@@ -10,6 +10,8 @@ import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.download.model.Download
 import eu.kanade.tachiyomi.data.download.model.DownloadQueue
+import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.online.HttpSource
@@ -28,7 +30,12 @@ import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import rx.subscriptions.CompositeSubscription
 import timber.log.Timber
+import uy.kohesive.injekt.injectLazy
+import java.io.BufferedOutputStream
 import java.io.File
+import java.io.FileInputStream
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 
 /**
  * This class is the one in charge of downloading chapters.
@@ -65,6 +72,8 @@ class Downloader(
      * Notifier for the downloader state and progress.
      */
     private val notifier by lazy { DownloadNotifier(context) }
+
+    private val preferencesHelper:PreferencesHelper by injectLazy()
 
     /**
      * Downloader subscriptions.
@@ -461,7 +470,25 @@ class Downloader(
 
         // Only rename the directory if it's downloaded.
         if (download.status == Download.DOWNLOADED) {
-            tmpDir.renameTo(dirname)
+            mangaDir.findFile(dirname+".tmp")?.delete()
+            if (preferencesHelper.downloadASZip().getOrDefault()) {
+                val zip = mangaDir.createFile(dirname + ".tmp")
+                val zipOut = ZipOutputStream(BufferedOutputStream(zip.openOutputStream()))
+                zipOut.setLevel(preferencesHelper.compressionLevel().getOrDefault())
+                tmpDir.listFiles()?.forEach { img ->
+                    val input = img.openInputStream()
+                    zipOut.putNextEntry(ZipEntry(img.name))
+                    input.copyTo(zipOut)
+                    input.close()
+                }
+                zipOut.close()
+                zip.renameTo(dirname + ".cbz")
+                tmpDir.delete()
+            }else {
+                tmpDir.renameTo(dirname)
+            }
+
+
             cache.addChapter(dirname, mangaDir, download.manga)
 
             DiskUtil.createNoMediaFile(tmpDir, context)

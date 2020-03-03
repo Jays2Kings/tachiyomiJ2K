@@ -87,7 +87,11 @@ class DownloadProvider(private val context: Context) {
      */
     fun findChapterDir(chapter: Chapter, manga: Manga, source: Source): UniFile? {
         val mangaDir = findMangaDir(manga, source)
-        return getValidChapterDirNames(chapter).mapNotNull { mangaDir?.findFile(it) }.firstOrNull()
+        var chapterPath = getValidChapterDirNames(chapter).mapNotNull { mangaDir?.findFile(it) }.firstOrNull()
+        if (chapterPath==null){
+            chapterPath = getValidChapterDirNames(chapter).mapNotNull { mangaDir?.findFile(it+".cbz") }.firstOrNull()
+        }
+        return chapterPath
     }
 
     /**
@@ -99,9 +103,14 @@ class DownloadProvider(private val context: Context) {
      */
     fun findChapterDirs(chapters: List<Chapter>, manga: Manga, source: Source): List<UniFile> {
         val mangaDir = findMangaDir(manga, source) ?: return emptyList()
-        return chapters.mapNotNull { chp ->
-            getValidChapterDirNames(chp).mapNotNull { mangaDir.findFile(it) }.firstOrNull()
+        var chaptersPath =chapters.mapNotNull { chp ->
+            var chapterPath = getValidChapterDirNames(chp).mapNotNull { mangaDir.findFile(it) }.firstOrNull()
+            if (chapterPath==null){
+                chapterPath = getValidChapterDirNames(chp).mapNotNull { mangaDir.findFile(it+".cbz") }.firstOrNull()
+            }
+            chapterPath
         }
+                return chaptersPath
     }
 
     /**

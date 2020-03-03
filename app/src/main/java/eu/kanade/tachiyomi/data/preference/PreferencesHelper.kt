@@ -234,6 +234,10 @@ class PreferencesHelper(val context: Context) {
 
     fun lastExtCheck() = rxPrefs.getLong("last_ext_check", 0)
 
+    fun downloadASZip() = rxPrefs.getBoolean(Keys.downloadASZip,false)
+
+    fun compressionLevel() = rxPrefs.getInteger(Keys.compressionLevel,0)
+
     fun upgradeFilters() {
         val filterDl = rxPrefs.getBoolean(Keys.filterDownloaded, false).getOrDefault()
         val filterUn = rxPrefs.getBoolean(Keys.filterUnread, false).getOrDefault()

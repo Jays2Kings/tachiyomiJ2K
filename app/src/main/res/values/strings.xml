@@ -604,5 +604,7 @@
     <string name="skip_this_step_next_time">Skip this step next time</string>
     <string name="pre_migration_skip_toast">To show this screen again, go to Settings -> Library.</string>
     <string name="reset_tags">Reset Tags</string>
+    <string name="pref_download_as_zip">Download Chapters As Zip</string>
+    <string name="compression_level">Compression Level</string>
 
 </resources>

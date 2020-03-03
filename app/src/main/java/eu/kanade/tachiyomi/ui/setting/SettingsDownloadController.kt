@@ -51,6 +51,26 @@ class SettingsDownloadController : SettingsController() {
             titleRes = R.string.pref_download_only_over_wifi
             defaultValue = true
         }
+        switchPreference {
+            key = Keys.downloadASZip
+            titleRes = R.string.pref_download_as_zip
+            defaultValue = false
+
+        }
+
+        val compressionLevel = intListPreference(activity) {
+            key = Keys.compressionLevel
+            titleRes = R.string.compression_level
+            entries = listOf("0 Store","1", "2", "3", "4", "5","6","7","8","9 Highest Compression")
+            entryRange = 0..9
+            defaultValue = 0
+        }
+
+        preferences.downloadASZip().asObservable()
+                .subscribeUntilDestroy {
+                    compressionLevel.isVisible = it == true
+                }
+
         preferenceCategory {
             titleRes = R.string.pref_remove_after_read
 

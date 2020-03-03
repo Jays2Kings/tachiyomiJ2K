@@ -5,6 +5,10 @@ package eu.kanade.tachiyomi.data.preference
  */
 object PreferenceKeys {
 
+    const val compressionLevel= "pref_compression_level"
+
+    const val downloadASZip = "pref_download_as_zip"
+
     const val theme = "pref_theme_key"
 
     const val rotation = "pref_rotation_type_key"
