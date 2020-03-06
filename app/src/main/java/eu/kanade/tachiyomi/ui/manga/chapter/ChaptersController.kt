@@ -203,6 +203,16 @@ class ChaptersController() : NucleusController<ChaptersPresenter>(),
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.mark_all_as_read -> {
+                selectAll()
+                markAsRead(getSelectedChapters())
+                unSelectAll()
+            }
+            R.id.mark_all_as_unread -> {
+                selectAll()
+                markAsUnread(getSelectedChapters())
+                unSelectAll()
+            }
             R.id.display_title -> {
                 item.isChecked = true
                 setDisplayMode(Manga.DISPLAY_NAME)
@@ -455,6 +465,12 @@ class ChaptersController() : NucleusController<ChaptersPresenter>(),
     }
 
     // SELECTION MODE ACTIONS
+
+    private fun unSelectAll() {
+        val adapter = adapter ?: return
+        adapter.clearSelection();
+        selectedItems.clear();
+    }
 
     private fun selectAll() {
         val adapter = adapter ?: return

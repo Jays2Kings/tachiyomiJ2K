@@ -50,7 +50,6 @@
             </group>
         </menu>
     </item>
-
     <item
         android:title="@string/sorting_mode"
         app:showAsAction="never">
@@ -88,6 +87,18 @@
             <item
                 android:id="@+id/download_all"
                 android:title="@string/download_all" />
+        </menu>
+    </item>
+    <item android:title="@string/status">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/mark_all_as_read"
+                    android:title="@string/action_mark_all_as_read" />
+                <item
+                    android:id="@+id/mark_all_as_unread"
+                    android:title="@string/action_mark_all_as_unread" />
+            </group>
         </menu>
     </item>
 </menu>
