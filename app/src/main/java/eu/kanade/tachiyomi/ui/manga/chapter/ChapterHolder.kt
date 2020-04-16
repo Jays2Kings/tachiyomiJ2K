@@ -42,6 +42,7 @@ class ChapterHolder(
         download_button.visibleIf(!localSource)
 
         if (isLocked) download_button.gone()
+        if (chapter.read) download_button.alpha = .3f
 
         // Set correct text color
         chapter_title.setTextColor(
