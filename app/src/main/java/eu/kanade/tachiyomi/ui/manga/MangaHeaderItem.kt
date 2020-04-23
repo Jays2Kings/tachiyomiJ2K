@@ -7,6 +7,7 @@ import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
+import eu.kanade.tachiyomi.util.system.HashCode
 
 class MangaHeaderItem(val manga: Manga, var startExpanded: Boolean) :
     AbstractFlexibleItem<MangaHeaderHolder>() {
@@ -46,6 +47,6 @@ class MangaHeaderItem(val manga: Manga, var startExpanded: Boolean) :
     }
 
     override fun hashCode(): Int {
-        return manga.id!!.hashCode()
+        return HashCode.generate(manga.id, manga.title)
     }
 }
