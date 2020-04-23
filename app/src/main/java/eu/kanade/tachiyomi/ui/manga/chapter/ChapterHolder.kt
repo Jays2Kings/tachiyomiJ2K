@@ -1,19 +1,17 @@
 package eu.kanade.tachiyomi.ui.manga.chapter
 
-import android.text.format.DateUtils
 import android.view.View
-import androidx.core.content.ContextCompat
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.download.model.Download
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsAdapter
+import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.system.contextCompatDrawable
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.chapters_item.*
 import kotlinx.android.synthetic.main.download_button.*
-import java.util.Date
 
 class ChapterHolder(
     view: View,
@@ -21,6 +19,7 @@ class ChapterHolder(
 ) : BaseChapterHolder(view, adapter) {
 
     private var localSource = false
+
     init {
         download_button.setOnLongClickListener {
             adapter.delegate.startDownloadRange(adapterPosition)
@@ -42,30 +41,24 @@ class ChapterHolder(
         localSource = manga.source == LocalSource.ID
         download_button.visibleIf(!localSource && !isLocked)
 
-        var chapterColor = when{
+        var chapterColor = when {
             isLocked -> adapter.unreadColor
+            chapter.bookmark && chapter.read -> adapter.bookmarkedAndReadColor
             chapter.bookmark -> adapter.bookmarkedColor
             chapter.read -> adapter.readColor
             else -> adapter.unreadColor
         }
 
-
         // Set correct text color
-        chapter_title.setTextColor(chapterColor )
+        chapter_title.setTextColor(chapterColor)
 
         val statuses = mutableListOf<String>()
 
-        if (chapter.date_upload > 0) {
-            statuses.add(
-                DateUtils.getRelativeTimeSpanString(
-                    chapter.date_upload, Date().time, DateUtils.HOUR_IN_MILLIS
-                ).toString()
-            )
-        }
+        ChapterUtil.relativeDate(chapter)?.let { statuses.add(it) }
 
         val showPagesLeft = !chapter.read && chapter.last_page_read > 0 && !isLocked
 
-        if (showPagesLeft && chapter.pages_left > 0 ) {
+        if (showPagesLeft && chapter.pages_left > 0) {
             statuses.add(
                 itemView.resources.getQuantityString(
                     R.plurals.pages_left, chapter.pages_left, chapter.pages_left
@@ -81,30 +74,34 @@ class ChapterHolder(
 
         chapter.scanlator?.isNotBlank()?.let { statuses.add(chapter.scanlator!!) }
 
-
         if (front_view.translationX == 0f) {
             read.setImageDrawable(
-                read.context.contextCompatDrawable(when(item.read){
-                    true -> R.drawable.ic_eye_off_24dp
-                    false -> R.drawable.ic_eye_24dp
-                }))
+                read.context.contextCompatDrawable(
+                    when (item.read) {
+                        true -> R.drawable.ic_eye_off_24dp
+                        false -> R.drawable.ic_eye_24dp
+                    }
+                )
+            )
             bookmark.setImageDrawable(
-                read.context.contextCompatDrawable(when(item.bookmark){
-                    true -> R.drawable.ic_bookmark_off_24dp
-                    false -> R.drawable.ic_bookmark_24dp
-                }))
+                read.context.contextCompatDrawable(
+                    when (item.bookmark) {
+                        true -> R.drawable.ic_bookmark_off_24dp
+                        false -> R.drawable.ic_bookmark_24dp
+                    }
+                )
+            )
         }
-        // this will color the scanlator the for bookmarks
+        // this will color the scanlator the same bookmarks
         chapter_scanlator.setTextColor(chapterColor)
         chapter_scanlator.text = statuses.joinToString(" • ")
-        val status  = when(adapter.isSelected(adapterPosition)){
+
+        val status = when (adapter.isSelected(adapterPosition)) {
             true -> Download.CHECKED
             false -> item.status
         }
-        notifyStatus(status,
-            item.isLocked,
-            item.progress
-        )
+
+        notifyStatus(status, item.isLocked, item.progress)
         resetFrontView()
     }
 

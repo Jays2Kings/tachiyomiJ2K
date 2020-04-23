@@ -16,6 +16,11 @@
     <color name="actionModeShadow">@color/md_black_1000_38</color>
     <color name="gray_button">#404040</color>
 
+    <color name="read_chapter">@color/textColorHint</color>
+    <color name="unread_chapter">@color/textColorPrimary</color>
+    <color name="bookmarked_chapter">@color/colorAccent</color>
+    <color name="active_chapter">@color/colorAccent</color>
+
     <color name="colorAmoledPrimary">@color/md_black_1000</color>
 
     <color name="textColorPrimary">@color/md_black_1000_87</color>
