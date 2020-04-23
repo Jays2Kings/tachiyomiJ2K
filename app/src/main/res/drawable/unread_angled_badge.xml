@@ -8,8 +8,8 @@
     tools:background="@color/red_error">
 
     <path
-        android:fillColor="@color/colorAccent"
+        android:fillColor="@color/unread_badge"
         android:pathData="M0 20 L100 0 L100 20 Z"
-        android:strokeColor="@color/colorAccent" />
+        android:strokeColor="@color/unread_badge" />
 
 </vector>

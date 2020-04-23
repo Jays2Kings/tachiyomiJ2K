@@ -16,6 +16,14 @@
     <color name="actionModeShadow">@color/md_black_1000_38</color>
     <color name="gray_button">#404040</color>
 
+    <color name="unread_badge">@color/colorAccent</color>
+    <color name="unread_badge_text">@color/md_white_1000</color>
+    <color name="download_badge">@color/pale_green</color>
+    <color name="download_badge_text">@color/md_black_1000</color>
+    <color name="total_badge">@color/material_deep_purple_500</color>
+    <color name="total_badge_text">@color/md_white_1000</color>
+
+
     <color name="colorAmoledPrimary">@color/md_black_1000</color>
 
     <color name="textColorPrimary">@color/md_black_1000_87</color>
