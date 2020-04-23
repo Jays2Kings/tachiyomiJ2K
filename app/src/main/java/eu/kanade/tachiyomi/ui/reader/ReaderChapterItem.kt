@@ -12,6 +12,7 @@ import com.mikepenz.fastadapter.items.AbstractItem
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.Manga
+import eu.kanade.tachiyomi.util.chapter.ChapterUI
 import eu.kanade.tachiyomi.util.system.contextCompatDrawable
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import java.text.DecimalFormat
@@ -22,18 +23,14 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
     AbstractItem<ReaderChapterItem.ViewHolder>
     () {
 
-    var name: String? = null
-    var description: String? = null
     val decimalFormat =
         DecimalFormat("#.###", DecimalFormatSymbols().apply { decimalSeparator = '.' })
 
     /** defines the type defining this item. must be unique. preferably an id */
-    override val type: Int
-        get() = R.id.reader_chapter_layout
+    override val type: Int  = R.id.reader_chapter_layout
 
     /** defines the layout which will be used for this item in the list */
-    override val layoutRes: Int
-        get() = R.layout.reader_chapter_item
+    override val layoutRes: Int = R.layout.reader_chapter_item
 
     override var identifier: Long
         get() = chapter.id!!
@@ -49,9 +46,9 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
         var bookmarkButton: FrameLayout = view.findViewById(R.id.bookmark_layout)
         var bookmarkImage: ImageView = view.findViewById(R.id.bookmark_image)
 
-        private var readColor = view.context.getResourceColor(android.R.attr.textColorHint)
-        private var unreadColor = view.context.getResourceColor(android.R.attr.textColorPrimary)
-        private var activeColor = view.context.getResourceColor(android.R.attr.colorAccent)
+        private var readColor = ChapterUI.readColor(view.context)
+        private var unreadColor = ChapterUI.unreadColor(view.context)
+        private var activeColor = ChapterUI.activeColor(view.context)
 
         private var unbookmark = view.context.contextCompatDrawable(R.drawable.ic_bookmark_border_24dp)
         private var bookmark = view.context.contextCompatDrawable(R.drawable.ic_bookmark_24dp)
@@ -101,12 +98,16 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
                     else -> unreadColor
                 }
             )
-            bookmarkImage.setImageDrawable(if (chapter.bookmark)
-                bookmark
-            else unbookmark)
-            bookmarkImage.imageTintList = ColorStateList.valueOf(if (chapter.bookmark)
-                activeColor
-            else readColor)
+            bookmarkImage.setImageDrawable(when(chapter.bookmark){
+                true -> bookmark
+                false -> unbookmark
+            })
+
+            bookmarkImage.imageTintList = ColorStateList.valueOf(when(chapter.bookmark){
+                true -> activeColor
+                false -> readColor
+            })
+
             chapterSubtitle.text = statuses.joinToString(" • ")
         }
 

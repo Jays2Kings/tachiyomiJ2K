@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterAdapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
+import eu.kanade.tachiyomi.util.chapter.ChapterUI
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import uy.kohesive.injekt.injectLazy
 import java.text.DecimalFormat
@@ -25,11 +26,11 @@ class MangaDetailsAdapter(
     val delegate: MangaDetailsInterface = controller
     val presenter = controller.presenter
 
-    val readColor = context.getResourceColor(android.R.attr.textColorHint)
+    val readColor = ChapterUI.readColor(context)
 
-    val unreadColor = context.getResourceColor(android.R.attr.textColorPrimary)
+    val unreadColor = ChapterUI.unreadColor(context)
 
-    val bookmarkedColor = context.getResourceColor(R.attr.colorAccent)
+    val bookmarkedColor = ChapterUI.bookmarkedColor(context)
 
     val decimalFormat = DecimalFormat("#.###", DecimalFormatSymbols()
             .apply { decimalSeparator = '.' })
