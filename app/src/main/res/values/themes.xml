@@ -9,10 +9,10 @@
     <style name="Theme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="colorPrimary">@color/bluePrimary</item>
+        <item name="colorPrimary">@color/app_color_primary</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
         <item name="colorSecondary">@color/background</item>
-        <item name="colorPrimaryDark">@color/bluePrimary</item>
+        <item name="colorPrimaryDark">@color/app_color_primary</item>
         <item name="colorControlActivated">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
@@ -54,8 +54,8 @@
 
     <style name="Theme.Tachiyomi" parent="Theme.Base"/>
     <style name="Theme.Tachiyomi.AllBlue" parent="Theme.Tachiyomi">
-        <item name="colorPrimaryVariant">@color/bluePrimary</item>
-        <item name="colorSecondary">@color/bluePrimary</item>
+        <item name="colorPrimaryVariant">@color/app_color_primary</item>
+        <item name="colorSecondary">@color/app_color_primary</item>
         <item name="tabBarIconColor">@color/md_white_1000</item>
         <item name="tabBarIconInactive">@color/md_white_1000_50</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>

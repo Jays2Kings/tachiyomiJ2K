@@ -4,8 +4,8 @@
     <color name="colorPrimary">@color/md_white_1000</color>
     <color name="colorPrimaryInactive">#C2424242</color>
     <color name="colorPrimaryDark">@color/md_white_1000</color>
-    <color name="bluePrimary">#54759E</color>
-    <color name="splashBackground">@color/bluePrimary</color>
+    <color name="app_color_primary">#54759E</color>
+    <color name="splashBackground">@color/app_color_primary</color>
     <color name="fullRippleColor">#C2C2C2</color>
     <color name="rippleColor">@color/md_black_1000_12</color>
     <color name="colorAccent">@color/md_blue_A400</color>
