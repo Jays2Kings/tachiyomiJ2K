@@ -61,7 +61,6 @@ class TrackSearchDialog : DialogController {
         val dialog = MaterialDialog(activity!!).apply {
             customView(viewRes = R.layout.track_search_dialog, scrollable = false)
             negativeButton(android.R.string.cancel)
-            positiveButton(R.string.clear) { onPositiveButtonClick() }
             if (wasPreviouslyTracked) {
                 positiveButton(R.string.clear) { onPositiveButtonClick() }
             }
