@@ -16,11 +16,11 @@
         <item name="colorControlActivated">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
-        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
-        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
-        <item name="android:textColorHintInverse">@color/textColorHintInverse</item>
+        <item name="android:textColorSecondaryInverse">@color/text_color_inverse_secondary</item>
+        <item name="android:textColorHintInverse">@color/text_color_inverse_hint</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="android:listSelector">?colorAccent</item>
         <item name="android:divider">@color/divider</item>
@@ -36,14 +36,13 @@
         <item name="actionBarTintColor">@color/textColorPrimary</item>
         <item name="tabBarIconColor">?colorAccent</item>
         <item name="tabBarIconInactive">@color/colorPrimaryInactive</item>
-
-        <item name="android:statusBarColor">@color/mainStatus</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:navigationBarColor">#B3000000</item>
         <item name="android:colorEdgeEffect">@color/colorAccent</item>
 
         <!-- Material Dialog colors -->
         <item name="md_color_title">@color/textColorPrimary</item>
-        <item name="md_color_content">@color/textColorSecondary</item>
+        <item name="md_color_content">@color/text_color_secondary</item>
         <item name="md_color_button_text">@color/colorAccent</item>
         <item name="md_background_color">@color/dialog</item>
         <item name="md_button_casing">literal</item>
@@ -59,7 +58,6 @@
         <item name="colorSecondary">@color/bluePrimary</item>
         <item name="tabBarIconColor">@color/md_white_1000</item>
         <item name="tabBarIconInactive">@color/md_white_1000_50</item>
-        <item name="android:statusBarColor">@color/blueStatus</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>
         <item name="actionBarTheme">@style/Theme.ActionBar.Dark.DayNight</item>
         <item name="android:windowLightStatusBar">false</item>

@@ -16,11 +16,10 @@
         <item name="colorOnPrimary">@color/colorAmoledPrimary</item>
         <item name="colorPrimaryDark">@color/colorAmoledPrimary</item>
         <item name="android:colorBackground">@color/md_black_1000</item>
-        <item name="android:statusBarColor">@color/blackStatus</item>
 
         <!-- Material Dialog colors -->
         <item name="md_color_title">@color/textColorPrimary</item>
-        <item name="md_color_content">@color/textColorSecondary</item>
+        <item name="md_color_content">@color/text_color_secondary</item>
         <item name="md_color_button_text">@color/colorAccent</item>
         <item name="md_background_color">@color/colorAmoledPrimary</item>
         <item name="md_corner_radius">16dp</item>

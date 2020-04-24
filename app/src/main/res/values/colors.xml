@@ -5,21 +5,16 @@
     <color name="colorPrimaryInactive">#C2424242</color>
     <color name="colorPrimaryDark">@color/md_white_1000</color>
     <color name="bluePrimary">#54759E</color>
-    <color name="mainStatus">#AFFAFAFA</color>
-    <color name="blueStatus">#AF54759E</color>
-    <color name="blackStatus">#AF000000</color>
     <color name="splashBackground">@color/bluePrimary</color>
-    <color name="dialogBackground">@color/md_white_1000</color>
     <color name="fullRippleColor">#C2C2C2</color>
     <color name="rippleColor">@color/md_black_1000_12</color>
     <color name="colorAccent">@color/md_blue_A400</color>
     <color name="actionModeShadow">@color/md_black_1000_38</color>
     <color name="gray_button">#404040</color>
 
-    <color name="read_chapter">@color/textColorHint</color>
+    <color name="read_chapter">@color/text_color_hint</color>
     <color name="unread_chapter">@color/textColorPrimary</color>
     <color name="bookmarked_chapter">@color/colorAccent</color>
-    <color name="active_chapter">@color/colorAccent</color>
 
     <color name="unread_badge">@color/colorAccent</color>
     <color name="unread_badge_text">@color/md_white_1000</color>
@@ -31,11 +26,8 @@
     <color name="colorAmoledPrimary">@color/md_black_1000</color>
 
     <color name="textColorPrimary">@color/md_black_1000_87</color>
-    <color name="textColorSecondary">@color/md_black_1000_54</color>
     <color name="textColorPrimaryInverse">@color/md_white_1000</color>
-    <color name="textColorSecondaryInverse">@color/md_white_1000_70</color>
-    <color name="textColorHint">@color/md_black_1000_38</color>
-    <color name="textColorHintInverse">@color/md_white_1000_50</color>
+
     <color name="divider">@color/md_black_1000_12</color>
     <color name="badgeColor">@color/material_red_accent_700</color>
     <color name="download">@color/material_green_800</color>
@@ -51,7 +43,6 @@
 
     <color name="md_white_1000">#FFFFFFFF</color>
     <color name="md_white_1000_76">#C2FFFFFF</color>
-    <color name="md_white_1000_70">#B3FFFFFF</color>
     <color name="md_white_1000_54">#8AFFFFFF</color>
     <color name="md_white_1000_50">#80FFFFFF</color>
     <color name="md_white_1000_20">#33FFFFFF</color>
@@ -65,10 +56,7 @@
     <color name="md_grey_800">#424242</color>
     <color name="md_grey_800_85">#DF424242</color>
 
-    <color name="md_blue_A200_50">#80448AFF</color>
-
     <color name="md_blue_A400">#2979FF</color>
-    <color name="md_blue_A400_38">#612979FF</color>
 
     <color name="md_red_500">#F44336</color>
 

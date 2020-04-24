@@ -50,7 +50,7 @@ class CategoryHolder(view: View, val adapter: CategoryAdapter) : BaseFlexibleVie
         }
         createCategory = category.order == CREATE_CATEGORY_ORDER
         if (createCategory) {
-            title.setTextColor(ContextCompat.getColor(itemView.context, R.color.textColorHint))
+            title.setTextColor(ContextCompat.getColor(itemView.context, R.color.text_color_hint))
             regularDrawable = ContextCompat.getDrawable(itemView.context, R.drawable
                 .ic_add_white_24dp)
             image.gone()

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="@dimen/material_emphasis_high_type" android:color="?attr/colorSecondary"/>
+</selector>
