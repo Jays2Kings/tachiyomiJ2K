@@ -30,6 +30,7 @@ class LibraryBadge @JvmOverloads constructor(context: Context, attrs: AttributeS
                 context.contextCompatColor(
                     // hide the badge text when preference is only show badge
                     if (unread == -1 && !showTotalChapters) R.color.unread_badge
+                    else if (showTotalChapters) R.color.total_badge_text
                     else R.color.unread_badge_text
                 )
             )
