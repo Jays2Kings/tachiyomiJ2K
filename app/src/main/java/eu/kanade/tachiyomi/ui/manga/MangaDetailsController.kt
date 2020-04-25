@@ -187,7 +187,7 @@ class MangaDetailsController : BaseController,
     var headerHeight = 0
 
     override fun getTitle(): String? {
-        return if (toolbarIsColored && !isTablet) manga?.title else null
+        return null
     }
 
     override fun inflateView(inflater: LayoutInflater, container: ViewGroup): View {
