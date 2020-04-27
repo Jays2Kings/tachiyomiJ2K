@@ -27,7 +27,7 @@ import eu.kanade.tachiyomi.source.model.Filter
 import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.controller.NucleusController
-import eu.kanade.tachiyomi.ui.library.ChangeMangaCategoriesDialog
+import eu.kanade.tachiyomi.ui.library.AddToLibraryCategoriesDialog
 import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.source.SourceController
@@ -61,7 +61,7 @@ open class BrowseSourceController(bundle: Bundle) :
         FlexibleAdapter.OnItemClickListener,
         FlexibleAdapter.OnItemLongClickListener,
         FlexibleAdapter.EndlessScrollListener,
-        ChangeMangaCategoriesDialog.Listener {
+    AddToLibraryCategoriesDialog.Listener {
 
     constructor(
         source: CatalogueSource,
@@ -584,7 +584,7 @@ open class BrowseSourceController(bundle: Bundle) :
                     categories.indexOfFirst { it.id == id }.takeIf { it != -1 }
                 }.toTypedArray()
 
-                ChangeMangaCategoriesDialog(this, listOf(manga), categories, preselected)
+                AddToLibraryCategoriesDialog(this, manga, categories, preselected, position)
                         .showDialog(router)
             }
         }
@@ -596,9 +596,18 @@ open class BrowseSourceController(bundle: Bundle) :
      * @param mangas The list of manga to move to categories.
      * @param categories The list of categories where manga will be placed.
      */
-    override fun updateCategoriesForMangas(mangas: List<Manga>, categories: List<Category>) {
-        val manga = mangas.firstOrNull() ?: return
-        presenter.updateMangaCategories(manga, categories)
+    override fun updateCategoriesForManga(manga: Manga?, categories: List<Category>) {
+        manga?.let { presenter.updateMangaCategories(manga, categories) }
+    }
+
+    /**
+     * Update manga to remove from favorites
+     */
+    override fun addToLibraryCancelled(manga: Manga?, position: Int) {
+        manga?.let {
+            presenter.changeMangaFavorite(manga)
+            adapter?.notifyItemChanged(position)
+        }
     }
 
     protected companion object {

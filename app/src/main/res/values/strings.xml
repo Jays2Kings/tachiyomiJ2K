@@ -81,6 +81,7 @@
     <string name="manage_category">Manage category</string>
     <string name="rename_category">Rename category</string>
     <string name="move_to_categories">Move to categories</string>
+    <string name="add_to_categories">Choose which categories to add this to.  If none are selected, this will be added to the "default" category</string>
     <string name="hide_categories">Hide categories</string>
     <plurals name="category">
         <item quantity="one">%d category</item>
