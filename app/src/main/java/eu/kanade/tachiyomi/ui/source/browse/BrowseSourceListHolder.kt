@@ -2,15 +2,11 @@ package eu.kanade.tachiyomi.ui.source.browse
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.system.getResourceColor
-import eu.kanade.tachiyomi.widget.StateImageViewTarget
 import kotlinx.android.synthetic.main.manga_list_item.*
 
 /**
@@ -42,16 +38,5 @@ class BrowseSourceListHolder(private val view: View, adapter: FlexibleAdapter<IF
     }
 
     override fun setImage(manga: Manga) {
-        if (manga.thumbnail_url.isNullOrEmpty()) {
-            GlideApp.with(view.context).clear(contentView)
-        } else {
-            GlideApp.with(view.context)
-                .load(manga)
-                .diskCacheStrategy(DiskCacheStrategy.DATA)
-                .dontAnimate()
-                .placeholder(android.R.color.transparent)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(StateImageViewTarget(cover_thumbnail, progress))
-        }
     }
 }

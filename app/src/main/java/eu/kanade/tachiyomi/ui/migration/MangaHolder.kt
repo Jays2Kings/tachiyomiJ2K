@@ -8,10 +8,12 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import kotlinx.android.synthetic.main.manga_list_item.*
+import kotlinx.android.synthetic.main.manga_list_item.subtitle
+import kotlinx.android.synthetic.main.manga_list_item.title
 
 class MangaHolder(
-    private val view: View,
-    private val adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>
+    view: View,
+    adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>
 ) : BaseFlexibleViewHolder(view, adapter) {
 
     fun bind(item: MangaItem) {

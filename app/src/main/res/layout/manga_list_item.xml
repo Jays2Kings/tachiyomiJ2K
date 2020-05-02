@@ -6,17 +6,18 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:id="@+id/constraint_layout"
-    android:background="@drawable/list_item_selector"
-    android:minHeight="@dimen/material_component_lists_single_line_with_avatar_height">
+    android:background="@drawable/list_item_selector">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/material_layout_avatar"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
         android:layout_marginStart="8dp"
         app:layout_constrainedHeight="true"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -24,11 +25,11 @@
 
         <ImageView
             android:id="@+id/cover_thumbnail"
-            android:layout_width="@dimen/material_component_lists_single_line_with_avatar_height"
+            android:layout_width="@dimen/material_layout_avatar"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:background="?android:attr/colorBackground"
-            android:maxHeight="150dp"
+            android:maxHeight="@dimen/material_layout_avatar"
             app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,29 +38,6 @@
             tools:background="?android:attr/colorBackground"
             tools:ignore="ContentDescription"
             tools:src="@mipmap/ic_launcher" />
-
-        <FrameLayout
-            android:id="@+id/play_layout"
-            android:layout_width="@dimen/material_component_lists_single_line_with_avatar_height"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:clickable="true"
-            android:focusable="true"
-            android:visibility="gone"
-            tools:visibility="visible">
-
-            <ImageView
-                android:id="@+id/play_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/round_play_background"
-                android:contentDescription="@string/start_reading"
-                android:padding="6dp"
-                android:src="@drawable/ic_start_reading_white_24dp"
-                android:tint="@android:color/white" />
-
-        </FrameLayout>
 
         <ProgressBar
             android:id="@+id/progress"
@@ -81,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
         android:ellipsize="end"
         android:maxLines="3"
@@ -100,7 +78,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="14dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:singleLine="true"
