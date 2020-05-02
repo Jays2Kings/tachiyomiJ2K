@@ -136,9 +136,11 @@
     <string name="always_show_library_fast_scroll">Always show library fast scroll</string>
     <string name="unread_badges">Unread badges</string>
     <string name="uniform_covers">Uniform covers</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
+    <string name="x_small">XS</string>
+    <string name="small">S</string>
+    <string name="medium">M</string>
+    <string name="large">L</string>
+    <string name="x_large">XL</string>
     <string name="grid_options">Grid options</string>
     <string name="hide_badges">Hide badges</string>
     <string name="show_badges">Show badges</string>

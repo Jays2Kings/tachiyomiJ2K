@@ -75,6 +75,13 @@
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/x_small" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
                     android:text="@string/small" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
@@ -88,6 +95,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:text="@string/large" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/x_large" />
             </RadioGroup>
 
             <com.google.android.material.checkbox.MaterialCheckBox
