@@ -26,10 +26,9 @@
         <ImageView
             android:id="@+id/cover_thumbnail"
             android:layout_width="@dimen/material_layout_avatar"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/material_layout_avatar"
             android:adjustViewBounds="true"
             android:background="?android:attr/colorBackground"
-            android:maxHeight="@dimen/material_layout_avatar"
             app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

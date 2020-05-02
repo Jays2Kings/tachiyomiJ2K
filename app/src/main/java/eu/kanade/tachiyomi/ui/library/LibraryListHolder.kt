@@ -82,7 +82,7 @@ class LibraryListHolder(
             GlideApp.with(view.context).load(item.manga)
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
-                .circleCrop()
+                .centerCrop()
                 .into(cover_thumbnail)
         }
     }
