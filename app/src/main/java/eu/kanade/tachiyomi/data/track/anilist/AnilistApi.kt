@@ -182,7 +182,7 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             struct["coverImage"]["large"].asString,
             struct["description"].nullString.orEmpty(),
             struct["type"].asString,
-            struct["status"].asString,
+            struct["status"].nullString.orEmpty(),
             date,
             struct["chapters"].nullInt ?: 0
         )

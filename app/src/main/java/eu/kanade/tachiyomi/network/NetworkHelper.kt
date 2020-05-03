@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.network
 
 import android.content.Context
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import java.io.File
@@ -16,6 +17,7 @@ class NetworkHelper(context: Context) {
     val client = OkHttpClient.Builder()
             .cookieJar(cookieManager)
             .cache(Cache(cacheDir, cacheSize))
+            .addInterceptor(ChuckerInterceptor(context))
             .build()
 
     val cloudflareClient = client.newBuilder()
