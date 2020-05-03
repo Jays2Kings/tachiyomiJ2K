@@ -2,7 +2,6 @@
 <resources>
     <string name="add">Добавить</string>
     <string name="add_category">Добавить категорию</string>
-    <string name="add_to_home_screen">Добавить на главный экран</string>
     <string name="notify_extension_updates">Авто-проверка обновлений</string>
     <string name="cancel">Отмена</string>
     <string name="cancel_all">Отменить все</string>
@@ -21,7 +20,7 @@
     <string name="filter">Фильтр</string>
     <string name="bookmarked">Закладки</string>
     <string name="downloaded">Загруженные</string>
-    <string name="read">Читать</string>
+    <string name="read">Прочитано</string>
     <string name="unread">Непрочитанные</string>
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
@@ -75,7 +74,7 @@
 
     <string name="black">Черный</string>
 
-    <string name="browse">Смотреть</string>
+    <string name="browse">Каталог</string>
 
     <string name="build_time">Дата сборки</string>
 
@@ -99,8 +98,6 @@
     <string name="chapters">Главы</string>
 
     <string name="charging">Заряжается</string>
-
-    <string name="circular">Круглая иконка</string>
 
     <plurals name="cleanup_done">
         <item quantity="one">Очистка завершена. %d папка удалена.</item>
@@ -137,7 +134,6 @@
 
     <string name="_copied_to_clipboard">%1$s скопорован в буфер</string>
 
-    <string name="copy">Копировать</string>
 
     <string name="cover_updated">Обложка обновлена</string>
 
@@ -212,9 +208,6 @@
     <string name="fourth_to_last">Четвертую от прочитанной</string>
 
     <string name="history">История</string>
-
-    <string name="could_not_create_shortcut">Невозможно создать ярлык!</string>
-    <string name="icon_shape">Форма иконки</string>
 
     <string name="include_extra_search_parameter">Дополнительный параметр при поиске</string>
 
@@ -441,7 +434,6 @@
     <string name="free">Свободная</string>
     <string name="lock">Заблокированная</string>
 
-    <string name="rounded">Округленные иконки</string>
 
     <string name="fit_height">По высоте</string>
     <string name="fit_screen">По экрану</string>
@@ -465,7 +457,6 @@
 
     <string name="updates">Обновления</string>
 
-    <string name="shortcut_created">Ярлык был добавлен на главный экран.</string>
 
     <string name="show_password">Показывать пароль</string>
 
@@ -486,9 +477,6 @@
         <item quantity="other">%d источников отсутствует</item>
     </plurals>
 
-    <string name="square">Квадратная иконка</string>
-
-    <string name="star">Звездочная иконка</string>
 
     <string name="starting_cleanup">Начало очистки</string>
 
@@ -571,4 +559,243 @@
     <string name="center">Центральная</string>
     <string name="left">Слева</string>
     <string name="right">Справа</string>
+
+    <!-- Manga Type -->
+    <string name="manhwa">Манхва</string>
+    <string name="manhua">Маньхуа</string>
+    <string name="comic">Комикс</string>
+    <!-- Manga -->
+    <string name="not_started">Не читал</string>
+    <string name="in_progress">Читаю</string>
+    <!-- Status -->
+    <string name="unknown_status">Неизвестный Статус</string>
+    <!-- Security -->
+    <string name="unlock">Разблокировка</string>
+    <!-- Chapters -->
+    <string name="new_chapters">Новые главы</string>
+    <string name="last_read_chapter_">Последняя прочитанная глава %1$s</string>
+    <string name="chapter_x_of_y">Глава %1$d из %2$d</string>
+    <string name="all_chapters_read">Все главы прочитаны</string>
+    <string name="marked_as_read">Помечено как прочитанное</string>
+    <string name="marked_as_unread">Помечено как непрочитанное</string>
+    <string name="removed_bookmark">Удалена закладка</string>
+    <string name="chapters_removed">Главы удалены</string>
+
+    <plurals name="remove_n_chapters">
+        <item quantity="one">Удалить %1$d загруженную главу?</item>
+        <item quantity="other">Удалить %1$d загруженные главы?</item>
+    </plurals>
+    <plurals name="chapters">
+        <item quantity="one">%1$d глава</item>
+        <item quantity="other">%1$d главы</item>
+    </plurals>
+    <plurals name="pages_left">
+        <item quantity="one">%1$d страница осталась </item>
+        <item quantity="other">%1$d страницы осталась</item>
+    </plurals>
+
+    <!-- Category -->
+    <string name="category">Категория</string>
+    <string name="adding_category_to_queue">Добавление %1$s в очередь обновления</string>
+    <string name="_already_in_queue">%1$s уже в очереди</string>
+    <string name="create_new_category">Создать новую категорию</string>
+    <string name="category_is_empty">Категория пуста</string>
+    <string name="category_is_hidden">Категория скрыта</string>
+    <string name="top_category">Высшая категория (%1$s)</string>
+    <string name="first_category">Первая категория</string>
+    <string name="categories_on_manual">Категории для обновления при обновлении вручную</string>
+    <string name="categories_in_global_update">Все категории в глобальном обновлении</string>
+    <string name="confirm_category_deletion">Удалить категорию?</string>
+    <string name="confirm_category_deletion_message">Манга в этой категории будет перемещена в категорию по умолчанию.</string>
+    <string name="already_in_category">Манга уже в категории</string>
+    <string name="manage_category">Управление категорией</string>
+    <string name="add_to_categories">Выберите, к каким категориям добавить это. Если ни один не выбран, он будет добавлен в категорию «по умолчанию»</string>
+    <string name="hide_categories">Скрыть категории</string>
+    <string name="category_deleted">Категория удалена</string>
+    <string name="long_press_category">Нажмите и удерживайте, чтобы изменить категорию</string>
+
+    <plurals name="category">
+        <item quantity="one">%d категория</item>
+        <item quantity="other">%d категории</item>
+    </plurals>
+
+    <!-- Updates -->
+    <string name="update">Обновить</string>
+    <string name="what_should_update">Что следует обновить?</string>
+    <string name="updating_">Обновление %1$s</string>
+
+    <!-- Library -->
+    <string name="remove_from_library_question">Удалить из библиотеки?</string>
+    <string name="no_matches_for_filters">Не найдено совпадений для ваших текущих фильтров</string>
+    <!-- Library Sort -->
+    <string name="sort_by_">Сортировать по: %1$s</string>
+    <string name="date_added">Дата добавления</string>
+    <string name="latest_chapter">Последняя глава</string>
+    <!-- Library Display -->
+    <string name="display_options">Показать варианты</string>
+    <string name="comfortable_grid">Удобная Сетка</string>
+    <string name="start_with_filters_hidden">Скрывать фильтры при запуске</string>
+    <string name="hide_start_reading_button">Скрыть кнопку начала чтения</string>
+    <string name="always_show_library_fast_scroll">Всегда показывать быструю прокрутку в библиотеке</string>
+    <string name="unread_badges">Значки непрочитанных глав</string>
+    <string name="uniform_covers">Одинаковые обложки</string>
+    <string name="grid_options">Варианты сетки</string>
+    <string name="hide_badges">Скрыть</string>
+    <string name="show_badges">Показать</string>
+    <string name="show_count">Количество</string>
+    <string name="tap_library_to_show_filters">Нажмите значок библиотеки, чтобы отобразить фильтры</string>
+    <string name="display_as">Показать как</string>
+    <!-- Library settings -->
+    <string name="include_in_global_update">Включить в глобальное обновление</string>
+    <!-- Recents -->
+    <string name="recents">Недавние</string>
+    <string name="newly_added">Недавно добавлено</string>
+    <string name="this_will_remove_the_read_date_for_x_question">Это удалит прочитанную дату \"%1$s\". Ты уверен?</string>
+    <string name="reset_all_chapters_for_this_">Сбросить все главы для этого %1$s</string>
+    <string name="last_read_">Последнее чтение %1$s</string>
+    <string name="read_">Читал %1$s</string>
+    <string name="updated_">Обновлена %1$s</string>
+    <string name="added_">Добавлена %1$s</string>
+    <string name="view_history">Посмотреть историю</string>
+    <string name="view_all_updates">Посмотреть все обновления</string>
+    <string name="search_recents">Поиск последних ...</string>
+    <string name="group_all">Сгруппировать все</string>
+    <string name="ungroup_all">Разгруппировать все</string>
+    <string name="only_history">Только история</string>
+    <string name="only_updates">Только обновления</string>
+    <string name="reset_chapter_question">Сбросить главу?</string>
+    <string name="press_and_hold_to_reset_history">Нажмите и удерживайте, чтобы сбросить историю глав</string>
+    <!-- Browse -->
+    <string name="view_latest">ПОСЛЕДНЯЯ</string>
+    <string name="in_library">В библиотеке</string>
+    <string name="search_extensions">Поиск расширений ...</string>
+    <string name="source_hidden">Источник скрыт</string>
+    <string name="last_used">Последний используемый</string>
+    <string name="local_source_help_guide">Руководство по локальным источникам</string>
+    <string name="check_site_in_web">Проверить сайт в WebView</string>
+    <!-- Reader -->
+    <string name="set_as_default_for_all">Установить по умолчанию</string>
+    <string name="reading_">Чтение %1$s</string>
+    <string name="webtoon_style">Стиль WebToon</string>
+    <!-- Reader settings -->
+    <string name="continuous_vertical">Непрерывная вертикаль</string>
+    <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
+    <string name="pref_webtoon_side_padding">Боковой отступ</string>
+    <string name="webtoon_side_padding_0">Нет</string>
+    <!-- Manga details -->
+    <string name="about_this_">Об этом %1$s</string>
+    <string name="start_reading">Начать читать</string>
+    <string name="start_reading_chapter_">Начните читать главу %1$s</string>
+    <string name="continue_reading_chapter_">Продолжить чтение главы %1$s</string>
+    <string name="continue_reading">Продолжить чтение</string>
+    <string name="chapters_">Главы %1$s</string>
+    <string name="volume_">Том %1$d</string>
+    <string name="season_">Сезон %1$d</string>
+    <string name="add_to_library">Добавить в библиотеку</string>
+    <string name="no_description">Без описания</string>
+    <string name="mark_all_chapters_as_read">Отметить все главы как прочитанные?</string>
+    <string name="remove_from_library">Удалить из библиотеки</string>
+    <string name="select_starting_chapter">Выберите начальную главу</string>
+    <string name="select_ending_chapter">Выберите конечную главу</string>
+    <string name="search_chapters">Поиск глав</string>
+    <string name="next_unread_chapter">Следующая непрочитанная глава</string>
+    <string name="all_read_chapters">All read chapters</string>
+    <string name="all_but_bookmarked_chapters">Все главы, кроме закладок</string>
+    <string name="add_x_to_library">Добавить %1$s в библиотеку?</string>
+    <string name="show_all">Все</string>
+    <string name="show_bookmarked_chapters">Закладки глав</string>
+    <string name="show_downloaded_chapters">Загруженные главы</string>
+    <string name="show_unread_chapters">Непрочитанные главы</string>
+    <string name="show_read_chapters">Прочитанные главы</string>
+    <string name="hide_chapter_titles">Скрыть заголовки глав</string>
+    <string name="sort_by_source_s_order">Сортировать по порядку источника</string>
+    <string name="sort_by_chapter_number">Сортировать по номеру главы</string>
+    <string name="newest_first">От нового к старому</string>
+    <string name="oldest_first">От старого к новому</string>
+    <string name="edit_cover">Изменить обложку</string>
+    <string name="reset_cover">Сбросить обложку</string>
+    <string name="remember_this_choice">Запомни этот выбор</string>
+
+
+    <plurals name="deleted_chapters">
+        <item quantity="one">Глава была удалена из источника:\n%2$s\nDelete
+            скачать её?</item>
+        <item quantity="other">%1$s главы были удалены из источника:\n%2$s\n\nDelete
+            скачать их?</item>
+    </plurals>
+
+    <!-- Tracking -->
+    <string name="not_tracked">Не отслеживаемые</string>
+    <string name="refresh_tracking">Обновить отслеживание</string>
+    <string name="add_tracking">Добавить отслеживание</string>
+    <string name="migrate_">Перенести %1$s</string>
+    <string name="copy_value">Копия</string>
+
+    <!-- General settings -->
+    <string name="white_theme">Чисто белый</string>
+    <string name="date_format">Формат даты</string>
+    <string name="secure_screen">Безопасный экран</string>
+    <string name="hide_tachi_from_recents">Скрыть Tachiyomi с экрана последних</string>
+    <string name="security">Безопасность</string>
+
+    <!-- Advanced section -->
+    <string name="disable_battery_optimization">Отключить оптимизацию батареи</string>
+    <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
+    <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
+
+    <!-- About section -->
+    <string name="whats_new">Что нового в этом релизе</string>
+    <string name="website">Веб-сайт</string>
+    <string name="open_source_licenses">Лицензии с открытым исходным кодом</string>
+    <!-- Login dialog -->
+    <string name="email">Адрес Email</string>
+    <!-- Downloads -->
+    <string name="downloading_">Загрузка: %1$s</string>
+    <string name="not_downloaded">Не загружены</string>
+    <string name="start_downloading_now">Начать загрузку сейчас</string>
+    <string name="remove_download">Удалить загрузку</string>
+    <string name="remove_downloads">Удалить загрузки</string>
+    <string name="nothing_is_downloading">В данный момент ничего не загружается</string>
+    <string name="manage_whats_downloading">Управляйте тем, что скачивается</string>
+    <string name="visit_recents_for_download_queue">Посетите вкладку «Последние», чтобы получить доступ к очереди загрузки. Вы также можете дважды нажать или удерживать для быстрого доступа</string>
+    <!-- Downloads settings -->
+    <string name="delete_removed_chapters">Удалить удаленные главы</string>
+    <string name="delete_downloaded_if_removed_online">Удалить загруженные главы, если источник удалил главу онлайн</string>
+    <string name="ask_on_chapters_page">Удалить во время глобальных обновлений, спросите на странице глав</string>
+    <string name="always_keep">Всегда держать</string>
+    <string name="always_delete">Всегда удалять</string>
+    <!-- Webview -->
+    <string name="failed_to_bypass_cloudflare">Не удалось обойти Cloudflare</string>
+    <string name="please_update_webview">Пожалуйста, обновите приложение WebView для лучшей совместимости</string>
+    <!-- Miscellaneous -->
+    <string name="app_not_available">Приложение не доступно</string>
+    <string name="auto">Автоматически</string>
+    <string name="bottom">Низ</string>
+    <string name="bug_report">Сообщить об ошибке</string>
+    <string name="collasped">Рухнул</string>
+    <string name="drag_handle">Перетащить ручку</string>
+    <string name="hide">Спрятать</string>
+    <string name="keep">Хранить</string>
+    <string name="less">Меньше</string>
+    <string name="mark_all_as_read">Отметить все как прочитанные</string>
+    <string name="mark_all_as_unread">Отметить все как непрочитанные</string>
+    <string name="more">Больше</string>
+    <string name="moved_to_">Переехал в %1$s</string>
+    <string name="pin">Булавка</string>
+    <string name="pinned">Закрепленные</string>
+    <string name="refresh">Обновление</string>
+    <string name="refreshing">Обновляющиеся</string>
+    <string name="sort_and_filter">Сортировать и Фильтровать</string>
+    <string name="top">Верх</string>
+    <string name="un_select_all">Снять все</string>
+    <string name="unpin">Открепить</string>
+    <string name="use_default">Использовать "По умолчанию"</string>
+
+    <!-- Extensions -->
+    <plurals name="extension_updates_available">
+        <item quantity="one">Доступно обновление расширения</item>
+        <item quantity="other">%d доступны обновления расширений</item>
+    </plurals>
+
+
 </resources>
