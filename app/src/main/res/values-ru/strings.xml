@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
+    <string name="app_name" translatable="false">TachiyomiJ2K</string>
+    <string name="app_short_name" translatable="false">TachiJ2K</string>
+
     <string name="add">Добавить</string>
     <string name="add_category">Добавить категорию</string>
     <string name="notify_extension_updates">Авто-проверка обновлений</string>
@@ -25,7 +28,7 @@
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как прочитанное</string>
-    <string name="mark_previous_as_read">Отметить предыдущие как прочит</string>
+    <string name="mark_previous_as_read">Отметить предыдущие как прочитанные</string>
     <string name="migrate_now">Переместить сейчас</string>
     <string name="move_to_categories">Поместить в категорию</string>
     <string name="move_to_bottom">Переместить в конец</string>
@@ -268,7 +271,6 @@
     <string name="logout">Выход</string>
     <string name="successfully_logged_out">Вы вышли из аккаунта</string>
 
-    <string name="manga">Манга</string>
     <string name="added_to_library">Добавить в библиотеку</string>
     <string name="artist">Художник</string>
     <string name="author">Автор</string>
@@ -561,6 +563,7 @@
     <string name="right">Справа</string>
 
     <!-- Manga Type -->
+    <string name="manga">Манга</string>
     <string name="manhwa">Манхва</string>
     <string name="manhua">Маньхуа</string>
     <string name="comic">Комикс</string>
@@ -627,6 +630,7 @@
     <!-- Library -->
     <string name="remove_from_library_question">Удалить из библиотеки?</string>
     <string name="no_matches_for_filters">Не найдено совпадений для ваших текущих фильтров</string>
+    <string name="show_all_categories">Показать все категории</string>
     <!-- Library Sort -->
     <string name="sort_by_">Сортировать по: %1$s</string>
     <string name="date_added">Дата добавления</string>
@@ -639,6 +643,11 @@
     <string name="always_show_library_fast_scroll">Всегда показывать быструю прокрутку в библиотеке</string>
     <string name="unread_badges">Значки непрочитанных глав</string>
     <string name="uniform_covers">Одинаковые обложки</string>
+    <string name="x_small">XS</string>
+    <string name="small">S</string>
+    <string name="medium">M</string>
+    <string name="large">L</string>
+    <string name="x_large">XL</string>
     <string name="grid_options">Варианты сетки</string>
     <string name="hide_badges">Скрыть</string>
     <string name="show_badges">Показать</string>
@@ -650,8 +659,8 @@
     <!-- Recents -->
     <string name="recents">Недавние</string>
     <string name="newly_added">Недавно добавлено</string>
-    <string name="this_will_remove_the_read_date_for_x_question">Это удалит прочитанную дату \"%1$s\". Ты уверен?</string>
-    <string name="reset_all_chapters_for_this_">Сбросить все главы для этого %1$s</string>
+    <string name="this_will_remove_the_read_date_for_x_question">Это удалит дату прочтения главы \"%1$s\". Вы уверены?</string>
+    <string name="reset_all_chapters_for_this_">Сбросить все главы %1$s</string>
     <string name="last_read_">Последнее чтение %1$s</string>
     <string name="read_">Читал %1$s</string>
     <string name="updated_">Обновлена %1$s</string>
@@ -682,8 +691,12 @@
     <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
     <string name="pref_webtoon_side_padding">Боковой отступ</string>
     <string name="webtoon_side_padding_0">Нет</string>
+    <string name="webtoon_side_padding_10">10%</string>
+    <string name="webtoon_side_padding_15">15%</string>
+    <string name="webtoon_side_padding_20">20%</string>
+    <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
-    <string name="about_this_">Об этом %1$s</string>
+    <string name="about_this_">О чём эта %1$s</string>
     <string name="start_reading">Начать читать</string>
     <string name="start_reading_chapter_">Начните читать главу %1$s</string>
     <string name="continue_reading_chapter_">Продолжить чтение главы %1$s</string>
