@@ -94,6 +94,12 @@ class SettingsGeneralController : SettingsController() {
             }
         }
 
+        switchPreference() {
+            key = Keys.showHideScrollBar
+            titleRes = R.string.show_hide_scrollbar
+            defaultValue = true
+        }
+
         preferenceCategory {
             titleRes = R.string.security
 

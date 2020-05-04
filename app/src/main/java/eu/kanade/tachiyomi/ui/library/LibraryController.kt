@@ -158,6 +158,13 @@ class LibraryController(
     private var scrollListener = object : RecyclerView.OnScrollListener() {
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
+            if (!preferences.showHideScrollBar().getOrDefault()) {
+                fast_scroller.visibility = View.INVISIBLE
+                text_view_m.visibility = View.INVISIBLE
+            } else {
+                fast_scroller.visibility = View.VISIBLE
+                text_view_m.visibility = View.VISIBLE
+            }
             val notAtTop = recycler.canScrollVertically(-1)
             if (notAtTop != elevate) elevateFunc(notAtTop)
             val order = getCategoryOrder()
@@ -236,6 +243,14 @@ class LibraryController(
         if (!::presenter.isInitialized) presenter = LibraryPresenter(this)
         fast_scroller.setStartTranslationX(!alwaysShowScroller)
         fast_scroller.setBackground(!alwaysShowScroller)
+
+        if (!preferences.showHideScrollBar().getOrDefault()) {
+            fast_scroller.visibility = View.INVISIBLE
+            text_view_m.visibility = View.INVISIBLE
+        } else {
+            fast_scroller.visibility = View.VISIBLE
+            text_view_m.visibility = View.VISIBLE
+        }
 
         show_all.isChecked = preferences.showAllCategories().get()
         show_all.setOnCheckedChangeListener { _, isChecked ->

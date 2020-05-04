@@ -116,6 +116,7 @@
     <string name="no_matches_for_filters">No matches found for your current filters</string>
     <string name="show_all_categories">Show all categories</string>
 
+
     <!-- Library Sort -->
     <string name="sort_by_">Sort by: %1$s</string>
     <string name="total_chapters">Total chapters</string>
@@ -176,6 +177,7 @@
     <string name="auto_refresh_covers">Automatically refresh covers</string>
     <string name="auto_refresh_covers_summary">Refresh covers in library as well
         when updating library</string>
+    <string name="show_hide_scrollbar">Show scrollbar</string>
 
     <!-- Recents -->
     <string name="recents">Recents</string>
