@@ -249,10 +249,10 @@ class MangaDetailsController : BaseController,
         recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                    val atTop = !recycler.canScrollVertically(-1)
-                    val tY = getHeader()?.backdrop?.translationY ?: 0f
-                    getHeader()?.backdrop?.translationY = max(0f, tY + dy * 0.25f)
-                    if (atTop) getHeader()?.backdrop?.translationY = 0f
+                val atTop = !recycler.canScrollVertically(-1)
+                val tY = getHeader()?.backdrop?.translationY ?: 0f
+                getHeader()?.backdrop?.translationY = max(0f, tY + dy * 0.25f)
+                if (atTop) getHeader()?.backdrop?.translationY = 0f
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -319,7 +319,7 @@ class MangaDetailsController : BaseController,
                 (recycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
                     itemPosition, headerHeight
                 )
-                    colorToolbar(itemPosition > 0, false)
+                colorToolbar(itemPosition > 0, false)
             }
         }
     }
@@ -790,8 +790,8 @@ class MangaDetailsController : BaseController,
 
         setOnQueryTextChangeListener(searchView) {
             query = it ?: ""
-                if (query.isNotEmpty()) getHeader()?.collapse()
-                else getHeader()?.expand()
+            if (query.isNotEmpty()) getHeader()?.collapse()
+            else getHeader()?.expand()
 
             adapter?.setFilter(query)
             adapter?.performFilter()

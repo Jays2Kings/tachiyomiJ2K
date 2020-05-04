@@ -307,6 +307,7 @@ class MangaDetailsPresenter(
     private fun hasTensOfChapters(chapters: List<ChapterItem>): Boolean {
         return chapters.size in 21..300
     }
+
     /**
      * Returns the next unread chapter or null if everything is read.
      */
