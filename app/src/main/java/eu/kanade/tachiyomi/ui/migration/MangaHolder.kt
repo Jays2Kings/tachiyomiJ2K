@@ -8,8 +8,6 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import kotlinx.android.synthetic.main.manga_list_item.*
-import kotlinx.android.synthetic.main.manga_list_item.subtitle
-import kotlinx.android.synthetic.main.manga_list_item.title
 
 class MangaHolder(
     view: View,
@@ -23,10 +21,8 @@ class MangaHolder(
 
         // Update the cover.
         GlideApp.with(itemView.context).clear(cover_thumbnail)
-        GlideApp.with(itemView.context)
-                .load(item.manga)
-                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                .dontAnimate()
-                .into(cover_thumbnail)
+        GlideApp.with(itemView.context).load(item.manga)
+            .diskCacheStrategy(DiskCacheStrategy.RESOURCE).centerCrop().dontAnimate()
+            .into(cover_thumbnail)
     }
 }

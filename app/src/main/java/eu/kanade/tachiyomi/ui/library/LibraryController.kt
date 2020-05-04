@@ -502,7 +502,9 @@ class LibraryController(
             LibraryUpdateService.setListener(this)
             recycler_cover.isClickable = false
             recycler_cover.isFocusable = false
-            activity?.dropdown?.visibleIf(!singleCategory)
+            if (onRoot) {
+                activity?.dropdown?.visibleIf(!singleCategory)
+            }
         } else {
             closeTip()
             activity?.dropdown?.gone()
@@ -552,7 +554,9 @@ class LibraryController(
             recycler.itemAnimator = DefaultItemAnimator()
         }
         singleCategory = presenter.categories.size <= 1
-        activity?.dropdown?.visibleIf(!singleCategory)
+        if (onRoot) {
+            activity?.dropdown?.visibleIf(!singleCategory)
+        }
         progress.gone()
         if (!freshStart) {
             justStarted = false
@@ -571,12 +575,14 @@ class LibraryController(
         adapter.isLongPressDragEnabled = canDrag()
         category_recycler.setCategories(presenter.categories)
         setActiveCategory()
-        activity?.toolbar?.setOnClickListener {
-            val recycler = recycler ?: return@setOnClickListener
-            if (singleCategory) {
-                recycler.scrollToPosition(0)
-            } else {
-                showCategories(recycler.translationY == 0f)
+        if (onRoot) {
+            activity?.toolbar?.setOnClickListener {
+                val recycler = recycler ?: return@setOnClickListener
+                if (singleCategory) {
+                    recycler.scrollToPosition(0)
+                } else {
+                    showCategories(recycler.translationY == 0f)
+                }
             }
         }
     }

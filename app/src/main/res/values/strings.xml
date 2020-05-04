@@ -114,6 +114,7 @@
     <string name="library_is_empty_add_from_browse">Your library is empty, add series to your
         library from the browse tab.</string>
     <string name="no_matches_for_filters">No matches found for your current filters</string>
+    <string name="show_all_categories">Show all categories</string>
 
     <!-- Library Sort -->
     <string name="sort_by_">Sort by: %1$s</string>

@@ -262,7 +262,7 @@ class PagerPageHolder(
                                 context
                             )) {
                             imageView.setImage(ImageSource.inputStream(openStream!!))
-                            imageView.background = page.bg
+                            background = page.bg
                         }
                         // if the user switches to automatic when pages are already cached, the bg needs to be loaded
                         else {
@@ -280,15 +280,15 @@ class PagerPageHolder(
                     } else {
                         val imageView = initSubsamplingImageView()
                         imageView.setImage(ImageSource.inputStream(openStream!!))
-                        imageView.background = ColorDrawable(ThemeUtil.readerBackgroundColor(viewer.config.readerTheme))
+                        background = ColorDrawable(ThemeUtil.readerBackgroundColor(viewer.config.readerTheme))
                     }
                 } else {
                     val imageView = initImageView()
                     imageView.setImage(openStream!!)
                     if (viewer.config.readerTheme >= 2 && page.bg != null) {
-                        imageView.background = page.bg
+                        background = page.bg
                     } else if (viewer.config.readerTheme < 2) {
-                        imageView.background =
+                        background =
                             ColorDrawable(ThemeUtil.readerBackgroundColor(viewer.config.readerTheme))
                     }
                 }

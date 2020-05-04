@@ -35,8 +35,8 @@ android {
         minSdkVersion(23)
         targetSdkVersion(29)
         applicationId = "eu.kanade.tachiyomi"
-        versionCode = 62
-        versionName = "1.0.1"
+        versionCode = 63
+        versionName = "1.0.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
 
@@ -134,8 +134,13 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttpVersion")
     implementation("com.squareup.okio:okio:2.6.0")
 
+    //Chucker
+    val chuckerVersion = "3.2.0"
+    debugImplementation ("com.github.ChuckerTeam.Chucker:library:$chuckerVersion")
+    releaseImplementation ("com.github.ChuckerTeam.Chucker:library-no-op:$chuckerVersion")
+
     // REST
-    val retrofitVersion = "2.7.1"
+    val retrofitVersion = "2.7.2"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 

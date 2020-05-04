@@ -131,7 +131,8 @@ class SourceController : NucleusController<SourcePresenter>(),
         ext_bottom_sheet.sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior
         .BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, progress: Float) {
-                shadow2?.alpha = (1 - max(0f, progress)) * 0.25f
+                val recycler = recycler ?: return
+                shadow2.alpha = (1 - max(0f, progress)) * 0.25f
                 activity?.appbar?.elevation = max(progress * 15f,
                     if (recycler.canScrollVertically(-1)) 15f else 0f)
 
@@ -146,6 +147,7 @@ class SourceController : NucleusController<SourcePresenter>(),
             }
 
             override fun onStateChanged(p0: View, state: Int) {
+                val ext_bottom_sheet = ext_bottom_sheet ?: return
                 if (state == BottomSheetBehavior.STATE_EXPANDED) activity?.appbar?.y = 0f
                 if (state == BottomSheetBehavior.STATE_EXPANDED ||
                     state == BottomSheetBehavior.STATE_COLLAPSED) {

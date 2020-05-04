@@ -336,7 +336,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         chapters_bottom_sheet.sheetBehavior?.isHideable = !menuVisible
         if (!menuVisible)
             chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
-        reader_menu.doOnApplyWindowInsets { v, insets, _ ->
+        reader_layout.doOnApplyWindowInsets { v, insets, _ ->
             sheetManageNavColor = when {
                 insets.isBottomTappable() -> {
                     window.navigationBarColor = Color.TRANSPARENT
@@ -372,7 +372,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         if (visible) {
             snackbar?.dismiss()
             systemUi?.show()
-            reader_menu.visibility = View.VISIBLE
+            toolbar.visibility = View.VISIBLE
 
             if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
                 chapters_bottom_sheet.sheetBehavior?.isHideable = false
@@ -399,14 +399,14 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.exit_to_top)
                 toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
                     override fun onAnimationEnd(animation: Animation) {
-                        reader_menu.visibility = View.GONE
+                        toolbar.visibility = View.GONE
                     }
                 })
                 appbar.startAnimation(toolbarAnimation)
                 BottomSheetBehavior.from(chapters_bottom_sheet).isHideable = true
                 BottomSheetBehavior.from(chapters_bottom_sheet).state = BottomSheetBehavior.STATE_HIDDEN
             } else {
-                reader_menu.visibility = View.GONE
+                toolbar.visibility = View.GONE
             }
         }
         menuStickyVisible = false
@@ -661,7 +661,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                     }
                 }
                 if (sheetManageNavColor) window.navigationBarColor = getResourceColor(R.attr.colorSecondary)
-                reader_menu.visibility = View.VISIBLE
+                toolbar.visibility = View.VISIBLE
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.enter_from_top)
                 toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
                     override fun onAnimationStart(animation: Animation) {

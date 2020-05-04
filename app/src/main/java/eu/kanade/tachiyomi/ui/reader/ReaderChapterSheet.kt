@@ -73,8 +73,10 @@ class ReaderChapterSheet @JvmOverloads constructor(context: Context, attrs: Attr
                 backgroundTintList =
                     ColorStateList.valueOf(lerpColor(primary, fullPrimary, trueProgress))
                 chapter_recycler.alpha = trueProgress
-                if (activity.sheetManageNavColor) activity.window.navigationBarColor =
-                    lerpColor(ColorUtils.setAlphaComponent(primary, 0), primary, trueProgress)
+                if (activity.sheetManageNavColor && progress > 0f) {
+                    activity.window.navigationBarColor =
+                        lerpColor(ColorUtils.setAlphaComponent(primary, 0), primary, trueProgress)
+                }
             }
 
             override fun onStateChanged(p0: View, state: Int) {

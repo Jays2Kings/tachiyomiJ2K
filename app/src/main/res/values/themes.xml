@@ -8,6 +8,7 @@
 
     <style name="Theme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="colorPrimary">@color/app_color_primary</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>

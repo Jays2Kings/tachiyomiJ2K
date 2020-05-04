@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="v1.0.2" changeDate="">
+        <changelogtext>Here at J2K, we are listening to our customers. Except those who want tabs
+            back</changelogtext>
+        <changelogtext>Switch categories by tapping on the library title, with
+            option to not show all categories at once</changelogtext>
+        <changelogtext>More grid size options</changelogtext>
+        <changelogtext>Compact List returns</changelogtext>
+        <changelogtext>Search by title and author via tapping returns</changelogtext>
+        <changelogtext>More Bug fixes, including fixing blank pages in reader</changelogtext>
+    </changelogversion>
+
+    <changelogversion versionName="v1.0.1" changeDate="">
+        <changelogtext>Various Bug fixes</changelogtext>
+    </changelogversion>
+
     <changelogversion versionName="v1.0.0" changeDate="">
         <changelogtext>Full MD2 overhaul, check the GitHub release for full
             changelog</changelogtext>

@@ -12,6 +12,7 @@ import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.BaseViewer
+import eu.kanade.tachiyomi.util.view.visible
 import rx.subscriptions.CompositeSubscription
 import timber.log.Timber
 import kotlin.math.max
@@ -126,10 +127,10 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
 
     private fun checkAllowPreload(page: ReaderPage?): Boolean {
         // Page is transition page - preload allowed
-        page == null ?: return true
+        page ?: return true
 
         // Initial opening - preload allowed
-        currentPage == null ?: return true
+        currentPage ?: return true
 
         val nextItem = adapter.items.getOrNull(adapter.items.count() - 1)
         val nextChapter = (nextItem as? ChapterTransition.Next)?.to ?: (nextItem as? ReaderPage)?.chapter
@@ -137,7 +138,7 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
         // Allow preload for
         // 1. Going between pages of same chapter
         // 2. Next chapter page
-        return when (page!!.chapter) {
+        return when (page.chapter) {
             (currentPage as? ReaderPage)?.chapter -> true
             nextChapter -> true
             else -> false
@@ -156,7 +157,6 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
      */
     override fun destroy() {
         super.destroy()
-        config.unsubscribe()
         subscriptions.unsubscribe()
     }
 
@@ -165,12 +165,12 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
      * activity of the change and requests the preload of the next chapter if this is the last page.
      */
     private fun onPageSelected(page: ReaderPage, allowPreload: Boolean) {
-        val pages = page.chapter.pages!! // Won't be null because it's the loaded chapter
-        Timber.d("onPageSelected: ${page.number}/${pages.size}")
         activity.onPageSelected(page)
 
-        // Preload next chapter once we're within the last 3 pages of the current chapter
-        val inPreloadRange = pages.size - page.number < 3
+        val pages = page.chapter.pages ?: return
+        Timber.d("onReaderPageSelected: ${page.number}/${pages.size}")
+        // Preload next chapter once we're within the last 5 pages of the current chapter
+        val inPreloadRange = pages.size - page.number < 5
         if (inPreloadRange && allowPreload && page.chapter == adapter.currentChapter) {
             Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
             val nextItem = adapter.items.getOrNull(adapter.items.size - 1)
@@ -210,7 +210,7 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
             Timber.d("Recycler first layout")
             val pages = chapters.currChapter.pages ?: return
             moveToPage(pages[chapters.currChapter.requestedPage])
-            recycler.visibility = View.VISIBLE
+            recycler.visible()
         }
     }
 

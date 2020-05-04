@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/reader_layout"
@@ -7,6 +7,7 @@
     android:gravity="center">
 
     <FrameLayout
+        android:id="@+id/reader_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -34,13 +35,11 @@
 
     </FrameLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/reader_menu"
+    <eu.kanade.tachiyomi.ui.reader.ReaderColorFilterView
+        android:id="@+id/color_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:visibility="invisible"
-        tools:visibility="visible">
+        android:visibility="gone" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
@@ -61,9 +60,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <include layout="@layout/reader_chapters_sheet" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include layout="@layout/reader_chapters_sheet"/>
 
     <View
         android:id="@+id/brightness_overlay"
@@ -71,10 +68,4 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-    <eu.kanade.tachiyomi.ui.reader.ReaderColorFilterView
-        android:id="@+id/color_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
-
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
