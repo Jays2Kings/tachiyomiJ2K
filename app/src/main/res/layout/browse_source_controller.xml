@@ -7,7 +7,7 @@
     android:id="@+id/source_layout"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -22,7 +22,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:visibility="gone"/>
 
-    </LinearLayout>
+    </FrameLayout>
     
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"

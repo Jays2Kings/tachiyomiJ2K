@@ -159,15 +159,14 @@ class LibraryHeaderItem(
 
             val isAscending = category.isAscending()
             val sortingMode = category.sortingMode()
-            val sortDrawable = if (category.isHidden) R.drawable.ic_expand_more_24dp
-            else when {
+            val sortDrawable = when {
                 sortingMode == LibrarySort.DRAG_AND_DROP || sortingMode == null -> R.drawable.ic_sort_white_24dp
                 if (sortingMode == LibrarySort.DATE_ADDED || sortingMode == LibrarySort.LATEST_CHAPTER || sortingMode == LibrarySort.LAST_READ) !isAscending else isAscending -> R.drawable.ic_arrow_down_white_24dp
                 else -> R.drawable.ic_arrow_up_white_24dp
             }
 
             sortText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, sortDrawable, 0)
-            sortText.setText(if (category.isHidden) R.string.collasped else category.sortRes())
+            sortText.setText(category.sortRes())
             expandImage.setImageResource(
                 if (category.isHidden) R.drawable.ic_expand_more_24dp
                 else R.drawable.ic_expand_less_24dp)
@@ -185,16 +184,16 @@ class LibraryHeaderItem(
                     updateButton.gone()
                 }
                 LibraryUpdateService.categoryInQueue(category.id) -> {
-                    expandImage.visibleIf(adapter.headerItems.size > 1)
+                    expandImage.visibleIf(!adapter.isSingleCategory)
                     checkboxImage.gone()
                     catProgress.visible()
                     updateButton.invisible()
                 }
                 else -> {
-                    expandImage.visibleIf(adapter.headerItems.size > 1)
+                    expandImage.visibleIf(!adapter.isSingleCategory)
                     catProgress.gone()
                     checkboxImage.gone()
-                    updateButton.visInvisIf(category.id ?: 0 > -1 && adapter.headerItems.size > 1)
+                    updateButton.visInvisIf(category.id ?: 0 > -1 && !adapter.isSingleCategory)
                 }
             }
         }
@@ -210,10 +209,6 @@ class LibraryHeaderItem(
         private fun showCatSortOptions() {
             val category =
                 (adapter.getItem(adapterPosition) as? LibraryHeaderItem)?.category ?: return
-            if (category.isHidden) {
-                adapter.libraryListener.toggleCategoryVisibility(adapterPosition)
-                return
-            }
             // Create a PopupMenu, giving it the clicked view for an anchor
             val popup = PopupMenu(itemView.context, sortText)
 

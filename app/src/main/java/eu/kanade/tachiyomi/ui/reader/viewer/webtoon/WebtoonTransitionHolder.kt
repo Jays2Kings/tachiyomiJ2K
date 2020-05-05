@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.reader.viewer.webtoon
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -38,6 +39,7 @@ class WebtoonTransitionHolder(
      */
     private var textView = TextView(context).apply {
         textSize = 17.5F
+        setTextColor(Color.WHITE)
         wrapContent()
     }
 

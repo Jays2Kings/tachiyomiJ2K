@@ -1,12 +1,15 @@
 package eu.kanade.tachiyomi.util.view
 
-import android.R
 import android.animation.ValueAnimator
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Build
+import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.WindowInsets
 import android.view.inputmethod.InputMethodManager
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.math.MathUtils
@@ -17,9 +20,11 @@ import com.bluelinelabs.conductor.ControllerChangeHandler
 import com.bluelinelabs.conductor.ControllerChangeType
 import com.bluelinelabs.conductor.RouterTransaction
 import com.bluelinelabs.conductor.changehandler.FadeChangeHandler
+import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.ui.main.BottomSheetController
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.util.system.dpToPx
+import eu.kanade.tachiyomi.util.system.getResourceColor
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlin.math.abs
 import kotlin.random.Random
@@ -52,6 +57,7 @@ fun Controller.setOnQueryTextChangeListener(
     })
 }
 
+@RequiresApi(Build.VERSION_CODES.N_MR1)
 fun Controller.scrollViewWith(
     recycler: RecyclerView,
     padBottom: Boolean = false,
@@ -77,7 +83,7 @@ fun Controller.scrollViewWith(
     val randomTag = Random.nextLong()
     var headerHeight = 0
     var lastY = 0f
-
+    var fakeToolbarView: View? = null
     recycler.doOnApplyWindowInsets { view, insets, _ ->
         headerHeight = insets.systemWindowInsetTop + appBarHeight
         if (!customPadding) view.updatePaddingRelative(
@@ -96,7 +102,7 @@ fun Controller.scrollViewWith(
         elevate = el
         if (liftOnScroll != null) {
             liftOnScroll.invoke(el)
-        } else {
+        } else if (recycler.translationY == 0f) {
             elevationAnim?.cancel()
             elevationAnim = ValueAnimator.ofFloat(
                 activity!!.appbar.elevation, if (el) 15f else 0f
@@ -116,15 +122,10 @@ fun Controller.scrollViewWith(
             super.onChangeStart(controller, changeHandler, changeType)
             if (changeType.isEnter) {
                 elevateFunc(elevate)
-                if (!customPadding && changeType == ControllerChangeType.POP_ENTER &&
-                    recycler.marginTop > 0) {
-                    recycler.updatePaddingRelative(
-                        top = headerHeight
-                    )
-                    recycler.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                        topMargin = 0
-                    }
-                    recycler.scrollBy(0, -headerHeight)
+                if (fakeToolbarView?.parent != null) {
+                    val parent = recycler.parent as ViewGroup
+                    parent.removeView(fakeToolbarView)
+                    fakeToolbarView = null
                 }
                 lastY = 0f
                 activity!!.toolbar.tag = randomTag
@@ -136,20 +137,21 @@ fun Controller.scrollViewWith(
                     }
                 }
             } else {
-                if (!customPadding && lastY == 0f &&
-                    router.backstack.lastOrNull()?.controller() is MangaDetailsController
-                    ) {
-                    recycler.updatePaddingRelative(
-                        top = 0
-                    )
-                    recycler.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                        topMargin = headerHeight
-                    }
-                    recycler.scrollBy(0, headerHeight)
+                if (!customPadding && lastY == 0f && router.backstack.lastOrNull()
+                        ?.controller() is MangaDetailsController
+                ) {
+                    val v = View(activity)
+                    fakeToolbarView = v
+                    val parent = recycler.parent as ViewGroup
+                    parent.addView(v, parent.indexOfChild(recycler) + 1)
+                    val params = fakeToolbarView?.layoutParams
+                    params?.height = recycler.paddingTop
+                    params?.width = MATCH_PARENT
+                    v.setBackgroundColor(v.context.getResourceColor(R.attr.colorSecondary))
+                    v.layoutParams = params
                 }
                 elevationAnim?.cancel()
-                if (activity!!.toolbar.tag == randomTag)
-                    activity!!.toolbar.setOnClickListener(null)
+                if (activity!!.toolbar.tag == randomTag) activity!!.toolbar.setOnClickListener(null)
             }
         }
     })
@@ -158,11 +160,13 @@ fun Controller.scrollViewWith(
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
             if (router?.backstack?.lastOrNull()
-                    ?.controller() == this@scrollViewWith && statusBarHeight > -1 && activity != null && activity!!.appbar.height > 0
+                    ?.controller() == this@scrollViewWith && statusBarHeight > -1 &&
+                activity != null && activity!!.appbar.height > 0 &&
+                recycler.translationY == 0f
             ) {
                 if (!recycler.canScrollVertically(-1)) {
                     val shortAnimationDuration = resources?.getInteger(
-                        R.integer.config_shortAnimTime
+                        android.R.integer.config_shortAnimTime
                     ) ?: 0
                     activity!!.appbar.animate().y(0f).setDuration(shortAnimationDuration.toLong())
                         .start()
@@ -185,11 +189,13 @@ fun Controller.scrollViewWith(
             super.onScrollStateChanged(recyclerView, newState)
             if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                 if (router?.backstack?.lastOrNull()
-                        ?.controller() == this@scrollViewWith && statusBarHeight > -1 && activity != null && activity!!.appbar.height > 0
+                        ?.controller() == this@scrollViewWith && statusBarHeight > -1 &&
+                    activity != null && activity!!.appbar.height > 0 &&
+                    recycler.translationY == 0f
                 ) {
                     val halfWay = abs((-activity!!.appbar.height.toFloat()) / 2)
                     val shortAnimationDuration = resources?.getInteger(
-                        R.integer.config_shortAnimTime
+                        android.R.integer.config_shortAnimTime
                     ) ?: 0
                     val closerToTop = abs(activity!!.appbar.y) - halfWay > 0
                     val atTop = !recycler.canScrollVertically(-1)

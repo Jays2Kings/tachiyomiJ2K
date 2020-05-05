@@ -60,7 +60,7 @@ class LibraryPresenter(
 
     /** List of all manga to update the */
     var libraryItems: List<LibraryItem> = emptyList()
-    private var sectionedLibraryItems: Map<Int, List<LibraryItem>> = emptyMap()
+    private var sectionedLibraryItems: MutableMap<Int, List<LibraryItem>> = mutableMapOf()
     var currentCategory = -1
         private set
     private var allLibraryItems: List<LibraryItem> = emptyList()
@@ -117,7 +117,7 @@ class LibraryPresenter(
         val items = libraryItems
         val show = showAllCategories || preferences.hideCategories().getOrDefault()
         if (!show) {
-            sectionedLibraryItems = items.groupBy { it.manga.category }
+            sectionedLibraryItems = items.groupBy { it.manga.category }.toMutableMap()
             if (currentCategory == -1) currentCategory = categories.find {
                 it.order == preferences.lastUsedCategory().getOrDefault()
             }?.id ?: 0
@@ -133,7 +133,7 @@ class LibraryPresenter(
         libraryItems = items
         val show = showAllCategories || preferences.hideCategories().getOrDefault()
         if (!show) {
-            sectionedLibraryItems = items.groupBy { it.manga.category }
+            sectionedLibraryItems = items.groupBy { it.manga.category }.toMutableMap()
             if (currentCategory == -1) currentCategory = categories.find {
                 it.order == preferences.lastUsedCategory().getOrDefault()
             }?.id ?: 0
@@ -166,72 +166,89 @@ class LibraryPresenter(
         val filterTrackers = FilterBottomSheet.FILTER_TRACKER
 
         return items.filter f@{ item ->
-            if (item.manga.isBlank()) {
+            if (item.manga.status == -1) {
+                return@f sectionedLibraryItems[item.manga.category]?.any {
+                    matchesFilters(it, filterDownloaded, filterUnread, filterCompleted,
+                        filterTracked, filterMangaType, filterTrackers)
+                } ?: false
+            } else if (item.manga.isBlank()) {
                 return@f filterDownloaded == 0 && filterUnread == 0 && filterCompleted == 0 &&
                     filterTracked == 0 && filterMangaType == 0
             }
-
-            if (filterUnread == STATE_INCLUDE && item.manga.unread == 0) return@f false
-            if (filterUnread == STATE_EXCLUDE && item.manga.unread > 0) return@f false
-
-            // Filter for unread chapters
-            if (filterUnread == 3 && (item.manga.unread == 0 || db.getChapters(item.manga)
-                    .executeAsBlocking().size != item.manga.unread)
-            ) return@f false
-            if (filterUnread == 4 && (item.manga.unread == 0 || db.getChapters(item.manga)
-                    .executeAsBlocking().size == item.manga.unread)
-            ) return@f false
-
-            if (filterMangaType > 0) {
-                if (if (filterMangaType == Manga.TYPE_MANHWA) (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
-                    else filterMangaType != item.manga.mangaType()
-                ) return@f false
-            }
-
-            // Filter for completed status of manga
-            if (filterCompleted == STATE_INCLUDE && item.manga.status != SManga.COMPLETED) return@f false
-            if (filterCompleted == STATE_EXCLUDE && item.manga.status == SManga.COMPLETED) return@f false
-
-            // Filter for tracked (or per tracked service)
-            if (filterTracked != STATE_IGNORE) {
-                val tracks = db.getTracks(item.manga).executeAsBlocking()
-
-                val hasTrack = loggedServices.any { service ->
-                    tracks.any { it.sync_id == service.id }
-                }
-                val service = if (filterTrackers.isNotEmpty()) loggedServices.find {
-                    it.name == filterTrackers
-                } else null
-                if (filterTracked == STATE_INCLUDE) {
-                    if (!hasTrack) return@f false
-                    if (filterTrackers.isNotEmpty()) {
-                        if (service != null) {
-                            val hasServiceTrack = tracks.any { it.sync_id == service.id }
-                            if (!hasServiceTrack) return@f false
-                            if (filterTracked == STATE_EXCLUDE && hasServiceTrack) return@f false
-                        }
-                    }
-                } else if (filterTracked == STATE_EXCLUDE) {
-                    if (hasTrack && filterTrackers.isEmpty()) return@f false
-                    if (filterTrackers.isNotEmpty()) {
-                        if (service != null) {
-                            val hasServiceTrack = tracks.any { it.sync_id == service.id }
-                            if (hasServiceTrack) return@f false
-                        }
-                    }
-                }
-            }
-            // Filter for downloaded manga
-            if (filterDownloaded != STATE_IGNORE) {
-                val isDownloaded = when {
-                    item.manga.source == LocalSource.ID -> true
-                    item.downloadCount != -1 -> item.downloadCount > 0
-                    else -> downloadManager.getDownloadCount(item.manga) > 0
-                }
-                return@f if (filterDownloaded == STATE_INCLUDE) isDownloaded else !isDownloaded
-            }
-            true
+            matchesFilters(item, filterDownloaded, filterUnread, filterCompleted, filterTracked,
+                filterMangaType, filterTrackers)
         }
+    }
+
+    private fun matchesFilters(
+        item: LibraryItem,
+        filterDownloaded: Int,
+        filterUnread: Int,
+        filterCompleted: Int,
+        filterTracked: Int,
+        filterMangaType: Int,
+        filterTrackers: String
+    ): Boolean {
+        if (filterUnread == STATE_INCLUDE && item.manga.unread == 0) return false
+        if (filterUnread == STATE_EXCLUDE && item.manga.unread > 0) return false
+
+        // Filter for unread chapters
+        if (filterUnread == 3 && (item.manga.unread == 0 || db.getChapters(item.manga)
+                .executeAsBlocking().size != item.manga.unread)
+        ) return false
+        if (filterUnread == 4 && (item.manga.unread == 0 || db.getChapters(item.manga)
+                .executeAsBlocking().size == item.manga.unread)
+        ) return false
+
+        if (filterMangaType > 0) {
+            if (if (filterMangaType == Manga.TYPE_MANHWA) (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
+                else filterMangaType != item.manga.mangaType()
+            ) return false
+        }
+
+        // Filter for completed status of manga
+        if (filterCompleted == STATE_INCLUDE && item.manga.status != SManga.COMPLETED) return false
+        if (filterCompleted == STATE_EXCLUDE && item.manga.status == SManga.COMPLETED) return false
+
+        // Filter for tracked (or per tracked service)
+        if (filterTracked != STATE_IGNORE) {
+            val tracks = db.getTracks(item.manga).executeAsBlocking()
+
+            val hasTrack = loggedServices.any { service ->
+                tracks.any { it.sync_id == service.id }
+            }
+            val service = if (filterTrackers.isNotEmpty()) loggedServices.find {
+                it.name == filterTrackers
+            } else null
+            if (filterTracked == STATE_INCLUDE) {
+                if (!hasTrack) return false
+                if (filterTrackers.isNotEmpty()) {
+                    if (service != null) {
+                        val hasServiceTrack = tracks.any { it.sync_id == service.id }
+                        if (!hasServiceTrack) return false
+                        if (filterTracked == STATE_EXCLUDE && hasServiceTrack) return false
+                    }
+                }
+            } else if (filterTracked == STATE_EXCLUDE) {
+                if (hasTrack && filterTrackers.isEmpty()) return false
+                if (filterTrackers.isNotEmpty()) {
+                    if (service != null) {
+                        val hasServiceTrack = tracks.any { it.sync_id == service.id }
+                        if (hasServiceTrack) return false
+                    }
+                }
+            }
+        }
+        // Filter for downloaded manga
+        if (filterDownloaded != STATE_IGNORE) {
+            val isDownloaded = when {
+                item.manga.source == LocalSource.ID -> true
+                item.downloadCount != -1 -> item.downloadCount > 0
+                else -> downloadManager.getDownloadCount(item.manga) > 0
+            }
+            return if (filterDownloaded == STATE_INCLUDE) isDownloaded else !isDownloaded
+        }
+        return true
     }
 
     /**
@@ -487,6 +504,7 @@ class LibraryPresenter(
                     val mergedTitle = mangaToRemove.joinToString("-") {
                         it.manga.title + "-" + it.manga.author
                     }
+                    sectionedLibraryItems[catId] = mangaToRemove
                     items.removeAll(mangaToRemove)
                     val headerItem = headerItems[catId]
                     if (headerItem != null) items.add(

@@ -36,8 +36,7 @@ import kotlinx.android.synthetic.main.manga_header_item.*
 class MangaHeaderHolder(
     private val view: View,
     private val adapter: MangaDetailsAdapter,
-    startExpanded: Boolean,
-    isTablet: Boolean = false
+    startExpanded: Boolean
 ) : BaseFlexibleViewHolder(view, adapter) {
 
     private var showReadingButton = true
@@ -97,7 +96,6 @@ class MangaHeaderHolder(
             track_button.setOnClickListener { adapter.delegate.showTrackingSheet() }
             if (startExpanded) expandDesc()
             else collapseDesc()
-            if (isTablet) chapter_layout.gone()
         } else {
             filter_button.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                 marginEnd = 12.dpToPx
@@ -146,10 +144,10 @@ class MangaHeaderHolder(
         )
         else manga_genres_tags.setTags(emptyList())
 
-        if (manga.author == manga.artist || manga.artist.isNullOrBlank()) manga_author.text =
-            manga.author?.trim()
-        else {
-            manga_author.text = "${manga.author?.trim()}, ${manga.artist}"
+        if (manga.author == manga.artist || manga.artist.isNullOrBlank()) {
+            manga_author.text = manga.author?.trim()
+        } else {
+            manga_author.text = listOfNotNull(manga.author?.trim(), manga.artist?.trim()).joinToString(", ")
         }
         manga_summary.text =
             if (manga.description.isNullOrBlank()) itemView.context.getString(R.string.no_description)

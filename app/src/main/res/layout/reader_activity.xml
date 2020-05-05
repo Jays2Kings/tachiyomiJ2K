@@ -41,26 +41,27 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appbar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSecondary"
+        android:stateListAnimator="@null"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorSecondary"
-            android:stateListAnimator="@null"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/transparent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/reader_chapters_sheet"/>
+    <include layout="@layout/reader_chapters_sheet" />
 
     <View
         android:id="@+id/brightness_overlay"

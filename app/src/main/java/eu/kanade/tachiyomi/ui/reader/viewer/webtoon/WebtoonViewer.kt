@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.reader.viewer.webtoon
 
+import android.graphics.Color
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -64,6 +65,7 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
     val subscriptions = CompositeSubscription()
 
     init {
+        recycler.setBackgroundColor(Color.BLACK)
         recycler.visibility = View.GONE // Don't let the recycler layout yet
         recycler.layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT)
         recycler.itemAnimator = null

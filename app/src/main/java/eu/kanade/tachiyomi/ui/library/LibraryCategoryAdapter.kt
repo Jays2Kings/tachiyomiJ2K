@@ -34,6 +34,9 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
 
     val libraryListener: LibraryListener = controller
 
+    val isSingleCategory
+        get() = controller.singleCategory || !controller.presenter.showAllCategories
+
     /**
      * Sets a list of manga in the adapter.
      *
