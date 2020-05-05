@@ -32,7 +32,7 @@ Plus some new features in this fork such as:
 * Individual Category sorting
 * Library redesigned as a single list view
 * Read history goes all the way back to the beginning of time
-* Restoring backups in the background (taken from [Neko](https://github.com/CarlosEsco/Neko)
+* Restoring backups in the background (taken from [Neko](https://github.com/CarlosEsco/Neko))
 * Expanding manga thumbnails
 * A lot more Material Design 2 additions
 
