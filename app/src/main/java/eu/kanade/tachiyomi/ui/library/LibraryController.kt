@@ -236,15 +236,12 @@ class LibraryController(
         if (!::presenter.isInitialized) presenter = LibraryPresenter(this)
         fast_scroller.setStartTranslationX(!alwaysShowScroller)
         fast_scroller.setBackground(!alwaysShowScroller)
-
         updateScrollBar()
-
         show_all.isChecked = preferences.showAllCategories().get()
         show_all.setOnCheckedChangeListener { _, isChecked ->
             preferences.showAllCategories().set(isChecked)
             presenter.getLibrary()
         }
-
         adapter = LibraryCategoryAdapter(this)
         adapter.expandItemsAtStartUp()
         adapter.isRecursiveCollapse = true
