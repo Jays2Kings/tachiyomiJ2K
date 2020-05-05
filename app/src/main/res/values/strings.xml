@@ -178,6 +178,7 @@
     <string name="auto_refresh_covers_summary">Refresh covers in library as well
         when updating library</string>
     <string name="show_hide_scrollbar">Show scrollbar</string>
+    <string name="edit_text_show_hide_scrollbar">Show library fast scrollbar :</string>
 
     <!-- Recents -->
     <string name="recents">Recents</string>

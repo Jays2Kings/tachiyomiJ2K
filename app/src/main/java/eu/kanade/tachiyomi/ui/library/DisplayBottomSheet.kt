@@ -17,6 +17,7 @@ import eu.kanade.tachiyomi.util.view.setBottomEdge
 import eu.kanade.tachiyomi.util.view.setEdgeToEdge
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.display_bottom_sheet.*
+import kotlinx.android.synthetic.main.library_list_controller.*
 import uy.kohesive.injekt.injectLazy
 
 class DisplayBottomSheet(private val controller: LibraryController) : BottomSheetDialog
@@ -72,6 +73,32 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
                     settings_scroll_view.paddingTop + settings_scroll_view.paddingBottom
             close_button.visibleIf(isScrollable)
         }
+        updateRadioGroupScrollBar()
+        addCheckOnChangeLisctenerToScrollBar()
+    }
+
+    private fun addCheckOnChangeLisctenerToScrollBar() {
+        Show_hide_auto_scrollbar.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { radioGroup, i ->
+            if (i == R.id.radioButton_never) {
+                preferences.showHideScrollBar().set(0)
+            } else if (i == R.id.radioButton2_auto) {
+                preferences.showHideScrollBar().set(1)
+            } else if (i == R.id.radioButton3_always) {
+                preferences.showHideScrollBar().set(2)
+            }
+            controller.updateScrollBar()
+        })
+    }
+
+    private fun updateRadioGroupScrollBar() {
+        val prefScrollBar = preferences.showHideScrollBar().getOrDefault().toInt()
+        if (prefScrollBar == 0) {
+            radioButton_never.isChecked = true
+        } else if (prefScrollBar == 1) {
+            radioButton2_auto.isChecked = true
+        } else if (prefScrollBar == 2) {
+            radioButton3_always.isChecked = true
+        }
     }
 
     private fun initGeneralPreferences() {
@@ -83,9 +110,10 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
         uniform_grid.bindToPreference(preferences.uniformGrid()) {
             controller.reattachAdapter()
         }
-        autohide_seeker.bindToPreference(preferences.alwaysShowSeeker()) {
+        /*autohide_seeker.bindToPreference(preferences.alwaysShowSeeker()) {
             controller.updateShowScrollbar(autohide_seeker.isChecked)
         }
+         */
         grid_size_toggle_group.bindToPreference(preferences.gridSize()) {
             controller.reattachAdapter()
         }

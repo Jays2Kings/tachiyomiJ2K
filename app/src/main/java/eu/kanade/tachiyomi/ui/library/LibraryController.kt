@@ -158,13 +158,6 @@ class LibraryController(
     private var scrollListener = object : RecyclerView.OnScrollListener() {
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
-            if (!preferences.showHideScrollBar().getOrDefault()) {
-                fast_scroller.visibility = View.INVISIBLE
-                text_view_m.visibility = View.INVISIBLE
-            } else {
-                fast_scroller.visibility = View.VISIBLE
-                text_view_m.visibility = View.VISIBLE
-            }
             val notAtTop = recycler.canScrollVertically(-1)
             if (notAtTop != elevate) elevateFunc(notAtTop)
             val order = getCategoryOrder()
@@ -244,13 +237,7 @@ class LibraryController(
         fast_scroller.setStartTranslationX(!alwaysShowScroller)
         fast_scroller.setBackground(!alwaysShowScroller)
 
-        if (!preferences.showHideScrollBar().getOrDefault()) {
-            fast_scroller.visibility = View.INVISIBLE
-            text_view_m.visibility = View.INVISIBLE
-        } else {
-            fast_scroller.visibility = View.VISIBLE
-            text_view_m.visibility = View.VISIBLE
-        }
+        updateScrollBar()
 
         show_all.isChecked = preferences.showAllCategories().get()
         show_all.setOnCheckedChangeListener { _, isChecked ->
@@ -419,6 +406,21 @@ class LibraryController(
         } else {
             recycler_layout.alpha = 0f
             presenter.getLibrary()
+        }
+    }
+
+    fun updateScrollBar() {
+        /* values : 0 -> never show , 1 -> auto ,  2 -> always */
+        val prefScrollBar = preferences.showHideScrollBar().getOrDefault().toInt()
+        if (prefScrollBar == 0) {
+            fast_scroller.visibility = View.INVISIBLE
+            text_view_m.visibility = View.INVISIBLE
+        } else if (prefScrollBar == 1) {
+            fast_scroller.visibility = View.VISIBLE
+            text_view_m.visibility = View.VISIBLE
+            updateShowScrollbar(false)
+        } else if (prefScrollBar == 2) {
+            updateShowScrollbar(true)
         }
     }
 
