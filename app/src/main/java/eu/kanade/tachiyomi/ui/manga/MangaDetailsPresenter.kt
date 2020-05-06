@@ -372,7 +372,7 @@ class MangaDetailsPresenter(
 
     /** Refresh Manga Info and Chapter List (not tracking) */
     fun refreshAll() {
-        if (!controller.isOnline()) return
+        if (controller.isNotOnline()) return
         scope.launch {
             isLoading = true
             var mangaError: java.lang.Exception? = null
@@ -765,7 +765,7 @@ class MangaDetailsPresenter(
     }
 
     fun refreshTrackers(showOfflineSnack: Boolean = false) {
-        if (controller.isOnline(showOfflineSnack)) {
+        if (controller.isNotOnline(showOfflineSnack)) {
             scope.launch {
                 trackList.filter { it.track != null }.map { item ->
                     withContext(Dispatchers.IO) {
@@ -787,7 +787,7 @@ class MangaDetailsPresenter(
     }
 
     fun trackSearch(query: String, service: TrackService) {
-        if (controller.isOnline()) {
+        if (controller.isNotOnline()) {
             scope.launch(Dispatchers.IO) {
                 val results = try {
                     service.search(query)

@@ -516,12 +516,12 @@ class MangaDetailsController : BaseController,
     }
     //endregion
 
-    fun isOnline(showSnackbar: Boolean = true): Boolean {
+    fun isNotOnline(showSnackbar: Boolean = true): Boolean {
         if (activity == null || !activity!!.isOnline()) {
             if (showSnackbar) view?.snack(R.string.no_network_connection)
-            return false
+            return true
         }
-        return true
+        return false
     }
 
     fun showError(message: String) {
@@ -608,7 +608,8 @@ class MangaDetailsController : BaseController,
     fun refreshAdapter() = adapter?.notifyDataSetChanged()
 
     override fun onItemClick(view: View?, position: Int): Boolean {
-        val chapter = (adapter?.getItem(position) as? ChapterItem)?.chapter ?: return false
+        val chapterItem = (adapter?.getItem(position) as? ChapterItem) ?: return false
+        val chapter = chapterItem.chapter
         if (actionMode != null) {
             if (startingDLChapterPos == null) {
                 adapter?.addSelection(position)
@@ -637,7 +638,9 @@ class MangaDetailsController : BaseController,
             }
             return false
         }
-        openChapter(chapter)
+        if (chapterItem.isDownloaded || (!chapterItem.isDownloaded && !isNotOnline())) {
+            openChapter(chapter)
+        }
         return false
     }
 
@@ -839,11 +842,12 @@ class MangaDetailsController : BaseController,
             R.id.action_open_in_web_view -> openInWebView()
             R.id.action_refresh_tracking -> presenter.refreshTrackers(true)
             R.id.action_migrate ->
+                if (!isNotOnline()) {
                 PreMigrationController.navigateToMigration(
                     presenter.preferences.skipPreMigration().getOrDefault(),
                     router,
                     listOf(manga!!.id!!)
-                )
+                ) }
             R.id.action_mark_all_as_read -> {
                 MaterialDialog(view!!.context).message(R.string.mark_all_chapters_as_read)
                     .positiveButton(R.string.mark_as_read) {
@@ -901,7 +905,7 @@ class MangaDetailsController : BaseController,
     }
 
     override fun openInWebView() {
-        if (!isOnline()) return
+        if (isNotOnline()) return
         val source = presenter.source as? HttpSource ?: return
         val url = try {
             source.mangaDetailsRequest(presenter.manga).url.toString()
@@ -1020,7 +1024,9 @@ class MangaDetailsController : BaseController,
         }
         val item = presenter.getNextUnreadChapter()
         if (item != null) {
-            openChapter(item.chapter)
+            if (item.isDownloaded || (!item.isDownloaded && !isNotOnline())) {
+                openChapter(item.chapter)
+            }
         } else if (snack == null || snack?.getText() != view?.context?.getString(
                 R.string.next_chapter_not_found
             )
@@ -1062,6 +1068,7 @@ class MangaDetailsController : BaseController,
     }
 
     override fun globalSearch(text: String) {
+        if (isNotOnline()) return
         router.pushController(SourceSearchController(text).withFadeTransaction())
     }
 

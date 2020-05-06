@@ -109,7 +109,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
 
         override fun onLogoClick(position: Int) {
         val track = adapter?.getItem(position)?.track ?: return
-        if (!controller.isOnline()) {
+        if (controller.isNotOnline()) {
             sheetBehavior.hide()
             return
         }
@@ -124,7 +124,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
 
     override fun onSetClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
-        if (!controller.isOnline()) {
+        if (controller.isNotOnline()) {
             sheetBehavior.hide()
             return
         }
@@ -138,7 +138,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun onStatusClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
-        if (!controller.isOnline()) {
+        if (controller.isNotOnline()) {
             sheetBehavior.hide()
             return
         }
@@ -149,7 +149,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun onChaptersClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
-        if (!controller.isOnline()) {
+        if (controller.isNotOnline()) {
             sheetBehavior.hide()
             return
         }
@@ -159,7 +159,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun onScoreClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
-        if (!controller.isOnline()) {
+        if (controller.isNotOnline()) {
             sheetBehavior.hide()
             return
         }
