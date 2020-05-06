@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.checkbox.MaterialCheckBox
-    android:id="@+id/auto_checkbox"
-    android:layout_marginStart="8dp"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/notify_extension_updates">
-
-</com.google.android.material.checkbox.MaterialCheckBox>

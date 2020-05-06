@@ -12,6 +12,7 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.PowerManager
 import android.view.View
@@ -218,4 +219,23 @@ fun Context.openInBrowser(url: String) {
 fun Context.isInNightMode(): Boolean {
     val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
     return currentNightMode == Configuration.UI_MODE_NIGHT_YES
+}
+
+fun Context.isOnline(): Boolean {
+    val connectivityManager = this
+        .getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+    var result = false
+    connectivityManager?.let {
+        val networkCapabilities = connectivityManager.activeNetwork ?: return false
+        val actNw =
+            connectivityManager.getNetworkCapabilities(networkCapabilities) ?: return false
+        result = when {
+            actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+            actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+            actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+            else -> false
+        }
+    }
+
+    return result
 }

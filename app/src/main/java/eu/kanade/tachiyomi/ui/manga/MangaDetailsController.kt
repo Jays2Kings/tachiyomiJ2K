@@ -97,6 +97,7 @@ import eu.kanade.tachiyomi.util.system.ThemeUtil
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
+import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.getText
@@ -515,6 +516,14 @@ class MangaDetailsController : BaseController,
     }
     //endregion
 
+    fun isOnline(showSnackbar: Boolean = true): Boolean {
+        if (activity == null || !activity!!.isOnline()) {
+            if (showSnackbar) view?.snack(R.string.no_network_connection)
+            return false
+        }
+        return true
+    }
+
     fun showError(message: String) {
         swipe_refresh?.isRefreshing = presenter.isLoading
         view?.snack(message)
@@ -828,7 +837,7 @@ class MangaDetailsController : BaseController,
                 }
             }
             R.id.action_open_in_web_view -> openInWebView()
-            R.id.action_refresh_tracking -> presenter.refreshTrackers()
+            R.id.action_refresh_tracking -> presenter.refreshTrackers(true)
             R.id.action_migrate ->
                 PreMigrationController.navigateToMigration(
                     presenter.preferences.skipPreMigration().getOrDefault(),
@@ -892,8 +901,8 @@ class MangaDetailsController : BaseController,
     }
 
     override fun openInWebView() {
+        if (!isOnline()) return
         val source = presenter.source as? HttpSource ?: return
-
         val url = try {
             source.mangaDetailsRequest(presenter.manga).url.toString()
         } catch (e: Exception) {
