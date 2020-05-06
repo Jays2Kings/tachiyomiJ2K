@@ -92,14 +92,14 @@
         android:id="@+id/update_button"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
+        android:layout_margin="12dp"
         android:clickable="true"
         android:focusable="true"
         android:padding="5dp"
         android:src="@drawable/ic_refresh_white_24dp"
         android:tint="?attr/colorAccent"
         app:layout_constraintBottom_toBottomOf="@id/category_title"
-        app:layout_constraintEnd_toStartOf="@id/space"
-        app:layout_constraintStart_toEndOf="@id/category_title"
+        app:layout_constraintEnd_toStartOf="@id/category_sort"
         app:layout_constraintTop_toTopOf="@id/category_title"
         app:rippleColor="@color/fullRippleColor" />
 
