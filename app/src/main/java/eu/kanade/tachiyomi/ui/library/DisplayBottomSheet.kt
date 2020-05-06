@@ -73,20 +73,16 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
                     settings_scroll_view.paddingTop + settings_scroll_view.paddingBottom
             close_button.visibleIf(isScrollable)
         }
-        updateRadioGroupScrollBar()
-    }
-
-    private fun updateRadioGroupScrollBar() {
-        show_hide_auto_scrollbar.bindToPreference(preferences.showHideScrollBar()) {
-            controller.updateScrollBar()
-            if (sheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED)
-                dismiss()
-        }
     }
 
     private fun initGeneralPreferences() {
         display_group.bindToPreference(preferences.libraryLayout()) {
             controller.reattachAdapter()
+            if (sheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED)
+                dismiss()
+        }
+        show_hide_auto_scrollbar.bindToPreference(preferences.showHideScrollbar()) {
+            controller.updateScrollbar()
             if (sheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED)
                 dismiss()
         }

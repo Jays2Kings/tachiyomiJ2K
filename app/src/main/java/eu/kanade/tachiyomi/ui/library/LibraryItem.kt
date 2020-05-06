@@ -38,7 +38,7 @@ class LibraryItem(
     var chapterCount = -1
 
     private val showFastScroll: Boolean
-        get() = when (preferences.showHideScrollBar().getOrDefault()) {
+        get() = when (preferences.showHideScrollbar().getOrDefault()) {
             2 -> true
             else -> false
         }

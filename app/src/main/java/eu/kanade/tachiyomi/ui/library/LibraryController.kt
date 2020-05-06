@@ -147,7 +147,7 @@ class LibraryController(
 
     private var textAnim: ViewPropertyAnimator? = null
     private var scrollAnim: ViewPropertyAnimator? = null
-    private var alwaysShowScroller: Boolean = when (preferences.showHideScrollBar().getOrDefault()) {
+    private var alwaysShowScroller: Boolean = when (preferences.showHideScrollbar().getOrDefault()) {
         2 -> true
         else -> false
     }
@@ -246,7 +246,7 @@ class LibraryController(
         if (!::presenter.isInitialized) presenter = LibraryPresenter(this)
         fast_scroller.setStartTranslationX(!alwaysShowScroller)
         fast_scroller.setBackground(!alwaysShowScroller)
-        updateScrollBar()
+        updateScrollbar()
         adapter = LibraryCategoryAdapter(this)
         adapter.expandItemsAtStartUp()
         adapter.isRecursiveCollapse = true
@@ -417,9 +417,9 @@ class LibraryController(
         }
     }
 
-    fun updateScrollBar() {
+    fun updateScrollbar() {
         /* values : 0 -> never show , 1 -> auto ,  2 -> always */
-        val prefScrollBar = preferences.showHideScrollBar().getOrDefault()
+        val prefScrollBar = preferences.showHideScrollbar().getOrDefault()
         if (prefScrollBar == 0) {
             fast_scroller.visibility = View.GONE
             text_view_m.visibility = View.GONE

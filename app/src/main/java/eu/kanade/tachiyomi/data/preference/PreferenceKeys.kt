@@ -147,7 +147,7 @@ object PreferenceKeys {
 
     const val alwaysShowChapterTransition = "always_show_chapter_transition"
 
-    const val showHideScrollBar = "show_hide_scrollBar"
+    const val showHideScrollbar = "show_hide_scrollbar"
 
     @Deprecated("Use the preferences of the source")
     fun sourceUsername(sourceId: Long) = "pref_source_username_$sourceId"

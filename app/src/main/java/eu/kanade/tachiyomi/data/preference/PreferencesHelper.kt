@@ -273,5 +273,5 @@ class PreferencesHelper(val context: Context) {
     fun shownLongPressCategoryTutorial() = flowPrefs.getBoolean("shown_long_press_category", false)
 
     // values : 0 -> never show , 1 -> auto ,  2 -> always
-    fun showHideScrollBar() = rxPrefs.getInteger(Keys.showHideScrollBar, 1)
+    fun showHideScrollbar() = rxPrefs.getInteger(Keys.showHideScrollbar, 1)
 }
