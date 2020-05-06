@@ -638,9 +638,8 @@ class MangaDetailsController : BaseController,
             }
             return false
         }
-        if (chapterItem.isDownloaded || (!chapterItem.isDownloaded && !isNotOnline())) {
-            openChapter(chapter)
-        }
+        openChapter(chapter)
+
         return false
     }
 
@@ -843,11 +842,12 @@ class MangaDetailsController : BaseController,
             R.id.action_refresh_tracking -> presenter.refreshTrackers(true)
             R.id.action_migrate ->
                 if (!isNotOnline()) {
-                PreMigrationController.navigateToMigration(
-                    presenter.preferences.skipPreMigration().getOrDefault(),
-                    router,
-                    listOf(manga!!.id!!)
-                ) }
+                    PreMigrationController.navigateToMigration(
+                        presenter.preferences.skipPreMigration().getOrDefault(),
+                        router,
+                        listOf(manga!!.id!!)
+                    )
+                }
             R.id.action_mark_all_as_read -> {
                 MaterialDialog(view!!.context).message(R.string.mark_all_chapters_as_read)
                     .positiveButton(R.string.mark_as_read) {
@@ -1024,9 +1024,7 @@ class MangaDetailsController : BaseController,
         }
         val item = presenter.getNextUnreadChapter()
         if (item != null) {
-            if (item.isDownloaded || (!item.isDownloaded && !isNotOnline())) {
-                openChapter(item.chapter)
-            }
+            openChapter(item.chapter)
         } else if (snack == null || snack?.getText() != view?.context?.getString(
                 R.string.next_chapter_not_found
             )
