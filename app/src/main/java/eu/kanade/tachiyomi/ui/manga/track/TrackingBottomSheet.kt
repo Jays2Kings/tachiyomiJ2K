@@ -139,7 +139,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
         if (controller.isNotOnline()) {
-            sheetBehavior.hide()
+            dismiss()
             return
         }
 
@@ -150,7 +150,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
         if (controller.isNotOnline()) {
-            sheetBehavior.hide()
+            dismiss()
             return
         }
         SetTrackChaptersDialog(this, item).showDialog(controller.router)
@@ -160,7 +160,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
         if (controller.isNotOnline()) {
-            sheetBehavior.hide()
+            dismiss()
             return
         }
 
