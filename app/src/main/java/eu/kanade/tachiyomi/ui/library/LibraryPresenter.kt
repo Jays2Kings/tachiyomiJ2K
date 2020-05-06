@@ -463,7 +463,13 @@ class LibraryPresenter(
         val categories = db.getCategories().executeAsBlocking().toMutableList()
         val showCategories = !preferences.hideCategories().getOrDefault()
         var libraryManga = db.getLibraryMangas().executeAsBlocking()
-        val seekPref = preferences.alwaysShowSeeker()
+        val seekPref = when (preferences.showHideScrollBar().getOrDefault()) {
+            0 -> false
+            1 -> false
+            2 -> true
+            else -> false
+        }
+        // val seekPref = preferences.alwaysShowSeeker()
         val showAll = showAllCategories
         if (!showCategories) libraryManga = libraryManga.distinctBy { it.id }
         val categoryAll = Category.createAll(

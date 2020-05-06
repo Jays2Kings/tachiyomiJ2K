@@ -17,7 +17,6 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.f2prateek.rx.preferences.Preference
 import com.github.florent37.viewtooltip.ViewTooltip
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.SelectableAdapter
@@ -27,7 +26,6 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -44,7 +42,7 @@ import uy.kohesive.injekt.api.get
 class LibraryHeaderItem(
     private val categoryF: (Int) -> Category,
     private val catId: Int,
-    private val showFastScroll: Preference<Boolean>
+    private val showFastScroll: Boolean
 ) :
     AbstractHeaderItem<LibraryHeaderItem.Holder>() {
 
@@ -56,7 +54,7 @@ class LibraryHeaderItem(
         view: View,
         adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>
     ): Holder {
-        return Holder(view, adapter as LibraryCategoryAdapter, showFastScroll.getOrDefault())
+        return Holder(view, adapter as LibraryCategoryAdapter, showFastScroll)
     }
 
     override fun bindViewHolder(

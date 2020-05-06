@@ -74,30 +74,13 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
             close_button.visibleIf(isScrollable)
         }
         updateRadioGroupScrollBar()
-        addCheckOnChangeLisctenerToScrollBar()
-    }
-
-    private fun addCheckOnChangeLisctenerToScrollBar() {
-        Show_hide_auto_scrollbar.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { radioGroup, i ->
-            if (i == R.id.radioButton_never) {
-                preferences.showHideScrollBar().set(0)
-            } else if (i == R.id.radioButton2_auto) {
-                preferences.showHideScrollBar().set(1)
-            } else if (i == R.id.radioButton3_always) {
-                preferences.showHideScrollBar().set(2)
-            }
-            controller.updateScrollBar()
-        })
     }
 
     private fun updateRadioGroupScrollBar() {
-        val prefScrollBar = preferences.showHideScrollBar().getOrDefault().toInt()
-        if (prefScrollBar == 0) {
-            radioButton_never.isChecked = true
-        } else if (prefScrollBar == 1) {
-            radioButton2_auto.isChecked = true
-        } else if (prefScrollBar == 2) {
-            radioButton3_always.isChecked = true
+        Show_hide_auto_scrollbar.bindToPreference(preferences.showHideScrollBar()) {
+            controller.updateScrollBar()
+            if (sheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED)
+                dismiss()
         }
     }
 
@@ -110,10 +93,7 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
         uniform_grid.bindToPreference(preferences.uniformGrid()) {
             controller.reattachAdapter()
         }
-        /*autohide_seeker.bindToPreference(preferences.alwaysShowSeeker()) {
-            controller.updateShowScrollbar(autohide_seeker.isChecked)
-        }
-         */
+
         grid_size_toggle_group.bindToPreference(preferences.gridSize()) {
             controller.reattachAdapter()
         }

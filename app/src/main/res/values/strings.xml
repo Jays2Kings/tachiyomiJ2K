@@ -134,7 +134,6 @@
     <string name="start_with_filters_hidden">Start with filters hidden</string>
     <string name="download_badge">Download badges</string>
     <string name="hide_start_reading_button">Hide start reading button</string>
-    <string name="always_show_library_fast_scroll">Always show library fast scroll</string>
     <string name="unread_badges">Unread badges</string>
     <string name="uniform_covers">Uniform covers</string>
     <string name="x_small">XS</string>
@@ -148,6 +147,8 @@
     <string name="show_count">Show count</string>
     <string name="tap_library_to_show_filters">Tap the Library icon to show filters</string>
     <string name="display_as">Display as</string>
+    <string name="show_hide_scrollbar">Show scrollbar</string>
+    <string name="edit_text_show_hide_scrollbar">Show library fast scrollbar :</string>
 
     <!-- Library update service notifications -->
     <string name="new_chapters_found">New chapters found</string>
@@ -177,10 +178,8 @@
     <string name="auto_refresh_covers">Automatically refresh covers</string>
     <string name="auto_refresh_covers_summary">Refresh covers in library as well
         when updating library</string>
-    <string name="show_hide_scrollbar">Show scrollbar</string>
-    <string name="edit_text_show_hide_scrollbar">Show library fast scrollbar :</string>
 
-    <!-- Recents -->
+        <!-- Recents -->
     <string name="recents">Recents</string>
     <string name="updates">Updates</string>
     <string name="newly_added">Newly added</string>

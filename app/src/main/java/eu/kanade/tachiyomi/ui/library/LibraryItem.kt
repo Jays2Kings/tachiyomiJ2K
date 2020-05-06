@@ -38,8 +38,12 @@ class LibraryItem(
     var chapterCount = -1
 
     private val showFastScroll: Boolean
-        get() = preferences.alwaysShowSeeker().getOrDefault()
-
+        get() = when (preferences.showHideScrollBar().getOrDefault()) {
+            0 -> false
+            1 -> false
+            2 -> true
+            else -> false
+        }
     private val uniformSize: Boolean
         get() = preferences.uniformGrid().getOrDefault()
 

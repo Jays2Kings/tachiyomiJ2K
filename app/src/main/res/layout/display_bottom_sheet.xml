@@ -55,6 +55,45 @@
                     android:text="@string/comfortable_grid" />
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/edit_text_show_hide_scrollbar"
+                android:textAppearance="@style/TextAppearance.Medium.Body2" />
+
+            <RadioGroup
+                android:id="@+id/Show_hide_auto_scrollbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_never"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/never" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/auto" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3_always"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/always" />
+            </RadioGroup>
+
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
@@ -172,45 +211,6 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:text="@string/download_badge" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/edit_text_show_hide_scrollbar"
-                android:textAppearance="@style/TextAppearance.Medium.Body2" />
-
-            <RadioGroup
-                android:id="@+id/Show_hide_auto_scrollbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radioButton_never"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/never" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2_auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/auto" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3_always"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/always" />
-            </RadioGroup>
 
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/hide_filters"
