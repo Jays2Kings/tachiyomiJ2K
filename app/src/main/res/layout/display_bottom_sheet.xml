@@ -55,42 +55,37 @@
                     android:text="@string/comfortable_grid" />
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/textView"
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/edit_text_show_hide_scrollbar"
-                android:textAppearance="@style/TextAppearance.Medium.Body2" />
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp"
+                android:text="@string/show_hide_scrollbar" />
 
             <RadioGroup
-                android:id="@+id/Show_hide_auto_scrollbar"
+                android:id="@+id/show_hide_auto_scrollbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton_never"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
                     android:text="@string/never" />
 
-                <RadioButton
-                    android:id="@+id/radioButton2_auto"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
                     android:text="@string/auto" />
 
-                <RadioButton
-                    android:id="@+id/radioButton3_always"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
                     android:text="@string/always" />
             </RadioGroup>
 

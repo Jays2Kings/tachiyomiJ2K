@@ -39,8 +39,6 @@ class LibraryItem(
 
     private val showFastScroll: Boolean
         get() = when (preferences.showHideScrollBar().getOrDefault()) {
-            0 -> false
-            1 -> false
             2 -> true
             else -> false
         }

@@ -148,8 +148,6 @@ class LibraryController(
     private var textAnim: ViewPropertyAnimator? = null
     private var scrollAnim: ViewPropertyAnimator? = null
     private var alwaysShowScroller: Boolean = when (preferences.showHideScrollBar().getOrDefault()) {
-        0 -> false
-        1 -> false
         2 -> true
         else -> false
     }
@@ -421,7 +419,7 @@ class LibraryController(
 
     fun updateScrollBar() {
         /* values : 0 -> never show , 1 -> auto ,  2 -> always */
-        val prefScrollBar = preferences.showHideScrollBar().getOrDefault().toInt()
+        val prefScrollBar = preferences.showHideScrollBar().getOrDefault()
         if (prefScrollBar == 0) {
             fast_scroller.visibility = View.GONE
             text_view_m.visibility = View.GONE

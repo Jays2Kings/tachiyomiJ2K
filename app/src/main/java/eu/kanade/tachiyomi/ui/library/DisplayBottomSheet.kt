@@ -77,7 +77,7 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
     }
 
     private fun updateRadioGroupScrollBar() {
-        Show_hide_auto_scrollbar.bindToPreference(preferences.showHideScrollBar()) {
+        show_hide_auto_scrollbar.bindToPreference(preferences.showHideScrollBar()) {
             controller.updateScrollBar()
             if (sheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED)
                 dismiss()

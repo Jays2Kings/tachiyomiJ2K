@@ -147,8 +147,7 @@
     <string name="show_count">Show count</string>
     <string name="tap_library_to_show_filters">Tap the Library icon to show filters</string>
     <string name="display_as">Display as</string>
-    <string name="show_hide_scrollbar">Show scrollbar</string>
-    <string name="edit_text_show_hide_scrollbar">Show library fast scrollbar :</string>
+    <string name="show_hide_scrollbar">Show library fast scrollbar :</string>
 
     <!-- Library update service notifications -->
     <string name="new_chapters_found">New chapters found</string>
