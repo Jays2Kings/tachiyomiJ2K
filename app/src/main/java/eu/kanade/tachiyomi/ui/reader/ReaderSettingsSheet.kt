@@ -92,12 +92,8 @@ class ReaderSettingsSheet(private val activity: ReaderActivity) :
             is WebtoonViewer -> initWebtoonPreferences()
         }
 
-        val bottomEdgeView = when (activity.viewer is PagerViewer) {
-            true -> page_transitions
-            false -> webtoon_side_padding
-        }
-
-        setBottomEdge(bottomEdgeView, activity)
+        setBottomEdge(page_transitions, activity)
+        setBottomEdge(webtoon_side_padding, activity)
 
         close_button.setOnClickListener {
             dismiss()
@@ -117,6 +113,13 @@ class ReaderSettingsSheet(private val activity: ReaderActivity) :
     private fun initGeneralPreferences() {
         viewer.onItemSelectedListener = IgnoreFirstSpinnerListener { position ->
             activity.presenter.setMangaViewer(position)
+
+            val mangaViewer = activity.presenter.getMangaViewer()
+            if (mangaViewer == ReaderActivity.WEBTOON || mangaViewer == ReaderActivity.VERTICAL_PLUS) {
+                initWebtoonPreferences()
+            } else {
+                initPagerPreferences()
+            }
         }
         viewer.setSelection(activity.presenter.manga?.viewer ?: 0, false)
 

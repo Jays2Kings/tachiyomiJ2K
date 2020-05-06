@@ -47,6 +47,12 @@ class SettingsAdvancedController : SettingsController() {
     override fun setupPreferenceScreen(screen: PreferenceScreen) = with(screen) {
         titleRes = R.string.advanced
 
+        switchPreference {
+            key = "acra.enable"
+            titleRes = R.string.send_crash_report
+            summaryRes = R.string.helps_fix_bugs
+            defaultValue = true
+        }
         preference {
             key = CLEAR_CACHE_KEY
             titleRes = R.string.clear_chapter_cache

@@ -149,58 +149,67 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="manga_source,cover_card" />
 
-
-    <LinearLayout
-        android:id="@+id/button_layout"
+    <HorizontalScrollView
+        android:id="@+id/sub_button_scroll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        android:orientation="horizontal"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toTopOf="@id/manga_summary_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_line">
+        app:layout_constraintTop_toBottomOf="@id/bottom_line"
+        android:requiresFadingEdge="horizontal"
+        android:scrollbars="none">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/favorite_button"
-            style="@style/Theme.Widget.Button.RoundedOutline"
-            android:text="@string/add_to_library"
-            app:icon="@drawable/ic_heart_outline_24dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/track_button"
-            style="@style/Theme.Widget.Button.RoundedOutline"
-            android:layout_marginStart="6dp"
-            android:text="@string/tracking"
-            app:icon="@drawable/ic_sync_black_24dp" />
-
-        <ImageView
-            android:id="@+id/webview_button"
-            style="@style/Theme.Widget.CustomImageButton"
+        <LinearLayout
+            android:id="@+id/button_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:contentDescription="@string/open_in_webview"
-            android:padding="5dp"
-            android:src="@drawable/ic_open_in_webview_white_24dp"
-            android:tooltipText="@string/open_in_webview" />
+            android:layout_marginTop="14dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/share_button"
-            style="@style/Theme.Widget.CustomImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="6dp"
-            android:contentDescription="@string/share"
-            android:padding="5dp"
-            android:src="@drawable/ic_share_white_24dp"
-            android:tooltipText="@string/share" />
-    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/favorite_button"
+                style="@style/Theme.Widget.Button.RoundedOutline"
+                android:text="@string/add_to_library"
+                app:icon="@drawable/ic_heart_outline_24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/track_button"
+                style="@style/Theme.Widget.Button.RoundedOutline"
+                android:layout_marginStart="6dp"
+                android:text="@string/tracking"
+                app:icon="@drawable/ic_sync_black_24dp" />
+
+            <ImageView
+                android:id="@+id/webview_button"
+                style="@style/Theme.Widget.CustomImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/open_in_webview"
+                android:padding="5dp"
+                android:src="@drawable/ic_open_in_webview_white_24dp"
+                android:tooltipText="@string/open_in_webview" />
+
+            <ImageView
+                android:id="@+id/share_button"
+                style="@style/Theme.Widget.CustomImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/share"
+                android:padding="5dp"
+                android:src="@drawable/ic_share_white_24dp"
+                android:tooltipText="@string/share" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/manga_summary_label"
@@ -214,7 +223,7 @@
         android:textIsSelectable="false"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_layout"
+        app:layout_constraintTop_toBottomOf="@id/sub_button_scroll"
         tools:text="About this manga" />
 
     <TextView
@@ -284,7 +293,7 @@
         android:id="@+id/sub_item_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="manga_summary,manga_summary_label,button_layout" />
+        app:constraint_referenced_ids="manga_summary,manga_summary_label,sub_button_scroll" />
 
     <me.gujun.android.taggroup.TagGroup
         android:id="@+id/manga_genres_tags"
@@ -341,11 +350,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/chapter_layout"
         android:layout_width="match_parent"
-        android:layout_marginTop="12dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/list_item_selector"
         android:tooltipText="@string/sort_and_filter"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/list_item_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/start_reading_button">
 
@@ -360,20 +369,20 @@
             android:maxLines="1"
             android:text="@string/chapters"
             android:textSize="17sp"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/filters_text"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/filter_button"
-            android:tint="?colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:background="@null"
             android:padding="5dp"
             android:src="@drawable/ic_filter_list_white_24dp"
+            android:tint="?colorAccent"
             app:layout_constraintBottom_toBottomOf="@id/chapters_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/chapters_title" />
@@ -388,11 +397,11 @@
             android:padding="5dp"
             android:textAlignment="textEnd"
             android:textColor="?android:textColorHint"
+            app:layout_constraintBaseline_toBaselineOf="@id/chapters_title"
             app:layout_constraintBottom_toBottomOf="@id/filter_button"
             app:layout_constraintEnd_toStartOf="@id/filter_button"
             app:layout_constraintStart_toEndOf="@+id/chapters_title"
             app:layout_constraintTop_toTopOf="@id/filter_button"
-            app:layout_constraintBaseline_toBaselineOf="@id/chapters_title"
             tools:text="Read, Unread, Bookmarked, Downloaded, All" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

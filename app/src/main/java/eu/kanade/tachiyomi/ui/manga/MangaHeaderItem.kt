@@ -12,7 +12,6 @@ import eu.kanade.tachiyomi.util.system.HashCode
 class MangaHeaderItem(val manga: Manga, var startExpanded: Boolean) :
     AbstractFlexibleItem<MangaHeaderHolder>() {
 
-    var isTablet = false
     var isChapterHeader = false
     var isLocked = false
 
@@ -29,7 +28,7 @@ class MangaHeaderItem(val manga: Manga, var startExpanded: Boolean) :
     }
 
     override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): MangaHeaderHolder {
-        return MangaHeaderHolder(view, adapter as MangaDetailsAdapter, startExpanded, isTablet)
+        return MangaHeaderHolder(view, adapter as MangaDetailsAdapter, startExpanded)
     }
 
     override fun bindViewHolder(

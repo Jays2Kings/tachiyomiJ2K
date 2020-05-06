@@ -15,12 +15,8 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.listeners.ClickEventHook
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.dpToPx
-import eu.kanade.tachiyomi.util.system.getBottomGestureInsets
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.launchUI
-import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
-import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import kotlinx.android.synthetic.main.reader_chapters_sheet.view.*
 import kotlin.math.max
 import kotlin.math.min
@@ -50,7 +46,6 @@ class ReaderChapterSheet @JvmOverloads constructor(context: Context, attrs: Attr
             }
         }
 
-        val peek = sheetBehavior?.peekHeight ?: 30.dpToPx
         post {
             chapter_recycler.alpha = when (sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
                 true -> 1f
@@ -58,14 +53,6 @@ class ReaderChapterSheet @JvmOverloads constructor(context: Context, attrs: Attr
             }
         }
 
-        chapters_bottom_sheet.doOnApplyWindowInsets { _, insets, _ ->
-            sheetBehavior?.peekHeight = peek + insets.getBottomGestureInsets()
-
-            chapters_bottom_sheet.updateLayoutParams<MarginLayoutParams> {
-                height = 280.dpToPx + insets.systemWindowInsetBottom
-            }
-            chapter_recycler.updatePaddingRelative(bottom = insets.systemWindowInsetBottom)
-        }
         sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, progress: Float) {
                 pill.alpha = (1 - max(0f, progress)) * 0.25f

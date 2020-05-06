@@ -81,6 +81,7 @@
                 app:layout_constraintTop_toBottomOf="@id/viewer" />
 
             <TextView
+                android:id="@+id/background_color_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/background_color"
@@ -272,7 +273,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 app:constraint_referenced_ids="pager_prefs,scale_type,scale_type_text,
-                zoom_start_text,zoom_start,crop_borders,page_transitions"
+                zoom_start_text,zoom_start,crop_borders,page_transitions,background_color,background_color_label"
                 tools:visibility="visible" />
 
             <androidx.constraintlayout.widget.Group

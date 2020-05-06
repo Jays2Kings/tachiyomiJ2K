@@ -35,6 +35,7 @@
 
     <ImageView
         android:id="@+id/collapse_arrow"
+        android:layout_marginStart="8dp"
         android:layout_width="14dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/select_all"

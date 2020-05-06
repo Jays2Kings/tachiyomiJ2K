@@ -75,15 +75,9 @@ class MangaDetailsPresenter(
         private set
 
     var headerItem = MangaHeaderItem(manga, controller.fromCatalogue)
-    var tabletChapterHeaderItem: MangaHeaderItem? = null
 
     fun onCreate() {
-        headerItem.startExpanded = controller.hasTabletHeight() || headerItem.startExpanded
-        headerItem.isTablet = controller.isTablet
-        if (controller.isTablet) {
-            tabletChapterHeaderItem = MangaHeaderItem(manga, false)
-            tabletChapterHeaderItem?.isChapterHeader = true
-        }
+
         isLockedFromSearch = SecureActivityDelegate.shouldBeLocked()
         headerItem.isLocked = isLockedFromSearch
         downloadManager.addListener(this)
@@ -313,6 +307,7 @@ class MangaDetailsPresenter(
     private fun hasTensOfChapters(chapters: List<ChapterItem>): Boolean {
         return chapters.size in 21..300
     }
+
     /**
      * Returns the next unread chapter or null if everything is read.
      */

@@ -50,6 +50,8 @@ import eu.kanade.tachiyomi.util.lang.plusAssign
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.GLUtil
 import eu.kanade.tachiyomi.util.system.ThemeUtil
+import eu.kanade.tachiyomi.util.system.dpToPx
+import eu.kanade.tachiyomi.util.system.getBottomGestureInsets
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.hasSideNavBar
 import eu.kanade.tachiyomi.util.system.isBottomTappable
@@ -59,6 +61,7 @@ import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.snack
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
+import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.widget.SimpleAnimationListener
 import eu.kanade.tachiyomi.widget.SimpleSeekBarListener
@@ -312,8 +315,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         // Set toolbar
         setSupportActionBar(toolbar)
         val primaryColor = ColorUtils.setAlphaComponent(
-            getResourceColor(R.attr.colorSecondary),
-            200
+            getResourceColor(R.attr.colorSecondary), 200
         )
         appbar.setBackgroundColor(primaryColor)
         window.statusBarColor = Color.TRANSPARENT
@@ -334,8 +336,9 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         // Set initial visibility
         setMenuVisibility(menuVisible)
         chapters_bottom_sheet.sheetBehavior?.isHideable = !menuVisible
-        if (!menuVisible)
-            chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
+        if (!menuVisible) chapters_bottom_sheet.sheetBehavior?.state =
+            BottomSheetBehavior.STATE_HIDDEN
+        val peek = chapters_bottom_sheet.sheetBehavior?.peekHeight ?: 30.dpToPx
         reader_layout.doOnApplyWindowInsets { v, insets, _ ->
             sheetManageNavColor = when {
                 insets.isBottomTappable() -> {
@@ -352,13 +355,21 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                 }
             }
 
-            toolbar.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                topMargin = insets.systemWindowInsetTop
-            }
-            v.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+            appbar.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                 leftMargin = insets.systemWindowInsetLeft
                 rightMargin = insets.systemWindowInsetRight
             }
+            toolbar.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = insets.systemWindowInsetTop
+            }
+            chapters_bottom_sheet.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                leftMargin = insets.systemWindowInsetLeft
+                rightMargin = insets.systemWindowInsetRight
+                height = 280.dpToPx + insets.systemWindowInsetBottom
+            }
+            chapters_bottom_sheet.sheetBehavior?.peekHeight = peek + insets.getBottomGestureInsets()
+            chapter_recycler.updatePaddingRelative(bottom = insets.systemWindowInsetBottom)
+            viewer_container.requestLayout()
         }
     }
 
@@ -369,10 +380,11 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
     private fun setMenuVisibility(visible: Boolean, animate: Boolean = true) {
         menuVisible = visible
         if (visible) coroutine?.cancel()
+        viewer_container.requestLayout()
         if (visible) {
             snackbar?.dismiss()
             systemUi?.show()
-            toolbar.visibility = View.VISIBLE
+            appbar.visible()
 
             if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
                 chapters_bottom_sheet.sheetBehavior?.isHideable = false
@@ -399,14 +411,15 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.exit_to_top)
                 toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
                     override fun onAnimationEnd(animation: Animation) {
-                        toolbar.visibility = View.GONE
+                        appbar.gone()
                     }
                 })
                 appbar.startAnimation(toolbarAnimation)
                 BottomSheetBehavior.from(chapters_bottom_sheet).isHideable = true
-                BottomSheetBehavior.from(chapters_bottom_sheet).state = BottomSheetBehavior.STATE_HIDDEN
+                BottomSheetBehavior.from(chapters_bottom_sheet).state =
+                    BottomSheetBehavior.STATE_HIDDEN
             } else {
-                toolbar.visibility = View.GONE
+                appbar.gone()
             }
         }
         menuStickyVisible = false
@@ -454,6 +467,14 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         }
         viewer = newViewer
         viewer_container.addView(newViewer.getView())
+
+        viewer_container.setBackgroundColor(
+            if (viewer is WebtoonViewer) {
+                Color.BLACK
+            } else {
+                getResourceColor(android.R.attr.colorBackground)
+            }
+        )
 
         toolbar.title = manga.title
 
@@ -661,7 +682,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                     }
                 }
                 if (sheetManageNavColor) window.navigationBarColor = getResourceColor(R.attr.colorSecondary)
-                toolbar.visibility = View.VISIBLE
+                appbar.visible()
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.enter_from_top)
                 toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
                     override fun onAnimationStart(animation: Animation) {
