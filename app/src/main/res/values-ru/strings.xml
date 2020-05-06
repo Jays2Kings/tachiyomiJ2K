@@ -22,9 +22,6 @@
     <string name="edit_categories">Изменить категорию</string>
     <string name="filter">Фильтр</string>
     <string name="bookmarked">Закладки</string>
-    <string name="downloaded">Загруженные</string>
-    <string name="read">Прочитано</string>
-    <string name="unread">Непрочитанные</string>
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как прочитанное</string>
@@ -492,11 +489,11 @@
 
     <string name="title">Название</string>
 
-    <string name="tracking">Отслеживание</string>
+
     <string name="started">Начато</string>
     <string name="type">Тип</string>
 
-    <string name="tracked">Отслеживаемые</string>
+
 
     <string name="current">Текущая:</string>
     <string name="finished">Закончена:</string>
@@ -570,6 +567,8 @@
     <!-- Manga -->
     <string name="not_started">Не читал</string>
     <string name="in_progress">Читаю</string>
+    <string name="read">Прочитано</string>
+    <string name="unread">Не прочитано</string>
     <!-- Status -->
     <string name="unknown_status">Неизвестный Статус</string>
     <!-- Security -->
@@ -592,11 +591,13 @@
         <item quantity="one">%1$d глава</item>
         <item quantity="other">%1$d главы</item>
     </plurals>
+
     <plurals name="pages_left">
         <item quantity="one">%1$d страница осталась </item>
-        <item quantity="other">%1$d страницы осталась</item>
+        <item quantity="few">%1$d страницы осталось</item>
+        <item quantity="many">%1$d страниц осталось</item>
+        <item quantity="other">%1$d страниц осталось</item>
     </plurals>
-
     <!-- Category -->
     <string name="category">Категория</string>
     <string name="adding_category_to_queue">Добавление %1$s в очередь обновления</string>
@@ -619,7 +620,9 @@
 
     <plurals name="category">
         <item quantity="one">%d категория</item>
-        <item quantity="other">%d категории</item>
+        <item quantity="few">%d категории</item>
+        <item quantity="many">%d категорий</item>
+        <item quantity="other">%d категорий</item>
     </plurals>
 
     <!-- Updates -->
@@ -727,18 +730,24 @@
     <string name="oldest_first">От старого к новому</string>
     <string name="edit_cover">Изменить обложку</string>
     <string name="reset_cover">Сбросить обложку</string>
-    <string name="remember_this_choice">Запомни этот выбор</string>
+    <string name="remember_this_choice">Запомнить этот выбор</string>
 
 
     <plurals name="deleted_chapters">
         <item quantity="one">Глава была удалена из источника:\n%2$s\nDelete
             скачать её?</item>
-        <item quantity="other">%1$s главы были удалены из источника:\n%2$s\n\nDelete
+        <item quantity="few">%1$s главы было удалено из источника:\n%2$s\n\nDelete
+            скачать их?</item>
+        <item quantity="many">%1$s глав было удалено из источника:\n%2$s\n\nDelete
+            скачать их?</item>
+        <item quantity="other">%1$s глав было удалено из источника:\n%2$s\n\nDelete
             скачать их?</item>
     </plurals>
 
     <!-- Tracking -->
-    <string name="not_tracked">Не отслеживаемые</string>
+    <string name="tracking">Отслеживать</string>
+    <string name="tracked">Отслеживается</string>
+    <string name="not_tracked">Не отслеживается</string>
     <string name="refresh_tracking">Обновить отслеживание</string>
     <string name="add_tracking">Добавить отслеживание</string>
     <string name="migrate_">Перенести %1$s</string>
@@ -764,7 +773,8 @@
     <string name="email">Адрес Email</string>
     <!-- Downloads -->
     <string name="downloading_">Загрузка: %1$s</string>
-    <string name="not_downloaded">Не загружены</string>
+    <string name="downloaded">Загружено</string>
+    <string name="not_downloaded">Не загружено</string>
     <string name="start_downloading_now">Начать загрузку сейчас</string>
     <string name="remove_download">Удалить загрузку</string>
     <string name="remove_downloads">Удалить загрузки</string>
@@ -787,18 +797,18 @@
     <string name="bug_report">Сообщить об ошибке</string>
     <string name="collasped">Рухнул</string>
     <string name="drag_handle">Перетащить ручку</string>
-    <string name="hide">Спрятать</string>
+    <string name="hide">Скрыть</string>
     <string name="keep">Хранить</string>
     <string name="less">Меньше</string>
     <string name="mark_all_as_read">Отметить все как прочитанные</string>
     <string name="mark_all_as_unread">Отметить все как непрочитанные</string>
     <string name="more">Больше</string>
     <string name="moved_to_">Переехал в %1$s</string>
-    <string name="pin">Булавка</string>
+    <string name="pin">Закрепить</string>
     <string name="pinned">Закрепленные</string>
     <string name="refresh">Обновление</string>
     <string name="refreshing">Обновляющиеся</string>
-    <string name="sort_and_filter">Сортировать и Фильтровать</string>
+    <string name="sort_and_filter">Сортировка и Фильтрация</string>
     <string name="top">Верх</string>
     <string name="un_select_all">Снять все</string>
     <string name="unpin">Открепить</string>
@@ -807,7 +817,9 @@
     <!-- Extensions -->
     <plurals name="extension_updates_available">
         <item quantity="one">Доступно обновление расширения</item>
-        <item quantity="other">%d доступны обновления расширений</item>
+        <item quantity="few">Доступны %d обновления для расширений</item>
+        <item quantity="many">Доступны %d обновлений для расширений</item>
+        <item quantity="other">Доступны %d обновлений для расширений</item>
     </plurals>
 
 
