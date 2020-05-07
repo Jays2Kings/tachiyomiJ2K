@@ -60,6 +60,7 @@ ExtensionAdapter.OnButtonClickListener,
         ext_recycler.setHasFixedSize(true)
         ext_recycler.addItemDecoration(ExtensionDividerItemDecoration(context))
         ext_recycler.setOnApplyWindowInsetsListener(RecyclerWindowInsetsListener)
+        adapter?.fastScroller = fast_scroller
         this.controller = controller
         presenter.onCreate()
         updateExtTitle()
@@ -68,8 +69,8 @@ ExtensionAdapter.OnButtonClickListener,
         val array = context.obtainStyledAttributes(attrsArray)
         val headerHeight = array.getDimensionPixelSize(0, 0)
         array.recycle()
-        ext_recycler.doOnApplyWindowInsets { _, windowInsets, _ ->
-            ext_recycler.updateLayoutParams<LayoutParams> {
+        ext_recycler_layout.doOnApplyWindowInsets { v, windowInsets, _ ->
+            v.updateLayoutParams<MarginLayoutParams> {
                 topMargin = windowInsets.systemWindowInsetTop + headerHeight -
                     (sheet_layout.height)
             }

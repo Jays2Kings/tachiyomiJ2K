@@ -9,12 +9,12 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.util.lang.removeArticles
+import eu.kanade.tachiyomi.util.system.timeSpanFromNow
 import uy.kohesive.injekt.injectLazy
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import kotlin.math.max
 
 /**
  * Adapter storing a list of manga in a certain category.
@@ -98,57 +98,63 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         isLongPressDragEnabled = libraryListener.canDrag() && s.isNullOrBlank()
     }
 
-    fun getSectionText(position: Int): String? {
+    private fun getFirstLetter(name: String): String {
+        val letter = name.firstOrNull() ?: '#'
+        return if (letter.isLetter()) getFirstChar(name) else "#"
+    }
+
+    override fun onCreateBubbleText(position: Int): String {
         val preferences: PreferencesHelper by injectLazy()
         val db: DatabaseHelper by injectLazy()
-        if (position == itemCount - 1) return "-"
-        val sorting = if (!preferences.showAllCategories().get()) {
-            controller.presenter.getCurrentCategory()?.sortingMode() ?: LibrarySort.DRAG_AND_DROP
-        } else if (preferences.hideCategories().getOrDefault()) {
-            preferences.librarySortingMode().getOrDefault()
-        } else {
-            (headerItems.firstOrNull() as? LibraryHeaderItem)?.category?.sortingMode()
-                ?: LibrarySort.DRAG_AND_DROP
-        }
+        if (position == itemCount - 1) return recyclerView.context.getString(R.string.bottom)
         return when (val item: IFlexible<*>? = getItem(position)) {
             is LibraryHeaderItem ->
-                if (preferences.hideCategories().getOrDefault() || item.category.id == 0 ||
-                    !preferences.showAllCategories().get()) null
-                else getFirstChar(item.category.name) +
-                    "\u200B".repeat(max(0, item.category.order))
+                if (!preferences.hideCategories().getOrDefault()) item.category.name
+                else recyclerView.context.getString(R.string.top)
             is LibraryItem -> {
-                when (sorting) {
+                if (!isSingleCategory) {
+                    item.header?.category?.name.orEmpty()
+                } else if (item.manga.isBlank()) ""
+                else when (getSort()) {
                     LibrarySort.DRAG_AND_DROP -> {
-                        val category = db.getCategoriesForManga(item.manga).executeAsBlocking()
-                            .firstOrNull()
-                        if (category == null) null
-                        else getFirstLetter(category.name) + "\u200B".repeat(max(0, category.order))
+                        if (!preferences.hideCategories().getOrDefault()) {
+                            val title = item.manga.title
+                            if (preferences.removeArticles().getOrDefault())
+                                getFirstChar(title.removeArticles())
+                            else getFirstChar(title)
+                        } else {
+                            val category = db.getCategoriesForManga(item.manga)
+                                .executeAsBlocking().firstOrNull()?.name
+                            category ?: recyclerView.context.getString(R.string.default_value)
+                        }
                     }
                     LibrarySort.LAST_READ -> {
                         val id = item.manga.id ?: return ""
                         val history = db.getHistoryByMangaId(id).executeAsBlocking()
                         val last = history.maxBy { it.last_read }
-                        if (last != null && last.last_read > 100) getShorterDate(Date(last.last_read))
-                        else "*"
-                    }
-                    LibrarySort.TOTAL -> {
-                        val unread = item.chapterCount
-                        getShortRange(unread)
+                        if (last != null && last.last_read > 100) last.last_read.timeSpanFromNow
+                        else "N/A"
                     }
                     LibrarySort.UNREAD -> {
                         val unread = item.manga.unread
-                        if (unread > 0) getShortRange(unread)
-                        else "R"
+                        if (unread > 0) unread.toString()
+                        else recyclerView.context.getString(R.string.read)
+                    }
+                    LibrarySort.TOTAL -> {
+                        val total = item.chapterCount
+                        if (total > 0) total.toString()
+                        else "N/A"
                     }
                     LibrarySort.LATEST_CHAPTER -> {
                         val lastUpdate = item.manga.last_update
-                        if (lastUpdate > 0) getShorterDate(Date(lastUpdate))
-                        else "*"
+                        if (lastUpdate > 0) lastUpdate.timeSpanFromNow
+                        // getShortDate(Date(lastUpdate))
+                        else "N/A"
                     }
                     LibrarySort.DATE_ADDED -> {
                         val lastUpdate = item.manga.date_added
-                        if (lastUpdate > 0) getShorterDate(Date(lastUpdate))
-                        else "*"
+                        if (lastUpdate > 0) lastUpdate.timeSpanFromNow
+                        else "N/A"
                     }
                     else -> {
                         val title = if (preferences.removeArticles()
@@ -163,67 +169,12 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         }
     }
 
-    private fun getFirstLetter(name: String): String {
-        val letter = name.firstOrNull() ?: '#'
-        return if (letter.isLetter()) getFirstChar(name) else "#"
-    }
-
-    override fun onCreateBubbleText(position: Int): String {
+    private fun getSort(): Int {
         val preferences: PreferencesHelper by injectLazy()
-        val db: DatabaseHelper by injectLazy()
-        if (position == itemCount - 1) return recyclerView.context.getString(R.string.bottom)
-        return when (val iFlexible: IFlexible<*>? = getItem(position)) {
-            is LibraryHeaderItem ->
-                if (!preferences.hideCategories().getOrDefault()) iFlexible.category.name
-                else recyclerView.context.getString(R.string.top)
-            is LibraryItem -> {
-                if (iFlexible.manga.isBlank()) ""
-                else when (if (!preferences.showAllCategories().get()) {
-                    controller.presenter.getCurrentCategory()?.sortingMode() ?: LibrarySort.DRAG_AND_DROP
-                } else preferences.librarySortingMode().getOrDefault()) {
-                    LibrarySort.DRAG_AND_DROP -> {
-                        if (!preferences.hideCategories().getOrDefault()) {
-                            val title = iFlexible.manga.title
-                            if (preferences.removeArticles().getOrDefault())
-                                getFirstChar(title.removeArticles())
-                            else getFirstChar(title)
-                        } else {
-                            val category = db.getCategoriesForManga(iFlexible.manga)
-                                .executeAsBlocking().firstOrNull()?.name
-                            category ?: recyclerView.context.getString(R.string.default_value)
-                        }
-                    }
-                    LibrarySort.LAST_READ -> {
-                        val id = iFlexible.manga.id ?: return ""
-                        val history = db.getHistoryByMangaId(id).executeAsBlocking()
-                        val last = history.maxBy { it.last_read }
-                        if (last != null && last.last_read > 100) getShortDate(Date(last.last_read))
-                        else "N/A"
-                    }
-                    LibrarySort.UNREAD -> {
-                        val unread = iFlexible.manga.unread
-                        if (unread > 0) getRange(unread)
-                        else recyclerView.context.getString(R.string.read)
-                    }
-                    LibrarySort.TOTAL -> {
-                        val total = iFlexible.chapterCount
-                        if (total > 0) getRange(total)
-                        else "N/A"
-                    }
-                    LibrarySort.LATEST_CHAPTER -> {
-                        val lastUpdate = iFlexible.manga.last_update
-                        if (lastUpdate > 0) getShortDate(Date(lastUpdate))
-                        else "N/A"
-                    }
-                    LibrarySort.DATE_ADDED -> {
-                        val lastUpdate = iFlexible.manga.date_added
-                        if (lastUpdate > 0) getShortDate(Date(lastUpdate))
-                        else "N/A"
-                    }
-                    else -> getSectionText(position) ?: ""
-                }
-            }
-            else -> ""
+        return if (!preferences.showAllCategories().get() && !preferences.hideCategories().getOrDefault()) {
+            controller.presenter.getCurrentCategory()?.sortingMode() ?: LibrarySort.DRAG_AND_DROP
+        } else {
+            preferences.librarySortingMode().getOrDefault()
         }
     }
 
@@ -254,23 +205,6 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         }
     }
 
-    private fun getRange(value: Int): String {
-        return when (value) {
-            1 -> "1"
-            2 -> "2"
-            3 -> "3"
-            4 -> "4"
-            5 -> "5"
-            in 6..10 -> "6-10"
-            in 11..50 -> "11-50"
-            in 51..100 -> "51-100"
-            in 101..500 -> "100-500"
-            in 499..899 -> "499-900"
-            in 901..Int.MAX_VALUE -> "900+"
-            else -> "None"
-        }
-    }
-
     private fun getShorterDate(date: Date): String {
         val cal = Calendar.getInstance()
         cal.time = Date()
@@ -286,25 +220,7 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
             SimpleDateFormat("''yy", Locale.getDefault()).format(date)
     }
 
-    private fun getShortDate(date: Date): String {
-        val cal = Calendar.getInstance()
-        cal.time = Date()
-
-        val yearNow = cal.get(Calendar.YEAR)
-        val cal2 = Calendar.getInstance()
-        cal2.time = date
-        val yearThen = cal2.get(Calendar.YEAR)
-
-        return if (yearNow == yearThen)
-            SimpleDateFormat("MMMM", Locale.getDefault()).format(date)
-        else
-            SimpleDateFormat("yyyy", Locale.getDefault()).format(date)
-    }
-
     interface LibraryListener {
-        /**
-         * Called when an item of the list is released.
-         */
         fun startReading(position: Int)
         fun onItemReleased(position: Int)
         fun canDrag(): Boolean

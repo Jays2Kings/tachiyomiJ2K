@@ -13,7 +13,6 @@ import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.model.TrackSearch
 import eu.kanade.tachiyomi.network.GET
 import eu.kanade.tachiyomi.network.POST
-import eu.kanade.tachiyomi.network.await
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.FormBody
@@ -130,9 +129,10 @@ class ShikimoriApi(private val client: OkHttpClient, interceptor: ShikimoriInter
     }
 
     suspend fun getCurrentUser(): Int {
-        val response = authClient.newCall(GET("$apiUrl/users/whoami")).await()
-        val user = response.body?.string()
-        return JsonParser.parseString(user).obj["id"].asInt
+        return withContext(Dispatchers.IO) {
+            val user = authClient.newCall(GET("$apiUrl/users/whoami")).execute().body?.string()
+            JsonParser.parseString(user).obj["id"].asInt
+        }
     }
 
     suspend fun accessToken(code: String): OAuth {

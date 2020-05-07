@@ -55,7 +55,6 @@ class AutofitRecyclerView @JvmOverloads constructor(context: Context, attrs: Att
             val dpWidth = (measuredWidth.pxToDp / 100f).roundToInt()
             val count = max(1, (dpWidth / columnWidth).roundToInt())
             spanCount = count
-//            Timber.d("Dp width: $dpWidth - RSpan: $spanCount")
         }
     }
 }

@@ -75,7 +75,7 @@ class SettingsMainController : SettingsController() {
             iconRes = R.drawable.ic_info_black_24dp
             iconTint = tintColor
             titleRes = R.string.about
-            onClick { navigateTo(SettingsAboutController()) }
+            onClick { navigateTo(AboutController()) }
         }
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

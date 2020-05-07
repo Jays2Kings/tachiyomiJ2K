@@ -177,8 +177,6 @@ class PreferencesHelper(val context: Context) {
 
     fun gridSize() = rxPrefs.getInteger(Keys.gridSize, 2)
 
-    fun alwaysShowSeeker() = rxPrefs.getBoolean("always_show_seeker", false)
-
     fun uniformGrid() = rxPrefs.getBoolean(Keys.uniformGrid, true)
 
     fun chaptersDescAsDefault() = rxPrefs.getBoolean("chapters_desc_as_default", true)
@@ -268,6 +266,8 @@ class PreferencesHelper(val context: Context) {
     fun showAllCategories() = flowPrefs.getBoolean("show_all_categories", true)
 
     fun hopperGravity() = flowPrefs.getInt("hopper_gravity", 1)
+
+    fun filterOrder() = flowPrefs.getString("filter_order", "rudcmt")
 
     // Tutorial preferences
     fun shownFilterTutorial() = flowPrefs.getBoolean("shown_filter_tutorial", false)

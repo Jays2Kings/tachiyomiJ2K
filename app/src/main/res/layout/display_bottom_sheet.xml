@@ -174,20 +174,19 @@
                 android:text="@string/download_badge" />
 
             <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/autohide_seeker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/always_show_library_fast_scroll"/>
-
-            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/hide_filters"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:text="@string/start_with_filters_hidden" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/more_settings"
+                style="@style/Theme.Widget.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/more_library_settings"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

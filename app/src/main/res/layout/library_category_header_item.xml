@@ -54,9 +54,19 @@
         app:constraint_referenced_ids="start_space,collapse_arrow,checkbox"
         />
 
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/category_sort"
+        app:layout_constraintStart_toEndOf="@id/category_title"
+        app:layout_constraintWidth_min="1dp" />
+
     <TextView
         android:id="@+id/category_title"
         style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="?android:textColorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="0dp"
@@ -70,56 +80,21 @@
         android:gravity="center|start"
         android:inputType="none"
         android:maxLines="2"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/update_button"
+        app:layout_constraintEnd_toStartOf="@id/space"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/start_barrier"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title dfdsfsfsfsfsfdsfsfsfs" />
 
-    <Space
-        android:id="@+id/space"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/category_sort"
-        app:layout_constraintStart_toEndOf="@id/update_button"
-        app:layout_constraintWidth_min="1dp" />
-
-    <ImageView
-        android:id="@+id/update_button"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:padding="5dp"
-        android:src="@drawable/ic_refresh_white_24dp"
-        android:tint="?attr/colorAccent"
-        app:layout_constraintBottom_toBottomOf="@id/category_title"
-        app:layout_constraintEnd_toStartOf="@id/space"
-        app:layout_constraintStart_toEndOf="@id/category_title"
-        app:layout_constraintTop_toTopOf="@id/category_title"
-        app:rippleColor="@color/fullRippleColor" />
-
-    <ProgressBar
-        android:id="@+id/cat_progress"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/update_button"
-        app:layout_constraintEnd_toEndOf="@id/update_button"
-        app:layout_constraintStart_toStartOf="@id/update_button"
-        app:layout_constraintTop_toTopOf="@id/update_button"
-        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/category_sort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="0dp"
         android:background="@drawable/square_ripple"
         android:clickable="true"
         android:drawableEnd="@drawable/ic_sort_white_24dp"
@@ -137,9 +112,38 @@
         android:textStyle="normal"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="@id/category_title"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/update_button"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/space"
         app:layout_constraintTop_toTopOf="@id/category_title"
         tools:text="Drag and Drop" />
+
+    <ImageView
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tooltipText="@string/update"
+        android:focusable="true"
+        android:padding="4dp"
+        android:layout_marginEnd="6dp"
+        style="@style/Theme.Widget.CustomImageButton"
+        android:src="@drawable/ic_refresh_white_24dp"
+        android:tint="@color/gray_button"
+        app:layout_constraintBottom_toBottomOf="@id/category_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/category_sort"
+        app:layout_constraintTop_toTopOf="@id/category_title" />
+
+    <ProgressBar
+        android:id="@+id/cat_progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/update_button"
+        app:layout_constraintEnd_toEndOf="@id/update_button"
+        app:layout_constraintStart_toStartOf="@id/update_button"
+        app:layout_constraintTop_toTopOf="@id/update_button"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

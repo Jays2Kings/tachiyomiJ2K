@@ -45,10 +45,12 @@ object Notifications {
     const val CHANNEL_UPDATES_TO_EXTS = "updates_ext_channel"
     const val ID_UPDATES_TO_EXTS = -401
 
-    const val CHANNEL_RESTORE = "backup_restore_channel"
+    const val CHANNEL_BACKUP_RESTORE = "backup_restore_channel"
     const val ID_RESTORE_PROGRESS = -501
     const val ID_RESTORE_COMPLETE = -502
-    const val ID_RESTORE_ERROR = -503
+    const val ID_BACKUP_PROGRESS = -502
+    const val ID_BACKUP_COMPLETE = -503
+    const val ID_RESTORE_ERROR = -504
 
     /**
      * Creates the notification channels introduced in Android Oreo.
@@ -83,7 +85,7 @@ object Notifications {
             context.getString(R.string.new_chapters),
             NotificationManager.IMPORTANCE_DEFAULT
         ), NotificationChannel(
-            CHANNEL_RESTORE,
+            CHANNEL_BACKUP_RESTORE,
             context.getString(R.string.restoring_backup),
             NotificationManager.IMPORTANCE_LOW
         ).apply {

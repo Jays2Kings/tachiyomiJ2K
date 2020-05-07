@@ -24,8 +24,8 @@
                 android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
                 android:layout_weight="0.25"
+                android:clipToPadding="false"
                 tools:listitem="@layout/chapters_item" />
         </LinearLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -45,9 +45,9 @@
             android:paddingTop="8dp"
             android:paddingEnd="0dp"
             android:paddingBottom="8dp"
-            app:layout_constrainedHeight="true"
             android:textColor="?android:attr/textColorPrimary"
             app:iconColor="?android:attr/textColorPrimary"
+            app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -55,17 +55,13 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_view_m"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FloatingTextView"
             android:layout_marginEnd="50dp"
             android:alpha="0"
-            android:background="@drawable/round_textview_background"
-            android:padding="8dp"
-            android:textColor="@android:color/white"
             app:layout_constraintEnd_toStartOf="@id/fast_scroller"
             app:layout_constraintTop_toTopOf="@id/fast_scroller"
-            tools:alpha="1"
-            tools:text="sdfsdf" />
+            tools:text="Volume 12"
+            tools:alpha="1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View

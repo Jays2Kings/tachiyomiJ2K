@@ -55,6 +55,7 @@ class DownloadBottomSheet @JvmOverloads constructor(
         dl_recycler.adapter = adapter
         adapter?.isHandleDragEnabled = true
         adapter?.isSwipeEnabled = true
+        adapter?.fastScroller = fast_scroller
         dl_recycler.setHasFixedSize(true)
         dl_recycler.addItemDecoration(ExtensionDividerItemDecoration(context))
         dl_recycler.setOnApplyWindowInsetsListener(RecyclerWindowInsetsListener)
@@ -65,8 +66,8 @@ class DownloadBottomSheet @JvmOverloads constructor(
         val array = context.obtainStyledAttributes(attrsArray)
         val headerHeight = array.getDimensionPixelSize(0, 0)
         array.recycle()
-        dl_recycler.doOnApplyWindowInsets { _, windowInsets, _ ->
-            dl_recycler.updateLayoutParams<MarginLayoutParams> {
+        recycler_layout.doOnApplyWindowInsets { v, windowInsets, _ ->
+            v.updateLayoutParams<MarginLayoutParams> {
                 topMargin = windowInsets.systemWindowInsetTop + headerHeight - sheet_layout.height
             }
         }

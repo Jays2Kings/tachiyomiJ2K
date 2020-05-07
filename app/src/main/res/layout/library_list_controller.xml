@@ -51,6 +51,12 @@
 
             <include layout="@layout/library_grid_recycler" />
 
+            <eu.kanade.tachiyomi.ui.library.MaterialFastScroll
+                android:id="@+id/fast_scroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:fastScrollerBubbleEnabled="true" />
+
             <View
                 android:id="@+id/recycler_cover"
                 android:layout_width="match_parent"
@@ -60,42 +66,6 @@
         </FrameLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.reddit.indicatorfastscroll.FastScrollerView
-            android:id="@+id/fast_scroller"
-            android:layout_width="25dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:background="@drawable/fast_scroll_background"
-            android:elevation="10dp"
-            android:paddingStart="3dp"
-            android:paddingTop="8dp"
-            android:paddingEnd="0dp"
-            android:paddingBottom="8dp"
-            android:textColor="?android:attr/textColorPrimaryInverse"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text_view_m"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:alpha="0"
-            android:background="@drawable/round_textview_background"
-            android:padding="10dp"
-            android:textColor="@android:color/white"
-            app:layout_constraintEnd_toStartOf="@id/fast_scroller"
-            app:layout_constraintTop_toTopOf="@id/fast_scroller"
-            tools:alpha="1"
-            tools:text="Category" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <eu.kanade.tachiyomi.widget.EmptyView
         android:id="@+id/empty_view"
@@ -114,11 +84,24 @@
         app:layout_anchor="@id/filter_bottom_sheet"
         app:layout_anchorGravity="top" />
 
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/FloatingTextView"
+        android:id="@+id/jumper_category_text"
+        android:layout_gravity="start|center"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.0"
+        android:gravity="center"
+        app:layout_anchor="@id/category_hopper_frame"
+        app:layout_anchorGravity="start|center"
+        tools:text="Category and a long one"
+        tools:alpha="1" />
+
     <FrameLayout
         android:id="@+id/category_hopper_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
+        android:elevation="6dp"
         app:layout_anchor="@id/filter_bottom_sheet"
         app:layout_anchorGravity="top|center">
 

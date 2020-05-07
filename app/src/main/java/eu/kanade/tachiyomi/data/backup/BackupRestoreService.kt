@@ -18,6 +18,7 @@ import com.google.gson.stream.JsonReader
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.backup.models.Backup.CATEGORIES
 import eu.kanade.tachiyomi.data.backup.models.Backup.CHAPTERS
+import eu.kanade.tachiyomi.data.backup.models.Backup.EXTENSIONS
 import eu.kanade.tachiyomi.data.backup.models.Backup.HISTORY
 import eu.kanade.tachiyomi.data.backup.models.Backup.MANGA
 import eu.kanade.tachiyomi.data.backup.models.Backup.MANGAS
@@ -89,7 +90,9 @@ class BackupRestoreService : Service() {
     /**
      * List containing missing sources
      */
-    private val sourcesMissing = mutableListOf<Long>()
+    private val sourcesMissing = mutableListOf<String>()
+
+    var extensionsMap: Map<String, String> = emptyMap()
 
     /**
      * List containing missing sources
@@ -197,6 +200,7 @@ class BackupRestoreService : Service() {
         cancelled = 0
         // Restore categories
         restoreCategories(json, backupManager)
+        extensionsMap = getExtensionsList(json, backupManager)
 
         mangasJson.forEach {
             restoreManga(it.asJsonObject, backupManager)
@@ -213,8 +217,19 @@ class BackupRestoreService : Service() {
         showResultNotification(logFile.parent, logFile.name)
     }
 
-    /**Restore categories if they were backed up
-     *
+    /**
+     * Restore extension names if they were backed up
+     */
+    private fun getExtensionsList(json: JsonObject, backupManager: BackupManager): Map<String,
+        String> {
+        json.get(EXTENSIONS)?.let { element ->
+            return backupManager.getExtensionsMap(element.asJsonArray)
+        }
+        return emptyMap()
+    }
+
+    /**
+     * Restore categories if they were backed up
      */
     private fun restoreCategories(json: JsonObject, backupManager: BackupManager) {
         val element = json.get(CATEGORIES)
@@ -275,11 +290,18 @@ class BackupRestoreService : Service() {
             if (e is RuntimeException) {
                 val cause = e.cause
                 if (cause is SourceNotFoundException) {
-                    sourcesMissing.add(cause.id)
-                } else if (e.message?.contains("licensed", true) == true) {
-                    lincensedManga++
+                    val sourceName = extensionsMap[cause.id.toString()] ?: cause.id.toString()
+                    sourcesMissing.add(
+                        extensionsMap[cause.id.toString()] ?: cause.id.toString()
+                    )
+                    val errorMessage = getString(R.string.source_not_installed_, sourceName)
+                    errors.add("${manga.title} - $errorMessage")
+                } else {
+                    if (e.message?.contains("licensed", true) == true) {
+                        lincensedManga++
+                    }
+                    errors.add("${manga.title} - ${cause?.message ?: e.message}")
                 }
-                errors.add("${manga.title} - ${cause?.message ?: e.message}")
                 return
             }
             errors.add("${manga.title} - ${e.message}")
@@ -335,7 +357,7 @@ class BackupRestoreService : Service() {
      * keep a partially constructed progress notification for resuse
      */
     private val progressNotification by lazy {
-        NotificationCompat.Builder(this, Notifications.CHANNEL_RESTORE)
+        NotificationCompat.Builder(this, Notifications.CHANNEL_BACKUP_RESTORE)
                 .setContentTitle(getString(R.string.app_name))
                 .setSmallIcon(R.drawable.ic_tachi)
                 .setOngoing(true)
@@ -376,9 +398,27 @@ class BackupRestoreService : Service() {
         val content = mutableListOf(getString(R.string.restore_completed_content, restoreProgress
             .toString(), errors.size.toString()))
         val sourceMissingCount = sourcesMissing.distinct().size
-        if (sourceMissingCount > 0)
-            content.add(resources.getQuantityString(R.plurals.sources_missing,
-                sourceMissingCount, sourceMissingCount))
+        if (sourceMissingCount > 0) {
+            val sources = sourcesMissing.distinct().filter { it.toLongOrNull() == null }
+            val missingSourcesString = if (sources.size > 5) {
+                sources.take(5).joinToString(", ") + "..."
+            } else {
+                sources.joinToString(", ")
+            }
+            if (sources.isEmpty()) {
+                content.add(
+                    resources.getQuantityString(
+                        R.plurals.sources_missing, sourceMissingCount, sourceMissingCount
+                    )
+                )
+            } else {
+                content.add(
+                    resources.getQuantityString(
+                        R.plurals.sources_missing, sourceMissingCount, sourceMissingCount
+                    ) + ": " + missingSourcesString
+                )
+            }
+        }
         if (lincensedManga > 0)
             content.add(resources.getQuantityString(R.plurals.licensed_manga, lincensedManga,
                 lincensedManga))
@@ -392,7 +432,7 @@ class BackupRestoreService : Service() {
 
         val restoreString = content.joinToString("\n")
 
-        val resultNotification = NotificationCompat.Builder(this, Notifications.CHANNEL_RESTORE)
+        val resultNotification = NotificationCompat.Builder(this, Notifications.CHANNEL_BACKUP_RESTORE)
                 .setContentTitle(getString(R.string.restore_completed))
                 .setContentText(restoreString)
                 .setStyle(NotificationCompat.BigTextStyle().bigText(restoreString))
@@ -410,7 +450,7 @@ class BackupRestoreService : Service() {
      *
      */
     private fun showErrorNotification(errorMessage: String) {
-        val resultNotification = NotificationCompat.Builder(this, Notifications.CHANNEL_RESTORE)
+        val resultNotification = NotificationCompat.Builder(this, Notifications.CHANNEL_BACKUP_RESTORE)
                 .setContentTitle(getString(R.string.restore_error))
                 .setContentText(errorMessage)
                 .setSmallIcon(R.drawable.ic_error_grey)

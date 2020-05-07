@@ -67,6 +67,7 @@ class LibraryGestureDetector(private val controller: LibraryController) : Gestur
                     })
                 }
             }
+            controller.hopperGravity = controller.preferences.hopperGravity().get()
             result = true
         }
         return result

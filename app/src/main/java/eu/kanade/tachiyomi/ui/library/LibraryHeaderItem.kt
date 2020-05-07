@@ -8,7 +8,6 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.TypedValue
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -17,7 +16,6 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.f2prateek.rx.preferences.Preference
 import com.github.florent37.viewtooltip.ViewTooltip
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.SelectableAdapter
@@ -27,14 +25,12 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.invisible
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
-import eu.kanade.tachiyomi.util.view.visInvisIf
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.library_category_header_item.*
@@ -43,8 +39,7 @@ import uy.kohesive.injekt.api.get
 
 class LibraryHeaderItem(
     private val categoryF: (Int) -> Category,
-    private val catId: Int,
-    private val showFastScroll: Preference<Boolean>
+    private val catId: Int
 ) :
     AbstractHeaderItem<LibraryHeaderItem.Holder>() {
 
@@ -56,7 +51,7 @@ class LibraryHeaderItem(
         view: View,
         adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>
     ): Holder {
-        return Holder(view, adapter as LibraryCategoryAdapter, showFastScroll.getOrDefault())
+        return Holder(view, adapter as LibraryCategoryAdapter)
     }
 
     override fun bindViewHolder(
@@ -91,7 +86,7 @@ class LibraryHeaderItem(
         return -(category.id!!)
     }
 
-    class Holder(val view: View, private val adapter: LibraryCategoryAdapter, padEnd: Boolean) :
+    class Holder(val view: View, private val adapter: LibraryCategoryAdapter) :
         BaseFlexibleViewHolder(view, adapter, true) {
 
         private val sectionText: TextView = view.findViewById(R.id.category_title)
@@ -102,9 +97,6 @@ class LibraryHeaderItem(
         private val catProgress: ProgressBar = view.findViewById(R.id.cat_progress)
 
         init {
-            sortText.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                marginEnd = (if (padEnd && adapter.recyclerView.paddingEnd == 0) 12 else 2).dpToPx
-            }
             category_header_layout.setOnClickListener { toggleCategory() }
             updateButton.setOnClickListener { addCategoryToUpdate() }
             sectionText.setOnLongClickListener {
@@ -193,7 +185,7 @@ class LibraryHeaderItem(
                     expandImage.visibleIf(!adapter.isSingleCategory)
                     catProgress.gone()
                     checkboxImage.gone()
-                    updateButton.visInvisIf(category.id ?: 0 > -1 && !adapter.isSingleCategory)
+                    updateButton.visibleIf(category.id ?: 0 > -1 && !adapter.isSingleCategory)
                 }
             }
         }

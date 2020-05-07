@@ -12,12 +12,14 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
+import eu.kanade.tachiyomi.ui.setting.SettingsLibraryController
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.expand
 import eu.kanade.tachiyomi.util.view.isCollapsed
 import eu.kanade.tachiyomi.util.view.setBottomEdge
 import eu.kanade.tachiyomi.util.view.setEdgeToEdge
 import eu.kanade.tachiyomi.util.view.visibleIf
+import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.android.synthetic.main.display_bottom_sheet.*
 import uy.kohesive.injekt.injectLazy
 
@@ -66,7 +68,7 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initGeneralPreferences()
-        setBottomEdge(hide_filters, activity)
+        setBottomEdge(display_layout, activity)
         close_button.setOnClickListener { dismiss() }
         settings_scroll_view.viewTreeObserver.addOnGlobalLayoutListener {
             val isScrollable =
@@ -79,14 +81,10 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
     private fun initGeneralPreferences() {
         display_group.bindToPreference(preferences.libraryLayout()) {
             controller.reattachAdapter()
-            if (sheetBehavior.isCollapsed())
-                dismiss()
+            if (sheetBehavior.isCollapsed()) dismiss()
         }
         uniform_grid.bindToPreference(preferences.uniformGrid()) {
             controller.reattachAdapter()
-        }
-        autohide_seeker.bindToPreference(preferences.alwaysShowSeeker()) {
-            controller.updateShowScrollbar(autohide_seeker.isChecked)
         }
         grid_size_toggle_group.bindToPreference(preferences.gridSize()) {
             controller.reattachAdapter()
@@ -101,6 +99,10 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
             controller.reattachAdapter()
         }
         hide_filters.bindToPreference(preferences.hideFiltersAtStart())
+        more_settings.setOnClickListener {
+            controller.router.pushController(SettingsLibraryController().withFadeTransaction())
+            dismiss()
+        }
     }
 
     /**

@@ -38,7 +38,7 @@ internal class UpdaterNotifier(private val context: Context) {
      *
      * @param title tile of notification.
      */
-    fun onDownloadStarted(title: String) {
+    fun onDownloadStarted(title: String): NotificationCompat.Builder {
         with(notification) {
             setContentTitle(title)
             setContentText(context.getString(R.string.downloading))
@@ -46,6 +46,7 @@ internal class UpdaterNotifier(private val context: Context) {
             setOngoing(true)
         }
         notification.show()
+        return notification
     }
 
     /**

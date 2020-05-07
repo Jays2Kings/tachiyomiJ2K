@@ -97,6 +97,7 @@ import eu.kanade.tachiyomi.util.system.ThemeUtil
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
+import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.getText
@@ -515,6 +516,14 @@ class MangaDetailsController : BaseController,
     }
     //endregion
 
+    fun isNotOnline(showSnackbar: Boolean = true): Boolean {
+        if (activity == null || !activity!!.isOnline()) {
+            if (showSnackbar) view?.snack(R.string.no_network_connection)
+            return true
+        }
+        return false
+    }
+
     fun showError(message: String) {
         swipe_refresh?.isRefreshing = presenter.isLoading
         view?.snack(message)
@@ -599,7 +608,8 @@ class MangaDetailsController : BaseController,
     fun refreshAdapter() = adapter?.notifyDataSetChanged()
 
     override fun onItemClick(view: View?, position: Int): Boolean {
-        val chapter = (adapter?.getItem(position) as? ChapterItem)?.chapter ?: return false
+        val chapterItem = (adapter?.getItem(position) as? ChapterItem) ?: return false
+        val chapter = chapterItem.chapter
         if (actionMode != null) {
             if (startingDLChapterPos == null) {
                 adapter?.addSelection(position)
@@ -629,6 +639,7 @@ class MangaDetailsController : BaseController,
             return false
         }
         openChapter(chapter)
+
         return false
     }
 
@@ -828,13 +839,15 @@ class MangaDetailsController : BaseController,
                 }
             }
             R.id.action_open_in_web_view -> openInWebView()
-            R.id.action_refresh_tracking -> presenter.refreshTrackers()
+            R.id.action_refresh_tracking -> presenter.refreshTrackers(true)
             R.id.action_migrate ->
-                PreMigrationController.navigateToMigration(
-                    presenter.preferences.skipPreMigration().getOrDefault(),
-                    router,
-                    listOf(manga!!.id!!)
-                )
+                if (!isNotOnline()) {
+                    PreMigrationController.navigateToMigration(
+                        presenter.preferences.skipPreMigration().getOrDefault(),
+                        router,
+                        listOf(manga!!.id!!)
+                    )
+                }
             R.id.action_mark_all_as_read -> {
                 MaterialDialog(view!!.context).message(R.string.mark_all_chapters_as_read)
                     .positiveButton(R.string.mark_as_read) {
@@ -892,8 +905,8 @@ class MangaDetailsController : BaseController,
     }
 
     override fun openInWebView() {
+        if (isNotOnline()) return
         val source = presenter.source as? HttpSource ?: return
-
         val url = try {
             source.mangaDetailsRequest(presenter.manga).url.toString()
         } catch (e: Exception) {
@@ -1053,6 +1066,7 @@ class MangaDetailsController : BaseController,
     }
 
     override fun globalSearch(text: String) {
+        if (isNotOnline()) return
         router.pushController(SourceSearchController(text).withFadeTransaction())
     }
 
