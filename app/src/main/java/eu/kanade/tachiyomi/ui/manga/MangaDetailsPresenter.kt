@@ -788,7 +788,7 @@ class MangaDetailsPresenter(
     }
 
     fun trackSearch(query: String, service: TrackService) {
-        if (controller.isNotOnline()) {
+        if (!controller.isNotOnline()) {
             scope.launch(Dispatchers.IO) {
                 val results = try {
                     service.search(query)
