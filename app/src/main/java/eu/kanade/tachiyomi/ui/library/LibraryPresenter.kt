@@ -117,9 +117,9 @@ class LibraryPresenter(
 
     private fun blankItem(id: Int = currentCategory): List<LibraryItem> {
         return listOf(
-            LibraryItem(
-                LibraryManga.createBlank(id), LibraryHeaderItem({ getCategory(id) }, id)
-            )
+                LibraryItem(
+                        LibraryManga.createBlank(id), LibraryHeaderItem({ getCategory(id) }, id)
+                )
         )
     }
 
@@ -171,7 +171,34 @@ class LibraryPresenter(
 
         val filterTracked = preferences.filterTracked().getOrDefault()
 
-        fun filterTrackedStatus(status: String) = preferences.filterTrackedStatus(status).getOrDefault()
+        /*
+               Maybe track.status should be more generalized?
+               Anilist uses...
+                   const val READING = 1
+                   const val COMPLETED = 2
+                   const val PAUSED = 3
+                   const val DROPPED = 4
+                   const val PLANNING = 5
+                   const val REPEATING = 6
+               while Bangumi uses this...
+                   const val PLANNING = 1
+                   const val COMPLETED = 2
+                   const val READING = 3
+                   const val ON_HOLD = 4
+                   const val DROPPED = 5
+               (this also means, that this implementation currently
+                 only works perfectly with anilist)
+               */
+        // TODO import these from track schema?
+        val filterTrackedStatus = mapOf<Int, String>(
+                1 to "reading",
+                2 to "completed",
+                3 to "paused",
+                4 to "dropped",
+                5 to "plan_to_read",
+                6 to "rereading"
+        ).filter { preferences.filterTrackedStatus(it.value).getOrDefault() == STATE_INCLUDE }
+                .map { it.key }
 
         val filterMangaType = preferences.filterMangaType().getOrDefault()
 
@@ -185,14 +212,14 @@ class LibraryPresenter(
                 else {
                     return@f subItems.any {
                         matchesFilters(
-                            it,
-                            filterDownloaded,
-                            filterUnread,
-                            filterCompleted,
-                            filterTracked,
-                            ::filterTrackedStatus,
-                            filterMangaType,
-                            filterTrackers
+                                it,
+                                filterDownloaded,
+                                filterUnread,
+                                filterCompleted,
+                                filterTracked,
+                                filterTrackedStatus,
+                                filterMangaType,
+                                filterTrackers
                         )
                     }
                 }
@@ -209,7 +236,7 @@ class LibraryPresenter(
                     filterUnread,
                     filterCompleted,
                     filterTracked,
-                    ::filterTrackedStatus,
+                    filterTrackedStatus,
                     filterMangaType,
                     filterTrackers
             )
@@ -222,7 +249,7 @@ class LibraryPresenter(
         filterUnread: Int,
         filterCompleted: Int,
         filterTracked: Int,
-        filterTrackedStatus: (status: String) -> Int,
+        filterTrackedStatus: List<Int>,
         filterMangaType: Int,
         filterTrackers: String
     ): Boolean {
@@ -260,37 +287,10 @@ class LibraryPresenter(
             if (filterTracked == STATE_INCLUDE) {
                 if (!hasTrack) return false
 
-                /*
-                Maybe track.status should be more generalized?
-                Anilist uses...
-                    const val READING = 1
-                    const val COMPLETED = 2
-                    const val PAUSED = 3
-                    const val DROPPED = 4
-                    const val PLANNING = 5
-                    const val REPEATING = 6
-                while Bangumi uses this...
-                    const val PLANNING = 1
-                    const val COMPLETED = 2
-                    const val READING = 3
-                    const val ON_HOLD = 4
-                    const val DROPPED = 5
-                (this also means, that this implementation currently
-                  only works perfectly with anilist)
-                */
-                // TODO import these from track schema?
-                val filterTrackedStatusFailed = mapOf<Number, String>(
-                        1 to "reading",
-                        2 to "completed",
-                        3 to "paused",
-                        4 to "dropped",
-                        5 to "plan_to_read",
-                        6 to "rereading"
-                ).any {
-                    if (filterTrackedStatus(it.value) != STATE_INCLUDE) return@any false
-                    return@any tracks.any { track -> track.status != it.key }
+                if (filterTrackedStatus.isNotEmpty()) {
+                    val hasFilteredStatus = filterTrackedStatus.any { tracks.any { track -> track.status == it } }
+                    if (!hasFilteredStatus) return false
                 }
-                if (filterTrackedStatusFailed) return false
 
                 if (filterTrackers.isNotEmpty()) {
                     if (service != null) {
