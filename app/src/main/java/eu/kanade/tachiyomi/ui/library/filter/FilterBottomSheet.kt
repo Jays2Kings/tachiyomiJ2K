@@ -457,7 +457,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             FILTER_TRACKER = ""
             filterItems.remove(trackers!!)
         }
-        if (tracked.state == 0) {
+        if (tracked?.state == 0) {
             val trackedIndex = filter_layout.indexOfChild(tracked)
             trackedStatus.values.forEachIndexed { i, it ->
                 if (it != null && it.parent == null) {
@@ -465,7 +465,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     filterItems.add(trackedIndex + i + 1, it)
                 }
             }
-        } else if (tracked.state != 0) {
+        } else if (tracked?.state != 0) {
             trackedStatus.values.forEach {
                 if (it != null && it.parent != null) {
                     filter_layout.removeView(it)
