@@ -167,7 +167,7 @@
     <string name="normal">Нормальная</string>
 
     <string name="next_5_unread">Загрузить 5 следующих глав</string>
-    <string name="all_chapters">Загрузить все</string>
+    <string name="all_chapters">Все главы</string>
     <string name="custom_range">Загрузить другое кол-во</string>
     <string name="download_paused">Загрузка приостановлена</string>
     <string name="no_network_connection">Нет сетевого соединения</string>
