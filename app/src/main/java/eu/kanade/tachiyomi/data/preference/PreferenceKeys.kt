@@ -99,7 +99,7 @@ object PreferenceKeys {
 
     const val filterTracked = "pref_filter_tracked_key"
 
-    fun filterTrackedStatus(status: String) = "pref_filter_tracked_status_$status_key"
+    fun filterTrackedStatus(status: String) = "pref_filter_tracked_status_${status}_key"
 
     const val filterMangaType = "pref_filter_manga_type_key"
 
