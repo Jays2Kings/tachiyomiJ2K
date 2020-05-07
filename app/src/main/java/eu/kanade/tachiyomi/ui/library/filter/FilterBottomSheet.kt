@@ -36,8 +36,8 @@ import kotlin.math.min
 import kotlin.math.roundToInt
 
 class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-    LinearLayout(context, attrs),
-    FilterTagGroupListener {
+        LinearLayout(context, attrs),
+        FilterTagGroupListener {
 
     /**
      * Preferences helper.
@@ -53,6 +53,16 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
     private lateinit var completed: FilterTagGroup
 
     private lateinit var tracked: FilterTagGroup
+
+    // TODO import these from track schema?
+    private var trackedStatus: MutableMap<String, FilterTagGroup?> = mutableMapOf(
+            "reading" to null,
+            "completed" to null,
+            "paused" to null,
+            "dropped" to null,
+            "plan_to_read" to null,
+            "rereading" to null
+    )
 
     private var trackers: FilterTagGroup? = null
 
@@ -114,11 +124,11 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
 
         post {
             updateRootPadding(
-                when (sheetBehavior?.state) {
-                    BottomSheetBehavior.STATE_HIDDEN -> -1f
-                    BottomSheetBehavior.STATE_EXPANDED -> 1f
-                    else -> 0f
-                }
+                    when (sheetBehavior?.state) {
+                        BottomSheetBehavior.STATE_HIDDEN -> -1f
+                        BottomSheetBehavior.STATE_EXPANDED -> 1f
+                        else -> 0f
+                    }
             )
             shadow.alpha = if (sheetBehavior.isHidden()) 0f else 1f
         }
@@ -154,7 +164,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         val minHeight = sheetBehavior?.peekHeight ?: 0
         val maxHeight = height
         val trueProgress = progress
-            ?: if (sheetBehavior.isExpanded()) 1f else 0f
+                ?: if (sheetBehavior.isExpanded()) 1f else 0f
         val percent = (trueProgress * 100).roundToInt()
         val value = (percent * (maxHeight - minHeight) / 100) + minHeight
         val height = context.resources.getDimensionPixelSize(R.dimen.rounder_radius)
@@ -167,11 +177,13 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
     fun hasActiveFilters() = filterItems.any { it.isActivated }
 
     private fun hasActiveFiltersFromPref(): Boolean {
-        return preferences.filterDownloaded().getOrDefault() > 0 || preferences.filterUnread()
-            .getOrDefault() > 0 || preferences.filterCompleted()
-            .getOrDefault() > 0 || preferences.filterTracked()
-            .getOrDefault() > 0 || preferences.filterMangaType()
-            .getOrDefault() > 0 || FILTER_TRACKER.isNotEmpty()
+        return preferences.filterDownloaded().getOrDefault() > 0
+                || preferences.filterUnread().getOrDefault() > 0
+                || preferences.filterCompleted().getOrDefault() > 0
+                || preferences.filterTracked().getOrDefault() > 0
+                || trackedStatus.any { preferences.filterTrackedStatus(it.key).getOrDefault() > 0 }
+                || preferences.filterMangaType().getOrDefault() > 0
+                || FILTER_TRACKER.isNotEmpty()
     }
 
     private fun createTags() {
@@ -196,6 +208,15 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         tracked = inflate(R.layout.filter_buttons) as FilterTagGroup
         tracked.setup(this, R.string.tracked, R.string.not_tracked)
 
+        trackedStatus.forEach {
+            trackedStatus[it.key] = inflate(R.layout.filter_buttons) as FilterTagGroup
+            trackedStatus[it.key]!!.setup(this, this.context.resources.getIdentifier(
+                    it.key,
+                    "string",
+                    this.context.packageName
+            ))
+        }
+
         reSortViews()
 
         checkForManhwa()
@@ -206,7 +227,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             val db: DatabaseHelper by injectLazy()
             val showCategoriesCheckBox = withContext(Dispatchers.IO) {
                 db.getCategories().executeAsBlocking()
-                    .isNotEmpty()
+                        .isNotEmpty()
             }
             val libraryManga = db.getLibraryMangas().executeAsBlocking()
             val types = mutableListOf<Int>()
@@ -218,10 +239,10 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                 launchUI {
                     val mangaType = inflate(R.layout.filter_buttons) as FilterTagGroup
                     mangaType.setup(
-                        this@FilterBottomSheet,
-                        types.first(),
-                        types.getOrNull(1),
-                        types.getOrNull(2)
+                            this@FilterBottomSheet,
+                            types.first(),
+                            types.getOrNull(1),
+                            types.getOrNull(2)
                     )
                     this@FilterBottomSheet.mangaType = mangaType
                     filter_layout.addView(mangaType)
@@ -244,6 +265,15 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     unread.state = if (unreadP in 3..4) unreadP - 3 else 2
                 }
                 tracked.setState(preferences.filterTracked())
+                val trackedP = preferences.filterTracked().getOrDefault()
+                if (trackedP == STATE_INCLUDE) {
+                    trackedStatus.forEach {
+                        if (it.value == null) return@forEach
+                        it.value!!.state = 0
+                        if (!filterItems.contains(it.value!!))
+                            filterItems.add(it.value!!)
+                    }
+                }
                 mangaType?.setState(preferences.filterMangaType())
                 reSortViews()
             }
@@ -255,10 +285,10 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     withContext(Dispatchers.Main) {
                         trackers = inflate(R.layout.filter_buttons) as FilterTagGroup
                         trackers?.setup(
-                            this@FilterBottomSheet,
-                            serviceNames.first(),
-                            serviceNames.getOrNull(1),
-                            serviceNames.getOrNull(2)
+                                this@FilterBottomSheet,
+                                serviceNames.first(),
+                                serviceNames.getOrNull(1),
+                                serviceNames.getOrNull(2)
                         )
                         if (tracked.isActivated) {
                             filter_layout.addView(trackers)
@@ -281,11 +311,11 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                 }
                 unread -> {
                     preferences.filterUnread().set(
-                        when (index) {
-                            in 0..1 -> index + 3
-                            2 -> 2
-                            else -> 0
-                        }
+                            when (index) {
+                                in 0..1 -> index + 3
+                                2 -> 2
+                                else -> 0
+                            }
                     )
                     null
                 }
@@ -298,7 +328,13 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                 completed -> preferences.filterCompleted()
                 tracked -> preferences.filterTracked()
                 mangaType -> preferences.filterMangaType()
-                else -> null
+                else -> {
+                    val trackedStatusHasView = trackedStatus.any { it.value == view }
+                    if (trackedStatusHasView) {
+                        val status = trackedStatus.entries.find { it.value == view }!!.key
+                        preferences.filterTrackedStatus(status)
+                    } else null
+                }
             }?.set(index + 1)
             onGroupClicked(ACTION_FILTER)
         }
@@ -328,6 +364,23 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             FILTER_TRACKER = ""
             filterItems.remove(trackers!!)
         }
+        if (tracked.state == 0) {
+            val trackedIndex = filter_layout.indexOfChild(tracked)
+            trackedStatus.values.forEachIndexed { i, it ->
+                if (it != null && it.parent == null) {
+                    filter_layout.addView(it, trackedIndex + i + 1)
+                    filterItems.add(trackedIndex + i + 1, it)
+                }
+            }
+        } else if (tracked.state != 0) {
+            trackedStatus.values.forEach {
+                if (it != null && it.parent != null) {
+                    filter_layout.removeView(it)
+                    filterItems.remove(it)
+                    it.reset()
+                }
+            }
+        }
         val hasFilters = hasActiveFilters()
         if (hasFilters && clearButton.parent == null) {
             filter_layout.addView(clearButton, 0)
@@ -341,6 +394,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         preferences.filterUnread().set(0)
         preferences.filterCompleted().set(0)
         preferences.filterTracked().set(0)
+        trackedStatus.forEach { preferences.filterTrackedStatus(it.key) }
         preferences.filterMangaType().set(0)
         FILTER_TRACKER = ""
 
@@ -357,6 +411,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             filterItems.remove(it)
         }
         filterItems.remove(allUnread)
+        trackedStatus.forEach { filterItems.remove(it.value) }
         reSortViews()
         onGroupClicked(ACTION_FILTER)
     }
