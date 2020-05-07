@@ -715,7 +715,7 @@
     <string name="select_ending_chapter">Выберите конечную главу</string>
     <string name="search_chapters">Поиск глав</string>
     <string name="next_unread_chapter">Следующая непрочитанная глава</string>
-    <string name="all_read_chapters">All read chapters</string>
+    <string name="all_read_chapters">Все прочитанные главы</string>
     <string name="all_but_bookmarked_chapters">Все главы, кроме закладок</string>
     <string name="add_x_to_library">Добавить %1$s в библиотеку?</string>
     <string name="show_all">Все</string>
