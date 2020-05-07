@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="app_name" translatable="false">TachiyomiJ2K</string>
-    <string name="app_short_name" translatable="false">TachiJ2K</string>
 
     <string name="add">Добавить</string>
     <string name="add_category">Добавить категорию</string>
@@ -25,7 +23,7 @@
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как прочитанное</string>
-    <string name="mark_previous_as_read">Отметить предыдущие как прочитанные</string>
+    <string name="mark_previous_as_read">Предыдущие как прочитанные</string>
     <string name="migrate_now">Переместить сейчас</string>
     <string name="move_to_categories">Поместить в категорию</string>
     <string name="move_to_bottom">Переместить в конец</string>
@@ -166,15 +164,13 @@
     <string name="fast">Быстрая</string>
     <string name="normal">Нормальная</string>
 
-    <string name="next_5_unread">Загрузить 5 следующих глав</string>
-    <string name="all_chapters">Все главы</string>
-    <string name="custom_range">Загрузить другое кол-во</string>
+
     <string name="download_paused">Загрузка приостановлена</string>
     <string name="no_network_connection">Нет сетевого соединения</string>
     <string name="no_wifi_connection">Нет Wi-Fi соединения</string>
     <string name="could_not_download_unexpected_error">Неожиданная ошибка при загрузке главы</string>
     <string name="could_not_download_chapter_can_try_again">Произошла ошибка при загрузке глав. Попробуйте еще раз в разделе загрузки</string>
-    <string name="all_unread_chapters">Загрузить непрочитанные</string>
+
 
     <string name="dropped">Брошенный</string>
 
@@ -194,8 +190,6 @@
     <string name="version_">Версия: %1$s</string>
 
     <string name="fifth_to_last">Пятую от прочитанной главы</string>
-
-    <string name="file_saved_at_">Файл сохранен в %1$s</string>
     <string name="select_backup_file">Выбрать файл бэкапа</string>
     <string name="select_cover_image">Выбрать обложку</string>
 
@@ -328,7 +322,7 @@
 
     <string name="password">Пароль</string>
 
-    <string name="paused">На удержании</string>
+
 
     <string name="picture_saved">Картинка сохранена</string>
 
@@ -634,16 +628,21 @@
     <string name="remove_from_library_question">Удалить из библиотеки?</string>
     <string name="no_matches_for_filters">Не найдено совпадений для ваших текущих фильтров</string>
     <string name="show_all_categories">Показать все категории</string>
+    <string name="expand_all_categories">Развернуть категории</string>
+    <string name="collapse_all_categories">Свернуть категории</string>
+    <string name="reorder_filters">Изменить порядок фильтров</string>
+
+    <string name="read_progress">Прогресс чтения</string>
+    <string name="series_type">Тип серии</string>
     <!-- Library Sort -->
     <string name="sort_by_">Сортировать по: %1$s</string>
     <string name="date_added">Дата добавления</string>
     <string name="latest_chapter">Последняя глава</string>
     <!-- Library Display -->
-    <string name="display_options">Показать варианты</string>
+    <string name="display_options">Показать опции</string>
     <string name="comfortable_grid">Удобная Сетка</string>
     <string name="start_with_filters_hidden">Скрывать фильтры при запуске</string>
     <string name="hide_start_reading_button">Скрыть кнопку начала чтения</string>
-    <string name="always_show_library_fast_scroll">Всегда показывать быструю прокрутку в библиотеке</string>
     <string name="unread_badges">Значки непрочитанных глав</string>
     <string name="uniform_covers">Одинаковые обложки</string>
     <string name="x_small">XS</string>
@@ -714,8 +713,12 @@
     <string name="select_starting_chapter">Выберите начальную главу</string>
     <string name="select_ending_chapter">Выберите конечную главу</string>
     <string name="search_chapters">Поиск глав</string>
-    <string name="next_unread_chapter">Следующая непрочитанная глава</string>
-    <string name="all_read_chapters">Все прочитанные главы</string>
+    <string name="next_unread_chapter">Следующую главу</string>
+    <string name="next_5_unread">5 следующих глав</string>
+    <string name="all_chapters">Все главы</string>
+    <string name="all_unread_chapters">Непрочитанные главы</string>
+    <string name="custom_range">Другое кол-во</string>
+    <string name="all_read_chapters">Прочитанные главы</string>
     <string name="all_but_bookmarked_chapters">Все главы, кроме закладок</string>
     <string name="add_x_to_library">Добавить %1$s в библиотеку?</string>
     <string name="show_all">Все</string>
@@ -750,6 +753,8 @@
     <string name="not_tracked">Не отслеживается</string>
     <string name="refresh_tracking">Обновить отслеживание</string>
     <string name="add_tracking">Добавить отслеживание</string>
+    <string name="paused">На паузе</string>
+    <!-- Migration -->
     <string name="migrate_">Перенести %1$s</string>
     <string name="copy_value">Копия</string>
 
@@ -759,7 +764,9 @@
     <string name="secure_screen">Безопасный экран</string>
     <string name="hide_tachi_from_recents">Скрыть Tachiyomi с экрана последних</string>
     <string name="security">Безопасность</string>
-
+    <!-- Backup -->
+    <string name="backup_failed">Ошибка резервного копирования</string>
+    <string name="creating_backup">Создание резервной копии</string>
     <!-- Advanced section -->
     <string name="disable_battery_optimization">Отключить оптимизацию батареи</string>
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
