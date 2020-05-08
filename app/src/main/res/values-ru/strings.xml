@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
     <string name="add">Добавить</string>
-    <string name="add_category">Добавить категорию</string>
     <string name="notify_extension_updates">Авто-проверка обновлений</string>
     <string name="cancel">Отмена</string>
     <string name="cancel_all">Отменить все</string>
@@ -579,11 +577,15 @@
 
     <plurals name="remove_n_chapters">
         <item quantity="one">Удалить %1$d загруженную главу?</item>
-        <item quantity="other">Удалить %1$d загруженные главы?</item>
+        <item quantity="few">Удалить %1$d загруженные главы?</item>
+        <item quantity="many">Удалить %1$d загруженных глав?</item>
+        <item quantity="other">Удалить %1$d загруженных глав?</item>
     </plurals>
     <plurals name="chapters">
         <item quantity="one">%1$d глава</item>
-        <item quantity="other">%1$d главы</item>
+        <item quantity="few">%1$d главы</item>
+        <item quantity="many">%1$d глав</item>
+        <item quantity="other">%1$d глав</item>
     </plurals>
 
     <plurals name="pages_left">
@@ -606,6 +608,7 @@
     <string name="confirm_category_deletion">Удалить категорию?</string>
     <string name="confirm_category_deletion_message">Манга в этой категории будет перемещена в категорию по умолчанию.</string>
     <string name="already_in_category">Манга уже в категории</string>
+    <string name="add_categories">Добавить категории</string>
     <string name="manage_category">Управление категорией</string>
     <string name="add_to_categories">Выберите, к каким категориям добавить это. Если ни один не выбран, он будет добавлен в категорию «по умолчанию»</string>
     <string name="hide_categories">Скрыть категории</string>
@@ -656,6 +659,7 @@
     <string name="show_count">Количество</string>
     <string name="tap_library_to_show_filters">Нажмите значок библиотеки, чтобы отобразить фильтры</string>
     <string name="display_as">Показать как</string>
+    <string name="more_library_settings">Дополнительные настройки библиотеки</string>
     <!-- Library settings -->
     <string name="include_in_global_update">Включить в глобальное обновление</string>
     <!-- Recents -->
