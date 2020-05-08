@@ -67,23 +67,23 @@ interface Manga : SManga {
         val currentTags = genre?.split(",")?.map { it.trim().toLowerCase(Locale.US) }
         return if (currentTags?.any
             { tag ->
-                tag.startsWith("japanese") || tag == "manga"
+                tag.startsWith("japanese") || tag == "manga" || tag == "манга"
             } == true)
             TYPE_MANGA
         else if (currentTags?.any
             { tag ->
-                tag.startsWith("english") || tag == "comic"
+                tag.startsWith("english") || tag == "comic" || tag == "комикс"
             } == true || isComicSource(sourceName))
             TYPE_COMIC
         else if (currentTags?.any
             { tag ->
-                tag.startsWith("chinese") || tag == "manhua"
+                tag.startsWith("chinese") || tag == "manhua" || tag == "маньхуа"
             } == true ||
             sourceName.contains("manhua", true))
             TYPE_MANHUA
         else if (currentTags?.any
             { tag ->
-                tag == "long strip" || tag == "manhwa"
+                tag == "long strip" || tag == "manhwa" || tag == "манхва"
             } == true || isWebtoonSource(sourceName))
             TYPE_MANHWA
         else if (currentTags?.any
