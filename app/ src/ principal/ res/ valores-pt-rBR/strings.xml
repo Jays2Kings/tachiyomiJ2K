@@ -118,6 +118,8 @@
     <string name="expand_all_categories">Expandir todas as categorias</string>
     <string name="collapse_all_categories">Recolher todas as categorias</string>
     <string name="reorder_filters">Reordenar filtros</string>
+    <string name="_unread">%d Não lido</string>
+    <string name="search_globally">Procurar \"%1$s\" globalmente</string>
 
     <string name="read_progress">Leitura em progresso</string>
     <string name="series_type">Tipo de série</string>
@@ -535,6 +537,9 @@
         <item quantity="one">Limpeza realizada. %d pasta removida</item>
         <item quantity="other">Limpeza realizada. %d pastas removidas</item>
     </plurals>
+    <string name="clean_up_cached_covers">Limpar capas em cache</string>
+    <string name="delete_old_covers_in_library">Exclua capas em cache antigas e não usadas de
+         mangá em sua biblioteca que foi atualizado</string>
 
     <!-- About section -->
     <string name="version">Versão</string>
@@ -651,6 +656,7 @@
     <string name="create">Criar</string>
     <string name="default_value">Padrão</string>
     <string name="delete">Excluir</string>
+    <string name="deleted_">Excluído: %1$s</string>
     <string name="display">Exibir</string>
     <string name="drag_handle">Arrastar e pegar</string>
     <string name="edit">Editar</string>
