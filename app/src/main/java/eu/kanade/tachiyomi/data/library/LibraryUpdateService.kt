@@ -357,18 +357,14 @@ class LibraryUpdateService(
             Timber.e(exception)
             stopSelf(startId)
         }
+        if (target == Target.CHAPTERS) {
+            listener?.onUpdateManga(LibraryManga())
+        }
         job = GlobalScope.launch(handler) {
             when (target) {
-                Target.CHAPTERS -> {
-                    listener?.onUpdateManga(LibraryManga())
-                    updateChaptersJob(mangaToAdd)
-                }
-                Target.DETAILS -> {
-                    updateDetails(mangaToAdd)
-                }
-                else -> {
-                    updateTrackings(mangaToAdd)
-                }
+                Target.CHAPTERS ->updateChaptersJob(mangaToAdd)
+                Target.DETAILS -> updateDetails(mangaToAdd)
+                else -> updateTrackings(mangaToAdd)
             }
         }
 
