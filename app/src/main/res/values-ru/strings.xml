@@ -128,7 +128,7 @@
 
     <string name="cookies_cleared">Куки удалены</string>
 
-    <string name="_copied_to_clipboard">%1$s скопорован в буфер</string>
+    <string name="_copied_to_clipboard">%1$s скопорован(-о) в буфер</string>
 
 
     <string name="cover_updated">Обложка обновлена</string>
@@ -634,7 +634,8 @@
     <string name="expand_all_categories">Развернуть категории</string>
     <string name="collapse_all_categories">Свернуть категории</string>
     <string name="reorder_filters">Изменить порядок фильтров</string>
-
+    <string name="_unread">%d не прочитано</string>
+    <string name="search_globally">Поиск \"%1$s\" глобально</string>
     <string name="read_progress">Прогресс чтения</string>
     <string name="series_type">Тип серии</string>
     <!-- Library Sort -->
@@ -691,8 +692,9 @@
     <!-- Reader -->
     <string name="set_as_default_for_all">Установить по умолчанию</string>
     <string name="reading_">Чтение %1$s</string>
-    <string name="webtoon_style">Стиль WebToon</string>
+    <string name="webtoon_style">стиль веб-комикса</string>
     <!-- Reader settings -->
+    <string name="disable_zoom">Отключить зум</string>
     <string name="continuous_vertical">Непрерывная вертикаль</string>
     <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
     <string name="pref_webtoon_side_padding">Боковой отступ</string>
@@ -760,7 +762,7 @@
     <string name="paused">На паузе</string>
     <!-- Migration -->
     <string name="migrate_">Перенести %1$s</string>
-    <string name="copy_value">Копия</string>
+    <string name="copy_value">Копировать</string>
 
     <!-- General settings -->
     <string name="white_theme">Чисто белый</string>
@@ -775,6 +777,8 @@
     <string name="disable_battery_optimization">Отключить оптимизацию батареи</string>
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
+    <string name="clean_up_cached_covers">Очистить кэш обложек</string>
+    <string name="delete_old_covers_in_library">Удалять старые и неиспользуемые кэшированные обложки манги в вашей библиотеке, которая была обновлена</string>
 
     <!-- About section -->
     <string name="whats_new">Что нового в этом релизе</string>
@@ -807,7 +811,8 @@
     <string name="bottom">Низ</string>
     <string name="bug_report">Сообщить об ошибке</string>
     <string name="collasped">Рухнул</string>
-    <string name="drag_handle">Перетащить ручку</string>
+    <string name="deleted_">Удалено: %1$s</string>
+    <string name="drag_handle">Перетащить маркер</string>
     <string name="hide">Скрыть</string>
     <string name="keep">Хранить</string>
     <string name="less">Меньше</string>
