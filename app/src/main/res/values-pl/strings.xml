@@ -14,7 +14,7 @@
     <string name="webtoon">Webtoon</string>
 
     <!-- Manga -->
-    <string name="not_started">Nie rozpoczęte</string>
+    <string name="not_started">Nierozpoczęte</string>
     <string name="in_progress">Rozpoczęte</string>
     <string name="read">Czytaj</string>
     <string name="title">Tytuł</string>
@@ -83,8 +83,8 @@
     <string name="confirm_category_deletion">Usunąć kategorię?</string>
     <string name="confirm_category_deletion_message">Mangi z tej kategorii będą przeniesione do domyślnej kategorii.</string>
     <string name="already_in_category">Manga już jest w kategorii</string>
-    <string name="add_category">Dodaj kategorię</string>
-    <string name="edit_categories">Edytuj kategorię</string>
+    <string name="add_categories">Dodaj kategorie</string>
+    <string name="edit_categories">Edytuj kategorie</string>
     <string name="manage_category">Zarządzaj kategorią</string>
     <string name="rename_category">Zmień nazwę kategorii</string>
     <string name="move_to_categories">Przenieś do kategorii</string>
@@ -121,6 +121,13 @@
     <string name="library_is_empty_add_from_browse">Twoja biblioteka jest pusta, dodaj coś do swojej biblioteki z zakładki Przeglądaj.</string>
     <string name="no_matches_for_filters">Nie znaleziono wyników odpowiadających twoim filtrom</string>
     <string name="show_all_categories">Pokaż wszystkie kategorie</string>
+    <string name="expand_all_categories">Rozwiń wszystkie kategorie</string>
+    <string name="collapse_all_categories">Zwiń wszystkie kategorie</string>
+    <string name="reorder_filters">Uporządkuj filtry</string>
+    <string name="_unread">%d nieprzeczytanych</string>
+    <string name="search_globally">Szukaj \"%1$s\" globalnie</string>
+    <string name="read_progress">Postęp czytania</string>
+    <string name="series_type">Typ serii</string>
 
     <!-- Library Sort -->
     <string name="sort_by_">Sortuj według: %1$s</string>
@@ -139,7 +146,6 @@
     <string name="start_with_filters_hidden">Zacznij z ukrytymi filtrami</string>
     <string name="download_badge">Odznaka pobrania</string>
     <string name="hide_start_reading_button">Ukryj przycisk szybkiego przejścia do czytnika</string>
-    <string name="always_show_library_fast_scroll">Zawsze pokazuj pasek szybkiego przewijania</string>
     <string name="unread_badges">Odznaka nieprzeczytanych</string>
     <string name="uniform_covers">Jednolite okładki</string>
     <string name="x_small">XS</string>
@@ -148,11 +154,12 @@
     <string name="large">L</string>
     <string name="x_large">XL</string>
     <string name="grid_options">Opcje siatki</string>
-    <string name="hide_badges">Ukryj odznaczenia</string>
-    <string name="show_badges">Pokaż odznaczenia</string>
+    <string name="hide_badges">Ukryj</string>
+    <string name="show_badges">Pokaż odzn.</string>
     <string name="show_count">Pokaż licznik</string>
     <string name="tap_library_to_show_filters">Naciśnij ikonę biblioteki, by wyświetlić filtry</string>
     <string name="display_as">Wyświetlaj jako</string>
+    <string name="more_library_settings">Więcej ustawień czytnika</string>
 
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Znaleziono nowe rozdziały</string>
@@ -193,7 +200,7 @@
     <string name="reset_all_chapters_for_this_">Resetuj rozdziały dla %1$s</string>
     <string name="source_dash_chapter_">%1$s - Rozdz. %2$s</string>
     <string name="last_read_">Ostatnio czytany %1$s</string>
-    <string name="read_">Czytaj %1$s</string>
+    <string name="read_">Czytany %1$s</string>
     <string name="updated_">Zaktualizowany %1$s</string>
     <string name="added_">Dodany %1$s</string>
     <string name="view_history">Przeglądaj historię</string>
@@ -277,6 +284,7 @@
     <!-- Reader settings -->
     <string name="fullscreen">Pełny ekran</string>
     <string name="page_transitions">Animacje przejścia stron</string>
+    <string name="disable_zoom">Wyłącz przybliżenie</string>
     <string name="double_tap_anim_speed">Szybkość podwójnego stuknięcia</string>
     <string name="show_page_number">Pokazuj numer strony</string>
     <string name="true_32bit_color">Kolor 32 bitowy</string>
@@ -385,7 +393,7 @@
     <!-- Tracking -->
     <string name="tracking">Śledzenie</string>
     <string name="tracked">Śledzone</string>
-    <string name="not_tracked">Nie śledzone</string>
+    <string name="not_tracked">Nieśledzone</string>
     <string name="services">Usługi śledzenia</string>
     <string name="sync_chapters_after_reading">Aktualizuj postęp po przeczytaniu rozdziału</string>
     <string name="reading">Czytane</string>
@@ -485,13 +493,14 @@
     <string name="service">Cykliczna kopia zapasowa</string>
     <string name="backup_frequency">Częstotliwość tworzenia kopii</string>
     <string name="max_auto_backups">Maks. ilosć kopii automatycznych</string>
+    <string name="backup_failed">Tworzenie kopii nie powiodło się</string>
     <string name="backup_created">Kopia zapasowa utworzona</string>
     <string name="restore_completed">Przywracanie ukończone</string>
     <string name="restore_error">Błąd przywracania</string>
     <string name="restore_completed_content">%1$s Przywróconych. Napotkane błędy: %2$s</string>
     <string name="restore_content_skipped">%1$d pominięte</string>
     <string name="restore_message">Przywracanie używa źródeł do pobierania danych, operator może naliczać dodatkowe opłaty.\nPrzed przywróceniem upewnij się też, że jesteś poprawnie zalogowany do źródeł.</string>
-    <string name="file_saved_at_">Plik zapisano do %1$s</string>
+    <string name="creating_backup">Tworzenie kopii</string>
     <string name="what_should_backup">Co zawrzeć w kopii zapasowej?</string>
     <string name="restoring_backup">Przywracanie kopii zapasowej</string>
     <string name="restoring_progress">Przywracanie (%1$d/%2$d)</string>
@@ -542,6 +551,9 @@
         <item quantity="many">Czyszczenie skończone. Usunięto %d folderów</item>
         <item quantity="other">Czyszczenie skończone. Usunięto %d folderów</item>
     </plurals>
+    <string name="clean_up_cached_covers">Wyczyść okładki z pamięci cache</string>
+    <string name="delete_old_covers_in_library">Usuń stare i nieużywane okładki mang z pamięci cache,
+        które miały aktualizacje</string>
 
     <!-- About section -->
     <string name="version">Wersja</string>
@@ -656,6 +668,7 @@
     <string name="create">Stwórz</string>
     <string name="default_value">Domyślny</string>
     <string name="delete">Usuń</string>
+    <string name="deleted_">Usunięto: %1$s</string>
     <string name="display">Wyświetl</string>
     <string name="drag_handle">Uchwyt przeciągania</string>
     <string name="edit">Edytuj</string>
@@ -663,7 +676,7 @@
     <string name="fast">Szybko</string>
     <string name="filter">Filtr</string>
     <string name="forward">Naprzód</string>
-    <string name="free">Darmowe</string>
+    <string name="free">Dowolna</string>
     <string name="hide">Ukryj</string>
     <string name="ignore">Ignoruj</string>
     <string name="install">Zainstaluj</string>
