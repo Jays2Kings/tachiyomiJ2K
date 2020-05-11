@@ -667,7 +667,7 @@
     <string name="recents">Недавние</string>
     <string name="newly_added">Недавно добавлено</string>
     <string name="this_will_remove_the_read_date_for_x_question">Это удалит дату прочтения главы \"%1$s\". Вы уверены?</string>
-    <string name="reset_all_chapters_for_this_">Сбросить все главы</string>
+    <string name="reset_all_chapters_for_this_">Сбросить все главы %1$s серии</string>
     <string name="last_read_">Последнее чтение %1$s</string>
     <string name="read_">Читал %1$s</string>
     <string name="updated_">Обновлена %1$s</string>
@@ -761,7 +761,7 @@
     <string name="add_tracking">Добавить отслеживание</string>
     <string name="paused">На паузе</string>
     <!-- Migration -->
-    <string name="migrate_">Перенести %1$s</string>
+    <string name="migrate_">Перенос %1$s источника</string>
     <string name="copy_value">Копировать</string>
 
     <!-- General settings -->
