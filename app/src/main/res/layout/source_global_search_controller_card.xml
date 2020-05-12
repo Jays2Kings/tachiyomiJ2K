@@ -11,19 +11,40 @@
         style="@style/TextAppearance.Regular.SubHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/material_component_text_fields_padding_above_and_below_label"
-        app:layout_constraintBottom_toTopOf="@+id/source_card"
-        app:layout_constraintHeight_default="wrap"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/source_card"
-        style="@style/Theme.Widget.CardView.Item"
+    <TextView
+        android:id="@+id/no_results"
+        style="@style/TextAppearance.Regular.Body1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:minHeight="144dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintHeight_default="wrap"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:text="@string/no_results_found"/>
+
+    <FrameLayout
+        android:id="@+id/source_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="208dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constrainedHeight="true"
@@ -41,11 +62,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingEnd="4dp"
-            android:paddingStart="4dp"
+            android:paddingEnd="7dp"
+            android:paddingStart="7dp"
             android:clipToPadding="false"
             tools:listitem="@layout/source_global_search_controller_card_item" />
 
-    </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

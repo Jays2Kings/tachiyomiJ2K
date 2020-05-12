@@ -39,6 +39,8 @@ import eu.kanade.tachiyomi.ui.recently_read.RemoveHistoryDialog
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.applyWindowInsetsForRootController
+import eu.kanade.tachiyomi.util.view.expand
+import eu.kanade.tachiyomi.util.view.isExpanded
 import eu.kanade.tachiyomi.util.view.requestPermissionsSafe
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
@@ -141,6 +143,7 @@ class RecentsController(bundle: Bundle? = null) : BaseController(bundle),
         dl_bottom_sheet.sheetBehavior?.addBottomSheetCallback(object :
             BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, progress: Float) {
+                val shadow2 = shadow2 ?: return
                 shadow2.alpha = (1 - abs(progress)) * 0.25f
                 shadow.alpha = (1 - abs(progress)) * 0.5f
                 if (progress >= 0) activity?.appbar?.elevation = max(
@@ -201,7 +204,7 @@ class RecentsController(bundle: Bundle? = null) : BaseController(bundle),
         }
 
         if (showingDownloads) {
-            dl_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            dl_bottom_sheet.sheetBehavior?.expand()
         }
         setPadding(dl_bottom_sheet.sheetBehavior?.isHideable == true)
         requestPermissionsSafe(arrayOf(WRITE_EXTERNAL_STORAGE), 301)
@@ -431,16 +434,15 @@ class RecentsController(bundle: Bundle? = null) : BaseController(bundle),
 
     override fun showSheet() {
         if (dl_bottom_sheet.sheetBehavior?.isHideable == false || hasQueue())
-            dl_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            dl_bottom_sheet.sheetBehavior?.expand()
     }
 
     override fun toggleSheet() {
         if (showingDownloads) dl_bottom_sheet.dismiss()
-        else dl_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+        else dl_bottom_sheet.sheetBehavior?.expand()
     }
 
-    override fun sheetIsExpanded(): Boolean = dl_bottom_sheet.sheetBehavior?.state ==
-        BottomSheetBehavior.STATE_EXPANDED
+    override fun sheetIsExpanded(): Boolean = dl_bottom_sheet.sheetBehavior.isExpanded()
 
     override fun expandSearch() {
         if (showingDownloads) {

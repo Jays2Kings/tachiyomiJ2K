@@ -8,19 +8,19 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 
-class SourceSearchCardItem(val manga: Manga) : AbstractFlexibleItem<SourceSearchCardHolder>() {
+class GlobalSearchMangaItem(val manga: Manga) : AbstractFlexibleItem<GlobalSearchMangaHolder>() {
 
     override fun getLayoutRes(): Int {
         return R.layout.source_global_search_controller_card_item
     }
 
-    override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): SourceSearchCardHolder {
-        return SourceSearchCardHolder(view, adapter as SourceSearchCardAdapter)
+    override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): GlobalSearchMangaHolder {
+        return GlobalSearchMangaHolder(view, adapter as GlobalSearchCardAdapter)
     }
 
     override fun bindViewHolder(
         adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>,
-        holder: SourceSearchCardHolder,
+        holder: GlobalSearchMangaHolder,
         position: Int,
         payloads: MutableList<Any?>?
     ) {
@@ -28,7 +28,7 @@ class SourceSearchCardItem(val manga: Manga) : AbstractFlexibleItem<SourceSearch
     }
 
     override fun equals(other: Any?): Boolean {
-        if (other is SourceSearchCardItem) {
+        if (other is GlobalSearchMangaItem) {
             return manga.id == other.manga.id
         }
         return false

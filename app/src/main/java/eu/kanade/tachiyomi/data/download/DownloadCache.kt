@@ -47,11 +47,9 @@ class DownloadCache(
     private var mangaFiles: MutableMap<Long, MutableSet<String>> = mutableMapOf()
 
     init {
-        preferences.downloadsDirectory().asObservable()
-                .skip(1)
-                .subscribe {
-                    lastRenew = 0L // invalidate cache
-                }
+        preferences.downloadsDirectory().asObservable().skip(1).subscribe {
+                lastRenew = 0L // invalidate cache
+            }
     }
 
     /**
@@ -77,10 +75,12 @@ class DownloadCache(
 
         checkRenew()
 
-        val files = mangaFiles[manga.id] ?: return false
-        return files.any { file -> provider.getValidChapterDirNames(chapter).any {
-            it.toLowerCase() == file.toLowerCase()
-        } }
+        val files = mangaFiles[manga.id]?.toSet() ?: return false
+        return files.any { file ->
+            provider.getValidChapterDirNames(chapter).any {
+                it.toLowerCase() == file.toLowerCase()
+            }
+        }
     }
 
     /**
@@ -112,41 +112,39 @@ class DownloadCache(
     private fun renew() {
         val onlineSources = sourceManager.getOnlineSources()
 
-        val sourceDirs = getDirectoryFromPreference().listFiles()
-                .orEmpty()
-                .associate { it.name to SourceDirectory(it) }
-                .mapNotNullKeys { entry ->
-                    onlineSources.find { provider.getSourceDirName(it) == entry.key }?.id
-                }
+        val sourceDirs = getDirectoryFromPreference().listFiles().orEmpty()
+            .associate { it.name to SourceDirectory(it) }.mapNotNullKeys { entry ->
+                onlineSources.find { provider.getSourceDirName(it) == entry.key }?.id
+            }
 
         val db: DatabaseHelper by injectLazy()
         val mangas = db.getMangas().executeAsBlocking().groupBy { it.source }
 
         sourceDirs.forEach { sourceValue ->
             val sourceMangasRaw = mangas[sourceValue.key]?.toMutableSet() ?: return@forEach
-            val sourceMangas = arrayOf(sourceMangasRaw.filter { it.favorite }, sourceMangasRaw
-                .filterNot { it.favorite })
+            val sourceMangas = arrayOf(sourceMangasRaw.filter { it.favorite },
+                sourceMangasRaw.filterNot { it.favorite })
             val sourceDir = sourceValue.value
-            val mangaDirs = sourceDir.dir.listFiles()
-                    .orEmpty()
-                    .mapNotNull {
-                        val name = it.name ?: return@mapNotNull null
-                        name to MangaDirectory(it) }.toMap()
+            val mangaDirs = sourceDir.dir.listFiles().orEmpty().mapNotNull {
+                    val name = it.name ?: return@mapNotNull null
+                    name to MangaDirectory(it)
+                }.toMap()
 
             mangaDirs.values.forEach { mangaDir ->
-                val chapterDirs = mangaDir.dir.listFiles()
-                        .orEmpty()
-                        .mapNotNull { it.name }
-                        .toHashSet()
+                val chapterDirs =
+                    mangaDir.dir.listFiles().orEmpty().mapNotNull { it.name }.toHashSet()
                 mangaDir.files = chapterDirs
             }
             val trueMangaDirs = mangaDirs.mapNotNull { mangaDir ->
-                val manga = sourceMangas.firstOrNull()?.find { DiskUtil.buildValidFilename(
-                    it.title).toLowerCase() == mangaDir.key
-                    .toLowerCase() && it.source == sourceValue.key }
-                ?: sourceMangas.lastOrNull()?.find { DiskUtil.buildValidFilename(
-                    it.title).toLowerCase() == mangaDir.key
-                    .toLowerCase() && it.source == sourceValue.key }
+                val manga = sourceMangas.firstOrNull()?.find {
+                    DiskUtil.buildValidFilename(
+                        it.title
+                    ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
+                } ?: sourceMangas.lastOrNull()?.find {
+                    DiskUtil.buildValidFilename(
+                        it.title
+                    ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
+                }
                 val id = manga?.id ?: return@mapNotNull null
                 id to mangaDir.value.files
             }.toMap()

@@ -255,12 +255,7 @@ class MangaHeaderHolder(
         }
 
         if (!manga.initialized) return
-        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString()))
-            .into(manga_cover)
-        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString())).centerCrop()
-            .transition(DrawableTransitionOptions.withCrossFade()).into(backdrop)
+        updateCover(manga)
     }
 
     private fun MaterialButton.checked(checked: Boolean) {
@@ -310,6 +305,26 @@ class MangaHeaderHolder(
             less_button.gone()
             manga_genres_tags.gone()
         }
+    }
+
+    fun updateCover(manga: Manga) {
+        if (!isCached(manga)) return
+        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString()))
+            .into(manga_cover)
+        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString())).centerCrop()
+            .transition(DrawableTransitionOptions.withCrossFade()).into(backdrop)
+    }
+
+    private fun isCached(manga: Manga): Boolean {
+        if (manga.source == LocalSource.ID) return true
+        val coverCache = adapter.delegate.mangaPresenter().coverCache
+        manga.thumbnail_url?.let {
+            return if (manga.favorite) coverCache.getCoverFile(it).exists()
+            else true
+        }
+        return manga.initialized
     }
 
     fun expand() {

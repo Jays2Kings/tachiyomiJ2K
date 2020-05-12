@@ -49,7 +49,7 @@ class LocalSource(private val context: Context) : CatalogueSource {
             val cover = File("${dir.absolutePath}/${manga.url}", COVER_NAME)
 
             // It might not exist if using the external SD card
-            cover.parentFile.mkdirs()
+            cover.parentFile?.mkdirs()
             input.use {
                 cover.outputStream().use {
                     input.copyTo(it)
@@ -140,7 +140,8 @@ class LocalSource(private val context: Context) : CatalogueSource {
     override fun fetchLatestUpdates(page: Int) = fetchSearchManga(page, "", LATEST_FILTERS)
 
     override fun fetchMangaDetails(manga: SManga): Observable<SManga> {
-        getBaseDirectories(context).mapNotNull { File(it, manga.url).listFiles()?.toList() }
+        val baseDirs = getBaseDirectories(context)
+        baseDirs.mapNotNull { File(it, manga.url).listFiles()?.toList() }
             .flatten().filter { it.extension.equals("json") }.firstOrNull()?.apply {
                 val json = Gson().fromJson(
                     Scanner(this).useDelimiter("\\Z").next(),
@@ -154,6 +155,28 @@ class LocalSource(private val context: Context) : CatalogueSource {
                     ?: manga.genre
                 manga.status = json["status"]?.asInt ?: manga.status
             }
+        val url = manga.url
+        // Try to find the cover
+        for (dir in baseDirs) {
+            val cover = File("${dir.absolutePath}/$url", COVER_NAME)
+            if (cover.exists()) {
+                manga.thumbnail_url = cover.absolutePath
+                break
+            }
+        }
+
+        // Copy the cover from the first chapter found.
+        if (manga.thumbnail_url == null) {
+            val chapters = fetchChapterList(manga).toBlocking().first()
+            if (chapters.isNotEmpty()) {
+                try {
+                    val dest = updateCover(chapters.last(), manga)
+                    manga.thumbnail_url = dest?.absolutePath
+                } catch (e: Exception) {
+                    Timber.e(e)
+                }
+            }
+        }
         return Observable.just(manga)
     }
 

@@ -3,13 +3,11 @@ package eu.kanade.tachiyomi.util.view
 import android.animation.ValueAnimator
 import android.content.Context
 import android.content.pm.PackageManager
-import android.os.Build
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.WindowInsets
 import android.view.inputmethod.InputMethodManager
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.math.MathUtils
@@ -57,7 +55,6 @@ fun Controller.setOnQueryTextChangeListener(
     })
 }
 
-@RequiresApi(Build.VERSION_CODES.N_MR1)
 fun Controller.scrollViewWith(
     recycler: RecyclerView,
     padBottom: Boolean = false,
@@ -81,11 +78,10 @@ fun Controller.scrollViewWith(
         }
     }
     val randomTag = Random.nextLong()
-    var headerHeight = 0
     var lastY = 0f
     var fakeToolbarView: View? = null
     recycler.doOnApplyWindowInsets { view, insets, _ ->
-        headerHeight = insets.systemWindowInsetTop + appBarHeight
+        val headerHeight = insets.systemWindowInsetTop + appBarHeight
         if (!customPadding) view.updatePaddingRelative(
             top = headerHeight,
             bottom = if (padBottom) insets.systemWindowInsetBottom else view.paddingBottom
@@ -105,10 +101,10 @@ fun Controller.scrollViewWith(
         } else if (recycler.translationY == 0f) {
             elevationAnim?.cancel()
             elevationAnim = ValueAnimator.ofFloat(
-                activity!!.appbar.elevation, if (el) 15f else 0f
+                activity?.appbar?.elevation ?: 0f, if (el) 15f else 0f
             )
             elevationAnim?.addUpdateListener { valueAnimator ->
-                activity!!.appbar.elevation = valueAnimator.animatedValue as Float
+                activity?.appbar?.elevation = valueAnimator.animatedValue as Float
             }
             elevationAnim?.start()
         }
@@ -123,7 +119,7 @@ fun Controller.scrollViewWith(
             if (changeType.isEnter) {
                 elevateFunc(elevate)
                 if (fakeToolbarView?.parent != null) {
-                    val parent = recycler.parent as ViewGroup
+                    val parent = recycler.parent as? ViewGroup ?: return
                     parent.removeView(fakeToolbarView)
                     fakeToolbarView = null
                 }
@@ -140,9 +136,9 @@ fun Controller.scrollViewWith(
                 if (!customPadding && lastY == 0f && router.backstack.lastOrNull()
                         ?.controller() is MangaDetailsController
                 ) {
+                    val parent = recycler.parent as? ViewGroup ?: return
                     val v = View(activity)
                     fakeToolbarView = v
-                    val parent = recycler.parent as ViewGroup
                     parent.addView(v, parent.indexOfChild(recycler) + 1)
                     val params = fakeToolbarView?.layoutParams
                     params?.height = recycler.paddingTop

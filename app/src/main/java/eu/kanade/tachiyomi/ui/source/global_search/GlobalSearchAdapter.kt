@@ -8,10 +8,10 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
 /**
  * Adapter that holds the search cards.
  *
- * @param controller instance of [SourceSearchController].
+ * @param controller instance of [GlobalSearchController].
  */
-class SourceSearchAdapter(val controller: SourceSearchController) :
-        FlexibleAdapter<SourceSearchItem>(null, controller, true) {
+class GlobalSearchAdapter(val controller: GlobalSearchController) :
+        FlexibleAdapter<GlobalSearchItem>(null, controller, true) {
 
     /**
      * Bundle where the view state of the holders is saved.

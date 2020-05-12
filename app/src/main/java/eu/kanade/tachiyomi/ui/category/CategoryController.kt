@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
@@ -23,6 +24,7 @@ import kotlinx.android.synthetic.main.categories_controller.*
  */
 class CategoryController(bundle: Bundle? = null) : BaseController(bundle),
         FlexibleAdapter.OnItemClickListener,
+        FlexibleAdapter.OnItemMoveListener,
         CategoryAdapter.CategoryItemListener {
 
     /**
@@ -173,6 +175,13 @@ class CategoryController(bundle: Bundle? = null) : BaseController(bundle),
         snack = null
     }
 
+    override fun onActionStateChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {}
+
+    override fun onItemMove(fromPosition: Int, toPosition: Int) {}
+
+    override fun shouldMoveItem(fromPosition: Int, toPosition: Int): Boolean {
+        return toPosition > 0
+    }
     /**
      * Called from the presenter when a category with the given name already exists.
      */

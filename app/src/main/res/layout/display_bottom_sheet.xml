@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/display_bottom_sheet"
     android:layout_width="match_parent"
-    android:background="@drawable/bottom_sheet_rounded_background"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_rounded_background">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/settings_scroll_view"
@@ -29,31 +29,46 @@
                 android:paddingEnd="12dp"
                 android:text="@string/display_as" />
 
-            <RadioGroup
-                android:id="@+id/display_group"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp">
+                android:orientation="vertical">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:id="@+id/display_group"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/list" />
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="wrap_content"
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/list" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/compact_grid" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/comfortable_grid" />
+                </RadioGroup>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/show_all"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="@string/compact_grid" />
+                    android:layout_marginEnd="12dp"
+                    android:text="@string/show_all_categories" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:text="@string/comfortable_grid" />
-            </RadioGroup>
+            </LinearLayout>
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/TextAppearance.MaterialComponents.Headline6"
@@ -95,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:text="@string/large" />
+
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -174,12 +190,12 @@
                 android:text="@string/download_badge" />
 
             <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/autohide_seeker"
+                android:id="@+id/hide_hopper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
-                android:text="@string/always_show_library_fast_scroll"/>
+                android:text="@string/hide_category_hopper" />
 
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/hide_filters"
@@ -188,6 +204,13 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:text="@string/start_with_filters_hidden" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/more_settings"
+                style="@style/Theme.Widget.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/more_library_settings" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -123,6 +123,10 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
             refreshAdapter()
         }
 
+        config.zoomPropertyChangedListener = {
+            frame.disableZoom = it
+        }
+
         frame.layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT)
         frame.addView(recycler)
     }
@@ -294,7 +298,8 @@ class WebtoonViewer(val activity: ReaderActivity, val isContinuous: Boolean = tr
     private fun refreshAdapter() {
         val position = layoutManager.findLastEndVisibleItemPosition()
         adapter.notifyItemRangeChanged(
-            max(0, position - 2),
-            min(position + 2, adapter.itemCount - 1))
+            max(0, position - 3),
+            min(position + 3, adapter.itemCount - 1)
+        )
     }
 }

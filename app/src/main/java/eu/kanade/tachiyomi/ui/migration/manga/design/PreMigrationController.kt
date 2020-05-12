@@ -20,6 +20,7 @@ import eu.kanade.tachiyomi.ui.migration.manga.process.MigrationListController
 import eu.kanade.tachiyomi.ui.migration.manga.process.MigrationProcedureConfig
 import eu.kanade.tachiyomi.util.view.applyWindowInsetsForController
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
+import eu.kanade.tachiyomi.util.view.expand
 import eu.kanade.tachiyomi.util.view.marginBottom
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
@@ -81,7 +82,7 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
                 )
                 if (bottomSheet != null) {
                     val behavior: BottomSheetBehavior<*> = BottomSheetBehavior.from(bottomSheet)
-                    behavior.state = BottomSheetBehavior.STATE_EXPANDED
+                    behavior.expand()
                     behavior.skipCollapsed = true
                 }
             }

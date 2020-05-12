@@ -2,18 +2,14 @@ package eu.kanade.tachiyomi.ui.library.category
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
-import com.mikepenz.fastadapter.listeners.CustomEventHook
 import com.mikepenz.fastadapter.listeners.OnBindViewHolderListenerImpl
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
-import eu.kanade.tachiyomi.data.database.models.CategoryImpl
 import eu.kanade.tachiyomi.util.view.marginBottom
 
 class CategoryRecyclerView @JvmOverloads constructor(
@@ -27,9 +23,6 @@ class CategoryRecyclerView @JvmOverloads constructor(
     var onShowAllClicked: (Boolean) -> Unit = { }
     private val itemAdapter = ItemAdapter<CategoryItem>()
     var selectedCategory: Int = 0
-    val headerItem = CategoryItem(CategoryImpl().apply {
-        id = -1
-    })
 
     init {
         fastAdapter = FastAdapter.with(itemAdapter)
@@ -38,7 +31,7 @@ class CategoryRecyclerView @JvmOverloads constructor(
     }
 
     fun setCategories(items: List<Category>) {
-        itemAdapter.set(listOf(headerItem) + items.map(::CategoryItem))
+        itemAdapter.set(items.map(::CategoryItem))
         fastAdapter.onBindViewHolderListener =
             (object : OnBindViewHolderListenerImpl<CategoryItem>() {
                 override fun onBindViewHolder(
@@ -48,7 +41,7 @@ class CategoryRecyclerView @JvmOverloads constructor(
                 ) {
                     super.onBindViewHolder(viewHolder, position, payloads)
                     (viewHolder as? CategoryItem.ViewHolder)?.categoryTitle?.isSelected =
-                        selectedCategory + 1 == position
+                        selectedCategory == position
                 }
             })
         fastAdapter.onClickListener = { _, _, item, _ ->
@@ -56,28 +49,13 @@ class CategoryRecyclerView @JvmOverloads constructor(
                 onCategoryClicked(item.category.order)
             true
         }
-        fastAdapter.addEventHook(object : CustomEventHook<CategoryItem>() {
-            override fun onBind(viewHolder: ViewHolder): View? {
-                return if (viewHolder is CategoryItem.ShowAllViewHolder) {
-                    viewHolder.checkbox
-                } else {
-                    null
-                }
-            }
-
-            override fun attachEvent(view: View, viewHolder: ViewHolder) {
-                (view as? CheckBox)?.setOnCheckedChangeListener { _, isChecked ->
-                    onShowAllClicked(isChecked)
-                }
-            }
-        })
     }
 
     fun setCategories(selected: Int) {
         selectedCategory = selected
         for (i in 0..manager.itemCount) {
             (findViewHolderForAdapterPosition(i) as? CategoryItem.ViewHolder)?.categoryTitle?.isSelected =
-                selectedCategory + 1 == i
+                selectedCategory == i
         }
     }
 

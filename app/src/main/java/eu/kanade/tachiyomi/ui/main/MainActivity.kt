@@ -21,6 +21,7 @@ import androidx.appcompat.graphics.drawable.DrawerArrowDrawable
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.core.view.GestureDetectorCompat
+import androidx.lifecycle.lifecycleScope
 import com.afollestad.materialdialogs.MaterialDialog
 import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Controller
@@ -40,6 +41,8 @@ import eu.kanade.tachiyomi.data.download.DownloadServiceListener
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.data.preference.getOrDefault
+import eu.kanade.tachiyomi.data.updater.UpdateChecker
+import eu.kanade.tachiyomi.data.updater.UpdateResult
 import eu.kanade.tachiyomi.extension.api.ExtensionGithubApi
 import eu.kanade.tachiyomi.ui.base.activity.BaseActivity
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
@@ -50,6 +53,7 @@ import eu.kanade.tachiyomi.ui.recent_updates.RecentChaptersController
 import eu.kanade.tachiyomi.ui.recently_read.RecentlyReadController
 import eu.kanade.tachiyomi.ui.recents.RecentsController
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
+import eu.kanade.tachiyomi.ui.setting.AboutController
 import eu.kanade.tachiyomi.ui.setting.SettingsController
 import eu.kanade.tachiyomi.ui.setting.SettingsMainController
 import eu.kanade.tachiyomi.ui.source.SourceController
@@ -71,6 +75,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import java.util.Date
@@ -95,6 +100,9 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
     private val downloadManager: DownloadManager by injectLazy()
     private val hideBottomNav
         get() = router.backstackSize > 1 && router.backstack[1].controller() !is DialogController
+
+    private val updateChecker by lazy { UpdateChecker.getUpdateChecker() }
+    private val isUpdaterEnabled = BuildConfig.INCLUDE_UPDATER
 
     fun setUndoSnackBar(snackBar: Snackbar?, extraViewToCheck: View? = null) {
         this.snackBar = snackBar
@@ -348,7 +356,7 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
 
     override fun onResume() {
         super.onResume()
-        // setting in case someone comes from the search activity to main
+        getAppUpdates()
         getExtensionUpdates()
         DownloadService.callListeners()
         showDLQueueTutorial()
@@ -382,6 +390,29 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
     override fun onPause() {
         super.onPause()
         snackBar?.dismiss()
+    }
+
+    private fun getAppUpdates() {
+        if (isUpdaterEnabled &&
+            Date().time >= preferences.lastAppCheck().get() + TimeUnit.DAYS.toMillis(1)) {
+            lifecycleScope.launch(Dispatchers.IO) {
+                try {
+                    val result = updateChecker.checkForUpdate()
+                    preferences.lastAppCheck().set(Date().time)
+                    if (result is UpdateResult.NewUpdate<*>) {
+                        val body = result.release.info
+                        val url = result.release.downloadLink
+
+                        // Create confirmation window
+                        withContext(Dispatchers.Main) {
+                            AboutController.NewUpdateDialogController(body, url).showDialog(router)
+                        }
+                    }
+                } catch (error: Exception) {
+                    Timber.e(error)
+                }
+            }
+        }
     }
 
     private fun getExtensionUpdates() {
@@ -591,8 +622,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
 
     companion object {
 
-        private const val SWIPE_THRESHOLD = 100
-        private const val SWIPE_VELOCITY_THRESHOLD = 100
+        const val SWIPE_THRESHOLD = 100
+        const val SWIPE_VELOCITY_THRESHOLD = 100
 
         // Shortcut actions
         const val SHORTCUT_LIBRARY = "eu.kanade.tachiyomi.SHOW_LIBRARY"

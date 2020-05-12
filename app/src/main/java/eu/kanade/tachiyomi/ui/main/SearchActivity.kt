@@ -7,7 +7,7 @@ import com.bluelinelabs.conductor.Controller
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
-import eu.kanade.tachiyomi.ui.source.global_search.SourceSearchController
+import eu.kanade.tachiyomi.ui.source.global_search.GlobalSearchController
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.android.synthetic.main.main_activity.*
@@ -67,7 +67,7 @@ class SearchActivity : MainActivity() {
                 // Get the search query provided in extras, and if not null, perform a global search with it.
                 val query = intent.getStringExtra(SearchManager.QUERY)
                 if (query != null && query.isNotEmpty()) {
-                    router.replaceTopController(SourceSearchController(query).withFadeTransaction())
+                    router.replaceTopController(GlobalSearchController(query).withFadeTransaction())
                 }
             }
             INTENT_SEARCH -> {
@@ -77,7 +77,7 @@ class SearchActivity : MainActivity() {
                     if (router.backstackSize > 1) {
                         router.popToRoot()
                     }
-                    router.replaceTopController(SourceSearchController(query, filter).withFadeTransaction())
+                    router.replaceTopController(GlobalSearchController(query, filter).withFadeTransaction())
                 }
             }
             else -> return false

@@ -36,7 +36,7 @@ class BrowseSourceItem(
 
     override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): BrowseSourceHolder {
         val parent = adapter.recyclerView
-        return if (parent is AutofitRecyclerView) {
+        return if (parent is AutofitRecyclerView && !catalogueAsList.getOrDefault()) {
             val listType = catalogueListType.getOrDefault()
             view.apply {
                 val coverHeight = (parent.itemWidth / 3 * 4f).toInt()

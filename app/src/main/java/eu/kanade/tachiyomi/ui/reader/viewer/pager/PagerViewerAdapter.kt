@@ -23,6 +23,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     var nextTransition: ChapterTransition.Next? = null
         private set
 
+    var currentChapter: ReaderChapter? = null
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
      * next/previous chapter to allow seamless transitions and inverting the pages if the viewer
@@ -52,14 +53,17 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             newItems.addAll(currPages)
         }
 
+        currentChapter = chapters.currChapter
+
         // Add next chapter transition and pages.
         nextTransition = ChapterTransition.Next(chapters.currChapter, chapters.nextChapter)
-                .also {
-                    if (forceTransition ||
-                            chapters.nextChapter?.state !is ReaderChapter.State.Loaded) {
-                        newItems.add(it)
-                    }
+            .also {
+                if (forceTransition ||
+                    chapters.nextChapter?.state !is ReaderChapter.State.Loaded
+                ) {
+                    newItems.add(it)
                 }
+            }
 
         if (chapters.nextChapter != null) {
             // Add at most two pages, because this chapter will be selected before the user can
@@ -89,8 +93,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
      * Creates a new view for the item at the given [position].
      */
     override fun createView(container: ViewGroup, position: Int): View {
-        val item = items[position]
-        return when (item) {
+        return when (val item = items[position]) {
             is ReaderPage -> PagerPageHolder(viewer, item)
             is ChapterTransition -> PagerTransitionHolder(viewer, item)
             else -> throw NotImplementedError("Holder for ${item.javaClass} not implemented")

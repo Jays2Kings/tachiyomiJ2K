@@ -5,10 +5,11 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
+import eu.kanade.tachiyomi.util.view.visibleIf
 import eu.kanade.tachiyomi.widget.StateImageViewTarget
 import kotlinx.android.synthetic.main.source_global_search_controller_card_item.*
 
-class SourceSearchCardHolder(view: View, adapter: SourceSearchCardAdapter) :
+class GlobalSearchMangaHolder(view: View, adapter: GlobalSearchCardAdapter) :
     BaseFlexibleViewHolder(view, adapter) {
 
     init {
@@ -29,10 +30,8 @@ class SourceSearchCardHolder(view: View, adapter: SourceSearchCardAdapter) :
     }
 
     fun bind(manga: Manga) {
-        tvTitle.text = manga.title
-        // Set alpha of thumbnail.
-        itemImage.alpha = if (manga.favorite) 0.3f else 1.0f
-
+        title.text = manga.title
+        favorite_button.visibleIf(manga.favorite)
         setImage(manga)
     }
 

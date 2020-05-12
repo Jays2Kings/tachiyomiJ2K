@@ -1,55 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_item_selector"
     android:orientation="vertical"
-    android:paddingBottom="8dp"
-    android:paddingEnd="4dp"
-    android:paddingStart="4dp"
-    android:paddingTop="8dp">
+    android:background="@drawable/library_item_selector">
 
-    <ProgressBar
-        android:id="@+id/progress"
-        style="?android:attr/progressBarStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constrainedHeight="true"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/itemImage"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="112dp"
-        android:layout_height="112dp"
-        android:paddingBottom="8dp"
-        android:scaleType="fitCenter"
+        android:layout_height="168dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
-        tools:src="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="1.0">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        style="@style/TextAppearance.Regular.Caption"
-        android:layout_width="104dp"
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="?android:attr/colorBackground"
+            tools:background="?android:attr/colorBackground"
+            tools:ignore="ContentDescription"
+            tools:src="@mipmap/ic_launcher" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/favorite_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/unread_badge"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/unread_badge_text"
+            style="@style/TextAppearance.Regular.Caption.Light"
+            android:layout_height="wrap_content"
+            android:tint="@color/md_white_1000"
+            android:text="@string/in_library"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.Regular.Body1.Light"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:gravity="center"
         android:maxLines="1"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="12sp"
         app:layout_constrainedHeight="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemImage"
-        tools:text="Sample title" />
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        tools:text="Sample name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

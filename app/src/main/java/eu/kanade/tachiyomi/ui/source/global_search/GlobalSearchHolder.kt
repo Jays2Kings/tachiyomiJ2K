@@ -8,20 +8,20 @@ import eu.kanade.tachiyomi.util.view.visible
 import kotlinx.android.synthetic.main.source_global_search_controller_card.*
 
 /**
- * Holder that binds the [SourceSearchItem] containing catalogue cards.
+ * Holder that binds the [GlobalSearchItem] containing catalogue cards.
  *
- * @param view view of [SourceSearchItem]
- * @param adapter instance of [SourceSearchAdapter]
+ * @param view view of [GlobalSearchItem]
+ * @param adapter instance of [GlobalSearchAdapter]
  */
-class SourceSearchHolder(view: View, val adapter: SourceSearchAdapter) :
+class GlobalSearchHolder(view: View, val adapter: GlobalSearchAdapter) :
         BaseFlexibleViewHolder(view, adapter) {
 
     /**
      * Adapter containing manga from search results.
      */
-    private val mangaAdapter = SourceSearchCardAdapter(adapter.controller)
+    private val mangaAdapter = GlobalSearchCardAdapter(adapter.controller)
 
-    private var lastBoundResults: List<SourceSearchCardItem>? = null
+    private var lastBoundResults: List<GlobalSearchMangaItem>? = null
 
     init {
         // Set layout horizontal.
@@ -35,7 +35,7 @@ class SourceSearchHolder(view: View, val adapter: SourceSearchAdapter) :
      *
      * @param item item of card.
      */
-    fun bind(item: SourceSearchItem) {
+    fun bind(item: GlobalSearchItem) {
         val source = item.source
         val results = item.results
 
@@ -52,7 +52,8 @@ class SourceSearchHolder(view: View, val adapter: SourceSearchAdapter) :
             }
             results.isEmpty() -> {
                 progress.gone()
-                hideHolder()
+                no_results.visible()
+                source_card.gone()
             }
             else -> {
                 progress.gone()
@@ -80,11 +81,11 @@ class SourceSearchHolder(view: View, val adapter: SourceSearchAdapter) :
      * @param manga the manga to find.
      * @return the holder of the manga or null if it's not bound.
      */
-    private fun getHolder(manga: Manga): SourceSearchCardHolder? {
+    private fun getHolder(manga: Manga): GlobalSearchMangaHolder? {
         mangaAdapter.allBoundViewHolders.forEach { holder ->
             val item = mangaAdapter.getItem(holder.adapterPosition)
             if (item != null && item.manga.id!! == manga.id!!) {
-                return holder as SourceSearchCardHolder
+                return holder as GlobalSearchMangaHolder
             }
         }
 
@@ -92,12 +93,7 @@ class SourceSearchHolder(view: View, val adapter: SourceSearchAdapter) :
     }
 
     private fun showHolder() {
-        title.visible()
         source_card.visible()
-    }
-
-    private fun hideHolder() {
-        title.gone()
-        source_card.gone()
+        no_results.gone()
     }
 }

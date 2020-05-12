@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.recents
 
+import android.app.Activity
 import android.view.View
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
@@ -21,7 +22,7 @@ class RecentMangaHolder(
 ) : BaseChapterHolder(view, adapter) {
 
     init {
-        cover_thumbnail?.setOnClickListener { adapter.delegate.onCoverClick(adapterPosition) }
+        card_layout?.setOnClickListener { adapter.delegate.onCoverClick(adapterPosition) }
     }
 
     fun bind(recentsType: Int) {
@@ -70,9 +71,12 @@ class RecentMangaHolder(
                 R.string.read_, item.mch.history.last_read.timeSpanFromNow
             )
         }
-        GlideApp.with(itemView.context).load(item.mch.manga).diskCacheStrategy(DiskCacheStrategy
-            .AUTOMATIC)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(item.mch.manga.id!!).toString())).into(cover_thumbnail)
+        if ((itemView.context as? Activity)?.isDestroyed != true) {
+            GlideApp.with(itemView.context).load(item.mch.manga).diskCacheStrategy(
+                DiskCacheStrategy.RESOURCE
+            ).signature(ObjectKey(MangaImpl.getLastCoverFetch(item.mch.manga.id!!).toString()))
+                .into(cover_thumbnail)
+        }
         notifyStatus(
             if (adapter.isSelected(adapterPosition)) Download.CHECKED else item.status,
             item.progress

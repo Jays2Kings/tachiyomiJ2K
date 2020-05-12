@@ -78,13 +78,11 @@ class LibraryUpdateServiceTest {
 
         `when`(source.fetchChapterList(manga)).thenReturn(Observable.just(sourceChapters))
 
-        service.updateManga(manga).subscribe()
-
         assertThat(service.db.getChapters(manga).executeAsBlocking()).hasSize(2)
     }
 
     @Test
-    fun testContinuesUpdatingWhenAMangaFails() {
+    suspend fun testContinuesUpdatingWhenAMangaFails() {
         var favManga = createManga("/manga1", "/manga2", "/manga3")
         service.db.insertMangas(favManga).executeAsBlocking()
         favManga = service.db.getLibraryMangas().executeAsBlocking()
@@ -99,7 +97,7 @@ class LibraryUpdateServiceTest {
 
         val intent = Intent()
         val target = LibraryUpdateService.Target.CHAPTERS
-        service.updateDetails(favManga).subscribe()
+        service.updateDetails(favManga)
 
         // There are 3 network attempts and 2 insertions (1 request failed)
         assertThat(service.db.getChapters(favManga[0]).executeAsBlocking()).hasSize(2)

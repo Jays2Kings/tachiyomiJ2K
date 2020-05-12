@@ -4,10 +4,7 @@ import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.app.Activity
 import android.app.Dialog
 import android.content.ActivityNotFoundException
-import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -16,7 +13,6 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.list.listItemsMultiChoice
 import com.hippo.unifile.UniFile
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.backup.BackupConst
 import eu.kanade.tachiyomi.data.backup.BackupCreateService
 import eu.kanade.tachiyomi.data.backup.BackupCreatorJob
 import eu.kanade.tachiyomi.data.backup.BackupRestoreService
@@ -24,9 +20,7 @@ import eu.kanade.tachiyomi.data.backup.models.Backup
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
 import eu.kanade.tachiyomi.util.system.getFilePicker
-import eu.kanade.tachiyomi.util.system.registerLocalReceiver
 import eu.kanade.tachiyomi.util.system.toast
-import eu.kanade.tachiyomi.util.system.unregisterLocalReceiver
 import eu.kanade.tachiyomi.util.view.requestPermissionsSafe
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
 
@@ -37,20 +31,9 @@ class SettingsBackupController : SettingsController() {
      */
     private var backupFlags = 0
 
-    private val receiver = BackupBroadcastReceiver()
-
-    init {
-        preferences.context.registerLocalReceiver(receiver, IntentFilter(BackupConst.INTENT_FILTER))
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestPermissionsSafe(arrayOf(WRITE_EXTERNAL_STORAGE), 500)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        preferences.context.unregisterLocalReceiver(receiver)
     }
 
     override fun setupPreferenceScreen(screen: PreferenceScreen) = with(screen) {
@@ -170,7 +153,9 @@ class SettingsBackupController : SettingsController() {
 
                 val file = UniFile.fromUri(activity, uri)
 
-                BackupCreateService.makeBackup(activity, file.uri, backupFlags)
+                activity.toast(R.string.creating_backup)
+
+                BackupCreateService.start(activity, file.uri, backupFlags)
             }
             CODE_BACKUP_RESTORE -> if (data != null && resultCode == Activity.RESULT_OK) {
                 val uri = data.data
@@ -212,7 +197,7 @@ class SettingsBackupController : SettingsController() {
                     .title(R.string.create_backup)
                     .message(R.string.what_should_backup)
                 .listItemsMultiChoice(items = options, disabledIndices = intArrayOf(0),
-                    initialSelection = intArrayOf(0)) { _, positions, _ ->
+                    initialSelection = intArrayOf(0, 1, 2, 3, 4)) { _, positions, _ ->
                         var flags = 0
                         for (i in 1 until positions.size) {
                             when (positions[i]) {
@@ -227,33 +212,6 @@ class SettingsBackupController : SettingsController() {
                     }
                     .positiveButton(R.string.create)
                     .negativeButton(android.R.string.cancel)
-        }
-    }
-
-    class CreatedBackupDialog(bundle: Bundle? = null) : DialogController(bundle) {
-        constructor(uri: Uri) : this(Bundle().apply {
-            putParcelable(KEY_URI, uri)
-        })
-
-        override fun onCreateDialog(savedViewState: Bundle?): Dialog {
-            val activity = activity!!
-            val uniFile = UniFile.fromUri(activity, args.getParcelable(KEY_URI))
-            return MaterialDialog(activity).apply {
-                title(R.string.backup_created)
-                if (uniFile.filePath != null)
-                    message(text = resources?.getString(R.string.file_saved_at_, uniFile.filePath))
-                positiveButton(R.string.close)
-                negativeButton(R.string.share) {
-                    val sendIntent = Intent(Intent.ACTION_SEND)
-                    sendIntent.type = "application/json"
-                    sendIntent.putExtra(Intent.EXTRA_STREAM, uniFile.uri)
-                    startActivity(Intent.createChooser(sendIntent, ""))
-                }
-            }
-        }
-
-        private companion object {
-            const val KEY_URI = "BackupCreatedDialog.uri"
         }
     }
 
@@ -277,20 +235,6 @@ class SettingsBackupController : SettingsController() {
 
         private companion object {
             const val KEY_URI = "RestoreBackupDialog.uri"
-        }
-    }
-
-    inner class BackupBroadcastReceiver : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            when (intent.getStringExtra(BackupConst.ACTION)) {
-                BackupConst.ACTION_BACKUP_COMPLETED_DIALOG -> {
-                    val uri = Uri.parse(intent.getStringExtra(BackupConst.EXTRA_URI))
-                    CreatedBackupDialog(uri).showDialog(router)
-                }
-                BackupConst.ACTION_ERROR_BACKUP_DIALOG -> {
-                    context.toast(intent.getStringExtra(BackupConst.EXTRA_ERROR_MESSAGE))
-                }
-            }
         }
     }
 

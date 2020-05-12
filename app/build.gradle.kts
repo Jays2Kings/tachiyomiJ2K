@@ -35,8 +35,8 @@ android {
         minSdkVersion(23)
         targetSdkVersion(29)
         applicationId = "eu.kanade.tachiyomi"
-        versionCode = 63
-        versionName = "1.0.2"
+        versionCode = 65
+        versionName = "1.0.5"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
 
@@ -114,9 +114,11 @@ dependencies {
 
     implementation("com.google.firebase:firebase-core:17.3.0")
 
-    val lifecycleVersion = "2.1.0"
+    val lifecycleVersion = "2.2.0"
     implementation("androidx.lifecycle:lifecycle-extensions:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+
 
     // ReactiveX
     implementation("io.reactivex:rxandroid:1.2.1")
@@ -204,7 +206,6 @@ dependencies {
     implementation("me.zhanghai.android.systemuihelper:library:1.0.0")
     implementation("com.nightlynexus.viewstatepageradapter:viewstatepageradapter:1.1.0")
     implementation("com.github.mthli:Slice:v1.2")
-    implementation("com.reddit:indicator-fast-scroll:1.2.1")
 
     implementation("com.github.kizitonwose:AndroidTagGroup:1.6.0")
     implementation("com.github.chrisbanes:PhotoView:2.3.0")

@@ -16,6 +16,7 @@
             android:id="@+id/manga_cover"
             android:layout_width="wrap_content"
             android:adjustViewBounds="true"
+            android:minWidth="50dp"
             android:layout_height="150dp"
             android:contentDescription="@string/cover_of_image"
             android:background="@drawable/image_border_background"

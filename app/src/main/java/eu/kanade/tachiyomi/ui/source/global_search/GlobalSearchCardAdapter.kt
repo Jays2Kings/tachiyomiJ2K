@@ -6,10 +6,10 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 /**
  * Adapter that holds the manga items from search results.
  *
- * @param controller instance of [SourceSearchController].
+ * @param controller instance of [GlobalSearchController].
  */
-class SourceSearchCardAdapter(controller: SourceSearchController) :
-        FlexibleAdapter<SourceSearchCardItem>(null, controller, true) {
+class GlobalSearchCardAdapter(controller: GlobalSearchController) :
+        FlexibleAdapter<GlobalSearchMangaItem>(null, controller, true) {
 
     /**
      * Listen for browse item clicks.
@@ -18,7 +18,7 @@ class SourceSearchCardAdapter(controller: SourceSearchController) :
 
     /**
      * Listener which should be called when user clicks browse.
-     * Note: Should only be handled by [SourceSearchController]
+     * Note: Should only be handled by [GlobalSearchController]
      */
     interface OnMangaClickListener {
         fun onMangaClick(manga: Manga)

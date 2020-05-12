@@ -14,6 +14,7 @@ import androidx.preference.PreferenceScreen
 import com.afollestad.materialdialogs.MaterialDialog
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.ChapterCache
+import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
@@ -42,6 +43,8 @@ class SettingsAdvancedController : SettingsController() {
     private val chapterCache: ChapterCache by injectLazy()
 
     private val db: DatabaseHelper by injectLazy()
+
+    private val coverCache: CoverCache by injectLazy()
 
     @SuppressLint("BatteryLife")
     override fun setupPreferenceScreen(screen: PreferenceScreen) = with(screen) {
@@ -96,6 +99,17 @@ class SettingsAdvancedController : SettingsController() {
             summaryRes = R.string.delete_unused_chapters
 
             onClick { cleanupDownloads() }
+        }
+
+        preference {
+            titleRes = R.string.clean_up_cached_covers
+
+            summaryRes = R.string.delete_old_covers_in_library
+
+            onClick {
+                context.toast(R.string.starting_cleanup)
+                coverCache.deleteOldCovers()
+            }
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val pm = context.getSystemService(Context.POWER_SERVICE) as? PowerManager?

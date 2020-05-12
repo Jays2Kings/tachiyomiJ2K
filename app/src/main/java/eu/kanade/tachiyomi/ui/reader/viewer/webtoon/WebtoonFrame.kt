@@ -25,6 +25,12 @@ class WebtoonFrame(context: Context) : FrameLayout(context) {
      */
     private val flingDetector = GestureDetector(context, FlingListener())
 
+    var disableZoom = true
+        set(value) {
+            field = value
+            recycler?.canZoom = !value
+        }
+
     /**
      * Recycler view added in this frame.
      */

@@ -14,6 +14,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topbar_layout"
         android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -77,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0"
-        android:background="?android:attr/colorBackground"
+        android:background="@android:color/transparent"
         android:clipToPadding="false"
         tools:listitem="@layout/reader_chapter_item" />
 </eu.kanade.tachiyomi.ui.reader.ReaderChapterSheet>

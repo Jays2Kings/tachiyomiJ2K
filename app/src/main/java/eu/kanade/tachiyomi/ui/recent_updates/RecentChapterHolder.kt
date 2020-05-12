@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.recent_updates
 
+import android.app.Activity
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -69,13 +70,12 @@ class RecentChapterHolder(private val view: View, private val adapter: RecentCha
         }
 
         // Set cover
-        GlideApp.with(itemView.context).clear(manga_cover)
-        if (!item.manga.thumbnail_url.isNullOrEmpty()) {
-            GlideApp.with(itemView.context)
-                    .load(item.manga)
-                    .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                    .circleCrop()
-                    .into(manga_cover)
+        if ((view.context as? Activity)?.isDestroyed != true) {
+            GlideApp.with(itemView.context).clear(manga_cover)
+            if (!item.manga.thumbnail_url.isNullOrEmpty()) {
+                GlideApp.with(itemView.context).load(item.manga)
+                    .diskCacheStrategy(DiskCacheStrategy.RESOURCE).circleCrop().into(manga_cover)
+            }
         }
 
         val chapterColor = ChapterUtil.chapterColor(itemView.context, item)

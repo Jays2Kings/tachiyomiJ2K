@@ -32,7 +32,6 @@ import com.github.chrisbanes.photoview.PhotoView
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderProgressBar
@@ -304,7 +303,7 @@ class PagerPageHolder(
             val preferences by injectLazy<PreferencesHelper>()
             ImageUtil.autoSetBackground(BitmapFactory.decodeByteArray(
                 bytesArray, 0, bytesArray.size
-            ), preferences.readerTheme().getOrDefault() == 2, context)
+            ), preferences.readerTheme().get() == 2, context)
         }
     }
 

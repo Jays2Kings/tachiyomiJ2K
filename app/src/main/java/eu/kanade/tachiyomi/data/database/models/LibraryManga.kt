@@ -6,8 +6,6 @@ class LibraryManga : MangaImpl() {
 
     var category: Int = 0
 
-    fun isBlank() = id == Long.MIN_VALUE
-
     companion object {
         fun createBlank(categoryId: Int): LibraryManga = LibraryManga().apply {
             title = ""

@@ -81,7 +81,7 @@ class LibraryGridHolder(
     private fun setCover(manga: Manga, id: Long) {
         if ((adapter.recyclerView.context as? Activity)?.isDestroyed == true) return
         GlideApp.with(adapter.recyclerView.context).load(manga)
-            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
             .apply {
                 if (fixedSize) centerCrop()

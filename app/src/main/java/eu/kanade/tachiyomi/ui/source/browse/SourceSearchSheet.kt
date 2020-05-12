@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.RecyclerWindowInsetsListener
+import eu.kanade.tachiyomi.util.view.expand
 import eu.kanade.tachiyomi.util.view.setEdgeToEdge
 import kotlinx.android.synthetic.main.source_filter_sheet.*
 import uy.kohesive.injekt.injectLazy
@@ -51,7 +52,7 @@ class SourceSearchSheet(activity: Activity) :
 
         sheetBehavior = BottomSheetBehavior.from(view.parent as ViewGroup)
         sheetBehavior.skipCollapsed = true
-        sheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        sheetBehavior.expand()
         setEdgeToEdge(
             activity, view, 50.dpToPx
         )

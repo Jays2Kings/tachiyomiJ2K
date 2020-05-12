@@ -218,7 +218,6 @@
                 android:layout_marginTop="0dp"
                 android:text="@string/page_transitions"
                 android:textColor="?android:attr/textColorSecondary"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/crop_borders" />
 
             <!-- Webtoon preferences -->
@@ -259,11 +258,19 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:entries="@array/webtoon_side_padding"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/spinner_end"
                 app:layout_constraintRight_toRightOf="@id/spinner_end"
                 app:layout_constraintStart_toEndOf="@id/bottom_line"
                 app:layout_constraintTop_toBottomOf="@id/crop_borders_webtoon" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/webtoon_disable_zoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/disable_zoom"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintTop_toBottomOf="@id/webtoon_side_padding" />
 
             <!-- Groups of preferences -->
 
@@ -282,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 app:constraint_referenced_ids="webtoon_prefs,crop_borders_webtoon,
-                webtoon_side_padding_text,webtoon_side_padding" />
+                webtoon_side_padding_text,webtoon_side_padding,webtoon_disable_zoom" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/bottom_line"

@@ -15,8 +15,8 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
-import eu.kanade.tachiyomi.ui.source.global_search.SourceSearchController
-import eu.kanade.tachiyomi.ui.source.global_search.SourceSearchPresenter
+import eu.kanade.tachiyomi.ui.source.global_search.GlobalSearchController
+import eu.kanade.tachiyomi.ui.source.global_search.GlobalSearchPresenter
 import eu.kanade.tachiyomi.ui.main.BottomNavBarInterface
 import eu.kanade.tachiyomi.ui.migration.manga.process.MigrationListController
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
@@ -24,7 +24,7 @@ import uy.kohesive.injekt.injectLazy
 
 class SearchController(
     private var manga: Manga? = null
-) : SourceSearchController(manga?.title), BottomNavBarInterface {
+) : GlobalSearchController(manga?.title), BottomNavBarInterface {
 
     private var newManga: Manga? = null
     private var progress = 1
@@ -44,7 +44,7 @@ class SearchController(
             return super.getTitle()
     }
 
-    override fun createPresenter(): SourceSearchPresenter {
+    override fun createPresenter(): GlobalSearchPresenter {
         return SearchPresenter(initialQuery, manga!!)
     }
 

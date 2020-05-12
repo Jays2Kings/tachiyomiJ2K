@@ -106,8 +106,12 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         activity.toast(error.message)
     }
 
-    override fun onLogoClick(position: Int) {
+        override fun onLogoClick(position: Int) {
         val track = adapter?.getItem(position)?.track ?: return
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
 
         if (track.tracking_url.isBlank()) {
             activity.toast(R.string.url_not_set_click_again)
@@ -119,6 +123,11 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
 
     override fun onSetClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
+
         TrackSearchDialog(this, item.service, item.track != null).showDialog(
             controller.router,
             TAG_SEARCH_CONTROLLER
@@ -128,6 +137,10 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun onStatusClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
 
         SetTrackStatusDialog(this, item).showDialog(controller.router)
     }
@@ -135,13 +148,20 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun onChaptersClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
-
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
         SetTrackChaptersDialog(this, item).showDialog(controller.router)
     }
 
     override fun onScoreClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
 
         SetTrackScoreDialog(this, item).showDialog(controller.router)
     }

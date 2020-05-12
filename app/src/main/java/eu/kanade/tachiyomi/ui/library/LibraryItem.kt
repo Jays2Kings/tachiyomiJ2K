@@ -37,9 +37,6 @@ class LibraryItem(
     var unreadType = 2
     var chapterCount = -1
 
-    private val showFastScroll: Boolean
-        get() = preferences.alwaysShowSeeker().getOrDefault()
-
     private val uniformSize: Boolean
         get() = preferences.uniformGrid().getOrDefault()
 
@@ -62,7 +59,7 @@ class LibraryItem(
             val libraryLayout = libraryLayout
             val isFixedSize = uniformSize
             if (libraryLayout == 0 || manga.isBlank()) {
-                LibraryListHolder(view, adapter as LibraryCategoryAdapter, showFastScroll)
+                LibraryListHolder(view, adapter as LibraryCategoryAdapter)
             } else {
                 view.apply {
                     val coverHeight = (parent.itemWidth / 3f * 4f).toInt()
@@ -107,7 +104,7 @@ class LibraryItem(
                 )
             }
         } else {
-            LibraryListHolder(view, adapter as LibraryCategoryAdapter, showFastScroll)
+            LibraryListHolder(view, adapter as LibraryCategoryAdapter)
         }
     }
 

@@ -15,8 +15,8 @@ import eu.kanade.tachiyomi.source.CatalogueSource
  * @param results the search results.
  * @param highlighted whether this search item should be highlighted/marked in the catalogue search view.
  */
-class SourceSearchItem(val source: CatalogueSource, val results: List<SourceSearchCardItem>?, val highlighted: Boolean = false) :
-    AbstractFlexibleItem<SourceSearchHolder>() {
+class GlobalSearchItem(val source: CatalogueSource, val results: List<GlobalSearchMangaItem>?, val highlighted: Boolean = false) :
+    AbstractFlexibleItem<GlobalSearchHolder>() {
 
     /**
      * Set view.
@@ -28,12 +28,12 @@ class SourceSearchItem(val source: CatalogueSource, val results: List<SourceSear
     }
 
     /**
-     * Create view holder (see [SourceSearchAdapter].
+     * Create view holder (see [GlobalSearchAdapter].
      *
      * @return holder of view.
      */
-    override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): SourceSearchHolder {
-        return SourceSearchHolder(view, adapter as SourceSearchAdapter)
+    override fun createViewHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>): GlobalSearchHolder {
+        return GlobalSearchHolder(view, adapter as GlobalSearchAdapter)
     }
 
     /**
@@ -41,7 +41,7 @@ class SourceSearchItem(val source: CatalogueSource, val results: List<SourceSear
      */
     override fun bindViewHolder(
         adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>,
-        holder: SourceSearchHolder,
+        holder: GlobalSearchHolder,
         position: Int,
         payloads: MutableList<Any?>?
     ) {
@@ -54,7 +54,7 @@ class SourceSearchItem(val source: CatalogueSource, val results: List<SourceSear
      * @return items are equal?
      */
     override fun equals(other: Any?): Boolean {
-        if (other is SourceSearchItem) {
+        if (other is GlobalSearchItem) {
             return source.id == other.source.id
         }
         return false

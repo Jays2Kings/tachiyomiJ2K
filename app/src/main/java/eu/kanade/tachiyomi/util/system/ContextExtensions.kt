@@ -12,7 +12,9 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
+import android.os.Build
 import android.os.PowerManager
 import android.view.View
 import android.widget.Toast
@@ -136,6 +138,22 @@ val Resources.isLTR
     get() = configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
 
 /**
+ * Helper method to create a notification builder.
+ *
+ * @param id the channel id.
+ * @param block the function that will execute inside the builder.
+ * @return a notification to be displayed or updated.
+ */
+fun Context.notificationBuilder(channelId: String, block: (NotificationCompat.Builder.() -> Unit)? = null): NotificationCompat.Builder {
+    val builder = NotificationCompat.Builder(this, channelId)
+        .setColor(ContextCompat.getColor(this, R.color.colorAccent))
+    if (block != null) {
+        builder.block()
+    }
+    return builder
+}
+
+/**
  * Property to get the notification manager from the context.
  */
 val Context.notificationManager: NotificationManager
@@ -218,4 +236,21 @@ fun Context.openInBrowser(url: String) {
 fun Context.isInNightMode(): Boolean {
     val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
     return currentNightMode == Configuration.UI_MODE_NIGHT_YES
+}
+
+fun Context.isOnline(): Boolean {
+    val connectivityManager = this
+        .getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+    var result = false
+    connectivityManager?.let {
+        val networkCapabilities = connectivityManager.activeNetwork ?: return false
+        val actNw = connectivityManager.getNetworkCapabilities(networkCapabilities) ?: return false
+        val maxTransport = when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 -> NetworkCapabilities.TRANSPORT_LOWPAN
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.O -> NetworkCapabilities.TRANSPORT_WIFI_AWARE
+            else -> NetworkCapabilities.TRANSPORT_VPN
+        }
+        result = (NetworkCapabilities.TRANSPORT_CELLULAR..maxTransport).any(actNw::hasTransport)
+    }
+    return result
 }

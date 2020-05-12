@@ -190,7 +190,7 @@ open class BrowseSourceController(bundle: Bundle) :
         recycler.adapter = adapter
 
         scrollViewWith(recycler, true, afterInsets = { insets ->
-            fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+            fab?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                 bottomMargin = insets.systemWindowInsetBottom + 16.dpToPx
             }
         })

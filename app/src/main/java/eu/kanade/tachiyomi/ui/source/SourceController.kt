@@ -30,9 +30,13 @@ import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.main.RootSearchInterface
 import eu.kanade.tachiyomi.ui.setting.SettingsSourcesController
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
-import eu.kanade.tachiyomi.ui.source.global_search.SourceSearchController
+import eu.kanade.tachiyomi.ui.source.global_search.GlobalSearchController
 import eu.kanade.tachiyomi.ui.source.latest.LatestUpdatesController
 import eu.kanade.tachiyomi.util.view.applyWindowInsetsForRootController
+import eu.kanade.tachiyomi.util.view.collapse
+import eu.kanade.tachiyomi.util.view.expand
+import eu.kanade.tachiyomi.util.view.isCollapsed
+import eu.kanade.tachiyomi.util.view.isExpanded
 import eu.kanade.tachiyomi.util.view.requestPermissionsSafe
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
@@ -147,17 +151,19 @@ class SourceController : NucleusController<SourcePresenter>(),
             }
 
             override fun onStateChanged(p0: View, state: Int) {
-                val ext_bottom_sheet = ext_bottom_sheet ?: return
-                if (state == BottomSheetBehavior.STATE_EXPANDED) activity?.appbar?.y = 0f
+                val extBottomSheet = ext_bottom_sheet ?: return
+                if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                    activity?.appbar?.y = 0f
+                }
                 if (state == BottomSheetBehavior.STATE_EXPANDED ||
                     state == BottomSheetBehavior.STATE_COLLAPSED) {
-                    sheet_layout.alpha =
+                    sheet_layout?.alpha =
                         if (state == BottomSheetBehavior.STATE_COLLAPSED) 1f else 0f
                     showingExtensions = state == BottomSheetBehavior.STATE_EXPANDED
                     setTitle()
                     if (state == BottomSheetBehavior.STATE_EXPANDED)
-                        ext_bottom_sheet.fetchOnlineExtensionsIfNeeded()
-                    else ext_bottom_sheet.shouldCallApi = true
+                        extBottomSheet.fetchOnlineExtensionsIfNeeded()
+                    else extBottomSheet.shouldCallApi = true
                     activity?.invalidateOptionsMenu()
                 }
 
@@ -169,28 +175,27 @@ class SourceController : NucleusController<SourcePresenter>(),
         })
 
         if (showingExtensions) {
-            ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            ext_bottom_sheet.sheetBehavior?.expand()
         }
     }
 
     override fun showSheet() {
-        ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+        ext_bottom_sheet.sheetBehavior?.expand()
     }
 
     override fun toggleSheet() {
-        if (ext_bottom_sheet.sheetBehavior?.state != BottomSheetBehavior.STATE_COLLAPSED) {
-            ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (!ext_bottom_sheet.sheetBehavior.isCollapsed()) {
+            ext_bottom_sheet.sheetBehavior?.collapse()
         } else {
-            ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            ext_bottom_sheet.sheetBehavior?.expand()
         }
     }
 
-    override fun sheetIsExpanded(): Boolean = ext_bottom_sheet.sheetBehavior?.state ==
-        BottomSheetBehavior.STATE_EXPANDED
+    override fun sheetIsExpanded(): Boolean = ext_bottom_sheet.sheetBehavior.isExpanded()
 
     override fun handleSheetBack(): Boolean {
-        if (ext_bottom_sheet.sheetBehavior?.state != BottomSheetBehavior.STATE_COLLAPSED) {
-            ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (!ext_bottom_sheet.sheetBehavior.isCollapsed()) {
+            ext_bottom_sheet.sheetBehavior?.collapse()
             return true
         }
         return false
@@ -279,8 +284,7 @@ class SourceController : NucleusController<SourcePresenter>(),
     }
 
     override fun expandSearch() {
-        if (showingExtensions)
-            ext_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (showingExtensions) ext_bottom_sheet.sheetBehavior?.collapse()
         else activity?.toolbar?.menu?.findItem(R.id.action_search)?.expandActionView()
     }
 
@@ -329,7 +333,7 @@ class SourceController : NucleusController<SourcePresenter>(),
     }
 
     private fun performGlobalSearch(query: String) {
-        router.pushController(SourceSearchController(query).withFadeTransaction())
+        router.pushController(GlobalSearchController(query).withFadeTransaction())
     }
 
     /**

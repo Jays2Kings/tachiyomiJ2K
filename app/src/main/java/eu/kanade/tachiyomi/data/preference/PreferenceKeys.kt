@@ -53,6 +53,8 @@ object PreferenceKeys {
 
     const val webtoonSidePadding = "webtoon_side_padding"
 
+    const val webtoonDisableZoom = "webtoon_disable_zoom"
+
     const val updateOnlyNonCompleted = "pref_update_only_non_completed_key"
 
     const val autoUpdateTrack = "pref_auto_update_manga_sync_key"

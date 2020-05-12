@@ -16,9 +16,9 @@
         android:id="@+id/sheet_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/bottom_sheet_rounded_background"
         android:backgroundTint="?attr/colorPrimaryVariant"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
@@ -54,11 +54,24 @@
             tools:text="Extensions" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ext_recycler"
+    <FrameLayout
+        android:id="@+id/ext_recycler_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?android:attr/colorBackground"
-        android:clipToPadding="false"
-        tools:listitem="@layout/extension_card_header" />
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ext_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/colorBackground"
+            android:clipToPadding="false"
+            tools:listitem="@layout/extension_card_header" />
+
+        <eu.kanade.tachiyomi.ui.library.MaterialFastScroll
+            android:id="@+id/fast_scroller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fastScrollerBubbleEnabled="false" />
+
+    </FrameLayout>
 </eu.kanade.tachiyomi.ui.extension.ExtensionBottomSheet>

@@ -25,20 +25,20 @@ import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 
 /**
- * Presenter of [SourceSearchController]
+ * Presenter of [GlobalSearchController]
  * Function calls should be done from here. UI calls should be done from the controller.
  *
  * @param sourceManager manages the different sources.
  * @param db manages the database calls.
  * @param preferencesHelper manages the preference calls.
  */
-open class SourceSearchPresenter(
+open class GlobalSearchPresenter(
     private val initialQuery: String? = "",
     private val initialExtensionFilter: String? = null,
     val sourceManager: SourceManager = Injekt.get(),
     val db: DatabaseHelper = Injekt.get(),
     private val preferencesHelper: PreferencesHelper = Injekt.get()
-) : BasePresenter<SourceSearchController>() {
+) : BasePresenter<GlobalSearchController>() {
 
     /**
      * Enabled sources.
@@ -73,7 +73,7 @@ open class SourceSearchPresenter(
     override fun onCreate(savedState: Bundle?) {
         super.onCreate(savedState)
 
-        extensionFilter = savedState?.getString(SourceSearchPresenter::extensionFilter.name)
+        extensionFilter = savedState?.getString(GlobalSearchPresenter::extensionFilter.name)
             ?: initialExtensionFilter
 
         // Perform a search with previous or initial state
@@ -90,7 +90,7 @@ open class SourceSearchPresenter(
 
     override fun onSave(state: Bundle) {
         state.putString(BrowseSourcePresenter::query.name, query)
-        state.putString(SourceSearchPresenter::extensionFilter.name, extensionFilter)
+        state.putString(GlobalSearchPresenter::extensionFilter.name, extensionFilter)
         super.onSave(state)
     }
 
@@ -102,11 +102,13 @@ open class SourceSearchPresenter(
     protected open fun getEnabledSources(): List<CatalogueSource> {
         val languages = preferencesHelper.enabledLanguages().getOrDefault()
         val hiddenCatalogues = preferencesHelper.hiddenSources().getOrDefault()
+        val pinnedCatalogues = preferencesHelper.pinnedCatalogues().getOrDefault()
 
         return sourceManager.getCatalogueSources()
             .filter { it.lang in languages }
             .filterNot { it.id.toString() in hiddenCatalogues }
             .sortedBy { "(${it.lang}) ${it.name}" }
+            .sortedBy { it.id.toString() !in pinnedCatalogues }
     }
 
     private fun getSourcesToQuery(): List<CatalogueSource> {
@@ -132,9 +134,9 @@ open class SourceSearchPresenter(
      */
     protected open fun createCatalogueSearchItem(
         source: CatalogueSource,
-        results: List<SourceSearchCardItem>?
-    ): SourceSearchItem {
-        return SourceSearchItem(source, results)
+        results: List<GlobalSearchMangaItem>?
+    ): GlobalSearchItem {
+        return GlobalSearchItem(source, results)
     }
 
     /**
@@ -178,7 +180,7 @@ open class SourceSearchPresenter(
                     .map {
                         createCatalogueSearchItem(
                             source,
-                            it.map { SourceSearchCardItem(it) })
+                            it.map { GlobalSearchMangaItem(it) })
                     }
             }, 5).observeOn(AndroidSchedulers.mainThread())
             // Update matching source with the obtained results

@@ -22,19 +22,19 @@ import kotlinx.android.synthetic.main.source_global_search_controller.*
 
 /**
  * This controller shows and manages the different search result in global search.
- * This controller should only handle UI actions, IO actions should be done by [SourceSearchPresenter]
- * [SourceSearchCardAdapter.OnMangaClickListener] called when manga is clicked in global search
+ * This controller should only handle UI actions, IO actions should be done by [GlobalSearchPresenter]
+ * [GlobalSearchCardAdapter.OnMangaClickListener] called when manga is clicked in global search
  */
-open class SourceSearchController(
+open class GlobalSearchController(
     protected val initialQuery: String? = null,
     protected val extensionFilter: String? = null
-) : NucleusController<SourceSearchPresenter>(),
-        SourceSearchCardAdapter.OnMangaClickListener {
+) : NucleusController<GlobalSearchPresenter>(),
+        GlobalSearchCardAdapter.OnMangaClickListener {
 
     /**
      * Adapter containing search results grouped by lang.
      */
-    protected var adapter: SourceSearchAdapter? = null
+    protected var adapter: GlobalSearchAdapter? = null
 
     private var customTitle: String? = null
 
@@ -66,12 +66,12 @@ open class SourceSearchController(
     }
 
     /**
-     * Create the [SourceSearchPresenter] used in controller.
+     * Create the [GlobalSearchPresenter] used in controller.
      *
-     * @return instance of [SourceSearchPresenter]
+     * @return instance of [GlobalSearchPresenter]
      */
-    override fun createPresenter(): SourceSearchPresenter {
-        return SourceSearchPresenter(initialQuery, extensionFilter)
+    override fun createPresenter(): GlobalSearchPresenter {
+        return GlobalSearchPresenter(initialQuery, extensionFilter)
     }
 
     /**
@@ -137,7 +137,7 @@ open class SourceSearchController(
      */
     override fun onViewCreated(view: View) {
         super.onViewCreated(view)
-        adapter = SourceSearchAdapter(this)
+        adapter = GlobalSearchAdapter(this)
 
         recycler.updatePaddingRelative(
             top = (activity?.toolbar?.height ?: 0) +
@@ -175,13 +175,13 @@ open class SourceSearchController(
      * @param source used to find holder containing source
      * @return the holder of the manga or null if it's not bound.
      */
-    private fun getHolder(source: CatalogueSource): SourceSearchHolder? {
+    private fun getHolder(source: CatalogueSource): GlobalSearchHolder? {
         val adapter = adapter ?: return null
 
         adapter.allBoundViewHolders.forEach { holder ->
             val item = adapter.getItem(holder.adapterPosition)
             if (item != null && source.id == item.source.id) {
-                return holder as SourceSearchHolder
+                return holder as GlobalSearchHolder
             }
         }
 
@@ -193,7 +193,7 @@ open class SourceSearchController(
      *
      * @param searchResult result of search.
      */
-    fun setItems(searchResult: List<SourceSearchItem>) {
+    fun setItems(searchResult: List<GlobalSearchItem>) {
         if (extensionFilter != null) {
             val results = searchResult.first().results
             if (results != null && results.size == 1) {

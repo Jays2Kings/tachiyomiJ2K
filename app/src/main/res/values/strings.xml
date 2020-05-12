@@ -78,7 +78,7 @@
     <string name="confirm_category_deletion_message">Manga in this category will moved into the
         default category.</string>
     <string name="already_in_category">Manga already in category</string>
-    <string name="add_category">Add category</string>
+    <string name="add_categories">Add categories</string>
     <string name="edit_categories">Edit categories</string>
     <string name="manage_category">Manage category</string>
     <string name="rename_category">Rename category</string>
@@ -115,6 +115,14 @@
         library from the browse tab.</string>
     <string name="no_matches_for_filters">No matches found for your current filters</string>
     <string name="show_all_categories">Show all categories</string>
+    <string name="expand_all_categories">Expand all categories</string>
+    <string name="collapse_all_categories">Collapse all categories</string>
+    <string name="reorder_filters">Reorder filters</string>
+    <string name="_unread">%d unread</string>
+    <string name="search_globally">Search \"%1$s\" globally</string>
+
+    <string name="read_progress">Read progress</string>
+    <string name="series_type">Series type</string>
 
     <!-- Library Sort -->
     <string name="sort_by_">Sort by: %1$s</string>
@@ -133,7 +141,6 @@
     <string name="start_with_filters_hidden">Start with filters hidden</string>
     <string name="download_badge">Download badges</string>
     <string name="hide_start_reading_button">Hide start reading button</string>
-    <string name="always_show_library_fast_scroll">Always show library fast scroll</string>
     <string name="unread_badges">Unread badges</string>
     <string name="uniform_covers">Uniform covers</string>
     <string name="x_small">XS</string>
@@ -147,6 +154,8 @@
     <string name="show_count">Show count</string>
     <string name="tap_library_to_show_filters">Tap the Library icon to show filters</string>
     <string name="display_as">Display as</string>
+    <string name="hide_category_hopper">Hide category hopper</string>
+    <string name="more_library_settings">More library settings</string>
 
     <!-- Library update service notifications -->
     <string name="new_chapters_found">New chapters found</string>
@@ -274,6 +283,7 @@
     <!-- Reader settings -->
     <string name="fullscreen">Fullscreen</string>
     <string name="page_transitions">Page transitions</string>
+    <string name="disable_zoom">Disable zoom</string>
     <string name="double_tap_anim_speed">Double tap animation speed</string>
     <string name="show_page_number">Show page number</string>
     <string name="true_32bit_color">32-bit color</string>
@@ -477,13 +487,14 @@
     <string name="service">Service</string>
     <string name="backup_frequency">Backup frequency</string>
     <string name="max_auto_backups">Max automatic backups</string>
+    <string name="backup_failed">Backup failed</string>
     <string name="backup_created">Backup created</string>
     <string name="restore_completed">Restore completed</string>
     <string name="restore_error">Restore error</string>
     <string name="restore_completed_content">%1$s Restored. %2$s errors found</string>
     <string name="restore_content_skipped">%1$d skipped</string>
     <string name="restore_message">Restore uses the network to fetch data, carrier costs may apply.\n\nMake sure you have installed all necessary extensions and are logged in to sources and tracking services before restoring.</string>
-    <string name="file_saved_at_">File saved at %1$s</string>
+    <string name="creating_backup">Creating backup</string>
     <string name="what_should_backup">What do you want to backup?</string>
     <string name="restoring_backup">Restoring backup</string>
     <string name="restoring_progress">Restoring (%1$d/%2$d)</string>
@@ -528,6 +539,9 @@
         <item quantity="one">Cleanup done. Removed %d folder</item>
         <item quantity="other">Cleanup done. Removed %d folders</item>
     </plurals>
+    <string name="clean_up_cached_covers">Clean up cached covers</string>
+    <string name="delete_old_covers_in_library">Delete old and unused cached covers of
+        manga in your library that has been updated</string>
 
     <!-- About section -->
     <string name="version">Version</string>
@@ -644,6 +658,7 @@
     <string name="create">Create</string>
     <string name="default_value">Default</string>
     <string name="delete">Delete</string>
+    <string name="deleted_">Deleted: %1$s</string>
     <string name="display">Display</string>
     <string name="drag_handle">Drag handle</string>
     <string name="edit">Edit</string>

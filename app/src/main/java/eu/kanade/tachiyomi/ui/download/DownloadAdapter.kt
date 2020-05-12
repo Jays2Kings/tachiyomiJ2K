@@ -29,4 +29,8 @@ class DownloadAdapter(controller: DownloadItemListener) : FlexibleAdapter<Downlo
         super.onItemSwiped(position, direction)
         downloadItemListener.onItemRemoved(position)
     }
+
+    override fun onCreateBubbleText(position: Int): String {
+        return getItem(position)?.download?.manga?.title ?: ""
+    }
 }

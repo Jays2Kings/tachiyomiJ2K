@@ -33,7 +33,6 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.ui.base.activity.BaseRxActivity
 import eu.kanade.tachiyomi.ui.reader.ReaderPresenter.SetAsCoverResult.AddToLibraryFirst
 import eu.kanade.tachiyomi.ui.reader.ReaderPresenter.SetAsCoverResult.Error
@@ -46,7 +45,6 @@ import eu.kanade.tachiyomi.ui.reader.viewer.pager.L2RPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.R2LPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.VerticalPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.webtoon.WebtoonViewer
-import eu.kanade.tachiyomi.util.lang.plusAssign
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.GLUtil
 import eu.kanade.tachiyomi.util.system.ThemeUtil
@@ -57,8 +55,11 @@ import eu.kanade.tachiyomi.util.system.hasSideNavBar
 import eu.kanade.tachiyomi.util.system.isBottomTappable
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.toast
+import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
 import eu.kanade.tachiyomi.util.view.gone
+import eu.kanade.tachiyomi.util.view.hide
+import eu.kanade.tachiyomi.util.view.isExpanded
 import eu.kanade.tachiyomi.util.view.snack
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
@@ -69,17 +70,16 @@ import kotlinx.android.synthetic.main.reader_activity.*
 import kotlinx.android.synthetic.main.reader_chapters_sheet.*
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.sample
 import me.zhanghai.android.systemuihelper.SystemUiHelper
 import nucleus.factory.RequiresPresenter
-import rx.Observable
-import rx.Subscription
-import rx.android.schedulers.AndroidSchedulers
-import rx.subscriptions.CompositeSubscription
 import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import java.io.File
 import java.util.Locale
-import java.util.concurrent.TimeUnit
 import kotlin.math.abs
 
 /**
@@ -204,6 +204,9 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         }
 
         chapters_bottom_sheet.setup(this)
+        if (ThemeUtil.isBlueTheme(preferences.theme())) {
+            chapter_recycler.setBackgroundColor(getResourceColor(android.R.attr.colorBackground))
+        }
         config = ReaderConfig()
         initializeMenu()
     }
@@ -216,7 +219,6 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         viewer?.destroy()
         chapters_bottom_sheet.adapter = null
         viewer = null
-        config?.destroy()
         config = null
         bottomSheet?.dismiss()
         bottomSheet = null
@@ -272,8 +274,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
             else -> return super.onOptionsItemSelected(item)
         }
         bottomSheet?.show()
-        if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
-            chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (chapters_bottom_sheet.sheetBehavior.isExpanded()) {
+            chapters_bottom_sheet.sheetBehavior?.collapse()
         }
         return true
     }
@@ -283,8 +285,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
      * delegated to the presenter.
      */
     override fun onBackPressed() {
-        if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
-            chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (chapters_bottom_sheet.sheetBehavior.isExpanded()) {
+            chapters_bottom_sheet.sheetBehavior?.collapse()
             return
         }
         presenter.onBackPressed()
@@ -336,8 +338,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         // Set initial visibility
         setMenuVisibility(menuVisible)
         chapters_bottom_sheet.sheetBehavior?.isHideable = !menuVisible
-        if (!menuVisible) chapters_bottom_sheet.sheetBehavior?.state =
-            BottomSheetBehavior.STATE_HIDDEN
+        if (!menuVisible) chapters_bottom_sheet.sheetBehavior?.hide()
         val peek = chapters_bottom_sheet.sheetBehavior?.peekHeight ?: 30.dpToPx
         reader_layout.doOnApplyWindowInsets { v, insets, _ ->
             sheetManageNavColor = when {
@@ -386,11 +387,11 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
             systemUi?.show()
             appbar.visible()
 
-            if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
+            if (chapters_bottom_sheet.sheetBehavior.isExpanded()) {
                 chapters_bottom_sheet.sheetBehavior?.isHideable = false
             }
-            if (chapters_bottom_sheet.sheetBehavior?.state != BottomSheetBehavior.STATE_EXPANDED && sheetManageNavColor) {
-                window.navigationBarColor = Color.TRANSPARENT // getResourceColor(R.attr.colorPrimaryDark)
+            if (!chapters_bottom_sheet.sheetBehavior.isExpanded() && sheetManageNavColor) {
+                window.navigationBarColor = Color.TRANSPARENT
             }
             if (animate) {
                 if (!menuStickyVisible) {
@@ -402,7 +403,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                     })
                     appbar.startAnimation(toolbarAnimation)
                 }
-                BottomSheetBehavior.from(chapters_bottom_sheet).state = BottomSheetBehavior.STATE_COLLAPSED
+                chapters_bottom_sheet.sheetBehavior?.collapse()
             }
         } else {
             systemUi?.hide()
@@ -416,8 +417,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                 })
                 appbar.startAnimation(toolbarAnimation)
                 BottomSheetBehavior.from(chapters_bottom_sheet).isHideable = true
-                BottomSheetBehavior.from(chapters_bottom_sheet).state =
-                    BottomSheetBehavior.STATE_HIDDEN
+                chapters_bottom_sheet.sheetBehavior?.hide()
             } else {
                 appbar.gone()
             }
@@ -452,7 +452,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                             else -> R.string.left_to_right_viewer
                         }
                     ).toLowerCase(Locale.getDefault())
-                ), 8000
+                ), 4000
             ) {
                 if (mangaViewer != WEBTOON) setAction(R.string.use_default) {
                     presenter.setMangaViewer(0)
@@ -549,17 +549,14 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         // Set seekbar page number
         page_text.text = "${page.number} / ${pages.size}"
 
-        if (newChapter) {
-            if (config?.showNewChapter == false) {
-                systemUi?.show()
-            }
-        } else if (chapters_bottom_sheet.shouldCollaspe && chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
-            chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (!newChapter && chapters_bottom_sheet.shouldCollapse && chapters_bottom_sheet
+            .sheetBehavior.isExpanded()) {
+            chapters_bottom_sheet.sheetBehavior?.collapse()
         }
         if (chapters_bottom_sheet.selectedChapterId != page.chapter.chapter.id) {
             chapters_bottom_sheet.refreshList()
         }
-        chapters_bottom_sheet.shouldCollaspe = true
+        chapters_bottom_sheet.shouldCollapse = true
 
         // Set seekbar progress
         page_seekbar.max = pages.lastIndex
@@ -572,8 +569,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
      */
     fun onPageLongTap(page: ReaderPage) {
         ReaderPageSheet(this, page).show()
-        if (chapters_bottom_sheet.sheetBehavior?.state == BottomSheetBehavior.STATE_EXPANDED) {
-            chapters_bottom_sheet.sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+        if (chapters_bottom_sheet.sheetBehavior.isExpanded()) {
+            chapters_bottom_sheet.sheetBehavior?.collapse()
         }
     }
 
@@ -720,67 +717,52 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
      */
     private inner class ReaderConfig {
 
-        /**
-         * List of subscriptions to keep while the reader is alive.
-         */
-        private val subscriptions = CompositeSubscription()
-
-        /**
-         * Custom brightness subscription.
-         */
-        private var customBrightnessSubscription: Subscription? = null
-
-        /**
-         * Custom color filter subscription.
-         */
-        private var customFilterColorSubscription: Subscription? = null
-
         var showNewChapter = false
 
         /**
          * Initializes the reader subscriptions.
          */
         init {
-            val sharedRotation = preferences.rotation().asObservable().share()
-            val initialRotation = sharedRotation.take(1)
-            val rotationUpdates = sharedRotation.skip(1)
-                .delay(250, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
+            setOrientation(preferences.rotation().get())
+            preferences.rotation().asFlow()
+                .drop(1)
+                .onEach {
+                    delay(250)
+                    setOrientation(it)
+                }
+                .launchIn(scope)
 
-            subscriptions += Observable.merge(initialRotation, rotationUpdates)
-                .subscribe { setOrientation(it) }
+            preferences.showPageNumber().asFlow()
+                .onEach { setPageNumberVisibility(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.showPageNumber().asObservable()
-                .subscribe { setPageNumberVisibility(it) }
+            preferences.trueColor().asFlow()
+                .onEach { setTrueColor(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.trueColor().asObservable()
-                .subscribe { setTrueColor(it) }
+            preferences.fullscreen().asFlow()
+                .onEach { setFullscreen(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.fullscreen().asObservable()
-                .subscribe { setFullscreen(it) }
+            preferences.keepScreenOn().asFlow()
+                .onEach { setKeepScreenOn(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.keepScreenOn().asObservable()
-                .subscribe { setKeepScreenOn(it) }
+            preferences.customBrightness().asFlow()
+                .onEach { setCustomBrightness(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.customBrightness().asObservable()
-                .subscribe { setCustomBrightness(it) }
+            preferences.colorFilter().asFlow()
+                .onEach { setColorFilter(it) }
+                .launchIn(scope)
 
-            subscriptions += preferences.colorFilter().asObservable()
-                .subscribe { setColorFilter(it) }
+            preferences.colorFilterMode().asFlow()
+                .onEach { setColorFilter(preferences.colorFilter().get()) }
+                .launchIn(scope)
 
-            subscriptions += preferences.colorFilterMode().asObservable()
-                .subscribe { setColorFilter(preferences.colorFilter().getOrDefault()) }
-
-            subscriptions += preferences.alwaysShowChapterTransition().asObservable()
-                .subscribe { showNewChapter = it }
-        }
-
-        /**
-         * Called when the reader is being destroyed. It cleans up all the subscriptions.
-         */
-        fun destroy() {
-            subscriptions.unsubscribe()
-            customBrightnessSubscription = null
-            customFilterColorSubscription = null
+            preferences.alwaysShowChapterTransition().asFlow()
+                .onEach { showNewChapter = it }
+                .launchIn(scope)
         }
 
         /**
@@ -857,13 +839,11 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
          */
         private fun setCustomBrightness(enabled: Boolean) {
             if (enabled) {
-                customBrightnessSubscription = preferences.customBrightnessValue().asObservable()
-                    .sample(100, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
-                    .subscribe { setCustomBrightnessValue(it) }
-
-                subscriptions.add(customBrightnessSubscription)
+                preferences.customBrightnessValue().asFlow()
+                    .sample(100)
+                    .onEach { setCustomBrightnessValue(it) }
+                    .launchIn(scope)
             } else {
-                customBrightnessSubscription?.let { subscriptions.remove(it) }
                 setCustomBrightnessValue(0)
             }
         }
@@ -873,14 +853,12 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
          */
         private fun setColorFilter(enabled: Boolean) {
             if (enabled) {
-                customFilterColorSubscription = preferences.colorFilterValue().asObservable()
-                    .sample(100, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
-                    .subscribe { setColorFilterValue(it) }
-
-                subscriptions.add(customFilterColorSubscription)
+                preferences.colorFilterValue().asFlow()
+                    .sample(100)
+                    .onEach { setColorFilterValue(it) }
+                    .launchIn(scope)
             } else {
-                customFilterColorSubscription?.let { subscriptions.remove(it) }
-                color_overlay.visibility = View.GONE
+                color_overlay.gone()
             }
         }
 
@@ -906,11 +884,11 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
 
             // Set black overlay visibility.
             if (value < 0) {
-                brightness_overlay.visibility = View.VISIBLE
+                brightness_overlay.visible()
                 val alpha = (abs(value) * 2.56).toInt()
                 brightness_overlay.setBackgroundColor(Color.argb(alpha, 0, 0, 0))
             } else {
-                brightness_overlay.visibility = View.GONE
+                brightness_overlay.gone()
             }
         }
 
@@ -918,8 +896,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
          * Sets the color filter [value].
          */
         private fun setColorFilterValue(value: Int) {
-            color_overlay.visibility = View.VISIBLE
-            color_overlay.setFilterColor(value, preferences.colorFilterMode().getOrDefault())
+            color_overlay.visible()
+            color_overlay.setFilterColor(value, preferences.colorFilterMode().get())
         }
     }
 }

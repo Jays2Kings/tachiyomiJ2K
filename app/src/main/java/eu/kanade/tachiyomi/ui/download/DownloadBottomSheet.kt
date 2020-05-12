@@ -13,7 +13,13 @@ import eu.kanade.tachiyomi.data.download.model.Download
 import eu.kanade.tachiyomi.ui.extension.ExtensionDividerItemDecoration
 import eu.kanade.tachiyomi.ui.recents.RecentsController
 import eu.kanade.tachiyomi.util.view.RecyclerWindowInsetsListener
+import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
+import eu.kanade.tachiyomi.util.view.expand
+import eu.kanade.tachiyomi.util.view.hide
+import eu.kanade.tachiyomi.util.view.isCollapsed
+import eu.kanade.tachiyomi.util.view.isExpanded
+import eu.kanade.tachiyomi.util.view.isHidden
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import kotlinx.android.synthetic.main.download_bottom_sheet.view.*
 
@@ -49,6 +55,7 @@ class DownloadBottomSheet @JvmOverloads constructor(
         dl_recycler.adapter = adapter
         adapter?.isHandleDragEnabled = true
         adapter?.isSwipeEnabled = true
+        adapter?.fastScroller = fast_scroller
         dl_recycler.setHasFixedSize(true)
         dl_recycler.addItemDecoration(ExtensionDividerItemDecoration(context))
         dl_recycler.setOnApplyWindowInsetsListener(RecyclerWindowInsetsListener)
@@ -59,23 +66,23 @@ class DownloadBottomSheet @JvmOverloads constructor(
         val array = context.obtainStyledAttributes(attrsArray)
         val headerHeight = array.getDimensionPixelSize(0, 0)
         array.recycle()
-        dl_recycler.doOnApplyWindowInsets { _, windowInsets, _ ->
-            dl_recycler.updateLayoutParams<MarginLayoutParams> {
+        recycler_layout.doOnApplyWindowInsets { v, windowInsets, _ ->
+            v.updateLayoutParams<MarginLayoutParams> {
                 topMargin = windowInsets.systemWindowInsetTop + headerHeight - sheet_layout.height
             }
         }
         sheet_layout.setOnClickListener {
-            if (sheetBehavior?.state != BottomSheetBehavior.STATE_EXPANDED) {
-                sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            if (!sheetBehavior.isExpanded()) {
+                sheetBehavior?.expand()
             } else {
-                sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+                sheetBehavior?.collapse()
             }
         }
         update()
         setInformationView()
         if (!controller.hasQueue()) {
             sheetBehavior?.isHideable = true
-            sheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
+            sheetBehavior?.hide()
         }
     }
 
@@ -205,9 +212,9 @@ class DownloadBottomSheet @JvmOverloads constructor(
 
     fun dismiss() {
         if (sheetBehavior?.isHideable == true) {
-            sheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
+            sheetBehavior?.hide()
         } else {
-            sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+            sheetBehavior?.collapse()
         }
     }
 
@@ -215,13 +222,11 @@ class DownloadBottomSheet @JvmOverloads constructor(
         val hasQueue = presenter.downloadQueue.isNotEmpty()
         if (hasQueue) {
             sheetBehavior?.skipCollapsed = !hasQueue
-            if (sheetBehavior?.state == BottomSheetBehavior.STATE_HIDDEN) sheetBehavior?.state =
-                BottomSheetBehavior.STATE_COLLAPSED
+            if (sheetBehavior.isHidden()) sheetBehavior?.collapse()
         } else {
             sheetBehavior?.isHideable = !hasQueue
             sheetBehavior?.skipCollapsed = !hasQueue
-            if (sheetBehavior?.state == BottomSheetBehavior.STATE_COLLAPSED) sheetBehavior?.state =
-                BottomSheetBehavior.STATE_HIDDEN
+            if (sheetBehavior.isCollapsed()) sheetBehavior?.hide()
         }
         controller.setPadding(!hasQueue)
     }

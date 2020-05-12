@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="v1.0.5" changeDate="">
+        <changelogtext>When jumping to chapters while reading, your last read page will be saved</changelogtext>
+        <changelogtext>Option to hide category hopper</changelogtext>
+        <changelogtext>Fixed vpns and miui devices not working</changelogtext>
+        <changelogtext>Other minor fixes as well</changelogtext>
+    </changelogversion>
+	
+    <changelogversion versionName="v1.0.4" changeDate="">
+        <changelogtext>Fixed local covers</changelogtext>
+        <changelogtext>Toolbar no longer shows when transitioning chapters with transition
+            off</changelogtext>
+    </changelogversion>
+
+    <changelogversion versionName="v1.0.3" changeDate="">
+        <changelogtext>Changed how navigation between categories is done, there's now a hopper at the bottom of the screen</changelogtext>
+        <changelogtext>The hopper can be moved to the left or right of the screen with a swipe</changelogtext>
+        <changelogtext>New fast scroll again. Out with the old, in with the older</changelogtext>
+        <changelogtext>New fast scroller is now in downloads and extensions as well as library and manga info</changelogtext>
+        <changelogtext>Backups now save a list of your extensions (same as main Tachi)</changelogtext>
+        <changelogtext>Restores made with newer backups now mention the missing sources by name</changelogtext>
+        <changelogtext>Reorder filters in the filter bar</changelogtext>
+        <changelogtext>Perform a global search from your library</changelogtext>
+        <changelogtext>Collapse or expand all categories at once</changelogtext>
+        <changelogtext>Downloads and updates now run in parallel, divided by the sources</changelogtext>
+        <changelogtext>Updated Russian, Portuguese, and Polish translations</changelogtext>
+        <changelogtext>More Bug fixes</changelogtext>
+    </changelogversion>
+	
     <changelogversion versionName="v1.0.2" changeDate="">
         <changelogtext>Here at J2K, we are listening to our customers. Except those who want tabs
             back</changelogtext>

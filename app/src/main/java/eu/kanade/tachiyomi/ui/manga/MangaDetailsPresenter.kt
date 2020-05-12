@@ -37,6 +37,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -52,7 +53,7 @@ class MangaDetailsPresenter(
     val manga: Manga,
     val source: Source,
     val preferences: PreferencesHelper = Injekt.get(),
-    private val coverCache: CoverCache = Injekt.get(),
+    val coverCache: CoverCache = Injekt.get(),
     private val db: DatabaseHelper = Injekt.get(),
     private val downloadManager: DownloadManager = Injekt.get()
 ) : DownloadQueue.DownloadListener, LibraryServiceListener {
@@ -83,7 +84,9 @@ class MangaDetailsPresenter(
         downloadManager.addListener(this)
         LibraryUpdateService.setListener(this)
         tracks = db.getTracks(manga).executeAsBlocking()
-        if (!manga.initialized) {
+        if (manga.source == LocalSource.ID) {
+            refreshAll()
+        } else if (!manga.initialized) {
             isLoading = true
             controller.setRefresh(true)
             controller.updateHeader()
@@ -92,8 +95,8 @@ class MangaDetailsPresenter(
             updateChapters()
             controller.updateChapters(this.chapters)
         }
-        fetchTrackings()
-        refreshTrackers()
+        setTrackItems()
+        refreshTracking(false)
     }
 
     fun onDestroy() {
@@ -108,7 +111,7 @@ class MangaDetailsPresenter(
     fun fetchChapters(andTracking: Boolean = true) {
         scope.launch {
             getChapters()
-            if (andTracking) refreshTracking()
+            if (andTracking) fetchTracks()
             withContext(Dispatchers.Main) { controller.updateChapters(chapters) }
         }
     }
@@ -250,7 +253,6 @@ class MangaDetailsPresenter(
         scrollType = when {
             hasMultipleVolumes(chapters) -> MULTIPLE_VOLUMES
             hasMultipleSeasons(chapters) -> MULTIPLE_SEASONS
-            hasHundredsOfChapters(chapters) -> HUNDREDS_OF_CHAPTERS
             hasTensOfChapters(chapters) -> TENS_OF_CHAPTERS
             else -> 0
         }
@@ -282,7 +284,7 @@ class MangaDetailsPresenter(
             val volNum = getVolumeNumber(it)
             if (volNum != null) {
                 volumeSet.add(volNum)
-                if (volumeSet.size >= 3) return true
+                if (volumeSet.size >= 2) return true
             }
         }
         return false
@@ -294,18 +296,14 @@ class MangaDetailsPresenter(
             val volNum = getSeasonNumber(it)
             if (volNum != null) {
                 volumeSet.add(volNum)
-                if (volumeSet.size >= 3) return true
+                if (volumeSet.size >= 2) return true
             }
         }
         return false
     }
 
-    private fun hasHundredsOfChapters(chapters: List<ChapterItem>): Boolean {
-        return chapters.size > 300
-    }
-
     private fun hasTensOfChapters(chapters: List<ChapterItem>): Boolean {
-        return chapters.size in 21..300
+        return chapters.size > 20
     }
 
     /**
@@ -372,6 +370,7 @@ class MangaDetailsPresenter(
 
     /** Refresh Manga Info and Chapter List (not tracking) */
     fun refreshAll() {
+        if (controller.isNotOnline() && manga.source != LocalSource.ID) return
         scope.launch {
             isLoading = true
             var mangaError: java.lang.Exception? = null
@@ -395,11 +394,13 @@ class MangaDetailsPresenter(
             }
 
             val networkManga = nManga.await()
+            val mangaWasInitalized = manga.initialized
             if (networkManga != null) {
                 manga.copyFrom(networkManga)
                 manga.initialized = true
                 db.insertManga(manga).executeAsBlocking()
                 if (thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) {
+                    coverCache.deleteFromCache(thumbnailUrl)
                     MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                     withContext(Dispatchers.Main) { controller.setPaletteColor() }
                 }
@@ -411,7 +412,7 @@ class MangaDetailsPresenter(
                     val downloadNew = preferences.downloadNew().getOrDefault()
                     val categoriesToDownload =
                         preferences.downloadNewCategories().getOrDefault().map(String::toInt)
-                    val shouldDownload = !controller.fromCatalogue &&
+                    val shouldDownload = !controller.fromCatalogue && mangaWasInitalized
                         (downloadNew && (categoriesToDownload.isEmpty() || getMangaCategoryIds().any { it in categoriesToDownload }))
                     if (shouldDownload) {
                         downloadChapters(newChapters.first.sortedBy { it.chapter_number }
@@ -747,7 +748,7 @@ class MangaDetailsPresenter(
     fun hasTrackers(): Boolean = loggedServices.isNotEmpty()
 
     // Tracking
-    private fun fetchTrackings() {
+    private fun setTrackItems() {
         scope.launch {
             trackList = loggedServices.map { service ->
                 TrackItem(tracks.find { it.sync_id == service.id }, service)
@@ -755,7 +756,7 @@ class MangaDetailsPresenter(
         }
     }
 
-    private suspend fun refreshTracking() {
+    private suspend fun fetchTracks() {
         tracks = withContext(Dispatchers.IO) { db.getTracks(manga).executeAsBlocking() }
         trackList = loggedServices.map { service ->
             TrackItem(tracks.find { it.sync_id == service.id }, service)
@@ -763,36 +764,41 @@ class MangaDetailsPresenter(
         withContext(Dispatchers.Main) { controller.refreshTracking(trackList) }
     }
 
-    fun refreshTrackers() {
-        scope.launch {
-            trackList.filter { it.track != null }.map { item ->
-                withContext(Dispatchers.IO) {
-                    val trackItem = try {
-                        item.service.refresh(item.track!!)
-                    } catch (e: Exception) {
-                        trackError(e)
-                        null
+    fun refreshTracking(showOfflineSnack: Boolean = false) {
+        if (!controller.isNotOnline(showOfflineSnack)) {
+            scope.launch {
+                val asyncList = trackList.filter { it.track != null }.map { item ->
+                    async(Dispatchers.IO) {
+                        val trackItem = try {
+                            item.service.refresh(item.track!!)
+                        } catch (e: Exception) {
+                            trackError(e)
+                            null
+                        }
+                        if (trackItem != null) {
+                            db.insertTrack(trackItem).executeAsBlocking()
+                            trackItem
+                        } else item.track
                     }
-                    if (trackItem != null) {
-                        db.insertTrack(trackItem).executeAsBlocking()
-                        trackItem
-                    } else item.track
                 }
+                asyncList.awaitAll()
+                fetchTracks()
             }
-            refreshTracking()
         }
     }
 
     fun trackSearch(query: String, service: TrackService) {
-        scope.launch(Dispatchers.IO) {
-            val results = try {
-                service.search(query)
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) { controller.trackSearchError(e) }
-                null
-            }
-            if (!results.isNullOrEmpty()) {
-                withContext(Dispatchers.Main) { controller.onTrackSearchResults(results) }
+        if (!controller.isNotOnline()) {
+            scope.launch(Dispatchers.IO) {
+                val results = try {
+                    service.search(query)
+                } catch (e: Exception) {
+                    withContext(Dispatchers.Main) { controller.trackSearchError(e) }
+                    null
+                }
+                if (!results.isNullOrEmpty()) {
+                    withContext(Dispatchers.Main) { controller.onTrackSearchResults(results) }
+                }
             }
         }
     }
@@ -811,14 +817,14 @@ class MangaDetailsPresenter(
                 withContext(Dispatchers.IO) {
                     if (binding != null) db.insertTrack(binding).executeAsBlocking()
                 }
-                refreshTracking()
+                fetchTracks()
             }
         } else {
             scope.launch {
                 withContext(Dispatchers.IO) {
                     db.deleteTrackForManga(manga, service).executeAsBlocking()
                 }
-                refreshTracking()
+                fetchTracks()
             }
         }
     }
@@ -833,7 +839,7 @@ class MangaDetailsPresenter(
             }
             if (binding != null) {
                 withContext(Dispatchers.IO) { db.insertTrack(binding).executeAsBlocking() }
-                refreshTracking()
+                fetchTracks()
             } else trackRefreshDone()
         }
     }
@@ -869,7 +875,6 @@ class MangaDetailsPresenter(
     companion object {
         const val MULTIPLE_VOLUMES = 1
         const val TENS_OF_CHAPTERS = 2
-        const val HUNDREDS_OF_CHAPTERS = 3
-        const val MULTIPLE_SEASONS = 4
+        const val MULTIPLE_SEASONS = 3
     }
 }

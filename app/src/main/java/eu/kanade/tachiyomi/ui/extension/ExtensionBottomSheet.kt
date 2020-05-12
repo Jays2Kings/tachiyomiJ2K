@@ -18,7 +18,10 @@ import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.ui.source.SourceController
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.RecyclerWindowInsetsListener
+import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
+import eu.kanade.tachiyomi.util.view.expand
+import eu.kanade.tachiyomi.util.view.isExpanded
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.android.synthetic.main.extensions_bottom_sheet.view.*
@@ -57,6 +60,7 @@ ExtensionAdapter.OnButtonClickListener,
         ext_recycler.setHasFixedSize(true)
         ext_recycler.addItemDecoration(ExtensionDividerItemDecoration(context))
         ext_recycler.setOnApplyWindowInsetsListener(RecyclerWindowInsetsListener)
+        adapter?.fastScroller = fast_scroller
         this.controller = controller
         presenter.onCreate()
         updateExtTitle()
@@ -65,18 +69,18 @@ ExtensionAdapter.OnButtonClickListener,
         val array = context.obtainStyledAttributes(attrsArray)
         val headerHeight = array.getDimensionPixelSize(0, 0)
         array.recycle()
-        ext_recycler.doOnApplyWindowInsets { _, windowInsets, _ ->
-            ext_recycler.updateLayoutParams<LayoutParams> {
+        ext_recycler_layout.doOnApplyWindowInsets { v, windowInsets, _ ->
+            v.updateLayoutParams<MarginLayoutParams> {
                 topMargin = windowInsets.systemWindowInsetTop + headerHeight -
                     (sheet_layout.height)
             }
         }
         sheet_layout.setOnClickListener {
-            if (sheetBehavior?.state != BottomSheetBehavior.STATE_EXPANDED) {
-                sheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
+            if (!sheetBehavior.isExpanded()) {
+                sheetBehavior?.expand()
                 fetchOnlineExtensionsIfNeeded()
             } else {
-                sheetBehavior?.state = BottomSheetBehavior.STATE_COLLAPSED
+                sheetBehavior?.collapse()
             }
         }
         presenter.getExtensionUpdateCount()

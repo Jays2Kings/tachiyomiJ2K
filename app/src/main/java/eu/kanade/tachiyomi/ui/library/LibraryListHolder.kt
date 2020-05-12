@@ -29,15 +29,8 @@ import kotlinx.android.synthetic.main.unread_download_badge.*
 
 class LibraryListHolder(
     private val view: View,
-    adapter: LibraryCategoryAdapter,
-    padEnd: Boolean
+    adapter: LibraryCategoryAdapter
 ) : LibraryHolder(view, adapter) {
-
-    init {
-        badge_view?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-            marginEnd = (if (padEnd) 22 else 12).dpToPx
-        }
-    }
 
     /**
      * Method called from [LibraryCategoryAdapter.onBindViewHolder]. It updates the data for this
