@@ -38,7 +38,7 @@
     <!-- Chapters -->
     <string name="chapters">Capítulos</string>
     <string name="new_chapters">Novos capítulos</string>
-    <string name="unread">Não lidos</string>
+    <string name="unread">Não lido</string>
     <string name="last_read_chapter_">Última leitura do capítulo %1$s</string>
     <string name="chapter_">Capítulo %1$s</string>
     <string name="chapter_x_of_y">Capítulo %1$d de %2$d</string>
@@ -57,8 +57,8 @@
         <item quantity="other">%1$d Capítulos</item>
     </plurals>
     <plurals name="pages_left">
-        <item quantity="one">%1$d página restante</item>
-        <item quantity="other">%1$d páginas restantes</item>
+        <item quantity="one">Resta %1$d página</item>
+        <item quantity="other">Restam %1$d páginas</item>
     </plurals>
 
     <!-- Category -->
@@ -141,7 +141,6 @@
     <string name="start_with_filters_hidden">Começar com filtros ocultos</string>
     <string name="download_badge">Ícones de download</string>
     <string name="hide_start_reading_button">Ocultar botão de leitura inicial</string>
-    <string name="always_show_library_fast_scroll">Sempre mostrar rolagem rápida da biblioteca</string>
     <string name="unread_badges">Emblemas não lidos</string>
     <string name="uniform_covers">Capas uniformes</string>
     <string name="x_small">XP</string>
@@ -150,11 +149,13 @@
     <string name="large">G</string>
     <string name="x_large">XG</string>
     <string name="grid_options">Opções de grade</string>
-    <string name="hide_badges">Ocultar emblemas</string>
-    <string name="show_badges">Mostrar emblemas</string>
+    <string name="hide_badges">Ocultá-los</string>
+    <string name="show_badges">Mostrá-los</string>
     <string name="show_count">Mostrar contagem</string>
     <string name="tap_library_to_show_filters">Toque no ícone Biblioteca para mostrar os filtros</string>
     <string name="display_as">Mostrar como</string>
+    <string name="hide_category_hopper">Ocultar o pulador de categoria</string>
+    <string name="more_library_settings">Mais configurações da biblioteca</string>
 
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Novos capítulos encontrados</string>
@@ -200,7 +201,7 @@
     <string name="last_read_">Última leitura %1$s</string>
     <string name="read_">%1$s lido</string>
     <string name="updated_">%1$s atualizado</string>
-    <string name="added_">%1$s adicionados</string>
+    <string name="added_">Adicionado %1$s</string>
     <string name="view_history">Ver histórico</string>
     <string name="view_all_updates">Ver todas as atualizações</string>
     <string name="search_recents">Pesquisa recentes…</string>
@@ -282,6 +283,7 @@
     <!-- Reader settings -->
     <string name="fullscreen">Tela cheia</string>
     <string name="page_transitions">Transição de página</string>
+    <string name="disable_zoom">Desativar zoom</string>
     <string name="double_tap_anim_speed">Velocidade da animação de toque duplo</string>
     <string name="show_page_number">Mostrar número da página</string>
     <string name="true_32bit_color">cor de 32-bit</string>
@@ -423,7 +425,7 @@
     <string name="to_show_again_setting_library">Para mostrar esta tela novamente, vá para Configurações -> Biblioteca.</string>
     <string name="latest_">Mais recente: %1$s</string>
     <string name="migrating_to">migrando para</string>
-    <string name="dont_migrate">"Não migre"</string>
+    <string name="dont_migrate">"Não migrar"</string>
     <string name="search_manually">Pesquise manualmente</string>
     <string name="migrate_now">Migrar agora</string>
     <string name="copy_now">Copiar agora</string>
@@ -526,7 +528,7 @@
     <string name="updates_tracking_details">Atualiza informações como situação, avaliações e últimos capítulos lidos dos serviços de monitoramento</string>
     <string name="clean_up_downloaded_chapters">Limpar capítulos baixados</string>
     <string name="delete_unused_chapters">Excluir arquivos inexistentes, parcialmente baixados, 
-            e leia as pastas dos capítulos</string>
+            e lê as pastas dos capítulos</string>
     <string name="starting_cleanup">Iniciando a limpeza</string>
     <string name="no_folders_to_cleanup">Nenhuma pasta para limpar</string>
     <string name="disable_battery_optimization">Desativar otimização da bateria</string>
@@ -720,5 +722,4 @@
     <string name="view_all_errors">Ver todos os erros</string>
     <string name="view_chapters">Exibir capítulos</string>
     <string name="wifi">Wi-Fi</string>
-    <string name="add_tag">Adicionar Tag</string>
 </resources>
