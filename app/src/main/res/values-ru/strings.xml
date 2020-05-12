@@ -660,7 +660,7 @@
     <string name="show_count">Количество</string>
     <string name="tap_library_to_show_filters">Нажмите значок библиотеки, чтобы отобразить фильтры</string>
     <string name="display_as">Показать как</string>
-    <string name="hide_category_hopper">Скрыть бункер категорий</string>
+    <string name="hide_category_hopper">Скрыть переключатель категорий</string>
     <string name="more_library_settings">Дополнительные настройки библиотеки</string>
     <!-- Library settings -->
     <string name="include_in_global_update">Включить в глобальное обновление</string>
