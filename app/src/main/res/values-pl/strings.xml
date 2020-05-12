@@ -159,6 +159,7 @@
     <string name="show_count">Pokaż licznik</string>
     <string name="tap_library_to_show_filters">Naciśnij ikonę biblioteki, by wyświetlić filtry</string>
     <string name="display_as">Wyświetlaj jako</string>
+    <string name="hide_category_hopper">Ukryj szybki przełącznik kategorii</string>
     <string name="more_library_settings">Więcej ustawień czytnika</string>
 
     <!-- Library update service notifications -->
