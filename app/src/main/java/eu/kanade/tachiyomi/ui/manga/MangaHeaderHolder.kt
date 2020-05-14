@@ -9,14 +9,16 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.signature.ObjectKey
+import coil.api.load
+import coil.api.loadAny
+import coil.request.CachePolicy
+import coil.size.Precision
+import coil.size.Scale
+import coil.transform.RoundedCornersTransformation
 import com.google.android.material.button.MaterialButton
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaImpl
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
@@ -308,13 +310,15 @@ class MangaHeaderHolder(
     }
 
     fun updateCover(manga: Manga) {
-        if (!isCached(manga)) return
-        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+       // if (!isCached(manga)) return
+        manga_cover.loadAny(manga)
+        backdrop.loadAny(manga)
+    /*    GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString()))
             .into(manga_cover)
         GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString())).centerCrop()
-            .transition(DrawableTransitionOptions.withCrossFade()).into(backdrop)
+            .transition(DrawableTransitionOptions.withCrossFade()).into(backdrop)*/
     }
 
     private fun isCached(manga: Manga): Boolean {

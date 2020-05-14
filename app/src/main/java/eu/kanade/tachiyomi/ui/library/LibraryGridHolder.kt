@@ -4,10 +4,14 @@ import android.app.Activity
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
+import coil.api.load
+import coil.api.loadAny
+import coil.size.PixelSize
+import coil.size.Scale
+import coil.size.Size
+import coil.size.SizeResolver
+import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
@@ -80,14 +84,18 @@ class LibraryGridHolder(
 
     private fun setCover(manga: Manga, id: Long) {
         if ((adapter.recyclerView.context as? Activity)?.isDestroyed == true) return
-        GlideApp.with(adapter.recyclerView.context).load(manga)
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
-            .apply {
-                if (fixedSize) centerCrop()
-                else override(cover_thumbnail.maxHeight)
-            }
-            .into(cover_thumbnail)
+        cover_thumbnail.loadAny(manga) {
+            transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
+          /* scale(Scale.FILL)*/
+        }
+     /*   GlideApp.with(adapter.recyclerView.context).load(manga)
+              .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+              .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
+              .apply {
+                  if (fixedSize) centerCrop()
+                  else override(cover_thumbnail.maxHeight)
+              }
+              .into(cover_thumbnail)*/
     }
 
     private fun playButtonClicked() {

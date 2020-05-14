@@ -41,6 +41,8 @@ import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
+import coil.Coil
+import coil.request.LoadRequest
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.checkbox.checkBoxPrompt
 import com.afollestad.materialdialogs.checkbox.isCheckPromptChecked
@@ -317,38 +319,30 @@ class MangaDetailsController : BaseController,
     fun setPaletteColor() {
         val view = view ?: return
         coverColor = null
-        GlideApp.with(view.context).load(manga).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga!!.id!!).toString()))
-            .into(object : CustomTarget<Drawable>() {
-                override fun onResourceReady(
-                    resource: Drawable,
-                    transition: Transition<in Drawable>?
-                ) {
-                    coverDrawable = resource
-                    val bitmapCover = resource as? BitmapDrawable ?: return
-                    Palette.from(bitmapCover.bitmap).generate {
-                        if (recycler == null || it == null) return@generate
-                        val colorBack = view.context.getResourceColor(
-                            android.R.attr.colorBackground
-                        )
-                        val backDropColor = if (!view.context.isInNightMode()) {
-                            it.getLightVibrantColor(colorBack)
-                        } else {
-                            it.getDarkVibrantColor(colorBack)
-                        }
-                        coverColor = backDropColor
-                        getHeader()?.setBackDrop(backDropColor)
-                        if (toolbarIsColored) {
-                            val translucentColor = ColorUtils.setAlphaComponent(backDropColor, 175)
-                            (activity as MainActivity).toolbar.setBackgroundColor(translucentColor)
-                            activity?.window?.statusBarColor = translucentColor
-                        }
-                    }
-                    getHeader()?.updateCover(presenter.manga)
-                }
 
-                override fun onLoadCleared(placeholder: Drawable?) {}
-            })
+        val request = LoadRequest.Builder(view.context).data(manga).allowHardware(false)
+            .target {drawable ->
+                coverDrawable = drawable
+                val bitmap = (drawable as BitmapDrawable).bitmap
+                // Generate the Palette on a background thread.
+                Palette.from(bitmap).generate{
+                    if (recycler == null || it == null) return@generate
+                    val colorBack = view.context.getResourceColor(
+                        android.R.attr.colorBackground
+                    )
+                    //this makes the color more consistent regardless of theme
+                    val backDropColor = ColorUtils.blendARGB(it.getVibrantColor(colorBack),colorBack, .35f)
+
+                    coverColor = backDropColor
+                    getHeader()?.setBackDrop(backDropColor)
+                    if (toolbarIsColored) {
+                        val translucentColor = ColorUtils.setAlphaComponent(backDropColor, 175)
+                        (activity as MainActivity).toolbar.setBackgroundColor(translucentColor)
+                        activity?.window?.statusBarColor = translucentColor
+                    }
+                }
+            }.build()
+        Coil.imageLoader(view.context).execute(request)
     }
 
     /** Set toolbar theme for themes that are inverted (ie. light blue theme) */

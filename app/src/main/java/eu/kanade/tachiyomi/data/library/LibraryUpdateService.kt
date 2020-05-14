@@ -5,7 +5,9 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
@@ -13,6 +15,10 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.GROUP_ALERT_SUMMARY
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import coil.Coil
+import coil.request.GetRequest
+import coil.request.LoadRequest
+import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
@@ -604,10 +610,13 @@ class LibraryUpdateService(
             notifications.add(Pair(notification(Notifications.CHANNEL_NEW_CHAPTERS) {
                 setSmallIcon(R.drawable.ic_tachi)
                 try {
-                    val icon = GlideApp.with(this@LibraryUpdateService)
-                        .asBitmap().load(manga).dontTransform().centerCrop().circleCrop()
-                        .override(256, 256).submit().get()
-                    setLargeIcon(icon)
+
+                    val request = LoadRequest.Builder(this@LibraryUpdateService).data(manga)
+                    .transformations(CircleCropTransformation()).size(width=256, height = 256)
+                        .target{drawable -> setLargeIcon((drawable as BitmapDrawable).bitmap)}.build()
+
+                    Coil.imageLoader(this@LibraryUpdateService).execute(request)
+
                 } catch (e: Exception) {
                 }
                 setGroupAlertBehavior(GROUP_ALERT_SUMMARY)

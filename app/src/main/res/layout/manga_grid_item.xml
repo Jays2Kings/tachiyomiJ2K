@@ -34,9 +34,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
                 android:background="?android:attr/colorBackground"
-                android:maxHeight="250dp"
-                tools:background="?android:attr/colorBackground"
                 tools:ignore="ContentDescription"
                 tools:src="@mipmap/ic_launcher" />
 
