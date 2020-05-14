@@ -410,13 +410,13 @@ class MangaDetailsPresenter(
                 val newChapters = syncChaptersWithSource(db, finChapters, manga, source)
                 if (newChapters.first.isNotEmpty()) {
                     val downloadNew = preferences.downloadNew().getOrDefault()
-                    val categoriesToDownload =
-                        preferences.downloadNewCategories().getOrDefault().map(String::toInt)
-                    val shouldDownload = !controller.fromCatalogue && mangaWasInitalized
-                        (downloadNew && (categoriesToDownload.isEmpty() || getMangaCategoryIds().any { it in categoriesToDownload }))
-                    if (shouldDownload) {
-                        downloadChapters(newChapters.first.sortedBy { it.chapter_number }
-                            .map { it.toModel() })
+                    if (downloadNew && !controller.fromCatalogue && mangaWasInitalized) {
+                        val categoriesToDownload = preferences.downloadNewCategories().getOrDefault().map(String::toInt)
+                        val shouldDownload = categoriesToDownload.isEmpty() || getMangaCategoryIds().any { it in categoriesToDownload }
+                        if (shouldDownload) {
+                            downloadChapters(newChapters.first.sortedBy { it.chapter_number }
+                                .map { it.toModel() })
+                        }
                     }
                 }
                 if (newChapters.second.isNotEmpty()) {
