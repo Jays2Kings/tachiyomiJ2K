@@ -4,6 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import coil.api.clear
 import coil.api.load
+import coil.api.loadAny
 import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.dpToPx
@@ -82,7 +83,7 @@ class LibraryListHolder(
             cover_thumbnail.clear()
         } else {
             val id = item.manga.id ?: return
-            cover_thumbnail.load(item.manga.thumbnail_url!!) {
+            cover_thumbnail.loadAny(item.manga) {
                 transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
             }
         }

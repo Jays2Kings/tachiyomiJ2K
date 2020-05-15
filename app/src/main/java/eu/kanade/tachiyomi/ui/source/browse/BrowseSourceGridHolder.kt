@@ -3,18 +3,20 @@ package eu.kanade.tachiyomi.ui.source.browse
 import android.app.Activity
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import coil.Coil
 import coil.api.clear
 import coil.api.load
+import coil.request.LoadRequest
 import coil.transform.RoundedCornersTransformation
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.ui.library.LibraryCategoryAdapter
 import eu.kanade.tachiyomi.util.view.gone
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_grid_item.*
 import kotlinx.android.synthetic.main.manga_grid_item.cover_thumbnail
 import kotlinx.android.synthetic.main.manga_grid_item.title
-import kotlinx.android.synthetic.main.manga_list_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -63,10 +65,8 @@ class BrowseSourceGridHolder(
             cover_thumbnail.clear()
         } else {
             val id = manga.id ?: return
-            cover_thumbnail.load(manga.thumbnail_url!!) {
-
-                transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
-            }
+            val request = LoadRequest.Builder(view.context).data(manga).target(CoverViewTarget(cover_thumbnail, progress)).build()
+            Coil.imageLoader(view.context).execute(request)
         }
     }
 }

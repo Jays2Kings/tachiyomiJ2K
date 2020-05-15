@@ -65,7 +65,6 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.download.model.Download
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.data.track.model.TrackSearch
@@ -172,8 +171,6 @@ class MangaDetailsController : BaseController,
     private var startingDLChapterPos: Int? = null
     private var editMangaDialog: EditMangaDialog? = null
     var refreshTracker: Int? = null
-    private var textAnim: ViewPropertyAnimator? = null
-    private var scrollAnim: ViewPropertyAnimator? = null
     var chapterPopupMenu: Pair<Int, PopupMenu>? = null
 
     private var query = ""
@@ -804,20 +801,16 @@ class MangaDetailsController : BaseController,
     //endregion
 
     override fun prepareToShareManga() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && coverDrawable != null)
-            GlideApp.with(activity!!).asBitmap().load(presenter.manga).into(object :
-                CustomTarget<Bitmap>() {
-                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                    presenter.shareManga(resource)
-                }
-
-                override fun onLoadCleared(placeholder: Drawable?) {}
-
-                override fun onLoadFailed(errorDrawable: Drawable?) {
-                    shareManga()
-                }
-            })
-        else shareManga()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && coverDrawable != null) {
+            val request = LoadRequest.Builder(activity!!).data(manga).target(onError = {
+                shareManga()
+            }, onSuccess = {
+                presenter.shareManga((it as BitmapDrawable).bitmap)
+            }).build()
+            Coil.imageLoader(activity!!).execute(request)
+        }else{
+            shareManga()
+        }
     }
 
     fun shareManga(cover: File? = null) {

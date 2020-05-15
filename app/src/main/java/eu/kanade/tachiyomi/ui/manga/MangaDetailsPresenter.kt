@@ -3,6 +3,7 @@ package eu.kanade.tachiyomi.ui.manga
 import android.app.Application
 import android.graphics.Bitmap
 import android.net.Uri
+import coil.Coil
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
@@ -399,7 +400,7 @@ class MangaDetailsPresenter(
                 manga.copyFrom(networkManga)
                 manga.initialized = true
                 db.insertManga(manga).executeAsBlocking()
-                if (thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) {
+                if ((thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) || preferences.refreshCoversToo().getOrDefault()) {
                     coverCache.deleteFromCache(thumbnailUrl)
                     MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                     withContext(Dispatchers.Main) { controller.setPaletteColor() }

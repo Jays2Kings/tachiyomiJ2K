@@ -4,15 +4,20 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.View
 import androidx.core.content.ContextCompat
+import coil.Coil
+import coil.api.clear
+import coil.request.CachePolicy
+import coil.request.LoadRequest
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.extension_card_item.*
+import kotlinx.android.synthetic.main.source_global_search_controller_card_item.*
 
 class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         BaseFlexibleViewHolder(view, adapter) {
@@ -35,11 +40,12 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
             itemView.context.getString(R.string.untrusted).toUpperCase()
         }
 
-        GlideApp.with(itemView.context).clear(edit_button)
-        if (extension is Extension.Available) {
-            GlideApp.with(itemView.context)
-                    .load(extension.iconUrl)
-                    .into(edit_button)
+        edit_button.clear()
+
+        if (extension is Extension.Available || itemImage != null) {
+            val request = LoadRequest.Builder(itemView.context).data(extension.iconUrl)
+                .target(CoverViewTarget(itemImage, progress)).build()
+            Coil.imageLoader(itemView.context).execute(request)
         } else {
             extension.getApplicationIcon(itemView.context)?.let { edit_button.setImageDrawable(it) }
         }

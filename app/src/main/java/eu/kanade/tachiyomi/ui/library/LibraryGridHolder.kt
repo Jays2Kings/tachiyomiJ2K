@@ -4,6 +4,7 @@ import android.app.Activity
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
+import coil.api.clear
 import coil.api.load
 import coil.api.loadAny
 import coil.size.PixelSize
@@ -12,10 +13,11 @@ import coil.size.Size
 import coil.size.SizeResolver
 import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_grid_item.*
+import kotlinx.android.synthetic.main.manga_grid_item.title
+import kotlinx.android.synthetic.main.recently_read_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -69,33 +71,21 @@ class LibraryGridHolder(
         setReadingButton(item)
 
         // Update the cover.
-        if (item.manga.thumbnail_url == null) GlideApp.with(view.context).clear(cover_thumbnail)
+        if (item.manga.thumbnail_url == null) cover_thumbnail.clear()
         else {
-            val id = item.manga.id ?: return
             if (cover_thumbnail.height == 0) {
                 val oldPos = adapterPosition
                 adapter.recyclerView.post {
                     if (oldPos == adapterPosition)
-                        setCover(item.manga, id)
+                        setCover(item.manga)
                 }
-            } else setCover(item.manga, id)
+            } else setCover(item.manga)
         }
     }
 
-    private fun setCover(manga: Manga, id: Long) {
+    private fun setCover(manga: Manga) {
         if ((adapter.recyclerView.context as? Activity)?.isDestroyed == true) return
-        cover_thumbnail.loadAny(manga) {
-            transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
-          /* scale(Scale.FILL)*/
-        }
-     /*   GlideApp.with(adapter.recyclerView.context).load(manga)
-              .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-              .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
-              .apply {
-                  if (fixedSize) centerCrop()
-                  else override(cover_thumbnail.maxHeight)
-              }
-              .into(cover_thumbnail)*/
+        cover_thumbnail.loadAny(manga)
     }
 
     private fun playButtonClicked() {
