@@ -547,6 +547,7 @@ class ReaderPresenter(
                             manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
                             db.insertManga(manga).executeAsBlocking()
                         }
+                        coverCache.deleteFromCache(manga)
                         coverCache.copyToCache(manga, stream())
                         MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                         SetAsCoverResult.Success
