@@ -751,8 +751,9 @@ class MangaDetailsPresenter(
         val inputStream =
             downloadManager.context.contentResolver.openInputStream(uri) ?: return false
         if (manga.source == LocalSource.ID) {
+            coverCache.deleteFromCache(manga)
             LocalSource.updateCover(downloadManager.context, manga, inputStream)
-            forceUpdateCovers()
+            forceUpdateCovers(false)
             return true
         }
 
