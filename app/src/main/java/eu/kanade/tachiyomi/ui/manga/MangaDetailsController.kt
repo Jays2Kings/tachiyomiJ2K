@@ -1247,7 +1247,6 @@ class MangaDetailsController : BaseController,
                 if (editMangaDialog != null) editMangaDialog?.updateCover(uri)
                 else {
                     presenter.editCoverWithStream(uri)
-                    setPaletteColor()
                 }
             } catch (error: IOException) {
                 activity.toast(R.string.failed_to_update_cover)

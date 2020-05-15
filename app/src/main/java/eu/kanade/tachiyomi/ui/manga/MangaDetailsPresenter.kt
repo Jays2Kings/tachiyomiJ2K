@@ -399,14 +399,16 @@ class MangaDetailsPresenter(
             if (networkManga != null) {
                 manga.copyFrom(networkManga)
                 manga.initialized = true
-                db.insertManga(manga).executeAsBlocking()
+
                 if (shouldUpdateCover(thumbnailUrl, networkManga)) {
                     coverCache.deleteFromCache(manga, false)
+                    manga.thumbnail_url = networkManga.thumbnail_url
                     MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                     withContext(Dispatchers.Main) {
                         forceUpdateCovers()
                     }
                 }
+                db.insertManga(manga).executeAsBlocking()
             }
             val finChapters = chapters.await()
             if (finChapters.isNotEmpty()) {
@@ -462,6 +464,8 @@ class MangaDetailsPresenter(
         if(thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()){
             return true
         }
+        if(manga.hasCustomCover()) return false
+
         return refreshCovers
     }
 
@@ -757,9 +761,10 @@ class MangaDetailsPresenter(
                 manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
                 db.insertManga(manga).executeAsBlocking()
             }
+            coverCache.deleteFromCache(manga)
             coverCache.copyToCache(manga, inputStream)
             MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
-            forceUpdateCovers()
+            forceUpdateCovers(false)
             return true
         }
         return false

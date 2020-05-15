@@ -543,7 +543,6 @@ class ReaderPresenter(
                 } else {
                     manga.thumbnail_url ?: throw Exception("Image url not found")
                     if (manga.favorite) {
-                        coverCache.deleteFromCache(manga)
                         if (!manga.hasCustomCover()) {
                             manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
                             db.insertManga(manga).executeAsBlocking()
