@@ -1,10 +1,7 @@
 package eu.kanade.tachiyomi.data.download.coil
 
 import android.content.Context
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
-import android.os.Parcel
-import android.os.Parcelable
 import coil.Coil
 import coil.ImageLoader
 import coil.bitmappool.BitmapPool
@@ -16,14 +13,9 @@ import coil.decode.SvgDecoder
 import coil.fetch.FetchResult
 import coil.fetch.Fetcher
 import coil.fetch.SourceResult
-import coil.map.Mapper
-import coil.request.GetRequest
-import coil.request.LoadRequest
 import coil.size.Size
-import coil.transform.CircleCropTransformation
 import coil.util.CoilUtils
 import coil.util.DebugLogger
-import com.bumptech.glide.load.model.FileLoader
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.CoverCache
@@ -32,8 +24,6 @@ import eu.kanade.tachiyomi.network.NetworkHelper
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.util.storage.DiskUtil
-import kotlinx.coroutines.withContext
-import okhttp3.Cache
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -44,36 +34,6 @@ import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.File
-
-class CoilSetup(val context: Context, private val coverCache: CoverCache) {
-
-    init {
-        val imageLoader = ImageLoader.Builder(context)
-            .availableMemoryPercentage(0.40)
-            .crossfade(true)
-            .allowRgb565(true)
-            .allowHardware(false)
-            .logger(DebugLogger())
-            .error(R.drawable.ic_broken_image_grey_24dp)
-            .componentRegistry {
-                if (Build.VERSION.SDK_INT >= 28) {
-                    add(ImageDecoderDecoder())
-                } else {
-                    add(GifDecoder())
-                }
-                add(SvgDecoder(context))
-                add(MangaFetcher())
-            }.okHttpClient {
-                OkHttpClient.Builder()
-                    .cache(CoilUtils.createDefaultCache(context))
-                    .addInterceptor(ChuckerInterceptor(context))
-                    .build()
-            }
-            .build()
-
-        Coil.setImageLoader(imageLoader)
-    }
-}
 
 class MangaFetcher() : Fetcher<Manga>{
 

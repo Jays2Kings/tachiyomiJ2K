@@ -22,7 +22,6 @@ import java.io.InputStream
 /**
  * Class used to create cover cache.
  * It is used to store the covers of the library.
- * Makes use of Glide (which can avoid repeating requests) to download covers.
  * Names of files are created with the md5 of the thumbnail URL.
  *
  * @param context the application context.
@@ -35,6 +34,9 @@ class CoverCache(val context: Context) {
      */
     val cacheDir = context.getExternalFilesDir("covers")
             ?: File(context.filesDir, "covers").also { it.mkdirs() }
+
+    val tempCovers = context.getExternalFilesDir("covers")
+        ?: File(context.filesDir, "temp_covers").also { it.mkdirs() }
 
     val cache = Cache(cacheDir, 100 * 1024 * 1024)
 

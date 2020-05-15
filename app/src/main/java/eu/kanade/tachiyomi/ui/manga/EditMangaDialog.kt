@@ -4,24 +4,15 @@ import android.app.Dialog
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import coil.Coil
-import coil.api.load
 import coil.api.loadAny
-import coil.request.LoadRequest
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
-import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.edit_manga_dialog.view.*
-import kotlinx.android.synthetic.main.edit_manga_dialog.view.title
-import kotlinx.android.synthetic.main.manga_grid_item.view.*
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 

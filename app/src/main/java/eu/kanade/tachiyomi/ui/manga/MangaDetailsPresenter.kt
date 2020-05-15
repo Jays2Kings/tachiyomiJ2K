@@ -403,7 +403,10 @@ class MangaDetailsPresenter(
                 if ((thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) || preferences.refreshCoversToo().getOrDefault()) {
                     coverCache.deleteFromCache(thumbnailUrl)
                     MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
-                    withContext(Dispatchers.Main) { controller.setPaletteColor() }
+                    withContext(Dispatchers.Main) {
+                        controller.resetCovers()
+                        controller.setPaletteColor()
+                        }
                 }
             }
             val finChapters = chapters.await()

@@ -3,8 +3,8 @@ package eu.kanade.tachiyomi.ui.recently_read
 import android.view.View
 import coil.api.clear
 import coil.api.loadAny
+import coil.size.Scale
 import coil.transform.CircleCropTransformation
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.MangaChapterHistory
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
@@ -62,8 +62,6 @@ class RecentlyReadHolder(
 
         // Set cover
         cover.clear()
-        cover.loadAny(manga){
-            transformations(CircleCropTransformation())
-        }
+        cover.loadAny(manga)
     }
 }

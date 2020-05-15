@@ -6,9 +6,6 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import coil.api.clear
 import coil.api.load
-import coil.api.loadAny
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.track.model.TrackSearch
 import eu.kanade.tachiyomi.util.view.gone

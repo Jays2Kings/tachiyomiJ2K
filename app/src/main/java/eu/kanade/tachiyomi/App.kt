@@ -3,14 +3,24 @@ package eu.kanade.tachiyomi
 import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Build.VERSION.SDK_INT
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDex
+import coil.Coil
+import coil.ImageLoader
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import coil.decode.SvgDecoder
+import coil.util.CoilUtils
+import coil.util.DebugLogger
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.download.coil.CoilSetup
+import eu.kanade.tachiyomi.data.download.coil.MangaFetcher
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
@@ -42,9 +52,8 @@ open class App : Application(), LifecycleObserver {
 
         Injekt = InjektScope(DefaultRegistrar())
         Injekt.importModule(AppModule(this))
-        val coverCache  = Injekt.get<CoverCache>()
-        CoilSetup(this, coverCache)
 
+        CoilSetup(this)
         setupAcra()
         setupNotificationChannels()
 

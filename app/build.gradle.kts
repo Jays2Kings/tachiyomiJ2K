@@ -203,11 +203,6 @@ dependencies {
     implementation("io.coil-kt:coil:$coilVersion")
     implementation("io.coil-kt:coil-gif:$coilVersion")
     implementation("io.coil-kt:coil-svg:$coilVersion")
-    val glideVersion = "4.11.0"
-    implementation("com.github.bumptech.glide:glide:$glideVersion")
-    implementation("com.github.bumptech.glide:okhttp3-integration:$glideVersion")
-    kapt("com.github.bumptech.glide:compiler:$glideVersion")
-
 
     // Logging
     implementation("com.jakewharton.timber:timber:4.7.1")
