@@ -305,7 +305,7 @@ class MangaDetailsController : BaseController,
         }
     }
 
-    /** Get the color of the manga cover based on the current theme also loads the drawable for the expanded image view*/
+    /** Get the color of the manga cover*/
     fun setPaletteColor() {
         val view = view ?: return
         coverColor = null
