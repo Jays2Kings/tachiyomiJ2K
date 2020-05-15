@@ -536,17 +536,19 @@ class ReaderPresenter(
             .fromCallable {
                 if (manga.source == LocalSource.ID) {
                     val context = Injekt.get<Application>()
+                    coverCache.deleteFromCache(manga)
                     LocalSource.updateCover(context, manga, stream())
                     R.string.cover_updated
                     SetAsCoverResult.Success
                 } else {
-                    val thumbUrl = manga.thumbnail_url ?: throw Exception("Image url not found")
+                    manga.thumbnail_url ?: throw Exception("Image url not found")
                     if (manga.favorite) {
+                        coverCache.deleteFromCache(manga)
                         if (!manga.hasCustomCover()) {
                             manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
                             db.insertManga(manga).executeAsBlocking()
                         }
-                        coverCache.copyToCache(manga.thumbnail_url!!, stream())
+                        coverCache.copyToCache(manga, stream())
                         MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                         SetAsCoverResult.Success
                     } else {

@@ -40,6 +40,10 @@ import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
 import coil.Coil
+import coil.api.clear
+import coil.api.load
+import coil.api.loadAny
+import coil.request.CachePolicy
 import coil.request.LoadRequest
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.checkbox.checkBoxPrompt
@@ -159,7 +163,6 @@ class MangaDetailsController : BaseController,
     var toolbarIsColored = false
     private var snack: Snackbar? = null
     val fromCatalogue = args.getBoolean(FROM_CATALOGUE_EXTRA, false)
-    var coverDrawable: Drawable? = null
     private var trackingBottomSheet: TrackingBottomSheet? = null
     private var startingDLChapterPos: Int? = null
     private var editMangaDialog: EditMangaDialog? = null
@@ -305,23 +308,22 @@ class MangaDetailsController : BaseController,
         }
     }
 
-    /** Get the color of the manga cover based on the current theme */
+    /** Get the color of the manga cover based on the current theme also loads the drawable for the expanded image view*/
     fun setPaletteColor() {
         val view = view ?: return
         coverColor = null
 
         val request = LoadRequest.Builder(view.context).data(manga).allowHardware(false)
-            .target {drawable ->
-                coverDrawable = drawable
+            .target { drawable ->
                 val bitmap = (drawable as BitmapDrawable).bitmap
                 // Generate the Palette on a background thread.
-                Palette.from(bitmap).generate{
+                Palette.from(bitmap).generate {
                     if (recycler == null || it == null) return@generate
                     val colorBack = view.context.getResourceColor(
                         android.R.attr.colorBackground
                     )
                     //this makes the color more consistent regardless of theme
-                    val backDropColor = ColorUtils.blendARGB(it.getVibrantColor(colorBack),colorBack, .35f)
+                    val backDropColor = ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
 
                     coverColor = backDropColor
                     getHeader()?.setBackDrop(backDropColor)
@@ -335,7 +337,9 @@ class MangaDetailsController : BaseController,
         Coil.imageLoader(view.context).execute(request)
     }
 
-    fun resetCovers(){
+    fun resetCovers() {
+        manga_cover_full.clear()
+        manga_cover_full.loadAny(manga)
         getHeader()?.updateCover(manga!!, true)
     }
 
@@ -398,6 +402,8 @@ class MangaDetailsController : BaseController,
             presenter.refreshTracking()
             refreshTracker = null
         }
+        //reset the palette color since a custom cover could change this
+        setPaletteColor()
         val isCurrentController = router?.backstack?.lastOrNull()?.controller() ==
             this
         if (isCurrentController) {
@@ -762,7 +768,7 @@ class MangaDetailsController : BaseController,
                         ), waitForPositiveButton = false, selection = { _, index, _ ->
                             when (index) {
                                 0 -> changeCover()
-                                else -> presenter.clearCover()
+                                else -> presenter.clearCustomCover()
                             }
                         }).show()
                     } else {
@@ -798,14 +804,14 @@ class MangaDetailsController : BaseController,
     //endregion
 
     override fun prepareToShareManga() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && coverDrawable != null) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val request = LoadRequest.Builder(activity!!).data(manga).target(onError = {
                 shareManga()
             }, onSuccess = {
                 presenter.shareManga((it as BitmapDrawable).bitmap)
             }).build()
             Coil.imageLoader(activity!!).execute(request)
-        }else{
+        } else {
             shareManga()
         }
     }
@@ -1255,10 +1261,9 @@ class MangaDetailsController : BaseController,
         currentAnimator?.cancel()
 
         // Load the high-resolution "zoomed-in" image.
+        manga_cover_full?.loadAny(manga)
         val expandedImageView = manga_cover_full ?: return
         val fullBackdrop = full_backdrop
-        val image = coverDrawable ?: return
-        expandedImageView.setImageDrawable(image)
 
         // Hide the thumbnail and show the zoomed-in view. When the animation
         // begins, it will position the zoomed-in view in the place of the

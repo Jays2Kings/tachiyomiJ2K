@@ -10,16 +10,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import coil.api.clear
-import coil.api.load
 import coil.api.loadAny
-import coil.request.CachePolicy
-import coil.size.Precision
-import coil.size.Scale
-import coil.transform.RoundedCornersTransformation
 import com.google.android.material.button.MaterialButton
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
@@ -290,11 +284,15 @@ class MangaHeaderHolder(
         val presenter = adapter.delegate.mangaPresenter()
         val tracked = presenter.isTracked()
         with(track_button) {
-            text = itemView.context.getString(if (tracked) R.string.tracked
-            else R.string.tracking)
+            text = itemView.context.getString(
+                if (tracked) R.string.tracked
+                else R.string.tracking
+            )
 
-            icon = ContextCompat.getDrawable(itemView.context, if (tracked) R.drawable
-                .ic_check_white_24dp else R.drawable.ic_sync_black_24dp)
+            icon = ContextCompat.getDrawable(
+                itemView.context, if (tracked) R.drawable
+                    .ic_check_white_24dp else R.drawable.ic_sync_black_24dp
+            )
             checked(tracked)
         }
     }
@@ -310,8 +308,8 @@ class MangaHeaderHolder(
         }
     }
 
-    fun updateCover(manga: Manga, forceUpdate:Boolean = false) {
-       if(!isCached(manga) && !forceUpdate) return
+    fun updateCover(manga: Manga, forceUpdate: Boolean = false) {
+        if (!isCached(manga) && !forceUpdate) return
         manga_cover.clear()
         backdrop.clear()
         manga_cover.loadAny(manga)
@@ -322,8 +320,7 @@ class MangaHeaderHolder(
         if (manga.source == LocalSource.ID) return true
         val coverCache = adapter.delegate.mangaPresenter().coverCache
         manga.thumbnail_url?.let {
-            return if (manga.favorite) coverCache.getCoverFile(it).exists()
-            else true
+            return coverCache.getCoverFile(manga).exists()
         }
         return manga.initialized
     }

@@ -4,17 +4,14 @@ import android.content.Context
 import android.text.format.Formatter
 import coil.Coil
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.database.DatabaseHelper
+import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.util.storage.DiskUtil
-import eu.kanade.tachiyomi.util.system.executeOnIO
 import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.Cache
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -32,34 +29,27 @@ class CoverCache(val context: Context) {
     /**
      * Cache directory used for cache management.
      */
-    val cacheDir = context.getExternalFilesDir("covers")
-            ?: File(context.filesDir, "covers").also { it.mkdirs() }
+    private val cacheDir = context.getExternalFilesDir("covers")
+        ?: File(context.filesDir, "covers").also { it.mkdirs() }
 
-    val tempCovers = context.getExternalFilesDir("covers")
+    private val tempCacheDir = context.getExternalFilesDir("covers")
         ?: File(context.filesDir, "temp_covers").also { it.mkdirs() }
 
-    val cache = Cache(cacheDir, 100 * 1024 * 1024)
+    val cache = Cache(cacheDir, 250 * 1024 * 1024)
 
+    val tempCache = Cache(cacheDir, 100 * 1024 * 1024)
 
     fun deleteOldCovers() {
         GlobalScope.launch(Dispatchers.Default) {
-            val db = Injekt.get<DatabaseHelper>()
             var deletedSize = 0L
-            val urls = db.getLibraryMangas().executeOnIO().mapNotNull {
-                it.thumbnail_url?.let { url ->
-                    return@mapNotNull DiskUtil.hashKeyForDisk(url)
-                }
-                null
-            }
-            val files = cacheDir.listFiles()?.iterator() ?: return@launch
+            val files = tempCacheDir.listFiles()?.iterator() ?: return@launch
             while (files.hasNext()) {
                 val file = files.next()
-                if (file.name !in urls) {
-                    Coil.imageLoader(context).invalidate(file.name)
-                    deletedSize += file.length()
-                    file.delete()
-                }
+                Coil.imageLoader(context).invalidate(file.name)
+                deletedSize += file.length()
+                file.delete()
             }
+
             withContext(Dispatchers.Main) {
                 context.toast(
                     context.getString(
@@ -76,8 +66,19 @@ class CoverCache(val context: Context) {
      * @param thumbnailUrl the thumbnail url.
      * @return cover image.
      */
-    fun getCoverFile(thumbnailUrl: String): File {
-        return File(cacheDir, DiskUtil.hashKeyForDisk(thumbnailUrl))
+    fun getCoverFile(manga: Manga): File {
+        val cache = if (manga.favorite) cacheDir
+        else tempCacheDir
+        return File(cache, manga.key())
+    }
+
+    /**
+     * Returns the cover from cache, returns both potential temp and library covers
+     */
+    private fun getCoverFiles(manga: Manga): List<File> {
+        manga.thumbnail_url ?: return emptyList()
+        val key = manga.key()
+        return listOf(File(cacheDir, key), File(tempCacheDir, key))
     }
 
     /**
@@ -88,9 +89,9 @@ class CoverCache(val context: Context) {
      * @throws IOException if there's any error.
      */
     @Throws(IOException::class)
-    fun copyToCache(thumbnailUrl: String, inputStream: InputStream) {
+    fun copyToCache(manga: Manga, inputStream: InputStream) {
         // Get destination file.
-        val destFile = getCoverFile(thumbnailUrl)
+        val destFile = getCoverFile(manga)
 
         destFile.outputStream().use { inputStream.copyTo(it) }
     }
@@ -101,14 +102,16 @@ class CoverCache(val context: Context) {
      * @param thumbnailUrl the thumbnail url.
      * @return status of deletion.
      */
-    fun deleteFromCache(thumbnailUrl: String?): Boolean {
+    fun deleteFromCache(manga: Manga, deleteMemoryCache: Boolean = true) {
         // Check if url is empty.
-        if (thumbnailUrl.isNullOrEmpty())
-            return false
+        if (manga.thumbnail_url.isNullOrEmpty()) return
 
-        // Remove file.
-        val file = getCoverFile(thumbnailUrl)
-        Coil.imageLoader(context).invalidate(file.name)
-        return file.exists() && file.delete()
+        // Remove files.
+        val file = getCoverFiles(manga)
+        file.forEach {
+            if (deleteMemoryCache) Coil.imageLoader(context).invalidate(it.name)
+            if (it.exists()) it.delete()
+        }
     }
 }
+

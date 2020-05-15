@@ -1,23 +1,12 @@
 package eu.kanade.tachiyomi.data.download.coil
 
-import android.content.Context
-import android.os.Build
-import coil.Coil
-import coil.ImageLoader
 import coil.bitmappool.BitmapPool
 import coil.decode.DataSource
-import coil.decode.GifDecoder
-import coil.decode.ImageDecoderDecoder
 import coil.decode.Options
-import coil.decode.SvgDecoder
 import coil.fetch.FetchResult
 import coil.fetch.Fetcher
 import coil.fetch.SourceResult
 import coil.size.Size
-import coil.util.CoilUtils
-import coil.util.DebugLogger
-import com.chuckerteam.chucker.api.ChuckerInterceptor
-import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.network.NetworkHelper
@@ -25,7 +14,6 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import okhttp3.Call
-import okhttp3.OkHttpClient
 import okhttp3.Request
 import okio.buffer
 import okio.sink
@@ -63,8 +51,7 @@ class MangaFetcher() : Fetcher<Manga>{
     }
 
     private fun customLoader(manga: Manga): FetchResult {
-        val cover = manga.thumbnail_url!!
-        val coverFile = coverCache.getCoverFile(cover)
+        val coverFile = coverCache.getCoverFile(manga)
         if (coverFile.exists()) {
             return fileLoader(coverFile)
         }
@@ -73,8 +60,7 @@ class MangaFetcher() : Fetcher<Manga>{
     }
 
     private fun httpLoader(manga: Manga): FetchResult {
-        val cover = manga.thumbnail_url!!
-        val coverFile = coverCache.getCoverFile(cover)
+        val coverFile = coverCache.getCoverFile(manga)
         if(coverFile.exists()){
             return fileLoader(coverFile)
         }
@@ -107,12 +93,12 @@ class MangaFetcher() : Fetcher<Manga>{
             dataSource = DataSource.DISK)
     }
 
-    private fun getCall(manga: Manga, useCache: Boolean = true): Call {
+    private fun getCall(manga: Manga): Call {
         val source = sourceManager.get(manga.source) as? HttpSource
         val client = source?.client ?: defaultClient
 
         val newClient = client.newBuilder()
-            .cache(if (useCache) coverCache.cache else null)
+            .cache(if (manga.favorite) coverCache.cache else coverCache.tempCache)
             .build()
 
         val request = Request.Builder().url(manga.thumbnail_url!!).also {
