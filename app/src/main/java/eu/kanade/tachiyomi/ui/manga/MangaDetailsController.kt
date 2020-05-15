@@ -239,14 +239,14 @@ class MangaDetailsController : BaseController,
         recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                val atTop = !recycler.canScrollVertically(-1)
+                val atTop = !recyclerView.canScrollVertically(-1)
                 val tY = getHeader()?.backdrop?.translationY ?: 0f
                 getHeader()?.backdrop?.translationY = max(0f, tY + dy * 0.25f)
                 if (atTop) getHeader()?.backdrop?.translationY = 0f
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                val atTop = recycler?.canScrollVertically(-1) == false
+                val atTop = !recyclerView.canScrollVertically(-1)
                 if (atTop) getHeader()?.backdrop?.translationY = 0f
             }
         })

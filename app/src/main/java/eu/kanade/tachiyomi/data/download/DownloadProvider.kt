@@ -109,7 +109,7 @@ class DownloadProvider(private val context: Context) {
      * @param manga the manga of the chapter.
      * @param source the source of the chapter.
      */
-    fun renameChaapters() {
+    fun renameChapters() {
         val db by injectLazy<DatabaseHelper>()
         val sourceManager by injectLazy<SourceManager>()
         val mangas = db.getLibraryMangas().executeAsBlocking()

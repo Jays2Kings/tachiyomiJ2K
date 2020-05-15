@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.ui.base.holder.BaseViewHolder
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.visibleIf
@@ -36,13 +37,14 @@ class TrackHolder(view: View, adapter: TrackAdapter) : BaseViewHolder(view) {
             track_title.text = track.title
             with(track_chapters) {
                 text = when {
-                    track.total_chapters > 0 && track.last_chapter_read == track.total_chapters ->
-                        context.getString(R.string.all_chapters_read)
+                    track.total_chapters > 0 && track.last_chapter_read == track.total_chapters -> context.getString(
+                        R.string.all_chapters_read
+                    )
                     track.total_chapters > 0 -> context.getString(
                         R.string.chapter_x_of_y, track.last_chapter_read, track.total_chapters
                     )
                     track.last_chapter_read > 0 -> context.getString(
-                        R.string.chapter_, track.last_chapter_read
+                        R.string.chapter_, track.last_chapter_read.toString()
                     )
                     else -> context.getString(R.string.not_started)
                 }
@@ -51,6 +53,15 @@ class TrackHolder(view: View, adapter: TrackAdapter) : BaseViewHolder(view) {
             if (status.isEmpty()) track_status.setText(R.string.unknown_status)
             else track_status.text = item.service.getStatus(track.status)
             track_score.text = if (track.score == 0f) "-" else item.service.displayScore(track)
+            track_score.setCompoundDrawablesWithIntrinsicBounds(0, 0, starIcon(track), 0)
+        }
+    }
+
+    private fun starIcon(track: Track): Int {
+        return if (track.score == 0f || track_score.text.toString().toFloatOrNull() != null) {
+            R.drawable.ic_star_12dp
+        } else {
+            0
         }
     }
 

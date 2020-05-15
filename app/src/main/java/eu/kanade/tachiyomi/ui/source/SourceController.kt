@@ -136,11 +136,11 @@ class SourceController : NucleusController<SourcePresenter>(),
         .BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, progress: Float) {
                 val recycler = recycler ?: return
-                shadow2.alpha = (1 - max(0f, progress)) * 0.25f
+                shadow2?.alpha = (1 - max(0f, progress)) * 0.25f
                 activity?.appbar?.elevation = max(progress * 15f,
                     if (recycler.canScrollVertically(-1)) 15f else 0f)
 
-                sheet_layout.alpha = 1 - progress
+                sheet_layout?.alpha = 1 - progress
                 activity?.appbar?.y = max(activity!!.appbar.y, -headerHeight * (1 - progress))
                 val oldShow = showingExtensions
                 showingExtensions = progress > 0.92f
