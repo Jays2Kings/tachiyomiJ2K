@@ -42,9 +42,9 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
 
         edit_button.clear()
 
-        if (extension is Extension.Available || itemImage != null) {
+        if (extension is Extension.Available) {
             val request = LoadRequest.Builder(itemView.context).data(extension.iconUrl)
-                .target(CoverViewTarget(itemImage, progress)).build()
+                .target(CoverViewTarget(edit_button, progress)).build()
             Coil.imageLoader(itemView.context).execute(request)
         } else {
             extension.getApplicationIcon(itemView.context)?.let { edit_button.setImageDrawable(it) }
