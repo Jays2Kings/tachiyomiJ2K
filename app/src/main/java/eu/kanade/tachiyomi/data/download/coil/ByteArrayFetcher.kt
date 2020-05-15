@@ -24,7 +24,6 @@ class ByteArrayFetcher : Fetcher<ByteArray> {
         options: Options
     ): FetchResult {
         val source = ByteArrayInputStream(data).source().buffer()
-        Timber.d("CARLOSESCO %s", DecodeUtils.isGif(source))
         return SourceResult(
             source = ByteArrayInputStream(data).source().buffer(),
             mimeType = "image/gif",
