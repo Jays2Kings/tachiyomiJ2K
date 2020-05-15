@@ -15,6 +15,7 @@ import androidx.core.app.NotificationCompat.GROUP_ALERT_SUMMARY
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import coil.Coil
+import coil.request.CachePolicy
 import coil.request.LoadRequest
 import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
@@ -23,7 +24,6 @@ import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.LibraryManga
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.library.LibraryUpdateRanker.rankingScheme
@@ -59,7 +59,6 @@ import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.util.ArrayList
-import java.util.Date
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
 
@@ -533,6 +532,15 @@ class LibraryUpdateService(
                             val thumbnailUrl = manga.thumbnail_url
                             manga.copyFrom(networkManga)
                             manga.initialized = true
+                                // load new covers in background
+                            if (!manga.hasCustomCover()) {
+                                val request = LoadRequest.Builder(this@LibraryUpdateService)
+                                    .data(manga)
+                                    .memoryCachePolicy(CachePolicy.DISABLED)
+                                    .build()
+                                Coil.imageLoader(this@LibraryUpdateService).execute(request)
+                            }
+
                             db.insertManga(manga).executeAsBlocking()
                         }
                     }
