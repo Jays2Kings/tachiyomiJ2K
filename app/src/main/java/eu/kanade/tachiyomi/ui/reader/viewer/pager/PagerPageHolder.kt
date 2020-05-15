@@ -18,9 +18,8 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import coil.Coil
+import coil.api.loadAny
 import coil.request.CachePolicy
-import coil.request.LoadRequest
 import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.github.chrisbanes.photoview.PhotoView
@@ -37,6 +36,7 @@ import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visible
+import eu.kanade.tachiyomi.widget.GifViewTarget
 import eu.kanade.tachiyomi.widget.ViewPagerAdapter
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.withContext
@@ -481,15 +481,11 @@ class PagerPageHolder(
      * Extension method to set a [stream] into this ImageView.
      */
     private fun ImageView.setImage(stream: InputStream) {
-        val request = LoadRequest.Builder(this.context).data(stream).memoryCachePolicy(CachePolicy.DISABLED).diskCachePolicy(CachePolicy.DISABLED)
-            .target(onError = {
-                onImageDecodeError()
-            }, onSuccess = {
-                this.setImageDrawable(it)
-                onImageDecoded()
-            }).build()
-        Coil.execute(request)
-
+        this.loadAny(stream.readBytes()){
+            memoryCachePolicy(CachePolicy.DISABLED)
+            diskCachePolicy(CachePolicy.DISABLED)
+                target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
+        }
     }
 
     companion object {

@@ -30,6 +30,7 @@ class CoilSetup(context: Context) {
                 }
                 add(SvgDecoder(context))
                 add(MangaFetcher())
+                add(ByteArrayFetcher())
             }.okHttpClient {
                 OkHttpClient.Builder()
                     .cache(CoilUtils.createDefaultCache(context))

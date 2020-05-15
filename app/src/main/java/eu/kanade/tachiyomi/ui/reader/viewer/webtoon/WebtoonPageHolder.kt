@@ -17,6 +17,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import coil.Coil
 import coil.api.clear
+import coil.api.loadAny
 import coil.request.CachePolicy
 import coil.request.LoadRequest
 import com.davemorrissey.labs.subscaleview.ImageSource
@@ -30,6 +31,7 @@ import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.visible
+import eu.kanade.tachiyomi.widget.GifViewTarget
 import rx.Observable
 import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
@@ -485,13 +487,10 @@ class WebtoonPageHolder(
      * Extension method to set a [stream] into this ImageView.
      */
     private fun ImageView.setImage(stream: InputStream) {
-        val request = LoadRequest.Builder(this.context).data(stream).memoryCachePolicy(CachePolicy.DISABLED).diskCachePolicy(CachePolicy.DISABLED)
-            .target(onError = {
-                onImageDecodeError()
-            }, onSuccess = {
-                this.setImageDrawable(it)
-                onImageDecoded()
-            }).build()
-        Coil.execute(request)
+        this.loadAny(stream.readBytes()){
+            memoryCachePolicy(CachePolicy.DISABLED)
+            diskCachePolicy(CachePolicy.DISABLED)
+            target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
+        }
     }
 }
