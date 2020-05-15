@@ -8,7 +8,6 @@ import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
 import coil.decode.SvgDecoder
 import coil.util.CoilUtils
-import coil.util.DebugLogger
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import eu.kanade.tachiyomi.R
 import okhttp3.OkHttpClient
@@ -20,7 +19,6 @@ class CoilSetup(context: Context) {
             .crossfade(true)
             .allowRgb565(true)
             .allowHardware(false)
-            .logger(DebugLogger())
             .error(R.drawable.ic_broken_image_grey_24dp)
             .componentRegistry {
                 if (Build.VERSION.SDK_INT >= 28) {

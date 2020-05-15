@@ -6,6 +6,7 @@ import coil.Coil
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
+import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.Dispatchers
@@ -36,6 +37,10 @@ class CoverCache(val context: Context) {
         ?: File(context.filesDir, "covers").also { it.mkdirs() }
 
     val cache = Cache(cacheDir, 300 * 1024 * 1024) // 300MB
+
+    fun getChapterCacheSize(): String {
+        return Formatter.formatFileSize(context, DiskUtil.getDirectorySize(cacheDir))
+    }
 
     fun deleteOldCovers() {
         GlobalScope.launch(Dispatchers.Default) {

@@ -540,8 +540,8 @@
         <item quantity="other">Cleanup done. Removed %d folders</item>
     </plurals>
     <string name="clean_up_cached_covers">Clean up cached covers</string>
-    <string name="delete_old_covers_in_library">Delete old and unused cached covers of
-        manga in your library that has been updated</string>
+    <string name="delete_old_covers_in_library_used_">Delete old and unused cached covers of
+        manga in your library that has been updated.\nCurrently using: %1$s</string>
 
     <!-- About section -->
     <string name="version">Version</string>
