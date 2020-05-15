@@ -4,13 +4,17 @@ import android.content.Context
 import android.text.format.Formatter
 import coil.Coil
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
+import eu.kanade.tachiyomi.util.system.executeOnIO
 import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.Cache
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -31,24 +35,24 @@ class CoverCache(val context: Context) {
     private val cacheDir = context.getExternalFilesDir("covers")
         ?: File(context.filesDir, "covers").also { it.mkdirs() }
 
-    private val tempCacheDir = context.getExternalFilesDir("covers")
-        ?: File(context.filesDir, "temp_covers").also { it.mkdirs() }
-
-    val cache = Cache(cacheDir, 250 * 1024 * 1024)
-
-    val tempCache = Cache(cacheDir, 100 * 1024 * 1024)
+    val cache = Cache(cacheDir, 300 * 1024 * 1024) // 300MB
 
     fun deleteOldCovers() {
         GlobalScope.launch(Dispatchers.Default) {
+            val db = Injekt.get<DatabaseHelper>()
             var deletedSize = 0L
-            val files = tempCacheDir.listFiles()?.iterator() ?: return@launch
+            val urls = db.getLibraryMangas().executeOnIO().mapNotNull {
+                it.thumbnail_url?.let { url -> return@mapNotNull it.key() }
+                null
+            }
+            val files = cacheDir.listFiles()?.iterator() ?: return@launch
             while (files.hasNext()) {
                 val file = files.next()
-                Coil.imageLoader(context).invalidate(file.name)
-                deletedSize += file.length()
-                file.delete()
+                if (file.name !in urls) {
+                    deletedSize += file.length()
+                    file.delete()
+                }
             }
-
             withContext(Dispatchers.Main) {
                 context.toast(
                     context.getString(
@@ -66,18 +70,7 @@ class CoverCache(val context: Context) {
      * @return cover image.
      */
     fun getCoverFile(manga: Manga): File {
-        val cache = if (manga.favorite) cacheDir
-        else tempCacheDir
-        return File(cache, manga.key())
-    }
-
-    /**
-     * Returns the cover from cache, returns both potential temp and library covers
-     */
-    private fun getCoverFiles(manga: Manga): List<File> {
-        manga.thumbnail_url ?: return emptyList()
-        val key = manga.key()
-        return listOf(File(cacheDir, key), File(tempCacheDir, key))
+        return File(cacheDir, manga.key())
     }
 
     /**
@@ -96,7 +89,7 @@ class CoverCache(val context: Context) {
     }
 
     /**
-     * Delete the cover file from the cache.
+     * Delete the cover file from the disk cache and optional from memory cache
      *
      * @param thumbnailUrl the thumbnail url.
      * @return status of deletion.
@@ -105,11 +98,9 @@ class CoverCache(val context: Context) {
         // Check if url is empty.
         if (manga.thumbnail_url.isNullOrEmpty()) return
 
-        // Remove files.
-        val file = getCoverFiles(manga)
-        file.forEach {
-            if (deleteMemoryCache) Coil.imageLoader(context).invalidate(it.name)
-            if (it.exists()) it.delete()
-        }
+        // Remove file
+        val file = getCoverFile(manga)
+        if (deleteMemoryCache) Coil.imageLoader(context).invalidate(file.name)
+        if (file.exists()) file.delete()
     }
 }

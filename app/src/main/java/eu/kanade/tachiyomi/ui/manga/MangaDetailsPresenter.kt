@@ -369,6 +369,12 @@ class MangaDetailsPresenter(
         if (update) controller.updateChapters(this.chapters)
     }
 
+    fun refreshMangaFromDb(): Manga {
+        val dbManga = db.getManga(manga.id!!).executeAsBlocking()
+        manga.copyFrom(dbManga!!)
+        return dbManga
+    }
+
     /** Refresh Manga Info and Chapter List (not tracking) */
     fun refreshAll() {
         if (controller.isNotOnline() && manga.source != LocalSource.ID) return
@@ -606,7 +612,9 @@ class MangaDetailsPresenter(
         manga.favorite = !manga.favorite
 
         when (manga.favorite) {
-            true -> manga.date_added = Date().time
+            true -> {
+                manga.date_added = Date().time
+            }
             false -> manga.date_added = 0
         }
 
@@ -725,7 +733,6 @@ class MangaDetailsPresenter(
             db.updateMangaInfo(manga).executeAsBlocking()
         }
         if (uri != null) editCoverWithStream(uri)
-        controller.updateHeader()
     }
 
     /**
@@ -734,37 +741,32 @@ class MangaDetailsPresenter(
     fun clearCustomCover() {
         if (manga.hasCustomCover()) {
             coverCache.deleteFromCache(manga)
-            manga.thumbnail_url = manga.thumbnail_url?.removePrefix("Custom-")
+            manga.removeCustomThumbnailUrl()
             db.insertManga(manga).executeAsBlocking()
-            MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
-            forceUpdateCovers(false)
+            forceUpdateCovers()
         }
     }
 
     fun forceUpdateCovers(deleteCache: Boolean = true) {
         if (deleteCache) coverCache.deleteFromCache(manga)
-        controller.resetCovers()
         controller.setPaletteColor()
+        controller.resetCovers()
     }
 
     fun editCoverWithStream(uri: Uri): Boolean {
         val inputStream =
             downloadManager.context.contentResolver.openInputStream(uri) ?: return false
         if (manga.source == LocalSource.ID) {
-            coverCache.deleteFromCache(manga)
             LocalSource.updateCover(downloadManager.context, manga, inputStream)
-            forceUpdateCovers(false)
+            forceUpdateCovers()
             return true
         }
 
         if (manga.favorite) {
-            if (!manga.hasCustomCover()) {
-                manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
-                db.insertManga(manga).executeAsBlocking()
-            }
             coverCache.deleteFromCache(manga)
+            manga.setCustomThumbnailUrl()
+            db.insertManga(manga).executeAsBlocking()
             coverCache.copyToCache(manga, inputStream)
-            MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
             forceUpdateCovers(false)
             return true
         }

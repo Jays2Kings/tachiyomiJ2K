@@ -55,7 +55,7 @@ class MangaFetcher() : Fetcher<Manga> {
         if (coverFile.exists()) {
             return fileLoader(coverFile)
         }
-        manga.thumbnail_url = manga.thumbnail_url!!.substringAfter("Custom-")
+        manga.thumbnail_url = manga.thumbnail_url!!.substringAfter("-J2K-").substringAfter("CUSTOM-")
         return httpLoader(manga)
     }
 
@@ -97,7 +97,7 @@ class MangaFetcher() : Fetcher<Manga> {
         val client = source?.client ?: defaultClient
 
         val newClient = client.newBuilder()
-            .cache(if (manga.favorite) coverCache.cache else coverCache.tempCache)
+            .cache(coverCache.cache)
             .build()
 
         val request = Request.Builder().url(manga.thumbnail_url!!).also {

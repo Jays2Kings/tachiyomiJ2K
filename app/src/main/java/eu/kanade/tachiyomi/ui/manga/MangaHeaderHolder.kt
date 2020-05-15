@@ -318,9 +318,8 @@ class MangaHeaderHolder(
 
     private fun isCached(manga: Manga): Boolean {
         if (manga.source == LocalSource.ID) return true
-        val coverCache = adapter.delegate.mangaPresenter().coverCache
         manga.thumbnail_url?.let {
-            return coverCache.getCoverFile(manga).exists()
+            return adapter.delegate.mangaPresenter().coverCache.getCoverFile(manga).exists()
         }
         return manga.initialized
     }

@@ -393,14 +393,15 @@ class MangaDetailsController : BaseController,
         super.onActivityResumed(activity)
         presenter.isLockedFromSearch = SecureActivityDelegate.shouldBeLocked()
         presenter.headerItem.isLocked = presenter.isLockedFromSearch
+        manga!!.thumbnail_url = presenter.refreshMangaFromDb().thumbnail_url
         presenter.fetchChapters(refreshTracker == null)
         if (refreshTracker != null) {
             trackingBottomSheet?.refreshItem(refreshTracker ?: 0)
             presenter.refreshTracking()
             refreshTracker = null
         }
-        // reset the palette color since a custom cover could change this
-        setPaletteColor()
+        // reset the covers and palette cause user might have set a custom cover
+        presenter.forceUpdateCovers(false)
         val isCurrentController = router?.backstack?.lastOrNull()?.controller() ==
             this
         if (isCurrentController) {

@@ -47,8 +47,8 @@ class LocalSource(private val context: Context) : CatalogueSource {
                 return null
             }
             val cover = File("${dir.absolutePath}/${manga.url}", COVER_NAME)
+            if (cover.exists()) cover.delete()
 
-            // It might not exist if using the external SD card
             cover.parentFile?.mkdirs()
             input.use {
                 cover.outputStream().use {
