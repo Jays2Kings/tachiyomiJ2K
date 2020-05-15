@@ -15,11 +15,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
-import coil.Coil
 import coil.api.clear
 import coil.api.loadAny
 import coil.request.CachePolicy
-import coil.request.LoadRequest
 import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import eu.kanade.tachiyomi.R
@@ -487,7 +485,7 @@ class WebtoonPageHolder(
      * Extension method to set a [stream] into this ImageView.
      */
     private fun ImageView.setImage(stream: InputStream) {
-        this.loadAny(stream.readBytes()){
+        this.loadAny(stream.readBytes()) {
             memoryCachePolicy(CachePolicy.DISABLED)
             diskCachePolicy(CachePolicy.DISABLED)
             target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))

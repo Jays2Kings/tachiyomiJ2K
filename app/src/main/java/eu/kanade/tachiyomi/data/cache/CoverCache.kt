@@ -113,4 +113,3 @@ class CoverCache(val context: Context) {
         }
     }
 }
-

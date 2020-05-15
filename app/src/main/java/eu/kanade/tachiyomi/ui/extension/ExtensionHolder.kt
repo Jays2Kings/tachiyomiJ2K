@@ -6,7 +6,6 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import coil.Coil
 import coil.api.clear
-import coil.request.CachePolicy
 import coil.request.LoadRequest
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.extension.model.Extension

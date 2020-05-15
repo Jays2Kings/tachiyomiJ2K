@@ -51,7 +51,6 @@ class SaveImageNotifier(private val context: Context) {
                 }
             }).build()
         Coil.imageLoader(context).execute(request)
-
     }
 
     private fun showCompleteNotification(file: File, image: Bitmap) {

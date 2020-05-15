@@ -5,9 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import coil.Coil
 import coil.api.clear
-import coil.api.load
 import coil.request.LoadRequest
-import coil.transform.RoundedCornersTransformation
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.database.models.Manga

@@ -5,13 +5,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import coil.api.clear
-import coil.api.load
 import coil.api.loadAny
-import coil.size.PixelSize
-import coil.size.Scale
-import coil.size.Size
-import coil.size.SizeResolver
-import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf

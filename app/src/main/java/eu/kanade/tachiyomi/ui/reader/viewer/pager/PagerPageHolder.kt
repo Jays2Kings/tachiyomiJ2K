@@ -481,7 +481,7 @@ class PagerPageHolder(
      * Extension method to set a [stream] into this ImageView.
      */
     private fun ImageView.setImage(stream: InputStream) {
-        this.loadAny(stream.readBytes()){
+        this.loadAny(stream.readBytes()) {
             memoryCachePolicy(CachePolicy.DISABLED)
             diskCachePolicy(CachePolicy.DISABLED)
                 target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))

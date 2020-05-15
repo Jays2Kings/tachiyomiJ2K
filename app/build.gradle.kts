@@ -269,12 +269,12 @@ dependencies {
     implementation("com.google.android.gms:play-services-oss-licenses:17.0.0")
 }
 
-/*tasks.preBuild {
+tasks.preBuild {
     dependsOn(tasks.lintKotlin)
 }
 tasks.lintKotlin {
     dependsOn(tasks.formatKotlin)
-}*/
+}
 
 if (gradle.startParameter.taskRequests.toString().contains("Standard")) {
     apply(mapOf("plugin" to "com.google.gms.google-services"))

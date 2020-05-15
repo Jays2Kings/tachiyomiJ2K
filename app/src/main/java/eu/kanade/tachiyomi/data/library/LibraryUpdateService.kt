@@ -5,7 +5,6 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
@@ -16,7 +15,6 @@ import androidx.core.app.NotificationCompat.GROUP_ALERT_SUMMARY
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import coil.Coil
-import coil.request.GetRequest
 import coil.request.LoadRequest
 import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
@@ -611,11 +609,10 @@ class LibraryUpdateService(
                 try {
 
                     val request = LoadRequest.Builder(this@LibraryUpdateService).data(manga)
-                    .transformations(CircleCropTransformation()).size(width=256, height = 256)
-                        .target{drawable -> setLargeIcon((drawable as BitmapDrawable).bitmap)}.build()
+                    .transformations(CircleCropTransformation()).size(width = 256, height = 256)
+                        .target { drawable -> setLargeIcon((drawable as BitmapDrawable).bitmap) }.build()
 
                     Coil.imageLoader(this@LibraryUpdateService).execute(request)
-
                 } catch (e: Exception) {
                 }
                 setGroupAlertBehavior(GROUP_ALERT_SUMMARY)

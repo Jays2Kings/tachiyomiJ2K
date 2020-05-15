@@ -458,13 +458,13 @@ class MangaDetailsPresenter(
 
     private fun shouldUpdateCover(thumbnailUrl: String?, networkManga: SManga): Boolean {
         val refreshCovers = preferences.refreshCoversToo().getOrDefault()
-        if(thumbnailUrl == networkManga.thumbnail_url && !refreshCovers){
+        if (thumbnailUrl == networkManga.thumbnail_url && !refreshCovers) {
             return false
         }
-        if(thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()){
+        if (thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) {
             return true
         }
-        if(manga.hasCustomCover()) return false
+        if (manga.hasCustomCover()) return false
 
         return refreshCovers
     }
@@ -741,8 +741,8 @@ class MangaDetailsPresenter(
         }
     }
 
-    fun forceUpdateCovers(deleteCache: Boolean= true){
-        if(deleteCache) coverCache.deleteFromCache(manga)
+    fun forceUpdateCovers(deleteCache: Boolean = true) {
+        if (deleteCache) coverCache.deleteFromCache(manga)
         controller.resetCovers()
         controller.setPaletteColor()
     }

@@ -3,7 +3,6 @@ package eu.kanade.tachiyomi.ui.library
 import android.view.View
 import android.view.ViewGroup
 import coil.api.clear
-import coil.api.load
 import coil.api.loadAny
 import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.R

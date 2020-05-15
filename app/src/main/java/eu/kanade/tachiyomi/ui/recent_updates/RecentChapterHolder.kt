@@ -73,7 +73,7 @@ class RecentChapterHolder(private val view: View, private val adapter: RecentCha
         // Set cover
         if ((view.context as? Activity)?.isDestroyed != true) {
             manga_cover.clear()
-            manga_cover.loadAny(item.manga){
+            manga_cover.loadAny(item.manga) {
                 transformations(CircleCropTransformation())
             }
         }

@@ -17,7 +17,6 @@ class ByteArrayFetcher : Fetcher<ByteArray> {
 
     override fun key(data: ByteArray): String? = null
 
-
     override suspend fun fetch(
         pool: BitmapPool,
         data: ByteArray,

@@ -140,7 +140,7 @@ interface Manga : SManga {
             sourceName.contains("tapastic", true)
     }
 
-    fun key(): String{
+    fun key(): String {
         return DiskUtil.hashKeyForDisk(thumbnail_url.orEmpty())
     }
 

@@ -3,7 +3,6 @@ package eu.kanade.tachiyomi.widget
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import coil.target.ImageViewTarget
 import eu.kanade.tachiyomi.R
@@ -11,7 +10,7 @@ import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visible
 
-class CoverViewTarget(view: ImageView, val progress: View? = null) : ImageViewTarget(view){
+class CoverViewTarget(view: ImageView, val progress: View? = null) : ImageViewTarget(view) {
 
     override fun onError(error: Drawable?) {
         progress?.gone()
@@ -30,5 +29,4 @@ class CoverViewTarget(view: ImageView, val progress: View? = null) : ImageViewTa
         progress?.gone()
         super.onSuccess(result)
     }
-
 }

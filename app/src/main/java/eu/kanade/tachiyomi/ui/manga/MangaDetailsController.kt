@@ -14,7 +14,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -41,9 +40,7 @@ import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
 import coil.Coil
 import coil.api.clear
-import coil.api.load
 import coil.api.loadAny
-import coil.request.CachePolicy
 import coil.request.LoadRequest
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.checkbox.checkBoxPrompt
@@ -322,7 +319,7 @@ class MangaDetailsController : BaseController,
                     val colorBack = view.context.getResourceColor(
                         android.R.attr.colorBackground
                     )
-                    //this makes the color more consistent regardless of theme
+                    // this makes the color more consistent regardless of theme
                     val backDropColor = ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
 
                     coverColor = backDropColor
@@ -402,7 +399,7 @@ class MangaDetailsController : BaseController,
             presenter.refreshTracking()
             refreshTracker = null
         }
-        //reset the palette color since a custom cover could change this
+        // reset the palette color since a custom cover could change this
         setPaletteColor()
         val isCurrentController = router?.backstack?.lastOrNull()?.controller() ==
             this

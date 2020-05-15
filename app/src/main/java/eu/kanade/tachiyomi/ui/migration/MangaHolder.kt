@@ -22,6 +22,5 @@ class MangaHolder(
         // Update the cover.
         cover_thumbnail.clear()
         cover_thumbnail.loadAny(item.manga)
-
     }
 }

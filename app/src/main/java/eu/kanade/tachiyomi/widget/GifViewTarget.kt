@@ -21,4 +21,3 @@ class GifViewTarget(view: ImageView, private val progressBar: View?, private val
         super.onSuccess(result)
     }
 }
-

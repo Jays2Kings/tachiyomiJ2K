@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import coil.api.clear
 import coil.api.loadAny
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
