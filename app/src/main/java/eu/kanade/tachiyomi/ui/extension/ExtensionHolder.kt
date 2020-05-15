@@ -4,9 +4,8 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.View
 import androidx.core.content.ContextCompat
-import coil.Coil
 import coil.api.clear
-import coil.request.LoadRequest
+import coil.api.load
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.extension.model.InstallStep
@@ -42,9 +41,9 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         edit_button.clear()
 
         if (extension is Extension.Available) {
-            val request = LoadRequest.Builder(itemView.context).data(extension.iconUrl)
-                .target(CoverViewTarget(edit_button, progress)).build()
-            Coil.imageLoader(itemView.context).execute(request)
+            edit_button.load(extension.iconUrl) {
+                target(CoverViewTarget(edit_button, progress))
+            }
         } else {
             extension.getApplicationIcon(itemView.context)?.let { edit_button.setImageDrawable(it) }
         }

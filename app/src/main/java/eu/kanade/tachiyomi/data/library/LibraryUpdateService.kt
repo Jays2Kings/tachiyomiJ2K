@@ -534,9 +534,6 @@ class LibraryUpdateService(
                             manga.copyFrom(networkManga)
                             manga.initialized = true
                             db.insertManga(manga).executeAsBlocking()
-                            if (thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) {
-                                MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
-                            }
                         }
                     }
                 }

@@ -409,7 +409,6 @@ class MangaDetailsPresenter(
                 if (shouldUpdateCover(thumbnailUrl, networkManga)) {
                     coverCache.deleteFromCache(manga, false)
                     manga.thumbnail_url = networkManga.thumbnail_url
-                    MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
                     withContext(Dispatchers.Main) {
                         forceUpdateCovers()
                     }
