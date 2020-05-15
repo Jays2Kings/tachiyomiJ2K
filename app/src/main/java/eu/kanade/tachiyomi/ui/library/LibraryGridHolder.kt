@@ -6,12 +6,12 @@ import android.view.View
 import android.widget.FrameLayout
 import coil.api.clear
 import coil.api.loadAny
+import coil.size.Precision
+import coil.size.Scale
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_grid_item.*
-import kotlinx.android.synthetic.main.manga_grid_item.title
-import kotlinx.android.synthetic.main.recently_read_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -79,7 +79,12 @@ class LibraryGridHolder(
 
     private fun setCover(manga: Manga) {
         if ((adapter.recyclerView.context as? Activity)?.isDestroyed == true) return
-        cover_thumbnail.loadAny(manga)
+        cover_thumbnail.loadAny(manga) {
+            if (!fixedSize) {
+                precision(Precision.INEXACT)
+                scale(Scale.FIT)
+            }
+        }
     }
 
     private fun playButtonClicked() {
