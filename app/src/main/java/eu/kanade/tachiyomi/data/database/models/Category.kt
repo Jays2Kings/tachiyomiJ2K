@@ -123,6 +123,7 @@ interface Category : Serializable {
             createCustom(context.getString(R.string.all), libSort, ascending).apply {
                 id = -1
                 order = -1
+                isAlone = true
             }
     }
 }
