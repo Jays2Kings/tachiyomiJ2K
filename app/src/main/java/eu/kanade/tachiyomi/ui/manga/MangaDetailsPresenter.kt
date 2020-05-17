@@ -826,6 +826,16 @@ class MangaDetailsPresenter(
                 }
                 if (!results.isNullOrEmpty()) {
                     withContext(Dispatchers.Main) { controller.onTrackSearchResults(results) }
+                } else {
+                    withContext(Dispatchers.Main) {
+                        controller.trackSearchError(
+                            Exception(
+                                preferences.context.getString(
+                                    R.string.no_results_found
+                                )
+                            )
+                        )
+                    }
                 }
             }
         }
