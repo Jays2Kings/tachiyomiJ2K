@@ -410,8 +410,7 @@ class LibraryPresenter(
     ): Int {
         return if (i1.header.category.id == i2.header.category.id) {
             val category = i1.header.category
-            if (!category.isDynamic &&
-                category.mangaOrder.isNullOrEmpty() && category.mangaSort == null) {
+            if (category.mangaOrder.isNullOrEmpty() && category.mangaSort == null) {
                 category.changeSortTo(preferences.librarySortingMode().getOrDefault())
                 if (category.id == 0) preferences.defaultMangaOrder()
                     .set(category.mangaSort.toString())
