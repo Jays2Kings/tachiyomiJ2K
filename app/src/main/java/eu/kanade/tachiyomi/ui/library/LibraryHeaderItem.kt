@@ -1,18 +1,12 @@
 package eu.kanade.tachiyomi.ui.library
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Color
-import android.graphics.drawable.Drawable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.appcompat.widget.PopupMenu
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -145,9 +139,6 @@ class LibraryHeaderItem(
 
             if (category.isAlone) sectionText.text = ""
             else sectionText.text = category.name
-            sortText.text = itemView.context.getString(
-                R.string.sort_by_, itemView.context.getString(category.sortRes())
-            )
 
             val isAscending = category.isAscending()
             val sortingMode = category.sortingMode()
@@ -198,72 +189,71 @@ class LibraryHeaderItem(
             }
         }
 
-        @SuppressLint("RestrictedApi")
         private fun showCatSortOptions() {
             val category =
                 (adapter.getItem(adapterPosition) as? LibraryHeaderItem)?.category ?: return
-            // Create a PopupMenu, giving it the clicked view for an anchor
-            val popup = PopupMenu(itemView.context, sortText)
-
-            // Inflate our menu resource into the PopupMenu's Menu
-            popup.menuInflater.inflate(
-                if (category.id == -1) R.menu.main_sort
-                else R.menu.cat_sort, popup.menu)
-
-            // Set a listener so we are notified if a menu item is clicked
-            popup.setOnMenuItemClickListener { menuItem ->
-                onCatSortClicked(category, menuItem.itemId)
-                true
-            }
-
-            val sortingMode = category.sortingMode()
-            val currentItem = if (sortingMode == null) null
-            else popup.menu.findItem(
-                when (sortingMode) {
-                    LibrarySort.DRAG_AND_DROP -> R.id.action_drag_and_drop
-                    LibrarySort.TOTAL -> R.id.action_total_chaps
-                    LibrarySort.LAST_READ -> R.id.action_last_read
-                    LibrarySort.UNREAD -> R.id.action_unread
-                    LibrarySort.LATEST_CHAPTER -> R.id.action_update
-                    LibrarySort.DATE_ADDED -> R.id.action_date_added
-                    else -> R.id.action_alpha
+            adapter.controller.activity?.let { activity ->
+                val items = mutableListOf(
+                    MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.ALPHA, R.drawable.ic_sort_by_alpha_24dp, R.string.title
+                    ), MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.LAST_READ,
+                        R.drawable.ic_recent_read_outline_24dp,
+                        R.string.last_read
+                    ), MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.LATEST_CHAPTER,
+                        R.drawable.ic_new_releases_24dp,
+                        R.string.latest_chapter
+                    ), MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.UNREAD, R.drawable.ic_eye_24dp, R.string.unread
+                    ), MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.TOTAL,
+                        R.drawable.ic_sort_by_numeric_24dp,
+                        R.string.total_chapters
+                    ), MaterialMenuSheet.MenuSheetItem(
+                        LibrarySort.DATE_ADDED,
+                        R.drawable.ic_heart_outline_24dp,
+                        R.string.date_added
+                    )
+                )
+                if (category.isDynamic) {
+                    items.add(
+                        MaterialMenuSheet.MenuSheetItem(
+                            LibrarySort.DRAG_AND_DROP,
+                            R.drawable.ic_label_outline_white_24dp,
+                            R.string.category
+                        )
+                    )
                 }
-            )
-
-            if (category.id == -1)
-            popup.menu.findItem(R.id.action_drag_and_drop).title = contentView.context.getString(
-                R.string.category
-            )
-
-            if (sortingMode != null && popup.menu is MenuBuilder) {
-                val m = popup.menu as MenuBuilder
-                m.setOptionalIconsVisible(true)
-            }
-
-            val isAscending = category.isAscending()
-
-            currentItem?.icon = tintVector(
-                when {
-                    sortingMode == LibrarySort.DRAG_AND_DROP -> R.drawable.ic_check_white_24dp
-                    if (sortingMode == LibrarySort.DATE_ADDED ||
-                        sortingMode == LibrarySort.LATEST_CHAPTER ||
-                        sortingMode == LibrarySort.LAST_READ) !isAscending else isAscending ->
-                        R.drawable.ic_arrow_down_white_24dp
-                    else -> R.drawable.ic_arrow_up_white_24dp
+                val sortingMode = category.sortingMode()
+                val sheet = MaterialMenuSheet(
+                    activity,
+                    items,
+                    activity.getString(R.string.sort_by),
+                    sortingMode
+                ) { sheet, item ->
+                    onCatSortClicked(category, item)
+                    val nCategory =
+                        (adapter.getItem(adapterPosition) as? LibraryHeaderItem)?.category
+                    val isAscending = nCategory?.isAscending() ?: false
+                    val drawableRes = getSortRes(item, isAscending)
+                    sheet.setDrawable(item, drawableRes)
+                    false
                 }
-            )
-            val s = SpannableString(currentItem?.title ?: "")
-            s.setSpan(ForegroundColorSpan(itemView.context.getResourceColor(android.R.attr.colorAccent)), 0, s.length, 0)
-            currentItem?.title = s
-
-            // Finally show the PopupMenu
-            popup.show()
+                val isAscending = category.isAscending()
+                val drawableRes = getSortRes(sortingMode, isAscending)
+                sheet.setDrawable(sortingMode ?: -1, drawableRes)
+                sheet.show()
+            }
         }
 
-        private fun tintVector(resId: Int): Drawable? {
-            return ContextCompat.getDrawable(itemView.context, resId)?.mutate()?.apply {
-                setTint(itemView.context.getResourceColor(android.R.attr.colorAccent))
-            }
+        private fun getSortRes(sortingMode: Int?, isAscending: Boolean): Int = when {
+            sortingMode == LibrarySort.DRAG_AND_DROP -> R.drawable.ic_check_white_24dp
+            if (sortingMode == LibrarySort.DATE_ADDED ||
+                sortingMode == LibrarySort.LATEST_CHAPTER ||
+                sortingMode == LibrarySort.LAST_READ) !isAscending else isAscending ->
+                R.drawable.ic_arrow_down_white_24dp
+            else -> R.drawable.ic_arrow_up_white_24dp
         }
 
         private fun onCatSortClicked(category: Category, menuId: Int?) {
@@ -273,15 +263,15 @@ class LibraryHeaderItem(
                 else t - 1
             } else {
                 val order = when (menuId) {
-                    R.id.action_drag_and_drop -> {
+                    LibrarySort.DRAG_AND_DROP -> {
                         adapter.libraryListener.sortCategory(category.id!!, 'D' - 'a' + 1)
                         return
                     }
-                    R.id.action_date_added -> 5
-                    R.id.action_total_chaps -> 4
-                    R.id.action_last_read -> 3
-                    R.id.action_unread -> 2
-                    R.id.action_update -> 1
+                    LibrarySort.DATE_ADDED -> 5
+                    LibrarySort.TOTAL -> 4
+                    LibrarySort.LAST_READ -> 3
+                    LibrarySort.UNREAD -> 2
+                    LibrarySort.LATEST_CHAPTER -> 1
                     else -> 0
                 }
                 if (order == category.catSortingMode()) {

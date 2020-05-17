@@ -125,7 +125,7 @@
     <string name="series_type">Series type</string>
 
     <!-- Library Sort -->
-    <string name="sort_by_">Sort by: %1$s</string>
+    <string name="sort_by">Sort by</string>
     <string name="total_chapters">Total chapters</string>
     <string name="date_added">Date added</string>
     <string name="last_read">Last read</string>

@@ -11,10 +11,10 @@
     <Space
         android:id="@+id/start_space"
         android:layout_width="6dp"
+        android:layout_height="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/category_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/category_title"
-        android:layout_height="1dp"/>
+        app:layout_constraintTop_toTopOf="@+id/category_title" />
 
     <ImageView
         android:id="@+id/checkbox"
@@ -35,13 +35,13 @@
 
     <ImageView
         android:id="@+id/collapse_arrow"
-        android:layout_marginStart="8dp"
         android:layout_width="14dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.5"
         android:contentDescription="@string/select_all"
         android:src="@drawable/ic_expand_less_24dp"
         android:tint="?android:textColorPrimary"
-        android:alpha="0.5"
         app:layout_constraintBottom_toBottomOf="@+id/category_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/category_title" />
@@ -51,8 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="right"
-        app:constraint_referenced_ids="start_space,collapse_arrow,checkbox"
-        />
+        app:constraint_referenced_ids="start_space,collapse_arrow,checkbox" />
 
     <Space
         android:id="@+id/space"
@@ -66,20 +65,20 @@
     <TextView
         android:id="@+id/category_title"
         style="@style/TextAppearance.MaterialComponents.Headline6"
-        android:textColor="?android:textColorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="0dp"
-        android:paddingEnd="4dp"
-        android:paddingTop="4dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/square_ripple"
-        android:paddingBottom="4dp"
         android:layout_marginBottom="6dp"
+        android:background="@drawable/square_ripple"
         android:ellipsize="end"
         android:gravity="center|start"
         android:inputType="none"
         android:maxLines="2"
+        android:paddingStart="0dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="?android:textColorPrimary"
         android:textSize="18sp"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,16 +119,16 @@
 
     <ImageView
         android:id="@+id/update_button"
+        style="@style/Theme.Widget.CustomImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
         android:clickable="true"
-        android:tooltipText="@string/update"
         android:focusable="true"
         android:padding="4dp"
-        android:layout_marginEnd="6dp"
-        style="@style/Theme.Widget.CustomImageButton"
         android:src="@drawable/ic_refresh_white_24dp"
         android:tint="@color/gray_button"
+        android:tooltipText="@string/update"
         app:layout_constraintBottom_toBottomOf="@id/category_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/category_sort"
