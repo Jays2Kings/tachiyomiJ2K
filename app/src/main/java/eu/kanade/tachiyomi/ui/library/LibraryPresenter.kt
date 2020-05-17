@@ -431,6 +431,7 @@ class LibraryPresenter(
         val categories = db.getCategories().executeAsBlocking().toMutableList()
         val showCategories = !preferences.hideCategories().getOrDefault()
         var libraryManga = db.getLibraryMangas().executeAsBlocking()
+        val showAll = showAllCategories
         if (groupType <= BY_DEFAULT || !showCategories) {
             libraryManga = libraryManga.distinctBy { it.id }
         }
@@ -465,12 +466,12 @@ class LibraryPresenter(
                 categories.forEach { category ->
                     val catId = category.id ?: return@forEach
                     if (catId > 0 && !categorySet.contains(catId) && (catId !in categoriesHidden ||
-                            !showCategories)) {
+                            !showAll)) {
                         val headerItem = headerItems[catId]
                         if (headerItem != null) items.add(
                             LibraryItem(LibraryManga.createBlank(catId), headerItem)
                         )
-                    } else if (catId in categoriesHidden && showCategories && categories.size > 1) {
+                    } else if (catId in categoriesHidden && showAll && categories.size > 1) {
                         val mangaToRemove = items.filter { it.manga.category == catId }
                         val mergedTitle = mangaToRemove.joinToString("-") {
                             it.manga.title + "-" + it.manga.author
@@ -486,7 +487,7 @@ class LibraryPresenter(
             }
 
             categories.forEach {
-                it.isHidden = it.id in categoriesHidden && showCategories
+                it.isHidden = it.id in categoriesHidden && showAll && categories.size > 1
             }
             this.categories = if (!showCategories) {
                 arrayListOf(categoryAll)
