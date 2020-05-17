@@ -3,17 +3,18 @@ package eu.kanade.tachiyomi.ui.source.browse
 import android.app.Activity
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import coil.Coil
+import coil.api.clear
+import coil.request.LoadRequest
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.ui.library.LibraryCategoryAdapter
 import eu.kanade.tachiyomi.util.view.gone
-import eu.kanade.tachiyomi.widget.StateImageViewTarget
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_grid_item.*
+import kotlinx.android.synthetic.main.manga_grid_item.cover_thumbnail
+import kotlinx.android.synthetic.main.manga_grid_item.title
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -58,16 +59,12 @@ class BrowseSourceGridHolder(
 
     override fun setImage(manga: Manga) {
         if ((view.context as? Activity)?.isDestroyed == true) return
-        if (manga.thumbnail_url == null)
-            Glide.with(view.context).clear(cover_thumbnail)
-        else {
-            GlideApp.with(view.context)
-                .load(manga)
-                .diskCacheStrategy(DiskCacheStrategy.DATA)
-                .centerCrop()
-                .placeholder(android.R.color.transparent)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(StateImageViewTarget(cover_thumbnail, progress))
+        if (manga.thumbnail_url == null) {
+            cover_thumbnail.clear()
+        } else {
+            val id = manga.id ?: return
+            val request = LoadRequest.Builder(view.context).data(manga).target(CoverViewTarget(cover_thumbnail, progress)).build()
+            Coil.imageLoader(view.context).execute(request)
         }
     }
 }

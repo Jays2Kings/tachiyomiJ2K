@@ -8,6 +8,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDex
+import eu.kanade.tachiyomi.data.download.coil.CoilSetup
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
@@ -18,6 +19,7 @@ import org.acra.annotation.ReportsCrashes
 import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.InjektScope
+import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import uy.kohesive.injekt.registry.default.DefaultRegistrar
 
@@ -37,6 +39,7 @@ open class App : Application(), LifecycleObserver {
         Injekt = InjektScope(DefaultRegistrar())
         Injekt.importModule(AppModule(this))
 
+        CoilSetup(this)
         setupAcra()
         setupNotificationChannels()
 

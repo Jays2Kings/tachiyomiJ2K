@@ -3,12 +3,11 @@ package eu.kanade.tachiyomi.ui.migration.manga.process
 import android.view.View
 import androidx.appcompat.widget.PopupMenu
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import coil.Coil
+import coil.request.LoadRequest
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
@@ -20,7 +19,7 @@ import eu.kanade.tachiyomi.util.view.invisible
 import eu.kanade.tachiyomi.util.view.setVectorCompat
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
-import eu.kanade.tachiyomi.widget.StateImageViewTarget
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_grid_item.view.*
 import kotlinx.android.synthetic.main.migration_process_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.view.*
@@ -133,14 +132,10 @@ class MigrationProcessHolder(
     private fun View.attachManga(manga: Manga, source: Source, isTo: Boolean) {
         (layoutParams as ConstraintLayout.LayoutParams).verticalBias = 1f
         progress.gone()
-        GlideApp.with(view.context.applicationContext).load(manga).apply {
-            diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            if (isTo) {
-                transition(DrawableTransitionOptions.withCrossFade())
-                    .into(StateImageViewTarget(cover_thumbnail, progress))
-            } else
-                into(cover_thumbnail)
-        }
+
+        val request = LoadRequest.Builder(view.context).data(manga)
+            .target(CoverViewTarget(cover_thumbnail, progress)).build()
+        Coil.imageLoader(view.context).execute(request)
 
         compact_title.visible()
         gradient.visible()
@@ -164,11 +159,15 @@ class MigrationProcessHolder(
         val latestChapter = mangaChapters.maxBy { it.chapter_number }?.chapter_number ?: -1f
 
         if (latestChapter > 0f) {
-            subtitle.text = context.getString(R.string.latest_,
-                DecimalFormat("#.#").format(latestChapter))
+            subtitle.text = context.getString(
+                R.string.latest_,
+                DecimalFormat("#.#").format(latestChapter)
+            )
         } else {
-            subtitle.text = context.getString(R.string.latest_,
-                context.getString(R.string.unknown))
+            subtitle.text = context.getString(
+                R.string.latest_,
+                context.getString(R.string.unknown)
+            )
         }
     }
 

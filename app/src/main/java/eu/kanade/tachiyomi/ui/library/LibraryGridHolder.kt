@@ -4,11 +4,11 @@ import android.app.Activity
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
+import coil.api.clear
+import coil.api.loadAny
+import coil.size.Precision
+import coil.size.Scale
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_grid_item.*
@@ -65,29 +65,26 @@ class LibraryGridHolder(
         setReadingButton(item)
 
         // Update the cover.
-        if (item.manga.thumbnail_url == null) GlideApp.with(view.context).clear(cover_thumbnail)
+        if (item.manga.thumbnail_url == null) cover_thumbnail.clear()
         else {
-            val id = item.manga.id ?: return
             if (cover_thumbnail.height == 0) {
                 val oldPos = adapterPosition
                 adapter.recyclerView.post {
                     if (oldPos == adapterPosition)
-                        setCover(item.manga, id)
+                        setCover(item.manga)
                 }
-            } else setCover(item.manga, id)
+            } else setCover(item.manga)
         }
     }
 
-    private fun setCover(manga: Manga, id: Long) {
+    private fun setCover(manga: Manga) {
         if ((adapter.recyclerView.context as? Activity)?.isDestroyed == true) return
-        GlideApp.with(adapter.recyclerView.context).load(manga)
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
-            .apply {
-                if (fixedSize) centerCrop()
-                else override(cover_thumbnail.maxHeight)
+        cover_thumbnail.loadAny(manga) {
+            if (!fixedSize) {
+                precision(Precision.INEXACT)
+                scale(Scale.FIT)
             }
-            .into(cover_thumbnail)
+        }
     }
 
     private fun playButtonClicked() {

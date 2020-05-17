@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.view.Gravity
 import android.view.ViewGroup
@@ -16,18 +15,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
-import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.load.resource.gif.GifDrawable
-import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
-import com.bumptech.glide.request.transition.NoTransition
+import coil.api.clear
+import coil.api.loadAny
+import coil.request.CachePolicy
 import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderProgressBar
@@ -36,6 +29,7 @@ import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.visible
+import eu.kanade.tachiyomi.widget.GifViewTarget
 import rx.Observable
 import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
@@ -149,7 +143,7 @@ class WebtoonPageHolder(
         removeDecodeErrorLayout()
         subsamplingImageView?.recycle()
         subsamplingImageView?.gone()
-        imageView?.let { GlideApp.with(frame).clear(it) }
+        imageView?.clear()
         imageView?.gone()
         progressBar.setProgress(0)
     }
@@ -491,36 +485,10 @@ class WebtoonPageHolder(
      * Extension method to set a [stream] into this ImageView.
      */
     private fun ImageView.setImage(stream: InputStream) {
-        GlideApp.with(this)
-            .load(stream)
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .transition(DrawableTransitionOptions.with(NoTransition.getFactory()))
-            .listener(object : RequestListener<Drawable> {
-                override fun onLoadFailed(
-                    e: GlideException?,
-                    model: Any?,
-                    target: Target<Drawable>?,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    onImageDecodeError()
-                    return false
-                }
-
-                override fun onResourceReady(
-                    resource: Drawable?,
-                    model: Any?,
-                    target: Target<Drawable>?,
-                    dataSource: DataSource?,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    if (resource is GifDrawable) {
-                        resource.setLoopCount(GifDrawable.LOOP_INTRINSIC)
-                    }
-                    onImageDecoded()
-                    return false
-                }
-            })
-            .into(this)
+        this.loadAny(stream.readBytes()) {
+            memoryCachePolicy(CachePolicy.DISABLED)
+            diskCachePolicy(CachePolicy.DISABLED)
+            target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
+        }
     }
 }

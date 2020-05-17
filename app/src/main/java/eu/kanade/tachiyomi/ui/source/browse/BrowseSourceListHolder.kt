@@ -2,15 +2,16 @@ package eu.kanade.tachiyomi.ui.source.browse
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import coil.Coil
+import coil.api.clear
+import coil.request.LoadRequest
+import coil.transform.RoundedCornersTransformation
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.system.getResourceColor
-import eu.kanade.tachiyomi.widget.StateImageViewTarget
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_list_item.*
 
 /**
@@ -42,17 +43,14 @@ class BrowseSourceListHolder(private val view: View, adapter: FlexibleAdapter<IF
     }
 
     override fun setImage(manga: Manga) {
-        if (manga.thumbnail_url.isNullOrEmpty()) {
-            GlideApp.with(view.context).clear(contentView)
+        // Update the cover.
+        if (manga.thumbnail_url == null) {
+            cover_thumbnail.clear()
         } else {
-            GlideApp.with(view.context)
-                .load(manga)
-                .diskCacheStrategy(DiskCacheStrategy.DATA)
-                .dontAnimate()
-                .centerCrop()
-                .placeholder(android.R.color.transparent)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(StateImageViewTarget(cover_thumbnail, progress))
+            val id = manga.id ?: return
+            val request = LoadRequest.Builder(view.context).data(manga).target(CoverViewTarget(cover_thumbnail))
+                .transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f)).build()
+            Coil.imageLoader(view.context).execute(request)
         }
     }
 }

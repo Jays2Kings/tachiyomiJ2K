@@ -2,11 +2,13 @@ package eu.kanade.tachiyomi.ui.reader
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import com.bumptech.glide.load.engine.DiskCacheStrategy
+import coil.Coil
+import coil.request.CachePolicy
+import coil.request.LoadRequest
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.data.notification.NotificationHandler
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.data.notification.Notifications
@@ -36,19 +38,19 @@ class SaveImageNotifier(private val context: Context) {
      * @param file image file containing downloaded page image.
      */
     fun onComplete(file: File) {
-        val bitmap = GlideApp.with(context)
-            .asBitmap()
-            .load(file)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .skipMemoryCache(true)
-            .submit(720, 1280)
-            .get()
 
-        if (bitmap != null) {
-            showCompleteNotification(file, bitmap)
-        } else {
-            onError(null)
-        }
+        val request = LoadRequest.Builder(context).memoryCachePolicy(CachePolicy.DISABLED).diskCachePolicy(CachePolicy.DISABLED)
+            .data(file)
+            .size(720, 1280)
+            .target(onSuccess = {
+                val bitmap = (it as BitmapDrawable).bitmap
+                if (bitmap != null) {
+                    showCompleteNotification(file, bitmap)
+                } else {
+                    onError(null)
+                }
+            }).build()
+        Coil.imageLoader(context).execute(request)
     }
 
     private fun showCompleteNotification(file: File, image: Bitmap) {

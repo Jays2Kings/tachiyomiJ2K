@@ -4,15 +4,12 @@ import android.app.Dialog
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import coil.api.loadAny
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
 import kotlinx.android.synthetic.main.edit_manga_dialog.view.*
@@ -60,13 +57,7 @@ class EditMangaDialog : DialogController {
     }
 
     fun onViewCreated(view: View) {
-        GlideApp.with(view.context)
-            .asDrawable()
-            .load(manga)
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .signature(ObjectKey(MangaImpl.getLastCoverFetch(manga.id!!).toString()))
-            .dontAnimate()
-            .into(view.manga_cover)
+        view.manga_cover.loadAny(manga)
         val isLocal = manga.source == LocalSource.ID
 
         if (isLocal) {
@@ -93,7 +84,7 @@ class EditMangaDialog : DialogController {
     }
 
     fun updateCover(uri: Uri) {
-        GlideApp.with(dialogView!!.context).load(uri).into(dialogView!!.manga_cover)
+        dialogView!!.manga_cover.loadAny(uri)
         customCoverUri = uri
     }
 

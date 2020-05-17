@@ -67,14 +67,4 @@ open class MangaImpl : Manga {
         if (::url.isInitialized) return url.hashCode()
         else return (id ?: 0L).hashCode()
     }
-
-    companion object {
-        private var lastCoverFetch: HashMap<Long, Long> = hashMapOf()
-
-        fun setLastCoverFetch(id: Long, time: Long) {
-            lastCoverFetch[id] = time
-        }
-
-        fun getLastCoverFetch(id: Long) = lastCoverFetch[id] ?: 0
-    }
 }

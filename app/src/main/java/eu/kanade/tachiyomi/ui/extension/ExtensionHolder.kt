@@ -4,15 +4,18 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.View
 import androidx.core.content.ContextCompat
+import coil.api.clear
+import coil.api.load
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
+import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.extension_card_item.*
+import kotlinx.android.synthetic.main.source_global_search_controller_card_item.*
 
 class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         BaseFlexibleViewHolder(view, adapter) {
@@ -35,11 +38,12 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
             itemView.context.getString(R.string.untrusted).toUpperCase()
         }
 
-        GlideApp.with(itemView.context).clear(edit_button)
+        edit_button.clear()
+
         if (extension is Extension.Available) {
-            GlideApp.with(itemView.context)
-                    .load(extension.iconUrl)
-                    .into(edit_button)
+            edit_button.load(extension.iconUrl) {
+                target(CoverViewTarget(edit_button, progress))
+            }
         } else {
             extension.getApplicationIcon(itemView.context)?.let { edit_button.setImageDrawable(it) }
         }

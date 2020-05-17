@@ -3,9 +3,10 @@ package eu.kanade.tachiyomi.ui.recent_updates
 import android.app.Activity
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.bumptech.glide.load.engine.DiskCacheStrategy
+import coil.api.clear
+import coil.api.loadAny
+import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterHolder
 import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -71,10 +72,9 @@ class RecentChapterHolder(private val view: View, private val adapter: RecentCha
 
         // Set cover
         if ((view.context as? Activity)?.isDestroyed != true) {
-            GlideApp.with(itemView.context).clear(manga_cover)
-            if (!item.manga.thumbnail_url.isNullOrEmpty()) {
-                GlideApp.with(itemView.context).load(item.manga)
-                    .diskCacheStrategy(DiskCacheStrategy.RESOURCE).circleCrop().into(manga_cover)
+            manga_cover.clear()
+            manga_cover.loadAny(item.manga) {
+                transformations(CircleCropTransformation())
             }
         }
 

@@ -2,19 +2,19 @@ package eu.kanade.tachiyomi.ui.library
 
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
+import coil.api.clear
+import coil.api.loadAny
+import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_list_item.*
+import kotlinx.android.synthetic.main.manga_list_item.title
 import kotlinx.android.synthetic.main.manga_list_item.view.*
+import kotlinx.android.synthetic.main.recently_read_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -78,15 +78,13 @@ class LibraryListHolder(
         }
 
         // Update the cover.
-        if (item.manga.thumbnail_url == null) Glide.with(view.context).clear(cover_thumbnail)
-        else {
+        if (item.manga.thumbnail_url == null) {
+            cover_thumbnail.clear()
+        } else {
             val id = item.manga.id ?: return
-
-            GlideApp.with(view.context).load(item.manga)
-                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                .signature(ObjectKey(MangaImpl.getLastCoverFetch(id).toString()))
-                .centerCrop()
-                .into(cover_thumbnail)
+            cover_thumbnail.loadAny(item.manga) {
+                transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
+            }
         }
     }
 

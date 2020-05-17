@@ -76,8 +76,8 @@ android {
     }
 
     compileOptions {
-        setSourceCompatibility(1.8)
-        setTargetCompatibility(1.8)
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -141,6 +141,21 @@ dependencies {
     debugImplementation ("com.github.ChuckerTeam.Chucker:library:$chuckerVersion")
     releaseImplementation ("com.github.ChuckerTeam.Chucker:library-no-op:$chuckerVersion")
 
+    //hyperion
+    val hyperionVersion = "0.9.27"
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-core:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-timber:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-core:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-attr:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-build-config:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-crash:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-disk:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-geiger-counter:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-measurement:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-phoenix:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-recorder:$hyperionVersion")
+    debugImplementation("com.willowtreeapps.hyperion:hyperion-shared-preferences:$hyperionVersion")
+
     // REST
     val retrofitVersion = "2.7.2"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
@@ -184,10 +199,10 @@ dependencies {
     implementation("com.github.inorichi.injekt:injekt-core:65b0440")
 
     // Image library
-    val glideVersion = "4.11.0"
-    implementation("com.github.bumptech.glide:glide:$glideVersion")
-    implementation("com.github.bumptech.glide:okhttp3-integration:$glideVersion")
-    kapt("com.github.bumptech.glide:compiler:$glideVersion")
+    val coilVersion = "0.10.1"
+    implementation("io.coil-kt:coil:$coilVersion")
+    implementation("io.coil-kt:coil-gif:$coilVersion")
+    implementation("io.coil-kt:coil-svg:$coilVersion")
 
     // Logging
     implementation("com.jakewharton.timber:timber:4.7.1")

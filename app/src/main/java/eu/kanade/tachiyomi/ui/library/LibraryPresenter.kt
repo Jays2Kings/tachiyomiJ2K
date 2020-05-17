@@ -641,7 +641,7 @@ class LibraryPresenter(
             val mangaToDelete = mangas.distinctBy { it.id }
             mangaToDelete.forEach { manga ->
                 db.resetMangaInfo(manga).executeOnIO()
-                coverCache.deleteFromCache(manga.thumbnail_url)
+                coverCache.deleteFromCache(manga)
                 val source = sourceManager.get(manga.source) as? HttpSource
                 if (source != null)
                     downloadManager.deleteManga(manga, source)

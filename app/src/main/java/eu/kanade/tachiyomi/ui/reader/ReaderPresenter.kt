@@ -10,7 +10,6 @@ import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.History
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
@@ -536,18 +535,17 @@ class ReaderPresenter(
             .fromCallable {
                 if (manga.source == LocalSource.ID) {
                     val context = Injekt.get<Application>()
+                    coverCache.deleteFromCache(manga)
                     LocalSource.updateCover(context, manga, stream())
                     R.string.cover_updated
                     SetAsCoverResult.Success
                 } else {
-                    val thumbUrl = manga.thumbnail_url ?: throw Exception("Image url not found")
+                    manga.thumbnail_url ?: throw Exception("Image url not found")
                     if (manga.favorite) {
-                        if (!manga.hasCustomCover()) {
-                            manga.thumbnail_url = "Custom-${manga.thumbnail_url ?: manga.id!!}"
-                            db.insertManga(manga).executeAsBlocking()
-                        }
-                        coverCache.copyToCache(manga.thumbnail_url!!, stream())
-                        MangaImpl.setLastCoverFetch(manga.id!!, Date().time)
+                        coverCache.deleteFromCache(manga)
+                        manga.setCustomThumbnailUrl()
+                        db.insertManga(manga).executeAsBlocking()
+                        coverCache.copyToCache(manga, stream())
                         SetAsCoverResult.Success
                     } else {
                         SetAsCoverResult.AddToLibraryFirst

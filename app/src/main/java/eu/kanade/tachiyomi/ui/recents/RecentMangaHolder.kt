@@ -2,12 +2,9 @@ package eu.kanade.tachiyomi.ui.recents
 
 import android.app.Activity
 import android.view.View
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.signature.ObjectKey
+import coil.api.loadAny
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.database.models.MangaImpl
 import eu.kanade.tachiyomi.data.download.model.Download
-import eu.kanade.tachiyomi.data.glide.GlideApp
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterHolder
 import eu.kanade.tachiyomi.util.chapter.ChapterUtil
@@ -72,10 +69,7 @@ class RecentMangaHolder(
             )
         }
         if ((itemView.context as? Activity)?.isDestroyed != true) {
-            GlideApp.with(itemView.context).load(item.mch.manga).diskCacheStrategy(
-                DiskCacheStrategy.RESOURCE
-            ).signature(ObjectKey(MangaImpl.getLastCoverFetch(item.mch.manga.id!!).toString()))
-                .into(cover_thumbnail)
+            cover_thumbnail.loadAny(item.mch.manga)
         }
         notifyStatus(
             if (adapter.isSelected(adapterPosition)) Download.CHECKED else item.status,

@@ -284,7 +284,7 @@ open class BrowseSourcePresenter(
     }
 
     fun confirmDeletion(manga: Manga) {
-        coverCache.deleteFromCache(manga.thumbnail_url)
+        coverCache.deleteFromCache(manga)
         val downloadManager: DownloadManager = Injekt.get()
         downloadManager.deleteManga(manga, source)
         db.resetMangaInfo(manga).executeAsBlocking()
