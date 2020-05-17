@@ -524,6 +524,7 @@ class MangaDetailsController : BaseController,
         }
         adapter?.setChapters(chapters)
         addMangaHeader()
+        colorToolbar(recycler.canScrollVertically(-1))
         activity?.invalidateOptionsMenu()
     }
 
