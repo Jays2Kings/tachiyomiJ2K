@@ -19,13 +19,14 @@ interface Category : Serializable {
 
     var mangaSort: Char?
 
-    var isFirst: Boolean?
-    var isLast: Boolean?
+    var isAlone: Boolean
 
     val nameLower: String
         get() = name.toLowerCase()
 
     var isHidden: Boolean
+
+    var isDynamic: Boolean
 
     fun isAscending(): Boolean {
         return ((mangaSort?.minus('a') ?: 0) % 2) != 1
@@ -49,7 +50,7 @@ interface Category : Serializable {
         LAST_READ_ASC, LAST_READ_DSC -> R.string.last_read
         TOTAL_ASC, TOTAL_DSC -> R.string.total_chapters
         DATE_ADDED_ASC, DATE_ADDED_DSC -> R.string.date_added
-        else -> if (id == -1) R.string.category else R.string.drag_and_drop
+        else -> if (isDynamic) R.string.category else R.string.drag_and_drop
     }
 
     fun catSortingMode(): Int? = when (mangaSort) {
@@ -96,12 +97,10 @@ interface Category : Serializable {
         fun createDefault(context: Context): Category =
             create(context.getString(R.string.default_value)).apply {
                 id = 0
-                isFirst = true
             }
 
-        fun createAll(context: Context, libSort: Int, ascending: Boolean): Category =
-            create(context.getString(R.string.all)).apply {
-                id = -1
+        fun createCustom(name: String, libSort: Int, ascending: Boolean): Category =
+            create(name).apply {
                 mangaSort = when (libSort) {
                     LibrarySort.ALPHA -> ALPHA_ASC
                     LibrarySort.LATEST_CHAPTER -> UPDATED_ASC
@@ -113,11 +112,15 @@ interface Category : Serializable {
                     else -> DRAG_AND_DROP
                 }
                 if (mangaSort != DRAG_AND_DROP && !ascending) {
-                    mangaSort?.plus(1)
+                    mangaSort = mangaSort?.plus(1)
                 }
+                isDynamic = true
+            }
+
+        fun createAll(context: Context, libSort: Int, ascending: Boolean): Category =
+            createCustom(context.getString(R.string.all), libSort, ascending).apply {
+                id = -1
                 order = -1
-                isFirst = true
-                isLast = true
             }
     }
 }

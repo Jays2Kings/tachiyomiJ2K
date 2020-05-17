@@ -143,7 +143,7 @@ class LibraryHeaderItem(
             }
             val category = item.category
 
-            if (category.isFirst == true && category.isLast == true) sectionText.text = ""
+            if (category.isAlone) sectionText.text = ""
             else sectionText.text = category.name
             sortText.text = itemView.context.getString(
                 R.string.sort_by_, itemView.context.getString(category.sortRes())
@@ -165,14 +165,15 @@ class LibraryHeaderItem(
             when {
                 adapter.mode == SelectableAdapter.Mode.MULTI -> {
                     checkboxImage.visibleIf(!category.isHidden)
-                    expandImage.visibleIf(category.isHidden && !adapter.isSingleCategory)
+                    expandImage.visibleIf(category.isHidden && !adapter.isSingleCategory && !category.isDynamic)
                     updateButton.gone()
                     catProgress.gone()
                     setSelection()
                 }
-                category.id == -1 -> {
+                category.isDynamic -> {
                     expandImage.gone()
                     checkboxImage.gone()
+                    catProgress.gone()
                     updateButton.gone()
                 }
                 LibraryUpdateService.categoryInQueue(category.id) -> {
@@ -185,7 +186,7 @@ class LibraryHeaderItem(
                     expandImage.visibleIf(!adapter.isSingleCategory)
                     catProgress.gone()
                     checkboxImage.gone()
-                    updateButton.visibleIf(category.id ?: 0 > -1 && !adapter.isSingleCategory)
+                    updateButton.visibleIf(!adapter.isSingleCategory)
                 }
             }
         }

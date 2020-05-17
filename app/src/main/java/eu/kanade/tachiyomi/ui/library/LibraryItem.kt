@@ -35,7 +35,6 @@ class LibraryItem(
 
     var downloadCount = -1
     var unreadType = 2
-    var chapterCount = -1
 
     private val uniformSize: Boolean
         get() = preferences.uniformGrid().getOrDefault()

@@ -3,10 +3,15 @@ package eu.kanade.tachiyomi.data.database.models
 class LibraryManga : MangaImpl() {
 
     var unread: Int = 0
+    var read: Int = 0
 
     var category: Int = 0
 
-    var hasRead: Boolean = false
+    val totalChapters
+        get() = read + unread
+
+    val hasRead
+        get() = read > 0
 
     companion object {
         fun createBlank(categoryId: Int): LibraryManga = LibraryManga().apply {

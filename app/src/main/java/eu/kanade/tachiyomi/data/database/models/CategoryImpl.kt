@@ -14,11 +14,11 @@ class CategoryImpl : Category {
 
     override var mangaSort: Char? = null
 
-    override var isFirst: Boolean? = null
-
-    override var isLast: Boolean? = null
+    override var isAlone: Boolean = false
 
     override var isHidden: Boolean = false
+
+    override var isDynamic: Boolean = false
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

@@ -155,7 +155,7 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
                         else recyclerView.context.getString(R.string.read)
                     }
                     LibrarySort.TOTAL -> {
-                        val total = item.chapterCount
+                        val total = item.manga.totalChapters
                         if (total > 0) recyclerView.resources.getQuantityString(
                             R.plurals.chapters, total, total
                         )

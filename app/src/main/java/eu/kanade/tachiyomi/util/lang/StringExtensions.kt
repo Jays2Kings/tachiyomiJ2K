@@ -14,7 +14,12 @@ fun String.chop(count: Int, replacement: String = "..."): String {
 }
 
 fun String.removeArticles(): String {
-    return this.replace(Regex("^(an|a|the) ", RegexOption.IGNORE_CASE), "")
+    return when {
+        startsWith("a ", true) -> substring(2)
+        startsWith("an ", true) -> substring(3)
+        startsWith("the ", true) -> substring(4)
+        else -> this
+    }
 }
 
 /**
