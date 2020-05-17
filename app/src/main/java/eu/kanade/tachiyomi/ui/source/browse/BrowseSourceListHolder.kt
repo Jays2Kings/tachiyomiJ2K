@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.Coil
 import coil.api.clear
 import coil.request.LoadRequest
-import coil.transform.RoundedCornersTransformation
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
@@ -48,8 +47,8 @@ class BrowseSourceListHolder(private val view: View, adapter: FlexibleAdapter<IF
             cover_thumbnail.clear()
         } else {
             val id = manga.id ?: return
-            val request = LoadRequest.Builder(view.context).data(manga).target(CoverViewTarget(cover_thumbnail))
-                .transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f)).build()
+            val request = LoadRequest.Builder(view.context).data(manga)
+                .target(CoverViewTarget(cover_thumbnail)).build()
             Coil.imageLoader(view.context).execute(request)
         }
     }

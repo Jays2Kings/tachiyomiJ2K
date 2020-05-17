@@ -4,7 +4,6 @@ import android.view.View
 import android.view.ViewGroup
 import coil.api.clear
 import coil.api.loadAny
-import coil.transform.RoundedCornersTransformation
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.gone
@@ -12,9 +11,7 @@ import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_list_item.*
-import kotlinx.android.synthetic.main.manga_list_item.title
 import kotlinx.android.synthetic.main.manga_list_item.view.*
-import kotlinx.android.synthetic.main.recently_read_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -82,9 +79,7 @@ class LibraryListHolder(
             cover_thumbnail.clear()
         } else {
             val id = item.manga.id ?: return
-            cover_thumbnail.loadAny(item.manga) {
-                transformations(RoundedCornersTransformation(2f, 2f, 2f, 2f))
-            }
+            cover_thumbnail.loadAny(item.manga)
         }
     }
 

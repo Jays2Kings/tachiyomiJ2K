@@ -748,7 +748,6 @@ class MangaDetailsPresenter(
     fun forceUpdateCovers(deleteCache: Boolean = true) {
         if (deleteCache) coverCache.deleteFromCache(manga)
         controller.setPaletteColor()
-        controller.resetCovers()
     }
 
     fun editCoverWithStream(uri: Uri): Boolean {

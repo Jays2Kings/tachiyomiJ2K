@@ -13,8 +13,6 @@ import eu.kanade.tachiyomi.ui.library.LibraryCategoryAdapter
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.widget.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_grid_item.*
-import kotlinx.android.synthetic.main.manga_grid_item.cover_thumbnail
-import kotlinx.android.synthetic.main.manga_grid_item.title
 import kotlinx.android.synthetic.main.unread_download_badge.*
 
 /**
@@ -63,7 +61,8 @@ class BrowseSourceGridHolder(
             cover_thumbnail.clear()
         } else {
             val id = manga.id ?: return
-            val request = LoadRequest.Builder(view.context).data(manga).target(CoverViewTarget(cover_thumbnail, progress)).build()
+            val request = LoadRequest.Builder(view.context).data(manga)
+                .target(CoverViewTarget(cover_thumbnail, progress)).build()
             Coil.imageLoader(view.context).execute(request)
         }
     }

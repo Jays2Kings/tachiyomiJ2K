@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
-import coil.api.clear
 import coil.api.loadAny
+import coil.request.CachePolicy
 import com.google.android.material.button.MaterialButton
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
@@ -308,12 +308,19 @@ class MangaHeaderHolder(
         }
     }
 
-    fun updateCover(manga: Manga, forceUpdate: Boolean = false) {
-        if (!isCached(manga) && !forceUpdate) return
-        manga_cover.clear()
-        backdrop.clear()
-        manga_cover.loadAny(manga)
-        backdrop.loadAny(manga)
+    fun updateCover(manga: Manga) {
+        if (!manga.initialized) return
+        val drawable = adapter.controller.manga_cover_full?.drawable
+        manga_cover.loadAny(manga, builder = {
+            placeholder(drawable)
+            error(drawable)
+            if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
+        })
+        backdrop.loadAny(manga, builder = {
+            placeholder(drawable)
+            error(drawable)
+            if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
+        })
     }
 
     private fun isCached(manga: Manga): Boolean {

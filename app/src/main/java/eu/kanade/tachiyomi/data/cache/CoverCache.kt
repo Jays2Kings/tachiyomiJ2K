@@ -13,7 +13,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.Cache
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.io.File
@@ -35,8 +34,6 @@ class CoverCache(val context: Context) {
      */
     private val cacheDir = context.getExternalFilesDir("covers")
         ?: File(context.filesDir, "covers").also { it.mkdirs() }
-
-    val cache = Cache(cacheDir, 300 * 1024 * 1024) // 300MB
 
     fun getChapterCacheSize(): String {
         return Formatter.formatFileSize(context, DiskUtil.getDirectorySize(cacheDir))

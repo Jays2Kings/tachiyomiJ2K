@@ -39,8 +39,6 @@ import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
 import coil.Coil
-import coil.api.clear
-import coil.api.loadAny
 import coil.request.LoadRequest
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.checkbox.checkBoxPrompt
@@ -308,7 +306,6 @@ class MangaDetailsController : BaseController,
     /** Get the color of the manga cover*/
     fun setPaletteColor() {
         val view = view ?: return
-        coverColor = null
 
         val request = LoadRequest.Builder(view.context).data(manga).allowHardware(false)
             .target { drawable ->
@@ -330,14 +327,10 @@ class MangaDetailsController : BaseController,
                         activity?.window?.statusBarColor = translucentColor
                     }
                 }
+                manga_cover_full.setImageDrawable(drawable)
+                getHeader()?.updateCover(manga!!)
             }.build()
         Coil.imageLoader(view.context).execute(request)
-    }
-
-    fun resetCovers() {
-        manga_cover_full.clear()
-        manga_cover_full.loadAny(manga)
-        getHeader()?.updateCover(manga!!, true)
     }
 
     /** Set toolbar theme for themes that are inverted (ie. light blue theme) */
@@ -1258,7 +1251,6 @@ class MangaDetailsController : BaseController,
         currentAnimator?.cancel()
 
         // Load the high-resolution "zoomed-in" image.
-        manga_cover_full?.loadAny(manga)
         val expandedImageView = manga_cover_full ?: return
         val fullBackdrop = full_backdrop
 

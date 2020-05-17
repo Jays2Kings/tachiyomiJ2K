@@ -21,7 +21,6 @@ class ByteArrayFetcher : Fetcher<ByteArray> {
         size: Size,
         options: Options
     ): FetchResult {
-        val source = ByteArrayInputStream(data).source().buffer()
         return SourceResult(
             source = ByteArrayInputStream(data).source().buffer(),
             mimeType = "image/gif",
