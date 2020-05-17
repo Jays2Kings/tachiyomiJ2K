@@ -117,11 +117,7 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         val db: DatabaseHelper by injectLazy()
         if (position == itemCount - 1) return recyclerView.context.getString(R.string.bottom)
         return when (val item: IFlexible<*>? = getItem(position)) {
-            is LibraryHeaderItem -> if (!preferences.hideCategories().getOrDefault()) {
-                item.category.name
-            } else {
-                recyclerView.context.getString(R.string.top)
-            }
+            is LibraryHeaderItem -> item.category.name
             is LibraryItem -> {
                 val text = if (item.manga.isBlank()) return item.header?.category?.name.orEmpty()
                 else when (getSort(position)) {
@@ -198,21 +194,12 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         }
     }
 
-    private fun getSort(position: Int? = null): Int {
-        val preferences: PreferencesHelper by injectLazy()
-        return if (position != null) {
-            val header = (getItem(position) as? LibraryItem)?.header
-            if (header != null) {
-                header.category.sortingMode() ?: LibrarySort.DRAG_AND_DROP
-            } else {
-                LibrarySort.DRAG_AND_DROP
-            }
-        } else if (!preferences.showAllCategories().get() && !preferences.hideCategories()
-                .getOrDefault()
-        ) {
-            controller.presenter.getCurrentCategory()?.sortingMode() ?: LibrarySort.DRAG_AND_DROP
+    private fun getSort(position: Int): Int {
+        val header = (getItem(position) as? LibraryItem)?.header
+        return if (header != null) {
+            header.category.sortingMode() ?: LibrarySort.DRAG_AND_DROP
         } else {
-            preferences.librarySortingMode().getOrDefault()
+            LibrarySort.DRAG_AND_DROP
         }
     }
 

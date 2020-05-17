@@ -195,8 +195,6 @@ class PreferencesHelper(val context: Context) {
 
     fun filterMangaType() = rxPrefs.getInteger(Keys.filterMangaType, 0)
 
-    fun hideCategories() = rxPrefs.getBoolean("hide_categories", false)
-
     fun librarySortingMode() = rxPrefs.getInteger(Keys.librarySortingMode, 0)
 
     fun librarySortingAscending() = rxPrefs.getBoolean("library_sorting_ascending", true)

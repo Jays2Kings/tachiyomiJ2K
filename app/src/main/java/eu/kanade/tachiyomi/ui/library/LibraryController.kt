@@ -56,6 +56,7 @@ import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_SOURCE
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_STATUS
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TAG
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TRACK_STATUS
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.UNGROUPED
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet
 import eu.kanade.tachiyomi.ui.main.BottomSheetController
 import eu.kanade.tachiyomi.ui.main.MainActivity
@@ -435,6 +436,9 @@ class LibraryController(
                     if (presenter.isLoggedIntoTracking) {
                         groupItems.add(BY_TRACK_STATUS)
                     }
+                    if (presenter.allCategories.size > 1) {
+                        groupItems.add(UNGROUPED)
+                    }
                     val items = groupItems.map { id ->
                         MaterialMenuSheet.MenuSheetItem(
                             id,
@@ -691,9 +695,7 @@ class LibraryController(
         }
         category_hopper_frame.visibleIf(!singleCategory && !preferences.hideHopper().get())
         filter_bottom_sheet.updateButtons(
-            showHideCategories = presenter.allCategories.size > 1,
-            showExpand = !singleCategory && presenter.showAllCategories,
-            groupType = presenter.groupType
+            showExpand = !singleCategory && presenter.showAllCategories, groupType = presenter.groupType
         )
         adapter.isLongPressDragEnabled = canDrag()
         category_recycler.setCategories(presenter.categories)
@@ -946,8 +948,7 @@ class LibraryController(
 
     override fun canDrag(): Boolean {
         filter_bottom_sheet ?: return false
-        val filterOff =
-            !filter_bottom_sheet.hasActiveFilters() && !preferences.hideCategories().getOrDefault()
+        val filterOff = !filter_bottom_sheet.hasActiveFilters() && presenter.groupType == BY_DEFAULT
         return filterOff && adapter.mode != SelectableAdapter.Mode.MULTI
     }
 

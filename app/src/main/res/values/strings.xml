@@ -84,7 +84,6 @@
     <string name="rename_category">Rename category</string>
     <string name="move_to_categories">Move to categories</string>
     <string name="add_to_categories">Choose which categories to add this to.  If none are selected, this will be added to the "default" category</string>
-    <string name="hide_categories">Hide categories</string>
     <plurals name="category">
         <item quantity="one">%d category</item>
         <item quantity="other">%d categories</item>
@@ -124,6 +123,8 @@
     <string name="read_progress">Read progress</string>
     <string name="series_type">Series type</string>
     <string name="group_library_by">Group library by…</string>
+    <string name="tracking_status">Tracking status</string>
+    <string name="ungrouped">Ungrouped</string>
 
     <!-- Library Sort -->
     <string name="sort_by">Sort by</string>

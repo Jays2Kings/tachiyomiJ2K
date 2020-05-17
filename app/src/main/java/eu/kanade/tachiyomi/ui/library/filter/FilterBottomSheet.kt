@@ -28,7 +28,6 @@ import eu.kanade.tachiyomi.util.view.hide
 import eu.kanade.tachiyomi.util.view.inflate
 import eu.kanade.tachiyomi.util.view.isExpanded
 import eu.kanade.tachiyomi.util.view.isHidden
-import eu.kanade.tachiyomi.util.view.isVisible
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.filter_bottom_sheet.view.*
@@ -221,11 +220,6 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
     }
 
     private fun createTags() {
-        hide_categories.isChecked = preferences.hideCategories().getOrDefault()
-        hide_categories.setOnCheckedChangeListener { _, isChecked ->
-            preferences.hideCategories().set(isChecked)
-            onGroupClicked(ACTION_REFRESH)
-        }
 
         downloaded = inflate(R.layout.filter_buttons) as FilterTagGroup
         downloaded.setup(this, R.string.downloaded, R.string.not_downloaded)
@@ -276,7 +270,6 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                 }
             }
             withContext(Dispatchers.Main) {
-                hide_categories.visibleIf(showCategoriesCheckBox)
                 downloaded.setState(preferences.filterDownloaded())
                 completed.setState(preferences.filterCompleted())
                 val unreadP = preferences.filterUnread().getOrDefault()
@@ -434,12 +427,8 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         }
     }
 
-    fun updateButtons(showHideCategories: Boolean, showExpand: Boolean, groupType: Int) {
-        hide_categories.visibleIf(showHideCategories)
+    fun updateButtons(showExpand: Boolean, groupType: Int) {
         expand_categories.visibleIf(showExpand && groupType == 0)
-        first_layout.visibleIf(
-            hide_categories.isVisible() || expand_categories.isVisible() || !second_layout.isVisible()
-        )
         group_by.setIconResource(LibraryGroup.groupTypeDrawableRes(groupType))
     }
 
