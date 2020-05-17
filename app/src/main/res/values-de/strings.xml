@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
+																	  
+																		
 
     <!-- Models -->
     <string name="name">Name</string>
@@ -79,7 +79,7 @@
     <string name="already_in_category">Manga ist schon in dieser Kategorie</string>
     <string name="add_categories">Kategorien hinzufügen</string>
     <string name="edit_categories">Kategorien bearbeiten</string>
-    <string name="rename_category">Kategorie verwalten</string>
+    <string name="manage_category">Kategorie verwalten</string>
     <string name="rename_category">Kategorie umbenennen</string>
     <string name="move_to_categories">Zu Kategorien hinzufügen</string>
     <string name="add_to_categories">Kategorie wählen in welche hinzugefügt wird. Wenn nichts ausgewählt wird, wird die Standardkategorie genutzt.</string>
@@ -172,8 +172,8 @@
     <string name="library_update_restriction">Bibliotheksaktualisierung einschränken</string>
     <string name="library_update_restriction_summary">Nur wenn folgende Bedingungen eintreffen aktualisieren</string>
     <string name="only_update_ongoing">Nur fortlaufende Manga aktualisieren</string>
-    <string name="sort_by_ignoring_articles">Artikel beim Sortieren ignorieren</string>
-    <string name="when_sorting_ignore_articles">Wenn alphabetisch sortiert wird, dann werden Artikel (a, an, the) am Anfang des Mangatitels ignoriert</string>
+    <string name="sort_by_ignoring_articles">Englische Artikel beim Sortieren ignorieren</string>
+    <string name="when_sorting_ignore_articles">Wenn alphabetisch sortiert wird, dann werden englische Artikel (a, an, the) am Anfang des Mangatitels ignoriert</string>
     <string name="use_last_saved_migration_preferences">Zuletzt gespeicherte Vor-Migrierungseinstellungen und Quellen nutzen für Massenmigrierung</string>
     <string name="categories_to_include_in_global_update">Einzuschließende Kategorien in globaler Aktualisierung</string>
     <string name="include_in_global_update">In globaler Aktualisierung einschließen</string>
