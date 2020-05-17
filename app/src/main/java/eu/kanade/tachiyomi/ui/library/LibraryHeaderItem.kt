@@ -19,6 +19,8 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.source.SourceManager
+import eu.kanade.tachiyomi.source.icon
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -30,12 +32,15 @@ import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.library_category_header_item.*
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
+import uy.kohesive.injekt.injectLazy
 
 class LibraryHeaderItem(
     private val categoryF: (Int) -> Category,
-    private val catId: Int
+    val catId: Int
 ) :
     AbstractHeaderItem<LibraryHeaderItem.Holder>() {
+
+    private val sourceManager by injectLazy<SourceManager>()
 
     override fun getLayoutRes(): Int {
         return R.layout.library_category_header_item
@@ -139,6 +144,13 @@ class LibraryHeaderItem(
 
             if (category.isAlone) sectionText.text = ""
             else sectionText.text = category.name
+            if (category.sourceId != null) {
+                val icon = item.sourceManager.get(category.sourceId!!)?.icon()
+                icon?.setBounds(0, 0, 32.dpToPx, 32.dpToPx)
+                sectionText.setCompoundDrawablesRelative(icon, null, null, null)
+            } else {
+                sectionText.setCompoundDrawablesRelative(null, null, null, null)
+            }
 
             val isAscending = category.isAscending()
             val sortingMode = category.sortingMode()

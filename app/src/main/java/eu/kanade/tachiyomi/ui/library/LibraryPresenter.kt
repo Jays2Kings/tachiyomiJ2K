@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.ui.library
 
+import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
@@ -15,6 +16,10 @@ import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_DEFAULT
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_SOURCE
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TAG
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TRACK_STATUS
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet.Companion.STATE_EXCLUDE
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet.Companion.STATE_IGNORE
@@ -29,7 +34,6 @@ import kotlinx.coroutines.withContext
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.util.ArrayList
-import java.util.Collections
 import java.util.Comparator
 
 /**
@@ -49,6 +53,11 @@ class LibraryPresenter(
     private val context = preferences.context
 
     private val loggedServices by lazy { Injekt.get<TrackManager>().services.filter { it.isLogged } }
+
+    var groupType = preferences.groupLibraryBy().get()
+
+    val isLoggedIntoTracking
+        get() = loggedServices.isNotEmpty()
 
     /** Current categories of the library. */
     var categories: List<Category> = emptyList()
@@ -422,69 +431,163 @@ class LibraryPresenter(
         val categories = db.getCategories().executeAsBlocking().toMutableList()
         val showCategories = !preferences.hideCategories().getOrDefault()
         var libraryManga = db.getLibraryMangas().executeAsBlocking()
-        val showAll = showAllCategories
-        if (!showCategories) libraryManga = libraryManga.distinctBy { it.id }
-        val categoryAll = Category.createAll(
-            context,
-            preferences.librarySortingMode().getOrDefault(),
-            preferences.librarySortingAscending().getOrDefault()
-        )
-        val catItemAll = LibraryHeaderItem({ categoryAll }, -1)
-        val categorySet = mutableSetOf<Int>()
-        val headerItems = (categories.mapNotNull { category ->
-            val id = category.id
-            if (id == null) null
-            else id to LibraryHeaderItem({ getCategory(id) }, id)
-        } + (-1 to catItemAll) + (0 to LibraryHeaderItem({ getCategory(0) }, 0))).toMap()
-        val items = libraryManga.mapNotNull {
-            val headerItem = (if (!showCategories) catItemAll
-            else headerItems[it.category]) ?: return@mapNotNull null
-            categorySet.add(it.category)
-            LibraryItem(it, headerItem)
-        }.toMutableList()
-
-        val categoriesHidden = preferences.collapsedCategories().getOrDefault().mapNotNull {
-            it.toIntOrNull()
-        }.toMutableSet()
-
-        if (categorySet.contains(0)) categories.add(0, createDefaultCategory())
-        if (showCategories) {
-            categories.forEach { category ->
-                val catId = category.id ?: return@forEach
-                if (catId > 0 && !categorySet.contains(catId) &&
-                    (catId !in categoriesHidden || !showAll)) {
-                    val headerItem = headerItems[catId]
-                    if (headerItem != null) items.add(
-                        LibraryItem(LibraryManga.createBlank(catId), headerItem)
-                    )
-                } else if (catId in categoriesHidden && showAll && categories.size > 1) {
-                    val mangaToRemove = items.filter { it.manga.category == catId }
-                    val mergedTitle = mangaToRemove.joinToString("-") {
-                        it.manga.title + "-" + it.manga.author
-                    }
-                    sectionedLibraryItems[catId] = mangaToRemove
-                    items.removeAll(mangaToRemove)
-                    val headerItem = headerItems[catId]
-                    if (headerItem != null) items.add(
-                        LibraryItem(LibraryManga.createHide(catId, mergedTitle), headerItem)
-                    )
-                }
-            }
+        if (groupType <= BY_DEFAULT || !showCategories) {
+            libraryManga = libraryManga.distinctBy { it.id }
         }
 
-        categories.forEach {
-            it.isHidden = it.id in categoriesHidden && showAll
+        val items = if (groupType <= BY_DEFAULT || !showCategories) {
+            val categoryAll = Category.createAll(
+                context,
+                preferences.librarySortingMode().getOrDefault(),
+                preferences.librarySortingAscending().getOrDefault()
+            )
+            val catItemAll = LibraryHeaderItem({ categoryAll }, -1)
+            val categorySet = mutableSetOf<Int>()
+            val headerItems = (categories.mapNotNull { category ->
+                val id = category.id
+                if (id == null) null
+                else id to LibraryHeaderItem({ getCategory(id) }, id)
+            } + (-1 to catItemAll) + (0 to LibraryHeaderItem({ getCategory(0) }, 0))).toMap()
+
+            val items = libraryManga.mapNotNull {
+                val headerItem = (if (!showCategories) catItemAll
+                else headerItems[it.category]) ?: return@mapNotNull null
+                categorySet.add(it.category)
+                LibraryItem(it, headerItem)
+            }.toMutableList()
+
+            val categoriesHidden = preferences.collapsedCategories().getOrDefault().mapNotNull {
+                it.toIntOrNull()
+            }.toMutableSet()
+
+            if (categorySet.contains(0)) categories.add(0, createDefaultCategory())
+            if (showCategories) {
+                categories.forEach { category ->
+                    val catId = category.id ?: return@forEach
+                    if (catId > 0 && !categorySet.contains(catId) && (catId !in categoriesHidden ||
+                            !showCategories)) {
+                        val headerItem = headerItems[catId]
+                        if (headerItem != null) items.add(
+                            LibraryItem(LibraryManga.createBlank(catId), headerItem)
+                        )
+                    } else if (catId in categoriesHidden && showCategories && categories.size > 1) {
+                        val mangaToRemove = items.filter { it.manga.category == catId }
+                        val mergedTitle = mangaToRemove.joinToString("-") {
+                            it.manga.title + "-" + it.manga.author
+                        }
+                        sectionedLibraryItems[catId] = mangaToRemove
+                        items.removeAll(mangaToRemove)
+                        val headerItem = headerItems[catId]
+                        if (headerItem != null) items.add(
+                            LibraryItem(LibraryManga.createHide(catId, mergedTitle), headerItem)
+                        )
+                    }
+                }
+            }
+
+            categories.forEach {
+                it.isHidden = it.id in categoriesHidden && showCategories
+            }
+            this.categories = if (!showCategories) {
+                arrayListOf(categoryAll)
+            } else {
+                categories
+            }
+
+            items
+        } else {
+            val (items, categories) = getCustomMangaItems(libraryManga)
+            this.categories = categories
+            items
         }
 
         this.allCategories = categories
-        this.categories = if (!showCategories) arrayListOf(categoryAll)
-        else categories
 
         hashCategories = HashMap(this.categories.mapNotNull {
             it.id!! to it
         }.toMap())
 
         return items
+    }
+
+    private fun getCustomMangaItems(libraryManga: List<LibraryManga>): Pair<List<LibraryItem>,
+        List<Category>> {
+        val tagItems: MutableMap<String, LibraryHeaderItem> = mutableMapOf()
+
+        // internal function to make headers
+        fun makeOrGetHeader(name: String): LibraryHeaderItem {
+            return if (tagItems.containsKey(name)) {
+                tagItems[name]!!
+            } else {
+                val headerItem = LibraryHeaderItem({ getCategory(it) }, tagItems.count())
+                tagItems[name] = headerItem
+                headerItem
+            }
+        }
+
+        val items = libraryManga.mapNotNull { manga ->
+            when (groupType) {
+                BY_TAG -> {
+                    val tags = if (manga.genre.isNullOrBlank()) {
+                        listOf("Unknown")
+                    } else {
+                        manga.genre?.split(",")?.mapNotNull {
+                            val tag = it.trim()
+                            if (tag.isBlank()) null else tag
+                        } ?: listOf("Unknown")
+                    }
+                    tags.map {
+                        LibraryItem(manga, makeOrGetHeader(it))
+                    }
+                }
+                BY_TRACK_STATUS -> {
+                    val status: String = {
+                        val tracks = db.getTracks(manga).executeAsBlocking()
+                        val track = tracks.find { track ->
+                            loggedServices.any { it.id == track?.sync_id }
+                        }
+                        if (track != null) {
+                            loggedServices.find { it.id == track.sync_id }?.getStatus(track.status)
+                                ?: context.getString(R.string.unknown)
+                        } else {
+                            context.getString(R.string.not_tracked)
+                        }
+                    }()
+                    listOf(LibraryItem(manga, makeOrGetHeader(status)))
+                }
+                BY_SOURCE -> {
+                    val source = sourceManager.getOrStub(manga.source)
+                    listOf(LibraryItem(manga, makeOrGetHeader("${source.name}◘•◘${source.id}")))
+                }
+                else -> listOf(LibraryItem(manga, makeOrGetHeader(mapStatus(manga.status))))
+            }
+        }.flatten()
+
+        val headers = tagItems.map { item ->
+            Category.createCustom(
+                item.key,
+                preferences.librarySortingMode().getOrDefault(),
+                preferences.librarySortingAscending().getOrDefault()
+            ).apply {
+                id = item.value.catId
+                if (name.contains("◘•◘")) {
+                    val split = name.split("◘•◘")
+                    name = split.first()
+                    sourceId = split.last().toLongOrNull()
+                }
+            }
+        }.sortedBy { it.name }
+        headers.forEachIndexed { index, category -> category.order = index }
+        return items to headers
+    }
+
+    private fun mapStatus(status: Int): String {
+        return context.getString(when (status) {
+            SManga.LICENSED -> R.string.licensed
+            SManga.ONGOING -> R.string.ongoing
+            SManga.COMPLETED -> R.string.completed
+            else -> R.string.unknown
+        })
     }
 
     /** Create a default category with the sort set */
@@ -632,6 +735,9 @@ class LibraryPresenter(
             val sort = category.sortingMode() ?: LibrarySort.ALPHA
             preferences.librarySortingMode().set(sort)
             preferences.librarySortingAscending().set(category.isAscending())
+            categories.forEach {
+                it.mangaSort = category.mangaSort
+            }
         } else if (catId >= 0) {
             if (category.id == 0) preferences.defaultMangaOrder().set(category.mangaSort.toString())
             else Injekt.get<DatabaseHelper>().insertCategory(category).executeAsBlocking()

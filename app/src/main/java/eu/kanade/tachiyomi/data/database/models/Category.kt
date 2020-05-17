@@ -28,6 +28,8 @@ interface Category : Serializable {
 
     var isDynamic: Boolean
 
+    var sourceId: Long?
+
     fun isAscending(): Boolean {
         return ((mangaSort?.minus('a') ?: 0) % 2) != 1
     }

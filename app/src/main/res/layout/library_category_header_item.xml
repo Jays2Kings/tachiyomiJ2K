@@ -70,6 +70,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/square_ripple"
+        android:drawablePadding="6dp"
         android:ellipsize="end"
         android:gravity="center|start"
         android:inputType="none"

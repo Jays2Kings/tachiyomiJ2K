@@ -51,6 +51,11 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.category.ManageCategoryDialog
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_DEFAULT
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_SOURCE
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_STATUS
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TAG
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_TRACK_STATUS
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet
 import eu.kanade.tachiyomi.ui.main.BottomSheetController
 import eu.kanade.tachiyomi.ui.main.MainActivity
@@ -379,7 +384,7 @@ class LibraryController(
             swipe_refresh.isRefreshing = false
             if (!LibraryUpdateService.isRunning()) {
                 when {
-                    !presenter.showAllCategories -> {
+                    !presenter.showAllCategories || presenter.groupType != BY_DEFAULT -> {
                         presenter.categories.find { it.id == presenter.currentCategory }?.let {
                             updateLibrary(it)
                         }
@@ -425,6 +430,31 @@ class LibraryController(
                 FilterBottomSheet.ACTION_HIDE_FILTER_TIP -> showFilterTip()
                 FilterBottomSheet.ACTION_DISPLAY -> DisplayBottomSheet(this).show()
                 FilterBottomSheet.ACTION_EXPAND_COLLAPSE_ALL -> presenter.toggleAllCategoryVisibility()
+                FilterBottomSheet.ACTION_GROUP_BY -> {
+                    val groupItems = mutableListOf(BY_DEFAULT, BY_TAG, BY_SOURCE, BY_STATUS)
+                    if (presenter.isLoggedIntoTracking) {
+                        groupItems.add(BY_TRACK_STATUS)
+                    }
+                    val items = groupItems.map { id ->
+                        MaterialMenuSheet.MenuSheetItem(
+                            id,
+                            LibraryGroup.groupTypeDrawableRes(id),
+                            LibraryGroup.groupTypeStringRes(id)
+                        )
+                    }
+                    MaterialMenuSheet(
+                        activity!!,
+                        items,
+                        activity!!.getString(R.string.group_library_by),
+                        presenter.groupType
+                    ) { _, item ->
+                        preferences.groupLibraryBy().set(item)
+                        presenter.groupType = item
+                        recycler?.scrollToPosition(0)
+                        presenter.getLibrary()
+                        true
+                    }.show()
+                }
             }
         }
 
@@ -662,7 +692,8 @@ class LibraryController(
         category_hopper_frame.visibleIf(!singleCategory && !preferences.hideHopper().get())
         filter_bottom_sheet.updateButtons(
             showHideCategories = presenter.allCategories.size > 1,
-            showExpand = !singleCategory && presenter.showAllCategories
+            showExpand = !singleCategory && presenter.showAllCategories,
+            groupType = presenter.groupType
         )
         adapter.isLongPressDragEnabled = canDrag()
         category_recycler.setCategories(presenter.categories)

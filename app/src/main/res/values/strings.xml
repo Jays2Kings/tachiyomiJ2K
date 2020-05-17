@@ -123,6 +123,7 @@
 
     <string name="read_progress">Read progress</string>
     <string name="series_type">Series type</string>
+    <string name="group_library_by">Group library by…</string>
 
     <!-- Library Sort -->
     <string name="sort_by">Sort by</string>
@@ -713,6 +714,7 @@
     <string name="sort_and_filter">Sort &amp; Filter</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="tag">Tag</string>
     <string name="top">Top</string>
     <string name="undo">Undo</string>
     <string name="unknown_error">Unknown error</string>

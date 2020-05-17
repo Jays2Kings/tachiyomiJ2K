@@ -20,6 +20,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.data.track.TrackManager
+import eu.kanade.tachiyomi.ui.library.LibraryGroup
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.gone
@@ -125,6 +126,9 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         }
         expand_categories.setOnClickListener {
             onGroupClicked(ACTION_EXPAND_COLLAPSE_ALL)
+        }
+        group_by.setOnClickListener {
+            onGroupClicked(ACTION_GROUP_BY)
         }
         view_options.setOnClickListener {
             onGroupClicked(ACTION_DISPLAY)
@@ -413,8 +417,14 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             }?.set(index + 1)
             onGroupClicked(ACTION_FILTER)
         }
+        val hasFilters = hasActiveFilters()
+        if (hasFilters && clearButton.parent == null) {
+            filter_layout.addView(clearButton, 0)
+        } else if (!hasFilters && clearButton.parent != null) {
+            filter_layout.removeView(clearButton)
+        }
         if (tracked?.isActivated == true && trackers != null && trackers?.parent == null) {
-            filter_layout.addView(trackers, filterItems.indexOf(tracked!!) + 1)
+            filter_layout.addView(trackers, filterItems.indexOf(tracked!!) + 2)
             filterItems.add(filterItems.indexOf(tracked!!) + 1, trackers!!)
         } else if (tracked?.isActivated == false && trackers?.parent != null) {
             filter_layout.removeView(trackers)
@@ -422,20 +432,15 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             FILTER_TRACKER = ""
             filterItems.remove(trackers!!)
         }
-        val hasFilters = hasActiveFilters()
-        if (hasFilters && clearButton.parent == null) {
-            filter_layout.addView(clearButton, 0)
-        } else if (!hasFilters && clearButton.parent != null) {
-            filter_layout.removeView(clearButton)
-        }
     }
 
-    fun updateButtons(showHideCategories: Boolean, showExpand: Boolean) {
+    fun updateButtons(showHideCategories: Boolean, showExpand: Boolean, groupType: Int) {
         hide_categories.visibleIf(showHideCategories)
-        expand_categories.visibleIf(showExpand)
+        expand_categories.visibleIf(showExpand && groupType == 0)
         first_layout.visibleIf(
             hide_categories.isVisible() || expand_categories.isVisible() || !second_layout.isVisible()
         )
+        group_by.setIconResource(LibraryGroup.groupTypeDrawableRes(groupType))
     }
 
     private fun clearFilters() {
@@ -479,6 +484,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         const val ACTION_HIDE_FILTER_TIP = 2
         const val ACTION_DISPLAY = 3
         const val ACTION_EXPAND_COLLAPSE_ALL = 4
+        const val ACTION_GROUP_BY = 5
 
         const val STATE_IGNORE = 0
         const val STATE_INCLUDE = 1

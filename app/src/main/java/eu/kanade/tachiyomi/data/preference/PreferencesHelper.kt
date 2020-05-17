@@ -273,6 +273,8 @@ class PreferencesHelper(val context: Context) {
 
     fun hideHopper() = flowPrefs.getBoolean("hide_hopper", false)
 
+    fun groupLibraryBy() = flowPrefs.getInt("group_library_by", 0)
+
     // Tutorial preferences
     fun shownFilterTutorial() = flowPrefs.getBoolean("shown_filter_tutorial", false)
 

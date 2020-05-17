@@ -89,6 +89,18 @@
                     app:iconTint="?android:attr/textColorPrimary" />
             </LinearLayout>
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/group_by"
+                style="@style/Theme.Widget.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/group_library_by"
+                android:textColor="?android:attr/textColorPrimary"
+                app:icon="@drawable/ic_label_outline_white_24dp"
+                app:iconTint="?android:attr/textColorPrimary" />
+
             <LinearLayout
                 android:id="@+id/second_layout"
                 android:layout_width="wrap_content"

@@ -126,15 +126,13 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
                 val text = if (item.manga.isBlank()) return item.header?.category?.name.orEmpty()
                 else when (getSort(position)) {
                     LibrarySort.DRAG_AND_DROP -> {
-                        if (!preferences.hideCategories().getOrDefault()) {
-                            val title = item.manga.title
-                            if (preferences.removeArticles().getOrDefault()) title.removeArticles()
-                                .chop(15)
-                            else title.take(10)
-                        } else {
-                            val category = db.getCategoriesForManga(item.manga).executeAsBlocking()
-                                .firstOrNull()?.name
+                        if (item.header.category.isDynamic) {
+                            val category = db.getCategoriesForManga(item.manga).executeAsBlocking().firstOrNull()?.name
                             category ?: recyclerView.context.getString(R.string.default_value)
+                        } else {
+                            val title = item.manga.title
+                            if (preferences.removeArticles().getOrDefault()) title.removeArticles().chop(15)
+                            else title.take(10)
                         }
                     }
                     LibrarySort.LAST_READ -> {
