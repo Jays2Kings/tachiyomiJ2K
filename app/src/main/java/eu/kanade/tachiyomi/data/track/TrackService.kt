@@ -31,6 +31,8 @@ abstract class TrackService(val id: Int) {
 
     abstract fun getStatus(status: Int): String
 
+    abstract fun getGlobalStatus(status: Int): String
+
     abstract fun getScoreList(): List<String>
 
     open fun indexToScore(index: Int): Float {

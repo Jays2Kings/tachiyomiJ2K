@@ -57,6 +57,17 @@ class Kitsu(private val context: Context, id: Int) : TrackService(id) {
         }
     }
 
+    override fun getGlobalStatus(status: Int): String = with(context) {
+        when (status) {
+            READING -> getString(R.string.reading)
+            PLAN_TO_READ -> getString(R.string.plan_to_read)
+            COMPLETED -> getString(R.string.completed)
+            ON_HOLD -> getString(R.string.on_hold)
+            DROPPED -> getString(R.string.dropped)
+            else -> ""
+        }
+    }
+
     override fun getScoreList(): List<String> {
         val df = DecimalFormat("0.#")
         return listOf("0") + IntRange(2, 20).map { df.format(it / 2f) }

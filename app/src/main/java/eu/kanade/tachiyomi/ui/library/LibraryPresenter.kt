@@ -550,9 +550,13 @@ class LibraryPresenter(
                         val track = tracks.find { track ->
                             loggedServices.any { it.id == track?.sync_id }
                         }
-                        if (track != null) {
-                            loggedServices.find { it.id == track.sync_id }?.getStatus(track.status)
-                                ?: context.getString(R.string.unknown)
+                        val service = loggedServices.find { it.id == track?.sync_id }
+                        if (track != null && service != null) {
+                            if (loggedServices.size > 1) {
+                                service.getGlobalStatus(track.status)
+                            } else {
+                                service.getStatus(track.status)
+                            }
                         } else {
                             context.getString(R.string.not_tracked)
                         }
@@ -580,7 +584,12 @@ class LibraryPresenter(
                     sourceId = split.last().toLongOrNull()
                 }
             }
-        }.sortedBy { it.name }
+        }.sortedBy {
+            if (groupType == BY_TRACK_STATUS) {
+                mapTrackingOrder(it.name)
+            } else {
+                it.name
+            } }
         headers.forEachIndexed { index, category -> category.order = index }
         return items to headers
     }
@@ -592,6 +601,20 @@ class LibraryPresenter(
             SManga.COMPLETED -> R.string.completed
             else -> R.string.unknown
         })
+    }
+
+    private fun mapTrackingOrder(status: String): String {
+        with(context) {
+            return when (status) {
+                getString(R.string.reading), getString(R.string.currently_reading) -> "1"
+                getString(R.string.rereading) -> "2"
+                getString(R.string.plan_to_read), getString(R.string.want_to_read) -> "3"
+                getString(R.string.on_hold), getString(R.string.paused) -> "4"
+                getString(R.string.completed) -> "5"
+                getString(R.string.dropped) -> "6"
+                else -> "7"
+            }
+        }
     }
 
     /** Create a default category with the sort set */
