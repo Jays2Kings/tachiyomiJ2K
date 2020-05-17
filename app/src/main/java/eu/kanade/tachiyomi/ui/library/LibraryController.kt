@@ -716,7 +716,8 @@ class LibraryController(
         category_hopper_frame.animate().translationY(translateY).start()
         if (scroll) {
             // Smooth scroll the recycler to hide the hidden content blocked by the app bar
-            ValueAnimator.ofInt(recycler.translationY.roundToInt(), translateY.roundToInt()).apply {
+            val vA = ValueAnimator.ofInt(recycler.translationY.roundToInt(), translateY
+                .roundToInt()).apply {
                 var start = 0f
                 var last = recycler.translationY.roundToInt()
                 val distance = abs(recycler.translationY.roundToInt() - translateY.roundToInt())
@@ -729,11 +730,15 @@ class LibraryController(
                         start %= 1
                     }
                 }
+                addListener(EndAnimatorListener {
+                    fast_scroller?.hideScrollbar()
+                })
             }.start()
         }
         recycler_cover.animate().translationY(translateY).start()
         recycler_cover.animate().alpha(if (show) 0.75f else 0f).start()
         if (show) {
+            fast_scroller?.hideScrollbar()
             activity?.appbar?.y = 0f
             elevateFunc(false)
             activity?.dropdown?.setImageResource(R.drawable.ic_arrow_drop_up_24dp)
