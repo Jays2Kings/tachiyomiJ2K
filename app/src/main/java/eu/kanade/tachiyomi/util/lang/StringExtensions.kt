@@ -35,6 +35,11 @@ fun String.truncateCenter(count: Int, replacement: String = "..."): String {
     return "${take(pieceLength)}$replacement${takeLast(pieceLength)}"
 }
 
+fun String.capitalizeWords(): String {
+    val firstReplace = split(" ").joinToString(" ") { it.capitalize() }
+    return firstReplace.split("-").joinToString("-") { it.capitalize() }
+}
+
 /**
  * Case-insensitive natural comparator for strings.
  */

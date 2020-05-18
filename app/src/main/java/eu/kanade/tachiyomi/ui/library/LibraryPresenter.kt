@@ -25,6 +25,7 @@ import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet.Companion.STATE_EXCLUDE
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet.Companion.STATE_IGNORE
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet.Companion.STATE_INCLUDE
+import eu.kanade.tachiyomi.util.lang.capitalizeWords
 import eu.kanade.tachiyomi.util.lang.removeArticles
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import kotlinx.coroutines.CoroutineScope
@@ -536,7 +537,7 @@ class LibraryPresenter(
                         listOf("Unknown")
                     } else {
                         manga.genre?.split(",")?.mapNotNull {
-                            val tag = it.trim()
+                            val tag = it.trim().capitalizeWords()
                             if (tag.isBlank()) null else tag
                         } ?: listOf("Unknown")
                     }
