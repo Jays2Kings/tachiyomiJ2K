@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
+import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.util.lang.chop
 import eu.kanade.tachiyomi.util.lang.removeArticles
 import eu.kanade.tachiyomi.util.system.isLTR
@@ -22,6 +23,8 @@ import java.util.Locale
  */
 class LibraryCategoryAdapter(val controller: LibraryController) :
         FlexibleAdapter<IFlexible<*>>(null, controller, true) {
+
+    val sourceManager by injectLazy<SourceManager>()
 
     init {
         setDisplayHeadersAtStartUp(true)
