@@ -385,12 +385,14 @@ class LibraryController(
             swipe_refresh.isRefreshing = false
             if (!LibraryUpdateService.isRunning()) {
                 when {
-                    !presenter.showAllCategories || presenter.groupType != BY_DEFAULT -> {
-                        presenter.categories.find { it.id == presenter.currentCategory }?.let {
+                    !presenter.showAllCategories && presenter.groupType == BY_DEFAULT -> {
+                        presenter.allCategories.find { it.id == presenter.currentCategory }?.let {
                             updateLibrary(it)
                         }
                     }
-                    presenter.allCategories.size <= 1 -> updateLibrary()
+                    presenter.allCategories.size <= 1 || presenter.groupType > BY_DEFAULT -> {
+                        updateLibrary()
+                    }
                     preferences.updateOnRefresh().getOrDefault() == -1 -> {
                         MaterialDialog(activity!!).title(R.string.what_should_update)
                             .negativeButton(android.R.string.cancel)

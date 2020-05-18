@@ -435,7 +435,7 @@ class LibraryPresenter(
         val categories = db.getCategories().executeAsBlocking().toMutableList()
         var libraryManga = db.getLibraryMangas().executeAsBlocking()
         val showAll = showAllCategories
-        if (groupType <= BY_DEFAULT || !libraryIsGrouped) {
+        if (groupType > BY_DEFAULT) {
             libraryManga = libraryManga.distinctBy { it.id }
         }
 
