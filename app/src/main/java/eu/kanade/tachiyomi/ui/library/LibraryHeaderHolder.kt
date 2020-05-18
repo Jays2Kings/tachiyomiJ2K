@@ -45,7 +45,7 @@ class LibraryHeaderHolder(val view: View, private val adapter: LibraryCategoryAd
             adapter.libraryListener.manageCategory(adapterPosition)
             true
         }
-        sectionText.setOnClickListener { toggleCategory() }
+        sectionText.setOnClickListener { adapter.libraryListener.openCategoriesBackdrop() }
         sortText.setOnClickListener { it.post { showCatSortOptions() } }
         checkboxImage.setOnClickListener { selectAll() }
         updateButton.drawable.mutate()

@@ -1113,6 +1113,8 @@ class LibraryController(
         }
     }
 
+    override fun openCategoriesBackdrop() = showCategories(true)
+
     override fun updateCategory(catId: Int): Boolean {
         val category = (adapter.getItem(catId) as? LibraryHeaderItem)?.category ?: return false
         val inQueue = LibraryUpdateService.categoryInQueue(category.id)
