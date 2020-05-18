@@ -10,6 +10,7 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.listeners.OnBindViewHolderListenerImpl
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
+import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.marginBottom
 
 class CategoryRecyclerView @JvmOverloads constructor(
@@ -48,6 +49,16 @@ class CategoryRecyclerView @JvmOverloads constructor(
             if (item.category.id != -1)
                 onCategoryClicked(item.category.order)
             true
+        }
+    }
+
+    fun scrollToCategory(order: Int) {
+        val index = itemAdapter.adapterItems.indexOfFirst { it.category.order == order }
+        if (index > -1) {
+            manager.scrollToPositionWithOffset(
+                index,
+                (height - 38.dpToPx) / 2
+            )
         }
     }
 

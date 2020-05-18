@@ -749,30 +749,10 @@ class LibraryController(
         val translateY = if (show) full else 0f
         recycler.animate().translationY(translateY).start()
         category_hopper_frame.animate().translationY(translateY).start()
-        if (scroll) {
-            // Smooth scroll the recycler to hide the hidden content blocked by the app bar
-            val vA = ValueAnimator.ofInt(recycler.translationY.roundToInt(), translateY
-                .roundToInt()).apply {
-                var start = 0f
-                var last = recycler.translationY.roundToInt()
-                val distance = abs(recycler.translationY.roundToInt() - translateY.roundToInt())
-                addUpdateListener {
-                    val diff = abs(it.animatedValue as Int - last)
-                    last = it.animatedValue as Int
-                    start += diff.toFloat() / distance * recycler.paddingTop.toFloat()
-                    if (start > 1) {
-                        recycler.scrollBy(0, start.toInt() * if (show) 1 else -1)
-                        start %= 1
-                    }
-                }
-                addListener(EndAnimatorListener {
-                    fast_scroller?.hideScrollbar()
-                })
-            }.start()
-        }
         recycler_cover.animate().translationY(translateY).start()
         recycler_cover.animate().alpha(if (show) 0.75f else 0f).start()
         if (show) {
+            category_recycler.scrollToCategory(activeCategory)
             fast_scroller?.hideScrollbar()
             activity?.appbar?.y = 0f
             elevateFunc(false)
