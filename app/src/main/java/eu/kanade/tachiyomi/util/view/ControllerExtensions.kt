@@ -62,7 +62,7 @@ fun Controller.scrollViewWith(
     swipeRefreshLayout: SwipeRefreshLayout? = null,
     afterInsets: ((WindowInsets) -> Unit)? = null,
     liftOnScroll: ((Boolean) -> Unit)? = null
-) {
+): ((Boolean) -> Unit) {
     var statusBarHeight = -1
     activity?.appbar?.y = 0f
     val attrsArray = intArrayOf(R.attr.actionBarSize)
@@ -98,7 +98,7 @@ fun Controller.scrollViewWith(
         elevate = el
         if (liftOnScroll != null) {
             liftOnScroll.invoke(el)
-        } else if (recycler.translationY == 0f) {
+        } else {
             elevationAnim?.cancel()
             elevationAnim = ValueAnimator.ofFloat(
                 activity?.appbar?.elevation ?: 0f, if (el) 15f else 0f
@@ -173,8 +173,8 @@ fun Controller.scrollViewWith(
                     activity!!.appbar.y = MathUtils.clamp(
                         activity!!.appbar.y, -activity!!.appbar.height.toFloat(), 0f
                     )
-                    if ((activity!!.appbar.y <= -activity!!.appbar.height.toFloat() ||
-                            dy == 0 && activity!!.appbar.y == 0f) && !elevate)
+                    if (((activity!!.appbar.y <= -activity!!.appbar.height.toFloat() ||
+                            dy == 0 && activity!!.appbar.y == 0f) || dy == 0) && !elevate)
                         elevateFunc(true)
                     lastY = activity!!.appbar.y
                 }
@@ -203,6 +203,7 @@ fun Controller.scrollViewWith(
             }
         }
     })
+    return elevateFunc
 }
 
 fun Controller.requestPermissionsSafe(permissions: Array<String>, requestCode: Int) {

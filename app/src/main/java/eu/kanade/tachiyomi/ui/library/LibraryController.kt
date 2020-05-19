@@ -2,7 +2,6 @@ package eu.kanade.tachiyomi.ui.library
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
@@ -177,8 +176,7 @@ class LibraryController(
     private var filterTooltip: ViewTooltip? = null
     private var isAnimatingHopper: Boolean? = null
     var hasMovedHopper = preferences.shownHopperSwipeTutorial().get()
-    private var elevationAnim: ValueAnimator? = null
-    private var elevate = false
+    private lateinit var elevateAppBar: ((Boolean) -> Unit)
 
     override fun getTitle(): String? {
         return view?.context?.getString(R.string.library)
@@ -188,8 +186,6 @@ class LibraryController(
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
             val recyclerCover = recycler_cover ?: return
-            val notAtTop = recycler.canScrollVertically(-1)
-            if (notAtTop != elevate) elevateFunc(notAtTop)
             val order = getCategoryOrder()
             if (!recyclerCover.isClickable && isAnimatingHopper != true) {
                 category_hopper_frame.translationY += dy
@@ -372,14 +368,16 @@ class LibraryController(
             }
         }
 
-        scrollViewWith(recycler, swipeRefreshLayout = swipe_refresh, afterInsets = { insets ->
-            category_layout?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                topMargin = recycler?.paddingTop ?: 0
-            }
-            fast_scroller?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                topMargin = recycler?.paddingTop ?: 0
-            }
-        })
+        elevateAppBar =
+            scrollViewWith(recycler, swipeRefreshLayout = swipe_refresh, afterInsets = { insets ->
+                category_layout?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                    topMargin = recycler?.paddingTop ?: 0
+                }
+                fast_scroller?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                    topMargin = recycler?.paddingTop ?: 0
+                }
+                header_title?.updatePaddingRelative(top = insets.systemWindowInsetTop + 2.dpToPx)
+            })
 
         swipe_refresh.setOnRefreshListener {
             swipe_refresh.isRefreshing = false
@@ -751,30 +749,18 @@ class LibraryController(
         category_hopper_frame.animate().translationY(translateY).start()
         recycler_cover.animate().translationY(translateY).start()
         recycler_cover.animate().alpha(if (show) 0.75f else 0f).start()
+        recycler.suppressLayout(show)
+        activity?.toolbar?.showDropdown(!show)
         if (show) {
             category_recycler.scrollToCategory(activeCategory)
             fast_scroller?.hideScrollbar()
             activity?.appbar?.y = 0f
-            elevateFunc(false)
-            activity?.dropdown?.setImageResource(R.drawable.ic_arrow_drop_up_24dp)
+            elevateAppBar(false)
             filter_bottom_sheet?.sheetBehavior?.hide()
         } else {
             val notAtTop = recycler.canScrollVertically(-1)
-            if (notAtTop != elevate) elevateFunc(notAtTop)
-            activity?.dropdown?.setImageResource(R.drawable.ic_arrow_drop_down_24dp)
+            elevateAppBar(notAtTop)
         }
-    }
-
-    private fun elevateFunc(el: Boolean) {
-        elevate = el
-        elevationAnim?.cancel()
-        elevationAnim = ValueAnimator.ofFloat(
-            activity?.appbar?.elevation ?: 0f, if (el) 15f else 0f
-        )
-        elevationAnim?.addUpdateListener { valueAnimator ->
-            activity?.appbar?.elevation = valueAnimator.animatedValue as Float
-        }
-        elevationAnim?.start()
     }
 
     fun setActiveCategory() {
