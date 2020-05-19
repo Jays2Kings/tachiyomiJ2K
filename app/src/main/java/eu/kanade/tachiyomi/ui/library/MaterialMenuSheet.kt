@@ -41,7 +41,7 @@ class MaterialMenuSheet(
     BottomSheetDialog
     (activity, R.style.BottomSheetDialogTheme) {
 
-    val primaryColor = activity.getResourceColor(android.R.attr.textColorPrimary)
+    private val primaryColor = activity.getResourceColor(android.R.attr.textColorPrimary)
     private val view = activity.layoutInflater.inflate(R.layout.bottom_menu_sheet, null)
 
     init {
@@ -51,12 +51,13 @@ class MaterialMenuSheet(
             window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         }
 
-        items.forEach {
+        var currentIndex: Int? = null
+        items.forEachIndexed { index, item ->
             val view =
                 activity.layoutInflater.inflate(R.layout.menu_sheet_item, null) as ViewGroup
             val textView = view.getChildAt(0) as MaterialTextView
             with(view) {
-                id = it.id
+                id = item.id
                 menu_layout.addView(this)
                 setOnClickListener {
                     val shouldDismiss = onMenuItemClicked(this@MaterialMenuSheet, id)
@@ -66,13 +67,14 @@ class MaterialMenuSheet(
                 }
             }
             with(textView) {
-                if (it.text != null) {
-                    text = it.text
+                if (item.text != null) {
+                    text = item.text
                 } else {
-                    setText(it.textRes)
+                    setText(item.textRes)
                 }
-                setCompoundDrawablesRelativeWithIntrinsicBounds(it.drawable, 0, 0, 0)
-                if (it.id == selectedId) {
+                setCompoundDrawablesRelativeWithIntrinsicBounds(item.drawable, 0, 0, 0)
+                if (item.id == selectedId) {
+                    currentIndex = index
                     setTextColorRes(R.color.colorAccent)
                     compoundDrawableTintList =
                         ColorStateList.valueOf(context.getColor(R.color.colorAccent))
@@ -91,6 +93,12 @@ class MaterialMenuSheet(
 
         title_layout.visibleIf(title != null)
         toolbar_title.text = title
+
+        currentIndex?.let {
+            view.post {
+                menu_scroll_view.scrollTo(0, it * 48.dpToPx - menu_scroll_view.height / 2)
+            }
+        }
 
         var isNotElevated = false
         var elevationAnimator: ValueAnimator? = null
