@@ -71,7 +71,7 @@ interface Manga : SManga {
     fun mangaType(): Int {
         val sourceName = Injekt.get<SourceManager>().getOrStub(source).name
         val currentTags =
-            genre?.split(",")?.map { it.trim().toLowerCase(Locale.US) } ?: return TYPE_MANGA
+            genre?.split(",")?.map { it.trim().toLowerCase(Locale.US) } ?: emptyList()
         return if (currentTags.any { tag -> tag.startsWith("japanese") || isMangaTag(tag) }) {
             TYPE_MANGA
         } else if (currentTags.any { tag -> tag.startsWith("english") || isComicTag(tag) } || isComicSource(
