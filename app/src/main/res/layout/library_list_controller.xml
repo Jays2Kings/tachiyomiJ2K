@@ -33,6 +33,7 @@
                     android:id="@+id/category_recycler"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:clipToPadding="false"
                     android:paddingBottom="4dp"
                     android:scrollbars="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -86,16 +87,16 @@
         app:layout_anchorGravity="top" />
 
     <com.google.android.material.textview.MaterialTextView
-        style="@style/FloatingTextView"
         android:id="@+id/jumper_category_text"
+        style="@style/FloatingTextView"
         android:layout_gravity="start|center"
         android:layout_marginBottom="8dp"
         android:alpha="0.0"
         android:gravity="center"
         app:layout_anchor="@id/category_hopper_frame"
         app:layout_anchorGravity="start|center"
-        tools:text="Category and a long one"
-        tools:alpha="1" />
+        tools:alpha="1"
+        tools:text="Category and a long one" />
 
     <FrameLayout
         android:id="@+id/category_hopper_frame"
