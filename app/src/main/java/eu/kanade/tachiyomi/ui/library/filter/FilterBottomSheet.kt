@@ -5,7 +5,6 @@ import android.content.res.Configuration
 import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +19,9 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.data.track.TrackManager
+import eu.kanade.tachiyomi.ui.library.LibraryController
 import eu.kanade.tachiyomi.ui.library.LibraryGroup
+import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.gone
@@ -31,6 +32,8 @@ import eu.kanade.tachiyomi.util.view.isHidden
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.filter_bottom_sheet.view.*
+import kotlinx.android.synthetic.main.library_grid_recycler.*
+import kotlinx.android.synthetic.main.library_list_controller.*
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -90,15 +93,17 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
 
     var onGroupClicked: (Int) -> Unit = { _ -> }
     var pager: View? = null
+    var controller: LibraryController? = null
 
-    fun onCreate(pagerView: View) {
+    fun onCreate(controller: LibraryController) {
         clearButton = clear_button
         filter_layout.removeView(clearButton)
         sheetBehavior = BottomSheetBehavior.from(this)
         sheetBehavior?.isHideable = true
-        pager = pagerView
-        val shadow2: View = (pagerView.parent.parent as ViewGroup).findViewById(R.id.shadow2)
-        val shadow: View = (pagerView.parent.parent as ViewGroup).findViewById(R.id.shadow)
+        this.controller = controller
+        pager = controller.recycler
+        val shadow2: View = controller.shadow2
+        val shadow: View = controller.shadow
         sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, progress: Float) {
                 pill.alpha = (1 - max(0f, progress)) * 0.25f
@@ -173,10 +178,10 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
     }
 
     private fun stateChanged(state: Int) {
-        val shadow = ((pager?.parent as? ViewGroup)?.findViewById(R.id.shadow) as? View)
+        val shadow = controller?.shadow ?: return
         if (state == BottomSheetBehavior.STATE_COLLAPSED) {
-            shadow?.alpha = 1f
-            pager?.updatePaddingRelative(bottom = sheetBehavior?.peekHeight ?: 0)
+            shadow.alpha = 1f
+            pager?.updatePaddingRelative(bottom = sheetBehavior?.peekHeight ?: 0 + 10.dpToPx)
         }
         if (state == BottomSheetBehavior.STATE_EXPANDED) {
             pill.alpha = 0f
@@ -184,8 +189,8 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         if (state == BottomSheetBehavior.STATE_HIDDEN) {
             onGroupClicked(ACTION_HIDE_FILTER_TIP)
             reSortViews()
-            shadow?.alpha = 0f
-            pager?.updatePaddingRelative(bottom = 0)
+            shadow.alpha = 0f
+            pager?.updatePaddingRelative(bottom = 10.dpToPx)
         }
     }
 
@@ -202,9 +207,8 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
             ?: if (sheetBehavior.isExpanded()) 1f else 0f
         val percent = (trueProgress * 100).roundToInt()
         val value = (percent * (maxHeight - minHeight) / 100) + minHeight
-        val height = context.resources.getDimensionPixelSize(R.dimen.rounder_radius)
         if (trueProgress >= 0)
-            pager?.updatePaddingRelative(bottom = value - height)
+            pager?.updatePaddingRelative(bottom = value + 10.dpToPx)
         else
             pager?.updatePaddingRelative(bottom = (minHeight * (1 + trueProgress)).toInt())
     }
