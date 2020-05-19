@@ -757,6 +757,7 @@ class LibraryController(
             activity?.appbar?.y = 0f
             elevateFunc(false)
             activity?.dropdown?.setImageResource(R.drawable.ic_arrow_drop_up_24dp)
+            filter_bottom_sheet?.sheetBehavior?.hide()
         } else {
             val notAtTop = recycler.canScrollVertically(-1)
             if (notAtTop != elevate) elevateFunc(notAtTop)

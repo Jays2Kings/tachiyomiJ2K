@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.ui.library.category
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,6 @@ import com.mikepenz.fastadapter.listeners.OnBindViewHolderListenerImpl
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.util.system.dpToPx
-import eu.kanade.tachiyomi.util.view.marginBottom
 
 class CategoryRecyclerView @JvmOverloads constructor(
     context: Context,
@@ -71,13 +71,15 @@ class CategoryRecyclerView @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
-        val recyclerView = (parent.parent as ViewGroup).findViewById<RecyclerView>(R.id.recycler)
+        val recyclerView = (parent.parent as ViewGroup).findViewById<View>(R.id.recycler)
+        val mainView = (parent.parent.parent.parent as ViewGroup)
         val top = recyclerView.paddingTop
-        val bottom = recyclerView.marginBottom
-        val parent = recyclerView.measuredHeight - top - bottom
-        val heightS = if (parent > 0)
+        val parent = mainView.measuredHeight - top - 50.dpToPx
+        val heightS = if (parent > 0) {
             MeasureSpec.makeMeasureSpec(parent, MeasureSpec.AT_MOST)
-        else heightSpec
+        } else {
+            heightSpec
+        }
         super.onMeasure(widthSpec, heightS)
     }
 }
