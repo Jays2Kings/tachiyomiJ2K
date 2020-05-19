@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.ui.library
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
@@ -333,8 +334,6 @@ class LibraryController(
         adapter.fastScroller = fast_scroller
         recycler.addOnScrollListener(scrollListener)
 
-        val tv = TypedValue()
-        activity!!.theme.resolveAttribute(R.attr.actionBarTintColor, tv, true)
         swipe_refresh.setStyle()
 
         recycler_cover.setOnClickListener {
@@ -349,52 +348,8 @@ class LibraryController(
             preferences.showAllCategories().set(isChecked)
             presenter.getLibrary()
         }
-
-        category_hopper_frame.gone()
-        down_category.setOnClickListener {
-            jumpToNextCategory(true)
-        }
-        up_category.setOnClickListener {
-            jumpToNextCategory(false)
-        }
-        down_category.setOnLongClickListener {
-            recycler.scrollToPosition(adapter.itemCount - 1)
-            true
-        }
-        up_category.setOnLongClickListener {
-            recycler.scrollToPosition(0)
-            true
-        }
-        category_button.setOnClickListener {
-            showCategories(!recycler_cover.isClickable)
-        }
-
-        category_button.setOnLongClickListener {
-            activity?.toolbar?.menu?.performIdentifierAction(R.id.action_search, 0)
-            true
-        }
-
-        val gravityPref = if (!hasMovedHopper) {
-            Random.nextInt(0..2)
-        } else {
-            preferences.hopperGravity().get()
-        }
-        hideHopper(preferences.hideHopper().get())
-        category_hopper_frame.updateLayoutParams<CoordinatorLayout.LayoutParams> {
-            anchorGravity = Gravity.TOP or when (gravityPref) {
-                0 -> Gravity.LEFT
-                2 -> Gravity.RIGHT
-                else -> Gravity.CENTER
-            }
-        }
-        hopperGravity = gravityPref
-
-        val gestureDetector = GestureDetectorCompat(activity, LibraryGestureDetector(this))
-        listOf(category_hopper_layout, up_category, down_category, category_button).forEach {
-            it.setOnTouchListener { _, event ->
-                gestureDetector.onTouchEvent(event)
-            }
-        }
+        setupFilterSheet()
+        setUpHopper()
 
         elevateAppBar =
             scrollViewWith(recycler, swipeRefreshLayout = swipe_refresh, afterInsets = { insets ->
@@ -452,6 +407,16 @@ class LibraryController(
             createActionModeIfNeeded()
         }
 
+        presenter.onRestore()
+        if (presenter.libraryItems.isNotEmpty()) {
+            presenter.restoreLibrary()
+        } else {
+            recycler_layout.alpha = 0f
+            presenter.getLibrary()
+        }
+    }
+
+    private fun setupFilterSheet() {
         filter_bottom_sheet.onCreate(this)
 
         filter_bottom_sheet.onGroupClicked = {
@@ -491,13 +456,54 @@ class LibraryController(
                 }
             }
         }
+    }
 
-        presenter.onRestore()
-        if (presenter.libraryItems.isNotEmpty()) {
-            presenter.restoreLibrary()
+    @SuppressLint("RtlHardcoded")
+    private fun setUpHopper() {
+        category_hopper_frame.gone()
+        down_category.setOnClickListener {
+            jumpToNextCategory(true)
+        }
+        up_category.setOnClickListener {
+            jumpToNextCategory(false)
+        }
+        down_category.setOnLongClickListener {
+            recycler.scrollToPosition(adapter.itemCount - 1)
+            true
+        }
+        up_category.setOnLongClickListener {
+            recycler.scrollToPosition(0)
+            true
+        }
+        category_button.setOnClickListener {
+            showCategories(!recycler_cover.isClickable)
+        }
+
+        category_button.setOnLongClickListener {
+            activity?.toolbar?.menu?.performIdentifierAction(R.id.action_search, 0)
+            true
+        }
+
+        val gravityPref = if (!hasMovedHopper) {
+            Random.nextInt(0..2)
         } else {
-            recycler_layout.alpha = 0f
-            presenter.getLibrary()
+            preferences.hopperGravity().get()
+        }
+        hideHopper(preferences.hideHopper().get())
+        category_hopper_frame.updateLayoutParams<CoordinatorLayout.LayoutParams> {
+            anchorGravity = Gravity.TOP or when (gravityPref) {
+                0 -> Gravity.LEFT
+                2 -> Gravity.RIGHT
+                else -> Gravity.CENTER
+            }
+        }
+        hopperGravity = gravityPref
+
+        val gestureDetector = GestureDetectorCompat(activity, LibraryGestureDetector(this))
+        listOf(category_hopper_layout, up_category, down_category, category_button).forEach {
+            it.setOnTouchListener { _, event ->
+                gestureDetector.onTouchEvent(event)
+            }
         }
     }
 
