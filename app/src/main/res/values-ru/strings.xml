@@ -611,7 +611,6 @@
     <string name="add_categories">Добавить категории</string>
     <string name="manage_category">Управление категорией</string>
     <string name="add_to_categories">Выберите, к каким категориям добавить это. Если ни один не выбран, он будет добавлен в категорию «по умолчанию»</string>
-    <string name="hide_categories">Скрыть категории</string>
     <string name="category_deleted">Категория удалена</string>
     <string name="long_press_category">Нажмите и удерживайте, чтобы изменить категорию</string>
 
@@ -631,6 +630,7 @@
     <string name="remove_from_library_question">Удалить из библиотеки?</string>
     <string name="no_matches_for_filters">Не найдено совпадений для ваших текущих фильтров</string>
     <string name="show_all_categories">Показать все категории</string>
+    <string name="always_show_current_category">Всегда показывать текущую категорию</string>
     <string name="expand_all_categories">Развернуть категории</string>
     <string name="collapse_all_categories">Свернуть категории</string>
     <string name="reorder_filters">Изменить порядок фильтров</string>
@@ -638,8 +638,11 @@
     <string name="search_globally">Поиск \"%1$s\" глобально</string>
     <string name="read_progress">Прогресс чтения</string>
     <string name="series_type">Тип серии</string>
+    <string name="group_library_by">Группировка по…</string>
+    <string name="tracking_status">Статус отслеживания</string>
+    <string name="ungrouped">Не группировать</string>
     <!-- Library Sort -->
-    <string name="sort_by_">Сортировать по: %1$s</string>
+    <string name="sort_by">Сортировать по</string>
     <string name="date_added">Дата добавления</string>
     <string name="latest_chapter">Последняя глава</string>
     <!-- Library Display -->
@@ -779,7 +782,7 @@
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
     <string name="clean_up_cached_covers">Очистить кэш обложек</string>
-    <string name="delete_old_covers_in_library">Удалять старые и неиспользуемые кэшированные обложки манги в вашей библиотеке, которая была обновлена</string>
+    <string name="delete_old_covers_in_library_used_">Удалять старые и неиспользуемые кэшированные обложки манги в вашей библиотеке, которая была обновлена.\nВ настоящее время используется: %1$s</string>
 
     <!-- About section -->
     <string name="whats_new">Что нового в этом релизе</string>
@@ -826,6 +829,7 @@
     <string name="refresh">Обновление</string>
     <string name="refreshing">Обновляющиеся</string>
     <string name="sort_and_filter">Сортировка и Фильтрация</string>
+    <string name="tag">Тег</string>
     <string name="top">Верх</string>
     <string name="un_select_all">Снять все</string>
     <string name="unpin">Открепить</string>
