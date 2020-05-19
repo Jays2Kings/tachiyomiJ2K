@@ -137,10 +137,9 @@ class LibraryPresenter(
 
     fun restoreLibrary() {
         val items = libraryItems
-        val show = showAllCategories || !libraryIsGrouped ||
-            categories.size == 1
+        val show = showAllCategories || !libraryIsGrouped || categories.size == 1
         if (!show) {
-            sectionedLibraryItems = items.groupBy { it.manga.category }.toMutableMap()
+            sectionedLibraryItems = items.groupBy { it.header.category.id!! }.toMutableMap()
             if (currentCategory == -1) currentCategory = categories.find {
                 it.order == preferences.lastUsedCategory().getOrDefault()
             }?.id ?: 0
