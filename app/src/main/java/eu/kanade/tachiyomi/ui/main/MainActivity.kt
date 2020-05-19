@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.provider.Settings
 import android.view.GestureDetector
 import android.view.MenuItem
@@ -40,6 +41,7 @@ import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.download.DownloadServiceListener
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
+import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.data.updater.UpdateChecker
 import eu.kanade.tachiyomi.data.updater.UpdateResult
@@ -155,6 +157,10 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
                 LibraryUpdateService.start(this)
                 main_content.snack(R.string.updating_library) {
                     anchorView = bottom_nav
+                    setAction(R.string.cancel) {
+                        LibraryUpdateService.stop(context)
+                        Handler().post { NotificationReceiver.dismissNotification(context, Notifications.ID_LIBRARY_PROGRESS) }
+                    }
                 }
             }
             true
