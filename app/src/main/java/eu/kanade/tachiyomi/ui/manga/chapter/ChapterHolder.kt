@@ -47,10 +47,7 @@ class ChapterHolder(
         localSource = manga.source == LocalSource.ID
         download_button.visibleIf(!localSource && !isLocked)
 
-        val chapterColor = ChapterUtil.chapterColor(itemView.context, item, isLocked)
-
-        // Set correct text color
-        chapter_title.setTextColor(chapterColor)
+        ChapterUtil.setTextViewForChapter(chapter_title, item, hideStatus = isLocked)
 
         val statuses = mutableListOf<String>()
 
@@ -83,7 +80,9 @@ class ChapterHolder(
             )
         }
         // this will color the scanlator the same bookmarks
-        chapter_scanlator.setTextColor(chapterColor)
+        ChapterUtil.setTextViewForChapter(
+            chapter_scanlator, item, showBookmark = false, hideStatus = isLocked
+        )
         chapter_scanlator.text = statuses.joinToString(" • ")
 
         val status = when {
@@ -94,8 +93,7 @@ class ChapterHolder(
         notifyStatus(status, item.isLocked, item.progress)
         resetFrontView()
         if (adapterPosition == 1) {
-            if (!adapter.hasShownSwipeTut.get())
-                showSlideAnimation()
+            if (!adapter.hasShownSwipeTut.get()) showSlideAnimation()
         }
     }
 

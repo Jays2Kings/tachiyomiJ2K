@@ -16,8 +16,8 @@ import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 
 class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: Boolean) :
-    AbstractItem<ReaderChapterItem.ViewHolder>
-    () {
+    AbstractItem<ReaderChapterItem.ViewHolder>(),
+    Chapter by chapter {
 
     val decimalFormat =
         DecimalFormat("#.###", DecimalFormatSymbols().apply { decimalSeparator = '.' })
@@ -28,9 +28,7 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
     /** defines the layout which will be used for this item in the list */
     override val layoutRes: Int = R.layout.reader_chapter_item
 
-    override var identifier: Long
-        get() = chapter.id!!
-        set(value) {}
+    override var identifier: Long = chapter.id!!
 
     override fun getViewHolder(v: View): ViewHolder {
         return ViewHolder(v)
@@ -43,23 +41,22 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
         private var bookmarkImage: ImageView = view.findViewById(R.id.bookmark_image)
 
         override fun bindView(item: ReaderChapterItem, payloads: List<Any>) {
-            val chapter = item.chapter
             val manga = item.manga
 
             val chapterColor = ChapterUtil.chapterColor(itemView.context, item.chapter)
 
-            chapterTitle.setTextColor(chapterColor)
+            ChapterUtil.setTextViewForChapter(chapterTitle, item)
             chapterTitle.text = when (manga.displayMode) {
                 Manga.DISPLAY_NUMBER -> {
-                    val number = item.decimalFormat.format(chapter.chapter_number.toDouble())
+                    val number = item.decimalFormat.format(item.chapter_number.toDouble())
                     itemView.context.getString(R.string.chapter_, number)
                 }
-                else -> chapter.name
+                else -> item.name
             }
 
             val statuses = mutableListOf<String>()
-            ChapterUtil.relativeDate(chapter)?.let { statuses.add(it) }
-            chapter.scanlator?.isNotBlank()?.let { statuses.add(chapter.scanlator!!) }
+            ChapterUtil.relativeDate(item)?.let { statuses.add(it) }
+            item.scanlator?.isNotBlank()?.let { statuses.add(item.scanlator!!) }
 
             if (item.isCurrent) {
                 chapterTitle.setTypeface(null, Typeface.BOLD_ITALIC)
@@ -73,11 +70,11 @@ class ReaderChapterItem(val chapter: Chapter, val manga: Manga, val isCurrent: B
             chapterSubtitle.setTextColor(chapterColor)
 
             bookmarkImage.setImageResource(
-                if (chapter.bookmark) R.drawable.ic_bookmark_24dp
+                if (item.bookmark) R.drawable.ic_bookmark_24dp
                 else R.drawable.ic_bookmark_border_24dp
             )
 
-            val drawableColor = ChapterUtil.bookmarkColor(itemView.context, chapter)
+            val drawableColor = ChapterUtil.bookmarkColor(itemView.context, item)
 
             DrawableCompat.setTint(bookmarkImage.drawable, drawableColor)
 
