@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
                 android:paddingEnd="12dp"
-                android:text="@string/display_as" />
+                android:text="@string/display" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +67,14 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:text="@string/show_all_categories" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/category_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="@string/always_show_current_category" />
 
             </LinearLayout>
 

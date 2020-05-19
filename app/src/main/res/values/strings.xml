@@ -114,6 +114,7 @@
         library from the browse tab.</string>
     <string name="no_matches_for_filters">No matches found for your current filters</string>
     <string name="show_all_categories">Show all categories</string>
+    <string name="always_show_current_category">Always show current category</string>
     <string name="expand_all_categories">Expand all categories</string>
     <string name="collapse_all_categories">Collapse all categories</string>
     <string name="reorder_filters">Reorder filters</string>

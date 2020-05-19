@@ -61,7 +61,8 @@ fun Controller.scrollViewWith(
     customPadding: Boolean = false,
     swipeRefreshLayout: SwipeRefreshLayout? = null,
     afterInsets: ((WindowInsets) -> Unit)? = null,
-    liftOnScroll: ((Boolean) -> Unit)? = null
+    liftOnScroll: ((Boolean) -> Unit)? = null,
+    onLeavingController: (() -> Unit)? = null
 ): ((Boolean) -> Unit) {
     var statusBarHeight = -1
     activity?.appbar?.y = 0f
@@ -119,7 +120,7 @@ fun Controller.scrollViewWith(
             if (changeType.isEnter) {
                 elevateFunc(elevate)
                 if (fakeToolbarView?.parent != null) {
-                    val parent = recycler.parent as? ViewGroup ?: return
+                    val parent = fakeToolbarView?.parent as? ViewGroup ?: return
                     parent.removeView(fakeToolbarView)
                     fakeToolbarView = null
                 }
@@ -145,6 +146,7 @@ fun Controller.scrollViewWith(
                     params?.width = MATCH_PARENT
                     v.setBackgroundColor(v.context.getResourceColor(R.attr.colorSecondary))
                     v.layoutParams = params
+                    onLeavingController?.invoke()
                 }
                 elevationAnim?.cancel()
                 if (activity!!.toolbar.tag == randomTag) activity!!.toolbar.setOnClickListener(null)

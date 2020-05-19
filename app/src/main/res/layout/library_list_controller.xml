@@ -26,8 +26,7 @@
                 android:id="@+id/category_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="?actionBarSize"
-                android:orientation="vertical">
+                android:layout_marginTop="?actionBarSize" >
 
                 <eu.kanade.tachiyomi.ui.library.category.CategoryRecyclerView
                     android:id="@+id/category_recycler"
@@ -68,6 +67,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:fastScrollerBubbleEnabled="true" />
+
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/list_item_selector"
+        android:backgroundTint="?colorSecondary"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="center"
+        android:inputType="none"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="6dp"
+        android:textColor="?actionBarTintColor"
+        android:textSize="14sp"
+        tools:text="Category" />
 
     <eu.kanade.tachiyomi.widget.EmptyView
         android:id="@+id/empty_view"

@@ -177,17 +177,22 @@ class LibraryController(
     private var isAnimatingHopper: Boolean? = null
     var hasMovedHopper = preferences.shownHopperSwipeTutorial().get()
     private var shouldScrollToTop = false
+    private val showCategoryInTitle
+        get() = preferences.showCategoryInTitle().get() && presenter.showAllCategories
     private lateinit var elevateAppBar: ((Boolean) -> Unit)
 
     override fun getTitle(): String? {
-        return view?.context?.getString(R.string.library)
+        return if (!showCategoryInTitle || header_title.text.isNullOrBlank() || recycler_cover?.isClickable == true) {
+            view?.context?.getString(R.string.library)
+        } else {
+            header_title.text.toString()
+        }
     }
 
     private var scrollListener = object : RecyclerView.OnScrollListener() {
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
             val recyclerCover = recycler_cover ?: return
-            val order = getCategoryOrder()
             if (!recyclerCover.isClickable && isAnimatingHopper != true) {
                 category_hopper_frame.translationY += dy
                 category_hopper_frame.translationY =
@@ -202,13 +207,11 @@ class LibraryController(
                     scrollDistance = 0f
                 }
             } else scrollDistance = 0f
-            if (order != null && order != activeCategory && lastItem == null) {
-                preferences.lastUsedCategory().set(order)
-                activeCategory = order
-                setActiveCategory()
-                if (presenter.categories.size > 1 && dy != 0 && recyclerView.translationY == 0f) {
-                    val headerItem = getHeader() ?: return
-                    showCategoryText(headerItem.category.name)
+            val currentCategory = getHeader()?.category ?: return
+            if (currentCategory.order != activeCategory) {
+                saveActiveCategory(currentCategory)
+                if (!showCategoryInTitle && presenter.categories.size > 1 && dy != 0 && recyclerView.translationY == 0f) {
+                    showCategoryText(currentCategory.name)
                 }
             }
         }
@@ -233,6 +236,30 @@ class LibraryController(
                 }
             }
         }
+    }
+
+    fun saveActiveCategory(category: Category) {
+        preferences.lastUsedCategory().set(category.order)
+        activeCategory = category.order
+        val headerItem = getHeader() ?: return
+        header_title.text = headerItem.category.name
+        setActiveCategory()
+    }
+
+    private fun setActiveCategory() {
+        val currentCategory = presenter.categories.indexOfFirst {
+            if (presenter.showAllCategories) it.order == activeCategory else presenter.currentCategory == it.id
+        }
+        if (currentCategory > -1) {
+            category_recycler.setCategories(currentCategory)
+            header_title.text = presenter.categories[currentCategory].name
+            setTitle()
+        }
+    }
+
+    fun showMiniBar() {
+        header_title.visibleIf(showCategoryInTitle)
+        setTitle()
     }
 
     fun showCategoryText(name: String) {
@@ -316,7 +343,7 @@ class LibraryController(
         category_recycler.onCategoryClicked = {
             recycler.itemAnimator = null
             scrollToHeader(it)
-            showCategories(show = false, scroll = false)
+            showCategories(show = false)
         }
         category_recycler.onShowAllClicked = { isChecked ->
             preferences.showAllCategories().set(isChecked)
@@ -378,6 +405,8 @@ class LibraryController(
                     topMargin = recycler?.paddingTop ?: 0
                 }
                 header_title?.updatePaddingRelative(top = insets.systemWindowInsetTop + 2.dpToPx)
+            }, onLeavingController = {
+                header_title?.gone()
             })
 
         swipe_refresh.setOnRefreshListener {
@@ -690,6 +719,11 @@ class LibraryController(
         if (justStarted && freshStart) {
             scrollToHeader(activeCategory)
         }
+        recycler.post {
+            elevateAppBar(recycler.canScrollVertically(-1))
+            setActiveCategory()
+        }
+
         category_hopper_frame.visibleIf(!singleCategory && !preferences.hideHopper().get())
         filter_bottom_sheet.updateButtons(
             showExpand = !singleCategory && presenter.showAllCategories, groupType = presenter.groupType
@@ -697,22 +731,25 @@ class LibraryController(
         adapter.isLongPressDragEnabled = canDrag()
         category_recycler.setCategories(presenter.categories)
         filter_bottom_sheet.setExpandText(preferences.collapsedCategories().getOrDefault().isNotEmpty())
-        setActiveCategory()
         if (shouldScrollToTop) {
             recycler.scrollToPosition(0)
             shouldScrollToTop = false
         }
         if (onRoot) {
-            activity?.toolbar?.setOnClickListener {
-                val recycler = recycler ?: return@setOnClickListener
-                if (singleCategory) {
-                    recycler.scrollToPosition(0)
-                } else {
-                    showCategories(recycler.translationY == 0f)
+            listOf(activity?.toolbar, header_title).forEach {
+                it?.setOnClickListener {
+                    val recycler = recycler ?: return@setOnClickListener
+                    if (singleCategory) {
+                        recycler.scrollToPosition(0)
+                    } else {
+                        showCategories(recycler.translationY == 0f)
+                    }
+                }
+                if (!hasMovedHopper && isAnimatingHopper == null) {
+                    showSlideAnimation()
                 }
             }
-            if (!hasMovedHopper && isAnimatingHopper == null) {
-                showSlideAnimation()
+            showMiniBar()
         }
     }
 
@@ -750,7 +787,7 @@ class LibraryController(
             .setDuration(duration)
     }
 
-    private fun showCategories(show: Boolean, scroll: Boolean = true) {
+    private fun showCategories(show: Boolean) {
         recycler_cover.isClickable = show
         recycler_cover.isFocusable = show
         val full = category_layout.height.toFloat() + recycler.paddingTop
@@ -761,6 +798,7 @@ class LibraryController(
         recycler_cover.animate().alpha(if (show) 0.75f else 0f).start()
         recycler.suppressLayout(show)
         activity?.toolbar?.showDropdown(!show)
+        setTitle()
         if (show) {
             category_recycler.scrollToCategory(activeCategory)
             fast_scroller?.hideScrollbar()
@@ -771,13 +809,6 @@ class LibraryController(
             val notAtTop = recycler.canScrollVertically(-1)
             elevateAppBar(notAtTop)
         }
-    }
-
-    fun setActiveCategory() {
-        val currentCategory = presenter.categories.indexOfFirst {
-            if (presenter.showAllCategories) it.order == activeCategory else presenter.currentCategory == it.id
-        }
-        category_recycler.setCategories(currentCategory)
     }
 
     private fun scrollToHeader(pos: Int) {
@@ -803,6 +834,11 @@ class LibraryController(
                     else -> (-30).dpToPx
                 }) + appbarOffset
             )
+            (adapter.getItem(headerPosition) as? LibraryHeaderItem)?.category?.let {
+                saveActiveCategory(it)
+            }
+            activeCategory = pos
+            preferences.lastUsedCategory().set(pos)
             recycler.suppressLayout(false)
         }
     }
@@ -984,7 +1020,6 @@ class LibraryController(
         val position = viewHolder?.adapterPosition ?: return
         swipe_refresh.isEnabled = actionState != ItemTouchHelper.ACTION_STATE_DRAG
         if (actionState == ItemTouchHelper.ACTION_STATE_DRAG) {
-            activity?.appbar?.y = 0f
             if (lastItemPosition != null && position != lastItemPosition && lastItem == adapter.getItem(
                     position
                 )
@@ -1022,7 +1057,6 @@ class LibraryController(
         ) {
             recycler.scrollBy(0, recycler.paddingTop)
         }
-        activity?.appbar?.y = 0f
         if (lastItemPosition == toPosition) lastItemPosition = null
         else if (lastItemPosition == null) lastItemPosition = fromPosition
     }

@@ -85,6 +85,11 @@ class DisplayBottomSheet(private val controller: LibraryController) : BottomShee
         }
         show_all.bindToPreference(preferences.showAllCategories()) {
             controller.presenter.getLibrary()
+            category_show.isEnabled = it
+        }
+        category_show.isEnabled = show_all.isChecked
+        category_show.bindToPreference(preferences.showCategoryInTitle()) {
+            controller.showMiniBar()
         }
         hide_hopper.bindToPreference(preferences.hideHopper()) {
             controller.hideHopper(it)

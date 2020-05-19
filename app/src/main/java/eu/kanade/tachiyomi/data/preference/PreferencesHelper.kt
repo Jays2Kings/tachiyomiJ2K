@@ -273,6 +273,8 @@ class PreferencesHelper(val context: Context) {
 
     fun groupLibraryBy() = flowPrefs.getInt("group_library_by", 0)
 
+    fun showCategoryInTitle() = flowPrefs.getBoolean("category_in_title", false)
+
     // Tutorial preferences
     fun shownFilterTutorial() = flowPrefs.getBoolean("shown_filter_tutorial", false)
 
