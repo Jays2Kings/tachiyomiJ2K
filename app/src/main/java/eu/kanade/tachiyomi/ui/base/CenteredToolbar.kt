@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable
 import com.google.android.material.appbar.MaterialToolbar
-import eu.kanade.tachiyomi.util.view.gone
+import eu.kanade.tachiyomi.R
 import kotlinx.android.synthetic.main.main_activity.view.*
 
 class CenteredToolbar@JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
@@ -14,7 +14,7 @@ class CenteredToolbar@JvmOverloads constructor(context: Context, attrs: Attribut
         if (navigationIcon is DrawerArrowDrawable) {
             super.setTitle(resId)
             toolbar_title.text = null
-            dropdown?.gone()
+            hideDropdown()
         } else {
             toolbar_title.text = context.getString(resId)
             super.setTitle(null)
@@ -25,10 +25,23 @@ class CenteredToolbar@JvmOverloads constructor(context: Context, attrs: Attribut
         if (navigationIcon is DrawerArrowDrawable) {
             super.setTitle(title)
             toolbar_title.text = ""
-            dropdown?.gone()
+            hideDropdown()
         } else {
             toolbar_title.text = title
             super.setTitle(null)
         }
+    }
+
+    fun showDropdown(down: Boolean = true) {
+        toolbar_title.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_blank_24dp, 0,
+        if (down) {
+            R.drawable.ic_arrow_drop_down_24dp
+        } else {
+            R.drawable.ic_arrow_drop_up_24dp
+        }, 0)
+    }
+
+    fun hideDropdown() {
+        toolbar_title.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
     }
 }

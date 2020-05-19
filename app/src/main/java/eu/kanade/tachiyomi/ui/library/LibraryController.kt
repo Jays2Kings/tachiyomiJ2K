@@ -621,19 +621,17 @@ class LibraryController(
             LibraryUpdateService.setListener(this)
             recycler_cover.isClickable = false
             recycler_cover.isFocusable = false
-            if (onRoot) {
-                activity?.dropdown?.visibleIf(!singleCategory)
-            }
+            showDropdown()
         } else {
             closeTip()
-            activity?.dropdown?.gone()
+            activity?.toolbar?.hideDropdown()
         }
     }
 
     override fun onChangeEnded(handler: ControllerChangeHandler, type: ControllerChangeType) {
         super.onChangeEnded(handler, type)
         if (!type.isEnter) {
-            activity?.dropdown?.gone()
+            activity?.toolbar?.hideDropdown()
         }
     }
 
@@ -681,9 +679,7 @@ class LibraryController(
             recycler.itemAnimator = DefaultItemAnimator()
         }
         singleCategory = presenter.categories.size <= 1
-        if (onRoot) {
-            activity?.dropdown?.visibleIf(!singleCategory)
-        }
+        showDropdown()
         progress.gone()
         if (!freshStart) {
             justStarted = false
@@ -712,6 +708,15 @@ class LibraryController(
             }
             if (!hasMovedHopper && isAnimatingHopper == null) {
                 showSlideAnimation()
+        }
+    }
+
+    private fun showDropdown() {
+        if (onRoot) {
+            if (!singleCategory) {
+                activity?.toolbar?.showDropdown()
+            } else {
+                activity?.toolbar?.hideDropdown()
             }
         }
     }
