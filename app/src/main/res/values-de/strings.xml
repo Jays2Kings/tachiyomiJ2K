@@ -648,7 +648,7 @@
     <string name="delete">Löschen</string>
     <string name="deleted_">Gelöscht: %1$s</string>
     <string name="display">Anzeige</string>
-    <string name="drag_handle">Verschiebesymbol</string-->
+    <string name="drag_handle">Verschiebesymbol</string>
     <string name="edit">Bearbeiten</string>
     <string name="enabled">Eingeschaltet</string>
     <string name="fast">Schnell</string>
