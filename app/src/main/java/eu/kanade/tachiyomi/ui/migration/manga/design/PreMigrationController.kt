@@ -41,7 +41,7 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
 
     private var dialog: BottomSheetDialog? = null
 
-    override fun getTitle() = "Select target sources"
+    override fun getTitle() = view?.context?.getString(R.string.select_target_sources)
 
     override fun inflateView(inflater: LayoutInflater, container: ViewGroup): View {
         return inflater.inflate(R.layout.pre_migration_controller, container, false)

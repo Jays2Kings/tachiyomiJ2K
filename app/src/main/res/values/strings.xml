@@ -415,6 +415,7 @@
     <string name="add_tracking">Add tracking</string>
 
     <!-- Migration -->
+    <string name="select_target_sources">Select target sources</string>
     <string name="source_migration">Source migration</string>
     <string name="migration">Migration</string>
     <string name="skip_pre_migration">Skip pre-migration</string>
