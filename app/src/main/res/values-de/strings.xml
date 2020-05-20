@@ -466,8 +466,8 @@
     <string name="date_format">Datumsformat</string>
     <string name="check_for_updates">Nach Aktualisierungen suchen</string>
     <string name="auto_check_for_app_versions">Automatisch nach App Aktualisierung suchen</string>
-    <!--string name="secure_screen">Secure screen</string-->
-    <!--string name="hide_tachi_from_recents">Hide Tachiyomi from the recents screen</string-->
+    <string name="secure_screen">Sicherheitsbildschirm</string>
+    <string name="hide_tachi_from_recents">Verstecke Tachiyomi auf dem letzte Aktivitäten-Bildschirm</string>
     <string name="security">Sicherheit</string>
 
     <!-- Backup -->
@@ -648,7 +648,7 @@
     <string name="delete">Löschen</string>
     <string name="deleted_">Gelöscht: %1$s</string>
     <string name="display">Anzeige</string>
-    <!--string name="drag_handle">Drag handle</string-->
+    <string name="drag_handle">Verschiebesymbol</string-->
     <string name="edit">Bearbeiten</string>
     <string name="enabled">Eingeschaltet</string>
     <string name="fast">Schnell</string>
