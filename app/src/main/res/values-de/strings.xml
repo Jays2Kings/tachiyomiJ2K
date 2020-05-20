@@ -83,7 +83,6 @@
     <string name="rename_category">Kategorie umbenennen</string>
     <string name="move_to_categories">Zu Kategorien hinzufügen</string>
     <string name="add_to_categories">Kategorie wählen in welche hinzugefügt wird. Wenn nichts ausgewählt wird, wird die Standardkategorie genutzt.</string>
-    <string name="hide_categories">Kategorien verstecken</string>
     <plurals name="category">
         <item quantity="one">%d Kategorie</item>
         <item quantity="other">%d Kategorien</item>
@@ -113,6 +112,7 @@
     <string name="library_is_empty_add_from_browse">Ihre Bibliothek ist leer, Sie können neue Serien über den Katalog hinzufügen.</string>
     <string name="no_matches_for_filters">Keine Ergebnisse für die ausgewählten Filtereinstellungen</string>
     <string name="show_all_categories">Alle Kategorien anzeigen</string>
+    <string name="always_show_current_category">Aktuelle Kategorie immer anzeigen</string>
     <string name="expand_all_categories">Alle Kategorien erweitern</string>
     <string name="collapse_all_categories">Alle Kategorien einklappen</string>
     <string name="reorder_filters">Filter neuordnen</string>
@@ -120,9 +120,12 @@
     <string name="search_globally">Suche \"%1$s\" global</string>
     <string name="read_progress">Lesefortschritt</string>
     <string name="series_type">Serientyp</string>
+    <string name="group_library_by">Gruppiere Bibiliothek nach…</string>
+    <string name="tracking_status">Synchronisierungsstatus</string>
+    <string name="ungrouped">Ungruppiert</string>
 
     <!-- Library Sort -->
-    <string name="sort_by_">Sortieren nach: %1$s</string>
+    <string name="sort_by">Sortieren nach</string>
     <string name="total_chapters">Kapitelanzahl</string>
     <string name="date_added">Datum hinzugefügt</string>
     <string name="last_read">Zuletzt gelesen</string>
@@ -368,7 +371,7 @@
     <string name="sort_by_chapter_number">Sortiert nach Kapitelanzahl</string>
     <string name="newest_first">Neu nach alt</string>
     <string name="oldest_first">Alt nach neu</string>
-    <string name="clear_tags">Clear Tags</string>
+    <string name="clear_tags">Tags löschen</string>
     <string name="edit_cover">Vorschaubild bearbeiten</string>
     <string name="reset_cover">Vorschaubild zurücksetzen</string>
     <string name="failed_to_update_cover">Konnte Vorschaubild nicht ändern</string>
@@ -527,7 +530,7 @@
         <item quantity="other">Aufräumen abgeschlossen. %d Ordner entfernt</item>
     </plurals>
     <string name="clean_up_cached_covers">Zwischengespeicherte Vorschaubilder aufräumen</string>
-    <string name="delete_old_covers_in_library">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Manga in deiner Bibliothek welche aktualisiert wurden löschen</string>
+    <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Manga in deiner Bibliothek welche aktualisiert wurden löschen.\nAktuell genutzt: %1$s</string>
 
     <!-- About section -->
     <string name="version">Version</string>
@@ -697,6 +700,7 @@
     <string name="sort_and_filter">Sortierung &amp; Filter</string>
     <string name="start">Start</string>
     <string name="stop">Stopp</string>
+    <string name="tag">Tag</string>
     <string name="top">Oben</string>
     <string name="undo">Rückgängig machen</string>
     <string name="unknown_error">Unbekannter Fehler</string>
