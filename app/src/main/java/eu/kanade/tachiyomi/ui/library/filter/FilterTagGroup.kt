@@ -12,6 +12,7 @@ import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visible
+import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.filter_buttons.view.*
 
 class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout
@@ -24,8 +25,8 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
 
     private var root: ViewGroup? = null
 
-    private val buttons by lazy { arrayOf(firstButton, secondButton, thirdButton) }
-    private val separators by lazy { arrayOf(separator1, separator2) }
+    private val buttons by lazy { arrayOf(firstButton, secondButton, thirdButton, fourthButton) }
+    private val separators by lazy { arrayOf(separator1, separator2, separator3) }
 
     override fun isActivated(): Boolean {
         return buttons.any { it.isActivated }
@@ -33,45 +34,28 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
 
     fun nameOf(index: Int): String? = buttons.getOrNull(index)?.text as? String
 
-    fun setup(root: ViewGroup, firstText: Int, secondText: Int? = null, thirdText: Int? = null) {
+    fun setup(root: ViewGroup, firstText: Int, vararg extra: Int?) {
         val text1 = context.getString(firstText)
-        val text2 = if (secondText != null) context.getString(secondText) else null
-        val text3 = if (thirdText != null) context.getString(thirdText) else null
-        setup(root, text1, text2, text3)
+        val strings = extra.mapNotNull { if (it != null) context.getString(it) else null }
+        setup(root, text1, extra = *strings.toTypedArray())
     }
 
-    fun setup(
-        root: ViewGroup,
-        firstText: String,
-        secondText: String? = null,
-        thirdText: String? =
-                null
-    ) {
+    fun setup(root: ViewGroup, firstText: String, vararg extra: String?) {
         listener = root as? FilterTagGroupListener
         (layoutParams as? MarginLayoutParams)?.rightMargin = 5.dpToPx
         (layoutParams as? MarginLayoutParams)?.leftMargin = 5.dpToPx
         firstButton.text = firstText
-        if (secondText != null) {
-            secondButton.text = secondText
-            itemCount = 2
-            if (thirdText != null) {
-                thirdButton.text = thirdText
-                itemCount = 3
-            } else {
-                thirdButton.gone()
-                separator2.gone()
-            }
-        } else {
-            itemCount = 1
-            secondButton.gone()
-            separator1.gone()
-            thirdButton.gone()
-            separator2.gone()
+        val extras = (extra.toList() + listOf<String?>(null, null, null)).take(separators.size)
+        extras.forEachIndexed { index, text ->
+            buttons[index + 1].text = text
+            separators[index].visibleIf(text != null)
+            buttons[index + 1].visibleIf(text != null)
         }
+        itemCount = buttons.count { !it.text.isNullOrBlank() }
         this.root = root
-        firstButton.setOnClickListener { toggleButton(0) }
-        secondButton.setOnClickListener { toggleButton(1) }
-        thirdButton.setOnClickListener { toggleButton(2) }
+        buttons.forEachIndexed { index, textView ->
+            textView.setOnClickListener { toggleButton(index) }
+        }
     }
 
     var state: Int
@@ -115,27 +99,24 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
             listener?.onFilterClicked(this, if (firstButton.isActivated) index else -1, callBack)
             return
         }
-        val buttons = mutableListOf(firstButton, secondButton)
-        if (itemCount >= 3)
-            buttons.add(thirdButton)
         val mainButton = buttons[index]
-        buttons.remove(mainButton)
 
         if (mainButton.isActivated) {
             mainButton.isActivated = false
-            separator1.visible()
             listener?.onFilterClicked(this, -1, callBack)
-            if (itemCount >= 3)
-                separator2.visible()
-            buttons.forEach { it.visible() }
+            buttons.forEachIndexed { viewIndex, textView ->
+                if (!textView.text.isNullOrBlank()) {
+                    textView.visible()
+                    if (viewIndex > 0) {
+                        separators[viewIndex - 1].visible()
+                    }
+                }
+            }
         } else {
             mainButton.isActivated = true
             listener?.onFilterClicked(this, index, callBack)
-            buttons.forEach { it.gone() }
-            separator1.gone()
-            if (itemCount >= 3) {
-                separator2.gone()
-            }
+            buttons.forEach { if (it != mainButton) it.gone() }
+            separators.forEach { it.gone() }
         }
         mainButton.setTextColor(if (mainButton.isActivated) Color.WHITE else context
             .getResourceColor(android.R.attr.textColorPrimary))

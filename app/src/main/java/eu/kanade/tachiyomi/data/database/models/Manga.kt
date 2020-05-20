@@ -108,7 +108,7 @@ interface Manga : SManga {
             { tag ->
                 tag == "chinese" || tag == "manhua" ||
                     tag.startsWith("english") || tag == "comic"
-            } == true || (isComicSource(sourceName) && !sourceName.contains("tapastic", true)) ||
+            } == true || (isComicSource(sourceName) && !sourceName.contains("tapas", true)) ||
             sourceName.contains("manhua", true)
         )
             ReaderActivity.LEFT_TO_RIGHT
@@ -142,7 +142,7 @@ interface Manga : SManga {
             sourceName.contains("dilbert", true) ||
             sourceName.contains("cyanide", true) ||
             sourceName.contains("xkcd", true) ||
-            sourceName.contains("tapastic", true)
+            sourceName.contains("tapas", true)
     }
 
     fun key(): String {
@@ -212,11 +212,11 @@ interface Manga : SManga {
         const val DISPLAY_NUMBER = 0x00100000
         const val DISPLAY_MASK = 0x00100000
 
-        const val TYPE_MANGA = 0
-        const val TYPE_MANHWA = 1
-        const val TYPE_MANHUA = 2
-        const val TYPE_COMIC = 3
-        const val TYPE_WEBTOON = 4
+        const val TYPE_MANGA = 1
+        const val TYPE_MANHWA = 2
+        const val TYPE_MANHUA = 3
+        const val TYPE_COMIC = 4
+        const val TYPE_WEBTOON = 5
 
         fun create(source: Long): Manga = MangaImpl().apply {
             this.source = source

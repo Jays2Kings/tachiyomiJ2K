@@ -242,8 +242,11 @@ class LibraryPresenter(
         if (filterUnread == 4 && !(item.manga.unread > 0 && item.manga.hasRead)) return false
 
         if (filterMangaType > 0) {
-            if (if (filterMangaType == Manga.TYPE_MANHWA) (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
-                else filterMangaType != item.manga.mangaType()
+            if (if (filterMangaType == Manga.TYPE_MANHWA) {
+                    (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
+                } else {
+                    filterMangaType != item.manga.mangaType()
+                }
             ) return false
         }
 

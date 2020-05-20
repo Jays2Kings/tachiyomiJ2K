@@ -57,7 +57,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
 
     private val trackManager: TrackManager by injectLazy()
 
-    val hasTracking
+    private val hasTracking
         get() = trackManager.hasLoggedServices()
 
     private lateinit var downloaded: FilterTagGroup
@@ -264,6 +264,7 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     val mangaType = inflate(R.layout.filter_buttons) as FilterTagGroup
                     mangaType.setup(
                         this@FilterBottomSheet,
+                        R.string.manga,
                         types.first(),
                         types.getOrNull(1),
                         types.getOrNull(2)
@@ -283,7 +284,13 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     unreadProgress.state = unreadP - 3
                 }
                 tracked?.setState(preferences.filterTracked())
-                mangaType?.setState(preferences.filterMangaType())
+                mangaType?.setState(when (preferences.filterMangaType().getOrDefault()) {
+                    Manga.TYPE_MANGA -> context.getString(R.string.manga)
+                    Manga.TYPE_MANHUA -> context.getString(R.string.manhua)
+                    Manga.TYPE_MANHWA -> context.getString(R.string.manhwa)
+                    Manga.TYPE_COMIC -> context.getString(R.string.comic)
+                    else -> ""
+                })
                 reorderFilters()
                 reSortViews()
             }
@@ -409,7 +416,17 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                 downloaded -> preferences.filterDownloaded()
                 completed -> preferences.filterCompleted()
                 tracked -> preferences.filterTracked()
-                mangaType -> preferences.filterMangaType()
+                mangaType -> {
+                    val newIndex = when (view.nameOf(index)) {
+                        context.getString(R.string.manga) -> Manga.TYPE_MANGA
+                        context.getString(R.string.manhua) -> Manga.TYPE_MANHUA
+                        context.getString(R.string.manhwa) -> Manga.TYPE_MANHWA
+                        context.getString(R.string.comic) -> Manga.TYPE_COMIC
+                        else -> 0
+                    }
+                    preferences.filterMangaType().set(newIndex)
+                    null
+                }
                 else -> null
             }?.set(index + 1)
             onGroupClicked(ACTION_FILTER)
