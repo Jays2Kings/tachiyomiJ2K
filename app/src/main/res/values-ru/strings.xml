@@ -409,8 +409,6 @@
 
     <string name="rereading">Перечитываю</string>
 
-    <string name="clear_tags">Сбросить теги</string>
-
     <string name="restore_completed">Восстановление закончено</string>
     <string name="restore_completed_content">%1$s восстановлено. %2$s ошибок обнаружено.</string>
     <string name="restore_content_skipped">%1$d пропущено</string>
@@ -642,7 +640,7 @@
     <string name="tracking_status">Статус отслеживания</string>
     <string name="ungrouped">Не группировать</string>
     <!-- Library Sort -->
-    <string name="sort_by">Сортировать по</string>
+    <string name="sort_by">Сортировка по…</string>
     <string name="date_added">Дата добавления</string>
     <string name="latest_chapter">Последняя глава</string>
     <!-- Library Display -->
@@ -678,7 +676,7 @@
     <string name="added_">Добавлена %1$s</string>
     <string name="view_history">Посмотреть историю</string>
     <string name="view_all_updates">Посмотреть все обновления</string>
-    <string name="search_recents">Поиск последних ...</string>
+    <string name="search_recents">Поиск последних…</string>
     <string name="group_all">Сгруппировать все</string>
     <string name="ungroup_all">Разгруппировать все</string>
     <string name="only_history">Только история</string>
@@ -688,7 +686,7 @@
     <!-- Browse -->
     <string name="view_latest">ПОСЛЕДНЯЯ</string>
     <string name="in_library">В библиотеке</string>
-    <string name="search_extensions">Поиск расширений ...</string>
+    <string name="search_extensions">Поиск расширений…</string>
     <string name="source_hidden">Источник скрыт</string>
     <string name="last_used">Последний используемый</string>
     <string name="local_source_help_guide">Руководство по локальным источникам</string>
@@ -741,7 +739,8 @@
     <string name="sort_by_chapter_number">Сортировать по номеру главы</string>
     <string name="newest_first">От нового к старому</string>
     <string name="oldest_first">От старого к новому</string>
-    <string name="edit_cover">Изменить обложку</string>
+    <string name="clear_tags">Очистить теги</string>
+    <string name="reset_tags">Сбросить теги</string>
     <string name="reset_cover">Сбросить обложку</string>
     <string name="remember_this_choice">Запомнить этот выбор</string>
 
@@ -765,6 +764,7 @@
     <string name="add_tracking">Добавить отслеживание</string>
     <string name="paused">На паузе</string>
     <!-- Migration -->
+    <string name="select_target_sources">Выберите источники для переноса</string>
     <string name="migrate_">Перенос %1$s источника</string>
     <string name="copy_value">Копировать</string>
 
