@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.download.model.Download
 import eu.kanade.tachiyomi.data.download.model.DownloadQueue
+import eu.kanade.tachiyomi.data.library.CustomMangaManager
 import eu.kanade.tachiyomi.data.library.LibraryServiceListener
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
@@ -26,11 +27,11 @@ import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.fetchChapterListAsync
 import eu.kanade.tachiyomi.source.fetchMangaDetailsAsync
 import eu.kanade.tachiyomi.source.model.SChapter
-import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.manga.track.TrackItem
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
+import eu.kanade.tachiyomi.util.lang.trimOrNull
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import kotlinx.coroutines.CoroutineScope
@@ -43,6 +44,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
+import uy.kohesive.injekt.injectLazy
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -59,6 +61,8 @@ class MangaDetailsPresenter(
 ) : DownloadQueue.DownloadListener, LibraryServiceListener {
 
     private var scope = CoroutineScope(Job() + Dispatchers.Default)
+
+    private val customMangaManager: CustomMangaManager by injectLazy()
 
     var isLockedFromSearch = false
     var hasRequested = false
@@ -405,11 +409,10 @@ class MangaDetailsPresenter(
                 manga.copyFrom(networkManga)
                 manga.initialized = true
 
-                if (shouldUpdateCover(thumbnailUrl, networkManga)) {
-                    coverCache.deleteFromCache(manga, false)
-                    manga.thumbnail_url = networkManga.thumbnail_url
+                if (thumbnailUrl != networkManga.thumbnail_url) {
+                    coverCache.deleteFromCache(thumbnailUrl)
                     withContext(Dispatchers.Main) {
-                        forceUpdateCovers()
+                        controller.setPaletteColor()
                     }
                 }
                 db.insertManga(manga).executeAsBlocking()
@@ -458,19 +461,6 @@ class MangaDetailsPresenter(
                 )
             }
         }
-    }
-
-    private fun shouldUpdateCover(thumbnailUrl: String?, networkManga: SManga): Boolean {
-        val refreshCovers = preferences.refreshCoversToo().getOrDefault()
-        if (thumbnailUrl == networkManga.thumbnail_url && !refreshCovers) {
-            return false
-        }
-        if (thumbnailUrl != networkManga.thumbnail_url && !manga.hasCustomCover()) {
-            return true
-        }
-        if (manga.hasCustomCover()) return false
-
-        return refreshCovers
     }
 
     /**
@@ -666,6 +656,7 @@ class MangaDetailsPresenter(
         coverCache.deleteFromCache(manga)
         db.resetMangaInfo(manga).executeAsBlocking()
         downloadManager.deleteManga(manga, source)
+        customMangaManager.saveMangaInfo(CustomMangaManager.MangaJson(manga.id!!))
         asyncUpdateMangaAndChapters(true)
     }
 
@@ -718,36 +709,41 @@ class MangaDetailsPresenter(
         artist: String?,
         uri: Uri?,
         description: String?,
-        tags: Array<String>?
+        tags: Array<String>?,
+        resetCover: Boolean = false
     ) {
         if (manga.source == LocalSource.ID) {
             manga.title = if (title.isNullOrBlank()) manga.url else title.trim()
-            manga.author = author?.trim()
-            manga.artist = artist?.trim()
-            manga.description = description?.trim()
+            manga.author = author?.trimOrNull()
+            manga.artist = artist?.trimOrNull()
+            manga.description = description?.trimOrNull()
             val tagsString = tags?.joinToString(", ") { it.capitalize() }
             manga.genre = if (tags.isNullOrEmpty()) null else tagsString?.trim()
             LocalSource(downloadManager.context).updateMangaInfo(manga)
             db.updateMangaInfo(manga).executeAsBlocking()
+        } else {
+            val genre = if (!tags.isNullOrEmpty() && tags.joinToString(", ") != manga.genre) {
+                tags.map { it.capitalize() }.toTypedArray()
+            } else {
+                null
+            }
+            val manga = CustomMangaManager.MangaJson(
+                manga.id!!,
+                title?.trimOrNull(),
+                author?.trimOrNull(),
+                artist?.trimOrNull(),
+                description?.trimOrNull(),
+                genre
+            )
+            customMangaManager.saveMangaInfo(manga)
         }
-        if (uri != null) editCoverWithStream(uri)
-    }
-
-    /**
-     * Remvoe custom cover
-     */
-    fun clearCustomCover() {
-        if (manga.hasCustomCover()) {
-            coverCache.deleteFromCache(manga)
-            manga.removeCustomThumbnailUrl()
-            db.insertManga(manga).executeAsBlocking()
-            forceUpdateCovers()
+        if (uri != null) {
+            editCoverWithStream(uri)
+        } else if (resetCover) {
+            coverCache.deleteCustomCover(manga)
+            controller.setPaletteColor()
         }
-    }
-
-    fun forceUpdateCovers(deleteCache: Boolean = true) {
-        if (deleteCache) coverCache.deleteFromCache(manga)
-        controller.setPaletteColor()
+        controller.updateHeader()
     }
 
     fun editCoverWithStream(uri: Uri): Boolean {
@@ -755,16 +751,13 @@ class MangaDetailsPresenter(
             downloadManager.context.contentResolver.openInputStream(uri) ?: return false
         if (manga.source == LocalSource.ID) {
             LocalSource.updateCover(downloadManager.context, manga, inputStream)
-            forceUpdateCovers()
+            controller.setPaletteColor()
             return true
         }
 
         if (manga.favorite) {
-            coverCache.deleteFromCache(manga)
-            manga.setCustomThumbnailUrl()
-            db.insertManga(manga).executeAsBlocking()
-            coverCache.copyToCache(manga, inputStream)
-            forceUpdateCovers(false)
+            coverCache.setCustomCoverToCache(manga, inputStream)
+            controller.setPaletteColor()
             return true
         }
         return false

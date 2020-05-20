@@ -78,6 +78,9 @@ object Migrations {
                 BackupCreatorJob.setupTask()
                 ExtensionUpdateJob.setupTask()
             }
+            if (oldVersion < 66) {
+                LibraryPresenter.updateCustoms()
+            }
             return true
         }
         return false

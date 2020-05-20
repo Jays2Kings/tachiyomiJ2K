@@ -9,7 +9,6 @@ import eu.kanade.tachiyomi.util.storage.DiskUtil
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.util.Locale
-import kotlin.random.Random
 
 interface Manga : SManga {
 
@@ -147,15 +146,6 @@ interface Manga : SManga {
 
     fun key(): String {
         return DiskUtil.hashKeyForDisk(thumbnail_url.orEmpty())
-    }
-
-    fun setCustomThumbnailUrl() {
-        removeCustomThumbnailUrl()
-        thumbnail_url = "Custom-${Random.nextInt(0, 1000)}-J2K-${thumbnail_url ?: id!!}"
-    }
-
-    fun removeCustomThumbnailUrl() {
-        thumbnail_url = thumbnail_url?.substringAfter("-J2K-")?.substringAfter("Custom-")
     }
 
     // Used to display the chapter's title one way or another

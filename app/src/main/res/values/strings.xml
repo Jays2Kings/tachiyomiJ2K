@@ -380,7 +380,7 @@
     <string name="newest_first">Newest to oldest</string>
     <string name="oldest_first">Oldest to newest</string>
     <string name="clear_tags">Clear Tags</string>
-    <string name="edit_cover">Edit cover</string>
+    <string name="reset_tags">Reset Tags</string>
     <string name="reset_cover">Reset cover</string>
     <string name="failed_to_update_cover">Failed to update cover</string>
     <string name="must_be_in_library_to_edit">Manga must be in your library to edit</string>

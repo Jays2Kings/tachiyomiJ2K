@@ -137,7 +137,7 @@ class MangaHeaderHolder(
         title.text = manga.title
 
         if (manga.genre.isNullOrBlank().not()) manga_genres_tags.setTags(
-            manga.genre?.split(", ")?.map(String::trim)
+            manga.genre?.split(",")?.map(String::trim)
         )
         else manga_genres_tags.setTags(emptyList())
 
@@ -321,14 +321,6 @@ class MangaHeaderHolder(
             error(drawable)
             if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
         })
-    }
-
-    private fun isCached(manga: Manga): Boolean {
-        if (manga.source == LocalSource.ID) return true
-        manga.thumbnail_url?.let {
-            return adapter.delegate.mangaPresenter().coverCache.getCoverFile(manga).exists()
-        }
-        return manga.initialized
     }
 
     fun expand() {

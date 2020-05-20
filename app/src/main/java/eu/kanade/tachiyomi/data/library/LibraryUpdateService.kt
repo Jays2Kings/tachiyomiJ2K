@@ -20,6 +20,7 @@ import coil.request.GetRequest
 import coil.request.LoadRequest
 import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.database.models.Chapter
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicInteger
  */
 class LibraryUpdateService(
     val db: DatabaseHelper = Injekt.get(),
+    val coverCache: CoverCache = Injekt.get(),
     val sourceManager: SourceManager = Injekt.get(),
     val preferences: PreferencesHelper = Injekt.get(),
     val downloadManager: DownloadManager = Injekt.get(),
@@ -533,15 +535,14 @@ class LibraryUpdateService(
                             val thumbnailUrl = manga.thumbnail_url
                             manga.copyFrom(networkManga)
                             manga.initialized = true
+                            if (thumbnailUrl != manga.thumbnail_url) {
+                                coverCache.deleteFromCache(thumbnailUrl)
                                 // load new covers in background
-                            if (!manga.hasCustomCover()) {
-                                val request = LoadRequest.Builder(this@LibraryUpdateService)
-                                    .data(manga)
-                                    .memoryCachePolicy(CachePolicy.DISABLED)
-                                    .build()
+                                val request =
+                                    LoadRequest.Builder(this@LibraryUpdateService).data(manga)
+                                        .memoryCachePolicy(CachePolicy.DISABLED).build()
                                 Coil.imageLoader(this@LibraryUpdateService).execute(request)
                             }
-
                             db.insertManga(manga).executeAsBlocking()
                         }
                     }

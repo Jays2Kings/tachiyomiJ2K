@@ -6,6 +6,7 @@ import eu.kanade.tachiyomi.data.cache.ChapterCache
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.download.DownloadManager
+import eu.kanade.tachiyomi.data.library.CustomMangaManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.extension.ExtensionManager
@@ -41,6 +42,8 @@ class AppModule(val app: Application) : InjektModule {
 
         addSingletonFactory { DownloadManager(app) }
 
+        addSingletonFactory { CustomMangaManager(app) }
+
         addSingletonFactory { TrackManager(app) }
 
         addSingletonFactory { Gson() }
@@ -56,5 +59,7 @@ class AppModule(val app: Application) : InjektModule {
         GlobalScope.launch { get<DatabaseHelper>() }
 
         GlobalScope.launch { get<DownloadManager>() }
+
+        GlobalScope.launch { get<CustomMangaManager>() }
     }
 }

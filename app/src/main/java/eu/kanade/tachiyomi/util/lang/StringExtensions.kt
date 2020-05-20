@@ -22,6 +22,11 @@ fun String.removeArticles(): String {
     }
 }
 
+fun String.trimOrNull(): String? {
+    val trimmed = trim()
+    return if (trimmed.isBlank()) null else trimmed
+}
+
 /**
  * Replaces the given string to have at most [count] characters using [replacement] near the center.
  * If [replacement] is longer than [count] an exception will be thrown when `length > count`.

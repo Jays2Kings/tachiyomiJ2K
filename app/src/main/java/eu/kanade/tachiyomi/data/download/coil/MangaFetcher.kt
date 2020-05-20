@@ -28,7 +28,11 @@ import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.File
 
-class MangaFetcher() : Fetcher<Manga> {
+class MangaFetcher : Fetcher<Manga> {
+
+    companion object {
+        const val realCover = "real_cover"
+    }
 
     private val coverCache: CoverCache by injectLazy()
     private val sourceManager: SourceManager by injectLazy()
@@ -46,23 +50,17 @@ class MangaFetcher() : Fetcher<Manga> {
     override suspend fun fetch(pool: BitmapPool, data: Manga, size: Size, options: Options): FetchResult {
         val cover = data.thumbnail_url
         return when (getResourceType(cover)) {
-            Type.File -> fileLoader(data)
             Type.URL -> httpLoader(data, options)
-            Type.CUSTOM -> customLoader(data, options)
+            Type.File -> fileLoader(data)
             null -> error("Invalid image")
         }
     }
 
-    private suspend fun customLoader(manga: Manga, options: Options): FetchResult {
-        val coverFile = coverCache.getCoverFile(manga)
-        if (coverFile.exists()) {
-            return fileLoader(coverFile)
-        }
-        manga.thumbnail_url = manga.thumbnail_url!!.substringAfter("-J2K-").substringAfter("CUSTOM-")
-        return httpLoader(manga, options)
-    }
-
     private suspend fun httpLoader(manga: Manga, options: Options): FetchResult {
+        val customCoverFile = coverCache.getCustomCoverFile(manga)
+        if (customCoverFile.exists() && options.parameters.value(realCover) != true) {
+            return fileLoader(customCoverFile)
+        }
         val coverFile = coverCache.getCoverFile(manga)
         if (coverFile.exists()) {
             return fileLoader(coverFile)
@@ -158,14 +156,13 @@ class MangaFetcher() : Fetcher<Manga> {
     private fun getResourceType(cover: String?): Type? {
         return when {
             cover.isNullOrEmpty() -> null
-            cover.startsWith("http") -> Type.URL
-            cover.startsWith("Custom-") -> Type.CUSTOM
+            cover.startsWith("http") || cover.startsWith("Custom-", true) -> Type.URL
             cover.startsWith("/") || cover.startsWith("file://") -> Type.File
             else -> null
         }
     }
 
     private enum class Type {
-        File, CUSTOM, URL;
+        File, URL;
     }
 }

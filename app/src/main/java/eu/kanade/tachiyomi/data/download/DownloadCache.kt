@@ -138,11 +138,11 @@ class DownloadCache(
             val trueMangaDirs = mangaDirs.mapNotNull { mangaDir ->
                 val manga = sourceMangas.firstOrNull()?.find {
                     DiskUtil.buildValidFilename(
-                        it.title
+                        it.originalTitle
                     ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
                 } ?: sourceMangas.lastOrNull()?.find {
                     DiskUtil.buildValidFilename(
-                        it.title
+                        it.originalTitle
                     ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
                 }
                 val id = manga?.id ?: return@mapNotNull null

@@ -540,12 +540,8 @@ class ReaderPresenter(
                     R.string.cover_updated
                     SetAsCoverResult.Success
                 } else {
-                    manga.thumbnail_url ?: throw Exception("Image url not found")
                     if (manga.favorite) {
-                        coverCache.deleteFromCache(manga)
-                        manga.setCustomThumbnailUrl()
-                        db.insertManga(manga).executeAsBlocking()
-                        coverCache.copyToCache(manga, stream())
+                        coverCache.setCustomCoverToCache(manga, stream())
                         SetAsCoverResult.Success
                     } else {
                         SetAsCoverResult.AddToLibraryFirst
