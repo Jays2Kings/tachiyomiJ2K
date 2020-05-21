@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="add">Добавить</string>
-    <string name="notify_extension_updates">Авто-проверка обновлений</string>
     <string name="cancel">Отмена</string>
     <string name="cancel_all">Отменить все</string>
     <string name="clear">Очистить</string>
@@ -222,7 +221,6 @@
 
     <string name="last_read_chapter">Последняя прочитанная глава</string>
 
-    <string name="latest">Последняя</string>
     <string name="latest_">Последняя: %1$s</string>
 
     <string name="left_to_right_viewer">Слева направо</string>
@@ -272,7 +270,6 @@
     </plurals>
     <string name="removed_from_library">Удалить из библиотеки</string>
 
-    <string name="migrate">Мигрировать</string>
 
     <string name="migrating_to">переместится в</string>
 
@@ -663,8 +660,16 @@
     <string name="display_as">Показать как</string>
     <string name="hide_category_hopper">Скрыть переключатель категорий</string>
     <string name="more_library_settings">Дополнительные настройки библиотеки</string>
+    <!-- Library update service notifications -->
     <!-- Library settings -->
     <string name="include_in_global_update">Включить в глобальное обновление</string>
+    <string name="show_notification_error">Показывать уведомление об ошибках</string>
+    <plurals name="notification_update_failed">
+        <item quantity="one">1 обновление не удалось</item>
+        <item quantity="few">%1$s обновления не удалось</item>
+        <item quantity="many">%1$s обновлений не удалось</item>
+        <item quantity="other">%1$d обновлений не удалось</item>
+    </plurals>
     <!-- Recents -->
     <string name="recents">Недавние</string>
     <string name="newly_added">Недавно добавлено</string>
@@ -684,9 +689,9 @@
     <string name="reset_chapter_question">Сбросить главу?</string>
     <string name="press_and_hold_to_reset_history">Нажмите и удерживайте, чтобы сбросить историю глав</string>
     <!-- Browse -->
-    <string name="view_latest">ПОСЛЕДНЯЯ</string>
     <string name="in_library">В библиотеке</string>
     <string name="search_extensions">Поиск расширений…</string>
+    <string name="latest">Последняя</string>
     <string name="source_hidden">Источник скрыт</string>
     <string name="last_used">Последний используемый</string>
     <string name="local_source_help_guide">Руководство по локальным источникам</string>
@@ -766,6 +771,7 @@
     <!-- Migration -->
     <string name="select_target_sources">Выберите источники для переноса</string>
     <string name="migrate_">Перенос %1$s источника</string>
+    <string name="migrate">Перенести</string>
     <string name="copy_value">Копировать</string>
 
     <!-- General settings -->
@@ -783,6 +789,18 @@
     <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
     <string name="clean_up_cached_covers">Очистить кэш обложек</string>
     <string name="delete_old_covers_in_library_used_">Удалять старые и неиспользуемые кэшированные обложки манги в вашей библиотеке, которая была обновлена.\nВ настоящее время используется: %1$s</string>
+
+    <!-- Browse Settings -->
+    <string name="pref_global_search">Глобальный поиск</string>
+    <string name="check_for_extension_updates">Авто-проверка обновлений расширений</string>
+    <string name="only_search_pinned_when">Искать только в закрепленных источниках</string>
+    <string name="match_pinned_sources">Соответствие закрепленных источников</string>
+    <string name="match_enabled_sources">Соответствие включенных источников</string>
+    <string name="only_enable_pinned_for_migration">Включить только ваши закрепленные источники для переноса</string>
+    <string name="only_enable_enabled_for_migration">Включить только ваши в настоящее время включенные источники для переноса</string>
+    <string name="migration_sources_set">Источники для переноса установлены</string>
+    <string name="you_can_migrate_in_library">Вы также можете мигрировать, выбрав мангу в своей библиотеке</string>
+
 
     <!-- About section -->
     <string name="whats_new">Что нового в этом релизе</string>
