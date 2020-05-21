@@ -167,6 +167,10 @@
         <item quantity="one">und %1$d weiteres Kapitel</item>
         <item quantity="other">und %1$d weitere Kapitel</item>
     </plurals>
+    <plurals name="notification_update_failed">
+        <item quantity="one">%1$d Aktualisierung fehlgeschlagen</item>
+        <item quantity="other">%1$d Aktualisierungen fehlgeschlagen</item>
+    </plurals>
 
     <!-- Library settings -->
     <string name="library_update_frequency">Häufigkeit der Bibliotheksaktualisierung</string>
@@ -182,6 +186,7 @@
     <string name="include_in_global_update">In globaler Aktualisierung einschließen</string>
     <string name="auto_refresh_covers">Vorschaubilder automatisch aktualisieren</string>
     <string name="auto_refresh_covers_summary">Vorschaubilder automatisch aktualisieren wenn die Bibliothek aktualisiert wird</string>
+    <string name="show_notification_error">Push-Nachrichten für Fehler anzeigen</string>
 
     <!-- Recents -->
     <string name="recents">Neues</string>
@@ -216,7 +221,6 @@
     <string name="local_source">Lokale Manga</string>
     <string name="other">Andere</string>
     <string name="global_search">Globale Suche…</string>
-    <string name="view_latest">Letzte ansehen</string>
     <string name="latest">Letzte</string>
     <string name="browse">Umsehen</string>
     <string name="in_library">In Bibliothek</string>
@@ -496,8 +500,8 @@
         <item quantity="other">%d Quellen fehlen</item>
     </plurals>
     <plurals name="licensed_manga">
-        <item quantity="one">%d Manga ist nun lizenesiert und konnte nicht wiederhergestellt werden</item>
-        <item quantity="other">%d Manga sind nun lizenesiert und konnten nicht wiederhergestellt werden</item>
+        <item quantity="one">%d Manga ist nun liizenziert und konnte nicht wiederhergestellt werden</item>
+        <item quantity="other">%d Manga sind nun liizenziert und konnten nicht wiederhergestellt werden</item>
     </plurals>
     <string name="not_logged_into_">Nicht angemeldet in %1$s</string>
 
@@ -532,6 +536,18 @@
     </plurals>
     <string name="clean_up_cached_covers">Zwischengespeicherte Vorschaubilder aufräumen</string>
     <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Manga in deiner Bibliothek welche aktualisiert wurden löschen.\nAktuell genutzt: %1$s</string>
+
+    <!-- Browse Settings -->
+    <string name="pref_global_search">Globale Suche</string>
+    <string name="check_for_extension_updates">Erweiterungsaktualisierungen prüfen</string>
+    <string name="only_search_pinned_when">Nur angepinnte Quellen durchsuchen</string>
+    <string name="match_pinned_sources">Entspechend angepinnter Quellen</string>
+    <string name="match_enabled_sources">Entspechend aktivierter Quellen</string>
+    <string name="only_enable_pinned_for_migration">Nur angepinnte Quellen für Migrierung nutzen</string>
+    <string name="only_enable_enabled_for_migration">Nur aktuell aktivierte Quellen für Migrierung nutzen</string>
+    <string name="use_last_saved_migration_preferences">Zuletzt gespeicherte Vor-Migrierungseinstellungen und Quellen nutzen für Massenmigrierung</string>
+    <string name="migration_sources_set">Migration sources set</string>
+    <string name="you_can_migrate_in_library">Migrieren können Sie auch durch Auswählen von Manga in Ihrer Bibliothek</string>
 
     <!-- About section -->
     <string name="version">Version</string>
