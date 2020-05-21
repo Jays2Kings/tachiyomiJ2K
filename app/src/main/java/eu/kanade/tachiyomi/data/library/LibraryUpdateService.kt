@@ -107,93 +107,6 @@ class LibraryUpdateService(
         preferences.deleteRemovedChapters().get() != 1
     }
 
-    /**
-     * Defines what should be updated within a service execution.
-     */
-    enum class Target {
-
-        CHAPTERS, // Manga chapters
-        DETAILS, // Manga metadata
-        TRACKING // Tracking metadata
-    }
-
-    companion object {
-
-        /**
-         * Key for category to update.
-         */
-        const val KEY_CATEGORY = "category"
-
-        fun categoryInQueue(id: Int?) = instance?.categoryIds?.contains(id) ?: false
-        private var instance: LibraryUpdateService? = null
-
-        /**
-         * Key that defines what should be updated.
-         */
-        const val KEY_TARGET = "target"
-
-        /**
-         * Returns the status of the service.
-         *
-         * @return true if the service is running, false otherwise.
-         */
-        fun isRunning(): Boolean {
-            return instance != null
-        }
-
-        /**
-         * Starts the service. It will be started only if there isn't another instance already
-         * running.
-         *
-         * @param context the application context.
-         * @param category a specific category to update, or null for global update.
-         * @param target defines what should be updated.
-         */
-        fun start(context: Context, category: Category? = null, target: Target = Target.CHAPTERS) {
-            if (!isRunning()) {
-                val intent = Intent(context, LibraryUpdateService::class.java).apply {
-                    putExtra(KEY_TARGET, target)
-                    category?.id?.let { id ->
-                        putExtra(KEY_CATEGORY, id)
-                    }
-                }
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-                    context.startService(intent)
-                } else {
-                    context.startForegroundService(intent)
-                }
-            } else {
-                if (target == Target.CHAPTERS) category?.id?.let {
-                    instance?.addCategory(it)
-                }
-            }
-        }
-
-        /**
-         * Stops the service.
-         *
-         * @param context the application context.
-         */
-        fun stop(context: Context) {
-            instance?.job?.cancel()
-            GlobalScope.launch {
-                instance?.jobCount?.set(0)
-                instance?.finishUpdates()
-            }
-            context.stopService(Intent(context, LibraryUpdateService::class.java))
-        }
-
-        private var listener: LibraryServiceListener? = null
-
-        fun setListener(listener: LibraryServiceListener) {
-            this.listener = listener
-        }
-
-        fun removeListener(listener: LibraryServiceListener) {
-            if (this.listener == listener) this.listener = null
-        }
-    }
-
     private fun addManga(mangaToAdd: List<LibraryManga>) {
         val distinctManga = mangaToAdd.filter { it !in mangaToUpdate }
         mangaToUpdate.addAll(distinctManga)
@@ -575,6 +488,93 @@ class LibraryUpdateService(
             // Empty
         }
         return File("")
+    }
+
+    /**
+     * Defines what should be updated within a service execution.
+     */
+    enum class Target {
+
+        CHAPTERS, // Manga chapters
+        DETAILS, // Manga metadata
+        TRACKING // Tracking metadata
+    }
+
+    companion object {
+
+        /**
+         * Key for category to update.
+         */
+        const val KEY_CATEGORY = "category"
+
+        fun categoryInQueue(id: Int?) = instance?.categoryIds?.contains(id) ?: false
+        private var instance: LibraryUpdateService? = null
+
+        /**
+         * Key that defines what should be updated.
+         */
+        const val KEY_TARGET = "target"
+
+        /**
+         * Returns the status of the service.
+         *
+         * @return true if the service is running, false otherwise.
+         */
+        fun isRunning(): Boolean {
+            return instance != null
+        }
+
+        /**
+         * Starts the service. It will be started only if there isn't another instance already
+         * running.
+         *
+         * @param context the application context.
+         * @param category a specific category to update, or null for global update.
+         * @param target defines what should be updated.
+         */
+        fun start(context: Context, category: Category? = null, target: Target = Target.CHAPTERS) {
+            if (!isRunning()) {
+                val intent = Intent(context, LibraryUpdateService::class.java).apply {
+                    putExtra(KEY_TARGET, target)
+                    category?.id?.let { id ->
+                        putExtra(KEY_CATEGORY, id)
+                    }
+                }
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                    context.startService(intent)
+                } else {
+                    context.startForegroundService(intent)
+                }
+            } else {
+                if (target == Target.CHAPTERS) category?.id?.let {
+                    instance?.addCategory(it)
+                }
+            }
+        }
+
+        /**
+         * Stops the service.
+         *
+         * @param context the application context.
+         */
+        fun stop(context: Context) {
+            instance?.job?.cancel()
+            GlobalScope.launch {
+                instance?.jobCount?.set(0)
+                instance?.finishUpdates()
+            }
+            context.stopService(Intent(context, LibraryUpdateService::class.java))
+        }
+
+        private var listener: LibraryServiceListener? = null
+
+        fun setListener(listener: LibraryServiceListener) {
+            this.listener = listener
+        }
+
+        fun removeListener(listener: LibraryServiceListener) {
+            if (this.listener == listener) this.listener = null
+        }
     }
 }
 
