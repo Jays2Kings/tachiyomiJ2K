@@ -500,8 +500,8 @@
         <item quantity="other">%d Quellen fehlen</item>
     </plurals>
     <plurals name="licensed_manga">
-        <item quantity="one">%d Manga ist nun liizenziert und konnte nicht wiederhergestellt werden</item>
-        <item quantity="other">%d Manga sind nun liizenziert und konnten nicht wiederhergestellt werden</item>
+        <item quantity="one">%d Manga ist nun lizenziert und konnte nicht wiederhergestellt werden</item>
+        <item quantity="other">%d Manga sind nun lizenziert und konnten nicht wiederhergestellt werden</item>
     </plurals>
     <string name="not_logged_into_">Nicht angemeldet in %1$s</string>
 
