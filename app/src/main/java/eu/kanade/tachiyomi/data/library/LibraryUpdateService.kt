@@ -107,6 +107,27 @@ class LibraryUpdateService(
         preferences.deleteRemovedChapters().get() != 1
     }
 
+    /**
+     * Method called when the service receives an intent.
+     *
+     * @param intent the start intent from.
+     * @param flags the flags of the command.
+     * @param startId the start id of this command.
+     * @return the start value of the command.
+     */
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        if (intent == null) return START_NOT_STICKY
+        val target = intent.getSerializableExtra(KEY_TARGET) as? Target ?: return START_NOT_STICKY
+
+        instance = this
+
+        val selectedScheme = preferences.libraryUpdatePrioritization().getOrDefault()
+        val mangaList = getMangaToUpdate(intent, target).sortedWith(rankingScheme[selectedScheme])
+        // Update favorite manga. Destroy service when completed or in case of an error.
+        launchTarget(target, mangaList, startId)
+        return START_REDELIVER_INTENT
+    }
+
     private fun addManga(mangaToAdd: List<LibraryManga>) {
         val distinctManga = mangaToAdd.filter { it !in mangaToUpdate }
         mangaToUpdate.addAll(distinctManga)
@@ -220,26 +241,7 @@ class LibraryUpdateService(
         return null
     }
 
-    /**
-     * Method called when the service receives an intent.
-     *
-     * @param intent the start intent from.
-     * @param flags the flags of the command.
-     * @param startId the start id of this command.
-     * @return the start value of the command.
-     */
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        if (intent == null) return START_NOT_STICKY
-        val target = intent.getSerializableExtra(KEY_TARGET) as? Target ?: return START_NOT_STICKY
 
-        instance = this
-
-        val selectedScheme = preferences.libraryUpdatePrioritization().getOrDefault()
-        val mangaList = getMangaToUpdate(intent, target).sortedWith(rankingScheme[selectedScheme])
-        // Update favorite manga. Destroy service when completed or in case of an error.
-        launchTarget(target, mangaList, startId)
-        return START_REDELIVER_INTENT
-    }
 
     private fun launchTarget(target: Target, mangaToAdd: List<LibraryManga>, startId: Int) {
         val handler = CoroutineExceptionHandler { _, exception ->
