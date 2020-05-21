@@ -108,6 +108,16 @@ class LibraryUpdateService(
     }
 
     /**
+     * Defines what should be updated within a service execution.
+     */
+    enum class Target {
+
+        CHAPTERS, // Manga chapters
+        DETAILS, // Manga metadata
+        TRACKING // Tracking metadata
+    }
+
+    /**
      * Method called when the service receives an intent.
      *
      * @param intent the start intent from.
@@ -492,15 +502,6 @@ class LibraryUpdateService(
         return File("")
     }
 
-    /**
-     * Defines what should be updated within a service execution.
-     */
-    enum class Target {
-
-        CHAPTERS, // Manga chapters
-        DETAILS, // Manga metadata
-        TRACKING // Tracking metadata
-    }
 
     companion object {
 
