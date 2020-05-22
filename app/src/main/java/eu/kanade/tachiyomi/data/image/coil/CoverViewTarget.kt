@@ -1,4 +1,4 @@
-package eu.kanade.tachiyomi.widget
+package eu.kanade.tachiyomi.data.image.coil
 
 import android.graphics.drawable.Drawable
 import android.view.View

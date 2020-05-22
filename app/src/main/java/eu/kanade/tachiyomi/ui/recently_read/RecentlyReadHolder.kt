@@ -4,7 +4,7 @@ import android.view.View
 import coil.api.clear
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.MangaChapterHistory
-import eu.kanade.tachiyomi.data.download.coil.loadLibraryManga
+import eu.kanade.tachiyomi.data.image.coil.loadLibraryManga
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.lang.toTimestampString
 import kotlinx.android.synthetic.main.recently_read_item.*

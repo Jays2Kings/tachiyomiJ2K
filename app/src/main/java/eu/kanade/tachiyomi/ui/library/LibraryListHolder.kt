@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import coil.api.clear
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.download.coil.loadLibraryManga
+import eu.kanade.tachiyomi.data.image.coil.loadLibraryManga
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.updateLayoutParams

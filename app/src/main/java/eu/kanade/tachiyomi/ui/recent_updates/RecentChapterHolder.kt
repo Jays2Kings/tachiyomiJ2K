@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import coil.api.clear
 import coil.transform.CircleCropTransformation
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.download.coil.loadLibraryManga
+import eu.kanade.tachiyomi.data.image.coil.loadLibraryManga
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterHolder
 import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.system.getResourceColor

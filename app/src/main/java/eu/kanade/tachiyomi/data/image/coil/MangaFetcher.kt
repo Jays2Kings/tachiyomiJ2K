@@ -1,4 +1,4 @@
-package eu.kanade.tachiyomi.data.download.coil
+package eu.kanade.tachiyomi.data.image.coil
 
 import android.webkit.MimeTypeMap
 import coil.bitmappool.BitmapPool

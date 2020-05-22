@@ -13,7 +13,7 @@ import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
-import eu.kanade.tachiyomi.widget.CoverViewTarget
+import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import kotlinx.android.synthetic.main.extension_card_item.*
 import kotlinx.android.synthetic.main.source_global_search_controller_card_item.*
 

@@ -10,7 +10,7 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.util.system.getResourceColor
-import eu.kanade.tachiyomi.widget.CoverViewTarget
+import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_list_item.*
 
 /**

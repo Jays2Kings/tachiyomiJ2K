@@ -8,7 +8,7 @@ import coil.api.clear
 import coil.size.Precision
 import coil.size.Scale
 import eu.kanade.tachiyomi.data.database.models.Manga
-import eu.kanade.tachiyomi.data.download.coil.loadLibraryManga
+import eu.kanade.tachiyomi.data.image.coil.loadLibraryManga
 import eu.kanade.tachiyomi.util.view.gone
 import eu.kanade.tachiyomi.util.view.visibleIf
 import kotlinx.android.synthetic.main.manga_grid_item.*

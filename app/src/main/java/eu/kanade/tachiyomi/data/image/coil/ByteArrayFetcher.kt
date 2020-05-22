@@ -1,4 +1,4 @@
-package eu.kanade.tachiyomi.data.download.coil
+package eu.kanade.tachiyomi.data.image.coil
 
 import coil.bitmappool.BitmapPool
 import coil.decode.DataSource

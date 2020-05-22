@@ -1,4 +1,4 @@
-package eu.kanade.tachiyomi.data.download.coil
+package eu.kanade.tachiyomi.data.image.coil
 
 import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable

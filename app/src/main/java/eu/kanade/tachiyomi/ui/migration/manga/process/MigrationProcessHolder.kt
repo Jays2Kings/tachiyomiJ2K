@@ -19,7 +19,7 @@ import eu.kanade.tachiyomi.util.view.invisible
 import eu.kanade.tachiyomi.util.view.setVectorCompat
 import eu.kanade.tachiyomi.util.view.visible
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
-import eu.kanade.tachiyomi.widget.CoverViewTarget
+import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import kotlinx.android.synthetic.main.manga_grid_item.view.*
 import kotlinx.android.synthetic.main.migration_process_item.*
 import kotlinx.android.synthetic.main.unread_download_badge.view.*
