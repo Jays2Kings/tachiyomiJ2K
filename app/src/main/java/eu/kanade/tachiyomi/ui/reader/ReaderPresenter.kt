@@ -26,7 +26,6 @@ import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.ImageUtil
-import eu.kanade.tachiyomi.util.system.executeOnIO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -51,7 +50,8 @@ class ReaderPresenter(
     private val sourceManager: SourceManager = Injekt.get(),
     private val downloadManager: DownloadManager = Injekt.get(),
     private val coverCache: CoverCache = Injekt.get(),
-    private val preferences: PreferencesHelper = Injekt.get()
+    private val preferences: PreferencesHelper = Injekt.get(),
+    private val readerChapterFilter: ReaderChapterFilter = Injekt.get()
 ) : BasePresenter<ReaderActivity>() {
 
     /**
@@ -96,38 +96,8 @@ class ReaderPresenter(
         val selectedChapter = dbChapters.find { it.id == chapterId }
             ?: error("Requested chapter of id $chapterId not found in chapter list")
 
-        val chaptersForReader =
-            if (preferences.skipRead() || preferences.skipFiltered()) {
-                val list = dbChapters
-                    .filter {
-                        if (preferences.skipRead() && it.read) {
-                            return@filter false
-                        } else if (preferences.skipFiltered()) {
-                            if (
-                                (manga.readFilter == Manga.SHOW_READ && !it.read) ||
-                                (manga.readFilter == Manga.SHOW_UNREAD && it.read) ||
-                                (
-                                    manga.downloadedFilter == Manga.SHOW_DOWNLOADED &&
-                                        !downloadManager.isChapterDownloaded(it, manga)
-                                    ) ||
-                                (manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED && !it.bookmark)
-                            ) {
-                                return@filter false
-                            }
-                        }
-
-                        true
-                    }
-                    .toMutableList()
-
-                val find = list.find { it.id == chapterId }
-                if (find == null) {
-                    list.add(selectedChapter)
-                }
-                list
-            } else {
-                dbChapters
-            }
+        val chaptersForReader = readerChapterFilter
+            .filterChapter(dbChapters, manga, chapterId, selectedChapter)
 
         when (manga.sorting) {
             Manga.SORTING_SOURCE -> ChapterLoadBySource().get(chaptersForReader)
@@ -211,33 +181,26 @@ class ReaderPresenter(
     suspend fun getChapters(): List<ReaderChapterItem> {
         val manga = manga ?: return emptyList()
         chapterItems = withContext(Dispatchers.IO) {
-            val list = db.getChapters(manga).executeOnIO().filter {
-                if (preferences.skipFiltered()) {
-                    if ((manga.readFilter == Manga.SHOW_READ && !it.read) ||
-                        (manga.readFilter == Manga.SHOW_UNREAD && it.read) ||
-                        (manga.downloadedFilter == Manga.SHOW_DOWNLOADED &&
-                            !downloadManager.isChapterDownloaded(it, manga)) ||
-                        (manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED && !it.bookmark)) {
-                        return@filter false
+            val dbChapters = db.getChapters(manga).executeAsBlocking()
+            val list = readerChapterFilter
+                .filterChapter(dbChapters, manga, -1L, null)
+                .sortedBy {
+                    when (manga.sorting) {
+                        Manga.SORTING_NUMBER -> it.chapter_number
+                        else -> it.source_order.toFloat()
                     }
-                    true
-                } else {
-                    true
+                }.map {
+                    ReaderChapterItem(
+                        it, manga, it.id == getCurrentChapter()?.chapter?.id ?: chapterId
+                    )
                 }
-            }.sortedBy {
-                when (manga.sorting) {
-                    Manga.SORTING_NUMBER -> it.chapter_number
-                    else -> it.source_order.toFloat()
-                }
-            }.map {
-                ReaderChapterItem(
-                    it, manga, it.id == getCurrentChapter()?.chapter?.id ?: chapterId
-                )
-            }
-            if (!manga.sortDescending(preferences.chaptersDescAsDefault().getOrDefault()))
+            if (!manga.sortDescending(preferences.chaptersDescAsDefault().getOrDefault())) {
                 list.reversed()
-            else list
+            } else {
+                list
+            }
         }
+
         return chapterItems
     }
 
