@@ -53,7 +53,7 @@ class ReaderChapterFilter(
                     if (readEnabled && it.read.not() ||
                         (unreadEnabled && it.read) ||
                         (bookmarkEnabled && it.bookmark.not()) ||
-                        (downloadEnabled && !downloadManager.isChapterDownloaded(it, manga))
+                        (downloadEnabled && downloadManager.isChapterDownloaded(it, manga).not())
                     ) {
                         return@filter false
                     }
