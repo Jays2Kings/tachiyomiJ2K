@@ -282,10 +282,11 @@
     <!-- Reader settings -->
     <string name="fullscreen">Vollbild</string>
     <string name="page_transitions">Seitenübergänge</string>
-    <string name="disable_zoom">Zoom deaktiveren</string>
+    <string name="disable_zoom">Zoom deaktivieren</string>
     <string name="double_tap_anim_speed">Doppeltipp Animationsgeschwindigkeit</string>
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
+    <string name="reduces_banding_impacts_performance">Reduziert die Streifenbildung, beeinträchtigt jedoch die Leistung</string>
     <string name="crop_borders">Rand abschneiden</string>
     <string name="use_custom_brightness">Eigene Helligkeit festlegen</string>
     <string name="use_custom_color_filter">Eigenen Farbfilter nutzen</string>
@@ -296,7 +297,8 @@
     <string name="dodge_lighten">Abwedeln / Aufhellen</string>
     <string name="burn_darken">Brennen / Verdunkeln</string>
     <string name="keep_screen_on">Bildschirm anlassen</string>
-    <string name="skip_read_chapters">Überspringe als gelesen markierte Kapitel</string>
+    <string name="skip_read_chapters">Als gelesen markierte Kapitel überspringen</string>
+    <string name="skip_filtered_chapters">Gefilterte Kapitel überspringen</string>
     <string name="navigation">Navigation</string>
     <string name="volume_keys">Lautstärketasten</string>
     <string name="invert_volume_keys">Lautstärketasten umkehren</string>
@@ -312,13 +314,13 @@
     <string name="right_to_left_viewer">Rechts nach links</string>
     <string name="vertical_viewer">Vertikal</string>
     <string name="continuous_vertical">Durchgehend vertikal</string>
-    <string name="pager_viewer">Seiten</string>
+    <string name="paged">Seiten</string>
     <string name="scale_type">Skalierung</string>
     <string name="fit_screen">Bild ausfüllen</string>
     <string name="stretch">Strecken</string>
     <string name="fit_width">Horizontal ausfüllen</string>
     <string name="fit_height">Vertikal ausfüllen</string>
-    <string name="original_size">Orginalgröße</string>
+    <string name="original_size">Originalgröße</string>
     <string name="smart_fit">Intelligentes ausfüllen</string>
     <string name="zoom_start_position">Zoom Anfangsposition</string>
     <string name="force_portrait">Hochformat erzwingen</string>
@@ -330,6 +332,7 @@
     <string name="smart_based_on_page">Schlau (basierend auf Seite)</string>
     <string name="smart_based_on_page_and_theme">Schlau (basierend auf Seite und Thema)</string>
     <string name="always_show_chapter_transition">Kapitelübergang immer anzeigen</string>
+    <string name="if_disabled_transition_will_skip">Wenn deaktiviert wird die Kapitelübergangsseite, sollte das nächste Kapitel geladen sein, übersprungen</string>
     <string name="pref_webtoon_side_padding">Seitenpolsterung</string>
     <string name="webtoon_side_padding_0">Keine</string>
     <string name="webtoon_side_padding_10">10%</string>
@@ -340,7 +343,7 @@
     <!-- Manga details -->
     <string name="about_this_">Über diesen %1$s</string>
     <string name="start_reading">Anfangen zu lesen</string>
-    <string name="start_reading_chapter_">Anfangen Kapitel %1$s zu lesen</string>
+    <string name="start_reading_chapter_">Kapitel %1$s anfangen zu lesen</string>
     <string name="continue_reading_chapter_">Kapitel %1$s weiterlesen</string>
     <string name="continue_reading">Weiterlesen</string>
     <string name="chapters_">Kapitel %1$s</string>
@@ -354,8 +357,8 @@
     <string name="no_description">Keine Beschreibung</string>
     <string name="mark_all_chapters_as_read">Alle Kapitel als gelesen markieren?</string>
     <string name="remove_from_library">Aus Bibliothek entfernen</string>
-    <string name="select_starting_chapter">Start-Kapitel auswählen</string>
-    <string name="select_ending_chapter">End-Kapitel auswählen</string>
+    <string name="select_starting_chapter">Anfang auswählen</string>
+    <string name="select_ending_chapter">Ende auswählen</string>
     <string name="search_chapters">Kapitel suchen</string>
     <string name="next_unread_chapter">Nächstes ungelesenes Kapitel</string>
     <string name="next_5_unread">Die nächsten 5 ungelesenen Kapitel</string>
@@ -381,6 +384,7 @@
     <string name="failed_to_update_cover">Konnte Vorschaubild nicht ändern</string>
     <string name="must_be_in_library_to_edit">Zum Bearbeiten muss der Manga in Ihrer Bibliothek sein</string>
     <string name="remember_this_choice">Diese Auswahl merken</string>
+    <string name="source_not_installed">Quelle nicht installiert</string>
     <plurals name="deleted_chapters">
         <item quantity="one">Ein Kapitel wurde von der Quelle entfernt:\n%2$s\nDiesen Download löschen?</item>
         <item quantity="other">%1$s Kapitel wurden von der Quelle entfernt::\n%2$s\n\nDiese Downloads löschen?</item>
@@ -413,14 +417,14 @@
     <string name="source_migration">Quellenmigration</string>
     <string name="migration">Migrierung</string>
     <string name="skip_pre_migration">Vor-Migrierung überspringen</string>
-    <string name="select_a_source_to_migrate_from">Suche eine Quelle zum Migrieren aus</string>
-    <string name="data_to_include_in_migration">Beim Migrieren miteinschließen</string>
+    <string name="select_a_source_then_item_to_migrate">Zum Migrieren erst die Quelle und danach einen Eintrag auswählen</string>
+    <string name="data_to_include_in_migration">Beim Migrieren mit einschließen</string>
     <string name="search_parameter_eg">Suchparameter (Z. B.: language:english)</string>
     <string name="include_extra_search_parameter">Extra Suchparameter in die Suche einschließen</string>
     <string name="use_most_chapters">Quelle mit den meisten Kapiteln nutzen (langsamer)</string>
     <string name="use_first_source">Erste Quelle als Alternative nutzen</string>
     <string name="skip_this_step_next_time">Diesen Schritt beim Nächsten mal überspringen</string>
-    <string name="to_show_again_setting_library">Um diesen Bildschirm wieder anzuzeigen: Einstellungen -> Meine Bibliothek</string>
+    <string name="to_show_again_setting_sources">Um diesen Bildschirm wieder anzuzeigen: Einstellungen => Quellen</string>
     <string name="latest_">Neueste: %1$s</string>
     <string name="migrating_to">migriere zu</string>
     <string name="dont_migrate">Nicht migrieren</string>
@@ -490,7 +494,7 @@
     <string name="restore_error">Wiederherstellungsfehler</string>
     <string name="restore_completed_content">Das Wiederherstellen hat %1$s gedauert. %2$s Fehler gefunden.</string>
     <string name="restore_content_skipped">%1$d übersprungen</string>
-    <string name="restore_message">Beim Wiederhestellen werden Daten von den Quellen abgerufen, wodurch möglicherweise Mobilfunkkosten enstehen können.\n\nVergewissern Sie sich zudem, dass Sie alle benötigen Seitenlogins bereitgestellt haben, bevor Sie mit dem Wiederherstellen beginnen.</string>
+    <string name="restore_message">Beim Wiederherstellen werden Daten von den Quellen abgerufen, wodurch möglicherweise Mobilfunkkosten entstehen können.\n\nVergewissern Sie sich zudem, dass Sie alle benötigen Seitenlogins bereitgestellt haben, bevor Sie mit dem Wiederherstellen beginnen.</string>
     <string name="creating_backup">Backup wird erstellt</string>
     <string name="what_should_backup">Was wollen Sie sichern?</string>
     <string name="restoring_backup">Backup wird wiederhergestellt</string>
@@ -520,7 +524,7 @@
     <string name="clear_database_confirmation">Sind Sie sicher? Der Lesestatus aller Manga, die nicht in der Bibliothek sind, wird gelöscht</string>
     <string name="clear_database_completed">Einträge gelöscht</string>
     <string name="refresh_library_metadata">Bibliotheksmetadaten erneuern</string>
-    <string name="updates_covers_genres_desc">Aktualisiert Vorschaubilder, Genres, Beschreibungen und andere Manga-Informationen</string>
+    <string name="updates_covers_genres_desc">Aktualisiert Vorschaubilder, Genres, Beschreibungen und andere Mangainformationen</string>
     <string name="refresh_tracking_metadata">Synchronisationsmetadaten erneuern</string>
     <string name="updates_tracking_details">Lesestatus, die Bewertung und das zuletzt gelesene Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
     <string name="clean_up_downloaded_chapters">Heruntergeladene Kapitel aufräumen</string>
@@ -529,7 +533,7 @@
     <string name="no_folders_to_cleanup">Keine Ordner zum Aufräumen</string>
     <string name="disable_battery_optimization">Optimierung des Akkuverbrauchs beenden</string>
     <string name="disable_if_issues_with_updating">Deaktivieren wenn Sie Probleme mit der Aktualisierung oder dem Wiederherstellen der Bibliothek haben</string>
-    <string name="battery_optimization_disabled">Optimierung des Akkuverbrauchs ist schon deaktivert</string>
+    <string name="battery_optimization_disabled">Optimierung des Akkuverbrauchs ist schon deaktiviert</string>
     <plurals name="cleanup_done">
         <item quantity="one">Aufräumen abgeschlossen. %d Ordner entfernt</item>
         <item quantity="other">Aufräumen abgeschlossen. %d Ordner entfernt</item>
@@ -541,12 +545,12 @@
     <string name="pref_global_search">Globale Suche</string>
     <string name="check_for_extension_updates">Erweiterungsaktualisierungen prüfen</string>
     <string name="only_search_pinned_when">Nur angepinnte Quellen durchsuchen</string>
-    <string name="match_pinned_sources">Entspechend angepinnter Quellen</string>
-    <string name="match_enabled_sources">Entspechend aktivierter Quellen</string>
-    <string name="only_enable_pinned_for_migration">Nur angepinnte Quellen für Migrierung nutzen</string>
-    <string name="only_enable_enabled_for_migration">Nur aktuell aktivierte Quellen für Migrierung nutzen</string>
+    <string name="match_pinned_sources">Entsprechend angepinnter Quellen</string>
+    <string name="match_enabled_sources">Entsprechend aktivierter Quellen</string>
+    <string name="only_enable_pinned_for_migration">Nur angepinnte Migrierungsquellen nutzen</string>
+    <string name="only_enable_enabled_for_migration">Nur aktuell aktivierte Migrierungsquellen nutzen</string>
     <string name="use_last_saved_migration_preferences">Zuletzt gespeicherte Vor-Migrierungseinstellungen und Quellen nutzen für Massenmigrierung</string>
-    <string name="migration_sources_set">Migration sources set</string>
+    <string name="migration_sources_changed">Migrierungsquellen geändert</string>
     <string name="you_can_migrate_in_library">Migrieren können Sie auch durch Auswählen von Manga in Ihrer Bibliothek</string>
 
     <!-- About section -->
@@ -611,7 +615,7 @@
     <string name="download_new_chapters">Neue Kapitel herunterladen</string>
     <string name="categories_to_include_in_download">Kategorien die Heruntergeladen werden sollen</string>
     <string name="delete_removed_chapters">Entfernte Kapitel löschen</string>
-    <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online enfernt hat.</string>
+    <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online entfernt hat.</string>
     <string name="ask_on_chapters_page">Löschen während globalen Aktualisierungen. Auf Kapitelseite nachfragen.</string>
     <string name="always_keep">Immer behalten</string>
     <string name="always_delete">Immer löschen</string>
