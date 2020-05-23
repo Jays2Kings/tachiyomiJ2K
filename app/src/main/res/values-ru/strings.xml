@@ -274,7 +274,6 @@
     <string name="migrating_to">переместится в</string>
 
     <string name="migration">Перемещение</string>
-    <string name="select_a_source_to_migrate_from">Выберите источник, из которого будет происходить перемещение</string>
 
     <string name="name">Название</string>
 
@@ -312,19 +311,9 @@
     <string name="options">Опции</string>
 
     <string name="other">Другие</string>
-
-    <string name="pager_viewer">Страница</string>
-
     <string name="password">Пароль</string>
-
-
-
     <string name="picture_saved">Картинка сохранена</string>
-
     <string name="plan_to_read">Планирую прочитать</string>
-
-    <string name="to_show_again_setting_library">Чтобы снова показать этот диалог, перейдите в Настройки -&gt; Библиотека</string>
-
     <string name="helps_fix_bugs">Помогает исправлять любые баги. Личные данные не передаются</string>
     <string name="sync_chapters_after_reading">Синхронизировать главы после прочтения</string>
     <string name="backup_location">Каталог бэкапа</string>
@@ -701,9 +690,13 @@
     <string name="reading_">Чтение %1$s</string>
     <string name="webtoon_style">стиль веб-комикса</string>
     <!-- Reader settings -->
+    <string name="reduces_banding_impacts_performance">Уменьшает "цветовцю полосатость", но влияет на производительность</string>
+    <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
+    <string name="paged">Страницы</string>
     <string name="disable_zoom">Отключить зум</string>
     <string name="continuous_vertical">Непрерывная вертикаль</string>
     <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
+    <string name="if_disabled_transition_will_skip">Если отключено, страница перехода будет пропущена, если загружена следующая глава</string>
     <string name="pref_webtoon_side_padding">Боковой отступ</string>
     <string name="webtoon_side_padding_0">Нет</string>
     <string name="webtoon_side_padding_10">10%</string>
@@ -748,7 +741,7 @@
     <string name="reset_tags">Сбросить теги</string>
     <string name="reset_cover">Сбросить обложку</string>
     <string name="remember_this_choice">Запомнить этот выбор</string>
-
+    <string name="source_not_installed">Источник не установлен</string>
 
     <plurals name="deleted_chapters">
         <item quantity="one">Глава была удалена из источника:\n%2$s\nDelete
@@ -770,6 +763,8 @@
     <string name="paused">На паузе</string>
     <!-- Migration -->
     <string name="select_target_sources">Выберите источники для переноса</string>
+    <string name="select_a_source_then_item_to_migrate">Выберите источник, затем выберите элемент для миграции</string>
+    <string name="to_show_again_setting_sources">Чтобы снова показать этот экран, перейдите в Настройки -> Источники.</string>
     <string name="migrate_">Перенос %1$s источника</string>
     <string name="migrate">Перенести</string>
     <string name="copy_value">Копировать</string>
@@ -798,7 +793,7 @@
     <string name="match_enabled_sources">Соответствие включенных источников</string>
     <string name="only_enable_pinned_for_migration">Включить только ваши закрепленные источники для переноса</string>
     <string name="only_enable_enabled_for_migration">Включить только ваши в настоящее время включенные источники для переноса</string>
-    <string name="migration_sources_set">Источники для переноса установлены</string>
+    <string name="migration_sources_changed">Миграционные источники изменены</string>
     <string name="you_can_migrate_in_library">Вы также можете мигрировать, выбрав мангу в своей библиотеке</string>
 
 
