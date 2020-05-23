@@ -263,7 +263,7 @@
     <string name="set_as_cover">Als Vorschaubild festlegen</string>
     <string name="set_as_default_for_all">Als Standard für alle setzen</string>
     <string name="cover_updated">Vorschaubild geändert</string>
-    <string name="page_">Seite: %1$d</string>
+    <string name="page_">Seite %1$d</string>
     <string name="next_chapter_not_found">Nächstes Kapitel nicht gefunden</string>
     <string name="decode_image_error">Das Bild konnte nicht dekodiert werden</string>
     <string name="use_image_as_cover">Wollen Sie dieses Bild als Vorschaubild setzen?</string>
