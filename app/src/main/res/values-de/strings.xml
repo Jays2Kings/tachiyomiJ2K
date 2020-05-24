@@ -90,6 +90,7 @@
     <string name="category_with_name_exists">Eine Kategorie mit diesem Namen existiert bereits!</string>
     <string name="category_deleted">Kategorie gelöscht</string>
     <string name="long_press_category">Drücken und halten um Kategorie zu bearbeiten</string>
+    <string name="jump_to_category">Zu Kategorie springen</string>
 
     <!-- Updates -->
     <string name="update">Aktualisierung</string>
@@ -413,7 +414,7 @@
     <string name="add_tracking">Synchronisation hinzufügen</string>
 
     <!-- Migration -->
-    <string name="select_target_sources">Zielquelle auswählen</string>
+    <string name="select_sources">Quellen auswählen</string>
     <string name="source_migration">Quellenmigration</string>
     <string name="migration">Migrierung</string>
     <string name="skip_pre_migration">Vor-Migrierung überspringen</string>
@@ -716,6 +717,7 @@
     <string name="save">Speichern</string>
     <string name="search">Suche</string>
     <string name="select_all">Alle auswählen</string>
+    <string name="select_none">Keine auswählen</string>
     <string name="share">Teilen</string>
     <string name="sort">Sortierung</string>
     <string name="sort_and_filter">Sortierung &amp; Filter</string>
