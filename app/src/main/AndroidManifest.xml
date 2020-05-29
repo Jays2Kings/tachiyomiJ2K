@@ -39,8 +39,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
-            <!--suppress AndroidDomInspection -->
-            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity>
         <activity
             android:name=".ui.main.SearchActivity"
