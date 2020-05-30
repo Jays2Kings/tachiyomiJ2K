@@ -293,7 +293,7 @@
     <!-- Reader settings -->
     <string name="fullscreen">Pełny ekran</string>
     <string name="page_transitions">Animacje przejścia stron</string>
-    <string name="disable_zoom">Wyłącz przybliżenie</string>
+    <string name="enable_zoom_out">Włącz możliwość oddalania</string>
     <string name="double_tap_anim_speed">Szybkość podwójnego stuknięcia</string>
     <string name="show_page_number">Pokazuj numer strony</string>
     <string name="true_32bit_color">Kolor 32 bitowy</string>
