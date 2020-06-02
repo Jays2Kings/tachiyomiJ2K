@@ -13,11 +13,13 @@ import eu.kanade.tachiyomi.data.track.shikimori.ShikimoriApi
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.widget.preference.LoginPreference
 import eu.kanade.tachiyomi.widget.preference.TrackLoginDialog
+import eu.kanade.tachiyomi.widget.preference.TrackLogoutDialog
+import kotlinx.android.synthetic.main.track_item.*
 import uy.kohesive.injekt.injectLazy
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
 
 class SettingsTrackingController : SettingsController(),
-        TrackLoginDialog.Listener {
+        TrackLoginDialog.Listener, TrackLogoutDialog.Listener {
 
     private val trackManager: TrackManager by injectLazy()
 
@@ -41,11 +43,17 @@ class SettingsTrackingController : SettingsController(),
             }
             trackPreference(trackManager.aniList) {
                 onClick {
-                    val tabsIntent = CustomTabsIntent.Builder()
+                    if (trackManager.aniList.isLogged) {
+                        val dialog = TrackLogoutDialog(trackManager.aniList)
+                        dialog.targetController = this@SettingsTrackingController
+                        dialog.showDialog(router)
+                    } else {
+                        val tabsIntent = CustomTabsIntent.Builder()
                             .setToolbarColor(context.getResourceColor(R.attr.colorPrimaryVariant))
                             .build()
-                    tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-                    tabsIntent.launchUrl(activity!!, AnilistApi.authUrl())
+                        tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+                        tabsIntent.launchUrl(activity!!, AnilistApi.authUrl())
+                    }
                 }
             }
             trackPreference(trackManager.kitsu) {
@@ -91,6 +99,7 @@ class SettingsTrackingController : SettingsController(),
         // Manually refresh anilist holder
         updatePreference(trackManager.aniList.id)
         updatePreference(trackManager.shikimori.id)
+        updatePreference(trackManager.bangumi.id)
     }
 
     private fun updatePreference(id: Int) {
@@ -98,7 +107,11 @@ class SettingsTrackingController : SettingsController(),
         pref?.notifyChanged()
     }
 
-    override fun trackDialogClosed(service: TrackService) {
+    override fun trackLoginDialogClosed(service: TrackService) {
+        updatePreference(service.id)
+    }
+
+    override fun trackLogoutDialogClosed(service: TrackService) {
         updatePreference(service.id)
     }
 }

@@ -582,7 +582,7 @@
     <string name="website">Website</string>
     <string name="open_source_licenses">Open source licenses</string>
 
-    <!-- Login dialog -->
+    <!-- Login/Logout dialog -->
     <string name="log_in_to_">Log in to %1$s</string>
     <string name="username">Username</string>
     <string name="email">Email address</string>
@@ -590,6 +590,8 @@
     <string name="show_password">Show password</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
+    <string name="logout_from_">Logout from %1$s?</string>
+
     <string name="successfully_logged_in">Successfully logged in</string>
     <string name="successfully_logged_out">You are now logged out</string>
     <string name="could_not_log_in">Could not log in</string>
