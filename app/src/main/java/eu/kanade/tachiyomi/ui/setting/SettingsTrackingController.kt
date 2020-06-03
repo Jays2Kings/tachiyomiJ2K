@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.ui.setting
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.preference.PreferenceScreen
 import eu.kanade.tachiyomi.R
@@ -14,12 +15,11 @@ import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.widget.preference.LoginPreference
 import eu.kanade.tachiyomi.widget.preference.TrackLoginDialog
 import eu.kanade.tachiyomi.widget.preference.TrackLogoutDialog
-import kotlinx.android.synthetic.main.track_item.*
 import uy.kohesive.injekt.injectLazy
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
 
 class SettingsTrackingController : SettingsController(),
-        TrackLoginDialog.Listener, TrackLogoutDialog.Listener {
+    TrackLoginDialog.Listener, TrackLogoutDialog.Listener {
 
     private val trackManager: TrackManager by injectLazy()
 
@@ -36,49 +36,27 @@ class SettingsTrackingController : SettingsController(),
 
             trackPreference(trackManager.myAnimeList) {
                 onClick {
-                    val dialog = TrackLoginDialog(trackManager.myAnimeList)
-                    dialog.targetController = this@SettingsTrackingController
-                    dialog.showDialog(router)
+                    showDialog(trackManager.myAnimeList)
                 }
             }
             trackPreference(trackManager.aniList) {
                 onClick {
-                    if (trackManager.aniList.isLogged) {
-                        val dialog = TrackLogoutDialog(trackManager.aniList)
-                        dialog.targetController = this@SettingsTrackingController
-                        dialog.showDialog(router)
-                    } else {
-                        val tabsIntent = CustomTabsIntent.Builder()
-                            .setToolbarColor(context.getResourceColor(R.attr.colorPrimaryVariant))
-                            .build()
-                        tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-                        tabsIntent.launchUrl(activity!!, AnilistApi.authUrl())
-                    }
+                    showDialog(trackManager.aniList, AnilistApi.authUrl())
                 }
             }
             trackPreference(trackManager.kitsu) {
                 onClick {
-                    val dialog = TrackLoginDialog(trackManager.kitsu, context.getString(R.string.email))
-                    dialog.targetController = this@SettingsTrackingController
-                    dialog.showDialog(router)
+                    showDialog(trackManager.kitsu, userNameLabel = context.getString(R.string.email))
                 }
             }
             trackPreference(trackManager.shikimori) {
                 onClick {
-                    val tabsIntent = CustomTabsIntent.Builder()
-                            .setToolbarColor(context.getResourceColor(R.attr.colorPrimaryVariant))
-                            .build()
-                    tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-                    tabsIntent.launchUrl(activity!!, ShikimoriApi.authUrl())
+                    showDialog(trackManager.shikimori, ShikimoriApi.authUrl())
                 }
             }
             trackPreference(trackManager.bangumi) {
                 onClick {
-                    val tabsIntent = CustomTabsIntent.Builder()
-                            .setToolbarColor(context.getResourceColor(R.attr.colorPrimaryVariant))
-                            .build()
-                    tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-                    tabsIntent.launchUrl(activity!!, BangumiApi.authUrl())
+                    showDialog(trackManager.bangumi, BangumiApi.authUrl())
                 }
             }
         }
@@ -100,6 +78,24 @@ class SettingsTrackingController : SettingsController(),
         updatePreference(trackManager.aniList.id)
         updatePreference(trackManager.shikimori.id)
         updatePreference(trackManager.bangumi.id)
+    }
+
+    private fun showDialog(trackService: TrackService, url: Uri? = null, userNameLabel: String? = null) {
+        if (trackService.isLogged) {
+            val dialog = TrackLogoutDialog(trackService)
+            dialog.targetController = this@SettingsTrackingController
+            dialog.showDialog(router)
+        } else if (url == null) {
+            val dialog = TrackLoginDialog(trackService, userNameLabel)
+            dialog.targetController = this@SettingsTrackingController
+            dialog.showDialog(router)
+        } else {
+            val tabsIntent = CustomTabsIntent.Builder()
+                .setToolbarColor(activity!!.getResourceColor(R.attr.colorPrimaryVariant))
+                .build()
+            tabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+            tabsIntent.launchUrl(activity!!, url)
+        }
     }
 
     private fun updatePreference(id: Int) {
