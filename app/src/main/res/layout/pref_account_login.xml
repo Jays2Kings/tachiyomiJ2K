@@ -63,15 +63,4 @@
         app:pb_textError="@string/could_not_log_in"
         app:pb_textProgress="@string/loading"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/logout"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:background="@color/md_grey_800"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/logout"
-        android:textColor="?colorAccent"/>
-
 </LinearLayout>

@@ -63,13 +63,6 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
         }
     }
 
-    override fun logout() {
-        if (service.isLogged) {
-            service.logout()
-            activity?.toast(R.string.successfully_logged_out)
-        }
-    }
-
     override fun onDialogClosed() {
         super.onDialogClosed()
         (targetController as? Listener)?.trackLoginDialogClosed(service)
