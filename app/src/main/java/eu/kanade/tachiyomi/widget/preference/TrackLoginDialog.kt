@@ -31,8 +31,11 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
 
         v?.apply {
             login.startAnimation()
-            if (username.text.isEmpty() || password.text.isEmpty())
+            if (username.text.isEmpty() || password.text.isEmpty()) {
+                errorResult()
+                context.toast(R.string.username_must_not_be_blank)
                 return
+            }
 
             val user = username.text.toString()
             val pass = password.text.toString()
