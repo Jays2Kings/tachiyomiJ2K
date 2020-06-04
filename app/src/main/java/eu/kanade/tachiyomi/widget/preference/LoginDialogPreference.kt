@@ -4,11 +4,11 @@ import android.app.Dialog
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.view.View
+import androidx.core.content.ContextCompat
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.bluelinelabs.conductor.ControllerChangeHandler
 import com.bluelinelabs.conductor.ControllerChangeType
-import com.dd.processbutton.iml.ActionProcessButton
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
@@ -61,9 +61,11 @@ abstract class LoginDialogPreference(
             if (!usernameLabel.isNullOrEmpty()) {
                 username_label.text = usernameLabel
             }
+            login.background = ContextCompat.getDrawable(context, R.drawable.button_round)
 
-            login.setMode(ActionProcessButton.Mode.ENDLESS)
-            login.setOnClickListener { checkLogin() }
+            login.setOnClickListener {
+                checkLogin()
+            }
 
             setCredentialsOnView(this)
 

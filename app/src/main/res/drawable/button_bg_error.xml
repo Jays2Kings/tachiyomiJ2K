@@ -3,7 +3,7 @@
     <item android:state_activated="true" android:color="@color/md_white_1000">
         <shape android:shape="rectangle">
             <corners android:radius="2dp" />
-            <solid android:color="@color/red_error" />
+            <solid android:color="@color/material_red_500" />
             <padding android:left="8dp" android:right="8dp" />
         </shape>
     </item>
@@ -15,11 +15,11 @@
             <padding android:left="8dp" android:right="8dp" />
         </shape>
     </item>
-    <item android:color="@color/red_error">
-        <shape android:color="@color/red_error" android:shape="rectangle">
+    <item android:color="@color/material_red_500">
+        <shape android:color="@color/material_red_500" android:shape="rectangle">
             <corners android:radius="2dp" />
             <solid android:color="@android:color/transparent" />
-            <stroke android:width="1dp" android:color="@color/red_error" />
+            <stroke android:width="1dp" android:color="@color/material_red_500" />
             <padding android:left="8dp" android:right="8dp" />
         </shape>
     </item>

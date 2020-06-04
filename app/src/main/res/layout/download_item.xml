@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        android:background="@color/red_error">
+        android:background="@color/material_red_500">
 
         <ImageView
             android:id="@+id/close_right"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        android:background="@color/red_error">
+        android:background="@color/material_red_500">
 
         <ImageView
             android:id="@+id/close_left"

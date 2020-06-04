@@ -88,8 +88,8 @@
         app:atg_isAppendMode="true"
         app:atg_inputHintColor="?android:attr/textColorSecondary"
         app:atg_inputTextColor="?android:attr/textColorPrimary"
-        app:atg_checkedBackgroundColor="@color/red_error"
-        app:atg_checkedBorderColor="@color/red_error"
+        app:atg_checkedBackgroundColor="@color/material_red_500"
+        app:atg_checkedBorderColor="@color/material_red_500"
         app:atg_borderColor="?attr/colorAccent"
         app:atg_textColor="?attr/colorAccent" />
 

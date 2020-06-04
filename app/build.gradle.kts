@@ -196,7 +196,7 @@ dependencies {
 
     // UI
     implementation("com.dmitrymalkovich.android:material-design-dimens:1.4")
-    implementation("com.github.dmytrodanylyk.android-process-button:library:1.0.4")
+    implementation("br.com.simplepass:loading-button-android:2.2.0")
     implementation("com.mikepenz:fastadapter:${Versions.FASTADAPTER}")
     implementation("com.mikepenz:fastadapter-extensions-binding:${Versions.FASTADAPTER}")
     implementation("eu.davidea:flexible-adapter:5.1.0")

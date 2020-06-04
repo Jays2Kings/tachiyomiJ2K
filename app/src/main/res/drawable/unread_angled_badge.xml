@@ -5,7 +5,7 @@
     android:height="100dp"
     android:viewportHeight="10"
     android:viewportWidth="100"
-    tools:background="@color/red_error">
+    tools:background="@color/material_red_500">
 
     <path
         android:fillColor="@color/unread_badge"

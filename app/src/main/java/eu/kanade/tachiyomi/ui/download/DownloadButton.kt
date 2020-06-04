@@ -24,7 +24,7 @@ class DownloadButton @JvmOverloads constructor(context: Context, attrs: Attribut
     private val downloadedColor = ContextCompat.getColor(context,
         R.color.download)
     private val errorColor = ContextCompat.getColor(context,
-        R.color.red_error)
+        R.color.material_red_500)
     private val filledCircle = ContextCompat.getDrawable(context,
         R.drawable.filled_circle)?.mutate()
     private val borderCircle = ContextCompat.getDrawable(context,

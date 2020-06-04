@@ -18,8 +18,6 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
 
     override var canLogout = true
 
-    constructor(service: TrackService) : this(service, null)
-
     constructor(service: TrackService, usernameLabel: String?) :
         this(usernameLabel, Bundle().apply { putInt("key", service.id) })
 
@@ -32,13 +30,12 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
     override fun checkLogin() {
 
         v?.apply {
+            login.startAnimation()
             if (username.text.isEmpty() || password.text.isEmpty())
                 return
 
-            login.progress = 1
             val user = username.text.toString()
             val pass = password.text.toString()
-
             scope.launch {
                 try {
                     val result = service.login(user, pass)
@@ -58,8 +55,9 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
 
     private fun errorResult() {
         v?.apply {
-            login.progress = -1
-            login.setText(R.string.unknown_error)
+            login.revertAnimation {
+                login.text = activity!!.getText(R.string.unknown_error)
+            }
         }
     }
 
