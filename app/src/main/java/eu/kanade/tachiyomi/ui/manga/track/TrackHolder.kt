@@ -17,6 +17,7 @@ class TrackHolder(view: View, adapter: TrackAdapter) : BaseViewHolder(view) {
         logo_container.setOnClickListener { listener.onLogoClick(adapterPosition) }
         add_tracking.setOnClickListener { listener.onSetClick(adapterPosition) }
         track_title.setOnClickListener { listener.onSetClick(adapterPosition) }
+        track_remove.setOnClickListener { listener.onRemoveClick(adapterPosition) }
         track_status.setOnClickListener { listener.onStatusClick(adapterPosition) }
         track_chapters.setOnClickListener { listener.onChaptersClick(adapterPosition) }
         score_container.setOnClickListener { listener.onScoreClick(adapterPosition) }

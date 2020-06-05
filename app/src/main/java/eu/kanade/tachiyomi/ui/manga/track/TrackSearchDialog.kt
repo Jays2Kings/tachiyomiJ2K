@@ -40,6 +40,7 @@ class TrackSearchDialog : DialogController {
     private lateinit var bottomSheet: TrackingBottomSheet
 
     private var wasPreviouslyTracked: Boolean = false
+
     private lateinit var presenter: MangaDetailsPresenter
 
     constructor(target: TrackingBottomSheet, service: TrackService, wasTracked: Boolean) : super(Bundle()
@@ -61,9 +62,6 @@ class TrackSearchDialog : DialogController {
         val dialog = MaterialDialog(activity!!).apply {
             customView(viewRes = R.layout.track_search_dialog, scrollable = false)
             negativeButton(android.R.string.cancel)
-            if (wasPreviouslyTracked) {
-                positiveButton(R.string.clear) { onPositiveButtonClick() }
-            }
         }
 
         if (subscriptions.isUnsubscribed) {
@@ -149,12 +147,6 @@ class TrackSearchDialog : DialogController {
         view.progress.visibility = View.VISIBLE
         view.track_search_list.visibility = View.INVISIBLE
         adapter?.setItems(emptyList())
-    }
-
-    private fun onPositiveButtonClick() {
-        bottomSheet.refreshTrack(service)
-        presenter.registerTracking(null,
-            service)
     }
 
     private companion object {

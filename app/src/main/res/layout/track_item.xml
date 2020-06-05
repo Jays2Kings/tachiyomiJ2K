@@ -31,9 +31,9 @@
             <ImageView
                 android:id="@+id/track_logo"
                 android:layout_width="wrap_content"
-                android:contentDescription="@string/tracking"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/tracking"
                 tools:src="@drawable/ic_tracker_mal" />
 
             <ProgressBar
@@ -70,10 +70,26 @@
                 android:text="@string/title"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/track_remove"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="dfdffggjdfigjssdfgidfjgidgjdifgjfdgifdjgid" />
+
+            <ImageView
+                android:id="@+id/track_remove"
+                style="@style/Theme.Widget.CustomImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:contentDescription="@string/open_in_webview"
+                android:padding="5dp"
+                android:src="@drawable/ic_close_24dp"
+                android:tint="@color/text_color_secondary"
+                android:tooltipText="@string/remove_tracking"
+                app:layout_constraintEnd_toEndOf="@id/status_container"
+                app:layout_constraintStart_toEndOf="@id/track_title"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -122,9 +138,9 @@
                 android:layout_height="0dp"
                 android:background="@drawable/card_item_selector"
                 android:gravity="center"
+                android:maxLines="2"
                 android:paddingStart="6dp"
                 android:paddingEnd="6dp"
-                android:maxLines="2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/score_container"
                 app:layout_constraintStart_toEndOf="@id/track_status"
@@ -159,10 +175,10 @@
                 android:layout_marginBottom="10dp"
                 android:alpha="0.25"
                 android:background="@color/strong_divider"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/track_chapters"
                 app:layout_constraintStart_toEndOf="@+id/track_status"
-                app:layout_constraintEnd_toStartOf="@id/track_chapters"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:layout_width="1dp"
@@ -171,10 +187,10 @@
                 android:layout_marginBottom="10dp"
                 android:alpha="0.25"
                 android:background="@color/strong_divider"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/score_container"
                 app:layout_constraintStart_toEndOf="@+id/track_chapters"
-                app:layout_constraintEnd_toStartOf="@id/score_container"/>
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.button.MaterialButton

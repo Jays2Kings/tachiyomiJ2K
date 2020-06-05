@@ -850,13 +850,18 @@ class MangaDetailsPresenter(
                 }
                 fetchTracks()
             }
-        } else {
-            scope.launch {
-                withContext(Dispatchers.IO) {
-                    db.deleteTrackForManga(manga, service).executeAsBlocking()
+        }
+    }
+
+    fun removeTracker(trackItem: TrackItem, removeFromService: Boolean) {
+        scope.launch {
+            withContext(Dispatchers.IO) {
+                db.deleteTrackForManga(manga, trackItem.service).executeAsBlocking()
+                if (removeFromService && trackItem.service.canRemoveFromService()) {
+                    trackItem.service.removeFromService(trackItem.track!!)
                 }
-                fetchTracks()
             }
+            fetchTracks()
         }
     }
 

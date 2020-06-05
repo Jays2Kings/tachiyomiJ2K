@@ -24,7 +24,8 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     TrackAdapter.OnClickListener,
     SetTrackStatusDialog.Listener,
     SetTrackChaptersDialog.Listener,
-    SetTrackScoreDialog.Listener {
+    SetTrackScoreDialog.Listener,
+    TrackRemoveDialog.Listener {
 
     val activity = controller.activity!!
 
@@ -145,6 +146,18 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         SetTrackStatusDialog(this, item).showDialog(controller.router)
     }
 
+    override fun onRemoveClick(position: Int) {
+        val item = adapter?.getItem(position) ?: return
+        if (item.track == null) return
+
+        if (controller.isNotOnline()) {
+            dismiss()
+            return
+        }
+
+        TrackRemoveDialog(this, item).showDialog(controller.router)
+    }
+
     override fun onChaptersClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return
@@ -195,6 +208,11 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
     override fun setChaptersRead(item: TrackItem, chaptersRead: Int) {
         presenter.setLastChapterRead(item, chaptersRead)
         refreshItem(item)
+    }
+
+    override fun removeTracker(item: TrackItem, fromServiceAlso: Boolean) {
+        refreshTrack(item.service)
+        presenter.removeTracker(item, fromServiceAlso)
     }
 
     private companion object {

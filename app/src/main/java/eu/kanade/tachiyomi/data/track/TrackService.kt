@@ -13,7 +13,7 @@ abstract class TrackService(val id: Int) {
 
     val preferences: PreferencesHelper by injectLazy()
     val networkService: NetworkHelper by injectLazy()
-
+    open fun canRemoveFromService() = false
     open val client: OkHttpClient
         get() = networkService.client
 
@@ -50,6 +50,8 @@ abstract class TrackService(val id: Int) {
     abstract suspend fun refresh(track: Track): Track
 
     abstract suspend fun login(username: String, password: String): Boolean
+
+    open suspend fun removeFromService(track: Track): Boolean = false
 
     @CallSuper
     open fun logout() {
