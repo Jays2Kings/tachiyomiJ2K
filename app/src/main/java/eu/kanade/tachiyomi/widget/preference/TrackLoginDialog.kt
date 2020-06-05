@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.widget.preference
 
 import android.os.Bundle
 import android.view.View
+import br.com.simplepass.loadingbutton.animatedDrawables.ProgressType
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackService
@@ -30,8 +31,11 @@ class TrackLoginDialog(usernameLabel: String? = null, bundle: Bundle? = null) :
     override fun checkLogin() {
 
         v?.apply {
-            login.startAnimation()
-            if (username.text.isEmpty() || password.text.isEmpty()) {
+            login.apply {
+                progressType = ProgressType.INDETERMINATE
+                startAnimation()
+            }
+            if (username.text.isNullOrBlank() || password.text.isNullOrBlank()) {
                 errorResult()
                 context.toast(R.string.username_must_not_be_blank)
                 return

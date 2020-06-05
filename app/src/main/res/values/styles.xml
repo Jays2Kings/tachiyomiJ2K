@@ -5,8 +5,7 @@
     <!--Toolbars-->
     <!--========-->
 
-    <style name="Theme.ActionBar.Dark.DayNight"
-        parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    <style name="Theme.ActionBar.Dark.DayNight" parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
         <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
     </style>
 
@@ -202,7 +201,7 @@
     <!--==============-->
     <!--Widgets.Button-->
     <!--==============-->
-    <style name="Theme.Widget.Button" parent="Widget.AppCompat.Button"/>
+    <style name="Theme.Widget.Button" parent="Widget.AppCompat.Button" />
 
     <style name="Theme.Widget.Button.Colored" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">?attr/colorAccent</item>
@@ -223,8 +222,7 @@
         <item name="android:minWidth">48dip</item>
     </style>
 
-    <style name="Theme.Widget.Button.RoundedOutline"
-        parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+    <style name="Theme.Widget.Button.RoundedOutline" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0.0</item>
@@ -260,6 +258,7 @@
         <item name="android:focusable">true</item>
         <item name="android:tint">?colorAccent</item>
     </style>
+
 
     <!--===-->
     <!--OLD-->
