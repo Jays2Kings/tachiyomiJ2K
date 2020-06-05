@@ -33,17 +33,24 @@ class TrackRemoveDialog<T> : DialogController
 
     override fun onCreateDialog(savedViewState: Bundle?): Dialog {
         val item = item
+        val mutableList = mutableListOf(
+            activity!!.getString(
+                R.string.remove_tracking_from_app
+            )
+        )
+
+        if (item.service.canRemoveFromService()) {
+            mutableList.add(
+                activity!!.getString(
+                    R.string.remove_tracking_from_, item.service.name
+                )
+            )
+        }
 
         val dialog = MaterialDialog(activity!!)
             .title(R.string.remove_tracking)
             .listItemsMultiChoice(
-                items = listOf(
-                    activity!!.getString(
-                        R.string.remove_tracking_from_app
-                    ), activity!!.getString(
-                        R.string.remove_from_tracking_service
-                    )
-                ),
+                items = mutableList.toList(),
                 initialSelection = intArrayOf(0),
                 disabledIndices = intArrayOf(0)
             ) { _, index, _ ->

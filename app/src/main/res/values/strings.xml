@@ -422,8 +422,8 @@
     <string name="refresh_tracking">Refresh tracking</string>
     <string name="add_tracking">Add tracking</string>
     <string name="remove_tracking">Remove tracking</string>
-    <string name="remove_tracking_from_app">Remove From app</string>
-    <string name="remove_from_tracking_service">Remove from tracking service</string>
+    <string name="remove_tracking_from_app">Remove from app</string>
+    <string name="remove_tracking_from_">Remove from %1$s</string>
 
     <!-- Migration -->
     <string name="select_sources">Select sources</string>

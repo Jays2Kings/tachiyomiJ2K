@@ -150,6 +150,12 @@ class Anilist(private val context: Context, id: Int) : TrackService(id) {
         }
     }
 
+    override fun canRemoveFromService(): Boolean = true
+
+    override suspend fun removeFromService(track: Track): Boolean {
+        return api.remove(track)
+    }
+
     override suspend fun search(query: String) = api.search(query)
 
     override suspend fun refresh(track: Track): Track {
