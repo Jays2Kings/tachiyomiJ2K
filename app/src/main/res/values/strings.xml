@@ -421,9 +421,8 @@
     <string name="url_not_set_click_again">Manga URL not set, please click title and select manga again</string>
     <string name="refresh_tracking">Refresh tracking</string>
     <string name="add_tracking">Add tracking</string>
-    <string name="remove_tracking">Remove tracking</string>
-    <string name="remove_tracking_from_app">Remove from app</string>
-    <string name="remove_tracking_from_">Remove from %1$s</string>
+    <string name="remove_tracking">Remove tracking from app</string>
+    <string name="remove_tracking_from_">Also remove from %1$s</string>
 
     <!-- Migration -->
     <string name="select_sources">Select sources</string>

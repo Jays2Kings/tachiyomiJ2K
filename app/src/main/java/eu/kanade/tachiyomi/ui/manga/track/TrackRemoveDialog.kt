@@ -3,7 +3,9 @@ package eu.kanade.tachiyomi.ui.manga.track
 import android.app.Dialog
 import android.os.Bundle
 import com.afollestad.materialdialogs.MaterialDialog
-import com.afollestad.materialdialogs.list.listItemsMultiChoice
+import com.afollestad.materialdialogs.checkbox.checkBoxPrompt
+import com.afollestad.materialdialogs.checkbox.getCheckBoxPrompt
+import com.afollestad.materialdialogs.checkbox.isCheckPromptChecked
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.data.track.TrackManager
@@ -33,31 +35,21 @@ class TrackRemoveDialog<T> : DialogController
 
     override fun onCreateDialog(savedViewState: Bundle?): Dialog {
         val item = item
-        val mutableList = mutableListOf(
-            activity!!.getString(
-                R.string.remove_tracking_from_app
-            )
-        )
-
-        if (item.service.canRemoveFromService()) {
-            mutableList.add(
-                activity!!.getString(
-                    R.string.remove_tracking_from_, item.service.name
-                )
-            )
-        }
 
         val dialog = MaterialDialog(activity!!)
             .title(R.string.remove_tracking)
-            .listItemsMultiChoice(
-                items = mutableList.toList(),
-                initialSelection = intArrayOf(0),
-                disabledIndices = intArrayOf(0)
-            ) { _, index, _ ->
-                listener.removeTracker(item, index.size > 1)
-            }
             .negativeButton(android.R.string.cancel)
-            .positiveButton(android.R.string.ok)
+
+        if (item.service.canRemoveFromService()) {
+            dialog.checkBoxPrompt(
+                text = activity!!.getString(
+                    R.string.remove_tracking_from_, item.service.name
+                ), onToggle = null
+            ).positiveButton(android.R.string.ok) { listener.removeTracker(item, it.isCheckPromptChecked()) }
+            dialog.getCheckBoxPrompt().textSize = 16f
+        } else {
+            dialog.positiveButton(android.R.string.ok) { listener.removeTracker(item, false) }
+        }
 
         return dialog
     }
