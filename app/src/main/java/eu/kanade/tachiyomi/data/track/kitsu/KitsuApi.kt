@@ -16,6 +16,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -25,6 +26,7 @@ import retrofit2.http.PATCH
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
+import timber.log.Timber
 
 class KitsuApi(private val client: OkHttpClient, interceptor: KitsuInterceptor) {
 
@@ -97,6 +99,16 @@ class KitsuApi(private val client: OkHttpClient, interceptor: KitsuInterceptor) 
         return track
     }
 
+    suspend fun remove(track: Track): Boolean {
+        try {
+            rest.deleteLibManga(track.media_id)
+            return true
+        } catch (e: Exception) {
+            Timber.w(e)
+        }
+        return false
+    }
+
     suspend fun search(query: String): List<TrackSearch> {
         val key = searchRest.getKey()["media"].asJsonObject["key"].string
         return algoliaSearch(key, query)
@@ -154,6 +166,12 @@ class KitsuApi(private val client: OkHttpClient, interceptor: KitsuInterceptor) 
         @POST("library-entries")
         suspend fun addLibManga(
             @Body data: JsonObject
+        ): JsonObject
+
+        @Headers("Content-Type: application/vnd.api+json")
+        @DELETE("library-entries/{id}")
+        suspend fun deleteLibManga(
+            @Path("id") remoteId: Int
         ): JsonObject
 
         @Headers("Content-Type: application/vnd.api+json")
