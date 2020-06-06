@@ -104,7 +104,7 @@ class MyAnimeList(private val context: Context, id: Int) : TrackService(id) {
         }
     }
 
-    private suspend fun refreshLogin() {
+    suspend fun refreshLogin() {
         val username = getUsername()
         val password = getPassword()
         logout()
