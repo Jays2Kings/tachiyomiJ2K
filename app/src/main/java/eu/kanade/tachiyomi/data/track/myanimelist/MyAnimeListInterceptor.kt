@@ -11,7 +11,6 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
 import okio.Buffer
 import org.json.JSONObject
-import timber.log.Timber
 
 class MyAnimeListInterceptor(private val myanimelist: MyAnimeList) : Interceptor {
 
