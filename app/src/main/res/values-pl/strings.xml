@@ -424,6 +424,8 @@
     <string name="url_not_set_click_again">URL mangi nie jest ustawiony, kliknij tytuł i wybierz mangę jeszcze raz</string>
     <string name="refresh_tracking">Odśwież śledzenie</string>
     <string name="add_tracking">Dodaj śledzenie</string>
+    <string name="remove_tracking">Usuń śledzenie z aplikacji</string>
+    <string name="remove_tracking_from_">Usuń też z %1$s</string>
 
     <!-- Migration -->
     <string name="select_sources">Wybierz źródła</string>
@@ -590,7 +592,7 @@
     <string name="website">Strona</string>
     <string name="open_source_licenses">Licencje typu open source</string>
 
-    <!-- Login dialog -->
+    <!-- Login/Logout dialog -->
     <string name="log_in_to_">Logowanie do %1$s</string>
     <string name="username">Nazwa użytkownika</string>
     <string name="email">Adres email</string>
@@ -598,7 +600,9 @@
     <string name="show_password">Pokaż hasło</string>
     <string name="login">Zaloguj się</string>
     <string name="logout">Wyloguj</string>
+    <string name="logout_from_">Wyloguj z %1$s?</string>
     <string name="successfully_logged_in">Logowanie udane</string>
+    <string name="username_must_not_be_blank">Nazwa użytkownika i hasło nie mogą być puste</string>
     <string name="successfully_logged_out">Wylogowanie udane</string>
     <string name="could_not_log_in">Nie udało się zalogować</string>
 
