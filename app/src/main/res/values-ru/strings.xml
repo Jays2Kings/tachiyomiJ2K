@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="add">Добавить</string>
+     <string name="add">Добавить</string>
     <string name="cancel">Отмена</string>
     <string name="cancel_all">Отменить все</string>
     <string name="clear">Очистить</string>
@@ -358,6 +358,7 @@
     <string name="library_update_restriction">Ограничения обновления библиотеки</string>
     <string name="library_update_restriction_summary">Обновлять когда условия выполнены</string>
     <string name="page_transitions">Переходы страниц</string>
+    <string name="enable_zoom_out">Включить уменьшение</string>
     <string name="long_tap_dialog">Диалог при долгом нажатии</string>
     <string name="tapping">Нажатие</string>
     <string name="volume_keys">Клавиши громкости</string>
@@ -597,6 +598,7 @@
     <string name="add_to_categories">Выберите, к каким категориям добавить это. Если ни один не выбран, он будет добавлен в категорию «по умолчанию»</string>
     <string name="category_deleted">Категория удалена</string>
     <string name="long_press_category">Нажмите и удерживайте, чтобы изменить категорию</string>
+    <string name="jump_to_category">Перейти в категорию</string>
 
     <plurals name="category">
         <item quantity="one">%d категория</item>
@@ -693,7 +695,6 @@
     <string name="reduces_banding_impacts_performance">Уменьшает "цветовцю полосатость", но влияет на производительность</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Страницы</string>
-    <string name="disable_zoom">Отключить зум</string>
     <string name="continuous_vertical">Непрерывная вертикаль</string>
     <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
     <string name="if_disabled_transition_will_skip">Если отключено, страница перехода будет пропущена, если загружена следующая глава</string>
@@ -760,9 +761,11 @@
     <string name="not_tracked">Не отслеживается</string>
     <string name="refresh_tracking">Обновить отслеживание</string>
     <string name="add_tracking">Добавить отслеживание</string>
+    <string name="remove_tracking">Удалить отслеживание</string>
+    <string name="remove_tracking_from_">Также удалить из %1$s</string>
     <string name="paused">На паузе</string>
     <!-- Migration -->
-    <string name="select_target_sources">Выберите источники для переноса</string>
+    <string name="select_sources">Выберите источники</string>
     <string name="select_a_source_then_item_to_migrate">Выберите источник, затем выберите элемент для миграции</string>
     <string name="to_show_again_setting_sources">Чтобы снова показать этот экран, перейдите в Настройки -> Источники.</string>
     <string name="migrate_">Перенос %1$s источника</string>
@@ -847,7 +850,7 @@
     <string name="un_select_all">Снять все</string>
     <string name="unpin">Открепить</string>
     <string name="use_default">Использовать "По умолчанию"</string>
-
+    <string name="select_none">Не выбрано</string>
     <!-- Extensions -->
     <plurals name="extension_updates_available">
         <item quantity="one">Доступно обновление расширения</item>
@@ -856,5 +859,8 @@
         <item quantity="other">Доступны %d обновлений для расширений</item>
     </plurals>
 
+    <!-- Login/Logout dialog -->
+    <string name="logout_from_">Выйти из %1$s?</string>
+    <string name="username_must_not_be_blank">Имя пользователя или пароль не могут быть пустыми</string>
 
 </resources>
