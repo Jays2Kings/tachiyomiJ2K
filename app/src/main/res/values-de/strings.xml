@@ -119,6 +119,7 @@
     <string name="reorder_filters">Filter neuordnen</string>
     <string name="_unread">%d ungelesen</string>
     <string name="search_globally">Suche \"%1$s\" global</string>
+
     <string name="read_progress">Lesefortschritt</string>
     <string name="series_type">Serientyp</string>
     <string name="group_library_by">Gruppiere Bibiliothek nach…</string>
@@ -231,11 +232,12 @@
     <string name="last_used">Zuletzt genutzt</string>
     <string name="local_source_help_guide">Anleitung für lokale Quellen</string>
     <string name="check_site_in_web">Webseite in Webansicht prüfen</string>
-    
+
     <!-- Other Screens -->
 
     <!-- Extensions -->
     <string name="extensions">Erweiterungen</string>
+    <string name="extension_updates">Erweiterungsaktualisierungen</string>
     <string name="extension_info">Erweiterungsinfo</string>
     <string name="details">Details</string>
     <string name="obsolete">Veraltet</string>
@@ -409,6 +411,8 @@
     <string name="url_not_set_click_again">Manga URL ist nicht gesetzt. Bitte auf den Titel drücken und den Manga erneut wählen</string>
     <string name="refresh_tracking">Synchronisation aktualisieren</string>
     <string name="add_tracking">Synchronisation hinzufügen</string>
+    <string name="remove_tracking">Synchronisation aus App entfernen</string>
+    <string name="remove_tracking_from_">Entferne auch von %1$s</string>
 
     <!-- Migration -->
     <string name="select_sources">Quellen auswählen</string>
@@ -524,7 +528,7 @@
     <string name="refresh_library_metadata">Bibliotheksmetadaten erneuern</string>
     <string name="updates_covers_genres_desc">Aktualisiert Vorschaubilder, Genres, Beschreibungen und andere Mangainformationen</string>
     <string name="refresh_tracking_metadata">Synchronisationsmetadaten erneuern</string>
-    <string name="updates_tracking_details">Lesestatus, die Bewertung und das zuletzt gelesene Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
+    <string name="updates_tracking_details">Lesestatus, Bewertung und zuletzt gelesenes Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
     <string name="clean_up_downloaded_chapters">Heruntergeladene Kapitel aufräumen</string>
     <string name="delete_unused_chapters">Nicht existierende, teilweise heruntergeladene und gelesene Kapitel löschen</string>
     <string name="starting_cleanup">Aufräumen gestartet</string>
@@ -562,13 +566,17 @@
 
     <!-- Login dialog -->
     <string name="log_in_to_">Bei %1$s anmelden</string>
-    <string name="username">Nutzername</string>
+    <string name="username">Benutzername</string>
     <string name="email">E-Mail-Adresse</string>
-    <string name="password">Kennwort</string>
-    <string name="show_password">Kennwort anzeigen</string>
+    <string name="password">Passwort</string>
+    <string name="show_password">Passwort anzeigen</string>
     <string name="login">Anmelden</string>
     <string name="logout">Abmelden</string>
+    <string name="logout_from_">Von %1$s abmelden?</string>
+
     <string name="successfully_logged_in">Anmeldung erfolgreich</string>
+    <string name="username_must_not_be_blank">Benutzername und Passwort dürfen nicht leer sein</string>
+
     <string name="successfully_logged_out">Sie sind jetzt abgemeldet</string>
     <string name="could_not_log_in">Anmeldungsfehler</string>
 
@@ -700,6 +708,7 @@
     <string name="pause">Pause</string>
     <string name="picture_saved">Bild gespeichert</string>
     <string name="pin">Anpinnen</string>
+    <string name="pinned">Angepinnt</string>
     <string name="refresh">Aktualisieren</string>
     <string name="refreshing">Aktualisiere</string>
     <string name="remove">Entfernen</string>
