@@ -412,7 +412,7 @@
     <string name="refresh_tracking">Synchronisation aktualisieren</string>
     <string name="add_tracking">Synchronisation hinzufügen</string>
     <string name="remove_tracking">Synchronisation aus App entfernen</string>
-    <string name="remove_tracking_from_">Entferne auch von %1$s</string>
+    <string name="remove_tracking_from_">Auch aus %1$s tntfernen</string>
 
     <!-- Migration -->
     <string name="select_sources">Quellen auswählen</string>
