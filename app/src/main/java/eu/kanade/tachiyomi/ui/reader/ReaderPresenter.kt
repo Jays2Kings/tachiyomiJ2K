@@ -23,7 +23,6 @@ import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
-import eu.kanade.tachiyomi.ui.reader.loader.DownloadPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
@@ -188,16 +187,16 @@ class ReaderPresenter(
             val dbChapters = db.getChapters(manga).executeAsBlocking()
             val list =
                 readerChapterFilter.filterChapter(dbChapters, manga, getCurrentChapter()?.chapter)
-                .sortedBy {
-                    when (manga.sorting) {
-                        Manga.SORTING_NUMBER -> it.chapter_number
-                        else -> it.source_order.toFloat()
+                    .sortedBy {
+                        when (manga.sorting) {
+                            Manga.SORTING_NUMBER -> it.chapter_number
+                            else -> it.source_order.toFloat()
+                        }
+                    }.map {
+                        ReaderChapterItem(
+                            it, manga, it.id == getCurrentChapter()?.chapter?.id ?: chapterId
+                        )
                     }
-                }.map {
-                    ReaderChapterItem(
-                        it, manga, it.id == getCurrentChapter()?.chapter?.id ?: chapterId
-                    )
-                }
             if (!manga.sortDescending(preferences.chaptersDescAsDefault().getOrDefault())) {
                 list.reversed()
             } else {
@@ -370,7 +369,7 @@ class ReaderPresenter(
         if (selectedChapter.pages?.lastIndex == page.index) {
             selectedChapter.chapter.read = true
             updateTrackChapterRead(selectedChapter)
-            enqueueDeleteReadChapters(selectedChapter)
+            deleteChapterIfNeeded(selectedChapter)
         }
 
         if (selectedChapter != currentChapters.currChapter) {
@@ -380,6 +379,22 @@ class ReaderPresenter(
             return true
         }
         return false
+    }
+
+    /**
+     * Determines if deleting option is enabled and nth to last chapter actually exists.
+     * If both conditions are satisfied enqueues chapter for delete
+     * @param currentChapter current chapter, which is going to be marked as read.
+     */
+    private fun deleteChapterIfNeeded(currentChapter: ReaderChapter) {
+        // Determine which chapter should be deleted and enqueue
+        val currentChapterPosition = chapterList.indexOf(currentChapter)
+        val removeAfterReadSlots = preferences.removeAfterReadSlots()
+        val chapterToDelete = chapterList.getOrNull(currentChapterPosition - removeAfterReadSlots)
+        // Check if deleting option is enabled and chapter exists
+        if (removeAfterReadSlots != -1 && chapterToDelete != null) {
+            enqueueDeleteReadChapters(chapterToDelete)
+        }
     }
 
     /**
@@ -634,23 +649,12 @@ class ReaderPresenter(
      * manager handles persisting it across process deaths.
      */
     private fun enqueueDeleteReadChapters(chapter: ReaderChapter) {
-        if (!chapter.chapter.read || chapter.pageLoader !is DownloadPageLoader) return
+        if (!chapter.chapter.read) return
         val manga = manga ?: return
-
-        // Return if the setting is disabled
-        val removeAfterReadSlots = preferences.removeAfterReadSlots()
-        if (removeAfterReadSlots == -1) return
 
         Completable
             .fromCallable {
-                // Position of the read chapter
-                val position = chapterList.indexOf(chapter)
-
-                // Retrieve chapter to delete according to preference
-                val chapterToDelete = chapterList.getOrNull(position - removeAfterReadSlots)
-                if (chapterToDelete != null) {
-                    downloadManager.enqueueDeleteChapters(listOf(chapterToDelete.chapter), manga)
-                }
+                downloadManager.enqueueDeleteChapters(listOf(chapter.chapter), manga)
             }
             .onErrorComplete()
             .subscribeOn(Schedulers.io())
