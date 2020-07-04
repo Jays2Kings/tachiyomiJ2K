@@ -248,6 +248,9 @@ dependencies {
     implementation("info.debatty:java-string-similarity:1.2.1")
 
     implementation("com.google.android.gms:play-services-oss-licenses:${Versions.OSS_LICENSE}")
+
+    // TLS 1.3 support for Android < 10
+    implementation("org.conscrypt:conscrypt-android:2.4.0")
 }
 
 
