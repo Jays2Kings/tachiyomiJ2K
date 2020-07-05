@@ -177,6 +177,8 @@ class WebViewActivity : BaseActivity() {
                 insets
             }
             webview.settings.javaScriptEnabled = true
+            webview.settings.domStorageEnabled = true
+
             webview.settings.userAgentString = source.headers["User-Agent"]
             webview.loadUrl(url, headers)
         } else {
