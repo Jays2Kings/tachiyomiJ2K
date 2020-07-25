@@ -75,12 +75,14 @@ class DownloadCache(
 
         checkRenew()
 
-        val files = mangaFiles[manga.id]?.toSet() ?: return false
-        return files.any { file ->
-            provider.getValidChapterDirNames(chapter).any {
-                it.toLowerCase() == file.toLowerCase()
+        val files = mangaFiles[manga.id]?.toHashSet() ?: return false
+        val validChapterDirNames = provider.getValidChapterDirNames(chapter)
+        validChapterDirNames.forEach {
+            if (files.contains(it)) {
+                return true
             }
         }
+        return false
     }
 
     /**
