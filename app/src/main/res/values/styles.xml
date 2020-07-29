@@ -140,8 +140,9 @@
         </item>
         <item name="android:layout_marginEnd">@dimen/material_component_cards_space_between_cards
         </item>
+        <item name="cardCornerRadius">@dimen/rounded_radius</item>
         <item name="cardBackgroundColor">?md_background_color</item>
-        <item name="cardElevation">2dp</item>
+        <item name="cardElevation">4dp</item>
     </style>
 
     <style name="Theme.Widget.CardView.Item">

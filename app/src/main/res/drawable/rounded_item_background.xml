@@ -5,8 +5,8 @@
         <shape>
             <solid android:color="@color/fullRippleColor" />
             <corners
-                android:topLeftRadius="14dp"
-                android:topRightRadius="14dp" />
+                android:topLeftRadius="@dimen/rounded_radius"
+                android:topRightRadius="@dimen/rounded_radius" />
         </shape>
     </item>
 </ripple>
