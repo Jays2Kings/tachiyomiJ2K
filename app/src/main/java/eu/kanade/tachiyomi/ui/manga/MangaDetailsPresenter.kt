@@ -30,6 +30,7 @@ import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.manga.track.TrackItem
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
+import eu.kanade.tachiyomi.util.chapter.ChapterFilter
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
 import eu.kanade.tachiyomi.util.lang.trimOrNull
 import eu.kanade.tachiyomi.util.storage.DiskUtil
@@ -57,7 +58,8 @@ class MangaDetailsPresenter(
     val preferences: PreferencesHelper = Injekt.get(),
     val coverCache: CoverCache = Injekt.get(),
     private val db: DatabaseHelper = Injekt.get(),
-    private val downloadManager: DownloadManager = Injekt.get()
+    private val downloadManager: DownloadManager = Injekt.get(),
+    private val chapterFilter: ChapterFilter = Injekt.get()
 ) : DownloadQueue.DownloadListener, LibraryServiceListener {
 
     private var scope = CoroutineScope(Job() + Dispatchers.Default)
@@ -200,26 +202,6 @@ class MangaDetailsPresenter(
     }
 
     /**
-     * Whether the display only downloaded filter is enabled.
-     */
-    fun onlyDownloaded() = manga.downloadedFilter == Manga.SHOW_DOWNLOADED
-
-    /**
-     * Whether the display only downloaded filter is enabled.
-     */
-    fun onlyBookmarked() = manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED
-
-    /**
-     * Whether the display only unread filter is enabled.
-     */
-    fun onlyUnread() = manga.readFilter == Manga.SHOW_UNREAD
-
-    /**
-     * Whether the display only read filter is enabled.
-     */
-    fun onlyRead() = manga.readFilter == Manga.SHOW_READ
-
-    /**
      * Whether the sorting method is descending or ascending.
      */
     fun sortDescending() = manga.sortDescending(globalSort())
@@ -232,18 +214,9 @@ class MangaDetailsPresenter(
     private fun applyChapterFilters(chapterList: List<ChapterItem>): List<ChapterItem> {
         if (isLockedFromSearch)
             return chapterList
-        var chapters = chapterList
-        if (onlyUnread()) {
-            chapters = chapters.filter { !it.read }
-        } else if (onlyRead()) {
-            chapters = chapters.filter { it.read }
-        }
-        if (onlyDownloaded()) {
-            chapters = chapters.filter { it.isDownloaded || it.manga.source == LocalSource.ID }
-        }
-        if (onlyBookmarked()) {
-            chapters = chapters.filter { it.bookmark }
-        }
+
+        val chapters = chapterFilter.filterChapters(chapterList, manga) as List<ChapterItem>
+
         val sortFunction: (Chapter, Chapter) -> Int = when (manga.sorting) {
             Manga.SORTING_SOURCE -> when (sortDescending()) {
                 true -> { c1, c2 -> c1.source_order.compareTo(c2.source_order) }
@@ -255,9 +228,8 @@ class MangaDetailsPresenter(
             }
             else -> { c1, c2 -> c1.source_order.compareTo(c2.source_order) }
         }
-        chapters = chapters.sortedWith(Comparator(sortFunction))
         getScrollType(chapters)
-        return chapters
+        return chapters.sortedWith(Comparator(sortFunction))
     }
 
     private fun getScrollType(chapters: List<ChapterItem>) {
@@ -596,10 +568,10 @@ class MangaDetailsPresenter(
 
     fun currentFilters(): String {
         val filtersId = mutableListOf<Int?>()
-        filtersId.add(if (onlyRead()) R.string.read else null)
-        filtersId.add(if (onlyUnread()) R.string.unread else null)
-        filtersId.add(if (onlyDownloaded()) R.string.downloaded else null)
-        filtersId.add(if (onlyBookmarked()) R.string.bookmarked else null)
+        filtersId.add(if (manga.readFilter == Manga.SHOW_READ) R.string.read else null)
+        filtersId.add(if (manga.readFilter == Manga.SHOW_UNREAD) R.string.unread else null)
+        filtersId.add(if (manga.downloadedFilter == Manga.SHOW_DOWNLOADED) R.string.downloaded else null)
+        filtersId.add(if (manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED) R.string.bookmarked else null)
         return filtersId.filterNotNull().joinToString(", ") { preferences.context.getString(it) }
     }
 
