@@ -49,7 +49,7 @@ class AppModule(val app: Application) : InjektModule {
 
         addSingletonFactory { Gson() }
 
-        addSingletonFactory{ChapterFilter()}
+        addSingletonFactory { ChapterFilter() }
 
         // Asynchronously init expensive components for a faster cold start
 

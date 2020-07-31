@@ -9,7 +9,7 @@ import uy.kohesive.injekt.api.get
 
 class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downloadManager: DownloadManager = Injekt.get()) {
 
-    //filters chapters based on the manga values
+    // filters chapters based on the manga values
     fun filterChapters(chapters: List<Chapter>, manga: Manga): List<Chapter> {
         val readEnabled = manga.readFilter == Manga.SHOW_READ
         val unreadEnabled = manga.readFilter == Manga.SHOW_UNREAD

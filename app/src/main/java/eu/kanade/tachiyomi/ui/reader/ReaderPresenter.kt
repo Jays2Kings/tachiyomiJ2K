@@ -58,7 +58,6 @@ class ReaderPresenter(
     private val chapterFilter: ChapterFilter = Injekt.get()
 ) : BasePresenter<ReaderActivity>() {
 
-
     /**
      * The manga loaded in the reader. It can be null when instantiated for a short time.
      */
