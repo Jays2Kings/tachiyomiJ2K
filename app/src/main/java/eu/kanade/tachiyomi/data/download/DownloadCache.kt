@@ -134,35 +134,33 @@ class DownloadCache(
         val mangas = db.getMangas().executeAsBlocking().groupBy { it.source }
 
         sourceDirs.forEach { sourceValue ->
-            val sourceMangasRaw = mangas[sourceValue.key]?.toMutableSet() ?: return@forEach
-            val sourceMangas = arrayOf(sourceMangasRaw.filter { it.favorite },
-                sourceMangasRaw.filterNot { it.favorite })
+            val sourceMangaRaw = mangas[sourceValue.key]?.toMutableSet() ?: return@forEach
+            val sourceMangaPair = sourceMangaRaw.partition { it.favorite }
+
             val sourceDir = sourceValue.value
-            val mangaDirs = sourceDir.dir.listFiles().orEmpty().mapNotNull {
-                val name = it.name ?: return@mapNotNull null
-                name to MangaDirectory(it)
+
+            val mangaDirs = sourceDir.dir.listFiles().orEmpty().mapNotNull { mangaDir ->
+                val name = mangaDir.name ?: return@mapNotNull null
+                val chapterDirs = mangaDir.listFiles().orEmpty().mapNotNull { chapterFile -> chapterFile.name }.toHashSet()
+                name to MangaDirectory(mangaDir, chapterDirs)
             }.toMap()
 
-            mangaDirs.values.forEach { mangaDir ->
-                val chapterDirs =
-                    mangaDir.dir.listFiles().orEmpty().mapNotNull { it.name }.toHashSet()
-                mangaDir.files = chapterDirs
-            }
             val trueMangaDirs = mangaDirs.mapNotNull { mangaDir ->
-                val manga = sourceMangas.firstOrNull()?.find {
-                    DiskUtil.buildValidFilename(
-                        it.originalTitle
-                    ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
-                } ?: sourceMangas.lastOrNull()?.find {
-                    DiskUtil.buildValidFilename(
-                        it.originalTitle
-                    ).toLowerCase() == mangaDir.key.toLowerCase() && it.source == sourceValue.key
-                }
+                val manga = findManga(sourceMangaPair.first, mangaDir.key, sourceValue.key) ?: findManga(sourceMangaPair.second, mangaDir.key, sourceValue.key)
                 val id = manga?.id ?: return@mapNotNull null
                 id to mangaDir.value.files
             }.toMap()
 
             mangaFiles.putAll(trueMangaDirs)
+        }
+    }
+
+    /**
+     * Searches a manga list and matches the given mangakey and source key
+     */
+    private fun findManga(mangaList: List<Manga>, mangaKey: String, sourceKey: Long): Manga? {
+        return mangaList.find {
+            DiskUtil.buildValidFilename(it.originalTitle).toLowerCase() == mangaKey.toLowerCase() && it.source == sourceKey
         }
     }
 
