@@ -287,11 +287,9 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
         if (savedInstanceState == null) {
             // Show changelog if needed
             if (Migrations.upgrade(preferences)) {
-                if (BuildConfig.DEBUG) {
-                    MaterialDialog(this).title(text = "Welcome to the J2K MD2 Beta").message(
-                        text = "This beta is for testing the upcoming release. Requests for new additions for this beta will ignored (however suggestions on how to better implement a feature in this beta are welcome).\n\nFor any bugs you come across, there is a bug report button in settings.\n\nAs a reminder this is a *BETA* build; bugs may happen, features may be missing/not implemented yet, and screens can change.\n\nEnjoy and thanks for testing!"
-                    ).positiveButton(android.R.string.ok).cancelOnTouchOutside(false).show()
-                } else ChangelogDialogController().showDialog(router)
+                if (!BuildConfig.DEBUG) {
+                    ChangelogDialogController().showDialog(router)
+                }
             }
         }
         preferences.extensionUpdatesCount().asObservable().subscribe {
