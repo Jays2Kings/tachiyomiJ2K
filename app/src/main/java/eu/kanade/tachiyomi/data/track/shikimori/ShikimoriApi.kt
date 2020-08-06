@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.data.track.shikimori
 
 import android.net.Uri
+import androidx.core.net.toUri
 import com.github.salomonbrys.kotson.array
 import com.github.salomonbrys.kotson.jsonObject
 import com.github.salomonbrys.kotson.nullString
@@ -52,7 +53,7 @@ class ShikimoriApi(private val client: OkHttpClient, interceptor: ShikimoriInter
     suspend fun search(search: String): List<TrackSearch> {
         return withContext(Dispatchers.IO) {
             val url =
-                Uri.parse("$apiUrl/mangas").buildUpon().appendQueryParameter("order", "popularity")
+                "$apiUrl/mangas".toUri().buildUpon().appendQueryParameter("order", "popularity")
                     .appendQueryParameter("search", search).appendQueryParameter("limit", "20")
                     .build()
             val request = Request.Builder().url(url.toString()).get().build()
@@ -96,14 +97,13 @@ class ShikimoriApi(private val client: OkHttpClient, interceptor: ShikimoriInter
 
     suspend fun findLibManga(track: Track, user_id: String): Track? {
         return withContext(Dispatchers.IO) {
-            val url = Uri.parse("$apiUrl/v2/user_rates").buildUpon()
+            val url = "$apiUrl/v2/user_rates".toUri().buildUpon()
                 .appendQueryParameter("user_id", user_id)
                 .appendQueryParameter("target_id", track.media_id.toString())
                 .appendQueryParameter("target_type", "Manga").build()
             val request = Request.Builder().url(url.toString()).get().build()
 
-            val urlMangas =
-                Uri.parse("$apiUrl/mangas").buildUpon().appendPath(track.media_id.toString())
+            val urlMangas ="$apiUrl/mangas".toUri().buildUpon().appendPath(track.media_id.toString())
                     .build()
             val requestMangas = Request.Builder().url(urlMangas.toString()).get().build()
 
@@ -171,7 +171,7 @@ class ShikimoriApi(private val client: OkHttpClient, interceptor: ShikimoriInter
             return "$baseMangaUrl/$remoteId"
         }
 
-        fun authUrl() = Uri.parse(loginUrl).buildUpon().appendQueryParameter("client_id", clientId)
+        fun authUrl() = loginUrl.toUri().buildUpon().appendQueryParameter("client_id", clientId)
             .appendQueryParameter("redirect_uri", redirectUrl)
             .appendQueryParameter("response_type", "code").build()
 

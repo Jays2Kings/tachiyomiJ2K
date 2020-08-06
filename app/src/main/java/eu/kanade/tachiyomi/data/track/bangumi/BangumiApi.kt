@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.data.track.bangumi
 
 import android.net.Uri
+import androidx.core.net.toUri
 import com.github.salomonbrys.kotson.array
 import com.github.salomonbrys.kotson.obj
 import com.google.gson.Gson
@@ -56,9 +57,8 @@ class BangumiApi(private val client: OkHttpClient, interceptor: BangumiIntercept
 
     suspend fun search(search: String): List<TrackSearch> {
         return withContext(Dispatchers.IO) {
-            val url = Uri.parse(
-                    "$apiUrl/search/subject/${URLEncoder.encode(search, Charsets.UTF_8.name())}"
-                ).buildUpon().appendQueryParameter("max_results", "20").build()
+            val url = "$apiUrl/search/subject/${URLEncoder.encode(search, Charsets.UTF_8.name())}"
+                .toUri().buildUpon().appendQueryParameter("max_results", "20").build()
             val request = Request.Builder().url(url.toString()).get().build()
 
             val netResponse = authClient.newCall(request).await()
@@ -159,7 +159,7 @@ class BangumiApi(private val client: OkHttpClient, interceptor: BangumiIntercept
             return "$baseMangaUrl/$remoteId"
         }
 
-        fun authUrl() = Uri.parse(loginUrl).buildUpon().appendQueryParameter("client_id", clientId)
+        fun authUrl() = loginUrl.toUri().buildUpon().appendQueryParameter("client_id", clientId)
             .appendQueryParameter("response_type", "code")
             .appendQueryParameter("redirect_uri", redirectUrl).build()
 

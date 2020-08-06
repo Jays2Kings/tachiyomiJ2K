@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.PowerManager
 import android.provider.Settings
 import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.preference.PreferenceScreen
 import com.afollestad.materialdialogs.MaterialDialog
 import eu.kanade.tachiyomi.R
@@ -122,7 +123,7 @@ class SettingsAdvancedController : SettingsController() {
                     if (!pm.isIgnoringBatteryOptimizations(packageName)) {
                         val intent = Intent().apply {
                             action = Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
-                            data = Uri.parse("package:$packageName")
+                            data = "package:$packageName".toUri()
                         }
                         startActivity(intent)
                     } else {

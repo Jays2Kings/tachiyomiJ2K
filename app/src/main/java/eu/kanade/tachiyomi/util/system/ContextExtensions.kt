@@ -25,6 +25,7 @@ import androidx.annotation.StringRes
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import com.nononsenseapps.filepicker.FilePickerActivity
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.widget.CustomLayoutPickerActivity
@@ -223,7 +224,7 @@ fun Context.isServiceRunning(serviceClass: Class<*>): Boolean {
  */
 fun Context.openInBrowser(url: String) {
     try {
-        val parsedUrl = Uri.parse(url)
+        val parsedUrl = url.toUri()
         val intent = CustomTabsIntent.Builder()
                 .setToolbarColor(getResourceColor(R.attr.colorPrimaryVariant))
                 .build()

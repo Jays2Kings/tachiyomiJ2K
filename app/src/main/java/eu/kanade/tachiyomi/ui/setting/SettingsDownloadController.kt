@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.preference.PreferenceScreen
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.list.listItemsSingleChoice
@@ -42,7 +43,7 @@ class SettingsDownloadController : SettingsController() {
 
             preferences.downloadsDirectory().asObservable()
                     .subscribeUntilDestroy { path ->
-                        val dir = UniFile.fromUri(context, Uri.parse(path))
+                        val dir = UniFile.fromUri(context, path.toUri())
                         summary = dir.filePath ?: path
                     }
         }
