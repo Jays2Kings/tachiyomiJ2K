@@ -61,4 +61,11 @@
         <item>@string/multiply</item>
         <item>@string/screen</item>
     </string-array>
+
+    <string-array name="clean_up_downloads">
+        <item>@string/clean_orphaned_downloads</item>
+        <item>@string/clean_read_downloads</item>
+        <item>@string/clean_read_manga_not_in_library</item>
+    </string-array>
+
 </resources>
