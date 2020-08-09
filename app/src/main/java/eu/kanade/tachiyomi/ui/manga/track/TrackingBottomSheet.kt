@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -117,7 +118,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         if (track.tracking_url.isBlank()) {
             activity.toast(R.string.url_not_set_click_again)
         } else {
-            activity.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(track.tracking_url)))
+            activity.startActivity(Intent(Intent.ACTION_VIEW, track.tracking_url.toUri()))
             controller.refreshTracker = position
         }
     }

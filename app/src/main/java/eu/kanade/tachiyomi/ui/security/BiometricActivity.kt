@@ -33,7 +33,7 @@ class BiometricActivity : BaseActivity() {
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
             .setTitle(getString(R.string.unlock_library))
-            .setNegativeButtonText(getString(android.R.string.cancel))
+            .setDeviceCredentialAllowed(true)
             .build()
 
         biometricPrompt.authenticate(promptInfo)

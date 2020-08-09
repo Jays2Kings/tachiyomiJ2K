@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.core.net.toUri
 import androidx.preference.PreferenceScreen
 import com.afollestad.materialdialogs.MaterialDialog
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
@@ -58,7 +59,7 @@ class AboutController : SettingsController() {
             val url = "https://tachiyomi.org"
             summary = url
             onClick {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                val intent = Intent(Intent.ACTION_VIEW, url.toUri())
                 startActivity(intent)
             }
         }
@@ -68,7 +69,7 @@ class AboutController : SettingsController() {
             val url = "https://discord.gg/tachiyomi"
             summary = url
             onClick {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                val intent = Intent(Intent.ACTION_VIEW, url.toUri())
                 startActivity(intent)
             }
         }
@@ -77,7 +78,7 @@ class AboutController : SettingsController() {
             val url = "https://github.com/Jays2Kings/tachiyomiJ2K"
             summary = url
             onClick {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                val intent = Intent(Intent.ACTION_VIEW, url.toUri())
                 startActivity(intent)
             }
         }
@@ -86,13 +87,12 @@ class AboutController : SettingsController() {
                 titleRes = R.string.whats_new
                 onClick {
                     val intent = Intent(
-                        Intent.ACTION_VIEW, Uri.parse(
+                        Intent.ACTION_VIEW,
                             if (BuildConfig.DEBUG) {
                                 "https://github.com/Jays2Kings/tachiyomiJ2K/commits/master"
                             } else {
                                 "https://github.com/Jays2Kings/tachiyomiJ2K/releases/tag/v${BuildConfig.VERSION_NAME}"
-                            }
-                        )
+                            }.toUri()
                     )
                     startActivity(intent)
                 }

@@ -7,6 +7,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterAdapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
+import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import uy.kohesive.injekt.injectLazy
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -26,7 +27,7 @@ class MangaDetailsAdapter(
     val presenter = controller.presenter
 
     val decimalFormat = DecimalFormat("#.###", DecimalFormatSymbols()
-            .apply { decimalSeparator = '.' })
+        .apply { decimalSeparator = '.' })
 
     fun setChapters(items: List<ChapterItem>?) {
         this.items = items ?: emptyList()
@@ -46,8 +47,10 @@ class MangaDetailsAdapter(
         if (s.isNullOrBlank()) {
             updateDataSet(items)
         } else {
-            updateDataSet(items.filter { it.name.contains(s, true) ||
-                it.scanlator?.contains(s, true) == true })
+            updateDataSet(items.filter {
+                it.name.contains(s, true) ||
+                    it.scanlator?.contains(s, true) == true
+            })
         }
     }
 
@@ -64,7 +67,7 @@ class MangaDetailsAdapter(
             getItem(position) as? ChapterItem ?: return recyclerView.context.getString(R.string.top)
         return when (val scrollType = presenter.scrollType) {
             MangaDetailsPresenter.MULTIPLE_VOLUMES, MangaDetailsPresenter.MULTIPLE_SEASONS -> {
-                val volume = presenter.getGroupNumber(chapter)
+                val volume = ChapterUtil.getGroupNumber(chapter)
                 if (volume != null) {
                     recyclerView.context.getString(
                         if (scrollType == MangaDetailsPresenter.MULTIPLE_SEASONS) R.string.season_

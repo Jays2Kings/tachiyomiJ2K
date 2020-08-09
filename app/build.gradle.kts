@@ -90,7 +90,7 @@ dependencies {
     implementation("com.github.inorichi:subsampling-scale-image-view:ac0dae7")
     implementation("com.github.inorichi:junrar-android:634c1f5")
 
-    // Android support library
+    // Android X libraries
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.material:material:1.1.0")
@@ -100,12 +100,13 @@ dependencies {
     implementation("androidx.browser:browser:1.2.0")
     implementation("androidx.biometric:biometric:1.0.1")
     implementation("androidx.palette:palette:1.0.0")
+    implementation ("androidx.core:core-ktx:$1.3.1")
 
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
 
     implementation("androidx.multidex:multidex:2.0.1")
 
-    implementation("com.google.firebase:firebase-core:17.3.0")
+    implementation("com.google.firebase:firebase-core:17.4.4")
 
     val lifecycleVersion = "2.2.0"
     implementation("androidx.lifecycle:lifecycle-extensions:$lifecycleVersion")
@@ -248,6 +249,9 @@ dependencies {
     implementation("info.debatty:java-string-similarity:1.2.1")
 
     implementation("com.google.android.gms:play-services-oss-licenses:${Versions.OSS_LICENSE}")
+
+    // TLS 1.3 support for Android < 10
+    implementation("org.conscrypt:conscrypt-android:2.4.0")
 }
 
 

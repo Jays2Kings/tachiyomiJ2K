@@ -31,17 +31,19 @@ import java.util.zip.ZipFile
 
 class LocalSource(private val context: Context) : CatalogueSource {
     companion object {
+        const val ID = 0L
         const val HELP_URL = "https://tachiyomi.org/help/guides/reading-local-manga/"
 
         private const val COVER_NAME = "cover.jpg"
+        private val SUPPORTED_ARCHIVE_TYPES = setOf("zip", "rar", "cbr", "cbz", "epub")
+
         private val POPULAR_FILTERS = FilterList(OrderBy())
         private val LATEST_FILTERS =
             FilterList(OrderBy().apply { state = Filter.Sort.Selection(1, false) })
         private val LATEST_THRESHOLD = TimeUnit.MILLISECONDS.convert(7, TimeUnit.DAYS)
-        const val ID = 0L
 
         fun updateCover(context: Context, manga: SManga, input: InputStream): File? {
-            val dir = getBaseDirectories(context).firstOrNull()
+            val dir = getBaseDirectories(context).asSequence().firstOrNull()
             if (dir == null) {
                 input.close()
                 return null
@@ -85,12 +87,12 @@ class LocalSource(private val context: Context) : CatalogueSource {
 
         val time =
             if (filters === LATEST_FILTERS) System.currentTimeMillis() - LATEST_THRESHOLD else 0L
-        var mangaDirs = baseDirs.mapNotNull { it.listFiles()?.toList() }.flatten().filter {
-                it.isDirectory && if (time == 0L) it.name.contains(
-                    query,
-                    ignoreCase = true
-                ) else it.lastModified() >= time
-            }.distinctBy { it.name }
+        var mangaDirs = baseDirs
+            .asSequence()
+            .mapNotNull { it.listFiles()?.toList() }.flatten()
+            .filter { it.isDirectory }
+            .filter { if (time == 0L) it.name.contains(query, ignoreCase = true) else it.lastModified() >= time }
+            .distinctBy { it.name }
 
         val state = ((if (filters.isEmpty()) POPULAR_FILTERS else filters)[0] as OrderBy).state
         when (state?.index) {
@@ -134,15 +136,17 @@ class LocalSource(private val context: Context) : CatalogueSource {
                 }
             }
         }
-        return Observable.just(MangasPage(mangas, false))
+        return Observable.just(MangasPage(mangas.toList(), false))
     }
 
     override fun fetchLatestUpdates(page: Int) = fetchSearchManga(page, "", LATEST_FILTERS)
 
     override fun fetchMangaDetails(manga: SManga): Observable<SManga> {
         val baseDirs = getBaseDirectories(context)
-        baseDirs.mapNotNull { File(it, manga.url).listFiles()?.toList() }
-            .flatten().filter { it.extension == "json" }.firstOrNull()?.apply {
+            baseDirs
+            .mapNotNull { File(it, manga.url).listFiles()?.toList() }
+            .flatten()
+            .filter { it.extension == "json" }.firstOrNull()?.apply {
                 val json = Gson().fromJson(
                     Scanner(this).useDelimiter("\\Z").next(),
                     JsonObject::class.java
@@ -155,6 +159,7 @@ class LocalSource(private val context: Context) : CatalogueSource {
                     ?: manga.genre
                 manga.status = json["status"]?.asInt ?: manga.status
             }
+
         val url = manga.url
         // Try to find the cover
         for (dir in baseDirs) {
@@ -249,7 +254,7 @@ class LocalSource(private val context: Context) : CatalogueSource {
     }
 
     private fun isSupportedFile(extension: String): Boolean {
-        return extension.toLowerCase() in setOf("zip", "rar", "cbr", "cbz", "epub")
+        return extension.toLowerCase() in SUPPORTED_ARCHIVE_TYPES
     }
 
     fun getFormat(chapter: SChapter): Format {
@@ -283,22 +288,23 @@ class LocalSource(private val context: Context) : CatalogueSource {
         val format = getFormat(chapter)
         return when (format) {
             is Format.Directory -> {
-                val entry = format.file.listFiles().sortedWith(Comparator<File> { f1, f2 ->
+                val entry = format.file.listFiles()
+                    ?.sortedWith(Comparator<File> { f1, f2 ->
                         f1.name.compareToCaseInsensitiveNaturalOrder(f2.name)
                     })
-                    .find { !it.isDirectory && ImageUtil.isImage(it.name) { FileInputStream(it) } }
+                    ?.find { !it.isDirectory && ImageUtil.isImage(it.name) { FileInputStream(it) } }
 
                 entry?.let { updateCover(context, manga, it.inputStream()) }
             }
             is Format.Zip -> {
                 ZipFile(format.file).use { zip ->
                     val entry = zip.entries().toList().sortedWith(Comparator<ZipEntry> { f1, f2 ->
-                            f1.name.compareToCaseInsensitiveNaturalOrder(f2.name)
-                        }).find {
-                            !it.isDirectory && ImageUtil.isImage(it.name) {
-                                zip.getInputStream(it)
-                            }
+                        f1.name.compareToCaseInsensitiveNaturalOrder(f2.name)
+                    }).find {
+                        !it.isDirectory && ImageUtil.isImage(it.name) {
+                            zip.getInputStream(it)
                         }
+                    }
 
                     entry?.let { updateCover(context, manga, zip.getInputStream(it)) }
                 }
@@ -306,12 +312,12 @@ class LocalSource(private val context: Context) : CatalogueSource {
             is Format.Rar -> {
                 Archive(format.file).use { archive ->
                     val entry = archive.fileHeaders.sortedWith(Comparator<FileHeader> { f1, f2 ->
-                            f1.fileNameString.compareToCaseInsensitiveNaturalOrder(f2.fileNameString)
-                        }).find {
-                            !it.isDirectory && ImageUtil.isImage(it.fileNameString) {
-                                archive.getInputStream(it)
-                            }
+                        f1.fileNameString.compareToCaseInsensitiveNaturalOrder(f2.fileNameString)
+                    }).find {
+                        !it.isDirectory && ImageUtil.isImage(it.fileNameString) {
+                            archive.getInputStream(it)
                         }
+                    }
 
                     entry?.let { updateCover(context, manga, archive.getInputStream(it)) }
                 }

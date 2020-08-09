@@ -30,6 +30,8 @@ import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.manga.track.TrackItem
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
+import eu.kanade.tachiyomi.util.chapter.ChapterFilter
+import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
 import eu.kanade.tachiyomi.util.lang.trimOrNull
 import eu.kanade.tachiyomi.util.storage.DiskUtil
@@ -57,7 +59,8 @@ class MangaDetailsPresenter(
     val preferences: PreferencesHelper = Injekt.get(),
     val coverCache: CoverCache = Injekt.get(),
     private val db: DatabaseHelper = Injekt.get(),
-    private val downloadManager: DownloadManager = Injekt.get()
+    private val downloadManager: DownloadManager = Injekt.get(),
+    private val chapterFilter: ChapterFilter = Injekt.get()
 ) : DownloadQueue.DownloadListener, LibraryServiceListener {
 
     private var scope = CoroutineScope(Job() + Dispatchers.Default)
@@ -68,8 +71,6 @@ class MangaDetailsPresenter(
     var hasRequested = false
     var isLoading = false
     var scrollType = 0
-    private val volumeRegex = Regex("""(vol|volume)\.? *([0-9]+)?""", RegexOption.IGNORE_CASE)
-    private val seasonRegex = Regex("""(Season |S)([0-9]+)?""")
 
     private val loggedServices by lazy { Injekt.get<TrackManager>().services.filter { it.isLogged } }
     private var tracks = emptyList<Track>()
@@ -82,25 +83,32 @@ class MangaDetailsPresenter(
     var headerItem = MangaHeaderItem(manga, controller.fromCatalogue)
 
     fun onCreate() {
-
-        isLockedFromSearch = SecureActivityDelegate.shouldBeLocked()
-        headerItem.isLocked = isLockedFromSearch
-        downloadManager.addListener(this)
-        LibraryUpdateService.setListener(this)
-        tracks = db.getTracks(manga).executeAsBlocking()
-        if (manga.source == LocalSource.ID) {
-            refreshAll()
-        } else if (!manga.initialized) {
-            isLoading = true
-            controller.setRefresh(true)
-            controller.updateHeader()
-            refreshAll()
-        } else {
-            updateChapters()
-            controller.updateChapters(this.chapters)
+        scope.launch {
+            withContext(Dispatchers.IO) {
+                isLockedFromSearch = SecureActivityDelegate.shouldBeLocked()
+                headerItem.isLocked = isLockedFromSearch
+                downloadManager.addListener(this@MangaDetailsPresenter)
+                LibraryUpdateService.setListener(this@MangaDetailsPresenter)
+                tracks = db.getTracks(manga).executeAsBlocking()
+                if (manga.source == LocalSource.ID) {
+                    refreshAll()
+                } else if (!manga.initialized) {
+                    isLoading = true
+                    withContext(Dispatchers.Main) {
+                        controller.setRefresh(true)
+                        controller.updateHeader()
+                    }
+                    refreshAll()
+                } else {
+                    updateChapters()
+                    withContext(Dispatchers.Main) {
+                        controller.updateChapters(this@MangaDetailsPresenter.chapters)
+                    }
+                }
+                setTrackItems()
+                refreshTracking(false)
+            }
         }
-        setTrackItems()
-        refreshTracking(false)
     }
 
     fun onDestroy() {
@@ -193,26 +201,6 @@ class MangaDetailsPresenter(
     }
 
     /**
-     * Whether the display only downloaded filter is enabled.
-     */
-    fun onlyDownloaded() = manga.downloadedFilter == Manga.SHOW_DOWNLOADED
-
-    /**
-     * Whether the display only downloaded filter is enabled.
-     */
-    fun onlyBookmarked() = manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED
-
-    /**
-     * Whether the display only unread filter is enabled.
-     */
-    fun onlyUnread() = manga.readFilter == Manga.SHOW_UNREAD
-
-    /**
-     * Whether the display only read filter is enabled.
-     */
-    fun onlyRead() = manga.readFilter == Manga.SHOW_READ
-
-    /**
      * Whether the sorting method is descending or ascending.
      */
     fun sortDescending() = manga.sortDescending(globalSort())
@@ -225,18 +213,9 @@ class MangaDetailsPresenter(
     private fun applyChapterFilters(chapterList: List<ChapterItem>): List<ChapterItem> {
         if (isLockedFromSearch)
             return chapterList
-        var chapters = chapterList
-        if (onlyUnread()) {
-            chapters = chapters.filter { !it.read }
-        } else if (onlyRead()) {
-            chapters = chapters.filter { it.read }
-        }
-        if (onlyDownloaded()) {
-            chapters = chapters.filter { it.isDownloaded || it.manga.source == LocalSource.ID }
-        }
-        if (onlyBookmarked()) {
-            chapters = chapters.filter { it.bookmark }
-        }
+
+        val chapters = chapterFilter.filterChapters(chapterList, manga) as List<ChapterItem>
+
         val sortFunction: (Chapter, Chapter) -> Int = when (manga.sorting) {
             Manga.SORTING_SOURCE -> when (sortDescending()) {
                 true -> { c1, c2 -> c1.source_order.compareTo(c2.source_order) }
@@ -248,66 +227,17 @@ class MangaDetailsPresenter(
             }
             else -> { c1, c2 -> c1.source_order.compareTo(c2.source_order) }
         }
-        chapters = chapters.sortedWith(Comparator(sortFunction))
         getScrollType(chapters)
-        return chapters
+        return chapters.sortedWith(Comparator(sortFunction))
     }
 
     private fun getScrollType(chapters: List<ChapterItem>) {
         scrollType = when {
-            hasMultipleVolumes(chapters) -> MULTIPLE_VOLUMES
-            hasMultipleSeasons(chapters) -> MULTIPLE_SEASONS
-            hasTensOfChapters(chapters) -> TENS_OF_CHAPTERS
+            ChapterUtil.hasMultipleVolumes(chapters) -> MULTIPLE_VOLUMES
+            ChapterUtil.hasMultipleSeasons(chapters) -> MULTIPLE_SEASONS
+            ChapterUtil.hasTensOfChapters(chapters) -> TENS_OF_CHAPTERS
             else -> 0
         }
-    }
-
-    fun getGroupNumber(chapter: ChapterItem): Int? {
-        val groups = volumeRegex.find(chapter.name)?.groups
-        if (groups != null) return groups[2]?.value?.toIntOrNull()
-        val seasonGroups = seasonRegex.find(chapter.name)?.groups
-        if (seasonGroups != null) return seasonGroups[2]?.value?.toIntOrNull()
-        return null
-    }
-
-    private fun getVolumeNumber(chapter: ChapterItem): Int? {
-        val groups = volumeRegex.find(chapter.name)?.groups
-        if (groups != null) return groups[2]?.value?.toIntOrNull()
-        return null
-    }
-
-    private fun getSeasonNumber(chapter: ChapterItem): Int? {
-        val groups = seasonRegex.find(chapter.name)?.groups
-        if (groups != null) return groups[2]?.value?.toIntOrNull()
-        return null
-    }
-
-    private fun hasMultipleVolumes(chapters: List<ChapterItem>): Boolean {
-        val volumeSet = mutableSetOf<Int>()
-        chapters.forEach {
-            val volNum = getVolumeNumber(it)
-            if (volNum != null) {
-                volumeSet.add(volNum)
-                if (volumeSet.size >= 2) return true
-            }
-        }
-        return false
-    }
-
-    private fun hasMultipleSeasons(chapters: List<ChapterItem>): Boolean {
-        val volumeSet = mutableSetOf<Int>()
-        chapters.forEach {
-            val volNum = getSeasonNumber(it)
-            if (volNum != null) {
-                volumeSet.add(volNum)
-                if (volumeSet.size >= 2) return true
-            }
-        }
-        return false
-    }
-
-    private fun hasTensOfChapters(chapters: List<ChapterItem>): Boolean {
-        return chapters.size > 20
     }
 
     /**
@@ -589,10 +519,10 @@ class MangaDetailsPresenter(
 
     fun currentFilters(): String {
         val filtersId = mutableListOf<Int?>()
-        filtersId.add(if (onlyRead()) R.string.read else null)
-        filtersId.add(if (onlyUnread()) R.string.unread else null)
-        filtersId.add(if (onlyDownloaded()) R.string.downloaded else null)
-        filtersId.add(if (onlyBookmarked()) R.string.bookmarked else null)
+        filtersId.add(if (manga.readFilter == Manga.SHOW_READ) R.string.read else null)
+        filtersId.add(if (manga.readFilter == Manga.SHOW_UNREAD) R.string.unread else null)
+        filtersId.add(if (manga.downloadedFilter == Manga.SHOW_DOWNLOADED) R.string.downloaded else null)
+        filtersId.add(if (manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED) R.string.bookmarked else null)
         return filtersId.filterNotNull().joinToString(", ") { preferences.context.getString(it) }
     }
 

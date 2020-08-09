@@ -15,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.net.toUri
 import coil.api.clear
 import coil.api.loadAny
 import coil.request.CachePolicy
@@ -458,7 +459,7 @@ class WebtoonPageHolder(
                 }
                 setText(R.string.open_in_browser)
                 setOnClickListener {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(imageUrl))
+                    val intent = Intent(Intent.ACTION_VIEW, imageUrl.toUri())
                     context.startActivity(intent)
                 }
 

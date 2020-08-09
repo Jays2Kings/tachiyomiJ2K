@@ -12,6 +12,7 @@ import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.extension.ExtensionManager
 import eu.kanade.tachiyomi.network.NetworkHelper
 import eu.kanade.tachiyomi.source.SourceManager
+import eu.kanade.tachiyomi.util.chapter.ChapterFilter
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import uy.kohesive.injekt.api.InjektModule
@@ -47,6 +48,8 @@ class AppModule(val app: Application) : InjektModule {
         addSingletonFactory { TrackManager(app) }
 
         addSingletonFactory { Gson() }
+
+        addSingletonFactory { ChapterFilter() }
 
         // Asynchronously init expensive components for a faster cold start
 

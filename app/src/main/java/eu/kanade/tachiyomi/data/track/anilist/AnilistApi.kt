@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.data.track.anilist
 
 import android.net.Uri
+import androidx.core.net.toUri
 import com.github.salomonbrys.kotson.array
 import com.github.salomonbrys.kotson.get
 import com.github.salomonbrys.kotson.jsonObject
@@ -232,7 +233,7 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             return baseMangaUrl + mediaId
         }
 
-        fun authUrl() = Uri.parse("${baseUrl}oauth/authorize").buildUpon()
+        fun authUrl() = "${baseUrl.toUri()}oauth/authorize".toUri().buildUpon()
             .appendQueryParameter("client_id", clientId)
             .appendQueryParameter("response_type", "token")
             .build()!!

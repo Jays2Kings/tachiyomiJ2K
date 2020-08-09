@@ -10,13 +10,16 @@ import android.os.Bundle
 import android.os.PowerManager
 import android.provider.Settings
 import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.preference.PreferenceScreen
 import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.list.listItemsMultiChoice
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.ChapterCache
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.download.DownloadManager
+import eu.kanade.tachiyomi.data.download.DownloadProvider
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService.Target
 import eu.kanade.tachiyomi.network.NetworkHelper
@@ -108,7 +111,11 @@ class SettingsAdvancedController : SettingsController() {
 
             summaryRes = R.string.delete_unused_chapters
 
-            onClick { cleanupDownloads() }
+            onClick {
+                val ctrl = CleanupDownloadsDialogController()
+                ctrl.targetController = this@SettingsAdvancedController
+                ctrl.showDialog(router)
+            }
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -122,7 +129,7 @@ class SettingsAdvancedController : SettingsController() {
                     if (!pm.isIgnoringBatteryOptimizations(packageName)) {
                         val intent = Intent().apply {
                             action = Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
-                            data = Uri.parse("package:$packageName")
+                            data = "package:$packageName".toUri()
                         }
                         startActivity(intent)
                     } else {
@@ -133,18 +140,51 @@ class SettingsAdvancedController : SettingsController() {
         }
     }
 
-    private fun cleanupDownloads() {
+    class CleanupDownloadsDialogController() : DialogController() {
+        override fun onCreateDialog(savedViewState: Bundle?): Dialog {
+
+            return MaterialDialog(activity!!).show {
+
+                title(R.string.clean_up_downloaded_chapters)
+                    .listItemsMultiChoice(R.array.clean_up_downloads, disabledIndices = intArrayOf(0), initialSelection = intArrayOf(0, 1, 2)) { dialog, selections, items ->
+                        val deleteRead = selections.contains(1)
+                        val deleteNonFavorite = selections.contains(2)
+                        (targetController as? SettingsAdvancedController)?.cleanupDownloads(deleteRead, deleteNonFavorite)
+                    }
+                positiveButton(android.R.string.ok)
+                negativeButton(android.R.string.cancel)
+            }
+        }
+    }
+
+    private fun cleanupDownloads(removeRead: Boolean, removeNonFavorite: Boolean) {
         if (job?.isActive == true) return
         activity?.toast(R.string.starting_cleanup)
         job = GlobalScope.launch(Dispatchers.IO, CoroutineStart.DEFAULT) {
             val mangaList = db.getMangas().executeAsBlocking()
             val sourceManager: SourceManager = Injekt.get()
             val downloadManager: DownloadManager = Injekt.get()
+            val downloadProvider = DownloadProvider(activity!!)
             var foldersCleared = 0
-            for (manga in mangaList) {
-                val chapterList = db.getChapters(manga).executeAsBlocking()
-                val source = sourceManager.getOrStub(manga.source)
-                foldersCleared += downloadManager.cleanupChapters(chapterList, manga, source)
+            val sources = sourceManager.getOnlineSources()
+
+            for (source in sources) {
+                val mangaFolders = downloadManager.getMangaFolders(source)
+                val sourceManga = mangaList.filter { it.source == source.id }
+
+                for (mangaFolder in mangaFolders) {
+                    val manga = sourceManga.find { downloadProvider.getMangaDirName(it) == mangaFolder.name }
+                    if (manga == null) {
+                    //download is orphaned and not even in the db delete it if remove non favorited is enabled
+                        if (removeNonFavorite) {
+                            foldersCleared += 1 + (mangaFolder.listFiles()?.size ?: 0)
+                            mangaFolder.delete()
+                        }
+                        continue
+                    }
+                    val chapterList = db.getChapters(manga).executeAsBlocking()
+                    foldersCleared += downloadManager.cleanupChapters(chapterList, manga, source, removeRead, removeNonFavorite)
+                }
             }
             launchUI {
                 val activity = activity ?: return@launchUI
@@ -167,32 +207,36 @@ class SettingsAdvancedController : SettingsController() {
         var deletedFiles = 0
 
         Observable.defer { Observable.from(files) }
-                .doOnNext { file ->
-                    if (chapterCache.removeFileFromCache(file.name)) {
-                        deletedFiles++
-                    }
+            .doOnNext { file ->
+                if (chapterCache.removeFileFromCache(file.name)) {
+                    deletedFiles++
                 }
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                }, {
-                    activity?.toast(R.string.cache_delete_error)
-                }, {
-                    activity?.toast(resources?.getQuantityString(R.plurals.cache_cleared,
-                        deletedFiles, deletedFiles))
-                    findPreference(CLEAR_CACHE_KEY)?.summary =
-                            resources?.getString(R.string.used_, chapterCache.readableSize)
-                })
+            }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+            }, {
+                activity?.toast(R.string.cache_delete_error)
+            }, {
+                activity?.toast(
+                    resources?.getQuantityString(
+                        R.plurals.cache_cleared,
+                        deletedFiles, deletedFiles
+                    )
+                )
+                findPreference(CLEAR_CACHE_KEY)?.summary =
+                    resources?.getString(R.string.used_, chapterCache.readableSize)
+            })
     }
 
     class ClearDatabaseDialogController : DialogController() {
         override fun onCreateDialog(savedViewState: Bundle?): Dialog {
             return MaterialDialog(activity!!)
-                    .message(R.string.clear_database_confirmation)
-                    .positiveButton(android.R.string.ok) {
-                        (targetController as? SettingsAdvancedController)?.clearDatabase()
-                    }
-                    .negativeButton(android.R.string.cancel)
+                .message(R.string.clear_database_confirmation)
+                .positiveButton(android.R.string.ok) {
+                    (targetController as? SettingsAdvancedController)?.clearDatabase()
+                }
+                .negativeButton(android.R.string.cancel)
         }
     }
 

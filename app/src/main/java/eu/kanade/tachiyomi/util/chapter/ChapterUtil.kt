@@ -3,10 +3,10 @@ package eu.kanade.tachiyomi.util.chapter
 import android.content.Context
 import android.content.res.ColorStateList
 import android.widget.TextView
-import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Chapter
+import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.util.system.contextCompatColor
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.dpToPxEnd
@@ -84,6 +84,55 @@ class ChapterUtil {
 
         private fun bookmarkedColor(context: Context): Int = context.contextCompatColor(R.color.bookmarked_chapter)
 
-        private fun bookmarkedAndReadColor(context: Context): Int = ColorUtils.setAlphaComponent(context.contextCompatColor(R.color.bookmarked_chapter), 150)
+        private val volumeRegex = Regex("""(vol|volume)\.? *([0-9]+)?""", RegexOption.IGNORE_CASE)
+        private val seasonRegex = Regex("""(Season |S)([0-9]+)?""")
+
+        fun getGroupNumber(chapter: Chapter): Int? {
+            val groups = volumeRegex.find(chapter.name)?.groups
+            if (groups != null) return groups[2]?.value?.toIntOrNull()
+            val seasonGroups = seasonRegex.find(chapter.name)?.groups
+            if (seasonGroups != null) return seasonGroups[2]?.value?.toIntOrNull()
+            return null
+        }
+
+        private fun getVolumeNumber(chapter: Chapter): Int? {
+            val groups = volumeRegex.find(chapter.name)?.groups
+            if (groups != null) return groups[2]?.value?.toIntOrNull()
+            return null
+        }
+
+        private fun getSeasonNumber(chapter: Chapter): Int? {
+            val groups = seasonRegex.find(chapter.name)?.groups
+            if (groups != null) return groups[2]?.value?.toIntOrNull()
+            return null
+        }
+
+        fun hasMultipleVolumes(chapters: List<Chapter>): Boolean {
+            val volumeSet = mutableSetOf<Int>()
+            chapters.forEach {
+                val volNum = getVolumeNumber(it)
+                if (volNum != null) {
+                    volumeSet.add(volNum)
+                    if (volumeSet.size >= 2) return true
+                }
+            }
+            return false
+        }
+
+        fun hasMultipleSeasons(chapters: List<Chapter>): Boolean {
+            val volumeSet = mutableSetOf<Int>()
+            chapters.forEach {
+                val volNum = getSeasonNumber(it)
+                if (volNum != null) {
+                    volumeSet.add(volNum)
+                    if (volumeSet.size >= 2) return true
+                }
+            }
+            return false
+        }
+
+        fun hasTensOfChapters(chapters: List<ChapterItem>): Boolean {
+            return chapters.size > 20
+        }
     }
 }

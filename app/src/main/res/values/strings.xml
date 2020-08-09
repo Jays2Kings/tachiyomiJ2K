@@ -545,6 +545,9 @@
     <string name="clean_up_downloaded_chapters">Clean up downloaded chapters</string>
     <string name="delete_unused_chapters">Delete non-existent, partially downloaded,
             and read chapter folders</string>
+    <string name="clean_orphaned_downloads">Clean orphaned</string>
+    <string name="clean_read_downloads">Clean read</string>
+    <string name="clean_read_manga_not_in_library">Clean manga not in library</string>
     <string name="starting_cleanup">Starting cleanup</string>
     <string name="no_folders_to_cleanup">No folders to cleanup</string>
     <string name="disable_battery_optimization">Disable battery optimization</string>

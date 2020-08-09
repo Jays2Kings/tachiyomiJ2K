@@ -18,6 +18,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.net.toUri
 import coil.api.loadAny
 import coil.request.CachePolicy
 import com.davemorrissey.labs.subscaleview.ImageSource
@@ -465,7 +466,7 @@ class PagerPageHolder(
                 }
                 setText(R.string.open_in_browser)
                 setOnClickListener {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(imageUrl))
+                    val intent = Intent(Intent.ACTION_VIEW, imageUrl.toUri())
                     context.startActivity(intent)
                 }
 
