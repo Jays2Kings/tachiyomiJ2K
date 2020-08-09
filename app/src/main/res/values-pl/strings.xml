@@ -556,6 +556,9 @@
     <string name="updates_tracking_details">Aktualizuje status, ocenę i ostatnio czytany rozdział na podstawie usług śledzenia</string>
     <string name="clean_up_downloaded_chapters">Wyczyść pobrane rozdziały</string>
     <string name="delete_unused_chapters">Usuń nieistniejące, częściowo pobrane oraz przeczytane rozdziały</string>
+    <string name="clean_orphaned_downloads">Wyczyść osierocone</string>
+    <string name="clean_read_downloads">Wyczyść przeczytane</string>
+    <string name="clean_read_manga_not_in_library">Wyczyść przeczytane mangi spoza biblioteki</string>
     <string name="starting_cleanup">Rozpoczęcie czyszczenie</string>
     <string name="no_folders_to_cleanup">Brak folderów do wyczyszczenia</string>
     <string name="disable_battery_optimization">Wyłącz optymalizację baterii</string>
