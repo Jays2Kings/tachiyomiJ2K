@@ -48,6 +48,7 @@
     <string name="marked_as_unread">Oznacz jako nieprzeczytane</string>
     <string name="removed_bookmark">Usuń zakładkę</string>
     <string name="chapters_removed">Rozdziały usunięte</string>
+    <string name="chapter_not_found">Rozdziały nie znalezione</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Usunąć %1$d pobrany rozdział?</item>
         <item quantity="few">Usunąć %1$d pobrane rozdziały?</item>
@@ -536,6 +537,10 @@
 
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Wyczyść cache rozdziałów</string>
+    <string name="data_management">Zarządzanie Danymi</string>
+    <string name="network">Sieć</string>
+    <string name="dns_over_https" translatable="false">DNS over HTTPS (Cloudflare)</string>
+    <string name="requires_app_restart">Wymaga ponownego uruchomienia aplikacji</string>
     <string name="used_">W użyciu: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Cache wyczyszczony. %d plik został usunięty</item>
@@ -573,6 +578,8 @@
     <string name="clean_up_cached_covers">Wyczyść okładki z pamięci cache</string>
     <string name="delete_old_covers_in_library_used_">Usuń stare i nieużywane okładki mang z pamięci cache,
         które miały aktualizacje. \nUżywane teraz: %1$s</string>
+    <string name="clear_cached_covers_non_library">Wyczyść okładki z pamięci cache spoza biblioteki</string>
+    <string name="delete_all_covers__not_in_library_used_">Wyczyść okładki z pamięci cache spoza biblioteki \nObecnie używane: %1$s</string>
 
     <!-- Browse Settings -->
     <string name="pref_global_search">Wyszukiwanie globalne</string>
