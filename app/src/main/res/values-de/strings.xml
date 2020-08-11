@@ -48,6 +48,7 @@
     <string name="marked_as_unread">Als ungelesen markieren</string>
     <string name="removed_bookmark">Lesezeichen entfernt</string>
     <string name="chapters_removed">Kapitel entfernt.</string>
+    <string name="chapter_not_found">Kapitel nicht gefunden</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Entferne %1$d heruntergeladenes Kapitel?</item>
         <item quantity="other">Entferne %1$d heruntergeladene Kapitel?</item>
@@ -122,7 +123,7 @@
 
     <string name="read_progress">Lesefortschritt</string>
     <string name="series_type">Serientyp</string>
-    <string name="group_library_by">Gruppiere Bibiliothek nach…</string>
+    <string name="group_library_by">Gruppiere Bibliothek nach…</string>
     <string name="tracking_status">Synchronisierungsstatus</string>
     <string name="ungrouped">Ungruppiert</string>
 
@@ -287,6 +288,7 @@
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
     <string name="reduces_banding_impacts_performance">Reduziert die Streifenbildung, beeinträchtigt jedoch die Leistung</string>
+
     <string name="crop_borders">Rand abschneiden</string>
     <string name="use_custom_brightness">Eigene Helligkeit festlegen</string>
     <string name="use_custom_color_filter">Eigenen Farbfilter nutzen</string>
@@ -333,6 +335,7 @@
     <string name="smart_based_on_page_and_theme">Schlau (basierend auf Seite und Thema)</string>
     <string name="always_show_chapter_transition">Kapitelübergang immer anzeigen</string>
     <string name="if_disabled_transition_will_skip">Wenn deaktiviert wird die Kapitelübergangsseite, sollte das nächste Kapitel geladen sein, übersprungen</string>
+
     <string name="pref_webtoon_side_padding">Seitenpolsterung</string>
     <string name="webtoon_side_padding_0">Keine</string>
     <string name="webtoon_side_padding_10">10%</string>
@@ -387,7 +390,9 @@
     <string name="source_not_installed">Quelle nicht installiert</string>
     <plurals name="deleted_chapters">
         <item quantity="one">Ein Kapitel wurde von der Quelle entfernt:\n%2$s\nDiesen Download löschen?</item>
+
         <item quantity="other">%1$s Kapitel wurden von der Quelle entfernt::\n%2$s\n\nDiese Downloads löschen?</item>
+
     </plurals>
 
     <!-- Tracking -->
@@ -420,6 +425,7 @@
     <string name="migration">Migrierung</string>
     <string name="skip_pre_migration">Vor-Migrierung überspringen</string>
     <string name="select_a_source_then_item_to_migrate">Zum Migrieren erst die Quelle und danach einen Eintrag auswählen</string>
+
     <string name="data_to_include_in_migration">Beim Migrieren mit einschließen</string>
     <string name="search_parameter_eg">Suchparameter (Z. B.: language:english)</string>
     <string name="include_extra_search_parameter">Extra Suchparameter in die Suche einschließen</string>
@@ -427,6 +433,7 @@
     <string name="use_first_source">Erste Quelle als Alternative nutzen</string>
     <string name="skip_this_step_next_time">Diesen Schritt beim Nächsten mal überspringen</string>
     <string name="to_show_again_setting_sources">Um diesen Bildschirm wieder anzuzeigen: Einstellungen => Quellen</string>
+
     <string name="latest_">Neueste: %1$s</string>
     <string name="migrating_to">migriere zu</string>
     <string name="dont_migrate">Nicht migrieren</string>
@@ -438,6 +445,7 @@
     <string name="migrate_">Migriere %1$s</string>
     <string name="copy_value">Kopieren</string>
     <string name="no_chapters_found_for_migration">Keine Kapitel gefunden. Dieser Manga kann nicht für das Migrieren genutzt werden.</string>
+
     <string name="no_alternatives_found">Keine alternative gefunden</string>
     <string name="stop_migrating">Migration stoppen?</string>
     <plurals name="migrate_manga">
@@ -513,6 +521,10 @@
 
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Kapitel-Zwischenspeicher leeren</string>
+    <string name="data_management">Datenmanagement</string>
+    <string name="network">Netzwerk</string>
+    <string name="dns_over_https" translatable="false">DNS über HTTPS (Cloudflare)</string>
+    <string name="requires_app_restart">Erfordert einen Neustart der App, um wirksam zu werden</string>
     <string name="used_">Belegt: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Zwischenspeicher geleert. %d Datei wurde gelöscht</item>
@@ -531,6 +543,9 @@
     <string name="updates_tracking_details">Lesestatus, Bewertung und zuletzt gelesenes Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
     <string name="clean_up_downloaded_chapters">Heruntergeladene Kapitel aufräumen</string>
     <string name="delete_unused_chapters">Nicht existierende, teilweise heruntergeladene und gelesene Kapitel löschen</string>
+    <string name="clean_orphaned_downloads">Verwaiste bereinigen</string>
+    <string name="clean_read_downloads">Gelesene bereinigen</string>
+    <string name="clean_read_manga_not_in_library">Manga bereinigen welche nicht in der Bibliothek sind</string>
     <string name="starting_cleanup">Aufräumen gestartet</string>
     <string name="no_folders_to_cleanup">Keine Ordner zum Aufräumen</string>
     <string name="disable_battery_optimization">Optimierung des Akkuverbrauchs beenden</string>
@@ -542,6 +557,8 @@
     </plurals>
     <string name="clean_up_cached_covers">Zwischengespeicherte Vorschaubilder aufräumen</string>
     <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Manga in deiner Bibliothek welche aktualisiert wurden löschen.\nAktuell genutzt: %1$s</string>
+    <string name="clear_cached_covers_non_library">Zwischengespeicherte Vorschaubilder welche nicht in der Bibliothek sind bereinigen</string>
+    <string name="delete_all_covers__not_in_library_used_">Alle zwischengespeicherten Vorschaubilder welche nicht in der Bibliothek sind löschen \nAktuell genutzt: %1$s</string>
 
     <!-- Browse Settings -->
     <string name="pref_global_search">Globale Suche</string>
@@ -564,7 +581,7 @@
     <string name="website">Webseite</string>
     <string name="open_source_licenses">Open Source Lizenzen</string>
 
-    <!-- Login dialog -->
+    <!-- Login/Logout dialog -->
     <string name="log_in_to_">Bei %1$s anmelden</string>
     <string name="username">Benutzername</string>
     <string name="email">E-Mail-Adresse</string>
@@ -602,6 +619,7 @@
     <string name="manage_whats_downloading">Verwalte was heruntergeladen werden soll</string>
     <string name="visit_recents_for_download_queue">Die "Neues"-Registerkarte für Zugriff auf die Downloadwarteschlange besuchen. Sie können auch Doppeltippen oder drücken und halten für schnelleren Zugriff</string>
 
+
     <!-- Download Notification -->
     <string name="could_not_download_unexpected_error">Während dem Herunterladen ist ein unerwarteter Fehler aufgetreten</string>
     <string name="no_wifi_connection">Keine WLAN-Verbindung verfügbar</string>
@@ -622,6 +640,7 @@
     <string name="categories_to_include_in_download">Kategorien die Heruntergeladen werden sollen</string>
     <string name="delete_removed_chapters">Entfernte Kapitel löschen</string>
     <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online entfernt hat.</string>
+
     <string name="ask_on_chapters_page">Löschen während globalen Aktualisierungen. Auf Kapitelseite nachfragen.</string>
     <string name="always_keep">Immer behalten</string>
     <string name="always_delete">Immer löschen</string>
