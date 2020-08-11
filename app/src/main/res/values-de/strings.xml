@@ -288,7 +288,6 @@
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
     <string name="reduces_banding_impacts_performance">Reduziert die Streifenbildung, beeinträchtigt jedoch die Leistung</string>
-
     <string name="crop_borders">Rand abschneiden</string>
     <string name="use_custom_brightness">Eigene Helligkeit festlegen</string>
     <string name="use_custom_color_filter">Eigenen Farbfilter nutzen</string>
@@ -335,7 +334,6 @@
     <string name="smart_based_on_page_and_theme">Schlau (basierend auf Seite und Thema)</string>
     <string name="always_show_chapter_transition">Kapitelübergang immer anzeigen</string>
     <string name="if_disabled_transition_will_skip">Wenn deaktiviert wird die Kapitelübergangsseite, sollte das nächste Kapitel geladen sein, übersprungen</string>
-
     <string name="pref_webtoon_side_padding">Seitenpolsterung</string>
     <string name="webtoon_side_padding_0">Keine</string>
     <string name="webtoon_side_padding_10">10%</string>
@@ -390,9 +388,7 @@
     <string name="source_not_installed">Quelle nicht installiert</string>
     <plurals name="deleted_chapters">
         <item quantity="one">Ein Kapitel wurde von der Quelle entfernt:\n%2$s\nDiesen Download löschen?</item>
-
         <item quantity="other">%1$s Kapitel wurden von der Quelle entfernt::\n%2$s\n\nDiese Downloads löschen?</item>
-
     </plurals>
 
     <!-- Tracking -->
@@ -425,7 +421,6 @@
     <string name="migration">Migrierung</string>
     <string name="skip_pre_migration">Vor-Migrierung überspringen</string>
     <string name="select_a_source_then_item_to_migrate">Zum Migrieren erst die Quelle und danach einen Eintrag auswählen</string>
-
     <string name="data_to_include_in_migration">Beim Migrieren mit einschließen</string>
     <string name="search_parameter_eg">Suchparameter (Z. B.: language:english)</string>
     <string name="include_extra_search_parameter">Extra Suchparameter in die Suche einschließen</string>
@@ -433,7 +428,6 @@
     <string name="use_first_source">Erste Quelle als Alternative nutzen</string>
     <string name="skip_this_step_next_time">Diesen Schritt beim Nächsten mal überspringen</string>
     <string name="to_show_again_setting_sources">Um diesen Bildschirm wieder anzuzeigen: Einstellungen => Quellen</string>
-
     <string name="latest_">Neueste: %1$s</string>
     <string name="migrating_to">migriere zu</string>
     <string name="dont_migrate">Nicht migrieren</string>
@@ -445,7 +439,6 @@
     <string name="migrate_">Migriere %1$s</string>
     <string name="copy_value">Kopieren</string>
     <string name="no_chapters_found_for_migration">Keine Kapitel gefunden. Dieser Manga kann nicht für das Migrieren genutzt werden.</string>
-
     <string name="no_alternatives_found">Keine alternative gefunden</string>
     <string name="stop_migrating">Migration stoppen?</string>
     <plurals name="migrate_manga">
@@ -619,7 +612,6 @@
     <string name="manage_whats_downloading">Verwalte was heruntergeladen werden soll</string>
     <string name="visit_recents_for_download_queue">Die "Neues"-Registerkarte für Zugriff auf die Downloadwarteschlange besuchen. Sie können auch Doppeltippen oder drücken und halten für schnelleren Zugriff</string>
 
-
     <!-- Download Notification -->
     <string name="could_not_download_unexpected_error">Während dem Herunterladen ist ein unerwarteter Fehler aufgetreten</string>
     <string name="no_wifi_connection">Keine WLAN-Verbindung verfügbar</string>
@@ -640,7 +632,6 @@
     <string name="categories_to_include_in_download">Kategorien die Heruntergeladen werden sollen</string>
     <string name="delete_removed_chapters">Entfernte Kapitel löschen</string>
     <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online entfernt hat.</string>
-
     <string name="ask_on_chapters_page">Löschen während globalen Aktualisierungen. Auf Kapitelseite nachfragen.</string>
     <string name="always_keep">Immer behalten</string>
     <string name="always_delete">Immer löschen</string>
