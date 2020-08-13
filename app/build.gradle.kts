@@ -247,7 +247,9 @@ dependencies {
     implementation(Libs.Network.conscrypt)
 }
 
-
+tasks.preBuild {
+    dependsOn(tasks.ktlintFormat)
+}
 
 if (gradle.startParameter.taskRequests.toString().contains("Standard")) {
     apply(mapOf("plugin" to Plugins.googleServices))
