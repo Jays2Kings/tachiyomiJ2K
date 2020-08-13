@@ -1,16 +1,19 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins{
-    id("com.github.ben-manes.versions") version BuildPluginsVersion.VERSIONS_PLUGIN
-}
 
 buildscript {
+    repositories {
+        gradlePluginPortal()
+        google()
+        jcenter()
+    }
     dependencies {
-        classpath(BuildPluginsVersion.AGP)
-        classpath(BuildPluginsVersion.OSS_LICENSE)
-        classpath(BuildPluginsVersion.GOOGLE_SERVICES)
-        classpath(BuildPluginsVersion.ANDROID_EXTENSIONS)
-        classpath(BuildPluginsVersion.KOTLIN_GRADLE)
-        classpath(BuildPluginsVersion.KOTLINTER)
+        classpath(ClassPaths.androidGradlePlugin)
+        classpath(ClassPaths.aboutLibraries)
+        classpath(ClassPaths.googleServices)
+        classpath(ClassPaths.kotlinExtensions)
+        classpath(ClassPaths.kotlinPlugin)
+        classpath(ClassPaths.gradleVersion)
+        classpath(ClassPaths.ktlint)
     }
 }
 
