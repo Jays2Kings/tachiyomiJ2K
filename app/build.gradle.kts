@@ -86,8 +86,8 @@ androidExtensions {
 
 dependencies {
     // Modified dependencies
-    implementation(Libs.Tachiyomi.subsamplingScaleImageView)
-    implementation(Libs.Tachiyomi.junrar)
+    implementation(Libs.Ui.subsamplingScaleImageView)
+    implementation(Libs.Util.junrar)
 
     // Android X libraries
     implementation(Libs.Android.appCompat)
@@ -213,7 +213,7 @@ dependencies {
     implementation(Libs.Navigation.conductorSupport) {
         exclude("group", "com.android.support")
     }
-    implementation(Libs.Tachiyomi.conductorSupportPreferences)
+    implementation(Libs.Navigation.conductorSupportPreferences)
 
     // RxBindings
     implementation(Libs.Rx.bindingAppcompat)
@@ -237,7 +237,7 @@ dependencies {
     implementation(Libs.Util.acra)
 
     // Text distance
-    implementation(Libs.Util.textDistance)
+    implementation(Libs.Util.stringSimilarity)
 
     implementation(Libs.Util.aboutLibraries)
 
