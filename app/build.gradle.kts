@@ -5,13 +5,11 @@ import java.time.format.DateTimeFormatter
 
 plugins {
     id(Plugins.androidApplication)
-    id(Plugins.aboutLibraries)
     kotlin(Plugins.kotlinAndroid)
     kotlin(Plugins.kotlinExtensions)
     kotlin(Plugins.kapt)
+    id(Plugins.aboutLibraries)
     id(Plugins.googleServices) apply false
-    id(Plugins.ktlint)
-    id(Plugins.gradleVersions)
 }
 
 fun getBuildTime() = DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now(ZoneOffset.UTC))
@@ -245,6 +243,11 @@ dependencies {
 
     // TLS 1.3 support for Android < 10
     implementation(Libs.Network.conscrypt)
+}
+
+// See https://kotlinlang.org/docs/reference/experimental.html#experimental-status-of-experimental-api-markers
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().all {
+    kotlinOptions.freeCompilerArgs += "-Xopt-in=org.mylibrary.OptInAnnotation"
 }
 
 tasks.preBuild {

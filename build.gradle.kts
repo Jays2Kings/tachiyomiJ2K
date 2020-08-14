@@ -1,29 +1,46 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-buildscript {
-    repositories {
-        gradlePluginPortal()
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath(ClassPaths.androidGradlePlugin)
-        classpath(ClassPaths.aboutLibraries)
-        classpath(ClassPaths.googleServices)
-        classpath(ClassPaths.kotlinExtensions)
-        classpath(ClassPaths.kotlinPlugin)
-        classpath(ClassPaths.gradleVersion)
-        classpath(ClassPaths.ktlint)
-    }
+plugins {
+    id(Plugins.KtLint.name) version Plugins.KtLint.version
+    id(Plugins.GradleVersions.name) version Plugins.GradleVersions.version
 }
-
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 allprojects {
     repositories {
         google()
         mavenCentral()
         maven { setUrl("https://jitpack.io") }
         maven { setUrl("https://plugins.gradle.org/m2/") }
+        jcenter()
+    }
+}
+
+subprojects {
+    apply(plugin = Plugins.KtLint.name)
+    ktlint {
+        debug.set(true)
+        verbose.set(true)
+        android.set(false)
+        outputToConsole.set(true)
+        ignoreFailures.set(false)
+        enableExperimentalRules.set(false)
+        filter {
+            exclude("**/generated/**")
+            include("**/kotlin/**")
+        }
+    }
+}
+
+
+buildscript {
+
+    dependencies {
+        classpath(LegacyPluginClassPath.androidGradlePlugin)
+        classpath(LegacyPluginClassPath.googleServices)
+        classpath(LegacyPluginClassPath.kotlinExtensions)
+        classpath(LegacyPluginClassPath.kotlinPlugin)
+        classpath(LegacyPluginClassPath.aboutLibraries)
+    }
+    repositories {
+        gradlePluginPortal()
+        google()
         jcenter()
     }
 }

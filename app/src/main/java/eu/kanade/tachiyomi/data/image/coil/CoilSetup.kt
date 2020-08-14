@@ -8,6 +8,7 @@ import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
 import coil.decode.SvgDecoder
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import eu.kanade.tachiyomi.BuildConfig
 import okhttp3.OkHttpClient
 
 class CoilSetup(context: Context) {
@@ -27,9 +28,11 @@ class CoilSetup(context: Context) {
                 add(MangaFetcher())
                 add(ByteArrayFetcher())
             }.okHttpClient {
-                OkHttpClient.Builder()
-                    .addInterceptor(ChuckerInterceptor(context))
-                    .build()
+                OkHttpClient.Builder().apply {
+                    if (BuildConfig.DEBUG) {
+                        addInterceptor(ChuckerInterceptor(context))
+                    }
+                }.build()
             }
             .build()
 
