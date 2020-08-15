@@ -86,7 +86,7 @@ androidExtensions {
 
 dependencies {
     // Modified dependencies
-    implementation(Libs.Ui.subsamplingScaleImageView)
+    implementation(Libs.UI.subsamplingScaleImageView)
     implementation(Libs.Util.junrar)
 
     // Android X libraries
@@ -123,7 +123,7 @@ dependencies {
     implementation(Libs.Network.okhttp)
     implementation(Libs.Network.okhttpDns)
     implementation(Libs.Network.okhttpLoggingInterceptor)
-    implementation(Libs.Io.okio)
+    implementation(Libs.IO.okio)
 
     // Chucker
     debugImplementation(Libs.Network.chucker)
@@ -146,8 +146,8 @@ dependencies {
     implementation(Libs.Network.retrofitGsonConverter)
 
     // JSON
-    implementation(Libs.Io.gson)
-    implementation(Libs.Io.kotson)
+    implementation(Libs.IO.gson)
+    implementation(Libs.IO.kotson)
 
     // JavaScript engine
     implementation(Libs.Parsing.duktape)
@@ -189,24 +189,24 @@ dependencies {
     implementation(Libs.Util.timber)
 
     // UI
-    implementation(Libs.Ui.materalDesignDimens)
-    implementation(Libs.Ui.loadingButton)
-    implementation(Libs.Ui.fastAdapter)
-    implementation(Libs.Ui.fastAdapterBinding)
-    implementation(Libs.Ui.flexibleAdapter)
-    implementation(Libs.Ui.flexibleAdapterUi)
-    implementation(Libs.Ui.filePicker)
-    implementation(Libs.Ui.materialDialogsCore)
-    implementation(Libs.Ui.materialDialogsInput)
-    implementation(Libs.Ui.systemUiHelper)
-    implementation(Libs.Ui.viewStatePager)
-    implementation(Libs.Ui.slice)
+    implementation(Libs.UI.materalDesignDimens)
+    implementation(Libs.UI.loadingButton)
+    implementation(Libs.UI.fastAdapter)
+    implementation(Libs.UI.fastAdapterBinding)
+    implementation(Libs.UI.flexibleAdapter)
+    implementation(Libs.UI.flexibleAdapterUi)
+    implementation(Libs.UI.filePicker)
+    implementation(Libs.UI.materialDialogsCore)
+    implementation(Libs.UI.materialDialogsInput)
+    implementation(Libs.UI.systemUiHelper)
+    implementation(Libs.UI.viewStatePager)
+    implementation(Libs.UI.slice)
 
-    implementation(Libs.Ui.androidTagGroup)
-    implementation(Libs.Ui.photoView)
-    implementation(Libs.Ui.directionalPageView)
-    implementation(Libs.Ui.viewToolTip)
-    implementation(Libs.Ui.tapTargetView)
+    implementation(Libs.UI.androidTagGroup)
+    implementation(Libs.UI.photoView)
+    implementation(Libs.UI.directionalPageView)
+    implementation(Libs.UI.viewToolTip)
+    implementation(Libs.UI.tapTargetView)
 
     // Conductor
     implementation(Libs.Navigation.conductor)

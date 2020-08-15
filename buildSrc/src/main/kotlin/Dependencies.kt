@@ -7,7 +7,7 @@ object Libs {
         const val browser = "androidx.browser:browser:${Versions.androidBrowser}"
         const val cardView = "androidx.cardview:cardview:${Versions.androidCardView}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.androidConstraintLayout}"
-    const val coreKtx = "androidx.core:core-ktx:${Versions.androidCoreKtx}"
+        const val coreKtx = "androidx.core:core-ktx:${Versions.androidCoreKtx}"
         const val lifecycleCommonJava8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.androidLifecycle}"
         const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.androidLifecycle}"
         const val lifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.androidLifecycle}"
@@ -57,7 +57,7 @@ object Libs {
         const val coilSvg = "io.coil-kt:coil-svg:${Versions.coil}"
     }
 
-    object Io {
+    object IO {
         const val gson = "com.google.code.gson:gson:${Versions.gson}"
         const val kotson = "com.github.salomonbrys.kotson:kotson:${Versions.kotson}"
         const val okio = "com.squareup.okio:okio:${Versions.okio}"
@@ -73,7 +73,6 @@ object Libs {
         const val conductor = "com.bluelinelabs:conductor:${Versions.conductor}"
         const val conductorSupport = "com.bluelinelabs:conductor-support:${Versions.conductor}"
         const val conductorSupportPreferences = "com.github.inorichi:conductor-support-preference:a32c357"
-
         const val nucleus = "info.android15.nucleus:nucleus:${Versions.nucleus}"
         const val nucleusSupport = "info.android15.nucleus:nucleus-support-v7:${Versions.nucleus}"
     }
@@ -115,8 +114,7 @@ object Libs {
         const val roboElectricShadowPlayServices = "org.robolectric:shadows-play-services:${Versions.roboElectric}"
     }
 
-    object Ui {
-        const val subsamplingScaleImageView = "com.github.inorichi:subsampling-scale-image-view:${Versions.subsamplingImageScale}"
+    object UI {
         const val androidTagGroup = "com.github.kizitonwose:AndroidTagGroup:${Versions.tagGroup}"
         const val directionalPageView = "com.github.carlosesco:DirectionalViewPager:${Versions.directionalViewPager}"
         const val fastAdapter = "com.mikepenz:fastadapter:${Versions.fastAdapter}"
@@ -130,6 +128,7 @@ object Libs {
         const val materialDialogsInput = "com.afollestad.material-dialogs:input:${Versions.materialDialogs}"
         const val photoView = "com.github.chrisbanes:PhotoView:${Versions.photoView}"
         const val slice = "com.github.mthli:Slice:${Versions.slice}"
+        const val subsamplingScaleImageView = "com.github.inorichi:subsampling-scale-image-view:${Versions.subsamplingImageScale}"
         const val systemUiHelper = "me.zhanghai.android.systemuihelper:library:${Versions.systemUiHelper}"
         const val tapTargetView = "com.getkeepsafe.taptargetview:taptargetview:${Versions.tapTargetView}"
         const val viewStatePager = "com.nightlynexus.viewstatepageradapter:viewstatepageradapter:${Versions.viewStatePagerAdapter}"
@@ -141,9 +140,9 @@ object Libs {
         const val acra = "ch.acra:acra:${Versions.acra}"
         const val changelog = "com.github.gabrielemariotti.changeloglib:changelog:${Versions.changelog}"
         const val injekt = "com.github.inorichi.injekt:injekt-core:${Versions.injekt}"
+        const val junrar = "com.github.inorichi:junrar-android:${Versions.junrar}"
         const val stringSimilarity = "info.debatty:java-string-similarity:${Versions.stringSimilarity}"
         const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
-        const val junrar = "com.github.inorichi:junrar-android:${Versions.junrar}"
 
     }
 }
