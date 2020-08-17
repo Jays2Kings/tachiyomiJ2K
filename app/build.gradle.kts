@@ -127,6 +127,7 @@ dependencies {
 
     // Chucker
     debugImplementation(Libs.Network.chucker)
+    releaseImplementation(Libs.Network.chuckerNoOp)
 
     // hyperion
     debugImplementation(Libs.Hyperion.attr)

@@ -79,6 +79,7 @@ object Libs {
 
     object Network {
         const val chucker = "com.github.ChuckerTeam.Chucker:library:${Versions.chucker}"
+        const val chuckerNoOp = "com.github.ChuckerTeam.Chucker:library-no-op:${Versions.chucker}"
         const val conscrypt = "org.conscrypt:conscrypt-android:${Versions.conscrypt}"
         const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
         const val okhttpDns = "com.squareup.okhttp3:okhttp-dnsoverhttps:${Versions.okhttp}"
