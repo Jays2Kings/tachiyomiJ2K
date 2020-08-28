@@ -14,6 +14,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -832,12 +833,9 @@ class MangaDetailsController : BaseController,
     }
 
     override fun openDiscussionInWebView() {
-        val source = presenter.source as? HttpSource ?: return
         val url = "https://www.reddit.com/search?q=subreddit:manga+title:\"[DISC] ${presenter.manga.title}\"&restrict_sr=&include_over_18=on&sort=new&t=all"
-        val activity = activity ?: return
-        val intent = WebViewActivity.newIntent(
-                activity.applicationContext, source.id, url, presenter.manga.title
-        )
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
         startActivity(intent)
     }
 
