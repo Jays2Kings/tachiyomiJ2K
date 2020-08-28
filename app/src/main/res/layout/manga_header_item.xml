@@ -208,6 +208,24 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_share_24dp"
                 android:tooltipText="@string/share" />
+
+            <ImageView
+                android:id="@+id/reddit_button"
+                style="@style/Theme.Widget.CustomImageButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/reddit"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/reddit"
+                android:tooltipText="@string/reddit"
+                app:srcCompat="@drawable/reddit"
+                tools:srcCompat="@drawable/reddit" />
         </LinearLayout>
     </HorizontalScrollView>
 

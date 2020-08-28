@@ -831,6 +831,16 @@ class MangaDetailsController : BaseController,
         startActivity(intent)
     }
 
+    override fun openDiscussionInWebView() {
+        val source = presenter.source as? HttpSource ?: return
+        val url = "https://www.reddit.com/search?q=subreddit:manga+title:\"[DISC] ${presenter.manga.title}\"&restrict_sr=&include_over_18=on&sort=new&t=all"
+        val activity = activity ?: return
+        val intent = WebViewActivity.newIntent(
+                activity.applicationContext, source.id, url, presenter.manga.title
+        )
+        startActivity(intent)
+    }
+
     private fun massDeleteChapters(choice: Int) {
         val chaptersToDelete = when (choice) {
             R.id.remove_all -> presenter.chapters

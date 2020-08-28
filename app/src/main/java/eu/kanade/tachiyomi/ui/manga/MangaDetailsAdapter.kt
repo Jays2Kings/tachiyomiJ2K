@@ -112,6 +112,7 @@ class MangaDetailsAdapter(
         fun mangaPresenter(): MangaDetailsPresenter
         fun prepareToShareManga()
         fun openInWebView()
+        fun openDiscussionInWebView()
         fun startDownloadRange(position: Int)
         fun readNextChapter()
         fun topCoverHeight(): Int

@@ -68,6 +68,7 @@ class MangaHeaderHolder(
             }
             webview_button.setOnClickListener { adapter.delegate.openInWebView() }
             share_button.setOnClickListener { adapter.delegate.prepareToShareManga() }
+            reddit_button.setOnClickListener { adapter.delegate.openDiscussionInWebView() }
             favorite_button.setOnClickListener {
                 adapter.delegate.favoriteManga(false)
             }
