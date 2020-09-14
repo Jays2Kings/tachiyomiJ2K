@@ -29,7 +29,10 @@ class SettingsReaderController : SettingsController() {
                 key = Keys.rotation
                 titleRes = R.string.rotation
                 entriesRes = arrayOf(
-                    R.string.free, R.string.lock, R.string.force_portrait, R.string.force_landscape
+                    R.string.free,
+                    R.string.lock,
+                    R.string.force_portrait,
+                    R.string.force_landscape
                 )
                 entryRange = 1..4
                 defaultValue = 1
@@ -50,9 +53,11 @@ class SettingsReaderController : SettingsController() {
                 key = Keys.doubleTapAnimationSpeed
                 titleRes = R.string.double_tap_anim_speed
                 entries = listOf(
-                    context.getString(R.string.no_animation), context.getString(
+                    context.getString(R.string.no_animation),
+                    context.getString(
                         R.string.fast
-                    ), context.getString(R.string.normal)
+                    ),
+                    context.getString(R.string.normal)
                 )
                 entryValues = listOf(1, 250, 500) // using a value of 0 breaks the image viewer, so
                 // min is 1
@@ -125,7 +130,10 @@ class SettingsReaderController : SettingsController() {
                 key = Keys.zoomStart
                 titleRes = R.string.zoom_start_position
                 entriesRes = arrayOf(
-                    R.string.automatic, R.string.left, R.string.right, R.string.center
+                    R.string.automatic,
+                    R.string.left,
+                    R.string.right,
+                    R.string.center
                 )
                 entryRange = 1..4
                 defaultValue = 1

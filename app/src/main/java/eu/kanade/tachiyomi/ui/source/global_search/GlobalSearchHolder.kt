@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.source_global_search_controller_card.*
  * @param adapter instance of [GlobalSearchAdapter]
  */
 class GlobalSearchHolder(view: View, val adapter: GlobalSearchAdapter) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
 
     /**
      * Adapter containing manga from search results.

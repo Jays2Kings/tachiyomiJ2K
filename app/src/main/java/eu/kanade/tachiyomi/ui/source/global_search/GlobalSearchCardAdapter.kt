@@ -9,7 +9,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
  * @param controller instance of [GlobalSearchController].
  */
 class GlobalSearchCardAdapter(controller: GlobalSearchController) :
-        FlexibleAdapter<GlobalSearchMangaItem>(null, controller, true) {
+    FlexibleAdapter<GlobalSearchMangaItem>(null, controller, true) {
 
     /**
      * Listen for browse item clicks.

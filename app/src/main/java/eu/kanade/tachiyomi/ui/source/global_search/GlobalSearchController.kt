@@ -29,7 +29,7 @@ open class GlobalSearchController(
     protected val initialQuery: String? = null,
     protected val extensionFilter: String? = null
 ) : NucleusController<GlobalSearchPresenter>(),
-        GlobalSearchCardAdapter.OnMangaClickListener {
+    GlobalSearchCardAdapter.OnMangaClickListener {
 
     /**
      * Adapter containing search results grouped by lang.
@@ -109,25 +109,27 @@ open class GlobalSearchController(
         val searchView = searchItem.actionView as SearchView
 
         searchItem.isVisible = customTitle == null
-        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
-                searchView.onActionViewExpanded() // Required to show the query in the view
-                searchView.setQuery(presenter.query, false)
-                return true
-            }
+        searchItem.setOnActionExpandListener(
+            object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+                    searchView.onActionViewExpanded() // Required to show the query in the view
+                    searchView.setQuery(presenter.query, false)
+                    return true
+                }
 
-            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-                return true
+                override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                    return true
+                }
             }
-        })
+        )
 
         searchView.queryTextChangeEvents()
-                .filter { it.isSubmitted }
-                .subscribeUntilDestroy {
-                    presenter.search(it.queryText().toString())
-                    searchItem.collapseActionView()
-                    setTitle() // Update toolbar title
-                }
+            .filter { it.isSubmitted }
+            .subscribeUntilDestroy {
+                presenter.search(it.queryText().toString())
+                searchItem.collapseActionView()
+                setTitle() // Update toolbar title
+            }
     }
 
     /**
@@ -198,8 +200,9 @@ open class GlobalSearchController(
             val results = searchResult.firstOrNull()?.results
             if (results != null && results.size == 1) {
                 val manga = results.first().manga
-                router.replaceTopController(MangaDetailsController(manga, true)
-                    .withFadeTransaction()
+                router.replaceTopController(
+                    MangaDetailsController(manga, true)
+                        .withFadeTransaction()
                 )
                 return
             } else if (results != null) {

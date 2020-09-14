@@ -39,11 +39,16 @@ class ChapterUtil {
             if (chapter.bookmark) {
                 val context = textView.context
                 val drawable = VectorDrawableCompat.create(
-                    textView.resources, R.drawable.ic_bookmark_24dp, context.theme
+                    textView.resources,
+                    R.drawable.ic_bookmark_24dp,
+                    context.theme
                 )
                 drawable?.setBounds(0, 0, textView.textSize.toInt(), textView.textSize.toInt())
                 textView.setCompoundDrawablesRelative(
-                    drawable, null, null, null
+                    drawable,
+                    null,
+                    null,
+                    null
                 )
                 textView.compoundDrawableTintList = ColorStateList.valueOf(
                     bookmarkedColor(context)

@@ -110,7 +110,8 @@ import java.io.IOException
 import java.util.Locale
 import kotlin.math.max
 
-class MangaDetailsController : BaseController,
+class MangaDetailsController :
+    BaseController,
     FlexibleAdapter.OnItemClickListener,
     FlexibleAdapter.OnItemLongClickListener,
     ActionMode.Callback,
@@ -124,12 +125,14 @@ class MangaDetailsController : BaseController,
         fromCatalogue: Boolean = false,
         smartSearchConfig: SourceController.SmartSearchConfig? = null,
         update: Boolean = false
-    ) : super(Bundle().apply {
-        putLong(MANGA_EXTRA, manga?.id ?: 0)
-        putBoolean(FROM_CATALOGUE_EXTRA, fromCatalogue)
-        putParcelable(SMART_SEARCH_CONFIG_EXTRA, smartSearchConfig)
-        putBoolean(UPDATE_EXTRA, update)
-    }) {
+    ) : super(
+        Bundle().apply {
+            putLong(MANGA_EXTRA, manga?.id ?: 0)
+            putBoolean(FROM_CATALOGUE_EXTRA, fromCatalogue)
+            putParcelable(SMART_SEARCH_CONFIG_EXTRA, smartSearchConfig)
+            putBoolean(UPDATE_EXTRA, update)
+        }
+    ) {
         this.manga = manga
         if (manga != null) {
             source = Injekt.get<SourceManager>().getOrStub(manga.source)
@@ -145,7 +148,9 @@ class MangaDetailsController : BaseController,
         val notificationId = bundle.getInt("notificationId", -1)
         val context = applicationContext ?: return
         if (notificationId > -1) NotificationReceiver.dismissNotification(
-            context, notificationId, bundle.getInt("groupId", 0)
+            context,
+            notificationId,
+            bundle.getInt("groupId", 0)
         )
     }
 
@@ -227,26 +232,34 @@ class MangaDetailsController : BaseController,
         swipe_refresh.setDistanceToTriggerSync(70.dpToPx)
         activity!!.appbar.elevation = 0f
 
-        scrollViewWith(recycler, padBottom = true, customPadding = true, afterInsets = { insets ->
-            setInsets(insets, appbarHeight, offset)
-        }, liftOnScroll = {
-            colorToolbar(it)
-        })
-
-        recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val atTop = !recyclerView.canScrollVertically(-1)
-                val tY = getHeader()?.backdrop?.translationY ?: 0f
-                getHeader()?.backdrop?.translationY = max(0f, tY + dy * 0.25f)
-                if (atTop) getHeader()?.backdrop?.translationY = 0f
+        scrollViewWith(
+            recycler,
+            padBottom = true,
+            customPadding = true,
+            afterInsets = { insets ->
+                setInsets(insets, appbarHeight, offset)
+            },
+            liftOnScroll = {
+                colorToolbar(it)
             }
+        )
 
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                val atTop = !recyclerView.canScrollVertically(-1)
-                if (atTop) getHeader()?.backdrop?.translationY = 0f
+        recycler.addOnScrollListener(
+            object : RecyclerView.OnScrollListener() {
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    val atTop = !recyclerView.canScrollVertically(-1)
+                    val tY = getHeader()?.backdrop?.translationY ?: 0f
+                    getHeader()?.backdrop?.translationY = max(0f, tY + dy * 0.25f)
+                    if (atTop) getHeader()?.backdrop?.translationY = 0f
+                }
+
+                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                    val atTop = !recyclerView.canScrollVertically(-1)
+                    if (atTop) getHeader()?.backdrop?.translationY = 0f
+                }
             }
-        })
+        )
     }
 
     private fun setInsets(insets: WindowInsets, appbarHeight: Int, offset: Int) {
@@ -280,15 +293,19 @@ class MangaDetailsController : BaseController,
             if (colorAnimator?.isRunning == true) activity?.window?.statusBarColor
                 ?: color
             else ColorUtils.setAlphaComponent(
-                color, if (toolbarIsColored) 0 else 175
+                color,
+                if (toolbarIsColored) 0 else 175
             )
         val colorTo = ColorUtils.setAlphaComponent(
-            color, if (toolbarIsColored) 175 else 0
+            color,
+            if (toolbarIsColored) 175 else 0
         )
         colorAnimator?.cancel()
         if (animate) {
             colorAnimator = ValueAnimator.ofObject(
-                android.animation.ArgbEvaluator(), colorFrom, colorTo
+                android.animation.ArgbEvaluator(),
+                colorFrom,
+                colorTo
             )
             colorAnimator?.duration = 250 // milliseconds
             colorAnimator?.addUpdateListener { animator ->
@@ -307,35 +324,38 @@ class MangaDetailsController : BaseController,
         val view = view ?: return
 
         val request = LoadRequest.Builder(view.context).data(presenter.manga).allowHardware(false)
-            .target(onSuccess = { drawable ->
-                val bitmap = (drawable as BitmapDrawable).bitmap
-                // Generate the Palette on a background thread.
-                Palette.from(bitmap).generate {
-                    if (recycler == null || it == null) return@generate
-                    val colorBack = view.context.getResourceColor(
-                        android.R.attr.colorBackground
-                    )
-                    // this makes the color more consistent regardless of theme
-                    val backDropColor =
-                        ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
+            .target(
+                onSuccess = { drawable ->
+                    val bitmap = (drawable as BitmapDrawable).bitmap
+                    // Generate the Palette on a background thread.
+                    Palette.from(bitmap).generate {
+                        if (recycler == null || it == null) return@generate
+                        val colorBack = view.context.getResourceColor(
+                            android.R.attr.colorBackground
+                        )
+                        // this makes the color more consistent regardless of theme
+                        val backDropColor =
+                            ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
 
-                    coverColor = backDropColor
-                    getHeader()?.setBackDrop(backDropColor)
-                    if (toolbarIsColored) {
-                        val translucentColor = ColorUtils.setAlphaComponent(backDropColor, 175)
-                        (activity as MainActivity).toolbar.setBackgroundColor(translucentColor)
-                        activity?.window?.statusBarColor = translucentColor
+                        coverColor = backDropColor
+                        getHeader()?.setBackDrop(backDropColor)
+                        if (toolbarIsColored) {
+                            val translucentColor = ColorUtils.setAlphaComponent(backDropColor, 175)
+                            (activity as MainActivity).toolbar.setBackgroundColor(translucentColor)
+                            activity?.window?.statusBarColor = translucentColor
+                        }
+                    }
+                    manga_cover_full.setImageDrawable(drawable)
+                    getHeader()?.updateCover(manga!!)
+                },
+                onError = {
+                    val file = presenter.coverCache.getCoverFile(manga!!)
+                    if (file.exists()) {
+                        file.delete()
+                        setPaletteColor()
                     }
                 }
-                manga_cover_full.setImageDrawable(drawable)
-                getHeader()?.updateCover(manga!!)
-            }, onError = {
-                val file = presenter.coverCache.getCoverFile(manga!!)
-                if (file.exists()) {
-                    file.delete()
-                    setPaletteColor()
-                }
-            }).build()
+            ).build()
         Coil.imageLoader(view.context).execute(request)
     }
 
@@ -343,10 +363,7 @@ class MangaDetailsController : BaseController,
     private fun setActionBar(forThis: Boolean) {
         val activity = activity ?: return
         // if the theme is using inverted toolbar color
-        if (!activity.isInNightMode() && ThemeUtil.isBlueTheme(
-                presenter.preferences.theme()
-            )
-        ) {
+        if (!activity.isInNightMode() && ThemeUtil.isBlueTheme(presenter.preferences.theme())) {
             if (forThis) (activity as MainActivity).appbar.context.setTheme(
                 R.style.ThemeOverlay_AppCompat_DayNight_ActionBar
             )
@@ -481,10 +498,12 @@ class MangaDetailsController : BaseController,
             1 -> return
             else -> {
                 MaterialDialog(context).title(R.string.chapters_removed).message(
-                    text = context.resources.getQuantityString(R.plurals.deleted_chapters,
+                    text = context.resources.getQuantityString(
+                        R.plurals.deleted_chapters,
                         deletedChapters.size,
                         deletedChapters.size,
-                        deletedChapters.joinToString("\n") { "${it.name}" })
+                        deletedChapters.joinToString("\n") { "${it.name}" }
+                    )
                 ).positiveButton(R.string.delete) {
                     presenter.deleteChapters(deletedChapters, false)
                     if (it.isCheckPromptChecked()) deleteRemovedPref.set(2)
@@ -502,7 +521,8 @@ class MangaDetailsController : BaseController,
     //region Recycler methods
     fun updateChapterDownload(download: Download) {
         getHolder(download.chapter)?.notifyStatus(
-            download.status, presenter.isLockedFromSearch,
+            download.status,
+            presenter.isLockedFromSearch,
             download.progress
         )
     }
@@ -638,7 +658,8 @@ class MangaDetailsController : BaseController,
         snack?.dismiss()
         snack = view?.snack(
             if (bookmarked) R.string.removed_bookmark
-            else R.string.bookmarked, Snackbar.LENGTH_INDEFINITE
+            else R.string.bookmarked,
+            Snackbar.LENGTH_INDEFINITE
         ) {
             setAction(R.string.undo) {
                 bookmarkChapters(listOf(item), bookmarked)
@@ -657,21 +678,24 @@ class MangaDetailsController : BaseController,
         snack?.dismiss()
         snack = view?.snack(
             if (read) R.string.marked_as_unread
-            else R.string.marked_as_read, Snackbar.LENGTH_INDEFINITE
+            else R.string.marked_as_read,
+            Snackbar.LENGTH_INDEFINITE
         ) {
             var undoing = false
             setAction(R.string.undo) {
                 presenter.markChaptersRead(listOf(item), read, true, lastRead, pagesLeft)
                 undoing = true
             }
-            addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                    super.onDismissed(transientBottomBar, event)
-                    if (!undoing && !read && presenter.preferences.removeAfterMarkedAsRead()) {
-                        presenter.deleteChapters(listOf(item))
+            addCallback(
+                object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                        super.onDismissed(transientBottomBar, event)
+                        if (!undoing && !read && presenter.preferences.removeAfterMarkedAsRead()) {
+                            presenter.deleteChapters(listOf(item))
+                        }
                     }
                 }
-            })
+            )
         }
         (activity as? MainActivity)?.setUndoSnackBar(snack)
     }
@@ -707,7 +731,7 @@ class MangaDetailsController : BaseController,
             presenter.anyRead() && !presenter.isLockedFromSearch
         menu.findItem(R.id.action_remove_downloads).isVisible =
             presenter.hasDownloads() && !presenter.isLockedFromSearch &&
-                manga?.source != LocalSource.ID
+            manga?.source != LocalSource.ID
         menu.findItem(R.id.remove_non_bookmarked).isVisible =
             presenter.hasBookmark() && !presenter.isLockedFromSearch
         menu.findItem(R.id.action_migrate).isVisible = !presenter.isLockedFromSearch &&
@@ -748,7 +772,8 @@ class MangaDetailsController : BaseController,
         when (item.itemId) {
             R.id.action_edit -> {
                 editMangaDialog = EditMangaDialog(
-                    this, presenter.manga
+                    this,
+                    presenter.manga
                 )
                 editMangaDialog?.showDialog(router)
             }
@@ -781,11 +806,14 @@ class MangaDetailsController : BaseController,
 
     override fun prepareToShareManga() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            val request = LoadRequest.Builder(activity!!).data(manga).target(onError = {
-                shareManga()
-            }, onSuccess = {
-                presenter.shareManga((it as BitmapDrawable).bitmap)
-            }).build()
+            val request = LoadRequest.Builder(activity!!).data(manga).target(
+                onError = {
+                    shareManga()
+                },
+                onSuccess = {
+                    presenter.shareManga((it as BitmapDrawable).bitmap)
+                }
+            ).build()
             Coil.imageLoader(activity!!).execute(request)
         } else {
             shareManga()
@@ -825,7 +853,10 @@ class MangaDetailsController : BaseController,
 
         val activity = activity ?: return
         val intent = WebViewActivity.newIntent(
-            activity.applicationContext, source.id, url, presenter.manga
+            activity.applicationContext,
+            source.id,
+            url,
+            presenter.manga
                 .title
         )
         startActivity(intent)
@@ -847,7 +878,9 @@ class MangaDetailsController : BaseController,
         val context = view?.context ?: return
         MaterialDialog(context).message(
             text = context.resources.getQuantityString(
-                R.plurals.remove_n_chapters, chapters.size, chapters.size
+                R.plurals.remove_n_chapters,
+                chapters.size,
+                chapters.size
             )
         ).positiveButton(R.string.remove) {
             presenter.deleteChapters(chapters)
@@ -901,22 +934,27 @@ class MangaDetailsController : BaseController,
         val view = view ?: return
         presenter.downloadChapters(chapters)
         val text = view.context.getString(
-            R.string.add_x_to_library, presenter.manga.mangaType
-                (view.context).toLowerCase(Locale.ROOT)
+            R.string.add_x_to_library,
+            presenter.manga.mangaType
+            (view.context).toLowerCase(Locale.ROOT)
         )
-        if (!presenter.manga.favorite && (snack == null ||
-                snack?.getText() != text)
+        if (!presenter.manga.favorite && (
+            snack == null ||
+                snack?.getText() != text
+            )
         ) {
             snack = view.snack(text, Snackbar.LENGTH_INDEFINITE) {
                 setAction(R.string.add) {
                     presenter.setFavorite(true)
                 }
-                addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                        super.onDismissed(transientBottomBar, event)
-                        if (snack == transientBottomBar) snack = null
+                addCallback(
+                    object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                        override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                            super.onDismissed(transientBottomBar, event)
+                            if (snack == transientBottomBar) snack = null
+                        }
                     }
-                })
+                )
             }
             (activity as? MainActivity)?.setUndoSnackBar(snack)
         }
@@ -935,17 +973,18 @@ class MangaDetailsController : BaseController,
         val item = presenter.getNextUnreadChapter()
         if (item != null) {
             openChapter(item.chapter)
-        } else if (snack == null || snack?.getText() != view?.context?.getString(
-                R.string.next_chapter_not_found
-            )
+        } else if (snack == null ||
+            snack?.getText() != view?.context?.getString(R.string.next_chapter_not_found)
         ) {
             snack = view?.snack(R.string.next_chapter_not_found, Snackbar.LENGTH_LONG) {
-                addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                        super.onDismissed(transientBottomBar, event)
-                        if (snack == transientBottomBar) snack = null
+                addCallback(
+                    object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                        override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                            super.onDismissed(transientBottomBar, event)
+                            if (snack == transientBottomBar) snack = null
+                        }
                     }
-                })
+                )
             }
         }
     }
@@ -1023,7 +1062,10 @@ class MangaDetailsController : BaseController,
                     categories.indexOfFirst { it.id == id }.takeIf { it != -1 }
                 }.toTypedArray()
                 ChangeMangaCategoriesDialog(
-                    this, listOf(manga), categories, preselected
+                    this,
+                    listOf(manga),
+                    categories,
+                    preselected
                 ).showDialog(
                     router
                 )
@@ -1080,12 +1122,14 @@ class MangaDetailsController : BaseController,
             setAction(R.string.undo) {
                 presenter.setFavorite(true)
             }
-            addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                    super.onDismissed(transientBottomBar, event)
-                    if (!presenter.manga.favorite) presenter.confirmDeletion()
+            addCallback(
+                object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                        super.onDismissed(transientBottomBar, event)
+                        if (!presenter.manga.favorite) presenter.confirmDeletion()
+                    }
                 }
-            })
+            )
         }
         val favButton = getHeader()?.favorite_button
         (activity as? MainActivity)?.setUndoSnackBar(snack, favButton)
@@ -1204,7 +1248,9 @@ class MangaDetailsController : BaseController,
         if (startingDLChapterPos != null) {
             val item = adapter?.getItem(startingDLChapterPos!!) as? ChapterItem
             (recycler.findViewHolderForAdapterPosition(startingDLChapterPos!!) as? ChapterHolder)?.notifyStatus(
-                item?.status ?: Download.NOT_DOWNLOADED, false, 0
+                item?.status ?: Download.NOT_DOWNLOADED,
+                false,
+                0
             )
         }
         startingDLChapterPos = null
@@ -1308,18 +1354,20 @@ class MangaDetailsController : BaseController,
                 )
                 duration = shortAnimationDuration.toLong()
                 interpolator = DecelerateInterpolator()
-                addListener(object : AnimatorListenerAdapter() {
+                addListener(
+                    object : AnimatorListenerAdapter() {
 
-                    override fun onAnimationEnd(animation: Animator) {
-                        TransitionManager.endTransitions(frame_layout)
-                        currentAnimator = null
-                    }
+                        override fun onAnimationEnd(animation: Animator) {
+                            TransitionManager.endTransitions(frame_layout)
+                            currentAnimator = null
+                        }
 
-                    override fun onAnimationCancel(animation: Animator) {
-                        TransitionManager.endTransitions(frame_layout)
-                        currentAnimator = null
+                        override fun onAnimationCancel(animation: Animator) {
+                            TransitionManager.endTransitions(frame_layout)
+                            currentAnimator = null
+                        }
                     }
-                })
+                )
                 start()
             }
 
@@ -1351,24 +1399,26 @@ class MangaDetailsController : BaseController,
                     play(ObjectAnimator.ofFloat(fullBackdrop, View.ALPHA, 0f))
                     duration = shortAnimationDuration.toLong()
                     interpolator = DecelerateInterpolator()
-                    addListener(object : AnimatorListenerAdapter() {
+                    addListener(
+                        object : AnimatorListenerAdapter() {
 
-                        override fun onAnimationEnd(animation: Animator) {
-                            thumbView.alpha = 1f
-                            expandedImageView.visibility = View.GONE
-                            fullBackdrop.visibility = View.GONE
-                            swipe_refresh.isEnabled = true
-                            currentAnimator = null
-                        }
+                            override fun onAnimationEnd(animation: Animator) {
+                                thumbView.alpha = 1f
+                                expandedImageView.visibility = View.GONE
+                                fullBackdrop.visibility = View.GONE
+                                swipe_refresh.isEnabled = true
+                                currentAnimator = null
+                            }
 
-                        override fun onAnimationCancel(animation: Animator) {
-                            thumbView.alpha = 1f
-                            expandedImageView.visibility = View.GONE
-                            fullBackdrop.visibility = View.GONE
-                            swipe_refresh.isEnabled = true
-                            currentAnimator = null
+                            override fun onAnimationCancel(animation: Animator) {
+                                thumbView.alpha = 1f
+                                expandedImageView.visibility = View.GONE
+                                fullBackdrop.visibility = View.GONE
+                                swipe_refresh.isEnabled = true
+                                currentAnimator = null
+                            }
                         }
-                    })
+                    )
                     start()
                 }
             }

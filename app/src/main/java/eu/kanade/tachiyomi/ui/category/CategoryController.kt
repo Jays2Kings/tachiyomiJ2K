@@ -22,10 +22,11 @@ import kotlinx.android.synthetic.main.categories_controller.*
 /**
  * Controller to manage the categories for the users' library.
  */
-class CategoryController(bundle: Bundle? = null) : BaseController(bundle),
-        FlexibleAdapter.OnItemClickListener,
-        FlexibleAdapter.OnItemMoveListener,
-        CategoryAdapter.CategoryItemListener {
+class CategoryController(bundle: Bundle? = null) :
+    BaseController(bundle),
+    FlexibleAdapter.OnItemClickListener,
+    FlexibleAdapter.OnItemMoveListener,
+    CategoryAdapter.CategoryItemListener {
 
     /**
      * Adapter containing category items.
@@ -147,12 +148,14 @@ class CategoryController(bundle: Bundle? = null) : BaseController(bundle),
                     adapter?.restoreDeletedItems()
                     undoing = true
                 }
-                addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                        super.onDismissed(transientBottomBar, event)
-                        if (!undoing) confirmDelete()
+                addCallback(
+                    object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                        override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                            super.onDismissed(transientBottomBar, event)
+                            if (!undoing) confirmDelete()
+                        }
                     }
-                })
+                )
             }
         (activity as? MainActivity)?.setUndoSnackBar(snack)
     }

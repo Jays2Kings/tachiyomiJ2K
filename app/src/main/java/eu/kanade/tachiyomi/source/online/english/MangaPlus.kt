@@ -61,9 +61,13 @@ class MangaPlus : DelegatedHttpSource() {
                 context.getString(R.string.chapter_not_found)
             )
             if (manga != null) {
-                Triple(trueChapter, manga.apply {
-                    this.title = trimmedTitle
-                }, chapters.orEmpty())
+                Triple(
+                    trueChapter,
+                    manga.apply {
+                        this.title = trimmedTitle
+                    },
+                    chapters.orEmpty()
+                )
             } else null
         }
     }

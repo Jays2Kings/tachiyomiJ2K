@@ -103,7 +103,7 @@ class ShikimoriApi(private val client: OkHttpClient, interceptor: ShikimoriInter
             val request = Request.Builder().url(url.toString()).get().build()
 
             val urlMangas = "$apiUrl/mangas".toUri().buildUpon().appendPath(track.media_id.toString())
-                    .build()
+                .build()
             val requestMangas = Request.Builder().url(urlMangas.toString()).get().build()
 
             val requestMangasResponse = authClient.newCall(requestMangas).execute()

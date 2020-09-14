@@ -71,10 +71,10 @@ inline fun Context.notification(channelId: String, func: NotificationCompat.Buil
  */
 fun Context.getFilePicker(currentDir: String): Intent {
     return Intent(this, CustomLayoutPickerActivity::class.java)
-            .putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false)
-            .putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, true)
-            .putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_DIR)
-            .putExtra(FilePickerActivity.EXTRA_START_PATH, currentDir)
+        .putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false)
+        .putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, true)
+        .putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_DIR)
+        .putExtra(FilePickerActivity.EXTRA_START_PATH, currentDir)
 }
 
 /**
@@ -84,7 +84,7 @@ fun Context.getFilePicker(currentDir: String): Intent {
  * @return true if it has permissions.
  */
 fun Context.hasPermission(permission: String) =
-        ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED
+    ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED
 
 /**
  * Returns the color for the given attribute.
@@ -133,8 +133,10 @@ val Float.dpToPx: Float
 
 /** Converts to px and takes into account LTR/RTL layout */
 val Float.dpToPxEnd: Float
-    get() = (this * Resources.getSystem().displayMetrics.density *
-        if (Resources.getSystem().isLTR) 1 else -1)
+    get() = (
+        this * Resources.getSystem().displayMetrics.density *
+            if (Resources.getSystem().isLTR) 1 else -1
+        )
 
 val Resources.isLTR
     get() = configuration.layoutDirection == View.LAYOUT_DIRECTION_LTR
@@ -217,7 +219,7 @@ fun Context.isServiceRunning(serviceClass: Class<*>): Boolean {
     val manager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
     @Suppress("DEPRECATION")
     return manager.getRunningServices(Integer.MAX_VALUE)
-            .any { className == it.service.className }
+        .any { className == it.service.className }
 }
 
 /**

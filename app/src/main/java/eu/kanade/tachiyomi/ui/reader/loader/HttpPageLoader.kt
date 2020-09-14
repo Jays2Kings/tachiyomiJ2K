@@ -45,16 +45,19 @@ class HttpPageLoader(
 
     init {
         subscriptions += Observable.defer { Observable.just(queue.take().page) }
-                .filter { it.status == Page.QUEUE }
-                .concatMap { source.fetchImageFromCacheThenNet(it) }
-                .repeat()
-                .subscribeOn(Schedulers.io())
-                .subscribe({
-                }, { error ->
+            .filter { it.status == Page.QUEUE }
+            .concatMap { source.fetchImageFromCacheThenNet(it) }
+            .repeat()
+            .subscribeOn(Schedulers.io())
+            .subscribe(
+                {
+                },
+                { error ->
                     if (error !is InterruptedException) {
                         Timber.e(error)
                     }
-                })
+                }
+            )
     }
 
     /**
@@ -86,13 +89,13 @@ class HttpPageLoader(
      */
     override fun getPages(): Observable<List<ReaderPage>> {
         return chapterCache
-                .getPageListFromCache(chapter.chapter)
-                .onErrorResumeNext { source.fetchPageList(chapter.chapter) }
-                .map { pages ->
-                    pages.mapIndexed { index, page -> // Don't trust sources and use our own indexing
-                        ReaderPage(index, page.url, page.imageUrl)
-                    }
+            .getPageListFromCache(chapter.chapter)
+            .onErrorResumeNext { source.fetchPageList(chapter.chapter) }
+            .map { pages ->
+                pages.mapIndexed { index, page -> // Don't trust sources and use our own indexing
+                    ReaderPage(index, page.url, page.imageUrl)
                 }
+            }
     }
 
     /**
@@ -123,16 +126,16 @@ class HttpPageLoader(
             queuedPages += preloadNextPages(page, preloadSize)
 
             statusSubject.startWith(page.status)
-                    .doOnUnsubscribe {
-                        queuedPages.forEach {
-                            if (it.page.status == Page.QUEUE) {
-                                queue.remove(it)
-                            }
+                .doOnUnsubscribe {
+                    queuedPages.forEach {
+                        if (it.page.status == Page.QUEUE) {
+                            queue.remove(it)
                         }
                     }
+                }
         }
-                .subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
+            .subscribeOn(Schedulers.io())
+            .unsubscribeOn(Schedulers.io())
     }
 
     /**
@@ -145,12 +148,12 @@ class HttpPageLoader(
         if (pageIndex == pages.lastIndex) return emptyList()
 
         return pages
-                .subList(pageIndex + 1, min(pageIndex + 1 + amount, pages.size))
-                .mapNotNull {
-                    if (it.status == Page.QUEUE) {
-                        PriorityPage(it, 0).apply { queue.offer(this) }
-                    } else null
-                }
+            .subList(pageIndex + 1, min(pageIndex + 1 + amount, pages.size))
+            .mapNotNull {
+                if (it.status == Page.QUEUE) {
+                    PriorityPage(it, 0).apply { queue.offer(this) }
+                } else null
+            }
     }
 
     /**
@@ -214,25 +217,27 @@ class HttpPageLoader(
         val imageUrl = page.imageUrl ?: return Observable.just(page)
 
         return Observable.just(page).flatMap {
-                if (!chapterCache.isImageInCache(imageUrl)) {
-                    cacheImage(page)
-                } else {
-                    Observable.just(page)
-                }
-            }.doOnNext {
-                val readerTheme = preferences.readerTheme().get()
-                if (readerTheme >= 2) {
-                    val stream = chapterCache.getImageFile(imageUrl).inputStream()
-                    val image = BitmapFactory.decodeStream(stream)
-                    page.bg = ImageUtil.autoSetBackground(
-                        image, readerTheme == 2, preferences.context
-                    )
-                    page.bgType = PagerPageHolder.getBGType(readerTheme, preferences.context)
-                    stream.close()
-                }
-                page.stream = { chapterCache.getImageFile(imageUrl).inputStream() }
-                page.status = Page.READY
-            }.doOnError { page.status = Page.ERROR }.onErrorReturn { page }
+            if (!chapterCache.isImageInCache(imageUrl)) {
+                cacheImage(page)
+            } else {
+                Observable.just(page)
+            }
+        }.doOnNext {
+            val readerTheme = preferences.readerTheme().get()
+            if (readerTheme >= 2) {
+                val stream = chapterCache.getImageFile(imageUrl).inputStream()
+                val image = BitmapFactory.decodeStream(stream)
+                page.bg = ImageUtil.autoSetBackground(
+                    image,
+                    readerTheme == 2,
+                    preferences.context
+                )
+                page.bgType = PagerPageHolder.getBGType(readerTheme, preferences.context)
+                stream.close()
+            }
+            page.stream = { chapterCache.getImageFile(imageUrl).inputStream() }
+            page.status = Page.READY
+        }.doOnError { page.status = Page.ERROR }.onErrorReturn { page }
     }
 
     /**

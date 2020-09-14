@@ -66,18 +66,21 @@ class LibraryItem(
                         gradient.layoutParams = FrameLayout.LayoutParams(
                             FrameLayout.LayoutParams.MATCH_PARENT,
                             (coverHeight * 0.66f).toInt(),
-                            Gravity.BOTTOM)
+                            Gravity.BOTTOM
+                        )
                         card.updateLayoutParams<ConstraintLayout.LayoutParams> {
                             bottomMargin = 6.dpToPx
                         }
                     } else if (libraryLayout == 2) {
                         constraint_layout.background = ContextCompat.getDrawable(
-                            context, R.drawable.library_item_selector
+                            context,
+                            R.drawable.library_item_selector
                         )
                     }
                     if (isFixedSize) {
                         constraint_layout.layoutParams = FrameLayout.LayoutParams(
-                            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
                         )
                         cover_thumbnail.maxHeight = Int.MAX_VALUE
                         cover_thumbnail.minimumHeight = 0
@@ -162,7 +165,8 @@ class LibraryItem(
             } == null
         else
             genres?.find {
-                it.trim().toLowerCase() == tag.toLowerCase() } != null
+                it.trim().toLowerCase() == tag.toLowerCase()
+            } != null
     }
 
     override fun equals(other: Any?): Boolean {

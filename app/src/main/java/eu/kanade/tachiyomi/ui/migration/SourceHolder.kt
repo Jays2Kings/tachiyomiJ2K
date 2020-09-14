@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.source_item.edit_button
 import kotlinx.android.synthetic.main.source_item.title
 
 class SourceHolder(view: View, val adapter: SourceAdapter) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
 
     init {
         migration_all.setOnClickListener {

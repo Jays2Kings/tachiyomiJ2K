@@ -64,7 +64,8 @@ class RecentChapterHolder(private val view: View, private val adapter: RecentCha
         if (front_view.translationX == 0f) {
             read.setImageDrawable(
                 ContextCompat.getDrawable(
-                    read.context, if (item.read) R.drawable.ic_eye_off_24dp
+                    read.context,
+                    if (item.read) R.drawable.ic_eye_off_24dp
                     else R.drawable.ic_eye_24dp
                 )
             )

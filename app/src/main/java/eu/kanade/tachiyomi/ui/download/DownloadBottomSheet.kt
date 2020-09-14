@@ -94,7 +94,8 @@ class DownloadBottomSheet @JvmOverloads constructor(
     private fun updateDLTitle() {
         val extCount = presenter.downloadQueue.firstOrNull()
         title_text.text = if (extCount != null) resources.getString(
-            R.string.downloading_, extCount.chapter.name
+            R.string.downloading_,
+            extCount.chapter.name
         )
         else ""
     }
@@ -164,7 +165,8 @@ class DownloadBottomSheet @JvmOverloads constructor(
         if (presenter.downloadQueue.isEmpty()) {
             empty_view?.show(
                 R.drawable.ic_download_off_24dp,
-                R.string.nothing_is_downloading)
+                R.string.nothing_is_downloading
+            )
         } else {
             empty_view?.hide()
         }

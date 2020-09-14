@@ -288,23 +288,23 @@ class Downloader(
         val pageListObservable = if (download.pages == null) {
             // Pull page list from network and add them to download object
             download.source.fetchPageList(download.chapter).doOnNext { pages ->
-                    if (pages.isEmpty()) {
-                        throw Exception("Page list is empty")
-                    }
-                    download.pages = pages
+                if (pages.isEmpty()) {
+                    throw Exception("Page list is empty")
                 }
+                download.pages = pages
+            }
         } else {
             // Or if the page list already exists, start from the file
             Observable.just(download.pages!!)
         }
 
         pageListObservable.doOnNext { _ ->
-                // Delete all temporary (unfinished) files
-                tmpDir.listFiles()?.filter { it.name!!.endsWith(".tmp") }?.forEach { it.delete() }
+            // Delete all temporary (unfinished) files
+            tmpDir.listFiles()?.filter { it.name!!.endsWith(".tmp") }?.forEach { it.delete() }
 
-                download.downloadedImages = 0
-                download.status = Download.DOWNLOADING
-            }
+            download.downloadedImages = 0
+            download.status = Download.DOWNLOADING
+        }
             // Get all the URLs to the source images, fetch pages if necessary
             .flatMap { download.source.fetchAllImageUrlsFromPageList(it) }
             // Start downloading images, consider we can have downloaded images already
@@ -447,7 +447,7 @@ class Downloader(
     private fun getImageExtension(response: Response, file: UniFile): String {
         // Read content type if available.
         val mime = response.body?.contentType()?.let { ct -> "${ct.type}/${ct.subtype}" }
-        // Else guess from the uri.
+            // Else guess from the uri.
             ?: context.contentResolver.getType(file.uri)
             // Else read magic numbers.
             ?: ImageUtil.findImageType { file.openInputStream() }?.mime

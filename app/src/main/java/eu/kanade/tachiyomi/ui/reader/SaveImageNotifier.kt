@@ -42,14 +42,16 @@ class SaveImageNotifier(private val context: Context) {
         val request = LoadRequest.Builder(context).memoryCachePolicy(CachePolicy.DISABLED).diskCachePolicy(CachePolicy.DISABLED)
             .data(file)
             .size(720, 1280)
-            .target(onSuccess = {
-                val bitmap = (it as BitmapDrawable).bitmap
-                if (bitmap != null) {
-                    showCompleteNotification(file, bitmap)
-                } else {
-                    onError(null)
+            .target(
+                onSuccess = {
+                    val bitmap = (it as BitmapDrawable).bitmap
+                    if (bitmap != null) {
+                        showCompleteNotification(file, bitmap)
+                    } else {
+                        onError(null)
+                    }
                 }
-            }).build()
+            ).build()
         Coil.imageLoader(context).execute(request)
     }
 
@@ -67,13 +69,17 @@ class SaveImageNotifier(private val context: Context) {
 
             setContentIntent(NotificationHandler.openImagePendingActivity(context, file))
             // Share action
-            addAction(R.drawable.ic_share_24dp,
-                    context.getString(R.string.share),
-                    NotificationReceiver.shareImagePendingBroadcast(context, file.absolutePath, notificationId))
+            addAction(
+                R.drawable.ic_share_24dp,
+                context.getString(R.string.share),
+                NotificationReceiver.shareImagePendingBroadcast(context, file.absolutePath, notificationId)
+            )
             // Delete action
-            addAction(R.drawable.ic_delete_24dp,
-                    context.getString(R.string.delete),
-                    NotificationReceiver.deleteImagePendingBroadcast(context, file.absolutePath, notificationId))
+            addAction(
+                R.drawable.ic_delete_24dp,
+                context.getString(R.string.delete),
+                NotificationReceiver.deleteImagePendingBroadcast(context, file.absolutePath, notificationId)
+            )
 
             updateNotification()
         }

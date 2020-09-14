@@ -18,14 +18,14 @@ open class BrowseSourcePager(val source: CatalogueSource, val query: String, val
             source.fetchSearchManga(page, query, filters)
 
         return observable
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnNext {
-                    if (it.mangas.isNotEmpty()) {
-                        onPageReceived(it)
-                    } else {
-                        throw NoResultsException()
-                    }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .doOnNext {
+                if (it.mangas.isNotEmpty()) {
+                    onPageReceived(it)
+                } else {
+                    throw NoResultsException()
                 }
+            }
     }
 }

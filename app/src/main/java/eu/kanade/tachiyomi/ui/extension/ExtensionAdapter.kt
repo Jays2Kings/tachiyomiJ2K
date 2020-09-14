@@ -10,7 +10,7 @@ import eu.kanade.tachiyomi.ui.extension.ExtensionAdapter.OnButtonClickListener
  * @param listener instance of [OnButtonClickListener].
  */
 class ExtensionAdapter(val listener: OnButtonClickListener) :
-        FlexibleAdapter<IFlexible<*>>(null, listener, true) {
+    FlexibleAdapter<IFlexible<*>>(null, listener, true) {
 
     init {
         setDisplayHeadersAtStartUp(true)

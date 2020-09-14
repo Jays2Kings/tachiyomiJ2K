@@ -54,7 +54,9 @@ class SourceSearchSheet(activity: Activity) :
         sheetBehavior.skipCollapsed = true
         sheetBehavior.expand()
         setEdgeToEdge(
-            activity, view, 50.dpToPx
+            activity,
+            view,
+            50.dpToPx
         )
 
         recycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
@@ -72,35 +74,39 @@ class SourceSearchSheet(activity: Activity) :
             }
         }
 
-        sheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, progress: Float) {}
+        sheetBehavior.addBottomSheetCallback(
+            object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onSlide(bottomSheet: View, progress: Float) {}
 
-            override fun onStateChanged(p0: View, state: Int) {
-                if (state == BottomSheetBehavior.STATE_EXPANDED) {
-                    sheetBehavior.skipCollapsed = true
+                override fun onStateChanged(p0: View, state: Int) {
+                    if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                        sheetBehavior.skipCollapsed = true
+                    }
                 }
             }
-        })
+        )
 
-        recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val atTop = !recycler.canScrollVertically(-1)
-                if (atTop != isNotElevated) {
-                    elevationAnimator?.cancel()
-                    isNotElevated = atTop
-                    elevationAnimator?.cancel()
-                    elevationAnimator = ObjectAnimator.ofFloat(
-                        title_layout,
-                        "elevation",
-                        title_layout.elevation,
-                        if (atTop) 0f else 10f.dpToPx
-                    )
-                    elevationAnimator?.duration = 100
-                    elevationAnimator?.start()
+        recycler.addOnScrollListener(
+            object : RecyclerView.OnScrollListener() {
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    val atTop = !recycler.canScrollVertically(-1)
+                    if (atTop != isNotElevated) {
+                        elevationAnimator?.cancel()
+                        isNotElevated = atTop
+                        elevationAnimator?.cancel()
+                        elevationAnimator = ObjectAnimator.ofFloat(
+                            title_layout,
+                            "elevation",
+                            title_layout.elevation,
+                            if (atTop) 0f else 10f.dpToPx
+                        )
+                        elevationAnimator?.duration = 100
+                        elevationAnimator?.start()
+                    }
                 }
             }
-        })
+        )
     }
 
     override fun onWindowStartingActionMode(

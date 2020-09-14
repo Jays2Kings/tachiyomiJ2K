@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.migration_source_item.*
 import uy.kohesive.injekt.injectLazy
 
 class MigrationSourceHolder(view: View, val adapter: MigrationSourceAdapter) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
     init {
         setDragHandleView(reorder)
     }

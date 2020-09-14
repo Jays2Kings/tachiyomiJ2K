@@ -54,8 +54,10 @@ class DownloadHolder(private val view: View, val adapter: DownloadAdapter) :
 
         migration_menu.visibleIf(adapterPosition != 0 || adapterPosition != adapter.itemCount - 1)
         migration_menu.setVectorCompat(
-            R.drawable.ic_more_vert_24dp, view.context
-            .getResourceColor(android.R.attr.textColorPrimary))
+            R.drawable.ic_more_vert_24dp,
+            view.context
+                .getResourceColor(android.R.attr.textColorPrimary)
+        )
     }
 
     /**

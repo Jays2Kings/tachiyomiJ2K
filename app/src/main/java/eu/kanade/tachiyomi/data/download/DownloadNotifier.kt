@@ -24,7 +24,7 @@ internal class DownloadNotifier(private val context: Context) {
      */
     private val notification by lazy {
         NotificationCompat.Builder(context, Notifications.CHANNEL_DOWNLOADER)
-                .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher))
+            .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher))
     }
 
     /**
@@ -78,16 +78,21 @@ internal class DownloadNotifier(private val context: Context) {
                 setContentIntent(NotificationHandler.openDownloadManagerPendingActivity(context))
                 isDownloading = true
                 // Pause action
-                addAction(R.drawable.ic_pause_24dp,
+                addAction(
+                    R.drawable.ic_pause_24dp,
                     context.getString(R.string.pause),
-                    NotificationReceiver.pauseDownloadsPendingBroadcast(context))
+                    NotificationReceiver.pauseDownloadsPendingBroadcast(context)
+                )
             }
 
             if (download != null) {
                 val title = download.manga.title.chop(15)
                 val quotedTitle = Pattern.quote(title)
-                val chapter = download.chapter.name.replaceFirst("$quotedTitle[\\s]*[-]*[\\s]*"
-                    .toRegex(RegexOption.IGNORE_CASE), "")
+                val chapter = download.chapter.name.replaceFirst(
+                    "$quotedTitle[\\s]*[-]*[\\s]*"
+                        .toRegex(RegexOption.IGNORE_CASE),
+                    ""
+                )
                 setContentTitle("$title - $chapter".chop(30))
                 setContentText(
                     context.getString(R.string.downloading)
@@ -124,17 +129,21 @@ internal class DownloadNotifier(private val context: Context) {
                 setContentIntent(NotificationHandler.openDownloadManagerPendingActivity(context))
                 isDownloading = true
                 // Pause action
-                addAction(R.drawable.ic_pause_24dp,
-                        context.getString(R.string.pause),
-                        NotificationReceiver.pauseDownloadsPendingBroadcast(context))
+                addAction(
+                    R.drawable.ic_pause_24dp,
+                    context.getString(R.string.pause),
+                    NotificationReceiver.pauseDownloadsPendingBroadcast(context)
+                )
             }
 
             val title = download.manga.title.chop(15)
             val quotedTitle = Pattern.quote(title)
             val chapter = download.chapter.name.replaceFirst("$quotedTitle[\\s]*[-]*[\\s]*".toRegex(RegexOption.IGNORE_CASE), "")
             setContentTitle("$title - $chapter".chop(30))
-            setContentText(context.getString(R.string.downloading_progress)
-                    .format(download.downloadedImages, download.pages!!.size))
+            setContentText(
+                context.getString(R.string.downloading_progress)
+                    .format(download.downloadedImages, download.pages!!.size)
+            )
             setStyle(null)
             setProgress(download.pages!!.size, download.downloadedImages, false)
         }

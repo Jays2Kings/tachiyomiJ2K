@@ -108,10 +108,13 @@ class LibraryController(
 ) : BaseController(bundle),
     ActionMode.Callback,
     ChangeMangaCategoriesDialog.Listener,
-    FlexibleAdapter.OnItemClickListener, FlexibleAdapter.OnItemLongClickListener,
-    FlexibleAdapter.OnItemMoveListener, LibraryCategoryAdapter.LibraryListener,
+    FlexibleAdapter.OnItemClickListener,
+    FlexibleAdapter.OnItemLongClickListener,
+    FlexibleAdapter.OnItemMoveListener,
+    LibraryCategoryAdapter.LibraryListener,
     BottomSheetController,
-    RootSearchInterface, LibraryServiceListener {
+    RootSearchInterface,
+    LibraryServiceListener {
 
     init {
         setHasOptionsMenu(true)
@@ -325,17 +328,19 @@ class LibraryController(
         adapter = LibraryCategoryAdapter(this)
         setRecyclerLayout()
 
-        recycler.manager.spanSizeLookup = (object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                if (libraryLayout == 0) return 1
-                val item = this@LibraryController.adapter.getItem(position)
-                return if (item is LibraryHeaderItem || item is SearchGlobalItem || (item is LibraryItem && item.manga.isBlank())) {
-                    recycler?.manager?.spanCount ?: 1
-                } else {
-                    1
+        recycler.manager.spanSizeLookup = (
+            object : GridLayoutManager.SpanSizeLookup() {
+                override fun getSpanSize(position: Int): Int {
+                    if (libraryLayout == 0) return 1
+                    val item = this@LibraryController.adapter.getItem(position)
+                    return if (item is LibraryHeaderItem || item is SearchGlobalItem || (item is LibraryItem && item.manga.isBlank())) {
+                        recycler?.manager?.spanCount ?: 1
+                    } else {
+                        1
+                    }
                 }
             }
-        })
+            )
         recycler.setHasFixedSize(true)
         recycler.adapter = adapter
 
@@ -360,17 +365,22 @@ class LibraryController(
         setUpHopper()
 
         elevateAppBar =
-            scrollViewWith(recycler, swipeRefreshLayout = swipe_refresh, afterInsets = { insets ->
-                category_recycler?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                    topMargin = recycler?.paddingTop ?: 0
+            scrollViewWith(
+                recycler,
+                swipeRefreshLayout = swipe_refresh,
+                afterInsets = { insets ->
+                    category_recycler?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                        topMargin = recycler?.paddingTop ?: 0
+                    }
+                    fast_scroller?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                        topMargin = recycler?.paddingTop ?: 0
+                    }
+                    header_title?.updatePaddingRelative(top = insets.systemWindowInsetTop + 2.dpToPx)
+                },
+                onLeavingController = {
+                    header_title?.gone()
                 }
-                fast_scroller?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                    topMargin = recycler?.paddingTop ?: 0
-                }
-                header_title?.updatePaddingRelative(top = insets.systemWindowInsetTop + 2.dpToPx)
-            }, onLeavingController = {
-                header_title?.gone()
-            })
+            )
 
         swipe_refresh.setOnRefreshListener {
             swipe_refresh.isRefreshing = false
@@ -387,19 +397,24 @@ class LibraryController(
                     preferences.updateOnRefresh().getOrDefault() == -1 -> {
                         MaterialDialog(activity!!).title(R.string.what_should_update)
                             .negativeButton(android.R.string.cancel)
-                            .listItemsSingleChoice(items = listOf(
-                                view.context.getString(
-                                    R.string.top_category, presenter.allCategories.first().name
-                                ), view.context.getString(
-                                    R.string.categories_in_global_update
-                                )
-                            ), selection = { _, index, _ ->
-                                preferences.updateOnRefresh().set(index)
-                                when (index) {
-                                    0 -> updateLibrary(presenter.allCategories.first())
-                                    else -> updateLibrary()
+                            .listItemsSingleChoice(
+                                items = listOf(
+                                    view.context.getString(
+                                        R.string.top_category,
+                                        presenter.allCategories.first().name
+                                    ),
+                                    view.context.getString(
+                                        R.string.categories_in_global_update
+                                    )
+                                ),
+                                selection = { _, index, _ ->
+                                    preferences.updateOnRefresh().set(index)
+                                    when (index) {
+                                        0 -> updateLibrary(presenter.allCategories.first())
+                                        else -> updateLibrary()
+                                    }
                                 }
-                            }).positiveButton(R.string.update).show()
+                            ).positiveButton(R.string.update).show()
                     }
                     else -> {
                         when (preferences.updateOnRefresh().getOrDefault()) {
@@ -557,8 +572,8 @@ class LibraryController(
                 presenter.categories.indexOfFirst { presenter.currentCategory == it.id } +
                     (if (next) 1 else -1)
             if (if (!next) {
-                    newOffset > -1
-                } else {
+                newOffset > -1
+            } else {
                     newOffset < presenter.categories.size
                 }
             ) {
@@ -632,7 +647,8 @@ class LibraryController(
         if (libraryLayout == 0) {
             recycler.spanCount = 1
             recycler.updatePaddingRelative(
-                start = 0, end = 0
+                start = 0,
+                end = 0
             )
         } else {
             recycler.columnWidth = when (preferences.gridSize().getOrDefault()) {
@@ -712,9 +728,9 @@ class LibraryController(
         }
         adapter.setItems(mangaMap)
         if (recycler.itemAnimator == null)
-        recycler.post {
-            recycler.itemAnimator = DefaultItemAnimator()
-        }
+            recycler.post {
+                recycler.itemAnimator = DefaultItemAnimator()
+            }
         singleCategory = presenter.categories.size <= 1
         showDropdown()
         progress.gone()
@@ -733,7 +749,8 @@ class LibraryController(
 
         category_hopper_frame.visibleIf(!singleCategory && !preferences.hideHopper().get())
         filter_bottom_sheet.updateButtons(
-            showExpand = !singleCategory && presenter.showAllCategories, groupType = presenter.groupType
+            showExpand = !singleCategory && presenter.showAllCategories,
+            groupType = presenter.groupType
         )
         adapter.isLongPressDragEnabled = canDrag()
         category_recycler.setCategories(presenter.categories)
@@ -783,9 +800,11 @@ class LibraryController(
         )
         animatorSet.playSequentially(animations)
         animatorSet.startDelay = 1250
-        animatorSet.addListener(EndAnimatorListener {
-            isAnimatingHopper = false
-        })
+        animatorSet.addListener(
+            EndAnimatorListener {
+                isAnimatingHopper = false
+            }
+        )
         animatorSet.start()
     }
 
@@ -836,16 +855,21 @@ class LibraryController(
         if (headerPosition > -1) {
             val appbar = activity?.appbar
             recycler.suppressLayout(true)
-            val appbarOffset = if (appbar?.y ?: 0f > -20) 0 else (appbar?.y?.plus(
-                view?.rootWindowInsets?.systemWindowInsetTop ?: 0
-            ) ?: 0f).roundToInt() + 30.dpToPx
+            val appbarOffset = if (appbar?.y ?: 0f > -20) 0 else (
+                appbar?.y?.plus(
+                    view?.rootWindowInsets?.systemWindowInsetTop ?: 0
+                ) ?: 0f
+                ).roundToInt() + 30.dpToPx
             val previousHeader = adapter.getItem(adapter.indexOf(pos - 1)) as? LibraryHeaderItem
             (recycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
-                headerPosition, (when {
-                    headerPosition == 0 -> 0
-                    previousHeader?.category?.isHidden == true -> (-3).dpToPx
-                    else -> (-30).dpToPx
-                }) + appbarOffset
+                headerPosition,
+                (
+                    when {
+                        headerPosition == 0 -> 0
+                        previousHeader?.category?.isHidden == true -> (-3).dpToPx
+                        else -> (-30).dpToPx
+                    }
+                    ) + appbarOffset
             )
             (adapter.getItem(headerPosition) as? LibraryHeaderItem)?.category?.let {
                 saveActiveCategory(it)
@@ -1033,9 +1057,9 @@ class LibraryController(
         val position = viewHolder?.adapterPosition ?: return
         swipe_refresh.isEnabled = actionState != ItemTouchHelper.ACTION_STATE_DRAG
         if (actionState == ItemTouchHelper.ACTION_STATE_DRAG) {
-            if (lastItemPosition != null && position != lastItemPosition && lastItem == adapter.getItem(
-                    position
-                )
+            if (lastItemPosition != null &&
+                position != lastItemPosition &&
+                lastItem == adapter.getItem(position)
             ) {
                 // because for whatever reason you can repeatedly tap on a currently dragging manga
                 adapter.removeSelection(position)
@@ -1063,10 +1087,11 @@ class LibraryController(
 
     override fun onItemMove(fromPosition: Int, toPosition: Int) {
         // Because padding a recycler causes it to scroll up we have to scroll it back down... wild
-        if ((adapter.getItem(fromPosition) is LibraryItem && adapter.getItem(fromPosition) is
-                LibraryItem) || adapter.getItem(
-                fromPosition
-            ) == null
+        if ((
+            adapter.getItem(fromPosition) is LibraryItem &&
+                adapter.getItem(fromPosition) is LibraryItem
+            ) ||
+            adapter.getItem(fromPosition) == null
         ) {
             recycler.scrollBy(0, recycler.paddingTop)
         }
@@ -1079,9 +1104,12 @@ class LibraryController(
         val item = adapter.getItem(fromPosition) as? LibraryItem ?: return false
         val newHeader = adapter.getSectionHeader(toPosition) as? LibraryHeaderItem
         if (toPosition < 1) return false
-        return (adapter.getItem(toPosition) !is LibraryHeaderItem) && (newHeader?.category?.id == item.manga.category || !presenter.mangaIsInCategory(
-            item.manga, newHeader?.category?.id
-        ))
+        return (adapter.getItem(toPosition) !is LibraryHeaderItem) && (
+            newHeader?.category?.id == item.manga.category || !presenter.mangaIsInCategory(
+                item.manga,
+                newHeader?.category?.id
+            )
+            )
     }
 
     override fun onItemReleased(position: Int) {
@@ -1110,7 +1138,9 @@ class LibraryController(
                 return
             }
             if (newHeader?.category != null) moveMangaToCategory(
-                item.manga, newHeader.category, mangaIds
+                item.manga,
+                newHeader.category,
+                mangaIds
             )
         }
         lastItemPosition = null
@@ -1147,8 +1177,10 @@ class LibraryController(
                     inQueue -> R.string._already_in_queue
                     LibraryUpdateService.isRunning() -> R.string.adding_category_to_queue
                     else -> R.string.updating_
-                }, category.name
-            ), Snackbar.LENGTH_LONG
+                },
+                category.name
+            ),
+            Snackbar.LENGTH_LONG
         ) {
             anchorView = anchorView()
             view.elevation = 15f.dpToPx
@@ -1163,7 +1195,9 @@ class LibraryController(
             }
         }
         if (!inQueue) LibraryUpdateService.start(
-            view!!.context, category, mangaToUse = if (category.isDynamic) {
+            view!!.context,
+            category,
+            mangaToUse = if (category.isDynamic) {
                 presenter.getMangaInCategories(category.id)
             } else null
         )
@@ -1327,9 +1361,11 @@ class LibraryController(
             }
             R.id.action_migrate -> {
                 val skipPre = preferences.skipPreMigration().getOrDefault()
-                PreMigrationController.navigateToMigration(skipPre,
+                PreMigrationController.navigateToMigration(
+                    skipPre,
                     router,
-                    selectedMangas.filter { it.id != LocalSource.ID }.mapNotNull { it.id })
+                    selectedMangas.filter { it.id != LocalSource.ID }.mapNotNull { it.id }
+                )
                 destroyActionModeIfNeeded()
             }
             else -> return false
@@ -1356,7 +1392,8 @@ class LibraryController(
         destroyActionModeIfNeeded()
         snack?.dismiss()
         snack = view?.snack(
-            activity?.getString(R.string.removed_from_library) ?: "", Snackbar.LENGTH_INDEFINITE
+            activity?.getString(R.string.removed_from_library) ?: "",
+            Snackbar.LENGTH_INDEFINITE
         ) {
             anchorView = anchorView()
             view.elevation = 15f.dpToPx
@@ -1365,12 +1402,14 @@ class LibraryController(
                 presenter.reAddMangas(mangas)
                 undoing = true
             }
-            addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                    super.onDismissed(transientBottomBar, event)
-                    if (!undoing) presenter.confirmDeletion(mangas)
+            addCallback(
+                object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                        super.onDismissed(transientBottomBar, event)
+                        if (!undoing) presenter.confirmDeletion(mangas)
+                    }
                 }
-            })
+            )
         }
         (activity as? MainActivity)?.setUndoSnackBar(snack)
     }

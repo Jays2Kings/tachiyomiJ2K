@@ -15,7 +15,7 @@ class SearchPresenter(
     override fun getEnabledSources(): List<CatalogueSource> {
         // Put the source of the selected manga at the top
         return super.getEnabledSources()
-                .sortedByDescending { it.id == manga.source }
+            .sortedByDescending { it.id == manga.source }
     }
 
     override fun createCatalogueSearchItem(source: CatalogueSource, results: List<GlobalSearchMangaItem>?): GlobalSearchItem {

@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.extension_card_item.*
 import kotlinx.android.synthetic.main.source_global_search_controller_card_item.*
 
 class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
 
     init {
         ext_button.setOnClickListener {
@@ -63,13 +63,15 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         val extension = item.extension
         val installStep = item.installStep
         if (installStep != null) {
-            setText(when (installStep) {
-                InstallStep.Pending -> R.string.pending
-                InstallStep.Downloading -> R.string.downloading
-                InstallStep.Installing -> R.string.installing
-                InstallStep.Installed -> R.string.installed
-                InstallStep.Error -> R.string.retry
-            })
+            setText(
+                when (installStep) {
+                    InstallStep.Pending -> R.string.pending
+                    InstallStep.Downloading -> R.string.downloading
+                    InstallStep.Installing -> R.string.installing
+                    InstallStep.Installed -> R.string.installed
+                    InstallStep.Error -> R.string.retry
+                }
+            )
             if (installStep != InstallStep.Error) {
                 isEnabled = false
                 isClickable = false
@@ -79,7 +81,8 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
                 extension.hasUpdate -> {
                     isActivated = true
                     backgroundTintList = ColorStateList.valueOf(
-                        context.getResourceColor(R.attr.colorAccent))
+                        context.getResourceColor(R.attr.colorAccent)
+                    )
                     strokeColor = ColorStateList.valueOf(Color.TRANSPARENT)
                     setText(R.string.update)
                 }

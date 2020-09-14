@@ -20,8 +20,8 @@ data class OAuth(
     val refresh_token: String?,
     val user_id: Long?
 ) {
-        // Access token refresh before expired
-        fun isExpired() = (System.currentTimeMillis() / 1000) > (created_at + expires_in - 3600)
+    // Access token refresh before expired
+    fun isExpired() = (System.currentTimeMillis() / 1000) > (created_at + expires_in - 3600)
 }
 
 data class Status(

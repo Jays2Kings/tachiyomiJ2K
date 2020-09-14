@@ -9,7 +9,7 @@ import eu.davidea.flexibleadapter.items.IFlexible
  * @param controller instance of [SourceController].
  */
 class SourceAdapter(val controller: SourceController) :
-        FlexibleAdapter<IFlexible<*>>(null, controller, true) {
+    FlexibleAdapter<IFlexible<*>>(null, controller, true) {
 
     init {
         setDisplayHeadersAtStartUp(true)

@@ -11,7 +11,7 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
  * @param controller instance of [GlobalSearchController].
  */
 class GlobalSearchAdapter(val controller: GlobalSearchController) :
-        FlexibleAdapter<GlobalSearchItem>(null, controller, true) {
+    FlexibleAdapter<GlobalSearchItem>(null, controller, true) {
 
     /**
      * Bundle where the view state of the holders is saved.

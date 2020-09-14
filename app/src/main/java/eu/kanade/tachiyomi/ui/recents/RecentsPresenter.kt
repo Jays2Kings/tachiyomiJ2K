@@ -46,8 +46,10 @@ class RecentsPresenter(
     private val newAdditionsHeader = RecentMangaHeaderItem(RecentMangaHeaderItem.NEWLY_ADDED)
     private val newChaptersHeader = RecentMangaHeaderItem(RecentMangaHeaderItem.NEW_CHAPTERS)
     val generalHeader = RecentMangaHeaderItem(-1)
-    private val continueReadingHeader = RecentMangaHeaderItem(RecentMangaHeaderItem
-        .CONTINUE_READING)
+    private val continueReadingHeader = RecentMangaHeaderItem(
+        RecentMangaHeaderItem
+            .CONTINUE_READING
+    )
     var viewType: Int = preferences.recentsViewType().getOrDefault()
 
     fun onCreate() {
@@ -99,7 +101,8 @@ class RecentsPresenter(
                 else db.getRecentMangaLimit(
                     cal.time,
                     if (viewType == 2) 200 else 8,
-                    query).executeOnIO() else emptyList()
+                    query
+                ).executeOnIO() else emptyList()
             val rUpdates = when {
                 viewType == 3 -> db.getRecentChapters(calWeek.time).executeOnIO().map {
                     MangaChapterHistory(it.manga, it.chapter, HistoryImpl())
@@ -129,20 +132,24 @@ class RecentsPresenter(
                     else -> it.chapter
                 }
                 if (chapter == null) if ((query.isNotEmpty() || viewType > 1) &&
-                    it.chapter.id != null) Pair(it, it.chapter)
+                    it.chapter.id != null
+                ) Pair(it, it.chapter)
                 else null
                 else Pair(it, chapter)
             }
             if (query.isEmpty() && !isUngrouped) {
                 val nChaptersItems =
                     pairs.filter { it.first.history.id == null && it.first.chapter.id != null }
-                        .sortedWith(Comparator<Pair<MangaChapterHistory, Chapter>> { f1, f2 ->
-                            if (abs(f1.second.date_fetch - f2.second.date_fetch) <=
-                                TimeUnit.HOURS.toMillis(12))
-                                f2.second.date_upload.compareTo(f1.second.date_upload)
-                            else
-                                f2.second.date_fetch.compareTo(f1.second.date_fetch)
-                        })
+                        .sortedWith(
+                            Comparator<Pair<MangaChapterHistory, Chapter>> { f1, f2 ->
+                                if (abs(f1.second.date_fetch - f2.second.date_fetch) <=
+                                    TimeUnit.HOURS.toMillis(12)
+                                )
+                                    f2.second.date_upload.compareTo(f1.second.date_upload)
+                                else
+                                    f2.second.date_fetch.compareTo(f1.second.date_fetch)
+                            }
+                        )
                         .take(4).map {
                             RecentMangaItem(
                                 it.first,
@@ -153,36 +160,40 @@ class RecentsPresenter(
                         RecentMangaItem(header = newChaptersHeader)
                 val cReadingItems =
                     pairs.filter { it.first.history.id != null }.take(9 - nChaptersItems.size).map {
-                            RecentMangaItem(
-                                it.first,
-                                it.second,
-                                continueReadingHeader
-                            )
-                        } + RecentMangaItem(header = continueReadingHeader)
+                        RecentMangaItem(
+                            it.first,
+                            it.second,
+                            continueReadingHeader
+                        )
+                    } + RecentMangaItem(header = continueReadingHeader)
                 val nAdditionsItems = pairs.filter { it.first.chapter.id == null }.take(4)
                     .map { RecentMangaItem(it.first, it.second, newAdditionsHeader) }
                 recentItems =
                     listOf(nChaptersItems, cReadingItems, nAdditionsItems).sortedByDescending {
-                            it.firstOrNull()?.mch?.history?.last_read ?: 0L
-                        }.flatten()
+                        it.firstOrNull()?.mch?.history?.last_read ?: 0L
+                    }.flatten()
             } else {
                 recentItems =
                     if (viewType == 3) {
                         val map = TreeMap<Date, MutableList<Pair<MangaChapterHistory, Chapter>>> {
-                                d1, d2 -> d2
-                            .compareTo(d1) }
+                            d1, d2 ->
+                            d2
+                                .compareTo(d1)
+                        }
                         val byDay =
                             pairs.groupByTo(map, { getMapKey(it.first.history.last_read) })
                         byDay.flatMap {
                             val dateItem = DateItem(it.key, true)
                             it.value.map { item ->
-                                RecentMangaItem(item.first, item.second, dateItem) }
+                                RecentMangaItem(item.first, item.second, dateItem)
+                            }
                         }
                     } else pairs.map { RecentMangaItem(it.first, it.second, null) }
                 if (isUngrouped && recentItems.isEmpty()) {
                     recentItems = listOf(
                         RecentMangaItem(header = newChaptersHeader),
-                        RecentMangaItem(header = continueReadingHeader))
+                        RecentMangaItem(header = continueReadingHeader)
+                    )
                 }
             }
             setDownloadedChapters(recentItems)
@@ -229,7 +240,7 @@ class RecentsPresenter(
                 item.status = Download.DOWNLOADED
             } else if (downloadManager.hasQueue()) {
                 item.status = downloadManager.queue.find { it.chapter.id == item.chapter.id }
-                ?.status ?: 0
+                    ?.status ?: 0
             }
         }
     }

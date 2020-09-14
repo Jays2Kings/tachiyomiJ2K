@@ -33,17 +33,19 @@ class CategoryRecyclerView @JvmOverloads constructor(
     fun setCategories(items: List<Category>) {
         itemAdapter.set(items.map(::CategoryItem))
         fastAdapter.onBindViewHolderListener =
-            (object : OnBindViewHolderListenerImpl<CategoryItem>() {
-                override fun onBindViewHolder(
-                    viewHolder: ViewHolder,
-                    position: Int,
-                    payloads: List<Any>
-                ) {
-                    super.onBindViewHolder(viewHolder, position, payloads)
-                    (viewHolder as? CategoryItem.ViewHolder)?.categoryTitle?.isSelected =
-                        selectedCategory == position
+            (
+                object : OnBindViewHolderListenerImpl<CategoryItem>() {
+                    override fun onBindViewHolder(
+                        viewHolder: ViewHolder,
+                        position: Int,
+                        payloads: List<Any>
+                    ) {
+                        super.onBindViewHolder(viewHolder, position, payloads)
+                        (viewHolder as? CategoryItem.ViewHolder)?.categoryTitle?.isSelected =
+                            selectedCategory == position
+                    }
                 }
-            })
+                )
         fastAdapter.onClickListener = { _, _, item, _ ->
             if (item.category.id != -1)
                 onCategoryClicked(item.category.order)

@@ -52,10 +52,12 @@ class MigrationProcessHolder(
             val source = item.manga.mangaSource()
 
             migration_menu.setVectorCompat(
-                R.drawable.ic_more_vert_24dp, view.context.getResourceColor(android.R.attr.textColorPrimary)
+                R.drawable.ic_more_vert_24dp,
+                view.context.getResourceColor(android.R.attr.textColorPrimary)
             )
             skip_manga.setVectorCompat(
-                R.drawable.ic_close_24dp, view.context.getResourceColor(
+                R.drawable.ic_close_24dp,
+                view.context.getResourceColor(
                     android.R.attr.textColorPrimary
                 )
             )
@@ -68,7 +70,8 @@ class MigrationProcessHolder(
                     migration_manga_card_from.setOnClickListener {
                         adapter.controller.router.pushController(
                             MangaDetailsController(
-                                manga, true
+                                manga,
+                                true
                             ).withFadeTransaction()
                         )
                     }
@@ -100,7 +103,8 @@ class MigrationProcessHolder(
                         migration_manga_card_to.setOnClickListener {
                             adapter.controller.router.pushController(
                                 MangaDetailsController(
-                                    searchResult, true
+                                    searchResult,
+                                    true
                                 ).withFadeTransaction()
                             )
                         }

@@ -78,7 +78,7 @@ class SourcePresenter(
         }
 
         sourceSubscription = Observable.just(sourceItems)
-                .subscribeLatestCache(SourceController::setSources)
+            .subscribeLatestCache(SourceController::setSources)
     }
 
     private fun loadLastUsedSource() {
@@ -90,13 +90,13 @@ class SourcePresenter(
             sharedObs.take(1),
             sharedObs.skip(1).delay(500, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
         ).distinctUntilChanged().map {
-                (sourceManager.get(it) as? CatalogueSource)?.let { source ->
-                    val pinnedCatalogues = preferences.pinnedCatalogues().getOrDefault()
-                    val isPinned = source.id.toString() in pinnedCatalogues
-                    if (isPinned) null
-                    else SourceItem(source, null, isPinned)
-                }
-            }.subscribeLatestCache(SourceController::setLastUsedSource)
+            (sourceManager.get(it) as? CatalogueSource)?.let { source ->
+                val pinnedCatalogues = preferences.pinnedCatalogues().getOrDefault()
+                val isPinned = source.id.toString() in pinnedCatalogues
+                if (isPinned) null
+                else SourceItem(source, null, isPinned)
+            }
+        }.subscribeLatestCache(SourceController::setLastUsedSource)
     }
 
     fun updateSources() {
@@ -115,10 +115,10 @@ class SourcePresenter(
         val hiddenCatalogues = preferences.hiddenSources().getOrDefault()
 
         return sourceManager.getCatalogueSources()
-                .filter { it.lang in languages }
-                .filterNot { it.id.toString() in hiddenCatalogues }
-                .sortedBy { "(${it.lang}) ${it.name}" } +
-                sourceManager.get(LocalSource.ID) as LocalSource
+            .filter { it.lang in languages }
+            .filterNot { it.id.toString() in hiddenCatalogues }
+            .sortedBy { "(${it.lang}) ${it.name}" } +
+            sourceManager.get(LocalSource.ID) as LocalSource
     }
 
     companion object {

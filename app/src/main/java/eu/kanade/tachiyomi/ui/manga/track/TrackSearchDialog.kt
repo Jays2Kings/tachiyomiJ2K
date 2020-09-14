@@ -43,10 +43,12 @@ class TrackSearchDialog : DialogController {
 
     private lateinit var presenter: MangaDetailsPresenter
 
-    constructor(target: TrackingBottomSheet, service: TrackService, wasTracked: Boolean) : super(Bundle()
-        .apply {
-            putInt(KEY_SERVICE, service.id)
-        }) {
+    constructor(target: TrackingBottomSheet, service: TrackService, wasTracked: Boolean) : super(
+        Bundle()
+            .apply {
+                putInt(KEY_SERVICE, service.id)
+            }
+    ) {
         wasPreviouslyTracked = wasTracked
         bottomSheet = target
         presenter = target.presenter
@@ -112,11 +114,11 @@ class TrackSearchDialog : DialogController {
     override fun onAttach(view: View) {
         super.onAttach(view)
         searchTextSubscription = dialogView!!.track_search.textChanges()
-                .skip(1)
-                .debounce(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
-                .map { it.toString() }
-                .filter(String::isNotBlank)
-                .subscribe { search(it) }
+            .skip(1)
+            .debounce(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
+            .map { it.toString() }
+            .filter(String::isNotBlank)
+            .subscribe { search(it) }
     }
 
     override fun onDetach(view: View) {

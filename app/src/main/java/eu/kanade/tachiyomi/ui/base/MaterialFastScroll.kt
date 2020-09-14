@@ -21,7 +21,9 @@ class MaterialFastScroll @JvmOverloads constructor(context: Context, attrs: Attr
     var scrollOffset = 0
     init {
         setViewsToUse(
-            R.layout.material_fastscroll, R.id.fast_scroller_bubble, R.id.fast_scroller_handle
+            R.layout.material_fastscroll,
+            R.id.fast_scroller_bubble,
+            R.id.fast_scroller_handle
         )
         autoHideEnabled = true
         ignoreTouchesOutsideHandle = false
@@ -85,7 +87,8 @@ class MaterialFastScroll @JvmOverloads constructor(context: Context, attrs: Attr
             val targetPos = getTargetPos(y)
             if (layoutManager is StaggeredGridLayoutManager) {
                 (layoutManager as StaggeredGridLayoutManager).scrollToPositionWithOffset(
-                    targetPos, scrollOffset
+                    targetPos,
+                    scrollOffset
                 )
             } else {
                 (layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, scrollOffset)

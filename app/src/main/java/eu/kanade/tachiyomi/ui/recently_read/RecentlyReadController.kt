@@ -32,13 +32,14 @@ import kotlinx.android.synthetic.main.recently_read_controller.*
  * Uses R.layout.fragment_recently_read.
  * UI related actions should be called from here.
  */
-class RecentlyReadController(bundle: Bundle? = null) : BaseController(bundle),
-        FlexibleAdapter.OnUpdateListener,
-        FlexibleAdapter.EndlessScrollListener,
-        RecentlyReadAdapter.OnRemoveClickListener,
-        RecentlyReadAdapter.OnResumeClickListener,
-        RecentlyReadAdapter.OnCoverClickListener,
-        RemoveHistoryDialog.Listener {
+class RecentlyReadController(bundle: Bundle? = null) :
+    BaseController(bundle),
+    FlexibleAdapter.OnUpdateListener,
+    FlexibleAdapter.EndlessScrollListener,
+    RecentlyReadAdapter.OnRemoveClickListener,
+    RecentlyReadAdapter.OnResumeClickListener,
+    RecentlyReadAdapter.OnCoverClickListener,
+    RemoveHistoryDialog.Listener {
 
     init {
         setHasOptionsMenu(true)
@@ -128,8 +129,11 @@ class RecentlyReadController(bundle: Bundle? = null) : BaseController(bundle),
         if (size > 0) {
             empty_view?.hide()
         } else {
-            empty_view.show(R.drawable.ic_history_24dp, R.string
-                .no_recently_read_manga)
+            empty_view.show(
+                R.drawable.ic_history_24dp,
+                R.string
+                    .no_recently_read_manga
+            )
         }
     }
 
@@ -211,16 +215,18 @@ class RecentlyReadController(bundle: Bundle? = null) : BaseController(bundle),
         }
 
         // Fixes problem with the overflow icon showing up in lieu of search
-        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem): Boolean {
-                return true
-            }
+        searchItem.setOnActionExpandListener(
+            object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem): Boolean {
+                    return true
+                }
 
-            override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
-                activity?.invalidateOptionsMenu()
-                return true
+                override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
+                    activity?.invalidateOptionsMenu()
+                    return true
+                }
             }
-        })
+        )
     }
 
     /*override fun onOptionsItemSelected(item: MenuItem): Boolean {

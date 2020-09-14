@@ -11,7 +11,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
 
 class ChangeMangaCategoriesDialog<T>(bundle: Bundle? = null) :
-        DialogController(bundle) where T : Controller, T : ChangeMangaCategoriesDialog.Listener {
+    DialogController(bundle) where T : Controller, T : ChangeMangaCategoriesDialog.Listener {
 
     private var mangas = emptyList<Manga>()
 

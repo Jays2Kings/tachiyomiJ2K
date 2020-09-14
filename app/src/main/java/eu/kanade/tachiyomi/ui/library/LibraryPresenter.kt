@@ -129,7 +129,8 @@ class LibraryPresenter(
     private fun blankItem(id: Int = currentCategory): List<LibraryItem> {
         return listOf(
             LibraryItem(
-                LibraryManga.createBlank(id), LibraryHeaderItem({ getCategory(id) }, id)
+                LibraryManga.createBlank(id),
+                LibraryHeaderItem({ getCategory(id) }, id)
             )
         )
     }
@@ -146,7 +147,8 @@ class LibraryPresenter(
         view.onNextLibraryUpdate(
             if (!show) sectionedLibraryItems[currentCategory]
                 ?: sectionedLibraryItems[categories.first().id] ?: blankItem()
-            else libraryItems, true
+            else libraryItems,
+            true
         )
     }
 
@@ -168,8 +170,9 @@ class LibraryPresenter(
         withContext(Dispatchers.Main) {
             view.onNextLibraryUpdate(
                 if (!showAll) sectionedLibraryItems[currentCategory]
-                ?: sectionedLibraryItems[categories.first().id] ?: blankItem()
-                else libraryItems, freshStart
+                    ?: sectionedLibraryItems[categories.first().id] ?: blankItem()
+                else libraryItems,
+                freshStart
             )
         }
     }
@@ -247,8 +250,8 @@ class LibraryPresenter(
 
         if (filterMangaType > 0) {
             if (if (filterMangaType == Manga.TYPE_MANHWA) {
-                    (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
-                } else {
+                (filterMangaType != item.manga.mangaType() && filterMangaType != Manga.TYPE_WEBTOON)
+            } else {
                     filterMangaType != item.manga.mangaType()
                 }
             ) return false
@@ -454,15 +457,19 @@ class LibraryPresenter(
             )
             val catItemAll = LibraryHeaderItem({ categoryAll }, -1)
             val categorySet = mutableSetOf<Int>()
-            val headerItems = (categories.mapNotNull { category ->
-                val id = category.id
-                if (id == null) null
-                else id to LibraryHeaderItem({ getCategory(id) }, id)
-            } + (-1 to catItemAll) + (0 to LibraryHeaderItem({ getCategory(0) }, 0))).toMap()
+            val headerItems = (
+                categories.mapNotNull { category ->
+                    val id = category.id
+                    if (id == null) null
+                    else id to LibraryHeaderItem({ getCategory(id) }, id)
+                } + (-1 to catItemAll) + (0 to LibraryHeaderItem({ getCategory(0) }, 0))
+                ).toMap()
 
             val items = libraryManga.mapNotNull {
-                val headerItem = (if (!libraryIsGrouped) catItemAll
-                else headerItems[it.category]) ?: return@mapNotNull null
+                val headerItem = (
+                    if (!libraryIsGrouped) catItemAll
+                    else headerItems[it.category]
+                    ) ?: return@mapNotNull null
                 categorySet.add(it.category)
                 LibraryItem(it, headerItem)
             }.toMutableList()
@@ -475,8 +482,11 @@ class LibraryPresenter(
             if (libraryIsGrouped) {
                 categories.forEach { category ->
                     val catId = category.id ?: return@forEach
-                    if (catId > 0 && !categorySet.contains(catId) && (catId !in categoriesHidden ||
-                            !showAll)) {
+                    if (catId > 0 && !categorySet.contains(catId) && (
+                        catId !in categoriesHidden ||
+                            !showAll
+                        )
+                    ) {
                         val headerItem = headerItems[catId]
                         if (headerItem != null) items.add(
                             LibraryItem(LibraryManga.createBlank(catId), headerItem)
@@ -592,18 +602,21 @@ class LibraryPresenter(
                 mapTrackingOrder(it.name)
             } else {
                 it.name
-            } }
+            }
+        }
         headers.forEachIndexed { index, category -> category.order = index }
         return items to headers
     }
 
     private fun mapStatus(status: Int): String {
-        return context.getString(when (status) {
-            SManga.LICENSED -> R.string.licensed
-            SManga.ONGOING -> R.string.ongoing
-            SManga.COMPLETED -> R.string.completed
-            else -> R.string.unknown
-        })
+        return context.getString(
+            when (status) {
+                SManga.LICENSED -> R.string.licensed
+                SManga.ONGOING -> R.string.ongoing
+                SManga.COMPLETED -> R.string.completed
+                else -> R.string.unknown
+            }
+        )
     }
 
     private fun mapTrackingOrder(status: String): String {
@@ -681,8 +694,8 @@ class LibraryPresenter(
     fun getCommonCategories(mangas: List<Manga>): Collection<Category> {
         if (mangas.isEmpty()) return emptyList()
         return mangas.toSet()
-                .map { db.getCategoriesForManga(it).executeAsBlocking() }
-                .reduce { set1: Iterable<Category>, set2 -> set1.intersect(set2).toMutableList() }
+            .map { db.getCategoriesForManga(it).executeAsBlocking() }
+            .reduce { set1: Iterable<Category>, set2 -> set1.intersect(set2).toMutableList() }
     }
 
     fun getMangaUrls(mangas: List<Manga>): List<String> {
@@ -813,8 +826,8 @@ class LibraryPresenter(
             val categories =
                 if (catId == 0) emptyList()
                 else
-                db.getCategoriesForManga(manga).executeOnIO()
-                .filter { it.id != oldCatId } + listOf(category)
+                    db.getCategoriesForManga(manga).executeOnIO()
+                        .filter { it.id != oldCatId } + listOf(category)
 
             for (cat in categories) {
                 mc.add(MangaCategory.create(manga, cat))

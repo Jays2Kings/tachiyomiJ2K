@@ -13,7 +13,7 @@ class DownloadQueue(
     private val store: DownloadStore,
     private val queue: MutableList<Download> = CopyOnWriteArrayList<Download>()
 ) :
-List<Download> by queue {
+    List<Download> by queue {
 
     private val statusSubject = PublishSubject.create<Download>()
 
@@ -80,8 +80,8 @@ List<Download> by queue {
     fun getStatusObservable(): Observable<Download> = statusSubject.onBackpressureBuffer()
 
     fun getUpdatedObservable(): Observable<List<Download>> = updatedRelay.onBackpressureBuffer()
-            .startWith(Unit)
-            .map { this }
+        .startWith(Unit)
+        .map { this }
 
     private fun setPagesFor(download: Download) {
         if (download.status == Download.DOWNLOADING) {
@@ -105,23 +105,23 @@ List<Download> by queue {
 
     fun getProgressObservable(): Observable<Download> {
         return statusSubject.onBackpressureBuffer()
-                .startWith(getActiveDownloads())
-                .flatMap { download ->
-                    if (download.status == Download.DOWNLOADING) {
-                        val pageStatusSubject = PublishSubject.create<Int>()
-                        setPagesSubject(download.pages, pageStatusSubject)
-                        downloadListeners.forEach { it.updateDownload(download) }
-                        return@flatMap pageStatusSubject
-                                .onBackpressureBuffer()
-                                .filter { it == Page.READY }
-                                .map { download }
-                    } else if (download.status == Download.DOWNLOADED || download.status == Download.ERROR) {
-                        setPagesSubject(download.pages, null)
-                        downloadListeners.forEach { it.updateDownload(download) }
-                    }
-                    Observable.just(download)
+            .startWith(getActiveDownloads())
+            .flatMap { download ->
+                if (download.status == Download.DOWNLOADING) {
+                    val pageStatusSubject = PublishSubject.create<Int>()
+                    setPagesSubject(download.pages, pageStatusSubject)
+                    downloadListeners.forEach { it.updateDownload(download) }
+                    return@flatMap pageStatusSubject
+                        .onBackpressureBuffer()
+                        .filter { it == Page.READY }
+                        .map { download }
+                } else if (download.status == Download.DOWNLOADED || download.status == Download.ERROR) {
+                    setPagesSubject(download.pages, null)
+                    downloadListeners.forEach { it.updateDownload(download) }
                 }
-                .filter { it.status == Download.DOWNLOADING }
+                Observable.just(download)
+            }
+            .filter { it.status == Download.DOWNLOADING }
     }
 
     private fun setPagesSubject(pages: List<Page>?, subject: PublishSubject<Int>?) {

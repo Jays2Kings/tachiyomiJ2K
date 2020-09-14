@@ -89,8 +89,10 @@ class WebViewActivity : BaseActivity() {
                 right = insets.systemWindowInsetRight
             )
             insets.replaceSystemWindowInsets(
-                0, insets.systemWindowInsetTop,
-                0, insets.systemWindowInsetBottom
+                0,
+                insets.systemWindowInsetTop,
+                0,
+                insets.systemWindowInsetBottom
             )
         }
         swipe_refresh.setStyle()
@@ -98,8 +100,13 @@ class WebViewActivity : BaseActivity() {
             refreshPage()
         }
 
-        window.statusBarColor = ColorUtils.setAlphaComponent(getResourceColor(R.attr
-            .colorSecondary), 255)
+        window.statusBarColor = ColorUtils.setAlphaComponent(
+            getResourceColor(
+                R.attr
+                    .colorSecondary
+            ),
+            255
+        )
 
         content.setOnApplyWindowInsetsListener { v, insets ->
             // if pure white theme on a device that does not support dark status bar
@@ -113,13 +120,18 @@ class WebViewActivity : BaseActivity() {
             }
             // if the android q+ device has gesture nav, transparent nav bar
             else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
-                (v.rootWindowInsets.systemWindowInsetBottom != v.rootWindowInsets.tappableElementInsets.bottom)) {
+                (v.rootWindowInsets.systemWindowInsetBottom != v.rootWindowInsets.tappableElementInsets.bottom)
+            ) {
                 getColor(android.R.color.transparent)
             } else {
                 getResourceColor(android.R.attr.colorBackground)
             }
-            v.setPadding(insets.systemWindowInsetLeft, insets.systemWindowInsetTop,
-                insets.systemWindowInsetRight, 0)
+            v.setPadding(
+                insets.systemWindowInsetLeft,
+                insets.systemWindowInsetTop,
+                insets.systemWindowInsetRight,
+                0
+            )
             if (Build.VERSION.SDK_INT >= 26 && !isInNightMode()) {
                 content.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
             }
@@ -193,8 +205,13 @@ class WebViewActivity : BaseActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         val lightMode = !isInNightMode()
-        window.statusBarColor = ColorUtils.setAlphaComponent(getResourceColor(R.attr
-            .colorSecondary), 255)
+        window.statusBarColor = ColorUtils.setAlphaComponent(
+            getResourceColor(
+                R.attr
+                    .colorSecondary
+            ),
+            255
+        )
         toolbar.setBackgroundColor(getResourceColor(R.attr.colorSecondary))
         toolbar.popupTheme = if (lightMode) R.style.ThemeOverlay_MaterialComponents else R
             .style.ThemeOverlay_MaterialComponents_Dark
@@ -210,11 +227,13 @@ class WebViewActivity : BaseActivity() {
             window.navigationBarColor = getResourceColor(android.R.attr.colorBackground)
 
         web_linear_layout.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && lightMode) {
-            web_linear_layout.systemUiVisibility = web_linear_layout.systemUiVisibility.or(View
-                .SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            web_linear_layout.systemUiVisibility = web_linear_layout.systemUiVisibility.or(
+                View
+                    .SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+            )
         }
         val typedValue = TypedValue()
         theme.resolveAttribute(android.R.attr.windowLightStatusBar, typedValue, true)

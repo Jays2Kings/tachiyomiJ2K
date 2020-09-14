@@ -61,11 +61,11 @@ class LibraryUpdateServiceTest {
     fun testLifecycle() {
         // Smoke test
         Robolectric.buildService(LibraryUpdateService::class.java)
-                .attach()
-                .create()
-                .startCommand(0, 0)
-                .destroy()
-                .get()
+            .attach()
+            .create()
+            .startCommand(0, 0)
+            .destroy()
+            .get()
     }
 
     @Test

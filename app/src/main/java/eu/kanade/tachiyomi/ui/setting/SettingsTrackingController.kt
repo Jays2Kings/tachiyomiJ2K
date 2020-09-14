@@ -18,8 +18,10 @@ import eu.kanade.tachiyomi.widget.preference.TrackLogoutDialog
 import uy.kohesive.injekt.injectLazy
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
 
-class SettingsTrackingController : SettingsController(),
-    TrackLoginDialog.Listener, TrackLogoutDialog.Listener {
+class SettingsTrackingController :
+    SettingsController(),
+    TrackLoginDialog.Listener,
+    TrackLogoutDialog.Listener {
 
     private val trackManager: TrackManager by injectLazy()
 
@@ -66,10 +68,13 @@ class SettingsTrackingController : SettingsController(),
         service: TrackService,
         block: (@DSL LoginPreference).() -> Unit
     ): LoginPreference {
-        return initThenAdd(LoginPreference(context).apply {
-            key = Keys.trackUsername(service.id)
-            title = service.name
-        }, block)
+        return initThenAdd(
+            LoginPreference(context).apply {
+                key = Keys.trackUsername(service.id)
+                title = service.name
+            },
+            block
+        )
     }
 
     override fun onActivityResumed(activity: Activity) {

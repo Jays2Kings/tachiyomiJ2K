@@ -21,13 +21,15 @@ class SettingsGeneralController : SettingsController() {
         listPreference(activity) {
             key = Keys.lang
             titleRes = R.string.language
-            entryValues = listOf("", "ar", "bg", "bn", "ca", "cs", "de", "el", "en-US", "en-GB",
-            "es", "fr", "hi", "hu", "in", "it", "ja", "ko", "lv", "ms", "nb-rNO", "nl", "pl", "pt",
-            "pt-BR", "ro", "ru", "sc", "sr", "sv", "th", "tl", "tr", "uk", "vi", "zh-rCN")
+            entryValues = listOf(
+                "", "ar", "bg", "bn", "ca", "cs", "de", "el", "en-US", "en-GB",
+                "es", "fr", "hi", "hu", "in", "it", "ja", "ko", "lv", "ms", "nb-rNO", "nl", "pl", "pt",
+                "pt-BR", "ro", "ru", "sc", "sr", "sv", "th", "tl", "tr", "uk", "vi", "zh-rCN"
+            )
             entries = entryValues.map { value ->
                 val locale = LocaleHelper.getLocaleFromString(value.toString())
                 locale?.getDisplayName(locale)?.capitalize()
-                        ?: context.getString(R.string.system_default)
+                    ?: context.getString(R.string.system_default)
             }
             defaultValue = ""
             summary = "%s"
@@ -45,10 +47,17 @@ class SettingsGeneralController : SettingsController() {
         intListPreference(activity) {
             key = Keys.theme
             titleRes = R.string.app_theme
-            entriesRes = arrayOf(R.string.white_theme, R.string.light_blue, R.string.dark,
-                R.string.amoled_black, R.string.dark_blue, R.string.system_default, R.string
+            entriesRes = arrayOf(
+                R.string.white_theme,
+                R.string.light_blue,
+                R.string.dark,
+                R.string.amoled_black,
+                R.string.dark_blue,
+                R.string.system_default,
+                R.string
                     .system_default_amoled,
-                R.string.system_default_all_blue)
+                R.string.system_default_all_blue
+            )
             entryValues = listOf(1, 8, 2, 3, 4, 5, 6, 7)
             defaultValue = 5
 
@@ -120,7 +129,9 @@ class SettingsGeneralController : SettingsController() {
                             0 -> context.getString(R.string.always)
                             -1 -> context.getString(R.string.never)
                             else -> resources?.getQuantityString(
-                                R.plurals.after_minutes, it.toInt(), it
+                                R.plurals.after_minutes,
+                                it.toInt(),
+                                it
                             )
                         }
                     }

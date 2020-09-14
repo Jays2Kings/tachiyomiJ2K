@@ -353,8 +353,10 @@ class MangaDetailsPresenter(
                         val categoriesToDownload = preferences.downloadNewCategories().getOrDefault().map(String::toInt)
                         val shouldDownload = categoriesToDownload.isEmpty() || getMangaCategoryIds().any { it in categoriesToDownload }
                         if (shouldDownload) {
-                            downloadChapters(newChapters.first.sortedBy { it.chapter_number }
-                                .map { it.toModel() })
+                            downloadChapters(
+                                newChapters.first.sortedBy { it.chapter_number }
+                                    .map { it.toModel() }
+                            )
                         }
                     }
                 }
@@ -419,9 +421,11 @@ class MangaDetailsPresenter(
     }
 
     private fun trimException(e: java.lang.Exception): String {
-        return (if (e.message?.contains(": ") == true) e.message?.split(": ")?.drop(1)
-            ?.joinToString(": ")
-        else e.message) ?: preferences.context.getString(R.string.unknown_error)
+        return (
+            if (e.message?.contains(": ") == true) e.message?.split(": ")?.drop(1)
+                ?.joinToString(": ")
+            else e.message
+            ) ?: preferences.context.getString(R.string.unknown_error)
     }
 
     /**

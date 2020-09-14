@@ -7,8 +7,9 @@ import nucleus.factory.PresenterFactory
 import nucleus.presenter.Presenter
 
 @Suppress("LeakingThis")
-abstract class NucleusController<P : Presenter<*>>(val bundle: Bundle? = null) : RxController(bundle),
-        PresenterFactory<P> {
+abstract class NucleusController<P : Presenter<*>>(val bundle: Bundle? = null) :
+    RxController(bundle),
+    PresenterFactory<P> {
 
     private val delegate = NucleusConductorDelegate(this)
 

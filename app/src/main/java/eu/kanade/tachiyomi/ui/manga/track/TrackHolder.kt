@@ -42,10 +42,13 @@ class TrackHolder(view: View, adapter: TrackAdapter) : BaseViewHolder(view) {
                         R.string.all_chapters_read
                     )
                     track.total_chapters > 0 -> context.getString(
-                        R.string.chapter_x_of_y, track.last_chapter_read, track.total_chapters
+                        R.string.chapter_x_of_y,
+                        track.last_chapter_read,
+                        track.total_chapters
                     )
                     track.last_chapter_read > 0 -> context.getString(
-                        R.string.chapter_, track.last_chapter_read.toString()
+                        R.string.chapter_,
+                        track.last_chapter_read.toString()
                     )
                     else -> context.getString(R.string.not_started)
                 }

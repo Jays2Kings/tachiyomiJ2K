@@ -33,10 +33,12 @@ class EditMangaDialog : DialogController {
     private val infoController
         get() = targetController as MangaDetailsController
 
-    constructor(target: MangaDetailsController, manga: Manga) : super(Bundle()
-        .apply {
-            putLong(KEY_MANGA, manga.id!!)
-        }) {
+    constructor(target: MangaDetailsController, manga: Manga) : super(
+        Bundle()
+            .apply {
+                putLong(KEY_MANGA, manga.id!!)
+            }
+    ) {
         targetController = target
         this.manga = manga
     }
@@ -44,7 +46,7 @@ class EditMangaDialog : DialogController {
     @Suppress("unused")
     constructor(bundle: Bundle) : super(bundle) {
         manga = Injekt.get<DatabaseHelper>().getManga(bundle.getLong(KEY_MANGA))
-        .executeAsBlocking()!!
+            .executeAsBlocking()!!
     }
 
     override fun onCreateDialog(savedViewState: Bundle?): Dialog {
@@ -99,7 +101,8 @@ class EditMangaDialog : DialogController {
             if (manga.originalDescription != null) {
                 view.manga_description.hint =
                     "${resources?.getString(R.string.description)}: ${manga.originalDescription?.replace(
-                        "\n", " "
+                        "\n",
+                        " "
                     )?.chop(20)}"
             }
         }
@@ -110,9 +113,12 @@ class EditMangaDialog : DialogController {
         view.reset_tags.setOnClickListener { resetTags() }
         view.reset_cover.visibleIf(!isLocal)
         view.reset_cover.setOnClickListener {
-            view.manga_cover.loadAny(manga, builder = {
-                parameters(Parameters.Builder().set(MangaFetcher.realCover, true).build())
-            })
+            view.manga_cover.loadAny(
+                manga,
+                builder = {
+                    parameters(Parameters.Builder().set(MangaFetcher.realCover, true).build())
+                }
+            )
             willResetCover = true
         }
     }
@@ -136,10 +142,15 @@ class EditMangaDialog : DialogController {
     }
 
     private fun onPositiveButtonClick() {
-        infoController.presenter.updateManga(dialogView?.title?.text.toString(),
-            dialogView?.manga_author?.text.toString(), dialogView?.manga_artist?.text.toString(),
-            customCoverUri, dialogView?.manga_description?.text.toString(),
-            dialogView?.manga_genres_tags?.tags, willResetCover)
+        infoController.presenter.updateManga(
+            dialogView?.title?.text.toString(),
+            dialogView?.manga_author?.text.toString(),
+            dialogView?.manga_artist?.text.toString(),
+            customCoverUri,
+            dialogView?.manga_description?.text.toString(),
+            dialogView?.manga_genres_tags?.tags,
+            willResetCover
+        )
     }
 
     private companion object {

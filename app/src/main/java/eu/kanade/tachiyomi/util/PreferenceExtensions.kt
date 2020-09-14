@@ -24,7 +24,7 @@ inline fun <reified T> SharedPreferences.getKey(key: String, default: T, dispatc
         awaitClose { unregisterOnSharedPreferenceChangeListener(listener) }
     }
     return flow
-            .flowOn(dispatcher)
+        .flowOn(dispatcher)
 }
 
 inline fun <reified T> SharedPreferences.getItem(key: String, default: T): T {

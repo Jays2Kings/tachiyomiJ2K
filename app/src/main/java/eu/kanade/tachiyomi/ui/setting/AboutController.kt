@@ -87,11 +87,11 @@ class AboutController : SettingsController() {
                 onClick {
                     val intent = Intent(
                         Intent.ACTION_VIEW,
-                            if (BuildConfig.DEBUG) {
-                                "https://github.com/Jays2Kings/tachiyomiJ2K/commits/master"
-                            } else {
-                                "https://github.com/Jays2Kings/tachiyomiJ2K/releases/tag/v${BuildConfig.VERSION_NAME}"
-                            }.toUri()
+                        if (BuildConfig.DEBUG) {
+                            "https://github.com/Jays2Kings/tachiyomiJ2K/commits/master"
+                        } else {
+                            "https://github.com/Jays2Kings/tachiyomiJ2K/releases/tag/v${BuildConfig.VERSION_NAME}"
+                        }.toUri()
                     )
                     startActivity(intent)
                 }
@@ -166,24 +166,26 @@ class AboutController : SettingsController() {
 
     class NewUpdateDialogController(bundle: Bundle? = null) : DialogController(bundle) {
 
-        constructor(body: String, url: String) : this(Bundle().apply {
-            putString(BODY_KEY, body)
-            putString(URL_KEY, url)
-        })
+        constructor(body: String, url: String) : this(
+            Bundle().apply {
+                putString(BODY_KEY, body)
+                putString(URL_KEY, url)
+            }
+        )
 
         override fun onCreateDialog(savedViewState: Bundle?): Dialog {
             return MaterialDialog(activity!!)
-                    .title(R.string.new_version_available)
-                    .message(text = args.getString(BODY_KEY) ?: "")
-                    .positiveButton(R.string.download) {
-                        val appContext = applicationContext
-                        if (appContext != null) {
-                            // Start download
-                            val url = args.getString(URL_KEY) ?: ""
-                            UpdaterService.start(appContext, url)
-                        }
+                .title(R.string.new_version_available)
+                .message(text = args.getString(BODY_KEY) ?: "")
+                .positiveButton(R.string.download) {
+                    val appContext = applicationContext
+                    if (appContext != null) {
+                        // Start download
+                        val url = args.getString(URL_KEY) ?: ""
+                        UpdaterService.start(appContext, url)
                     }
-                    .negativeButton(R.string.ignore)
+                }
+                .negativeButton(R.string.ignore)
         }
 
         private companion object {

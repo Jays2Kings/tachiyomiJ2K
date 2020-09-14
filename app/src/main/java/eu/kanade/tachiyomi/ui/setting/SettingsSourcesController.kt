@@ -50,28 +50,33 @@ class SettingsSourcesController : SettingsController() {
 
         orderedLangs.forEach { lang ->
             // Create a preference group and set initial state and change listener
-            langPrefs.add(Pair(lang, SwitchPreferenceCategory(context).apply {
-                preferenceScreen.addPreference(this)
-                title = LocaleHelper.getDisplayName(lang, context)
-                isPersistent = false
-                if (lang in activeLangsCodes) {
-                    setChecked(true)
-                    addLanguageSources(this, sortedSources(sourcesByLang[lang]))
-                }
+            langPrefs.add(
+                Pair(
+                    lang,
+                    SwitchPreferenceCategory(context).apply {
+                        preferenceScreen.addPreference(this)
+                        title = LocaleHelper.getDisplayName(lang, context)
+                        isPersistent = false
+                        if (lang in activeLangsCodes) {
+                            setChecked(true)
+                            addLanguageSources(this, sortedSources(sourcesByLang[lang]))
+                        }
 
-                onChange { newValue ->
-                    val checked = newValue as Boolean
-                    val current = preferences.enabledLanguages().getOrDefault()
-                    if (!checked) {
-                        preferences.enabledLanguages().set(current - lang)
-                        removeAll()
-                    } else {
-                        preferences.enabledLanguages().set(current + lang)
-                        addLanguageSources(this, sortedSources(sourcesByLang[lang]))
+                        onChange { newValue ->
+                            val checked = newValue as Boolean
+                            val current = preferences.enabledLanguages().getOrDefault()
+                            if (!checked) {
+                                preferences.enabledLanguages().set(current - lang)
+                                removeAll()
+                            } else {
+                                preferences.enabledLanguages().set(current + lang)
+                                addLanguageSources(this, sortedSources(sourcesByLang[lang]))
+                            }
+                            true
+                        }
                     }
-                    true
-                }
-            }))
+                )
+            )
         }
     }
 
@@ -180,17 +185,19 @@ class SettingsSourcesController : SettingsController() {
 
     var expandActionViewFromInteraction = false
     private fun MenuItem.fixExpand(onExpand: ((MenuItem) -> Boolean)? = null, onCollapse: ((MenuItem) -> Boolean)? = null) {
-        setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem): Boolean {
-                return onExpand?.invoke(item) ?: true
-            }
+        setOnActionExpandListener(
+            object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem): Boolean {
+                    return onExpand?.invoke(item) ?: true
+                }
 
-            override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
-                activity?.invalidateOptionsMenu()
+                override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
+                    activity?.invalidateOptionsMenu()
 
-                return onCollapse?.invoke(item) ?: true
+                    return onCollapse?.invoke(item) ?: true
+                }
             }
-        })
+        )
 
         if (expandActionViewFromInteraction) {
             expandActionViewFromInteraction = false

@@ -9,7 +9,7 @@ import eu.kanade.tachiyomi.util.view.inflate
 import kotlinx.android.synthetic.main.common_dialog_with_checkbox.view.*
 
 class DialogCheckboxView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-        LinearLayout(context, attrs) {
+    LinearLayout(context, attrs) {
 
     init {
         addView(inflate(R.layout.common_dialog_with_checkbox))

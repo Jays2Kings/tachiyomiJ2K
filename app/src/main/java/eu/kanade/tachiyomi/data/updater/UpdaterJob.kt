@@ -44,7 +44,10 @@ class UpdaterJob(private val context: Context, workerParams: WorkerParameters) :
                     android.R.drawable.stat_sys_download_done,
                     context.getString(R.string.download),
                     PendingIntent.getService(
-                        context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
+                        context,
+                        0,
+                        intent,
+                        PendingIntent.FLAG_UPDATE_CURRENT
                     )
                 )
             }
@@ -62,15 +65,18 @@ class UpdaterJob(private val context: Context, workerParams: WorkerParameters) :
 
         fun setupTask() {
             val constraints = Constraints.Builder()
-                    .setRequiredNetworkType(NetworkType.CONNECTED)
-                    .build()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .build()
 
             val request = PeriodicWorkRequestBuilder<UpdaterJob>(
-                    1, TimeUnit.DAYS,
-                    1, TimeUnit.HOURS)
-                    .addTag(TAG)
-                    .setConstraints(constraints)
-                    .build()
+                1,
+                TimeUnit.DAYS,
+                1,
+                TimeUnit.HOURS
+            )
+                .addTag(TAG)
+                .setConstraints(constraints)
+                .build()
 
             WorkManager.getInstance().enqueueUniquePeriodicWork(TAG, ExistingPeriodicWorkPolicy.REPLACE, request)
         }

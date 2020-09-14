@@ -14,7 +14,7 @@ import uy.kohesive.injekt.api.get
 import java.util.concurrent.TimeUnit
 
 class BackupCreatorJob(private val context: Context, workerParams: WorkerParameters) :
-        Worker(context, workerParams) {
+    Worker(context, workerParams) {
 
     override fun doWork(): Result {
         val preferences = Injekt.get<PreferencesHelper>()
@@ -37,10 +37,13 @@ class BackupCreatorJob(private val context: Context, workerParams: WorkerParamet
             val interval = prefInterval ?: preferences.backupInterval().getOrDefault()
             if (interval > 0) {
                 val request = PeriodicWorkRequestBuilder<BackupCreatorJob>(
-                        interval.toLong(), TimeUnit.HOURS,
-                        10, TimeUnit.MINUTES)
-                        .addTag(TAG)
-                        .build()
+                    interval.toLong(),
+                    TimeUnit.HOURS,
+                    10,
+                    TimeUnit.MINUTES
+                )
+                    .addTag(TAG)
+                    .build()
 
                 WorkManager.getInstance().enqueueUniquePeriodicWork(TAG, ExistingPeriodicWorkPolicy.REPLACE, request)
             } else {

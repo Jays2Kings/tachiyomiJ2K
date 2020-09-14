@@ -13,7 +13,7 @@ open class ListMatPreference @JvmOverloads constructor(
     activity: Activity?,
     context: Context,
     attrs: AttributeSet? =
-    null
+        null
 ) :
     MatPreference(activity, context, attrs) {
 
@@ -45,13 +45,17 @@ open class ListMatPreference @JvmOverloads constructor(
 
     @SuppressLint("CheckResult")
     open fun MaterialDialog.setItems() {
-        val default = entryValues.indexOf(if (sharedPref != null) {
-            val settings = context.getSharedPreferences(sharedPref, Context.MODE_PRIVATE)
-            settings.getString(key, "")
-        } else prefs.getStringPref(key, defValue).getOrDefault())
-        listItemsSingleChoice(items = entries,
+        val default = entryValues.indexOf(
+            if (sharedPref != null) {
+                val settings = context.getSharedPreferences(sharedPref, Context.MODE_PRIVATE)
+                settings.getString(key, "")
+            } else prefs.getStringPref(key, defValue).getOrDefault()
+        )
+        listItemsSingleChoice(
+            items = entries,
             waitForPositiveButton = false,
-            initialSelection = default) { _, pos, _ ->
+            initialSelection = default
+        ) { _, pos, _ ->
             val value = entryValues[pos]
             if (sharedPref != null) {
                 val oldDef = if (default > -1) entries[default] else ""
@@ -62,7 +66,8 @@ open class ListMatPreference @JvmOverloads constructor(
                 otherPref?.callChangeListener(value)
                 if (oldDef == otherPref?.summary || otherPref?.summary.isNullOrEmpty()) otherPref?.summary =
                     entries[pos]
-                else otherPref?.summary = otherPref?.summary?.toString()?.replace(oldDef,
+                else otherPref?.summary = otherPref?.summary?.toString()?.replace(
+                    oldDef,
                     entries[pos]
                 ) ?: entries[pos]
             } else {

@@ -140,19 +140,21 @@ class SearchController(
             val preselected = MigrationFlags.getEnabledFlagsPositions(prefValue)
 
             return MaterialDialog(activity!!)
-                    .message(R.string.data_to_include_in_migration)
-                    .listItemsMultiChoice(items = MigrationFlags.titles.map
+                .message(R.string.data_to_include_in_migration)
+                .listItemsMultiChoice(
+                    items = MigrationFlags.titles.map
                     { resources?.getString(it) as CharSequence },
-                        initialSelection = preselected.toIntArray()) { _, positions, _ ->
-                        val newValue = MigrationFlags.getFlagsFromPositions(positions.toTypedArray())
-                        preferences.migrateFlags().set(newValue)
-                    }
-                    .positiveButton(R.string.migrate) {
-                        (targetController as? SearchController)?.migrateManga()
-                    }
-                    .negativeButton(R.string.copy_value) {
-                        (targetController as? SearchController)?.copyManga()
-                    }
+                    initialSelection = preselected.toIntArray()
+                ) { _, positions, _ ->
+                    val newValue = MigrationFlags.getFlagsFromPositions(positions.toTypedArray())
+                    preferences.migrateFlags().set(newValue)
+                }
+                .positiveButton(R.string.migrate) {
+                    (targetController as? SearchController)?.migrateManga()
+                }
+                .negativeButton(R.string.copy_value) {
+                    (targetController as? SearchController)?.copyManga()
+                }
         }
     }
 
@@ -170,17 +172,19 @@ class SearchController(
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = searchItem.actionView as SearchView
 
-        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
-                searchView.onActionViewExpanded() // Required to show the query in the view
-                searchView.setQuery(presenter.query, false)
-                return true
-            }
+        searchItem.setOnActionExpandListener(
+            object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+                    searchView.onActionViewExpanded() // Required to show the query in the view
+                    searchView.setQuery(presenter.query, false)
+                    return true
+                }
 
-            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-                return true
+                override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                    return true
+                }
             }
-        })
+        )
 
         searchView.queryTextChangeEvents()
             .filter { it.isSubmitted }
@@ -193,7 +197,7 @@ class SearchController(
 
     override fun canChangeTabs(block: () -> Unit): Boolean {
         val migrationListController = router.getControllerWithTag(MigrationListController.TAG)
-        as? BottomNavBarInterface
+            as? BottomNavBarInterface
         if (migrationListController != null) return migrationListController.canChangeTabs(block)
         return true
     }

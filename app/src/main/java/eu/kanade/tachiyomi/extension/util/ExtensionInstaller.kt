@@ -144,7 +144,7 @@ internal class ExtensionInstaller(private val context: Context) {
     fun uninstallApk(pkgName: String) {
         val packageUri = "package:$pkgName".toUri()
         val intent = Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri)
-                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
         context.startActivity(intent)
     }

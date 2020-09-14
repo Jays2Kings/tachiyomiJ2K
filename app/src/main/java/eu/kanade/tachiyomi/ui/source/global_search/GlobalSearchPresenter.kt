@@ -166,7 +166,8 @@ open class GlobalSearchPresenter(
         var items = initialItems
 
         fetchSourcesSubscription?.unsubscribe()
-        fetchSourcesSubscription = Observable.from(sources).flatMap({ source ->
+        fetchSourcesSubscription = Observable.from(sources).flatMap(
+            { source ->
                 Observable.defer { source.fetchSearchManga(1, query, FilterList()) }
                     .subscribeOn(Schedulers.io()).onErrorReturn {
                         MangasPage(
@@ -187,9 +188,12 @@ open class GlobalSearchPresenter(
                     .map {
                         createCatalogueSearchItem(
                             source,
-                            it.map { GlobalSearchMangaItem(it) })
+                            it.map { GlobalSearchMangaItem(it) }
+                        )
                     }
-            }, 5).observeOn(AndroidSchedulers.mainThread())
+            },
+            5
+        ).observeOn(AndroidSchedulers.mainThread())
             // Update matching source with the obtained results
             .map { result ->
                 items.map { item -> if (item.source == result.source) result else item }
@@ -197,11 +201,14 @@ open class GlobalSearchPresenter(
             // Update current state
             .doOnNext { items = it }
             // Deliver initial state
-            .startWith(initialItems).subscribeLatestCache({ view, manga ->
-                view.setItems(manga)
-            }, { _, error ->
-                Timber.e(error)
-            })
+            .startWith(initialItems).subscribeLatestCache(
+                { view, manga ->
+                    view.setItems(manga)
+                },
+                { _, error ->
+                    Timber.e(error)
+                }
+            )
     }
 
     /**
@@ -219,17 +226,20 @@ open class GlobalSearchPresenter(
     private fun initializeFetchImageSubscription() {
         fetchImageSubscription?.unsubscribe()
         fetchImageSubscription = fetchImageSubject.observeOn(Schedulers.io()).flatMap {
-                val source = it.second
-                Observable.from(it.first).filter { it.thumbnail_url == null && !it.initialized }
-                    .map { Pair(it, source) }
-                    .concatMap { getMangaDetailsObservable(it.first, it.second) }
-                    .map { Pair(source as CatalogueSource, it) }
-            }.onBackpressureBuffer().observeOn(AndroidSchedulers.mainThread())
-            .subscribe({ (source, manga) ->
-                @Suppress("DEPRECATION") view?.onMangaInitialized(source, manga)
-            }, { error ->
-                Timber.e(error)
-            })
+            val source = it.second
+            Observable.from(it.first).filter { it.thumbnail_url == null && !it.initialized }
+                .map { Pair(it, source) }
+                .concatMap { getMangaDetailsObservable(it.first, it.second) }
+                .map { Pair(source as CatalogueSource, it) }
+        }.onBackpressureBuffer().observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                { (source, manga) ->
+                    @Suppress("DEPRECATION") view?.onMangaInitialized(source, manga)
+                },
+                { error ->
+                    Timber.e(error)
+                }
+            )
     }
 
     /**
@@ -240,11 +250,11 @@ open class GlobalSearchPresenter(
      */
     private fun getMangaDetailsObservable(manga: Manga, source: Source): Observable<Manga> {
         return source.fetchMangaDetails(manga).flatMap { networkManga ->
-                manga.copyFrom(networkManga)
-                manga.initialized = true
-                db.insertManga(manga).executeAsBlocking()
-                Observable.just(manga)
-            }.onErrorResumeNext { Observable.just(manga) }
+            manga.copyFrom(networkManga)
+            manga.initialized = true
+            db.insertManga(manga).executeAsBlocking()
+            Observable.just(manga)
+        }.onErrorResumeNext { Observable.just(manga) }
     }
 
     /**

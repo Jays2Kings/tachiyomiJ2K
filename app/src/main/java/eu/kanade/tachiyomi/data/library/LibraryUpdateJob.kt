@@ -15,7 +15,7 @@ import uy.kohesive.injekt.api.get
 import java.util.concurrent.TimeUnit
 
 class LibraryUpdateJob(private val context: Context, workerParams: WorkerParameters) :
-        Worker(context, workerParams) {
+    Worker(context, workerParams) {
 
     override fun doWork(): Result {
         LibraryUpdateService.start(context)
@@ -37,16 +37,19 @@ class LibraryUpdateJob(private val context: Context, workerParams: WorkerParamet
                     NetworkType.CONNECTED
 
                 val constraints = Constraints.Builder()
-                        .setRequiredNetworkType(wifiRestriction)
-                        .setRequiresCharging(acRestriction)
-                        .build()
+                    .setRequiredNetworkType(wifiRestriction)
+                    .setRequiresCharging(acRestriction)
+                    .build()
 
                 val request = PeriodicWorkRequestBuilder<LibraryUpdateJob>(
-                        interval.toLong(), TimeUnit.HOURS,
-                        10, TimeUnit.MINUTES)
-                        .addTag(TAG)
-                        .setConstraints(constraints)
-                        .build()
+                    interval.toLong(),
+                    TimeUnit.HOURS,
+                    10,
+                    TimeUnit.MINUTES
+                )
+                    .addTag(TAG)
+                    .setConstraints(constraints)
+                    .build()
 
                 WorkManager.getInstance().enqueueUniquePeriodicWork(TAG, ExistingPeriodicWorkPolicy.REPLACE, request)
             } else {

@@ -54,8 +54,11 @@ class RecentMangaHeaderItem(val recentsType: Int) :
         return recentsType.hashCode()
     }
 
-    class Holder(val view: View, adapter: RecentMangaAdapter) : BaseFlexibleViewHolder(view, adapter,
-        true) {
+    class Holder(val view: View, adapter: RecentMangaAdapter) : BaseFlexibleViewHolder(
+        view,
+        adapter,
+        true
+    ) {
 
         init {
             action_history.setOnClickListener { adapter.delegate.showHistory() }
@@ -63,12 +66,14 @@ class RecentMangaHeaderItem(val recentsType: Int) :
         }
 
         fun bind(recentsType: Int) {
-            title.setText(when (recentsType) {
-                CONTINUE_READING -> R.string.continue_reading
-                NEW_CHAPTERS -> R.string.new_chapters
-                NEWLY_ADDED -> R.string.newly_added
-                else -> R.string.continue_reading
-            })
+            title.setText(
+                when (recentsType) {
+                    CONTINUE_READING -> R.string.continue_reading
+                    NEW_CHAPTERS -> R.string.new_chapters
+                    NEWLY_ADDED -> R.string.newly_added
+                    else -> R.string.continue_reading
+                }
+            )
             action_history.visibleIf(recentsType == -1)
             action_update.visibleIf(recentsType == -1)
             title.visibleIf(recentsType != -1)

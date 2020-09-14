@@ -39,8 +39,10 @@ class MigrationPresenter(
 
         db.getFavoriteMangas().asRxObservable().observeOn(AndroidSchedulers.mainThread())
             .doOnNext { state = state.copy(sourcesWithManga = findSourcesWithManga(it)) }
-            .combineLatest(stateRelay.map { it.selectedSource }
-                .distinctUntilChanged()) { library, source -> library to source }
+            .combineLatest(
+                stateRelay.map { it.selectedSource }
+                    .distinctUntilChanged()
+            ) { library, source -> library to source }
             .filter { (_, source) -> source != null }.observeOn(Schedulers.io())
             .map { (library, source) -> libraryToMigrationItem(library, source!!.id) }
             .observeOn(AndroidSchedulers.mainThread())

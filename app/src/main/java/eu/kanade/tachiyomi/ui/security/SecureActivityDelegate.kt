@@ -51,8 +51,10 @@ object SecureActivityDelegate {
 
     private fun isAppLocked(): Boolean {
         return locked &&
-            (preferences.lockAfter().getOrDefault() <= 0 ||
-                Date().time >= preferences.lastUnlock().getOrDefault() + 60 * 1000 * preferences
-                .lockAfter().getOrDefault())
+            (
+                preferences.lockAfter().getOrDefault() <= 0 ||
+                    Date().time >= preferences.lastUnlock().getOrDefault() + 60 * 1000 * preferences
+                    .lockAfter().getOrDefault()
+                )
     }
 }

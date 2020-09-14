@@ -53,7 +53,7 @@ class RecentlyReadHolder(
         // Set source + chapter title
         val formattedNumber = adapter.decimalFormat.format(chapter.chapter_number.toDouble())
         manga_source.text = itemView.context.getString(R.string.source_dash_chapter_)
-                .format(adapter.sourceManager.getOrStub(manga.source).toString(), formattedNumber)
+            .format(adapter.sourceManager.getOrStub(manga.source).toString(), formattedNumber)
 
         // Set last read timestamp title
         last_read.text = Date(history.last_read).toTimestampString(adapter.dateFormat)

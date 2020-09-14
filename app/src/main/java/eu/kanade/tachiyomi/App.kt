@@ -26,11 +26,11 @@ import uy.kohesive.injekt.registry.default.DefaultRegistrar
 import java.security.Security
 
 @ReportsCrashes(
-        formUri = "https://collector.tracepot.com/e90773ff",
-        reportType = org.acra.sender.HttpSender.Type.JSON,
-        httpMethod = org.acra.sender.HttpSender.Method.PUT,
-        buildConfigClass = BuildConfig::class,
-        excludeMatchingSharedPreferencesKeys = [".*username.*", ".*password.*", ".*token.*"]
+    formUri = "https://collector.tracepot.com/e90773ff",
+    reportType = org.acra.sender.HttpSender.Type.JSON,
+    httpMethod = org.acra.sender.HttpSender.Method.PUT,
+    buildConfigClass = BuildConfig::class,
+    excludeMatchingSharedPreferencesKeys = [".*username.*", ".*password.*", ".*token.*"]
 )
 open class App : Application(), LifecycleObserver {
 

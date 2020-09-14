@@ -44,8 +44,12 @@ class MigrationProcessAdapter(
         if (allMangasDone()) menuItemListener.enableButtons()
     }
 
-    fun allMangasDone() = (items.all { it.manga.migrationStatus != MigrationStatus
-        .RUNNUNG } && items.any { it.manga.migrationStatus == MigrationStatus.MANGA_FOUND })
+    fun allMangasDone() = (
+        items.all {
+            it.manga.migrationStatus != MigrationStatus
+                .RUNNUNG
+        } && items.any { it.manga.migrationStatus == MigrationStatus.MANGA_FOUND }
+        )
 
     fun mangasSkipped() = (items.count { it.manga.migrationStatus == MigrationStatus.MANGA_NOT_FOUND })
 
@@ -61,7 +65,8 @@ class MigrationProcessAdapter(
                         migrateMangaInternal(
                             manga.manga() ?: return@forEach,
                             toMangaObj,
-                            !copy)
+                            !copy
+                        )
                     }
                 }
             }
@@ -76,7 +81,9 @@ class MigrationProcessAdapter(
                     db.getManga(manga.searchResult.get() ?: return@launchUI).executeAsBlocking()
                         ?: return@launchUI
                 migrateMangaInternal(
-                    manga.manga() ?: return@launchUI, toMangaObj, !copy
+                    manga.manga() ?: return@launchUI,
+                    toMangaObj,
+                    !copy
                 )
             }
             removeManga(position)

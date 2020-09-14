@@ -43,8 +43,8 @@ inline fun PreferenceGroup.editTextPreference(block: (@DSL EditTextPreference).(
 
 inline fun PreferenceGroup.dropDownPreference(block: (@DSL DropDownPreference).() -> Unit):
     DropDownPreference {
-    return initThenAdd(DropDownPreference(context), block).also(::initDialog)
-}
+        return initThenAdd(DropDownPreference(context), block).also(::initDialog)
+    }
 
 inline fun PreferenceGroup.listPreference(
     activity: Activity?,
@@ -52,31 +52,38 @@ inline fun PreferenceGroup.listPreference(
     -> Unit
 ):
     ListMatPreference {
-    return initThenAdd(ListMatPreference(activity, context), block)
-}
+        return initThenAdd(ListMatPreference(activity, context), block)
+    }
 
 inline fun PreferenceGroup.intListPreference(
     activity: Activity?,
-    block: (@DSL
-    IntListMatPreference).() -> Unit
+    block: (
+        @DSL
+        IntListMatPreference
+    ).() -> Unit
 ):
     IntListMatPreference {
-    return initThenAdd(IntListMatPreference(activity, context), block)
-}
+        return initThenAdd(IntListMatPreference(activity, context), block)
+    }
 
 inline fun PreferenceGroup.multiSelectListPreferenceMat(
     activity: Activity?,
-    block: (@DSL
-    MultiListMatPreference).()
+    block: (
+        @DSL
+        MultiListMatPreference
+    ).()
     -> Unit
 ): MultiListMatPreference {
     return initThenAdd(MultiListMatPreference(activity, context), block)
 }
 
 inline fun PreferenceScreen.preferenceCategory(block: (@DSL PreferenceCategory).() -> Unit): PreferenceCategory {
-    return addThenInit(PreferenceCategory(context).apply {
-        isIconSpaceReserved = false
-    }, block)
+    return addThenInit(
+        PreferenceCategory(context).apply {
+            isIconSpaceReserved = false
+        },
+        block
+    )
 }
 
 inline fun PreferenceScreen.preferenceScreen(block: (@DSL PreferenceScreen).() -> Unit): PreferenceScreen {

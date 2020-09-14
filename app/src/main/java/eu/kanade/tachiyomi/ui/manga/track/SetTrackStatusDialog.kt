@@ -17,9 +17,11 @@ class SetTrackStatusDialog<T> : DialogController
     private val item: TrackItem
     private lateinit var listener: Listener
 
-    constructor(target: T, item: TrackItem) : super(Bundle().apply {
-        putSerializable(KEY_ITEM_TRACK, item.track)
-    }) {
+    constructor(target: T, item: TrackItem) : super(
+        Bundle().apply {
+            putSerializable(KEY_ITEM_TRACK, item.track)
+        }
+    ) {
         listener = target
         this.item = item
     }
@@ -40,8 +42,11 @@ class SetTrackStatusDialog<T> : DialogController
         return MaterialDialog(activity!!)
             .title(R.string.status)
             .negativeButton(android.R.string.cancel)
-            .listItemsSingleChoice(items = statusString, initialSelection = selectedIndex,
-                waitForPositiveButton = false) { dialog, position, _ ->
+            .listItemsSingleChoice(
+                items = statusString,
+                initialSelection = selectedIndex,
+                waitForPositiveButton = false
+            ) { dialog, position, _ ->
                 listener.setStatus(item, position)
                 dialog.dismiss()
             }

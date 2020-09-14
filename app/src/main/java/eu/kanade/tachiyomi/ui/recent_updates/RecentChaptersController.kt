@@ -37,10 +37,13 @@ import timber.log.Timber
  * Uses [R.layout.recent_chapters_controller].
  * UI related actions should be called from here.
  */
-class RecentChaptersController(bundle: Bundle? = null) : BaseController(bundle),
-    FlexibleAdapter.OnItemClickListener, FlexibleAdapter.OnUpdateListener,
+class RecentChaptersController(bundle: Bundle? = null) :
+    BaseController(bundle),
+    FlexibleAdapter.OnItemClickListener,
+    FlexibleAdapter.OnUpdateListener,
     FlexibleAdapter.OnItemMoveListener,
-    RecentChaptersAdapter.OnCoverClickListener, BaseChapterAdapter.DownloadInterface {
+    RecentChaptersAdapter.OnCoverClickListener,
+    BaseChapterAdapter.DownloadInterface {
 
     /**
      * Adapter containing the recent chapters.
@@ -207,15 +210,17 @@ class RecentChaptersController(bundle: Bundle? = null) : BaseController(bundle),
                     presenter.markChapterRead(item, read, lastRead, pagesLeft)
                     undoing = true
                 }
-                addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                        super.onDismissed(transientBottomBar, event)
-                        if (!undoing && presenter.preferences.removeAfterMarkedAsRead()) {
-                            lastChapterId = chapter.id
-                            presenter.deleteChapter(chapter, item.manga)
+                addCallback(
+                    object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                        override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                            super.onDismissed(transientBottomBar, event)
+                            if (!undoing && presenter.preferences.removeAfterMarkedAsRead()) {
+                                lastChapterId = chapter.id
+                                presenter.deleteChapter(chapter, item.manga)
+                            }
                         }
                     }
-                })
+                )
             }
             (activity as? MainActivity)?.setUndoSnackBar(snack)
         }
