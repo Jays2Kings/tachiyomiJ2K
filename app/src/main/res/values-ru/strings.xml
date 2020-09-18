@@ -786,9 +786,9 @@
     <string name="network">Сеть</string>
     <string name="dns_over_https" translatable="false">DNS через HTTPS (Cloudflare)</string>
     <string name="requires_app_restart">Для вступления в силу требуется перезапуск приложения</string>
-    <string name="clean_orphaned_downloads">Оистить потерянные</string>
-    <string name="clean_read_downloads">Оистить прочитанные</string>
-    <string name="clean_read_manga_not_in_library">Оистить отсутствующую в библиотеке</string>
+    <string name="clean_orphaned_downloads">Очистить потерянные</string>
+    <string name="clean_read_downloads">Очистить прочитанные</string>
+    <string name="clean_read_manga_not_in_library">Очистить отсутствующие в библиотеке</string>
     <string name="disable_battery_optimization">Отключить оптимизацию батареи</string>
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
