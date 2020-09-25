@@ -22,7 +22,8 @@ class SourceDividerItemDecoration(context: Context) : androidx.recyclerview.widg
             val child = parent.getChildAt(i)
             val holder = parent.getChildViewHolder(child)
             if (holder is SourceHolder &&
-                    parent.getChildViewHolder(parent.getChildAt(i + 1)) is SourceHolder) {
+                parent.getChildViewHolder(parent.getChildAt(i + 1)) is SourceHolder
+            ) {
                 val params = child.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
                 val top = child.bottom + params.bottomMargin
                 val bottom = top + divider.intrinsicHeight

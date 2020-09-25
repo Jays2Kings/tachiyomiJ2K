@@ -22,7 +22,7 @@ import java.util.Locale
  * @param view the fragment containing this adapter.
  */
 class LibraryCategoryAdapter(val controller: LibraryController) :
-        FlexibleAdapter<IFlexible<*>>(null, controller, true) {
+    FlexibleAdapter<IFlexible<*>>(null, controller, true) {
 
     val sourceManager by injectLazy<SourceManager>()
 
@@ -59,7 +59,8 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
     fun indexOf(categoryOrder: Int): Int {
         return currentItems.indexOfFirst {
             if (it is LibraryHeaderItem) it.category.order == categoryOrder
-            else false }
+            else false
+        }
     }
 
     /**
@@ -70,13 +71,15 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
     fun indexOf(manga: Manga): Int {
         return currentItems.indexOfFirst {
             if (it is LibraryItem) it.manga.id == manga.id
-            else false }
+            else false
+        }
     }
 
     fun getHeaderPositions(): List<Int> {
         return currentItems.mapIndexedNotNull { index, it ->
             if (it is LibraryHeaderItem) index
-            else null }
+            else null
+        }
     }
 
     /**
@@ -87,7 +90,8 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
     fun allIndexOf(manga: Manga): List<Int> {
         return currentItems.mapIndexedNotNull { index, it ->
             if (it is LibraryItem && it.manga.id == manga.id) index
-            else null }
+            else null
+        }
     }
 
     fun performFilter() {
@@ -140,7 +144,8 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
                         val last = history.maxBy { it.last_read }
                         if (last != null && last.last_read > 100) {
                             recyclerView.context.getString(
-                                R.string.read_, last.last_read.timeSpanFromNow
+                                R.string.read_,
+                                last.last_read.timeSpanFromNow
                             )
                         } else {
                             "N/A"
@@ -154,7 +159,9 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
                     LibrarySort.TOTAL -> {
                         val total = item.manga.totalChapters
                         if (total > 0) recyclerView.resources.getQuantityString(
-                            R.plurals.chapters, total, total
+                            R.plurals.chapters,
+                            total,
+                            total
                         )
                         else {
                             "N/A"
@@ -164,7 +171,8 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
                         val lastUpdate = item.manga.last_update
                         if (lastUpdate > 0) {
                             recyclerView.context.getString(
-                                R.string.updated_, lastUpdate.timeSpanFromNow
+                                R.string.updated_,
+                                lastUpdate.timeSpanFromNow
                             )
                         } else {
                             "N/A"

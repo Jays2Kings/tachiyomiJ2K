@@ -31,7 +31,7 @@ import kotlin.math.abs
  * Color filter sheet to toggle custom filter and brightness overlay.
  */
 class ReaderColorFilterSheet(private val activity: ReaderActivity) : BottomSheetDialog
-    (activity, R.style.BottomSheetDialogTheme) {
+(activity, R.style.BottomSheetDialogTheme) {
 
     private val preferences by injectLazy<PreferencesHelper>()
 
@@ -45,7 +45,8 @@ class ReaderColorFilterSheet(private val activity: ReaderActivity) : BottomSheet
         window?.navigationBarColor = Color.TRANSPARENT
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
             !context.isInNightMode() &&
-            !activity.window.decorView.rootWindowInsets.hasSideNavBar())
+            !activity.window.decorView.rootWindowInsets.hasSideNavBar()
+        )
             window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         setBottomEdge(brightness_seekbar, activity)
 
@@ -95,45 +96,55 @@ class ReaderColorFilterSheet(private val activity: ReaderActivity) : BottomSheet
         }
         color_filter_mode.setSelection(preferences.colorFilterMode().get(), false)
 
-        seekbar_color_filter_alpha.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    setColorValue(value, ALPHA_MASK, 24)
+        seekbar_color_filter_alpha.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        setColorValue(value, ALPHA_MASK, 24)
+                    }
                 }
             }
-        })
+        )
 
-        seekbar_color_filter_red.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    setColorValue(value, RED_MASK, 16)
+        seekbar_color_filter_red.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        setColorValue(value, RED_MASK, 16)
+                    }
                 }
             }
-        })
+        )
 
-        seekbar_color_filter_green.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    setColorValue(value, GREEN_MASK, 8)
+        seekbar_color_filter_green.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        setColorValue(value, GREEN_MASK, 8)
+                    }
                 }
             }
-        })
+        )
 
-        seekbar_color_filter_blue.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    setColorValue(value, BLUE_MASK, 0)
+        seekbar_color_filter_blue.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        setColorValue(value, BLUE_MASK, 0)
+                    }
                 }
             }
-        })
+        )
 
-        brightness_seekbar.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    preferences.customBrightnessValue().set(value)
+        brightness_seekbar.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        preferences.customBrightnessValue().set(value)
+                    }
                 }
             }
-        })
+        )
     }
 
     override fun onStart() {

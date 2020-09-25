@@ -57,8 +57,11 @@ import uy.kohesive.injekt.injectLazy
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.coroutines.CoroutineContext
 
-class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
-    MigrationProcessAdapter.MigrationProcessInterface, BottomNavBarInterface, CoroutineScope {
+class MigrationListController(bundle: Bundle? = null) :
+    BaseController(bundle),
+    MigrationProcessAdapter.MigrationProcessInterface,
+    BottomNavBarInterface,
+    CoroutineScope {
 
     init {
         setHasOptionsMenu(true)
@@ -165,13 +168,16 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
                                     sourceSemaphore.withPermit {
                                         try {
                                             val searchResult = smartSearchEngine.normalSearch(
-                                                    source,
-                                                    mangaObj.title
-                                                )
+                                                source,
+                                                mangaObj.title
+                                            )
 
                                             if (searchResult != null &&
-                                                !(searchResult.url == mangaObj.url &&
-                                                    source.id == mangaObj.source)) {
+                                                !(
+                                                    searchResult.url == mangaObj.url &&
+                                                        source.id == mangaObj.source
+                                                    )
+                                            ) {
                                                 val localManga =
                                                     smartSearchEngine.networkToLocalManga(
                                                         searchResult,
@@ -210,9 +216,9 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
                             validSources.forEachIndexed { index, source ->
                                 val searchResult = try {
                                     val searchResult = smartSearchEngine.normalSearch(
-                                            source,
-                                            mangaObj.title
-                                        )
+                                        source,
+                                        mangaObj.title
+                                    )
 
                                     if (searchResult != null) {
                                         val localManga = smartSearchEngine.networkToLocalManga(
@@ -309,7 +315,9 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
             if (res != null) {
                 activity?.toast(
                     res.getQuantityString(
-                        R.plurals.manga_migrated, manaulMigrations, manaulMigrations
+                        R.plurals.manga_migrated,
+                        manaulMigrations,
+                        manaulMigrations
                     )
                 )
             }
@@ -419,8 +427,8 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
                     if (manga != null) {
                         val newStack = router.backstack.filter {
                             it.controller() !is MangaDetailsController &&
-                            it.controller() !is MigrationListController &&
-                            it.controller() !is PreMigrationController
+                                it.controller() !is MigrationListController &&
+                                it.controller() !is PreMigrationController
                         } + MangaDetailsController(manga).withFadeTransaction()
                         router.setBackstack(newStack, FadeChangeHandler())
                         return@launchUI
@@ -463,7 +471,9 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
 
         if (adapter?.itemCount == 1) {
             menuMigrate.icon = VectorDrawableCompat.create(
-                resources!!, R.drawable.ic_done_24dp, null
+                resources!!,
+                R.drawable.ic_done_24dp,
+                null
             )
         }
 
@@ -520,9 +530,11 @@ class MigrationListController(bundle: Bundle? = null) : BaseController(bundle),
         const val TAG = "migration_list"
 
         fun create(config: MigrationProcedureConfig): MigrationListController {
-            return MigrationListController(Bundle().apply {
-                putParcelable(CONFIG_EXTRA, config)
-            })
+            return MigrationListController(
+                Bundle().apply {
+                    putParcelable(CONFIG_EXTRA, config)
+                }
+            )
         }
     }
 }

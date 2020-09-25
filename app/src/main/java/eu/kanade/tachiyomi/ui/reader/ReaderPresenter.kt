@@ -179,9 +179,12 @@ class ReaderPresenter(
             .first()
             .observeOn(AndroidSchedulers.mainThread())
             .doOnNext { init(it, initialChapterId) }
-            .subscribeFirst({ _, _ ->
-                // Ignore onNext event
-            }, ReaderActivity::setInitialChapterError)
+            .subscribeFirst(
+                { _, _ ->
+                    // Ignore onNext event
+                },
+                ReaderActivity::setInitialChapterError
+            )
     }
 
     suspend fun getChapters(): List<ReaderChapterItem> {
@@ -190,16 +193,18 @@ class ReaderPresenter(
             val dbChapters = db.getChapters(manga).executeAsBlocking()
             val list =
                 chapterFilter.filterChaptersForReader(dbChapters, manga, getCurrentChapter()?.chapter)
-                .sortedBy {
-                    when (manga.sorting) {
-                        Manga.SORTING_NUMBER -> it.chapter_number
-                        else -> it.source_order.toFloat()
+                    .sortedBy {
+                        when (manga.sorting) {
+                            Manga.SORTING_NUMBER -> it.chapter_number
+                            else -> it.source_order.toFloat()
+                        }
+                    }.map {
+                        ReaderChapterItem(
+                            it,
+                            manga,
+                            it.id == getCurrentChapter()?.chapter?.id ?: chapterId
+                        )
                     }
-                }.map {
-                    ReaderChapterItem(
-                        it, manga, it.id == getCurrentChapter()?.chapter?.id ?: chapterId
-                    )
-                }
             if (!manga.sortDescending(preferences.chaptersDescAsDefault().getOrDefault())) {
                 list.reversed()
             } else {
@@ -236,7 +241,9 @@ class ReaderPresenter(
         if (chapterId == -1L) chapterId = initialChapterId
 
         NotificationReceiver.dismissNotification(
-            preferences.context, manga.id!!.hashCode(), Notifications.ID_NEW_CHAPTERS
+            preferences.context,
+            manga.id!!.hashCode(),
+            Notifications.ID_NEW_CHAPTERS
         )
 
         val source = sourceManager.getOrStub(manga.source)
@@ -253,9 +260,12 @@ class ReaderPresenter(
             .flatMap { getLoadObservable(loader!!, it) }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribeFirst({ _, _ ->
-                // Ignore onNext event
-            }, ReaderActivity::setInitialChapterError)
+            .subscribeFirst(
+                { _, _ ->
+                    // Ignore onNext event
+                },
+                ReaderActivity::setInitialChapterError
+            )
     }
 
     /**
@@ -270,15 +280,17 @@ class ReaderPresenter(
         chapter: ReaderChapter
     ): Observable<ViewerChapters> {
         return loader.loadChapter(chapter)
-            .andThen(Observable.fromCallable {
-                val chapterPos = chapterList.indexOf(chapter)
+            .andThen(
+                Observable.fromCallable {
+                    val chapterPos = chapterList.indexOf(chapter)
 
-                ViewerChapters(
-                    chapter,
-                    chapterList.getOrNull(chapterPos - 1),
-                    chapterList.getOrNull(chapterPos + 1)
-                )
-            })
+                    ViewerChapters(
+                        chapter,
+                        chapterList.getOrNull(chapterPos - 1),
+                        chapterList.getOrNull(chapterPos + 1)
+                    )
+                }
+            )
             .observeOn(AndroidSchedulers.mainThread())
             .doOnNext { newChapters ->
                 val oldChapters = viewerChaptersRelay.value
@@ -344,7 +356,10 @@ class ReaderPresenter(
             val chapterId = db.insertChapter(chapter).executeOnIO().insertedId() ?: return
             if (chapters.isNotEmpty()) {
                 syncChaptersWithSource(
-                    db, chapters, manga, delegatedSource.delegate!!
+                    db,
+                    chapters,
+                    manga,
+                    delegatedSource.delegate!!
                 )
             }
             withContext(Dispatchers.Main) {
@@ -381,13 +396,16 @@ class ReaderPresenter(
         activeChapterSubscription = getLoadObservable(loader, ReaderChapter(chapter))
             .doOnSubscribe { isLoadingAdjacentChapterRelay.call(true) }
             .doOnUnsubscribe { isLoadingAdjacentChapterRelay.call(false) }
-            .subscribeFirst({ view, _ ->
-                val lastPage = if (chapter.pages_left <= 1) 0 else chapter.last_page_read
-                view.moveToPageIndex(lastPage)
-                view.refreshChapters()
-            }, { _, _ ->
-                // Ignore onError event, viewers handle that state
-            })
+            .subscribeFirst(
+                { view, _ ->
+                    val lastPage = if (chapter.pages_left <= 1) 0 else chapter.last_page_read
+                    view.moveToPageIndex(lastPage)
+                    view.refreshChapters()
+                },
+                { _, _ ->
+                    // Ignore onError event, viewers handle that state
+                }
+            )
     }
 
     fun toggleBookmark(chapter: Chapter) {

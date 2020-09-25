@@ -104,18 +104,20 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         pager = controller.recycler
         val shadow2: View = controller.shadow2
         val shadow: View = controller.shadow
-        sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, progress: Float) {
-                pill.alpha = (1 - max(0f, progress)) * 0.25f
-                shadow2.alpha = (1 - max(0f, progress)) * 0.25f
-                shadow.alpha = 1 + min(0f, progress)
-                updateRootPadding(progress)
-            }
+        sheetBehavior?.addBottomSheetCallback(
+            object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onSlide(bottomSheet: View, progress: Float) {
+                    pill.alpha = (1 - max(0f, progress)) * 0.25f
+                    shadow2.alpha = (1 - max(0f, progress)) * 0.25f
+                    shadow.alpha = 1 + min(0f, progress)
+                    updateRootPadding(progress)
+                }
 
-            override fun onStateChanged(p0: View, state: Int) {
-                stateChanged(state)
+                override fun onStateChanged(p0: View, state: Int) {
+                    stateChanged(state)
+                }
             }
-        })
+        )
 
         if (context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             second_layout.removeView(view_options)
@@ -284,13 +286,15 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
                     unreadProgress.state = unreadP - 3
                 }
                 tracked?.setState(preferences.filterTracked())
-                mangaType?.setState(when (preferences.filterMangaType().getOrDefault()) {
-                    Manga.TYPE_MANGA -> context.getString(R.string.manga)
-                    Manga.TYPE_MANHUA -> context.getString(R.string.manhua)
-                    Manga.TYPE_MANHWA -> context.getString(R.string.manhwa)
-                    Manga.TYPE_COMIC -> context.getString(R.string.comic)
-                    else -> ""
-                })
+                mangaType?.setState(
+                    when (preferences.filterMangaType().getOrDefault()) {
+                        Manga.TYPE_MANGA -> context.getString(R.string.manga)
+                        Manga.TYPE_MANHUA -> context.getString(R.string.manhua)
+                        Manga.TYPE_MANHWA -> context.getString(R.string.manhwa)
+                        Manga.TYPE_COMIC -> context.getString(R.string.comic)
+                        else -> ""
+                    }
+                )
                 reorderFilters()
                 reSortViews()
             }
@@ -329,10 +333,10 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         }
         listOfNotNull(unreadProgress, unread, downloaded, completed, mangaType, tracked)
             .forEach {
-            if (!filterItems.contains(it)) {
-                filterItems.add(it)
+                if (!filterItems.contains(it)) {
+                    filterItems.add(it)
+                }
             }
-        }
     }
     private fun indexOf(filterTagGroup: FilterTagGroup): Int {
         charOfFilter(filterTagGroup)?.let {
@@ -361,8 +365,11 @@ class FilterBottomSheet @JvmOverloads constructor(context: Context, attrs: Attri
         val recycler = RecyclerView(context)
         if (filterOrder.count() != 6)
             filterOrder = "urdcmt"
-        val adapter = FlexibleAdapter(filterOrder.toCharArray().map(::ManageFilterItem),
-            this, true)
+        val adapter = FlexibleAdapter(
+            filterOrder.toCharArray().map(::ManageFilterItem),
+            this,
+            true
+        )
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.adapter = adapter
         adapter.isHandleDragEnabled = true

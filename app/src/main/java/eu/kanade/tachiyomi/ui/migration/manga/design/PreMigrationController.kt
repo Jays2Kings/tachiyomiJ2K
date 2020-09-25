@@ -31,8 +31,11 @@ import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.android.synthetic.main.pre_migration_controller.*
 import uy.kohesive.injekt.injectLazy
 
-class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), FlexibleAdapter
-.OnItemClickListener, StartMigrationListener {
+class PreMigrationController(bundle: Bundle? = null) :
+    BaseController(bundle),
+    FlexibleAdapter
+    .OnItemClickListener,
+    StartMigrationListener {
     private val sourceManager: SourceManager by injectLazy()
     private val prefs: PreferencesHelper by injectLazy()
 
@@ -55,8 +58,8 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
         liftAppbarWith(recycler)
 
         val ourAdapter = adapter ?: MigrationSourceAdapter(
-                getEnabledSources().map { MigrationSourceItem(it, isEnabled(it.id.toString())) },
-                this
+            getEnabledSources().map { MigrationSourceItem(it, isEnabled(it.id.toString())) },
+            this
         )
         adapter = ourAdapter
         recycler.layoutManager = LinearLayoutManager(view.context)
@@ -74,8 +77,10 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
             v.post {
                 // offset the recycler by the fab's inset + some inset on top
                 v.updatePaddingRelative(
-                    bottom = insets.systemWindowInsetBottom + (fab?.marginBottom
-                        ?: 0) + (fab?.height ?: 0)
+                    bottom = insets.systemWindowInsetBottom + (
+                        fab?.marginBottom
+                            ?: 0
+                        ) + (fab?.height ?: 0)
                 )
             }
         }
@@ -108,7 +113,8 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
                     config.toList(),
                     extraSearchParams = extraParam
                 )
-            ).withFadeTransaction().tag(MigrationListController.TAG))
+            ).withFadeTransaction().tag(MigrationListController.TAG)
+        )
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -143,10 +149,13 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
             .filter { it.lang in languages }
             .sortedBy { "(${it.lang}) ${it.name}" }
         sources =
-            sources.filter { isEnabled(it.id.toString()) }.sortedBy { sourcesSaved.indexOf(it.id
-                .toString())
-            } +
-                sources.filterNot { isEnabled(it.id.toString()) }
+            sources.filter { isEnabled(it.id.toString()) }.sortedBy {
+            sourcesSaved.indexOf(
+                it.id
+                    .toString()
+            )
+        } +
+            sources.filterNot { isEnabled(it.id.toString()) }
 
         return sources
     }
@@ -208,9 +217,11 @@ class PreMigrationController(bundle: Bundle? = null) : BaseController(bundle), F
         }
 
         fun create(mangaIds: List<Long>): PreMigrationController {
-            return PreMigrationController(Bundle().apply {
-                putLongArray(MANGA_IDS_EXTRA, mangaIds.toLongArray())
-            })
+            return PreMigrationController(
+                Bundle().apply {
+                    putLongArray(MANGA_IDS_EXTRA, mangaIds.toLongArray())
+                }
+            )
         }
     }
 }

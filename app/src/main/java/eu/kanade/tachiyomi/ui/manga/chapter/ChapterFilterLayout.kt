@@ -44,7 +44,9 @@ class ChapterFilterLayout @JvmOverloads constructor(context: Context, attrs: Att
         show_download.isChecked = manga.downloadedFilter == Manga.SHOW_DOWNLOADED
         show_bookmark.isChecked = manga.bookmarkedFilter == Manga.SHOW_BOOKMARKED
 
-        show_all.isChecked = !(show_read.isChecked || show_unread.isChecked ||
-            show_download.isChecked || show_bookmark.isChecked)
+        show_all.isChecked = !(
+            show_read.isChecked || show_unread.isChecked ||
+                show_download.isChecked || show_bookmark.isChecked
+            )
     }
 }

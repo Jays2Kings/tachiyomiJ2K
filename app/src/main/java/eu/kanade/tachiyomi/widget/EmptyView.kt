@@ -14,7 +14,7 @@ import eu.kanade.tachiyomi.util.view.visible
 import kotlinx.android.synthetic.main.common_view_empty.view.*
 
 class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-        RelativeLayout(context, attrs) {
+    RelativeLayout(context, attrs) {
 
     init {
         inflate(context, R.layout.common_view_empty, this)
@@ -46,11 +46,13 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         actions_container.removeAllViews()
         if (!actions.isNullOrEmpty()) {
             actions.forEach {
-                val button = (inflate(
-                    context,
-                    R.layout.material_text_button,
-                    null
-                ) as MaterialButton).apply {
+                val button = (
+                    inflate(
+                        context,
+                        R.layout.material_text_button,
+                        null
+                    ) as MaterialButton
+                    ).apply {
                     setText(it.resId)
                     setOnClickListener(it.listener)
                 }

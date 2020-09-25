@@ -21,7 +21,7 @@ import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
 open class FoolSlide(override val domainName: String, private val urlModifier: String = "") :
-DelegatedHttpSource
+    DelegatedHttpSource
     () {
 
     override fun canOpenUrl(uri: Uri): Boolean = true
@@ -34,7 +34,11 @@ DelegatedHttpSource
         val chapterNumber = uri.pathSegments.getOrNull(4 + offset) ?: return null
         val subChapterNumber = uri.pathSegments.getOrNull(5 + offset)?.toIntOrNull()?.toString()
         return "$urlModifier/read/" + listOfNotNull(
-            mangaName, lang, volume, chapterNumber, subChapterNumber
+            mangaName,
+            lang,
+            volume,
+            chapterNumber,
+            subChapterNumber
         ).joinToString("/") + "/"
     }
 
@@ -95,8 +99,11 @@ DelegatedHttpSource
     private fun allowAdult(request: Request) = allowAdult(request.url.toString())
 
     private fun allowAdult(url: String): Request {
-        return POST(url, body = FormBody.Builder()
-            .add("adult", "true")
-            .build())
+        return POST(
+            url,
+            body = FormBody.Builder()
+                .add("adult", "true")
+                .build()
+        )
     }
 }

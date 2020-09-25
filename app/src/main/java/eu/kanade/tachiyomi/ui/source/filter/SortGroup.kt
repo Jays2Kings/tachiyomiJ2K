@@ -31,10 +31,12 @@ class SortGroup(val filter: Filter.Sort) : AbstractExpandableHeaderItem<SortGrou
     override fun bindViewHolder(adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>, holder: Holder, position: Int, payloads: MutableList<Any?>?) {
         holder.title.text = filter.name
 
-        holder.icon.setVectorCompat(if (isExpanded)
-            R.drawable.ic_expand_more_24dp
-        else
-            R.drawable.ic_chevron_right_24dp)
+        holder.icon.setVectorCompat(
+            if (isExpanded)
+                R.drawable.ic_expand_more_24dp
+            else
+                R.drawable.ic_chevron_right_24dp
+        )
 
         holder.itemView.setOnClickListener(holder)
     }

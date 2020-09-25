@@ -70,7 +70,8 @@ class MangaFetcher : Fetcher<Manga> {
             return fileLoader(coverFile)
         }
         val (_, body) = awaitGetCall(
-            manga, if (manga.favorite) {
+            manga,
+            if (manga.favorite) {
                 !options.networkCachePolicy.readEnabled
             } else {
                 false

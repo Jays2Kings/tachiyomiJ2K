@@ -134,16 +134,18 @@ class LibraryUpdateService(
         val selectedScheme = preferences.libraryUpdatePrioritization().getOrDefault()
         val savedMangasList = intent.getLongArrayExtra(KEY_MANGAS)?.asList()
 
-        val mangaList = (if (savedMangasList != null) {
-            val mangas = db.getLibraryMangas().executeAsBlocking().filter {
-                it.id in savedMangasList
-            }.distinctBy { it.id }
-            val categoryId = intent.getIntExtra(KEY_CATEGORY, -1)
-            if (categoryId > -1) categoryIds.add(categoryId)
-            mangas
-        } else {
-            getMangaToUpdate(intent, target)
-        }).sortedWith(rankingScheme[selectedScheme])
+        val mangaList = (
+            if (savedMangasList != null) {
+                val mangas = db.getLibraryMangas().executeAsBlocking().filter {
+                    it.id in savedMangasList
+                }.distinctBy { it.id }
+                val categoryId = intent.getIntExtra(KEY_CATEGORY, -1)
+                if (categoryId > -1) categoryIds.add(categoryId)
+                mangas
+            } else {
+                getMangaToUpdate(intent, target)
+            }
+            ).sortedWith(rankingScheme[selectedScheme])
         // Update favorite manga. Destroy service when completed or in case of an error.
         launchTarget(target, mangaList, startId)
         return START_REDELIVER_INTENT
@@ -157,7 +159,8 @@ class LibraryUpdateService(
         super.onCreate()
         notifier = LibraryUpdateNotifier(this)
         wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager).newWakeLock(
-            PowerManager.PARTIAL_WAKE_LOCK, "LibraryUpdateService:WakeLock"
+            PowerManager.PARTIAL_WAKE_LOCK,
+            "LibraryUpdateService:WakeLock"
         )
         wakeLock.acquire(TimeUnit.MINUTES.toMillis(30))
         startForeground(Notifications.ID_LIBRARY_PROGRESS, notifier.progressNotificationBuilder.build())
@@ -247,7 +250,9 @@ class LibraryUpdateService(
                     val hasDLs = try {
                         requestSemaphore.withPermit {
                             updateMangaInSource(
-                                it.key, downloadNew, categoriesToDownload
+                                it.key,
+                                downloadNew,
+                                categoriesToDownload
                             )
                         }
                     } catch (e: Exception) {
@@ -351,13 +356,15 @@ class LibraryUpdateService(
         var hasDownloads = false
         while (count < mangaToUpdateMap[source]!!.size) {
             val shouldDownload =
-                (downloadNew && (categoriesToDownload.isEmpty() || mangaToUpdateMap[source]!![count].category in categoriesToDownload || db.getCategoriesForManga(
-                    mangaToUpdateMap[source]!![count]
-                ).executeOnIO().any { (it.id ?: -1) in categoriesToDownload }))
-            if (updateMangaChapters(
-                    mangaToUpdateMap[source]!![count], this.count.andIncrement, shouldDownload
-                )
-            ) {
+                (
+                    downloadNew && (
+                        categoriesToDownload.isEmpty() ||
+                            mangaToUpdateMap[source]!![count].category in categoriesToDownload ||
+                            db.getCategoriesForManga(mangaToUpdateMap[source]!![count])
+                                .executeOnIO().any { (it.id ?: -1) in categoriesToDownload }
+                        )
+                    )
+            if (updateMangaChapters(mangaToUpdateMap[source]!![count], this.count.andIncrement, shouldDownload)) {
                 hasDownloads = true
             }
             count++
@@ -372,47 +379,47 @@ class LibraryUpdateService(
         shouldDownload: Boolean
     ):
         Boolean {
-        try {
-            var hasDownloads = false
-            if (job?.isCancelled == true) {
+            try {
+                var hasDownloads = false
+                if (job?.isCancelled == true) {
+                    return false
+                }
+                notifier.showProgressNotification(manga, progress, mangaToUpdate.size)
+                val source = sourceManager.get(manga.source) as? HttpSource ?: return false
+                val fetchedChapters = withContext(Dispatchers.IO) {
+                    source.fetchChapterList(manga).toBlocking().single()
+                } ?: emptyList()
+                if (fetchedChapters.isNotEmpty()) {
+                    val newChapters = syncChaptersWithSource(db, fetchedChapters, manga, source)
+                    if (newChapters.first.isNotEmpty()) {
+                        if (shouldDownload) {
+                            downloadChapters(manga, newChapters.first.sortedBy { it.chapter_number })
+                            hasDownloads = true
+                        }
+                        newUpdates[manga] =
+                            newChapters.first.sortedBy { it.chapter_number }.toTypedArray()
+                    }
+                    if (deleteRemoved && newChapters.second.isNotEmpty()) {
+                        val removedChapters = newChapters.second.filter {
+                            downloadManager.isChapterDownloaded(it, manga)
+                        }
+                        if (removedChapters.isNotEmpty()) {
+                            downloadManager.deleteChapters(removedChapters, manga, source)
+                        }
+                    }
+                    if (newChapters.first.size + newChapters.second.size > 0) listener?.onUpdateManga(
+                        manga
+                    )
+                }
+                return hasDownloads
+            } catch (e: Exception) {
+                if (e !is CancellationException) {
+                    failedUpdates[manga] = e.message
+                    Timber.e("Failed updating: ${manga.title}: $e")
+                }
                 return false
             }
-            notifier.showProgressNotification(manga, progress, mangaToUpdate.size)
-            val source = sourceManager.get(manga.source) as? HttpSource ?: return false
-            val fetchedChapters = withContext(Dispatchers.IO) {
-                source.fetchChapterList(manga).toBlocking().single()
-            } ?: emptyList()
-            if (fetchedChapters.isNotEmpty()) {
-                val newChapters = syncChaptersWithSource(db, fetchedChapters, manga, source)
-                if (newChapters.first.isNotEmpty()) {
-                    if (shouldDownload) {
-                        downloadChapters(manga, newChapters.first.sortedBy { it.chapter_number })
-                        hasDownloads = true
-                    }
-                    newUpdates[manga] =
-                        newChapters.first.sortedBy { it.chapter_number }.toTypedArray()
-                }
-                if (deleteRemoved && newChapters.second.isNotEmpty()) {
-                    val removedChapters = newChapters.second.filter {
-                        downloadManager.isChapterDownloaded(it, manga)
-                    }
-                    if (removedChapters.isNotEmpty()) {
-                        downloadManager.deleteChapters(removedChapters, manga, source)
-                    }
-                }
-                if (newChapters.first.size + newChapters.second.size > 0) listener?.onUpdateManga(
-                    manga
-                )
-            }
-            return hasDownloads
-        } catch (e: Exception) {
-            if (e !is CancellationException) {
-                failedUpdates[manga] = e.message
-                Timber.e("Failed updating: ${manga.title}: $e")
-            }
-            return false
         }
-    }
 
     private fun downloadChapters(manga: Manga, chapters: List<Chapter>) {
         // We don't want to start downloading while the library is updating, because websites

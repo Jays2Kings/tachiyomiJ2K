@@ -18,9 +18,11 @@ class SetTrackScoreDialog<T> : DialogController where T : SetTrackScoreDialog.Li
     private val item: TrackItem
     private lateinit var listener: Listener
 
-    constructor(target: T, item: TrackItem) : super(Bundle().apply {
-        putSerializable(KEY_ITEM_TRACK, item.track)
-    }) {
+    constructor(target: T, item: TrackItem) : super(
+        Bundle().apply {
+            putSerializable(KEY_ITEM_TRACK, item.track)
+        }
+    ) {
         listener = target
         this.item = item
     }

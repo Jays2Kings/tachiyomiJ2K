@@ -29,7 +29,8 @@ class CustomMangaManager(val context: Context) {
 
         val json = try {
             Gson().fromJson(
-                Scanner(editJson).useDelimiter("\\Z").next(), JsonObject::class.java
+                Scanner(editJson).useDelimiter("\\Z").next(),
+                JsonObject::class.java
             )
         } catch (e: Exception) {
             null
@@ -83,7 +84,12 @@ class CustomMangaManager(val context: Context) {
 
     fun Manga.toJson(): MangaJson {
         return MangaJson(
-            id!!, title, author, artist, description, genre?.split(", ")?.toTypedArray()
+            id!!,
+            title,
+            author,
+            artist,
+            description,
+            genre?.split(", ")?.toTypedArray()
         )
     }
 

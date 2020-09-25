@@ -237,7 +237,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             .appendQueryParameter("response_type", "token")
             .build()!!
 
-        fun addToLibraryQuery() = """
+        fun addToLibraryQuery() =
+            """
             |mutation AddManga(${'$'}mangaId: Int, ${'$'}progress: Int, ${'$'}status: MediaListStatus) {
                 |SaveMediaListEntry (mediaId: ${'$'}mangaId, progress: ${'$'}progress, status: ${'$'}status) { 
                 |   id 
@@ -246,7 +247,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             |}
             |""".trimMargin()
 
-        fun deleteFromLibraryQuery() = """
+        fun deleteFromLibraryQuery() =
+            """
                 |mutation DeleteManga(${'$'}listId: Int) {
                 |DeleteMediaListEntry (id: ${'$'}listId) {
                     |deleted
@@ -254,7 +256,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
                 |}
             |}""".trimMargin()
 
-        fun updateInLibraryQuery() = """
+        fun updateInLibraryQuery() =
+            """
             |mutation UpdateManga(${'$'}listId: Int, ${'$'}progress: Int, ${'$'}status: MediaListStatus, ${'$'}score: Int) {
                 |SaveMediaListEntry (id: ${'$'}listId, progress: ${'$'}progress, status: ${'$'}status, scoreRaw: ${'$'}score) {
                     |id
@@ -264,7 +267,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             |}
             |""".trimMargin()
 
-        fun searchQuery() = """
+        fun searchQuery() =
+            """
             |query Search(${'$'}query: String) {
                 |Page (perPage: 50) {
                     |media(search: ${'$'}query, type: MANGA, format_not_in: [NOVEL]) {
@@ -289,7 +293,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             |}
             |""".trimMargin()
 
-        fun findLibraryMangaQuery() = """
+        fun findLibraryMangaQuery() =
+            """
             |query (${'$'}id: Int!, ${'$'}manga_id: Int!) {
                 |Page {
                     |mediaList(userId: ${'$'}id, type: MANGA, mediaId: ${'$'}manga_id) {
@@ -320,7 +325,8 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
             |}
             |""".trimMargin()
 
-        fun currentUserQuery() = """
+        fun currentUserQuery() =
+            """
             |query User {
                 |Viewer {
                     |id

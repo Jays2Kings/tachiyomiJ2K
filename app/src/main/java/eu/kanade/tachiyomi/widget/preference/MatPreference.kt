@@ -14,8 +14,8 @@ open class MatPreference @JvmOverloads constructor(
     val activity: Activity?,
     context: Context,
     attrs:
-    AttributeSet? =
-        null
+        AttributeSet? =
+            null
 ) :
     Preference(context, attrs) {
 

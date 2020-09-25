@@ -49,7 +49,9 @@ class ReaderSettingsSheet(private val activity: ReaderActivity) :
 
         sheetBehavior = BottomSheetBehavior.from(view.parent as ViewGroup)
         setEdgeToEdge(
-            activity, view, if (context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE)
+            activity,
+            view,
+            if (context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE)
                 0 else -1
         )
         window?.navigationBarColor = Color.TRANSPARENT
@@ -63,20 +65,22 @@ class ReaderSettingsSheet(private val activity: ReaderActivity) :
         val height = activity.window.decorView.rootWindowInsets.systemWindowInsetBottom
         sheetBehavior.peekHeight = 550.dpToPx + height
 
-        sheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, progress: Float) {
-                if (progress.isNaN())
-                    pill.alpha = 0f
-                else
-                    pill.alpha = (1 - max(0f, progress)) * 0.25f
-            }
+        sheetBehavior.addBottomSheetCallback(
+            object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onSlide(bottomSheet: View, progress: Float) {
+                    if (progress.isNaN())
+                        pill.alpha = 0f
+                    else
+                        pill.alpha = (1 - max(0f, progress)) * 0.25f
+                }
 
-            override fun onStateChanged(p0: View, state: Int) {
-                if (state == BottomSheetBehavior.STATE_EXPANDED) {
-                    sheetBehavior.skipCollapsed = true
+                override fun onStateChanged(p0: View, state: Int) {
+                    if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                        sheetBehavior.skipCollapsed = true
+                    }
                 }
             }
-        })
+        )
     }
 
     /**

@@ -15,7 +15,7 @@ class MultiListMatPreference @JvmOverloads constructor(
     activity: Activity?,
     context: Context,
     attrs: AttributeSet? =
-    null
+        null
 ) :
     ListMatPreference(activity, context, attrs) {
 
@@ -39,7 +39,8 @@ class MultiListMatPreference @JvmOverloads constructor(
         val set = prefs.getStringSet(key, emptySet()).getOrDefault()
         var default = set.mapNotNull {
             if (entryValues.indexOf(it) == -1) null
-            else entryValues.indexOf(it) + if (allSelectionRes != null) 1 else 0 }
+            else entryValues.indexOf(it) + if (allSelectionRes != null) 1 else 0
+        }
             .toIntArray()
         if (allSelectionRes != null && default.isEmpty()) default = intArrayOf(0)
         val items = if (allSelectionRes != null)
@@ -49,17 +50,20 @@ class MultiListMatPreference @JvmOverloads constructor(
             for (i in items.indices)
                 if (!(allSelectionRes != null && i == 0) && isItemChecked(i)) pos.add(i)
             var value = pos.map {
-                entryValues[it - if (allSelectionRes != null) 1 else 0] }?.toSet() ?: emptySet()
+                entryValues[it - if (allSelectionRes != null) 1 else 0]
+            }?.toSet() ?: emptySet()
             if (allSelectionRes != null && isItemChecked(0)) value = emptySet()
             prefs.getStringSet(key, emptySet()).set(value)
             callChangeListener(value)
             this@MultiListMatPreference.summary = this@MultiListMatPreference.summary
         }
-        listItemsMultiChoice(items = items,
+        listItemsMultiChoice(
+            items = items,
             allowEmptySelection = true,
             disabledIndices = if (allSelectionRes != null) intArrayOf(0) else null,
             waitForPositiveButton = false,
-            initialSelection = default) { _, pos, _ ->
+            initialSelection = default
+        ) { _, pos, _ ->
             if (allSelectionRes != null) {
                 if (pos.isEmpty()) checkItem(0)
                 else uncheckItem(0)

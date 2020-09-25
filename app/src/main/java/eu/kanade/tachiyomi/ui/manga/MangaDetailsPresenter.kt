@@ -3,6 +3,7 @@ package eu.kanade.tachiyomi.ui.manga
 import android.app.Application
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Environment
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
@@ -35,6 +36,7 @@ import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
 import eu.kanade.tachiyomi.util.lang.trimOrNull
 import eu.kanade.tachiyomi.util.storage.DiskUtil
+import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -353,8 +355,10 @@ class MangaDetailsPresenter(
                         val categoriesToDownload = preferences.downloadNewCategories().getOrDefault().map(String::toInt)
                         val shouldDownload = categoriesToDownload.isEmpty() || getMangaCategoryIds().any { it in categoriesToDownload }
                         if (shouldDownload) {
-                            downloadChapters(newChapters.first.sortedBy { it.chapter_number }
-                                .map { it.toModel() })
+                            downloadChapters(
+                                newChapters.first.sortedBy { it.chapter_number }
+                                    .map { it.toModel() }
+                            )
                         }
                     }
                 }
@@ -419,9 +423,11 @@ class MangaDetailsPresenter(
     }
 
     private fun trimException(e: java.lang.Exception): String {
-        return (if (e.message?.contains(": ") == true) e.message?.split(": ")?.drop(1)
-            ?.joinToString(": ")
-        else e.message) ?: preferences.context.getString(R.string.unknown_error)
+        return (
+            if (e.message?.contains(": ") == true) e.message?.split(": ")?.drop(1)
+                ?.joinToString(": ")
+            else e.message
+            ) ?: preferences.context.getString(R.string.unknown_error)
     }
 
     /**
@@ -688,6 +694,49 @@ class MangaDetailsPresenter(
             return true
         }
         return false
+    }
+
+    fun shareCover(): File? {
+        return try {
+            val destDir = File(coverCache.context.cacheDir, "shared_image")
+            val file = saveCover(destDir)
+            file
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    fun saveCover(): Boolean {
+        return try {
+            val directory = File(
+                Environment.getExternalStorageDirectory().absolutePath +
+                    File.separator + Environment.DIRECTORY_PICTURES +
+                    File.separator + "Tachiyomi"
+            )
+            saveCover(directory)
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    private fun saveCover(directory: File): File {
+        val cover = coverCache.getCoverFile(manga)
+        val type = ImageUtil.findImageType(cover.inputStream())
+            ?: throw Exception("Not an image")
+
+        directory.mkdirs()
+
+        // Build destination file.
+        val filename = DiskUtil.buildValidFilename("${manga.title}.${type.extension}")
+
+        val destFile = File(directory, filename)
+        cover.inputStream().use { input ->
+            destFile.outputStream().use { output ->
+                input.copyTo(output)
+            }
+        }
+        return destFile
     }
 
     fun isTracked(): Boolean =

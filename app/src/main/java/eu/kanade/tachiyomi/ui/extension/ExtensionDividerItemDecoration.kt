@@ -24,7 +24,8 @@ class ExtensionDividerItemDecoration(context: Context) : androidx.recyclerview.w
             val child = parent.getChildAt(i)
             val holder = parent.getChildViewHolder(child)
             if (holder is ExtensionHolder &&
-                    parent.getChildViewHolder(parent.getChildAt(i + 1)) is ExtensionHolder) {
+                parent.getChildViewHolder(parent.getChildAt(i + 1)) is ExtensionHolder
+            ) {
                 val params = child.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
                 val top = child.bottom + params.bottomMargin
                 val bottom = top + divider.intrinsicHeight

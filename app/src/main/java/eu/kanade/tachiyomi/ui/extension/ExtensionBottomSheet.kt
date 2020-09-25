@@ -21,8 +21,8 @@ import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.android.synthetic.main.extensions_bottom_sheet.view.*
 
 class ExtensionBottomSheet @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-LinearLayout(context, attrs),
-ExtensionAdapter.OnButtonClickListener,
+    LinearLayout(context, attrs),
+    ExtensionAdapter.OnButtonClickListener,
     FlexibleAdapter.OnItemClickListener,
     FlexibleAdapter.OnItemLongClickListener,
     ExtensionTrustDialog.Listener {
@@ -88,11 +88,17 @@ ExtensionAdapter.OnButtonClickListener,
     fun updateExtTitle() {
         val extCount = presenter.getExtensionUpdateCount()
         title_text.text = if (extCount == 0) context.getString(R.string.extensions)
-        else resources.getQuantityString(R.plurals.extension_updates_available, extCount,
-            extCount)
+        else resources.getQuantityString(
+            R.plurals.extension_updates_available,
+            extCount,
+            extCount
+        )
 
-        title_text.setTextColor(context.getResourceColor(
-            if (extCount == 0) R.attr.actionBarTintColor else R.attr.colorAccent))
+        title_text.setTextColor(
+            context.getResourceColor(
+                if (extCount == 0) R.attr.actionBarTintColor else R.attr.colorAccent
+            )
+        )
     }
 
     override fun onButtonClick(position: Int) {
@@ -153,7 +159,8 @@ ExtensionAdapter.OnButtonClickListener,
             adapter?.updateDataSet(
                 extensions.filter {
                     it.extension.name.contains(controller.extQuery, ignoreCase = true)
-                })
+                }
+            )
         } else {
             adapter?.updateDataSet(extensions)
         }

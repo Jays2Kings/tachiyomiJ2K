@@ -83,7 +83,8 @@ class CoverCache(val context: Context) {
             withContext(Dispatchers.Main) {
                 context.toast(
                     context.getString(
-                        R.string.deleted_, Formatter.formatFileSize(context, deletedSize)
+                        R.string.deleted_,
+                        Formatter.formatFileSize(context, deletedSize)
                     )
                 )
             }
@@ -111,7 +112,8 @@ class CoverCache(val context: Context) {
             withContext(Dispatchers.Main) {
                 context.toast(
                     context.getString(
-                        R.string.deleted_, Formatter.formatFileSize(context, deletedSize)
+                        R.string.deleted_,
+                        Formatter.formatFileSize(context, deletedSize)
                     )
                 )
             }

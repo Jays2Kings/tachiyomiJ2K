@@ -12,7 +12,7 @@ import eu.kanade.tachiyomi.util.view.visible
 import kotlinx.android.synthetic.main.source_item.*
 
 class SourceHolder(view: View, val adapter: SourceAdapter) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
 
     init {
         source_pin.setOnClickListener {

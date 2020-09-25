@@ -58,13 +58,16 @@ class ChapterHolder(
         if (showPagesLeft && chapter.pages_left > 0) {
             statuses.add(
                 itemView.resources.getQuantityString(
-                    R.plurals.pages_left, chapter.pages_left, chapter.pages_left
+                    R.plurals.pages_left,
+                    chapter.pages_left,
+                    chapter.pages_left
                 )
             )
         } else if (showPagesLeft) {
             statuses.add(
                 itemView.context.getString(
-                    R.string.page_, chapter.last_page_read + 1
+                    R.string.page_,
+                    chapter.last_page_read + 1
                 )
             )
         }
@@ -81,7 +84,10 @@ class ChapterHolder(
         }
         // this will color the scanlator the same bookmarks
         ChapterUtil.setTextViewForChapter(
-            chapter_scanlator, item, showBookmark = false, hideStatus = isLocked
+            chapter_scanlator,
+            item,
+            showBookmark = false,
+            hideStatus = isLocked
         )
         chapter_scanlator.text = statuses.joinToString(" • ")
 
@@ -115,9 +121,11 @@ class ChapterHolder(
         val anim3 = slideAnimation(-slide, 0f)
         anim3.startDelay = 750
         animatorSet.playSequentially(anim1, anim2, anim3)
-        animatorSet.addListener(EndAnimatorListener {
-            adapter.hasShownSwipeTut.set(true)
-        })
+        animatorSet.addListener(
+            EndAnimatorListener {
+                adapter.hasShownSwipeTut.set(true)
+            }
+        )
         animatorSet.start()
     }
 

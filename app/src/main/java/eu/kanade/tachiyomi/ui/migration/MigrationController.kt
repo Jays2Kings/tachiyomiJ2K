@@ -22,10 +22,11 @@ import rx.schedulers.Schedulers
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
-class MigrationController : NucleusController<MigrationPresenter>(),
-        FlexibleAdapter.OnItemClickListener,
-        SourceAdapter.OnAllClickListener,
-        MigrationInterface {
+class MigrationController :
+    NucleusController<MigrationPresenter>(),
+    FlexibleAdapter.OnItemClickListener,
+    SourceAdapter.OnAllClickListener,
+    MigrationInterface {
 
     private var adapter: FlexibleAdapter<IFlexible<*>>? = null
 
@@ -105,9 +106,11 @@ class MigrationController : NucleusController<MigrationPresenter>(),
         val item = adapter?.getItem(position) ?: return false
 
         if (item is MangaItem) {
-            PreMigrationController.navigateToMigration(Injekt.get<PreferencesHelper>().skipPreMigration().getOrDefault(),
+            PreMigrationController.navigateToMigration(
+                Injekt.get<PreferencesHelper>().skipPreMigration().getOrDefault(),
                 router,
-                listOf(item.manga.id!!))
+                listOf(item.manga.id!!)
+            )
         } else if (item is SourceItem) {
             presenter.setSelectedSource(item.source)
         }
@@ -124,9 +127,11 @@ class MigrationController : NucleusController<MigrationPresenter>(),
             val sourceMangas =
                 manga.asSequence().filter { it.source == item.source.id }.map { it.id!! }.toList()
             withContext(Dispatchers.Main) {
-                PreMigrationController.navigateToMigration(Injekt.get<PreferencesHelper>().skipPreMigration().getOrDefault(),
+                PreMigrationController.navigateToMigration(
+                    Injekt.get<PreferencesHelper>().skipPreMigration().getOrDefault(),
                     router,
-                    sourceMangas)
+                    sourceMangas
+                )
             }
         }
     }

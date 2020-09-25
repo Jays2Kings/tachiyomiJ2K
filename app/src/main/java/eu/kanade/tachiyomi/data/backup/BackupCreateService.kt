@@ -75,7 +75,8 @@ class BackupCreateService : Service() {
         startForeground(Notifications.ID_BACKUP_PROGRESS, notifier.showBackupProgress().build())
 
         wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager).newWakeLock(
-            PowerManager.PARTIAL_WAKE_LOCK, "${javaClass.name}:WakeLock"
+            PowerManager.PARTIAL_WAKE_LOCK,
+            "${javaClass.name}:WakeLock"
         )
         wakeLock.acquire()
     }

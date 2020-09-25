@@ -72,7 +72,8 @@ class SettingsAdvancedController : SettingsController() {
             preference {
                 titleRes = R.string.clean_up_cached_covers
                 summary = context.getString(
-                    R.string.delete_old_covers_in_library_used_, coverCache.getChapterCacheSize()
+                    R.string.delete_old_covers_in_library_used_,
+                    coverCache.getChapterCacheSize()
                 )
 
                 onClick {
@@ -209,7 +210,7 @@ class SettingsAdvancedController : SettingsController() {
                 for (mangaFolder in mangaFolders) {
                     val manga = sourceManga.find { downloadProvider.getMangaDirName(it) == mangaFolder.name }
                     if (manga == null) {
-                    // download is orphaned and not even in the db delete it if remove non favorited is enabled
+                        // download is orphaned and not even in the db delete it if remove non favorited is enabled
                         if (removeNonFavorite) {
                             foldersCleared += 1 + (mangaFolder.listFiles()?.size ?: 0)
                             mangaFolder.delete()
@@ -248,19 +249,24 @@ class SettingsAdvancedController : SettingsController() {
             }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-            }, {
-                activity?.toast(R.string.cache_delete_error)
-            }, {
-                activity?.toast(
-                    resources?.getQuantityString(
-                        R.plurals.cache_cleared,
-                        deletedFiles, deletedFiles
+            .subscribe(
+                {
+                },
+                {
+                    activity?.toast(R.string.cache_delete_error)
+                },
+                {
+                    activity?.toast(
+                        resources?.getQuantityString(
+                            R.plurals.cache_cleared,
+                            deletedFiles,
+                            deletedFiles
+                        )
                     )
-                )
-                findPreference(CLEAR_CACHE_KEY)?.summary =
-                    resources?.getString(R.string.used_, chapterCache.readableSize)
-            })
+                    findPreference(CLEAR_CACHE_KEY)?.summary =
+                        resources?.getString(R.string.used_, chapterCache.readableSize)
+                }
+            )
     }
 
     class ClearDatabaseDialogController : DialogController() {

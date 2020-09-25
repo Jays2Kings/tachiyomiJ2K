@@ -80,20 +80,22 @@ object ImageUtil {
         val botRightIsDark = isDark(image.getPixel(right, bot))
 
         var darkBG = (topLeftIsDark && (botLeftIsDark || botRightIsDark || topRightIsDark || midLeftIsDark || topMidIsDark)) ||
-                (topRightIsDark && (botRightIsDark || botLeftIsDark || midRightIsDark || topMidIsDark))
+            (topRightIsDark && (botRightIsDark || botLeftIsDark || midRightIsDark || topMidIsDark))
 
         if (!isWhite(image.getPixel(left, top)) && pixelIsClose(image.getPixel(left, top), image.getPixel(midX, top)) &&
-                !isWhite(image.getPixel(midX, top)) && pixelIsClose(image.getPixel(midX, top), image.getPixel(right, top)) &&
-                !isWhite(image.getPixel(right, top)) && pixelIsClose(image.getPixel(right, top), image.getPixel(right, bot)) &&
-                !isWhite(image.getPixel(right, bot)) && pixelIsClose(image.getPixel(right, bot), image.getPixel(midX, bot)) &&
-                !isWhite(image.getPixel(midX, bot)) && pixelIsClose(image.getPixel(midX, bot), image.getPixel(left, bot)) &&
-                !isWhite(image.getPixel(left, bot)) && pixelIsClose(image.getPixel(left, bot), image.getPixel(left, top)))
+            !isWhite(image.getPixel(midX, top)) && pixelIsClose(image.getPixel(midX, top), image.getPixel(right, top)) &&
+            !isWhite(image.getPixel(right, top)) && pixelIsClose(image.getPixel(right, top), image.getPixel(right, bot)) &&
+            !isWhite(image.getPixel(right, bot)) && pixelIsClose(image.getPixel(right, bot), image.getPixel(midX, bot)) &&
+            !isWhite(image.getPixel(midX, bot)) && pixelIsClose(image.getPixel(midX, bot), image.getPixel(left, bot)) &&
+            !isWhite(image.getPixel(left, bot)) && pixelIsClose(image.getPixel(left, bot), image.getPixel(left, top))
+        )
             return ColorDrawable(image.getPixel(left, top))
 
         if (isWhite(image.getPixel(left, top)).toInt() +
-                isWhite(image.getPixel(right, top)).toInt() +
-                isWhite(image.getPixel(left, bot)).toInt() +
-                isWhite(image.getPixel(right, bot)).toInt() > 2)
+            isWhite(image.getPixel(right, top)).toInt() +
+            isWhite(image.getPixel(left, bot)).toInt() +
+            isWhite(image.getPixel(right, bot)).toInt() > 2
+        )
             darkBG = false
 
         var blackPixel = when {
@@ -186,22 +188,36 @@ object ImageUtil {
         if (topIsBlackStreak && bottomIsBlackStreak)
             darkBG = true
         if (darkBG) {
-            return if (isWhite(image.getPixel(left, bot)) && isWhite(image.getPixel(right, bot))) GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
-                intArrayOf(blackPixel, blackPixel, backgroundColor, backgroundColor))
-            else if (isWhite(image.getPixel(left, top)) && isWhite(image.getPixel(right, top))) GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
-                intArrayOf(backgroundColor, backgroundColor, blackPixel, blackPixel))
+            return if (isWhite(image.getPixel(left, bot)) && isWhite(image.getPixel(right, bot))) GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                intArrayOf(blackPixel, blackPixel, backgroundColor, backgroundColor)
+            )
+            else if (isWhite(image.getPixel(left, top)) && isWhite(image.getPixel(right, top))) GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                intArrayOf(backgroundColor, backgroundColor, blackPixel, blackPixel)
+            )
             else ColorDrawable(blackPixel)
         }
-        if (topIsBlackStreak || (topLeftIsDark && topRightIsDark &&
-                        isDark(image.getPixel(left - offsetX, top)) && isDark(image.getPixel(right + offsetX, top)) &&
-                        (topMidIsDark || overallBlackPixels > 9)))
-            return GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
-                    intArrayOf(blackPixel, blackPixel, backgroundColor, backgroundColor))
-        else if (bottomIsBlackStreak || (botLeftIsDark && botRightIsDark &&
-                        isDark(image.getPixel(left - offsetX, bot)) && isDark(image.getPixel(right + offsetX, bot)) &&
-                        (isDark(image.getPixel(midX, bot)) || overallBlackPixels > 9)))
-            return GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
-                    intArrayOf(backgroundColor, backgroundColor, blackPixel, blackPixel))
+        if (topIsBlackStreak || (
+            topLeftIsDark && topRightIsDark &&
+                isDark(image.getPixel(left - offsetX, top)) && isDark(image.getPixel(right + offsetX, top)) &&
+                (topMidIsDark || overallBlackPixels > 9)
+            )
+        )
+            return GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                intArrayOf(blackPixel, blackPixel, backgroundColor, backgroundColor)
+            )
+        else if (bottomIsBlackStreak || (
+            botLeftIsDark && botRightIsDark &&
+                isDark(image.getPixel(left - offsetX, bot)) && isDark(image.getPixel(right + offsetX, bot)) &&
+                (isDark(image.getPixel(midX, bot)) || overallBlackPixels > 9)
+            )
+        )
+            return GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                intArrayOf(backgroundColor, backgroundColor, blackPixel, blackPixel)
+            )
         return ColorDrawable(backgroundColor)
     }
 
@@ -213,8 +229,8 @@ object ImageUtil {
 
     private fun pixelIsClose(color1: Int, color2: Int): Boolean {
         return abs(Color.red(color1) - Color.red(color2)) < 30 &&
-                abs(Color.green(color1) - Color.green(color2)) < 30 &&
-                abs(Color.blue(color1) - Color.blue(color2)) < 30
+            abs(Color.green(color1) - Color.green(color2)) < 30 &&
+            abs(Color.blue(color1) - Color.blue(color2)) < 30
     }
 
     private fun isWhite(color: Int): Boolean {

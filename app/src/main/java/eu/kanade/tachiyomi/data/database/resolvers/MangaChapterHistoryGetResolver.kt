@@ -42,8 +42,8 @@ class MangaChapterHistoryGetResolver : DefaultGetResolver<MangaChapterHistory>()
         val chapter =
             if (!cursor.isNull(cursor.getColumnIndex(ChapterTable.COL_MANGA_ID))) chapterResolver
                 .mapFromCursor(
-                cursor
-            ) else ChapterImpl()
+                    cursor
+                ) else ChapterImpl()
 
         // Get history object
         val history =

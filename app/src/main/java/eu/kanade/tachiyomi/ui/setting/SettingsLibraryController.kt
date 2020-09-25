@@ -118,7 +118,8 @@ class SettingsLibraryController : SettingsController() {
                 // The following array lines up with the list rankingScheme in:
                 // ../../data/library/LibraryUpdateRanker.kt
                 entriesRes = arrayOf(
-                    R.string.alphabetically, R.string.last_updated
+                    R.string.alphabetically,
+                    R.string.last_updated
                 )
                 entryRange = 0..1
                 defaultValue = 0
@@ -147,7 +148,8 @@ class SettingsLibraryController : SettingsController() {
                 titleRes = R.string.categories_on_manual
 
                 entriesRes = arrayOf(
-                    R.string.first_category, R.string.categories_in_global_update
+                    R.string.first_category,
+                    R.string.categories_in_global_update
                 )
                 entryRange = 0..1
                 defaultValue = -1

@@ -8,7 +8,7 @@ import kotlin.math.max
 import kotlin.math.roundToInt
 
 class AutofitRecyclerView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-        androidx.recyclerview.widget.RecyclerView(context, attrs) {
+    androidx.recyclerview.widget.RecyclerView(context, attrs) {
 
     val manager = GridLayoutManager(context, 1)
 

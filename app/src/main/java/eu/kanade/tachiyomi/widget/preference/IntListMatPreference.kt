@@ -11,8 +11,8 @@ class IntListMatPreference @JvmOverloads constructor(
     activity: Activity?,
     context: Context,
     attrs:
-AttributeSet? =
-    null
+        AttributeSet? =
+            null
 ) :
     MatPreference(activity, context, attrs) {
     var entryValues: List<Int> = emptyList()
@@ -40,10 +40,12 @@ AttributeSet? =
     override fun dialog(): MaterialDialog {
         return super.dialog().apply {
             val default = entryValues.indexOf(prefs.getInt(key, defValue).getOrDefault())
-            listItemsSingleChoice(items = entries,
+            listItemsSingleChoice(
+                items = entries,
                 waitForPositiveButton = false,
-                initialSelection = default) {
-                    _, pos, _ ->
+                initialSelection = default
+            ) {
+                _, pos, _ ->
                 val value = entryValues[pos]
                 if (key != null)
                     prefs.getInt(key, defValue).set(value)

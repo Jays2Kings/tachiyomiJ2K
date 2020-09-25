@@ -4,7 +4,7 @@ import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.data.updater.UpdateChecker
 import eu.kanade.tachiyomi.data.updater.UpdateResult
 
-    class GithubUpdateChecker : UpdateChecker() {
+class GithubUpdateChecker : UpdateChecker() {
 
     private val service: GithubService = GithubService.create()
 

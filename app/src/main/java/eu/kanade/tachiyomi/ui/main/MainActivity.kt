@@ -144,10 +144,12 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
         drawerArrow = DrawerArrowDrawable(this)
         drawerArrow?.color = getResourceColor(R.attr.actionBarTintColor)
         searchDrawable = ContextCompat.getDrawable(
-            this, R.drawable.ic_search_24dp
+            this,
+            R.drawable.ic_search_24dp
         )
         dismissDrawable = ContextCompat.getDrawable(
-            this, R.drawable.ic_close_24dp
+            this,
+            R.drawable.ic_close_24dp
         )
 
         var continueSwitchingTabs = false
@@ -180,20 +182,24 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
             val currentController = router.backstack.lastOrNull()?.controller()
             if (!continueSwitchingTabs && currentController is BottomNavBarInterface) {
                 if (!currentController.canChangeTabs {
-                        continueSwitchingTabs = true
-                        this@MainActivity.bottom_nav.selectedItemId = id
-                    }) return@setOnNavigationItemSelectedListener false
+                    continueSwitchingTabs = true
+                    this@MainActivity.bottom_nav.selectedItemId = id
+                }
+                ) return@setOnNavigationItemSelectedListener false
             }
             continueSwitchingTabs = false
             if (item.itemId != R.id.nav_browse)
                 preferences.lastTab().set(item.itemId)
             val currentRoot = router.backstack.firstOrNull()
             if (currentRoot?.tag()?.toIntOrNull() != id) {
-                setRoot(when (id) {
-                    R.id.nav_library -> LibraryController()
-                    R.id.nav_recents -> RecentsController()
-                    else -> SourceController()
-                }, id)
+                setRoot(
+                    when (id) {
+                        R.id.nav_library -> LibraryController()
+                        R.id.nav_recents -> RecentsController()
+                        else -> SourceController()
+                    },
+                    id
+                )
             } else if (currentRoot.tag()?.toIntOrNull() == id) {
                 if (router.backstackSize == 1) {
                     val controller =
@@ -225,7 +231,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
             // Consume any horizontal insets and pad all content in. There's not much we can do
             // with horizontal insets
             v.updatePadding(
-                left = insets.systemWindowInsetLeft, right = insets.systemWindowInsetRight
+                left = insets.systemWindowInsetLeft,
+                right = insets.systemWindowInsetRight
             )
             appbar.updatePadding(
                 top = insets.systemWindowInsetTop
@@ -251,31 +258,33 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
 
         bottom_nav.visibleIf(!hideBottomNav)
         bottom_nav.alpha = if (hideBottomNav) 0f else 1f
-        router.addChangeListener(object : ControllerChangeHandler.ControllerChangeListener {
-            override fun onChangeStarted(
-                to: Controller?,
-                from: Controller?,
-                isPush: Boolean,
-                container: ViewGroup,
-                handler: ControllerChangeHandler
-            ) {
+        router.addChangeListener(
+            object : ControllerChangeHandler.ControllerChangeListener {
+                override fun onChangeStarted(
+                    to: Controller?,
+                    from: Controller?,
+                    isPush: Boolean,
+                    container: ViewGroup,
+                    handler: ControllerChangeHandler
+                ) {
 
-                syncActivityViewWithController(to, from, isPush)
-                appbar.y = 0f
-                snackBar?.dismiss()
-            }
+                    syncActivityViewWithController(to, from, isPush)
+                    appbar.y = 0f
+                    snackBar?.dismiss()
+                }
 
-            override fun onChangeCompleted(
-                to: Controller?,
-                from: Controller?,
-                isPush: Boolean,
-                container: ViewGroup,
-                handler: ControllerChangeHandler
-            ) {
-                appbar.y = 0f
-                showDLQueueTutorial()
+                override fun onChangeCompleted(
+                    to: Controller?,
+                    from: Controller?,
+                    isPush: Boolean,
+                    container: ViewGroup,
+                    handler: ControllerChangeHandler
+                ) {
+                    appbar.y = 0f
+                    showDLQueueTutorial()
+                }
             }
-        })
+        )
 
         syncActivityViewWithController(router.backstack.lastOrNull()?.controller())
 
@@ -322,7 +331,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
         // if in portrait with 2/3 button mode, translucent nav bar
         else {
             ColorUtils.setAlphaComponent(
-                getResourceColor(R.attr.colorPrimaryVariant), 179
+                getResourceColor(R.attr.colorPrimaryVariant),
+                179
             )
         }
     }
@@ -335,7 +345,9 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
     override fun onSupportActionModeFinished(mode: androidx.appcompat.view.ActionMode) {
         launchUI {
             val scale = Settings.Global.getFloat(
-                contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1.0f
+                contentResolver,
+                Settings.Global.ANIMATOR_DURATION_SCALE,
+                1.0f
             )
             val duration = resources.getInteger(android.R.integer.config_mediumAnimTime) * scale
             delay(duration.toLong())
@@ -372,7 +384,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
         ) {
             val recentsItem = bottom_nav.getItemView(R.id.nav_recents) ?: return
             preferences.shownDownloadQueueTutorial().set(true)
-            TapTargetView.showFor(this,
+            TapTargetView.showFor(
+                this,
                 TapTarget.forView(
                     recentsItem,
                     getString(R.string.manage_whats_downloading),
@@ -387,7 +400,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
                         super.onTargetClick(view)
                         bottom_nav.selectedItemId = R.id.nav_recents
                     }
-                })
+                }
+            )
         }
     }
 
@@ -398,7 +412,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
 
     private fun getAppUpdates() {
         if (isUpdaterEnabled &&
-            Date().time >= preferences.lastAppCheck().get() + TimeUnit.DAYS.toMillis(1)) {
+            Date().time >= preferences.lastAppCheck().get() + TimeUnit.DAYS.toMillis(1)
+        ) {
             lifecycleScope.launch(Dispatchers.IO) {
                 try {
                     val result = updateChecker.checkForUpdate()
@@ -441,7 +456,9 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
     protected open fun handleIntentAction(intent: Intent): Boolean {
         val notificationId = intent.getIntExtra("notificationId", -1)
         if (notificationId > -1) NotificationReceiver.dismissNotification(
-            applicationContext, notificationId, intent.getIntExtra("groupId", 0)
+            applicationContext,
+            notificationId,
+            intent.getIntExtra("groupId", 0)
         )
         when (intent.action) {
             SHORTCUT_LIBRARY -> bottom_nav.selectedItemId = R.id.nav_library
@@ -508,8 +525,8 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
             R.id.action_settings -> {
                 router.pushController(
                     (RouterTransaction.with(SettingsMainController())).popChangeHandler(
-                            FadeChangeHandler()
-                        ).pushChangeHandler(FadeChangeHandler())
+                        FadeChangeHandler()
+                    ).pushChangeHandler(FadeChangeHandler())
                 )
             }
             else -> return super.onOptionsItemSelected(item)
@@ -528,10 +545,9 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
                 extraViewForUndo?.getGlobalVisibleRect(extRect)
                 // This way the snackbar will only be dismissed if
                 // the user clicks outside it.
-                if (canDismissSnackBar && !sRect.contains(
-                        ev.x.toInt(),
-                        ev.y.toInt()
-                    ) && (extRect == null || !extRect.contains(ev.x.toInt(), ev.y.toInt()))
+                if (canDismissSnackBar &&
+                    !sRect.contains(ev.x.toInt(), ev.y.toInt()) &&
+                    (extRect == null || !extRect.contains(ev.x.toInt(), ev.y.toInt()))
                 ) {
                     snackBar?.dismiss()
                     snackBar = null
@@ -567,14 +583,17 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
         animationSet?.cancel()
         animationSet = AnimatorSet()
         val alphaAnimation = ValueAnimator.ofFloat(
-            bottom_nav.alpha, if (hideBottomNav) 0f else 1f
+            bottom_nav.alpha,
+            if (hideBottomNav) 0f else 1f
         )
         alphaAnimation.addUpdateListener { valueAnimator ->
             bottom_nav.alpha = valueAnimator.animatedValue as Float
         }
-        alphaAnimation.addListener(EndAnimatorListener {
-            bottom_nav.visibility = if (hideBottomNav) View.GONE else View.VISIBLE
-        })
+        alphaAnimation.addListener(
+            EndAnimatorListener {
+                bottom_nav.visibility = if (hideBottomNav) View.GONE else View.VISIBLE
+            }
+        )
         alphaAnimation.duration = 200
         alphaAnimation.startDelay = 50
         animationSet?.playTogether(alphaAnimation)
@@ -610,9 +629,10 @@ open class MainActivity : BaseActivity(), DownloadServiceListener {
             if (abs(diffX) <= abs(diffY)) {
                 val sheetRect = Rect()
                 bottom_nav.getGlobalVisibleRect(sheetRect)
-                if (sheetRect.contains(
-                        e1.x.toInt(), e1.y.toInt()
-                    ) && abs(diffY) > Companion.SWIPE_THRESHOLD && abs(velocityY) > Companion.SWIPE_VELOCITY_THRESHOLD && diffY <= 0
+                if (sheetRect.contains(e1.x.toInt(), e1.y.toInt()) &&
+                    abs(diffY) > Companion.SWIPE_THRESHOLD &&
+                    abs(velocityY) > Companion.SWIPE_VELOCITY_THRESHOLD &&
+                    diffY <= 0
                 ) {
                     val bottomSheetController =
                         router.backstack.lastOrNull()?.controller() as? BottomSheetController

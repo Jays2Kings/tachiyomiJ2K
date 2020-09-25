@@ -43,7 +43,8 @@ class UpdaterService : Service() {
         startForeground(Notifications.ID_UPDATER, notifier.onDownloadStarted(getString(R.string.app_name)).build())
 
         wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager).newWakeLock(
-            PowerManager.PARTIAL_WAKE_LOCK, "${javaClass.name}:WakeLock"
+            PowerManager.PARTIAL_WAKE_LOCK,
+            "${javaClass.name}:WakeLock"
         )
         wakeLock.acquire()
     }

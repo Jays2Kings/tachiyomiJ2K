@@ -17,8 +17,11 @@ class RecentMangaAdapter(val delegate: RecentsInterface) :
         updateDataSet(items)
     }
 
-    val decimalFormat = DecimalFormat("#.###", DecimalFormatSymbols()
-        .apply { decimalSeparator = '.' })
+    val decimalFormat = DecimalFormat(
+        "#.###",
+        DecimalFormatSymbols()
+            .apply { decimalSeparator = '.' }
+    )
 
     interface RecentsInterface : RecentMangaInterface, DownloadInterface
 

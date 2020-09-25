@@ -360,15 +360,17 @@ class WebtoonPageHolder(
             setMinimumDpi(90)
             setMinimumTileDpi(180)
             setCropBorders(if (viewer.hasMargins) config.verticalCropBorders else config.webtoonCropBorders)
-            setOnImageEventListener(object : SubsamplingScaleImageView.DefaultOnImageEventListener() {
-                override fun onReady() {
-                    onImageDecoded()
-                }
+            setOnImageEventListener(
+                object : SubsamplingScaleImageView.DefaultOnImageEventListener() {
+                    override fun onReady() {
+                        onImageDecoded()
+                    }
 
-                override fun onImageLoadError(e: Exception) {
-                    onImageDecodeError()
+                    override fun onImageLoadError(e: Exception) {
+                        onImageDecodeError()
+                    }
                 }
-            })
+            )
         }
         frame.addView(subsamplingImageView, MATCH_PARENT, MATCH_PARENT)
         return subsamplingImageView!!

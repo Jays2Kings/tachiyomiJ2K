@@ -9,8 +9,10 @@ fun WindowInsets.getBottomGestureInsets(): Int {
 }
 
 /** returns if device using gesture nav and supports true edge to edge */
-fun WindowInsets.isBottomTappable() = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
-    systemWindowInsetBottom != tappableElementInsets.bottom)
+fun WindowInsets.isBottomTappable() = (
+    Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
+        systemWindowInsetBottom != tappableElementInsets.bottom
+    )
 
 fun WindowInsets.hasSideInsets() = systemWindowInsetLeft > 0 || systemWindowInsetRight > 0
 

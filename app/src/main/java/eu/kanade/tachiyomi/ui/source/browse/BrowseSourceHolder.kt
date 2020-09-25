@@ -14,7 +14,7 @@ import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
  * @param adapter the adapter handling this holder.
  */
 abstract class BrowseSourceHolder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>) :
-        BaseFlexibleViewHolder(view, adapter) {
+    BaseFlexibleViewHolder(view, adapter) {
 
     /**
      * Method called from [CatalogueAdapter.onBindViewHolder]. It updates the data for this

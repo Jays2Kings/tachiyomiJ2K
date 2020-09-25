@@ -11,7 +11,7 @@ assignees: ''
 
 I acknowledge that:
 
-- I have updated to the latest version of the app (latest J2K is v1.0.7)
+- I have updated to the latest version of the app (latest J2K is v1.0.9)
 - I will not repeat a request for a feature already requested
 - If this is an request for an extension/source, that I should be opening an issue in https://github.com/inorichi/tachiyomi-extensions
 

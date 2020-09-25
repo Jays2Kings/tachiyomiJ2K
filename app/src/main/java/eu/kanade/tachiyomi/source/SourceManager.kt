@@ -21,13 +21,24 @@ open class SourceManager(private val context: Context) {
 
     private val delegatedSources = listOf(
         DelegatedSource(
-            "reader.kireicake.com", 5509224355268673176, KireiCake()
-        ), DelegatedSource(
-            "jaiminisbox.com", 9064882169246918586, FoolSlide("jaiminis", "/reader")
-        ), DelegatedSource(
-            "mangadex.org", 2499283573021220255, MangaDex()
-        ), DelegatedSource(
-            "mangaplus.shueisha.co.jp", 1998944621602463790, MangaPlus()
+            "reader.kireicake.com",
+            5509224355268673176,
+            KireiCake()
+        ),
+        DelegatedSource(
+            "jaiminisbox.com",
+            9064882169246918586,
+            FoolSlide("jaiminis", "/reader")
+        ),
+        DelegatedSource(
+            "mangadex.org",
+            2499283573021220255,
+            MangaDex()
+        ),
+        DelegatedSource(
+            "mangaplus.shueisha.co.jp",
+            1998944621602463790,
+            MangaPlus()
         )
     ).associateBy { it.sourceId }
 
@@ -92,8 +103,10 @@ open class SourceManager(private val context: Context) {
         private fun getSourceNotInstalledException(): Exception {
             return SourceNotFoundException(
                 context.getString(
-                    R.string.source_not_installed_, id.toString()
-                ), id
+                    R.string.source_not_installed_,
+                    id.toString()
+                ),
+                id
             )
         }
 

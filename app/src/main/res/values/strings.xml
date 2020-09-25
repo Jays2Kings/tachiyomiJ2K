@@ -394,6 +394,9 @@
     <string name="must_be_in_library_to_edit">Manga must be in your library to edit</string>
     <string name="remember_this_choice">Remember this choice</string>
     <string name="source_not_installed">Source not installed</string>
+    <string name="cover_saved">Cover saved</string>
+    <string name="error_saving_cover">Error saving cover</string>
+    <string name="error_sharing_cover">Error sharing cover</string>
     <plurals name="deleted_chapters">
         <item quantity="one">A chapter has been removed from the source:\n%2$s\nDelete
             its download?</item>

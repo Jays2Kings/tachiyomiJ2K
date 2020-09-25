@@ -45,12 +45,15 @@ class ExtensionUpdateJob(private val context: Context, workerParams: WorkerParam
         val preferences: PreferencesHelper by injectLazy()
         preferences.extensionUpdatesCount().set(names.size)
         NotificationManagerCompat.from(context).apply {
-            notify(Notifications.ID_UPDATES_TO_EXTS,
+            notify(
+                Notifications.ID_UPDATES_TO_EXTS,
                 context.notification(Notifications.CHANNEL_UPDATES_TO_EXTS) {
                     setContentTitle(
                         context.resources.getQuantityString(
-                            R.plurals.extension_updates_available, names
-                                .size, names.size
+                            R.plurals.extension_updates_available,
+                            names
+                                .size,
+                            names.size
                         )
                     )
                     val extNames = names.joinToString(", ")
@@ -64,7 +67,8 @@ class ExtensionUpdateJob(private val context: Context, workerParams: WorkerParam
                         )
                     )
                     setAutoCancel(true)
-                })
+                }
+            )
         }
     }
 
@@ -80,8 +84,11 @@ class ExtensionUpdateJob(private val context: Context, workerParams: WorkerParam
                     .build()
 
                 val request = PeriodicWorkRequestBuilder<ExtensionUpdateJob>(
-                    12, TimeUnit.HOURS,
-                    1, TimeUnit.HOURS)
+                    12,
+                    TimeUnit.HOURS,
+                    1,
+                    TimeUnit.HOURS
+                )
                     .addTag(TAG)
                     .setConstraints(constraints)
                     .build()

@@ -61,37 +61,44 @@ object Notifications {
     fun createChannels(context: Context) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
 
-        val channels = listOf(NotificationChannel(
-            CHANNEL_COMMON,
-            context.getString(R.string.common),
-            NotificationManager.IMPORTANCE_LOW
-        ), NotificationChannel(
-            CHANNEL_LIBRARY,
-            context.getString(R.string.updating_library),
-            NotificationManager.IMPORTANCE_LOW
-        ).apply {
-            setShowBadge(false)
-        }, NotificationChannel(
-            CHANNEL_DOWNLOADER,
-            context.getString(R.string.downloads),
-            NotificationManager.IMPORTANCE_LOW
-        ).apply {
-            setShowBadge(false)
-        }, NotificationChannel(
-            CHANNEL_UPDATES_TO_EXTS,
-            context.getString(R.string.extension_updates),
-            NotificationManager.IMPORTANCE_DEFAULT
-        ), NotificationChannel(
-            CHANNEL_NEW_CHAPTERS,
-            context.getString(R.string.new_chapters),
-            NotificationManager.IMPORTANCE_DEFAULT
-        ), NotificationChannel(
-            CHANNEL_BACKUP_RESTORE,
-            context.getString(R.string.restoring_backup),
-            NotificationManager.IMPORTANCE_LOW
-        ).apply {
-            setShowBadge(false)
-        })
+        val channels = listOf(
+            NotificationChannel(
+                CHANNEL_COMMON,
+                context.getString(R.string.common),
+                NotificationManager.IMPORTANCE_LOW
+            ),
+            NotificationChannel(
+                CHANNEL_LIBRARY,
+                context.getString(R.string.updating_library),
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                setShowBadge(false)
+            },
+            NotificationChannel(
+                CHANNEL_DOWNLOADER,
+                context.getString(R.string.downloads),
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                setShowBadge(false)
+            },
+            NotificationChannel(
+                CHANNEL_UPDATES_TO_EXTS,
+                context.getString(R.string.extension_updates),
+                NotificationManager.IMPORTANCE_DEFAULT
+            ),
+            NotificationChannel(
+                CHANNEL_NEW_CHAPTERS,
+                context.getString(R.string.new_chapters),
+                NotificationManager.IMPORTANCE_DEFAULT
+            ),
+            NotificationChannel(
+                CHANNEL_BACKUP_RESTORE,
+                context.getString(R.string.restoring_backup),
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                setShowBadge(false)
+            }
+        )
         context.notificationManager.createNotificationChannels(channels)
     }
 }

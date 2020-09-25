@@ -9,7 +9,7 @@ import eu.davidea.flexibleadapter.items.IFlexible
  * @param controller instance of [MigrationController].
  */
 class SourceAdapter(val controller: MigrationController) :
-        FlexibleAdapter<IFlexible<*>>(null, controller, true) {
+    FlexibleAdapter<IFlexible<*>>(null, controller, true) {
 
     private var items: List<IFlexible<*>>? = null
 

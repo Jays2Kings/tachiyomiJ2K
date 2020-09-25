@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="v1.0.9" changeDate="">
+		<changelogtext>Fixes to crashes while using certain extensions</changelogtext>
+		<changelogtext>Option to save or share a manga cover</changelogtext>
+		<changelogtext>In LTR/RTL Reader mode, the page no longer overlap the cutout area (notches, hole punches) when zoomed out, and pans past it when zoomed in</changelogtext>
+    </changelogversion>
+	
+    <changelogversion versionName="v1.0.8" changeDate="">
+        <changelogtext>Deeplinking into chapter support for a few sources (Mangadex, MangaPlus, Jaimini's Box, Kirei Cake). more to come maybe</changelogtext>
+        <changelogtext>Tap on the manga title in reader to go to the manga's details</changelogtext>
+        <changelogtext>Fixes to MAL signouts</changelogtext>
+        <changelogtext>Fixes to Nth downloaded chapters not deleting as well as lag when deleting</changelogtext>
+        <changelogtext>Changed webtoon zoom setting to only disable zoom out</changelogtext>
+        <changelogtext>Various updates from upstream, such as DNS over HTTPS via Cloudflare</changelogtext>
+    </changelogversion>
+
     <changelogversion versionName="v1.0.7" changeDate="">
 		<changelogtext>Fixes to crashes on certain Samsung phones</changelogtext>
 		<changelogtext>Fixed external links not opening sometimes (if you still have this issue, set this app to the default)</changelogtext>

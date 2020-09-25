@@ -160,11 +160,13 @@ class MangaHeaderHolder(
             else expand()
         }
         manga_summary_label.text = itemView.context.getString(
-            R.string.about_this_, manga.mangaType(itemView.context)
+            R.string.about_this_,
+            manga.mangaType(itemView.context)
         )
         with(favorite_button) {
             icon = ContextCompat.getDrawable(
-                itemView.context, when {
+                itemView.context,
+                when {
                     item.isLocked -> R.drawable.ic_lock_24dp
                     manga.favorite -> R.drawable.ic_heart_24dp
                     else -> R.drawable.ic_heart_outline_24dp
@@ -210,7 +212,8 @@ class MangaHeaderHolder(
                 val number = adapter.decimalFormat.format(nextChapter.chapter_number.toDouble())
                 if (nextChapter.chapter_number > 0) resources.getString(
                     if (nextChapter.last_page_read > 0) R.string.continue_reading_chapter_
-                    else R.string.start_reading_chapter_, number
+                    else R.string.start_reading_chapter_,
+                    number
                 )
                 else {
                     resources.getString(
@@ -231,14 +234,16 @@ class MangaHeaderHolder(
         }
 
         manga_status.visibleIf(manga.status != 0)
-        manga_status.text = (itemView.context.getString(
-            when (manga.status) {
-                SManga.ONGOING -> R.string.ongoing
-                SManga.COMPLETED -> R.string.completed
-                SManga.LICENSED -> R.string.licensed
-                else -> R.string.unknown_status
-            }
-        ))
+        manga_status.text = (
+            itemView.context.getString(
+                when (manga.status) {
+                    SManga.ONGOING -> R.string.ongoing
+                    SManga.COMPLETED -> R.string.completed
+                    SManga.LICENSED -> R.string.licensed
+                    else -> R.string.unknown_status
+                }
+            )
+            )
         manga_source.text = presenter.source.toString()
 
         filters_text.text = presenter.currentFilters()
@@ -256,7 +261,8 @@ class MangaHeaderHolder(
         if (checked) {
             backgroundTintList = ColorStateList.valueOf(
                 ColorUtils.setAlphaComponent(
-                    context.getResourceColor(R.attr.colorAccent), 75
+                    context.getResourceColor(R.attr.colorAccent),
+                    75
                 )
             )
             strokeColor = ColorStateList.valueOf(Color.TRANSPARENT)
@@ -287,7 +293,8 @@ class MangaHeaderHolder(
             )
 
             icon = ContextCompat.getDrawable(
-                itemView.context, if (tracked) R.drawable
+                itemView.context,
+                if (tracked) R.drawable
                     .ic_check_24dp else R.drawable.ic_sync_24dp
             )
             checked(tracked)
@@ -308,16 +315,22 @@ class MangaHeaderHolder(
     fun updateCover(manga: Manga) {
         if (!manga.initialized) return
         val drawable = adapter.controller.manga_cover_full?.drawable
-        manga_cover.loadAny(manga, builder = {
-            placeholder(drawable)
-            error(drawable)
-            if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
-        })
-        backdrop.loadAny(manga, builder = {
-            placeholder(drawable)
-            error(drawable)
-            if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
-        })
+        manga_cover.loadAny(
+            manga,
+            builder = {
+                placeholder(drawable)
+                error(drawable)
+                if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
+            }
+        )
+        backdrop.loadAny(
+            manga,
+            builder = {
+                placeholder(drawable)
+                error(drawable)
+                if (manga.favorite) networkCachePolicy(CachePolicy.DISABLED)
+            }
+        )
     }
 
     fun expand() {

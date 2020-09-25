@@ -27,7 +27,8 @@ object TrackTable {
     const val COL_TRACKING_URL = "remote_url"
 
     val createTableQuery: String
-        get() = """CREATE TABLE $TABLE(
+        get() =
+            """CREATE TABLE $TABLE(
             $COL_ID INTEGER NOT NULL PRIMARY KEY,
             $COL_MANGA_ID INTEGER NOT NULL,
             $COL_SYNC_ID INTEGER NOT NULL,

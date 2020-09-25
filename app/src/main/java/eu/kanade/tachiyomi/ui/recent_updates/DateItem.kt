@@ -12,7 +12,7 @@ import eu.kanade.tachiyomi.R
 import java.util.Date
 
 class DateItem(val date: Date, val addedString: Boolean = false) : AbstractHeaderItem<DateItem
-.Holder>() {
+    .Holder>() {
 
     override fun getLayoutRes(): Int {
         return R.layout.recent_chapters_section_item

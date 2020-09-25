@@ -97,7 +97,8 @@ import kotlin.math.abs
  * viewers, to which calls from the presenter or UI events are delegated.
  */
 @RequiresPresenter(ReaderPresenter::class)
-class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
+class ReaderActivity :
+    BaseRxActivity<ReaderPresenter>(),
     SystemUiHelper.OnVisibilityChangeListener {
 
     /**
@@ -346,7 +347,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         // Set toolbar
         setSupportActionBar(toolbar)
         val primaryColor = ColorUtils.setAlphaComponent(
-            getResourceColor(R.attr.colorSecondary), 200
+            getResourceColor(R.attr.colorSecondary),
+            200
         )
         appbar.setBackgroundColor(primaryColor)
         window.statusBarColor = Color.TRANSPARENT
@@ -363,13 +365,15 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         }
 
         // Init listeners on bottom menu
-        page_seekbar.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
-                if (viewer != null && fromUser) {
-                    moveToPageIndex(value)
+        page_seekbar.setOnSeekBarChangeListener(
+            object : SimpleSeekBarListener() {
+                override fun onProgressChanged(seekBar: SeekBar, value: Int, fromUser: Boolean) {
+                    if (viewer != null && fromUser) {
+                        moveToPageIndex(value)
+                    }
                 }
             }
-        })
+        )
 
         // Set initial visibility
         setMenuVisibility(menuVisible)
@@ -432,11 +436,13 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
             if (animate) {
                 if (!menuStickyVisible) {
                     val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.enter_from_top)
-                    toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
-                        override fun onAnimationStart(animation: Animation) {
-                            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                    toolbarAnimation.setAnimationListener(
+                        object : SimpleAnimationListener() {
+                            override fun onAnimationStart(animation: Animation) {
+                                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                            }
                         }
-                    })
+                    )
                     appbar.startAnimation(toolbarAnimation)
                 }
                 chapters_bottom_sheet.sheetBehavior?.collapse()
@@ -446,11 +452,13 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
 
             if (animate) {
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.exit_to_top)
-                toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
-                    override fun onAnimationEnd(animation: Animation) {
-                        reader_menu.gone()
+                toolbarAnimation.setAnimationListener(
+                    object : SimpleAnimationListener() {
+                        override fun onAnimationEnd(animation: Animation) {
+                            reader_menu.gone()
+                        }
                     }
-                })
+                )
                 appbar.startAnimation(toolbarAnimation)
                 BottomSheetBehavior.from(chapters_bottom_sheet).isHideable = true
                 chapters_bottom_sheet.sheetBehavior?.hide()
@@ -480,7 +488,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         if (noDefault && presenter.manga?.viewer!! > 0) {
             snackbar = reader_layout.snack(
                 getString(
-                    R.string.reading_, getString(
+                    R.string.reading_,
+                    getString(
                         when (mangaViewer) {
                             RIGHT_TO_LEFT -> R.string.right_to_left_viewer
                             VERTICAL -> R.string.vertical_viewer
@@ -488,7 +497,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                             else -> R.string.left_to_right_viewer
                         }
                     ).toLowerCase(Locale.getDefault())
-                ), 4000
+                ),
+                4000
             ) {
                 if (mangaViewer != WEBTOON) setAction(R.string.use_default) {
                     presenter.setMangaViewer(0)
@@ -612,11 +622,19 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
     fun onPageLongTap(page: ReaderPage) {
         val items = listOf(
             MaterialMenuSheet.MenuSheetItem(
-                0, R.drawable.ic_photo_24dp, R.string.set_as_cover
-            ), MaterialMenuSheet.MenuSheetItem(
-                1, R.drawable.ic_share_24dp, R.string.share
-            ), MaterialMenuSheet.MenuSheetItem(
-                2, R.drawable.ic_save_24dp, R.string.save
+                0,
+                R.drawable.ic_photo_24dp,
+                R.string.set_as_cover
+            ),
+            MaterialMenuSheet.MenuSheetItem(
+                1,
+                R.drawable.ic_share_24dp,
+                R.string.share
+            ),
+            MaterialMenuSheet.MenuSheetItem(
+                2,
+                R.drawable.ic_save_24dp,
+                R.string.save
             )
         )
         MaterialMenuSheet(this, items) { _, item ->
@@ -686,7 +704,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
             DecimalFormat("#.###", DecimalFormatSymbols().apply { decimalSeparator = '.' })
 
         val text = "${manga.title}: ${getString(
-            R.string.chapter_, decimalFormat.format(chapter.chapter_number)
+            R.string.chapter_,
+            decimalFormat.format(chapter.chapter_number)
         )}, ${getString(R.string.page_, page.number)}"
 
         val stream = file.getUriCompat(this)
@@ -760,11 +779,13 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
                     getResourceColor(R.attr.colorSecondary)
                 reader_menu.visible()
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.enter_from_top)
-                toolbarAnimation.setAnimationListener(object : SimpleAnimationListener() {
-                    override fun onAnimationStart(animation: Animation) {
-                        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                toolbarAnimation.setAnimationListener(
+                    object : SimpleAnimationListener() {
+                        override fun onAnimationStart(animation: Animation) {
+                            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                        }
                     }
-                })
+                )
                 appbar.startAnimation(toolbarAnimation)
             }
         } else {
@@ -821,7 +842,10 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>(),
         }
 
         val intent = WebViewActivity.newIntent(
-            applicationContext, source.id, url, presenter.manga!!.title
+            applicationContext,
+            source.id,
+            url,
+            presenter.manga!!.title
         )
         startActivity(intent)
     }

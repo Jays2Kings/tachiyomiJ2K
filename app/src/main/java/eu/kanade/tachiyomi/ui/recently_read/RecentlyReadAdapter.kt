@@ -19,7 +19,7 @@ import java.text.DecimalFormatSymbols
  * @constructor creates an instance of the adapter.
  */
 class RecentlyReadAdapter(controller: RecentlyReadController) :
-        FlexibleAdapter<IFlexible<*>>(null, controller, true) {
+    FlexibleAdapter<IFlexible<*>>(null, controller, true) {
 
     val sourceManager by injectLazy<SourceManager>()
 
@@ -32,8 +32,11 @@ class RecentlyReadAdapter(controller: RecentlyReadController) :
     /**
      * DecimalFormat used to display correct chapter number
      */
-    val decimalFormat = DecimalFormat("#.###", DecimalFormatSymbols()
-            .apply { decimalSeparator = '.' })
+    val decimalFormat = DecimalFormat(
+        "#.###",
+        DecimalFormatSymbols()
+            .apply { decimalSeparator = '.' }
+    )
 
     private val preferences: PreferencesHelper by injectLazy()
 

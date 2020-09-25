@@ -17,9 +17,8 @@ class KireiCake : FoolSlide("kireicake") {
             this.url = url
             source = delegate?.id ?: -1
             title = document.select("$mangaDetailsInfoSelector li:has(b:contains(title))").first()
-                ?.ownText()?.substringAfter(":")?.trim() ?: url.split("/").last().replace(
-                "_", " " + ""
-            ).capitalizeWords()
+                ?.ownText()?.substringAfter(":")?.trim()
+                ?: url.split("/").last().replace("_", " " + "").capitalizeWords()
             description =
                 document.select("$mangaDetailsInfoSelector li:has(b:contains(description))").first()
                     ?.ownText()?.substringAfter(":")

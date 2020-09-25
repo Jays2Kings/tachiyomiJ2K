@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.manga_list_item.*
  * @constructor creates a new catalogue holder.
  */
 class BrowseSourceListHolder(private val view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>) :
-        BrowseSourceHolder(view, adapter) {
+    BrowseSourceHolder(view, adapter) {
 
     /**
      * Method called from [CatalogueAdapter.onBindViewHolder]. It updates the data for this

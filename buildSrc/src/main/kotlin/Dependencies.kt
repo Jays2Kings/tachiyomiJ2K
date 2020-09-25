@@ -72,7 +72,7 @@ object Libs {
     object Navigation {
         const val conductor = "com.bluelinelabs:conductor:${Versions.conductor}"
         const val conductorSupport = "com.bluelinelabs:conductor-support:${Versions.conductor}"
-        const val conductorSupportPreferences = "com.github.inorichi:conductor-support-preference:a32c357"
+        const val conductorSupportPreferences = "com.github.tachiyomiorg:conductor-support-preference:1.1.1"
         const val nucleus = "info.android15.nucleus:nucleus:${Versions.nucleus}"
         const val nucleusSupport = "info.android15.nucleus:nucleus-support-v7:${Versions.nucleus}"
     }
@@ -129,7 +129,7 @@ object Libs {
         const val materialDialogsInput = "com.afollestad.material-dialogs:input:${Versions.materialDialogs}"
         const val photoView = "com.github.chrisbanes:PhotoView:${Versions.photoView}"
         const val slice = "com.github.mthli:Slice:${Versions.slice}"
-        const val subsamplingScaleImageView = "com.github.inorichi:subsampling-scale-image-view:${Versions.subsamplingImageScale}"
+        const val subsamplingScaleImageView = "com.github.jays2kings:subsampling-scale-image-view:${Versions.subsamplingImageScale}"
         const val systemUiHelper = "me.zhanghai.android.systemuihelper:library:${Versions.systemUiHelper}"
         const val tapTargetView = "com.getkeepsafe.taptargetview:taptargetview:${Versions.tapTargetView}"
         const val viewStatePager = "com.nightlynexus.viewstatepageradapter:viewstatepageradapter:${Versions.viewStatePagerAdapter}"
@@ -216,7 +216,7 @@ object Versions {
     const val storioCommon = "8be19de@aar"
     const val storioSqlite = "8be19de@aar"
     const val stringSimilarity= "1.2.1"
-    const val subsamplingImageScale = "ac0dae7"
+    const val subsamplingImageScale = "78f9664"
     const val systemUiHelper= "1.0.0"
     const val tagGroup= "1.6.0"
     const val tapTargetView= "1.13.0"
@@ -226,3 +226,40 @@ object Versions {
     const val viewToolTip= "1.2.2"
 }
 
+=======
+object Versions {
+    const val ACRA = "4.9.2"
+    const val CHUCKER = "3.2.0"
+    const val COIL = "0.11.0"
+    const val COROUTINES = "1.3.9"
+    const val FASTADAPTER = "5.0.0"
+    const val HYPERION = "0.9.27"
+    const val NUCLEUS = "3.0.0"
+    const val OKHTTP = "4.8.1"
+    const val OSS_LICENSE = "17.0.0"
+    const val RETROFIT = "2.7.2"
+    const val ROBO_ELECTRIC = "3.1.4"
+    const val RX_BINDING = "1.0.1"
+    const val TIMBER = "4.7.1"
+    const val WORKMANAGER = "2.3.3"
+}
+
+object AndroidVersions {
+    const val BUILD_TOOL = "29.0.3"
+    const val COMPILE_SDK = 29
+    const val MIN_SDK = 23
+    const val TARGET_SDK = 29
+    const val VERSION_CODE = 66
+    const val VERSION_NAME = "1.0.9"
+}
+
+object BuildPluginsVersion {
+    const val AGP = "com.android.tools.build:gradle:4.0.1"
+    const val KOTLIN = "1.4.10"
+    const val ANDROID_EXTENSIONS = "org.jetbrains.kotlin:kotlin-android-extensions:$KOTLIN"
+    const val KOTLIN_GRADLE = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN"
+    const val KOTLINTER = "org.jmailen.gradle:kotlinter-gradle:3.0.2"
+    const val GOOGLE_SERVICES = "com.google.gms:google-services:4.3.3"
+    const val OSS_LICENSE = "com.google.android.gms:oss-licenses-plugin:0.10.2"
+    const val VERSIONS_PLUGIN = "0.28.0"
+}

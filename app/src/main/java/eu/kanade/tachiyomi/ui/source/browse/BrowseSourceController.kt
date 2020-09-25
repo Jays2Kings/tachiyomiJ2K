@@ -57,29 +57,33 @@ import java.util.concurrent.TimeUnit
  * Controller to manage the catalogues available in the app.
  */
 open class BrowseSourceController(bundle: Bundle) :
-        NucleusController<BrowseSourcePresenter>(bundle),
-        FlexibleAdapter.OnItemClickListener,
-        FlexibleAdapter.OnItemLongClickListener,
-        FlexibleAdapter.EndlessScrollListener,
+    NucleusController<BrowseSourcePresenter>(bundle),
+    FlexibleAdapter.OnItemClickListener,
+    FlexibleAdapter.OnItemLongClickListener,
+    FlexibleAdapter.EndlessScrollListener,
     AddToLibraryCategoriesDialog.Listener {
 
     constructor(
         source: CatalogueSource,
         searchQuery: String? = null,
         smartSearchConfig: SourceController.SmartSearchConfig? = null
-    ) : this(Bundle().apply {
-        putLong(SOURCE_ID_KEY, source.id)
+    ) : this(
+        Bundle().apply {
+            putLong(SOURCE_ID_KEY, source.id)
 
-        if (searchQuery != null)
-            putString(SEARCH_QUERY_KEY, searchQuery)
+            if (searchQuery != null)
+                putString(SEARCH_QUERY_KEY, searchQuery)
 
-        if (smartSearchConfig != null)
-            putParcelable(SMART_SEARCH_CONFIG_KEY, smartSearchConfig)
-    })
+            if (smartSearchConfig != null)
+                putParcelable(SMART_SEARCH_CONFIG_KEY, smartSearchConfig)
+        }
+    )
 
-    constructor(source: CatalogueSource) : this(Bundle().apply {
-        putLong(SOURCE_ID_KEY, source.id)
-    })
+    constructor(source: CatalogueSource) : this(
+        Bundle().apply {
+            putLong(SOURCE_ID_KEY, source.id)
+        }
+    )
 
     /**
      * Preferences helper.
@@ -189,20 +193,26 @@ open class BrowseSourceController(bundle: Bundle) :
         recycler.setHasFixedSize(true)
         recycler.adapter = adapter
 
-        scrollViewWith(recycler, true, afterInsets = { insets ->
-            fab?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                bottomMargin = insets.systemWindowInsetBottom + 16.dpToPx
+        scrollViewWith(
+            recycler,
+            true,
+            afterInsets = { insets ->
+                fab?.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                    bottomMargin = insets.systemWindowInsetBottom + 16.dpToPx
+                }
             }
-        })
+        )
 
-        recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy <= 0)
-                    fab.extend()
-                else
-                    fab.shrink()
+        recycler.addOnScrollListener(
+            object : RecyclerView.OnScrollListener() {
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    if (dy <= 0)
+                        fab.extend()
+                    else
+                        fab.shrink()
+                }
             }
-        })
+        )
 
         catalogue_view.addView(recycler, 1)
         if (oldPosition != RecyclerView.NO_POSITION) {
@@ -302,8 +312,11 @@ open class BrowseSourceController(bundle: Bundle) :
                 if (filter is List<*>) {
                     for (j in filter.indices) {
                         if (filter[j] !=
-                            ((presenter.sourceFilters[i] as Filter.Group<*>).state[j] as
-                                Filter<*>).state) {
+                            (
+                                (presenter.sourceFilters[i] as Filter.Group<*>).state[j] as
+                                    Filter<*>
+                                ).state
+                        ) {
                             matches = false
                             break
                         }
@@ -333,8 +346,13 @@ open class BrowseSourceController(bundle: Bundle) :
     private fun openInWebView() {
         val source = presenter.source as? HttpSource ?: return
         val activity = activity ?: return
-        val intent = WebViewActivity.newIntent(activity, source.id, source.baseUrl, presenter
-            .source.name)
+        val intent = WebViewActivity.newIntent(
+            activity,
+            source.id,
+            source.baseUrl,
+            presenter
+                .source.name
+        )
         startActivity(intent)
     }
 
@@ -403,15 +421,19 @@ open class BrowseSourceController(bundle: Bundle) :
             val actions = emptyList<EmptyView.Action>().toMutableList()
 
             actions += if (presenter.source is LocalSource) {
-                EmptyView.Action(R.string.local_source_help_guide,
-                    View.OnClickListener { openLocalSourceHelpGuide() })
+                EmptyView.Action(
+                    R.string.local_source_help_guide,
+                    View.OnClickListener { openLocalSourceHelpGuide() }
+                )
             } else {
                 EmptyView.Action(R.string.retry, retryAction)
             }
 
             if (presenter.source is HttpSource) {
-                actions += EmptyView.Action(R.string.open_in_webview,
-                    View.OnClickListener { openInWebView() })
+                actions += EmptyView.Action(
+                    R.string.open_in_webview,
+                    View.OnClickListener { openInWebView() }
+                )
             }
 
             empty_view.show(
@@ -561,12 +583,14 @@ open class BrowseSourceController(bundle: Bundle) :
                 setAction(R.string.undo) {
                     if (!manga.favorite) addManga(manga, position)
                 }
-                addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
-                        super.onDismissed(transientBottomBar, event)
-                        if (!manga.favorite) presenter.confirmDeletion(manga)
+                addCallback(
+                    object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                        override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                            super.onDismissed(transientBottomBar, event)
+                            if (!manga.favorite) presenter.confirmDeletion(manga)
+                        }
                     }
-                })
+                )
             }
             (activity as? MainActivity)?.setUndoSnackBar(snack)
         } else {
@@ -596,7 +620,7 @@ open class BrowseSourceController(bundle: Bundle) :
                 }.toTypedArray()
 
                 AddToLibraryCategoriesDialog(this, manga, categories, preselected, position)
-                        .showDialog(router)
+                    .showDialog(router)
             }
         }
     }

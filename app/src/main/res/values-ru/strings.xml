@@ -558,7 +558,7 @@
     <string name="marked_as_unread">Помечено как непрочитанное</string>
     <string name="removed_bookmark">Удалена закладка</string>
     <string name="chapters_removed">Главы удалены</string>
-
+    <string name="chapter_not_found">Глава не найдена</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Удалить %1$d загруженную главу?</item>
         <item quantity="few">Удалить %1$d загруженные главы?</item>
@@ -597,6 +597,7 @@
     <string name="add_to_categories">Выберите, к каким категориям добавить это. Если ни один не выбран, он будет добавлен в категорию «по умолчанию»</string>
     <string name="category_deleted">Категория удалена</string>
     <string name="long_press_category">Нажмите и удерживайте, чтобы изменить категорию</string>
+    <string name="jump_to_category">Перейти в категорию</string>
 
     <plurals name="category">
         <item quantity="one">%d категория</item>
@@ -693,7 +694,7 @@
     <string name="reduces_banding_impacts_performance">Уменьшает "цветовцю полосатость", но влияет на производительность</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Страницы</string>
-    <string name="disable_zoom">Отключить зум</string>
+    <string name="enable_zoom_out">Включить зум</string>
     <string name="continuous_vertical">Непрерывная вертикаль</string>
     <string name="always_show_chapter_transition">Всегда показывать переход глав</string>
     <string name="if_disabled_transition_will_skip">Если отключено, страница перехода будет пропущена, если загружена следующая глава</string>
@@ -761,8 +762,10 @@
     <string name="refresh_tracking">Обновить отслеживание</string>
     <string name="add_tracking">Добавить отслеживание</string>
     <string name="paused">На паузе</string>
+    <string name="remove_tracking">Удалить отслеживание из приложения</string>
+    <string name="remove_tracking_from_">Также удалить из %1$s</string>
     <!-- Migration -->
-    <string name="select_target_sources">Выберите источники для переноса</string>
+    <string name="select_sources">Выберите источники</string>
     <string name="select_a_source_then_item_to_migrate">Выберите источник, затем выберите элемент для миграции</string>
     <string name="to_show_again_setting_sources">Чтобы снова показать этот экран, перейдите в Настройки -> Источники.</string>
     <string name="migrate_">Перенос %1$s источника</string>
@@ -779,12 +782,20 @@
     <string name="backup_failed">Ошибка резервного копирования</string>
     <string name="creating_backup">Создание резервной копии</string>
     <!-- Advanced section -->
+    <string name="data_management">Управление данными</string>
+    <string name="network">Сеть</string>
+    <string name="dns_over_https" translatable="false">DNS через HTTPS (Cloudflare)</string>
+    <string name="requires_app_restart">Для вступления в силу требуется перезапуск приложения</string>
+    <string name="clean_orphaned_downloads">Оистить потерянные</string>
+    <string name="clean_read_downloads">Оистить прочитанные</string>
+    <string name="clean_read_manga_not_in_library">Оистить отсутствующую в библиотеке</string>
     <string name="disable_battery_optimization">Отключить оптимизацию батареи</string>
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением или восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже отключена</string>
     <string name="clean_up_cached_covers">Очистить кэш обложек</string>
     <string name="delete_old_covers_in_library_used_">Удалять старые и неиспользуемые кэшированные обложки манги в вашей библиотеке, которая была обновлена.\nВ настоящее время используется: %1$s</string>
-
+    <string name="clear_cached_covers_non_library">Очистить кешированные обложки, которых нет в библиотеке</string>
+    <string name="delete_all_covers__not_in_library_used_">Удалить все кешированные обложки, которых нет в библиотеке \nИспользуется: %1$s</string>
     <!-- Browse Settings -->
     <string name="pref_global_search">Глобальный поиск</string>
     <string name="check_for_extension_updates">Авто-проверка обновлений расширений</string>
@@ -801,8 +812,11 @@
     <string name="whats_new">Что нового в этом релизе</string>
     <string name="website">Веб-сайт</string>
     <string name="open_source_licenses">Лицензии с открытым исходным кодом</string>
-    <!-- Login dialog -->
+    <!-- Login/Logout dialog -->
     <string name="email">Адрес Email</string>
+    <string name="logout_from_">Выйти из %1$s?</string>
+    <string name="username_must_not_be_blank">Имя пользователя или пароль не могут быть пустыми</string>
+
     <!-- Downloads -->
     <string name="downloading_">Загрузка: %1$s</string>
     <string name="downloaded">Загружено</string>
@@ -841,13 +855,13 @@
     <string name="pinned">Закрепленные</string>
     <string name="refresh">Обновление</string>
     <string name="refreshing">Обновляющиеся</string>
+    <string name="select_none">Ничего не выбрано</string>
     <string name="sort_and_filter">Сортировка и Фильтрация</string>
     <string name="tag">Тег</string>
     <string name="top">Верх</string>
     <string name="un_select_all">Снять все</string>
     <string name="unpin">Открепить</string>
     <string name="use_default">Использовать "По умолчанию"</string>
-
     <!-- Extensions -->
     <plurals name="extension_updates_available">
         <item quantity="one">Доступно обновление расширения</item>

@@ -70,15 +70,17 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         pager.offscreenPageLimit = 1
         pager.id = R.id.reader_pager
         pager.adapter = adapter
-        pager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
-            override fun onPageSelected(position: Int) {
-                onPageChange(position)
-            }
+        pager.addOnPageChangeListener(
+            object : ViewPager.SimpleOnPageChangeListener() {
+                override fun onPageSelected(position: Int) {
+                    onPageChange(position)
+                }
 
-            override fun onPageScrollStateChanged(state: Int) {
-                isIdle = state == ViewPager.SCROLL_STATE_IDLE
+                override fun onPageScrollStateChanged(state: Int) {
+                    isIdle = state == ViewPager.SCROLL_STATE_IDLE
+                }
             }
-        })
+        )
         pager.tapListener = { event ->
             val positionX = event.x
             when {
@@ -201,8 +203,10 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
      */
     private fun setChaptersInternal(chapters: ViewerChapters) {
         Timber.d("setChaptersInternal")
-        val forceTransition = config.alwaysShowChapterTransition || adapter.items.getOrNull(pager
-            .currentItem) is ChapterTransition
+        val forceTransition = config.alwaysShowChapterTransition || adapter.items.getOrNull(
+            pager
+                .currentItem
+        ) is ChapterTransition
         adapter.setChapters(chapters, forceTransition)
 
         // Layout the pager once a chapter is being set

@@ -32,17 +32,19 @@ class RemoveHistoryDialog<T>(bundle: Bundle? = null) : DialogController(bundle)
         val activity = activity!!
 
         return MaterialDialog(activity).title(R.string.reset_chapter_question).message(
-                text = if (chapter?.name != null) activity.getString(
-                    R.string.this_will_remove_the_read_date_for_x_question, chapter?.name ?: ""
-                )
-                else activity.getString(R.string.this_will_remove_the_read_date_question)
-            ).checkBoxPrompt(
-                text = activity.getString(
-                    R.string.reset_all_chapters_for_this_, manga!!.mangaType(activity)
-                )
-            ) {}.negativeButton(android.R.string.cancel).positiveButton(R.string.reset) {
-                onPositive(it.isCheckPromptChecked())
-            }
+            text = if (chapter?.name != null) activity.getString(
+                R.string.this_will_remove_the_read_date_for_x_question,
+                chapter?.name ?: ""
+            )
+            else activity.getString(R.string.this_will_remove_the_read_date_question)
+        ).checkBoxPrompt(
+            text = activity.getString(
+                R.string.reset_all_chapters_for_this_,
+                manga!!.mangaType(activity)
+            )
+        ) {}.negativeButton(android.R.string.cancel).positiveButton(R.string.reset) {
+            onPositive(it.isCheckPromptChecked())
+        }
     }
 
     private fun onPositive(checked: Boolean) {

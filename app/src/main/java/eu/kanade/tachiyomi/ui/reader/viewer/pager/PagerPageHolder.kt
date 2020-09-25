@@ -13,6 +13,7 @@ import android.view.MotionEvent
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.view.WindowInsets
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -107,10 +108,12 @@ class PagerPageHolder(
     init {
         addView(progressBar)
         observeStatus()
-        setBackgroundColor(when (val theme = viewer.config.readerTheme) {
-            3 -> Color.TRANSPARENT
-            else -> ThemeUtil.readerBackgroundColor(theme)
-        })
+        setBackgroundColor(
+            when (val theme = viewer.config.readerTheme) {
+                3 -> Color.TRANSPARENT
+                else -> ThemeUtil.readerBackgroundColor(theme)
+            }
+        )
     }
 
     /**
@@ -254,10 +257,9 @@ class PagerPageHolder(
                 if (!isAnimated) {
                     if (viewer.config.readerTheme >= 2) {
                         val imageView = initSubsamplingImageView()
-                        if (page.bg != null && page.bgType == getBGType(
-                                viewer.config.readerTheme,
-                                context
-                            )) {
+                        if (page.bg != null &&
+                            page.bgType == getBGType(viewer.config.readerTheme, context)
+                        ) {
                             imageView.setImage(ImageSource.inputStream(openStream!!))
                             imageView.background = page.bg
                         }
@@ -297,9 +299,15 @@ class PagerPageHolder(
     private suspend fun setBG(bytesArray: ByteArray): Drawable {
         return withContext(Default) {
             val preferences by injectLazy<PreferencesHelper>()
-            ImageUtil.autoSetBackground(BitmapFactory.decodeByteArray(
-                bytesArray, 0, bytesArray.size
-            ), preferences.readerTheme().get() == 2, context)
+            ImageUtil.autoSetBackground(
+                BitmapFactory.decodeByteArray(
+                    bytesArray,
+                    0,
+                    bytesArray.size
+                ),
+                preferences.readerTheme().get() == 2,
+                context
+            )
         }
     }
 
@@ -358,20 +366,31 @@ class PagerPageHolder(
             setMinimumDpi(90)
             setMinimumTileDpi(180)
             setCropBorders(config.imageCropBorders)
-            setOnImageEventListener(object : SubsamplingScaleImageView.DefaultOnImageEventListener() {
-                override fun onReady() {
-                    when (config.imageZoomType) {
-                        ZoomType.Left -> setScaleAndCenter(scale, PointF(0f, 0f))
-                        ZoomType.Right -> setScaleAndCenter(scale, PointF(sWidth.toFloat(), 0f))
-                        ZoomType.Center -> setScaleAndCenter(scale, center.also { it?.y = 0f })
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+                val insets: WindowInsets? = viewer.activity.window.decorView.rootWindowInsets
+                setExtraSpace(
+                    0f,
+                    insets?.displayCutout?.boundingRectTop?.height()?.toFloat() ?: 0f,
+                    0f,
+                    insets?.displayCutout?.boundingRectBottom?.height()?.toFloat() ?: 0f
+                )
+            }
+            setOnImageEventListener(
+                object : SubsamplingScaleImageView.DefaultOnImageEventListener() {
+                    override fun onReady() {
+                        when (config.imageZoomType) {
+                            ZoomType.Left -> setScaleAndCenter(scale, PointF(0f, 0f))
+                            ZoomType.Right -> setScaleAndCenter(scale, PointF(sWidth.toFloat(), 0f))
+                            ZoomType.Center -> setScaleAndCenter(scale, center.also { it?.y = 0f })
+                        }
+                        onImageDecoded()
                     }
-                    onImageDecoded()
-                }
 
-                override fun onImageLoadError(e: Exception) {
-                    onImageDecodeError()
+                    override fun onImageLoadError(e: Exception) {
+                        onImageDecodeError()
+                    }
                 }
-            })
+            )
         }
         addView(subsamplingImageView)
         return subsamplingImageView!!
@@ -389,16 +408,18 @@ class PagerPageHolder(
             setZoomTransitionDuration(viewer.config.doubleTapAnimDuration)
             setScaleLevels(1f, 2f, 3f)
             // Force 2 scale levels on double tap
-            setOnDoubleTapListener(object : GestureDetector.SimpleOnGestureListener() {
-                override fun onDoubleTap(e: MotionEvent): Boolean {
-                    if (scale > 1f) {
-                        setScale(1f, e.x, e.y, true)
-                    } else {
-                        setScale(2f, e.x, e.y, true)
+            setOnDoubleTapListener(
+                object : GestureDetector.SimpleOnGestureListener() {
+                    override fun onDoubleTap(e: MotionEvent): Boolean {
+                        if (scale > 1f) {
+                            setScale(1f, e.x, e.y, true)
+                        } else {
+                            setScale(2f, e.x, e.y, true)
+                        }
+                        return true
                     }
-                    return true
                 }
-            })
+            )
         }
         addView(imageView)
         return imageView!!
@@ -486,7 +507,7 @@ class PagerPageHolder(
         this.loadAny(stream.readBytes()) {
             memoryCachePolicy(CachePolicy.DISABLED)
             diskCachePolicy(CachePolicy.DISABLED)
-                target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
+            target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
         }
     }
 

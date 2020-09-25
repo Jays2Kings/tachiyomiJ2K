@@ -110,7 +110,7 @@ class RecentlyReadPresenter(private val view: RecentlyReadController) {
         }
 
         val chapters = db.getChapters(manga).executeAsBlocking()
-                .sortedWith(Comparator<Chapter> { c1, c2 -> sortFunction(c1, c2) })
+            .sortedWith(Comparator<Chapter> { c1, c2 -> sortFunction(c1, c2) })
 
         val currChapterIndex = chapters.indexOfFirst { chapter.id == it.id }
         return when (manga.sorting) {
@@ -119,10 +119,11 @@ class RecentlyReadPresenter(private val view: RecentlyReadController) {
                 val chapterNumber = chapter.chapter_number
 
                 ((currChapterIndex + 1) until chapters.size)
-                        .map { chapters[it] }
-                        .firstOrNull { it.chapter_number > chapterNumber &&
-                                it.chapter_number <= chapterNumber + 1
-                        }
+                    .map { chapters[it] }
+                    .firstOrNull {
+                        it.chapter_number > chapterNumber &&
+                            it.chapter_number <= chapterNumber + 1
+                    }
             }
             else -> throw NotImplementedError("Unknown sorting method")
         }

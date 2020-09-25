@@ -48,6 +48,7 @@
     <string name="marked_as_unread">Als ungelesen markieren</string>
     <string name="removed_bookmark">Lesezeichen entfernt</string>
     <string name="chapters_removed">Kapitel entfernt.</string>
+    <string name="chapter_not_found">Kapitel nicht gefunden</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Entferne %1$d heruntergeladenes Kapitel?</item>
         <item quantity="other">Entferne %1$d heruntergeladene Kapitel?</item>
@@ -119,9 +120,10 @@
     <string name="reorder_filters">Filter neuordnen</string>
     <string name="_unread">%d ungelesen</string>
     <string name="search_globally">Suche \"%1$s\" global</string>
+
     <string name="read_progress">Lesefortschritt</string>
     <string name="series_type">Serientyp</string>
-    <string name="group_library_by">Gruppiere Bibiliothek nach…</string>
+    <string name="group_library_by">Gruppiere Bibliothek nach…</string>
     <string name="tracking_status">Synchronisierungsstatus</string>
     <string name="ungrouped">Ungruppiert</string>
 
@@ -231,11 +233,12 @@
     <string name="last_used">Zuletzt genutzt</string>
     <string name="local_source_help_guide">Anleitung für lokale Quellen</string>
     <string name="check_site_in_web">Webseite in Webansicht prüfen</string>
-    
+
     <!-- Other Screens -->
 
     <!-- Extensions -->
     <string name="extensions">Erweiterungen</string>
+    <string name="extension_updates">Erweiterungsaktualisierungen</string>
     <string name="extension_info">Erweiterungsinfo</string>
     <string name="details">Details</string>
     <string name="obsolete">Veraltet</string>
@@ -409,6 +412,8 @@
     <string name="url_not_set_click_again">Manga URL ist nicht gesetzt. Bitte auf den Titel drücken und den Manga erneut wählen</string>
     <string name="refresh_tracking">Synchronisation aktualisieren</string>
     <string name="add_tracking">Synchronisation hinzufügen</string>
+    <string name="remove_tracking">Synchronisation aus App entfernen</string>
+    <string name="remove_tracking_from_">Auch aus %1$s entfernen</string>
 
     <!-- Migration -->
     <string name="select_sources">Quellen auswählen</string>
@@ -509,6 +514,10 @@
 
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Kapitel-Zwischenspeicher leeren</string>
+    <string name="data_management">Datenmanagement</string>
+    <string name="network">Netzwerk</string>
+    <string name="dns_over_https" translatable="false">DNS über HTTPS (Cloudflare)</string>
+    <string name="requires_app_restart">Erfordert einen Neustart der App, um wirksam zu werden</string>
     <string name="used_">Belegt: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Zwischenspeicher geleert. %d Datei wurde gelöscht</item>
@@ -524,9 +533,12 @@
     <string name="refresh_library_metadata">Bibliotheksmetadaten erneuern</string>
     <string name="updates_covers_genres_desc">Aktualisiert Vorschaubilder, Genres, Beschreibungen und andere Mangainformationen</string>
     <string name="refresh_tracking_metadata">Synchronisationsmetadaten erneuern</string>
-    <string name="updates_tracking_details">Lesestatus, die Bewertung und das zuletzt gelesene Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
+    <string name="updates_tracking_details">Lesestatus, Bewertung und zuletzt gelesenes Kapitel mit den angemeldeten Synchronisationsanbietern synchronisieren</string>
     <string name="clean_up_downloaded_chapters">Heruntergeladene Kapitel aufräumen</string>
     <string name="delete_unused_chapters">Nicht existierende, teilweise heruntergeladene und gelesene Kapitel löschen</string>
+    <string name="clean_orphaned_downloads">Verwaiste bereinigen</string>
+    <string name="clean_read_downloads">Gelesene bereinigen</string>
+    <string name="clean_read_manga_not_in_library">Manga bereinigen welche nicht in der Bibliothek sind</string>
     <string name="starting_cleanup">Aufräumen gestartet</string>
     <string name="no_folders_to_cleanup">Keine Ordner zum Aufräumen</string>
     <string name="disable_battery_optimization">Optimierung des Akkuverbrauchs beenden</string>
@@ -538,6 +550,8 @@
     </plurals>
     <string name="clean_up_cached_covers">Zwischengespeicherte Vorschaubilder aufräumen</string>
     <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Manga in deiner Bibliothek welche aktualisiert wurden löschen.\nAktuell genutzt: %1$s</string>
+    <string name="clear_cached_covers_non_library">Zwischengespeicherte Vorschaubilder welche nicht in der Bibliothek sind bereinigen</string>
+    <string name="delete_all_covers__not_in_library_used_">Alle zwischengespeicherten Vorschaubilder welche nicht in der Bibliothek sind löschen \nAktuell genutzt: %1$s</string>
 
     <!-- Browse Settings -->
     <string name="pref_global_search">Globale Suche</string>
@@ -560,15 +574,19 @@
     <string name="website">Webseite</string>
     <string name="open_source_licenses">Open Source Lizenzen</string>
 
-    <!-- Login dialog -->
+    <!-- Login/Logout dialog -->
     <string name="log_in_to_">Bei %1$s anmelden</string>
-    <string name="username">Nutzername</string>
+    <string name="username">Benutzername</string>
     <string name="email">E-Mail-Adresse</string>
-    <string name="password">Kennwort</string>
-    <string name="show_password">Kennwort anzeigen</string>
+    <string name="password">Passwort</string>
+    <string name="show_password">Passwort anzeigen</string>
     <string name="login">Anmelden</string>
     <string name="logout">Abmelden</string>
+    <string name="logout_from_">Von %1$s abmelden?</string>
+
     <string name="successfully_logged_in">Anmeldung erfolgreich</string>
+    <string name="username_must_not_be_blank">Benutzername und Passwort dürfen nicht leer sein</string>
+
     <string name="successfully_logged_out">Sie sind jetzt abgemeldet</string>
     <string name="could_not_log_in">Anmeldungsfehler</string>
 
@@ -700,6 +718,7 @@
     <string name="pause">Pause</string>
     <string name="picture_saved">Bild gespeichert</string>
     <string name="pin">Anpinnen</string>
+    <string name="pinned">Angepinnt</string>
     <string name="refresh">Aktualisieren</string>
     <string name="refreshing">Aktualisiere</string>
     <string name="remove">Entfernen</string>

@@ -56,11 +56,12 @@ import kotlin.math.max
  * [SourceAdapter.SourceListener] call function data on browse item click.
  * [SourceAdapter.OnLatestClickListener] call function data on latest item click
  */
-class SourceController : NucleusController<SourcePresenter>(),
-        FlexibleAdapter.OnItemClickListener,
-        SourceAdapter.SourceListener,
-        RootSearchInterface,
-        BottomSheetController {
+class SourceController :
+    NucleusController<SourcePresenter>(),
+    FlexibleAdapter.OnItemClickListener,
+    SourceAdapter.SourceListener,
+    RootSearchInterface,
+    BottomSheetController {
 
     /**
      * Application preferences.
@@ -124,54 +125,62 @@ class SourceController : NucleusController<SourcePresenter>(),
         val array = view.context.obtainStyledAttributes(attrsArray)
         val appBarHeight = array.getDimensionPixelSize(0, 0)
         array.recycle()
-        scrollViewWith(recycler, afterInsets = {
-            headerHeight = it.systemWindowInsetTop + appBarHeight
-        })
+        scrollViewWith(
+            recycler,
+            afterInsets = {
+                headerHeight = it.systemWindowInsetTop + appBarHeight
+            }
+        )
 
         requestPermissionsSafe(arrayOf(WRITE_EXTERNAL_STORAGE), 301)
         ext_bottom_sheet.onCreate(this)
 
-        ext_bottom_sheet.sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior
-        .BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, progress: Float) {
-                val recycler = recycler ?: return
-                shadow2?.alpha = (1 - max(0f, progress)) * 0.25f
-                activity?.appbar?.elevation = max(progress * 15f,
-                    if (recycler.canScrollVertically(-1)) 15f else 0f)
+        ext_bottom_sheet.sheetBehavior?.addBottomSheetCallback(
+            object : BottomSheetBehavior
+            .BottomSheetCallback() {
+                override fun onSlide(bottomSheet: View, progress: Float) {
+                    val recycler = recycler ?: return
+                    shadow2?.alpha = (1 - max(0f, progress)) * 0.25f
+                    activity?.appbar?.elevation = max(
+                        progress * 15f,
+                        if (recycler.canScrollVertically(-1)) 15f else 0f
+                    )
 
-                sheet_layout?.alpha = 1 - progress
-                activity?.appbar?.y = max(activity!!.appbar.y, -headerHeight * (1 - progress))
-                val oldShow = showingExtensions
-                showingExtensions = progress > 0.92f
-                if (oldShow != showingExtensions) {
-                    setTitle()
-                    activity?.invalidateOptionsMenu()
+                    sheet_layout?.alpha = 1 - progress
+                    activity?.appbar?.y = max(activity!!.appbar.y, -headerHeight * (1 - progress))
+                    val oldShow = showingExtensions
+                    showingExtensions = progress > 0.92f
+                    if (oldShow != showingExtensions) {
+                        setTitle()
+                        activity?.invalidateOptionsMenu()
+                    }
+                }
+
+                override fun onStateChanged(p0: View, state: Int) {
+                    val extBottomSheet = ext_bottom_sheet ?: return
+                    if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                        activity?.appbar?.y = 0f
+                    }
+                    if (state == BottomSheetBehavior.STATE_EXPANDED ||
+                        state == BottomSheetBehavior.STATE_COLLAPSED
+                    ) {
+                        sheet_layout?.alpha =
+                            if (state == BottomSheetBehavior.STATE_COLLAPSED) 1f else 0f
+                        showingExtensions = state == BottomSheetBehavior.STATE_EXPANDED
+                        setTitle()
+                        if (state == BottomSheetBehavior.STATE_EXPANDED)
+                            extBottomSheet.fetchOnlineExtensionsIfNeeded()
+                        else extBottomSheet.shouldCallApi = true
+                        activity?.invalidateOptionsMenu()
+                    }
+
+                    retainViewMode = if (state == BottomSheetBehavior.STATE_EXPANDED)
+                        RetainViewMode.RETAIN_DETACH else RetainViewMode.RELEASE_DETACH
+                    sheet_layout.isClickable = state == BottomSheetBehavior.STATE_COLLAPSED
+                    sheet_layout.isFocusable = state == BottomSheetBehavior.STATE_COLLAPSED
                 }
             }
-
-            override fun onStateChanged(p0: View, state: Int) {
-                val extBottomSheet = ext_bottom_sheet ?: return
-                if (state == BottomSheetBehavior.STATE_EXPANDED) {
-                    activity?.appbar?.y = 0f
-                }
-                if (state == BottomSheetBehavior.STATE_EXPANDED ||
-                    state == BottomSheetBehavior.STATE_COLLAPSED) {
-                    sheet_layout?.alpha =
-                        if (state == BottomSheetBehavior.STATE_COLLAPSED) 1f else 0f
-                    showingExtensions = state == BottomSheetBehavior.STATE_EXPANDED
-                    setTitle()
-                    if (state == BottomSheetBehavior.STATE_EXPANDED)
-                        extBottomSheet.fetchOnlineExtensionsIfNeeded()
-                    else extBottomSheet.shouldCallApi = true
-                    activity?.invalidateOptionsMenu()
-                }
-
-                retainViewMode = if (state == BottomSheetBehavior.STATE_EXPANDED)
-                    RetainViewMode.RETAIN_DETACH else RetainViewMode.RELEASE_DETACH
-                sheet_layout.isClickable = state == BottomSheetBehavior.STATE_COLLAPSED
-                sheet_layout.isFocusable = state == BottomSheetBehavior.STATE_COLLAPSED
-            }
-        })
+        )
 
         if (showingExtensions) {
             ext_bottom_sheet.sheetBehavior?.expand()
@@ -262,7 +271,7 @@ class SourceController : NucleusController<SourcePresenter>(),
     override fun onPinClick(position: Int) {
         val item = adapter?.getItem(position) as? SourceItem ?: return
         val isPinned = item.isPinned ?: item.header?.code?.equals(SourcePresenter.PINNED_KEY)
-        ?: false
+            ?: false
         pinCatalogue(item.source, isPinned)
     }
 
@@ -353,7 +362,7 @@ class SourceController : NucleusController<SourcePresenter>(),
                     (RouterTransaction.with(controller)).popChangeHandler(
                         SettingsSourcesFadeChangeHandler()
                     ).pushChangeHandler(FadeChangeHandler())
-                    )
+                )
             }
             else -> return super.onOptionsItemSelected(item)
         }

@@ -60,9 +60,13 @@ class ReaderProgressBar @JvmOverloads constructor(
      * The rotation animation to use while the progress bar is visible.
      */
     private val rotationAnimation by lazy {
-        RotateAnimation(0f, 360f,
-                Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f
+        RotateAnimation(
+            0f,
+            360f,
+            Animation.RELATIVE_TO_SELF,
+            0.5f,
+            Animation.RELATIVE_TO_SELF,
+            0.5f
         ).apply {
             interpolator = LinearInterpolator()
             repeatCount = Animation.INFINITE
@@ -160,16 +164,18 @@ class ReaderProgressBar @JvmOverloads constructor(
             ObjectAnimator.ofFloat(this, "alpha", 1f, 0f).apply {
                 interpolator = DecelerateInterpolator()
                 duration = 1000
-                addListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationEnd(animation: Animator?) {
-                        visibility = View.GONE
-                        alpha = 1f
-                    }
+                addListener(
+                    object : AnimatorListenerAdapter() {
+                        override fun onAnimationEnd(animation: Animator?) {
+                            visibility = View.GONE
+                            alpha = 1f
+                        }
 
-                    override fun onAnimationCancel(animation: Animator?) {
-                        alpha = 1f
+                        override fun onAnimationCancel(animation: Animator?) {
+                            alpha = 1f
+                        }
                     }
-                })
+                )
                 start()
             }
         }

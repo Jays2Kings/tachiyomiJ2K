@@ -10,7 +10,7 @@ import eu.kanade.tachiyomi.R
 import kotlinx.android.synthetic.main.pref_widget_imageview.view.*
 
 class LoginPreference @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
-        Preference(context, attrs) {
+    Preference(context, attrs) {
 
     init {
         widgetLayoutResource = R.layout.pref_widget_imageview

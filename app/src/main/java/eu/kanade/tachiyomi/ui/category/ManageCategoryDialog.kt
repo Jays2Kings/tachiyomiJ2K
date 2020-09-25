@@ -70,7 +70,8 @@ class ManageCategoryDialog(bundle: Bundle? = null) :
             preferences.downloadNew().set(true)
         }
         if (preferences.libraryUpdateInterval().getOrDefault() > 0 &&
-            !updatePref(preferences.libraryUpdateCategories(), view.include_global)) {
+            !updatePref(preferences.libraryUpdateCategories(), view.include_global)
+        ) {
             preferences.libraryUpdateInterval().set(0)
             LibraryUpdateJob.setupTask(0)
         }
@@ -99,9 +100,11 @@ class ManageCategoryDialog(bundle: Bundle? = null) :
         view.title.hint = category.name
         view.title.append(category.name)
         val downloadNew = preferences.downloadNew().getOrDefault()
-        setCheckbox(view.download_new,
+        setCheckbox(
+            view.download_new,
             preferences.downloadNewCategories(),
-            true)
+            true
+        )
         if (downloadNew && preferences.downloadNewCategories().getOrDefault().isEmpty())
             view.download_new.gone()
         else if (!downloadNew)

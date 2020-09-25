@@ -119,7 +119,10 @@ class MaterialMenuSheet(
             isElevated = elevate
             elevationAnimator?.cancel()
             elevationAnimator = ObjectAnimator.ofFloat(
-                title_layout, "elevation", title_layout.elevation, if (elevate) 10f else 0f
+                title_layout,
+                "elevation",
+                title_layout.elevation,
+                if (elevate) 10f else 0f
             )
             elevationAnimator?.start()
         }

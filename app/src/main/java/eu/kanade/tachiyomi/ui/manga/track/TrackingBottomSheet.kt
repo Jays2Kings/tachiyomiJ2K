@@ -19,7 +19,8 @@ import eu.kanade.tachiyomi.util.view.setEdgeToEdge
 import kotlinx.android.synthetic.main.tracking_bottom_sheet.*
 import timber.log.Timber
 
-class TrackingBottomSheet(private val controller: MangaDetailsController) : BottomSheetDialog
+class TrackingBottomSheet(private val controller: MangaDetailsController) :
+    BottomSheetDialog
     (controller.activity!!, R.style.BottomSheetDialogTheme),
     TrackAdapter.OnClickListener,
     SetTrackStatusDialog.Listener,
@@ -45,15 +46,17 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         val height = activity.window.decorView.rootWindowInsets.systemWindowInsetBottom
         sheetBehavior.peekHeight = 380.dpToPx + height
 
-        sheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, progress: Float) { }
+        sheetBehavior.addBottomSheetCallback(
+            object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onSlide(bottomSheet: View, progress: Float) { }
 
-            override fun onStateChanged(p0: View, state: Int) {
-                if (state == BottomSheetBehavior.STATE_EXPANDED) {
-                    sheetBehavior.skipCollapsed = true
+                override fun onStateChanged(p0: View, state: Int) {
+                    if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                        sheetBehavior.skipCollapsed = true
+                    }
                 }
             }
-        })
+        )
     }
 
     override fun onStart() {
@@ -107,7 +110,7 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) : Bott
         activity.toast(error.message)
     }
 
-        override fun onLogoClick(position: Int) {
+    override fun onLogoClick(position: Int) {
         val track = adapter?.getItem(position)?.track ?: return
         if (controller.isNotOnline()) {
             dismiss()

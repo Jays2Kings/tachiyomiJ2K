@@ -25,7 +25,7 @@ class BrowseSourceItem(
     private val catalogueAsList: Preference<Boolean>,
     private val catalogueListType: Preference<Int>
 ) :
-        AbstractFlexibleItem<BrowseSourceHolder>() {
+    AbstractFlexibleItem<BrowseSourceHolder>() {
 
     override fun getLayoutRes(): Int {
         return if (catalogueAsList.getOrDefault())
@@ -44,17 +44,20 @@ class BrowseSourceItem(
                     gradient.layoutParams = FrameLayout.LayoutParams(
                         FrameLayout.LayoutParams.MATCH_PARENT,
                         (coverHeight * 0.66f).toInt(),
-                        Gravity.BOTTOM)
+                        Gravity.BOTTOM
+                    )
                     card.updateLayoutParams<ConstraintLayout.LayoutParams> {
                         bottomMargin = 6.dpToPx
                     }
                 } else {
                     constraint_layout.background = ContextCompat.getDrawable(
-                        context, R.drawable.library_item_selector
+                        context,
+                        R.drawable.library_item_selector
                     )
                 }
                 constraint_layout.layoutParams = FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
                 )
                 cover_thumbnail.maxHeight = Int.MAX_VALUE
                 cover_thumbnail.minimumHeight = 0

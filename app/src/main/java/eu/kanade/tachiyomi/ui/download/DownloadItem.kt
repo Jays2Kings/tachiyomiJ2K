@@ -31,7 +31,7 @@ class DownloadItem(val download: Download) : AbstractFlexibleItem<DownloadHolder
     override fun createViewHolder(
         view: View,
         adapter: FlexibleAdapter<IFlexible<RecyclerView
-            .ViewHolder>>
+                .ViewHolder>>
     ): DownloadHolder {
         return DownloadHolder(view, adapter as DownloadAdapter)
     }

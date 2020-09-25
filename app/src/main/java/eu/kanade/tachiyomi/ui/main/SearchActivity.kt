@@ -64,7 +64,9 @@ class SearchActivity : MainActivity() {
     override fun handleIntentAction(intent: Intent): Boolean {
         val notificationId = intent.getIntExtra("notificationId", -1)
         if (notificationId > -1) NotificationReceiver.dismissNotification(
-            applicationContext, notificationId, intent.getIntExtra("groupId", 0)
+            applicationContext,
+            notificationId,
+            intent.getIntExtra("groupId", 0)
         )
         when (intent.action) {
             Intent.ACTION_SEARCH, "com.google.android.gms.actions.SEARCH_ACTION" -> {
@@ -91,8 +93,9 @@ class SearchActivity : MainActivity() {
                 val extras = intent.extras ?: return false
                 router.replaceTopController(
                     RouterTransaction.with(MangaDetailsController(extras))
-                    .pushChangeHandler(SimpleSwapChangeHandler())
-                    .popChangeHandler(FadeChangeHandler()))
+                        .pushChangeHandler(SimpleSwapChangeHandler())
+                        .popChangeHandler(FadeChangeHandler())
+                )
             }
             else -> return false
         }
@@ -100,8 +103,11 @@ class SearchActivity : MainActivity() {
     }
 
     companion object {
-        fun openMangaIntent(context: Context, id: Long) = Intent(context, SearchActivity::class
-            .java)
+        fun openMangaIntent(context: Context, id: Long) = Intent(
+            context,
+            SearchActivity::class
+                .java
+        )
             .apply {
                 action = SHORTCUT_MANGA
                 putExtra(MangaDetailsController.MANGA_EXTRA, id)

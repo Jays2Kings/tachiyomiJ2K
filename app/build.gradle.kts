@@ -214,7 +214,6 @@ dependencies {
     implementation(Libs.Navigation.conductorSupport) {
         exclude("group", "com.android.support")
     }
-    implementation(Libs.Navigation.conductorSupportPreferences)
 
     // RxBindings
     implementation(Libs.Rx.bindingAppcompat)

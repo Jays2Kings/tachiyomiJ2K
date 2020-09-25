@@ -103,7 +103,8 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
 
     private fun initParser(): Gson = when (version) {
         1 -> GsonBuilder().create()
-        2 -> GsonBuilder()
+        2 ->
+            GsonBuilder()
                 .registerTypeAdapter<MangaImpl>(MangaTypeAdapter.build())
                 .registerTypeHierarchyAdapter<ChapterImpl>(ChapterTypeAdapter.build())
                 .registerTypeAdapter<CategoryImpl>(CategoryTypeAdapter.build())
@@ -176,14 +177,14 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
                 val numberOfBackups = numberOfBackups()
                 val backupRegex = Regex("""tachiyomi_\d+-\d+-\d+_\d+-\d+.json""")
                 dir.listFiles { _, filename -> backupRegex.matches(filename) }
-                        .orEmpty()
-                        .sortedByDescending { it.name }
-                        .drop(numberOfBackups - 1)
-                        .forEach { it.delete() }
+                    .orEmpty()
+                    .sortedByDescending { it.name }
+                    .drop(numberOfBackups - 1)
+                    .forEach { it.delete() }
 
                 // Create new file to place backup
                 val newFile = dir.createFile(Backup.getDefaultFilename())
-                        ?: throw Exception("Couldn't create backup file")
+                    ?: throw Exception("Couldn't create backup file")
 
                 newFile.openOutputStream().bufferedWriter().use {
                     parser.toJson(root, it)
@@ -192,7 +193,7 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
                 return newFile.uri.toString()
             } else {
                 val file = UniFile.fromUri(context, uri)
-                        ?: throw Exception("Couldn't create backup file")
+                    ?: throw Exception("Couldn't create backup file")
                 file.openOutputStream().bufferedWriter().use {
                     parser.toJson(root, it)
                 }
@@ -514,7 +515,7 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
      * @return [Manga], null if not found
      */
     internal fun getMangaFromDatabase(manga: Manga): Manga? =
-            databaseHelper.getManga(manga.url, manga.source).executeAsBlocking()
+        databaseHelper.getManga(manga.url, manga.source).executeAsBlocking()
 
     /**
      * Returns list containing manga from library
@@ -522,7 +523,7 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
      * @return [Manga] from library
      */
     internal fun getFavoriteManga(): List<Manga> =
-            databaseHelper.getFavoriteMangas().executeAsBlocking()
+        databaseHelper.getFavoriteMangas().executeAsBlocking()
 
     /**
      * Inserts manga and returns id
@@ -530,7 +531,7 @@ class BackupManager(val context: Context, version: Int = CURRENT_VERSION) {
      * @return id of [Manga], null if not found
      */
     internal fun insertManga(manga: Manga): Long? =
-            databaseHelper.insertManga(manga).executeAsBlocking().insertedId()
+        databaseHelper.insertManga(manga).executeAsBlocking().insertedId()
 
     /**
      * Inserts list of chapters
