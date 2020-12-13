@@ -710,6 +710,7 @@
     <string name="delete">Delete</string>
     <string name="deleted_">Deleted: %1$s</string>
     <string name="display">Display</string>
+    <string name="download_unread">Download unread</string>
     <string name="drag_handle">Drag handle</string>
     <string name="edit">Edit</string>
     <string name="enabled">Enabled</string>
@@ -728,7 +729,9 @@
     <string name="mark_all_as_read">Mark all as read</string>
     <string name="mark_all_as_unread">Mark all as unread</string>
     <string name="mark_as_read">Mark as read</string>
+    <string name="mark_as_unread">Mark as unread</string>
     <string name="mark_previous_as_read">Mark previous as read</string>
+    <string name="mark_previous_as_unread">Mark previous as unread</string>
     <string name="more">More</string>
     <string name="move_to_bottom">Move to bottom</string>
     <string name="move_to_top">Move to top</string>

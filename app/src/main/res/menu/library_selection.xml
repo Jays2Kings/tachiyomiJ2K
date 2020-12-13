@@ -22,8 +22,23 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_download_unread"
+        android:title="@string/download_unread"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_mark_as_read"
+        android:title="@string/mark_as_read"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_mark_as_unread"
+        android:title="@string/mark_as_unread"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_share"
         android:icon="@drawable/ic_share_24dp"
         android:title="@string/share"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 </menu>

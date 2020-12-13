@@ -3,4 +3,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/action_mark_previous_as_read"
           android:title="@string/mark_previous_as_read"/>
+    <item android:id="@+id/action_mark_previous_as_unread"
+        android:title="@string/mark_previous_as_unread"/>
 </menu>

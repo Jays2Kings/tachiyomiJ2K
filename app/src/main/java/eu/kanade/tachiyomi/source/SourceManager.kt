@@ -56,6 +56,10 @@ open class SourceManager(private val context: Context) {
         }
     }
 
+    fun isDelegatedSource(source: Source): Boolean {
+        return delegatedSources.values.count { it.sourceId == source.id } > 0
+    }
+
     fun getDelegatedSource(urlName: String): DelegatedHttpSource? {
         return delegatedSources.values.find { it.urlName == urlName }?.delegatedHttpSource
     }

@@ -875,6 +875,48 @@ class LibraryPresenter(
         getLibrary()
     }
 
+    /** download All unread */
+    fun downloadUnread(mangaList: List<Manga>) {
+        scope.launch {
+            withContext(Dispatchers.IO) {
+                mangaList.forEach {
+                    val chapters = db.getChapters(it).executeAsBlocking().filter { !it.read }
+                    downloadManager.downloadChapters(it, chapters)
+                }
+            }
+            if (preferences.downloadBadge().getOrDefault()) {
+                requestDownloadBadgesUpdate()
+            }
+        }
+    }
+
+    fun markReadStatus(mangaList: List<Manga>, markRead: Boolean) {
+        scope.launch {
+            withContext(Dispatchers.IO) {
+                mangaList.forEach {
+                    withContext(Dispatchers.IO) {
+                        val chapters = db.getChapters(it).executeAsBlocking()
+                        chapters.forEach {
+                            it.read = markRead
+                            it.last_page_read = 0
+                        }
+                        db.updateChaptersProgress(chapters).executeAsBlocking()
+                        if (markRead && preferences.removeAfterMarkedAsRead()) {
+                            deleteChapters(it, chapters)
+                        }
+                    }
+                }
+                getLibrary()
+            }
+        }
+    }
+
+    private fun deleteChapters(manga: Manga, chapters: List<Chapter>) {
+        sourceManager.get(manga.source)?.let { source ->
+            downloadManager.deleteChapters(chapters, manga, source)
+        }
+    }
+
     companion object {
         private var lastLibraryItems: List<LibraryItem>? = null
         private var lastCategories: List<Category>? = null
