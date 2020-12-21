@@ -19,8 +19,6 @@
     <string name="bookmarked">Закладки</string>
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
-    <string name="mark_as_read">Отметить как прочитанное</string>
-    <string name="mark_previous_as_read">Предыдущие как прочитанные</string>
     <string name="migrate_now">Переместить сейчас</string>
     <string name="move_to_categories">Поместить в категорию</string>
     <string name="move_to_bottom">Переместить в конец</string>
@@ -743,6 +741,9 @@
     <string name="reset_cover">Сбросить обложку</string>
     <string name="remember_this_choice">Запомнить этот выбор</string>
     <string name="source_not_installed">Источник не установлен</string>
+    <string name="cover_saved">Обложка сохранена</string>
+    <string name="error_saving_cover">Ошибка сохранения обложки</string>
+    <string name="error_sharing_cover">Ошибка отправки обложки</string>
 
     <plurals name="deleted_chapters">
         <item quantity="one">Глава была удалена из источника:\n%2$s\nDelete
@@ -843,12 +844,17 @@
     <string name="bug_report">Сообщить об ошибке</string>
     <string name="collasped">Рухнул</string>
     <string name="deleted_">Удалено: %1$s</string>
+    <string name="download_unread">Скачать непрочитанные</string>
     <string name="drag_handle">Перетащить маркер</string>
     <string name="hide">Скрыть</string>
     <string name="keep">Хранить</string>
     <string name="less">Меньше</string>
     <string name="mark_all_as_read">Отметить все как прочитанные</string>
     <string name="mark_all_as_unread">Отметить все как непрочитанные</string>
+    <string name="mark_as_read">Отметить как прочитанные</string>
+    <string name="mark_as_unread">Отметить как непрочитанные</string>
+    <string name="mark_previous_as_read">Предыдущие как прочитанные</string>
+    <string name="mark_previous_as_unread">Предыдущие как непрочитанные</string>
     <string name="more">Больше</string>
     <string name="moved_to_">Переехал в %1$s</string>
     <string name="pin">Закрепить</string>
