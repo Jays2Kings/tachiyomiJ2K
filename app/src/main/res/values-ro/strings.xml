@@ -107,7 +107,6 @@
     <string name="language_">Limbă: %1$s</string>
     <string name="empty_preferences_for_extension">Nu există preferințe pentru această extensie</string>
     <string name="fullscreen">Ecran complet</string>
-    <string name="page_transitions">Tranziții între pagini</string>
     <string name="download_badge">Insigne descărcate</string>
     <string name="dark_blue">Albastru închis</string>
     <string name="double_tap_anim_speed">Animație pentru apăsare dublă</string>
@@ -123,7 +122,6 @@
     <string name="background_color">Culoare de fundal</string>
     <string name="white">Alb</string>
     <string name="black">Negru</string>
-    <string name="default_viewer">Implicit</string>
     <string name="left_to_right_viewer">De la stânga la dreapta</string>
     <string name="right_to_left_viewer">De la dreapta la stânga</string>
     <string name="vertical_viewer">Vertical</string>
@@ -379,4 +377,57 @@
     <string name="always">Întotdeauna</string>
     <string name="app_not_available">Aplicația nu este accesibilă</string>
     <string name="back">Înapoi</string>
+    <string name="badges">Insigne</string>
+    <string name="no_chapters_error">Nu a fost găsit niciun capitol</string>
+    <string name="last_used">Data ultimei utilizări</string>
+    <string name="unofficial_extension_message">Aceasta extensie nu face parte din lista oficială de extensii Tachiyomi.</string>
+    <string name="nsfw_short">Peste 18</string>
+    <string name="unofficial">Neoficial</string>
+    <string name="next_page">Pagina următoare</string>
+    <string name="previous_page">Pagina anterioară</string>
+    <string name="next_chapter">Pagina următoare</string>
+    <string name="previous_chapter">Pagina anterioară</string>
+    <string name="animate_page_transitions">Animați tranzițiile de pagini</string>
+    <string name="default_reading_mode">Mod de citire implicit</string>
+    <string name="invert_tapping">Invertiți atingerea</string>
+    <string name="none">Nici unul</string>
+    <string name="myanimelist_relogin">Te rugăm să te loghezi la MAL din nou</string>
+    <string name="search_settings">Setări de căutare</string>
+    <string name="locale">Local</string>
+    <string name="create_legacy_backup">Crează copie de rezervă de moștenire</string>
+    <string name="can_be_used_in_older_tachi">Poate fi utilizat în versiuni mai vechi de Tachiyomi</string>
+    <string name="automatic_backups">Copii de rezervă create automat</string>
+    <string name="also_create_legacy_backup">De asemenea, creați copii de rezervă de moștenire</string>
+    <string name="invalid_backup_file">Fișierul de rezerva este invalid</string>
+    <string name="file_is_missing_data">Lipsesc date din fișier.</string>
+    <string name="backup_has_no_manga">Copia de rezerva nu conține nici o manga.</string>
+    <string name="restore_missing_sources">Surse lipsă:</string>
+    <string name="restore_missing_trackers">Trackerele nu sunt conectate la:</string>
+    <string name="restore_content">Restabilirea utilizează surse pentru a prelua date, se pot aplica costuri de operator.
+\n
+\nAsigurați-vă că ați instalat toate extensiile necesare și că sunteți conectat la surse și servicii de urmărire înainte de restaurare.</string>
+    <string name="restoring_backup_canceled">Restaurare anulată</string>
+    <string name="restore_duration">%02d minute, %02d secunde</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Gata în %1$s cu %2$s eroareGata în %1$s cu %2$s eroriGata în %1$s cu %2$s erori</item>
+        <item quantity="few"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Ghid de migrare a sursei</string>
+    <string name="nsfw_sources">Conținut NSFW (18+)</string>
+    <string name="show_in_sources">Arată în lista surselor</string>
+    <string name="show_in_extensions">Arată în lista extensiilor</string>
+    <string name="label_in_extensions">Etichetează în lista extensiilor</string>
+    <string name="whats_new">Ce este nou</string>
+    <string name="file_picker_error">Nicio aplicație de ales fișiere nu a fost găsite</string>
+    <string name="open_log">Deschide jurnal</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d categorie%d categorii%d categorii</item>
+        <item quantity="few"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="backup_and_restore">Creează copie de rezervă și restaurează</string>
+    <string name="progress">Progresul</string>
+    <string name="complete">Terminat</string>
+    <string name="updated_to_">Actualizat la v%1$s</string>
 </resources>

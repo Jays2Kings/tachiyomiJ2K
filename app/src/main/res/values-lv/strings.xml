@@ -157,8 +157,8 @@
     <string name="_already_in_queue">%1$s jau ir rindā</string>
     <plurals name="category_plural">
         <item quantity="zero">Kategorija</item>
-        <item quantity="one"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="other"/>
     </plurals>
     <string name="chapter_not_found">Nodaļa nav atrasta</string>
     <string name="chapters_removed">Izņemtas nodaļas.</string>
@@ -185,4 +185,21 @@
     <string name="comic">Komikss</string>
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhva</string>
+    <string name="unread_badges">Nelasītas nozīmes</string>
+    <string name="invert_tapping">Invertēt spiešanu</string>
+    <string name="none">Nav</string>
+    <string name="tracked">Izsekots</string>
+    <string name="search_settings">Meklēt Uzstādījumos</string>
+    <string name="backup_has_no_manga">Dublējums nesatur nekādu mangu.</string>
+    <string name="restore_missing_sources">Trūkst avotu:</string>
+    <string name="restore_content">Atjaunojot, datu iegūšanai tiek izmantoti avoti, var tikt piemērota maksa par mobilā tīkla operatoru.
+\n
+\nPirms atjaunošanas pārliecinieties, vai esat instalējis visus nepieciešamos paplašinājumus un esat pieteicies avotos un izsekošanas pakalpojumos.</string>
+    <string name="restore_duration">%02d min, %02d sec</string>
+    <plurals name="restore_completed_message">
+        <item quantity="zero">Pabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdām</item>
+        <item quantity="one"></item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="open_log">Atvērt žurnālfailu</string>
 </resources>

@@ -91,7 +91,6 @@
     <string name="default_category">নির্ধারিত ধরণ</string>
     <string name="always_ask">সর্বদা জিজ্ঞাসা করুন</string>
     <string name="fullscreen">সম্পূর্ণ স্ক্রিন</string>
-    <string name="page_transitions">পৃষ্ঠা রূপান্তর</string>
     <string name="show_page_number">পৃষ্ঠা নং দেখান</string>
     <string name="crop_borders">কোনাগুলো কাটুন</string>
     <string name="use_custom_brightness">স্ব ইচ্ছামত আলো ব্যাবহার করুন</string>
@@ -104,7 +103,6 @@
     <string name="background_color">পিছনের রঙ</string>
     <string name="white">সাদা</string>
     <string name="black">কালো</string>
-    <string name="default_viewer">নির্ধারিত</string>
     <string name="left_to_right_viewer">বাম থেকে ডানে</string>
     <string name="right_to_left_viewer">ডান থেকে বামে</string>
     <string name="vertical_viewer">সোঁজাসুজি</string>
@@ -548,7 +546,6 @@
     <string name="include_in_global_update">সর্বত্র আপডেটে অন্তর্ভুক্ত করুন</string>
     <string name="more_library_settings">আরো লাইব্রেরি সেটিংস</string>
     <string name="tap_library_to_show_filters">ফিল্টারগুলো দেখানোর জন্য লাইব্রেরি আইকনটিতে চাপুন</string>
-    <string name="show_badges">ব্যাজগুলো প্রদর্শন করুন</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -564,4 +561,60 @@
     <string name="collapse_all_categories">সমস্ত বিভাগ সঙ্কুচিত করুন</string>
     <string name="expand_all_categories">সমস্ত বিভাগ প্রসারিত করুন</string>
     <string name="tracked">ট্র্যাকড</string>
+    <string name="nav_layout">ন্যাভিগেশন নকশা</string>
+    <string name="l_nav">L আকারের</string>
+    <string name="no_chapters_error">কোনও অধ্যায় পাওয়া যায় নি</string>
+    <string name="badges">প্রতীক গুলি</string>
+    <string name="source_migration_guide">উৎস স্থানান্তর গাইড</string>
+    <string name="show_in_sources">উৎস তালিকায় প্রদর্শন করুন</string>
+    <string name="show_in_extensions">এক্সটেনশন গুলোর তালিকায় প্রদর্শন করুন</string>
+    <string name="label_in_extensions">এক্সটেনশন গুলোর তালিকায় লেবেল করুন</string>
+    <string name="file_picker_error">কোনো ফাইল বাছাইকারী অ্যাপ পাওয়া যায় নি</string>
+    <string name="unofficial_extension_message">এক্সটেনশনটি তাচিওমির অনুমোদিত এক্সটেনশন তালিকায় নেই।</string>
+    <string name="nsfw_short">১৮+</string>
+    <string name="unofficial">অনুমোদনহীন</string>
+    <string name="next_page">পরের পৃষ্ঠা</string>
+    <string name="previous_page">আগের পৃষ্ঠা</string>
+    <string name="next_chapter">পরের পৃষ্ঠা</string>
+    <string name="previous_chapter">আগের পৃষ্ঠা</string>
+    <string name="animate_page_transitions">পৃষ্ঠা পালটানো এনিমেট করুন</string>
+    <string name="default_reading_mode">প্রকৃত পঠন ধরন</string>
+    <string name="kindlish_nav">কিন্ডেলের মতো</string>
+    <string name="edge_nav">কিনার</string>
+    <string name="right_and_left_nav">ডান ও বাম</string>
+    <string name="invert_tapping">উল্টানো ট্যাপিং</string>
+    <string name="none">কিছুই না</string>
+    <string name="started_reading_date">পড়া শুরু করার তারিখ</string>
+    <string name="finished_reading_date">পড়া শেষ করার তারিখ</string>
+    <string name="myanimelist_relogin">দয়া করে MAL এ আবার লগইন করুন</string>
+    <string name="search_settings">সেটিংসে খুঁজুন</string>
+    <string name="locale">স্থানীয়</string>
+    <string name="create_legacy_backup">উত্তরাধিকার এর ব্যাকআপ তৈরি করা</string>
+    <string name="can_be_used_in_older_tachi">পুরাতন তাচ্চিওমির ভার্সন গুলোতে ব্যবহার করা যাবে</string>
+    <string name="automatic_backups">স্বয়ংক্রিয় ব্যাকআপ</string>
+    <string name="also_create_legacy_backup">লিগ্যাসি ব্যাকআপও তৈরি করুন</string>
+    <string name="invalid_backup_file">ব্যাকআপ ফাইল গ্রহণযোগ্য নয়</string>
+    <string name="invalid_backup_file_type">অকার্যকর ব্যাকআপ ফাইল ধরণ: %1$s
+\nএটা .proto.gz বা .json দিয়ে শেষ হওয়া উচিত।</string>
+    <string name="file_is_missing_data">ফাইলে তথ্য অনুপস্থিত।</string>
+    <string name="backup_has_no_manga">ব্যাকআপে কোনো মাংগা নেই।</string>
+    <string name="restore_missing_sources">উৎস অনুপলব্ধ:</string>
+    <string name="restore_missing_trackers">ট্র্যাকারগুলিতে প্রবেশ হয়নি:</string>
+    <string name="restore_content">পুনরুদ্ধার উপাত্ত আনতে উৎস ব্যবহার করে, ক্যারিয়ারের খরচগুলি প্রযোজ্য হতে পারে।
+\n
+\nনিশ্চিত করুন যে আপনি পুনরুদ্ধারের আগে প্রয়োজনীয় এক্সটেনশনগুলো ইন্সটল করেছেন আর উৎসগুলো ও ট্র্যাকিং পরিসেবায় লগ-ইন করেছেন।</string>
+    <string name="restoring_backup_canceled">পুনরুদ্ধার বাতিল করা হয়েছে</string>
+    <string name="restore_duration">%02d মিন, %02d সেক</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">%1$s সময়ে %2$s ত্রুটি সহ সম্পন্ন%1$s সময়ে %2$s ত্রুটিসহ সম্পন্ন</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="open_log">লগ খুলুন</string>
+    <string name="backup_and_restore">ব্যাকআপ এবং পুনঃস্থাপন</string>
+    <string name="progress">অগ্রগতি</string>
+    <string name="complete">সম্পূর্ণ</string>
+    <string name="crash_logs">ক্র্যাশ লগগুলো</string>
+    <string name="saves_error_logs">বিকাশকারীদের সাথে সেয়ার করার জন্য এরর লগগুলো একটি ফাইলে সংরক্ষণ করে</string>
+    <string name="crash_log_saved">ক্র্যাশ লগগুলো সংরক্ষিত হয়েছে</string>
+    <string name="updated_to_">হালনাগাদ করা হয়েছে v%1$s তে</string>
 </resources>

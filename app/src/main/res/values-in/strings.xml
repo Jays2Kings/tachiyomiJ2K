@@ -88,7 +88,6 @@
     <string name="default_category">Bawaan kategori</string>
     <string name="always_ask">Selalu tanya</string>
     <string name="fullscreen">Layar penuh</string>
-    <string name="page_transitions">Transisi halaman</string>
     <string name="show_page_number">Tampilkan nomor halaman</string>
     <string name="crop_borders">Potong pinggiran</string>
     <string name="use_custom_brightness">Atur kecerahan layar</string>
@@ -101,7 +100,6 @@
     <string name="background_color">Warna latar</string>
     <string name="white">Putih</string>
     <string name="black">Hitam</string>
-    <string name="default_viewer">Bawaan</string>
     <string name="left_to_right_viewer">Kiri ke kanan</string>
     <string name="right_to_left_viewer">Kanan ke kiri</string>
     <string name="vertical_viewer">Vertikal</string>
@@ -439,7 +437,6 @@
     <string name="hide_category_hopper">Sembunyikan kategori lompat</string>
     <string name="display_as">Tampilkan sebagai</string>
     <string name="tap_library_to_show_filters">Ketuk ikon perpustakaan untuk menampilkan filter</string>
-    <string name="show_badges">Tampilkan lencana</string>
     <string name="grid_options">Opsi grid</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -526,4 +523,63 @@
     <string name="search_chapters">Cari bab</string>
     <string name="mark_all_chapters_as_read">Tandai semua bab sebagai telah dibaca\?</string>
     <string name="no_description">Tidak ada deskripsi</string>
+    <string name="next_page">Halaman selanjutnya</string>
+    <string name="previous_page">Halaman sebelumnya</string>
+    <string name="next_chapter">Halaman selanjutnya</string>
+    <string name="previous_chapter">Halaman sebelumnya</string>
+    <string name="animate_page_transitions">Transisi halaman</string>
+    <string name="default_reading_mode">Mode pembacaan standar</string>
+    <string name="nav_layout">Tata letak navigasi</string>
+    <string name="no_chapters_error">Bab tidak ditemukan</string>
+    <string name="badges">Penanda</string>
+    <string name="source_migration_guide">Petunjuk migrasi</string>
+    <string name="nsfw_sources">Sumber NSFW (18+)</string>
+    <string name="show_in_sources">Tampilkan dalam daftar sumber</string>
+    <string name="show_in_extensions">Tampilkan dalam daftar ekstensi</string>
+    <string name="label_in_extensions">Label dalam daftar ekstensi</string>
+    <string name="does_not_prevent_unofficial_nsfw">Hal ini tidak mencegah ekstensi tidak resmi atau yang berpotensi salahnya label untuk menampilkan konten NSFW (18+) dalam aplikasi.</string>
+    <string name="whats_new">Apa yang baru</string>
+    <string name="file_picker_error">Tidak ada aplikasi pemilih file yang ditemukan</string>
+    <string name="unofficial_extension_message">Ekstensi ini bukan dari daftar resmi Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Tidak resmi</string>
+    <string name="may_contain_nsfw">Mungkin berisi konten 18+</string>
+    <string name="l_nav">Berbentuk L</string>
+    <string name="edge_nav">Tepi</string>
+    <string name="right_and_left_nav">Kanan dan Kiri</string>
+    <string name="invert_tapping">Ketukan arah sebaliknya</string>
+    <string name="none">Tidak</string>
+    <string name="started_reading_date">Tanggal mulai membaca</string>
+    <string name="finished_reading_date">Tanggal selesai membaca</string>
+    <string name="myanimelist_relogin">Harap login kembali ke MAL</string>
+    <string name="search_settings">Cari pengaturan</string>
+    <string name="locale">Daerah</string>
+    <string name="create_legacy_backup">Buat cadangan versi</string>
+    <string name="can_be_used_in_older_tachi">Bisa digunakan di Tachiyomi versi lama</string>
+    <string name="automatic_backups">Pencadangan otomatis</string>
+    <string name="also_create_legacy_backup">Buat cadangan versi lama juga</string>
+    <string name="invalid_backup_file">File cadangan tidak valid</string>
+    <string name="invalid_backup_file_type">Tipe file berkas cadangan tidak valid: %1$s
+\nHarusnya nama file berakhir dengan .proto.gz atau .json.</string>
+    <string name="file_is_missing_data">File tidak memiliki data.</string>
+    <string name="backup_has_no_manga">Cadangan tidak berisi manga apapun.</string>
+    <string name="restore_missing_sources">Kehilangan sumber:</string>
+    <string name="restore_missing_trackers">Pelacakan tidak tersinkronisasi di:</string>
+    <string name="restore_content">Proses pemulihan menggunakan koneksi internet untuk mengambil data, biaya operator mungkin berlaku.
+\n
+\nPastikan Anda telah memasang ekstensi yg dibutuhkan dan sudah login ke sumber sebelum proses pemulihan.</string>
+    <string name="restoring_backup_canceled">Pemulihan dibatalkan</string>
+    <string name="restore_duration">%02d menit, %02d detik</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">Selesai dalam %1$s dengan %2$s kesalahan</item>
+    </plurals>
+    <string name="open_log">Buka log</string>
+    <string name="backup_and_restore">Cadangkan dan pulihkan</string>
+    <string name="progress">Kemajuan</string>
+    <string name="complete">Lengkap</string>
+    <string name="crash_logs">Log kerusakan</string>
+    <string name="dump_crash_logs">Buang log kerusakan</string>
+    <string name="saves_error_logs">Simpan log kesalahan ke sebuah file untuk dibagikan dengan pengembang aplikasi</string>
+    <string name="crash_log_saved">Log kerusakan disimpan</string>
+    <string name="updated_to_">Diperbaharui ke v%1$s</string>
 </resources>

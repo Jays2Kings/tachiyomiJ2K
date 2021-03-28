@@ -91,7 +91,6 @@
     <string name="default_category">الفئة الافتراضية</string>
     <string name="always_ask">السؤال دائما</string>
     <string name="fullscreen">وضع الشاشة الكاملة</string>
-    <string name="page_transitions">الانتقال بين الصفحات</string>
     <string name="show_page_number">عرض رقم الصفحة</string>
     <string name="crop_borders">اقتصاص الحدود</string>
     <string name="use_custom_brightness">سطوع مخصص</string>
@@ -104,7 +103,6 @@
     <string name="background_color">لون الخلفية</string>
     <string name="white">أبيض</string>
     <string name="black">أسود</string>
-    <string name="default_viewer">الافتراضي</string>
     <string name="left_to_right_viewer">من اليسار لليمين</string>
     <string name="right_to_left_viewer">من اليمين لليسار</string>
     <string name="vertical_viewer">عموديا</string>
@@ -685,7 +683,6 @@
     <string name="hide_category_hopper">إخفاء الفئة</string>
     <string name="display_as">عرض ك</string>
     <string name="tap_library_to_show_filters">انقر على أيقونة المكتبة لعرض المُرشحات</string>
-    <string name="show_badges">إظهار الشارات</string>
     <string name="grid_options">خيارات التخطيط</string>
     <string name="x_large">XL</string>
     <string name="medium">M</string>
@@ -714,4 +711,68 @@
         <item quantity="many">%d مصادر مفقود</item>
         <item quantity="other">%d مصادر مفقود</item>
     </plurals>
+    <string name="next_page">صفحة التالية</string>
+    <string name="previous_page">الصفحة سابقة</string>
+    <string name="next_chapter">صفحة التالية</string>
+    <string name="previous_chapter">الصفحة سابقة</string>
+    <string name="animate_page_transitions">مؤثرات الانتقال بين الصفحات</string>
+    <string name="default_reading_mode">وضع القراءة الافتراضي</string>
+    <string name="nav_layout">تخطيط التنقل</string>
+    <string name="l_nav">على شكل حرف L</string>
+    <string name="kindlish_nav">كيندل العش</string>
+    <string name="edge_nav">حافة</string>
+    <string name="right_and_left_nav">يميناً و يساراً</string>
+    <string name="invert_tapping">عكس جهة النقر</string>
+    <string name="none">لا شيء</string>
+    <string name="no_chapters_error">لم يتم العثور على فصول</string>
+    <string name="file_picker_error">لم يتم العثور على تطبيق منتقي الملفات</string>
+    <string name="open_log">فتح السجل</string>
+    <string name="badges">شارات</string>
+    <string name="unofficial_extension_message">هذه الإضافة ليست من قائمة إضافات Tachiyomi الرسميّة.</string>
+    <string name="nsfw_short">محتوى غير لائق</string>
+    <string name="unofficial">غير رسمي</string>
+    <string name="may_contain_nsfw">قد يحتوى على محتوى للبالغين</string>
+    <string name="started_reading_date">تاريخ بدء القراءة</string>
+    <string name="finished_reading_date">تاريخ انهاء القراءة</string>
+    <string name="myanimelist_relogin">رجاء سجل دخولك في MAL مجدداً</string>
+    <string name="search_settings">إعدادات البحث</string>
+    <string name="locale">محلي</string>
+    <string name="create_legacy_backup">إنشاء نسخة احتياطية قديمة</string>
+    <string name="can_be_used_in_older_tachi">يمكن إستخدامه في الإصدارات القديمة من Tachiyomi</string>
+    <string name="automatic_backups">النسخ الاحتياطيّة التلقائيّة</string>
+    <string name="also_create_legacy_backup">قم أيضًا بإنشاء نسخة إحتياطية قديمة</string>
+    <string name="invalid_backup_file">ملف النسخ الاحتياطي غير صالح</string>
+    <string name="invalid_backup_file_type">ملف النسخ الاحتياطي غير صالح: %1$s
+\nيجب أن ينتهي ب.proto.gz أو .json.</string>
+    <string name="file_is_missing_data">هناك بيانات مفقودة في الملف.</string>
+    <string name="backup_has_no_manga">النسخة الإحتياطية لا تحتوي على أيّة مانجا.</string>
+    <string name="restore_missing_sources">المصادر المفقودة:</string>
+    <string name="restore_missing_trackers">أجهزة التتبع التي لم يتم تسجيل الدخول إليها:</string>
+    <string name="restore_content">عملية الاستعادة تستخدم المصادر لجلب البيانات؛ قد يتم تطبيق تكاليف مزود الخدمة.
+\n
+\nتأكّد من تثبيت كافة اﻹضافات الضرورية وتسجيل الدخول لخدمات التتبع المطلوبة قبل عملية الاستعادة.</string>
+    <string name="restoring_backup_canceled">تم الغاء الاستعادة</string>
+    <string name="restore_duration">%02d دقيقة و %02d ثانية</string>
+    <plurals name="restore_completed_message">
+        <item quantity="zero">تم في %1$s بدون أيّة أخطاءتم في %1$s ووجد خطأ واحدتم في %1$s ووجد اثنين من الأخطاءتم في %1$s ووجد %2$s من الأخطاءتم في %1$s ووجد %2$s من الأخطاءتم في %1$s ووجد %2$s من الأخطاء</item>
+        <item quantity="one"/>
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">دليل ترحيل المصدر</string>
+    <string name="nsfw_sources">محتوى +18</string>
+    <string name="show_in_sources">إعرض في قائمة المصادر</string>
+    <string name="show_in_extensions">إعرض في قائمة الإضافات</string>
+    <string name="label_in_extensions">تسمية في قائمة الملحقات</string>
+    <string name="does_not_prevent_unofficial_nsfw">هذا لا يمنع الإضافات غير الرسمية أو التي تم وضع علامة عليها بشكل غير صحيح من إظهار محتوى غير لائق داخل التطبيق.</string>
+    <string name="backup_and_restore">النسخ الاحتياطي والاستعادة</string>
+    <string name="progress">التقدّم</string>
+    <string name="complete">مُكتمل</string>
+    <string name="crash_logs">سجلات الاخطاء</string>
+    <string name="dump_crash_logs">استخراج سجلات الاخطاء</string>
+    <string name="saves_error_logs">يحفظ سجلات الأخطاء في ملف للمشاركة مع المطورين</string>
+    <string name="crash_log_saved">تم حفظ سجلات الأخطاء</string>
+    <string name="updated_to_">حُدِّث إلى الإصدار v%1$s</string>
 </resources>

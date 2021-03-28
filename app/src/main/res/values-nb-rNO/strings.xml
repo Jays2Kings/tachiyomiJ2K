@@ -94,7 +94,6 @@
     <string name="version_">Versjon: %1$s</string>
     <string name="language_">Språk: %1$s</string>
     <string name="fullscreen">Fullskjermsvisning</string>
-    <string name="page_transitions">Sideoverganger</string>
     <string name="show_page_number">Vis sidenummer</string>
     <string name="keep_screen_on">Behold skjerm på</string>
     <string name="navigation">Navigasjon</string>
@@ -119,7 +118,6 @@
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="white">Hvit</string>
     <string name="black">Svart</string>
-    <string name="default_viewer">Forvalg</string>
     <string name="left_to_right_viewer">Venstre til høyre</string>
     <string name="right_to_left_viewer">Høyre til venstre</string>
     <string name="vertical_viewer">Loddrett</string>
@@ -368,4 +366,38 @@
     <string name="reorder">Sorter etter</string>
     <string name="unpin">Opphev festin</string>
     <string name="view_chapters">Vis kapitler</string>
+    <string name="open_log">Åpne logg</string>
+    <string name="no_chapters_error">Fant ingen kapitler</string>
+    <string name="restore_missing_sources">Manglende kilder:</string>
+    <string name="restore_content">Gjenoppretting bruker kilde for å hente data, mobilkostnader kan tilkomme.
+\n
+\nForsikre deg om at du har installert alle nødvendige utvidelser og er logget inn i kilder og sporingstjenester før du gjenoppretter.</string>
+    <string name="restoring_backup_canceled">Avbrutt gjenoppretting</string>
+    <string name="restore_duration">%02d min, %02d sek</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Gjort i %1$s med %2$s feilGjort i %1$s med %2$s feil</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="whats_new">Hva er nytt</string>
+    <string name="badges">merker</string>
+    <string name="last_used">Sist brukt</string>
+    <string name="unofficial_extension_message">Denne utvidelsen kommer ikke fra den offisielle Tachiyomi-utvidelseslisten.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Uoffisiell</string>
+    <string name="animate_page_transitions">Sideovergangsanimasjoner</string>
+    <string name="default_reading_mode">Forvalgt lesemodus</string>
+    <string name="invert_tapping">Inverter trykk</string>
+    <string name="none">Ingen</string>
+    <string name="search_settings">Søkeinnstillinger</string>
+    <string name="locale">Språk</string>
+    <string name="invalid_backup_file">Ugyldig sikkerhetskopieringsfil</string>
+    <string name="file_is_missing_data">Filen mangler data.</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d kategori%d kateogrier</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="backup_and_restore">Sikkerhetskopier og gjenopprett</string>
+    <string name="progress">Framdrift</string>
+    <string name="complete">Fullført</string>
+    <string name="updated_to_">Oppdatert til v%1$s</string>
 </resources>

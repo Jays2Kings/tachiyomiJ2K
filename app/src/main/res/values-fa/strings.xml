@@ -146,8 +146,6 @@
     </plurals>
     <string name="next_chapter_not_found">فصل بعدی یافت نشد</string>
     <string name="use_image_as_cover">این عکس، به عنوان عکس روی جلد تنظیم شود؟</string>
-    <string name="finished">تمام شده:</string>
-    <string name="current">فعلی:</string>
     <string name="next">بعدی:</string>
     <string name="previous">قبلی:</string>
     <string name="theres_no_next_chapter">فصل بعدی وجود ندارد</string>
@@ -299,7 +297,6 @@
     <string name="vertical_viewer">عمودی</string>
     <string name="right_to_left_viewer">راست به چپ</string>
     <string name="left_to_right_viewer">چپ به راست</string>
-    <string name="default_viewer">پیش‌فرض</string>
     <string name="decode_image_error">بازکردن عکس با خطا مواجه شد</string>
     <string name="cover_updated">عکس روی جلد بروزرسانی شد</string>
     <string name="set_as_cover">تنظیم به عنوان عکس روی جلد</string>
@@ -325,7 +322,7 @@
     <string name="categories">دسته بندی ها</string>
     <plurals name="chapters_plural">
         <item quantity="one">قسمت ها</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="lock_when_idle">قفل صفحه هنگام بیکاری</string>
     <string name="lock_with_biometrics">با بیومتریک قفل کنید</string>
@@ -344,5 +341,60 @@
     <string name="not_started">آغاز نشده</string>
     <string name="comic">کامیک</string>
     <string name="manhwa">مانهوای</string>
-    <string name="app_name" translatable="false"></string>
+    <string name="app_name" translatable="false"/>
+    <string name="locale">محلی</string>
+    <string name="create_legacy_backup">ساخت نسخه پشتیبان با تکنولوژی قدیمی</string>
+    <string name="can_be_used_in_older_tachi">در نسخه های قدیمی تر Tachiyomi قابل استفاده است</string>
+    <string name="automatic_backups">پشتیبان گیری خودکار</string>
+    <string name="also_create_legacy_backup">همچنین یک نسخه پشتیبان با تکنولوژی قدیمی بساز</string>
+    <string name="invalid_backup_file">فایل پشتیبان نامعتبر است</string>
+    <string name="file_is_missing_data">فایل شامل اطلاعات ناموجود است.</string>
+    <string name="backup_has_no_manga">فایل پشتیبان شامل هیچ مانگا ای نیست.</string>
+    <string name="restore_missing_sources">منابع ناموجود:</string>
+    <string name="restore_missing_trackers">ردیابی هایی که به سیستم وارد نشده اند:</string>
+    <string name="restore_content">بازیابی برای واکشی داده ها از منابع نصب شده استفاده می‌کند، ممکن است از حجم اینتنرت مصرف شود.
+\n
+\nاطمینان حاصل کنید که تمام افزونه‌های لازم را نصب کرده اید و قبل از بازگردانی به منابع نصب شده و خدمات ردیابی وارد شده اید.</string>
+    <string name="no_chapters_error">هیچ قسمتی پیدا نشد</string>
+    <string name="badges">تعداد</string>
+    <string name="last_used">آخرین استفاده</string>
+    <string name="unofficial_extension_message">این افزونه در لیست افزونه‌های رسمی تاچیومی نیست.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">غیررسمی</string>
+    <string name="finished_chapter">تمام شده:</string>
+    <string name="current_chapter">فعلی:</string>
+    <string name="next_title">بعدی:</string>
+    <string name="previous_title">قبلی:</string>
+    <string name="next_page">صفحه بعدی</string>
+    <string name="previous_page">صفحه قبلی</string>
+    <string name="next_chapter">صفحه بعدی</string>
+    <string name="previous_chapter">صفحه قبلی</string>
+    <string name="animate_page_transitions">انمیشن‌های تغییر صفحه</string>
+    <string name="default_reading_mode">حالت پیش فرض خواندن</string>
+    <string name="invert_tapping">ضربه زدن معکوس</string>
+    <string name="none">هیچ کدام</string>
+    <string name="myanimelist_relogin">لطفا دوباره به MAL وارد شوید</string>
+    <string name="search_settings">جست و جوی تنضیمات</string>
+    <string name="restoring_backup_canceled">بازیابی لغو شده</string>
+    <string name="restore_duration">%02d دقیقه, %02d ثانیه</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">در %1$s با %2$s خطا انجام شددر %1$s با %2$s خطا انجام شد</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">راهنمای تعویض منبع</string>
+    <string name="nsfw_sources">منابع محتوای جنسی (+18)</string>
+    <string name="show_in_sources">نمایش در لیست منابع</string>
+    <string name="show_in_extensions">نمایش در لیست افزونه ها</string>
+    <string name="label_in_extensions">برچسب دهی در لیست افزونه ها</string>
+    <string name="file_picker_error">هیچ نرم افزار انتخاب فایلی یافت نشد</string>
+    <string name="open_log">بازکردن log</string>
+    <string name="chapters">قسمت ها</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d دسته%d دسته</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="progress">پیشرفت</string>
+    <string name="complete">تکمیل شده</string>
+    <string name="backup_and_restore">پشتیبان گیری و بازیابی</string>
+    <string name="updated_to_">به نسخه v%1$s آپدیت شد</string>
 </resources>

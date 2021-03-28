@@ -110,7 +110,6 @@
     <string name="language_">Jezik: %1$s</string>
     <string name="empty_preferences_for_extension">Nema prefrenca za podešavanje na ovom dodatku</string>
     <string name="fullscreen">Ceo ekran</string>
-    <string name="page_transitions">Prelaz stranica</string>
     <string name="double_tap_anim_speed">Brzina animacije dvoklika</string>
     <string name="show_page_number">Prikaži broj stranice</string>
     <string name="crop_borders">Iseci krajeve</string>
@@ -124,7 +123,6 @@
     <string name="background_color">Boja pozadine</string>
     <string name="white">Bela</string>
     <string name="black">Crna</string>
-    <string name="default_viewer">Podrazumevano</string>
     <string name="left_to_right_viewer">S leva na desno</string>
     <string name="right_to_left_viewer">S desna na levo</string>
     <string name="vertical_viewer">Verticalno</string>
@@ -270,8 +268,6 @@
     <string name="set_as_cover">Postavi kao naslov</string>
     <string name="next_chapter_not_found">Sledeće poglavlje nije pronađeno</string>
     <string name="use_image_as_cover">Koristite ovu sliku kao naslovnu\?</string>
-    <string name="finished">Gotovo:</string>
-    <string name="current">Trenutno:</string>
     <string name="next">Sledeće:</string>
     <string name="previous">Prethodno:</string>
     <string name="theres_no_next_chapter">Nema sledećeg poglavlja</string>
@@ -345,4 +341,26 @@
     <string name="pinned">Zakačeno</string>
     <string name="refresh">Osveži</string>
     <string name="reorder">Presloži</string>
+    <string name="unofficial_extension_message">Ovaj dodatak nije iz oficijalne liste Tachiyomi dodataka.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Neoficijalno</string>
+    <string name="finished_chapter">Gotovo:</string>
+    <string name="current_chapter">Trenutno:</string>
+    <string name="next_title">Sledeće:</string>
+    <string name="previous_title">Prethodno:</string>
+    <string name="none">Ništa</string>
+    <string name="last_used">Zadnje korišćeno</string>
+    <string name="search_settings">Podešavanja pretrage</string>
+    <string name="locale">Jezik</string>
+    <string name="restore_content">Vraćanja koriste izvore da preuzima podatke, troškovi prenošenja se mogu primeniti.
+\n
+\nProvjerite jeste li instalirali sva potrebna proširenja i prijavljeni ste u izvore i usluge praćenja prije vraćanja.</string>
+    <string name="restoring_backup_canceled">Otkazano vraćanje kopije</string>
+    <string name="restore_duration">%02d minuta, %02d sekudi</string>
+    <string name="open_log">Otvori zapisnik</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d kategorija%d kategorije</item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
+    </plurals>
 </resources>

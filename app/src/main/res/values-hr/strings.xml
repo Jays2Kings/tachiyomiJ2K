@@ -117,8 +117,6 @@
     <string name="cover_updated">Naslovnica aktualizirana</string>
     <string name="next_chapter_not_found">Sljedeće poglavlje nije pronađeno</string>
     <string name="use_image_as_cover">Ovu sliku koristiti kao ilustraciju naslovnice\?</string>
-    <string name="finished">Završeno:</string>
-    <string name="current">Trenutačno:</string>
     <string name="next">Sljedeće:</string>
     <string name="previous">Prethodno:</string>
     <string name="theres_no_next_chapter">Nema sljedećeg poglavlja</string>
@@ -471,11 +469,9 @@
     <string name="smart_based_on_page">Pametno (na osnovi stranice)</string>
     <string name="smart_by_theme">Pametno (po temi)</string>
     <string name="smart_by_page">Pametno (po stranici)</string>
-    <string name="default_viewer">Standardni prikaz</string>
     <string name="use_custom_color_filter">Koristi prilagođeni filtar boja</string>
     <string name="use_custom_brightness">Koristi prilagođenu svjetlost</string>
     <string name="enable_zoom_out">Aktiviraj zumiranje</string>
-    <string name="page_transitions">Prijelaz stranica</string>
     <string name="webtoon_style">webtoon stil</string>
     <string name="reading_">Čita se %1$s</string>
     <string name="viewer_for_this_series">Prikaz za ovu seriju</string>
@@ -546,4 +542,74 @@
     <string name="next_5_unread">Sljedećih 5 nepročitanih poglavlja</string>
     <string name="next_unread_chapter">Sljedeće nepročitano poglavlje</string>
     <string name="search_chapters">Traži poglavlja</string>
+    <string name="badges">Značke</string>
+    <string name="unofficial_extension_message">Ovo proširenje nije sa službenog popisa Tachiyomi proširenja.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Neslužbeno</string>
+    <string name="may_contain_nsfw">Može sadržavati neprikladan sadržaj (18+)</string>
+    <string name="finished_chapter">Završeno:</string>
+    <string name="current_chapter">Trenutačno:</string>
+    <string name="next_title">Sljedeće:</string>
+    <string name="previous_title">Prethodno:</string>
+    <string name="next_page">Sljedeća stranica</string>
+    <string name="previous_page">Prethodna stranica</string>
+    <string name="next_chapter">Sljedeća stranica</string>
+    <string name="previous_chapter">Prethodna stranica</string>
+    <string name="animate_page_transitions">Animiraj prijelaze stranica</string>
+    <string name="default_reading_mode">Standardni modus čitanja</string>
+    <string name="nav_layout">Način navigacije</string>
+    <string name="l_nav">U obliku slova L</string>
+    <string name="kindlish_nav">Kao Kindle</string>
+    <string name="edge_nav">Rub</string>
+    <string name="right_and_left_nav">Desno i lijevo</string>
+    <string name="invert_tapping">Preokreni dodirivanje</string>
+    <string name="none">Ništa</string>
+    <string name="no_chapters_error">Nema poglavlja</string>
+    <string name="started_reading_date">Datum početka čitanja</string>
+    <string name="finished_reading_date">Datum kraja čitanja</string>
+    <string name="myanimelist_relogin">Ponovo se prijavi na MAL</string>
+    <string name="search_settings">Postavke pretrage</string>
+    <string name="locale">Jezik</string>
+    <string name="create_legacy_backup">Stvori zastarjelu sigurnosnu kopiju</string>
+    <string name="can_be_used_in_older_tachi">Može se koristiti u starijim Tachiyomi verzijama</string>
+    <string name="automatic_backups">Automatsko spremanje sigurnosnih kopija</string>
+    <string name="also_create_legacy_backup">Također spremi zastarjelu sigurnosnu kopiju</string>
+    <string name="invalid_backup_file">Neispravna datoteka sigurnosne kopije</string>
+    <string name="invalid_backup_file_type">Neispravna datoteka sigurnosne kopije: %1$s
+\nTrebala bi završiti s .proto.gz ili .json.</string>
+    <string name="file_is_missing_data">Datoteci nedostaju podaci.</string>
+    <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan manga.</string>
+    <string name="restore_missing_sources">Nedostaju izvori:</string>
+    <string name="restore_missing_trackers">Praćenja bez prijave:</string>
+    <string name="restore_content">Obnavljanje koristi izvore za dohvaćanje podataka, može prouzročiti troškove.
+\n
+\nPrije obnavljanja, provjeri jesu li instalirana sva potrebna proširenja i da si prijavljen/a u izvorima i uslugama za praćenje.</string>
+    <string name="restore_content_full">Podaci datoteke sigurnosne kopije će se obnoviti.
+\n
+\nZa upotrebu podataka, morat ćeš instalirati nedostajuća proširenja i nakon toga se prijaviti na usluge praćenja.</string>
+    <string name="restoring_backup_canceled">Obnavljanje prekinuto</string>
+    <string name="restore_duration">%02d min, %02d s</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Dovršeno u %1$s s %2$s greškomDovršeno u %1$s s %2$s greškeDovršeno u %1$s s %2$s grešaka</item>
+        <item quantity="few"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Vodič za migraciju izvora</string>
+    <string name="nsfw_sources">Izvori neprikladnog sadržaja (18+)</string>
+    <string name="show_in_sources">Pokaži u popisu izvora</string>
+    <string name="show_in_extensions">Pokaži u popisu dodataka</string>
+    <string name="label_in_extensions">Oznaka u popisu dodataka</string>
+    <string name="does_not_prevent_unofficial_nsfw">To ne sprečava neslužbene ili potencijalno krivo označene dodatke prikazati neprikladan sadržaj (18+) unutar aplikacije.</string>
+    <string name="whats_new">Što je novo</string>
+    <string name="file_picker_error">Nije pronađen nijedan program za biranje datoteka</string>
+    <string name="open_log">Otvori zapisnik</string>
+    <string name="chapters">Poglavlja</string>
+    <string name="backup_and_restore">Sigurnosna kopija i obnavljanje</string>
+    <string name="progress">Napredak</string>
+    <string name="complete">Gotovo</string>
+    <string name="crash_logs">Zapisi rušenja programa</string>
+    <string name="dump_crash_logs">Spremi zapise rušenja programa</string>
+    <string name="saves_error_logs">Sprema zapise grešaka u datoteku za obavještavanje programera</string>
+    <string name="crash_log_saved">Zapisi rušenja programa su spremljeni</string>
+    <string name="updated_to_">Aktualizirano na v%1$s</string>
 </resources>

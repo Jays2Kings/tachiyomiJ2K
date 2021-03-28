@@ -108,7 +108,6 @@
     <string name="language_">语言: %1$s</string>
     <string name="empty_preferences_for_extension">此插件没有可用的偏好设置</string>
     <string name="fullscreen">全屏</string>
-    <string name="page_transitions">页面过渡动画</string>
     <string name="double_tap_anim_speed">双击动画速度</string>
     <string name="show_page_number">显示页数</string>
     <string name="crop_borders">边缘剪裁</string>
@@ -122,7 +121,6 @@
     <string name="background_color">背景颜色</string>
     <string name="white">白色</string>
     <string name="black">黑色</string>
-    <string name="default_viewer">默认</string>
     <string name="left_to_right_viewer">从左到右</string>
     <string name="right_to_left_viewer">从右到左</string>
     <string name="vertical_viewer">从上到下</string>
@@ -257,7 +255,7 @@
     <string name="decode_image_error">无法解码该图片</string>
     <string name="use_image_as_cover">要将此页设为封面吗？</string>
     <string name="viewer_for_this_series">阅读模式</string>
-    <string name="current_chapter">"当前: "</string>
+    <string name="current_chapter">当前:</string>
     <string name="finished_chapter">已读完:</string>
     <string name="next_title">下一章:</string>
     <string name="previous_title">上一章:</string>
@@ -399,14 +397,13 @@
     <string name="start_reading">开始阅读</string>
     <string name="about_this_">关于此%1$s</string>
     <string name="auto_refresh_covers">自动刷新封面</string>
-    <string name="show_badges">显示标记</string>
     <string name="read_progress">阅读进度</string>
     <string name="search_globally">全局搜索「%1$s」</string>
     <string name="collapse_all_categories">收起所有分类</string>
     <string name="expand_all_categories">展开所有分类</string>
     <string name="always_show_current_category">始终显示当前分类</string>
     <string name="show_all_categories">显示所有分类</string>
-    <string name="library_search_hint">搜索标题，标签，图源</string>
+    <string name="library_search_hint">搜索标题、标签、源</string>
     <string name="remove_from_library_question">从书架中移除？</string>
     <string name="jump_to_category">分类跳转</string>
     <string name="category_deleted">分类已删除</string>
@@ -419,7 +416,7 @@
     <string name="_already_in_queue">%1$s 已在队列中</string>
     <string name="adding_category_to_queue">正在将 %1$s 添加到更新队列</string>
     <plurals name="category_plural">
-        <item quantity="other">分类</item>
+        <item quantity="other">%d 个类别</item>
     </plurals>
     <string name="chapter_not_found">未找到章节</string>
     <string name="removed_bookmark">书签已移除</string>
@@ -488,10 +485,10 @@
     <string name="manhua">漫画</string>
     <string name="manhwa">韩国漫画</string>
     <string name="restoring_progress">正在还原（%1$d/%2$d）</string>
-    <string name="restore_error">还原错误</string>
+    <string name="restore_error">还原备份失败</string>
     <string name="add_x_to_library">添加 %1$s 至书架？</string>
     <string name="recents">最近</string>
-    <string name="want_to_read">想要读</string>
+    <string name="want_to_read">想读</string>
     <plurals name="deleted_chapters">
         <item quantity="other">第%1$s章已从图源中删除：
 \n%2$s
@@ -568,7 +565,7 @@
     <string name="hide">隐藏</string>
     <string name="enabled">已启用</string>
     <string name="drag_handle">拖动手柄</string>
-    <string name="download_unread">下载未读</string>
+    <string name="download_unread">下载但未读</string>
     <string name="deleted_">已删除：%1$s</string>
     <string name="collasped">折叠</string>
     <string name="auto">自动</string>
@@ -590,7 +587,7 @@
     <string name="not_downloaded">未下载</string>
     <string name="logout_from_">从%1$s中登出？</string>
     <string name="logout">登出</string>
-    <string name="whats_new">最新发布的更新内容</string>
+    <string name="whats_new">更新记录</string>
     <string name="you_can_migrate_in_library">您还可以通过选择书架中的漫画进行迁移</string>
     <string name="migration_sources_changed">迁移图源已更改</string>
     <string name="only_enable_enabled_for_migration">仅启用当前启用的图源用于迁移</string>
@@ -635,7 +632,7 @@
     <string name="reading_">正在阅读 %1$s</string>
     <string name="set_as_default_for_all">设置为全局默认</string>
     <string name="extension_updates">拓展更新</string>
-    <string name="last_used">最后使用</string>
+    <string name="last_used">上次使用</string>
     <string name="source_hidden">隐藏图源</string>
     <string name="all_sources">所有图源</string>
     <string name="search_extensions">搜索拓展…</string>
@@ -660,4 +657,105 @@
     <string name="auto_refresh_covers_summary">更新书架的同时更新书架漫画封面</string>
     <string name="include_in_global_update">包含在全局更新中</string>
     <string name="when_sorting_ignore_articles">当按字母排序时，排序忽略漫画标题开头的（a，an，the）</string>
+    <string name="no_chapters_error">未找到章节</string>
+    <string name="badges">标记</string>
+    <string name="search_settings">搜索设置</string>
+    <string name="locale">语言</string>
+    <string name="create_legacy_backup">创建旧版本备份</string>
+    <string name="can_be_used_in_older_tachi">可用于旧版本的 Tachiyomi</string>
+    <string name="automatic_backups">自动备份</string>
+    <string name="also_create_legacy_backup">同时创建旧版本备份</string>
+    <string name="invalid_backup_file">无效的备份文件</string>
+    <string name="unofficial_extension_message">此扩展插件的来源不是官方 Tachiyomi 扩展插件列表。</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">非官方</string>
+    <string name="may_contain_nsfw">可能包含 NSFW (18+) 内容</string>
+    <string name="next_page">下一页</string>
+    <string name="previous_page">上一页</string>
+    <string name="next_chapter">下一页</string>
+    <string name="previous_chapter">上一页</string>
+    <string name="animate_page_transitions">页面过渡动画</string>
+    <string name="default_reading_mode">默认阅读模式</string>
+    <string name="nav_layout">导航布局</string>
+    <string name="l_nav">L 形</string>
+    <string name="kindlish_nav">Kindle 样式</string>
+    <string name="edge_nav">边缘</string>
+    <string name="right_and_left_nav">右和左</string>
+    <string name="invert_tapping">反转轻触方向</string>
+    <string name="none">无</string>
+    <string name="started_reading_date">开始阅读日期</string>
+    <string name="finished_reading_date">完成阅读日期</string>
+    <string name="myanimelist_relogin">请重新登录 MyAnimeList</string>
+    <string name="invalid_backup_file_type">无效的备份文件类型：%1$s
+\n文件扩展名应为 .proto.gz 或 .json。</string>
+    <string name="file_is_missing_data">文件是丢失数据。</string>
+    <string name="backup_has_no_manga">备份不包含任何漫画。</string>
+    <string name="restore_missing_sources">缺少图源：</string>
+    <string name="restore_missing_trackers">未登录的同步源：</string>
+    <string name="restore_content">还原使用图源获取数据，可能耗费联网费用。
+\n
+\n还原前，请确认你已安装了全部必需的扩展并已登录到图源和追踪服务。</string>
+    <string name="restore_content_full">来自备份文件的数据将被还原。
+\n
+\n你需要安装所有缺少的扩展，之后登录到跟踪服务以使用它们。</string>
+    <string name="restoring_backup_canceled">取消了还原</string>
+    <string name="restore_duration">%02d 分，%02d 秒</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">耗时 %1$s，出现 %2$s 个错误</item>
+    </plurals>
+    <string name="source_migration_guide">图源迁移指南</string>
+    <string name="nsfw_sources">NSFW (18+) 图源</string>
+    <string name="show_in_sources">在图源列表中显示</string>
+    <string name="show_in_extensions">在扩展插件列表中显示</string>
+    <string name="label_in_extensions">在扩展插件列表中添加标签</string>
+    <string name="does_not_prevent_unofficial_nsfw">这并不能防止非官方或可能被错误标记的扩展插件在应用程序中显示 NSFW (18+) 内容。</string>
+    <string name="file_picker_error">未找到文件选择应用</string>
+    <string name="next">下一个</string>
+    <string name="open_log">打开日志</string>
+    <string name="last_used_library_recents">上次使用（书架或最近）</string>
+    <string name="previous">上一个</string>
+    <string name="menu">菜单</string>
+    <string name="enable">启用</string>
+    <string name="whats_new_this_release">此版本中的新功能</string>
+    <string name="backup_in_progress">备份已在进行中</string>
+    <string name="restore_in_progress">还原已在进行中</string>
+    <string name="pressing_back_to_start">按下返回启动屏幕</string>
+    <string name="back_to_start">回到启动屏</string>
+    <string name="starting_screen">启动屏幕</string>
+    <string name="hides_on_scroll">滚动时隐藏</string>
+    <string name="hide_bottom_nav">自动隐藏底部导航栏</string>
+    <string name="suggested_date_">建议日期：%1$s</string>
+    <string name="custom_manga_info">自定义漫画信息</string>
+    <string name="both_axes">两根轴</string>
+    <string name="vertically">垂直地</string>
+    <string name="horizontally">水平地</string>
+    <string name="reader_settings">阅读器设置</string>
+    <string name="_details">%1$s 细节</string>
+    <string name="save_page">保存页面</string>
+    <string name="share_page">分享页面</string>
+    <string name="set_page_as_cover">设置页面为封面</string>
+    <string name="_must_be_enabled_first">%1$s 必须先被启用</string>
+    <string name="app_info">应用信息</string>
+    <string name="filter_languages">过滤语言</string>
+    <string name="hide_hopper_on_scroll">滚动时隐藏分类漏斗</string>
+    <string name="show_unread_count">显示未读计数</string>
+    <string name="show_unread_badges">显示未读徽章</string>
+    <string name="hide_unread_badges">隐藏未读徽章</string>
+    <string name="category">类别</string>
+    <plurals name="chapters_plural">
+        <item quantity="other">%1$d 章</item>
+    </plurals>
+    <string name="backup_and_restore">备份和还原</string>
+    <string name="progress">进度</string>
+    <string name="complete">完成</string>
+    <string name="crash_logs">崩溃记录</string>
+    <string name="dump_crash_logs">转储崩溃记录</string>
+    <string name="saves_error_logs">将错误记录保存到文件中，以便与开发人员共享</string>
+    <string name="crash_log_saved">崩溃记录已保存</string>
+    <string name="updated_to_">已更新到 v%1$s</string>
+    <string name="ignore_cutout_areas">忽略刘海屏区域</string>
+    <string name="pad_cutout_areas">平板刘海屏区域</string>
+    <string name="cutout_area_behavior">刘海屏行为</string>
+    <string name="mark_all_chapters_as_unread">标记所有章节为未读？</string>
+    <string name="add_edit_categories">添加/编辑分类</string>
 </resources>

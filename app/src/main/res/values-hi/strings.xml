@@ -89,7 +89,6 @@
     <string name="default_category">डिफ़ॉल्ट श्रेणी</string>
     <string name="always_ask">हमेशा पूछे</string>
     <string name="fullscreen">पूर्ण स्क्रीन</string>
-    <string name="page_transitions">पृष्ठ संक्रमण</string>
     <string name="show_page_number">पृष्ठ संख्या दिखाएं</string>
     <string name="crop_borders">किनारा कांटे</string>
     <string name="use_custom_brightness">इच्छा अनुसार द्य्रुति</string>
@@ -102,7 +101,6 @@
     <string name="background_color">पीछे का रंग</string>
     <string name="white">सफेद</string>
     <string name="black">काला</string>
-    <string name="default_viewer">डिफ़ॉल्ट</string>
     <string name="left_to_right_viewer">बाएं से दाएं</string>
     <string name="right_to_left_viewer">दाएं से बाएं</string>
     <string name="vertical_viewer">शीर्ष से असंतत</string>
@@ -379,4 +377,73 @@
     <string name="unpin">अनपिन</string>
     <string name="view_chapters">अध्याय देखें</string>
     <string name="tracked">ट्रैक किए गए</string>
+    <string name="l_nav">एल आकार</string>
+    <string name="kindlish_nav">किंडल-ईश</string>
+    <string name="edge_nav">धार</string>
+    <string name="right_and_left_nav">दाएं और बाएं</string>
+    <string name="invert_tapping">उलटा दोहन</string>
+    <string name="none">कोई नहीं</string>
+    <string name="no_chapters_error">कोई अध्याय नहीं मिला</string>
+    <string name="badges">बैज</string>
+    <string name="last_used">आखरी इस्त्तमाल किया गया</string>
+    <string name="unofficial_extension_message">यह एक्सटेंशन आधिकारिक तचियोमी एक्सटेंशन सूची से नहीं है।</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">अनौपचारिक</string>
+    <string name="may_contain_nsfw">इसमें NSFW (18+) सामग्री हो सकती है</string>
+    <string name="next_page">अगला पृष्ठ</string>
+    <string name="previous_page">पिछला पृष्ठ</string>
+    <string name="next_chapter">अगला पृष्ठ</string>
+    <string name="previous_chapter">पिछला पृष्ठ</string>
+    <string name="animate_page_transitions">चेतन पृष्ठ संक्रमण</string>
+    <string name="default_reading_mode">डिफ़ॉल्ट रीडिंग मोड</string>
+    <string name="nav_layout">नेविगेशन लेआउट</string>
+    <string name="started_reading_date">पढ़ना शुरू करने की तारीख</string>
+    <string name="finished_reading_date">पढ़ना समाप्त की तिथि</string>
+    <string name="myanimelist_relogin">कृपया फिर से MAL पर लॉगिन करें</string>
+    <string name="search_settings">खोज सेंटिंग</string>
+    <string name="locale">भाषा</string>
+    <string name="create_legacy_backup">विरासत बैकअप बनाएँ</string>
+    <string name="can_be_used_in_older_tachi">Tachiyomi के पुराने संस्करणों में उपयोग किया जा सकता है</string>
+    <string name="automatic_backups">स्वचालित बैकअप</string>
+    <string name="also_create_legacy_backup">विरासत बैकअप भी बनाएं</string>
+    <string name="invalid_backup_file">अमान्य बैकअप फ़ाइल</string>
+    <string name="invalid_backup_file_type">अमान्य बैकअप फ़ाइल प्रकार: %1$s
+\nयह .proto.gz या .json के साथ समाप्त होना चाहिए।</string>
+    <string name="file_is_missing_data">फाइल में डेटा गायब है।</string>
+    <string name="backup_has_no_manga">बैकअप में कोई मंगा नहीं होता है।</string>
+    <string name="restore_missing_sources">अनुपलब्ध स्रोत:</string>
+    <string name="restore_missing_trackers">ट्रैकर्स में लॉग इन नहीं किया गया:</string>
+    <string name="restore_content">डेटा लाने के लिए स्रोतों का उपयोग करें, वाहक लागत लागू हो सकती है।
+\n
+\nसुनिश्चित करें कि आपने सभी आवश्यक एक्सटेंशन स्थापित किए हैं और बहाल करने से पहले स्रोतों और ट्रैकिंग सेवाओं में लॉग इन किया है।</string>
+    <string name="restore_content_full">बैकअप फ़ाइल से डेटा बहाल किया जाएगा।
+\n
+\nआपको किसी भी लापता एक्सटेंशन को इंस्टॉल करना होगा और बाद में सेवाओं को ट्रैक करने के लिए लॉग इन करना होगा ताकि उनका उपयोग किया जा सके।</string>
+    <string name="restoring_backup_canceled">पुनर्स्थापना रद्द की गई</string>
+    <string name="restore_duration">%02d मिनट,%02d सेकंड</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">%1$s में %2$s त्रुटि के साथ किया गया%1$s में %2$s त्रुटियों के साथ किया गया</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">स्रोत माइग्रेशन गाइड</string>
+    <string name="nsfw_sources">NSFW (18+) स्रोत</string>
+    <string name="show_in_sources">स्रोत सूची में दिखाएं</string>
+    <string name="show_in_extensions">एक्सटेंशन सूची में दिखाएं</string>
+    <string name="label_in_extensions">एक्सटेंशन सूची में लेबल</string>
+    <string name="does_not_prevent_unofficial_nsfw">यह अनौपचारिक या संभावित रूप से फ़्लैग किए गए एक्सटेंशन को ऐप के भीतर NSFW (18+) सामग्री के सामने आने से नहीं रोकता है।</string>
+    <string name="whats_new">नया क्या है</string>
+    <string name="file_picker_error">कोई फ़ाइल पिकर ऐप नहीं मिला</string>
+    <string name="open_log">लॉग खोले</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d श्रेणी%d श्रेणियाँ</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="backup_and_restore">बैकअप और पुनर्स्थापना</string>
+    <string name="progress">प्रगती</string>
+    <string name="complete">पूर्ण</string>
+    <string name="crash_logs">क्रैश लॉग</string>
+    <string name="dump_crash_logs">डंप क्रैश लॉग</string>
+    <string name="saves_error_logs">डेवलपर्स के साथ साझा करने के लिए फ़ाइल में त्रुटि लॉग सहेजता है</string>
+    <string name="crash_log_saved">क्रैश लॉग सहेजे गए</string>
+    <string name="updated_to_">v%1$s तक अद्यतन</string>
 </resources>

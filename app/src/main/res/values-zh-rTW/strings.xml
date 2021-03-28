@@ -388,4 +388,65 @@
     <string name="comic">漫畫</string>
     <string name="manhua">漫畫</string>
     <string name="manhwa">漫畫</string>
+    <string name="started_reading_date">開始閱讀日期</string>
+    <string name="finished_reading_date">閱讀完畢日期</string>
+    <string name="myanimelist_relogin">請重新登入 MAL</string>
+    <string name="search_settings">搜尋設定</string>
+    <string name="locale">在地化</string>
+    <string name="create_legacy_backup">建立適用於舊版的備份</string>
+    <string name="can_be_used_in_older_tachi">可供舊版 Tachiyomi 還原</string>
+    <string name="automatic_backups">自動備份</string>
+    <string name="also_create_legacy_backup">同時建立舊版備份</string>
+    <string name="invalid_backup_file">無效的備份檔</string>
+    <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
+\n副檔名應為 .proto.gz 或 .json</string>
+    <string name="file_is_missing_data">檔案遺失資料</string>
+    <string name="backup_has_no_manga">備份檔並未包含任何漫畫</string>
+    <string name="restore_missing_sources">遺失來源：</string>
+    <string name="restore_missing_trackers">尚未登入至歷程平台：</string>
+    <string name="restore_content">還原時需連線至來源以取得資料，可能要支付數據傳輸費用。
+\n
+\n在進行還原前，請確認你已安裝所需的擴充套件，並已登入至歷程平台及要求身分認證的來源。</string>
+    <string name="restoring_backup_canceled">已取消還原</string>
+    <string name="restore_duration">%02d 分 %02d 秒</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">歷時 %1$s，出現 %2$s 個錯誤</item>
+    </plurals>
+    <string name="no_chapters_error">沒有章節</string>
+    <string name="badges">標記</string>
+    <string name="last_used">最近使用</string>
+    <string name="unofficial_extension_message">這個擴充套件不是由 Tachiyomi 所提供。</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">非官方</string>
+    <string name="may_contain_nsfw">可能包含未滿十八歲之人不宜觀賞的內容</string>
+    <string name="next_page">下一頁</string>
+    <string name="previous_page">上一頁</string>
+    <string name="next_chapter">下一頁</string>
+    <string name="previous_chapter">上一頁</string>
+    <string name="animate_page_transitions">翻頁轉場動畫</string>
+    <string name="default_reading_mode">預設閱讀模式</string>
+    <string name="nav_layout">輕觸翻頁模式</string>
+    <string name="l_nav">L 式</string>
+    <string name="kindlish_nav">Kindle 式</string>
+    <string name="edge_nav">邊緣式</string>
+    <string name="right_and_left_nav">左右式</string>
+    <string name="invert_tapping">反轉輕觸方向</string>
+    <string name="none">無</string>
+    <string name="source_migration_guide">來源遷移說明</string>
+    <string name="nsfw_sources">未滿十八歲之人不宜瀏覽的來源</string>
+    <string name="show_in_sources">在來源清單中顯示</string>
+    <string name="show_in_extensions">在擴充套件清單中顯示</string>
+    <string name="label_in_extensions">在擴充套件清單中標幟</string>
+    <string name="does_not_prevent_unofficial_nsfw">即使啟用監護限制，還是可能有漏網之魚。使用者仍可藉由非官方或未正確標幟的擴充套件在本應用程式中瀏覽未滿十八歲之人不宜觀賞的內容。</string>
+    <string name="whats_new">更新日誌</string>
+    <string name="file_picker_error">找不到檔案選擇器</string>
+    <string name="open_log">檢視記錄檔</string>
+    <string name="backup_and_restore">備份與還原</string>
+    <string name="progress">進度</string>
+    <string name="complete">作業完成</string>
+    <string name="crash_logs">當機記錄</string>
+    <string name="dump_crash_logs">傾印當機記錄</string>
+    <string name="saves_error_logs">產生錯誤記錄檔以便分享予開發人員</string>
+    <string name="crash_log_saved">已產生當機記錄</string>
+    <string name="updated_to_">已更新至 v%1$s</string>
 </resources>

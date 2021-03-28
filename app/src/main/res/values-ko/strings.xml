@@ -111,7 +111,6 @@
     <string name="keep_screen_on">화면 켜짐 유지</string>
     <string name="volume_keys">볼륨 키</string>
     <string name="invert_volume_keys">볼륨 키 뒤바꾸기</string>
-    <string name="default_viewer">기본값</string>
     <string name="left_to_right_viewer">왼쪽에서 오른쪽으로</string>
     <string name="right_to_left_viewer">오른쪽에서 왼쪽으로</string>
     <string name="vertical_viewer">수직으로</string>
@@ -243,7 +242,6 @@
     <string name="details">세부정보</string>
     <string name="can_be_used_to_restore">현재 서재를 나중에 복구하는 데 사용 가능</string>
     <string name="navigation">네비게이션</string>
-    <string name="page_transitions">페이지 전환</string>
     <string name="tapping">탭핑</string>
     <string name="background_color">배경 색상</string>
     <string name="white">흰색</string>
@@ -311,4 +309,5 @@
     <string name="email">이메일 주소</string>
     <string name="mark_as_unread">읽지 않음으로 표시</string>
     <string name="website">웹사이트</string>
+    <string name="open_log">로그 열기</string>
 </resources>

@@ -109,7 +109,6 @@
     <string name="language_">Limba: %1$s</string>
     <string name="empty_preferences_for_extension">Non bi sunt preferèntzias de modificare pro custa estensione</string>
     <string name="fullscreen">Ischermu intreu</string>
-    <string name="page_transitions">Transitziones de sas pàginas</string>
     <string name="double_tap_anim_speed">Lestresa de s\'animatzione de su tocu dòpiu</string>
     <string name="show_page_number">Ammustra su nùmeru de sa pàgina</string>
     <string name="crop_borders">Sega sos oros</string>
@@ -124,7 +123,6 @@
     <string name="background_color">Colore de isfundu</string>
     <string name="white">Arbu/biancu</string>
     <string name="black">Nieddu</string>
-    <string name="default_viewer">Predefinidu</string>
     <string name="left_to_right_viewer">Dae manca a destra</string>
     <string name="right_to_left_viewer">Dae destra a manca</string>
     <string name="vertical_viewer">Verticale</string>
@@ -419,7 +417,7 @@
     <string name="username_must_not_be_blank">Su nùmene de impreadore e sa crae non podent abarrare bòidos</string>
     <string name="logout_from_">Essire dae %1$s\?</string>
     <string name="logout">Essi</string>
-    <string name="whats_new">Ite b\'at de nou in custa versione</string>
+    <string name="whats_new">Ite b\'at de nou</string>
     <string name="you_can_migrate_in_library">Podes fintzas tramudare ischertende sos manga in sa biblioteca tua</string>
     <string name="migration_sources_changed">Mitzas de tramudòngiu mudadas</string>
     <string name="use_last_saved_migration_preferences">Imprea sas ùrtimas preferèntzias e mitzas de pre-tramudòngiu sarvadas pro tramudare in massa</string>
@@ -601,7 +599,6 @@
     <string name="hide_category_hopper">Cua su mojolu de categorias</string>
     <string name="display_as">Ammustra comente</string>
     <string name="tap_library_to_show_filters">Toca s\'icona de sa Biblioteca pro ammustrare sos filtros</string>
-    <string name="show_badges">Ammustra sos istintivos</string>
     <string name="grid_options">Optziones de sa grìllia</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -651,8 +648,8 @@
     <string name="_already_in_queue">%1$s est giai in sa lista de isetu</string>
     <string name="adding_category_to_queue">Annanghende %1$s a sa lista de agiornamentu</string>
     <plurals name="category_plural">
-        <item quantity="one">Categoria</item>
-        <item quantity="other"/>
+        <item quantity="one">%d categoria</item>
+        <item quantity="other">%d categorias</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">Galu %1$d pàgina</item>
@@ -679,4 +676,98 @@
     <string name="comic">Fumetu otzidentale</string>
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhwa</string>
+    <string name="l_nav">A forma de L</string>
+    <string name="kindlish_nav">A tipu Kindle</string>
+    <string name="edge_nav">Oru</string>
+    <string name="right_and_left_nav">Destra e manca</string>
+    <string name="invert_tapping">Inverte su tocu</string>
+    <string name="none">Perunu</string>
+    <string name="started_reading_date">Data de incumintzu de sa leghidura</string>
+    <string name="finished_reading_date">Data de fine de sa leghidura</string>
+    <string name="myanimelist_relogin">Pro praghere torra a intrare in MAL</string>
+    <string name="search_settings">Impostatziones de chirca</string>
+    <string name="locale">Limba</string>
+    <string name="create_legacy_backup">Crea una còpia de seguresa de casta betza</string>
+    <string name="can_be_used_in_older_tachi">Podet èssere impreada in versiones prus betzas de Tachiyomi</string>
+    <string name="automatic_backups">Còpias de seguresa automàticas</string>
+    <string name="also_create_legacy_backup">Crea fintzas una còpia de seguresa de casta betza</string>
+    <string name="invalid_backup_file">Documentu de sa còpia de seguresa non vàlidu</string>
+    <string name="invalid_backup_file_type">Casta de documentu de còpia de seguresa non vàlidu: %1$s
+\nDiat dèpere acabbare cun .proto.gz o .json.</string>
+    <string name="file_is_missing_data">In su documentu bi mancant datos.</string>
+    <string name="backup_has_no_manga">Sa còpia de seguresa non tenet perunu manga.</string>
+    <string name="restore_missing_sources">Mitzas chi mancant:</string>
+    <string name="restore_missing_trackers">Arrastadores a sos cales no as fatu atzessu:</string>
+    <string name="restore_content">Su riprìstinu impreat sas mitzas pro otènnere sos datos, bi diant pòdere èssere costos de s\'operadore.
+\n
+\nAssegura·ti de àere installadu totu sas estensiones netzessàrias e de àere fatu s\'atzessu a sas mitzas e a sos servìtzios de arrastamentu in antis de ripristinare.</string>
+    <string name="restore_content_full">Sos datos dae su documentu de sa còpia de seguresa s\'ant a ripristinare.
+\n
+\nA pustis as a dèpere installare sas estensiones chi mancant e atzèdere a sos servìtzios de arrastamentu pro los pòdere impreare.</string>
+    <string name="restoring_backup_canceled">Riprìstinu annulladu</string>
+    <string name="restore_duration">%02d min e %02d seg</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Fatu in %1$s cun %2$s errore</item>
+        <item quantity="other">Fatu in %1$s cun %2$s errores</item>
+    </plurals>
+    <string name="source_migration_guide">Ghia a su tramudòngiu de sas mitzas</string>
+    <string name="nsfw_sources">Cuntenutu NSFW (18+)</string>
+    <string name="show_in_sources">Ammustra in sa lista de sas mitzas</string>
+    <string name="show_in_extensions">Ammustra in sa lista de sas estensiones</string>
+    <string name="label_in_extensions">Eticheta in sa lista de sas estensiones</string>
+    <string name="does_not_prevent_unofficial_nsfw">Custu no impedit a estensiones no ufitziales o potentzialmente non curretas de ammustrare cuntenutos NSFW (18+) in s\'aplicatzione.</string>
+    <string name="no_chapters_error">Perunu capìtulu agatadu</string>
+    <string name="badges">Distintivos</string>
+    <string name="unofficial_extension_message">Custa estensione non benit dae sa lista de estensiones ufitziales de Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">No ufitziale</string>
+    <string name="may_contain_nsfw">Diat pòdere cuntènnere cuntenutos NSFW (18+)</string>
+    <string name="next_page">Pàgina imbeniente</string>
+    <string name="previous_page">Pàgina anteposta</string>
+    <string name="next_chapter">Pàgina imbeniente</string>
+    <string name="previous_chapter">Pàgina anteposta</string>
+    <string name="animate_page_transitions">Ànima sas transitziones de sas pàginas</string>
+    <string name="default_reading_mode">Modalidade de leghidura predefinida</string>
+    <string name="nav_layout">Impaginatzione de su navigadore</string>
+    <string name="file_picker_error">Peruna aplicatzione pro ischertare documentos agatada</string>
+    <string name="next">Imbeniente</string>
+    <string name="open_log">Aberi su registru</string>
+    <string name="backup_and_restore">Còpia de seguresa e riprìstinu</string>
+    <string name="progress">Progressu</string>
+    <string name="complete">Acabada</string>
+    <string name="crash_logs">Registros de sos arrestos anòmalos</string>
+    <string name="dump_crash_logs">Iscàrriga sos registros de sos arrestos anòmalos</string>
+    <string name="saves_error_logs">Sarva sos registros de sos errores in unu documentu pro lu cumpartzire cun sos isvilupadores</string>
+    <string name="crash_log_saved">Registros de sos arrestos anòmalos sarvados</string>
+    <string name="updated_to_">Agiornadu a v%1$s</string>
+    <string name="previous">Antepostu</string>
+    <string name="menu">menù</string>
+    <string name="enable">Abìlita</string>
+    <string name="whats_new_this_release">Ite b\'at de nou in custa versione</string>
+    <string name="backup_in_progress">Sa còpia de seguresa est giai in cursu</string>
+    <string name="restore_in_progress">Su riprìstinu est giai in cursu</string>
+    <string name="back_to_start">Torra a s\'incumintzu</string>
+    <string name="starting_screen">Ischermada de incumintzu</string>
+    <string name="hides_on_scroll">Si cuat cando iscurres</string>
+    <string name="last_used_library_recents">Ùrtimu impreu (Biblioteca o Reghentes)</string>
+    <string name="suggested_date_">Data cussigiada: %1$s</string>
+    <string name="mark_all_chapters_as_unread">Marcare totu sos capìtulos comente non lèghidos\?</string>
+    <string name="both_axes">Ambos sos asses</string>
+    <string name="vertically">Verticalmente</string>
+    <string name="horizontally">Orizontalmente</string>
+    <string name="reader_settings">Impostatziones de su leghidore</string>
+    <string name="save_page">Sarva sa pàgina</string>
+    <string name="share_page">Cumpartzi sa pàgina</string>
+    <string name="set_page_as_cover">Imposta sa pàgina comente cobertedda</string>
+    <string name="_must_be_enabled_first">In antis depes abilitare %1$s</string>
+    <string name="app_info">Informatziones de s\'aplicatzione</string>
+    <string name="show_unread_count">Ammustra su nùmeru de sos non lèghidos</string>
+    <string name="show_unread_badges">Ammustra sas iconas de sos non lèghidos</string>
+    <string name="hide_unread_badges">Cua sas iconas de sos non lèghidos</string>
+    <string name="add_edit_categories">Annanghe/modìfica sas categorias</string>
+    <string name="category">Categoria</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d capìtulu</item>
+        <item quantity="other">%1$d capìtulos</item>
+    </plurals>
 </resources>

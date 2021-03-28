@@ -46,8 +46,8 @@
         <item quantity="other">Entferne %1$d heruntergeladene Kapitel?</item>
     </plurals>
     <plurals name="chapters_plural">
-        <item quantity="one">Kapitel</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$d Kapitel</item>
+        <item quantity="other">%1$d Kapitel</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d Seite über</item>
@@ -76,8 +76,8 @@
     <string name="move_to_categories">Zu Kategorien hinzufügen</string>
     <string name="add_to_categories">Wähle, in welche Kategorien dies hinzugefügt wird. Wenn nichts ausgewählt ist, wird die Standardkategorie genutzt</string>
     <plurals name="category_plural">
-        <item quantity="one">Kategorie</item>
-        <item quantity="other">Kategorien</item>
+        <item quantity="one">%d Kategorie</item>
+        <item quantity="other">%d Kategorien</item>
     </plurals>
     <string name="category_with_name_exists">Eine Kategorie mit diesem Namen existiert bereits!</string>
     <string name="category_deleted">Kategorie gelöscht</string>
@@ -137,7 +137,6 @@
     <string name="large">L</string>
     <string name="x_large">XL</string>
     <string name="grid_options">Raster-Einstellungen</string>
-    <string name="show_badges">Kennzeichnungen anzeigen</string>
     <string name="tap_library_to_show_filters">Das „Meine Bibliothek“-Symbol antippen zum Anzeigen des Filtermenus</string>
     <string name="display_as">Anzeigen als</string>
     <string name="hide_category_hopper">Kategorienhüpfer verstecken</string>
@@ -251,8 +250,8 @@
     <string name="viewer_for_this_series">Leser dieser Serie</string>
     <string name="finished_chapter">Beendet:</string>
     <string name="current_chapter">Aktuell:</string>
-    <string name="next_title">Nächste:</string>
-    <string name="previous_title">Vorherige:</string>
+    <string name="next_title">Als Nächstes:</string>
+    <string name="previous_title">Davor:</string>
     <string name="theres_no_next_chapter">Es gibt kein nächstes Kapitel</string>
     <string name="theres_no_previous_chapter">Es gibt kein vorheriges Kapitel</string>
     <string name="loading_pages">Lade Seiten …</string>
@@ -261,7 +260,6 @@
     <string name="webtoon_style">Webtoonstil</string>
     <!-- Reader settings -->
     <string name="fullscreen">Vollbild</string>
-    <string name="page_transitions">Seitenübergänge</string>
     <string name="double_tap_anim_speed">Doppeltipp Animationsgeschwindigkeit</string>
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
@@ -288,7 +286,6 @@
     <string name="black">Schwarz</string>
     <string name="smart_by_page">Schlau (nach Seite)</string>
     <string name="smart_by_theme">Schlau (nach Thema)</string>
-    <string name="default_viewer">Standard</string>
     <string name="left_to_right_viewer">Links nach rechts</string>
     <string name="right_to_left_viewer">Rechts nach links</string>
     <string name="vertical_viewer">Vertikal</string>
@@ -471,7 +468,7 @@
     <string name="backup_failed">Datensicherung fehlgeschlagen</string>
     <string name="backup_created">Datensicherung erstellt</string>
     <string name="restore_completed">Wiederherstellen abgeschlossen</string>
-    <string name="restore_error">Wiederherstellungsfehler</string>
+    <string name="restore_error">Fehler beim Wiederherstellen der Sicherung</string>
     <string name="restore_content_skipped">%1$d übersprungen</string>
     <string name="restore_message">Beim Wiederherstellen werden Daten von den Quellen abgerufen, wodurch möglicherweise Mobilfunkkosten entstehen können.\n\nVergewissern Sie sich zudem, dass Sie alle benötigen Seitenlogins bereitgestellt haben, bevor Sie mit dem Wiederherstellen beginnen.</string>
     <string name="creating_backup">Datensicherung wird erstellt</string>
@@ -543,7 +540,7 @@
     <string name="build_time">Erstellt am</string>
     <string name="send_crash_report">Fehlerberichte senden</string>
     <string name="helps_fix_bugs">Hilft Fehler zu beheben. Keine sensiblen Daten werden gesendet</string>
-    <string name="whats_new">Was ist neu in dieser Version</string>
+    <string name="whats_new">Was ist neu</string>
     <string name="website">Website</string>
     <string name="open_source_licenses">Quelloffene Lizenzen</string>
     <!-- Login/Logout dialog -->
@@ -718,4 +715,102 @@
     <string name="error_saving_cover">Fehler beim Speichern vom Vorschaubild</string>
     <string name="cover_saved">Vorschaubild gespeichert</string>
     <string name="enable_zoom_out">Rauszoomen aktivieren</string>
+    <string name="unofficial_extension_message">Diese Erweiterung stammt nicht von der offiziellen Tachiyomi-Erweiterungsliste.</string>
+    <string name="nsfw_short">Ü18</string>
+    <string name="unofficial">Inoffiziell</string>
+    <string name="may_contain_nsfw">Kann NSFW/Ü18-Inhalte enthalten</string>
+    <string name="no_chapters_error">Keine Kapitel gefunden</string>
+    <string name="badges">Abzeichen</string>
+    <string name="create_legacy_backup">Legacy-Sicherung erstellen</string>
+    <string name="can_be_used_in_older_tachi">Können in älteren Versionen von Tachiyomi verwendet werden</string>
+    <string name="automatic_backups">Automatische Datensicherungen</string>
+    <string name="also_create_legacy_backup">Auch eine Legacy-Sicherung erstellen</string>
+    <string name="invalid_backup_file">Ungültige Sicherungsdatei</string>
+    <string name="invalid_backup_file_type">Ungültiger Sicherungsdateientyp: %1$s
+\nDie Datei sollte mit .proto.gz oder .json enden.</string>
+    <string name="file_is_missing_data">Der Datei fehlen Daten.</string>
+    <string name="backup_has_no_manga">Sicherung beinhaltet keinerlei Manga.</string>
+    <string name="restore_missing_sources">Fehlende Quellen:</string>
+    <string name="restore_missing_trackers">Nicht-angemeldete Tracker:</string>
+    <string name="restore_content">Beim Wiederherstellen einer Datensicherung werden Daten von den Quellen abgerufen, wodurch Mobilfunkkosten enstehen können.
+\n
+\nVergewissere dich zudem, dass du alle benötigten Seitenanmeldungsdaten bereitgestellt hast, bevor du mit dem Wiederherstellen beginnst.</string>
+    <string name="restore_content_full">Die Daten der Sicherungsdatei werden wiederhergestellt.
+\n
+\nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
+    <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
+    <string name="restore_duration">%02d Min. %02d Sk.</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Erledigt in %1$s mit %2$s FehlerErledigt in %1$s mit %2$s Fehlern</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Quellenmigration</string>
+    <string name="nsfw_sources">NSFW/Ü18-Quellen</string>
+    <string name="show_in_sources">In der Quellenliste anzeigen</string>
+    <string name="show_in_extensions">In der Erweiterungsliste</string>
+    <string name="label_in_extensions">In der Erweiterungsliste markieren</string>
+    <string name="does_not_prevent_unofficial_nsfw">Dies verhindert nicht, dass inoffizielle oder möglicherweise falsch gekennzeichnete Erweiterungen NSFW/Ü18-Inhalte in der App anzeigen.</string>
+    <string name="next_page">Nächste Seite</string>
+    <string name="previous_page">Vorherige Seite</string>
+    <string name="next_chapter">Nächste Seite</string>
+    <string name="previous_chapter">Vorherige Seite</string>
+    <string name="animate_page_transitions">Animierte Seitenübergänge</string>
+    <string name="default_reading_mode">Standard-Lesemodus</string>
+    <string name="nav_layout">Navigationslayout</string>
+    <string name="l_nav">L-förmig</string>
+    <string name="kindlish_nav">Kindle-Stil</string>
+    <string name="edge_nav">Rand</string>
+    <string name="right_and_left_nav">Rechts und Links</string>
+    <string name="invert_tapping">Tippen invertieren</string>
+    <string name="none">–</string>
+    <string name="started_reading_date">Datum des Lesebeginns</string>
+    <string name="finished_reading_date">Datum des Leseabschlusses</string>
+    <string name="myanimelist_relogin">Bitte logge dich erneut in MAL ein</string>
+    <string name="search_settings">Sucheinstellungen</string>
+    <string name="locale">Lokal</string>
+    <string name="file_picker_error">Keine Dateiauswahl-App gefunden</string>
+    <string name="next">Weiter</string>
+    <string name="open_log">Protokoll öffnen</string>
+    <string name="backup_and_restore">Sichern und Wiederherstellen</string>
+    <string name="progress">Fortschritt</string>
+    <string name="complete">Abgeschlossen</string>
+    <string name="crash_logs">Absturzprotokolle</string>
+    <string name="dump_crash_logs">Absturzprotokolle ausgeben</string>
+    <string name="saves_error_logs">Speichert Fehlerprotokolle in einer Datei, die dann mit den Entwicklern geteilt wird</string>
+    <string name="crash_log_saved">Absturzprotokolle gespeichert</string>
+    <string name="updated_to_">Auf v%1$s aktualisiert</string>
+    <string name="previous">Letzte</string>
+    <string name="menu">Menü</string>
+    <string name="enable">Aktivieren</string>
+    <string name="whats_new_this_release">Was ist neu in dieser Version</string>
+    <string name="share_page">Seite teilen</string>
+    <string name="set_page_as_cover">Als Titelseite festlegen</string>
+    <string name="_must_be_enabled_first">%1$s muss zuerst aktiviert werden</string>
+    <string name="app_info">Anwendungsinformation</string>
+    <string name="filter_languages">Sprachen filtern</string>
+    <string name="show_unread_count">Zeige Ungelesenenanzahl</string>
+    <string name="add_edit_categories">Hinzufügen/Editieren der Kategorien</string>
+    <string name="restore_in_progress">Wiederherstellung bereits in Arbeit</string>
+    <string name="backup_in_progress">Sicherung bereits in Arbeit</string>
+    <string name="back_to_start">Zurück zum Start</string>
+    <string name="starting_screen">Startbildschirm</string>
+    <string name="hides_on_scroll">Verstecken beim Scrollen</string>
+    <string name="hide_bottom_nav">Navigations-Bar automatisch verstecken</string>
+    <string name="last_used_library_recents">Zuletzt benutzt (Bibliothek oder Neueste)</string>
+    <string name="suggested_date_">Vorgeschlagenes Datum: %1$s</string>
+    <string name="custom_manga_info">Benutzerdefinierte Manga Information</string>
+    <string name="mark_all_chapters_as_unread">Alle Kapitel als ungelesen markieren\?</string>
+    <string name="ignore_cutout_areas">Ausschnittbereiche ignorieren</string>
+    <string name="start_past_cutout">Nach dem Ausschnitt starten</string>
+    <string name="pad_cutout_areas">Ausschnittbereich füllen</string>
+    <string name="cutout_area_behavior">Verhalten des Ausschnittbereichs</string>
+    <string name="both_axes">Beide Achsen</string>
+    <string name="vertically">Vertikal</string>
+    <string name="horizontally">Horizontal</string>
+    <string name="reader_settings">Leseeinstellungen</string>
+    <string name="_details">%1$s Details</string>
+    <string name="save_page">Seite speichern</string>
+    <string name="hide_hopper_on_scroll">Kategorienhopper beim Scrollen verstecken</string>
+    <string name="show_unread_badges">Ungelesenzähler anzeigen</string>
+    <string name="hide_unread_badges">Ungelesenzähler verstecken</string>
 </resources>

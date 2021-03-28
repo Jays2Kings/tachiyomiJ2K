@@ -113,7 +113,6 @@
     <string name="language_">Jazyk: %1$s</string>
     <string name="empty_preferences_for_extension">Nie sú k dispozícii žiadne preferencie na úpravu pre toto rozšírenie</string>
     <string name="fullscreen">Na celú obrazovku</string>
-    <string name="page_transitions">Prechod stránok</string>
     <string name="double_tap_anim_speed">Rýchlosť animácie pre dvojité ťuknutie</string>
     <string name="show_page_number">Zobraziť číslo strany</string>
     <string name="true_32bit_color">32-bitová farba</string>
@@ -136,7 +135,6 @@
     <string name="background_color">Farba pozadia</string>
     <string name="white">Biela</string>
     <string name="black">Čierna</string>
-    <string name="default_viewer">Predvolené</string>
     <string name="left_to_right_viewer">Zľava doprava</string>
     <string name="right_to_left_viewer">Sprava doľava</string>
     <string name="vertical_viewer">Vertikálne</string>
@@ -220,8 +218,6 @@
     <string name="cover_updated">Obal bol aktualizovaný</string>
     <string name="next_chapter_not_found">Ďalšia kapitola nebola nájdená</string>
     <string name="use_image_as_cover">Chcete použiť tento obrázok ako obal\?</string>
-    <string name="finished">Dokončená:</string>
-    <string name="current">Aktuálna:</string>
     <string name="next">Ďalšia:</string>
     <string name="previous">Predchádzajúcí:</string>
     <string name="theres_no_next_chapter">Žiadna ďalšia kapitola</string>
@@ -295,4 +291,12 @@
     <string name="check_site_in_web">Kontrola webovej lokality vo WebView</string>
     <string name="last_used">Naposledy použité</string>
     <string name="source_hidden">Zdroj skrytý</string>
+    <string name="open_log">Otvoriť log</string>
+    <string name="finished_chapter">Dokončená:</string>
+    <string name="current_chapter">Aktuálna:</string>
+    <string name="next_title">Ďalšia:</string>
+    <string name="previous_title">Predchádzajúcí:</string>
+    <string name="restore_content">Obnovenie využíva zdroje na načítanie údajov, môžu sa účtovať poplatky operátora.
+\n
+\nPred obnovením skontrolujte, či máte nainštalované všetky potrebné rozšírenia a či ste prihlásení do zdrojov a služieb sledovania.</string>
 </resources>

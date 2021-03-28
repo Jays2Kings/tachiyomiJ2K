@@ -64,7 +64,6 @@
     <string name="dark">Tema oscuro</string>
     <!-- Reader section -->
     <string name="fullscreen">Pantalla completa</string>
-    <string name="page_transitions">Habilitar transiciones</string>
     <string name="show_page_number">Mostrar el número de página</string>
     <string name="use_custom_brightness">Utilizar brillo personalizado</string>
     <string name="keep_screen_on">Mantener la pantalla encendida</string>
@@ -74,7 +73,6 @@
     <string name="background_color">Color de fondo</string>
     <string name="white">Blanco</string>
     <string name="black">Negro</string>
-    <string name="default_viewer">Predefinido</string>
     <string name="left_to_right_viewer">Izquierda a derecha</string>
     <string name="right_to_left_viewer">Derecha a izquierda</string>
     <string name="vertical_viewer">Vertical</string>
@@ -515,7 +513,6 @@ También asegúrese de haber iniciado sesión en las fuentes que lo requieren an
     <string name="hide_category_hopper">Ocultar tolva de categoría</string>
     <string name="display_as">Mostrar como</string>
     <string name="tap_library_to_show_filters">Toca el icono de la Biblioteca para mostrar los filtros</string>
-    <string name="show_badges">Mostrar las insignias</string>
     <string name="grid_options">Opciones de cuadrícula</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -650,4 +647,64 @@ También asegúrese de haber iniciado sesión en las fuentes que lo requieren an
     <string name="not_tracked">Sin seguimiento</string>
     <string name="to_show_again_setting_sources">Para volver a mostrar esta pantalla, vaya a Configuración -&gt; Fuentes.</string>
     <string name="include_extra_search_parameter">Incluir un parámetro de búsqueda adicional al buscar</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">No oficial</string>
+    <string name="may_contain_nsfw">Puede contener contenido 18+</string>
+    <string name="next_page">Siguiente página</string>
+    <string name="previous_page">Página anterior</string>
+    <string name="next_chapter">Siguiente página</string>
+    <string name="previous_chapter">Página anterior</string>
+    <string name="animate_page_transitions">Animar las transiciones de página</string>
+    <string name="default_reading_mode">Modo de lectura por defecto</string>
+    <string name="nav_layout">Estructura de navegación</string>
+    <string name="no_chapters_error">No hay capítulos</string>
+    <string name="badges">Insignias</string>
+    <string name="unofficial_extension_message">Esta extensión no es de la lista oficial de extensiones de Tachiyomi.</string>
+    <string name="l_nav">En forma de L</string>
+    <string name="kindlish_nav">Kindle-ish</string>
+    <string name="edge_nav">Borde</string>
+    <string name="invert_tapping">Tapping invertido</string>
+    <string name="none">Ninguno</string>
+    <string name="started_reading_date">Fecha de inicio de lectura</string>
+    <string name="finished_reading_date">Fecha de lectura finalizada</string>
+    <string name="myanimelist_relogin">Vuelva a iniciar sesión en MAL</string>
+    <string name="search_settings">Opciones de búsqueda</string>
+    <string name="locale">Localización</string>
+    <string name="create_legacy_backup">Crear una copia de seguridad heredada</string>
+    <string name="can_be_used_in_older_tachi">Se puede utilizar en versiones anteriores de Tachiyomi</string>
+    <string name="automatic_backups">Copias de seguridad automáticas</string>
+    <string name="also_create_legacy_backup">También crear copia de seguridad heredada</string>
+    <string name="invalid_backup_file">Un archivo invalido de copia de seguridad</string>
+    <string name="invalid_backup_file_type">Tipo de archivo de copia de seguridad no válido: %1$s
+\nDebería terminar con .proto.gz o .json.</string>
+    <string name="file_is_missing_data">En archivo faltan datos.</string>
+    <string name="backup_has_no_manga">Copia de seguridad no contiene manga.</string>
+    <string name="restore_missing_sources">Fuentes que faltan:</string>
+    <string name="restore_missing_trackers">Rastreadores no conectados:</string>
+    <string name="restore_content">Restaurar utiliza la fuente para obtener datos, es posible que se apliquen los costos de la operadora.
+\n
+\nAsegúrese de haber instalado todas las extensiones necesarias y de haber iniciado sesión en las fuentes y los servicios de seguimiento antes de la restauración.</string>
+    <string name="restoring_backup_canceled">Se canceló la restauración</string>
+    <string name="restore_duration">%02d min, %02d seg</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Hecho %1$s con %2$s errorHecho %1$s con %2$s errores</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Guía de migración de fuentes</string>
+    <string name="nsfw_sources">Fuentes NSFW (18+)</string>
+    <string name="show_in_sources">Mostrar en la lista de fuentes</string>
+    <string name="show_in_extensions">Mostrar en la lista de extensiones</string>
+    <string name="label_in_extensions">Etiqueta en la lista de extensiones</string>
+    <string name="does_not_prevent_unofficial_nsfw">Esto no evita que las extensiones no oficiales o potencialmente marcadas incorrectamente muestren contenido para mayores de 18 años dentro de la aplicación.</string>
+    <string name="whats_new">Qué hay de nuevo</string>
+    <string name="file_picker_error">No se encontró aplicación de selección de archivos</string>
+    <string name="open_log">Abrir registro</string>
+    <string name="backup_and_restore">Respaldar y restaurar</string>
+    <string name="progress">Progreso</string>
+    <string name="complete">Completo</string>
+    <string name="crash_logs">Registros de accidentes</string>
+    <string name="dump_crash_logs">Volcar registros de accidentes</string>
+    <string name="saves_error_logs">Guarda los registros de errores en un archivo para compartirlos con los desarrolladores</string>
+    <string name="crash_log_saved">Registros de fallos guardados</string>
+    <string name="updated_to_">Actualizado a v%1$s</string>
 </resources>

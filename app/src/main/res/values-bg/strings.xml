@@ -85,7 +85,6 @@
     <string name="system_default">По подразбиране</string>
     <!-- Reader section -->
     <string name="fullscreen">Цял екран</string>
-    <string name="page_transitions">Преходи</string>
     <string name="show_page_number">Номер на страница</string>
     <string name="use_custom_brightness">Персонализирана яркост</string>
     <string name="use_custom_color_filter">Персонализиран цветен филтър</string>
@@ -96,7 +95,6 @@
     <string name="background_color">Цвят на фона</string>
     <string name="white">Бял</string>
     <string name="black">Черен</string>
-    <string name="default_viewer">По подразбиране</string>
     <string name="left_to_right_viewer">От ляво надясно</string>
     <string name="right_to_left_viewer">От дясно наляво</string>
     <string name="vertical_viewer">Вертикално</string>
@@ -410,4 +408,40 @@
     <string name="refresh">Обнови</string>
     <string name="reorder">Пренареди</string>
     <string name="tracked">Следени</string>
+    <string name="default_reading_mode">Режим на четене по подразбиране</string>
+    <string name="no_chapters_error">Не са намерени глави</string>
+    <string name="does_not_prevent_unofficial_nsfw">Тази настройка няма да спре неофициални или потенциално неправилно маркирани разширения да позволяват достъп до съдържание за възрастни (18+) в апликацията.</string>
+    <string name="whats_new">Какво е ново</string>
+    <string name="badges">Значки</string>
+    <string name="last_used">Последно използвани</string>
+    <string name="unofficial_extension_message">Това разширение не е част от официалните разширения на Тачийоми.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Неофициален</string>
+    <string name="animate_page_transitions">Анимирани преходи</string>
+    <string name="none">Без</string>
+    <string name="locale">Език</string>
+    <string name="automatic_backups">Автоматично запазване</string>
+    <string name="invalid_backup_file">Невалиден резервен файл</string>
+    <string name="file_is_missing_data">Във файла липсват данни.</string>
+    <string name="backup_has_no_manga">Резервното копие не съдържа манга.</string>
+    <string name="restore_missing_sources">Липсващи източници:</string>
+    <string name="restore_missing_trackers">Не сте влезли като потребител в:</string>
+    <string name="restore_content">За възстановяването се изтеглят данни от източника, за които може да бъде отчетен разход на данни.
+\n
+\nСъщо проверете дали сте изтеглили всички необходими разширения и сте влезли коректно в източниците и услугите за проследяване преди възстановяването.</string>
+    <string name="restoring_backup_canceled">Отменено възстановяване</string>
+    <string name="restore_duration">%02d мин, %02d сек</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Направено за %1$s с %2$s грешкаНаправено за %1$s с %2$s грешки</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="open_log">Отвори лога</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d категория%d категории</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="backup_and_restore">Резервно копие и възстановяване</string>
+    <string name="progress">Прогрес</string>
+    <string name="complete">Готово</string>
+    <string name="updated_to_">Обновена до v%1$s</string>
 </resources>

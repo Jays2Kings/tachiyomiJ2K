@@ -109,7 +109,6 @@
     <string name="language_">Мова: %1$s</string>
     <string name="empty_preferences_for_extension">У цього розширення немає налаштувань для редагування</string>
     <string name="fullscreen">Повноекранний режим</string>
-    <string name="page_transitions">Переходи сторінки</string>
     <string name="double_tap_anim_speed">Швидкість анімації при подвійному натиснені</string>
     <string name="show_page_number">Показувати номер сторінки</string>
     <string name="crop_borders">Межі обрізки</string>
@@ -123,7 +122,6 @@
     <string name="background_color">Колір фону</string>
     <string name="white">Білий</string>
     <string name="black">Чорний</string>
-    <string name="default_viewer">За замовчанням</string>
     <string name="left_to_right_viewer">Зліва направо</string>
     <string name="right_to_left_viewer">Справа наліво</string>
     <string name="vertical_viewer">Вертикальний</string>
@@ -482,7 +480,6 @@
     <string name="hide_category_hopper">Приховати категорію</string>
     <string name="display_as">Показати як</string>
     <string name="tap_library_to_show_filters">Тицьніть іконку бібліотеки аби показати фільтри</string>
-    <string name="show_badges">Показати значки</string>
     <string name="grid_options">Налаштування сітки</string>
     <string name="x_large">Оверсайз</string>
     <string name="large">Норма</string>
@@ -714,4 +711,70 @@
     <string name="logout">Вихід</string>
     <string name="whats_new">Що новенького в цьому релізі</string>
     <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши мангу з вашої бібліотеки</string>
+    <string name="badges">Значки</string>
+    <string name="started_reading_date">Дата початку читання</string>
+    <string name="finished_reading_date">Дата закінчення читання</string>
+    <string name="myanimelist_relogin">Будь ласка, увійдіть в MAL знову</string>
+    <string name="search_settings">Налаштування пошуку</string>
+    <string name="locale">Локаль</string>
+    <string name="no_chapters_error">Немає глав</string>
+    <string name="next">Наступний</string>
+    <string name="open_log">Відкрити лог</string>
+    <string name="unofficial_extension_message">Це розширення не входить до переліку офіційних розширень Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Неофіційне</string>
+    <string name="may_contain_nsfw">Може містити контент NSFW (18+)</string>
+    <string name="next_page">Наступна сторінка</string>
+    <string name="previous_page">Попередня сторінка</string>
+    <string name="next_chapter">Наступна сторінка</string>
+    <string name="previous_chapter">Попередня сторінка</string>
+    <string name="animate_page_transitions">Анімація переходів сторінки</string>
+    <string name="default_reading_mode">Напрямок читання за замовчуванням</string>
+    <string name="nav_layout">Розмітка навігації</string>
+    <string name="l_nav">L-подібна</string>
+    <string name="kindlish_nav">Kindle-подібна</string>
+    <string name="edge_nav">Межа</string>
+    <string name="right_and_left_nav">Праворуч та ліворуч</string>
+    <string name="invert_tapping">Інвертувати тицяння</string>
+    <string name="none">Нічого</string>
+    <string name="create_legacy_backup">Створити сумісну резервну копію</string>
+    <string name="can_be_used_in_older_tachi">Може бути використано в старіших версіях Tachiyomi</string>
+    <string name="automatic_backups">Автоматичне резервування</string>
+    <string name="also_create_legacy_backup">Також створювати сумісну копію</string>
+    <string name="invalid_backup_file">Невірний файл бекапу</string>
+    <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
+\nЙого розширення повинне бути .proto.gz or .json.</string>
+    <string name="file_is_missing_data">У файлі відсутні дані.</string>
+    <string name="backup_has_no_manga">Бекап не містить жодної манги.</string>
+    <string name="restore_missing_sources">Відсутні джерела:</string>
+    <string name="restore_missing_trackers">Трекери не авторизовано:</string>
+    <string name="restore_content">Відновлення використовує джерела для отримання даних, можуть застосовуватися витрати оператора.
+\n
+\nПереконайтеся, що ви встановили всі необхідні розширення та ввійшли до джерел та служб відстеження перед відновленням.</string>
+    <string name="restore_content_full">Дані з файлу резервної копії буде відновлено.
+\n
+\nВам потрібно встановити розширення яких бракує та увійти в сервіси відстежування для їх використання.</string>
+    <string name="restoring_backup_canceled">Відновлення відмінено</string>
+    <string name="restore_duration">%02d хв, %02d сек</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Зроблено %1$s з %2$s помилкоюЗроблено %1$s з %2$s помилкамиЗроблено %1$s з %2$s помилками</item>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Гайд по міграції джерел</string>
+    <string name="nsfw_sources">NSFW (18+) джерела</string>
+    <string name="show_in_sources">Показувати в списку джерел</string>
+    <string name="show_in_extensions">Показувати в списку розширень</string>
+    <string name="label_in_extensions">Мітка в списку розширень</string>
+    <string name="does_not_prevent_unofficial_nsfw">Це не заважає неофіційним або потенційно невірним розширенням розміщувати вміст NSFW (18+) у додатку.</string>
+    <string name="file_picker_error">Додаток вибору файлів не знайдено</string>
+    <string name="backup_and_restore">Бекап та відновлення</string>
+    <string name="progress">Поступ</string>
+    <string name="complete">Завершено</string>
+    <string name="crash_logs">Логи падінь</string>
+    <string name="dump_crash_logs">Дамп логів про падіння</string>
+    <string name="saves_error_logs">Зберігає логи помилок до файлу для надсилання розробникам</string>
+    <string name="crash_log_saved">Логи падінь збережено</string>
+    <string name="updated_to_">Оновлено до v%1$s</string>
 </resources>

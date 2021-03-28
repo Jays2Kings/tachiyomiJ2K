@@ -78,7 +78,6 @@
     <string name="dark">Thème sombre</string>
     <!-- Reader section -->
     <string name="fullscreen">Plein écran</string>
-    <string name="page_transitions">Activer les transitions</string>
     <string name="show_page_number">Afficher le numéro de page</string>
     <string name="use_custom_brightness">Utiliser une luminosité personnalisée</string>
     <string name="use_custom_color_filter">Utiliser un filtre de couleur personnalisé</string>
@@ -89,7 +88,6 @@
     <string name="background_color">Couleur de fond</string>
     <string name="white">Blanc</string>
     <string name="black">Noir</string>
-    <string name="default_viewer">Par défaut</string>
     <string name="left_to_right_viewer">De gauche à droite</string>
     <string name="right_to_left_viewer">De droite à gauche</string>
     <string name="vertical_viewer">Vertical</string>
@@ -454,7 +452,6 @@
     <string name="hide_category_hopper">Cachez la catégorie trémie</string>
     <string name="display_as">Afficher en tant que</string>
     <string name="tap_library_to_show_filters">Appuyez sur l\'icône de la bibliothèque pour afficher les filtres</string>
-    <string name="show_badges">Afficher les badges</string>
     <string name="grid_options">Options de grille</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -713,4 +710,67 @@
     <string name="show_unread_chapters">Afficher les chapitres non lus</string>
     <string name="show_bookmarked_chapters">Afficher les signets</string>
     <string name="all_but_bookmarked_chapters">Tous les chapitres, sauf les signets</string>
+    <string name="l_nav">En forme de L</string>
+    <string name="kindlish_nav">Plutôt provoquant</string>
+    <string name="edge_nav">Bord</string>
+    <string name="right_and_left_nav">Droite et gauche</string>
+    <string name="invert_tapping">Inverser les touches</string>
+    <string name="none">Non</string>
+    <string name="no_chapters_error">Aucun chapitre trouvé</string>
+    <string name="badges">Badges</string>
+    <string name="file_picker_error">L’application de sélection de fichier est introuvable</string>
+    <string name="open_log">Ouvrir le fichier journal</string>
+    <string name="unofficial_extension_message">Cette extension ne fait pas partie de la liste des extensions officielles de Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Non officiel</string>
+    <string name="may_contain_nsfw">Peut contenir du contenu +18</string>
+    <string name="next_page">Page suivante</string>
+    <string name="previous_page">Page précédente</string>
+    <string name="next_chapter">Page suivante</string>
+    <string name="previous_chapter">Page précédente</string>
+    <string name="animate_page_transitions">Activer les transitions</string>
+    <string name="default_reading_mode">Mode de lecture par défaut</string>
+    <string name="nav_layout">Plan de navigation</string>
+    <string name="started_reading_date">Date de début de lecture</string>
+    <string name="finished_reading_date">Date de fin de lecture</string>
+    <string name="myanimelist_relogin">Veuillez vous reconnecter à MAL</string>
+    <string name="search_settings">Paramètres de la recherche</string>
+    <string name="locale">Local</string>
+    <string name="create_legacy_backup">Créer des sauvegardes héritées</string>
+    <string name="can_be_used_in_older_tachi">Peut être utilisé dans les anciennes versions de Tachiyomi</string>
+    <string name="automatic_backups">Sauvegardes automatiques</string>
+    <string name="also_create_legacy_backup">Créez également une sauvegarde héritée</string>
+    <string name="invalid_backup_file">Fichier de sauvegarde invalide</string>
+    <string name="invalid_backup_file_type">Fichier de sauvegarde invalide : %1$s
+\nIl devrait se terminer par .proto.gz ou .json.</string>
+    <string name="file_is_missing_data">Données manquante dans le fichier.</string>
+    <string name="backup_has_no_manga">La sauvegarde ne contient aucune série.</string>
+    <string name="restore_missing_sources">Sources manquantes :</string>
+    <string name="restore_missing_trackers">Traceurs non connectés :</string>
+    <string name="restore_content">La restauration utilise des sources pour obtenir les données, des frais d\'opérateur peuvent s\'appliquer.
+\n
+\nAssurez-vous d\'avoir installé toutes les extensions nécessaires et d\'être connecté aux sources et services de suivi avant de commencer la restauration.</string>
+    <string name="restore_content_full">Les données du fichier de sauvegarde seront restaurées.
+\n
+\nVous devrez installer les extensions manquantes et vous connecter ensuite aux services de suivi pour les utiliser.</string>
+    <string name="restoring_backup_canceled">Restauration de sauvegarde annulée</string>
+    <string name="restore_duration">%02d min, %02d s</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Effectuée en %1$s avec %2$s erreurEffectuée en %1$s avec %2$s erreurs</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Guide de migration des sources</string>
+    <string name="nsfw_sources">Contenu +18</string>
+    <string name="show_in_sources">Afficher dans la liste de sources</string>
+    <string name="show_in_extensions">Afficher dans la liste d\'extensions</string>
+    <string name="label_in_extensions">Étiqueter dans la liste d\'extension</string>
+    <string name="does_not_prevent_unofficial_nsfw">Cela n\'empêche pas les extensions non officielles ou potentiellement mal signalées de diffuser du contenu +18 dans l\'application.</string>
+    <string name="backup_and_restore">Sauvegarde et restauration</string>
+    <string name="progress">Progression</string>
+    <string name="complete">Compléter</string>
+    <string name="crash_logs">Journaux d\'erreur</string>
+    <string name="dump_crash_logs">Copie des journaux endommagés</string>
+    <string name="saves_error_logs">Enregistre les journaux d\'erreur dans un fichier pour le partager avec les développeurs</string>
+    <string name="crash_log_saved">Sauvegarde des journaux endommagés</string>
+    <string name="updated_to_">Mise à jour de v%1$s</string>
 </resources>

@@ -197,8 +197,6 @@
     <string name="cover_updated">Na-update na pabalat</string>
     <string name="next_chapter_not_found">Di makita ang susunod na kabanata</string>
     <string name="use_image_as_cover">Gamitin ang larawang ito bilang pabalat\?</string>
-    <string name="finished">Natapos:</string>
-    <string name="current">Kasalukuyan:</string>
     <string name="next">Susunod:</string>
     <string name="previous">Nakaraan:</string>
     <string name="theres_no_next_chapter">Wala na\'ng susunod</string>
@@ -328,7 +326,7 @@
     <string name="tracked">Sinundan</string>
     <plurals name="category_plural">
         <item quantity="one">Kategorya</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pahina na lang</item>
@@ -357,4 +355,74 @@
     <string name="comic">Mga Komiks</string>
     <string name="manhua">Mga Manhua</string>
     <string name="manhwa">Mga Manhwa</string>
+    <string name="last_used">Huling ginamit</string>
+    <string name="unofficial_extension_message">Wala sa opisyal na listahan ng mga dugtong ng Tachiyomi ang dugtong na ito.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Di opisyal</string>
+    <string name="may_contain_nsfw">Maaaring maglaman ng NSFW (18+)</string>
+    <string name="finished_chapter">Natapos:</string>
+    <string name="current_chapter">Kasalukuyan:</string>
+    <string name="next_title">Susunod:</string>
+    <string name="previous_title">Nakaraan:</string>
+    <string name="next_page">Abante</string>
+    <string name="previous_page">Balik</string>
+    <string name="next_chapter">Abante</string>
+    <string name="previous_chapter">Balik</string>
+    <string name="animate_page_transitions">I-animate ang paglipat-pahina</string>
+    <string name="default_reading_mode">Paraan ng pagbása</string>
+    <string name="nav_layout">Layout ng navigation</string>
+    <string name="l_nav">Hugis-L</string>
+    <string name="kindlish_nav">mala-Kindle</string>
+    <string name="edge_nav">Sulok</string>
+    <string name="right_and_left_nav">Kaliwa at Kanan</string>
+    <string name="invert_tapping">Baliktad na pagpindot</string>
+    <string name="none">Hindi</string>
+    <string name="source_migration_guide">Gabay sa Paglipat</string>
+    <string name="nsfw_sources">Mga Pinagkukunang NSFW (pang-18+)</string>
+    <string name="show_in_sources">Ipakita sa Mga Pinagkukunan</string>
+    <string name="show_in_extensions">Ipakita sa listahan</string>
+    <string name="label_in_extensions">Label sa listahan</string>
+    <string name="does_not_prevent_unofficial_nsfw">Hindi nito naiiwasan ang pagpakita ng mga NSFW (18+) ng mga di-opisyal o posibleng maling naka-flag na dugtong sa loob ng app.</string>
+    <string name="whats_new">Anong bago</string>
+    <string name="no_chapters_error">Walang nakitang kabanata</string>
+    <string name="badges">Mga Panukoy</string>
+    <string name="started_reading_date">Sinimulang basáhin</string>
+    <string name="finished_reading_date">Natapos basáhin</string>
+    <string name="myanimelist_relogin">Mag-login muli po sa MAL</string>
+    <string name="search_settings">Paghahanap</string>
+    <string name="locale">Lokal</string>
+    <string name="create_legacy_backup">Gumawa ng lumang pag-backup</string>
+    <string name="can_be_used_in_older_tachi">Magagamit sa mga lumang bersyon ng Tachiyomi</string>
+    <string name="automatic_backups">Awtomatikong pag-backup</string>
+    <string name="also_create_legacy_backup">Gawin din ang lumang pag-backup</string>
+    <string name="invalid_backup_file">Invalid na backup</string>
+    <string name="invalid_backup_file_type">Di mabasa ang backup: %1$s
+\nDapat nagtatapos ito sa .proto.gz o .json.</string>
+    <string name="file_is_missing_data">May kulang na data ang file.</string>
+    <string name="backup_has_no_manga">Walang manga ang backup.</string>
+    <string name="restore_missing_sources">Nawawalang (mga) pinagkunan:</string>
+    <string name="restore_missing_trackers">Di naka-login sa (mga) tagasubaybay:</string>
+    <string name="restore_content">Ginagamit ng Pagbalik ang mga pinagkukunan para kunin ang data, maaari kang makagastos dahil rito.
+\n
+\nSiguraduhing na-install mo na ang mga lahat ng mga kinakailangang dugtong at naka-login ka na sa lahat ng mga pinagkukunan at tagasubaybay (tracking services) bago mo simulan ang pagbalik.</string>
+    <string name="restore_content_full">Maibabalik ang mga datos mula sa backup.
+\n
+\nKailangan mong i-install muli ang mga nawawalang dugtong at mag-login muli sa mga serbisyo pagkatapos para magamit ang mga ito.</string>
+    <string name="restoring_backup_canceled">Itigil ang pagbalik</string>
+    <string name="restore_duration">%02d (na) min, %02d (na) seg</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Naibalik sa loob ng %1$s na may %2$s errorNaibalik sa loob ng %1$s na may %2$s (na) mga error</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="file_picker_error">Walang nakitang app para makapili</string>
+    <string name="open_log">Buksan ang log</string>
+    <string name="chapters">Mga Kabanata</string>
+    <string name="backup_and_restore">Pag-backup at Pagbalik</string>
+    <string name="progress">Takbo</string>
+    <string name="complete">Tapos na</string>
+    <string name="crash_logs">Crash log</string>
+    <string name="dump_crash_logs">Itambak ang mga crash log</string>
+    <string name="saves_error_logs">Sine-save ang mga error log sa isang file para maibahagi sa mga developer</string>
+    <string name="crash_log_saved">Nai-save na ang crash log</string>
+    <string name="updated_to_">In-update patungong bersyon %1$s</string>
 </resources>

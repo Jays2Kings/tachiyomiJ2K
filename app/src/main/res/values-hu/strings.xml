@@ -110,13 +110,11 @@
     <string name="restore">Visszaállítás</string>
     <string name="updates">Frissítések</string>
     <string name="sync_chapters_after_reading">Olvasás után a fejezetek szinkronizálása</string>
-    <string name="page_transitions">Áttűnés lapozáskor</string>
     <string name="crop_borders">Szegélyek vágása</string>
     <string name="use_custom_brightness">Egyéni fényerő használata</string>
     <string name="use_custom_color_filter">Egyéni színprofil használata</string>
     <string name="white">Fehér</string>
     <string name="black">Fekete</string>
-    <string name="default_viewer">Alapértelmezett</string>
     <string name="left_to_right_viewer">Balról jobbra</string>
     <string name="right_to_left_viewer">Jobbról balra</string>
     <string name="vertical_viewer">Függőlegesen</string>
@@ -181,4 +179,17 @@
     <string name="move_to_bottom">Ugrás legalulra</string>
     <string name="move_to_top">Ugrás legfelülre</string>
     <string name="never">Soha</string>
+    <string name="search_settings">Keresési beállítások</string>
+    <string name="locale">Helyszín</string>
+    <string name="unofficial_extension_message">Ez a bővítmény nem a hivatalos Tachiyomi bővítménylistából származik.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Nem hivatalos</string>
+    <string name="nsfw_sources">NSFW (18+) források</string>
+    <string name="show_in_sources">Megjelenítés a forráslistában</string>
+    <string name="show_in_extensions">Megjelenítés a bővítménylistában</string>
+    <string name="open_log">Napló megnyitása</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d kategória%d kategóriák</item>
+        <item quantity="other"></item>
+    </plurals>
 </resources>

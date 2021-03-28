@@ -78,7 +78,6 @@
     <string name="system_default">Predefinita di sistema</string>
     <!-- Reader section -->
     <string name="fullscreen">Schermo Intero</string>
-    <string name="page_transitions">Transazioni pagine</string>
     <string name="show_page_number">Mostra numero pagina</string>
     <string name="use_custom_brightness">Usa luminosità personalizzata</string>
     <string name="use_custom_color_filter">Usa filtro colore personalizzato</string>
@@ -89,7 +88,6 @@
     <string name="background_color">Colore sfondo</string>
     <string name="white">Bianco</string>
     <string name="black">Nero</string>
-    <string name="default_viewer">Predefinito</string>
     <string name="left_to_right_viewer">Da sinistra a destra</string>
     <string name="right_to_left_viewer">Da destra a sinistra</string>
     <string name="vertical_viewer">Verticale</string>
@@ -500,7 +498,6 @@
     <string name="read_">Leggi %1$s</string>
     <string name="reset_all_chapters_for_this_">Resetta tutti i capitoli per %1$s</string>
     <string name="hide_category_hopper">Nascondi l\'opzione per saltare categoria</string>
-    <string name="hide_badges">Nascondi i simboli</string>
     <string name="comfortable_grid">Griglia confortevole</string>
     <string name="view_all_errors">Visualizza tutti gli errori</string>
     <string name="use_default">Usa come predefinito</string>
@@ -712,4 +709,67 @@
     <string name="display_as">Visualizza come</string>
     <string name="tap_library_to_show_filters">Premi sull\'icona Libreria per vedere i filtri</string>
     <string name="start_with_filters_hidden">Inizializza nascondendo i filtri</string>
+    <string name="next_page">Pagina successiva</string>
+    <string name="previous_page">Pagina precedente</string>
+    <string name="next_chapter">Pagina successiva</string>
+    <string name="previous_chapter">Pagina precedente</string>
+    <string name="animate_page_transitions">Anima le transazioni di pagina</string>
+    <string name="no_chapters_error">Nessun capitolo trovato</string>
+    <string name="restore_duration">%02d min %02d s</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Completato in %1$s con %2$s erroreCompletato in %1$s con %2$s errori</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Guida alla migrazione di origine</string>
+    <string name="nsfw_sources">Fonti NSFW (18+)</string>
+    <string name="show_in_sources">Mostra nella lista delle fonti</string>
+    <string name="show_in_extensions">Mostra nella lista delle estensioni</string>
+    <string name="label_in_extensions">Etichetta nella lista delle estensioni</string>
+    <string name="does_not_prevent_unofficial_nsfw">Questo non impedisce a estensioni non ufficiali o potenzialmente segnalate in modo errato mostrare contenuti 18+ all\'interno dell\'applicazione.</string>
+    <string name="file_picker_error">Nessuna app per la selezione dei file trovata</string>
+    <string name="badges">Caratteristiche</string>
+    <string name="unofficial_extension_message">Questa estensione non è presente nella lista ufficiale delle estensioni di Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Non ufficiale</string>
+    <string name="may_contain_nsfw">Potrebbe contenere materiale 18+</string>
+    <string name="default_reading_mode">Modalità di lettura predefinita</string>
+    <string name="nav_layout">Layout della navigazione</string>
+    <string name="l_nav">A forma di L</string>
+    <string name="kindlish_nav">Tipo un Kindle</string>
+    <string name="edge_nav">Bordo</string>
+    <string name="right_and_left_nav">Navigazione destra/sinistra</string>
+    <string name="invert_tapping">Inverti i tasti</string>
+    <string name="none">Nessuno</string>
+    <string name="started_reading_date">Data di inizio lettura</string>
+    <string name="finished_reading_date">Data di fine lettura</string>
+    <string name="myanimelist_relogin">Per favore accedi di nuovo a MAL</string>
+    <string name="search_settings">Ricerca impostazioni</string>
+    <string name="locale">Locale</string>
+    <string name="create_legacy_backup">Crea backup legacy</string>
+    <string name="can_be_used_in_older_tachi">Può essere utilizzato nelle versioni precedenti di Tachiyomi</string>
+    <string name="automatic_backups">Backup automatici</string>
+    <string name="also_create_legacy_backup">Crea anche backup legacy</string>
+    <string name="invalid_backup_file">File di backup invalido</string>
+    <string name="invalid_backup_file_type">File di backup non valido: %1$s
+\nDovrebbe terminare con .proto.gz oppure .json.</string>
+    <string name="file_is_missing_data">Il file risulta corrotto o in mancanza di dati.</string>
+    <string name="backup_has_no_manga">Il backup non contiene nessun manga.</string>
+    <string name="restore_missing_sources">Fonti mancanti:</string>
+    <string name="restore_missing_trackers">Trackers non collegati:</string>
+    <string name="restore_content">Il ripristino utilizza delle fonti per recuperare i dati, potrebbero essere applicati costi del gestore telefonico.
+\n
+\nAssicurati di aver installato tutte le estensioni necessarie e di aver effettuato l\'accesso a fonti e servizi di tracciamento prima di ripristinare.</string>
+    <string name="restore_content_full">I dati dal file di backup verranno recuperati.
+\n
+\nAvrai bisogno di installare le estensioni mancanti ed effettuare il login nei trackers per utilizzarli.</string>
+    <string name="restoring_backup_canceled">Ripristino cancellato</string>
+    <string name="open_log">Apri log</string>
+    <string name="backup_and_restore">Backup e ripristino</string>
+    <string name="progress">Progresso</string>
+    <string name="complete">Completo</string>
+    <string name="crash_logs">Resoconto dei crash</string>
+    <string name="dump_crash_logs">Salva un resoconto dei crash</string>
+    <string name="saves_error_logs">Salva un resoconto degli errori su un file per condividerlo con gli sviluppatori</string>
+    <string name="crash_log_saved">Resoconto salvato</string>
+    <string name="updated_to_">Aggiornato verso v%1$s</string>
 </resources>

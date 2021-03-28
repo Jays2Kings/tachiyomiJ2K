@@ -137,7 +137,6 @@
     <string name="large">G</string>
     <string name="x_large">XG</string>
     <string name="grid_options">Opções de grade</string>
-    <string name="show_badges">Mostrar selos</string>
     <string name="tap_library_to_show_filters">Toque no ícone da Biblioteca para mostrar os filtros</string>
     <string name="display_as">Mostrar como</string>
     <string name="hide_category_hopper">Ocultar seletor de categoria</string>
@@ -262,7 +261,6 @@
     <string name="webtoon_style">estilo webtoon</string>
     <!-- Reader settings -->
     <string name="fullscreen">Tela cheia</string>
-    <string name="page_transitions">Transição de página</string>
     <string name="double_tap_anim_speed">Velocidade da animação de toque duplo</string>
     <string name="show_page_number">Mostrar número da página</string>
     <string name="true_32bit_color">cor de 32-bit</string>
@@ -290,7 +288,6 @@
     <string name="black">Preto</string>
     <string name="smart_by_page">Adaptável (por página)</string>
     <string name="smart_by_theme">Adaptável (por tema)</string>
-    <string name="default_viewer">Visualizador padrão</string>
     <string name="left_to_right_viewer">Esquerda para direita</string>
     <string name="right_to_left_viewer">Direita para esquerda</string>
     <string name="vertical_viewer">Vertical</string>
@@ -736,4 +733,68 @@
     <string name="cover_saved">Capa salva</string>
     <string name="reset_tags">Redefinir tags</string>
     <string name="enable_zoom_out">Habilitar zoom out</string>
+    <string name="unofficial_extension_message">Esta extensão não é da lista oficial de extensões do Tachiyomi.</string>
+    <string name="nsfw_short">+18</string>
+    <string name="unofficial">Não oficial</string>
+    <string name="may_contain_nsfw">Pode haver conteúdo NSFW (+18)</string>
+    <string name="next_page">Próxima página</string>
+    <string name="previous_page">Página anterior</string>
+    <string name="next_chapter">Próxima página</string>
+    <string name="previous_chapter">Página anterior</string>
+    <string name="animate_page_transitions">Animar as transições de página</string>
+    <string name="default_reading_mode">Modo de leitura padrão</string>
+    <string name="nav_layout">Layout de navegação</string>
+    <string name="l_nav">Em forma de L</string>
+    <string name="kindlish_nav">Kindle</string>
+    <string name="edge_nav">Borda</string>
+    <string name="right_and_left_nav">Direita e Esquerda</string>
+    <string name="invert_tapping">Inverter o toque</string>
+    <string name="none">Nenhum</string>
+    <string name="started_reading_date">Data de início da leitura</string>
+    <string name="finished_reading_date">Data de término da leitura</string>
+    <string name="myanimelist_relogin">Por favor, faça login no MAL novamente</string>
+    <string name="no_chapters_error">Nenhum capítulo encontrado</string>
+    <string name="badges">Selos</string>
+    <string name="search_settings">Pesquisar configurações</string>
+    <string name="locale">Localidade</string>
+    <string name="create_legacy_backup">Criar backup legado</string>
+    <string name="can_be_used_in_older_tachi">Pode ser usado em versões antigas do Tachiyomi</string>
+    <string name="automatic_backups">Backups automáticos</string>
+    <string name="also_create_legacy_backup">Também criar um backup legado</string>
+    <string name="invalid_backup_file">Arquivo de backup inválido</string>
+    <string name="invalid_backup_file_type">Tipo de arquivo de backup inválido: %1$s
+\nO arquivo deve terminar com .proto.gz ou .json.</string>
+    <string name="file_is_missing_data">Faltam dados no arquivo.</string>
+    <string name="backup_has_no_manga">O backup não possui nenhum mangá.</string>
+    <string name="restore_missing_sources">Fontes faltando:</string>
+    <string name="restore_missing_trackers">Monitoradores sem login realizado:</string>
+    <string name="restore_content">A restauração usa as fontes para obter dados, cobranças podem ser efetuadas pela sua operadora.
+\n
+\nVerifique se instalou todas as extensões necessárias e se realizou o login nas fontes e serviços de monitoramento antes de restaurar.</string>
+    <string name="restore_content_full">Os dados do arquivo de backup serão restaurados.
+\n
+\nVocê precisará instalar quaisquer extensões que estejam faltando e depois realizar o login nos serviços de monitoramento para utilizá-los.</string>
+    <string name="restoring_backup_canceled">Restauração cancelada</string>
+    <string name="restore_duration">%02d min e %02d seg</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Concluído em %1$s com %2$s erroConcluído em %1$s com %2$s erros</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Guia de migração de fonte</string>
+    <string name="nsfw_sources">Fontes NSFW (+18)</string>
+    <string name="show_in_sources">Mostrar na lista de fontes</string>
+    <string name="show_in_extensions">Mostrar na lista de extensões</string>
+    <string name="label_in_extensions">Rotular na lista de extensões</string>
+    <string name="does_not_prevent_unofficial_nsfw">Isso não impede que extensões não oficiais ou potencialmente sinalizadas de maneira incorreta apresentem conteúdo NSFW (+18) no aplicativo.</string>
+    <string name="file_picker_error">Nenhum aplicativo de seleção de arquivos encontrado</string>
+    <string name="next">Próxima</string>
+    <string name="open_log">Abrir registro de eventos</string>
+    <string name="backup_and_restore">Backup e restauração</string>
+    <string name="progress">Andamento</string>
+    <string name="complete">Concluído</string>
+    <string name="crash_logs">Registros de travamentos</string>
+    <string name="dump_crash_logs">Limpar os registros de travamentos</string>
+    <string name="saves_error_logs">Salva os registros de erro em um arquivo para o compartilhamento com os desenvolvedores</string>
+    <string name="crash_log_saved">Registros de travamento salvos</string>
+    <string name="updated_to_">Atualizado para v%1$s</string>
 </resources>

@@ -147,7 +147,6 @@
     <string name="large">L</string>
     <string name="x_large">XL</string>
     <string name="grid_options">Opcje siatki</string>
-    <string name="show_badges">Pokaż odzn.</string>
     <string name="tap_library_to_show_filters">Naciśnij ikonę biblioteki, by wyświetlić filtry</string>
     <string name="display_as">Wyświetlaj jako</string>
     <string name="hide_category_hopper">Ukryj szybki przełącznik kategorii</string>
@@ -275,7 +274,6 @@
     <string name="webtoon_style">Styl webtoon</string>
     <!-- Reader settings -->
     <string name="fullscreen">Pełny ekran</string>
-    <string name="page_transitions">Animacje przejścia stron</string>
     <string name="enable_zoom_out">Włącz możliwość oddalania</string>
     <string name="double_tap_anim_speed">Szybkość podwójnego stuknięcia</string>
     <string name="show_page_number">Pokazuj numer strony</string>
@@ -303,7 +301,6 @@
     <string name="black">Czarny</string>
     <string name="smart_by_page">Inteligentne (stroną)</string>
     <string name="smart_by_theme">Inteligentne (motywem)</string>
-    <string name="default_viewer">Domyślnie</string>
     <string name="left_to_right_viewer">Od lewej do prawej</string>
     <string name="right_to_left_viewer">Od prawej do lewej</string>
     <string name="vertical_viewer">Pionowo</string>
@@ -744,4 +741,66 @@
     <string name="cover_saved">Zapisano okładkę</string>
     <string name="mark_previous_as_unread">Oznacz poprzednie jako nieprzeczytane</string>
     <string name="download_unread">Pobierz nieprzeczytane</string>
+    <string name="started_reading_date">Data rozpoczęcia czytania</string>
+    <string name="finished_reading_date">Data zakończenia czytania</string>
+    <string name="myanimelist_relogin">Wymagane ponowne zalogowanie do MAL</string>
+    <string name="search_settings">Ustawienia szukania</string>
+    <string name="locale">Język</string>
+    <string name="no_chapters_error">Nie znaleziono rozdziałów</string>
+    <string name="badges">Plakietki</string>
+    <string name="unofficial_extension_message">Te rozszerzenie nie jest na liście oficjalnych rozszerzeń Tachiyomi.</string>
+    <string name="open_log">Otwórz log</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Nieoficjalne</string>
+    <string name="may_contain_nsfw">Może zawierać zawartość NSFW (18+)</string>
+    <string name="next_page">Następna strona</string>
+    <string name="previous_page">Poprzednia strona</string>
+    <string name="next_chapter">Następna strona</string>
+    <string name="previous_chapter">Poprzednia strona</string>
+    <string name="animate_page_transitions">Animacje przejścia stron</string>
+    <string name="default_reading_mode">Domyślny styl czytania</string>
+    <string name="nav_layout">Styl nawigacji</string>
+    <string name="l_nav">W kształcie litery \"L\"</string>
+    <string name="kindlish_nav">Podobnie jak w czytniku Kindle</string>
+    <string name="edge_nav">Przy krawędzi</string>
+    <string name="right_and_left_nav">Prawa i Lewa</string>
+    <string name="invert_tapping">Odwróć kliknięcia</string>
+    <string name="none">Brak</string>
+    <string name="create_legacy_backup">Utwórz kopię zapasową w starym formacie</string>
+    <string name="can_be_used_in_older_tachi">Może być użyta w starszych wersjach Tachiyomi</string>
+    <string name="automatic_backups">Automatyczna kopia zapasowa</string>
+    <string name="also_create_legacy_backup">Dodatkowo stwórz kopię zapasową w starym formacie</string>
+    <string name="invalid_backup_file">Nieprawidłowy plik kopii zapasowej</string>
+    <string name="invalid_backup_file_type">Nieprawidłowe rozszczerzenie pliku kopii zapasowej: %1$s
+\nPowinno być .proto.gz albo .json.</string>
+    <string name="file_is_missing_data">W pliku brakuje danych.</string>
+    <string name="backup_has_no_manga">Kopia zapasowa nie zawiera żadnych mang.</string>
+    <string name="restore_missing_sources">Brakujące źródła:</string>
+    <string name="restore_missing_trackers">Serwisy, do których nie zalogowono:</string>
+    <string name="restore_content">Przywracanie używa źródeł do pobierania danych, operator może naliczać dodatkowe opłaty.
+\n
+\nPrzed przywróceniem upewnij się, że zainstalowane są odpowiednie rozszerzenia i że zalogowano się do źródeł i usług śledzenia.</string>
+    <string name="restoring_backup_canceled">Anulowano przywracanie</string>
+    <string name="restore_duration">%02d min, %02d s</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Wykonano w %1$s z %2$s błędemWykonano w %1$s z %2$s błędamiWykonano w %1$s z %2$s błędami</item>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Instrukcja przenoszenia źródeł</string>
+    <string name="nsfw_sources">NFSW Materiały 18+</string>
+    <string name="show_in_sources">Pokazuj na liście źródeł</string>
+    <string name="show_in_extensions">Pokazuj na liście rozszerzeń</string>
+    <string name="label_in_extensions">Pokazuj etykiety na liście rozszerzeń</string>
+    <string name="does_not_prevent_unofficial_nsfw">Nie zapobiega to nieoficjalnym lub potencjalnie niepoprawnie oflagowanym rozszerzeniom przed pokazywaniem zwartości NSFW(18+) w aplikacji.</string>
+    <string name="file_picker_error">Nie znaleziono aplikacji do przeglądania plików</string>
+    <string name="backup_and_restore">Kopia zapasowa i odzyskiwanie</string>
+    <string name="progress">Postęp</string>
+    <string name="complete">Ukończone</string>
+    <string name="crash_logs">Logi crashy</string>
+    <string name="dump_crash_logs">Zapisz logi crasha</string>
+    <string name="saves_error_logs">Zapisuje logi błędów do pliku do udostępnienia programistom</string>
+    <string name="crash_log_saved">Logi crasha zapisane</string>
+    <string name="updated_to_">Zaktualizowano do v%1$s</string>
 </resources>

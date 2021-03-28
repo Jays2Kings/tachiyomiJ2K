@@ -114,7 +114,6 @@
     <string name="version_">เวอร์ชัน: %1$s</string>
     <string name="empty_preferences_for_extension">ไม่มีการตั้งค่าสำหรับส่วนต่อขยายนี้</string>
     <string name="fullscreen">เต็มจอ</string>
-    <string name="page_transitions">เล่นเปลี่ยนแปลงหน้า</string>
     <string name="double_tap_anim_speed">เพื่อความเร็วภาพเคลื่อนไหว</string>
     <string name="show_page_number">แสดงเลขหน้า</string>
     <string name="crop_borders">ตัดขอบ</string>
@@ -124,7 +123,6 @@
     <string name="volume_keys">ปุ่มปรับระดับเสียง</string>
     <string name="invert_volume_keys">สลับด้าน ปุ่มปรับระดับเสียง</string>
     <string name="tapping">แตะ</string>
-    <string name="default_viewer">ค่าเริ่มต้น</string>
     <string name="left_to_right_viewer">จากซ้ายไปขวา</string>
     <string name="right_to_left_viewer">จากขวาไปซ้าย</string>
     <string name="vertical_viewer">แนวตั้ง</string>
@@ -310,4 +308,7 @@
     <string name="copy_value">คัดลอก</string>
     <string name="creating_backup">กำลังสร้างการสำรองข้อมูล</string>
     <string name="pref_global_search">ค้นหา</string>
+    <string name="restore_content">คืนค่าใช้แหล่งที่มาเพื่อดึงข้อมูลอาจมีค่าใช้จ่ายของผู้ให้บริการ
+\nตรวจสอบให้แน่ใจว่าคุณได้เข้าสู่ระบบอย่างถูกต้องในแหล่งที่ต้องใช้ก่อนที่จะกู้</string>
+    <string name="open_log">ประวัติ</string>
 </resources>

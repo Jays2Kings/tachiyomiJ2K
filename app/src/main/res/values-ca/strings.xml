@@ -109,7 +109,6 @@
     <string name="language_">Idioma: %1$s</string>
     <string name="empty_preferences_for_extension">No hi ha preferències editables en aquesta extensió</string>
     <string name="fullscreen">Pantalla completa</string>
-    <string name="page_transitions">Transicions de pàgina</string>
     <string name="show_page_number">Mostra el número de pàgina</string>
     <string name="crop_borders">Retalla les vores</string>
     <string name="use_custom_brightness">Utilitza la brillantor personalitzada</string>
@@ -122,7 +121,6 @@
     <string name="background_color">Color de fons</string>
     <string name="white">Blanc</string>
     <string name="black">Negre</string>
-    <string name="default_viewer">Per defecte</string>
     <string name="left_to_right_viewer">D\'esquerra a dreta</string>
     <string name="right_to_left_viewer">De dreta a esquerra</string>
     <string name="vertical_viewer">Vertical</string>
@@ -431,4 +429,69 @@
     <string name="confirm_category_deletion_message">El manga d\'aquesta categoria es mourà a la categoria per defecte.</string>
     <string name="confirm_category_deletion">Voleu suprimir la categoria\?</string>
     <string name="category_is_hidden">La categoria està amagada</string>
+    <string name="next_page">Pàgina següent</string>
+    <string name="previous_page">Pàgina anterior</string>
+    <string name="next_chapter">Pàgina següent</string>
+    <string name="previous_chapter">Pàgina anterior</string>
+    <string name="animate_page_transitions">Anima les transicions de pàgina</string>
+    <string name="no_chapters_error">No s\'ha trobat cap capítol</string>
+    <string name="restoring_backup_canceled">S\'ha cancel·lat la restauració</string>
+    <string name="restore_duration">%02d min i %02d s</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Fet en %1$s amb %2$s errorFet en %1$s amb %2$s errors</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="badges">Icones</string>
+    <string name="last_used">Utilitzada per darrer cop</string>
+    <string name="unofficial_extension_message">Aquesta extensió no pertany a la llista d\'extensions oficials del Tachiyomi.</string>
+    <string name="nsfw_short">+18</string>
+    <string name="unofficial">No oficial</string>
+    <string name="may_contain_nsfw">Pot contenir contingut NSFW (+18)</string>
+    <string name="default_reading_mode">Mode de lectura per defecte</string>
+    <string name="nav_layout">Disseny de navegació</string>
+    <string name="l_nav">En forma d\'L</string>
+    <string name="kindlish_nav">Semblant al Kindle</string>
+    <string name="edge_nav">Vora</string>
+    <string name="right_and_left_nav">A la dreta i a l\'esquerra</string>
+    <string name="invert_tapping">Inverteix els tocs</string>
+    <string name="none">Cap</string>
+    <string name="started_reading_date">Data en què el vau començar a llegir</string>
+    <string name="finished_reading_date">Data en què el vau acabar a llegir</string>
+    <string name="myanimelist_relogin">Torneu a iniciar la sessió a MAL</string>
+    <string name="search_settings">Configuració de la cerca</string>
+    <string name="locale">Llengua</string>
+    <string name="create_legacy_backup">Crea una còpia de seguretat en format antic</string>
+    <string name="can_be_used_in_older_tachi">Es pot utilitzar en versions més antigues del Tachiyomi</string>
+    <string name="automatic_backups">Còpies de seguretat automàtiques</string>
+    <string name="also_create_legacy_backup">Crea també una còpia de seguretat en format antic</string>
+    <string name="invalid_backup_file">Fitxer de còpia de seguretat invàlid</string>
+    <string name="invalid_backup_file_type">Tipus de fitxer de còpia de seguretat invàlid: %1$s
+\nHauria d\'acabar en .proto.gz o .json.</string>
+    <string name="file_is_missing_data">Manquen dades al fitxer.</string>
+    <string name="backup_has_no_manga">La còpia de seguretat no conté cap manga.</string>
+    <string name="restore_missing_sources">Manquen fonts:</string>
+    <string name="restore_missing_trackers">Seguidors sense sessió iniciada:</string>
+    <string name="restore_content">La restauració obté dades de les fonts, poden haver-hi despeses de l\'operador.
+\n
+\nAssegureu-vos que heu instal·lat totes les extensions necessàries i que heu iniciat la sessió a les fonts i serveis de seguiment abans de restaurar.</string>
+    <string name="restore_content_full">Es restauraran les dades del fitxer de còpia de seguretat.
+\n
+\nCaldrà que instal·leu les extensions que manquin i que després inicieu la sessió als serveis de seguiment per a utilitzar-los.</string>
+    <string name="source_migration_guide">Guia de migració de fonts</string>
+    <string name="nsfw_sources">Fonts NSFW (+18)</string>
+    <string name="show_in_sources">Mostra a la llista de fonts</string>
+    <string name="show_in_extensions">Mostra a la llista d\'extensions</string>
+    <string name="label_in_extensions">Etiqueta a la llista d\'extensions</string>
+    <string name="does_not_prevent_unofficial_nsfw">Això no evita que les extensions no oficials o possiblement mal etiquetades puguin mostrar contingut NSFW (+18) a l\'aplicació.</string>
+    <string name="whats_new">Novetats</string>
+    <string name="file_picker_error">No s\'ha trobat cap aplicació de selecció de fitxers</string>
+    <string name="open_log">Obre el registre</string>
+    <string name="backup_and_restore">Còpia de seguretat i restauració</string>
+    <string name="progress">Progrés</string>
+    <string name="complete">Completada</string>
+    <string name="crash_logs">Registres de fallades</string>
+    <string name="dump_crash_logs">Bolca els registres de fallades</string>
+    <string name="saves_error_logs">Desa els registres d\'errors en un fitxer perquè el pugueu compartir amb els desenvolupadors</string>
+    <string name="crash_log_saved">S\'han desat els registres de fallades</string>
+    <string name="updated_to_">S\'ha actualitzat a la v%1$s</string>
 </resources>

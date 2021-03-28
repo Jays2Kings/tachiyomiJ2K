@@ -88,7 +88,6 @@
     <string name="default_category">Kategori lalai</string>
     <string name="always_ask">Sentiasa tanya</string>
     <string name="fullscreen">Skrin penuh</string>
-    <string name="page_transitions">Kesan peralihan halaman</string>
     <string name="show_page_number">Tunjuk nombor muka surat</string>
     <string name="crop_borders">Potong pinggiran</string>
     <string name="use_custom_brightness">Guna kecerahan tersuai</string>
@@ -101,7 +100,6 @@
     <string name="background_color">Warna latar</string>
     <string name="white">Putih</string>
     <string name="black">Hitam</string>
-    <string name="default_viewer">Lalai</string>
     <string name="left_to_right_viewer">Kiri ke kanan</string>
     <string name="right_to_left_viewer">Kanan ke kiri</string>
     <string name="vertical_viewer">Menegak</string>
@@ -387,7 +385,6 @@
     <string name="hide_category_hopper">Sembunyi lompatan</string>
     <string name="display_as">Paparkan</string>
     <string name="tap_library_to_show_filters">Tekan gambar pustaka untuk tunjukkan tapisan</string>
-    <string name="show_badges">Tunjuk</string>
     <string name="grid_options">Pilihan</string>
     <string name="uniform_covers">Lapis</string>
     <string name="hide_start_reading_button">Sembunyi butang mula</string>
@@ -510,7 +507,7 @@
     <string name="username_must_not_be_blank">Nama pengguna atau kata laluan tidak boleh</string>
     <string name="logout_from_">Log keluar daripada %1$s\?</string>
     <string name="logout">Log</string>
-    <string name="whats_new">Apa yang baru dalam release kali</string>
+    <string name="whats_new">Apa yang terbaharu</string>
     <string name="you_can_migrate_in_library">Anda juga boleh pindah dengan memilih manga di pustaka</string>
     <string name="migration_sources_changed">Sumber perpindahan di</string>
     <string name="use_last_saved_migration_preferences">Guna save terakhir pra-perpindahan rujukan dan sumber untuk perpindahan besar</string>
@@ -548,7 +545,7 @@
     </plurals>
     <string name="restoring_progress">Memulihkan(%1$d/%2$d)</string>
     <string name="restore_content_skipped">%1$d telah di</string>
-    <string name="restore_error">Ralat tambah</string>
+    <string name="restore_error">Gagal memulihkan sandaran</string>
     <string name="hide_tachi_from_recents">Sembunyi Tachiyomi daripada skrin terbaharu</string>
     <string name="white_theme">Putih</string>
     <plurals name="manga_migrated">
@@ -638,7 +635,7 @@
     <string name="reading_">Membaca %1$s</string>
     <string name="set_as_default_for_all">set semua sebagai</string>
     <string name="extension_updates">Kemas kini</string>
-    <string name="last_used">Terakhir di</string>
+    <string name="last_used">Terakhir digunakan</string>
     <string name="source_hidden">Sumber</string>
     <string name="all_sources">Semua</string>
     <string name="search_extensions">Cari penambahan…</string>
@@ -658,7 +655,105 @@
     <string name="medium">M</string>
     <string name="small">S</string>
     <plurals name="category_plural">
-        <item quantity="other">Kategori</item>
+        <item quantity="other">%d kategori</item>
     </plurals>
     <string name="unlock">Buka kunci</string>
+    <string name="unofficial_extension_message">Sambungan ini bukan daripada senarai sambungan Tachiyomi yang rasmi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Tidak rasmi</string>
+    <string name="may_contain_nsfw">Mungkin mengandungi kandungan 18+ tahun keatas</string>
+    <string name="next_page">Halaman seterusnya</string>
+    <string name="previous_page">Halaman terdahulu</string>
+    <string name="next_chapter">Halaman seterusnya</string>
+    <string name="previous_chapter">Halaman terdahulu</string>
+    <string name="animate_page_transitions">Menggerakkan peralihan muka surat</string>
+    <string name="default_reading_mode">Mod membaca lalai</string>
+    <string name="nav_layout">Tataletak navigasi</string>
+    <string name="no_chapters_error">Tiada bab dijumpai</string>
+    <string name="source_migration_guide">Panduan memindahkan sumber</string>
+    <string name="nsfw_sources">Sumber NSFW (18+)</string>
+    <string name="show_in_sources">Tunjuk dalam senarai sumber</string>
+    <string name="show_in_extensions">Tunjuk dalam senarai sambungan</string>
+    <string name="label_in_extensions">Label dalam senarai</string>
+    <string name="does_not_prevent_unofficial_nsfw">Ini tidak menghalang sambungan yang tidak rasmi atau berpotensi tidak menggunakan tetapan yang betul daripada menayangkan kandungan 18+ tahun keatas dalam aplikasi.</string>
+    <string name="badges">Penanda</string>
+    <string name="l_nav">Bentuk L</string>
+    <string name="kindlish_nav">Serupa Kindle</string>
+    <string name="edge_nav">Sisi</string>
+    <string name="right_and_left_nav">Kanan dan kiri</string>
+    <string name="invert_tapping">Songsangkan tekan skrin</string>
+    <string name="none">Tidak aktif</string>
+    <string name="started_reading_date">Tarikh mula membaca</string>
+    <string name="finished_reading_date">Tarikh selesai membaca</string>
+    <string name="myanimelist_relogin">Sila log masuk ke MAL sekali lagi</string>
+    <string name="search_settings">Carian tetapan</string>
+    <string name="locale">Tempat</string>
+    <string name="create_legacy_backup">Buat sandaran legasi</string>
+    <string name="can_be_used_in_older_tachi">Boleh digunakan pada versi Tachiyomi yang</string>
+    <string name="automatic_backups">Sandaran automatik</string>
+    <string name="also_create_legacy_backup">Buat juga sandaran legasi</string>
+    <string name="invalid_backup_file">Fail sandaran tidak sah</string>
+    <string name="invalid_backup_file_type">Jenis fail sandaran tidak sah: %1$s\t
+\nIa sepatutnya berakhir dengan .proto.gz atau .json.</string>
+    <string name="file_is_missing_data">Fail hilang data.</string>
+    <string name="backup_has_no_manga">Sandaran tidak mengandungi apa-apa siri.</string>
+    <string name="restore_missing_sources">Tiada sumber:</string>
+    <string name="restore_missing_trackers">Penjejak yang tidak dilog masuk:</string>
+    <string name="restore_content">Pemulihan menggunakan Sambungan untuk memperolehi data, caj telco mungkin dikenakan.
+\n
+\nPastikan anda telah memasang semua Sambungan yang perlu dan telah log masuk ke dalam sumber dan Penjejakan sebelum memulakan pemulihan.</string>
+    <string name="restore_content_full">Data dari fail sandaran akan dipulihkan.
+\n
+\nAnda perlu memasang sambungan yang hilang dan log masuk ke penjejakan untuk menggunakannya.</string>
+    <string name="restoring_backup_canceled">Pemulih dibatalkan</string>
+    <string name="restore_duration">%02d minit, %02d saat</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">Selesai dalam %1$s dengan %2$s ralat</item>
+    </plurals>
+    <string name="file_picker_error">Tiada aplikasi memilih fail</string>
+    <string name="next">Seterusnya</string>
+    <string name="open_log">Buka log</string>
+    <string name="show_unread_count">Tunjuk bilangan belum dibaca</string>
+    <string name="show_unread_badges">Tunjuk petanda belum dibaca</string>
+    <string name="hide_unread_badges">Sembunyi petanda belum dibaca</string>
+    <string name="category">Kategori</string>
+    <plurals name="chapters_plural">
+        <item quantity="other">%1$d bab</item>
+    </plurals>
+    <string name="complete">Selesai</string>
+    <string name="crash_logs">Log kerosakan</string>
+    <string name="dump_crash_logs">Kumpulan log kerosakan</string>
+    <string name="saves_error_logs">Simpan log ralat untuk dikongsi dengan pembangunan aplikasi</string>
+    <string name="crash_log_saved">Log kerosakan disimpan</string>
+    <string name="backup_and_restore">Sandaran dan memulih</string>
+    <string name="progress">Kemajuan</string>
+    <string name="updated_to_">Dikemaskini ke v%1$s</string>
+    <string name="hide_bottom_nav">Auto-sembunyi navigasi bawah</string>
+    <string name="last_used_library_recents">Akhir digunakan (Pustaka atau Terkini)</string>
+    <string name="suggested_date_">Tarikh cadangan: %1$s</string>
+    <string name="custom_manga_info">Maklumat manga tersuai</string>
+    <string name="mark_all_chapters_as_unread">Tanda semua bab sebagai belum dibaca\?</string>
+    <string name="ignore_cutout_areas">Abai kawasan bertakuk</string>
+    <string name="start_past_cutout">Mula selepas kawasan bertakuk</string>
+    <string name="pad_cutout_areas">Berpad kawasan bertakuk</string>
+    <string name="cutout_area_behavior">Kelakuan kawasan bertakuk</string>
+    <string name="both_axes">Kedua-dua Paksi</string>
+    <string name="vertically">Menegak</string>
+    <string name="horizontally">Melintang</string>
+    <string name="reader_settings">Tetapan pembaca</string>
+    <string name="_details">%1$s butiran</string>
+    <string name="save_page">Simpan halaman</string>
+    <string name="share_page">Kongsi halaman</string>
+    <string name="set_page_as_cover">Tetapkan halaman sebagai muka hadapan</string>
+    <string name="_must_be_enabled_first">%1$s perlu dihidupkan terlebih dahulu</string>
+    <string name="app_info">Maklumat aplikasi</string>
+    <string name="filter_languages">Tapis Bahasa</string>
+    <string name="add_edit_categories">Tambah/Sunting kategori</string>
+    <string name="whats_new_this_release">Apa yang baharu dengan keluaran ini</string>
+    <string name="backup_in_progress">Sandaran sedang dijalankan</string>
+    <string name="restore_in_progress">Pemulihan sedang dijalankan</string>
+    <string name="pressing_back_to_start">Menekan kembali ke skrin permulaan</string>
+    <string name="back_to_start">Kembali ke permulaan</string>
+    <string name="starting_screen">Skrin permulaan</string>
+    <string name="hides_on_scroll">Sembunyi apabila skrol</string>
 </resources>

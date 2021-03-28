@@ -122,7 +122,6 @@
     <string name="default_category">Категория по умолчанию</string>
     <string name="always_ask">Всегда спрашивать</string>
     <string name="default_value">По умолчанию</string>
-    <string name="default_viewer">По умолчанию</string>
     <string name="description">Описание</string>
     <string name="cover_of_image">Обложка манги</string>
     <string name="this_will_remove_the_read_date_question">Это действие удалит дату прочтения главы. Вы уверены\?</string>
@@ -278,7 +277,7 @@
     <string name="categories_to_include_in_download">Категории для включения в загружаемые</string>
     <string name="only_download_over_wifi">Загружать только через Wi-Fi</string>
     <string name="send_crash_report">Отсылать отчеты о падениях</string>
-    <string name="check_for_updates">Проверять обновления</string>
+    <string name="check_for_updates">Проверить обновления</string>
     <string name="auto_check_for_app_versions">Автоматически проверять новые версии</string>
     <string name="fullscreen">Полноэкранный режим</string>
     <string name="scale_type">Масштабирование</string>
@@ -290,7 +289,6 @@
     <string name="select_order_to_update">Выберите порядок, в котором Tachiyomi проверяет наличие обновлений</string>
     <string name="library_update_restriction">Ограничения обновления библиотеки</string>
     <string name="library_update_restriction_summary">Обновлять когда условия соблюдены</string>
-    <string name="page_transitions">Переходы страниц</string>
     <string name="long_tap_dialog">Диалог при долгом нажатии</string>
     <string name="tapping">Нажатие</string>
     <string name="volume_keys">Клавиши громкости</string>
@@ -325,7 +323,7 @@
     <string name="rereading">Перечитываю</string>
     <string name="restore_completed">Восстановление завершено</string>
     <string name="restore_content_skipped">%1$d пропущено</string>
-    <string name="restore_error">Восстановить ошибку</string>
+    <string name="restore_error">Не удалось восстановить резервную копию</string>
     <string name="restoring_backup">Восстановление из резервной копии</string>
     <string name="right_to_left_viewer">Справа налево</string>
     <string name="force_landscape">Горизонтальная</string>
@@ -449,10 +447,10 @@
         <item quantity="other">Удалить %1$d загруженных глав\?</item>
     </plurals>
     <plurals name="chapters_plural">
-        <item quantity="one">Главы</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">%1$d глава</item>
+        <item quantity="few">%1$d главы</item>
+        <item quantity="many">%1$d глав</item>
+        <item quantity="other">%1$d глав</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d страница осталась</item>
@@ -481,10 +479,10 @@
     <string name="long_press_category">Нажмите и удерживайте, чтобы изменить категорию</string>
     <string name="jump_to_category">Перейти в категорию</string>
     <plurals name="category_plural">
-        <item quantity="one">Категория</item>
-        <item quantity="few">Категории</item>
-        <item quantity="many">Категорий</item>
-        <item quantity="other">Категорий</item>
+        <item quantity="one">%d категория</item>
+        <item quantity="few">%d категории</item>
+        <item quantity="many">%d категорий</item>
+        <item quantity="other">%d категорий</item>
     </plurals>
     <!-- Updates -->
     <string name="update">Обновить</string>
@@ -522,7 +520,6 @@
     <string name="large">L</string>
     <string name="x_large">XL</string>
     <string name="grid_options">Варианты сетки</string>
-    <string name="show_badges">Показать значки</string>
     <string name="tap_library_to_show_filters">Нажмите на значок библиотеки, чтобы отобразить фильтры</string>
     <string name="display_as">Показать как</string>
     <string name="hide_category_hopper">Скрыть переключатель категорий</string>
@@ -690,7 +687,7 @@
     <string name="migration_sources_changed">Миграционные источники изменены</string>
     <string name="you_can_migrate_in_library">Вы также можете мигрировать, выбрав мангу в своей библиотеке</string>
     <!-- About section -->
-    <string name="whats_new">Что нового в этом релизе</string>
+    <string name="whats_new">Что нового</string>
     <string name="website">Веб-сайт</string>
     <string name="open_source_licenses">Лицензии с открытым исходным кодом</string>
     <!-- Login/Logout dialog -->
@@ -755,4 +752,105 @@
     <string name="error_sharing_cover">Ошибка отправки обложки</string>
     <string name="error_saving_cover">Ошибка сохранения обложки</string>
     <string name="cover_saved">Обложка сохранена</string>
+    <string name="unofficial_extension_message">Это расширение не входит в официальный список расширений Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Неофициальное</string>
+    <string name="may_contain_nsfw">Может содержать контент NSFW (18+)</string>
+    <string name="next_page">Следующая страница</string>
+    <string name="previous_page">Предыдущая страница</string>
+    <string name="next_chapter">Следующая страница</string>
+    <string name="previous_chapter">Предыдущая страница</string>
+    <string name="animate_page_transitions">Анимированные переходы страниц</string>
+    <string name="default_reading_mode">Режим чтения по умолчанию</string>
+    <string name="nav_layout">Разметка навигации</string>
+    <string name="source_migration_guide">Руководство по миграции источников</string>
+    <string name="nsfw_sources">NSFW (18+) источники</string>
+    <string name="show_in_sources">Показывать в списке источников</string>
+    <string name="show_in_extensions">Показывать в списке расширений</string>
+    <string name="label_in_extensions">Метка в списке расширений</string>
+    <string name="does_not_prevent_unofficial_nsfw">Это не предотвращает появление внутри приложения контента NSFW (18+) из неофициальных или потенциально неправильно помеченных расширений.</string>
+    <string name="no_chapters_error">Нет глав</string>
+    <string name="badges">Значки</string>
+    <string name="l_nav">L-образная</string>
+    <string name="kindlish_nav">Kindle-подобная</string>
+    <string name="edge_nav">Край</string>
+    <string name="right_and_left_nav">Справа и слева</string>
+    <string name="invert_tapping">Инверсия нажатия</string>
+    <string name="none">Нет</string>
+    <string name="started_reading_date">Дата начала чтения</string>
+    <string name="finished_reading_date">Дата окончания чтения</string>
+    <string name="myanimelist_relogin">Пожалуйста, войдите в MAL снова</string>
+    <string name="search_settings">Настройки поиска</string>
+    <string name="locale">Региональные настройки</string>
+    <string name="create_legacy_backup">Создать резервную копию старого формата</string>
+    <string name="can_be_used_in_older_tachi">Может быть использован в предыдущих версиях Tachiyomi</string>
+    <string name="automatic_backups">Автоматические бэкапы</string>
+    <string name="also_create_legacy_backup">Также создавать резервную копию старого формата</string>
+    <string name="invalid_backup_file">Неверный файл резервной копии</string>
+    <string name="invalid_backup_file_type">Неверный тип файла резервной копии: %1$s
+\nФайл должен заканчиваться на .proto.gz или .json.</string>
+    <string name="file_is_missing_data">В файле отсутствуют данные.</string>
+    <string name="backup_has_no_manga">Резервная копия не содержит мангу.</string>
+    <string name="restore_missing_sources">Отсутствующие источники:</string>
+    <string name="restore_missing_trackers">Не выполнен вход в трекеры:</string>
+    <string name="restore_content">При восстановлении используются данные из источников, что может вызвать большой расход трафика.
+\n
+\nУбедитесь, что установили и авторизовались во всех нужных расширениях и сервисах отслеживания перед восстановлением.</string>
+    <string name="restore_content_full">Данные из файла резевной копии будут восстановлены.
+\n
+\nВам будет нужно установить все недостающие расширения, и после этого войти в сервисы отслеживания для их использования.</string>
+    <string name="restoring_backup_canceled">Восстановление отменено</string>
+    <string name="restore_duration">%02d мин, %02d сек</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Выполнено за %1$s с %2$s ошибкойВыполнено за %1$s с %2$s ошибкамиВыполнено за %1$s с %2$s ошибками</item>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="file_picker_error">Приложение для выбора файлов не найдено</string>
+    <string name="next">Следующий</string>
+    <string name="open_log">Открыть лог</string>
+    <string name="previous">Предыдущее</string>
+    <string name="menu">Меню</string>
+    <string name="enable">Включено</string>
+    <string name="whats_new_this_release">Что нового в этом выпуске</string>
+    <string name="backup_in_progress">Резервная копия уже выполняется</string>
+    <string name="restore_in_progress">Восстановление уже выполняется</string>
+    <string name="pressing_back_to_start">Возврат к начальному экрану</string>
+    <string name="starting_screen">Начальный экран</string>
+    <string name="back_to_start">Вернуться к началу</string>
+    <string name="hides_on_scroll">Скрывается при прокрутке</string>
+    <string name="hide_bottom_nav">Автоматически скрывать нижнию панель навигации</string>
+    <string name="last_used_library_recents">Последнее использованное (Библиотека или Недавние)</string>
+    <string name="suggested_date_">Предлагаемая дата: %1$s</string>
+    <string name="custom_manga_info">Информация о пользовательской манге</string>
+    <string name="both_axes">Обе оси</string>
+    <string name="vertically">Вертикально</string>
+    <string name="horizontally">Горизонтально</string>
+    <string name="reader_settings">Настройки читалки</string>
+    <string name="_details">%1$s подробности</string>
+    <string name="save_page">Сохранить страницу</string>
+    <string name="share_page">Поделиться страницей</string>
+    <string name="set_page_as_cover">Установить страницу как обложку</string>
+    <string name="_must_be_enabled_first">%1$s должен быть включён сначала</string>
+    <string name="app_info">О приложении</string>
+    <string name="filter_languages">Языковой фильтр</string>
+    <string name="hide_hopper_on_scroll">Скрывать панель категорий при прокрутке</string>
+    <string name="show_unread_count">Показывать счётчик непрочитанных</string>
+    <string name="show_unread_badges">Показывать значки непрочитанных</string>
+    <string name="hide_unread_badges">Скрывать значки непрочитанных</string>
+    <string name="ignore_cutout_areas">Игнорировать вырезанные области</string>
+    <string name="cutout_area_behavior">Поведение области выреза</string>
+    <string name="pad_cutout_areas">Блокнотная область вырезания</string>
+    <string name="start_past_cutout">Начать с прошлого выреза</string>
+    <string name="add_edit_categories">Добавить/Редактировать категории</string>
+    <string name="backup_and_restore">Резервная копия и восстановление</string>
+    <string name="progress">Прогресс</string>
+    <string name="complete">Завершено</string>
+    <string name="crash_logs">Логи вылетов</string>
+    <string name="dump_crash_logs">Выгрузка логов о вылетах</string>
+    <string name="saves_error_logs">Сохраняет логи ошибок в файл для отправки разработчикам</string>
+    <string name="crash_log_saved">Логи вылета сохранены</string>
+    <string name="updated_to_">Обновлено до в%1$s</string>
+    <string name="mark_all_chapters_as_unread">Отметить все главы как непрочитанное\?</string>
 </resources>

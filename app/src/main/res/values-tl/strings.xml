@@ -110,7 +110,6 @@
     <string name="language_">Wika: %1$s</string>
     <string name="empty_preferences_for_extension">Walang mga pagsasaayos na ma-e-edit para sa extension na ito</string>
     <string name="fullscreen">I-fullscreen</string>
-    <string name="page_transitions">Mga transisyon ng pahina</string>
     <string name="double_tap_anim_speed">Bilis ng animation sa pag-dobleng pindot</string>
     <string name="show_page_number">Ipakita ang bilang ng pahina</string>
     <string name="true_32bit_color">Kulay na 32-bit</string>
@@ -127,7 +126,6 @@
     <string name="background_color">Kulay ng likuran</string>
     <string name="white">Puti</string>
     <string name="black">Itim</string>
-    <string name="default_viewer">Default</string>
     <string name="left_to_right_viewer">Kaliwa pakanan</string>
     <string name="right_to_left_viewer">Kanan pakaliwa</string>
     <string name="vertical_viewer">Patayo</string>

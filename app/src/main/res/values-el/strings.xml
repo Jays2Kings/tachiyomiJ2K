@@ -109,7 +109,6 @@
     <string name="language_">Γλώσσα: %1$s</string>
     <string name="empty_preferences_for_extension">Δεν υπάρχουν προτιμήσεις επεξεργασίας για αυτή την επέκταση</string>
     <string name="fullscreen">Πλήρης οθόνη</string>
-    <string name="page_transitions">Αλλαγές σελίδας</string>
     <string name="double_tap_anim_speed">Διπλή βρύση κινούμενα σχέδια ταχύτητα</string>
     <string name="show_page_number">Εμφάνιση αριθμού σελίδας</string>
     <string name="crop_borders">Περικοπή άκρων</string>
@@ -123,7 +122,6 @@
     <string name="background_color">Χρώμα παρασκηνίου</string>
     <string name="white">Άσπρο</string>
     <string name="black">Μαύρο</string>
-    <string name="default_viewer">Προεπιλογή</string>
     <string name="left_to_right_viewer">Αριστερά προς τα δεξιά</string>
     <string name="right_to_left_viewer">Δεξιά προς τα αριστερά</string>
     <string name="vertical_viewer">Κάθετα</string>
@@ -429,7 +427,6 @@
     <string name="more_library_settings">Περισσότερες ρυθμίσεις βιβλιοθήκης</string>
     <string name="display_as">Εμφάνιση ως</string>
     <string name="tap_library_to_show_filters">Πατήστε το εικονίδιο Βιβλιοθήκη για εμφάνιση φίλτρων</string>
-    <string name="show_badges">Εμφάνιση σημάτων</string>
     <string name="grid_options">Επιλογές πλέγματος</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -508,4 +505,79 @@
     <string name="logout_from_">Αποσύνδεση από το %1$s;</string>
     <string name="logout">Αποσύνδεση</string>
     <string name="whats_new">Τι νέο υπάρχει σε αυτήν την έκδοση</string>
+    <string name="default_reading_mode">Προεπιλεγμένη λειτουργία ανάγνωσης</string>
+    <string name="nav_layout">Διάταξη πλοήγησης</string>
+    <string name="l_nav">Σχήματος L</string>
+    <string name="kindlish_nav">Kindle-ish</string>
+    <string name="edge_nav">Άκρη</string>
+    <string name="right_and_left_nav">Δεξιά και Aριστερά</string>
+    <string name="invert_tapping">Αντιστροφή πατήματος</string>
+    <string name="none">Κανένα</string>
+    <string name="started_reading_date">Ημερομηνία έναρξης ανάγνωσης</string>
+    <string name="finished_reading_date">Ημερομηνία ολοκλήρωσης ανάγνωσης</string>
+    <string name="myanimelist_relogin">Συνδεθείτε ξανά στο MAL</string>
+    <string name="no_chapters_error">Δεν βρέθηκαν κεφάλαια</string>
+    <string name="badges">Σήματα</string>
+    <string name="next">Επόμενο</string>
+    <string name="open_log">Άνοιγμα αρχείου καταγραφής</string>
+    <string name="unofficial_extension_message">Αυτή η επέκταση δεν προέρχεται από την επίσημη λίστα επεκτάσεων Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Ανεπίσημη</string>
+    <string name="may_contain_nsfw">Μπορεί να περιέχει NSFW (18+) περιεχόμενο</string>
+    <string name="next_page">Επόμενη σελίδα</string>
+    <string name="previous_page">Προηγούμενη σελίδα</string>
+    <string name="next_chapter">Επόμενη σελίδα</string>
+    <string name="previous_chapter">Προηγούμενη σελίδα</string>
+    <string name="animate_page_transitions">Ζωντανή μετάβαση σελίδας</string>
+    <string name="search_settings">Αναζήτηση ρυθμίσεων</string>
+    <string name="locale">Περιοχή</string>
+    <string name="create_legacy_backup">Δημιουργία αντιγράφου ασφαλείας παλαιού τύπου</string>
+    <string name="can_be_used_in_older_tachi">Μπορεί να χρησιμοποιηθεί σε παλαιότερες εκδόσεις του Tachiyomi</string>
+    <string name="automatic_backups">Αυτόματα αντίγραφα ασφαλείας</string>
+    <string name="also_create_legacy_backup">Επίσης, δημιουργία αντιγράφου ασφαλείας παλαιού τύπου</string>
+    <string name="invalid_backup_file">Μη έγκυρο αρχείο αντιγράφου ασφαλείας</string>
+    <string name="invalid_backup_file_type">Μη έγκυρος τύπος αρχείου αντιγράφου ασφαλείας: %1$s
+\nΘα πρέπει να τελειώνει με .proto.gz ή .json.</string>
+    <string name="file_is_missing_data">Λείπουν δεδομένα από το αρχείο.</string>
+    <string name="backup_has_no_manga">Το αντίγραφο ασφαλείας δεν περιέχει manga.</string>
+    <string name="restore_missing_sources">Πηγές που λείπουν:</string>
+    <string name="restore_missing_trackers">Ιχνηλάτες που δεν έχουν συνδεθεί:</string>
+    <string name="restore_content">Η επαναφορά χρησιμοποιεί τις πηγές για τη λήψη δεδομένων, ενδέχεται να ισχύουν χρεώσεις φορέα.
+\n
+\nΒεβαιωθείτε ότι έχετε εγκαταστήσει όλες τις απαραίτητες επεκτάσεις και είστε συνδεδεμένοι σε πηγές και σε υπηρεσίες παρακολούθησης πριν κάνετε επαναφορά.</string>
+    <string name="restore_content_full">Τα δεδομένα από το αντίγραφο ασφαλείας θα αποκατασταθούν
+\n
+\nΘα χρειαστεί να εγκαταστήσετε τυχόν επεκτάσεις που λείπουν και στη συνέχεια να συνδεθείτε στις υπηρεσίες παρακολούθησης για να τις χρησιμοποιήσετε.</string>
+    <string name="restoring_backup_canceled">Η επαναφορά ακυρώθηκε</string>
+    <string name="restore_duration">%02d λεπτά, %02d δευτερόλεπτα</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Έγινε σε %1$s με %2$s σφάλμα</item>
+        <item quantity="other">Έγινε σε %1$s με %2$s σφάλματα</item>
+    </plurals>
+    <string name="source_migration_guide">Οδηγός μετανάστευσης πηγής</string>
+    <string name="nsfw_sources">Πηγές NSFW (18+)</string>
+    <string name="show_in_sources">Εμφάνιση στη λίστα πηγών</string>
+    <string name="show_in_extensions">Εμφάνιση στη λίστα επεκτάσεων</string>
+    <string name="label_in_extensions">Ετικέτα στη λίστα επεκτάσεων</string>
+    <string name="does_not_prevent_unofficial_nsfw">Αυτό δεν εμποδίζει τις ανεπίσημες ή ενδεχομένως εσφαλμένα επισημασμένες επεκτάσεις να εμφανίζουν περιεχόμενο NSFW (18+) μέσα στην εφαρμογή.</string>
+    <string name="file_picker_error">Δεν βρέθηκε εφαρμογή επιλογής αρχείων</string>
+    <string name="restore_in_progress">Η επαναφορά βρίσκεται ήδη σε εξέλιξη</string>
+    <string name="backup_in_progress">Η δημιουργία αντιγράφων ασφαλείας βρίσκεται ήδη σε εξέλιξη</string>
+    <string name="not_logged_into_">Δεν έχετε συνδεθεί στο %1$s</string>
+    <plurals name="licensed_manga">
+        <item quantity="one">%d το manga έχει πλέον αδειοδοτηθεί και δεν μπορεί να αποκατασταθεί</item>
+        <item quantity="other">%d τα manga έχουν πλέον αδειοδοτηθεί και δεν μπορούν να αποκατασταθούν</item>
+    </plurals>
+    <plurals name="sources_missing">
+        <item quantity="one">%d πηγή λείπει</item>
+        <item quantity="other">%d πηγές λείπουν</item>
+    </plurals>
+    <string name="backup_and_restore">Δημιουργία αντιγράφων ασφαλείας και επαναφορά</string>
+    <string name="progress">Η λήψη ολοκληρώθηκε</string>
+    <string name="complete">Ολοκληρωμένο</string>
+    <string name="crash_logs">Αρχεία καταγραφής σφαλμάτων</string>
+    <string name="dump_crash_logs">Άδειασμα αρχείων καταγραφής σφαλμάτων</string>
+    <string name="saves_error_logs">Αποθηκεύει αρχεία καταγραφής σφαλμάτων σε ένα αρχείο για κοινή χρήση με τους προγραμματιστές</string>
+    <string name="crash_log_saved">Τα αρχεία καταγραφής σφαλμάτων αποθηκεύτηκαν</string>
+    <string name="updated_to_">Ενημερώθηκε σε v%1$s</string>
 </resources>

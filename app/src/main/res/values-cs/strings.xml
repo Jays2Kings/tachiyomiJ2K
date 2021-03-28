@@ -74,7 +74,6 @@
     <string name="language_">Jazyk: %1$s</string>
     <string name="empty_preferences_for_extension">Neexistují žádné předvolby k úpravám pro toto rozšíření</string>
     <string name="fullscreen">Celá obrazovka</string>
-    <string name="page_transitions">Přechody stránek</string>
     <string name="show_page_number">Zobrazit číslo stránky</string>
     <string name="volume_keys">Tlačítka hlasitosti</string>
     <string name="invert_volume_keys">Prohodit tlačítka hlasitosti</string>
@@ -196,7 +195,6 @@
     <string name="use_custom_brightness">Použít vlastní jas</string>
     <string name="use_custom_color_filter">Použít vlastní barevný filtr</string>
     <string name="tapping">Klepnutím</string>
-    <string name="default_viewer">Výchozí</string>
     <string name="vertical_viewer">Vertikální</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Typ úpravy velikosti</string>
@@ -319,4 +317,15 @@
     <string name="refresh">Obnovit</string>
     <string name="open_in_webview">Otevřít ve WebView</string>
     <string name="lock_when_idle">Uzamknout při nečinnosti</string>
+    <string name="latest_chapter">Poslední kapitola</string>
+    <string name="oldest">Nejstarší</string>
+    <string name="open_log">Otevřít log</string>
+    <string name="view_chapters">Zobrazit kapitoly</string>
+    <string name="security">Bezpečnost</string>
+    <string name="restore_content">Obnovení používá zdroje pro načítání dat, mohou být účtovány poplatky od operátora (v případě použití datového připojení).
+\n
+\nTaké se před obnovením ujistěte, že jste správně přihlášeni do zdrojů, které to vyžadují.</string>
+    <string name="always">Vždy</string>
+    <string name="never">Nikdy</string>
+    <string name="newest">Nejnovější</string>
 </resources>

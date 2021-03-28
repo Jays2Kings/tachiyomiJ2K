@@ -93,7 +93,6 @@
     <string name="version_">バージョン：%1$s</string>
     <string name="language_">言語： %1$s</string>
     <string name="fullscreen">フルスクリーン</string>
-    <string name="page_transitions">ページ遷移</string>
     <string name="double_tap_anim_speed">ダブルタップアニメーション速度</string>
     <string name="crop_borders">クロップボーダー</string>
     <string name="use_custom_brightness">カスタムの明るさを使う</string>
@@ -105,7 +104,6 @@
     <string name="background_color">背景色</string>
     <string name="white">白</string>
     <string name="black">ブラック</string>
-    <string name="default_viewer">デフォルト</string>
     <string name="left_to_right_viewer">左から右</string>
     <string name="right_to_left_viewer">右から左</string>
     <string name="vertical_viewer">縦反転</string>
@@ -241,8 +239,6 @@
     <string name="cover_updated">カバーとして設定しました</string>
     <string name="next_chapter_not_found">次の章が見つかりません</string>
     <string name="use_image_as_cover">カバーとして設定しますか？</string>
-    <string name="finished">読み終わりました：</string>
-    <string name="current">読んでいます：</string>
     <string name="next">次：</string>
     <string name="previous">前：</string>
     <string name="theres_no_next_chapter">次の章がありません</string>
@@ -414,4 +410,72 @@
     <string name="library_is_empty_add_from_browse">文庫が空です。「参照」タブから文庫にシリーズを追加してください。</string>
     <string name="display_options">表示オプション</string>
     <string name="tracked">登録済み</string>
+    <string name="started_reading_date">読み始めた日付</string>
+    <string name="finished_reading_date">読み終わった日付</string>
+    <string name="myanimelist_relogin">もう一度MALにログインしてください</string>
+    <string name="search_settings">検索設定</string>
+    <string name="locale">ロカール</string>
+    <string name="no_chapters_error">章が見つかりません</string>
+    <string name="badges">カウンター</string>
+    <string name="last_used">最近に使用済み</string>
+    <string name="unofficial_extension_message">この拡張機能はTachiyomiの公式拡張機能リストに含まれていません。</string>
+    <string name="nsfw_short">成人向け</string>
+    <string name="unofficial">非公式</string>
+    <string name="may_contain_nsfw">成人向けのコンテンツが含まれる可能性があります</string>
+    <string name="finished_chapter">読み終わりました：</string>
+    <string name="current_chapter">読んでいます：</string>
+    <string name="next_title">次：</string>
+    <string name="previous_title">前：</string>
+    <string name="next_page">次のページ</string>
+    <string name="previous_page">前のページ</string>
+    <string name="next_chapter">次のページ</string>
+    <string name="previous_chapter">前のページ</string>
+    <string name="animate_page_transitions">ページ遷移エフェクトを表示</string>
+    <string name="open_log">ログを開く</string>
+    <string name="default_reading_mode">既定のビューアモード</string>
+    <string name="nav_layout">ナビゲーションレイアウト</string>
+    <string name="l_nav">L形</string>
+    <string name="kindlish_nav">Kindleスタイル</string>
+    <string name="edge_nav">角</string>
+    <string name="right_and_left_nav">右と左</string>
+    <string name="invert_tapping">タップでのページめくりを反転</string>
+    <string name="none">なし</string>
+    <string name="create_legacy_backup">レガシー バックアップを作成</string>
+    <string name="can_be_used_in_older_tachi">古いバージョンのTachiyomiで利用可能</string>
+    <string name="automatic_backups">自動バックアップ</string>
+    <string name="also_create_legacy_backup">同じくレガシー バックアップを作成</string>
+    <string name="invalid_backup_file">バックアップファイルは無効です</string>
+    <string name="invalid_backup_file_type">無効なバックアップ ファイル：%1$s
+\nファイル拡張子は.proto.gzもしくは.jsonであるよう確認してください。</string>
+    <string name="file_is_missing_data">ファイルは必要なデータを含んでいません。</string>
+    <string name="backup_has_no_manga">バックアップにはマンガが含まれていません。</string>
+    <string name="restore_missing_sources">ソースがありません：</string>
+    <string name="restore_missing_trackers">ログインしていないトラッカー：</string>
+    <string name="restore_content">復元するにはソースを用いてデータをダウンロードします。追加の通信料が発生する場合はあります。
+\n
+\n復元する前に、必要な拡張をインストールし、追跡サービスとソースにログインするようにしてください。</string>
+    <string name="restore_content_full">バックアップファイルからデータを復旧します。
+\n
+\n後で手動で必要な拡張機能をインストールし、使用したい追跡サービスにログインしてください。</string>
+    <string name="restoring_backup_canceled">復元をキャンセルしました</string>
+    <string name="restore_duration">%02d分%02d秒</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">%1$sで完成済み　%2$s件のエラーが発生しました</item>
+    </plurals>
+    <string name="source_migration_guide">ソース移行ガイド</string>
+    <string name="nsfw_sources">成人向けのソース</string>
+    <string name="show_in_sources">ソースリストに表示</string>
+    <string name="show_in_extensions">拡張機能リストに表示</string>
+    <string name="label_in_extensions">拡張機能リストでマーク</string>
+    <string name="does_not_prevent_unofficial_nsfw">非公式や誤ってフラグ付けされた可能性のある拡張機能の成人向けのコンテンツはこれからも表示される恐れがあります。</string>
+    <string name="whats_new">更新情報</string>
+    <string name="file_picker_error">ファイルを選択できるアプリが見つかりません</string>
+    <string name="backup_and_restore">バックアップと復元</string>
+    <string name="progress">プログレス</string>
+    <string name="complete">完了</string>
+    <string name="crash_logs">クラッシュログ</string>
+    <string name="dump_crash_logs">クラッシュ ログをダンプ</string>
+    <string name="saves_error_logs">開発者に渡すよう、エラー ログを保存します</string>
+    <string name="crash_log_saved">クラッシュログが保存されました</string>
+    <string name="updated_to_">v%1$sに更新しました</string>
 </resources>

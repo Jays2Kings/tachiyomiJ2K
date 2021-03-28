@@ -109,7 +109,6 @@
     <string name="language_">Språk: %1$s</string>
     <string name="empty_preferences_for_extension">Det finns inga inställningar för detta tillägg</string>
     <string name="fullscreen">Fullskärm</string>
-    <string name="page_transitions">Sidövergångar</string>
     <string name="double_tap_anim_speed">Dubbelklicka animationshastighet</string>
     <string name="show_page_number">Visa sidnummer</string>
     <string name="crop_borders">Beskär kanter</string>
@@ -123,7 +122,6 @@
     <string name="background_color">Bakgrundsfärg</string>
     <string name="white">Vit</string>
     <string name="black">Svart</string>
-    <string name="default_viewer">Standard</string>
     <string name="left_to_right_viewer">Vänster till höger</string>
     <string name="right_to_left_viewer">Höger till vänster</string>
     <string name="vertical_viewer">Vertikal</string>
@@ -385,4 +383,74 @@
     <string name="manhua"/>
     <string name="manhwa"/>
     <string name="tracked">Spåras</string>
+    <string name="badges">Emblem</string>
+    <string name="file_picker_error">Ingen filväljare-app hittades</string>
+    <string name="search_settings">Sök inställningar</string>
+    <string name="locale">Språk</string>
+    <string name="create_legacy_backup">Skapa legacy säkerhetskopia</string>
+    <string name="can_be_used_in_older_tachi">Kan används i äldre versioner av Tachiyomi</string>
+    <string name="automatic_backups">Automatiska säkerhetskopior</string>
+    <string name="also_create_legacy_backup">Skapa också legacy säkerhetskopia</string>
+    <string name="invalid_backup_file">Ogiltig säkerhetskopia</string>
+    <string name="invalid_backup_file_type">Ogiltig säkerhetskopia: %1$s
+\nDet bör sluta med .proto.gz eller .json.</string>
+    <string name="file_is_missing_data">Filen saknar data.</string>
+    <string name="backup_has_no_manga">Säkerhetskopian innehåller ingen manga.</string>
+    <string name="restore_missing_sources">Saknade källor:</string>
+    <string name="restore_missing_trackers">Spårare som inte har loggats in:</string>
+    <string name="restore_content">Återställning använder källor för att hämta data, data kostnader kan tillkomma.
+\n
+\nSe till att du har installerat de nödvändiga tilläggen och är inloggad på de källor och spårningstjänsterna som kräver detta innan du återställer.</string>
+    <string name="restore_content_full">Data från säkerhetskopian återställs.
+\n
+\nDu måste installera eventuella tillägg som saknas och logga in på spårningstjänster efteråt för att kunna använda dem.</string>
+    <string name="restoring_backup_canceled">Avbruten återställning</string>
+    <string name="restore_duration">%02d minuter, %02d sekunder</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Klar på %1$s med %2$s felKlar på %1$s med %2$s fel</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Migreringsguide för källor</string>
+    <string name="nsfw_sources">NSFW (18+) källor</string>
+    <string name="show_in_sources">Visa i källistan</string>
+    <string name="show_in_extensions">Visa i tilläggslistan</string>
+    <string name="label_in_extensions">Etikett i tilläggslistan</string>
+    <string name="does_not_prevent_unofficial_nsfw">Detta förhindrar inte inofficiella eller potentiellt felaktigt flaggade tillägg från att visa NSFW(18+) innehåll i appen.</string>
+    <string name="whats_new">Vad är nytt</string>
+    <string name="next">Nästa</string>
+    <string name="open_log">Öppna logg</string>
+    <string name="no_chapters_error">Inga kapitel hittades</string>
+    <string name="last_used">Senast använd</string>
+    <string name="unofficial_extension_message">Detta tillägg kommer inte från den officiella Tachiyomi-tilläggslistan.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Inofficiell</string>
+    <string name="may_contain_nsfw">Kan innehålla NSFW(18+) innehåll</string>
+    <string name="next_page">Nästa sida</string>
+    <string name="previous_page">Föregående sida</string>
+    <string name="next_chapter">Nästa sida</string>
+    <string name="previous_chapter">Föregående sida</string>
+    <string name="animate_page_transitions">Animera sidbyten</string>
+    <string name="default_reading_mode">Standardläsläge</string>
+    <string name="nav_layout">Navigationslayout</string>
+    <string name="l_nav">L-formad</string>
+    <string name="kindlish_nav">Kindle-ish</string>
+    <string name="edge_nav">Kant</string>
+    <string name="right_and_left_nav">Höger och Vänster</string>
+    <string name="invert_tapping">Invertera tryck</string>
+    <string name="none">Ingen</string>
+    <string name="started_reading_date">Påbörjat läsdatum</string>
+    <string name="finished_reading_date">Avslutat läsdatum</string>
+    <string name="myanimelist_relogin">Vänligen logga in på MAL igen</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d kategori%d kategorier</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="backup_and_restore">Säkerhetskopiering och återställning</string>
+    <string name="progress">Förlopp</string>
+    <string name="complete">Färdig</string>
+    <string name="crash_logs">Kraschloggar</string>
+    <string name="dump_crash_logs">Dumpa kraschloggar</string>
+    <string name="saves_error_logs">Sparar felloggar till en fil för delning med utvecklarna</string>
+    <string name="crash_log_saved">Kraschloggar sparade</string>
+    <string name="updated_to_">Uppdaterad till v%1$s</string>
 </resources>

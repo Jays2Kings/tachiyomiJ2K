@@ -199,4 +199,24 @@
     <string name="right_to_left_viewer">De dereita a esquerda</string>
     <string name="left_to_right_viewer">De esquerda a dereita</string>
     <string name="manhua">Manhua</string>
+    <string name="unofficial_extension_message">Esta extensión non é da lista de extensións oficiais de Tachiyomi.</string>
+    <string name="nsfw_short">+18</string>
+    <string name="unofficial">Non oficial</string>
+    <string name="animate_page_transitions">Animar transición de páxinas</string>
+    <string name="default_reading_mode">Modo de lectura por defecto</string>
+    <string name="none">Ningún</string>
+    <string name="myanimelist_relogin">Por favor, inicia sesión en MAL de novo</string>
+    <string name="search_settings">Procurar axustes</string>
+    <string name="locale">Localización</string>
+    <string name="nsfw_sources">Fontes NSFW (+18)</string>
+    <string name="show_in_sources">Amosar na lista de fontes</string>
+    <string name="show_in_extensions">Amosar na lista de extensións</string>
+    <string name="label_in_extensions">Etiquetar na lista de extensións</string>
+    <string name="file_picker_error">Non se atopou unha aplicación para seleccionar arquivos</string>
+    <string name="open_log">Abrir rexistro</string>
+    <string name="chapters">Capítulos</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d categoría%d categorías</item>
+        <item quantity="other"></item>
+    </plurals>
 </resources>

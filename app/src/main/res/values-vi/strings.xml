@@ -81,7 +81,6 @@
     <string name="system_default">Mặc định hệ thống</string>
     <!-- Reader section -->
     <string name="fullscreen">Toàn màn hình</string>
-    <string name="page_transitions">Chuyển trang</string>
     <string name="show_page_number">Hiện số trang</string>
     <string name="use_custom_brightness">Dùng độ sáng tùy chỉnh</string>
     <string name="use_custom_color_filter">Dùng bộ lọc màu tùy chỉnh</string>
@@ -92,7 +91,6 @@
     <string name="background_color">Màu nền</string>
     <string name="white">Trắng</string>
     <string name="black">Đen</string>
-    <string name="default_viewer">Mặc định</string>
     <string name="left_to_right_viewer">Trái sang phải</string>
     <string name="right_to_left_viewer">Phải sang trái</string>
     <string name="vertical_viewer">Theo chiều dọc</string>
@@ -418,4 +416,19 @@
     <string name="in_progress">Trong quá trình</string>
     <string name="not_started">Chưa bắt đầu</string>
     <string name="manhwa">Manhwa</string>
+    <string name="unofficial_extension_message">Tiện ích mở rộng này không nằm trong danh sách tiện ích mở rộng chính thức của Tachiyomi.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="open_log">Nhật ký mở</string>
+    <string name="unofficial">Không chính thức</string>
+    <string name="animate_page_transitions">Hoạt ảnh chuyển trang</string>
+    <string name="default_reading_mode">Kiểu đọc mặc định</string>
+    <string name="search_settings">Cài đặt tìm kiếm</string>
+    <string name="locale">Khu vực</string>
+    <string name="automatic_backups">Tự động sao lưu</string>
+    <string name="invalid_backup_file">File backup không hợp lệ</string>
+    <string name="backup_has_no_manga">Backup không chứa manga nào.</string>
+    <string name="restore_content">Khôi phục yêu cầu sử dụng mạng để truy cập các nguồn truyện và nguồn theo dõi để lấy dữ liệu.
+\n
+\nHãy đảm bảo rằng bạn đã cài đặt và đăng nhập vào các nguồn truyện và nguồn theo dõi trước khi khôi phục.</string>
+    <string name="source_migration_guide">Hướng dẫn di chuyển nguồn</string>
 </resources>

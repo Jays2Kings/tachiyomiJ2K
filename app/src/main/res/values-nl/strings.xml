@@ -73,7 +73,6 @@
     <string name="default_category">Standaard categorie</string>
     <string name="always_ask">Altijd vragen</string>
     <string name="fullscreen">Volledig scherm</string>
-    <string name="page_transitions">Paginaovergangen</string>
     <string name="show_page_number">Toon paginanummer</string>
     <string name="crop_borders">Randen bijsnijden</string>
     <string name="use_custom_brightness">Gebruik aangepaste helderheid</string>
@@ -83,7 +82,6 @@
     <string name="background_color">Achtergrondkleur</string>
     <string name="white">Wit</string>
     <string name="black">Zwart</string>
-    <string name="default_viewer">Standaard</string>
     <string name="left_to_right_viewer">Links naar rechts</string>
     <string name="right_to_left_viewer">Rechts naar links</string>
     <string name="vertical_viewer">Verticaal</string>
@@ -431,7 +429,6 @@
     <string name="hide_category_hopper">Categoriehopper verbergen</string>
     <string name="display_as">Weergeven als</string>
     <string name="tap_library_to_show_filters">Tik op het Bibliotheekicoon om filters weer te geven</string>
-    <string name="show_badges">Badges weergeven</string>
     <string name="grid_options">Rasteropties</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -679,4 +676,64 @@
     <string name="added_">Toegevoegd %1$s</string>
     <string name="updated_">Bijgewerkt %1$s</string>
     <string name="read_">Gelezen %1$s</string>
+    <string name="default_reading_mode">Standaard leesmodus</string>
+    <string name="nav_layout">Navigatie-indeling</string>
+    <string name="l_nav">L-vormig</string>
+    <string name="kindlish_nav">Kindle-achtig</string>
+    <string name="edge_nav">Rand</string>
+    <string name="right_and_left_nav">Rechts en links</string>
+    <string name="invert_tapping">Tikken omkeren</string>
+    <string name="none">Niet omkeren</string>
+    <string name="started_reading_date">Datum begonnen met lezen</string>
+    <string name="finished_reading_date">Datum klaar met lezen</string>
+    <string name="myanimelist_relogin">Log alstublieft opnieuw in op MAL</string>
+    <string name="no_chapters_error">Geen hoofdstukken gevonden</string>
+    <string name="badges">Badges</string>
+    <string name="open_log">Open log</string>
+    <string name="unofficial_extension_message">Deze extensie behoort niet tot de officiële Tachiyomi extensielijst.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="unofficial">Niet officieel</string>
+    <string name="may_contain_nsfw">Kan NSFW-inhoud (18+) bevatten</string>
+    <string name="next_page">Volgende pagina</string>
+    <string name="previous_page">Vorige pagina</string>
+    <string name="next_chapter">Volgende pagina</string>
+    <string name="previous_chapter">Vorige pagina</string>
+    <string name="animate_page_transitions">Animeer pagina-overgangen</string>
+    <string name="search_settings">Zoekinstellingen</string>
+    <string name="locale">Landinstelling</string>
+    <string name="create_legacy_backup">Verourderde back-up maken</string>
+    <string name="can_be_used_in_older_tachi">Kan gebruikt worden in oudere versies van Tachiyomi</string>
+    <string name="automatic_backups">Automatische backups</string>
+    <string name="also_create_legacy_backup">Maak ook een verouderde backup</string>
+    <string name="invalid_backup_file">Ongeldig backupbestand</string>
+    <string name="invalid_backup_file_type">Ongeldig type back-upbestand: %1$s
+\nDe bestandsnaam moet eindigen op .proto.gz of .json.</string>
+    <string name="file_is_missing_data">Bestand mist data.</string>
+    <string name="backup_has_no_manga">Back-up bevat geen manga.</string>
+    <string name="restore_missing_sources">Missende bronnen:</string>
+    <string name="restore_missing_trackers">Niet-ingelogde trackers:</string>
+    <string name="restore_content">Herstellen gebruikt bronnen om data op te halen, mogelijk zijn extra mobiele-abonnementskosten van toepassing.
+\n
+\nZorg ervoor dat je de nodige extensies hebt geinstalleerd en bent ingelogd voor bronnen en trackingdiensten voordat je het herstellen start.</string>
+    <string name="restoring_backup_canceled">Herstellen geannuleerd</string>
+    <string name="restore_duration">%02d min, %02d sec</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Voltooid in %1$s met %2$s foutmeldingVoltooid in %1$s met %2$s foutmeldingen</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="source_migration_guide">Bronmigratiegids</string>
+    <string name="nsfw_sources">NSFW-bronnen (18+)</string>
+    <string name="show_in_sources">Weergeven in bronnenlijst</string>
+    <string name="show_in_extensions">Weergeven in extensielijst</string>
+    <string name="label_in_extensions">Markeren in extensielijst</string>
+    <string name="does_not_prevent_unofficial_nsfw">Dit voorkomt niet dat onofficiële of mogelijk incorrect gemarkeerde extensies NSFW-inhoud (18+) kunnen laten zien in de app.</string>
+    <string name="file_picker_error">Geen bestandskiezer-app gevonden</string>
+    <string name="backup_and_restore">Back-up en herstel</string>
+    <string name="progress">Voortgang</string>
+    <string name="complete">Voltooid</string>
+    <string name="crash_logs">Crashlogboeken</string>
+    <string name="dump_crash_logs">Crashlogboeken opslaan</string>
+    <string name="saves_error_logs">Slaat foutmeldingslogboeken op in een bestand om te delen met de ontwikkelaars</string>
+    <string name="crash_log_saved">Crashlogboeken opgeslagen</string>
+    <string name="updated_to_">Bijgewerkt naar v%1$s</string>
 </resources>
