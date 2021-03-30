@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">TachiyomiJ2K</string>
-    <string name="app_short_name" translatable="false">TachiJ2K</string>
+
     <!--Models-->
     <string name="name">Nazwa</string>
+
     <!-- Manga Type -->
     <string name="manga">Manga</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
     <string name="comic">Komiks</string>
     <string name="webtoon">Webtoon</string>
+
     <!-- Manga -->
     <string name="not_started">Nierozpoczęte</string>
     <string name="in_progress">Rozpoczęte</string>
@@ -18,17 +19,20 @@
     <string name="author">Autor</string>
     <string name="artist">Rysownik</string>
     <string name="description">Opis</string>
+
     <!-- Status -->
     <string name="ongoing">Nieukończone</string>
     <string name="unknown">Nieznane</string>
     <string name="unknown_status">Nieznany Status</string>
     <string name="licensed">Licencjonowane</string>
     <string name="completed">Ukończone</string>
+
     <!-- Security -->
     <string name="unlock_library">Odblokuj by mieć dostęp do biblioteki</string>
     <string name="unlock">Odblokuj</string>
     <string name="lock_with_biometrics">Zablokuj odciskiem palca</string>
     <string name="lock_when_idle">Zablokuj podczas bezczynności</string>
+
     <!-- Chapters -->
     <string name="chapters">Rozdziały</string>
     <string name="new_chapters">Nowe rozdziały</string>
@@ -43,6 +47,7 @@
     <string name="removed_bookmark">Usuń zakładkę</string>
     <string name="chapters_removed">Rozdziały usunięte.</string>
     <string name="chapter_not_found">Rozdziały nie znalezione</string>
+
     <plurals name="remove_n_chapters">
         <item quantity="one">Usunąć %1$d pobrany rozdział?</item>
         <item quantity="few">Usunąć %1$d pobrane rozdziały?</item>
@@ -50,10 +55,10 @@
         <item quantity="other">Usunąć %1$d pobranych rozdziałów?</item>
     </plurals>
     <plurals name="chapters_plural">
-        <item quantity="one">Rozdziały</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">%1$d rozdział</item>
+        <item quantity="few">%1$d rozdziały</item>
+        <item quantity="many">%1$d rozdziałów</item>
+        <item quantity="other">%1$d rozdziałów</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">Pozostała %1$d strona</item>
@@ -61,6 +66,7 @@
         <item quantity="many">Pozostało %1$d stron</item>
         <item quantity="other">Pozostało %1$d stron</item>
     </plurals>
+
     <!-- Category -->
     <string name="category">Kategoria</string>
     <string name="categories">Kategorie</string>
@@ -78,6 +84,7 @@
     <string name="confirm_category_deletion_message">Mangi z tej kategorii będą przeniesione do domyślnej kategorii.</string>
     <string name="already_in_category">Manga już jest w kategorii</string>
     <string name="add_categories">Dodaj kategorie</string>
+    <string name="add_edit_categories">Dodaj/Edytuj rozdziały</string>
     <string name="edit_categories">Edytuj kategorie</string>
     <string name="manage_category">Zarządzaj kategorią</string>
     <string name="rename_category">Zmień nazwę kategorii</string>
@@ -93,6 +100,7 @@
     <string name="category_deleted">Kategoria usunięta</string>
     <string name="long_press_category">Dotknij i przytrzymaj aby edytować kategorię</string>
     <string name="jump_to_category">Przejdź do kategorii</string>
+
     <!-- Updates -->
     <string name="update">Aktualizacja</string>
     <string name="what_should_update">Co aktualizować?</string>
@@ -101,7 +109,9 @@
     <string name="new_version_available">Nowa wersja dostępna!</string>
     <string name="no_new_updates_available">Brak nowych wersji</string>
     <string name="searching_for_updates">Szukanie aktualizacji...</string>
+
     <!-- Main Screens -->
+
     <!-- Library -->
     <string name="library">Biblioteka</string>
     <string name="updating_library">Aktualizowanie biblioteki</string>
@@ -122,7 +132,8 @@
     <string name="series_type">Typ serii</string>
     <string name="group_library_by">Grupuj bibliotekę według...</string>
     <string name="tracking_status">Statusu śledzenia</string>
-    <string name="ungrouped">Nie zgrupowane</string>
+    <string name="ungrouped">Niezgrupowane</string>
+
     <!-- Library Sort -->
     <string name="sort_by">Sortuj według</string>
     <string name="total_chapters">Ilość rozdziałów</string>
@@ -131,6 +142,7 @@
     <string name="last_updated">Ostatnio zaktualizowane</string>
     <string name="latest_chapter">Najnowszy rozdział</string>
     <string name="drag_and_drop">Przeciągnij i upuść</string>
+
     <!-- Library Display -->
     <string name="display_options">Ustawienia wyświetlania</string>
     <string name="list">Lista</string>
@@ -140,6 +152,7 @@
     <string name="download_badge">Odznaka pobrania</string>
     <string name="hide_start_reading_button">Ukryj przycisk szybkiego przejścia do czytnika</string>
     <string name="unread_badges">Odznaka nieprzeczytanych</string>
+    <string name="badges">Odznaki</string>
     <string name="uniform_covers">Jednolite okładki</string>
     <string name="x_small">XS</string>
     <string name="small">S</string>
@@ -147,10 +160,15 @@
     <string name="large">L</string>
     <string name="x_large">XL</string>
     <string name="grid_options">Opcje siatki</string>
+    <string name="hide_unread_badges">Ukryj nieprzeczytane odznaki</string>
+    <string name="show_unread_badges">Pokaż nieprzeczytane odznaki</string>
+    <string name="show_unread_count">Pokaż ilość nieprzeczytanych</string>
     <string name="tap_library_to_show_filters">Naciśnij ikonę biblioteki, by wyświetlić filtry</string>
     <string name="display_as">Wyświetlaj jako</string>
     <string name="hide_category_hopper">Ukryj szybki przełącznik kategorii</string>
+    <string name="hide_hopper_on_scroll">Ukryj przełącznik kategorii podczas przewijania</string>
     <string name="more_library_settings">Więcej ustawień czytnika</string>
+
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Znaleziono nowe rozdziały</string>
     <plurals name="for_n_titles">
@@ -167,6 +185,7 @@
         <item quantity="many">%1$d aktualizacji nieudanych</item>
         <item quantity="other">%1$d aktualizacji nieudanych</item>
     </plurals>
+
     <!-- Library settings -->
     <string name="library_update_frequency">Częstotliwość aktualizowania biblioteki</string>
     <string name="library_update_order">Kolejność aktualizacji biblioteki</string>
@@ -181,6 +200,7 @@
     <string name="auto_refresh_covers">Automatycznie odśwież okładki</string>
     <string name="auto_refresh_covers_summary">Odśwież okładki w bibliotece podczas odświeżania biblioteki</string>
     <string name="show_notification_error">Pokaż powiadomienia dla błędów</string>
+
     <!-- Recents -->
     <string name="recents">Ostatnie</string>
     <string name="updates">Aktualizacje</string>
@@ -208,6 +228,7 @@
     <string name="only_updates">Tylko aktualizacje</string>
     <string name="reset_chapter_question">Zrestartować rozdział?</string>
     <string name="press_and_hold_to_reset_history">Dotknij i przytrzymaj aby zresetować historię rozdziałów</string>
+
     <!-- Browse -->
     <string name="search_filters">Filtry wyszukiwania</string>
     <string name="no_more_results">Nie znaleziono więcej wyników</string>
@@ -225,11 +246,14 @@
     <string name="last_used">Użyte ostatnio</string>
     <string name="local_source_help_guide">Źródła lokalne - poradnik</string>
     <string name="check_site_in_web">Przeglądaj stronę w trybie WebView</string>
+
     <!-- Other Screens -->
+
     <!-- Extensions -->
     <string name="extensions">Rozszerzenia</string>
     <string name="extension_updates">Aktualizacje rozszerzeń</string>
     <string name="extension_info">Szczegóły rozszerzenia</string>
+    <string name="filter_languages">Filter Languages</string>
     <string name="details">Szczegóły</string>
     <string name="obsolete">Przestarzałe</string>
     <string name="pending">Oczekujące</string>
@@ -252,6 +276,7 @@
         <item quantity="one">Aktualizacja rozszerzenia dostępna</item>
         <item quantity="other">%d aktualizacje rozszerzeń dostępne</item>
     </plurals>
+
     <!-- Reader -->
     <string name="custom_filter">Filtr niestandardowy</string>
     <string name="set_as_cover">Ustaw jako okładkę</string>
@@ -272,6 +297,7 @@
     <string name="failed_to_load_pages_">Nie udało się załadować stron: %1$s</string>
     <string name="reading_">Czytanie %1$s</string>
     <string name="webtoon_style">Styl webtoon</string>
+
     <!-- Reader settings -->
     <string name="fullscreen">Pełny ekran</string>
     <string name="enable_zoom_out">Włącz możliwość oddalania</string>
@@ -330,6 +356,7 @@
     <string name="webtoon_side_padding_15">15%</string>
     <string name="webtoon_side_padding_20">20%</string>
     <string name="webtoon_side_padding_25">25%</string>
+
     <!-- Manga details -->
     <string name="about_this_">Opis - %1$s</string>
     <string name="start_reading">Zacznij czytać</string>
@@ -345,7 +372,7 @@
     <string name="_copied_to_clipboard">%1$s skopiowano do schowka</string>
     <string name="source_not_installed_">Źródło nie zainstalowane: %1$s</string>
     <string name="no_description">Brak opisu</string>
-    <string name="mark_all_chapters_as_read">Oznaczyć wszystkie rozdziały jako przeczytane\?</string>
+    <string name="mark_all_chapters_as_read">Oznaczyć wszystkie rozdziały jako przeczytane?</string>
     <string name="remove_from_library">Usuń z biblioteki</string>
     <string name="select_starting_chapter">Wybierz startowy rozdział</string>
     <string name="select_ending_chapter">Wybierz końcowy rozdział</string>
@@ -381,6 +408,7 @@
         <item quantity="many">%1$s rozdziałów zostało usuniętych ze źródła:\n%2$s\n\nUsunąć pobrane?</item>
         <item quantity="other">%1$s rozdziałów zostało usuniętych ze źródła:\n%2$s\n\nUsunąć pobrane?</item>
     </plurals>
+
     <!-- Tracking -->
     <string name="tracking">Śledzenie</string>
     <string name="tracked">Śledzone</string>
@@ -404,6 +432,7 @@
     <string name="add_tracking">Dodaj śledzenie</string>
     <string name="remove_tracking">Usuń śledzenie z aplikacji</string>
     <string name="remove_tracking_from_">Usuń też z %1$s</string>
+
     <!-- Migration -->
     <string name="select_sources">Wybierz źródła</string>
     <string name="source_migration">Migracja źródła</string>
@@ -434,7 +463,7 @@
         <item quantity="one">Migrować %1$d%2$s mangę?</item>
         <item quantity="few">Migrować %1$d%2$s mangi?</item>
         <item quantity="many">Migrować %1$d%2$s mang?</item>
-        <item quantity="other">Migrate %1$d%2$s mang?</item>
+        <item quantity="other">Migrować %1$d%2$s mang?</item>
     </plurals>
     <plurals name="copy_manga">
         <item quantity="one">Skopiować %1$d%2$s mangę?</item>
@@ -449,6 +478,7 @@
         <item quantity="many">%d mang zmigrowanych</item>
         <item quantity="other">%d mang zmigrowanych</item>
     </plurals>
+
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="general">Ogólne</string>
@@ -456,6 +486,7 @@
     <string name="advanced">Zaawansowane</string>
     <string name="about">O...</string>
     <string name="help">Pomoc</string>
+
     <!-- General settings -->
     <string name="app_theme">Motyw aplikacji</string>
     <string name="light_blue">Jasnoniebieski</string>
@@ -473,6 +504,7 @@
     <string name="secure_screen">Ukryj ekran</string>
     <string name="hide_tachi_from_recents">Ukryj Tachiyomi w menu ostatnich aplikacji</string>
     <string name="security">Zabezpieczenia</string>
+
     <!-- Backup -->
     <string name="backup">Kopia zapasowa</string>
     <string name="create_backup">Utwórz kopię zapasową</string>
@@ -506,11 +538,12 @@
         <item quantity="other">%d mangi posiadają teraz licencję i nie mogą zostać przywrócone</item>
     </plurals>
     <string name="not_logged_into_">Niezalogowany do %1$s</string>
+
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Wyczyść cache rozdziałów</string>
     <string name="data_management">Zarządzanie Danymi</string>
     <string name="network">Sieć</string>
-    <string name="dns_over_https" translatable="false">DNS over HTTPS (Cloudflare)</string>
+    <string name="dns_over_https">DNS poprzez HTTPS (Cloudflare)</string>
     <string name="requires_app_restart">Wymaga ponownego uruchomienia aplikacji</string>
     <string name="used_">W użyciu: %1$s</string>
     <plurals name="cache_cleared">
@@ -567,7 +600,7 @@
     <string name="build_time">Data utworzenia kompilacji</string>
     <string name="send_crash_report">Wysyłaj raporty o awariach</string>
     <string name="helps_fix_bugs">Pomaga naprawiać błędy. Żadne wrażliwe dane nie będą wysyłane</string>
-    <string name="whats_new">Co nowego w tej wersji?</string>
+    <string name="whats_new">Co nowego</string>
     <string name="website">Strona WWW</string>
     <string name="open_source_licenses">Licencje typu open source</string>
     <!-- Login/Logout dialog -->
@@ -803,4 +836,34 @@
     <string name="saves_error_logs">Zapisuje logi błędów do pliku do udostępnienia programistom</string>
     <string name="crash_log_saved">Logi crasha zapisane</string>
     <string name="updated_to_">Zaktualizowano do v%1$s</string>
+    <string name="app_info">O aplikacji</string>
+    <string name="_must_be_enabled_first">%1$s musi najpierw zostać włączone</string>
+    <string name="set_page_as_cover">Ustaw stronę jako okładkę</string>
+    <string name="share_page">Udostępnij stronę</string>
+    <string name="save_page">Zapisz stronę</string>
+    <string name="_details">Szczegóły %1$s</string>
+    <string name="reader_settings">Ustawienia czytnika</string>
+    <string name="horizontally">Poziomo</string>
+    <string name="vertically">Pionowo</string>
+    <string name="both_axes">Obie osie</string>
+    <string name="cutout_area_behavior">Zachowanie wyciętego obszaru</string>
+    <string name="start_past_cutout">Zacznij po wcięciu</string>
+    <string name="ignore_cutout_areas">Ignoruj wycięte obszary</string>
+    <string name="mark_all_chapters_as_unread">Oznaczyć wszystkie rozdziały jako nieprzeczytane?</string>
+    <string name="custom_manga_info">Własna informacja o mandze</string>
+    <string name="suggested_date_">Sugerowana data: %1$s</string>
+    <string name="last_used_library_recents">Ostatnio użyte (Biblioteka lub Ostatnie)</string>
+    <string name="hide_bottom_nav">Automatyczne ukrywanie dolnej nawigacji</string>
+    <string name="hides_on_scroll">Ukryte przy przewijaniu</string>
+    <string name="starting_screen">Ekran startowy</string>
+    <string name="back_to_start">Wróć na początek</string>
+    <string name="pressing_back_to_start">Przyciskanie wstecz by powrócić do ekranu startowego</string>
+    <string name="restore_in_progress">Przywracanie jest już w trakcie</string>
+    <string name="backup_in_progress">Kopia zapasowa jest już w trakcie</string>
+    <string name="restore_content_full">Dane z kopii zapasowej zostaną przywrócone. Będziesz później musiał zainstalować wszystkie brakujące rozszerzenia i zalogować się do serwisów śledzących by móc je używać.</string>
+    <string name="whats_new_this_release">Co nowego w tym wydaniu</string>
+    <string name="enable">Włącz</string>
+    <string name="next">Następny</string>
+    <string name="previous">Poprzedni</string>
+    <string name="menu">menu</string>
 </resources>

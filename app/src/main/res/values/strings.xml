@@ -612,7 +612,7 @@
     <string name="saves_error_logs">Saves error logs to a file for sharing with the developers</string>
     <string name="crash_log_saved">Crash logs saved</string>
     <string name="network">Network</string>
-    <string name="dns_over_https" translatable="false">DNS over HTTPS (Cloudflare)</string>
+    <string name="dns_over_https">DNS over HTTPS (Cloudflare)</string>
     <string name="requires_app_restart">Requires app restart to take effect</string>
     <string name="used_">Used: %1$s</string>
     <plurals name="cache_cleared">
