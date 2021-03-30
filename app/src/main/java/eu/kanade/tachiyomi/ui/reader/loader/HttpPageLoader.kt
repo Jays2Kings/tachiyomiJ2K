@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.ui.reader.loader
 
 import android.graphics.BitmapFactory
+import com.elvishew.xlog.XLog
 import eu.kanade.tachiyomi.data.cache.ChapterCache
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.source.model.Page
@@ -41,7 +42,7 @@ class HttpPageLoader(
     private val subscriptions = CompositeSubscription()
 
     private val preferences by injectLazy<PreferencesHelper>()
-    private val preloadSize = 4
+    private val preloadSize = 20
 
     init {
         subscriptions += Observable.defer { Observable.just(queue.take().page) }
