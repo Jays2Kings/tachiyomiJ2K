@@ -153,6 +153,7 @@ class LibraryItem(
         return manga.title.contains(constraint, true) ||
             (manga.author?.contains(constraint, true) ?: false) ||
             (manga.artist?.contains(constraint, true) ?: false) ||
+            (manga.description?.contains(constraint, true) ?: false) ||
             sourceName.contains(constraint, true) ||
             if (constraint.contains(",")) {
                 val genres = manga.genre?.split(", ")
