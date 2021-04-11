@@ -364,7 +364,6 @@
     <string name="long_press_category">長押ししてカテゴリーを編集します</string>
     <string name="category_deleted">カテゴリーが削除されました</string>
     <string name="category_with_name_exists">同じ名前を持っているカテゴリーはもう存在しています！</string>
-    <string name="add_to_categories">追加先のカテゴリーを選択してください。選択せずに続行すると、デフォルトカテゴリーに追加します。</string>
     <string name="manage_category">カテゴリーを管理</string>
     <string name="add_categories">カテゴリーを追加</string>
     <string name="already_in_category">このマンガは既にこのカテゴリーに追加されています</string>
@@ -478,4 +477,5 @@
     <string name="saves_error_logs">開発者に渡すよう、エラー ログを保存します</string>
     <string name="crash_log_saved">クラッシュログが保存されました</string>
     <string name="updated_to_">v%1$sに更新しました</string>
+    <string name="hide_app_block_screenshots">スクリーンショットを無効化し、「最近使ったアプリ」画面にアプリの内容を非表示します</string>
 </resources>

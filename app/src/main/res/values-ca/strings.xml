@@ -494,4 +494,5 @@
     <string name="saves_error_logs">Desa els registres d\'errors en un fitxer perquè el pugueu compartir amb els desenvolupadors</string>
     <string name="crash_log_saved">S\'han desat els registres de fallades</string>
     <string name="updated_to_">S\'ha actualitzat a la v%1$s</string>
+    <string name="hide_app_block_screenshots">Amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
 </resources>

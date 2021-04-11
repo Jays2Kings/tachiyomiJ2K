@@ -444,4 +444,48 @@
     <string name="progress">Прогрес</string>
     <string name="complete">Готово</string>
     <string name="updated_to_">Обновена до v%1$s</string>
+    <string name="confirm_category_deletion_message">Мангата в тази категория ще се премести в категорията по подразбиране.</string>
+    <string name="confirm_category_deletion">Да се изтрие ли категорията\?</string>
+    <string name="categories_in_global_update">Всички категории в глобалната актуализация</string>
+    <string name="categories_on_manual">Категории за актуализиране при ръчно опресняване</string>
+    <string name="first_category">Първа категория</string>
+    <string name="top_category">Топ категория %1$s</string>
+    <string name="category_is_hidden">Категорията е скрита</string>
+    <string name="category_is_empty">Категорията е празна</string>
+    <string name="create_new_category">Създайте нова категория</string>
+    <string name="_already_in_queue">%1$s вече е на опашка</string>
+    <string name="adding_category_to_queue">Добавяне на %1$s за актуализация на опашката</string>
+    <string name="category">Категория</string>
+    <plurals name="pages_left">
+        <item quantity="one">%1$d страница останала</item>
+        <item quantity="other">%1$d страници останали</item>
+    </plurals>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d глава</item>
+        <item quantity="other">%1$d глави</item>
+    </plurals>
+    <plurals name="remove_n_chapters">
+        <item quantity="one">Изтри %1$d изтеглената глава\?</item>
+        <item quantity="other">Изтри %1$d изтеглените глави\?</item>
+    </plurals>
+    <string name="chapter_not_found">Главата не е намерена</string>
+    <string name="chapters_removed">Глава премахната.</string>
+    <string name="removed_bookmark">Премахната отметка</string>
+    <string name="marked_as_unread">Отбележи като не прочетено</string>
+    <string name="marked_as_read">Отбележи като прочетено</string>
+    <string name="all_chapters_read">Всички глави прочетени</string>
+    <string name="chapter_x_of_y">Глава %1$d от %2$d</string>
+    <string name="last_read_chapter_">Последно прочетена Глава %1$s</string>
+    <string name="new_chapters">Нова глава</string>
+    <string name="unlock">Отключи</string>
+    <string name="unlock_library">Отключете за достъп до библиотеката</string>
+    <string name="unknown_status">Неизвестен статус</string>
+    <string name="in_progress">В прогрес</string>
+    <string name="not_started">Не е започнато</string>
+    <string name="comic">комикс</string>
+    <string name="manhua">Манхуа</string>
+    <string name="manhwa">Манхуа</string>
+    <string name="next_chapter">Следваща глава</string>
+    <string name="previous_chapter">Предишна глава</string>
+    <string name="hide_app_block_screenshots">Скрий съдържанието на приложението и блокирай скрийншотове</string>
 </resources>

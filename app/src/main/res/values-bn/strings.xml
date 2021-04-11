@@ -411,7 +411,6 @@
     <string name="jump_to_category">বিভাগে যান</string>
     <string name="long_press_category">একটি বিভাগ সম্পাদনা করতে টিপুন এবং ধরে রাখুন</string>
     <string name="category_deleted">বিভাগ মুছা হয়েছে</string>
-    <string name="add_to_categories">এটি কোন বিভাগে যুক্ত করতে হবে তা নির্বাচন করুন। যদি কোনোটি নির্বাচিত না হয় তবে এটি ডিফল্ট বিভাগে যুক্ত করা হবে</string>
     <string name="manage_category">বিভাগ পরিচালনা করুন</string>
     <string name="add_categories">বিভাগ যুক্ত করুন</string>
     <string name="already_in_category">মাঙ্গা আগে থেকেই বিভাগে</string>
@@ -617,4 +616,5 @@
     <string name="saves_error_logs">বিকাশকারীদের সাথে সেয়ার করার জন্য এরর লগগুলো একটি ফাইলে সংরক্ষণ করে</string>
     <string name="crash_log_saved">ক্র্যাশ লগগুলো সংরক্ষিত হয়েছে</string>
     <string name="updated_to_">হালনাগাদ করা হয়েছে v%1$s তে</string>
+    <string name="hide_app_block_screenshots">অ্যাপ পাল্টানোর সময় অ্যাপের কন্টেন্ট লুকান ও স্ক্রিনসট ব্লক করুন</string>
 </resources>

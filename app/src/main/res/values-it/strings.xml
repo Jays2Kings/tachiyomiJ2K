@@ -385,7 +385,7 @@
     <string name="add_tracking">Aggiungi monitoraggio</string>
     <string name="copy_value">Copia</string>
     <string name="website">Sito web</string>
-    <string name="open_source_licenses">Licenze open source</string>
+    <string name="open_source_licenses">Licenze codice sorgente aperto</string>
     <string name="email">Indirizzo e-mail</string>
     <string name="successfully_logged_out">Ora sei disconnesso/a</string>
     <string name="cancel_all">Annulla tutto</string>
@@ -491,7 +491,6 @@
     <string name="collapse_all_categories">Riduci tutte le categorie</string>
     <string name="updating_">Aggiornamento di %1$s</string>
     <string name="what_should_update">Cosa deve essere aggiornato\?</string>
-    <string name="add_to_categories">Scegli le categorie a cui aggiungerlo. Se nessuno è selezionato, verrà aggiunto alla categoria predefinita</string>
     <string name="this_will_remove_the_read_date_for_x_question">Questo rimuoverà la data di lettura di «%1$s». Sei sicuro/a\?</string>
     <string name="search_globally">Cerca «%1$s» globalmente</string>
     <string name="display_options">Opzioni di visualizzazione</string>
@@ -574,7 +573,6 @@
     <string name="restoring_progress">Ripristinare (%1$d/%2$d)</string>
     <string name="restore_content_skipped">%1$d saltato</string>
     <string name="restore_error">Ripristina errore</string>
-    <string name="hide_tachi_from_recents">Nascondi Tachiyomi dalla schermata dei recenti</string>
     <string name="white_theme">Bianco Puro</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga migrato</item>
@@ -717,8 +715,8 @@
     <string name="no_chapters_error">Nessun capitolo trovato</string>
     <string name="restore_duration">%02d min %02d s</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Completato in %1$s con %2$s erroreCompletato in %1$s con %2$s errori</item>
-        <item quantity="other"/>
+        <item quantity="one">Completato in %1$s con %2$s errore</item>
+        <item quantity="other">Completato in %1$s con %2$s errori</item>
     </plurals>
     <string name="source_migration_guide">Guida alla migrazione di origine</string>
     <string name="nsfw_sources">Fonti NSFW (18+)</string>
@@ -772,4 +770,14 @@
     <string name="saves_error_logs">Salva un resoconto degli errori su un file per condividerlo con gli sviluppatori</string>
     <string name="crash_log_saved">Resoconto salvato</string>
     <string name="updated_to_">Aggiornato verso v%1$s</string>
+    <string name="restore_in_progress">Ripristino già in corso</string>
+    <string name="add_edit_categories">Aggiungi/Modifica categorie</string>
+    <string name="category">Categoria</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d capitolo</item>
+        <item quantity="other">%1$d capitoli</item>
+    </plurals>
+    <string name="backup_in_progress">Un backup è già in corso</string>
+    <string name="next">Successivo</string>
+    <string name="hide_app_block_screenshots">Nascondi i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
 </resources>

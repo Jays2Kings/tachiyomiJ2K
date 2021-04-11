@@ -433,7 +433,6 @@
     <string name="jump_to_category">الانتقال السريع إلى الفئة</string>
     <string name="long_press_category">اضغط باستمرار لتحرير الفئة</string>
     <string name="category_deleted">تم حذف الفئة</string>
-    <string name="add_to_categories">اختر الفئات التي تريد إضافة هذا إليها. إذا لم يتم تحديد أي شيء ، فستتم إضافة هذا إلى الفئة الافتراضية</string>
     <string name="manage_category">إدارة الفئات</string>
     <string name="add_categories">إضافة فئات</string>
     <string name="already_in_category">مانغا بالفعل في الفئة</string>
@@ -553,7 +552,6 @@
     <string name="restoring_progress">جاري استعادة (%1$d/%2$d)</string>
     <string name="restore_content_skipped">%1$d تم تخطيه</string>
     <string name="restore_error">خطأ في الاستعادة</string>
-    <string name="hide_tachi_from_recents">إخفاء Tachiyomi من شاشة آخر التطبيقات المستخدمة</string>
     <string name="white_theme">أبيض نقي</string>
     <string name="skipping_">(تخطي %1$d)</string>
     <string name="stop_migrating">التوقف عن الترحيل؟</string>
@@ -775,4 +773,10 @@
     <string name="saves_error_logs">يحفظ سجلات الأخطاء في ملف للمشاركة مع المطورين</string>
     <string name="crash_log_saved">تم حفظ سجلات الأخطاء</string>
     <string name="updated_to_">حُدِّث إلى الإصدار v%1$s</string>
+    <string name="next">التالي</string>
+    <string name="restore_content_full">تم استيراد البيانات من ملف نسخ الاحتياطي.
+\n
+\nيتوجب تثبيت الإضافات المفقودة و تسجيل الدخول إلى منصات التعقب تالياً لاستعمالهم.</string>
+    <string name="dns_over_https">DNS باستعمال التشفير (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
 </resources>

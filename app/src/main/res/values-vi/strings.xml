@@ -431,4 +431,7 @@
 \n
 \nHãy đảm bảo rằng bạn đã cài đặt và đăng nhập vào các nguồn truyện và nguồn theo dõi trước khi khôi phục.</string>
     <string name="source_migration_guide">Hướng dẫn di chuyển nguồn</string>
+    <string name="next_chapter">Chương kế tiếp</string>
+    <string name="previous_chapter">Chương trước</string>
+    <string name="hide_app_block_screenshots">Ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp ảnh màn hình</string>
 </resources>

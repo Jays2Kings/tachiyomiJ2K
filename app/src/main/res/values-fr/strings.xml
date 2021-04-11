@@ -313,10 +313,10 @@
     <string name="trust">Fiable</string>
     <string name="untrusted">Non fiable</string>
     <string name="rereading">Relecture</string>
-    <string name="finished_chapter">A jour :</string>
-    <string name="current_chapter">En cours :</string>
-    <string name="next_title">Suivant :</string>
-    <string name="previous_title">Précédent :</string>
+    <string name="finished_chapter">Terminé :</string>
+    <string name="current_chapter">En cours :</string>
+    <string name="next_title">Suivant :</string>
+    <string name="previous_title">Précédent :</string>
     <string name="theres_no_next_chapter">C\'était le dernier chapitre</string>
     <string name="theres_no_previous_chapter">Il n\'y a pas de chapitre précédent</string>
     <string name="loading_pages">Chargement des pages…</string>
@@ -485,7 +485,6 @@
     <string name="jump_to_category">Aller à la catégorie</string>
     <string name="long_press_category">Maintenez la touche enfoncée pour modifier une catégorie</string>
     <string name="category_deleted">Catégorie supprimée</string>
-    <string name="add_to_categories">Choisissez les catégories dans lesquelles vous souhaitez l\'ajouter. Si aucune n\'est sélectionnée, elle sera ajoutée à la catégorie par défaut</string>
     <string name="manage_category">Gérer la catégorie</string>
     <string name="add_categories">Ajouter des catégories</string>
     <string name="already_in_category">Manga déjà dans la catégorie</string>
@@ -505,8 +504,8 @@
     <string name="_already_in_queue">%1$s est déjà dans la file d\'attente</string>
     <string name="adding_category_to_queue">Ajout de %1$s à la file d\'attente de mise à jour</string>
     <plurals name="category_plural">
-        <item quantity="one">Catégorie</item>
-        <item quantity="other"/>
+        <item quantity="one">%d catégorie</item>
+        <item quantity="other">%d catégories</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d page restante</item>
@@ -604,7 +603,7 @@
     <string name="remove_download">Supprimer le téléchargement</string>
     <string name="start_downloading_now">Commencer le téléchargement maintenant</string>
     <string name="not_downloaded">Non téléchargé</string>
-    <string name="whats_new">Nouveautés de cette version</string>
+    <string name="whats_new">Quoi de neuf</string>
     <string name="you_can_migrate_in_library">Vous pouvez également migrer en sélectionnant un manga dans votre bibliothèque</string>
     <string name="migration_sources_changed">Les sources de migration ont changé</string>
     <string name="use_last_saved_migration_preferences">Utiliser les dernières préférences de pré-migration et les sources enregistrées pour les migrations de groupe</string>
@@ -645,8 +644,7 @@
         <item quantity="other">%d sources manquantes</item>
     </plurals>
     <string name="restoring_progress">Restauration (%1$d / %2$d)</string>
-    <string name="restore_error">Réparer l\'erreur</string>
-    <string name="hide_tachi_from_recents">Masquer Tachiyomi de l\'écran récent</string>
+    <string name="restore_error">Échec de la restauration de la sauvegarde</string>
     <string name="white_theme">Blanc pur</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga migré</item>
@@ -715,7 +713,7 @@
     <string name="edge_nav">Bord</string>
     <string name="right_and_left_nav">Droite et gauche</string>
     <string name="invert_tapping">Inverser les touches</string>
-    <string name="none">Non</string>
+    <string name="none">Aucun</string>
     <string name="no_chapters_error">Aucun chapitre trouvé</string>
     <string name="badges">Badges</string>
     <string name="file_picker_error">L’application de sélection de fichier est introuvable</string>
@@ -756,8 +754,8 @@
     <string name="restoring_backup_canceled">Restauration de sauvegarde annulée</string>
     <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Effectuée en %1$s avec %2$s erreurEffectuée en %1$s avec %2$s erreurs</item>
-        <item quantity="other"/>
+        <item quantity="one">Effectuée en %1$s avec %2$s erreur</item>
+        <item quantity="other">Effectuée en %1$s avec %2$s erreurs</item>
     </plurals>
     <string name="source_migration_guide">Guide de migration des sources</string>
     <string name="nsfw_sources">Contenu +18</string>
@@ -773,4 +771,42 @@
     <string name="saves_error_logs">Enregistre les journaux d\'erreur dans un fichier pour le partager avec les développeurs</string>
     <string name="crash_log_saved">Sauvegarde des journaux endommagés</string>
     <string name="updated_to_">Mise à jour de v%1$s</string>
+    <string name="pressing_back_to_start">Revenir à l\'écran de démarrage en pressant sur Retour</string>
+    <string name="ignore_cutout_areas">Ignorer les zones de découpe</string>
+    <string name="previous">Précédent</string>
+    <string name="next">Suivant</string>
+    <string name="menu">menu</string>
+    <string name="enable">Activer</string>
+    <string name="whats_new_this_release">Quoi de neuf dans cette version</string>
+    <string name="backup_in_progress">Sauvegarde déjà en cours</string>
+    <string name="back_to_start">Retour au début</string>
+    <string name="starting_screen">Écran de démarrage</string>
+    <string name="hides_on_scroll">Se cache lors du défilement</string>
+    <string name="hide_bottom_nav">Masquer automatiquement la navigation du bas</string>
+    <string name="last_used_library_recents">Dernière utilisation (Bibliothèque ou Récents)</string>
+    <string name="suggested_date_">Date suggérée : %1$s</string>
+    <string name="custom_manga_info">Infos personnalisées sur le manga</string>
+    <string name="mark_all_chapters_as_unread">Marquer tous les chapitres comme non lus \?</string>
+    <string name="cutout_area_behavior">Comportement de la zone de découpe</string>
+    <string name="both_axes">Les deux axes</string>
+    <string name="vertically">Verticalement</string>
+    <string name="horizontally">Horizontalement</string>
+    <string name="reader_settings">Paramètres du lecteur</string>
+    <string name="_details">Détails %1$s</string>
+    <string name="_must_be_enabled_first">%1$s doit d\'abord être activé</string>
+    <string name="app_info">Infos de l\'appli</string>
+    <string name="hide_hopper_on_scroll">Masquer le menu déroulant des catégories lors du défilement</string>
+    <string name="filter_languages">Filtrer les langues</string>
+    <string name="show_unread_count">Afficher le nombre des non lus</string>
+    <string name="show_unread_badges">Afficher les badges non lus</string>
+    <string name="hide_unread_badges">Masquer les badges non lus</string>
+    <string name="add_edit_categories">Ajouter/Modifier des catégories</string>
+    <string name="category">Catégorie</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d chapitre</item>
+        <item quantity="other">%1$d chapitres</item>
+    </plurals>
+    <string name="restore_in_progress">Restauration déjà en cours</string>
+    <string name="dns_over_https">DNS via HTTPS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">Cacher le contenu lors du changement d\'application et bloquer les captures d\'écran</string>
 </resources>

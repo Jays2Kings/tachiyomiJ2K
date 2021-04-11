@@ -360,7 +360,11 @@
     <string name="open_log">Otvori zapisnik</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategorija%d kategorije</item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
+    <string name="next_chapter">Naredno poglavlje</string>
+    <string name="previous_chapter">Prijašnje poglavlje</string>
+    <string name="tracked">Praćeno</string>
+    <string name="hide_app_block_screenshots">Sakrij prikaz aplikacije kada mijenjate aplikaciju i blokiraj screenshot-ove</string>
 </resources>

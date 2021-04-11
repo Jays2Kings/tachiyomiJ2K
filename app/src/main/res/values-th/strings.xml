@@ -311,4 +311,6 @@
     <string name="restore_content">คืนค่าใช้แหล่งที่มาเพื่อดึงข้อมูลอาจมีค่าใช้จ่ายของผู้ให้บริการ
 \nตรวจสอบให้แน่ใจว่าคุณได้เข้าสู่ระบบอย่างถูกต้องในแหล่งที่ต้องใช้ก่อนที่จะกู้</string>
     <string name="open_log">ประวัติ</string>
+    <string name="next_chapter">ตอนถัดไป</string>
+    <string name="previous_chapter">ตอนที่แล้ว</string>
 </resources>

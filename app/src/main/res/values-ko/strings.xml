@@ -310,4 +310,6 @@
     <string name="mark_as_unread">읽지 않음으로 표시</string>
     <string name="website">웹사이트</string>
     <string name="open_log">로그 열기</string>
+    <string name="next_chapter">다음 챕터</string>
+    <string name="previous_chapter">이전 챕터</string>
 </resources>

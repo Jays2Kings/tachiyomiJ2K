@@ -470,7 +470,6 @@
     <string name="jump_to_category">Lompat ke kategori</string>
     <string name="long_press_category">Tekan dan tahan untuk mengubah kategori</string>
     <string name="category_deleted">Kategori terhapus</string>
-    <string name="add_to_categories">Pilih kategori yang akan ditambahkannya. Jika tidak ada yang dipilih, ini akan ditambahkan ke kategori default</string>
     <string name="manage_category">Kelola kategori</string>
     <string name="add_categories">Tambah kategori</string>
     <string name="already_in_category">Manga telah ada dalam kategori</string>
@@ -487,7 +486,7 @@
     <string name="_already_in_queue">%1$s sudah ada dalam antrian</string>
     <string name="adding_category_to_queue">Menambahkan %1$s ke antrian pembaharuan</string>
     <plurals name="category_plural">
-        <item quantity="other">Kategori</item>
+        <item quantity="other">%d Kategori</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="other">%1$d halaman tersisa</item>
@@ -582,4 +581,6 @@
     <string name="saves_error_logs">Simpan log kesalahan ke sebuah file untuk dibagikan dengan pengembang aplikasi</string>
     <string name="crash_log_saved">Log kerusakan disimpan</string>
     <string name="updated_to_">Diperbaharui ke v%1$s</string>
+    <string name="add_edit_categories">Tambah/Ubah Kategori</string>
+    <string name="hide_app_block_screenshots">Sembunyikan konten aplikasi saat berpindah aplikasi dan blokir tangkapan layar</string>
 </resources>

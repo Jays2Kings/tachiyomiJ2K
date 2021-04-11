@@ -164,7 +164,7 @@
     <string name="can_be_used_to_restore">Kan brukes til å gjenopprette nåværende bibliotek</string>
     <string name="restore_backup">Gjenopprett sikkerhetskopi</string>
     <string name="restore_from_backup_file">Gjenopprett bibliotek fra sikkerhetskopifil</string>
-    <string name="backup_location">Sikkerhetskopimappe</string>
+    <string name="backup_location">Sikkerhetskopi-mappe</string>
     <string name="service">Tjeneste</string>
     <string name="backup_frequency">Sikkerhetskopieringsfrekvens</string>
     <string name="max_auto_backups">Maks antall automatiske sikkerhetskopier</string>
@@ -179,7 +179,7 @@
     <string name="cookies_cleared">Kaker tømt</string>
     <string name="clear_database">Tøm database</string>
     <string name="clear_database_summary">Slett manga og kapittel som ikke finnes i biblioteket ditt</string>
-    <string name="clear_database_confirmation">Er du sikker\? Leste kapittel og framdrift for manga som ikke er i biblioteket vil gå tapt.</string>
+    <string name="clear_database_confirmation">Er du sikker\? Leste kapitler og framdrift for manga som ikke er i biblioteket vil gå tapt</string>
     <string name="clear_database_completed">Oppføringer slettet</string>
     <string name="refresh_library_metadata">Gjenoppfrisk biblioteksmetadata</string>
     <string name="updates_covers_genres_desc">Oppdater omslag, sjangere, beskrivelse og statusinfo for manga</string>
@@ -187,7 +187,7 @@
     <string name="updates_tracking_details">Oppdaterer status, poengsum og sist leste kapittel fra sporingstjenestene</string>
     <string name="version">Versjon</string>
     <string name="build_time">Byggtid</string>
-    <string name="check_for_updates">Se etter nye versjoner</string>
+    <string name="check_for_updates">Se etter oppdateringer</string>
     <string name="auto_check_for_app_versions">Se etter nye versjoner automatisk</string>
     <string name="send_crash_report">Send kræsjrapporter</string>
     <string name="helps_fix_bugs">Hjelper til med fiksing av feil. Ingen sensitiv data vil bli sendt.</string>
@@ -202,7 +202,7 @@
     <string name="local">Lokal</string>
     <string name="search_filters">Søkefilter</string>
     <string name="no_more_results">Ingen flere resultater</string>
-    <string name="local_source">Lokal manga</string>
+    <string name="local_source">Lokal kilde</string>
     <string name="other">Andre</string>
     <string name="global_search">Globalt søk…</string>
     <string name="latest">Seneste</string>
@@ -375,8 +375,8 @@
     <string name="restoring_backup_canceled">Avbrutt gjenoppretting</string>
     <string name="restore_duration">%02d min, %02d sek</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Gjort i %1$s med %2$s feilGjort i %1$s med %2$s feil</item>
-        <item quantity="other"/>
+        <item quantity="one">Gjort på %1$s med %2$s feil</item>
+        <item quantity="other">Gjort på %1$s med %2$s feil</item>
     </plurals>
     <string name="whats_new">Hva er nytt</string>
     <string name="badges">merker</string>
@@ -400,4 +400,54 @@
     <string name="progress">Framdrift</string>
     <string name="complete">Fullført</string>
     <string name="updated_to_">Oppdatert til v%1$s</string>
+    <string name="automatic_backups">Automatisk sikkerhetskopi</string>
+    <string name="backup_in_progress">Sikkerhetskopiering allerede underveis</string>
+    <string name="file_picker_error">Ingen app for filvelging funnet</string>
+    <string name="myanimelist_relogin">Vennligst logg på MAL igjen</string>
+    <string name="crash_log_saved">Feillogger lagret</string>
+    <string name="invalid_backup_file_type">Ugyldig backup filtype: %1$s
+\nDen burde ende med .proto.gz eller .json.</string>
+    <string name="edge_nav">Edge</string>
+    <string name="kindlish_nav">Kindle-basert</string>
+    <string name="l_nav">L-formet</string>
+    <string name="requires_app_restart">Krever omstart for å tre i kraft</string>
+    <string name="pref_webtoon_side_padding">Sidepolstring</string>
+    <string name="right_and_left_nav">Høyre og Venstre</string>
+    <string name="chapters_">Kapitler %1$s</string>
+    <string name="cancel_all">Avbryt alle</string>
+    <string name="invalid_download_location">Ugyldig nedlastingsmappe</string>
+    <string name="failed_to_bypass_cloudflare">Klarte ikke bypassere Cloudflare</string>
+    <string name="less">Mindre</string>
+    <string name="next">Neste</string>
+    <string name="may_contain_nsfw">Kan inneholde innhold for 18+</string>
+    <string name="next_page">Neste side</string>
+    <string name="previous_page">Forrige side</string>
+    <string name="next_chapter">Neste kapittel</string>
+    <string name="previous_chapter">Forrige kapittel</string>
+    <string name="paged">Sider</string>
+    <string name="nav_layout">Navigasjonsoppsett</string>
+    <string name="tracked">Sporer</string>
+    <string name="refresh_tracking">Oppdater sporing</string>
+    <string name="started_reading_date">Startdato for lesing</string>
+    <string name="finished_reading_date">Sluttdato for lesing</string>
+    <string name="create_legacy_backup">Oppdrett legacy sikkerhetskopi</string>
+    <string name="can_be_used_in_older_tachi">Kan brukes i eldre versjoner av Tachiyomi</string>
+    <string name="also_create_legacy_backup">Opdrett også legacy sikkerhetskopi</string>
+    <string name="backup_has_no_manga">Sikkerhetskopi inneholder ingen manga.</string>
+    <string name="restore_missing_trackers">Sporingstjenester ikke logget inn i:</string>
+    <string name="restore_content_full">Data fra backup-filen will be gjenoprettet
+\n
+\nDu vil måtte installere manglende utvidelser og logge inn på sporings-tjenester etterpå for å bruke dem.</string>
+    <string name="crash_logs">Feillogg</string>
+    <string name="dump_crash_logs">Dump feillogg</string>
+    <string name="saves_error_logs">Lagrer feillogger i en fil som kan sendes til utviklerne</string>
+    <string name="dns_over_https">DNS over HTTPS (Cloudflare)</string>
+    <string name="check_for_extension_updates">Se etter oppdateringer for utvidelser</string>
+    <string name="source_migration_guide">Veiledning for kildemigrering</string>
+    <string name="nsfw_sources">Aldersgrense 18+ kilder</string>
+    <string name="show_in_sources">Vis i kildelisten</string>
+    <string name="show_in_extensions">Vis i utvidelseslisten</string>
+    <string name="label_in_extensions">Merk i utvidelseslisten</string>
+    <string name="does_not_prevent_unofficial_nsfw">Dette forhindrer ikke uoffisielle eller potensielt feilaktig kategoriserte tillegg fra å vise innhold for 18+ i appen.</string>
+    <string name="hide_app_block_screenshots">Skjul programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
 </resources>

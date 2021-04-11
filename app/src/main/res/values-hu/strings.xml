@@ -190,6 +190,44 @@
     <string name="open_log">Napló megnyitása</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategória%d kategóriák</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
+    <string name="all_sources">Minden forrás</string>
+    <string name="search_extensions">Keresési bővítmények…</string>
+    <string name="in_library">Könyvtárban</string>
+    <string name="unknown">Ismeretlen</string>
+    <string name="description">Leírás</string>
+    <string name="remove_from_library">Eltávolítva a könyvtárból</string>
+    <string name="backup_created">Biztonsági mentés létrehozva</string>
+    <string name="website">Weboldal</string>
+    <string name="check_for_updates">Frissítések keresése</string>
+    <string name="show_password">Jelszó megjelenítése</string>
+    <string name="cover_updated">Borító frissítve</string>
+    <string name="set_as_cover">Beállítás borítóként</string>
+    <string name="custom_filter">Egyedi szűrő</string>
+    <string name="right_and_left_nav">Jobb és bal</string>
+    <string name="badges">Jelvények</string>
+    <plurals name="notification_update_failed">
+        <item quantity="one">%1$d frissítés sikertelen%1$d frissítés sikertelen</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="reading">Olvasás</string>
+    <string name="other">Egyéb</string>
+    <string name="center">Központ</string>
+    <string name="left">Bal</string>
+    <string name="next">Következő</string>
+    <string name="next_page">Következő oldal</string>
+    <string name="previous_page">Előző oldal</string>
+    <string name="next_chapter">Következő fejezet</string>
+    <string name="previous_chapter">Előző fejezet</string>
+    <string name="added_to_library">Könyvtárhoz adva</string>
+    <string name="removed_from_library">Eltávolítva a könyvtárból</string>
+    <string name="copy_value">Másolás</string>
+    <string name="backup_and_restore">Mentés és visszaállítás</string>
+    <string name="progress">Előrehaladás</string>
+    <string name="complete">Befejezve</string>
+    <string name="open_source_licenses">Nyílt forráskódú licenc</string>
+    <string name="pinned">Kitűzött</string>
+    <string name="right">Jobb</string>
+    <string name="hide_app_block_screenshots">Az alkalmazás tartalmának elrejtése az alkalmazások közötti váltáskor és a képernyőképek készítésének blokkolása</string>
 </resources>

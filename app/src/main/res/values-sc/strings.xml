@@ -460,8 +460,7 @@
     </plurals>
     <string name="restoring_progress">Ripristinende (%1$d/%2$d)</string>
     <string name="restore_content_skipped">%1$d brincadu</string>
-    <string name="restore_error">Riprìstina s\'errore</string>
-    <string name="hide_tachi_from_recents">Cua Tachiyomi dae s\'ischermada de sos reghentes</string>
+    <string name="restore_error">Riprìstinu de sa còpia de seguresa fallidu</string>
     <string name="system_default_all_blue">Predefinidu de su sistema (Totu biaitu)</string>
     <string name="system_default_amoled">Predefinidu de su sistema (Biancu + Nieddu)</string>
     <string name="white_theme">Biancu puru</string>
@@ -632,7 +631,6 @@
     <string name="jump_to_category">Brinca a sa categoria</string>
     <string name="long_press_category">Incarca a longu pro modificare una categoria</string>
     <string name="category_deleted">Categoria iscantzellada</string>
-    <string name="add_to_categories">Issèbera a ite categorias annànghere custu. Si non nd\'as a ischertare peruna s\'at a annànghere a sa categoria predefinida</string>
     <string name="manage_category">Amministra sa categoria</string>
     <string name="add_categories">Annanghe categorias</string>
     <string name="already_in_category">Manga giai in sa categoria</string>
@@ -756,9 +754,6 @@
     <string name="vertically">Verticalmente</string>
     <string name="horizontally">Orizontalmente</string>
     <string name="reader_settings">Impostatziones de su leghidore</string>
-    <string name="save_page">Sarva sa pàgina</string>
-    <string name="share_page">Cumpartzi sa pàgina</string>
-    <string name="set_page_as_cover">Imposta sa pàgina comente cobertedda</string>
     <string name="_must_be_enabled_first">In antis depes abilitare %1$s</string>
     <string name="app_info">Informatziones de s\'aplicatzione</string>
     <string name="show_unread_count">Ammustra su nùmeru de sos non lèghidos</string>
@@ -770,4 +765,13 @@
         <item quantity="one">%1$d capìtulu</item>
         <item quantity="other">%1$d capìtulos</item>
     </plurals>
+    <string name="hide_bottom_nav">Cua automaticamente su butone de navigatzione</string>
+    <string name="custom_manga_info">Informatziones personalizadas de su manga</string>
+    <string name="ignore_cutout_areas">Ignora sas àreas segadas</string>
+    <string name="cutout_area_behavior">Cumportamentu de s\'àrea de segadura</string>
+    <string name="_details">Detàllios %1$s</string>
+    <string name="filter_languages">Filtra sas limbas</string>
+    <string name="hide_hopper_on_scroll">Cua su mojolu de categorias iscurrende</string>
+    <string name="dns_over_https">DNS pro mèdiu de HTTPS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">Cua sos cuntenutos de s\'aplicatzione cando mudas de aplicatzione e bloca sas ischermadas</string>
 </resources>

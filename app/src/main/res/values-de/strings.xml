@@ -74,7 +74,6 @@
     <string name="manage_category">Kategorie verwalten</string>
     <string name="rename_category">Kategorie umbenennen</string>
     <string name="move_to_categories">Zu Kategorien hinzufügen</string>
-    <string name="add_to_categories">Wähle, in welche Kategorien dies hinzugefügt wird. Wenn nichts ausgewählt ist, wird die Standardkategorie genutzt</string>
     <plurals name="category_plural">
         <item quantity="one">%d Kategorie</item>
         <item quantity="other">%d Kategorien</item>
@@ -250,8 +249,8 @@
     <string name="viewer_for_this_series">Leser dieser Serie</string>
     <string name="finished_chapter">Beendet:</string>
     <string name="current_chapter">Aktuell:</string>
-    <string name="next_title">Als Nächstes:</string>
-    <string name="previous_title">Davor:</string>
+    <string name="next_title">Nächste:</string>
+    <string name="previous_title">Vorherige:</string>
     <string name="theres_no_next_chapter">Es gibt kein nächstes Kapitel</string>
     <string name="theres_no_previous_chapter">Es gibt kein vorheriges Kapitel</string>
     <string name="loading_pages">Lade Seiten …</string>
@@ -453,7 +452,6 @@
     <string name="check_for_updates">Nach Aktualisierungen suchen</string>
     <string name="auto_check_for_app_versions">Automatisch nach App Aktualisierung suchen</string>
     <string name="secure_screen">Sicherer Bildschirm</string>
-    <string name="hide_tachi_from_recents">Verstecke Tachiyomi auf dem letzte Aktivitäten-Bildschirm</string>
     <string name="security">Sicherheit</string>
     <!-- Backup -->
     <string name="backup">Sichern</string>
@@ -741,8 +739,8 @@
     <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
     <string name="restore_duration">%02d Min. %02d Sk.</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Erledigt in %1$s mit %2$s FehlerErledigt in %1$s mit %2$s Fehlern</item>
-        <item quantity="other"/>
+        <item quantity="one">Erledigt in %1$s mit %2$s Fehler</item>
+        <item quantity="other">Erledigt in %1$s mit %2$s Fehlern</item>
     </plurals>
     <string name="source_migration_guide">Quellenmigration</string>
     <string name="nsfw_sources">NSFW/Ü18-Quellen</string>
@@ -762,7 +760,7 @@
     <string name="edge_nav">Rand</string>
     <string name="right_and_left_nav">Rechts und Links</string>
     <string name="invert_tapping">Tippen invertieren</string>
-    <string name="none">–</string>
+    <string name="none">Nichts</string>
     <string name="started_reading_date">Datum des Lesebeginns</string>
     <string name="finished_reading_date">Datum des Leseabschlusses</string>
     <string name="myanimelist_relogin">Bitte logge dich erneut in MAL ein</string>
@@ -783,13 +781,11 @@
     <string name="menu">Menü</string>
     <string name="enable">Aktivieren</string>
     <string name="whats_new_this_release">Was ist neu in dieser Version</string>
-    <string name="share_page">Seite teilen</string>
-    <string name="set_page_as_cover">Als Titelseite festlegen</string>
     <string name="_must_be_enabled_first">%1$s muss zuerst aktiviert werden</string>
-    <string name="app_info">Anwendungsinformation</string>
+    <string name="app_info">Anwendungsinfos</string>
     <string name="filter_languages">Sprachen filtern</string>
-    <string name="show_unread_count">Zeige Ungelesenenanzahl</string>
-    <string name="add_edit_categories">Hinzufügen/Editieren der Kategorien</string>
+    <string name="show_unread_count">Ungelesenenanzahl zeigen</string>
+    <string name="add_edit_categories">Kategorien hinzufügen/bearbeiten</string>
     <string name="restore_in_progress">Wiederherstellung bereits in Arbeit</string>
     <string name="backup_in_progress">Sicherung bereits in Arbeit</string>
     <string name="back_to_start">Zurück zum Start</string>
@@ -798,19 +794,24 @@
     <string name="hide_bottom_nav">Navigations-Bar automatisch verstecken</string>
     <string name="last_used_library_recents">Zuletzt benutzt (Bibliothek oder Neueste)</string>
     <string name="suggested_date_">Vorgeschlagenes Datum: %1$s</string>
-    <string name="custom_manga_info">Benutzerdefinierte Manga Information</string>
+    <string name="custom_manga_info">Benutzerdefinierte Infos des Mangas</string>
     <string name="mark_all_chapters_as_unread">Alle Kapitel als ungelesen markieren\?</string>
     <string name="ignore_cutout_areas">Ausschnittbereiche ignorieren</string>
     <string name="start_past_cutout">Nach dem Ausschnitt starten</string>
     <string name="pad_cutout_areas">Ausschnittbereich füllen</string>
     <string name="cutout_area_behavior">Verhalten des Ausschnittbereichs</string>
-    <string name="both_axes">Beide Achsen</string>
+    <string name="both_axes">Beide Orientierungen</string>
     <string name="vertically">Vertikal</string>
     <string name="horizontally">Horizontal</string>
-    <string name="reader_settings">Leseeinstellungen</string>
+    <string name="reader_settings">Lese-Einstellungen</string>
     <string name="_details">%1$s Details</string>
-    <string name="save_page">Seite speichern</string>
     <string name="hide_hopper_on_scroll">Kategorienhopper beim Scrollen verstecken</string>
     <string name="show_unread_badges">Ungelesenzähler anzeigen</string>
     <string name="hide_unread_badges">Ungelesenzähler verstecken</string>
+    <string name="pressing_back_to_start">Zurück drücken zum Startbildschirm</string>
+    <string name="category_cannot_be_blank">Kategorienname darf nicht leer sein</string>
+    <string name="new_category">Neue Kategorie</string>
+    <string name="add_x_to">Füge %1$s zu… hinzu</string>
+    <string name="move_x_to">Verschiebe %1$s zu…</string>
+    <string name="hide_app_block_screenshots">App-Inhalte beim App-Wechseln verbergen und Screenshots blockieren</string>
 </resources>

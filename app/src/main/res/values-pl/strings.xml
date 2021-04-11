@@ -21,7 +21,7 @@
     <!-- Status -->
     <string name="ongoing">Nieukończone</string>
     <string name="unknown">Nieznane</string>
-    <string name="unknown_status">Nieznany Status</string>
+    <string name="unknown_status">Nieznany status</string>
     <string name="licensed">Licencjonowane</string>
     <string name="completed">Ukończone</string>
     <!-- Security -->
@@ -50,10 +50,10 @@
         <item quantity="other">Usunąć %1$d pobranych rozdziałów?</item>
     </plurals>
     <plurals name="chapters_plural">
-        <item quantity="one">Rozdziały</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">%1$d rozdział</item>
+        <item quantity="few">%1$d rozdziałów</item>
+        <item quantity="many">%1$d rozdziały</item>
+        <item quantity="other">%1$d rozdziały</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">Pozostała %1$d strona</item>
@@ -82,7 +82,6 @@
     <string name="manage_category">Zarządzaj kategorią</string>
     <string name="rename_category">Zmień nazwę kategorii</string>
     <string name="move_to_categories">Przenieś do kategorii</string>
-    <string name="add_to_categories">Wybierz, do których kategorii chcesz to dodać.  Jeżeli żadna nie zostanie wybrana, zostanie to dodane do domyślnej kategorii.</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategoria</item>
         <item quantity="few">%d kategorie</item>
@@ -100,7 +99,7 @@
     <string name="update_available">Aktualizacja dostępna</string>
     <string name="new_version_available">Nowa wersja dostępna!</string>
     <string name="no_new_updates_available">Brak nowych wersji</string>
-    <string name="searching_for_updates">Szukanie aktualizacji...</string>
+    <string name="searching_for_updates">Szukanie aktualizacji…</string>
     <!-- Main Screens -->
     <!-- Library -->
     <string name="library">Biblioteka</string>
@@ -120,7 +119,7 @@
     <string name="search_globally">Szukaj \"%1$s\" globalnie</string>
     <string name="read_progress">Postęp czytania</string>
     <string name="series_type">Typ serii</string>
-    <string name="group_library_by">Grupuj bibliotekę według...</string>
+    <string name="group_library_by">Grupuj bibliotekę według…</string>
     <string name="tracking_status">Statusu śledzenia</string>
     <string name="ungrouped">Nie zgrupowane</string>
     <!-- Library Sort -->
@@ -155,10 +154,14 @@
     <string name="new_chapters_found">Znaleziono nowe rozdziały</string>
     <plurals name="for_n_titles">
         <item quantity="one">Dla %d tytułu</item>
+        <item quantity="few">Dla %d tytułów</item>
+        <item quantity="many">Dla %d tytułów</item>
         <item quantity="other">Dla %d tytułów</item>
     </plurals>
     <plurals name="notification_and_n_more">
         <item quantity="one">i %1$d więcej rozdziału</item>
+        <item quantity="few">i %1$d więcej rozdziały</item>
+        <item quantity="many">i %1$d więcej rozdziałów</item>
         <item quantity="other">i %1$d więcej rozdziałów</item>
     </plurals>
     <plurals name="notification_update_failed">
@@ -214,11 +217,11 @@
     <string name="no_results_found">Nie znaleziono wyników</string>
     <string name="local_source">Źródło lokalne</string>
     <string name="other">Inne</string>
-    <string name="global_search">Wyszukiwanie globalne...</string>
+    <string name="global_search">Wyszukiwanie globalne…</string>
     <string name="latest">Najnowsze</string>
     <string name="browse">Przeglądaj</string>
     <string name="in_library">W bibliotece</string>
-    <string name="search_extensions">Szukaj rozszerzeń...</string>
+    <string name="search_extensions">Szukaj rozszerzeń…</string>
     <string name="all_sources">Wszystkie źródła</string>
     <string name="sources">Źródła</string>
     <string name="source_hidden">Ukryte źródła</string>
@@ -250,6 +253,8 @@
     <string name="empty_preferences_for_extension">To rozszerzenie nie ma żadnych preferencji do edycji</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Aktualizacja rozszerzenia dostępna</item>
+        <item quantity="few">%d aktualizacji rozszerzeń dostępnych</item>
+        <item quantity="many">%d aktualizacje rozszerzeń dostępne</item>
         <item quantity="other">%d aktualizacje rozszerzeń dostępne</item>
     </plurals>
     <!-- Reader -->
@@ -268,7 +273,7 @@
     <string name="previous_title">Poprzedni:</string>
     <string name="theres_no_next_chapter">Brak następnego rozdziału</string>
     <string name="theres_no_previous_chapter">Brak wcześniejszych rozdziałów</string>
-    <string name="loading_pages">Ładowanie stron...</string>
+    <string name="loading_pages">Ładowanie stron…</string>
     <string name="failed_to_load_pages_">Nie udało się załadować stron: %1$s</string>
     <string name="reading_">Czytanie %1$s</string>
     <string name="webtoon_style">Styl webtoon</string>
@@ -343,7 +348,7 @@
     <string name="add_to_library">Dodaj do biblioteki</string>
     <string name="removed_from_library">Usunięto z biblioteki</string>
     <string name="_copied_to_clipboard">%1$s skopiowano do schowka</string>
-    <string name="source_not_installed_">Źródło nie zainstalowane: %1$s</string>
+    <string name="source_not_installed_">Nie zainstalowano źródła %1$s</string>
     <string name="no_description">Brak opisu</string>
     <string name="mark_all_chapters_as_read">Oznaczyć wszystkie rozdziały jako przeczytane\?</string>
     <string name="remove_from_library">Usuń z biblioteki</string>
@@ -376,10 +381,22 @@
     <string name="remember_this_choice">Pamiętaj ten wybór</string>
     <string name="source_not_installed">Źródło niezainstalowane</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Rozdział został usunięty ze źródła:\n%2$s\nUsunąć pobrane?</item>
-        <item quantity="few">%1$s rozdziały zostały usunięte ze źródła:\n%2$s\nUsunąć pobrane?</item>
-        <item quantity="many">%1$s rozdziałów zostało usuniętych ze źródła:\n%2$s\n\nUsunąć pobrane?</item>
-        <item quantity="other">%1$s rozdziałów zostało usuniętych ze źródła:\n%2$s\n\nUsunąć pobrane?</item>
+        <item quantity="one">Rozdział został usunięty ze źródła:
+\n%2$s
+\n
+\nUsunąć pobrane\?</item>
+        <item quantity="few">%1$s rozdziały zostały usunięte ze źródła:
+\n%2$s
+\n
+\nUsunąć pobrane\?</item>
+        <item quantity="many">%1$s rozdziałów zostało usuniętych ze źródła:
+\n%2$s
+\n
+\nUsunąć pobrane\?</item>
+        <item quantity="other">%1$s rozdziałów zostało usuniętych ze źródła:
+\n%2$s
+\n
+\nUsunąć pobrane\?</item>
     </plurals>
     <!-- Tracking -->
     <string name="tracking">Śledzenie</string>
@@ -392,7 +409,7 @@
     <string name="dropped">Porzucone</string>
     <string name="on_hold">Wstrzymane</string>
     <string name="plan_to_read">Planowane do przeczytania</string>
-    <string name="want_to_read">Chciane do przeczytania</string>
+    <string name="want_to_read">Do przeczytania</string>
     <string name="paused">Wstrzymane</string>
     <string name="rereading">Czytane ponownie</string>
     <string name="score">Ocena</string>
@@ -442,7 +459,7 @@
         <item quantity="many">Skopiować %1$d%2$s mang?</item>
         <item quantity="other">Skopiować %1$d%2$s mang?</item>
     </plurals>
-    <string name="skipping_">(skipping %1$d)</string>
+    <string name="skipping_">(pomijanie %1$d)</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga zmigrowana</item>
         <item quantity="few">%d mangi zmigrowana</item>
@@ -454,7 +471,7 @@
     <string name="general">Ogólne</string>
     <string name="reader">Czytnik</string>
     <string name="advanced">Zaawansowane</string>
-    <string name="about">O...</string>
+    <string name="about">O aplikacji</string>
     <string name="help">Pomoc</string>
     <!-- General settings -->
     <string name="app_theme">Motyw aplikacji</string>
@@ -471,7 +488,6 @@
     <string name="check_for_updates">Sprawdź aktualizacje</string>
     <string name="auto_check_for_app_versions">Automatycznie sprawdzaj czy jest nowa wersja aplikacji</string>
     <string name="secure_screen">Ukryj ekran</string>
-    <string name="hide_tachi_from_recents">Ukryj Tachiyomi w menu ostatnich aplikacji</string>
     <string name="security">Zabezpieczenia</string>
     <!-- Backup -->
     <string name="backup">Kopia zapasowa</string>
@@ -486,9 +502,11 @@
     <string name="backup_failed">Tworzenie kopii nie powiodło się</string>
     <string name="backup_created">Kopia zapasowa utworzona</string>
     <string name="restore_completed">Przywracanie ukończone</string>
-    <string name="restore_error">Błąd przywracania</string>
+    <string name="restore_error">Nieudane przywrócenie kopii zapasowej</string>
     <string name="restore_content_skipped">%1$d pominięte</string>
-    <string name="restore_message">Przywracanie używa źródeł do pobierania danych, operator może naliczać dodatkowe opłaty.\nPrzed przywróceniem upewnij się też, że jesteś poprawnie zalogowany do źródeł.</string>
+    <string name="restore_message">Przywracanie używa źródeł do pobierania danych, operator może naliczać dodatkowe opłaty.
+\n
+\nPrzed przywróceniem upewnij się też, że jesteś poprawnie zalogowany do źródeł.</string>
     <string name="creating_backup">Tworzenie kopii zapasowej</string>
     <string name="what_should_backup">Co zawrzeć w kopii zapasowej?</string>
     <string name="restoring_backup">Przywracanie kopii zapasowej</string>
@@ -567,7 +585,7 @@
     <string name="build_time">Data utworzenia kompilacji</string>
     <string name="send_crash_report">Wysyłaj raporty o awariach</string>
     <string name="helps_fix_bugs">Pomaga naprawiać błędy. Żadne wrażliwe dane nie będą wysyłane</string>
-    <string name="whats_new">Co nowego w tej wersji?</string>
+    <string name="whats_new">Co nowego</string>
     <string name="website">Strona WWW</string>
     <string name="open_source_licenses">Licencje typu open source</string>
     <!-- Login/Logout dialog -->
@@ -638,13 +656,15 @@
     <string name="weekly">Co tydzień</string>
     <plurals name="after_minutes">
         <item quantity="one">Po %1$s minucie</item>
+        <item quantity="few">Po %1$s minutach</item>
+        <item quantity="many">Po %1$s minutach</item>
         <item quantity="other">Po %1$s minutach</item>
     </plurals>
     <!-- File Picker Titles -->
     <string name="select_cover_image">Wybierz okładkę</string>
     <string name="select_backup_file">Wybierz plik kopii zapasowej</string>
     <!-- Webview -->
-    <string name="failed_to_bypass_cloudflare">Błąd z przejściem przez Cloudflare</string>
+    <string name="failed_to_bypass_cloudflare">Nie udało się ominąć Cloudflare</string>
     <string name="please_update_webview">Zaktualizuj aplikację WebView dla lepszej kompatybilności</string>
     <!-- Miscellaneous -->
     <string name="add">Dodaj</string>
@@ -783,10 +803,10 @@
     <string name="restoring_backup_canceled">Anulowano przywracanie</string>
     <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Wykonano w %1$s z %2$s błędemWykonano w %1$s z %2$s błędamiWykonano w %1$s z %2$s błędami</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">Wykonano w %1$s z %2$s błędem</item>
+        <item quantity="few">Wykonano w %1$s z %2$s błędami</item>
+        <item quantity="many">Wykonano w %1$s z %2$s błędami</item>
+        <item quantity="other">Wykonano w %1$s z %2$s błędami</item>
     </plurals>
     <string name="source_migration_guide">Instrukcja przenoszenia źródeł</string>
     <string name="nsfw_sources">NFSW Materiały 18+</string>
@@ -803,4 +823,41 @@
     <string name="saves_error_logs">Zapisuje logi błędów do pliku do udostępnienia programistom</string>
     <string name="crash_log_saved">Logi crasha zapisane</string>
     <string name="updated_to_">Zaktualizowano do v%1$s</string>
+    <string name="previous">Poprzedni</string>
+    <string name="next">Następny</string>
+    <string name="menu">menu</string>
+    <string name="whats_new_this_release">Co nowego w tej wersji</string>
+    <string name="restore_content_full">Dane z kopii zapasowej zostaną przywrócone.
+\n
+\nBędziesz musiał zainstalować wszystkie brakujące rozszerzenia oraz zalogować się do usług śledzenia by móc je używać.</string>
+    <string name="backup_in_progress">Kopia zapasowa jest już w trakcie</string>
+    <string name="restore_in_progress">Przywracanie jest już w trakcie</string>
+    <string name="pressing_back_to_start">Wciskanie wstecz by wrócić na ekran startowy</string>
+    <string name="back_to_start">Wróć na początek</string>
+    <string name="starting_screen">Ekran startowy</string>
+    <string name="hides_on_scroll">Ukrywane przy przewijaniu</string>
+    <string name="hide_bottom_nav">Automatyczne ukrywanie dolnej nawigacji</string>
+    <string name="last_used_library_recents">Ostatnio użyte (Biblioteka lub Ostatnie)</string>
+    <string name="suggested_date_">Sugerowana data: %1$s</string>
+    <string name="custom_manga_info">Własna informacja o mandze</string>
+    <string name="mark_all_chapters_as_unread">Oznaczyć wszystkie rozdziały jako nieprzeczytane\?</string>
+    <string name="ignore_cutout_areas">Ignoruj wycięte obszary</string>
+    <string name="start_past_cutout">Rozpocznij po wcięciu</string>
+    <string name="pad_cutout_areas">Wypełnij wycięte obszary</string>
+    <string name="cutout_area_behavior">Zachowanie wyciętego obszaru</string>
+    <string name="both_axes">Obie osie</string>
+    <string name="vertically">Pionowo</string>
+    <string name="horizontally">Poziomo</string>
+    <string name="reader_settings">Ustawienia Czytnika</string>
+    <string name="_details">%1$s - szczegóły</string>
+    <string name="_must_be_enabled_first">%1$s musi najpierw zostać włączone</string>
+    <string name="app_info">Informacje o aplikacji</string>
+    <string name="filter_languages">Filtruj Języki</string>
+    <string name="hide_hopper_on_scroll">Ukryj przełącznik kategorii przy przewijaniu</string>
+    <string name="show_unread_count">Pokaż liczbę nieprzeczytanych</string>
+    <string name="show_unread_badges">Pokaż nieprzeczytane odznaki</string>
+    <string name="hide_unread_badges">Ukryj nieprzeczytane odznaki</string>
+    <string name="enable">Włącz</string>
+    <string name="add_edit_categories">Dodaj/Edytuj kategorie</string>
+    <string name="hide_app_block_screenshots">Ukryj zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
 </resources>

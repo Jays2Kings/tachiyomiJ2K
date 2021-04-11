@@ -459,7 +459,6 @@
     <string name="jump_to_category">Μετάβαση στην κατηγορία</string>
     <string name="long_press_category">Πατήστε παρατεταμένα για να επεξεργαστείτε μια κατηγορία</string>
     <string name="category_deleted">Η κατηγορία διαγράφηκε</string>
-    <string name="add_to_categories">Επιλέξτε σε ποιες κατηγορίες θα το προσθέσετε. Εάν δεν έχει επιλεγεί καμία, αυτό θα προστεθεί στην προεπιλεγμένη κατηγορία</string>
     <string name="manage_category">Διαχείριση κατηγορίας</string>
     <string name="add_categories">Προσθήκη κατηγοριών</string>
     <string name="already_in_category">Manga ήδη στην κατηγορία</string>
@@ -580,4 +579,6 @@
     <string name="saves_error_logs">Αποθηκεύει αρχεία καταγραφής σφαλμάτων σε ένα αρχείο για κοινή χρήση με τους προγραμματιστές</string>
     <string name="crash_log_saved">Τα αρχεία καταγραφής σφαλμάτων αποθηκεύτηκαν</string>
     <string name="updated_to_">Ενημερώθηκε σε v%1$s</string>
+    <string name="dns_over_https">DNS μέσω HTTPS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">Απόκρυψη περιεχομένων εφαρμογής κατά την εναλλαγή εφαρμογών και τον αποκλεισμό στιγμιότυπων οθόνης</string>
 </resources>

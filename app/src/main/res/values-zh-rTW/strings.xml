@@ -449,4 +449,5 @@
     <string name="saves_error_logs">產生錯誤記錄檔以便分享予開發人員</string>
     <string name="crash_log_saved">已產生當機記錄</string>
     <string name="updated_to_">已更新至 v%1$s</string>
+    <string name="hide_app_block_screenshots">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面</string>
 </resources>

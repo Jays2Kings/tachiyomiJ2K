@@ -8,7 +8,7 @@
     <string name="manga">Mangá</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
-    <string name="comic">Hq</string>
+    <string name="comic">HQ</string>
     <string name="webtoon">Webtoon</string>
     <!-- Manga -->
     <string name="not_started">Não iniciado</string>
@@ -47,8 +47,8 @@
         <item quantity="other">Remover %1$d capítulos baixados?</item>
     </plurals>
     <plurals name="chapters_plural">
-        <item quantity="one">Capítulos</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$d capítulo</item>
+        <item quantity="other">%1$d capítulos</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d página restante</item>
@@ -65,7 +65,7 @@
     <string name="top_category">Categoria principal (%1$s)</string>
     <string name="default_category">Categoria padrão</string>
     <string name="first_category">Primeira categoria</string>
-    <string name="categories_on_manual">Categorias a atualizar ao recarregar manualmente</string>
+    <string name="categories_on_manual">Categorias a atualizar ao atualizar manualmente</string>
     <string name="categories_in_global_update">Todas as categorias na atualização global</string>
     <string name="confirm_category_deletion">Excluir categoria?</string>
     <string name="confirm_category_deletion_message">O mangá nesta categoria será movido 
@@ -75,10 +75,9 @@
     <string name="manage_category">Gerenciar categoria</string>
     <string name="rename_category">Renomear categoria</string>
     <string name="move_to_categories">Mover para categorias</string>
-    <string name="add_to_categories">Escolha quais categorias adicionar isto. Se nenhuma for selecionada, isto será adicionado à categoria padrão</string>
     <plurals name="category_plural">
-        <item quantity="one">Categoria</item>
-        <item quantity="other">Categorias</item>
+        <item quantity="one">%d categoria</item>
+        <item quantity="other">%d categorias</item>
     </plurals>
     <string name="category_with_name_exists">Já existe uma categoria com este nome!</string>
     <string name="category_deleted">Categoria excluída</string>
@@ -452,7 +451,6 @@
     <string name="check_for_updates">Procurar por atualizações</string>
     <string name="auto_check_for_app_versions">Verificar automaticamente novas versões do aplicativo</string>
     <string name="secure_screen">Tela segura</string>
-    <string name="hide_tachi_from_recents">Ocultar Tachiyomi da tela Recentes</string>
     <string name="security">Segurança</string>
     <!-- Backup -->
     <string name="backup">Backup</string>
@@ -749,7 +747,7 @@
     <string name="edge_nav">Borda</string>
     <string name="right_and_left_nav">Direita e Esquerda</string>
     <string name="invert_tapping">Inverter o toque</string>
-    <string name="none">Nenhum</string>
+    <string name="none">Nenhuma</string>
     <string name="started_reading_date">Data de início da leitura</string>
     <string name="finished_reading_date">Data de término da leitura</string>
     <string name="myanimelist_relogin">Por favor, faça login no MAL novamente</string>
@@ -797,4 +795,7 @@
     <string name="saves_error_logs">Salva os registros de erro em um arquivo para o compartilhamento com os desenvolvedores</string>
     <string name="crash_log_saved">Registros de travamento salvos</string>
     <string name="updated_to_">Atualizado para v%1$s</string>
+    <string name="add_edit_categories">Adicionar/Editar categorias</string>
+    <string name="dns_over_https">DNS sobre HTTPS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">Oculta os conteúdos do aplicativo durante a troca de aplicativos e impede capturas de tela</string>
 </resources>

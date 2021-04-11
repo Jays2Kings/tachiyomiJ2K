@@ -198,8 +198,11 @@
     <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
         <item quantity="zero">Pabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdām</item>
-        <item quantity="one"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="other"/>
     </plurals>
     <string name="open_log">Atvērt žurnālfailu</string>
+    <string name="next_chapter">Nākama nodaļa</string>
+    <string name="previous_chapter">Iepriekšēja nodaļa</string>
+    <string name="hide_app_block_screenshots">Slēpt lietotnes saturu mainot lietotnes, un bloķēt ekrānuzņēmumus</string>
 </resources>

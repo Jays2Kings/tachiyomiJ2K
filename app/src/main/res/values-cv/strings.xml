@@ -317,13 +317,13 @@
     <string name="no_results_found">Пӗр тупсӑм та тупӑнман</string>
     <string name="no_more_results">Урӑх тупсӑмсем ҫук</string>
     <string name="history">Кун-ҫул</string>
-    <string name="library_search_hint"/>
+    <string name="library_search_hint">Ят, тегсем, ҫӑл куҫ</string>
     <string name="updating_library">Вулавӑша ҫӗнетни</string>
     <string name="default_category">Яланхилле пухмӑш</string>
     <string name="categories">Пухмӑшсем</string>
     <plurals name="chapters_plural">
-        <item quantity="one">Сыпӑксем</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$d сыпӑк</item>
+        <item quantity="other">%1$d сыпӑк</item>
     </plurals>
     <string name="lock_when_idle">Кӗтмелли тытӑмра ҫаклатса лартмалла</string>
     <string name="lock_with_biometrics">Алӑ йӗрпе ҫаклатса ларт</string>
@@ -351,8 +351,8 @@
     <string name="manhua">Киттай манкӑ</string>
     <string name="manhwa">Карей манкӑ</string>
     <plurals name="category_plural">
-        <item quantity="one">Пухмӑш</item>
-        <item quantity="other"/>
+        <item quantity="one">%d пухмӑш</item>
+        <item quantity="other">%d пухмӑш</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d эл юлчӗ</item>
@@ -375,7 +375,6 @@
     <string name="_unread">%d вуламан</string>
     <string name="show_all_categories">Пур пухмӑша кӑтарт</string>
     <string name="category_deleted">Пухмӑша катертнӗ</string>
-    <string name="add_to_categories">Ҫакна хӑш пухмашсем патне хушмаллине суйла. Пӗррине те суйламан пулсан вӑл яланхилле пухмӑша хушӑнӗ</string>
     <string name="move_to_categories">Пухмӑша куҫар</string>
     <string name="manage_category">Пухмӑша ӗнерле</string>
     <string name="add_categories">Пухмӑш хуш</string>
@@ -455,4 +454,14 @@
     <string name="saves_error_logs">Файлсенчи йӑнӑшсен логсене хатерлевҫӗсем патне яма упрать</string>
     <string name="crash_log_saved">Тухса кайни ҫинчен логсем упраннӑ</string>
     <string name="updated_to_">v%1$s верссиччен ҫӗнетнӗ</string>
+    <string name="remove_from_library_question">Вулавӑшран катермелле-и\?</string>
+    <string name="selected_">Суйланӑ: %1$d</string>
+    <string name="update_available">Ҫӗнетӳ пур</string>
+    <string name="updating_">%1$s ҫӗнетни</string>
+    <string name="what_should_update">Мӗн ҫӗнетмелле\?</string>
+    <string name="jump_to_category">Пухмӑша хуш</string>
+    <string name="category_with_name_exists">Ҫакӑн пек ятлӑ пухмӑш пур-уш!</string>
+    <string name="add_edit_categories">Пухмӑшсем хуш/тӳрлет</string>
+    <string name="category">Пухмӑш</string>
+    <string name="hide_app_block_screenshots">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
 </resources>

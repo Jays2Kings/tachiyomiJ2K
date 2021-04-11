@@ -446,4 +446,5 @@
     <string name="saves_error_logs">डेवलपर्स के साथ साझा करने के लिए फ़ाइल में त्रुटि लॉग सहेजता है</string>
     <string name="crash_log_saved">क्रैश लॉग सहेजे गए</string>
     <string name="updated_to_">v%1$s तक अद्यतन</string>
+    <string name="hide_app_block_screenshots">एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाएं और स्क्रीनशॉट ब्लॉक करें</string>
 </resources>

@@ -386,7 +386,6 @@
     <string name="updating_">%1$s güncelleniyor</string>
     <string name="jump_to_category">Kategoriye atla</string>
     <string name="category_deleted">Kategori silindi</string>
-    <string name="add_to_categories">Bunun hangi kategoriye ekleneceğini seç. Hiçbir şey seçilmediyse, varsayılan kategoriye eklenecek.</string>
     <string name="manage_category">Katedorileri yönet</string>
     <string name="add_categories">Kategori ekle</string>
     <string name="already_in_category">Manga zaten bu kategoride</string>
@@ -437,7 +436,6 @@
     <string name="disable_if_issues_with_updating">Kitaplığınızı güncelleme veya geri getirme ile ilgili sorunlar yaşıyorsanız bunu devre dışı bırakın</string>
     <string name="clean_read_manga_not_in_library">Kitaplıkta olmayan mangayı temizle</string>
     <string name="no_folders_to_cleanup">Temizlenecek klasör yok</string>
-    <string name="hide_tachi_from_recents">Tachiyomi\'yi son kullanılanlar ekranından gizle</string>
     <string name="white_theme">Saf Beyaz</string>
     <string name="data_to_include_in_migration">Taşınmaya dahil edilecek veriler</string>
     <string name="select_a_source_then_item_to_migrate">Bir kaynak seçin, ardından taşınacak bir öğe seçin</string>
@@ -505,7 +503,7 @@
     <string name="downloading_">İndiriliyor: %1$s</string>
     <string name="username_must_not_be_blank">Kullanıcı adı veya şifre boş bırakılamaz</string>
     <string name="logout">Çıkış yap</string>
-    <string name="whats_new">Bu sürümdeki yenilikler</string>
+    <string name="whats_new">Yenilikler</string>
     <string name="source_migration_guide">Kaynak taşınma kılavuzu</string>
     <string name="nsfw_sources">Yetişkin içerik (18+) kaynakları</string>
     <string name="show_in_sources">Kaynaklar listesinde göster</string>
@@ -538,8 +536,8 @@
     <string name="restoring_backup_canceled">Geri yükleme iptal edildi</string>
     <string name="restore_duration">%02d dk, %02d sn</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">%1$s içinde %2$s hatayla tamamlandı%1$s içinde %2$s hatayla tamamlandı</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$s içinde %2$s hatayla tamamlandı</item>
+        <item quantity="other">%1$s içinde %2$s hatayla tamamlandı</item>
     </plurals>
     <string name="no_chapters_error">Bölüm bulunamadı</string>
     <string name="badges">Rozetler</string>
@@ -571,4 +569,9 @@
     <string name="crash_log_saved">Çökme günlükleri kaydedildi</string>
     <string name="backup_and_restore">Yedekle ve geri yükle</string>
     <string name="updated_to_">v%1$s sürümüne güncellendi</string>
+    <string name="restore_in_progress">Geri yükleme zaten devam ediyor</string>
+    <string name="backup_in_progress">Yedekleme zaten devam ediyor</string>
+    <string name="in_library">Kitaplıkta</string>
+    <string name="dns_over_https">HTTPS üzerinden DNS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">İçeriği uygulamaları değiştirirken gizle ve ekran görüntülerini engelle</string>
 </resources>

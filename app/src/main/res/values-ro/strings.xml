@@ -430,4 +430,10 @@
     <string name="progress">Progresul</string>
     <string name="complete">Terminat</string>
     <string name="updated_to_">Actualizat la v%1$s</string>
+    <string name="comic">Benzi desenate</string>
+    <string name="manhua">Manhua</string>
+    <string name="manhwa">Manhwa</string>
+    <string name="does_not_prevent_unofficial_nsfw">Acest lucru nu împiedică extensiile neoficiale sau potențial semnalizate incorect să iasă la suprafață cu conținut 18+ în cadrul aplicației.</string>
+    <string name="may_contain_nsfw">Poate conține conținut 18+</string>
+    <string name="hide_app_block_screenshots">Ascundeți conținutul aplicației atunci când comutați aplicații și blocați capturile de ecran</string>
 </resources>

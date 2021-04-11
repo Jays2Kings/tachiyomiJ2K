@@ -414,7 +414,6 @@
     <string name="jump_to_category">Ir para a categoria</string>
     <string name="long_press_category">Pressione e segure para editar uma categoria</string>
     <string name="category_deleted">Categoria eliminada</string>
-    <string name="add_to_categories">Escolha a quais categorias adicionar. Se nenhuma for selecionada, esta será adicionada à categoria padrão</string>
     <string name="manage_category">Gerir categoria</string>
     <string name="add_categories">Adicionar categorias</string>
     <string name="already_in_category">Mangá já está na categoria</string>
@@ -549,4 +548,9 @@
     <string name="saves_error_logs">Guarda registos de erros num ficheiro para partilhar com os desenvolvedores</string>
     <string name="crash_log_saved">Registos de falhas guardados</string>
     <string name="updated_to_">Atualizado para v%1$s</string>
+    <string name="restore_content_full">Os dados da cópia de segurança serão restaurados.
+\n
+\nPrecisas instalar as extensões em falta e iniciar sessão nos serviços de monitorização para usá-los depois.</string>
+    <string name="next">Seguinte</string>
+    <string name="hide_app_block_screenshots">Esconder os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
 </resources>

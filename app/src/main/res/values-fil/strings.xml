@@ -376,7 +376,7 @@
     <string name="edge_nav">Sulok</string>
     <string name="right_and_left_nav">Kaliwa at Kanan</string>
     <string name="invert_tapping">Baliktad na pagpindot</string>
-    <string name="none">Hindi</string>
+    <string name="none">Wala</string>
     <string name="source_migration_guide">Gabay sa Paglipat</string>
     <string name="nsfw_sources">Mga Pinagkukunang NSFW (pang-18+)</string>
     <string name="show_in_sources">Ipakita sa Mga Pinagkukunan</string>
@@ -425,4 +425,6 @@
     <string name="saves_error_logs">Sine-save ang mga error log sa isang file para maibahagi sa mga developer</string>
     <string name="crash_log_saved">Nai-save na ang crash log</string>
     <string name="updated_to_">In-update patungong bersyon %1$s</string>
+    <string name="dns_over_https">DNS kesa HTTPS (Cloudflare)</string>
+    <string name="hide_app_block_screenshots">Itago ang nilalaman ng app habang nagpapalit ng app at harangin ang mga screenshot</string>
 </resources>

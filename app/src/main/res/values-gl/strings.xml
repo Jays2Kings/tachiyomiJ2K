@@ -217,6 +217,9 @@
     <string name="chapters">Capítulos</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoría%d categorías</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
+    <string name="next_chapter">Capítulo seguinte</string>
+    <string name="previous_chapter">Capítulo anterior</string>
+    <string name="hide_app_block_screenshots">Esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
 </resources>

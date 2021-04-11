@@ -464,7 +464,6 @@
     <string name="what_should_update">需要更新什么？</string>
     <string name="updating_">正在更新 %1$s</string>
     <string name="long_press_category">长按以编辑分类</string>
-    <string name="add_to_categories">选择要添加到的分类。 如果不选择，则添加到默认分类</string>
     <string name="already_in_category">漫画已在该分类</string>
     <string name="confirm_category_deletion_message">此分类的漫画将移至默认分类。</string>
     <string name="categories_in_global_update">全局更新中的所有分类</string>
@@ -495,7 +494,6 @@
 \n是否删除其下载内容？</item>
     </plurals>
     <string name="clean_orphaned_downloads">清除孤本</string>
-    <string name="hide_tachi_from_recents">在最近页面中隐藏 Tachiyomi</string>
     <plurals name="manga_migrated">
         <item quantity="other">%d 漫画已迁移</item>
     </plurals>
@@ -672,8 +670,8 @@
     <string name="may_contain_nsfw">可能包含 NSFW (18+) 内容</string>
     <string name="next_page">下一页</string>
     <string name="previous_page">上一页</string>
-    <string name="next_chapter">下一页</string>
-    <string name="previous_chapter">上一页</string>
+    <string name="next_chapter">下一章</string>
+    <string name="previous_chapter">上一章</string>
     <string name="animate_page_transitions">页面过渡动画</string>
     <string name="default_reading_mode">默认阅读模式</string>
     <string name="nav_layout">导航布局</string>
@@ -731,9 +729,6 @@
     <string name="horizontally">水平地</string>
     <string name="reader_settings">阅读器设置</string>
     <string name="_details">%1$s 细节</string>
-    <string name="save_page">保存页面</string>
-    <string name="share_page">分享页面</string>
-    <string name="set_page_as_cover">设置页面为封面</string>
     <string name="_must_be_enabled_first">%1$s 必须先被启用</string>
     <string name="app_info">应用信息</string>
     <string name="filter_languages">过滤语言</string>
@@ -758,4 +753,48 @@
     <string name="cutout_area_behavior">刘海屏行为</string>
     <string name="mark_all_chapters_as_unread">标记所有章节为未读？</string>
     <string name="add_edit_categories">添加/编辑分类</string>
+    <string name="show_read_in_all">显示 read in all</string>
+    <string name="selection">选择</string>
+    <string name="preview">预览</string>
+    <string name="move_to_">移动到 %1$s</string>
+    <string name="change">更改</string>
+    <string name="beta">测试</string>
+    <string name="added_to_">已添加到 %1$s</string>
+    <string name="automatic_can_still_switch">使用自动页面布局时，你仍然可以在阅读时在不同布局之间切换，而无需覆盖此设置</string>
+    <string name="add_to_">添加到 %1$s</string>
+    <plurals name="pages_plural">
+        <item quantity="other">%1$d页</item>
+    </plurals>
+    <string name="automatic_orientation">自动 (基于方向)</string>
+    <string name="page_layout">页面布局</string>
+    <string name="switch_to_single">转到单页</string>
+    <string name="switch_to_double">转到双页</string>
+    <string name="single_page">单页</string>
+    <string name="double_pages">双页</string>
+    <string name="amount_of_pages_to_preload">读取时要预加载的页数。更高的值将带来更流畅的阅读体验，但代价是更高的缓存和网络数据用量。</string>
+    <string name="page_preload_amount">页面预加载数量</string>
+    <string name="save_second_page">保存第二页</string>
+    <string name="share_second_page">分享第二页</string>
+    <string name="set_second_page_as_cover">将第二页设为封面</string>
+    <string name="save_first_page">保存第一页</string>
+    <string name="share_first_page">分享第一页</string>
+    <string name="set_first_page_as_cover">将第一页设为封面</string>
+    <string name="show_title_first">先显示标题</string>
+    <string name="show_reset_history_button">显示重置历史按钮</string>
+    <string name="only_unread">仅未读</string>
+    <string name="show_download_button">显示下载历史</string>
+    <string name="press_and_hold_to_also_reset">按住不放也可以重置章节历史</string>
+    <string name="grouped">已分组</string>
+    <string name="reset_chapter_history">重置章节历史</string>
+    <string name="shift_one_page_over">翻一页</string>
+    <string name="category_cannot_be_blank">分类名称不能为空</string>
+    <string name="new_category">新分类</string>
+    <string name="add_x_to">添加 %1$s 到…</string>
+    <string name="move_x_to">移动 %1$s 到…</string>
+    <string name="dns_over_https">DNS over HTTPS (Cloudflare)</string>
+    <string name="no_recent_read_updated_manga">没有最近读过或更新的漫画</string>
+    <string name="unread_or_downloaded">未读或已下载</string>
+    <string name="only_downloaded">仅已下载</string>
+    <string name="cutout_behavior_only_applies">刘海屏区域行为仅适用于某些比例类型的竖屏模式</string>
+    <string name="hide_app_block_screenshots">在切换应用时隐藏此应用内容，并禁止截取屏幕截图</string>
 </resources>

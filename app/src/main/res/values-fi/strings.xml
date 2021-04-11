@@ -364,7 +364,7 @@
     <string name="disable_battery_optimization">Poista akun optimointi käytöstä</string>
     <string name="battery_optimization_disabled">Akun optimointi on jo poistettu käytöstä</string>
     <string name="pref_global_search">Globaali haku</string>
-    <string name="check_for_extension_updates">Tarkista laajennuspäivitykset automaattisesti</string>
+    <string name="check_for_extension_updates">Tarkista laajennuspäivitykset</string>
     <string name="website">Kotisivu</string>
     <string name="open_source_licenses">Avoimen lähdekoodin lisenssit</string>
     <string name="email">Sähköpostiosoite</string>
@@ -440,7 +440,6 @@
     <string name="jump_to_category">Siirry kategoriaan</string>
     <string name="long_press_category">Muokkaa kategoriaa pitämällä sitä painettuna</string>
     <string name="category_deleted">Kategoria poistettu</string>
-    <string name="add_to_categories">Valitse mihin kategorioihin tämä lisätään. Jos mitään ei ole valittuna, se lisätään oletuskategoriaan</string>
     <string name="manage_category">Hallitse kategoriaa</string>
     <string name="add_categories">Lisää kategorioita</string>
     <string name="already_in_category">Manga on jo kategoriassa</string>
@@ -483,8 +482,8 @@
     <string name="restoring_backup_canceled">Palautus peruttu</string>
     <string name="restore_duration">%02d min, %02d sek</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Valmistui %1$s virheitä löytyi %2$sValmistui %1$s virheitä löytyi %2$s</item>
-        <item quantity="other"/>
+        <item quantity="one">Valmistui %1$s virheitä löytyi %2$s</item>
+        <item quantity="other">Valmistui %1$s virheitä löytyi %2$s</item>
     </plurals>
     <string name="animate_page_transitions">Animoi sivusiirtymät</string>
     <string name="default_reading_mode">Oletuslukutila</string>
@@ -508,8 +507,8 @@
     <string name="may_contain_nsfw">Voi sisältää NSFW (18+) -sisältöä</string>
     <string name="next_page">Seuraava sivu</string>
     <string name="previous_page">Edellinen sivu</string>
-    <string name="next_chapter">Seuraava sivu</string>
-    <string name="previous_chapter">Edellinen sivu</string>
+    <string name="next_chapter">Seuraava luku</string>
+    <string name="previous_chapter">Aiempi luku</string>
     <string name="source_migration_guide">Lähteen siirto-opas</string>
     <string name="nsfw_sources">NSFW (18+) lähteet</string>
     <string name="show_in_sources">Näytä lähdeluettelossa</string>
@@ -521,7 +520,7 @@
     <string name="next">Seuraava</string>
     <string name="open_log">Avaa loki</string>
     <string name="delete_unused_chapters">Poista olemattomat, osittain ladatut ja luettujen lukujen kansiot</string>
-    <string name="clean_up_downloaded_chapters">Puhdista ladatut luvut</string>
+    <string name="clean_up_downloaded_chapters">Poista ladatut luvut</string>
     <plurals name="cache_cleared">
         <item quantity="one">Välimuisti tyhjennetty. %d tiedosto on poistettu</item>
         <item quantity="other">Välimuisti tyhjennetty. %d tiedostoa on poistettu</item>
@@ -544,7 +543,6 @@
     <string name="pressing_back_to_start">Painamalla takaisin aloitusnäyttöön</string>
     <string name="back_to_start">Takaisin alkuun</string>
     <string name="starting_screen">Aloitusnäyttö</string>
-    <string name="hide_tachi_from_recents">Piilota Tachiyomi viimeisimmät näytöltä</string>
     <string name="hides_on_scroll">Piilottaa selattaessa</string>
     <string name="hide_bottom_nav">Piilota alareunan navigointi automaattisesti</string>
     <string name="last_used_library_recents">Viimeksi käytetty (kirjasto tai viimeisimmät)</string>
@@ -592,7 +590,7 @@
     <plurals name="deleted_chapters">
         <item quantity="one">Luku on poistettu lähteestä:
 \n%2$s
-\nPoistetaanko sen lataukset\?</item>
+\nPoistetaanko sen lataus\?</item>
         <item quantity="other">%1$s lukua on poistettu lähteestä:
 \n%2$s
 \n
@@ -648,9 +646,6 @@
     <string name="set_as_default_for_all">Aseta kaikkien oletusasetukseksi</string>
     <string name="reader_settings">Lukijan asetukset</string>
     <string name="_details">%1$s tiedot</string>
-    <string name="save_page">Tallenna sivu</string>
-    <string name="share_page">Jaa sivu</string>
-    <string name="set_page_as_cover">Aseta sivu kanneksi</string>
     <string name="_must_be_enabled_first">%1$s on otettava käyttöön ensin</string>
     <string name="app_info">Sovelluksen tiedot</string>
     <string name="filter_languages">Suodata kieliä</string>
@@ -702,4 +697,126 @@
     <string name="crash_log_saved">Kaatumislokit tallennettu</string>
     <string name="backup_and_restore">Varmuuskopiointi ja palautus</string>
     <string name="updated_to_">Päivitetty versioon v%1$s</string>
+    <string name="only_search_pinned_when">Etsi vain kiinnitetyistä lähteistä</string>
+    <string name="delete_all_covers__not_in_library_used_">Poista kaikki välimuistiin tallennetut kannet, jotka eivät ole kirjastossasi.
+\nTällä hetkellä käytössä: %1$s</string>
+    <string name="clear_cached_covers_non_library">Tyhjennä välimuistiin tallennetut kannet, joita ei ole kirjastossa</string>
+    <string name="delete_old_covers_in_library_used_">Poista kirjastossasi olevat vanhat ja käyttämättömät välimuistiin tallennetut mangakannet, jotka on päivitetty.
+\nTällä hetkellä käytössä: %1$s</string>
+    <string name="hide_hopper_on_scroll">Piilota kategoriasuppilo vierittäessä</string>
+    <string name="ignore_cutout_areas">Jätä leikkausalueet huomiotta</string>
+    <string name="start_past_cutout">Aloita leikkauksen jälkeen</string>
+    <string name="pad_cutout_areas">Täytä leikkausalueet</string>
+    <string name="clean_up_cached_covers">Poista välimuistissa olevat kannet</string>
+    <string name="no_folders_to_cleanup">Ei siivottavia kansioita</string>
+    <string name="starting_cleanup">Aloitetaan siivous</string>
+    <string name="clean_read_manga_not_in_library">Poista manga, jota ei ole kirjastossa</string>
+    <string name="clean_read_downloads">Poista luetut</string>
+    <plurals name="cleanup_done">
+        <item quantity="one">Siivous tehty. Poistettu %d kansio</item>
+        <item quantity="other">Siivous tehty. Poistettu %d kansiota</item>
+    </plurals>
+    <string name="disable_if_issues_with_updating">Poista tämä käytöstä, jos kirjaston päivittämisessä tai palauttamisessa on ongelmia</string>
+    <string name="mark_all_chapters_as_unread">Merkitse kaikki luvut lukemattomiksi\?</string>
+    <string name="cutout_area_behavior">Leikkausalueen käyttäytyminen</string>
+    <string name="add_edit_categories">Lisää/Muokkaa kategorioita</string>
+    <string name="dns_over_https">DNS HTTPS:n kautta (Cloudflare)</string>
+    <string name="view_all_errors">Näytä kaikki virheet</string>
+    <string name="use_default">Käytä oletusta</string>
+    <string name="un_select_all">Poista kaikki valinnat</string>
+    <string name="tag">Tunniste</string>
+    <string name="sort_and_filter">Lajittele &amp; suodata</string>
+    <string name="selection">Valinta</string>
+    <string name="select_none">Älä valitse mitään</string>
+    <string name="refreshing">Päivittää</string>
+    <string name="previous">Edellinen</string>
+    <string name="preview">Esikatselu</string>
+    <string name="moved_to_">Siirretty %1$s</string>
+    <string name="move_to_">siirry %1$s</string>
+    <string name="menu">Valikko</string>
+    <string name="mark_previous_as_unread">Merkitse aiemmat lukemattomiksi</string>
+    <string name="mark_all_as_unread">Merkitse kaikki lukemattomiksi</string>
+    <string name="mark_all_as_read">Merkitse kaikki luetuiksi</string>
+    <string name="keep">Säilytä</string>
+    <string name="hide">Piilota</string>
+    <string name="enabled">Käytössä</string>
+    <string name="enable">Ota käyttöön</string>
+    <string name="download_unread">Lataa lukemattomat</string>
+    <string name="deleted_">Poistettu: %1$s</string>
+    <string name="change">Muuta</string>
+    <string name="bug_report">Tee virheraportti</string>
+    <string name="bottom">Alaosa</string>
+    <string name="beta">BETA</string>
+    <string name="auto">Auto</string>
+    <string name="added_to_">Lisätty %1$s</string>
+    <string name="add_to_">lisää %1$s</string>
+    <plurals name="after_minutes">
+        <item quantity="one">%1$s minuutin jälkeen</item>
+        <item quantity="other">%1$s minuutin jälkeen</item>
+    </plurals>
+    <string name="always_delete">Poista aina</string>
+    <string name="always_keep">Säilytä aina</string>
+    <string name="ask_on_chapters_page">Poista globaalin päivityksen aikana, kysy luvut-sivulla</string>
+    <string name="delete_downloaded_if_removed_online">Poista ladatut luvut, jos lähde on poistanut luvun verkosta</string>
+    <string name="delete_removed_chapters">Poista poistetut luvut</string>
+    <string name="visit_recents_for_download_queue">Käy Viimeaikaiset-välilehdessä päästäksesi latausjonoon. Voit myös kaksoisnapauttaa tai painaa ja pitää painettuna nopeampaa pääsyä varten</string>
+    <string name="manage_whats_downloading">Hallitse latauksia</string>
+    <string name="nothing_is_downloading">Mitään ei ladata tällä hetkellä</string>
+    <string name="remove_downloads">Poista lataukset</string>
+    <string name="remove_download">Poista lataus</string>
+    <string name="start_downloading_now">Aloita lataaminen nyt</string>
+    <string name="not_downloaded">Ei ladattu</string>
+    <string name="downloading_">Ladataan: %1$s</string>
+    <string name="username_must_not_be_blank">Käyttäjänimi tai salasana ei voi olla tyhjä</string>
+    <string name="logout_from_">Kirjaudu ulos %1$s\?</string>
+    <string name="logout">Kirjaudu ulos</string>
+    <string name="whats_new_this_release">Mikä on uutta tässä julkaisussa</string>
+    <string name="you_can_migrate_in_library">Voit myös siirtää valitsemalla mangan kirjastostasi</string>
+    <string name="migration_sources_changed">Siirtolähteet muuttuneet</string>
+    <string name="use_last_saved_migration_preferences">Käytä viimeksi tallennettuja siirtoa edeltäviä asetuksia ja lähteitä massasiirtoon</string>
+    <string name="only_enable_enabled_for_migration">Ota vain tällä hetkellä käytössä olevat lähteet käyttöön siirtoa varten</string>
+    <string name="only_enable_pinned_for_migration">Ota vain kiinnitetyt lähteet käyttöön siirtoa varten</string>
+    <plurals name="pages_plural">
+        <item quantity="one">%1$d sivu</item>
+        <item quantity="other">%1$d sivua</item>
+    </plurals>
+    <string name="automatic_orientation">Automaattinen (suuntautumisen perusteella)</string>
+    <string name="automatic_can_still_switch">Kun käytät automaattista sivun asettelua, voit silti siirtyä asettelusta toiseen lukemisen aikana ohittamatta tätä asetusta</string>
+    <string name="page_layout">Sivun asettelu</string>
+    <string name="switch_to_single">Vaihda yksittäiseen sivuun</string>
+    <string name="switch_to_double">Vaihda tuplasivuihin</string>
+    <string name="single_page">Yksittäinen sivu</string>
+    <string name="double_pages">Tuplasivut</string>
+    <string name="amount_of_pages_to_preload">Esiladattavien sivujen määrä lukemisen aikana. Suuremmat arvot johtavat sujuvampaan lukukokemukseen, joka lisää välimuistin ja verkon käyttöä.</string>
+    <string name="page_preload_amount">Sivujen esilatauksen määrä</string>
+    <string name="save_second_page">Tallenna toinen sivu</string>
+    <string name="share_second_page">Jaa toinen sivu</string>
+    <string name="set_second_page_as_cover">Aseta toinen sivu kanneksi</string>
+    <string name="save_first_page">Tallenna ensimmäinen sivu</string>
+    <string name="share_first_page">Jaa ensimmäinen sivu</string>
+    <string name="set_first_page_as_cover">Aseta ensimmäinen sivu kanneksi</string>
+    <string name="show_title_first">Näytä otsikko ensin</string>
+    <string name="show_reset_history_button">Näytä historian nollauspainike</string>
+    <string name="only_unread">Vain lukemattomat</string>
+    <string name="show_download_button">Näytä Latauspainike</string>
+    <string name="press_and_hold_to_also_reset">Pitämällä painettuna voit myös nollata lukuhistorian</string>
+    <string name="grouped">Ryhmitelty</string>
+    <string name="no_recent_read_updated_manga">Ei äskettäin luettuja tai päivitettyjä mangoja</string>
+    <string name="reset_chapter_history">Nollaa lukuhistoria</string>
+    <string name="shift_one_page_over">Siirrä yksi sivu eteenpäin</string>
+    <string name="category_cannot_be_blank">Kategorian nimi ei voi olla tyhjä</string>
+    <string name="new_category">Uusi kategoria</string>
+    <string name="add_x_to">Lisää %1$s kohteeseen…</string>
+    <string name="move_x_to">Siirrä %1$s kohtaan…</string>
+    <string name="drag_handle">Veto kahva</string>
+    <string name="collasped">Pienennetty</string>
+    <string name="match_enabled_sources">Sovita käytössä olevat lähteet</string>
+    <string name="match_pinned_sources">Sovita kiinnitetyt lähteet</string>
+    <string name="cutout_behavior_only_applies">Leikkausalueen toiminta pätee vain pystytilassa tietyissä skaalaustyypeissä</string>
+    <string name="show_read_in_all">Näytä luettu kaikissa</string>
+    <string name="unread_or_downloaded">Lukematon tai ladattu</string>
+    <string name="only_downloaded">Vain ladatut</string>
+    <string name="hide_app_block_screenshots">Piilota sovelluksen sisältö kun sovelluksia vaihdetaan ja estä kuvakaappauksien otto</string>
+    <string name="follow_system_theme">Seuraa järjestelmän teemaa</string>
+    <string name="midnight_dusk"></string>
 </resources>

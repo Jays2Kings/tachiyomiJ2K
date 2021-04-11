@@ -513,7 +513,6 @@
     <string name="jump_to_category">Перейти до категорії</string>
     <string name="long_press_category">Натисніть та утримуйте для редагування категорії</string>
     <string name="category_deleted">Категорію видалено</string>
-    <string name="add_to_categories">Оберіть до яких категорій додати. Якщо жодну не буде вибрано - додаємо у категорію за замовчуванням</string>
     <string name="manage_category">Керувати категоріями</string>
     <string name="add_categories">Додати категорії</string>
     <string name="already_in_category">Манґа вже в категорії</string>
@@ -589,7 +588,6 @@
     <string name="restoring_progress">Відновлення (%1$d/%2$d)</string>
     <string name="restore_content_skipped">%1$d пропущено</string>
     <string name="restore_error">Помилка відновлення</string>
-    <string name="hide_tachi_from_recents">Сховати Tachiyomi з екрану останніх</string>
     <string name="white_theme">Чисто-білий</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d мангу змігровано</item>
@@ -736,7 +734,7 @@
     <string name="edge_nav">Межа</string>
     <string name="right_and_left_nav">Праворуч та ліворуч</string>
     <string name="invert_tapping">Інвертувати тицяння</string>
-    <string name="none">Нічого</string>
+    <string name="none">Ніхто</string>
     <string name="create_legacy_backup">Створити сумісну резервну копію</string>
     <string name="can_be_used_in_older_tachi">Може бути використано в старіших версіях Tachiyomi</string>
     <string name="automatic_backups">Автоматичне резервування</string>
@@ -777,4 +775,6 @@
     <string name="saves_error_logs">Зберігає логи помилок до файлу для надсилання розробникам</string>
     <string name="crash_log_saved">Логи падінь збережено</string>
     <string name="updated_to_">Оновлено до v%1$s</string>
+    <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
+    <string name="dns_over_https">DNS поверх HTTPS (Cloudflare)</string>
 </resources>
