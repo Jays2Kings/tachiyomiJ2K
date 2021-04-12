@@ -27,4 +27,12 @@
         <item name="colorAccentText">@color/md_red_500</item>
     </style>
 
+    <style name="Theme.Tachiyomi.HotPink" parent="Theme.Tachiyomi.Amoled">
+        <item name="colorAccent">@color/colorAccentPink</item>
+        <item name="colorAccentText">@color/colorAccentPink</item>
+
+    </style>
+
+
+
 </resources>

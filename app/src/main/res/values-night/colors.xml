@@ -31,4 +31,7 @@
     <color name="dialogDuskDawn">#201F27</color>
     <color name="textPrimaryDuskDawn">@color/md_white_1000</color>
     <color name="appBarTextDuskDawn">@color/md_white_1000</color>
+
+    <!-- Hot Pink Theme -->
+    <color name="colorAccentPink">#FF3399</color>
 </resources>
