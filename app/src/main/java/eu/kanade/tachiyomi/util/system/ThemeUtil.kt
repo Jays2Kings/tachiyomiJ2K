@@ -46,10 +46,6 @@ object ThemeUtil {
         return context.isInNightMode() && theme.styleRes == R.style.Theme_Tachiyomi_Amoled
     }
 
-    fun shouldFlipFab(context: Context, theme: Themes): Boolean {
-        return context.isInNightMode() && theme.styleRes == R.style.Theme_Tachiyomi_FlatLime
-    }
-
     fun hasDarkActionBarInLight(context: Context, theme: Themes): Boolean {
         return !context.isInNightMode() && isColoredTheme(theme)
     }
