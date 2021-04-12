@@ -61,7 +61,7 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:textSize="13sp"
-            android:textColor="@color/unread_badge_text"
+            android:textColor="?attr/colorOnAccent"
             style="@style/TextAppearance.Regular.Caption.Light"
             android:layout_height="wrap_content"
             android:tint="@color/md_white_1000"

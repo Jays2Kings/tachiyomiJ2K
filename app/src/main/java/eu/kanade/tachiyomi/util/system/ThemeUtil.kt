@@ -46,6 +46,10 @@ object ThemeUtil {
         return context.isInNightMode() && theme.styleRes == R.style.Theme_Tachiyomi_Amoled
     }
 
+    fun shouldFlipFab(context: Context, theme: Themes): Boolean {
+        return context.isInNightMode() && theme.styleRes == R.style.Theme_Tachiyomi_FlatLime
+    }
+
     fun hasDarkActionBarInLight(context: Context, theme: Themes): Boolean {
         return !context.isInNightMode() && isColoredTheme(theme)
     }
@@ -85,6 +89,11 @@ object ThemeUtil {
             R.style.Theme_Tachiyomi_HotPink,
             AppCompatDelegate.MODE_NIGHT_YES,
             R.string.hot_pink
+        ),
+        LIME(
+            R.style.Theme_Tachiyomi_FlatLime,
+            AppCompatDelegate.MODE_NIGHT_YES,
+            R.string.flat_lime
         ),
         LIGHT_BLUE(
             R.style.Theme_Tachiyomi_AllBlue,
@@ -167,6 +176,7 @@ object ThemeUtil {
             when (styleRes) {
                 R.style.Theme_Tachiyomi_Amoled, R.style.Theme_Tachiyomi_BlackAndRed, R.style.Theme_Tachiyomi_HotPink -> "#000000"
                 R.style.Theme_Tachiyomi_MidnightDusk -> "#16151D"
+                R.style.Theme_Tachiyomi_FlatLime -> "#16151D"
                 else -> "#1C1C1D"
             }
         )
@@ -185,6 +195,7 @@ object ThemeUtil {
                 R.style.Theme_Tachiyomi_MidnightDusk -> "#F02475"
                 R.style.Theme_Tachiyomi_BlackAndRed -> "#AA2200"
                 R.style.Theme_Tachiyomi_HotPink -> "#FF3399"
+                R.style.Theme_Tachiyomi_FlatLime -> "#4AF88A"
                 else -> "#3399FF"
             }
         )

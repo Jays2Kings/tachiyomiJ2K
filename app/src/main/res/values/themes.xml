@@ -29,7 +29,8 @@
         <item name="android:divider">@color/divider</item>
         <item name="android:listDivider">@drawable/line_divider</item>
         <item name="actionModeStyle">@style/CustomActionModeStyle</item>
-        
+        <item name="colorOnAccent">@color/md_white_1000</item>
+
         <!-- Themes -->
         <item name="windowActionModeOverlay">true</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.DayNight.ActionBar</item>
@@ -82,6 +83,19 @@
         <item name="android:textColorPrimary">@color/textPrimaryDuskDawn</item>
         <item name="android:colorBackground">@color/backgroundDuskDawn</item>
         <item name="actionBarTintColor">@color/appBarTextDuskDawn</item>
+    </style>
+    <style name="Theme.Tachiyomi.FlatLime" parent="Theme.Tachiyomi">
+        <item name="colorPrimary">@color/backgroundLime</item>
+        <item name="colorPrimaryDark">@color/backgroundLime</item>
+        <item name="colorAccent">@color/colorAccentLime</item>
+        <item name="colorAccentText">@color/colorAccentLime</item>
+        <item name="colorPrimaryVariant">@color/dialogLime</item>
+        <item name="colorSecondary">@color/backgroundLime</item>
+        <item name="background">@color/backgroundLime</item>
+        <item name="android:colorBackground">@color/backgroundLime</item>
+        <item name="colorOnSurface">@color/colorAccentLimeText</item>
+        <item name="colorOnAccent">@color/colorOnLime</item>
+
     </style>
 
 

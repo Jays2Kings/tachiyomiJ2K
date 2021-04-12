@@ -34,4 +34,16 @@
 
     <!-- Hot Pink Theme -->
     <color name="colorAccentPink">#FF3399</color>
+
+    <!-- Flat Lime Theme -->
+    <color name="colorAccentLime">#4AF88A</color>
+    <color name="textColorPrimaryLime">@color/md_white_1000</color>
+    <color name="textColorSecondaryLime">@color/md_white_1000_76</color>
+    <color name="textColorHintLime">@color/md_white_1000_50</color>
+    <color name="rippleColorLime">@color/md_white_1000_20</color>
+    <color name="backgroundLime">#202125</color>
+    <color name="colorAccentLimeText">#2C2D32</color>
+    <color name="dialogLime">#282A2E</color>
+    <color name="colorOnLime">#2C2D32</color>
+
 </resources>

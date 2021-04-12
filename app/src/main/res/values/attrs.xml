@@ -14,6 +14,7 @@
     <attr name="actionBarTintColor" format="color"/>
     <attr name="readerBackground" format="color"/>
     <attr name="colorAccentText" format="color"/>
+    <attr name="colorOnAccent" format="color"/>
     <attr name="tabBarIconColor" format="reference|integer"/>
     <attr name="tabBarIconInactive" format="reference|integer"/>
     <attr name="tabHighlightBackground" format="color"/>
