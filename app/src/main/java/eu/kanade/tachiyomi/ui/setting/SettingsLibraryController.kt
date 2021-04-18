@@ -143,10 +143,14 @@ class SettingsLibraryController : SettingsController() {
             multiSelectListPreferenceMat(activity) {
                 key = Keys.libraryUpdateCategories
                 titleRes = R.string.categories_to_include_in_global_update
-                entries = dbCategories.map { it.name }
-                entryValues = dbCategories.map { it.id.toString() }
+
+                val categories = listOf(Category.createDefault(context)) + dbCategories
+                entries = categories.map { it.name }
+                entryValues = categories.map { it.id.toString() }
+
                 allSelectionRes = R.string.all
             }
+
             intListPreference(activity) {
                 key = Keys.updateOnRefresh
                 titleRes = R.string.categories_on_manual
