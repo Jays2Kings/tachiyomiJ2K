@@ -82,7 +82,7 @@
     <string name="dark">Tema gelap</string>
     <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Bahasa</string>
-    <string name="system_default">Bawaan sistem</string>
+    <string name="system_default">Asali sistem</string>
     <string name="default_category">Bawaan kategori</string>
     <string name="always_ask">Selalu tanya</string>
     <string name="fullscreen">Layar penuh</string>
@@ -204,9 +204,8 @@
     <string name="cover_updated">Sampul telah diperbarui</string>
     <string name="page_">Halaman: %1$d</string>
     <string name="next_chapter_not_found">Bab berikutnya tidak ditemukan</string>
-    <string name="decode_image_error">Gambar tidak bisa diterjemahkan</string>
+    <string name="decode_image_error">Gambar tidak bisa ditampilkan</string>
     <string name="use_image_as_cover">Apakah anda ingin menggunakan gambar ini sebagai sampul\?</string>
-    <string name="viewer_for_this_series">Jumlah pembaca untuk seri ini</string>
     <string name="could_not_download_chapter_can_try_again">Terjadi kesalahan saat mengunduh bab. Anda bisa mencoba lagi di halaman sedang diunduh</string>
     <string name="new_chapters_found">Bab baru ditemukan</string>
     <string name="failed_to_update_cover">Gagal memperbarui sampul</string>
@@ -257,7 +256,7 @@
     <string name="normal">Normal</string>
     <string name="fast">Cepat</string>
     <string name="search_filters">Filter pencarian</string>
-    <string name="added_to_library">Ditambahkan ke perpustakaan</string>
+    <string name="added_to_library">Ditambahkan ke pustaka</string>
     <string name="removed_from_library">Dihapus dari perpustakaan</string>
     <string name="_copied_to_clipboard">%1$s tersalin ke clipboard</string>
     <string name="custom_range">Unduh tertentu</string>
@@ -363,7 +362,7 @@
     <string name="new_chapters">Bab baru</string>
     <string name="unknown_status">Status tidak diketahui</string>
     <string name="manhwa">Manhwa</string>
-    <string name="add_to_library">Tambahkan ke perpustakaan</string>
+    <string name="add_to_library">Tambah ke pustaka</string>
     <string name="season_">Sesi %1$d</string>
     <string name="volume_">Volume %1$d</string>
     <string name="continue_reading">Melanjutkan membaca</string>
@@ -385,7 +384,7 @@
     <string name="source_hidden">Sumber tersembunyi</string>
     <string name="all_sources">Semua sumber</string>
     <string name="search_extensions">Cari ekstensi…</string>
-    <string name="in_library">Dalam perpustakaan</string>
+    <string name="in_library">Di Pustaka</string>
     <string name="reset_chapter_question">Atur ulang bab\?</string>
     <string name="search_recents">Cari yang terbaru…</string>
     <string name="view_all_updates">Lihat semua pembaharuan</string>
@@ -414,7 +413,6 @@
     <string name="hide_category_hopper">Sembunyikan kategori lompat</string>
     <string name="display_as">Tampilkan sebagai</string>
     <string name="tap_library_to_show_filters">Ketuk ikon perpustakaan untuk menampilkan filter</string>
-    <string name="grid_options">Opsi grid</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -499,8 +497,8 @@
     <string name="no_description">Tidak ada deskripsi</string>
     <string name="next_page">Halaman selanjutnya</string>
     <string name="previous_page">Halaman sebelumnya</string>
-    <string name="next_chapter">Halaman selanjutnya</string>
-    <string name="previous_chapter">Halaman sebelumnya</string>
+    <string name="next_chapter">Chapter selanjutnya</string>
+    <string name="previous_chapter">Chapter sebelumnya</string>
     <string name="animate_page_transitions">Transisi halaman</string>
     <string name="default_reading_mode">Mode pembacaan standar</string>
     <string name="nav_layout">Tata letak navigasi</string>
@@ -522,7 +520,7 @@
     <string name="edge_nav">Tepi</string>
     <string name="right_and_left_nav">Kanan dan Kiri</string>
     <string name="invert_tapping">Ketukan arah sebaliknya</string>
-    <string name="none">Tidak</string>
+    <string name="none">Kosong</string>
     <string name="started_reading_date">Tanggal mulai membaca</string>
     <string name="finished_reading_date">Tanggal selesai membaca</string>
     <string name="myanimelist_relogin">Harap login kembali ke MAL</string>
@@ -558,4 +556,78 @@
     <string name="updated_to_">Diperbaharui ke v%1$s</string>
     <string name="add_edit_categories">Tambah/Ubah Kategori</string>
     <string name="hide_app_block_screenshots">Sembunyikan konten aplikasi saat berpindah aplikasi dan blokir tangkapan layar</string>
+    <string name="show_unread_count">Tampilkan jumlah belum dibaca</string>
+    <string name="show_unread_badges">Tampilkan penanda belum dibaca</string>
+    <string name="hide_unread_badges">Sembunyikan tanda belum dibaca</string>
+    <string name="category_cannot_be_blank">Mohon isi nama kategori</string>
+    <string name="new_category">Tambah kategori baru</string>
+    <string name="category">Kategori</string>
+    <plurals name="chapters_plural">
+        <item quantity="other">%1$d chapter</item>
+    </plurals>
+    <string name="move_x_to">Pindah %1$s ke…</string>
+    <string name="add_x_to">Tambah %1$s ke …</string>
+    <string name="download_unread">Unduh yang belum dibaca</string>
+    <string name="backup_in_progress">Pencadangan masih dalam proses</string>
+    <string name="restore_in_progress">Pemulihan masih dalam proses</string>
+    <string name="want_to_read">Ingin dibaca</string>
+    <string name="currently_reading">Sedang Membaca</string>
+    <plurals name="deleted_chapters">
+        <item quantity="other">%1$s chapter telah dihapus dari sumber:
+\n%2$s
+\n
+\nHapus unduhannya\?</item>
+    </plurals>
+    <string name="shift_one_page_over">Geser satu halaman ke atas</string>
+    <string name="suggested_date_">Tanggal yang disarankan: %1$s</string>
+    <string name="switch_to_single">Beralih ke satu halaman</string>
+    <string name="switch_to_double">Beralih ke dua halaman</string>
+    <string name="single_page">Satu halaman</string>
+    <string name="show_reset_history_button">Tampilkan tombol reset riwayat</string>
+    <string name="unread_or_downloaded">Belum dibaca atau diunduh</string>
+    <string name="top">Teratas</string>
+    <string name="tag">Tag</string>
+    <string name="custom_manga_info">Info manga kustom</string>
+    <string name="error_sharing_cover">Galat saat berbagi sampul</string>
+    <string name="error_saving_cover">Galat saat menyimpan penutup</string>
+    <string name="cover_saved">Sampul tersimpan</string>
+    <string name="migrate_now">Migrasi sekarang</string>
+    <string name="search_manually">Cari secara manual</string>
+    <string name="show_title_first">Tampilkan judul terlebih dahulu</string>
+    <string name="reset_cover">Reset penutup</string>
+    <string name="reset_tags">Setel ulang Tag</string>
+    <string name="clear_tags">Bersihkan Tag</string>
+    <string name="oldest_first">Terlama ke terbaru</string>
+    <string name="show_download_button">Tampilkan tombol unduh</string>
+    <string name="next">Selanjutnya</string>
+    <string name="move_to_">Pindah ke %1$s</string>
+    <string name="moved_to_">Pindahkan ke %1$s</string>
+    <string name="copy_now">Salin sekarang</string>
+    <string name="migrate_">Migrasi %1$s</string>
+    <string name="menu">menu</string>
+    <string name="stop_migrating">Hentikan migrasi\?</string>
+    <string name="sort_and_filter">Sortir &amp; Saring</string>
+    <string name="select_sources">Pilih sumber</string>
+    <string name="selection">Pilihan</string>
+    <plurals name="manga_migrated">
+        <item quantity="other">%d manga dimigrasi</item>
+    </plurals>
+    <string name="skipping_">(melewatkan %1$d)</string>
+    <plurals name="copy_manga">
+        <item quantity="other">Salin manga %1$d%2$s\?</item>
+    </plurals>
+    <string name="visit_recents_for_download_queue">Kunjungi tab terbaru untuk mengakses antrean unduhan. Anda juga dapat mengetuk atau menekan dan menahan dua kali untuk akses yang lebih cepat</string>
+    <string name="manage_whats_downloading">Atur apa yang diunduh</string>
+    <string name="nothing_is_downloading">Tidak ada unduhan</string>
+    <string name="remove_downloads">Hapus unduhan</string>
+    <string name="remove_download">Hapus unduhan</string>
+    <string name="start_downloading_now">Mulai mengunduh sekarang</string>
+    <string name="username_must_not_be_blank">Nama pengguna atau kata sandi tidak boleh kosong</string>
+    <string name="downloading_">Mengunduh: %1$s</string>
+    <string name="whats_new_this_release">Apa yang baru dirilis kali ini</string>
+    <string name="logout_from_">Keluar dari %1$s\?</string>
+    <string name="logout">Keluar</string>
+    <string name="not_downloaded">Tidak terunduh</string>
+    <string name="view_all_errors">Lihat semua galat</string>
+    <string name="filter_languages">Filter Bahasa</string>
 </resources>

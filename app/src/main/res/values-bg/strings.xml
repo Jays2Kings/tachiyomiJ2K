@@ -200,7 +200,6 @@
     <string name="next_chapter_not_found">Не беше намерена следваща глава</string>
     <string name="decode_image_error">Неуспешно декодиране на изображението</string>
     <string name="use_image_as_cover">Желаете ли да използвате това изображение за корица?</string>
-    <string name="viewer_for_this_series">Начин на четене за тази поредица</string>
     <!-- Backup fragment -->
     <string name="backup">Резервно копие</string>
     <!-- Recent manga fragment -->

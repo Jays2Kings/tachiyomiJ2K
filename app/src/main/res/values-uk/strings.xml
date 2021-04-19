@@ -244,7 +244,6 @@
     <string name="next_chapter_not_found">Наступну главу не знайдено</string>
     <string name="decode_image_error">Зображення не може бути декодовано</string>
     <string name="use_image_as_cover">Ви бажаєте встановити цю картинку як обкладинку\?</string>
-    <string name="viewer_for_this_series">Відображення для цієї серії</string>
     <string name="finished_chapter">Завершено:</string>
     <string name="current_chapter">Поточна:</string>
     <string name="next_title">Наступна:</string>
@@ -456,7 +455,6 @@
     <string name="hide_category_hopper">Приховати категорію</string>
     <string name="display_as">Показати як</string>
     <string name="tap_library_to_show_filters">Тицьніть іконку бібліотеки аби показати фільтри</string>
-    <string name="grid_options">Налаштування сітки</string>
     <string name="x_large">Оверсайз</string>
     <string name="large">Норма</string>
     <string name="medium">Макро</string>
@@ -732,5 +730,4 @@
     <string name="crash_log_saved">Логи падінь збережено</string>
     <string name="updated_to_">Оновлено до v%1$s</string>
     <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
-    <string name="dns_over_https">DNS поверх HTTPS (Cloudflare)</string>
 </resources>

@@ -244,7 +244,6 @@
     <string name="next_chapter_not_found">Το επόμενο κεφάλαιο δεν βρέθηκε</string>
     <string name="decode_image_error">Δεν ήταν δυνατή η αποκωδικοποίηση της εικόνας</string>
     <string name="use_image_as_cover">Θέλετε να ορίσετε αυτήν την εικόνα ως εξώφυλλο;</string>
-    <string name="viewer_for_this_series">Αναγνώστης για αυτήν τη σειρά</string>
     <string name="finished_chapter">Διαβασμένο:</string>
     <string name="current_chapter">Τρέχον:</string>
     <string name="next_title">Επόμενο:</string>
@@ -403,7 +402,6 @@
     <string name="more_library_settings">Περισσότερες ρυθμίσεις βιβλιοθήκης</string>
     <string name="display_as">Εμφάνιση ως</string>
     <string name="tap_library_to_show_filters">Πατήστε το εικονίδιο Βιβλιοθήκη για εμφάνιση φίλτρων</string>
-    <string name="grid_options">Επιλογές πλέγματος</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -545,6 +543,5 @@
     <string name="saves_error_logs">Αποθηκεύει αρχεία καταγραφής σφαλμάτων σε ένα αρχείο για κοινή χρήση με τους προγραμματιστές</string>
     <string name="crash_log_saved">Τα αρχεία καταγραφής σφαλμάτων αποθηκεύτηκαν</string>
     <string name="updated_to_">Ενημερώθηκε σε v%1$s</string>
-    <string name="dns_over_https">DNS μέσω HTTPS (Cloudflare)</string>
     <string name="hide_app_block_screenshots">Απόκρυψη περιεχομένων εφαρμογής κατά την εναλλαγή εφαρμογών και τον αποκλεισμό στιγμιότυπων οθόνης</string>
 </resources>

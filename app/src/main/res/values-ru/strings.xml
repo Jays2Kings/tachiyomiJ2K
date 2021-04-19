@@ -8,7 +8,7 @@
     <string name="copy_now">Копировать сейчас</string>
     <string name="create">Создать</string>
     <string name="delete">Удалить</string>
-    <string name="display">Отобразить</string>
+    <string name="display">Вид</string>
     <string name="download_badge">Значок загруженных</string>
     <string name="compact_grid">Сетка</string>
     <string name="list">Список</string>
@@ -16,7 +16,7 @@
     <string name="edit">Изменить</string>
     <string name="edit_categories">Изменить категории</string>
     <string name="filter">Фильтр</string>
-    <string name="bookmarked">Закладки</string>
+    <string name="bookmarked">Добавлено в закладки</string>
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как прочитанное</string>
@@ -42,7 +42,7 @@
     <string name="select_all">Выбрать всё</string>
     <string name="share">Поделиться</string>
     <string name="dont_migrate">Не мигрировать</string>
-    <string name="sort">Сортировать</string>
+    <string name="sort">Сортировка</string>
     <string name="alphabetically">По алфавиту</string>
     <string name="drag_and_drop">Перетаскивание</string>
     <string name="enabled">Включено</string>
@@ -55,7 +55,7 @@
     <string name="view_chapters">Посмотреть главы</string>
     <string name="back">Назад</string>
     <string name="forward">Вперёд</string>
-    <string name="all">Всё</string>
+    <string name="all">Все</string>
     <string name="amoled_black">AMOLED чёрная</string>
     <string name="backup">Резервная копия</string>
     <string name="what_should_backup">Что вы хотите резервировать\?</string>
@@ -151,7 +151,7 @@
     <string name="fourth_to_last">Четвёртая от прочитанной главы</string>
     <string name="history">История</string>
     <string name="include_extra_search_parameter">Дополнительный параметр при поиске</string>
-    <string name="library_is_empty_add_from_browse">Ваша библиотека пуста, вы можете добавить из Источника.</string>
+    <string name="library_is_empty_add_from_browse">Ваша библиотека пуста, добавьте тайтлы из Поисковика.</string>
     <string name="no_recent_chapters">Нет новых глав</string>
     <string name="no_recently_read_manga">Нет недавно прочитанной манги</string>
     <string name="invalid_download_location">Недопустомая директория для скачивания</string>
@@ -339,12 +339,12 @@
     <string name="type">Тип</string>
     <string name="current_chapter">Текущий:</string>
     <string name="finished_chapter">Закончено:</string>
-    <string name="next_title">Следующий:</string>
+    <string name="next_title">Следующая:</string>
     <string name="theres_no_next_chapter">Следующей главы нет</string>
     <string name="theres_no_previous_chapter">Предыдущей главы нет</string>
     <string name="failed_to_load_pages_">Не удалось загрузить страницы: %1$s</string>
     <string name="loading_pages">Идёт загрузка страниц…</string>
-    <string name="previous_title">Предыдущий:</string>
+    <string name="previous_title">Предыдущая:</string>
     <string name="unknown">Неизвестно</string>
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="unlock_library">Разблокируйте, чтобы открыть библиотеку</string>
@@ -378,7 +378,6 @@
     <string name="username">Имя пользователя</string>
     <string name="version">Версия</string>
     <string name="vertical_viewer">Вертикально</string>
-    <string name="viewer_for_this_series">Отображение для этой серии</string>
     <string name="want_to_read">Хочу прочитать</string>
     <string name="webtoon">Веб-комикс</string>
     <string name="white">Белый</string>
@@ -486,7 +485,6 @@
     <string name="medium">M</string>
     <string name="large">L</string>
     <string name="x_large">XL</string>
-    <string name="grid_options">Варианты сетки</string>
     <string name="tap_library_to_show_filters">Нажмите на значок библиотеки, чтобы отобразить фильтры</string>
     <string name="display_as">Показать как</string>
     <string name="hide_category_hopper">Скрыть переключатель категорий</string>
@@ -623,7 +621,6 @@
     <!-- Advanced section -->
     <string name="data_management">Управление данными</string>
     <string name="network">Сеть</string>
-    <string name="dns_over_https" translatable="false">DNS через HTTPS (Cloudflare)</string>
     <string name="requires_app_restart">Для вступления в силу требуется перезапуск приложения</string>
     <string name="clean_orphaned_downloads">Очистить утраченное</string>
     <string name="clean_read_downloads">Очистить прочитанное</string>
@@ -730,7 +727,7 @@
     <string name="edge_nav">Край</string>
     <string name="right_and_left_nav">Справа и слева</string>
     <string name="invert_tapping">Инверсия нажатия</string>
-    <string name="none">Никто</string>
+    <string name="none">Нет</string>
     <string name="started_reading_date">Дата начала чтения</string>
     <string name="finished_reading_date">Дата окончания чтения</string>
     <string name="myanimelist_relogin">Пожалуйста, войдите в MAL снова</string>
@@ -756,13 +753,13 @@
     <string name="restoring_backup_canceled">Восстановление отменено</string>
     <string name="restore_duration">%02d мин, %02d сек</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Выполнено за %1$s с %2$s ошибкойВыполнено за %1$s с %2$s ошибкамиВыполнено за %1$s с %2$s ошибками</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">Выполнено за %1$s с %2$s ошибкой</item>
+        <item quantity="few">Выполнено за %1$s с %2$s ошибками</item>
+        <item quantity="many">Выполнено за %1$s с %2$s ошибками</item>
+        <item quantity="other">Выполнено за %1$s с %2$s ошибками</item>
     </plurals>
     <string name="file_picker_error">Приложение для выбора файлов не найдено</string>
-    <string name="next">Следующий</string>
+    <string name="next">Следующее</string>
     <string name="open_log">Открыть лог</string>
     <string name="previous">Предыдущее</string>
     <string name="menu">Меню</string>
@@ -785,7 +782,6 @@
     <string name="_must_be_enabled_first">%1$s должен быть включён сначала</string>
     <string name="app_info">О приложении</string>
     <string name="filter_languages">Языковой фильтр</string>
-    <string name="hide_hopper_on_scroll">Скрывать панель категорий при прокрутке</string>
     <string name="show_unread_count">Показывать счётчик непрочитанных</string>
     <string name="show_unread_badges">Показывать значки непрочитанных</string>
     <string name="hide_unread_badges">Скрывать значки непрочитанных</string>
@@ -820,8 +816,8 @@
         <item quantity="many">%1$d страниц</item>
         <item quantity="other">%1$d страниц</item>
     </plurals>
-    <string name="automatic_orientation">Автоматически (зависимо от ориентации)</string>
-    <string name="automatic_can_still_switch">При использовании автоматического макета страниц, вы всё ещё можете переключиться между макетами когда читаете без переопределении этой настройки</string>
+    <string name="automatic_orientation">Автоматически (на основе ориентации)</string>
+    <string name="automatic_can_still_switch">При использовании автоматического макета страниц, вы всё ещё можете переключиться между макетами, когда читаете, без переопределении этой настройки</string>
     <string name="page_layout">Макет страниц</string>
     <string name="switch_to_single">Переключиться на одну страницу</string>
     <string name="switch_to_double">Переключиться на двойные страницы</string>
@@ -836,21 +832,56 @@
     <string name="share_first_page">Поделиться первой страницей</string>
     <string name="set_first_page_as_cover">Установить первую страницу как обложку</string>
     <string name="show_title_first">Показывать название первым</string>
-    <string name="show_read_in_all">Показывать прочитанное во всём</string>
     <string name="show_reset_history_button">Показывать кнопку сброса истории</string>
     <string name="only_unread">Только непрочитанное</string>
     <string name="show_download_button">Показывать кнопку загрузки</string>
     <string name="press_and_hold_to_also_reset">Нажать и удерживать также может сбросить историю главы</string>
-    <string name="grouped">Сгрупированно</string>
+    <string name="grouped">Сгрупировать</string>
     <string name="no_recent_read_updated_manga">Нет недавно прочитанной или обновлённой манги</string>
     <string name="reset_chapter_history">Сбросить историю главы</string>
     <string name="shift_one_page_over">Сдвинуть на одну страницу</string>
     <string name="unread_or_downloaded">Непрочитанное или загруженное</string>
     <string name="only_downloaded">Только загруженное</string>
     <string name="cutout_behavior_only_applies">Поведение вырезанной области только применяется в портретном режиме с определёнными типами масштабирования</string>
-    <string name="hide_app_block_screenshots">Скрывать содержимое приложения при переключении на другие приложения и также блокировать скриншоты</string>
-    <string name="follow_system_theme">В соответствии с системой</string>
+    <string name="hide_app_block_screenshots">Скрывать содержимое приложения при переключении на другие приложения а также блокировать скриншоты</string>
+    <string name="follow_system_theme">В соответствии с системой темой</string>
     <string name="black_and_red">Чёрный и Красный</string>
     <string name="spring_blossom">Весенний Цветок</string>
     <string name="midnight_dusk">Полночные Сумерки</string>
+    <string name="flat_lime">Плоский Лайм</string>
+    <string name="hot_pink">Ярко Розовый</string>
+    <string name="invert_double_pages">Инвертировать двойные страницы</string>
+    <string name="save_combined_pages">Сохранить объединённые страницы</string>
+    <string name="share_combined_pages">Поделиться объединёнными страницами</string>
+    <string name="pages_">Страницы %1$s</string>
+    <string name="couldnt_download_low_space">Невозможно загрузить главы из-за нехватки места на диске</string>
+    <string name="show_read_chapters_all">Показывать прочитанные главы в Группировке и во Всём</string>
+    <string name="when_grouping_by_sources_tags">При группировке библиотеки по источникам, статусу, и т.д.</string>
+    <string name="move_dynamic_to_bottom">Переместить свёрнутые динамические категории в нижнюю часть</string>
+    <string name="clear_filters">Сбросить фильтры</string>
+    <string name="webview_is_required">Для Tachiyomi необходим WebView</string>
+    <string name="disabled">Отключено</string>
+    <string name="doh">DNS по HTTPS</string>
+    <string name="pauses_reading_history">Приостанавливает историю чтения</string>
+    <string name="incognito_mode">Режим инкогнито</string>
+    <string name="turn_off_">Выключить %s</string>
+    <string name="turn_on_">Включить %s</string>
+    <string name="webtoon_cannot_change">Невозможно изменить режим чтения для вебкомикса. Отредактируйте типы серий для начала чтобы изменить режим чтения.</string>
+    <string name="remove_crop">Убрать обрезку</string>
+    <string name="crop_borders_webtoon">Границы обрезки (Вебкомикс)</string>
+    <string name="crop_borders_paged">Границы обрезки (Постранично)</string>
+    <string name="changing_will_reset_reading_mode">Изменяя этот параметр приведёт к сбросу режима чтения для этих серий</string>
+    <string name="reading_mode">Режим чтения</string>
+    <string name="a_while_ago">Некоторое время назад</string>
+    <string name="certain_buttons_can_be_found">Некоторые кнопки могут быть найдены в других местах если отключены здесь</string>
+    <string name="display_buttons_bottom_reader">Кнопки в нижней части читалки</string>
+    <string name="shift_double_pages">Сдвинуть двойные страницы</string>
+    <string name="_per_row">%d в ряд</string>
+    <string name="uniform_grid_covers">Единые обложки сетки</string>
+    <string name="grid_size">Размер сетки</string>
+    <string name="can_be_found_in_library_filters">Также может быть найденно при расширении библиотечных фильтров</string>
+    <string name="series">Серии</string>
+    <string name="expand_collapse_all_categories">Развернуть/Свернуть все категории</string>
+    <string name="category_hopper_long_press">Категория бункера при долгом нажатий действия</string>
+    <string name="no_pages_found">Страницы не найдены</string>
 </resources>

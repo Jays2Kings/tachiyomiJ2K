@@ -199,7 +199,6 @@
     <string name="next_chapter_not_found">Không tìm thấy chương kế tiếp</string>
     <string name="decode_image_error">Không thể giải mã hình ảnh</string>
     <string name="use_image_as_cover">Bạn có chắc muốn đặt ảnh này làm ảnh bìa?</string>
-    <string name="viewer_for_this_series">Kiểu đọc cho series này</string>
     <!-- Backup fragment -->
     <string name="backup">Sao lưu</string>
     <!-- Recent manga fragment -->

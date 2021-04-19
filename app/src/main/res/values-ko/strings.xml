@@ -200,7 +200,6 @@
     <string name="next_chapter_not_found">다음 챕터가 없습니다</string>
     <string name="decode_image_error">이미지를 디코드 할 수 없습니다</string>
     <string name="use_image_as_cover">이 이미지를 표지로 설정하시겠습니까\?</string>
-    <string name="viewer_for_this_series">이 시리즈에 대한 뷰어</string>
     <string name="finished_chapter">완료:</string>
     <string name="current_chapter">현재:</string>
     <string name="next_title">다음:</string>

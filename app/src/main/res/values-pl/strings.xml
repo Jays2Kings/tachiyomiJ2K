@@ -140,7 +140,6 @@
     <string name="medium">M</string>
     <string name="large">L</string>
     <string name="x_large">XL</string>
-    <string name="grid_options">Opcje siatki</string>
     <string name="tap_library_to_show_filters">Naciśnij ikonę biblioteki, by wyświetlić filtry</string>
     <string name="display_as">Wyświetlaj jako</string>
     <string name="hide_category_hopper">Ukryj szybki przełącznik kategorii</string>
@@ -252,7 +251,6 @@
     <string name="next_chapter_not_found">Nie znaleziono następnego rozdziału</string>
     <string name="decode_image_error">Nie udało się wczytać obrazka</string>
     <string name="use_image_as_cover">Czy chcesz ustawić ten obrazek jako okładkę?</string>
-    <string name="viewer_for_this_series">Widok dla tej serii</string>
     <string name="finished_chapter">Przeczytany:</string>
     <string name="current_chapter">Obecny:</string>
     <string name="next_title">Następny:</string>
@@ -493,7 +491,6 @@
     <string name="clear_chapter_cache">Wyczyść cache rozdziałów</string>
     <string name="data_management">Zarządzanie Danymi</string>
     <string name="network">Sieć</string>
-    <string name="dns_over_https" translatable="false">DNS over HTTPS (Cloudflare)</string>
     <string name="requires_app_restart">Wymaga ponownego uruchomienia aplikacji</string>
     <string name="used_">W użyciu: %1$s</string>
     <plurals name="cache_cleared">
@@ -808,7 +805,6 @@
     <string name="_must_be_enabled_first">%1$s musi najpierw zostać włączone</string>
     <string name="app_info">Informacje o aplikacji</string>
     <string name="filter_languages">Filtruj Języki</string>
-    <string name="hide_hopper_on_scroll">Ukryj przełącznik kategorii przy przewijaniu</string>
     <string name="show_unread_count">Pokaż liczbę nieprzeczytanych</string>
     <string name="show_unread_badges">Pokaż nieprzeczytane odznaki</string>
     <string name="hide_unread_badges">Ukryj nieprzeczytane odznaki</string>

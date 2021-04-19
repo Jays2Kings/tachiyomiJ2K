@@ -20,7 +20,7 @@
     <!-- Status -->
     <string name="ongoing">Em andamento</string>
     <string name="unknown">Desconhecido</string>
-    <string name="unknown_status">Status desconhecido</string>
+    <string name="unknown_status">Status Desconhecido</string>
     <string name="licensed">Licenciado</string>
     <string name="completed">Concluído</string>
     <!-- Security -->
@@ -130,7 +130,6 @@
     <string name="medium">M</string>
     <string name="large">G</string>
     <string name="x_large">XG</string>
-    <string name="grid_options">Opções de grade</string>
     <string name="tap_library_to_show_filters">Toque no ícone da Biblioteca para mostrar os filtros</string>
     <string name="display_as">Mostrar como</string>
     <string name="hide_category_hopper">Ocultar seletor de categoria</string>
@@ -233,7 +232,6 @@
     <string name="next_chapter_not_found">Próximo capítulo não encontrado</string>
     <string name="decode_image_error">Não foi possível descodificar a imagem</string>
     <string name="use_image_as_cover">Deseja usar esta imagem como capa?</string>
-    <string name="viewer_for_this_series">Leitura para esta série</string>
     <string name="finished_chapter">Concluído:</string>
     <string name="current_chapter">Atual:</string>
     <string name="next_title">Próximo:</string>
@@ -447,7 +445,7 @@
     <string name="backup_failed">Falha no backup</string>
     <string name="backup_created">Backup criado</string>
     <string name="restore_completed">Restauração concluída</string>
-    <string name="restore_error">Erro de restauração</string>
+    <string name="restore_error">Falha ao restaurar backup</string>
     <string name="what_should_backup">Do que você deseja fazer backup?</string>
     <string name="restoring_backup">Restaurando backup</string>
     <string name="not_logged_into_">Não conectado ao %1$s</string>
@@ -504,8 +502,8 @@
     <string name="build_time">Data de compilação</string>
     <string name="send_crash_report">Enviar relatórios de erro</string>
     <string name="helps_fix_bugs">Ajuda a corrigir eventuais erros. Não serão enviados dados sensíveis</string>
-    <string name="whats_new">O que há de novo nesta versão</string>
-    <string name="website">Saite</string>
+    <string name="whats_new">O que há de novo</string>
+    <string name="website">Website</string>
     <string name="open_source_licenses">Licenças de código aberto</string>
     <!-- Login dialog -->
     <string name="log_in_to_">Fazer login em %1$s</string>
@@ -697,8 +695,8 @@
     <string name="may_contain_nsfw">Pode haver conteúdo NSFW (+18)</string>
     <string name="next_page">Próxima página</string>
     <string name="previous_page">Página anterior</string>
-    <string name="next_chapter">Próxima página</string>
-    <string name="previous_chapter">Página anterior</string>
+    <string name="next_chapter">Próximo capítulo</string>
+    <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar as transições de página</string>
     <string name="default_reading_mode">Modo de leitura padrão</string>
     <string name="nav_layout">Layout de navegação</string>
@@ -756,6 +754,9 @@
     <string name="crash_log_saved">Registros de travamento salvos</string>
     <string name="updated_to_">Atualizado para v%1$s</string>
     <string name="add_edit_categories">Adicionar/Editar categorias</string>
-    <string name="dns_over_https">DNS sobre HTTPS (Cloudflare)</string>
     <string name="hide_app_block_screenshots">Oculta os conteúdos do aplicativo durante a troca de aplicativos e impede capturas de tela</string>
+    <string name="add_x_to">Adc %1$s para…</string>
+    <string name="move_x_to">Mover %1$s para…</string>
+    <string name="category_cannot_be_blank">Nome da categoria não pode ficar em branco</string>
+    <string name="new_category">Nova categoria</string>
 </resources>

@@ -157,7 +157,6 @@
     <string name="page_">Pagina: %1$d</string>
     <string name="next_chapter_not_found">Volgend hoofdstuk niet gevonden</string>
     <string name="use_image_as_cover">Wil je deze afbeelding als omslagfoto gebruiken?</string>
-    <string name="viewer_for_this_series">Lezer voor deze serie</string>
     <string name="new_chapters_found">Nieuwe hoofdstukken gevonden</string>
     <string name="must_be_in_library_to_edit">Gelieve eerst de manga aan je bibliotheek toe te voegen</string>
     <string name="select_cover_image">Selecteer omslagfoto</string>
@@ -406,7 +405,6 @@
     <string name="hide_category_hopper">Categoriehopper verbergen</string>
     <string name="display_as">Weergeven als</string>
     <string name="tap_library_to_show_filters">Tik op het Bibliotheekicoon om filters weer te geven</string>
-    <string name="grid_options">Rasteropties</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -724,7 +722,6 @@
     <string name="_must_be_enabled_first">%1$s moet eerst ingeschakeld worden</string>
     <string name="app_info">App-informatie</string>
     <string name="filter_languages">Filter talen</string>
-    <string name="hide_hopper_on_scroll">Categorietrechter verbergen bij een scroll</string>
     <string name="show_unread_count">Ongelezen aantal weergeven</string>
     <string name="show_unread_badges">\'Ongelezen\'-badges weergeven</string>
     <string name="hide_unread_badges">Ongelezen badges verbergen</string>
@@ -734,7 +731,6 @@
         <item quantity="one">%1$d hoofdstuk</item>
         <item quantity="other">%1$d hoofdstukken</item>
     </plurals>
-    <string name="dns_over_https">DNS over HTTPS (Cloudflare)</string>
     <string name="selection">Selectie</string>
     <string name="preview">Voorbeeld</string>
     <string name="move_to_">Verplaats naar %1$s</string>
@@ -763,7 +759,6 @@
     <string name="share_first_page">Eerste pagina delen</string>
     <string name="set_first_page_as_cover">Eerste pagina als omslag instellen</string>
     <string name="show_title_first">Eerst titel weergeven</string>
-    <string name="show_read_in_all">Laat gelezen zien in alles</string>
     <string name="show_reset_history_button">\"Geschiedenis vergeten\"-knop laten zien</string>
     <string name="show_download_button">Downloadknop laten zien</string>
     <string name="unread_or_downloaded">Ongelezen of gedownload</string>
@@ -779,4 +774,8 @@
     <string name="add_x_to">Voeg %1$s toe aan…</string>
     <string name="move_x_to">Verplaats %1$s naar…</string>
     <string name="hide_app_block_screenshots">Verberg inhoud van app bij omschakelen tussen apps en blokkeer screenshots</string>
+    <string name="follow_system_theme">Volg systeemthema</string>
+    <string name="black_and_red">Zwart en Rood</string>
+    <string name="spring_blossom">Lentebloesem</string>
+    <string name="midnight_dusk">Nachtschemering</string>
 </resources>

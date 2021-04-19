@@ -417,6 +417,5 @@
     <string name="saves_error_logs">Sine-save ang mga error log sa isang file para maibahagi sa mga developer</string>
     <string name="crash_log_saved">Nai-save na ang crash log</string>
     <string name="updated_to_">In-update patungong bersyon %1$s</string>
-    <string name="dns_over_https">DNS kesa HTTPS (Cloudflare)</string>
     <string name="hide_app_block_screenshots">Itago ang nilalaman ng app habang nagpapalit ng app at harangin ang mga screenshot</string>
 </resources>

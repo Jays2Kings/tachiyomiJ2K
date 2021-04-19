@@ -212,7 +212,6 @@
     <string name="next_chapter_not_found">अगले अध्याय नहीं मिला</string>
     <string name="decode_image_error">छवि को डीकोड नहीं किया जा सका</string>
     <string name="use_image_as_cover">क्या आप इस छवि को कवर के रूप में सेट करना चाहते हैं?</string>
-    <string name="viewer_for_this_series">इस श्रृंखला के लिए दर्शक</string>
     <string name="could_not_download_chapter_can_try_again">अध्याय डाउनलोड करते समय एक त्रुटि हुई आप डाउनलोड अनुभाग में पुनः प्रयास कर सकते हैं</string>
     <string name="new_chapters_found">नए अध्याय पाए गए</string>
     <string name="failed_to_update_cover">कवर को अपडेट करने में विफल</string>

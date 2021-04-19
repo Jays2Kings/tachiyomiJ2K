@@ -256,7 +256,6 @@
     <string name="next_chapter_not_found">ไม่พบบทถัดไป</string>
     <string name="decode_image_error">ไม่สามารถถอดรหัสรูปภาพได้</string>
     <string name="use_image_as_cover">คุณต้องการที่จะตั้งค่าภาพเป็นภาพที่ปกใช่มั้ย\?</string>
-    <string name="viewer_for_this_series">ตัวแสดงสำหรับชุดนี้</string>
     <string name="finished_chapter">เสร็จแล้ว:</string>
     <string name="current_chapter">ปัจจุบัน:</string>
     <string name="next_title">ต่อไป:</string>

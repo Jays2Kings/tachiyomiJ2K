@@ -263,7 +263,6 @@
 \nVed å godta dette sertifikatet aksepterer du overstående risikoer.</string>
     <string name="double_tap_anim_speed">Animasjonshastighet ved dobbelklikk</string>
     <string name="use_image_as_cover">Vil du bruke dette bildet som omslag\?</string>
-    <string name="viewer_for_this_series">Leser for denne serien</string>
     <string name="could_not_download_chapter_can_try_again">En feil oppstod under nedlasting av kapitler. Du kan prøve igjen i nedlastingsdelen.</string>
     <string name="must_be_in_library_to_edit">Legg til mangaen i biblioteket ditt før du gjør dette</string>
     <string name="select_cover_image">Velg omslagsbilde</string>
@@ -424,7 +423,6 @@
     <string name="crash_logs">Feillogg</string>
     <string name="dump_crash_logs">Dump feillogg</string>
     <string name="saves_error_logs">Lagrer feillogger i en fil som kan sendes til utviklerne</string>
-    <string name="dns_over_https">DNS over HTTPS (Cloudflare)</string>
     <string name="check_for_extension_updates">Se etter oppdateringer for utvidelser</string>
     <string name="source_migration_guide">Veiledning for kildemigrering</string>
     <string name="nsfw_sources">Aldersgrense 18+ kilder</string>

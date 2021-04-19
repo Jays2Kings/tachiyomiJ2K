@@ -257,7 +257,6 @@
     <string name="next_chapter_not_found">Hindi nakita ang susunod na kabanata</string>
     <string name="decode_image_error">Hindi ma-decode ang larawan</string>
     <string name="use_image_as_cover">Gusto mo bang i-set ang larawang ito bilang pabalat\?</string>
-    <string name="viewer_for_this_series">Viewer para sa seryeng ito</string>
     <string name="finished_chapter">Natapos:</string>
     <string name="current_chapter">Kasalukuyan:</string>
     <string name="next_title">Susunod:</string>

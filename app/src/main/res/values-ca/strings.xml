@@ -244,7 +244,6 @@
     <string name="next_chapter_not_found">No s\'ha trobat el capítol següent</string>
     <string name="decode_image_error">No s\'ha pogut descodificar la imatge</string>
     <string name="use_image_as_cover">Voleu definir aquesta imatge com a portada\?</string>
-    <string name="viewer_for_this_series">Lector per a aquesta sèrie</string>
     <string name="finished_chapter">Finalitzat:</string>
     <string name="current_chapter">Actual:</string>
     <string name="next_title">Següent:</string>
@@ -397,7 +396,6 @@
     <string name="show_notification_error">Mostra una notificació per als errors</string>
     <string name="more_library_settings">Més opcions de la biblioteca</string>
     <string name="display_as">Mostra com a</string>
-    <string name="grid_options">Opcions de la graella</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>

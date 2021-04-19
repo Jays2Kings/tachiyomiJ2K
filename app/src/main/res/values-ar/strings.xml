@@ -211,7 +211,6 @@
     <string name="next_chapter_not_found">لم يتم العثور على الفصل التالي</string>
     <string name="decode_image_error">لا يمكن فكّ تشفير هذه الصورةِ</string>
     <string name="use_image_as_cover">هل تريد تعيين هذه الصورة كغلاف؟</string>
-    <string name="viewer_for_this_series">العارض لهذه السلسلة</string>
     <string name="could_not_download_chapter_can_try_again">حدث خطأ أثناء تنزيل الفصول. يمكنك إعادة المحاولة في قسم التنزيلات</string>
     <string name="new_chapters_found">تم إيجاد فصول جديدة</string>
     <string name="failed_to_update_cover">فشل تحديث الغلاف</string>
@@ -650,7 +649,6 @@
     <string name="hide_category_hopper">إخفاء الفئة</string>
     <string name="display_as">عرض ك</string>
     <string name="tap_library_to_show_filters">انقر على أيقونة المكتبة لعرض المُرشحات</string>
-    <string name="grid_options">خيارات التخطيط</string>
     <string name="x_large">XL</string>
     <string name="medium">M</string>
     <string name="x_small">XS</string>
@@ -737,6 +735,5 @@
     <string name="restore_content_full">تم استيراد البيانات من ملف نسخ الاحتياطي.
 \n
 \nيتوجب تثبيت الإضافات المفقودة و تسجيل الدخول إلى منصات التعقب تالياً لاستعمالهم.</string>
-    <string name="dns_over_https">DNS باستعمال التشفير (Cloudflare)</string>
     <string name="hide_app_block_screenshots">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
 </resources>

@@ -4,7 +4,7 @@
     <string name="settings">Configuraciones</string>
     <string name="download_queue">Cola de descargas</string>
     <string name="library">Biblioteca</string>
-    <string name="recent_updates">Actualizaciones de librería</string>
+    <string name="recent_updates">Últimas actualizaciones</string>
     <string name="selected_">%1$d</string>
     <!-- Actions -->
     <string name="filter">Filtrar</string>
@@ -158,7 +158,6 @@
     <string name="page_">Pág: %1$d</string>
     <string name="next_chapter_not_found">Siguiente capítulo no encontrado</string>
     <string name="decode_image_error">"La imagen no se pudo decodificar. "</string>
-    <string name="viewer_for_this_series">Lectura para esta serie</string>
     <!-- Backup fragment -->
     <string name="backup">Copia de seguridad</string>
     <!-- Recent manga fragment -->
@@ -212,7 +211,7 @@
     <string name="undo">Deshacer</string>
     <string name="create">Crear</string>
     <string name="restore">Restablecer</string>
-    <string name="updates">Actualizaciones</string>
+    <string name="updates">Act.</string>
     <string name="weekly">Semanalmente</string>
     <string name="categories_to_include_in_global_update">Categorías a incluir en actualización global</string>
     <string name="all">Todos</string>
@@ -415,8 +414,8 @@
     <string name="unlock_library">Desbloquear para acceder a la biblioteca</string>
     <string name="unknown_status">Estado desconocido</string>
     <string name="in_progress">En progreso</string>
-    <string name="not_started">No iniciado</string>
-    <string name="comic">Comic</string>
+    <string name="not_started">Sin iniciar</string>
+    <string name="comic">Cómic</string>
     <string name="reset_tags">Restablecer etiquetas</string>
     <string name="clear_tags">Borrar etiquetas</string>
     <string name="oldest_first">De más antiguo a más nuevo</string>
@@ -461,7 +460,7 @@
     <string name="all_sources">Todas las fuentes</string>
     <string name="search_extensions">Buscar extensiones…</string>
     <string name="in_library">En Biblioteca</string>
-    <string name="reset_chapter_question">¿Restablecer capítulo\?</string>
+    <string name="reset_chapter_question">¿Reiniciar capítulo\?</string>
     <string name="search_recents">Buscar recientes…</string>
     <string name="view_all_updates">Ver todas las actualizaciones</string>
     <string name="view_history">Ver historial</string>
@@ -491,7 +490,6 @@
     <string name="hide_category_hopper">Ocultar tolva de categoría</string>
     <string name="display_as">Mostrar como</string>
     <string name="tap_library_to_show_filters">Toca el icono de la Biblioteca para mostrar los filtros</string>
-    <string name="grid_options">Opciones de cuadrícula</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -570,7 +568,7 @@
     <string name="always_keep">Mantener siempre</string>
     <string name="delete_removed_chapters">Remover capítulos eliminados</string>
     <string name="manage_whats_downloading">Administra que estás descargando</string>
-    <string name="nothing_is_downloading">No hay nada descargandose actualmente</string>
+    <string name="nothing_is_downloading">No hay descargas en proceso</string>
     <string name="remove_downloads">Borrar descargas</string>
     <string name="remove_download">Borrar descarga</string>
     <string name="start_downloading_now">Empezar descarga</string>
@@ -711,7 +709,6 @@
     <string name="_must_be_enabled_first">%1$s debe estar habilitado primero</string>
     <string name="app_info">Información de la aplicación</string>
     <string name="filter_languages">Filtrar idiomas</string>
-    <string name="hide_hopper_on_scroll">Ocultar hopper de categoría al hacer scroll</string>
     <string name="show_unread_count">Mostrar recuento de no leídos</string>
     <string name="show_unread_badges">Mostrar insignias no leídas</string>
     <string name="hide_unread_badges">Ocultar insignias no leídas</string>
@@ -722,4 +719,16 @@
         <item quantity="other">%1$d capítulos</item>
     </plurals>
     <string name="hide_app_block_screenshots">Ocultar contenido de la aplicación al cambiar de aplicación y bloquear capturas de pantalla</string>
+    <string name="add_x_to">Añadir %1$s a…</string>
+    <string name="move_x_to">Mover %1$s a…</string>
+    <string name="show_title_first">Mostrar el título primero</string>
+    <string name="show_reset_history_button">Mostrar botón de reinicio de historial</string>
+    <string name="unread_or_downloaded">No leídos o descargados</string>
+    <string name="only_downloaded">Solo descargados</string>
+    <string name="only_unread">Solo no leídos</string>
+    <string name="show_download_button">Mostrar botón de descarga</string>
+    <string name="press_and_hold_to_also_reset">Mantener pulsado puede reiniciar el historial de capítulos</string>
+    <string name="grouped">Agrupado</string>
+    <string name="no_recent_read_updated_manga">Sin lectura o actualización reciente</string>
+    <string name="reset_chapter_history">Restablecer el historial de capítulos</string>
 </resources>

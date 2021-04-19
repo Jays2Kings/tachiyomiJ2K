@@ -193,7 +193,6 @@
     <string name="next_chapter_not_found">Capitolo successivo non trovato</string>
     <string name="decode_image_error">L\'immagine non può essere decodificata</string>
     <string name="use_image_as_cover">Vuoi impostare questa immagine come copertina?</string>
-    <string name="viewer_for_this_series">Visualizzatore per questa serie</string>
     <!-- Backup fragment -->
     <string name="backup">Backup</string>
     <!-- Recent manga fragment -->
@@ -454,7 +453,6 @@
     <string name="logout_from_">Uscire da %1$s\?</string>
     <string name="logout">Esci</string>
     <string name="top_category">Miglior categoria (%1$s)</string>
-    <string name="grid_options">Opzioni della griglia</string>
     <string name="uniform_covers">Copertine uniformi</string>
     <string name="hide_start_reading_button">Nascondi il bottone di inizio lettura</string>
     <string name="drag_and_drop">Trascina e rilascia</string>
@@ -491,7 +489,7 @@
     <string name="hide">Nascondi</string>
     <string name="enabled">Attivo</string>
     <string name="drag_handle">Trascina</string>
-    <string name="download_unread">Elimina non letti</string>
+    <string name="download_unread">Scarica i non letti</string>
     <string name="deleted_">Eliminato: %1$s</string>
     <string name="bottom">Fondo</string>
     <plurals name="after_minutes">

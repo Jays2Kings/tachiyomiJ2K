@@ -165,7 +165,6 @@
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Capítulo seguinte não encontrado</string>
     <string name="decode_image_error">A imagem não pôde ser decodificada</string>
-    <string name="viewer_for_this_series">Visualizador para esta série</string>
     <!-- Backup fragment -->
     <string name="backup">Cópia de segurança</string>
     <!-- Recent manga fragment -->
@@ -261,7 +260,7 @@
     <string name="backup_created">Cópia de segurança criada</string>
     <string name="restore_completed">Restauro completo</string>
     <string name="what_should_backup">O que pretende fazer backup\?</string>
-    <string name="refresh_library_metadata">Refrescar metadata da biblioteca</string>
+    <string name="refresh_library_metadata">Atualizar metadados da biblioteca</string>
     <string name="max_auto_backups">Máximo de backups automáticos</string>
     <string name="download_badge">Transferir emblemas</string>
     <string name="trust">Confiar</string>
@@ -410,8 +409,8 @@
     <string name="_already_in_queue">%1$s já está na fila</string>
     <string name="adding_category_to_queue">Adicionando %1$s para a fila de atualizações</string>
     <plurals name="category_plural">
-        <item quantity="one">Categoria</item>
-        <item quantity="other"/>
+        <item quantity="one">%d categoria</item>
+        <item quantity="other">%d categorias</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d página restante</item>
@@ -441,7 +440,6 @@
     <string name="tracked">Monitorizado</string>
     <string name="display_as">Visualizar como</string>
     <string name="tap_library_to_show_filters">Clicar no icone da Libraria para mostrar filtros</string>
-    <string name="grid_options">Opções de grelha</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -478,8 +476,8 @@
     <string name="may_contain_nsfw">Pode conter conteúdo NSFW (18+)</string>
     <string name="next_page">Página seguinte</string>
     <string name="previous_page">Página anterior</string>
-    <string name="next_chapter">Página seguinte</string>
-    <string name="previous_chapter">Página anterior</string>
+    <string name="next_chapter">Capítulo seguinte</string>
+    <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar transições de página</string>
     <string name="default_reading_mode">Modo de leitura padrão</string>
     <string name="nav_layout">Esquema de navegação</string>
@@ -508,8 +506,8 @@
     <string name="restoring_backup_canceled">Restauro cancelado</string>
     <string name="restore_duration">%02d min, %02d seg</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Concluído em %1$s com %2$s erroConcluído em %1$s com %2$s erros</item>
-        <item quantity="other"/>
+        <item quantity="one">Concluído em %1$s com %2$s erro</item>
+        <item quantity="other">Concluído em %1$s com %2$s erros</item>
     </plurals>
     <string name="source_migration_guide">Guia de migração de fonte</string>
     <string name="nsfw_sources">Conteúdo 18+ (NSFW)</string>
@@ -533,4 +531,50 @@
 \nPrecisas instalar as extensões em falta e iniciar sessão nos serviços de monitorização para usá-los depois.</string>
     <string name="next">Seguinte</string>
     <string name="hide_app_block_screenshots">Esconder os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
+    <string name="more_library_settings">Mais definições da biblioteca</string>
+    <string name="hide_category_hopper">Esconder seletor de categorias</string>
+    <string name="category_cannot_be_blank">O nome da categoria não pode ficar vazio</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d capítulo</item>
+        <item quantity="other">%1$d capítulos</item>
+    </plurals>
+    <string name="add_x_to">Adicionar %1$s a…</string>
+    <string name="move_x_to">Mover %1$s para…</string>
+    <string name="newly_added">Adicionado recentemente</string>
+    <string name="recents">Recentes</string>
+    <string name="add_edit_categories">Adicionar/Editar categorias</string>
+    <string name="new_category">Nova categoria</string>
+    <string name="category">Categoria</string>
+    <string name="back_to_start">Voltar para o início</string>
+    <string name="pressing_back_to_start">Pressionar voltar para o ecrã inicial</string>
+    <string name="show_notification_error">Mostrar uma notificação para erros</string>
+    <string name="auto_refresh_covers_summary">Atualizar também capas na biblioteca ao atualizar a biblioteca</string>
+    <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
+    <string name="include_in_global_update">Incluir na atualização global</string>
+    <string name="when_sorting_ignore_articles">Ao ordenar alfabeticamente, ordenar ignorando os artigos (a, an, the) no início dos títulos de manga</string>
+    <string name="sort_by_ignoring_articles">Ordenar ignorando artigos</string>
+    <plurals name="notification_and_n_more">
+        <item quantity="one">e mais %1$d capítulo</item>
+        <item quantity="other">e mais %1$d capítulos</item>
+    </plurals>
+    <plurals name="for_n_titles">
+        <item quantity="one">Para %d título</item>
+        <item quantity="other">Para %d títulos</item>
+    </plurals>
+    <string name="show_unread_count">Mostrar contagem de não lidos</string>
+    <string name="show_unread_badges">Mostrar distintivos não lidos</string>
+    <string name="hide_unread_badges">Esconder distintivos não lidos</string>
+    <string name="reset_all_chapters_for_this_">Redefinir todos os capítulos para este %1$s</string>
+    <string name="this_will_remove_the_read_date_for_x_question">Isto irá remover a data de leitura de \"%1$s\". Tem a certeza\?</string>
+    <string name="reset_chapter_history">Reiniciar histórico de capítulos</string>
+    <string name="reset_chapter_question">Reiniciar capítulo\?</string>
+    <string name="grouped">Agrupado</string>
+    <string name="no_recent_read_updated_manga">Nenhum manga lido ou atualizado recentemente</string>
+    <string name="search_recents">Pesquisar recentes…</string>
+    <string name="view_all_updates">Ver todas as atualizações</string>
+    <string name="view_history">Ver histórico</string>
+    <string name="added_">Adicionado %1$s</string>
+    <string name="updated_">%1$s atualizado</string>
+    <string name="read_">%1$s lido</string>
+    <string name="last_read_">Última leitura %1$s</string>
 </resources>

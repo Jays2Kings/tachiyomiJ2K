@@ -237,7 +237,6 @@
     <string name="all_chapters">下載全部</string>
     <string name="all_unread_chapters">下載未讀</string>
     <string name="use_image_as_cover">要將該圖片設為書封嗎？</string>
-    <string name="viewer_for_this_series">閱讀模式</string>
     <string name="loading_pages">正在載入頁面…</string>
     <string name="library_is_empty_add_from_browse">尚未收藏任何作品，探索來源以挖掘你的愛書。</string>
     <string name="updates_covers_genres_desc">更新書封、類型、描述和連載狀態等漫畫簡介</string>

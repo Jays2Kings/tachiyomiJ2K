@@ -3,7 +3,6 @@
     <string name="manga">Манкӑ</string>
     <string name="app_short_name" translatable="false">TachiJ2K</string>
     <string name="app_name" translatable="false">TachiyomiJ2K</string>
-    <string name="dns_over_https" translatable="false">HTTPS урлӑ DNS (Cloudflare)</string>
     <string name="webtoon">Тетел кумӑкс</string>
     <string name="author">Авттӑр</string>
     <string name="unread">Вуламан</string>
@@ -455,4 +454,6 @@
     <string name="add_edit_categories">Пухмӑшсем хуш/тӳрлет</string>
     <string name="category">Пухмӑш</string>
     <string name="hide_app_block_screenshots">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
+    <string name="add_x_to">%1$s хуш…</string>
+    <string name="move_x_to">%1$s куҫар…</string>
 </resources>

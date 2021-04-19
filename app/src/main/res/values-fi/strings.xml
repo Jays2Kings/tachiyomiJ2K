@@ -24,7 +24,6 @@
     <string name="next_chapter_not_found">Seuraavaa lukua ei löydy</string>
     <string name="decode_image_error">Kuvaa ei voitu decoodata</string>
     <string name="use_image_as_cover">Haluatko asettaa tämän kuvan kansikuvaksi\?</string>
-    <string name="viewer_for_this_series">Katselin tälle sarjalle</string>
     <string name="finished_chapter">Valmistunut:</string>
     <string name="current_chapter">Nykyinen:</string>
     <string name="next_title">Seuraava:</string>
@@ -390,7 +389,6 @@
     <string name="manhwa">Manhwa</string>
     <string name="display_as">Näytä</string>
     <string name="tap_library_to_show_filters">Näytä suodattimet napauttamalla Kirjasto-kuvaketta</string>
-    <string name="grid_options">Ruudukon asetukset</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -668,7 +666,6 @@
     <string name="clear_cached_covers_non_library">Tyhjennä välimuistiin tallennetut kannet, joita ei ole kirjastossa</string>
     <string name="delete_old_covers_in_library_used_">Poista kirjastossasi olevat vanhat ja käyttämättömät välimuistiin tallennetut mangakannet, jotka on päivitetty.
 \nTällä hetkellä käytössä: %1$s</string>
-    <string name="hide_hopper_on_scroll">Piilota kategoriasuppilo vierittäessä</string>
     <string name="ignore_cutout_areas">Jätä leikkausalueet huomiotta</string>
     <string name="start_past_cutout">Aloita leikkauksen jälkeen</string>
     <string name="pad_cutout_areas">Täytä leikkausalueet</string>
@@ -685,7 +682,6 @@
     <string name="mark_all_chapters_as_unread">Merkitse kaikki luvut lukemattomiksi\?</string>
     <string name="cutout_area_behavior">Leikkausalueen käyttäytyminen</string>
     <string name="add_edit_categories">Lisää/Muokkaa kategorioita</string>
-    <string name="dns_over_https">DNS HTTPS:n kautta (Cloudflare)</string>
     <string name="view_all_errors">Näytä kaikki virheet</string>
     <string name="use_default">Käytä oletusta</string>
     <string name="tag">Tunniste</string>
@@ -773,10 +769,14 @@
     <string name="match_enabled_sources">Sovita käytössä olevat lähteet</string>
     <string name="match_pinned_sources">Sovita kiinnitetyt lähteet</string>
     <string name="cutout_behavior_only_applies">Leikkausalueen toiminta pätee vain pystytilassa tietyissä skaalaustyypeissä</string>
-    <string name="show_read_in_all">Näytä luettu kaikissa</string>
     <string name="unread_or_downloaded">Lukematon tai ladattu</string>
     <string name="only_downloaded">Vain ladatut</string>
     <string name="hide_app_block_screenshots">Piilota sovelluksen sisältö kun sovelluksia vaihdetaan ja estä kuvakaappauksien otto</string>
     <string name="follow_system_theme">Seuraa järjestelmän teemaa</string>
-    <string name="midnight_dusk"></string>
+    <string name="midnight_dusk">Midnight Dusk</string>
+    <string name="black_and_red">Musta ja Punainen</string>
+    <string name="top">Ylin</string>
+    <string name="clean_orphaned_downloads">Poista hylätyt</string>
+    <string name="spring_blossom">Spring blossom</string>
+    <string name="no_pages_found">Sivuja ei löytynyt</string>
 </resources>

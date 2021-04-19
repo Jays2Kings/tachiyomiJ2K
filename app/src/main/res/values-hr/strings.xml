@@ -457,7 +457,6 @@
     <string name="enable_zoom_out">Aktiviraj zumiranje</string>
     <string name="webtoon_style">webtoon stil</string>
     <string name="reading_">Čita se %1$s</string>
-    <string name="viewer_for_this_series">Prikaz za ovu seriju</string>
     <string name="decode_image_error">Nije bilo moguće dekodirati sliku</string>
     <string name="page_">Stranica %1$d</string>
     <string name="set_as_default_for_all">Postavi kao standardno za sve</string>
@@ -466,7 +465,6 @@
     <string name="read_">Pročitano %1$s</string>
     <string name="last_read_">Zadnje pročitano %1$s</string>
     <string name="hide_category_hopper">Sakrij prebacivača kategorija</string>
-    <string name="grid_options">Opcije mreže</string>
     <string name="uniform_covers">Jednolike naslovnice</string>
     <string name="hide_start_reading_button">Sakrij gumb za pokretanje čitanja</string>
     <string name="compact_grid">Kompaktno</string>
@@ -631,7 +629,6 @@
     <string name="source_not_installed">Izvor nije instaliran</string>
     <string name="category">Kategorija</string>
     <string name="app_info">Podaci programa</string>
-    <string name="hide_hopper_on_scroll">Sakrij prebacivača kategorija tijekom klizanja</string>
     <string name="show_unread_count">Prikaži broj nepročitanih</string>
     <string name="show_unread_badges">Prikaži značke nepročitanih</string>
     <string name="hide_unread_badges">Sakrij značke nepročitanih</string>
@@ -746,7 +743,6 @@
     <string name="only_enable_pinned_for_migration">Aktiviraj samo označene izvore za migraciju</string>
     <string name="match_pinned_sources">Poklapanje s označenim izvorima</string>
     <string name="only_search_pinned_when">Pretraži samo označene izvore</string>
-    <string name="dns_over_https">DNS preko HTTPS-a (Cloudflare)</string>
     <string name="selection">Odabir</string>
     <string name="preview">Pregled</string>
     <string name="move_to_">Premjesti u %1$s</string>
@@ -775,7 +771,6 @@
     <string name="share_first_page">Dijeli prvu stranicu</string>
     <string name="set_first_page_as_cover">Postavi prvu stranicu kao naslovnicu</string>
     <string name="show_title_first">Prvo prikaži naslov</string>
-    <string name="show_read_in_all">Prikaži pročitane u svima</string>
     <string name="only_unread">Samo nepročitane</string>
     <string name="show_download_button">Prikaži gumb za preuzimanje</string>
     <string name="show_reset_history_button">Pokaži gumb za obnavljanje povijesti</string>
@@ -797,4 +792,8 @@
     <string name="unread_or_downloaded">Nepročitane ili preuzete</string>
     <string name="only_downloaded">Samo preuzete</string>
     <string name="hide_app_block_screenshots">Sakrij sadržaj programa prilikom prebacivanja između programa i blokiraj snimke ekrana</string>
+    <string name="follow_system_theme">Slijedi temu sustava</string>
+    <string name="black_and_red">Crna i crvena</string>
+    <string name="spring_blossom">Proljetno cvjetanje</string>
+    <string name="midnight_dusk">Ponoćni sumrak</string>
 </resources>
