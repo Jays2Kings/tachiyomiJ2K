@@ -141,8 +141,6 @@
     <string name="rotation">การหมุน</string>
     <string name="free">ว่าง</string>
     <string name="lock">ล็อค</string>
-    <string name="force_portrait">บังคับแนวตั้ง</string>
-    <string name="force_landscape">บังคับแนวนอน</string>
     <string name="red_initial">R</string>
     <string name="green_initial">กรัม</string>
     <string name="blue_initial">B</string>
@@ -231,7 +229,6 @@
     <string name="plan_to_read">วางแผนที่จะอ่าน</string>
     <string name="rereading">อ่านอีกครั้ง</string>
     <string name="score">คะแนน</string>
-    <string name="long_tap_dialog">แตะนาน</string>
     <string name="open_in_webview">เปิดในมุมมองเว็บ</string>
     <string name="true_32bit_color">สี 32บิต</string>
     <string name="skip_read_chapters">ข้ามตอนที่อ่านแล้ว</string>
@@ -300,4 +297,5 @@
     <string name="open_log">ประวัติ</string>
     <string name="next_chapter">ตอนถัดไป</string>
     <string name="previous_chapter">ตอนที่แล้ว</string>
+    <string name="label_global_search">ค้นหา</string>
 </resources>

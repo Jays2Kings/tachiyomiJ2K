@@ -127,7 +127,6 @@
     <string name="volume_keys">Tlačidlá hlasitosti</string>
     <string name="invert_volume_keys">Invertovať tlačidlá hlasitosti</string>
     <string name="tapping">Ťukanie</string>
-    <string name="long_tap_dialog">Rozšírene možnosti po dlhšiom podržaní</string>
     <string name="background_color">Farba pozadia</string>
     <string name="white">Biela</string>
     <string name="black">Čierna</string>
@@ -153,8 +152,6 @@
     <string name="rotation">Rotácia</string>
     <string name="free">Voľná</string>
     <string name="lock">Zamknúť</string>
-    <string name="force_portrait">Iba na výšku</string>
-    <string name="force_landscape">Iba na šírku</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -291,4 +288,5 @@
 \nPred obnovením skontrolujte, či máte nainštalované všetky potrebné rozšírenia a či ste prihlásení do zdrojov a služieb sledovania.</string>
     <string name="next_chapter">Nasledujúca kapitola</string>
     <string name="previous_chapter">Predošlá kapitola</string>
+    <string name="label_global_search">Hľadať všade</string>
 </resources>

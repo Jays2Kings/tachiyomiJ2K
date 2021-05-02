@@ -12,8 +12,8 @@
     <string name="lock_with_biometrics">I-lock gamit biometrics</string>
     <string name="lock_when_idle">I-lock kung nakatambay</string>
     <plurals name="chapters_plural">
-        <item quantity="one">Mga Kabanata</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$d Kabanata</item>
+        <item quantity="other">%1$d ng Kabanata</item>
     </plurals>
     <string name="unread">Babasáhin</string>
     <string name="chapter_">Kabanata %1$s</string>
@@ -215,7 +215,6 @@
     <string name="volume_keys">Pindutan ng volume</string>
     <string name="invert_volume_keys">Pindutan ng volume (baligtad)</string>
     <string name="tapping">Pagpindot</string>
-    <string name="long_tap_dialog">Dialog sa mahabang pindot</string>
     <string name="background_color">Likuráng kulay</string>
     <string name="white">Puti</string>
     <string name="black">Itim</string>
@@ -232,8 +231,6 @@
     <string name="original_size">Orihinal na laki</string>
     <string name="smart_fit">Matalinong pagsasalaki</string>
     <string name="zoom_start_position">Panimulang pag-zoom</string>
-    <string name="force_portrait">Piliting nakatayo</string>
-    <string name="force_landscape">Piliting nakahiga</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -318,7 +315,7 @@
     <string name="tracked">Sinundan</string>
     <plurals name="category_plural">
         <item quantity="one">Kategorya</item>
-        <item quantity="other"/>
+        <item quantity="other">Mga kategorya</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pahina na lang</item>
@@ -418,4 +415,42 @@
     <string name="crash_log_saved">Nai-save na ang crash log</string>
     <string name="updated_to_">In-update patungong bersyon %1$s</string>
     <string name="hide_app_block_screenshots">Itago ang nilalaman ng app habang nagpapalit ng app at harangin ang mga screenshot</string>
+    <string name="label_global_search">Pangkalahatang Paghahanap</string>
+    <string name="move_dynamic_to_bottom">Ilipat Ang collapsed dynamic categories sa pinaka-ilalim</string>
+    <string name="show_all_categories">Ipakita Ang lahat ng kategorya</string>
+    <string name="no_matches_for_filters">Walang match na nahanap sa iyong napiling filters</string>
+    <string name="library_is_empty_add_from_browse">Ang iyong Librerya ay walang laman, dagdagan ng series sa iyong Librerya galing sa browse tab.</string>
+    <string name="library_search_hint">Hanapin Ang titulo, tags, source</string>
+    <string name="remove_from_library_question">Burahin sa Librerya\?</string>
+    <string name="selected_">Pinili:%1$d</string>
+    <string name="your_library">Iyong Librerya</string>
+    <string name="update_available">May maaaring maupdate</string>
+    <string name="updating_">Inuupdate ang %1$s</string>
+    <string name="what_should_update">Ano Ang iuupdate\?</string>
+    <string name="jump_to_category">Mag-Jump sa kategorya</string>
+    <string name="long_press_category">Pindutin ng matagal upang baguhin Ang kategorya</string>
+    <string name="category_deleted">Nabura na ang kategorya</string>
+    <string name="category_cannot_be_blank">Ang pangalan ng kategorya ay Hindi maaaring maging blanko</string>
+    <string name="category_with_name_exists">Mayroon nang kategorya na may pangalang iyon</string>
+    <string name="move_to_categories">Ilipat sa mga kategorya</string>
+    <string name="manage_category">Ayusin Ang kategorya</string>
+    <string name="add_edit_categories">Dagdag/mag-edit ng mga kategorya</string>
+    <string name="add_categories">Dagdag ng kategorya</string>
+    <string name="already_in_category">Ang manga ay nasa kategorya na</string>
+    <string name="confirm_category_deletion_message">Ang manga sa kategorya na Ito ay ililipat sa default na kategorya.</string>
+    <string name="confirm_category_deletion">Burahin Ang kategorya\?</string>
+    <string name="categories_in_global_update">Lahat ng kategorya sa panglahatang update</string>
+    <string name="categories_on_manual">Kategoryang I-uupdate Kung I-rerefresh ng isa-isa</string>
+    <string name="top_category">Pinaka-taas na kategorya</string>
+    <string name="category_is_empty">Walang laman Ang kategorya</string>
+    <string name="new_category">Bagong kategorya</string>
+    <string name="create_new_category">Gumawa ng bagong kategorya</string>
+    <string name="_already_in_queue">%1$s ay nasa pila na</string>
+    <string name="adding_category_to_queue">Idinadagdag ang %1$s sa pila na i-update</string>
+    <string name="category">Kategorya</string>
+    <string name="no_chapters_to_delete">Walang chapter na maaaring i-delete</string>
+    <string name="remove_all_downloads">Ialis Ang lahat ng downloads\?</string>
+    <string name="no_pages_found">Walang nakitang pahina</string>
+    <string name="add_x_to">Idagdag %1$s to…</string>
+    <string name="move_x_to">Ilipat%1$s to…</string>
 </resources>

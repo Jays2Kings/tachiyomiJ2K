@@ -105,8 +105,6 @@
     <string name="rotation">Rotation</string>
     <string name="free">Libre</string>
     <string name="lock">Verrouillée</string>
-    <string name="force_portrait">Forcer portrait</string>
-    <string name="force_landscape">Forcer en paysage</string>
     <string name="red_initial">R</string>
     <string name="green_initial">V</string>
     <string name="blue_initial">B</string>
@@ -309,7 +307,6 @@
     <string name="failed_to_load_pages_">Échec du chargement des pages : %1$s</string>
     <string name="migrate">Déplacer</string>
     <string name="dark_blue">Bleu foncé</string>
-    <string name="long_tap_dialog">Menu contextuel (appui prolongé)</string>
     <string name="open_in_webview">Ouvrir dans le navigateur intégré</string>
     <string name="true_32bit_color">Couleurs à 32 bits</string>
     <string name="skip_read_chapters">Passer les chapitres marqués comme lus</string>
@@ -837,5 +834,24 @@
     <string name="grid_size">Taille de la grille</string>
     <string name="can_be_found_in_library_filters">Peut aussi être trouvé en aggrandissant les filtres de la bibliothèque</string>
     <string name="expand_collapse_all_categories">Agrandir/Réduire toutes les catégories</string>
-    <string name="no_pages_found">Aucunes pages trouvées</string>
+    <string name="no_pages_found">Aucune page trouvée</string>
+    <string name="label_global_search">Recherche globale</string>
+    <string name="search_">Rechercher %1$s</string>
+    <string name="couldnt_download_low_space">Impossible de télécharger les chapitres à cause d\'un manque d\'espace disque</string>
+    <string name="group_chapters_together">Regrouper les chapitres</string>
+    <string name="show_updated_time">Afficher l\'heure de mise à jour</string>
+    <string name="show_read_chapters_all">Afficher les chapitres lus dans Regroupé et Tout</string>
+    <string name="fetched_">Récupéré %1$s</string>
+    <string name="updates_and_history">Mises à jour et historique</string>
+    <string name="shift_double_pages">Décaler les doubles pages</string>
+    <string name="uniform_grid_covers">Couvertures en grilles uniformes</string>
+    <string name="when_grouping_by_sources_tags">Lors du regroupement de la bibliothèque par sources, statut, etc.</string>
+    <string name="move_dynamic_to_bottom">Déplacer les catégories dynamiques réduites en bas</string>
+    <string name="your_library">Votre bibliothèque</string>
+    <string name="no_chapters_to_delete">Aucun chapitre à supprimer</string>
+    <string name="remove_all_downloads">Retirer tous les téléchargements \?</string>
+    <string name="locked_landscape">Paysage verrouillé</string>
+    <string name="locked_portrait">Portrait verrouillé</string>
+    <string name="landscape">Paysage</string>
+    <string name="portrait">Portrait</string>
 </resources>

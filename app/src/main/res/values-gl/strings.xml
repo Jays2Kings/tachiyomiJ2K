@@ -87,7 +87,6 @@
     <string name="volume_keys">Teclas de volume</string>
     <string name="invert_volume_keys">Invertir teclas de volume</string>
     <string name="tapping">Toques</string>
-    <string name="long_tap_dialog">Diálogo de toque longo</string>
     <string name="background_color">Cor de fondo</string>
     <string name="white">Branco</string>
     <string name="black">Negro</string>
@@ -101,14 +100,12 @@
     <string name="original_size">Tamaño orixinal</string>
     <string name="smart_fit">Axuste intelixente</string>
     <string name="zoom_start_position">Posición inicial do zoom</string>
-    <string name="force_portrait">Forzar vertical</string>
     <string name="sort">Ordenar</string>
     <string name="start">Comezar</string>
     <string name="stop">Parar</string>
     <string name="undo">Desfacer</string>
     <string name="unpin">Quitar de fixados</string>
     <string name="view_chapters">Ver capítulos</string>
-    <string name="force_landscape">Forzar horizontal</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -217,4 +214,5 @@
     <string name="next_chapter">Capítulo seguinte</string>
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="hide_app_block_screenshots">Esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
+    <string name="label_global_search">Procura global</string>
 </resources>

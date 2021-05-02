@@ -19,7 +19,7 @@
     <string name="alphabetically">字母序</string>
     <string name="total_chapters">章节数</string>
     <string name="last_read">最近阅读</string>
-    <string name="last_updated">更新时间</string>
+    <string name="last_updated">上次更新</string>
     <string name="search">搜索</string>
     <string name="select_all">选择所有</string>
     <string name="mark_as_read">标记已读</string>
@@ -139,8 +139,6 @@
     <string name="rotation">方向</string>
     <string name="free">自动</string>
     <string name="lock">锁定</string>
-    <string name="force_portrait">锁定竖屏</string>
-    <string name="force_landscape">锁定横屏</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -275,7 +273,6 @@
     <string name="download_paused">下载暂停</string>
     <string name="common">普通</string>
     <string name="dark_blue">暗蓝色主题</string>
-    <string name="long_tap_dialog">长按菜单</string>
     <string name="open_in_webview">用外部浏览器打开</string>
     <string name="true_32bit_color">32位色彩</string>
     <string name="skip_read_chapters">跳过已读章节</string>
@@ -793,4 +790,26 @@
     <string name="show_read_chapters_all">在已分组和全部中显示已读章节</string>
     <string name="when_grouping_by_sources_tags">当按源、状态等对书架进行分组时。</string>
     <string name="move_dynamic_to_bottom">将折叠的动态分类移到底部</string>
+    <string name="label_global_search">全局搜索</string>
+    <string name="search_">搜索 %1$s</string>
+    <string name="group_chapters_together">将章节分组在一起</string>
+    <string name="show_updated_time">显示更新时间</string>
+    <string name="fetched_">已取得 %1$s</string>
+    <string name="updates_and_history">更新和历史</string>
+    <string name="your_library">你的书架</string>
+    <string name="no_chapters_to_delete">没有要删除的章节</string>
+    <string name="remove_all_downloads">移除所有下载？</string>
+    <string name="locked_landscape">锁定横屏</string>
+    <string name="locked_portrait">锁定竖屏</string>
+    <string name="landscape">横屏</string>
+    <string name="portrait">竖屏</string>
+    <string name="date_fetched">取得日期</string>
+    <string name="create_folders_by_manga_title">根据漫画标题创建文件夹</string>
+    <string name="save_pages_separately">保存页面到单独文件夹</string>
+    <string name="show_on_long_press">长按显示</string>
+    <string name="actions">操作</string>
+    <string name="release_page">发布页面</string>
+    <string name="search_tips_show_periodically">搜索提示将定期显示。 长按建议进行搜索。</string>
+    <string name="search_suggestions">搜索建议</string>
+    <string name="automatic_removal">自动移除</string>
 </resources>

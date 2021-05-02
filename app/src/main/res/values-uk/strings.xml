@@ -140,8 +140,6 @@
     <string name="rotation">Орієнтація</string>
     <string name="free">Вільна</string>
     <string name="lock">Заблокована</string>
-    <string name="force_portrait">Вертикальна</string>
-    <string name="force_landscape">Горизонтальна</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -275,7 +273,6 @@
     <string name="no_network_connection">Немає мережевого з`єднання</string>
     <string name="download_paused">Завантаження призупинено</string>
     <string name="common">Звичайний</string>
-    <string name="long_tap_dialog">Діалог тривалого тицяння</string>
     <string name="open_in_webview">Відкрити у web view</string>
     <string name="true_32bit_color">32-бітний колір</string>
     <string name="skip_read_chapters">Пропускати глави, відмічені як прочитані</string>
@@ -730,4 +727,5 @@
     <string name="crash_log_saved">Логи падінь збережено</string>
     <string name="updated_to_">Оновлено до v%1$s</string>
     <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
+    <string name="label_global_search">Глобальний пошук</string>
 </resources>

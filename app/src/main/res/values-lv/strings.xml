@@ -198,4 +198,5 @@
     <string name="next_chapter">Nākama nodaļa</string>
     <string name="previous_chapter">Iepriekšēja nodaļa</string>
     <string name="hide_app_block_screenshots">Slēpt lietotnes saturu mainot lietotnes, un bloķēt ekrānuzņēmumus</string>
+    <string name="label_global_search">Globālā meklēšana</string>
 </resources>

@@ -186,8 +186,6 @@
     <string name="scale_type">Schaalmodus</string>
     <string name="fit_screen">Aanpassen aan scherm</string>
     <string name="zoom_start_position">Zoom startpositie</string>
-    <string name="force_portrait">Forceer staand</string>
-    <string name="force_landscape">Forceer liggend</string>
     <string name="remove_when_marked_as_read">Verwijder wanneer gemarkeerd als gelezen</string>
     <string name="remove_after_read">Verwijder na lezen</string>
     <string name="fourth_to_last">Drie-na-laatste hoofdstuk</string>
@@ -253,7 +251,6 @@
     <string name="version_">Versie: %1$s</string>
     <string name="language_">Taal: %1$s</string>
     <string name="double_tap_anim_speed">Dubbel tik animatiesnelheid</string>
-    <string name="long_tap_dialog">Lange tik dialoog</string>
     <string name="no_animation">Geen animatie</string>
     <string name="normal">Normaal</string>
     <string name="fast">Snel</string>
@@ -778,4 +775,5 @@
     <string name="black_and_red">Zwart en Rood</string>
     <string name="spring_blossom">Lentebloesem</string>
     <string name="midnight_dusk">Nachtschemering</string>
+    <string name="label_global_search">Globaal zoeken</string>
 </resources>

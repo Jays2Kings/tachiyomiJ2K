@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="manga">Manga</string>
-    <string name="webtoon">Webtoon</string>
+    <string name="webtoon">Digitalni strip</string>
     <string name="title">Naslov</string>
     <string name="author">Autor</string>
     <string name="description">Opis</string>
@@ -121,7 +121,7 @@
     <string name="double_tap_anim_speed">Brzina animacije dvostrukog dodira</string>
     <string name="show_page_number">Pokaži broj stranice</string>
     <string name="true_32bit_color">32-bitna boja</string>
-    <string name="reduces_banding_impacts_performance">Smanjuje nijansiranje, ali utječe na performansu</string>
+    <string name="reduces_banding_impacts_performance">Smanjuje trakasto iscrtavanje, ali utječe na performansu</string>
     <string name="crop_borders">Odreži rubove</string>
     <string name="color_filter_blend_mode">Način stapanja filtra boja</string>
     <string name="overlay">Prekrij</string>
@@ -136,7 +136,6 @@
     <string name="volume_keys">Tipke za glasnoću</string>
     <string name="invert_volume_keys">Preokreni tipke za glasnoću</string>
     <string name="tapping">Dodir</string>
-    <string name="long_tap_dialog">Dijaloški okvir pri dugom dodiru</string>
     <string name="background_color">Boja pozadine</string>
     <string name="white">Bijela</string>
     <string name="black">Crna</string>
@@ -153,8 +152,6 @@
     <string name="original_size">Izvorna veličina</string>
     <string name="smart_fit">Pametna prilagodba</string>
     <string name="zoom_start_position">Zumiranje početnog položaja</string>
-    <string name="force_portrait">Prisili okomito</string>
-    <string name="force_landscape">Prisili vodoravno</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -359,7 +356,7 @@
     <string name="manhwa">Manhwa</string>
     <string name="display_options">Opcije prikaza</string>
     <string name="drag_and_drop">Povuci i ispusti</string>
-    <string name="last_updated">Zadnji put aktualizirano</string>
+    <string name="last_updated">Zadnje aktualizirano</string>
     <string name="sort_by">Razvrstaj po</string>
     <string name="ungrouped">Negrupirano</string>
     <string name="tracking_status">Stanje praćenja</string>
@@ -391,7 +388,7 @@
     <string name="already_in_category">Manga se već nalazi u kategoriji</string>
     <string name="confirm_category_deletion_message">Manga u ovoj kategoriji premjestit će se u standardnu kategoriju.</string>
     <string name="confirm_category_deletion">Izbrisati kategoriju\?</string>
-    <string name="categories_in_global_update">Sve kategorije pri globalnom aktulaiziranju</string>
+    <string name="categories_in_global_update">Sve kategorije u globalnom aktualiziranju</string>
     <string name="extension_updates">Ažuriranja proširenja</string>
     <string name="last_used">Zadnje korišteno</string>
     <string name="source_hidden">Izvor skriven</string>
@@ -403,7 +400,7 @@
     <string name="no_recently_read_manga">Nema nedavno čitanih manga</string>
     <string name="no_recent_chapters">Nema nedavnih poglavlja</string>
     <string name="search_recents">Pretraži nedavne …</string>
-    <string name="view_all_updates">Pogledaj sva ažuriranja</string>
+    <string name="view_all_updates">Pogledaj sva aktualiziranja</string>
     <string name="view_history">Pogledaj povijest</string>
     <string name="reset_all_chapters_for_this_">Obnovi sva poglavlja za %1$s</string>
     <string name="this_will_remove_the_read_date_for_x_question">Ovo će ukloniti datum čitanja za „%1$s”. Je li to stvarno želiš\?</string>
@@ -414,7 +411,7 @@
     <string name="auto_refresh_covers_summary">Također osvježi naslovnice u biblioteci prilikom aktualiziranja biblioteke</string>
     <string name="auto_refresh_covers">Automatski osvježi naslovnice</string>
     <string name="include_in_global_update">Uključi u globalno ažuriranje</string>
-    <string name="when_sorting_ignore_articles">Prilikom razvrtavanja po abecedi, razvrstaj naslove mange bez člana (engl. a, an, the)</string>
+    <string name="when_sorting_ignore_articles">Prilikom razvrstavanja po abecedi, razvrstaj naslove manga bez člana (engl. a, an, the)</string>
     <string name="sort_by_ignoring_articles">Razvrstaj bez člana</string>
     <string name="select_order_to_update">Odaberi redoslijed kojim Tachiyomi traži nove verzije</string>
     <plurals name="notification_and_n_more">
@@ -455,7 +452,7 @@
     <string name="use_custom_color_filter">Koristi prilagođeni filtar boja</string>
     <string name="use_custom_brightness">Koristi prilagođenu svjetlost</string>
     <string name="enable_zoom_out">Aktiviraj zumiranje</string>
-    <string name="webtoon_style">webtoon stil</string>
+    <string name="webtoon_style">Stil digitalnog stripa</string>
     <string name="reading_">Čita se %1$s</string>
     <string name="decode_image_error">Nije bilo moguće dekodirati sliku</string>
     <string name="page_">Stranica %1$d</string>
@@ -770,15 +767,15 @@
     <string name="save_first_page">Spremi prvu stranicu</string>
     <string name="share_first_page">Dijeli prvu stranicu</string>
     <string name="set_first_page_as_cover">Postavi prvu stranicu kao naslovnicu</string>
-    <string name="show_title_first">Prvo prikaži naslov</string>
+    <string name="show_title_first">Najprije pokaži naslov</string>
     <string name="only_unread">Samo nepročitane</string>
     <string name="show_download_button">Prikaži gumb za preuzimanje</string>
     <string name="show_reset_history_button">Pokaži gumb za obnavljanje povijesti</string>
     <string name="press_and_hold_to_also_reset">Pritiskanjem gumba i držanjem gumba pritisnuto također može obnoviti povijesti poglavlja</string>
-    <string name="grouped">Grupirani</string>
+    <string name="grouped">Grupirano</string>
     <string name="no_recent_read_updated_manga">Nema nedavno pročitanih ili ažuriranih manga</string>
     <string name="reset_chapter_history">Obnovi povijest poglavlja</string>
-    <string name="shift_one_page_over">Pomakni jednu stranicu preko</string>
+    <string name="shift_one_page_over">Pomakni za jednu stranicu</string>
     <string name="category_cannot_be_blank">Ime kategorije ne smije biti prazno</string>
     <string name="new_category">Nova kategorija</string>
     <string name="add_x_to">Dodaj %1$s u …</string>
@@ -796,4 +793,48 @@
     <string name="black_and_red">Crna i crvena</string>
     <string name="spring_blossom">Proljetno cvjetanje</string>
     <string name="midnight_dusk">Ponoćni sumrak</string>
+    <string name="disabled">Deaktivirano</string>
+    <string name="clear_filters">Izbriši filtre</string>
+    <string name="webview_is_required">Za Tachiyomi je potreban WebView</string>
+    <string name="couldnt_download_low_space">Neuspjelo preuzimanje poglavlja zbog nedovoljno memorije na disku</string>
+    <string name="doh">DNS preko HTTPS</string>
+    <string name="flat_lime">Limetasta</string>
+    <string name="hot_pink">Vruća ružičasta</string>
+    <string name="pauses_reading_history">Zaustavlja povijest čitanja</string>
+    <string name="incognito_mode">Anonimni modus</string>
+    <string name="turn_off_">Isključi %s</string>
+    <string name="turn_on_">Uključi %s</string>
+    <string name="webtoon_cannot_change">Nije moguće promijeniti modus čitanja iz digitalnog stripa. Za mijenjanje modusa, najprije uredi vrstu serije.</string>
+    <string name="remove_crop">Ukloni odrezivanje</string>
+    <string name="crop_borders_webtoon">Odreži rubove (digitalni strip)</string>
+    <string name="crop_borders_paged">Odreži rubove (stranice)</string>
+    <string name="invert_double_pages">Obrni duplerice</string>
+    <string name="save_combined_pages">Spremi spojene stranice</string>
+    <string name="share_combined_pages">Dijeli spojene stranice</string>
+    <string name="changing_will_reset_reading_mode">Mijenjanjem ove opcije obnovit će se modus čitanja za ovu seriju</string>
+    <string name="reading_mode">Modus čitanja</string>
+    <string name="pages_">Stranice %1$s</string>
+    <string name="show_read_chapters_all">Pokaži pročitana poglavlja u Grupirano i Sve</string>
+    <string name="a_while_ago">Prije nekog vremena</string>
+    <string name="certain_buttons_can_be_found">Određeni gumbi mogu se pronaći i na drugim mjestima ako su ovdje deaktivirana</string>
+    <string name="display_buttons_bottom_reader">Gumbi u donjem dijelu čitača</string>
+    <string name="shift_double_pages">Pomakni duplerice</string>
+    <string name="_per_row">%d u retku</string>
+    <string name="grid_size">Veličina popločenja</string>
+    <string name="uniform_grid_covers">Jednolike pločaste naslovnice</string>
+    <string name="can_be_found_in_library_filters">Može se pronaći i proširenjem filtara biblioteke</string>
+    <string name="series">Serije</string>
+    <string name="expand_collapse_all_categories">Rasklopi/sklopi sve kategorije</string>
+    <string name="category_hopper_long_press">Skakanje po kategorijama dugim pritiskom</string>
+    <string name="when_grouping_by_sources_tags">Prilikom grupiranja biblioteke po izvorima, stanju itd.</string>
+    <string name="move_dynamic_to_bottom">Premjesti sklopljene dinamičke kategorije skroz dolje</string>
+    <string name="no_pages_found">Nema stranica</string>
+    <string name="label_global_search">Globalna pretraga</string>
+    <string name="search_tips_show_periodically">Savjeti pretrage pojavit će se povremeno. Za pretraživanje, dugo pritisni prijedlog.</string>
+    <string name="search_suggestions">Prijedlozi pretrage</string>
+    <string name="date_fetched">Datum dohvaćanja</string>
+    <string name="your_library">Tvoja biblioteka</string>
+    <string name="release_page">Stranica izdanja</string>
+    <string name="no_chapters_to_delete">Nema poglavlja za brisanje</string>
+    <string name="remove_all_downloads">Ukloniti sva preuzimanja\?</string>
 </resources>

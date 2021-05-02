@@ -108,8 +108,6 @@
     <string name="rotation">Xoay</string>
     <string name="free">Tự do</string>
     <string name="lock">Khóa</string>
-    <string name="force_portrait">Bắt buộc theo chiều dọc</string>
-    <string name="force_landscape">Bắt buộc theo chiều ngang</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -309,7 +307,6 @@
     <string name="failed_to_load_pages_">Tải trang thất bại: %1$s</string>
     <string name="migrate">Di chuyển</string>
     <string name="common">Thường gặp</string>
-    <string name="long_tap_dialog">Nhấn giữ mở hộp thoại</string>
     <string name="open_in_webview">Mở bằng webview</string>
     <string name="true_32bit_color">Màu 32-bit</string>
     <string name="skip_read_chapters">Bỏ qua chap đã đọc</string>
@@ -416,4 +413,5 @@
     <string name="next_chapter">Chương kế tiếp</string>
     <string name="previous_chapter">Chương trước</string>
     <string name="hide_app_block_screenshots">Ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp ảnh màn hình</string>
+    <string name="label_global_search">Tìm kiếm toàn bộ</string>
 </resources>

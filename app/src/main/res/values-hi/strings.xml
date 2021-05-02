@@ -118,8 +118,6 @@
     <string name="rotation">नियमित आवर्तन</string>
     <string name="free">मुक्त</string>
     <string name="lock">ताला</string>
-    <string name="force_portrait">मजबूर चित्र</string>
-    <string name="force_landscape">मजबूर लैंडस्केप</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -275,7 +273,6 @@
     <string name="loading_pages">पेज लोड हो रहे है …</string>
     <string name="failed_to_load_pages_">पृष्ठों को लोड करने में विफल है: %1$s</string>
     <string name="dark_blue">गहरा नीला</string>
-    <string name="long_tap_dialog">संवाद के लिए लंबी प्रेस</string>
     <string name="open_in_webview">वेब दृश्य में खोलें</string>
     <string name="true_32bit_color">32 बिट रंग</string>
     <string name="skip_read_chapters">पढ़े हुए अध्यायों को छोड़ें</string>
@@ -429,4 +426,5 @@
     <string name="crash_log_saved">क्रैश लॉग सहेजे गए</string>
     <string name="updated_to_">v%1$s तक अद्यतन</string>
     <string name="hide_app_block_screenshots">एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाएं और स्क्रीनशॉट ब्लॉक करें</string>
+    <string name="label_global_search">विश्वीय खोज</string>
 </resources>

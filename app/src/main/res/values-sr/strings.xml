@@ -141,8 +141,6 @@
     <string name="rotation">Rotacija</string>
     <string name="free">Slovodno</string>
     <string name="lock">Zaključano</string>
-    <string name="force_portrait">Forsirano vertikalno</string>
-    <string name="force_landscape">Forsirano horizontalno</string>
     <string name="red_initial">"R "</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -220,7 +218,6 @@
     <string name="downloading">Preuzima se</string>
     <string name="downloading_progress">Preuzimam (%1$d/%2$d)</string>
     <string name="paused">Pauzirano</string>
-    <string name="long_tap_dialog">Dialog kod dugog pritiska</string>
     <string name="next_5_unread">Preuzmi 5 narednih poglavlja</string>
     <string name="custom_range">Preuzmi određeno</string>
     <string name="all_chapters">Preuzmi sve</string>
@@ -352,4 +349,5 @@
     <string name="previous_chapter">Prijašnje poglavlje</string>
     <string name="tracked">Praćeno</string>
     <string name="hide_app_block_screenshots">Sakrij prikaz aplikacije kada mijenjate aplikaciju i blokiraj screenshot-ove</string>
+    <string name="label_global_search">Pretraži globalno</string>
 </resources>

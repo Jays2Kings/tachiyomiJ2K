@@ -127,8 +127,6 @@
     <string name="rotation">회전</string>
     <string name="free">자유</string>
     <string name="lock">잠금</string>
-    <string name="force_portrait">세로로 고정</string>
-    <string name="force_landscape">가로로 고정</string>
     <string name="only_download_over_wifi">Wi-Fi만 사용해서 다운로드</string>
     <string name="remove_when_marked_as_read">읽음 표시 후에 자동으로 삭제</string>
     <string name="remove_after_read">읽은 후에 자동으로 삭제</string>
@@ -275,7 +273,6 @@
     <string name="no_wifi_connection">Wifi 연결 사용 불가능</string>
     <string name="no_network_connection">네트워크 연결 사용 불가능</string>
     <string name="common">일반</string>
-    <string name="long_tap_dialog">길게 눌러 대화상자 표시</string>
     <string name="open_in_webview">웹뷰로 열기</string>
     <string name="true_32bit_color">32비트 컬러</string>
     <string name="skip_read_chapters">읽음 표시된 챕터 건너뛰기</string>
@@ -297,4 +294,5 @@
     <string name="open_log">로그 열기</string>
     <string name="next_chapter">다음 챕터</string>
     <string name="previous_chapter">이전 챕터</string>
+    <string name="label_global_search">전역 검색</string>
 </resources>

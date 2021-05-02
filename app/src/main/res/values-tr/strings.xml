@@ -21,7 +21,7 @@
     <string name="alphabetically">Alfabetik</string>
     <string name="total_chapters">Toplam bölüm</string>
     <string name="last_read">Son okunan</string>
-    <string name="last_updated">Son Güncellenen</string>
+    <string name="last_updated">Son güncellenen</string>
     <string name="search">Ara</string>
     <string name="select_all">Tümünü seç</string>
     <string name="mark_as_read">Okunmuş olarak işaretle</string>
@@ -139,8 +139,6 @@
     <string name="rotation">Döndürme</string>
     <string name="free">Serbest</string>
     <string name="lock">Kilitle</string>
-    <string name="force_portrait">Dikeyi zorla</string>
-    <string name="force_landscape">Yatayı zorla</string>
     <string name="red_initial">K</string>
     <string name="green_initial">Y</string>
     <string name="blue_initial">M</string>
@@ -261,7 +259,7 @@
     <string name="no_recent_chapters">Yeni bölüm yok</string>
     <string name="no_recently_read_manga">Yakınlarda okunan manga yok</string>
     <string name="library_is_empty_add_from_browse">Kitaplığınız boş, Kataloglardan kitaplığınıza serileri ekleyebilirsiniz.</string>
-    <string name="could_not_download_unexpected_error">Bölüm indirilirken beklenmeyen bir hata oluştu</string>
+    <string name="could_not_download_unexpected_error">Bölüm, beklenmeyen hata sonucu indirilemedi</string>
     <string name="no_wifi_connection">Wi-Fi bağlantısı yok</string>
     <string name="no_network_connection">Ağ bağlantısı yok</string>
     <string name="download_paused">İndirme duraklatıldı</string>
@@ -275,7 +273,6 @@
     <string name="loading_pages">Sayfalar yükleniyor…</string>
     <string name="failed_to_load_pages_">Sayfalar yüklenemedi: %1$s</string>
     <string name="dark_blue">Koyu mavi</string>
-    <string name="long_tap_dialog">Uzun dokunma iletişim kutusu</string>
     <string name="open_in_webview">Web görünümünde aç</string>
     <string name="true_32bit_color">32-bit renk</string>
     <string name="skip_read_chapters">Okunmuş olarak işaretli bölümleri atla</string>
@@ -810,4 +807,30 @@
     <string name="expand_collapse_all_categories">Tüm kategorileri genişlet/küçült</string>
     <string name="category_hopper_long_press">Kategori haznesi uzun basma eylemi</string>
     <string name="no_pages_found">Sayfa bulunamadı</string>
+    <string name="couldnt_download_low_space">Disk alanı az olduğundan bölümler indirilemedi</string>
+    <string name="move_dynamic_to_bottom">Daraltılmış dinamik kategorileri aşağı taşı</string>
+    <string name="when_grouping_by_sources_tags">Kitaplığı kaynak, durum, vs. ile gruplarken</string>
+    <string name="show_read_chapters_all">Okunmuş bölümleri, tüm ve gruplanmışlar içinde göster</string>
+    <string name="label_global_search">Genel arama</string>
+    <string name="search_">%1$s ara</string>
+    <string name="group_chapters_together">Bölümleri birlikte grupla</string>
+    <string name="show_updated_time">Güncelleme zamanını göster</string>
+    <string name="fetched_">%1$s alındı</string>
+    <string name="updates_and_history">Güncellemeler ve geçmiş</string>
+    <string name="your_library">Kitaplığınız</string>
+    <string name="no_chapters_to_delete">Silinecek bölüm yok</string>
+    <string name="remove_all_downloads">Tüm indirmeleri kaldır\?</string>
+    <string name="locked_landscape">Kilitli yatay</string>
+    <string name="locked_portrait">Kilitli dikey</string>
+    <string name="landscape">Yatay</string>
+    <string name="portrait">Dikey</string>
+    <string name="date_fetched">Alındığı tarih</string>
+    <string name="automatic_removal">Otomatik kaldırma</string>
+    <string name="create_folders_by_manga_title">Klasörleri manga başlığına göre oluşturur</string>
+    <string name="save_pages_separately">Sayfaları ayrı klasörlere kaydet</string>
+    <string name="show_on_long_press">Uzun basınca göster</string>
+    <string name="actions">Eylemler</string>
+    <string name="search_tips_show_periodically">Arama ipuçları düzenli olarak görünecek. Aramak için öneriye uzun basın.</string>
+    <string name="search_suggestions">Arama önerileri</string>
+    <string name="release_page">Yayın sayfası</string>
 </resources>

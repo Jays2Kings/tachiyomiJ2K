@@ -139,8 +139,6 @@
     <string name="rotation">Rotació</string>
     <string name="free">Lliure</string>
     <string name="lock">Bloca</string>
-    <string name="force_portrait">Força vertical</string>
-    <string name="force_landscape">Força horitzontal</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -275,7 +273,6 @@
     <string name="no_network_connection">No hi ha cap connexió de xarxa disponible</string>
     <string name="download_paused">Descàrrega pausada</string>
     <string name="common">Comú</string>
-    <string name="long_tap_dialog">Finestra de toc llarg</string>
     <string name="open_in_webview">Obre en una visualització web</string>
     <string name="true_32bit_color">Color de 32 bits</string>
     <string name="skip_read_chapters">Omet els capítols marcats com a llegits</string>
@@ -474,4 +471,5 @@
     <string name="crash_log_saved">S\'han desat els registres de fallades</string>
     <string name="updated_to_">S\'ha actualitzat a la v%1$s</string>
     <string name="hide_app_block_screenshots">Amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
+    <string name="label_global_search">Cerca global</string>
 </resources>

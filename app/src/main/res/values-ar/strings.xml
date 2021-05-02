@@ -118,8 +118,6 @@
     <string name="rotation">الدوران</string>
     <string name="free">حر</string>
     <string name="lock">مغلق</string>
-    <string name="force_portrait">الوضع اﻷفقي اﻹجباري</string>
-    <string name="force_landscape">الوضع الرأسي اﻹجباري</string>
     <string name="download_location">مسار التنزيلات</string>
     <string name="only_download_over_wifi">التنزيل عبر الواي فاي فقط</string>
     <string name="remove_when_marked_as_read">الحذف عند التحديد كمقروءة</string>
@@ -275,7 +273,6 @@
     <string name="theres_no_previous_chapter">لا يوجدُ فصل سابق</string>
     <string name="loading_pages">جار تحميل الصّفحات…</string>
     <string name="failed_to_load_pages_">فشل تحميل الصّفحات: %1$s</string>
-    <string name="long_tap_dialog">معلومات بضغطة مستمرة</string>
     <string name="open_in_webview">فتح في web view</string>
     <string name="true_32bit_color">الوان 32bit</string>
     <string name="skip_read_chapters">تخطي الفصول المقروءة</string>
@@ -736,4 +733,5 @@
 \n
 \nيتوجب تثبيت الإضافات المفقودة و تسجيل الدخول إلى منصات التعقب تالياً لاستعمالهم.</string>
     <string name="hide_app_block_screenshots">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
+    <string name="label_global_search">بحث شامل</string>
 </resources>

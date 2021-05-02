@@ -83,8 +83,6 @@
     <string name="rotation">Otáčení</string>
     <string name="free">Volné</string>
     <string name="lock">Zamknuté</string>
-    <string name="force_portrait">Na výšku</string>
-    <string name="force_landscape">Na šířku</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -291,7 +289,6 @@
     <string name="dodge_lighten">Zesvětlit</string>
     <string name="burn_darken">Ztmavit</string>
     <string name="skip_read_chapters">Přeskakovat přečtené kapitoly</string>
-    <string name="long_tap_dialog">Nabídka při dlouhém podržení</string>
     <string name="remove_from_library">Odstranit z knihovny</string>
     <string name="copy_value">Kopírovat</string>
     <string name="help">Nápověda</string>
@@ -591,4 +588,5 @@
     <string name="set_first_page_as_cover">Nastavit první stránku jako přebal</string>
     <string name="webtoon_style">styl webtoon</string>
     <string name="pages_">Stránky %1$s</string>
+    <string name="label_global_search">Globální vyhledávání</string>
 </resources>

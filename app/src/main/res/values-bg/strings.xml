@@ -110,8 +110,6 @@
     <string name="rotation">Въртене</string>
     <string name="free">Включено</string>
     <string name="lock">Заключено</string>
-    <string name="force_portrait">Портретно</string>
-    <string name="force_landscape">Пейзажно</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -309,7 +307,6 @@
     <string name="theres_no_previous_chapter">Няма предишна глава</string>
     <string name="loading_pages">Зареждане на страниците…</string>
     <string name="failed_to_load_pages_">Не бяха заредени успешно: %1$s страници</string>
-    <string name="long_tap_dialog">Показване на прозорец след натискане</string>
     <string name="open_in_webview">Отвори онлайн</string>
     <string name="true_32bit_color">32-битови цветове</string>
     <string name="skip_read_chapters">Пропускай прочетените глави</string>
@@ -470,4 +467,5 @@
     <string name="next_chapter">Следваща глава</string>
     <string name="previous_chapter">Предишна глава</string>
     <string name="hide_app_block_screenshots">Скрий съдържанието на приложението и блокирай скрийншотове</string>
+    <string name="label_global_search">Глобално търсене</string>
 </resources>

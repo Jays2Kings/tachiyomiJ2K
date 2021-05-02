@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Activities and fragments labels (toolbar title) -->
-    <string name="settings">Configuraciones</string>
+    <string name="settings">Configuración</string>
     <string name="download_queue">Cola de descargas</string>
     <string name="library">Biblioteca</string>
     <string name="recent_updates">Últimas actualizaciones</string>
-    <string name="selected_">%1$d</string>
+    <string name="selected_">Seleccionado: %1$d</string>
     <!-- Actions -->
     <string name="filter">Filtrar</string>
-    <string name="downloaded">Descargado</string>
+    <string name="downloaded">Descargados</string>
     <string name="unread">No leído</string>
     <string name="search">Buscar</string>
     <string name="select_all">Seleccionar todo</string>
@@ -42,7 +42,7 @@
     <string name="about">Acerca de</string>
     <!-- General section -->
     <string name="default_value">Predefinido</string>
-    <string name="library_update_frequency">Frecuencia de actualización de la librería</string>
+    <string name="library_update_frequency">Frecuencia de actualización de la biblioteca</string>
     <string name="manual">Manual</string>
     <string name="hourly">Cada hora</string>
     <string name="every_2_hours">Cada 2 horas</string>
@@ -51,7 +51,7 @@
     <string name="every_12_hours">Cada 12 horas</string>
     <string name="daily">Cada día</string>
     <string name="every_2_days">Cada 2 días</string>
-    <string name="library_update_restriction">Restricciones de actualización de la librería</string>
+    <string name="library_update_restriction">Restricciones de actualización de la biblioteca</string>
     <string name="library_update_restriction_summary">Actualizar solo cuando se cumplan las condiciones</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Cargando</string>
@@ -90,11 +90,9 @@
     <string name="rotation">Rotación</string>
     <string name="free">Libre</string>
     <string name="lock">Bloqueado</string>
-    <string name="force_portrait">Forzar retrato</string>
-    <string name="force_landscape">Forzar apaisado</string>
     <!-- Downloads section -->
     <string name="download_location">Directorio de descargas</string>
-    <string name="only_download_over_wifi">Descargar solo a través de Wi-Fi</string>
+    <string name="only_download_over_wifi">Descargar solo por Wi-Fi</string>
     <string name="remove_when_marked_as_read">Eliminar al marcar como leído</string>
     <string name="remove_after_read">Eliminar después de leer</string>
     <string name="custom_location">Directorio personalizado</string>
@@ -108,8 +106,8 @@
     <string name="clear_cookies">Borrar cookies</string>
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
-    <string name="clear_database_summary">Eliminar solo manga y capítulos que no están en tu librería</string>
-    <string name="clear_database_confirmation">¿Estás seguro? Los capítulos leídos y el progreso de manga que no esté en la librería se perderá</string>
+    <string name="clear_database_summary">Eliminar títulos y capítulos que no estén en la biblioteca</string>
+    <string name="clear_database_confirmation">¿Estás seguro\? Los capítulos leídos y el progreso del título que no esté en la biblioteca se perderá</string>
     <string name="clear_database_completed">Entradas borradas</string>
     <!-- About section -->
     <string name="version">Versión</string>
@@ -132,7 +130,7 @@
     <string name="description">Descripción</string>
     <string name="ongoing">En publicación</string>
     <string name="unknown">Desconocido</string>
-    <string name="licensed">Licenciado</string>
+    <string name="licensed">En hiatus</string>
     <string name="author">Autor</string>
     <string name="artist">Artista</string>
     <string name="status">Estado</string>
@@ -141,7 +139,7 @@
     <string name="downloading">Descargando</string>
     <string name="downloading_progress">Descargando (%1$d/%2$d)</string>
     <string name="next_5_unread">Descargar siguientes 5 capítulos</string>
-    <string name="all_chapters">Descargar todos</string>
+    <string name="all_chapters">Todos</string>
     <string name="all_unread_chapters">Descargar no leídos</string>
     <!-- MyAnimeList fragment -->
     <string name="reading">Leyendo</string>
@@ -165,7 +163,7 @@
     <string name="could_not_download_chapter_can_try_again">Se ha producido un error al descargar capítulos. Puede intentarlo de nuevo en la sección de descargas</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Nuevos capítulos encontrados</string>
-    <string name="must_be_in_library_to_edit">Por favor añada el manga a la librería antes de hacer esto</string>
+    <string name="must_be_in_library_to_edit">Por favor, añade el título a la biblioteca antes de editar</string>
     <!-- File Picker Titles -->
     <string name="select_cover_image">Seleccione la imagen de portada</string>
     <string name="select_backup_file">Seleccione la copia de seguridad</string>
@@ -211,7 +209,7 @@
     <string name="undo">Deshacer</string>
     <string name="create">Crear</string>
     <string name="restore">Restablecer</string>
-    <string name="updates">Act.</string>
+    <string name="updates">Nuevos</string>
     <string name="weekly">Semanalmente</string>
     <string name="categories_to_include_in_global_update">Categorías a incluir en actualización global</string>
     <string name="all">Todos</string>
@@ -250,7 +248,7 @@
     <string name="refresh_tracking_metadata">Actualizar metadatos de seguimiento</string>
     <string name="updates_tracking_details">Actualización de estado, puntuación y último capítulo leído en los servicios de seguimiento</string>
     <string name="no_more_results">No hay más resultados</string>
-    <string name="local_source">Manga local</string>
+    <string name="local_source">Fuente local</string>
     <string name="paused">Pausado</string>
     <string name="category_with_name_exists">¡Ya existe una categoría con este nombre!</string>
     <string name="picture_saved">Imagen guardada</string>
@@ -304,7 +302,6 @@
     <string name="failed_to_load_pages_">Error al cargar páginas: %1$s</string>
     <string name="double_tap_anim_speed">Velocidad de animación de doble toque</string>
     <string name="dark_blue">Azul oscuro</string>
-    <string name="long_tap_dialog">Diálogo de toque largo</string>
     <string name="open_in_webview">Abrir en vista web</string>
     <string name="skip_read_chapters">Saltar capítulos marcados como leídos</string>
     <string name="true_32bit_color">Color en 32 bits</string>
@@ -339,13 +336,13 @@
     <string name="always">Siempre</string>
     <string name="update">Actualizar</string>
     <string name="updating_library">Actualizando biblioteca</string>
-    <string name="date_added">Fecha agregada</string>
+    <string name="date_added">Fecha de añadido</string>
     <string name="latest_chapter">Capítulo más reciente</string>
     <plurals name="notification_update_failed">
         <item quantity="one">1 actualización fallida</item>
         <item quantity="other">%1$d actualizaciónes fallidas</item>
     </plurals>
-    <string name="local_source_help_guide">Instruccion local de fuente</string>
+    <string name="local_source_help_guide">Guía de fuente local</string>
     <string name="check_site_in_web">Abrir sitio en WebView</string>
     <string name="obsolete">Obsoleto</string>
     <string name="obsolete_extension_message">Esta extensión ya no está disponible.</string>
@@ -403,18 +400,18 @@
     </plurals>
     <string name="chapter_not_found">Capítulo no encontrado</string>
     <string name="chapters_removed">Capítulos eliminados.</string>
-    <string name="removed_bookmark">Remover marcador</string>
-    <string name="marked_as_unread">Marcar como no leído</string>
-    <string name="marked_as_read">Marcar como leído</string>
+    <string name="removed_bookmark">Marcador eliminado</string>
+    <string name="marked_as_unread">Marcado como no leído</string>
+    <string name="marked_as_read">Marcado como leído</string>
     <string name="all_chapters_read">Todos los capítulos leídos</string>
     <string name="chapter_x_of_y">Capítulo %1$d de %2$d</string>
     <string name="last_read_chapter_">Último capítulo leído %1$s</string>
     <string name="new_chapters">Nuevos capítulos</string>
     <string name="unlock">Desbloquear</string>
     <string name="unlock_library">Desbloquear para acceder a la biblioteca</string>
-    <string name="unknown_status">Estado desconocido</string>
-    <string name="in_progress">En progreso</string>
-    <string name="not_started">Sin iniciar</string>
+    <string name="unknown_status">Desconocido</string>
+    <string name="in_progress">En curso</string>
+    <string name="not_started">No iniciado</string>
     <string name="comic">Cómic</string>
     <string name="reset_tags">Restablecer etiquetas</string>
     <string name="clear_tags">Borrar etiquetas</string>
@@ -430,7 +427,7 @@
     <string name="show_all">Mostrar todo</string>
     <string name="add_x_to_library">¿Agregar %1$s a la biblioteca\?</string>
     <string name="all_but_bookmarked_chapters">Todos menos los capítulos marcados</string>
-    <string name="all_read_chapters">Todos capítulos leídos</string>
+    <string name="all_read_chapters">Todos los leídos</string>
     <string name="next_unread_chapter">Siguiente capítulo sin leer</string>
     <string name="search_chapters">Buscar capítulos</string>
     <string name="select_ending_chapter">Seleccionar capítulo final</string>
@@ -444,7 +441,7 @@
     <string name="continue_reading_chapter_">Continuar leyendo el capítulo %1$s</string>
     <string name="start_reading_chapter_">Empezar a leer el capítulo %1$s</string>
     <string name="start_reading">Empezar a leer</string>
-    <string name="about_this_">Sobre este %1$s</string>
+    <string name="about_this_">Acerca de este %1$s</string>
     <string name="if_disabled_transition_will_skip">Si está deshabilitado, la página de transición se omitirá si se carga el siguiente capítulo.</string>
     <string name="smart_based_on_page_and_theme">Inteligente (basado en la página y el tema)</string>
     <string name="smart_based_on_page">Inteligente (basado en la página)</string>
@@ -459,21 +456,21 @@
     <string name="source_hidden">Fuente oculta</string>
     <string name="all_sources">Todas las fuentes</string>
     <string name="search_extensions">Buscar extensiones…</string>
-    <string name="in_library">En Biblioteca</string>
+    <string name="in_library">En biblioteca</string>
     <string name="reset_chapter_question">¿Reiniciar capítulo\?</string>
     <string name="search_recents">Buscar recientes…</string>
     <string name="view_all_updates">Ver todas las actualizaciones</string>
     <string name="view_history">Ver historial</string>
     <string name="added_">Añadido %1$s</string>
     <string name="updated_">Actualizado %1$s</string>
-    <string name="read_">Leer %1$s</string>
+    <string name="read_">Leído %1$s</string>
     <string name="last_read_">Última lectura %1$s</string>
     <string name="reset_all_chapters_for_this_">Restablecer todos los capítulos para este %1$s</string>
     <string name="this_will_remove_the_read_date_for_x_question">Esto eliminará la fecha de lectura de \"%1$s\". ¿Está seguro\?</string>
     <string name="newly_added">Agregado recientemente</string>
     <string name="recents">Recientes</string>
     <string name="show_notification_error">Mostrar notificación de errores</string>
-    <string name="auto_refresh_covers_summary">Actualizar las cubiertas en la biblioteca cuando también se actualiza la biblioteca</string>
+    <string name="auto_refresh_covers_summary">Actualizar las portadas en la biblioteca cuando ésta también lo haga</string>
     <string name="auto_refresh_covers">Actualizar portadas automáticamente</string>
     <string name="include_in_global_update">Incluir en actualización global</string>
     <string name="when_sorting_ignore_articles">Al ordenar alfabéticamente, ordene ignorando los artículos (a, un, el) al comienzo de los títulos de manga</string>
@@ -499,12 +496,12 @@
     <string name="hide_start_reading_button">Ocultar el botón de inicio de lectura</string>
     <string name="comfortable_grid">Cuadrícula agradable</string>
     <string name="display_options">Opciones de visualización</string>
-    <string name="drag_and_drop">Arrastra y suelta</string>
+    <string name="drag_and_drop">Personalizado</string>
     <string name="sort_by">Ordenar por</string>
     <string name="ungrouped">Sin agrupar</string>
     <string name="tracking_status">Estado de seguimiento</string>
     <string name="group_library_by">Agrupar biblioteca por…</string>
-    <string name="series_type">Tipos de serie</string>
+    <string name="series_type">Tipo</string>
     <string name="read_progress">Progreso de lectura</string>
     <string name="search_globally">Buscar «%1$s» en cada fuente</string>
     <string name="_unread">%d no leído</string>
@@ -514,7 +511,7 @@
     <string name="always_show_current_category">Mostrar siempre la categoría actual</string>
     <string name="show_all_categories">Mostrar todas las categorías</string>
     <string name="no_matches_for_filters">Sin coincidencias para tus filtros actuales</string>
-    <string name="library_search_hint">Buscar por título, etiquetas o fuente…</string>
+    <string name="library_search_hint">Buscar título, autor, etiqueta…</string>
     <string name="remove_from_library_question">¿Eliminar de la biblioteca\?</string>
     <string name="updating_">Actualizando %1$s</string>
     <string name="what_should_update">¿Qué debería actualizar\?</string>
@@ -569,23 +566,23 @@
     <string name="delete_removed_chapters">Remover capítulos eliminados</string>
     <string name="manage_whats_downloading">Administra que estás descargando</string>
     <string name="nothing_is_downloading">No hay descargas en proceso</string>
-    <string name="remove_downloads">Borrar descargas</string>
-    <string name="remove_download">Borrar descarga</string>
-    <string name="start_downloading_now">Empezar descarga</string>
-    <string name="not_downloaded">Sin descargar</string>
+    <string name="remove_downloads">Eliminar capítulos descargados</string>
+    <string name="remove_download">Eliminar descarga</string>
+    <string name="start_downloading_now">Iniciar descarga</string>
+    <string name="not_downloaded">No descargados</string>
     <string name="downloading_">Descargando: %1$s</string>
     <string name="username_must_not_be_blank">El nombre de usuario o la contraseña no pueden estar en blanco</string>
     <string name="logout_from_">Cerrar sesión de %1$s\?</string>
     <string name="logout">Cerrar sesión</string>
-    <string name="you_can_migrate_in_library">También puedes migrar seleccinando el manga desde tu librería</string>
-    <string name="delete_all_covers__not_in_library_used_">Borrar todas las portadas en caché que no se encuentren en tu librería
-\nActualmente en uso: %1$s</string>
+    <string name="you_can_migrate_in_library">También puedes migrar seleccionando el título desde la biblioteca</string>
+    <string name="delete_all_covers__not_in_library_used_">Eliminar las portadas en caché que no estén en la biblioteca
+\nEn uso: %1$s</string>
     <string name="clean_up_cached_covers">Borrar portadas en caché</string>
     <plurals name="cleanup_done">
         <item quantity="one">Borrado completo. %d carpeta removida</item>
         <item quantity="other">Borrado completo. %d carpetas removidas</item>
     </plurals>
-    <string name="disable_if_issues_with_updating">Borrar esto si estás experimentando problemas al actualizar o restaurar tu librería</string>
+    <string name="disable_if_issues_with_updating">Desactivar si presentas problemas al actualizar o restaurar la biblioteca</string>
     <string name="no_folders_to_cleanup">No hay carpetas para borrar</string>
     <string name="clean_read_downloads">Borrar leídos</string>
     <string name="restore_error">Error en la restauración</string>
@@ -617,8 +614,8 @@
     <string name="may_contain_nsfw">Puede contener contenido 18+</string>
     <string name="next_page">Siguiente página</string>
     <string name="previous_page">Página anterior</string>
-    <string name="next_chapter">Siguiente página</string>
-    <string name="previous_chapter">Página anterior</string>
+    <string name="next_chapter">Siguiente capítulo</string>
+    <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar las transiciones de página</string>
     <string name="default_reading_mode">Modo de lectura por defecto</string>
     <string name="nav_layout">Estructura de navegación</string>
@@ -633,7 +630,7 @@
     <string name="started_reading_date">Fecha de inicio de lectura</string>
     <string name="finished_reading_date">Fecha de lectura finalizada</string>
     <string name="myanimelist_relogin">Vuelva a iniciar sesión en MAL</string>
-    <string name="search_settings">Opciones de búsqueda</string>
+    <string name="search_settings">Buscar en configuración</string>
     <string name="locale">Localización</string>
     <string name="create_legacy_backup">Crear una copia de seguridad heredada</string>
     <string name="can_be_used_in_older_tachi">Se puede utilizar en versiones anteriores de Tachiyomi</string>
@@ -731,4 +728,119 @@
     <string name="grouped">Agrupado</string>
     <string name="no_recent_read_updated_manga">Sin lectura o actualización reciente</string>
     <string name="reset_chapter_history">Restablecer el historial de capítulos</string>
+    <string name="clean_orphaned_downloads">Limpiar mangas huérfanos</string>
+    <string name="shift_double_pages">Mover paginas dobles</string>
+    <string name="shift_one_page_over">Mover unicamente una pagina</string>
+    <string name="add_to_">Añadido a %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Eliminar portadas antiguas y sin usarse de mangas guardadas en la cache de la biblioteca que han sido actualizados.
+\nActualmente usando: %1$s</string>
+    <plurals name="cache_cleared">
+        <item quantity="one">Cache limpiado. %d archivo a sido eliminado</item>
+        <item quantity="other">Cache limpiado. %d archivos han sido eliminados</item>
+    </plurals>
+    <string name="not_logged_into_">Sin iniciar sesion en %1$s</string>
+    <string name="hot_pink">Rosa chicle</string>
+    <string name="spring_blossom">Florecer de Primavera</string>
+    <string name="midnight_dusk">Crepusculo de Medianoche</string>
+    <string name="turn_off_">Desactivar %s</string>
+    <string name="turn_on_">Activar %s</string>
+    <plurals name="pages_plural">
+        <item quantity="one">%1$d pagina</item>
+        <item quantity="other">%1$d paginas</item>
+    </plurals>
+    <string name="remove_crop">Remover recordado</string>
+    <string name="pages_">Paginas %1$s</string>
+    <string name="_per_row">%d por fila</string>
+    <string name="series">Series</string>
+    <string name="category_hopper_long_press">Salto entre categoria despues de una accion de pulsacion larga</string>
+    <string name="top">Superior</string>
+    <string name="selection">Seleccion</string>
+    <string name="select_none">Seleccionar ninguno</string>
+    <string name="previous">Anterior</string>
+    <string name="preview">Avance</string>
+    <string name="next">Siguiente</string>
+    <string name="moved_to_">Movido a %1$s</string>
+    <string name="move_to_">Mover a %1$s</string>
+    <string name="menu">menú</string>
+    <string name="enabled">Activado</string>
+    <string name="enable">Activar</string>
+    <string name="drag_handle">Modulo de arrastrado</string>
+    <string name="clear_filters">Limpiar filtros</string>
+    <string name="change">Cambio</string>
+    <string name="bottom">Inferior</string>
+    <string name="beta">BETA</string>
+    <string name="added_to_">Añadido a %1$s</string>
+    <string name="webview_is_required">WebView es requerido para usar Tachiyomi</string>
+    <string name="ask_on_chapters_page">Eliminar en actualizaciones globales, preguntar en paginas de capitulos</string>
+    <string name="delete_downloaded_if_removed_online">Eliminar capitulos descargados si la fuente ha removido los capitulos de la red</string>
+    <string name="couldnt_download_low_space">No fue posible descargar capitulos debido a poco almacenamiento</string>
+    <string name="visit_recents_for_download_queue">Visitar la pestaña de recientes para acceder a la cola de descarga. Tambien puedes pulsar dos veces o mantener pulsado para un acceso mas rapido</string>
+    <string name="whats_new_this_release">Actualizado en esta versión</string>
+    <string name="migration_sources_changed">Fuentes de migracion editadas</string>
+    <string name="use_last_saved_migration_preferences">Usar las ultimas preferencias y fuentes pre migracion para migrar masivamente</string>
+    <string name="only_enable_enabled_for_migration">Solo permitir tus fuentes actualmente activadas para migrar</string>
+    <string name="only_enable_pinned_for_migration">Solo permitir tus fuentes marcadas para migrar</string>
+    <string name="match_enabled_sources">Igualar fuentes activadas</string>
+    <string name="match_pinned_sources">Igualar fuentes marcadas</string>
+    <string name="only_search_pinned_when">Buscar solo en fuentes marcadas</string>
+    <string name="clear_cached_covers_non_library">Eliminar portadas en la cache fuera de la biblioteca</string>
+    <string name="starting_cleanup">Iniciando limpieza</string>
+    <string name="clean_read_manga_not_in_library">Limpiar mangas que no estan en la biblioteca</string>
+    <string name="delete_unused_chapters">Elimiar carpetas de capitulos inexistentes, parcialmente descargados o leidos</string>
+    <string name="clean_up_downloaded_chapters">Limpiar capitulos descargados</string>
+    <string name="disabled">Deshabilitado</string>
+    <string name="doh">DNS sobre HTTPS</string>
+    <string name="data_management">Gestion de datos</string>
+    <string name="restore_content_full">Datos de la copia de seguridad seran restaurados.
+\n
+\nSe debera de instalar todos las extensiones faltantes y iniciar sesion en todos los servicios de seguimiento para poder ser usados.</string>
+    <string name="backup_in_progress">La copia de seguridad ya está en curso</string>
+    <string name="restore_in_progress">La restauración ya está en curso</string>
+    <string name="pressing_back_to_start">Presionar atras para la pantalla de inicio</string>
+    <string name="follow_system_theme">Predeterminado del sistema</string>
+    <string name="flat_lime">Lima Plano</string>
+    <string name="black_and_red">Blanco y Rojo</string>
+    <string name="pauses_reading_history">Pausar historia de lectura</string>
+    <string name="incognito_mode">Modo incógnito</string>
+    <string name="webtoon_cannot_change">No es posible cambiar el modo lectura de webtoon. Cambie el tipo de series primero.</string>
+    <string name="automatic_orientation">Automático (basado en orientacion)</string>
+    <string name="automatic_can_still_switch">Al usar diseño automático de página, todavía es viable cambiar entre diseños al leer sin sobrescribir este ajuste</string>
+    <string name="page_layout">Diseño de página</string>
+    <string name="cutout_behavior_only_applies">El comportamiento del área recortada solo se aplica en modo vertical con ciertos tipos de escalas</string>
+    <string name="pad_cutout_areas">Rellenar áreas recortadas</string>
+    <string name="switch_to_single">Cambiar a página única</string>
+    <string name="switch_to_double">Cambiar a páginas dobles</string>
+    <string name="single_page">Página única</string>
+    <string name="double_pages">Páginas dobles</string>
+    <string name="crop_borders_webtoon">Recortar bordes (Webtoon)</string>
+    <string name="crop_borders_paged">Recortar bordes (Páginado)</string>
+    <string name="invert_double_pages">Invertir páginas dobles</string>
+    <string name="amount_of_pages_to_preload">El numero de paginas precargadas al leer. Altos valores resultaran en una experiencia de lectura mas suave a coste de un uso mayor de cache y red.</string>
+    <string name="page_preload_amount">Numero de páginas precargadas</string>
+    <string name="save_combined_pages">Guardar páginas combinadas</string>
+    <string name="share_combined_pages">Compartir páginas combinadas</string>
+    <string name="save_second_page">Guardar segunda página</string>
+    <string name="share_second_page">Compartir segunda página</string>
+    <string name="set_second_page_as_cover">Establecer segunda página como portada</string>
+    <string name="save_first_page">Guardar primera página</string>
+    <string name="share_first_page">Compartir primera página</string>
+    <string name="set_first_page_as_cover">Establecer primera página como portada</string>
+    <string name="changing_will_reset_reading_mode">Cambiar esto reiniciara el ajuste de lectura para esta serie</string>
+    <string name="reading_mode">Modo lectura</string>
+    <string name="a_while_ago">Un tiempo atrás</string>
+    <string name="show_read_chapters_all">Mostrar los capítulos leídos en «Agrupado» y en «Todos»</string>
+    <string name="certain_buttons_can_be_found">Ciertos botones se pueden encontrar en otros sitios estando esto desactivado</string>
+    <string name="display_buttons_bottom_reader">Botones abajo del lector</string>
+    <string name="grid_size">Tamaño de la cuadrícula</string>
+    <string name="uniform_grid_covers">Cuadriculas con cubiertas uniformes</string>
+    <string name="can_be_found_in_library_filters">También se puede encontrar al expandir los filtros de la biblioteca</string>
+    <string name="expand_collapse_all_categories">Expandir / Colapsar todas las categorías</string>
+    <string name="when_grouping_by_sources_tags">Al agrupar la biblioteca por fuentes, estados, etc.</string>
+    <string name="move_dynamic_to_bottom">Mover categorías dinámicas colapsadas hacia abajo</string>
+    <string name="category_cannot_be_blank">El nombre de la categoría no puede estar vacío</string>
+    <string name="new_category">Nueva categoria</string>
+    <string name="no_pages_found">Paginas no encontradas</string>
+    <string name="label_global_search">Búsqueda global</string>
+    <string name="no_chapters_to_delete">No hay capítulos para eliminar</string>
+    <string name="remove_all_downloads">¿Borrar todas las descargas\?</string>
 </resources>

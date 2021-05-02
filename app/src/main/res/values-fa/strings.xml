@@ -25,7 +25,6 @@
     <string name="volume_keys">دکمه‌های صدا</string>
     <string name="invert_volume_keys">معکوس کردن دکمه‌های صدا</string>
     <string name="tapping">ضربه زدن</string>
-    <string name="long_tap_dialog">منوی ضربه طولانی</string>
     <string name="background_color">رنگ پس زمینه</string>
     <string name="white">سفید</string>
     <string name="black">سیاه</string>
@@ -39,8 +38,6 @@
     <string name="original_size">اندازه اصلی</string>
     <string name="smart_fit">هم اندازه حالت هوشمند</string>
     <string name="zoom_start_position">موقعیت شروع بزرگنمایی</string>
-    <string name="force_portrait">تحمیل حالت عمودی</string>
-    <string name="force_landscape">تحمیل حالت افقی</string>
     <string name="red_initial">قرمز</string>
     <string name="green_initial">سبز</string>
     <string name="blue_initial">آبی</string>
@@ -478,4 +475,5 @@
     <string name="unlock_library">برای دسترسی به کتابخانه قفل را باز کنید</string>
     <string name="manhua">مانهوا</string>
     <string name="hide_app_block_screenshots">محتویات برنامه هنگام تعویض برنامه ها مخفی و از عکس گرفتن از صفحه برنامه جلوگیری شود</string>
+    <string name="label_global_search">جست و جوی کامل</string>
 </resources>

@@ -135,4 +135,33 @@
     <string name="l_nav">En formo kiel \"L\"</string>
     <string name="obsolete_extension_message">Ĉi tiu aldonaĵo ne estas plu disponebla.</string>
     <string name="all">Ĉio</string>
+    <string name="updating_library">Ĝisdatigas bibliotekon</string>
+    <string name="options">Opcioj</string>
+    <string name="picture_saved">Bildo konservita</string>
+    <string name="status">Stato</string>
+    <string name="score">Takso</string>
+    <string name="dropped">Forĵetitaj</string>
+    <string name="completed">Finitaj</string>
+    <string name="reading">Legataj</string>
+    <string name="add_tracking">Aldoni ŝanĝospurilon</string>
+    <string name="no_chapters_error">Neniu ĉapitro trovita</string>
+    <string name="remove_from_library">Forigi el biblioteko</string>
+    <string name="unknown">Nekonata</string>
+    <string name="ongoing">Okazanta</string>
+    <string name="latest">Lastaj</string>
+    <string name="no_results_found">Neniu rezulto trovita</string>
+    <string name="no_more_results">Ne pli rezultoj</string>
+    <string name="unknown_error">Nekonata eraro</string>
+    <string name="login">Ensaluti</string>
+    <string name="whats_new">Kio novas</string>
+    <string name="version">Versio</string>
+    <string name="clear_database_completed">Eroj forigitaj</string>
+    <string name="cache_delete_error">Eraro okazis dum viŝado de kaŝmemoro</string>
+    <string name="cookies_cleared">Kuketoj viŝitaj</string>
+    <string name="creating_backup">Kreas savkopion</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">Farita en %1$s kun %2$s eraro</item>
+        <item quantity="other">Farita en %1$s kun %2$s eraroj</item>
+    </plurals>
+    <string name="restore_duration">%02d min, %02d sek</string>
 </resources>

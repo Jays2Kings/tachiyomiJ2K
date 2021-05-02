@@ -117,8 +117,6 @@
     <string name="rotation">Rotasi</string>
     <string name="free">Bebas</string>
     <string name="lock">Kunci</string>
-    <string name="force_portrait">Paksa tegak</string>
-    <string name="force_landscape">Paksa menyamping</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -278,7 +276,6 @@
     <string name="open_in_webview">Buka di sini</string>
     <string name="true_32bit_color">Warna 32-bit</string>
     <string name="skip_read_chapters">Lewati bab yang sudah dibaca</string>
-    <string name="long_tap_dialog">Dialog ketuk dan tahan</string>
     <string name="color_filter_blend_mode">Mode saringan warna campur</string>
     <string name="overlay">Lapisan</string>
     <string name="multiply">Gandakan</string>
@@ -630,4 +627,5 @@
     <string name="not_downloaded">Tidak terunduh</string>
     <string name="view_all_errors">Lihat semua galat</string>
     <string name="filter_languages">Filter Bahasa</string>
+    <string name="label_global_search">Pencarian Global</string>
 </resources>

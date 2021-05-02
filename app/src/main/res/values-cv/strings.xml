@@ -107,7 +107,6 @@
     <string name="volume_keys">Янравлӑх пускӑчӗсем</string>
     <string name="invert_volume_keys">Янравлӑх пускӑчӗсене вырӑнсемпе улӑштар</string>
     <string name="tapping">Пусни</string>
-    <string name="long_tap_dialog">Пусса тӑрсан суйлав чӳрече кӑтарт</string>
     <string name="background_color">Ӳкерчĕк хыҫӑн тӗсӗ</string>
     <string name="white">Шурӑ</string>
     <string name="black">Хура</string>
@@ -121,8 +120,6 @@
     <string name="original_size">Хӑйӗн виҫе</string>
     <string name="smart_fit">Тӑнлӑ</string>
     <string name="zoom_start_position">Пысӑклатни пуҫламӑш тӑрӑмӗ</string>
-    <string name="force_portrait">Урлӑскер</string>
-    <string name="force_landscape">Тӑрӑхскер</string>
     <string name="red_initial">Хӗрлӗ</string>
     <string name="green_initial">Симӗс</string>
     <string name="blue_initial">Кӑвак</string>
@@ -456,4 +453,9 @@
     <string name="hide_app_block_screenshots">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
     <string name="add_x_to">%1$s хуш…</string>
     <string name="move_x_to">%1$s куҫар…</string>
+    <string name="long_press_category">Пухмӑша улӑштарма пус та тытса тӑр</string>
+    <string name="category_cannot_be_blank">Пухмӑш ячӗ пушӑ пулаймасть</string>
+    <string name="new_category">Ҫӗнӗ пухмӑш</string>
+    <string name="no_pages_found">Элсем тупӑнман</string>
+    <string name="label_global_search">Пур ҫӗрте шыра</string>
 </resources>

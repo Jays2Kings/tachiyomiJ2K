@@ -105,8 +105,6 @@
     <string name="rotation">Orientamento</string>
     <string name="free">Libero</string>
     <string name="lock">Bloccato</string>
-    <string name="force_portrait">Blocca verticale</string>
-    <string name="force_landscape">Blocca orizzontale</string>
     <string name="red_initial">R</string>
     <string name="green_initial">V</string>
     <string name="blue_initial">B</string>
@@ -312,7 +310,6 @@
     <string name="true_32bit_color">Colori a 32 bit</string>
     <string name="skip_read_chapters">Salta i capitoli segnati come letti</string>
     <string name="screen">Schermo</string>
-    <string name="long_tap_dialog">Dialogo dopo pressione lunga</string>
     <string name="color_filter_blend_mode">Modalità di filtraggio del colore</string>
     <string name="overlay">Sovrimpressione</string>
     <string name="multiply">Moltiplica</string>
@@ -399,8 +396,8 @@
     <string name="_already_in_queue">%1$s è già nella coda</string>
     <string name="adding_category_to_queue">Aggiungendo %1$s alla coda di aggiornamento</string>
     <plurals name="category_plural">
-        <item quantity="one">Categoria</item>
-        <item quantity="other"/>
+        <item quantity="one">%d categoria</item>
+        <item quantity="other">%d categorie</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pagina rimasta</item>
@@ -738,4 +735,14 @@
     <string name="backup_in_progress">Un backup è già in corso</string>
     <string name="next">Successivo</string>
     <string name="hide_app_block_screenshots">Nascondi i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
+    <string name="disabled">Disabilitato</string>
+    <string name="label_global_search">Ricerca globale</string>
+    <string name="updates_and_history">Aggiornamenti e cronologia</string>
+    <string name="category_cannot_be_blank">Il nome della categoria non può essere vuoto</string>
+    <string name="new_category">Nuova categoria</string>
+    <string name="no_chapters_to_delete">Nessun capitolo da eliminare</string>
+    <string name="remove_all_downloads">Rimuovere tutti gli scaricamenti\?</string>
+    <string name="no_pages_found">Nessuna pagina trovata</string>
+    <string name="add_x_to">Aggiungi %1$s a…</string>
+    <string name="move_x_to">Sposta %1$s in…</string>
 </resources>

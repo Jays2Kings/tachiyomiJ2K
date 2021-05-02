@@ -24,7 +24,7 @@
     <!-- Security -->
     <string name="unlock_library">Entsperre den Bibliothekszugriff</string>
     <string name="unlock">Entsperren</string>
-    <string name="lock_with_biometrics">Mit Biometrie sperren</string>
+    <string name="lock_with_biometrics">Entsperren erforderlich</string>
     <string name="lock_when_idle">Während Inaktivität sperren</string>
     <!-- Chapters -->
     <string name="chapters">Kapitel</string>
@@ -116,7 +116,7 @@
     <string name="last_read">Zuletzt gelesen</string>
     <string name="last_updated">Zuletzt aktualisiert</string>
     <string name="latest_chapter">Letztes Kapitel</string>
-    <string name="drag_and_drop">Ziehen &amp; Ablegen</string>
+    <string name="drag_and_drop">Ziehen und Ablegen</string>
     <!-- Library Display -->
     <string name="display_options">Anzeigeeinstellungen</string>
     <string name="list">Liste</string>
@@ -190,7 +190,7 @@
     <string name="global_search">Globale Suche …</string>
     <string name="latest">Neueste</string>
     <string name="browse">Stöbern</string>
-    <string name="in_library">In Bibliothek</string>
+    <string name="in_library">In der Bibliothek</string>
     <string name="search_extensions">Erweiterungen suchen …</string>
     <string name="all_sources">Alle Quellen</string>
     <string name="sources">Quellen</string>
@@ -229,7 +229,7 @@
     <string name="cover_updated">Vorschaubild geändert</string>
     <string name="page_">Seite %1$d</string>
     <string name="next_chapter_not_found">Nächstes Kapitel nicht gefunden</string>
-    <string name="decode_image_error">Das Bild konnte nicht dekodiert werden</string>
+    <string name="decode_image_error">Das Bild konnte nicht geladen werden</string>
     <string name="use_image_as_cover">Wollen Sie dieses Bild als Vorschaubild setzen?</string>
     <string name="finished_chapter">Beendet:</string>
     <string name="current_chapter">Aktuell:</string>
@@ -263,7 +263,6 @@
     <string name="volume_keys">Lautstärketasten</string>
     <string name="invert_volume_keys">Lautstärketasten umkehren</string>
     <string name="tapping">Tippen</string>
-    <string name="long_tap_dialog">Lange für Dialog tippen</string>
     <string name="background_color">Hintergrundfarbe</string>
     <string name="white">Weiß</string>
     <string name="black">Schwarz</string>
@@ -282,8 +281,6 @@
     <string name="original_size">Originalgröße</string>
     <string name="smart_fit">Intelligentes ausfüllen</string>
     <string name="zoom_start_position">Zoom Anfangsposition</string>
-    <string name="force_portrait">Hochformat erzwingen</string>
-    <string name="force_landscape">Querformat erzwingen</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -307,7 +304,7 @@
     <string name="chapters_">Kapitel %1$s</string>
     <string name="volume_">Band %1$d</string>
     <string name="season_">Staffel %1$d</string>
-    <string name="added_to_library">Zur Bibliothek hinzugefügt</string>
+    <string name="added_to_library">Der Manga wurde der Bibliothek hinzugefügt</string>
     <string name="add_to_library">Zur Bibliothek hinzufügen</string>
     <string name="removed_from_library">Aus Bibliothek entfernt</string>
     <string name="_copied_to_clipboard">%1$s in Zwischenablage gespeichert</string>
@@ -359,11 +356,11 @@
     <string name="services">Anbieter</string>
     <string name="sync_chapters_after_reading">Kapitel nach dem Lesen synchronisieren</string>
     <string name="reading">Am Lesen</string>
-    <string name="currently_reading">Aktuell am Lesen</string>
+    <string name="currently_reading">Am Lesen</string>
     <string name="dropped">Abgebrochen</string>
     <string name="on_hold">Pausiert</string>
     <string name="plan_to_read">Plane ich zu lesen</string>
-    <string name="want_to_read">Will ich lesen</string>
+    <string name="want_to_read">Möchte ich lesen</string>
     <string name="paused">Pausiert</string>
     <string name="rereading">Erneutes Lesen</string>
     <string name="score">Bewertung</string>
@@ -696,7 +693,7 @@
 \n
 \nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
     <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
-    <string name="restore_duration">%02d Min. %02d Sk.</string>
+    <string name="restore_duration">%02d Min. %02d Sek.</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Erledigt in %1$s mit %2$s Fehler</item>
         <item quantity="other">Erledigt in %1$s mit %2$s Fehlern</item>
@@ -745,8 +742,8 @@
     <string name="filter_languages">Sprachen filtern</string>
     <string name="show_unread_count">Ungelesenenanzahl zeigen</string>
     <string name="add_edit_categories">Kategorien hinzufügen/bearbeiten</string>
-    <string name="restore_in_progress">Wiederherstellung bereits in Arbeit</string>
-    <string name="backup_in_progress">Sicherung bereits in Arbeit</string>
+    <string name="restore_in_progress">Wiederherstellung wird bereits durchgeführt</string>
+    <string name="backup_in_progress">Sicherung wird bereits durchgeführt</string>
     <string name="back_to_start">Zurück zum Start</string>
     <string name="starting_screen">Startbildschirm</string>
     <string name="hides_on_scroll">Verstecken beim Scrollen</string>
@@ -849,4 +846,26 @@
     <string name="when_grouping_by_sources_tags">Beim Gruppieren der Bibliothek nach Quellen, Status usw.</string>
     <string name="move_dynamic_to_bottom">Eingeklappte dynamische Kategorien ans Ende verschieben</string>
     <string name="no_pages_found">Keine Seiten gefunden</string>
+    <string name="label_global_search">Globale Suche</string>
+    <string name="search_">Suche %1$s</string>
+    <string name="group_chapters_together">Kapitel gruppieren</string>
+    <string name="show_updated_time">Aktualisierungszeit anzeigen</string>
+    <string name="fetched_">Abgerufen %1$s</string>
+    <string name="updates_and_history">Aktualisierungen und Verlauf</string>
+    <string name="your_library">Deine Bibliothek</string>
+    <string name="no_chapters_to_delete">Keine Kapitel zu löschen</string>
+    <string name="remove_all_downloads">Alle heruntergeladene Dateien entfernen\?</string>
+    <string name="actions">Aktionen</string>
+    <string name="automatic_removal">Automatisches Löschen</string>
+    <string name="create_folders_by_manga_title">Erstellt Ordner nach Manga-Titel</string>
+    <string name="save_pages_separately">Seiten in seperaten Ordnern speichern</string>
+    <string name="show_on_long_press">Bei langem Tippen anzeigen</string>
+    <string name="locked_landscape">Querformat erzwingen</string>
+    <string name="locked_portrait">Hochformat erzwingen</string>
+    <string name="landscape">Querformat</string>
+    <string name="portrait">Hochformat</string>
+    <string name="search_tips_show_periodically">Suchvorschläge werden periodisch auftauchen. Tippe lange auf einen Vorschlag, um nach ihm zu suchen.</string>
+    <string name="search_suggestions">Suchvorschläge</string>
+    <string name="date_fetched">Datum abgerufen</string>
+    <string name="release_page">Release-Seite</string>
 </resources>

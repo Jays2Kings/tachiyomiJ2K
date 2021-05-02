@@ -117,8 +117,6 @@
     <string name="rotation">Putaran skrin</string>
     <string name="free">Bebas</string>
     <string name="lock">Kunci</string>
-    <string name="force_portrait">Hanya potret</string>
-    <string name="force_landscape">Hanya landskap</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -190,9 +188,9 @@
     <string name="downloading">Memuat turun</string>
     <string name="downloading_progress">Muat turun dalam progres (%1$d/%2$d)</string>
     <string name="paused">Ditangguh</string>
-    <string name="next_5_unread">Muat turun 5 bab seterusnya</string>
-    <string name="all_chapters">Muat turun semua</string>
-    <string name="all_unread_chapters">Muat turun yang belum dibaca</string>
+    <string name="next_5_unread">5 belum dibaca seterusnya</string>
+    <string name="all_chapters">Semua bab</string>
+    <string name="all_unread_chapters">Semua yang belum dibaca</string>
     <string name="reading">Sedang baca</string>
     <string name="completed">Selesai</string>
     <string name="dropped">Diabaikan</string>
@@ -210,7 +208,7 @@
     <string name="cover_updated">Muka hadapan dikemas kini</string>
     <string name="page_">Halaman: %1$d</string>
     <string name="next_chapter_not_found">Bab seterusnya tidak dijumpai</string>
-    <string name="decode_image_error">Imej tidak dapat di muatkan</string>
+    <string name="decode_image_error">Imej tidak dapat diyahkod</string>
     <string name="use_image_as_cover">Adakah anda ingin set imej ini sebagai muka hadapan?</string>
     <string name="could_not_download_chapter_can_try_again">Ralat ketika memuat turun bab. Anda boleh mencuba lagi di bahagian muat turun</string>
     <string name="new_chapters_found">Bab baharu dijumpai</string>
@@ -256,7 +254,6 @@
     <string name="double_tap_anim_speed">Kelajuan animasi ketik dua kali</string>
     <string name="true_32bit_color">32-bit warna</string>
     <string name="skip_read_chapters">Langkau bab yang sudah dibaca</string>
-    <string name="long_tap_dialog">Menahan ketik buka dialog</string>
     <string name="no_animation">Tiada animasi</string>
     <string name="normal">Biasa</string>
     <string name="fast">Laju</string>
@@ -265,7 +262,7 @@
     <string name="removed_from_library">Dibuang dari koleksi</string>
     <string name="_copied_to_clipboard">%1$s disalin ke papan keratan</string>
     <string name="source_not_installed_">Sumber tidak dipasang: %1$s</string>
-    <string name="custom_range">Muat turun tersuai</string>
+    <string name="custom_range">Julat tersuai</string>
     <string name="rereading">Membaca semula</string>
     <string name="started">Bermula</string>
     <string name="type">Jenis</string>
@@ -430,7 +427,7 @@
     <string name="updated_">Di kemas kini %1$s</string>
     <string name="read_">Baca %1$s</string>
     <string name="last_read_">Bacaan terakhir %1$s</string>
-    <string name="reset_all_chapters_for_this_">Ulang semula semua bab untuk ini %1$s</string>
+    <string name="reset_all_chapters_for_this_">Ulang semula semua bab untuk %1$s ini</string>
     <string name="this_will_remove_the_read_date_for_x_question">Ini akan membuang tarikh bacaan bagi \"%1$s\". Anda pasti\?</string>
     <string name="newly_added">Baharu di</string>
     <string name="recents">Baru</string>
@@ -458,7 +455,7 @@
     <string name="mark_all_as_read">Tanda semua sebagai sudah di</string>
     <string name="hide">Sembunyi</string>
     <string name="drag_handle">Heret</string>
-    <string name="download_unread">Muat turun yang belum di baca</string>
+    <string name="download_unread">Muat turun yang belum dibaca</string>
     <string name="deleted_">Di padam: %1$s</string>
     <plurals name="after_minutes">
         <item quantity="other">Selepas %1$s</item>
@@ -543,8 +540,8 @@
     <string name="select_sources">Pilih</string>
     <string name="remove_tracking_from_">Juga buang daripada %1$s</string>
     <string name="remove_tracking">Buang penjejak daripada app</string>
-    <string name="want_to_read">Hendak di baca</string>
-    <string name="currently_reading">Sedang di baca</string>
+    <string name="want_to_read">Ingin baca</string>
+    <string name="currently_reading">Sedang dibaca</string>
     <string name="not_tracked">Tidak dijejaki</string>
     <string name="tracked">Dijejaki</string>
     <plurals name="deleted_chapters">
@@ -555,7 +552,7 @@
     <string name="error_sharing_cover">Ralat berkongsi muka hadapan</string>
     <string name="error_saving_cover">Ralat menyimpan muka hadapan</string>
     <string name="cover_saved">Muka hadapan disimpan</string>
-    <string name="source_not_installed">Sumber tidak di pasang</string>
+    <string name="source_not_installed">Sumber tidak dipasang</string>
     <string name="remember_this_choice">Ingat pilihan</string>
     <string name="reset_cover">Ulang semula cover</string>
     <string name="reset_tags">Ulang semula</string>
@@ -571,9 +568,9 @@
     <string name="show_bookmarked_chapters">Tunjuk bab yang di</string>
     <string name="show_all">Tunjuk</string>
     <string name="add_x_to_library">Tambah %1$s ke pustaka\?</string>
-    <string name="all_but_bookmarked_chapters">Semua tetapi bab yang di</string>
-    <string name="all_read_chapters">Semua bab yang di</string>
-    <string name="next_unread_chapter">Bab belum di baca yang</string>
+    <string name="all_but_bookmarked_chapters">Semua tetapi bab yang ditanda</string>
+    <string name="all_read_chapters">Semua yang sudah dibaca</string>
+    <string name="next_unread_chapter">Bab belum dibaca seterusnya</string>
     <string name="search_chapters">Cari</string>
     <string name="select_ending_chapter">Pilih penamat</string>
     <string name="select_starting_chapter">Pilih permulaan bab</string>
@@ -601,7 +598,7 @@
     <string name="source_hidden">Sumber</string>
     <string name="all_sources">Semua</string>
     <string name="search_extensions">Cari penambahan…</string>
-    <string name="in_library">Dalam pustaka</string>
+    <string name="in_library">Dalam Pustaka</string>
     <string name="reset_chapter_question">Ulang semula bab\?</string>
     <string name="keep">Simpan</string>
     <string name="top">Atas</string>
@@ -722,7 +719,7 @@
     <string name="added_to_">Ditambah ke %1$s</string>
     <string name="add_to_">Tambah ke %1$s</string>
     <string name="webview_is_required">WebView diperlukan untuk Tachiyomi</string>
-    <string name="disabled">Di nyahkan</string>
+    <string name="disabled">Dinyahkan</string>
     <string name="doh">DNS daripada HTTPS</string>
     <string name="follow_system_theme">Ikut tema sistem</string>
     <string name="flat_lime">Hijau flat</string>
@@ -794,4 +791,26 @@
     <string name="show_read_chapters_all">Tunjukkan bab di baca dalam kumpulan dan Semua</string>
     <string name="when_grouping_by_sources_tags">Bila mengumpulkan pustaka dengan sumber, status, etc.</string>
     <string name="move_dynamic_to_bottom">Pindahkan kategori dinamik yang di tutup ke bawah</string>
+    <string name="updates_and_history">Kemaskini &amp; Sejarah</string>
+    <string name="your_library">Pustaka anda</string>
+    <string name="no_chapters_to_delete">Tiada bab untuk dipadam</string>
+    <string name="remove_all_downloads">Padam semua yang dimuat turun\?</string>
+    <string name="label_global_search">Carian keseluruhan</string>
+    <string name="search_">Cari %1$s</string>
+    <string name="group_chapters_together">kumpul bab bersama</string>
+    <string name="show_updated_time">Tunjuk masa pengemaskinian</string>
+    <string name="date_fetched">Tarikh diperolehi</string>
+    <string name="fetched_">Diperolehi %1$s</string>
+    <string name="locked_landscape">Kekal landskap</string>
+    <string name="locked_portrait">Kekal potret</string>
+    <string name="landscape">Landskap</string>
+    <string name="portrait">Potret</string>
+    <string name="release_page">Halaman keluaran</string>
+    <string name="show_on_long_press">Tunjuk bila menahan ketik</string>
+    <string name="create_folders_by_manga_title">Mencipta folder mengikut tajuk manga</string>
+    <string name="save_pages_separately">Simpan muka surat dalam folder berasingan</string>
+    <string name="actions">Tindakan</string>
+    <string name="search_tips_show_periodically">Cadangan carian akan muncul secara berkala. Menahan tekan pada cadangan untuk mencarinya.</string>
+    <string name="search_suggestions">Cadangan carian</string>
+    <string name="automatic_removal">Pembuangan automatik</string>
 </resources>

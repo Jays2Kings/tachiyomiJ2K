@@ -140,8 +140,6 @@
     <string name="rotation">Rotering</string>
     <string name="free">Upplåst</string>
     <string name="lock">Lås</string>
-    <string name="force_portrait">Tvinga stående</string>
-    <string name="force_landscape">Tvinga liggande</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -278,7 +276,6 @@
     <string name="open_in_webview">Öppna i webbvisning</string>
     <string name="true_32bit_color">32-bitars färg</string>
     <string name="skip_read_chapters">Skippa över kapitel markerad som läst</string>
-    <string name="long_tap_dialog">Långtrycks dialog</string>
     <string name="color_filter_blend_mode">Färgfilterblandningsläge</string>
     <string name="overlay">Överlägg</string>
     <string name="multiply">Multiplicera</string>
@@ -814,4 +811,26 @@
     <string name="show_read_chapters_all">Visa lästa kapitel i grupperade och alla</string>
     <string name="when_grouping_by_sources_tags">När du grupperar biblioteket efter källor, status osv.</string>
     <string name="move_dynamic_to_bottom">Flytta ihopfällda dynamiska kategorier till botten</string>
+    <string name="search_">Sök %1$s</string>
+    <string name="group_chapters_together">Gruppkapitel tillsammans</string>
+    <string name="show_updated_time">Visa uppdaterad tid</string>
+    <string name="fetched_">Hämtas %1$s</string>
+    <string name="updates_and_history">Uppdateringar och historia</string>
+    <string name="your_library">Ditt bibliotek</string>
+    <string name="no_chapters_to_delete">Inga kapitel att radera</string>
+    <string name="remove_all_downloads">Ta bort alla nedladdningar\?</string>
+    <string name="label_global_search">Global sökning</string>
+    <string name="locked_landscape">Låst landskap</string>
+    <string name="locked_portrait">Låst porträtt</string>
+    <string name="landscape">Landskap</string>
+    <string name="portrait">Porträtt</string>
+    <string name="date_fetched">Datum hämtat</string>
+    <string name="create_folders_by_manga_title">Skapar mappar enligt mangatiteln</string>
+    <string name="save_pages_separately">Spara sidor i separata mappar</string>
+    <string name="show_on_long_press">Visa med lång tryckning</string>
+    <string name="actions">Åtgärder</string>
+    <string name="release_page">Släppsida</string>
+    <string name="search_tips_show_periodically">Söktips visas regelbundet. Tryck länge på förslaget för att söka i det.</string>
+    <string name="search_suggestions">Sökförslag</string>
+    <string name="automatic_removal">Automatisk borttagning</string>
 </resources>

@@ -284,7 +284,6 @@
     <string name="volume_keys">Przyciski głośności</string>
     <string name="invert_volume_keys">Odwróć przyciski głośności</string>
     <string name="tapping">Stukanie</string>
-    <string name="long_tap_dialog">Dialog po przytrzymaniu</string>
     <string name="background_color">Kolor tła</string>
     <string name="white">Biały</string>
     <string name="black">Czarny</string>
@@ -303,8 +302,6 @@
     <string name="original_size">Oryginalny rozmiar</string>
     <string name="smart_fit">Inteligentne dopasowanie</string>
     <string name="zoom_start_position">Początkowa pozycja przybliżenia</string>
-    <string name="force_portrait">Wymuś pionową</string>
-    <string name="force_landscape">Wymuś poziomą</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -811,4 +808,6 @@
     <string name="enable">Włącz</string>
     <string name="add_edit_categories">Dodaj/Edytuj kategorie</string>
     <string name="hide_app_block_screenshots">Ukryj zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
+    <string name="label_global_search">Wyszukiwanie globalne</string>
+    <string name="disabled">Nie usuwaj</string>
 </resources>

@@ -118,8 +118,6 @@
     <string name="rotation">ঘুরানো</string>
     <string name="free">ফ্রি</string>
     <string name="lock">বন্ধ</string>
-    <string name="force_portrait">সোঁজাসুজি রাখুন</string>
-    <string name="force_landscape">আড়াআড়ি রাখুন</string>
     <string name="red_initial">লাল</string>
     <string name="green_initial">সবুজ</string>
     <string name="blue_initial">নীল</string>
@@ -275,7 +273,6 @@
     <string name="loading_pages">পৃষ্ঠা লোড হচ্ছে …</string>
     <string name="failed_to_load_pages_">পৃষ্ঠা লোড করতে ব্যর্থ হয়েছে: %1$s</string>
     <string name="url_not_set_click_again">মাংগা ইউআরএল সেট না শিরোনাম ক্লিক করুন এবং আবার মাংগা নির্বাচন করুন</string>
-    <string name="long_tap_dialog">দীর্ঘক্ষণ ট্যাপ ডায়ালগ</string>
     <string name="open_in_webview">ওয়েব দর্শনে খুলুন</string>
     <string name="true_32bit_color">৩২-বিট রঙ</string>
     <string name="skip_read_chapters">পঠিত অধ্যায়গুলো এড়িয়ে যান</string>
@@ -591,4 +588,10 @@
     <string name="crash_log_saved">ক্র্যাশ লগগুলো সংরক্ষিত হয়েছে</string>
     <string name="updated_to_">হালনাগাদ করা হয়েছে v%1$s তে</string>
     <string name="hide_app_block_screenshots">অ্যাপ পাল্টানোর সময় অ্যাপের কন্টেন্ট লুকান ও স্ক্রিনসট ব্লক করুন</string>
+    <string name="series">সিরিজ</string>
+    <string name="category_cannot_be_blank">বিভাগের নাম ফাঁকা থাকতে পারবে না</string>
+    <string name="new_category">নতুন বিভাগ</string>
+    <string name="category">বিভাগ</string>
+    <string name="no_pages_found">কোনো পৃষ্ঠা পাওয়া যায় নি</string>
+    <string name="label_global_search">সর্বত্র খুঁজুন</string>
 </resources>
