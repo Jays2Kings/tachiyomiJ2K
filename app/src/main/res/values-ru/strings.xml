@@ -710,7 +710,7 @@
     <string name="previous_chapter">Предыдущая глава</string>
     <string name="animate_page_transitions">Анимированные переходы страниц</string>
     <string name="default_reading_mode">Режим чтения по умолчанию</string>
-    <string name="nav_layout">Макет навигации</string>
+    <string name="nav_layout">Схема навигации</string>
     <string name="source_migration_guide">Руководство по миграции источников</string>
     <string name="nsfw_sources">NSFW (18+) источники</string>
     <string name="show_in_sources">Показывать в списке источников</string>
@@ -881,11 +881,11 @@
     <string name="expand_collapse_all_categories">Развернуть/Свернуть все категории</string>
     <string name="category_hopper_long_press">Поведение переключателя категорий при долгом нажатий</string>
     <string name="no_pages_found">Страницы не найдены</string>
-    <string name="search_">Поиск %1$s</string>
+    <string name="search_">Поиск \"%1$s\"</string>
     <string name="group_chapters_together">Группировать главы вместе</string>
-    <string name="show_updated_time">Показать обновлённое время</string>
+    <string name="show_updated_time">Показать время обновления</string>
     <string name="fetched_">Получено %1$s</string>
-    <string name="updates_and_history">Обновления &amp; история</string>
+    <string name="updates_and_history">Обновления и История</string>
     <string name="your_library">Ваша библиотека</string>
     <string name="no_chapters_to_delete">Нет глав для удаления</string>
     <string name="remove_all_downloads">Удалить все загрузки\?</string>

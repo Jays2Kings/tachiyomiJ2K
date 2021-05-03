@@ -143,7 +143,7 @@
     <string name="right_to_left_viewer">S desna na lijevo</string>
     <string name="vertical_viewer">Okomito</string>
     <string name="continuous_vertical">Kontinuirano okomito</string>
-    <string name="paged">Pregled stranica</string>
+    <string name="paged">Listanje</string>
     <string name="scale_type">Skaliranje</string>
     <string name="fit_screen">Prilagodi ekranu</string>
     <string name="stretch">Rastegni</string>
@@ -447,8 +447,8 @@
     <string name="if_disabled_transition_will_skip">Ako je deaktivirano, prijelaz će se preskočiti ako se učita sljedeće poglavlje</string>
     <string name="smart_based_on_page_and_theme">Pametno (na osnovi stranice i teme)</string>
     <string name="smart_based_on_page">Pametno (na osnovi stranice)</string>
-    <string name="smart_by_theme">Pametno (po temi)</string>
-    <string name="smart_by_page">Pametno (po stranici)</string>
+    <string name="smart_by_theme">Pametno (prema temi)</string>
+    <string name="smart_by_page">Pametno (prema stranici)</string>
     <string name="use_custom_color_filter">Koristi prilagođeni filtar boja</string>
     <string name="use_custom_brightness">Koristi prilagođenu svjetlost</string>
     <string name="enable_zoom_out">Aktiviraj zumiranje</string>
@@ -837,4 +837,18 @@
     <string name="release_page">Stranica izdanja</string>
     <string name="no_chapters_to_delete">Nema poglavlja za brisanje</string>
     <string name="remove_all_downloads">Ukloniti sva preuzimanja\?</string>
+    <string name="search_">Traži %1$s</string>
+    <string name="automatic_removal">Automatsko uklanjanje</string>
+    <string name="create_folders_by_manga_title">Stvara mape prema naslovu mange</string>
+    <string name="save_pages_separately">Spremi stranice u zasebne mape</string>
+    <string name="show_on_long_press">Pokaži pri dugom dodiru</string>
+    <string name="actions">Radnje</string>
+    <string name="locked_landscape">Zaključan ležeći format</string>
+    <string name="locked_portrait">Zaključan uspravni format</string>
+    <string name="landscape">Ležeći format</string>
+    <string name="portrait">Uspravni format</string>
+    <string name="group_chapters_together">Grupiraj poglavlja</string>
+    <string name="show_updated_time">Pokaži aktualizirano vrijeme</string>
+    <string name="fetched_">Dohvaćeno %1$s</string>
+    <string name="updates_and_history">Aktualiziranja i povijest</string>
 </resources>

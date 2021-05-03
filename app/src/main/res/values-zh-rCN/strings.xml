@@ -62,7 +62,7 @@
     <string name="sources">图源</string>
     <string name="advanced">高级</string>
     <string name="about">关于</string>
-    <string name="default_value">预设</string>
+    <string name="default_value">默认</string>
     <string name="library_update_frequency">书架更新频率</string>
     <string name="manual">手动</string>
     <string name="hourly">每小时</string>
@@ -211,7 +211,7 @@
     <string name="artist">画师</string>
     <string name="status">状态</string>
     <string name="_copied_to_clipboard">已复制%1$s到剪贴板</string>
-    <string name="source_not_installed_">未安装图源:%1$s</string>
+    <string name="source_not_installed_">未安装图源：%1$s</string>
     <string name="chapter_">第 %1$s 章</string>
     <string name="downloading">下载中</string>
     <string name="downloading_progress">正在下载 (%1$d/%2$d)</string>
@@ -325,7 +325,7 @@
     <string name="chapters_">第 %1$s 章</string>
     <string name="remove_from_library">移出书架</string>
     <string name="refresh_tracking">刷新同步进度</string>
-    <string name="add_tracking">添加同步进度</string>
+    <string name="add_tracking">添加追踪进度</string>
     <string name="copy_value">共存</string>
     <string name="date_format">日期格式</string>
     <string name="secure_screen">防窥页面</string>
@@ -381,7 +381,7 @@
     <string name="expand_all_categories">展开所有分类</string>
     <string name="always_show_current_category">始终显示当前分类</string>
     <string name="show_all_categories">显示所有分类</string>
-    <string name="library_search_hint">搜索标题、标签、源</string>
+    <string name="library_search_hint">搜索标题、标签、图源</string>
     <string name="remove_from_library_question">从书架中移除？</string>
     <string name="jump_to_category">分类跳转</string>
     <string name="category_deleted">分类已删除</string>
@@ -621,7 +621,7 @@
     <string name="automatic_backups">自动备份</string>
     <string name="also_create_legacy_backup">同时创建旧版本备份</string>
     <string name="invalid_backup_file">无效的备份文件</string>
-    <string name="unofficial_extension_message">此扩展插件的来源不是官方 Tachiyomi 扩展插件列表。</string>
+    <string name="unofficial_extension_message">此扩展插件不是由官方 Tachiyomi 所提供。</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">非官方</string>
     <string name="may_contain_nsfw">可能包含 NSFW (18+) 内容</string>
@@ -632,10 +632,10 @@
     <string name="animate_page_transitions">页面过渡动画</string>
     <string name="default_reading_mode">默认阅读模式</string>
     <string name="nav_layout">导航布局</string>
-    <string name="l_nav">L 形</string>
+    <string name="l_nav">L 样式</string>
     <string name="kindlish_nav">Kindle 样式</string>
-    <string name="edge_nav">边缘</string>
-    <string name="right_and_left_nav">右和左</string>
+    <string name="edge_nav">边缘样式</string>
+    <string name="right_and_left_nav">左右样式</string>
     <string name="invert_tapping">反转轻触方向</string>
     <string name="none">无</string>
     <string name="started_reading_date">开始阅读日期</string>
@@ -653,7 +653,7 @@
     <string name="restore_content_full">来自备份文件的数据将被还原。
 \n
 \n你需要安装所有缺少的扩展，之后登录到跟踪服务以使用它们。</string>
-    <string name="restoring_backup_canceled">取消了还原</string>
+    <string name="restoring_backup_canceled">已取消还原</string>
     <string name="restore_duration">%02d 分，%02d 秒</string>
     <plurals name="restore_completed_message">
         <item quantity="other">耗时 %1$s，出现 %2$s 个错误</item>
@@ -672,8 +672,8 @@
     <string name="menu">菜单</string>
     <string name="enable">启用</string>
     <string name="whats_new_this_release">此版本中的新功能</string>
-    <string name="backup_in_progress">备份已在进行中</string>
-    <string name="restore_in_progress">还原已在进行中</string>
+    <string name="backup_in_progress">备份已在进行</string>
+    <string name="restore_in_progress">还原已在进行</string>
     <string name="pressing_back_to_start">按下返回启动屏幕</string>
     <string name="back_to_start">回到启动屏</string>
     <string name="starting_screen">启动屏幕</string>

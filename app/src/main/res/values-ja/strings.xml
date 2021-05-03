@@ -46,7 +46,7 @@
     <string name="save">保存する</string>
     <string name="reset">リセット</string>
     <string name="create">作成する</string>
-    <string name="restore">リストア</string>
+    <string name="restore">復元</string>
     <string name="loading">読み込み中…</string>
     <string name="general">全般</string>
     <string name="downloads">ダウンロード</string>
@@ -229,8 +229,8 @@
     <string name="cover_updated">カバーとして設定しました</string>
     <string name="next_chapter_not_found">次の章が見つかりません</string>
     <string name="use_image_as_cover">カバーとして設定しますか？</string>
-    <string name="next">次：</string>
-    <string name="previous">前：</string>
+    <string name="next">次</string>
+    <string name="previous">前</string>
     <string name="theres_no_next_chapter">次の章がありません</string>
     <string name="theres_no_previous_chapter">前の章がありません</string>
     <string name="loading_pages">ページをロード中…</string>
@@ -255,7 +255,7 @@
     <string name="unpin">ピン留めを外す</string>
     <string name="view_chapters">章を見る</string>
     <string name="always_show_chapter_transition">章の間の遷移エフェクトを常に表示</string>
-    <string name="pref_webtoon_side_padding">パディング</string>
+    <string name="pref_webtoon_side_padding">余白</string>
     <string name="webtoon_side_padding_0">なし</string>
     <string name="webtoon_side_padding_10">10%</string>
     <string name="webtoon_side_padding_15">15%</string>
@@ -415,7 +415,7 @@
     <string name="previous_chapter">前の章</string>
     <string name="animate_page_transitions">ページ遷移エフェクトを表示</string>
     <string name="open_log">ログを開く</string>
-    <string name="default_reading_mode">既定の読書モード</string>
+    <string name="default_reading_mode">既定のビューアモード</string>
     <string name="nav_layout">ナビゲーションレイアウト</string>
     <string name="l_nav">L形</string>
     <string name="kindlish_nav">Kindleスタイル</string>
@@ -538,14 +538,14 @@
     <string name="reset_cover">カバーをリセット</string>
     <string name="clear_tags">タグをクリア</string>
     <string name="reset_tags">タグをリセット</string>
-    <string name="reading_mode">読書モード</string>
+    <string name="reading_mode">ビューアモード</string>
     <string name="display_buttons_bottom_reader">リーダー下のボタン</string>
     <string name="page_preload_amount">プリロードするページの数</string>
     <string name="sort_by">ソート順</string>
     <string name="preview">プレビュー</string>
-    <string name="switch_to_single">シングルページに切替</string>
+    <string name="switch_to_single">単ページに切替</string>
     <string name="switch_to_double">見開きページに切替</string>
-    <string name="single_page">シングルページ</string>
+    <string name="single_page">単ページ</string>
     <string name="double_pages">見開きページ</string>
     <string name="page_layout">ページレイアウト</string>
     <string name="shift_one_page_over">1ページずらす</string>
@@ -614,7 +614,7 @@
     <string name="added_to_">%1$sに追加しました</string>
     <string name="series">シリーズ</string>
     <string name="expand_collapse_all_categories">全てのカテゴリーを展開/折りたたむ</string>
-    <string name="your_library">あなたのライブラリ</string>
+    <string name="your_library">ライブラリ</string>
     <string name="release_page">リリースページ</string>
     <string name="no_chapters_to_delete">削除する章がありません</string>
     <string name="delete_all_covers__not_in_library_used_">ライブラリにないキャッシュされたカバーを全て削除します。
@@ -706,12 +706,12 @@
     <plurals name="cache_cleared">
         <item quantity="other">キャッシュをクリアしました。%dファイルが削除されました</item>
     </plurals>
-    <string name="doh"/>
+    <string name="doh">DNS over HTTPS</string>
     <string name="clean_orphaned_downloads">放棄をクリア</string>
     <string name="disable_if_issues_with_updating">ライブラリの復元や更新に不具合が発生した場合無効にしてください</string>
     <string name="updates_covers_genres_desc">カバー、ジャンル、説明と漫画のステータス情報を更新します</string>
     <string name="clean_read_downloads">既読をクリア</string>
-    <string name="webtoon_cannot_change">Webtoonでは読書モードを変更できません。最初にシリーズタイプを編集してください。</string>
+    <string name="webtoon_cannot_change">Webtoonではビューアモードを変更できません。最初にシリーズタイプを編集してください。</string>
     <string name="only_enable_enabled_for_migration">有効化したソースを移行する際にのみ有効にしてください</string>
     <string name="only_enable_pinned_for_migration">ピン留めしたソースを移行する際にのみ有効にしてください</string>
     <string name="migration_sources_changed">移行ソースが変更されました</string>
@@ -751,4 +751,54 @@
     <string name="save_pages_separately">ページを別のフォルダに保存</string>
     <string name="show_on_long_press">長押しで表示</string>
     <string name="ignore_cutout_areas">カットアウト領域を無視</string>
+    <string name="automatic_removal">自動削除</string>
+    <string name="search_">%1$sを検索</string>
+    <string name="date_fetched">登録された日付</string>
+    <string name="fetched_">登録された %1$s</string>
+    <string name="ask_on_chapters_page">グローバルアップデート中に削除、章ごとに尋ねる</string>
+    <string name="keep">保持</string>
+    <string name="always_delete">常に削除</string>
+    <string name="always_keep">常に保持</string>
+    <string name="change">変更</string>
+    <string name="select_none">選択なし</string>
+    <string name="enabled">有効化済み</string>
+    <string name="enable">有効</string>
+    <string name="drag_handle">ドラッグハンドル</string>
+    <string name="deleted_">削除しました：%1$s</string>
+    <string name="include_in_global_update">グローバルアップデートに含める</string>
+    <string name="couldnt_download_low_space">ディスク容量が不足しているため、章をダウンロードできません</string>
+    <string name="visit_recents_for_download_queue">「最近」タブにアクセスして、ダウンロードキューにアクセスします。ダブルタップまたは長押しで素早くアクセスすることもできます</string>
+    <string name="use_last_saved_migration_preferences">最後に使用した移行設定とソースを使用して、一括移行します</string>
+    <plurals name="manga_migrated">
+        <item quantity="other">%dのマンガを移行しました</item>
+    </plurals>
+    <string name="skipping_">（スキップ %1$d）</string>
+    <plurals name="copy_manga">
+        <item quantity="other">%1$d%2$sのマンガをコピーしますか？</item>
+    </plurals>
+    <plurals name="migrate_manga">
+        <item quantity="other">%1$d%2$sのマンガを移行しますか？</item>
+    </plurals>
+    <string name="no_alternatives_found">代替が見つかりません</string>
+    <string name="no_chapters_found_for_migration">章が見つかりません。このマンガは移行に使用できません</string>
+    <string name="migrate_">%1$sを移行</string>
+    <string name="copy_now">コピーします</string>
+    <string name="migrate_now">移行します</string>
+    <string name="search_manually">マニュアル検索</string>
+    <string name="dont_migrate">移行しない</string>
+    <string name="latest_">最新：%1$s</string>
+    <string name="skip_this_step_next_time">次回はこのステップをスキップ</string>
+    <string name="use_first_source">最初のソースを代わりに使用</string>
+    <string name="skip_pre_migration">移行設定をスキップ</string>
+    <string name="suggested_date_">提案された日付：%1$s</string>
+    <string name="remove_tracking_from_">%1$sからも削除する</string>
+    <string name="url_not_set_click_again">マンガのURLが設定されていません。タイトルをクリックして、もう一度マンガを選択してください</string>
+    <string name="currently_reading">現在読書中</string>
+    <string name="changing_will_reset_reading_mode">これを行うと、このシリーズのビューア設定をリセットします</string>
+    <string name="pages_">%1$sページ</string>
+    <string name="reader_settings">ビューア設定</string>
+    <string name="_must_be_enabled_first">最初に%1$sを有効にする必要があります</string>
+    <string name="search_tips_show_periodically">検索のヒントは定期的に表示されます。検索するには、検索候補を長押しします。</string>
+    <string name="certain_buttons_can_be_found">ここで無効にしたいくつかのボタンは他の場所で見つけることができます</string>
+    <string name="start_past_cutout">カットアウト領域外から描画</string>
 </resources>

@@ -595,7 +595,7 @@
     <string name="migrating_to">Migrando a</string>
     <string name="want_to_read">Quiero leer</string>
     <string name="currently_reading">Actualmente leyendo</string>
-    <string name="search_parameter_eg">Parámetros de búsqueda (ej. language:english)</string>
+    <string name="search_parameter_eg">Parámetros de búsqueda (ej. idioma:español)</string>
     <string name="data_to_include_in_migration">Datos incluidos en la migración</string>
     <string name="skip_pre_migration">Omitir pre-migración</string>
     <string name="migration">Migración</string>
@@ -782,7 +782,7 @@
     <string name="only_enable_pinned_for_migration">Solo permitir tus fuentes marcadas para migrar</string>
     <string name="match_enabled_sources">Igualar fuentes activadas</string>
     <string name="match_pinned_sources">Igualar fuentes marcadas</string>
-    <string name="only_search_pinned_when">Buscar solo en fuentes marcadas</string>
+    <string name="only_search_pinned_when">Buscar solo en fuentes fijadas</string>
     <string name="clear_cached_covers_non_library">Eliminar portadas en la cache fuera de la biblioteca</string>
     <string name="starting_cleanup">Iniciando limpieza</string>
     <string name="clean_read_manga_not_in_library">Limpiar mangas que no estan en la biblioteca</string>
@@ -843,4 +843,9 @@
     <string name="label_global_search">Búsqueda global</string>
     <string name="no_chapters_to_delete">No hay capítulos para eliminar</string>
     <string name="remove_all_downloads">¿Borrar todas las descargas\?</string>
+    <string name="fetched_">Agregado %1$s</string>
+    <string name="updates_and_history">Historial y nuevos</string>
+    <string name="your_library">Tu biblioteca</string>
+    <string name="search_">Buscar %1$s</string>
+    <string name="search_suggestions">Buscar sugerencias</string>
 </resources>
