@@ -185,7 +185,6 @@
     <string name="version">Versió</string>
     <string name="build_time">Hora de compilació</string>
     <string name="check_for_updates">Comprova si hi ha actualitzacions</string>
-    <string name="auto_check_for_app_versions">Comprova automàticament si hi ha actualitzacions de l\'aplicació</string>
     <string name="send_crash_report">Envia informes de fallades</string>
     <string name="helps_fix_bugs">Ajuda a solucionar errades. No s\'enviaran dades sensibles</string>
     <string name="log_in_to_">Inicieu la sessió a %1$s</string>

@@ -94,7 +94,7 @@
     <string name="selected_">Ausgewählt: %1$d</string>
     <string name="local">Lokal</string>
     <string name="remove_from_library_question">Aus Bibliothek entfernen?</string>
-    <string name="library_search_hint">Titel, Markierung, Quelle suchen</string>
+    <string name="library_search_hint">Suche nach Titel, Markierung, Quelle</string>
     <string name="library_is_empty_add_from_browse">Ihre Bibliothek ist leer, Sie können neue Serien über den Katalog hinzufügen.</string>
     <string name="no_matches_for_filters">Keine Ergebnisse für die ausgewählten Filtereinstellungen</string>
     <string name="show_all_categories">Alle Kategorien anzeigen</string>
@@ -428,7 +428,6 @@
     <string name="system_default">Systemstandard</string>
     <string name="date_format">Datumsformat</string>
     <string name="check_for_updates">Nach Aktualisierungen suchen</string>
-    <string name="auto_check_for_app_versions">Automatisch nach App Aktualisierung suchen</string>
     <string name="secure_screen">Sicherer Bildschirm</string>
     <string name="security">Sicherheit</string>
     <!-- Backup -->
@@ -693,7 +692,7 @@
 \n
 \nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
     <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
-    <string name="restore_duration">%02d Min. %02d Sek.</string>
+    <string name="restore_duration">%02d Min., %02d Sek.</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Erledigt in %1$s mit %2$s Fehler</item>
         <item quantity="other">Erledigt in %1$s mit %2$s Fehlern</item>
@@ -868,4 +867,9 @@
     <string name="search_suggestions">Suchvorschläge</string>
     <string name="date_fetched">Datum abgerufen</string>
     <string name="release_page">Release-Seite</string>
+    <string name="mark_range_as_unread">Markiere einen Abschnitt von Kapiteln als ungelesen</string>
+    <string name="mark_range_as_read">Markiere einen Abschnitt von Kapiteln als gelesen</string>
+    <string name="cancel_all_for_series">Alles für diese Serie abbrechen</string>
+    <string name="show_recent_in_shortcuts">Zeige die letzten Quellen und Serien in App-Verknüpfungen an</string>
+    <string name="app_shortcuts">App-Verknüpfungen</string>
 </resources>

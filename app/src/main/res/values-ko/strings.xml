@@ -158,7 +158,6 @@
     <string name="version">버전</string>
     <string name="build_time">빌드 시간</string>
     <string name="check_for_updates">업데이트 확인</string>
-    <string name="auto_check_for_app_versions">어플리케이션 업데이트를 자동으로 확인</string>
     <string name="send_crash_report">충돌 보고서 전송</string>
     <string name="helps_fix_bugs">버그들을 수정하는데 도움이 됩니다. 민감한 정보는 전송되지 않습니다</string>
     <string name="log_in_to_">%1$s 으로 로그인</string>

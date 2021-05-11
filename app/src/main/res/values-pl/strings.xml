@@ -464,7 +464,6 @@
     <string name="system_default">Domyślny w systemie</string>
     <string name="date_format">Format daty</string>
     <string name="check_for_updates">Sprawdź aktualizacje</string>
-    <string name="auto_check_for_app_versions">Automatycznie sprawdzaj czy jest nowa wersja aplikacji</string>
     <string name="secure_screen">Ukryj ekran</string>
     <string name="security">Zabezpieczenia</string>
     <!-- Backup -->

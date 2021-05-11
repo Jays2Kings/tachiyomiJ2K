@@ -15,7 +15,7 @@
     <string name="selected_">Valittu: %1$d</string>
     <string name="total_chapters">Lukuja yhteensä</string>
     <string name="last_updated">Viimeksi päivitetty</string>
-    <string name="mark_previous_as_read">Merkitse aiemmat luetuiksi</string>
+    <string name="mark_previous_as_read">Merkitse edelliset luvut luetuiksi</string>
     <string name="move_to_categories">Siirrä kategorioihin</string>
     <string name="options">Asetukset</string>
     <string name="set_as_cover">Aseta kansikuvaksi</string>
@@ -222,7 +222,6 @@
     <string name="version">Versio</string>
     <string name="build_time">Kasausaika</string>
     <string name="check_for_updates">Tarkista päivitykset</string>
-    <string name="auto_check_for_app_versions">Etsi automaattisesti päivityksiä sovellukseen</string>
     <string name="send_crash_report">Lähetä kaatumisilmoituksia</string>
     <string name="helps_fix_bugs">Auttaa korjaamaan bugeja. Arkaluonteista tietoa ei lähetetä</string>
     <string name="log_in_to_">%1$s kirjautuminen</string>
@@ -690,7 +689,7 @@
     <string name="moved_to_">Siirretty %1$s</string>
     <string name="move_to_">siirry %1$s</string>
     <string name="menu">Valikko</string>
-    <string name="mark_previous_as_unread">Merkitse aiemmat lukemattomiksi</string>
+    <string name="mark_previous_as_unread">Merkitse edelliset luvut lukemattomiksi</string>
     <string name="mark_all_as_unread">Merkitse kaikki lukemattomiksi</string>
     <string name="mark_all_as_read">Merkitse kaikki luetuiksi</string>
     <string name="keep">Säilytä</string>
@@ -833,4 +832,9 @@
     <string name="release_page">Vapauta sivu</string>
     <string name="no_chapters_to_delete">Ei poistettavia lukuja</string>
     <string name="remove_all_downloads">Poista kaikki lataukset\?</string>
+    <string name="mark_range_as_unread">Merkitse lukuja lukemattomiksi</string>
+    <string name="mark_range_as_read">Merkitse useat luvut luetuiksi</string>
+    <string name="cancel_all_for_series">Peruuta kaikki tälle sarjalle</string>
+    <string name="show_recent_in_shortcuts">Näytä viimeisimmät lähteet ja sarjat sovelluksen pikavalinnoissa</string>
+    <string name="app_shortcuts">Sovelluksen pikavalinnat</string>
 </resources>

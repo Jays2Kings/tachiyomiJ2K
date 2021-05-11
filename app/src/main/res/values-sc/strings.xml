@@ -25,7 +25,7 @@
     <string name="search">Chirca</string>
     <string name="select_all">Ischerta totu</string>
     <string name="mark_as_read">Sinna comente lèghidu</string>
-    <string name="mark_previous_as_read">Sinna sos antepostos comente lèghidos</string>
+    <string name="mark_previous_as_read">Sinna sos capìtulos antepostos comente lèghidos</string>
     <string name="download">Iscàrriga</string>
     <string name="delete">Iscantzella</string>
     <string name="edit">Modìfica</string>
@@ -185,7 +185,6 @@
     <string name="version">Versione</string>
     <string name="build_time">Data de compilatzione</string>
     <string name="check_for_updates">Chirca agiornamentos</string>
-    <string name="auto_check_for_app_versions">Chirca automaticamente agiornamentos de s\'aplicatzione</string>
     <string name="send_crash_report">Imbia raportos a pitzu de sos arrestos anòmalos</string>
     <string name="helps_fix_bugs">Agiudat a acontzare cale si siat faddina. Perunu datu sensìbile at a èssere imbiadu</string>
     <string name="log_in_to_">Intrada pro %1$s</string>
@@ -362,7 +361,7 @@
     <string name="sort_and_filter">Òrdina e filtra</string>
     <string name="select_none">No ischertes nudda</string>
     <string name="moved_to_">Tramudadu a %1$s</string>
-    <string name="mark_previous_as_unread">Marca sos antepostos comente non lèghidos</string>
+    <string name="mark_previous_as_unread">Marca sos capìtulos antepostos comente non lèghidos</string>
     <string name="mark_all_as_unread">Marca totu comente non lèghidu</string>
     <string name="mark_all_as_read">Marca totu comente lèghidu</string>
     <string name="keep">Mantene</string>
@@ -833,4 +832,9 @@
     <string name="search_tips_show_periodically">Sos impòsitos de chirca s\'ant a ammustrare periodicamente. Incarca a longu in un\'impòsitu pro lu chircare.</string>
     <string name="search_suggestions">Impòsitos de chirca</string>
     <string name="automatic_removal">Bogadura automàtica</string>
+    <string name="mark_range_as_unread">Marca un\'intervallu de capìtulos comente non lèghidos</string>
+    <string name="mark_range_as_read">Marca un\'intervallu de capìtulos comente lèghidos</string>
+    <string name="cancel_all_for_series">Annulla totu pro custa sèrie</string>
+    <string name="show_recent_in_shortcuts">Ammustra sas mitzas e sas sèries reghentes in sas incurtzadas de s\'aplicatzione</string>
+    <string name="app_shortcuts">Incurtzadas de s\'aplicatzione</string>
 </resources>

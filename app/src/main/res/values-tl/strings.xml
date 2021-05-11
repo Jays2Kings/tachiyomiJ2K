@@ -197,7 +197,6 @@
     <string name="version">Bersyon</string>
     <string name="build_time">Oras ng build</string>
     <string name="check_for_updates">Tumingin ng update</string>
-    <string name="auto_check_for_app_versions">Awtomatikong tumingin ng mga update sa application</string>
     <string name="send_crash_report">Ipadala ang mga ulat ng pagka-crash</string>
     <string name="helps_fix_bugs">Nakakatulong sa pagsasaayos ng mga bugs. Walang sensitibong data ang ipapadala</string>
     <string name="log_in_to_">Mag-login para kay %1$s</string>

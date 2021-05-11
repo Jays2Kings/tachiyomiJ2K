@@ -185,7 +185,6 @@
     <string name="version">Versiune</string>
     <string name="build_time">Data versiunii</string>
     <string name="check_for_updates">Verifică pentru actualizări</string>
-    <string name="auto_check_for_app_versions">Verifică automat pentru actualizări</string>
     <string name="send_crash_report">Trimite rapoarte pt. eșuări</string>
     <string name="helps_fix_bugs">Ajută la rezolvarea bug-urilor. Informații sensibile nu vor fi trimise</string>
     <string name="log_in_to_">Autentificare pentru %1$s</string>

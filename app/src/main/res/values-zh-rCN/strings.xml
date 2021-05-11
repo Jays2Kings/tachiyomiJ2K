@@ -50,7 +50,7 @@
     <string name="undo">撤销</string>
     <string name="tracking">同步中</string>
     <string name="source_migration">来源迁移</string>
-    <string name="mark_previous_as_read">标记之前章节已读</string>
+    <string name="mark_previous_as_read">标记之前章节为已读</string>
     <string name="create">创建</string>
     <string name="restore">恢复</string>
     <string name="loading">正在加载…</string>
@@ -184,7 +184,6 @@
     <string name="version">版本</string>
     <string name="build_time">构建时间</string>
     <string name="check_for_updates">检查更新</string>
-    <string name="auto_check_for_app_versions">自动检查软件新版本</string>
     <string name="send_crash_report">发送错误数据</string>
     <string name="helps_fix_bugs">帮助我们修复bug。不会发送个人信息</string>
     <string name="log_in_to_">登录到%1$s</string>
@@ -353,7 +352,7 @@
     <string name="reorder">重新排序</string>
     <string name="unpin">取消置顶</string>
     <string name="view_chapters">查看章节</string>
-    <string name="mark_previous_as_unread">标记之前章节未读</string>
+    <string name="mark_previous_as_unread">标记之前章节为未读</string>
     <string name="mark_all_as_unread">标记所有章节未读</string>
     <string name="mark_all_as_read">标记已读</string>
     <string name="white_theme">纯白</string>
@@ -812,4 +811,9 @@
     <string name="search_tips_show_periodically">搜索提示将定期显示。 长按建议进行搜索。</string>
     <string name="search_suggestions">搜索建议</string>
     <string name="automatic_removal">自动移除</string>
+    <string name="mark_range_as_unread">将一些章节标记为未读</string>
+    <string name="mark_range_as_read">将一些章节标记为已读</string>
+    <string name="cancel_all_for_series">取消这个系列的全部</string>
+    <string name="show_recent_in_shortcuts">在应用快捷方式中显示最近图源和系列</string>
+    <string name="app_shortcuts">应用快捷方式</string>
 </resources>

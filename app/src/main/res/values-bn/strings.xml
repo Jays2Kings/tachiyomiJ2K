@@ -163,7 +163,6 @@
     <string name="version">সংস্করণ</string>
     <string name="build_time">তৈরি সময়</string>
     <string name="check_for_updates">আপডেটগুলো দেখে নিন</string>
-    <string name="auto_check_for_app_versions">স্বয়ংক্রিয়ভাবে এপ্লিকেশনের আপডেট খুঁজুন</string>
     <string name="send_crash_report">ক্র‍্যাশের জন্য অভিযোগ পাঠান</string>
     <string name="helps_fix_bugs">বাগ ঠিক করার জন্য সাহায্য করুন। কোন দরকারি তথ্য পাঠানো হবে না</string>
     <string name="log_in_to_">লগিন করা হয়েছে %1$s</string>

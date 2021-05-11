@@ -186,7 +186,6 @@
     <string name="version">เวอร์ชัน</string>
     <string name="build_time">สร้างเวลา</string>
     <string name="check_for_updates">ตรวจหาโปรแกรมปรับปรุง</string>
-    <string name="auto_check_for_app_versions">ตรวจหาการปรับปรุงโปรแกรมประยุกต์โดยอัตโนมัติ</string>
     <string name="send_crash_report">ส่งรายงานความผิดพลาด</string>
     <string name="helps_fix_bugs">ช่วยแก้ไขข้อบกพร่องใดๆ ไม่มีข้อมูลที่สำคัญจะถูกส่ง</string>
     <string name="log_in_to_">เข้าสู่ระบบสำหรับ %1$s</string>

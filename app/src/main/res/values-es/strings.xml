@@ -113,7 +113,6 @@
     <string name="version">Versión</string>
     <string name="build_time">Hora de compilación</string>
     <string name="check_for_updates">Buscar actualizaciones</string>
-    <string name="auto_check_for_app_versions">Buscar automáticamente si hay actualizaciones de la aplicación</string>
     <!-- ACRA -->
     <string name="send_crash_report">Enviar informes de fallos</string>
     <string name="helps_fix_bugs">Ayuda a corregir cualquier error. No se enviarán datos sensibles</string>
@@ -437,8 +436,8 @@
     <string name="add_to_library">Agregar a la biblioteca</string>
     <string name="season_">Temporada %1$d</string>
     <string name="volume_">Volumen %1$d</string>
-    <string name="continue_reading">Continuar leyendo</string>
-    <string name="continue_reading_chapter_">Continuar leyendo el capítulo %1$s</string>
+    <string name="continue_reading">Seguir leyendo</string>
+    <string name="continue_reading_chapter_">Seguir leyendo el capítulo %1$s</string>
     <string name="start_reading_chapter_">Empezar a leer el capítulo %1$s</string>
     <string name="start_reading">Empezar a leer</string>
     <string name="about_this_">Acerca de este %1$s</string>

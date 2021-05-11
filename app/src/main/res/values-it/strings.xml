@@ -139,7 +139,6 @@
     <string name="version">Versione</string>
     <string name="build_time">Data della versione</string>
     <string name="check_for_updates">Controlla aggiornamenti</string>
-    <string name="auto_check_for_app_versions">Controllo aggiornamenti automatici</string>
     <!-- ACRA -->
     <string name="send_crash_report">Invia segnalazioni</string>
     <string name="helps_fix_bugs">Aiuta a correggere eventuali bug. Non verranno inviati dati sensibili</string>

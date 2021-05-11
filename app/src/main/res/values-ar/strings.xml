@@ -163,7 +163,6 @@
     <string name="version">اﻹصدار</string>
     <string name="build_time">تاريخ ووقت البناء</string>
     <string name="check_for_updates">تحقق من وجود تحديثات</string>
-    <string name="auto_check_for_app_versions">التحقق تلقائيا من تحديثات التطبيق</string>
     <string name="send_crash_report">إرسال تقارير الأعطال</string>
     <string name="helps_fix_bugs">هذا يساعد فى حل أى مشاكل، لن يتم إرسال أية بيانات حساسة</string>
     <string name="log_in_to_">تسجيل الدخول إلى %1$s</string>

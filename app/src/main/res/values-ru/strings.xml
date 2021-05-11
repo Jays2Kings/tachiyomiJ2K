@@ -20,7 +20,7 @@
     <string name="global_search">Глобальный поиск…</string>
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как \"Прочитано\"</string>
-    <string name="mark_previous_as_read">Отметить предыдущее как \"Прочитано\"</string>
+    <string name="mark_previous_as_read">Отметить предыдущие главы как \"Прочитано\"</string>
     <string name="migrate_now">Мигрировать сейчас</string>
     <string name="move_to_categories">Поместить в категории</string>
     <string name="move_to_bottom">К концу</string>
@@ -261,7 +261,6 @@
     <string name="only_download_over_wifi">Загружать только через Wi-Fi</string>
     <string name="send_crash_report">Отсылать отчеты о падениях</string>
     <string name="check_for_updates">Проверить обновления</string>
-    <string name="auto_check_for_app_versions">Автоматически проверять новые версии</string>
     <string name="fullscreen">Полноэкранный режим</string>
     <string name="scale_type">Масштабирование</string>
     <string name="keep_screen_on">Держать экран включенным</string>
@@ -695,7 +694,7 @@
         <item quantity="other">Доступны %d обновлений для расширений</item>
     </plurals>
     <string name="mark_as_unread">Отметить как \"Не прочитано\"</string>
-    <string name="mark_previous_as_unread">Отметить предыдущее как \"Не прочитано\"</string>
+    <string name="mark_previous_as_unread">Отметить предыдущие главы как \"Не прочитано\"</string>
     <string name="download_unread">Скачать непрочитанное</string>
     <string name="error_sharing_cover">Ошибка отправки обложки</string>
     <string name="error_saving_cover">Ошибка сохранения обложки</string>
@@ -903,4 +902,9 @@
     <string name="automatic_removal">Автоматическое удаление</string>
     <string name="search_tips_show_periodically">Поисковые подсказки будут появляться периодически. При долгом нажатии на предложение будет произведён его поиск.</string>
     <string name="search_suggestions">Поисковые предложения</string>
+    <string name="mark_range_as_unread">Отметить определённое количество глав как \"Не прочитано\"</string>
+    <string name="mark_range_as_read">Отметить определённое количество глав как \"Прочитано\"</string>
+    <string name="cancel_all_for_series">Отменить всё для этих серий</string>
+    <string name="show_recent_in_shortcuts">Показывать недавние источники и серии, в ярлыках приложения</string>
+    <string name="app_shortcuts">Ярлыки приложения</string>
 </resources>

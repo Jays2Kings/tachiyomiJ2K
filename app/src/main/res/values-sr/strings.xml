@@ -186,7 +186,6 @@
     <string name="version">Verzija</string>
     <string name="build_time">Vrijema pravljenja</string>
     <string name="check_for_updates">Promjeri za nova ažuriranja</string>
-    <string name="auto_check_for_app_versions">"Automatski proveri za nova ažuriranje aplikacije "</string>
     <string name="send_crash_report">Pošalji izveštaje grešaka</string>
     <string name="helps_fix_bugs">Pomozi u popravljanju bugova. Nijedan sensitivan podatak neće biti poslat</string>
     <string name="log_in_to_">Prijavi se za %1$s</string>

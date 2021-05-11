@@ -185,7 +185,6 @@
     <string name="version">Версія</string>
     <string name="build_time">Дата збирання</string>
     <string name="check_for_updates">Перевірити оновлення</string>
-    <string name="auto_check_for_app_versions">Автоматично перевіряти нові версії</string>
     <string name="send_crash_report">Надсилати звіти про падіння</string>
     <string name="helps_fix_bugs">Допомагає виправляти будь-які баги. Особисті дані не передаються</string>
     <string name="log_in_to_">Авторизація для %1$s</string>

@@ -25,7 +25,7 @@
     <string name="search">Αναζήτηση</string>
     <string name="select_all">Επιλογή όλων</string>
     <string name="mark_as_read">Σήμανση ως αναγνωρισμένο</string>
-    <string name="mark_previous_as_read">Σήμανση προηγούμενου ως αναγνωρισμένο</string>
+    <string name="mark_previous_as_read">Σήμανση προηγούμενων κεφαλαίων ως αναγνωσμένα</string>
     <string name="download">Λήψη</string>
     <string name="delete">Διαγραφή</string>
     <string name="edit">Επεξεργασία</string>
@@ -185,7 +185,6 @@
     <string name="version">Έκδοση</string>
     <string name="build_time">Χρόνος κατασκευής</string>
     <string name="check_for_updates">Έλεγχος για ενημερώσεις</string>
-    <string name="auto_check_for_app_versions">Αυτόματος έλεγχος για ενημερώσεις εφαρμογής</string>
     <string name="send_crash_report">Αποστολή αναφορών σφαλμάτων</string>
     <string name="helps_fix_bugs">Βοηθά στην επιδιόρθωση τυχόν σφαλμάτων. Δεν θα αποστέλλονται ευαίσθητα δεδομένα</string>
     <string name="log_in_to_">Σύνδεση για %1$s</string>
@@ -552,7 +551,7 @@
     <string name="moved_to_">Μετακινήθηκε στο %1$s</string>
     <string name="move_to_">Μετακίνηση στο %1$s</string>
     <string name="menu">μενού</string>
-    <string name="mark_previous_as_unread">Επισήμανση προηγούμενου ως μη αναγνωσμένου</string>
+    <string name="mark_previous_as_unread">Σήμανση προηγούμενων κεφαλαίων ως αδιάβαστα</string>
     <string name="mark_all_as_read">Επισήμανση όλων ως αναγνωσμένων</string>
     <string name="keep">Διατήρηση</string>
     <string name="enabled">Ενεργοποιημένο</string>
@@ -833,4 +832,9 @@
     <string name="search_suggestions">Προτάσεις αναζήτησης</string>
     <string name="automatic_removal">Αυτόματη αφαίρεση</string>
     <string name="search_tips_show_periodically">Οι συμβουλές αναζήτησης θα εμφανίζονται περιοδικά. Πατήστε παρατεταμένα την πρόταση για να την αναζητήσετε.</string>
+    <string name="mark_range_as_unread">Σήμανση μιας σειράς κεφαλαίων ως αδιάβαστα</string>
+    <string name="mark_range_as_read">Σήμανση μιας σειράς κεφαλαίων ως αναγνωσμένα</string>
+    <string name="cancel_all_for_series">Ακύρωση όλων για αυτήν τη σειρά</string>
+    <string name="show_recent_in_shortcuts">Εμφάνιση πρόσφατων πηγών και σειρών στις συντομεύσεις εφαρμογής</string>
+    <string name="app_shortcuts">Συντομεύσεις εφαρμογής</string>
 </resources>

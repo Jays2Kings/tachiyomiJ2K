@@ -134,7 +134,6 @@
     <string name="version">Version</string>
     <string name="build_time">Date de compilation</string>
     <string name="check_for_updates">Rechercher des mises à jour</string>
-    <string name="auto_check_for_app_versions">Automatiquement vérifier les mises à jour de l\'application</string>
     <!-- ACRA -->
     <string name="send_crash_report">Envoyer des rapports de crash</string>
     <string name="helps_fix_bugs">Cela aide à corriger les bugs. Aucune donnée sensible ne sera envoyée</string>
@@ -854,4 +853,5 @@
     <string name="locked_portrait">Portrait verrouillé</string>
     <string name="landscape">Paysage</string>
     <string name="portrait">Portrait</string>
+    <string name="release_page">Page de sortie</string>
 </resources>

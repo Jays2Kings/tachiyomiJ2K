@@ -424,7 +424,6 @@
     <string name="system_default">Padrão do sistema</string>
     <string name="date_format">Formato de data</string>
     <string name="check_for_updates">Procurar por atualizações</string>
-    <string name="auto_check_for_app_versions">Verificar automaticamente novas versões do aplicativo</string>
     <string name="secure_screen">Tela segura</string>
     <string name="security">Segurança</string>
     <!-- Backup -->
@@ -611,7 +610,7 @@
     <string name="mark_all_as_read">Marcar tudo como lido</string>
     <string name="mark_all_as_unread">Marcar tudo como não lido</string>
     <string name="mark_as_read">Marcar como lido</string>
-    <string name="mark_previous_as_read">Marcar anterior como lido</string>
+    <string name="mark_previous_as_read">Marcar capítulo anterior como lido</string>
     <string name="more">Mais</string>
     <string name="move_to_bottom">Mover para baixo</string>
     <string name="move_to_top">Mover para o topo</string>
@@ -662,7 +661,7 @@
     <string name="add_categories">Adicionar categorias</string>
     <string name="chapter_not_found">Capítulo não encontrado</string>
     <string name="select_none">Selecionar nenhum</string>
-    <string name="mark_previous_as_unread">Marcar anteriores como não lidos</string>
+    <string name="mark_previous_as_unread">Marcar capítulos anteriores como não lidos</string>
     <string name="download_unread">Baixar não lidos</string>
     <string name="username_must_not_be_blank">Usuário ou senha não podem estar em branco</string>
     <string name="logout_from_">Sair de %1$s\?</string>
@@ -881,4 +880,9 @@
     <string name="search_tips_show_periodically">Dicas de pesquisa aparecerão periodicamente. Pressione-a e segure-a para pesquisá-la.</string>
     <string name="search_suggestions">Sugestões de pesquisa</string>
     <string name="release_page">Página de lançamento</string>
+    <string name="mark_range_as_unread">Marcar um intervalo de capítulos como não lido</string>
+    <string name="mark_range_as_read">Marcar um intervalo de capítulos como lido</string>
+    <string name="cancel_all_for_series">Cancelar tudo para esta série</string>
+    <string name="show_recent_in_shortcuts">Mostrar fontes e séries recentes nos atalhos do app</string>
+    <string name="app_shortcuts">Atalhos do app</string>
 </resources>

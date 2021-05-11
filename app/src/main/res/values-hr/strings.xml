@@ -597,7 +597,6 @@
     <string name="starting_screen">Početni ekran</string>
     <string name="hides_on_scroll">Sakrij prilikom klizanja</string>
     <string name="hide_bottom_nav">Automatski sakrij donju navigaciju</string>
-    <string name="auto_check_for_app_versions">Automatski traži nove verzije programa</string>
     <string name="last_used_library_recents">Zadnje korišteno (biblioteka ili nedavni)</string>
     <string name="white_theme">Potpuno bijela</string>
     <string name="dark_blue">Tamnoplava</string>

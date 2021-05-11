@@ -120,7 +120,6 @@
     <string name="version">Versão</string>
     <string name="build_time">Hora da compilação</string>
     <string name="check_for_updates">Verificar por atualizações</string>
-    <string name="auto_check_for_app_versions">Procurar por atualizações automaticamente</string>
     <!-- ACRA -->
     <string name="send_crash_report">Enviar relatórios de erro</string>
     <string name="helps_fix_bugs">Ajuda a corrigir qualquer erro. Não serão enviados dados sensíveis</string>
@@ -241,7 +240,7 @@
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
     <string name="alpha_initial">A</string>
-    <string name="download_new_chapters">Fazer download de novos capítulos</string>
+    <string name="download_new_chapters">Descarregar novos capítulos</string>
     <string name="create_backup">Criar backup</string>
     <string name="can_be_used_to_restore">Pode ser usado para restaurar a biblioteca atual</string>
     <string name="restore_backup">Restaurar backup</string>
@@ -304,7 +303,7 @@
     <string name="migrate">Migrar</string>
     <string name="failed_to_update_cover">Erro ao atualizar a capa</string>
     <string name="no_network_connection">Conexão à rede indisponível</string>
-    <string name="download_paused">Download pausado</string>
+    <string name="download_paused">Descarrega pausada</string>
     <string name="common">Comum</string>
     <string name="overlay">Sobreposição</string>
     <string name="multiply">Multiplicar</string>
@@ -608,7 +607,7 @@
     <string name="enabled">Ativado</string>
     <string name="enable">Ativar</string>
     <string name="download_unread">Descarregar não lidos</string>
-    <string name="deleted_">Excluído: %1$s</string>
+    <string name="deleted_">Apagado: %1$s</string>
     <string name="clear_filters">Limpar filtros</string>
     <string name="change">Mudar</string>
     <string name="bottom">Inferior</string>
@@ -621,18 +620,18 @@
         <item quantity="other">Após %1$s minutos</item>
     </plurals>
     <string name="automatic_removal">Remoção automática</string>
-    <string name="always_delete">Sempre excluir</string>
+    <string name="always_delete">Sempre apagar</string>
     <string name="always_keep">Sempre manter</string>
-    <string name="ask_on_chapters_page">Excluir durante atualizações globais, pergunte na página de capítulos</string>
-    <string name="delete_downloaded_if_removed_online">Exclua os capítulos descarregados se a fonte tiver removido o capítulo online</string>
-    <string name="delete_removed_chapters">Excluir capítulos removidos</string>
+    <string name="ask_on_chapters_page">Apagar durante atualizações globais, pergunte na página de capítulos</string>
+    <string name="delete_downloaded_if_removed_online">Apagar os capítulos descarregados se a fonte tiver removido o capítulo online</string>
+    <string name="delete_removed_chapters">Apagar capítulos removidos</string>
     <string name="couldnt_download_low_space">Não é possível descarregar capítulos devido ao pouco espaço em disco</string>
-    <string name="visit_recents_for_download_queue">Visite a guia Recentes para acessar a fila de download. Também é possível tocar duas vezes ou pressionar e segurar para acesso rápido</string>
+    <string name="visit_recents_for_download_queue">Visite a aba Recentes para acessar a fila de descarrega. Também é possível tocar duas vezes ou pressionar e segurar para acesso rápido</string>
     <string name="manage_whats_downloading">Gerir o que está a descarregar</string>
     <string name="nothing_is_downloading">Nada está a ser descarregado no momento</string>
-    <string name="remove_downloads">Excluir downloads</string>
-    <string name="remove_download">Excluir download</string>
-    <string name="start_downloading_now">Iniciar download agora</string>
+    <string name="remove_downloads">Apagar descarregados</string>
+    <string name="remove_download">Apagar descarregado</string>
+    <string name="start_downloading_now">Iniciar descarrega agora</string>
     <string name="not_downloaded">Não descarregado</string>
     <string name="downloading_">A descarregar: %1$s</string>
     <string name="username_must_not_be_blank">Utilizador ou palavra-passe não podem estar em branco</string>
@@ -649,7 +648,7 @@
     <string name="delete_all_covers__not_in_library_used_">Apaga todas as capas do cache fora da sua biblioteca.
 \nAtualmente a usar: %1$s</string>
     <string name="clear_cached_covers_non_library">Limpar capas em cache fora da biblioteca</string>
-    <string name="delete_old_covers_in_library_used_">Exclua capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados.
+    <string name="delete_old_covers_in_library_used_">Apaga capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados.
 \nAtualmente a usar: %1$s</string>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
     <plurals name="cleanup_done">
@@ -662,11 +661,11 @@
     <string name="clean_read_manga_not_in_library">Limpar mangás fora da biblioteca</string>
     <string name="clean_read_downloads">Limpar lidos</string>
     <string name="clean_orphaned_downloads">Limpar orfanados</string>
-    <string name="delete_unused_chapters">Excluir ficheiros inexistentes, parcialmente descarregados e lê as pastas dos capítulos</string>
+    <string name="delete_unused_chapters">Apagar ficheiros inexistentes, parcialmente descarregados e lê as pastas dos capítulos</string>
     <string name="clean_up_downloaded_chapters">Limpar capítulos descarregados</string>
     <plurals name="cache_cleared">
-        <item quantity="one">Cache limpo. %d ficheiro foi excluído</item>
-        <item quantity="other">Cache limpo. %d ficheiros foram excluídos</item>
+        <item quantity="one">Cache limpo. %d ficheiro foi apagado</item>
+        <item quantity="other">Cache limpo. %d ficheiros foram apagados</item>
     </plurals>
     <string name="doh">DNS sobre HTTPS</string>
     <string name="data_management">Gestão de dados</string>
@@ -838,7 +837,7 @@
     <string name="unread_or_downloaded">Não lido ou descareegado</string>
     <string name="only_downloaded">Apenas descarregado</string>
     <string name="only_unread">Apenas não lido</string>
-    <string name="show_download_button">Mostrar botão de download</string>
+    <string name="show_download_button">Mostrar botão de descarrega</string>
     <string name="press_and_hold_to_also_reset">Pressionar e segurar também pode redefinir o histórico do capítulo</string>
     <string name="fetched_">Buscado %1$s</string>
     <string name="updates_and_history">Atualizações e histórico</string>
@@ -860,7 +859,7 @@
     <string name="move_dynamic_to_bottom">Mover categorias dinâmicas recolhidas para o final</string>
     <string name="your_library">A sua biblioteca</string>
     <string name="release_page">Página de lançamento</string>
-    <string name="no_chapters_to_delete">Sem capítulos para excluir</string>
-    <string name="remove_all_downloads">Remover todos os downloads\?</string>
+    <string name="no_chapters_to_delete">Sem capítulos para apagar</string>
+    <string name="remove_all_downloads">Remover todas as descarregas\?</string>
     <string name="no_pages_found">Nenhuma página encontrada</string>
 </resources>

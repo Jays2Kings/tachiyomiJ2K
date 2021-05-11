@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">カテゴリー</string>
-    <string name="manga">マンガ</string>
+    <string name="manga">漫画</string>
     <string name="chapters">章</string>
     <string name="history">履歴</string>
     <string name="settings">設定</string>
@@ -10,8 +10,8 @@
     <string name="recent_updates">ライブラリの更新履歴</string>
     <string name="selected_">選択: %1$d</string>
     <string name="filter">フィルター</string>
-    <string name="downloaded">ダウンロードした</string>
-    <string name="bookmarked">お気に入り</string>
+    <string name="downloaded">ダウンロード済み</string>
+    <string name="bookmarked">お気に入りにしました</string>
     <string name="unread">未読</string>
     <string name="read">既読</string>
     <string name="alphabetically">アルファベット順</string>
@@ -24,7 +24,7 @@
     <string name="compact_grid">グリッド</string>
     <string name="list">リスト</string>
     <string name="sort">ソート</string>
-    <string name="tracking">同期</string>
+    <string name="tracking">追跡</string>
     <string name="extensions">拡張機能</string>
     <string name="extension_info">拡張機能の情報</string>
     <string name="source_migration">ソース移行</string>
@@ -146,11 +146,10 @@
     <string name="clear_chapter_cache">チャプターキャッシュをクリア</string>
     <string name="cache_delete_error">キャッシュの消去中にエラーが発生しました</string>
     <string name="clear_database">データベースをクリア</string>
-    <string name="clear_database_summary">ライブラリにないマンガや章を削除します</string>
+    <string name="clear_database_summary">ライブラリにない漫画や章を削除します</string>
     <string name="version">バージョン</string>
     <string name="build_time">ビルド日時</string>
     <string name="check_for_updates">更新を確認</string>
-    <string name="auto_check_for_app_versions">アプリケーションのアップデートを自動的に確認する</string>
     <string name="send_crash_report">クラッシュレポートを送信する</string>
     <string name="log_in_to_">%1$sにログイン</string>
     <string name="username">ユーザー名</string>
@@ -186,7 +185,7 @@
     <string name="status">ステータス</string>
     <string name="started">開始済み</string>
     <string name="type">タイプ</string>
-    <string name="refresh_tracking">同期を更新</string>
+    <string name="refresh_tracking">追跡を更新</string>
     <string name="add_tracking">追跡サービスを追加</string>
     <string name="migrate">移行</string>
     <string name="copy_value">コピー</string>
@@ -279,7 +278,7 @@
     <string name="used_">サイズ：%1$s</string>
     <string name="clear_cookies">Cookiesを削除</string>
     <string name="cookies_cleared">Cookiesを削除しました</string>
-    <string name="clear_database_confirmation">データベースをクリアしてもよろしいですか？ライブラリにないマンガの読んだ章と読書進捗はすべて失われます</string>
+    <string name="clear_database_confirmation">データベースをクリアしてもよろしいですか？ライブラリにない漫画の読んだ章と読書進捗はすべて失われます</string>
     <string name="clear_database_completed">エントリーを削除しました</string>
     <string name="updates_tracking_details">同期サービスでステータス、評価と最後に読んだ章を更新します</string>
     <string name="disable_battery_optimization">バッテリー最適化を無効にする</string>
@@ -351,8 +350,8 @@
     <string name="category_with_name_exists">同じ名前のカテゴリーが既に存在します！</string>
     <string name="manage_category">カテゴリーを管理</string>
     <string name="add_categories">カテゴリーを追加</string>
-    <string name="already_in_category">このマンガは既にこのカテゴリーに追加されています</string>
-    <string name="confirm_category_deletion_message">このカテゴリーに載っていたマンガはデフォルトカテゴリーに移動されます。</string>
+    <string name="already_in_category">この漫画は既にこのカテゴリーに追加されています</string>
+    <string name="confirm_category_deletion_message">このカテゴリーに載っていた漫画はデフォルトカテゴリーに移動されます。</string>
     <string name="confirm_category_deletion">カテゴリーを削除しますか？</string>
     <string name="categories_in_global_update">グローバルアップデートでの全てのカテゴリー</string>
     <string name="categories_on_manual">手動リロード時にアップデートするカテゴリー</string>
@@ -369,13 +368,13 @@
         <item quantity="other">残り%1$dページ</item>
     </plurals>
     <plurals name="remove_n_chapters">
-        <item quantity="other">%1$d件のダウンロードした章を消去してもよろしいですか？</item>
+        <item quantity="other">%1$d件のダウンロードした章を削除してもよろしいですか？</item>
     </plurals>
     <string name="chapter_not_found">章が見つかりませんでした</string>
     <string name="chapters_removed">章が消去されました。</string>
-    <string name="removed_bookmark">消去されたブックマーク</string>
+    <string name="removed_bookmark">お気に入りを削除しました</string>
     <string name="library_search_hint">タイトル、タグまたはソースを検索</string>
-    <string name="remove_from_library_question">ライブラリから消去しますか？</string>
+    <string name="remove_from_library_question">ライブラリから削除しますか？</string>
     <string name="update_available">更新可能</string>
     <string name="updating_">%1$sを更新</string>
     <string name="what_should_update">更新したいのは？</string>
@@ -384,7 +383,7 @@
     <string name="read_progress">読書の進捗状況</string>
     <string name="search_globally">「%1$s」をグローバルに検索する</string>
     <string name="_unread">%d 未読</string>
-    <string name="reorder_filters">フィルターを並べ替える</string>
+    <string name="reorder_filters">フィルターの並べ替え</string>
     <string name="collapse_all_categories">全てのカテゴリーを折りたたむ</string>
     <string name="expand_all_categories">全てのカテゴリーを展開する</string>
     <string name="always_show_current_category">常に現在のカテゴリーを表示する</string>
@@ -392,11 +391,11 @@
     <string name="no_matches_for_filters">現在のフィルターに一致する項目が見つかりませんでした</string>
     <string name="library_is_empty_add_from_browse">ライブラリが空です。「ブラウザ」タブからライブラリにシリーズを追加してください。</string>
     <string name="display_options">表示オプション</string>
-    <string name="tracked">登録済み</string>
+    <string name="tracked">追跡済み</string>
     <string name="started_reading_date">読み始めた日付</string>
     <string name="finished_reading_date">読み終わった日付</string>
     <string name="myanimelist_relogin">もう一度MALにログインしてください</string>
-    <string name="search_settings">検索設定</string>
+    <string name="search_settings">設定を検索</string>
     <string name="locale">ロケール</string>
     <string name="no_chapters_error">章が見つかりません</string>
     <string name="badges">バッジ</string>
@@ -463,7 +462,7 @@
     <string name="updated_to_">v%1$sに更新しました</string>
     <string name="hide_app_block_screenshots">スクリーンショットを無効化し、「最近使ったアプリ」画面でアプリの内容を非表示にします</string>
     <string name="label_global_search">グローバル検索</string>
-    <string name="not_downloaded">ダウンロードしていない</string>
+    <string name="not_downloaded">未ダウンロード</string>
     <string name="start_reading_chapter_">第%1$s章を読み始める</string>
     <string name="start_reading">読み始める</string>
     <string name="whats_new_this_release">このリリースの更新情報</string>
@@ -508,7 +507,7 @@
     <string name="show_downloaded_chapters">ダウンロードした章を表示</string>
     <string name="show_bookmarked_chapters">ブックマークした章を表示</string>
     <string name="show_all">全ての章を表示</string>
-    <string name="select_a_source_then_item_to_migrate">ソースを選択し、移行したい項目を選択します</string>
+    <string name="select_a_source_then_item_to_migrate">ソースを選択して、移行したい項目を選択します</string>
     <string name="migration">移行</string>
     <string name="show_title_first">タイトルを先に表示</string>
     <string name="unread_or_downloaded">未読またはダウンロード済み</string>
@@ -555,7 +554,7 @@
     <string name="grid_size">グリッドサイズ</string>
     <string name="comfortable_grid">快適グリッド</string>
     <string name="app_info">アプリ情報</string>
-    <string name="no_recently_read_manga">最近読んだマンガはありません</string>
+    <string name="no_recently_read_manga">最近読んだ漫画はありません</string>
     <string name="reset_chapter_history">章の履歴をリセット</string>
     <string name="search_suggestions">検索候補</string>
     <string name="more_library_settings">ライブラリの詳細設定</string>
@@ -582,7 +581,7 @@
     <string name="sort_and_filter">ソート＆フィルター</string>
     <string name="mark_previous_as_unread">前の章を未読にする</string>
     <string name="stop_migrating">移行を停止しますか？</string>
-    <string name="clean_read_manga_not_in_library">ライブラリにないマンガをクリア</string>
+    <string name="clean_read_manga_not_in_library">ライブラリにない漫画をクリア</string>
     <string name="disabled">無効</string>
     <string name="refresh_tracking_metadata">同期のメタデータを更新</string>
     <string name="if_disabled_transition_will_skip">無効にした場合、次の章を読み込む際の遷移ページはスキップされます</string>
@@ -604,13 +603,13 @@
     <string name="delete_downloaded_if_removed_online">ソースがオンラインの章を消去していた場合、ダウンロードした章を削除します</string>
     <string name="delete_removed_chapters">消去された章を削除</string>
     <string name="source_not_installed">ソースがインストールされていません</string>
-    <string name="remove_all_downloads">全てのダウンロードを消去しますか？</string>
+    <string name="remove_all_downloads">全てのダウンロードを削除しますか？</string>
     <string name="updates_and_history">アップデート＆履歴</string>
     <string name="shift_double_pages">2ページずらす</string>
     <string name="hide_start_reading_button">読み始めるボタンを隠す</string>
     <string name="drag_and_drop">ドラッグ＆ドロップ</string>
-    <string name="add_x_to">%1$sを追加…</string>
-    <string name="move_x_to">%1$sを移動…</string>
+    <string name="add_x_to">%1$sに追加…</string>
+    <string name="move_x_to">%1$sに移動…</string>
     <string name="added_to_">%1$sに追加しました</string>
     <string name="series">シリーズ</string>
     <string name="expand_collapse_all_categories">全てのカテゴリーを展開/折りたたむ</string>
@@ -661,7 +660,7 @@
     <string name="delete_unused_chapters">存在しないか、部分的にダウンロードされているか、既読の章のフォルダーを削除します</string>
     <string name="pauses_reading_history">読書履歴を一時停止します</string>
     <string name="want_to_read">読みたい</string>
-    <string name="must_be_in_library_to_edit">編集するには、マンガをライブラリに追加してください</string>
+    <string name="must_be_in_library_to_edit">編集するには、漫画をライブラリに追加してください</string>
     <string name="smart_by_page">スマート（ページ別）</string>
     <string name="smart_by_theme">スマート（テーマ別）</string>
     <string name="amount_of_pages_to_preload">読書中にプリロードするページの数です。数値を大きくすると、キャッシュとネットワークの使用量が増える代わりに、よりスムーズな読書体験を得られます。</string>
@@ -747,7 +746,7 @@
 \n%2$s
 \nダウンロードを削除しますか？</item>
     </plurals>
-    <string name="create_folders_by_manga_title">マンガのタイトルに応じてフォルダを作成します</string>
+    <string name="create_folders_by_manga_title">漫画のタイトルに応じてフォルダを作成します</string>
     <string name="save_pages_separately">ページを別のフォルダに保存</string>
     <string name="show_on_long_press">長押しで表示</string>
     <string name="ignore_cutout_areas">カットアウト領域を無視</string>
@@ -801,4 +800,6 @@
     <string name="search_tips_show_periodically">検索のヒントは定期的に表示されます。検索するには、検索候補を長押しします。</string>
     <string name="certain_buttons_can_be_found">ここで無効にしたいくつかのボタンは他の場所で見つけることができます</string>
     <string name="start_past_cutout">カットアウト領域外から描画</string>
+    <string name="migrating_to">移行先</string>
+    <string name="not_tracked">未追跡</string>
 </resources>

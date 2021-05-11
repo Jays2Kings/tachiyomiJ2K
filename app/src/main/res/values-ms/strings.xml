@@ -22,7 +22,7 @@
     <string name="search">Carian</string>
     <string name="select_all">Pilih semua</string>
     <string name="mark_as_read">Tandakan sebagai sudah dibaca</string>
-    <string name="mark_previous_as_read">Tandakan yang sebelum sebagai sudah dibaca</string>
+    <string name="mark_previous_as_read">Tandakan bab yang sebelum sebagai sudah dibaca</string>
     <string name="download">Muat turun</string>
     <string name="delete">Padam</string>
     <string name="edit">Ubah</string>
@@ -162,7 +162,6 @@
     <string name="version">Versi</string>
     <string name="build_time">Masa binaan aplikasi</string>
     <string name="check_for_updates">Semak untuk pengemaskinian</string>
-    <string name="auto_check_for_app_versions">Semak sama ada wujud versi baharu secara automatik</string>
     <string name="send_crash_report">Hantar laporan ranap</string>
     <string name="helps_fix_bugs">Bantu membaiki aplikasi. Tiada data sensitif dihantar</string>
     <string name="log_in_to_">Log masuk untuk %1$s</string>
@@ -450,7 +449,7 @@
     <string name="sort_and_filter">Susun dan</string>
     <string name="select_none">Pilih</string>
     <string name="moved_to_">Di pindahkan ke %1$s</string>
-    <string name="mark_previous_as_unread">Tanda sebelumnya sebagai belum di</string>
+    <string name="mark_previous_as_unread">Tandakan bab yang sebelum sebagai belum dibaca</string>
     <string name="mark_all_as_unread">Tanda semua sebagai belum di</string>
     <string name="mark_all_as_read">Tanda semua sebagai sudah di</string>
     <string name="hide">Sembunyi</string>

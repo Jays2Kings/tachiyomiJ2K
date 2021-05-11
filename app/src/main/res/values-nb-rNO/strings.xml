@@ -181,7 +181,6 @@
     <string name="version">Versjon</string>
     <string name="build_time">Byggtid</string>
     <string name="check_for_updates">Se etter oppdateringer</string>
-    <string name="auto_check_for_app_versions">Se etter nye versjoner automatisk</string>
     <string name="send_crash_report">Send kræsjrapporter</string>
     <string name="helps_fix_bugs">Hjelper til med fiksing av feil. Ingen sensitiv data vil bli sendt.</string>
     <string name="log_in_to_">Innlogging for %1$s</string>

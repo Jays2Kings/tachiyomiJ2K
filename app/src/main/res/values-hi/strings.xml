@@ -163,7 +163,6 @@
     <string name="version">संस्करण</string>
     <string name="build_time">निर्माण समय</string>
     <string name="check_for_updates">अद्यतन के लिए जाँच</string>
-    <string name="auto_check_for_app_versions">स्वचालित रूप से एप्लिकेशन अपडेट की जांच करें</string>
     <string name="send_crash_report">क्रैश रिपोर्ट भेजें</string>
     <string name="helps_fix_bugs">किसी भी बग को ठीक करने में मदद करता है कोई संवेदनशील डेटा नहीं भेजा जाएगा</string>
     <string name="log_in_to_">%1$s के लिए लॉगिन</string>

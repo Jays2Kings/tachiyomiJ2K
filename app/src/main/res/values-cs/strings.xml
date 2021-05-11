@@ -260,7 +260,6 @@
     <string name="restore_from_backup_file">Obnovit knihovnu ze záložního souboru</string>
     <string name="max_auto_backups">Maximální automatické zálohování</string>
     <string name="updates_covers_genres_desc">Aktualizuje obaly, žánry, popisy a informace o stavu mangy</string>
-    <string name="auto_check_for_app_versions">Automaticky kontrolovat aktualizace aplikace</string>
     <string name="log_in_to_">Přihlášení pro %1$s</string>
     <string name="url_not_set_click_again">Url mangy není nastaveno, klikněte prosím na název a vyberte mangu znovu</string>
     <string name="category_with_name_exists">Kategorie s tímto jménem již existuje!</string>

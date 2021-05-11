@@ -25,7 +25,7 @@
     <string name="search">Sök</string>
     <string name="select_all">Välj alla</string>
     <string name="mark_as_read">Markera som läst</string>
-    <string name="mark_previous_as_read">Markera tidigare som läst</string>
+    <string name="mark_previous_as_read">Markera tidigare kapitel som läst</string>
     <string name="download">Ladda ner</string>
     <string name="delete">Radera</string>
     <string name="edit">Redigera</string>
@@ -185,7 +185,6 @@
     <string name="version">Version</string>
     <string name="build_time">Byggtid</string>
     <string name="check_for_updates">Sök efter uppdateringar</string>
-    <string name="auto_check_for_app_versions">Kontrollera automatiskt om det finns nya programuppdateringar</string>
     <string name="send_crash_report">Skicka kraschrapporter</string>
     <string name="helps_fix_bugs">Hjälper till att fixa eventuella buggar. Inga känsliga uppgifter skickas</string>
     <string name="log_in_to_">Login för %1$s</string>
@@ -733,7 +732,7 @@
     <string name="moved_to_">Flyttat till %1$s</string>
     <string name="move_to_">Flytta till %1$s</string>
     <string name="menu">meny</string>
-    <string name="mark_previous_as_unread">Markera tidigare som oläst</string>
+    <string name="mark_previous_as_unread">Markera tidigare kapitel som oläst</string>
     <string name="mark_all_as_unread">Markera allt som oläst</string>
     <string name="mark_all_as_read">Markera allt som läst</string>
     <string name="keep">Behåll</string>
@@ -833,4 +832,9 @@
     <string name="search_tips_show_periodically">Söktips visas regelbundet. Tryck länge på förslaget för att söka i det.</string>
     <string name="search_suggestions">Sökförslag</string>
     <string name="automatic_removal">Automatisk borttagning</string>
+    <string name="mark_range_as_unread">Markera ett intervall med kapitel som olästa</string>
+    <string name="mark_range_as_read">Markera ett intervall med kapitel som lästa</string>
+    <string name="cancel_all_for_series">Avbryt alla för denna serie</string>
+    <string name="show_recent_in_shortcuts">Visa senaste källor och serier i appgenvägar</string>
+    <string name="app_shortcuts">Appgenväg</string>
 </resources>

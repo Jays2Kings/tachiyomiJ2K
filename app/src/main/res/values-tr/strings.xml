@@ -16,16 +16,16 @@
     <string name="filter">Süz</string>
     <string name="downloaded">İndirilen</string>
     <string name="bookmarked">İşaretli</string>
-    <string name="unread">Okunmamış</string>
-    <string name="read">Okunmuş</string>
+    <string name="unread">Okunmayan</string>
+    <string name="read">Okundu</string>
     <string name="alphabetically">Alfabetik</string>
     <string name="total_chapters">Toplam bölüm</string>
     <string name="last_read">Son okunan</string>
     <string name="last_updated">Son güncellenen</string>
     <string name="search">Ara</string>
     <string name="select_all">Tümünü seç</string>
-    <string name="mark_as_read">Okunmuş olarak işaretle</string>
-    <string name="mark_previous_as_read">Öncekini okunmuş olarak işaretle</string>
+    <string name="mark_as_read">Okundu olarak işaretle</string>
+    <string name="mark_previous_as_read">Önceki bölümleri okundu olarak işaretle</string>
     <string name="download">İndir</string>
     <string name="delete">Sil</string>
     <string name="edit">Düzenle</string>
@@ -145,7 +145,7 @@
     <string name="alpha_initial">A</string>
     <string name="download_location">İndirme dizini</string>
     <string name="only_download_over_wifi">Yalnızca Wi-Fi ile indir</string>
-    <string name="remove_when_marked_as_read">Okunmuş olarak işaretlendiğinde kaldır</string>
+    <string name="remove_when_marked_as_read">Okundu olarak işaretlendiğinde kaldır</string>
     <string name="remove_after_read">Okunduktan sonra kaldır</string>
     <string name="custom_location">Özel dizin</string>
     <string name="last_read_chapter">Son okunan bölüm</string>
@@ -175,7 +175,7 @@
     <string name="cookies_cleared">Çerezler temizlendi</string>
     <string name="clear_database">Veritabanını temizle</string>
     <string name="clear_database_summary">Kitaplığınızda olmayan manga ve bölümleri silin</string>
-    <string name="clear_database_confirmation">Emin misiniz? Kitaplıkta olmayan mangaların okunmuş bölümleri ve ilerlemesi kaybolacak</string>
+    <string name="clear_database_confirmation">Emin misiniz\? Kitaplıkta olmayan mangaların okunan bölümleri ve ilerlemesi kaybolacak</string>
     <string name="clear_database_completed">Girdileri silindi</string>
     <string name="refresh_library_metadata">Kitaplık üst verilerini yenile</string>
     <string name="updates_covers_genres_desc">Kapakları, türleri, açıklamayı ve manga durum bilgisini günceller</string>
@@ -184,7 +184,6 @@
     <string name="version">Sürüm</string>
     <string name="build_time">İnşa tarihi</string>
     <string name="check_for_updates">Güncellemeleri denetle</string>
-    <string name="auto_check_for_app_versions">Uygulama güncellemelerini kendiliğinden denetle</string>
     <string name="send_crash_report">Çökme bildirimi gönder</string>
     <string name="helps_fix_bugs">Hataların düzeltilmesine yardımcı olur. Hiçbir hassas veri gönderilmez</string>
     <string name="log_in_to_">%1$s için giriş</string>
@@ -219,7 +218,7 @@
     <string name="next_5_unread">Sonraki 5 bölümü indir</string>
     <string name="custom_range">Özel indir</string>
     <string name="all_chapters">Tümünü indir</string>
-    <string name="all_unread_chapters">Okunmamışı indir</string>
+    <string name="all_unread_chapters">Tüm okunmayan bölümler</string>
     <string name="reading">Okunuyor</string>
     <string name="completed">Tamamlandı</string>
     <string name="dropped">Bırakıldı</string>
@@ -275,7 +274,7 @@
     <string name="dark_blue">Koyu mavi</string>
     <string name="open_in_webview">Web görünümünde aç</string>
     <string name="true_32bit_color">32-bit renk</string>
-    <string name="skip_read_chapters">Okunmuş olarak işaretli bölümleri atla</string>
+    <string name="skip_read_chapters">Okundu olarak işaretli bölümleri atla</string>
     <string name="color_filter_blend_mode">Renk süzgeçi karışım kipi</string>
     <string name="overlay">Kaplama</string>
     <string name="multiply">Çarpma</string>
@@ -345,7 +344,7 @@
     <string name="back">Geri</string>
     <string name="forward">İleri</string>
     <string name="less">Daha az</string>
-    <string name="mark_as_unread">Okunmamış olarak işaretle</string>
+    <string name="mark_as_unread">Okunmadı olarak işaretle</string>
     <string name="more">Daha fazla</string>
     <string name="move_to_bottom">En alta taşı</string>
     <string name="move_to_top">En üste taşı</string>
@@ -431,13 +430,13 @@
     <string name="sort_by_chapter_number">Bölüm sayısına göre sırala</string>
     <string name="sort_by_source_s_order">Kaynağın sırasına göre sırala</string>
     <string name="hide_chapter_titles">Bölüm başlıklarını gizle</string>
-    <string name="show_read_chapters">Okunmuş bölümleri göster</string>
-    <string name="show_unread_chapters">Okunmamış bölümleri göster</string>
+    <string name="show_read_chapters">Okunan bölümleri göster</string>
+    <string name="show_unread_chapters">Okunmayan bölümleri göster</string>
     <string name="show_downloaded_chapters">İndirilmiş bölümleri göster</string>
     <string name="show_bookmarked_chapters">İşaretlenmiş bölümleri göster</string>
     <string name="show_all">Tümünü göster</string>
-    <string name="all_read_chapters">Tüm okunmuş bölümler</string>
-    <string name="mark_all_chapters_as_read">Tüm bölümleri okunmuş olarak işaretle\?</string>
+    <string name="all_read_chapters">Tüm okunan bölümler</string>
+    <string name="mark_all_chapters_as_read">Tüm bölümler okundu olarak işaretlensin mi\?</string>
     <string name="no_description">Açıklama yok</string>
     <string name="add_to_library">Kitaplığa ekle</string>
     <string name="continue_reading">Okumaya devam et</string>
@@ -466,8 +465,8 @@
     <string name="reorder_filters">Filtreleri sırala</string>
     <string name="view_all_errors">Tüm hataları gör</string>
     <string name="tag">Etiket</string>
-    <string name="mark_all_as_unread">Tümünü okunmamış olarak işaretle</string>
-    <string name="mark_all_as_read">Tümünü okunmuş olarak işaretle</string>
+    <string name="mark_all_as_unread">Tümünü okunmadı olarak işaretle</string>
+    <string name="mark_all_as_read">Tümünü okundu olarak işaretle</string>
     <string name="deleted_">Silindi: %1$s</string>
     <string name="always_delete">Daima sil</string>
     <string name="always_keep">Daima sakla</string>
@@ -574,11 +573,11 @@
     <string name="error_sharing_cover">Kapak paylaşılamadı</string>
     <string name="add_x_to_library">%1$s kitaplığa eklensin mi\?</string>
     <string name="all_but_bookmarked_chapters">Yer imli bölümler hariç tümü</string>
-    <string name="next_unread_chapter">Sonraki okunmamış bölüm</string>
+    <string name="next_unread_chapter">Sonraki okunmayan bölüm</string>
     <string name="search_chapters">Bölümleri ara</string>
     <string name="select_ending_chapter">Bitiş bölümünü seç</string>
     <string name="select_starting_chapter">Başlangıç bölümünü seç</string>
-    <string name="mark_all_chapters_as_unread">Tüm bölümleri okunmuş olarak işaretle\?</string>
+    <string name="mark_all_chapters_as_unread">Tüm bölümler okunmadı olarak işaretlensin mi\?</string>
     <string name="season_">Sezon %1$d</string>
     <string name="volume_">Kısım %1$d</string>
     <string name="start_reading">Okumaya başla</string>
@@ -622,9 +621,9 @@
     <string name="all_sources">Tüm kaynaklar</string>
     <string name="show_title_first">Önce başlığı göster</string>
     <string name="show_reset_history_button">Geçmişi sıfırlama düğmesini göster</string>
-    <string name="unread_or_downloaded">Okunmamış veya indirilen</string>
+    <string name="unread_or_downloaded">Okunmayan veya indirilen</string>
     <string name="only_downloaded">Yalnızca indirilen</string>
-    <string name="only_unread">Yalnızca okunmamış</string>
+    <string name="only_unread">Yalnızca okunmayan</string>
     <string name="show_download_button">İndirme düğmesini göster</string>
     <string name="press_and_hold_to_also_reset">Basılı tutma da bölüm geçmişini de sıfırlayabilir</string>
     <string name="reset_chapter_question">Bölümü sıfırla\?</string>
@@ -634,7 +633,7 @@
     <string name="updated_">%1$s güncellendi</string>
     <string name="read_">%1$s Oku</string>
     <string name="last_read_">Son okunan %1$s</string>
-    <string name="download_unread">Okunmamışları indir</string>
+    <string name="download_unread">Okunmayanları indir</string>
     <string name="currently_reading">Şu Anda Okunan</string>
     <string name="want_to_read">Okunmak İstenen</string>
     <string name="source_not_installed">Kaynak kurulmadı</string>
@@ -655,9 +654,9 @@
     <string name="more_library_settings">Diğer kitaplık ayarları</string>
     <string name="hide_category_hopper">Kategori haznesini gizle</string>
     <string name="display_as">Olarak göster</string>
-    <string name="show_unread_count">Okunmamış sayısını göster</string>
-    <string name="show_unread_badges">Okunmamış rozetleri göster</string>
-    <string name="hide_unread_badges">Okunmamış rozetleri gizle</string>
+    <string name="show_unread_count">Okunmayan sayısını göster</string>
+    <string name="show_unread_badges">Okunmayan rozetleri göster</string>
+    <string name="hide_unread_badges">Okunmayan rozetleri gizle</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
     <string name="medium">M</string>
@@ -667,7 +666,7 @@
     <string name="comfortable_grid">Rahat Izgara</string>
     <string name="series_type">Seri türü</string>
     <string name="search_globally">\"%1$s\" genel arama</string>
-    <string name="_unread">%d okunmamış</string>
+    <string name="_unread">%d okunmayan</string>
     <string name="what_should_update">Ne güncellensin\?</string>
     <string name="category_cannot_be_blank">Kategori ismi boş olamaz</string>
     <string name="add_edit_categories">Kategorileri ekle/düzenle</string>
@@ -729,8 +728,8 @@
         <item quantity="other">Temizleme bitti. %d klasörü kaldırıldı</item>
     </plurals>
     <string name="starting_cleanup">Temizliğe başlanıyor</string>
-    <string name="clean_read_downloads">Okunmuşları temizle</string>
-    <string name="delete_unused_chapters">Var olmayan, kısmen indirilen ve okunmuş bölüm klasörlerini sil</string>
+    <string name="clean_read_downloads">Okunanları temizle</string>
+    <string name="delete_unused_chapters">Var olmayan, kısmen indirilen ve okunan bölüm klasörlerini sil</string>
     <string name="clean_up_downloaded_chapters">İndirilen bölümleri temizle</string>
     <string name="data_management">Veri Yönetimi</string>
     <string name="starting_screen">Başlangıç ekranı</string>
@@ -775,7 +774,7 @@
     <string name="moved_to_">%1$s \'e taşındı</string>
     <string name="move_to_">%1$s \'e taşı</string>
     <string name="menu">menü</string>
-    <string name="mark_previous_as_unread">Öncekini okunmamış olarak işaretle</string>
+    <string name="mark_previous_as_unread">Önceki bölümleri okunmadı olarak işaretle</string>
     <string name="keep">Tut</string>
     <string name="hide">Gizle</string>
     <string name="enabled">Etkin</string>
@@ -810,7 +809,7 @@
     <string name="couldnt_download_low_space">Disk alanı az olduğundan bölümler indirilemedi</string>
     <string name="move_dynamic_to_bottom">Daraltılmış dinamik kategorileri aşağı taşı</string>
     <string name="when_grouping_by_sources_tags">Kitaplığı kaynak, durum, vs. ile gruplarken</string>
-    <string name="show_read_chapters_all">Okunmuş bölümleri, tüm ve gruplanmışlar içinde göster</string>
+    <string name="show_read_chapters_all">Okunan bölümleri, tüm ve gruplanmışlar içinde göster</string>
     <string name="label_global_search">Genel arama</string>
     <string name="search_">%1$s ara</string>
     <string name="group_chapters_together">Bölümleri birlikte grupla</string>
@@ -833,4 +832,9 @@
     <string name="search_tips_show_periodically">Arama ipuçları düzenli olarak görünecek. Aramak için öneriye uzun basın.</string>
     <string name="search_suggestions">Arama önerileri</string>
     <string name="release_page">Yayın sayfası</string>
+    <string name="mark_range_as_unread">Bir bölüm aralığını okunmadı olarak işaretle</string>
+    <string name="mark_range_as_read">Bir bölüm aralığını okundu olarak işaretle</string>
+    <string name="cancel_all_for_series">Bu seri için tümünü iptal et</string>
+    <string name="show_recent_in_shortcuts">Yakındaki kaynakları ve serileri uygulama kısayollarında göster</string>
+    <string name="app_shortcuts">Uygulama kısayolları</string>
 </resources>
