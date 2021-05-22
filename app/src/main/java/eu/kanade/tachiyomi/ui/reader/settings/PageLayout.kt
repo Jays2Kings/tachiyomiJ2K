@@ -7,6 +7,7 @@ enum class PageLayout(val value: Int, @StringRes val stringRes: Int, @StringRes 
     SINGLE_PAGE(0, R.string.single_page),
     DOUBLE_PAGES(1, R.string.double_pages),
     AUTOMATIC(2, R.string.automatic, R.string.automatic_orientation),
+    SPLIT_PAGES(3, R.string.split_double_pages)
     ;
 
     @StringRes val fullStringRes = _fullStringRes ?: stringRes

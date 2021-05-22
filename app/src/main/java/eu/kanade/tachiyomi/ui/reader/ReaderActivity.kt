@@ -29,6 +29,7 @@ import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import androidx.lifecycle.Lifecycle
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.afollestad.materialdialogs.MaterialDialog
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
@@ -342,8 +343,11 @@ class ReaderActivity :
         binding.chaptersSheet.doublePage.setImageDrawable(
             ContextCompat.getDrawable(
                 this,
-                if (!isDoublePage) R.drawable.ic_single_page_24dp
-                else R.drawable.ic_book_open_variant_24dp
+                when {
+                    isDoublePage -> R.drawable.ic_book_open_variant_24dp
+                    (viewer as? PagerViewer)?.config?.splitPages == true -> R.drawable.ic_book_open_split_24dp
+                    else -> R.drawable.ic_single_page_24dp
+                }
             )
         )
         with(binding.readerNav) {
@@ -354,11 +358,6 @@ class ReaderActivity :
                 }
             }
         }
-        binding.chaptersSheet.doublePage.compatToolTipText =
-            getString(
-                if (isDoublePage) R.string.switch_to_single
-                else R.string.switch_to_double
-            )
     }
 
     private fun updateOrientationShortcut(preference: Int) {
@@ -554,14 +553,39 @@ class ReaderActivity :
         }
 
         with(binding.chaptersSheet) {
-            doublePage.setOnClickListener {
-                if (preferences.pageLayout().get() == PageLayout.AUTOMATIC.value) {
-                    (viewer as? PagerViewer)?.config?.let { config ->
-                        config.doublePages = !config.doublePages
-                        reloadChapters(config.doublePages, true)
+            with(doublePage) {
+                compatToolTipText = getString(R.string.page_layout)
+                setOnClickListener {
+                    val config = (viewer as? PagerViewer)?.config
+                    val selectedId = when {
+                        config?.doublePages == true -> PageLayout.DOUBLE_PAGES
+                        config?.splitPages == true -> PageLayout.SPLIT_PAGES
+                        else -> PageLayout.SINGLE_PAGE
                     }
-                } else {
-                    preferences.pageLayout().set(1 - preferences.pageLayout().get())
+                    popupMenu(
+                        items = listOf(
+                            PageLayout.SINGLE_PAGE,
+                            PageLayout.DOUBLE_PAGES,
+                            PageLayout.SPLIT_PAGES,
+                        ).map { it.value to it.stringRes },
+                        selectedItemId = selectedId.value,
+                    ) {
+                        val newLayout = PageLayout.fromPreference(itemId)
+
+                        if (preferences.pageLayout().get() == PageLayout.AUTOMATIC.value) {
+                            (viewer as? PagerViewer)?.config?.let { config ->
+                                config.doublePages = newLayout == PageLayout.DOUBLE_PAGES
+                                if (newLayout == PageLayout.SINGLE_PAGE) {
+                                    preferences.automaticSplitsPage().set(false)
+                                } else if (newLayout == PageLayout.SPLIT_PAGES) {
+                                    preferences.automaticSplitsPage().set(true)
+                                }
+                                reloadChapters(config.doublePages, true)
+                            }
+                        } else {
+                            preferences.pageLayout().set(newLayout.value)
+                        }
+                    }
                 }
             }
             cropBordersSheetButton.setOnClickListener {
@@ -917,6 +941,9 @@ class ReaderActivity :
             setDoublePageMode(pViewer)
         } else {
             pViewer.config.doublePages = doublePages
+            if (pViewer.config.autoDoublePages) {
+                pViewer.config.splitPages = preferences.automaticSplitsPage().get() && !pViewer.config.doublePages
+            }
         }
         val currentChapter = presenter.getCurrentChapter()
         if (doublePages) {
@@ -925,7 +952,7 @@ class ReaderActivity :
                 binding.readerNav.pageSeekbar.progress +
                     (
                         currentChapter?.pages?.take(binding.readerNav.pageSeekbar.progress)
-                            ?.count { it.fullPage || it.isolatedPage } ?: 0
+                            ?.count { it.fullPage == true || it.isolatedPage } ?: 0
                         )
                 ) % 2 != 0
         }
@@ -953,7 +980,7 @@ class ReaderActivity :
                 currentChapter.requestedPage +
                     (
                         currentChapter.pages?.take(currentChapter.requestedPage)
-                            ?.count { it.fullPage || it.isolatedPage } ?: 0
+                            ?.count { it.fullPage == true || it.isolatedPage } ?: 0
                         )
                 ) % 2 != 0
         }
@@ -1042,7 +1069,7 @@ class ReaderActivity :
         val currentPage = if (hasExtraPage) {
             if (resources.isLTR) "${page.number}-${page.number + 1}" else "${page.number + 1}-${page.number}"
         } else {
-            "${page.number}"
+            "${page.number}${if (page.firstHalf == false) "*" else ""}"
         }
 
         val totalPages = pages.size.toString()
@@ -1347,6 +1374,9 @@ class ReaderActivity :
     private fun setDoublePageMode(viewer: PagerViewer) {
         val currentOrientation = resources.configuration.orientation
         viewer.config.doublePages = (currentOrientation == Configuration.ORIENTATION_LANDSCAPE)
+        if (viewer.config.autoDoublePages) {
+            viewer.config.splitPages = preferences.automaticSplitsPage().get() && !viewer.config.doublePages
+        }
     }
 
     private fun handleIntentAction(intent: Intent): Boolean {
@@ -1437,6 +1467,18 @@ class ReaderActivity :
             }
 
             preferences.pageLayout().asImmediateFlowIn(scope) { setBottomNavButtons(it) }
+
+            preferences.automaticSplitsPage().asFlow()
+                .drop(1)
+                .onEach {
+                    val isPaused = !this@ReaderActivity.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)
+                    if (isPaused) {
+                        (viewer as? PagerViewer)?.config?.let { config ->
+                            reloadChapters(config.doublePages, true)
+                        }
+                    }
+                }
+                .launchIn(scope)
 
             preferences.readerBottomButtons().asImmediateFlowIn(scope) { updateBottomShortcuts() }
 

@@ -58,6 +58,9 @@ class PagerConfig(
 
     var autoDoublePages = preferences.pageLayout().get() == PageLayout.AUTOMATIC.value
 
+    var splitPages = preferences.pageLayout().get() == PageLayout.SPLIT_PAGES.value
+    var autoSplitPages = preferences.automaticSplitsPage().get()
+
     init {
         preferences.pageTransitions()
             .register({ usePageTransitions = it })
@@ -103,6 +106,7 @@ class PagerConfig(
             .drop(1)
             .onEach {
                 autoDoublePages = it == PageLayout.AUTOMATIC.value
+                splitPages = it == PageLayout.SPLIT_PAGES.value
                 if (!autoDoublePages) {
                     doublePages = it == PageLayout.DOUBLE_PAGES.value
                 }
@@ -114,9 +118,12 @@ class PagerConfig(
                 autoDoublePages = it == PageLayout.AUTOMATIC.value
                 if (!autoDoublePages) {
                     doublePages = it == PageLayout.DOUBLE_PAGES.value
+                    splitPages = it == PageLayout.SPLIT_PAGES.value
                 }
             })
 
+        preferences.automaticSplitsPage()
+            .register({ autoSplitPages = it })
         navigationOverlayForNewUser = preferences.showNavigationOverlayNewUser().get()
         if (navigationOverlayForNewUser) {
             preferences.showNavigationOverlayNewUser().set(false)

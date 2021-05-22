@@ -186,6 +186,8 @@ class PreferencesHelper(val context: Context) {
 
     fun pageLayout() = flowPrefs.getInt(Keys.pageLayout, PageLayout.AUTOMATIC.value)
 
+    fun automaticSplitsPage() = flowPrefs.getBoolean(Keys.automaticSplitsPage, false)
+
     fun invertDoublePages() = flowPrefs.getBoolean(Keys.invertDoublePages, false)
 
     fun readerBottomButtons() = flowPrefs.getStringSet(

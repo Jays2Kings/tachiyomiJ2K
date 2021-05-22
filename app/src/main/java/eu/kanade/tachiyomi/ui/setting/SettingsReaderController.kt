@@ -256,6 +256,12 @@ class SettingsReaderController : SettingsController() {
                 preferences.pageLayout().asImmediateFlowIn(viewScope) { isVisible = it == PageLayout.AUTOMATIC.value }
             }
             switchPreference {
+                key = Keys.automaticSplitsPage
+                titleRes = R.string.split_double_pages_portrait
+                defaultValue = false
+                preferences.pageLayout().asImmediateFlowIn(viewScope) { isVisible = it == PageLayout.AUTOMATIC.value }
+            }
+            switchPreference {
                 key = Keys.invertDoublePages
                 titleRes = R.string.invert_double_pages
                 defaultValue = false

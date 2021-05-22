@@ -278,6 +278,24 @@ object ImageUtil {
         return ColorDrawable(backgroundColor)
     }
 
+    fun splitBitmap(
+        imageBitmap: Bitmap,
+        secondHalf: Boolean,
+        progressCallback: ((Int) -> Unit)? = null
+    ): ByteArrayInputStream {
+        val height = imageBitmap.height
+        val width = imageBitmap.width
+        val result = Bitmap.createBitmap(width / 2, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(result)
+        progressCallback?.invoke(98)
+        canvas.drawBitmap(imageBitmap, Rect(if (!secondHalf) 0 else width / 2, 0, if (secondHalf) width else width / 2, height), result.rect, null)
+        progressCallback?.invoke(99)
+        val output = ByteArrayOutputStream()
+        result.compress(Bitmap.CompressFormat.JPEG, 100, output)
+        progressCallback?.invoke(100)
+        return ByteArrayInputStream(output.toByteArray())
+    }
+
     fun mergeBitmaps(
         imageBitmap: Bitmap,
         imageBitmap2: Bitmap,

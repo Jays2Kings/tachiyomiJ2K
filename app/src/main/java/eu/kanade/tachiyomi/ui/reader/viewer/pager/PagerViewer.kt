@@ -156,7 +156,11 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
             val allowPreload = checkAllowPreload(page.first as? ReaderPage)
             currentPage = page.first
             when (val aPage = page.first) {
-                is ReaderPage -> onReaderPageSelected(aPage, allowPreload, page.second != null)
+                is ReaderPage -> onReaderPageSelected(
+                    aPage,
+                    allowPreload,
+                    page.second is ReaderPage
+                )
                 is ChapterTransition -> onTransitionSelected(aPage)
             }
         }
@@ -275,7 +279,13 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
      */
     override fun moveToPage(page: ReaderPage, animated: Boolean) {
         Timber.d("moveToPage ${page.number}")
-        val position = adapter.joinedItems.indexOfFirst { it.first == page || it.second == page }
+        val position = adapter.joinedItems.indexOfFirst {
+            it.first == page || it.second == page ||
+                (
+                    config.splitPages && (it.first as? ReaderPage)?.imageUrl == page.imageUrl &&
+                        (it.first as? ReaderPage)?.firstHalf != false
+                    )
+        }
         if (position != -1) {
             val currentPosition = pager.currentItem
             pager.setCurrentItem(position, animated)
@@ -288,7 +298,7 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
                 val joinedItem = adapter.joinedItems.firstOrNull { it.first == page || it.second == page }
                 activity.onPageSelected(
                     joinedItem?.first as? ReaderPage ?: page,
-                    joinedItem?.second != null
+                    joinedItem?.second is ReaderPage
                 )
             }
         } else {

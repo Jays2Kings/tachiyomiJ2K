@@ -3,6 +3,7 @@ package eu.kanade.tachiyomi.ui.reader.viewer.pager
 import android.view.View
 import android.view.ViewGroup
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
+import eu.kanade.tachiyomi.ui.reader.model.InsertPage
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
@@ -55,7 +56,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             // however we should take account full pages when deciding
             val numberOfFullPages =
                 (
-                    chapters.prevChapter.pages?.count { it.fullPage || it.isolatedPage }
+                    chapters.prevChapter.pages?.count { it.fullPage == true || it.isolatedPage }
                         ?: 0
                     )
             if (prevPages != null) {
@@ -134,7 +135,8 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     override fun getItemPosition(view: Any): Int {
         if (view is PositionableView) {
             val position = joinedItems.indexOfFirst {
-                view.item == (it.first to it.second)
+                val secondPage = it.second as? ReaderPage
+                view.item == it.first to secondPage
             }
             if (position != -1) {
                 return position
@@ -148,13 +150,17 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     fun splitDoublePages(current: ReaderPage) {
         val oldCurrent = joinedItems.getOrNull(viewer.pager.currentItem)
         setJoinedItems(
-            oldCurrent?.second == current ||
-                (current.index + 1) < (
-                (
-                    oldCurrent?.second
-                        ?: oldCurrent?.first
-                    ) as? ReaderPage
-                )?.index ?: 0
+            if (viewer.config.splitPages) {
+                (oldCurrent?.first as? ReaderPage)?.firstHalf == false
+            } else {
+                oldCurrent?.second == current ||
+                    (current.index + 1) < (
+                    (
+                        oldCurrent?.second
+                            ?: oldCurrent?.first
+                        ) as? ReaderPage
+                    )?.index ?: 0
+            }
         )
 
         // The listener may be removed when we split a page, so the ui may not have updated properly
@@ -170,8 +176,36 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             // If not in double mode, set up items like before
             subItems.forEach {
                 (it as? ReaderPage)?.shiftedPage = false
+                (it as? ReaderPage)?.firstHalf = null
             }
-            this.joinedItems = subItems.map { Pair<Any, Any?>(it, null) }.toMutableList()
+            if (viewer.config.splitPages) {
+                var itemIndex = 0
+                val pagedItems = subItems.toMutableList()
+                while (itemIndex < pagedItems.size) {
+                    val page = pagedItems[itemIndex] as? ReaderPage
+                    if (page == null) {
+                        itemIndex++
+                        continue
+                    }
+                    if (page.longPage == true) {
+                        page.firstHalf = true
+                        // Add a second halved page after each full page.
+                        pagedItems[itemIndex] = InsertPage(page).apply { firstHalf = true }
+                        val secondHalf = InsertPage(page)
+                        pagedItems.add(itemIndex + 1, secondHalf)
+                        itemIndex++
+                    }
+                    itemIndex++
+                }
+                this.joinedItems = pagedItems.map {
+                    Pair<Any, Any?>(
+                        it,
+                        if ((it as? ReaderPage)?.fullPage == true) (it as? ReaderPage)?.firstHalf else null
+                    )
+                }.toMutableList()
+            } else {
+                this.joinedItems = subItems.map { Pair<Any, Any?>(it, null) }.toMutableList()
+            }
             if (viewer is R2LPagerViewer) {
                 joinedItems.reverse()
             }
@@ -200,6 +234,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
 
                 items.forEach {
                     it?.shiftedPage = false
+                    it?.firstHalf = null
                 }
                 // Step 3: If pages have been shifted,
                 if (viewer.config.shiftDoublePage) {
@@ -281,10 +316,23 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             when {
                 (oldCurrent?.first as? ReaderPage)?.chapter != currentChapter &&
                     (oldCurrent?.first as? ChapterTransition)?.from != currentChapter -> subItems.find { (it as? ReaderPage)?.chapter == currentChapter }
-                useSecondPage -> (oldCurrent?.second ?: oldCurrent?.first)
+                useSecondPage && oldCurrent?.second is ReaderPage -> (oldCurrent.second ?: oldCurrent.first)
                 else -> oldCurrent?.first ?: return
             }
-        var index = joinedItems.indexOfFirst { it.first == newPage || it.second == newPage }
+        var index = joinedItems.indexOfFirst {
+            val readerPage = it.first as? ReaderPage
+            val readerPage2 = it.second as? ReaderPage
+            val newReaderPage = newPage as? ReaderPage
+            it.first == newPage || it.second == newPage ||
+                (
+                    readerPage != null && newReaderPage != null &&
+                        (
+                            readerPage.imageUrl == newReaderPage.imageUrl ||
+                                readerPage2?.imageUrl == newReaderPage.imageUrl
+                            ) &&
+                        (readerPage.firstHalf == !useSecondPage || readerPage.firstHalf == null)
+                    )
+        }
         if (newPage is ChapterTransition && index == -1 && !forceTransition) {
             val newerPage = if (newPage is ChapterTransition.Next) {
                 joinedItems.filter {

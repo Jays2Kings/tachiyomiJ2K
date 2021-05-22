@@ -490,7 +490,7 @@ class ReaderPresenter(
         if (shouldTrack &&
             // For double pages, check if the second to last page is doubled up
             (
-                selectedChapter.pages?.lastIndex == page.index ||
+                (selectedChapter.pages?.lastIndex == page.index && page.firstHalf != true) ||
                     (hasExtraPage && selectedChapter.pages?.lastIndex?.minus(1) == page.index)
                 )
         ) {

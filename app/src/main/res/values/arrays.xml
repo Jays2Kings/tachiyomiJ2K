@@ -113,6 +113,7 @@
         <item>@string/single_page</item>
         <item>@string/double_pages</item>
         <item>@string/automatic</item>
+        <item>@string/split_double_pages</item>
     </string-array>
 
     <string-array name="invert_tapping_mode">

@@ -348,7 +348,7 @@ class PagerPageHolder(
                 val stream = streamFn().buffered(16)
 
                 val stream2 = if (extraPage != null) streamFn2?.invoke()?.buffered(16) else null
-                openStream = this@PagerPageHolder.mergePages(stream, stream2)
+                openStream = this@PagerPageHolder.mergeOrSplitPages(stream, stream2)
                 ImageUtil.isAnimatedAndSupported(stream) ||
                     if (stream2 != null) ImageUtil.isAnimatedAndSupported(stream2) else false
             }
@@ -507,6 +507,15 @@ class PagerPageHolder(
             }
             setOnImageEventListener(
                 object : SubsamplingScaleImageView.DefaultOnImageEventListener() {
+
+                    override fun onImageLoaded() {
+                        if (this@PagerPageHolder.extraPage == null &&
+                            this@PagerPageHolder.page.longPage == null &&
+                            sHeight < sWidth
+                        ) {
+                            this@PagerPageHolder.page.longPage = true
+                        }
+                    }
                     override fun onReady() {
                         var centerV = 0f
                         when (config.imageZoomType) {
@@ -651,9 +660,63 @@ class PagerPageHolder(
         return decodeLayout
     }
 
-    private fun mergePages(imageStream: InputStream, imageStream2: InputStream?): InputStream {
-        imageStream2 ?: return imageStream
-        if (page.fullPage) return imageStream
+    private fun mergeOrSplitPages(imageStream: InputStream, imageStream2: InputStream?): InputStream {
+        if (page.longPage == true && viewer.config.splitPages) {
+            val imageBytes = imageStream.readBytes()
+            val imageBitmap = try {
+                BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+            } catch (e: Exception) {
+                imageStream.close()
+                Timber.e("Cannot split page ${e.message}")
+                return imageBytes.inputStream()
+            }
+            val isLTR = (viewer !is R2LPagerViewer).xor(viewer.config.invertDoublePages)
+            return ImageUtil.splitBitmap(imageBitmap, (page.firstHalf == false).xor(!isLTR)) {
+                scope?.launchUI {
+                    if (it == 100) {
+                        progressBar.completeAndFadeOut()
+                    } else {
+                        progressBar.setProgress(it)
+                    }
+                }
+            }
+        }
+        if (imageStream2 == null) {
+            if (viewer.config.splitPages && page.longPage == null) {
+                val imageBytes = imageStream.readBytes()
+                val imageBitmap = try {
+                    BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+                } catch (e: Exception) {
+                    imageStream.close()
+                    page.longPage = true
+                    skipExtra = true
+                    Timber.e("Cannot split page ${e.message}")
+                    return imageBytes.inputStream()
+                }
+                val height = imageBitmap.height
+                val width = imageBitmap.width
+                return if (height < width) {
+                    imageStream.close()
+                    page.longPage = true
+                    skipExtra = true
+                    val isLTR = (viewer !is R2LPagerViewer).xor(viewer.config.invertDoublePages)
+                    return ImageUtil.splitBitmap(imageBitmap, !isLTR) {
+                        scope?.launchUI {
+                            if (it == 100) {
+                                progressBar.completeAndFadeOut()
+                            } else {
+                                progressBar.setProgress(it)
+                            }
+                        }
+                    }
+                } else {
+                    page.longPage = false
+                    imageBytes.inputStream()
+                }
+            }
+            return imageStream
+        }
+        if (page.fullPage == true) return imageStream
         if (ImageUtil.isAnimatedAndSupported(imageStream)) {
             page.fullPage = true
             skipExtra = true
@@ -732,7 +795,7 @@ class PagerPageHolder(
     }
 
     private fun splitDoublePages() {
-        extraPage ?: return
+        // extraPage ?: return
         viewer.splitDoublePages(page)
         if (extraPage?.fullPage == true) {
             extraPage = null

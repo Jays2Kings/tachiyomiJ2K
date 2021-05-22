@@ -376,6 +376,7 @@
     <string name="reduces_banding_impacts_performance">Reduces banding, but impacts
         performance</string>
     <string name="invert_double_pages">Invert double pages</string>
+    <string name="split_double_pages_portrait">Split double pages in portrait</string>
     <string name="crop_borders">Crop borders</string>
     <string name="crop_borders_paged">Crop borders (Paged)</string>
     <string name="crop_borders_webtoon">Crop borders (Webtoon)</string>
@@ -415,6 +416,7 @@
     <string name="original_size">Original size</string>
     <string name="smart_fit">Smart fit</string>
     <string name="zoom_start_position">Zoom start position</string>
+    <string name="split_double_pages">Split double pages</string>
     <string name="double_pages">Double pages</string>
     <string name="single_page">Single page</string>
     <string name="switch_to_double">Switch to double pages</string>
