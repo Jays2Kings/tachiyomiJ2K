@@ -8,6 +8,16 @@
     android:id="@+id/constraint_layout"
     android:background="@drawable/list_item_selector">
 
+    <include
+        layout="@layout/in_library_badge"
+        android:id="@+id/in_library_badge"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="wrap_content"

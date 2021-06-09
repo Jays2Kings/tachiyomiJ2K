@@ -34,11 +34,8 @@ class BrowseSourceListHolder(private val view: View, adapter: FlexibleAdapter<IF
      */
     override fun onSetValues(manga: Manga) {
         binding.title.text = manga.title
-        with(binding.subtitle) {
-            visibility = if (manga.favorite) View.VISIBLE else View.GONE
-            text = view.resources.getString(R.string.in_library)
-            setTextColor(view.context.getResourceColor(android.R.attr.colorAccent))
-        }
+            binding.inLibraryBadge.inLibraryBadge.visibility = if (manga.favorite) View.VISIBLE else View.GONE
+
 
         setImage(manga)
     }
