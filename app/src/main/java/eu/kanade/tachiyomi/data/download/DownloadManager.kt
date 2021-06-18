@@ -379,4 +379,4 @@ class DownloadManager(val context: Context) {
 
     fun addListener(listener: DownloadQueue.DownloadListener) = queue.addListener(listener)
     fun removeListener(listener: DownloadQueue.DownloadListener) = queue.removeListener(listener)
-
+}
