@@ -94,15 +94,13 @@ class CoverCache(val context: Context) {
     }
 
     /**
-     * Clear out online covers until its under a certain size
+     * Clear out all online covers
      */
     fun deleteAllCachedCovers() {
         GlobalScope.launch(Dispatchers.IO) {
             val directory = onlineCoverDirectory
             val size = DiskUtil.getDirectorySize(directory)
-            if (size <= maxOnlineCacheSize) {
-                return@launch
-            }
+
             var deletedSize = 0L
             val files =
                 directory.listFiles()?.sortedBy { it.lastModified() }?.iterator() ?: return@launch

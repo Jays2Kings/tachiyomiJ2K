@@ -52,6 +52,8 @@ class SettingsAdvancedController : SettingsController() {
 
     private val coverCache: CoverCache by injectLazy()
 
+    private val downloadManager: DownloadManager by injectLazy()
+
     @SuppressLint("BatteryLife")
     override fun setupPreferenceScreen(screen: PreferenceScreen) = screen.apply {
         titleRes = R.string.advanced
@@ -101,6 +103,12 @@ class SettingsAdvancedController : SettingsController() {
                 summary = context.getString(R.string.used_, chapterCache.readableSize)
 
                 onClick { clearChapterCache() }
+            }
+
+            preference {
+                titleRes = R.string.force_download_cache_refresh
+                summaryRes = R.string.force_download_cache_refresh_summary
+                onClick { downloadManager.refreshCache() }
             }
 
             preference {
@@ -220,7 +228,6 @@ class SettingsAdvancedController : SettingsController() {
         job = GlobalScope.launch(Dispatchers.IO, CoroutineStart.DEFAULT) {
             val mangaList = db.getMangas().executeAsBlocking()
             val sourceManager: SourceManager = Injekt.get()
-            val downloadManager: DownloadManager = Injekt.get()
             val downloadProvider = DownloadProvider(activity!!)
             var foldersCleared = 0
             val sources = sourceManager.getOnlineSources()

@@ -118,6 +118,12 @@ class DownloadCache(
         }
     }
 
+    fun forceRenewCache() {
+        renew()
+        lastRenew = System.currentTimeMillis()
+    }
+
+
     /**
      * Renews the downloads cache.
      */

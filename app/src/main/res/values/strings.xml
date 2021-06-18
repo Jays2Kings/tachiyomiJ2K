@@ -668,6 +668,9 @@
 
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Clear chapter cache</string>
+    <string name="force_download_cache_refresh">Refresh the download cache</string>
+    <string name="force_download_cache_refresh_summary">This will force the download cache to recalculate.  Useful if you copied downloads outside of this app and want the app to pick them up</string>
+
     <string name="data_management">Data Management</string>
     <string name="crash_logs">Crash logs</string>
     <string name="dump_crash_logs">Dump crash logs</string>
