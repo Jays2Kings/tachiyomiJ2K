@@ -43,9 +43,24 @@
             android:src="@drawable/ic_label_outline_24dp"
             app:tint="?attr/colorOnAccent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/down_category"
+            app:layout_constraintEnd_toStartOf="@id/random_button"
             app:layout_constraintStart_toEndOf="@id/up_category"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/random_button"
+            style="@style/Theme.Widget.ImageBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:contentDescription="@string/categories"
+            android:padding="8dp"
+            android:src="@drawable/ic_dice_outline_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/down_category"
+            app:layout_constraintStart_toEndOf="@id/category_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorOnAccent" />
 
         <ImageButton
             android:id="@+id/down_category"
@@ -59,7 +74,7 @@
             app:tint="?attr/colorOnAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/category_button"
+            app:layout_constraintStart_toEndOf="@id/random_button"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

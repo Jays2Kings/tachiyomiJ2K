@@ -671,6 +671,13 @@ class LibraryController(
             }.show()
         }
 
+        binding.roundedCategoryHopper.randomButton.setOnClickListener {
+            val items = adapter.currentItems.filter { (it is LibraryItem && !it.manga.isBlank() && !it.manga.isHidden() && (!it.manga.initialized || it.manga.unread > 0)) }
+            if (items.isNotEmpty()) {
+                val item = items.random() as LibraryItem
+                openManga(item.manga)
+            }
+        }
         binding.roundedCategoryHopper.categoryButton.setOnLongClickListener {
             when (preferences.hopperLongPressAction().get()) {
                 3 -> showGroupOptions()
