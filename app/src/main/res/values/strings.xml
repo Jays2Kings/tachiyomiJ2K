@@ -219,6 +219,8 @@
     <string name="certain_buttons_can_be_found">Certain buttons can be found in other places if disabled here</string>
     <string name="search_suggestions">Search suggestions</string>
     <string name="search_tips_show_periodically">Search tips will show up periodically. Long press the suggestion to search it.</string>
+    <string name="random_manga">Random Manga</string>
+    <string name="add_button_random_manga">Add a button to the category hopper to select a random manga (from currently visible category).</string>
 
     <!-- Recents -->
     <string name="recents">Recents</string>

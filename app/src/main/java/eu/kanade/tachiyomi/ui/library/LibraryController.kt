@@ -708,7 +708,7 @@ class LibraryController(
 
         val gestureDetector = GestureDetectorCompat(activity, LibraryGestureDetector(this))
         with(binding.roundedCategoryHopper) {
-            listOf(categoryHopperLayout, upCategory, downCategory, categoryButton).forEach {
+            listOf(categoryHopperLayout, upCategory, downCategory, categoryButton, randomButton).forEach {
                 it.setOnTouchListener { _, event ->
                     if (event?.action == MotionEvent.ACTION_DOWN) {
                         animatorSet?.end()
@@ -999,6 +999,7 @@ class LibraryController(
         }
 
         binding.categoryHopperFrame.isVisible = !singleCategory && !preferences.hideHopper().get()
+        binding.roundedCategoryHopper.randomButton.isVisible = preferences.randomManga().getOrDefault()
         adapter.isLongPressDragEnabled = canDrag()
         binding.categoryRecycler.setCategories(presenter.categories)
         with(binding.filterBottomSheet.root) {
