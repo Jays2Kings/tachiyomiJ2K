@@ -438,6 +438,14 @@ class LibraryController(
         filterTooltip?.show()
     }
 
+    private fun openRandomManga() {
+        val items = adapter.currentItems.filter { (it is LibraryItem && !it.manga.isBlank() && !it.manga.isHidden() && (!it.manga.initialized || it.manga.unread > 0)) }
+        if (items.isNotEmpty()) {
+            val item = items.random() as LibraryItem
+            openManga(item.manga)
+        }
+    }
+
     private fun showGroupOptions() {
         val groupItems = mutableListOf(BY_DEFAULT, BY_TAG, BY_SOURCE, BY_STATUS)
         if (presenter.isLoggedIntoTracking) {
@@ -671,15 +679,9 @@ class LibraryController(
             }.show()
         }
 
-        binding.roundedCategoryHopper.randomButton.setOnClickListener {
-            val items = adapter.currentItems.filter { (it is LibraryItem && !it.manga.isBlank() && !it.manga.isHidden() && (!it.manga.initialized || it.manga.unread > 0)) }
-            if (items.isNotEmpty()) {
-                val item = items.random() as LibraryItem
-                openManga(item.manga)
-            }
-        }
         binding.roundedCategoryHopper.categoryButton.setOnLongClickListener {
             when (preferences.hopperLongPressAction().get()) {
+                4 -> openRandomManga()
                 3 -> showGroupOptions()
                 2 -> showDisplayOptions()
                 1 -> if (canCollapseOrExpandCategory() != null) presenter.toggleAllCategoryVisibility()
@@ -708,7 +710,7 @@ class LibraryController(
 
         val gestureDetector = GestureDetectorCompat(activity, LibraryGestureDetector(this))
         with(binding.roundedCategoryHopper) {
-            listOf(categoryHopperLayout, upCategory, downCategory, categoryButton, randomButton).forEach {
+            listOf(categoryHopperLayout, upCategory, downCategory, categoryButton).forEach {
                 it.setOnTouchListener { _, event ->
                     if (event?.action == MotionEvent.ACTION_DOWN) {
                         animatorSet?.end()
@@ -999,7 +1001,6 @@ class LibraryController(
         }
 
         binding.categoryHopperFrame.isVisible = !singleCategory && !preferences.hideHopper().get()
-        binding.roundedCategoryHopper.randomButton.isVisible = preferences.randomManga().getOrDefault()
         adapter.isLongPressDragEnabled = canDrag()
         binding.categoryRecycler.setCategories(presenter.categories)
         with(binding.filterBottomSheet.root) {

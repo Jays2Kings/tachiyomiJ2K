@@ -133,6 +133,7 @@
     <string name="always_show_current_category">Always show current category</string>
     <string name="category_hopper_long_press">Category hopper long-press action</string>
     <string name="expand_collapse_all_categories">Expand/collapse all categories</string>
+    <string name="open_random_manga">Open a random Manga</string>
     <string name="expand_all_categories">Expand all categories</string>
     <string name="collapse_all_categories">Collapse all categories</string>
     <string name="reorder_filters">Reorder filters</string>
@@ -219,8 +220,6 @@
     <string name="certain_buttons_can_be_found">Certain buttons can be found in other places if disabled here</string>
     <string name="search_suggestions">Search suggestions</string>
     <string name="search_tips_show_periodically">Search tips will show up periodically. Long press the suggestion to search it.</string>
-    <string name="random_manga">Random Manga</string>
-    <string name="add_button_random_manga">Add a button to the category hopper to select a random manga (from currently visible category).</string>
 
     <!-- Recents -->
     <string name="recents">Recents</string>

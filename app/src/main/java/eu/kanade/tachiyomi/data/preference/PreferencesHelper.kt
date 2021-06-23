@@ -314,8 +314,6 @@ class PreferencesHelper(val context: Context) {
 
     fun removeArticles() = rxPrefs.getBoolean(Keys.removeArticles, false)
 
-    fun randomManga() = rxPrefs.getBoolean(Keys.randomManga, false)
-
     fun migrateFlags() = rxPrefs.getInteger("migrate_flags", Int.MAX_VALUE)
 
     fun trustedSignatures() = rxPrefs.getStringSet("trusted_signatures", emptySet())

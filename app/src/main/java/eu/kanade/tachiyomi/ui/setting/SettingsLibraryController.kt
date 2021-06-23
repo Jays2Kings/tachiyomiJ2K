@@ -50,13 +50,6 @@ class SettingsLibraryController : SettingsController() {
                 }
             }
 
-            switchPreference {
-                key = Keys.randomManga
-                titleRes = R.string.random_manga
-                summaryRes = R.string.add_button_random_manga
-                defaultValue = false
-            }
-
             preference {
                 key = "library_display_options"
                 isPersistent = false

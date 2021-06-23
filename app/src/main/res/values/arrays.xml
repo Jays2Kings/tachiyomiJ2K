@@ -22,6 +22,7 @@
         <item>@string/expand_collapse_all_categories</item>
         <item>@string/display_options</item>
         <item>@string/group_library_by</item>
+        <item>@string/open_random_manga</item>
     </string-array>
 
     <string-array name="hide_hopper">

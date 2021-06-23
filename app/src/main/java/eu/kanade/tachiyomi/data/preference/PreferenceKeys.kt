@@ -180,8 +180,6 @@ object PreferenceKeys {
 
     const val removeArticles = "remove_articles"
 
-    const val randomManga = "random_manga"
-
     const val skipPreMigration = "skip_pre_migration"
 
     const val refreshCoversToo = "refresh_covers_too"
