@@ -558,10 +558,7 @@
     <string name="myanimelist_relogin">দয়া করে MAL এ আবার লগইন করুন</string>
     <string name="search_settings">সেটিংসে খুঁজুন</string>
     <string name="locale">স্থানীয়</string>
-    <string name="create_legacy_backup">উত্তরাধিকার এর ব্যাকআপ তৈরি করা</string>
-    <string name="can_be_used_in_older_tachi">পুরাতন তাচ্চিওমির ভার্সন গুলোতে ব্যবহার করা যাবে</string>
     <string name="automatic_backups">স্বয়ংক্রিয় ব্যাকআপ</string>
-    <string name="also_create_legacy_backup">লিগ্যাসি ব্যাকআপও তৈরি করুন</string>
     <string name="invalid_backup_file">ব্যাকআপ ফাইল গ্রহণযোগ্য নয়</string>
     <string name="invalid_backup_file_type">অকার্যকর ব্যাকআপ ফাইল ধরণ: %1$s
 \nএটা .proto.gz বা .json দিয়ে শেষ হওয়া উচিত।</string>

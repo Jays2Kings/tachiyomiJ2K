@@ -385,7 +385,7 @@
     <string name="recents">Nieuwste</string>
     <string name="show_notification_error">Laat een notificatie zien bij fouten</string>
     <string name="auto_refresh_covers_summary">Omslagen in bibliotheek ook verversen bij het bijwerken van de bibliotheek</string>
-    <string name="auto_refresh_covers">Automatisch omslagen verversen</string>
+    <string name="auto_refresh_covers">Omslagen automatisch vernieuwen</string>
     <string name="include_in_global_update">Meenemen in globale update</string>
     <string name="when_sorting_ignore_articles">Bij het alfabetisch sorteren, negeer Engelse lidwoorden (a, an, the) aan het begin van mangatitels</string>
     <string name="sort_by_ignoring_articles">Lidwoorden negeren bij sorteren</string>
@@ -571,7 +571,7 @@
 \n
 \nDownloads van deze hoofdstukken verwijderen\?</item>
     </plurals>
-    <string name="error_sharing_cover">Fout bij het delen van omslag</string>
+    <string name="error_sharing_cover">Fout bij delen van omslag</string>
     <string name="error_saving_cover">Fout bij opslaan van omslag</string>
     <string name="cover_saved">Omslag opgeslagen</string>
     <string name="source_not_installed">Bron niet geïnstalleerd</string>
@@ -653,10 +653,7 @@
     <string name="animate_page_transitions">Animeer pagina-overgangen</string>
     <string name="search_settings">Zoekinstellingen</string>
     <string name="locale">Landinstelling</string>
-    <string name="create_legacy_backup">Verourderde back-up maken</string>
-    <string name="can_be_used_in_older_tachi">Kan gebruikt worden in oudere versies van Tachiyomi</string>
     <string name="automatic_backups">Automatische backups</string>
-    <string name="also_create_legacy_backup">Maak ook een verouderde backup</string>
     <string name="invalid_backup_file">Ongeldig backupbestand</string>
     <string name="invalid_backup_file_type">Ongeldig type back-upbestand: %1$s
 \nDe bestandsnaam moet eindigen op .proto.gz of .json.</string>
@@ -771,7 +768,6 @@
     <string name="move_x_to">Verplaats %1$s naar…</string>
     <string name="hide_app_block_screenshots">Verberg inhoud van app bij omschakelen tussen apps en blokkeer screenshots</string>
     <string name="follow_system_theme">Volg systeemthema</string>
-    <string name="black_and_red">Zwart en Rood</string>
     <string name="spring_blossom">Lentebloesem</string>
     <string name="midnight_dusk">Nachtschemering</string>
     <string name="label_global_search">Globaal zoeken</string>
@@ -835,6 +831,5 @@
     <string name="mark_range_as_unread">Markeer een reeks hoofdstukken als ongelezen</string>
     <string name="mark_range_as_read">Markeer een reeks hoofstukken als gelezen</string>
     <string name="cancel_all_for_series">Alles annuleren voor deze serie</string>
-    <string name="show_recent_in_shortcuts">Toon recente bronnen en series in app-snelkoppelingen</string>
     <string name="app_shortcuts">App-snelkoppelingen</string>
 </resources>

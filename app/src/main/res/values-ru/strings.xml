@@ -23,8 +23,8 @@
     <string name="mark_previous_as_read">Отметить предыдущие главы как \"Прочитано\"</string>
     <string name="migrate_now">Мигрировать сейчас</string>
     <string name="move_to_categories">Поместить в категории</string>
-    <string name="move_to_bottom">К концу</string>
-    <string name="move_to_top">К началу</string>
+    <string name="move_to_bottom">В конец</string>
+    <string name="move_to_top">В начало</string>
     <string name="newest">Новейшее</string>
     <string name="oldest">Старейшее</string>
     <string name="open_in_browser">Открыть в браузере</string>
@@ -457,14 +457,14 @@
     <string name="no_matches_for_filters">Не найдено совпадений для ваших текущих фильтров</string>
     <string name="show_all_categories">Показать все категории</string>
     <string name="always_show_current_category">Всегда показывать текущую категорию</string>
-    <string name="expand_all_categories">Развернуть все категории</string>
-    <string name="collapse_all_categories">Свернуть все категории</string>
+    <string name="expand_all_categories">Развернуть категории</string>
+    <string name="collapse_all_categories">Свернуть категории</string>
     <string name="reorder_filters">Переупорядочить фильтры</string>
     <string name="_unread">%d непрочитано</string>
     <string name="search_globally">Поиск \"%1$s\" глобально</string>
     <string name="read_progress">Прогресс чтения</string>
     <string name="series_type">Тип серии</string>
-    <string name="group_library_by">Группировать библиотеку по…</string>
+    <string name="group_library_by">Группировать по…</string>
     <string name="tracking_status">Статус отслеживания</string>
     <string name="ungrouped">Не группировать</string>
     <!-- Library Sort -->
@@ -524,7 +524,7 @@
     <string name="reduces_banding_impacts_performance">Уменьшает полосатость, но влияет на производительность</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Постранично</string>
-    <string name="enable_zoom_out">Включить приближение</string>
+    <string name="enable_zoom_out">Включить уменьшение масштаба</string>
     <string name="continuous_vertical">Непрерывно вертикально</string>
     <string name="always_show_chapter_transition">Всегда показывать переход между главами</string>
     <string name="if_disabled_transition_will_skip">Если отключено, страница перехода будет пропущена, если загружена следующая глава</string>
@@ -551,10 +551,10 @@
     <string name="select_ending_chapter">Выберите конечную главу</string>
     <string name="search_chapters">Поиск глав</string>
     <string name="next_unread_chapter">Следующая непрочитанная глава</string>
-    <string name="next_5_unread">Следующие 5 непрочитанных глав</string>
+    <string name="next_5_unread">Следующие 5 глав</string>
     <string name="all_chapters">Все главы</string>
-    <string name="all_unread_chapters">Все непрочитанные главы</string>
-    <string name="custom_range">Другое количество</string>
+    <string name="all_unread_chapters">Непрочитанные</string>
+    <string name="custom_range">Другое кол-во</string>
     <string name="all_read_chapters">Все прочитанные главы</string>
     <string name="all_but_bookmarked_chapters">Все главы, кроме добавленных в закладки</string>
     <string name="add_x_to_library">Добавить %1$s в библиотеку\?</string>
@@ -729,10 +729,7 @@
     <string name="myanimelist_relogin">Пожалуйста, войдите в MAL снова</string>
     <string name="search_settings">Настройки поиска</string>
     <string name="locale">Региональные настройки</string>
-    <string name="create_legacy_backup">Создать резервную копию старого формата</string>
-    <string name="can_be_used_in_older_tachi">Может быть использован в предыдущих версиях Tachiyomi</string>
     <string name="automatic_backups">Автоматические резервные копии</string>
-    <string name="also_create_legacy_backup">Также создавать резервную копию старого формата</string>
     <string name="invalid_backup_file">Неверный файл резервной копии</string>
     <string name="invalid_backup_file_type">Неверный тип файла резервной копии: %1$s
 \nФайл должен заканчиваться на .proto.gz или .json.</string>
@@ -801,7 +798,7 @@
     <string name="move_x_to">Переместить %1$s в…</string>
     <string name="selection">Выбор</string>
     <string name="preview">Предосмотр</string>
-    <string name="move_to_">Перейти к %1$s</string>
+    <string name="move_to_">Переместить в %1$s</string>
     <string name="change">Изменить</string>
     <string name="beta">БЕТА</string>
     <string name="added_to_">Добавлено в %1$s</string>
@@ -813,8 +810,8 @@
         <item quantity="other">%1$d страниц</item>
     </plurals>
     <string name="automatic_orientation">Автоматически (на основе ориентации)</string>
-    <string name="automatic_can_still_switch">При использовании автоматической схемы страниц, вы всё ещё можете переключиться между схемами, когда читаете, без переопределения этой настройки</string>
-    <string name="page_layout">Схема страниц</string>
+    <string name="automatic_can_still_switch">При использовании автоматической разметки страниц, вы всё ещё можете переключиться между разметками, когда читаете, без переопределения этой настройки</string>
+    <string name="page_layout">Разметка страниц</string>
     <string name="switch_to_single">Переключиться на одну страницу</string>
     <string name="switch_to_double">Переключиться на двойные страницы</string>
     <string name="single_page">Одна страница</string>
@@ -841,7 +838,6 @@
     <string name="cutout_behavior_only_applies">Поведение вырезанной области только применяется в портретном режиме с определёнными типами масштабирования</string>
     <string name="hide_app_block_screenshots">Скрывать содержимое приложения при переключении на другие приложения а также блокировать скриншоты</string>
     <string name="follow_system_theme">В соответствии с системой темой</string>
-    <string name="black_and_red">Чёрный и Красный</string>
     <string name="spring_blossom">Весенний Цветок</string>
     <string name="midnight_dusk">Полночные Сумерки</string>
     <string name="flat_lime">Плоский Лайм</string>
@@ -880,7 +876,7 @@
     <string name="expand_collapse_all_categories">Развернуть/Свернуть все категории</string>
     <string name="category_hopper_long_press">Поведение переключателя категорий при долгом нажатий</string>
     <string name="no_pages_found">Страницы не найдены</string>
-    <string name="search_">Поиск \"%1$s\"</string>
+    <string name="search_">Поиск %1$s</string>
     <string name="group_chapters_together">Группировать главы вместе</string>
     <string name="show_updated_time">Показать время обновления</string>
     <string name="fetched_">Получено %1$s</string>
@@ -904,7 +900,6 @@
     <string name="search_suggestions">Поисковые предложения</string>
     <string name="mark_range_as_unread">Отметить определённое количество глав как \"Не прочитано\"</string>
     <string name="mark_range_as_read">Отметить определённое количество глав как \"Прочитано\"</string>
-    <string name="cancel_all_for_series">Отменить всё для этих серий</string>
-    <string name="show_recent_in_shortcuts">Показывать недавние источники и серии, в ярлыках приложения</string>
+    <string name="cancel_all_for_series">Отменить всё для этой серии</string>
     <string name="app_shortcuts">Ярлыки приложения</string>
 </resources>

@@ -16,7 +16,7 @@
     <string name="filter">Filtre</string>
     <string name="downloaded">Descărcate</string>
     <string name="bookmarked">Marcate</string>
-    <string name="unread">Necitite</string>
+    <string name="unread">Necitit</string>
     <string name="read">Citite</string>
     <string name="alphabetically">Alfabetic</string>
     <string name="total_chapters">Capitole totale</string>
@@ -373,10 +373,7 @@
     <string name="myanimelist_relogin">Te rugăm să te loghezi la MAL din nou</string>
     <string name="search_settings">Setări de căutare</string>
     <string name="locale">Local</string>
-    <string name="create_legacy_backup">Crează copie de rezervă de moștenire</string>
-    <string name="can_be_used_in_older_tachi">Poate fi utilizat în versiuni mai vechi de Tachiyomi</string>
     <string name="automatic_backups">Copii de rezervă create automat</string>
-    <string name="also_create_legacy_backup">De asemenea, creați copii de rezervă de moștenire</string>
     <string name="invalid_backup_file">Fișierul de rezerva este invalid</string>
     <string name="file_is_missing_data">Lipsesc date din fișier.</string>
     <string name="backup_has_no_manga">Copia de rezerva nu conține nici o manga.</string>
@@ -729,4 +726,7 @@
     <string name="not_downloaded">Fără descărcare</string>
     <string name="downloading_">Se descarcă: %1$s</string>
     <string name="label_global_search">Caută global</string>
+    <string name="shift_double_pages">Schimbați paginile duble</string>
+    <string name="landscape">Peisaj</string>
+    <string name="portrait">Portret</string>
 </resources>

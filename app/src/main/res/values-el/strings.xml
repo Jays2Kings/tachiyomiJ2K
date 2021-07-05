@@ -453,7 +453,7 @@
         <item quantity="one">Διαγραφή %1$d κατεβασμένου κεφαλαίου;</item>
         <item quantity="other">Διαγραφή %1$d κατεβασμένων κεφαλαίων;</item>
     </plurals>
-    <string name="chapter_not_found">Το κεφάλαιο δεν βρέθηκε</string>
+    <string name="chapter_not_found">Το κεφάλαιο δε βρέθηκε</string>
     <string name="chapters_removed">Κεφάλαια που αφαιρέθηκαν.</string>
     <string name="removed_bookmark">Καταργήθηκε ο σελιδοδείκτης</string>
     <string name="marked_as_unread">Σημειώθηκε ως αδιάβαστο</string>
@@ -498,10 +498,7 @@
     <string name="animate_page_transitions">Ζωντανή μετάβαση σελίδας</string>
     <string name="search_settings">Αναζήτηση ρυθμίσεων</string>
     <string name="locale">Περιοχή</string>
-    <string name="create_legacy_backup">Δημιουργία αντιγράφου ασφαλείας παλαιού τύπου</string>
-    <string name="can_be_used_in_older_tachi">Μπορεί να χρησιμοποιηθεί σε παλαιότερες εκδόσεις του Tachiyomi</string>
     <string name="automatic_backups">Αυτόματα αντίγραφα ασφαλείας</string>
-    <string name="also_create_legacy_backup">Επίσης, δημιουργία αντιγράφου ασφαλείας παλαιού τύπου</string>
     <string name="invalid_backup_file">Μη έγκυρο αρχείο αντιγράφου ασφαλείας</string>
     <string name="invalid_backup_file_type">Μη έγκυρος τύπος αρχείου αντιγράφου ασφαλείας: %1$s
 \nΘα πρέπει να τελειώνει με .proto.gz ή .json.</string>
@@ -626,7 +623,6 @@
     <string name="last_used_library_recents">Τελευταία χρήση (Βιβλιοθήκη ή Πρόσφατα)</string>
     <string name="flat_lime">Επίπεδο Μοσχολέμονο</string>
     <string name="hot_pink">Καυτό ροζ</string>
-    <string name="black_and_red">Μαύρο και Κόκκινο</string>
     <string name="spring_blossom">Ανοιξιάτικο Άνθος</string>
     <string name="midnight_dusk">Μεταμεσονύκτιο σούρουπο</string>
     <string name="pauses_reading_history">Παύει το ιστορικό ανάγνωσης</string>
@@ -835,6 +831,5 @@
     <string name="mark_range_as_unread">Σήμανση μιας σειράς κεφαλαίων ως αδιάβαστα</string>
     <string name="mark_range_as_read">Σήμανση μιας σειράς κεφαλαίων ως αναγνωσμένα</string>
     <string name="cancel_all_for_series">Ακύρωση όλων για αυτήν τη σειρά</string>
-    <string name="show_recent_in_shortcuts">Εμφάνιση πρόσφατων πηγών και σειρών στις συντομεύσεις εφαρμογής</string>
     <string name="app_shortcuts">Συντομεύσεις εφαρμογής</string>
 </resources>

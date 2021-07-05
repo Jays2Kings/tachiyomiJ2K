@@ -298,4 +298,16 @@
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhwa</string>
     <string name="label_global_search">Globális keresés</string>
+    <string name="untrusted_extension_message">Ezt a kiterjesztést nem megbízható tanúsítvánnyal írták alá, és nem lett aktiválva.
+\n
+\nEgy rosszindulatú kiterjesztés elolvashatja a Tachiyomiban tárolt bejelentkezési adatokat, vagy tetszőleges kódot futtathat.
+\n
+\nAz ebben a tanúsítványban való megbízással, elfogadja ezeket a kockázatokat.</string>
+    <string name="none">Semmi</string>
+    <string name="secure_screen">Biztonságos képernyő</string>
+    <string name="lock_when_idle">Zárás tétlen állapotban</string>
+    <string name="logout">Kijelentkezés</string>
+    <string name="browse">Böngészés</string>
+    <string name="cancel_all_for_series">Mégse az összesre a sorozatból</string>
+    <string name="webtoon_side_padding_0">Semmi</string>
 </resources>

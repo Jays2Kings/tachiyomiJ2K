@@ -196,7 +196,7 @@
     <string name="sources">Fontes</string>
     <string name="source_hidden">Fonte oculta</string>
     <string name="last_used">Usado por último</string>
-    <string name="local_source_help_guide">Guia para a fonte local</string>
+    <string name="local_source_help_guide">Guia sobre a fonte local</string>
     <string name="check_site_in_web">Verifique o site no WebView</string>
     <!-- Other Screens -->
     <!-- Extensions -->
@@ -705,10 +705,7 @@
     <string name="badges">Selos</string>
     <string name="search_settings">Pesquisar configurações</string>
     <string name="locale">Localidade</string>
-    <string name="create_legacy_backup">Criar backup legado</string>
-    <string name="can_be_used_in_older_tachi">Pode ser usado em versões antigas do Tachiyomi</string>
     <string name="automatic_backups">Backups automáticos</string>
-    <string name="also_create_legacy_backup">Também criar um backup legado</string>
     <string name="invalid_backup_file">Arquivo de backup inválido</string>
     <string name="invalid_backup_file_type">Tipo de arquivo de backup inválido: %1$s
 \nO arquivo deve terminar com .proto.gz ou .json.</string>
@@ -801,7 +798,6 @@
     <string name="last_used_library_recents">Último usado (Biblioteca ou Recentes)</string>
     <string name="flat_lime">Giz de Lima</string>
     <string name="hot_pink">Rosa Choque</string>
-    <string name="black_and_red">Preto &amp; Vermelho</string>
     <string name="spring_blossom">Flor da Primavera</string>
     <string name="midnight_dusk">Aurora-da-noite</string>
     <string name="pauses_reading_history">Pausa o histórico de leitura</string>
@@ -882,7 +878,6 @@
     <string name="release_page">Página de lançamento</string>
     <string name="mark_range_as_unread">Marcar um intervalo de capítulos como não lido</string>
     <string name="mark_range_as_read">Marcar um intervalo de capítulos como lido</string>
-    <string name="cancel_all_for_series">Cancelar tudo para esta série</string>
-    <string name="show_recent_in_shortcuts">Mostrar fontes e séries recentes nos atalhos do app</string>
+    <string name="cancel_all_for_series">Cancelar todos para esta série</string>
     <string name="app_shortcuts">Atalhos do app</string>
 </resources>

@@ -422,10 +422,7 @@
     <string name="right_and_left_nav">右と左</string>
     <string name="invert_tapping">タップでのページめくりを反転</string>
     <string name="none">なし</string>
-    <string name="create_legacy_backup">レガシーバックアップを作成</string>
-    <string name="can_be_used_in_older_tachi">古いバージョンのTachiyomiで利用可能</string>
     <string name="automatic_backups">自動バックアップ</string>
-    <string name="also_create_legacy_backup">同じくレガシーバックアップを作成</string>
     <string name="invalid_backup_file">バックアップファイルは無効です</string>
     <string name="invalid_backup_file_type">無効なバックアップ ファイル：%1$s
 \nファイル拡張子は.proto.gzもしくは.jsonであるよう確認してください。</string>
@@ -491,7 +488,6 @@
     <string name="white_theme">ピュアホワイト</string>
     <string name="flat_lime">フラットライム</string>
     <string name="hot_pink">ホットピンク</string>
-    <string name="black_and_red">ブラックレッド</string>
     <string name="spring_blossom">スプリングブロッサム</string>
     <string name="hides_on_scroll">スクロール中に隠す</string>
     <string name="hide_bottom_nav">ナビゲーションバーを自動的に隠す</string>
@@ -563,7 +559,7 @@
     <string name="show_updated_time">更新時間を表示</string>
     <string name="all_sources">全てのソース</string>
     <string name="extension_updates">拡張機能の更新</string>
-    <string name="cover_saved">カバーを保存しました</string>
+    <string name="cover_saved">表紙を保存しました</string>
     <string name="share_second_page">2ページ目をシェア</string>
     <string name="set_second_page_as_cover">2ページ目をカバーとして設定</string>
     <string name="save_second_page">2ページ目を保存</string>
@@ -692,8 +688,8 @@
     <string name="sort_by_source_s_order">ソースの並び順</string>
     <string name="sort_by_chapter_number">章の番号順</string>
     <string name="remember_this_choice">この選択を記憶する</string>
-    <string name="error_sharing_cover">カバーの共有エラー</string>
-    <string name="error_saving_cover">カバーの保存エラー</string>
+    <string name="error_sharing_cover">表紙を共有できませんでした</string>
+    <string name="error_saving_cover">表紙を保存できませんでした</string>
     <string name="incognito_mode">シークレットモード</string>
     <string name="midnight_dusk">ミッドナイトダスク</string>
     <string name="pressing_back_to_start">戻るボタンを押してスタート画面に戻る</string>
@@ -723,7 +719,7 @@
     <string name="this_will_remove_the_read_date_for_x_question">「%1$s」の読書日時を本当に削除してもよろしいですか？</string>
     <string name="newly_added">最近追加された</string>
     <string name="can_be_found_in_library_filters">ライブラリのフィルターを展開して見つけることもできます</string>
-    <string name="delete_old_covers_in_library_used_">ライブラリの更新後に不要になったマンガの古いカバーを削除します。
+    <string name="delete_old_covers_in_library_used_">ライブラリの更新後に不要になった漫画の古いカバーを削除します。
 \n現在使用中：%1$s</string>
     <string name="webview_is_required">TachiyomiにはWebViewが必要です</string>
     <string name="you_can_migrate_in_library">ライブラリでマンガを選択して移行することもできます</string>
@@ -802,4 +798,8 @@
     <string name="start_past_cutout">カットアウト領域外から描画</string>
     <string name="migrating_to">移行先</string>
     <string name="not_tracked">未追跡</string>
+    <string name="app_shortcuts">アプリショートカット</string>
+    <string name="mark_range_as_unread">選択範囲の章を未読にする</string>
+    <string name="mark_range_as_read">選択範囲の章を既読にする</string>
+    <string name="cancel_all_for_series">このシリーズの全項目をキャンセル</string>
 </resources>

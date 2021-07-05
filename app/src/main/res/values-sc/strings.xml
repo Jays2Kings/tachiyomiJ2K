@@ -639,10 +639,7 @@
     <string name="myanimelist_relogin">Pro praghere torra a intrare in MAL</string>
     <string name="search_settings">Impostatziones de chirca</string>
     <string name="locale">Limba</string>
-    <string name="create_legacy_backup">Crea una còpia de seguresa de casta betza</string>
-    <string name="can_be_used_in_older_tachi">Podet èssere impreada in versiones prus betzas de Tachiyomi</string>
     <string name="automatic_backups">Còpias de seguresa automàticas</string>
-    <string name="also_create_legacy_backup">Crea fintzas una còpia de seguresa de casta betza</string>
     <string name="invalid_backup_file">Documentu de sa còpia de seguresa non vàlidu</string>
     <string name="invalid_backup_file_type">Casta de documentu de còpia de seguresa non vàlidu: %1$s
 \nDiat dèpere acabbare cun .proto.gz o .json.</string>
@@ -734,7 +731,6 @@
     <string name="add_to_">Annanghe a %1$s</string>
     <string name="pressing_back_to_start">Incarca \"in segus\" pro torrare a s\'ischermada de incumintzu</string>
     <string name="follow_system_theme">Sighi su tema de su sistema</string>
-    <string name="black_and_red">Nieddu e ruju</string>
     <string name="spring_blossom">Froridura de beranu</string>
     <string name="midnight_dusk">Intrinada de mesanote</string>
     <plurals name="pages_plural">
@@ -835,6 +831,5 @@
     <string name="mark_range_as_unread">Marca un\'intervallu de capìtulos comente non lèghidos</string>
     <string name="mark_range_as_read">Marca un\'intervallu de capìtulos comente lèghidos</string>
     <string name="cancel_all_for_series">Annulla totu pro custa sèrie</string>
-    <string name="show_recent_in_shortcuts">Ammustra sas mitzas e sas sèries reghentes in sas incurtzadas de s\'aplicatzione</string>
     <string name="app_shortcuts">Incurtzadas de s\'aplicatzione</string>
 </resources>

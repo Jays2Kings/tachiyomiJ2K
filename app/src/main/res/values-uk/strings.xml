@@ -16,7 +16,7 @@
     <string name="filter">Фільтр</string>
     <string name="downloaded">Завантажені</string>
     <string name="bookmarked">Закладки</string>
-    <string name="unread">Непрочитані</string>
+    <string name="unread">Не прочитано</string>
     <string name="read">Читати</string>
     <string name="alphabetically">В алфавітному порядку</string>
     <string name="total_chapters">За кількістю глав</string>
@@ -497,8 +497,8 @@
     <string name="currently_reading">Зараз читається</string>
     <string name="not_tracked">Не відстежується</string>
     <string name="tracked">Відстежуване</string>
-    <string name="error_sharing_cover">Помилка шарингу обкладинки</string>
-    <string name="error_saving_cover">Помилка збереження обкладинки</string>
+    <string name="error_sharing_cover">Помилка відправлення обкладинки</string>
+    <string name="error_saving_cover">Помилка при збереженні обкладинки</string>
     <string name="cover_saved">Обкладинку збережено</string>
     <string name="source_not_installed">Джерело не встановлено</string>
     <string name="remember_this_choice">Запам`ятати цей вибір</string>
@@ -685,10 +685,7 @@
     <string name="right_and_left_nav">Праворуч та ліворуч</string>
     <string name="invert_tapping">Інвертувати тицяння</string>
     <string name="none">Ніхто</string>
-    <string name="create_legacy_backup">Створити сумісну резервну копію</string>
-    <string name="can_be_used_in_older_tachi">Може бути використано в старіших версіях Tachiyomi</string>
     <string name="automatic_backups">Автоматичне резервування</string>
-    <string name="also_create_legacy_backup">Також створювати сумісну копію</string>
     <string name="invalid_backup_file">Невірний файл бекапу</string>
     <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
 \nЙого розширення повинне бути .proto.gz or .json.</string>
@@ -727,4 +724,5 @@
     <string name="updated_to_">Оновлено до v%1$s</string>
     <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
     <string name="label_global_search">Глобальний пошук</string>
+    <string name="cancel_all_for_series">Відмінити для усієї серії</string>
 </resources>

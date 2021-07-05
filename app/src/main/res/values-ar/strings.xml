@@ -13,7 +13,7 @@
     <string name="filter">المُرشح</string>
     <string name="downloaded">تم التنزيل</string>
     <string name="bookmarked">المحفوظة</string>
-    <string name="unread">غير مقروءة</string>
+    <string name="unread">غير مقروء</string>
     <string name="read">المقروءة</string>
     <string name="alphabetically">أبجديا</string>
     <string name="total_chapters">كامل الفصول</string>
@@ -369,7 +369,7 @@
     <string name="_already_in_queue">%1$s موجود في قائمة الإنتظار بالفعل</string>
     <string name="adding_category_to_queue">إضافة %1$s إلى قائمة للتحديث</string>
     <plurals name="category_plural">
-        <item quantity="zero">الفئة</item>
+        <item quantity="zero">%dالفئة</item>
         <item quantity="one"/>
         <item quantity="two"/>
         <item quantity="few"/>
@@ -414,7 +414,7 @@
     <string name="already_in_category">مانغا بالفعل في الفئة</string>
     <string name="confirm_category_deletion_message">المانجا في هذه الفئة سوف تنتقل إلى الفئة الافتراضية.</string>
     <plurals name="pages_left">
-        <item quantity="zero">%1$d صفحة متبقية</item>
+        <item quantity="zero">%1$d لا توجد صفحات متبقية</item>
         <item quantity="one">%1$d صفحة متبقية</item>
         <item quantity="two">%1$d صفحتان متبقيتان</item>
         <item quantity="few">%1$d صفحات متبقية</item>
@@ -425,10 +425,10 @@
     <plurals name="deleted_chapters">
         <item quantity="zero">قد تم إزالة فصل من المصدر:
 \n%2$s
-\nهل تريد حذف تنزيله؟</item>
+\nهل تريد حذف تحميله؟</item>
         <item quantity="one">قد تم إزالة فصل من المصدر:
 \n%2$s
-\nهل تريد حذف تنزيله؟</item>
+\nهل تريد حذف تحميله؟</item>
         <item quantity="two">فصلان تم إزالتهما من المصدر:
 \n%2$s
 \n
@@ -615,9 +615,9 @@
     <string name="delete_old_covers_in_library_used_">حذف الأغلفة المخزنة مؤقتا القديمة و الغير مستخدمة الخاصة بالمانجا الموجودة في مكتبتك التى تم تحديثها.
 \nحاليا يتم استخدام: %1$s</string>
     <string name="clean_up_cached_covers">تنظيف الأغلفة المخزنة مؤقتًا</string>
-    <string name="error_sharing_cover">حدث خطأ اثناء مشاركة الغلاف</string>
-    <string name="error_saving_cover">حدث خطأ اثناء حفظ الغلاف</string>
-    <string name="cover_saved">تم حفظ الغلاف</string>
+    <string name="error_sharing_cover">فشل مشاركة الغطاء</string>
+    <string name="error_saving_cover">فشل حفظ الغطاء</string>
+    <string name="cover_saved">تم حفظ صورة الغطاء</string>
     <string name="reset_cover">إعادة تعيين الغلاف</string>
     <string name="auto_refresh_covers_summary">تحديث الغلافات في المكتبة أيضًا اثناء تحديث المكتبة</string>
     <string name="uniform_covers">غلافات موحدة</string>
@@ -665,8 +665,8 @@
     <string name="reorder_filters">إعادة ترتيب الترشيحات</string>
     <string name="next_page">صفحة التالية</string>
     <string name="previous_page">الصفحة سابقة</string>
-    <string name="next_chapter">صفحة التالية</string>
-    <string name="previous_chapter">الصفحة سابقة</string>
+    <string name="next_chapter">الفصل التالي</string>
+    <string name="previous_chapter">الفصل السابق</string>
     <string name="animate_page_transitions">مؤثرات الانتقال بين الصفحات</string>
     <string name="default_reading_mode">وضع القراءة الافتراضي</string>
     <string name="nav_layout">تخطيط التنقل</string>
@@ -689,10 +689,7 @@
     <string name="myanimelist_relogin">رجاء سجل دخولك في MAL مجدداً</string>
     <string name="search_settings">إعدادات البحث</string>
     <string name="locale">محلي</string>
-    <string name="create_legacy_backup">إنشاء نسخة احتياطية قديمة</string>
-    <string name="can_be_used_in_older_tachi">يمكن إستخدامه في الإصدارات القديمة من Tachiyomi</string>
     <string name="automatic_backups">النسخ الاحتياطيّة التلقائيّة</string>
-    <string name="also_create_legacy_backup">قم أيضًا بإنشاء نسخة إحتياطية قديمة</string>
     <string name="invalid_backup_file">ملف النسخ الاحتياطي غير صالح</string>
     <string name="invalid_backup_file_type">ملف النسخ الاحتياطي غير صالح: %1$s
 \nيجب أن ينتهي ب.proto.gz أو .json.</string>
@@ -706,12 +703,12 @@
     <string name="restoring_backup_canceled">تم الغاء الاستعادة</string>
     <string name="restore_duration">%02d دقيقة و %02d ثانية</string>
     <plurals name="restore_completed_message">
-        <item quantity="zero">تم في %1$s بدون أيّة أخطاءتم في %1$s ووجد خطأ واحدتم في %1$s ووجد اثنين من الأخطاءتم في %1$s ووجد %2$s من الأخطاءتم في %1$s ووجد %2$s من الأخطاءتم في %1$s ووجد %2$s من الأخطاء</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="zero">تم في %1$s مع %2$sأخطاء</item>
+        <item quantity="one">تم في %1$s ووجد خطأ واحد</item>
+        <item quantity="two">تم في %1$s ووجد اثنين من الأخطاء</item>
+        <item quantity="few">تم في %1$s ووجد %2$s من الأخطاء</item>
+        <item quantity="many">تم في %1$s ووجد %2$s من الأخطاء</item>
+        <item quantity="other">تم في %1$s ووجد %2$s من الأخطاء</item>
     </plurals>
     <string name="source_migration_guide">دليل ترحيل المصدر</string>
     <string name="nsfw_sources">محتوى +18</string>
@@ -733,4 +730,154 @@
 \nيتوجب تثبيت الإضافات المفقودة و تسجيل الدخول إلى منصات التعقب تالياً لاستعمالهم.</string>
     <string name="hide_app_block_screenshots">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
     <string name="label_global_search">بحث شامل</string>
+    <string name="disabled">معطل</string>
+    <string name="landscape">افقي</string>
+    <string name="portrait">رأسي</string>
+    <plurals name="chapters_plural">
+        <item quantity="zero">%1$d فصل</item>
+        <item quantity="one">فصل واحد</item>
+        <item quantity="two">فصلان</item>
+        <item quantity="few">1%$d فصول</item>
+        <item quantity="many">1%$d فصول</item>
+        <item quantity="other">1%$d فصول</item>
+    </plurals>
+    <string name="category">فئة</string>
+    <string name="new_category">فئة جديدة</string>
+    <string name="no_chapters_to_delete">لا توجد اية فصول للحذف</string>
+    <string name="remove_all_downloads">حذف جميع التحميلات؟</string>
+    <string name="no_pages_found">لا توجد اي صفحات</string>
+    <string name="add_x_to">اضف %1$s الى…</string>
+    <string name="move_x_to">انقل %1$s الى…</string>
+    <string name="unread_or_downloaded">غير المقروءة و المنزّلة</string>
+    <string name="only_downloaded">فقط المنزلّة</string>
+    <string name="only_unread">فقط غير المقروءة</string>
+    <string name="show_download_button">إظهار زر التنزيل</string>
+    <string name="press_and_hold_to_also_reset">اضغط باستمرار لإعادة تعيين سجل الفصل</string>
+    <string name="grouped">مجمّعة</string>
+    <string name="no_recent_read_updated_manga">لا توجد مانجا مقروءة أو مُحّدثة مؤخراً</string>
+    <string name="fetched_">تم تحديث:
+\n%1$s</string>
+    <string name="reset_chapter_history">إعادة تعيين تاريخ الفصل</string>
+    <string name="updates_and_history">التحديثات &amp; السجل</string>
+    <string name="search_tips_show_periodically">ستظهر نصائح البحث بشكل دوري. اضغط مطولاً على الاقتراح للبحث عنه.</string>
+    <string name="search_suggestions">اقتراحات البحث</string>
+    <string name="certain_buttons_can_be_found">يمكن العثور على أزرار معينة معطلة في أماكن أخرى هنا</string>
+    <string name="display_buttons_bottom_reader">الازرار آسفل الشاشة</string>
+    <string name="shift_double_pages">تحويل صفحتان</string>
+    <string name="shift_one_page_over">تحول صفحة واحدة</string>
+    <string name="show_unread_count">أظهر عدد غير المقروءة</string>
+    <string name="hide_unread_badges">أخف الشارات غير المقروءة</string>
+    <string name="show_unread_badges">أظهر الشارات غير المقروءة</string>
+    <string name="_per_row">%d كل صف</string>
+    <string name="grid_size">حجم الشبكة</string>
+    <string name="uniform_grid_covers">أغطية شبكية موحدة</string>
+    <string name="can_be_found_in_library_filters">يمكن العثور عليها أيضًا من خلال توسيع تصفيات المكتبة</string>
+    <string name="date_fetched">تاريخ التحديث</string>
+    <string name="series">السلاسل</string>
+    <string name="expand_collapse_all_categories">توسيع/طيّ كل الفئات</string>
+    <string name="category_hopper_long_press">وظيفة متنقل الصنف عند الضغط لفترة طويلة</string>
+    <string name="when_grouping_by_sources_tags">عند تجميع المكتبة حسب المصادر والحالة وغيرها.</string>
+    <string name="move_dynamic_to_bottom">نقل الفئات الديناميكية المطوية إلى الأسفل</string>
+    <string name="your_library">مكتبتك</string>
+    <string name="release_page">صفحة النشر</string>
+    <string name="category_cannot_be_blank">لا تتركها فارغاً</string>
+    <string name="add_edit_categories">ضفّ/عدّل الاصناف</string>
+    <string name="cancel_all_for_series">إلغاء الكل لهذه السلسلة</string>
+    <string name="add_to_">إضافة إلى%1$s</string>
+    <string name="added_to_">أُضيف إلى%1$s</string>
+    <string name="webview_is_required">نظام المتصفح مطلوب لتاتشيومي</string>
+    <string name="flat_lime">مسطح</string>
+    <string name="save_combined_pages">أحفظ الصفحات المجمعة</string>
+    <string name="share_combined_pages">شارك صفحات مجمعة</string>
+    <plurals name="manga_migrated">
+        <item quantity="zero">مانجا تم ترحيلها%d</item>
+        <item quantity="one"/>
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="automatic_removal">الحذف التلقائي</string>
+    <string name="pressing_back_to_start">الضغط للعودة لشاشة البداية</string>
+    <string name="changing_will_reset_reading_mode">تغيير هذا سيعيد قراءة تلك السلسلة</string>
+    <string name="change">تغيير</string>
+    <string name="reading_mode">وضع القراءة</string>
+    <string name="crop_borders_webtoon">أقتصاص الحدود (ويب توون)</string>
+    <string name="crop_borders_paged">أقتصاص الحدود (صفحات)</string>
+    <string name="couldnt_download_low_space">لا توجد مساحة كافية لتحميل الفصول</string>
+    <string name="suggested_date_">التاريخ المقترح:%1$s</string>
+    <string name="amount_of_pages_to_preload">عدد الصفحات التي يتم تحمليها بينما تقرأ، قيم أكبر ستسبب في تجربة أفضل للقراءة لكن ستكلف استخدام أكبر للإنترنت.</string>
+    <string name="backup_in_progress">أسترجع الذي يتم قرائته</string>
+    <string name="restore_in_progress">أسترجع الذي يتم قرائته</string>
+    <string name="share_second_page">شارك الصفحة الثانية</string>
+    <string name="set_second_page_as_cover">عين الصفحة الثانية كغلاف</string>
+    <string name="save_first_page">أحفظ الصفحة الأولى</string>
+    <string name="share_first_page">شارك الصفحة الأولى</string>
+    <string name="set_first_page_as_cover">عين الصفحة الأولى كغلاف</string>
+    <string name="selection">اختيار</string>
+    <string name="pages_">الصفحات%1$s</string>
+    <string name="filter_languages">صفي اللغات</string>
+    <string name="show_read_chapters_all">أظهر الفصول المقروئة في مجموعات</string>
+    <plurals name="copy_manga">
+        <item quantity="zero">أنقل %1$d%2$s المانجا؟</item>
+        <item quantity="one"/>
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <plurals name="migrate_manga">
+        <item quantity="zero">أنقل %1$d%2$s المانجا؟</item>
+        <item quantity="one"/>
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="app_info">حول التطبيق</string>
+    <string name="hide_bottom_nav">أخفي التنقل بشكل أوتوماتيكي</string>
+    <string name="turn_off_">%sأغلق</string>
+    <string name="custom_manga_info">معلومات عن المانجا</string>
+    <string name="automatic_can_still_switch">عند استخدام مظهر صفحة أوتوماتيكي، سيكون ما زال بإمكانك أن تغير بين المظاهر بينما تقرأ</string>
+    <plurals name="pages_plural">
+        <item quantity="zero">%1$d صفحة</item>
+        <item quantity="one"/>
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="save_pages_separately">أحفظ الصفحات في ملفات مختلفة</string>
+    <string name="actions">أفعال</string>
+    <string name="automatic_orientation">أوتوماتيك</string>
+    <string name="webtoon_cannot_change">لا يمكنك تغيير وضع القراءة من ويب توون. عدل نوع السلسلة أولاً للتغيير.</string>
+    <string name="create_folders_by_manga_title">أنشئ ملفات طبقاً لعنوان المانجا</string>
+    <string name="show_on_long_press">أظهر عند الضغط لمدة طويلة</string>
+    <string name="vertically">عمودي</string>
+    <string name="horizontally">أفقي</string>
+    <string name="page_layout">مظهر الصفحة</string>
+    <string name="last_used_library_recents">المُستخدم آخراً</string>
+    <string name="pauses_reading_history">توقيف سجل القراءة</string>
+    <string name="back_to_start">العودة إلى البداية</string>
+    <string name="starting_screen">شاشة البداية</string>
+    <string name="hides_on_scroll">إخفاء عند التمرير</string>
+    <string name="follow_system_theme">أتبع مظهر الجهاز</string>
+    <string name="hot_pink">وردي فاقع</string>
+    <string name="locked_landscape">غلق المناظر</string>
+    <string name="locked_portrait">قفل اللوحة</string>
+    <string name="switch_to_single">حول إلى صفحة واحدة</string>
+    <string name="switch_to_double">حول إلى الصفحات الزوجية</string>
+    <string name="single_page">صفحة واحدة</string>
+    <string name="double_pages">الصفحات الزوجية</string>
+    <string name="remove_crop">أحذف القص</string>
+    <string name="invert_double_pages">أعكس الصفحات الزوجية</string>
+    <string name="page_preload_amount">كمية الصفحات المُحملة مسبقاً</string>
+    <string name="save_second_page">أحفظ الصفحة الثانية</string>
+    <string name="reader_settings">إعدادات القارئ</string>
+    <string name="_must_be_enabled_first">%1$sيجب أن يتم تفعيلها أولاً</string>
+    <string name="group_chapters_together">جمع الفصول معاً</string>
+    <string name="show_updated_time">أظهر الوقت الجديد</string>
+    <string name="a_while_ago">منذ مدة</string>
+    <string name="show_title_first">أظهر العنوان أولاً</string>
+    <string name="show_reset_history_button">أظهر زر مسح السجل</string>
 </resources>

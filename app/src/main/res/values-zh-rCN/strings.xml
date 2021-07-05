@@ -284,7 +284,7 @@
     <string name="screen">屏幕</string>
     <string name="dodge_lighten">减淡/变亮</string>
     <string name="burn_darken">颜色加深/变暗</string>
-    <string name="lock_with_biometrics">启用生物识别锁定</string>
+    <string name="lock_with_biometrics">用生物特征进行锁定</string>
     <string name="lock_when_idle">应用待机时锁定</string>
     <plurals name="notification_update_failed">
         <item quantity="other">%1$d 本漫画更新失败</item>
@@ -360,7 +360,7 @@
     <string name="search_manually">手动搜索</string>
     <string name="migration">迁移</string>
     <string name="select_sources">选择图源</string>
-    <string name="cover_saved">封面已保存</string>
+    <string name="cover_saved">已保存封面</string>
     <string name="reset_cover">重置封面</string>
     <string name="reset_tags">重置标签</string>
     <string name="clear_tags">清除标签</string>
@@ -497,8 +497,8 @@
     <string name="currently_reading">正在阅读</string>
     <string name="not_tracked">未同步</string>
     <string name="tracked">已同步</string>
-    <string name="error_sharing_cover">分享封面错误</string>
-    <string name="error_saving_cover">保存封面错误</string>
+    <string name="error_sharing_cover">分享封面时出错</string>
+    <string name="error_saving_cover">保存封面时出错</string>
     <string name="source_not_installed">图源未安装</string>
     <string name="remember_this_choice">记住这个选择</string>
     <string name="oldest_first">最早</string>
@@ -534,7 +534,7 @@
     <string name="hide">隐藏</string>
     <string name="enabled">已启用</string>
     <string name="drag_handle">拖动手柄</string>
-    <string name="download_unread">下载但未读</string>
+    <string name="download_unread">下载未读</string>
     <string name="deleted_">已删除：%1$s</string>
     <plurals name="after_minutes">
         <item quantity="other">在%1$s分钟之后</item>
@@ -615,10 +615,7 @@
     <string name="badges">标记</string>
     <string name="search_settings">搜索设置</string>
     <string name="locale">语言</string>
-    <string name="create_legacy_backup">创建旧版本备份</string>
-    <string name="can_be_used_in_older_tachi">可用于旧版本的 Tachiyomi</string>
     <string name="automatic_backups">自动备份</string>
-    <string name="also_create_legacy_backup">同时创建旧版本备份</string>
     <string name="invalid_backup_file">无效的备份文件</string>
     <string name="unofficial_extension_message">此扩展插件不是由官方 Tachiyomi 所提供。</string>
     <string name="nsfw_short">18+</string>
@@ -750,7 +747,6 @@
     <string name="cutout_behavior_only_applies">刘海屏区域行为仅适用于某些比例类型的竖屏模式</string>
     <string name="hide_app_block_screenshots">在切换应用时隐藏此应用内容，并禁止截取屏幕截图</string>
     <string name="follow_system_theme">跟随系统主题</string>
-    <string name="black_and_red">黒与红</string>
     <string name="spring_blossom">春暖花开</string>
     <string name="midnight_dusk">午夜薄暮</string>
     <string name="flat_lime">平石灰</string>
@@ -814,6 +810,39 @@
     <string name="mark_range_as_unread">将一些章节标记为未读</string>
     <string name="mark_range_as_read">将一些章节标记为已读</string>
     <string name="cancel_all_for_series">取消这个系列的全部</string>
-    <string name="show_recent_in_shortcuts">在应用快捷方式中显示最近图源和系列</string>
     <string name="app_shortcuts">应用快捷方式</string>
+    <string name="include_">包含：%s</string>
+    <string name="exclude_">排除：%s</string>
+    <string name="force_download_cache_refresh_summary">这会强制重新计算下载缓存。 对于在此应用程序之外修改了下载并希望应用程序接收它们很有用</string>
+    <string name="force_download_cache_refresh">刷新下载缓存</string>
+    <string name="no_new_chapters_open_details">没有新章节时，将打开系列的详细信息</string>
+    <string name="series_opens_new_chapters">系列快捷键打开新篇章</string>
+    <string name="includes_recently_read_updated_added">包括最近阅读、更新和添加的系列</string>
+    <string name="show_recent_series">显示最近的系列</string>
+    <string name="show_recent_sources">显示最近用过的图源</string>
+    <string name="hide_notification_content">隐藏通知内容</string>
+    <string name="pure_black_dark_mode">纯黑深色模式</string>
+    <string name="side_nav_icon_alignment">侧边导航图标对齐</string>
+    <string name="chocolate_strawberries">巧克力草莓</string>
+    <string name="yotsuba">四叶草</string>
+    <string name="strawberry_daiquiri">草莓黛琦丽</string>
+    <string name="dark_theme">深色主题</string>
+    <string name="light_theme">浅色主题</string>
+    <string name="no_match_found">未找到匹配项</string>
+    <string name="source_unsupported">不支持此图源</string>
+    <string name="only_applies_silent_trackers">仅适用于静默追踪器，例如 Komga</string>
+    <string name="track_when_adding_to_library">添加到书库时跟踪</string>
+    <plurals name="_updates_pending">
+        <item quantity="other">%d 个待处理更新</item>
+    </plurals>
+    <string name="could_not_install_extension">无法安装扩展</string>
+    <string name="global_updates">全局更新</string>
+    <string name="checking_for_new_chapters">检查新章节中</string>
+    <string name="open_random_series">打开一个随机系列</string>
+    <string name="show_number_of_items">显示项目数</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K 需要访问所有文件才能下载章节。 点按此处，然后启用“允许访问以管理所有文件”</string>
+    <string name="external_storage_permission_notice">在 Android 11 中，TachiyomiJ2K 需要访问所有文件才能下载章节、创建自动备份和阅读本地漫画。
+\n
+\n在下一个屏幕上，启用“允许访问管理所有文件”</string>
+    <string name="all_files_permission_required">需要文件权限</string>
 </resources>

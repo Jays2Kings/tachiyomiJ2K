@@ -408,9 +408,6 @@
     <string name="refresh_tracking">Oppdater sporing</string>
     <string name="started_reading_date">Startdato for lesing</string>
     <string name="finished_reading_date">Sluttdato for lesing</string>
-    <string name="create_legacy_backup">Oppdrett legacy sikkerhetskopi</string>
-    <string name="can_be_used_in_older_tachi">Kan brukes i eldre versjoner av Tachiyomi</string>
-    <string name="also_create_legacy_backup">Opdrett også legacy sikkerhetskopi</string>
     <string name="backup_has_no_manga">Sikkerhetskopi inneholder ingen manga.</string>
     <string name="restore_missing_trackers">Sporingstjenester ikke logget inn i:</string>
     <string name="restore_content_full">Data fra backup-filen will be gjenoprettet

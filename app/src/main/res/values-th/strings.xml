@@ -4,7 +4,7 @@
     <string name="manga">มังงะ</string>
     <string name="chapters">ตอน</string>
     <string name="tracking">ดังต่อไปนี้</string>
-    <string name="history">ประวัติศาสตร์</string>
+    <string name="history">ประวัติ</string>
     <string name="settings">ตั้งค่า</string>
     <string name="download_queue">คิวดาวน์โหลด</string>
     <string name="library">ห้องสมุดของฉัน</string>
@@ -105,7 +105,7 @@
     <string name="untrusted_extension">ส่วนขยายที่ไม่น่าเชื่อถือ</string>
     <string name="untrusted_extension_message">ส่วนต่อขยายนี้ถูกรับรองจากใบรับรองที่ไม่น่าเชื่อถือ และมันไม่ทำงาน
 \n
-\nส่วนต่อขยายที่ประสงค์ร้าย สามารถข้อมูลหนังสือรับรองทั้งหมดใน Tachiyomi หรือโปรแกรมอันตราย
+\nส่วนต่อขยายที่ประสงค์ร้าย สามารถอ่านข้อมูลทั้งหมดในทาชิโยมิหรือรันโปรแกรมอันตราย
 \n
 \nคุณยอมต้องยอมรับความเสี่ยง กรณีเชื่อถือใบรับรองนี้</string>
     <string name="version_">เวอร์ชัน: %1$s</string>
@@ -150,11 +150,11 @@
     <string name="remove_when_marked_as_read">ลบเครื่องหมายว่าอ่านแล้ว</string>
     <string name="remove_after_read">ลบออกหลังจากอ่านแล้ว</string>
     <string name="custom_location">ไดเรกทอรีที่กำหนดเอง</string>
-    <string name="last_read_chapter">บทที่อ่านล่าสุด</string>
-    <string name="second_to_last">2 บท ถึง บทสุดท้าย</string>
-    <string name="third_to_last">3 บท ถึง บทสุดท้าย</string>
-    <string name="fourth_to_last">4 บท ถึง บทสุดท้าย</string>
-    <string name="fifth_to_last">5 บท ถึง บทสุดท้าย</string>
+    <string name="last_read_chapter">ตอนที่อ่านล่าสุด</string>
+    <string name="second_to_last">ตอนก่อนตอนสุดท้าย</string>
+    <string name="third_to_last">ตอนสองตอนก่อนสุดท้าย</string>
+    <string name="fourth_to_last">ตอนสามตอนก่อนสุดท้าย</string>
+    <string name="fifth_to_last">ตอนสี่ตอนก่อนสุดท้าย</string>
     <string name="download_new_chapters">ดาวน์โหลดบทใหม่</string>
     <string name="categories_to_include_in_download">ประเภทที่จะรวมในการดาวน์โหลด</string>
     <string name="services">บริการ</string>
@@ -166,7 +166,7 @@
     <string name="backup_location">ไดเรกทอรีการสำรองข้อมูล</string>
     <string name="backup_frequency">ความถี่ในการสำรองข้อมูล</string>
     <string name="max_auto_backups">จำนวนการสำรองข้อมูลอัตโนมัติสูงสุด</string>
-    <string name="backup_created">การสำรองข้อมูลที่สร้างขึ้น</string>
+    <string name="backup_created">สร้างการสำรองข้อมูลแล้ว</string>
     <string name="restore_completed">การคืนค่าเสร็จสมบูรณ์</string>
     <string name="what_should_backup">คุณต้องการสำรองข้อมูลอะไร\?</string>
     <string name="restoring_backup">กำลังคืนค่าการสำรองข้อมูล</string>
@@ -177,35 +177,35 @@
     <string name="cookies_cleared">ล้างคุกกี้แล้ว</string>
     <string name="clear_database">ล้างฐานข้อมูล</string>
     <string name="clear_database_summary">ลบมังงะและบทที่ไม่ได้อยู่ในห้องสมุดของคุณ</string>
-    <string name="clear_database_confirmation">คุณแน่ใจไหม\? อ่านบทและความคืบหน้าของมังงะที่ไม่ใช่ห้องสมุดจะหายไป</string>
-    <string name="clear_database_completed">รายการที่ลบแล้ว</string>
+    <string name="clear_database_confirmation">คุณแน่ใจไหม\? ข้อมูลการอ่านของมังงะที่ไม่ได้อยู่ในคลังจะหายไป</string>
+    <string name="clear_database_completed">ลบรายการแล้ว</string>
     <string name="refresh_library_metadata">รีเฟรชข้อมูลเมตาของไลบรารี</string>
     <string name="updates_covers_genres_desc">การปรับปรุงครอบคลุมประเภทคำอธิบายและข้อมูลสถานะมังงะ</string>
     <string name="refresh_tracking_metadata">รีเฟรชข้อมูลเมตาของการติดตาม</string>
     <string name="updates_tracking_details">อัพเดตสถานะคะแนนและบทสุดท้ายที่อ่านจากบริการติดตาม</string>
     <string name="version">เวอร์ชัน</string>
     <string name="build_time">สร้างเวลา</string>
-    <string name="check_for_updates">ตรวจหาโปรแกรมปรับปรุง</string>
+    <string name="check_for_updates">ตรวจสอบการอัปเดท</string>
     <string name="send_crash_report">ส่งรายงานความผิดพลาด</string>
     <string name="helps_fix_bugs">ช่วยแก้ไขข้อบกพร่องใดๆ ไม่มีข้อมูลที่สำคัญจะถูกส่ง</string>
     <string name="log_in_to_">เข้าสู่ระบบสำหรับ %1$s</string>
     <string name="username">ชื่อผู้ใช้</string>
-    <string name="password">รหัส ผ่าน</string>
+    <string name="password">รหัสผ่าน</string>
     <string name="login">ลงชื่อเข้าใช้</string>
     <string name="successfully_logged_in">เข้าสู่ระบบสำเร็จ</string>
-    <string name="unknown_error">ข้อผิดพลาดที่ไม่รู้จัก</string>
+    <string name="unknown_error">ความผิดพลาดที่ไม่อาจระบุได้</string>
     <string name="local">ท้องถิ่น</string>
     <string name="search_filters">ตัวกรองค้นหา</string>
     <string name="no_more_results">ไม่มีผลลัพธ์เพิ่มเติม</string>
-    <string name="local_source">มังงะภายในเครื่อง</string>
+    <string name="local_source">แหล่งข้อมูลภายในเครื่อง</string>
     <string name="other">อื่น ๆ</string>
     <string name="global_search">ค้นหาทั้งหมด…</string>
     <string name="latest">ล่าสุด</string>
     <string name="browse">เปิดดู</string>
-    <string name="description">คำอธิบาย</string>
-    <string name="ongoing">ยังดำเนินการอยู่</string>
-    <string name="unknown">ไม่ทราบ</string>
-    <string name="licensed">ลิขสิทธิ์</string>
+    <string name="description">รายละเอียด</string>
+    <string name="ongoing">ยังไม่จบ</string>
+    <string name="unknown">ไม่ระบุ</string>
+    <string name="licensed">มีลิขสิทธิ์</string>
     <string name="added_to_library">เพิ่มไปยังห้องสมุด</string>
     <string name="removed_from_library">ลบออกจากห้องสมุด</string>
     <string name="author">ผู้เขียน</string>
@@ -216,15 +216,15 @@
     <string name="chapter_">บทที่ %1$s</string>
     <string name="downloading">กำลังดาวน์โหลด</string>
     <string name="downloading_progress">กำลังดาวน์โหลด (%1$d/%2$d)</string>
-    <string name="paused">หยุดเล่นชั่วคราว</string>
+    <string name="paused">หยุดชั่วคราว</string>
     <string name="next_5_unread">ดาวน์โหลด 5 บทถัดไป</string>
     <string name="custom_range">ดาวน์โหลดแบบกำหนดเอง</string>
     <string name="all_chapters">ดาวน์โหลดทั้งหมด</string>
     <string name="all_unread_chapters">ดาวน์โหลดที่ยังไม่ได้อ่าน</string>
     <string name="reading">การอ่าน</string>
-    <string name="completed">เสร็จสมบูรณ์</string>
+    <string name="completed">จบแล้ว</string>
     <string name="dropped">ทิ้ง</string>
-    <string name="on_hold">รอสาย</string>
+    <string name="on_hold">หยุดไว้ชั่วคราว</string>
     <string name="plan_to_read">วางแผนที่จะอ่าน</string>
     <string name="rereading">อ่านอีกครั้ง</string>
     <string name="score">คะแนน</string>
@@ -260,7 +260,7 @@
     <string name="theres_no_previous_chapter">ไม่มีบทก่อนหน้านี้</string>
     <string name="loading_pages">กำลังโหลดหน้า …</string>
     <string name="failed_to_load_pages_">ไม่สามารถโหลดหน้าได้: %1$s</string>
-    <string name="migrate">โยกย้าย</string>
+    <string name="migrate">ย้าย</string>
     <string name="could_not_download_chapter_can_try_again">เกิดข้อผิดพลาดขณะดาวน์โหลดบท คุณสามารถลองอีกครั้งในส่วนการดาวน์โหลด</string>
     <string name="new_chapters_found">พบบทใหม่</string>
     <string name="failed_to_update_cover">ไม่สามารถอัปเดตหน้าปก</string>
@@ -287,7 +287,7 @@
     <string name="burn_darken">มืดมิด</string>
     <string name="update">อัพเดท</string>
     <string name="mark_as_unread">ตั้งเป็นยังไม่ได้อ่าน</string>
-    <string name="remove_from_library">ลบออกจากห้องสมุด</string>
+    <string name="remove_from_library">ลบออกจากคลัง</string>
     <string name="copy_value">คัดลอก</string>
     <string name="creating_backup">กำลังสร้างการสำรองข้อมูล</string>
     <string name="pref_global_search">ค้นหา</string>
@@ -297,4 +297,43 @@
     <string name="next_chapter">ตอนถัดไป</string>
     <string name="previous_chapter">ตอนที่แล้ว</string>
     <string name="label_global_search">ค้นหา</string>
+    <string name="file_picker_error">ไม่พบแอปตัวเลือกไฟล์</string>
+    <string name="updating_library">กำลังอัปเดตคลัง</string>
+    <string name="myanimelist_relogin">กรุณาเข้าสู่ระบบ MAL อีกครั้ง</string>
+    <string name="add_tracking">เพิ่มการติดตาม</string>
+    <string name="no_chapters_error">ไม่พบตอน</string>
+    <string name="local_source_help_guide">คู่มือแหล่งข้อมูลในเครื่อง</string>
+    <string name="email">ที่อยู่อีเมล</string>
+    <string name="whats_new">มีอะไรใหม่</string>
+    <string name="website">เว็บไซต์</string>
+    <string name="battery_optimization_disabled">การเพิ่มประสิทธิภาพแบตเตอรี่ถูกปิดใช้งานแล้ว</string>
+    <string name="crash_log_saved">บันทึกบันทึกข้อขัดข้องแล้ว</string>
+    <string name="requires_app_restart">ต้องรีสตาร์ทแอปจึงจะมีผล</string>
+    <string name="restoring_backup_canceled">ยกเลิกการเรียกคืน</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">เสร็จสิ้นใน %1$s โดยมีข้อผิดพลาด %2$s</item>
+    </plurals>
+    <string name="restore_duration">%02d นาที, %02d วินาที</string>
+    <string name="invalid_backup_file_type">ประเภทไฟล์สำรองไม่ถูกต้อง: %1$s
+\nควรลงท้ายด้วย. proto.gz หรือ. json</string>
+    <string name="invalid_backup_file">ไฟล์สำรองไม่ถูกต้อง</string>
+    <string name="disabled">ปิดการใช้งาน</string>
+    <string name="webtoon_side_padding_25">25%</string>
+    <string name="webtoon_side_padding_20">20%</string>
+    <string name="webtoon_side_padding_15">15%</string>
+    <string name="webtoon_side_padding_10">10%</string>
+    <string name="webtoon_side_padding_0">ไม่มี</string>
+    <string name="pref_webtoon_side_padding">ช่องว่างด้านข้าง</string>
+    <string name="right_and_left_nav">ขวาและซ้าย</string>
+    <string name="edge_nav">ขอบ</string>
+    <string name="kindlish_nav">เหมือน Kindle</string>
+    <string name="l_nav">รูปตัว L</string>
+    <string name="unofficial_extension_message">ส่วนขยายนี้ไม่อยู่ในรายการส่วนขยายทาชิโยมิอย่างเป็นทางการ</string>
+    <string name="obsolete_extension_message">ส่วนขยายนี้ไม่พร้อมใช้งานอีกต่อไป</string>
+    <string name="none">ไม่มี</string>
+    <string name="landscape">แนวนอน</string>
+    <string name="portrait">แนวตั้ง</string>
+    <string name="secure_screen">หน้าจอปลอดภัย</string>
+    <string name="lock_when_idle">ล็อคเมื่อไม่ได้ใช้งาน</string>
+    <string name="cancel_all_for_series">ยกเลิกทั้งหมดสำหรับซีรีส์นี้</string>
 </resources>

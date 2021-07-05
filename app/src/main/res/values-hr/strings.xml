@@ -28,7 +28,7 @@
     <string name="disable_battery_optimization">Deaktiviraj optimiranje baterije</string>
     <string name="battery_optimization_disabled">Optimiranje baterije je već isključeno</string>
     <string name="pref_global_search">Globalna pretraga</string>
-    <string name="check_for_extension_updates">Traži nove verzije dodataka</string>
+    <string name="check_for_extension_updates">Traži nove verzije proširenja</string>
     <string name="version">Verzija</string>
     <string name="build_time">Datum izdanja</string>
     <string name="send_crash_report">Pošalji izvještaj o padu programa</string>
@@ -58,7 +58,7 @@
     <string name="last_read">Zadnje čitano</string>
     <string name="latest_chapter">Najnovije poglavlje</string>
     <string name="list">Popis</string>
-    <string name="download_badge">Značke za preuzimanja</string>
+    <string name="download_badge">Značke preuzimanja</string>
     <string name="new_chapters_found">Pronađena su nova poglavlja</string>
     <plurals name="notification_update_failed">
         <item quantity="one">%1$d neuspjelo aktualiziranje</item>
@@ -280,7 +280,7 @@
     <string name="lock">Zaključaj</string>
     <string name="mark_as_read">Označi kao pročitano</string>
     <string name="mark_as_unread">Označi kao nepročitano</string>
-    <string name="mark_previous_as_read">Označi prethodno kao pročitano</string>
+    <string name="mark_previous_as_read">Označi prethodna poglavlja kao pročitana</string>
     <string name="more">Više</string>
     <string name="move_to_bottom">Premjesti na kraj</string>
     <string name="move_to_top">Premjesti na vrh</string>
@@ -484,7 +484,7 @@
         <item quantity="few">Brisanje je gotovo. Uklonjene su %d mape</item>
         <item quantity="other">Brisanje je gotovo. Uklonjeno je %d mapa</item>
     </plurals>
-    <string name="disable_if_issues_with_updating">Deaktiviraj ovo ako imaš problema s aktualiziranjem ili obnavljanjem tvoje knjižnice</string>
+    <string name="disable_if_issues_with_updating">Deaktiviraj ovo ako imaš problema s aktualiziranjem ili obnavljanjem tvoje biblioteke</string>
     <string name="delete_old_covers_in_library_used_">Izbriši stare i nekorištene predmemorirane manga naslovnice koje nisu u tvojoj biblioteci koje su aktualizirane.
 \nTrenutačno se koristi: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">Izbriši sve predmemorirane naslovnice koje nisu u tvojoj biblioteci
@@ -546,10 +546,7 @@
     <string name="myanimelist_relogin">Ponovo se prijavi na MAL</string>
     <string name="search_settings">Postavke pretrage</string>
     <string name="locale">Područje</string>
-    <string name="create_legacy_backup">Stvori zastarjelu sigurnosnu kopiju</string>
-    <string name="can_be_used_in_older_tachi">Može se koristiti u starijim Tachiyomi verzijama</string>
     <string name="automatic_backups">Automatsko spremanje sigurnosnih kopija</string>
-    <string name="also_create_legacy_backup">Također spremi zastarjelu sigurnosnu kopiju</string>
     <string name="invalid_backup_file">Neispravna datoteka sigurnosne kopije</string>
     <string name="invalid_backup_file_type">Neispravna datoteka sigurnosne kopije: %1$s
 \nTrebala bi završiti s .proto.gz ili .json.</string>
@@ -613,7 +610,7 @@
 \nŽeliš li izbrisati njegovo preuzimanje\?</item>
         <item quantity="few">Iz izvora su uklonjena %1$s poglavlja:
 \n%2$s
-\nŽeliš li izbrisati njihova preuzimanje\?</item>
+\nŽeliš li izbrisati njihova preuzimanja\?</item>
         <item quantity="other">Iz izvora je uklonjeno %1$s poglavlja:
 \n%2$s
 \nŽeliš li izbrisati njihovo preuzimanje\?</item>
@@ -702,7 +699,7 @@
     <string name="select_none">Odaberi ništa</string>
     <string name="moved_to_">Premješteno u %1$s</string>
     <string name="menu">izbornik</string>
-    <string name="mark_previous_as_unread">Označi prethodno kao pročitano</string>
+    <string name="mark_previous_as_unread">Označi prethodna poglavlja kao nepročitana</string>
     <string name="mark_all_as_unread">Označi sve kao nepročitano</string>
     <string name="mark_all_as_read">Označi sve kao pročitano</string>
     <string name="keep">Sačuvaj</string>
@@ -789,7 +786,6 @@
     <string name="only_downloaded">Samo preuzete</string>
     <string name="hide_app_block_screenshots">Sakrij sadržaj programa prilikom prebacivanja između programa i blokiraj snimke ekrana</string>
     <string name="follow_system_theme">Slijedi temu sustava</string>
-    <string name="black_and_red">Crna i crvena</string>
     <string name="spring_blossom">Proljetno cvjetanje</string>
     <string name="midnight_dusk">Ponoćni sumrak</string>
     <string name="disabled">Deaktivirano</string>
@@ -850,4 +846,8 @@
     <string name="show_updated_time">Pokaži aktualizirano vrijeme</string>
     <string name="fetched_">Dohvaćeno %1$s</string>
     <string name="updates_and_history">Aktualiziranja i povijest</string>
+    <string name="mark_range_as_unread">Označi raspon poglavlja kao nepročitana</string>
+    <string name="mark_range_as_read">Označi raspon poglavlja kao pročitana</string>
+    <string name="app_shortcuts">Prečaci programa</string>
+    <string name="cancel_all_for_series">Prekini sve za ovu seriju</string>
 </resources>

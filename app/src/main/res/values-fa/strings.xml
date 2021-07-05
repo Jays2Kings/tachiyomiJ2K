@@ -332,10 +332,7 @@
     <string name="manhwa">مانهوای</string>
     <string name="app_name" translatable="false"/>
     <string name="locale">محلی</string>
-    <string name="create_legacy_backup">ساخت نسخه پشتیبان با تکنولوژی قدیمی</string>
-    <string name="can_be_used_in_older_tachi">در نسخه های قدیمی تر Tachiyomi قابل استفاده است</string>
     <string name="automatic_backups">پشتیبان گیری خودکار</string>
-    <string name="also_create_legacy_backup">همچنین یک نسخه پشتیبان با تکنولوژی قدیمی بساز</string>
     <string name="invalid_backup_file">فایل پشتیبان نامعتبر است</string>
     <string name="file_is_missing_data">فایل شامل اطلاعات ناموجود است.</string>
     <string name="backup_has_no_manga">فایل پشتیبان شامل هیچ مانگا ای نیست.</string>

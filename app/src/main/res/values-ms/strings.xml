@@ -172,7 +172,7 @@
     <string name="unknown_error">Ralat tidak diketahui</string>
     <string name="local">lokal</string>
     <string name="no_more_results">Tiada lagi hasil</string>
-    <string name="local_source">Sumber lokal</string>
+    <string name="local_source">Sumber setempat</string>
     <string name="other">Lain</string>
     <string name="global_search">Carian keseluruhan…</string>
     <string name="latest">Terkini</string>
@@ -342,7 +342,7 @@
     <plurals name="notification_update_failed">
         <item quantity="other">%1$d gagal kemas kini</item>
     </plurals>
-    <string name="local_source_help_guide">Panduan penggunaan sumber lokal</string>
+    <string name="local_source_help_guide">Panduan penggunaan sumber setempat</string>
     <string name="check_site_in_web">Semak laman web dalam WebView</string>
     <string name="obsolete">Usang</string>
     <string name="obsolete_extension_message">Sambungan ini tidak lagi ada.</string>
@@ -641,10 +641,7 @@
     <string name="myanimelist_relogin">Sila log masuk ke MAL sekali lagi</string>
     <string name="search_settings">Carian tetapan</string>
     <string name="locale">Tempat</string>
-    <string name="create_legacy_backup">Buat sandaran legasi</string>
-    <string name="can_be_used_in_older_tachi">Boleh digunakan pada versi Tachiyomi yang</string>
     <string name="automatic_backups">Sandaran automatik</string>
-    <string name="also_create_legacy_backup">Buat juga sandaran legasi</string>
     <string name="invalid_backup_file">Fail sandaran tidak sah</string>
     <string name="invalid_backup_file_type">Jenis fail sandaran tidak sah: %1$s\t
 \nIa sepatutnya berakhir dengan .proto.gz atau .json.</string>
@@ -723,7 +720,6 @@
     <string name="follow_system_theme">Ikut tema sistem</string>
     <string name="flat_lime">Hijau flat</string>
     <string name="hot_pink">Pink panas</string>
-    <string name="black_and_red">Hitam \'dan\' Merah</string>
     <string name="spring_blossom">Musim bunnga mekar</string>
     <string name="midnight_dusk">Suasana tengah malam</string>
     <string name="pauses_reading_history">Jedah sejarah membaca</string>
@@ -812,4 +808,8 @@
     <string name="search_tips_show_periodically">Cadangan carian akan muncul secara berkala. Menahan tekan pada cadangan untuk mencarinya.</string>
     <string name="search_suggestions">Cadangan carian</string>
     <string name="automatic_removal">Pembuangan automatik</string>
+    <string name="cancel_all_for_series">Batalkan semua untuk siri ini</string>
+    <string name="app_shortcuts">Pintasan apl</string>
+    <string name="mark_range_as_unread">Tandakan julat bab sebagai belum dibaca</string>
+    <string name="mark_range_as_read">Tandakan julat bab sebagai dibaca</string>
 </resources>

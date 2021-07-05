@@ -485,10 +485,7 @@
     <string name="none">Nenhum</string>
     <string name="search_settings">Definições de pesquisa</string>
     <string name="locale">Localidade</string>
-    <string name="create_legacy_backup">Criar cópia de segurança antiga</string>
-    <string name="can_be_used_in_older_tachi">Pode ser usado em versões mais antigas do Tachiyomi</string>
     <string name="automatic_backups">Cópias de segurança automáticas</string>
-    <string name="also_create_legacy_backup">Criar também cópia de segurança antiga</string>
     <string name="invalid_backup_file">Ficheiro de cópia de segurança invalido</string>
     <string name="invalid_backup_file_type">Tipo de ficheiro da cópia de segurança inválido: %1$s
 \nDeve terminar com .proto.gz ou .json.</string>
@@ -679,7 +676,6 @@
     <string name="white_theme">Branco Puro</string>
     <string name="flat_lime">Giz de Lima</string>
     <string name="hot_pink">Rosa Choque</string>
-    <string name="black_and_red">Preto &amp; Vermelho</string>
     <string name="spring_blossom">Flor da Primavera</string>
     <string name="midnight_dusk">Aurora-da-noite</string>
     <string name="pauses_reading_history">Pausa o histórico de leitura</string>

@@ -13,7 +13,7 @@
     <string name="search">Buscar</string>
     <string name="select_all">Seleccionar todo</string>
     <string name="mark_as_read">Marcar como leído</string>
-    <string name="mark_previous_as_read">Marcar anteriores como leídos</string>
+    <string name="mark_previous_as_read">Marcar capitulos anteriores como leídos</string>
     <string name="download">Descargar</string>
     <string name="delete">Eliminar</string>
     <string name="edit">Editar</string>
@@ -464,8 +464,8 @@
     <string name="updated_">Actualizado %1$s</string>
     <string name="read_">Leído %1$s</string>
     <string name="last_read_">Última lectura %1$s</string>
-    <string name="reset_all_chapters_for_this_">Restablecer todos los capítulos para este %1$s</string>
-    <string name="this_will_remove_the_read_date_for_x_question">Esto eliminará la fecha de lectura de \"%1$s\". ¿Está seguro\?</string>
+    <string name="reset_all_chapters_for_this_">Reiniciar todos los capítulos para este %1$s</string>
+    <string name="this_will_remove_the_read_date_for_x_question">Esto eliminará la fecha de lectura de «%1$s». ¿Estás seguro\?</string>
     <string name="newly_added">Agregado recientemente</string>
     <string name="recents">Recientes</string>
     <string name="show_notification_error">Mostrar notificación de errores</string>
@@ -502,7 +502,7 @@
     <string name="group_library_by">Agrupar biblioteca por…</string>
     <string name="series_type">Tipo</string>
     <string name="read_progress">Progreso de lectura</string>
-    <string name="search_globally">Buscar «%1$s» en cada fuente</string>
+    <string name="search_globally">Más resultados para «%1$s»</string>
     <string name="_unread">%d no leído</string>
     <string name="reorder_filters">Reordenar filtros</string>
     <string name="collapse_all_categories">Ocultar todas las categorías</string>
@@ -549,7 +549,7 @@
     <string name="use_default">Usar predefinida</string>
     <string name="tag">Etiqueta</string>
     <string name="sort_and_filter">Ordenar y filtrar</string>
-    <string name="mark_previous_as_unread">Marcar anteriores como no leídos</string>
+    <string name="mark_previous_as_unread">Marcar capitulos anteriores como no leídos</string>
     <string name="mark_all_as_unread">Marcar todos como no leídos</string>
     <string name="mark_all_as_read">Marcar todos como leídos</string>
     <string name="keep">Mantener</string>
@@ -631,10 +631,7 @@
     <string name="myanimelist_relogin">Vuelva a iniciar sesión en MAL</string>
     <string name="search_settings">Buscar en configuración</string>
     <string name="locale">Localización</string>
-    <string name="create_legacy_backup">Crear una copia de seguridad heredada</string>
-    <string name="can_be_used_in_older_tachi">Se puede utilizar en versiones anteriores de Tachiyomi</string>
     <string name="automatic_backups">Copias de seguridad automáticas</string>
-    <string name="also_create_legacy_backup">También crear copia de seguridad heredada</string>
     <string name="invalid_backup_file">Un archivo invalido de copia de seguridad</string>
     <string name="invalid_backup_file_type">Tipo de archivo de copia de seguridad no válido: %1$s
 \nDebería terminar con .proto.gz o .json.</string>
@@ -798,7 +795,6 @@
     <string name="pressing_back_to_start">Presionar atras para la pantalla de inicio</string>
     <string name="follow_system_theme">Predeterminado del sistema</string>
     <string name="flat_lime">Lima Plano</string>
-    <string name="black_and_red">Blanco y Rojo</string>
     <string name="pauses_reading_history">Pausar historia de lectura</string>
     <string name="incognito_mode">Modo incógnito</string>
     <string name="webtoon_cannot_change">No es posible cambiar el modo lectura de webtoon. Cambie el tipo de series primero.</string>
@@ -847,4 +843,22 @@
     <string name="your_library">Tu biblioteca</string>
     <string name="search_">Buscar %1$s</string>
     <string name="search_suggestions">Buscar sugerencias</string>
+    <string name="mark_range_as_unread">Marcar una serie de capítulos como No leídos</string>
+    <string name="mark_range_as_read">Marcar una serie de capítulos como leídos</string>
+    <string name="automatic_removal">Eliminación automática</string>
+    <string name="cancel_all_for_series">Cancelar todo para esta serie</string>
+    <string name="app_shortcuts">Atajos de las aplicación</string>
+    <string name="create_folders_by_manga_title">Crear las carpetas según el título del manga</string>
+    <string name="save_pages_separately">Guardar las páginas en carpetas separadas</string>
+    <string name="show_on_long_press">Presione largamente para mostrar</string>
+    <string name="actions">comportamiento [Acciones]</string>
+    <string name="locked_landscape">Indicación bloqueada</string>
+    <string name="locked_portrait">Retrato bloqueado</string>
+    <string name="landscape">La indicación</string>
+    <string name="portrait">Retrato</string>
+    <string name="group_chapters_together">Agrupar los capítulos juntos</string>
+    <string name="show_updated_time">Mostrar la hora de la actualización</string>
+    <string name="search_tips_show_periodically">"Los consejos de búsqueda aparecerán periódicamente.  Mantenga presionada las sugerencias para buscarlos."</string>
+    <string name="date_fetched">Fecha de busqueda</string>
+    <string name="release_page">Ir a la pagina de lanzamiento</string>
 </resources>

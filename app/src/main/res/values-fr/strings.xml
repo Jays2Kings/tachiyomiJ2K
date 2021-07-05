@@ -10,15 +10,15 @@
     <string name="filter">Filtre</string>
     <string name="downloaded">Téléchargés</string>
     <string name="bookmarked">Signets</string>
-    <string name="unread">Non lus</string>
+    <string name="unread">Non lu</string>
     <string name="read">Lus</string>
     <string name="alphabetically">Alphabétiquement</string>
     <string name="last_read">Dernier lu</string>
-    <string name="last_updated">Dernier mis à jour</string>
+    <string name="last_updated">Dernière mise à jour</string>
     <string name="search">Rechercher</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="mark_as_read">Marquer comme lu</string>
-    <string name="mark_previous_as_read">Marquer précédent comme lu</string>
+    <string name="mark_previous_as_read">Marquer les chapitres précédents comme lus</string>
     <string name="download">Télécharger</string>
     <string name="delete">Supprimer</string>
     <string name="edit">Modifier</string>
@@ -213,7 +213,7 @@
     <string name="no_recently_read_manga">Aucun manga lu récemment</string>
     <string name="library_is_empty_add_from_browse">Votre bibliothèque est vide, vous pouvez ajouter des séries à votre bibliothèque depuis le menu Explorer.</string>
     <!-- Download Notification -->
-    <string name="no_wifi_connection">Aucune connexion disponible</string>
+    <string name="no_wifi_connection">Aucune connexion Wi-Fi disponible</string>
     <string name="no_network_connection">Aucune connexion disponible</string>
     <string name="language">Langue</string>
     <string name="clear_database_confirmation">Êtes-vous sûr(e) \? Les chapitres lus et la progression des mangas non présents dans la bibliothèque seront perdus</string>
@@ -357,7 +357,7 @@
     <string name="webtoon_side_padding_20">20 %</string>
     <string name="webtoon_side_padding_25">25 %</string>
     <string name="chapters_">Chapitres %1$s</string>
-    <string name="remove_from_library">Retirer de la bilbiothèque</string>
+    <string name="remove_from_library">Retirer de la bibliothèque</string>
     <string name="backup_failed">Échec de la sauvegarde</string>
     <string name="creating_backup">Création de sauvegarde en cours</string>
     <string name="network">Réseau</string>
@@ -449,7 +449,7 @@
     <string name="show_all_categories">Afficher toutes les catégories</string>
     <string name="no_matches_for_filters">Aucune correspondance trouvée pour vos filtres actuels</string>
     <string name="library_search_hint">Recherche par titre, étiquettes, source</string>
-    <string name="remove_from_library_question">Retirer de la bibliothèque \?</string>
+    <string name="remove_from_library_question">Retirer de la bibliothèque \?</string>
     <string name="updating_">Mise à jour %1$s</string>
     <string name="what_should_update">Que faut-il mettre à jour \?</string>
     <string name="jump_to_category">Aller à la catégorie</string>
@@ -490,10 +490,10 @@
     <string name="last_read_chapter_">Dernier chapitre lu %1$s</string>
     <string name="new_chapters">Nouveaux chapitres</string>
     <string name="not_started">Pas commencé</string>
-    <string name="unlock">Débloquer</string>
+    <string name="unlock">Déverrouiller</string>
     <string name="unlock_library">Débloquer pour accéder à la bibliothèque</string>
     <string name="manhua">Manhua</string>
-    <string name="unknown_status">Status inconnu</string>
+    <string name="unknown_status">Statut inconnu</string>
     <string name="in_progress">En cours</string>
     <string name="comic">Bande dessinée</string>
     <string name="manhwa">Manhwa</string>
@@ -540,14 +540,14 @@
     <string name="sort_and_filter">Trier et filtrer</string>
     <string name="select_none">Ne rien sélectionner</string>
     <string name="moved_to_">Déplacé vers %1$s</string>
-    <string name="mark_previous_as_unread">Marquer le précédent comme non lu</string>
+    <string name="mark_previous_as_unread">Marquer les chapitres précédents comme non lus</string>
     <string name="mark_all_as_unread">Tout marquer comme non lu</string>
     <string name="mark_all_as_read">Tout marquer comme lu</string>
     <string name="keep">Garder</string>
     <string name="hide">Cacher</string>
     <string name="enabled">Activé</string>
     <string name="drag_handle">Faites glisser la poignée</string>
-    <string name="download_unread">Télécharger non lu</string>
+    <string name="download_unread">Télécharger les non lus</string>
     <string name="deleted_">Supprimé : %1$s</string>
     <string name="bottom">Bas</string>
     <plurals name="after_minutes">
@@ -648,7 +648,7 @@
 \n
 \nSupprimer les téléchargements \?</item>
     </plurals>
-    <string name="error_sharing_cover">Erreur lors du partage de la couverture</string>
+    <string name="error_sharing_cover">Erreur de partage de couverture</string>
     <string name="error_saving_cover">Erreur lors de l\'enregistrement de la couverture</string>
     <string name="cover_saved">Couverture enregistrée</string>
     <string name="source_not_installed">Source non installée</string>
@@ -688,10 +688,7 @@
     <string name="myanimelist_relogin">Veuillez vous reconnecter à MAL</string>
     <string name="search_settings">Paramètres de la recherche</string>
     <string name="locale">Local</string>
-    <string name="create_legacy_backup">Créer des sauvegardes héritées</string>
-    <string name="can_be_used_in_older_tachi">Peut être utilisé dans les anciennes versions de Tachiyomi</string>
     <string name="automatic_backups">Sauvegardes automatiques</string>
-    <string name="also_create_legacy_backup">Créez également une sauvegarde héritée</string>
     <string name="invalid_backup_file">Fichier de sauvegarde invalide</string>
     <string name="invalid_backup_file_type">Fichier de sauvegarde invalide : %1$s
 \nIl devrait se terminer par .proto.gz ou .json.</string>
@@ -765,7 +762,6 @@
     <string name="change">Changer</string>
     <string name="beta">BETA</string>
     <string name="follow_system_theme">Suivre le thème du système</string>
-    <string name="black_and_red">Noir et Rouge</string>
     <string name="spring_blossom">Fleur de printemps</string>
     <string name="midnight_dusk">Crépuscule de minuit</string>
     <string name="page_layout">Disposition des pages</string>
@@ -824,7 +820,7 @@
     <string name="remove_crop">Supprimer le recadrage</string>
     <string name="crop_borders_webtoon">Recaler les bordures (Webtoon)</string>
     <string name="crop_borders_paged">Recaler les bordures (Paginé)</string>
-    <string name="changing_will_reset_reading_mode">Changer cela réinitialisera le mode lecture pour cette série</string>
+    <string name="changing_will_reset_reading_mode">Changer ceci réinitialisera le mode lecture pour cette série</string>
     <string name="reading_mode">Mode lecture</string>
     <string name="a_while_ago">Il y a un moment</string>
     <string name="certain_buttons_can_be_found">Certains boutons peuvent être trouvés ailleurs si désactivés ici</string>
@@ -854,4 +850,20 @@
     <string name="landscape">Paysage</string>
     <string name="portrait">Portrait</string>
     <string name="release_page">Page de sortie</string>
+    <string name="app_shortcuts">Raccourcis d\'applications</string>
+    <string name="create_folders_by_manga_title">Crée des dossiers en fonction du titre du manga</string>
+    <string name="save_pages_separately">Enregistrer les pages dans des dossiers séparés</string>
+    <string name="show_on_long_press">Afficher en appuyant longuement</string>
+    <string name="actions">Actions</string>
+    <string name="search_tips_show_periodically">Des suggestions de recherche apparaîtront périodiquement. Appuyez longuement sur la suggestion pour la rechercher.</string>
+    <string name="search_suggestions">Suggestions de recherche</string>
+    <string name="date_fetched">Date récupérée</string>
+    <string name="mark_range_as_unread">Marquer une partie des chapitres comme non-lus</string>
+    <string name="mark_range_as_read">Marquer une partie des chapitres comme lus</string>
+    <string name="automatic_removal">Suppression automatique</string>
+    <string name="flat_lime">Citron vert plate</string>
+    <string name="cutout_behavior_only_applies">Les zones de découpe s\'appliquent uniquement en mode portrait avec certains types d\'échelles</string>
+    <string name="pad_cutout_areas">Surfaces coupées du bloc</string>
+    <string name="category_hopper_long_press">Action d\'un appui long sur le filtre par Catégorie</string>
+    <string name="cancel_all_for_series">Tout annuler pour cette série</string>
 </resources>

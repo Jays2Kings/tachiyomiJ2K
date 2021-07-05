@@ -380,10 +380,7 @@
     <string name="myanimelist_relogin">कृपया फिर से MAL पर लॉगिन करें</string>
     <string name="search_settings">खोज सेंटिंग</string>
     <string name="locale">भाषा</string>
-    <string name="create_legacy_backup">विरासत बैकअप बनाएँ</string>
-    <string name="can_be_used_in_older_tachi">Tachiyomi के पुराने संस्करणों में उपयोग किया जा सकता है</string>
     <string name="automatic_backups">स्वचालित बैकअप</string>
-    <string name="also_create_legacy_backup">विरासत बैकअप भी बनाएं</string>
     <string name="invalid_backup_file">अमान्य बैकअप फ़ाइल</string>
     <string name="invalid_backup_file_type">अमान्य बैकअप फ़ाइल प्रकार: %1$s
 \nयह .proto.gz या .json के साथ समाप्त होना चाहिए।</string>
@@ -426,4 +423,5 @@
     <string name="updated_to_">v%1$s तक अद्यतन</string>
     <string name="hide_app_block_screenshots">एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाएं और स्क्रीनशॉट ब्लॉक करें</string>
     <string name="label_global_search">विश्वीय खोज</string>
+    <string name="cancel_all_for_series">इस श्रृंखला के लिए सभी रद्द करें</string>
 </resources>

@@ -15,9 +15,9 @@
     <string name="help">說明</string>
     <string name="filter">篩選</string>
     <string name="downloaded">已下載</string>
-    <string name="bookmarked">已加書籤</string>
-    <string name="unread">尚未閱讀</string>
-    <string name="read">已閱畢</string>
+    <string name="bookmarked">已加入書籤</string>
+    <string name="unread">未讀</string>
+    <string name="read">已讀</string>
     <string name="alphabetically">名稱</string>
     <string name="total_chapters">章節數</string>
     <string name="last_read">最近閱讀</string>
@@ -209,12 +209,12 @@
     <string name="local_source">本機來源</string>
     <string name="other">其他</string>
     <string name="browse">探索</string>
-    <string name="description">介紹</string>
+    <string name="description">詳細資訊</string>
     <string name="ongoing">連載中</string>
     <string name="unknown">不明</string>
     <string name="licensed">已授權</string>
     <string name="author">原作</string>
-    <string name="artist">畫家</string>
+    <string name="artist">作畫</string>
     <string name="status">狀態</string>
     <string name="chapter_">第 %1$s 章</string>
     <string name="downloading">下載中</string>
@@ -358,7 +358,7 @@
     <string name="display_options">檢視選項</string>
     <string name="drag_and_drop">拖曳</string>
     <string name="comfortable_grid">鬆散格狀</string>
-    <string name="confirm_category_deletion">刪除分類？</string>
+    <string name="confirm_category_deletion">確定要刪除分類？</string>
     <plurals name="category_plural">
         <item quantity="other">分類</item>
     </plurals>
@@ -372,10 +372,7 @@
     <string name="myanimelist_relogin">請重新登入 MAL</string>
     <string name="search_settings">搜尋設定</string>
     <string name="locale">在地化</string>
-    <string name="create_legacy_backup">建立適用於舊版的備份</string>
-    <string name="can_be_used_in_older_tachi">可供舊版 Tachiyomi 還原</string>
     <string name="automatic_backups">自動備份</string>
-    <string name="also_create_legacy_backup">同時建立舊版備份</string>
     <string name="invalid_backup_file">無效的備份檔</string>
     <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
 \n副檔名應為 .proto.gz 或 .json</string>
@@ -432,4 +429,10 @@
     <string name="label_global_search">全域搜尋</string>
     <string name="portrait">直向</string>
     <string name="landscape">橫向</string>
+    <string name="cancel_all_for_series">取消此叢書</string>
+    <string name="chapter_not_found">未找到章節</string>
+    <string name="add_categories">新增分類</string>
+    <string name="error_sharing_cover">分享封面時發生錯誤</string>
+    <string name="error_saving_cover">儲存封面時發生錯誤</string>
+    <string name="cover_saved">已儲存封面</string>
 </resources>

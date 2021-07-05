@@ -380,10 +380,7 @@
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Официаллӑ мар</string>
     <string name="may_contain_nsfw">NSFW (18+) шалаш пулма пултарать</string>
-    <string name="create_legacy_backup">Кивӗ форматлӑ янтӑв ту</string>
-    <string name="can_be_used_in_older_tachi">Кивӗ верссисенче усӑ курма пулать</string>
     <string name="automatic_backups">Хӑй-халлӗн янтӑвлани</string>
-    <string name="also_create_legacy_backup">Тата кивӗ форматлӑ янтӑв ту</string>
     <string name="invalid_backup_file">Тӗрӗс мар янтӑв файлӗ</string>
     <string name="invalid_backup_file_type">Тӗрӗс мар янтӑв файлӗ: %1$s
 \nФайлӗ .proto.gz е .json сӑмахсемпе вӗҫленмелле.</string>
@@ -458,4 +455,7 @@
     <string name="new_category">Ҫӗнӗ пухмӑш</string>
     <string name="no_pages_found">Элсем тупӑнман</string>
     <string name="label_global_search">Пур ҫӗрте шыра</string>
+    <string name="remove_all_downloads">Пур тиеве катертмелле-и\?</string>
+    <string name="cancel_all_for_series">Ҫак серилӗх валли веҫ пӑрахӑҫла</string>
+    <string name="all_files_permission_required">Файлсене курма ирӗк памалла</string>
 </resources>

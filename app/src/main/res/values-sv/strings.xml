@@ -365,10 +365,7 @@
     <string name="file_picker_error">Ingen filväljare-app hittades</string>
     <string name="search_settings">Sök inställningar</string>
     <string name="locale">Språk</string>
-    <string name="create_legacy_backup">Skapa legacy säkerhetskopia</string>
-    <string name="can_be_used_in_older_tachi">Kan används i äldre versioner av Tachiyomi</string>
     <string name="automatic_backups">Automatiska säkerhetskopior</string>
-    <string name="also_create_legacy_backup">Skapa också legacy säkerhetskopia</string>
     <string name="invalid_backup_file">Ogiltig säkerhetskopia</string>
     <string name="invalid_backup_file_type">Ogiltig säkerhetskopia: %1$s
 \nDet bör sluta med .proto.gz eller .json.</string>
@@ -473,7 +470,7 @@
         <item quantity="one">Ta bort %1$d nerladdade kapitel\?</item>
         <item quantity="other">Ta bort%1$d nerladdade kapitel\?</item>
     </plurals>
-    <string name="chapter_not_found">Kapitelet hittades inte</string>
+    <string name="chapter_not_found">Kapitlet hittades inte</string>
     <string name="chapters_removed">Kapitel borttagna.</string>
     <string name="removed_bookmark">Ta bort bokmärke</string>
     <string name="marked_as_unread">Markerad som oläst</string>
@@ -579,7 +576,7 @@
     <string name="remove_tracking">Ta bort spårning från appen</string>
     <string name="not_tracked">Spåras inte</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Kapitelet har tagits bort från källan:
+        <item quantity="one">Ett kapitel har tagits bort från källan:
 \n%2$s
 \nTa bort nedladdningen\?</item>
         <item quantity="other">%1$s kapitel har tagits bort från källan:
@@ -698,7 +695,6 @@
     <string name="hide_bottom_nav">Dölj bottennavigeringen automatiskt</string>
     <string name="last_used_library_recents">Senast använda (bibliotek eller senaste)</string>
     <string name="white_theme">Ren vit</string>
-    <string name="black_and_red">Svart och röd</string>
     <string name="spring_blossom">Vårblommor</string>
     <string name="midnight_dusk">Midnattskymning</string>
     <plurals name="manga_migrated">
@@ -835,6 +831,40 @@
     <string name="mark_range_as_unread">Markera ett intervall med kapitel som olästa</string>
     <string name="mark_range_as_read">Markera ett intervall med kapitel som lästa</string>
     <string name="cancel_all_for_series">Avbryt alla för denna serie</string>
-    <string name="show_recent_in_shortcuts">Visa senaste källor och serier i appgenvägar</string>
     <string name="app_shortcuts">Appgenväg</string>
+    <string name="include_">Inkludera: %s</string>
+    <string name="exclude_">Exkludera: %s</string>
+    <string name="force_download_cache_refresh_summary">Detta tvingar nedladdningscachen att räkna om. Användbart om du ändrade nedladdningar utanför den här appen och vill att appen ska hämta dem</string>
+    <string name="force_download_cache_refresh">Uppdatera nedladdningscachen</string>
+    <string name="no_new_chapters_open_details">När det inte finns några nya kapitel öppnas seriens detaljer istället</string>
+    <string name="series_opens_new_chapters">Seriens genvägar öppnar nya kapitel</string>
+    <string name="includes_recently_read_updated_added">Inkluderar nyligen lästa, uppdaterade och tillagda serier</string>
+    <string name="show_recent_series">Visa nya serier</string>
+    <string name="show_recent_sources">Visa nyligen använda källor</string>
+    <string name="hide_notification_content">Dölj notisinnehåll</string>
+    <string name="pure_black_dark_mode">Rent svart mörkt läge</string>
+    <string name="side_nav_icon_alignment">Justering av sidonavigeringsikon</string>
+    <string name="chocolate_strawberries">Chokladjordgubbar</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Jordgubbs-Daiquiri</string>
+    <string name="dark_theme">Mörkt tema</string>
+    <string name="light_theme">Ljust tema</string>
+    <string name="no_match_found">Inga träffar hittades</string>
+    <string name="source_unsupported">Källan stöds inte</string>
+    <string name="only_applies_silent_trackers">Gäller endast för tysta spårare, t.ex. Komga</string>
+    <string name="track_when_adding_to_library">Spåra när du lägger till i biblioteket</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d uppdatering väntar</item>
+        <item quantity="other">%d uppdateringar väntar</item>
+    </plurals>
+    <string name="could_not_install_extension">Det gick inte att installera tillägget</string>
+    <string name="global_updates">Globala uppdateringar</string>
+    <string name="checking_for_new_chapters">Letar efter nya kapitel</string>
+    <string name="open_random_series">Öppna en slumpmässig serie</string>
+    <string name="show_number_of_items">Visa antal artiklar</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K kräver åtkomst till alla filer för att ladda ner kapitel. Tryck här och aktivera sedan \"Tillåt åtkomst för att hantera alla filer.\"</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K kräver tillgång till alla filer i Android 11 för att kunna ladda ner kapitel, skapa automatiska säkerhetskopior, och läsa lokala manga.
+\n
+\nPå nästa skärm aktiverar du \"Tillåt åtkomst för att hantera alla filer\".</string>
+    <string name="all_files_permission_required">Filbehörigheter krävs</string>
 </resources>

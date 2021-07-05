@@ -664,9 +664,9 @@
     <string name="mark_as_unread">Als ungelesen markieren</string>
     <string name="mark_previous_as_unread">Vorherige Kapitel als ungelesen markieren</string>
     <string name="download_unread">Ungelesene herunterladen</string>
-    <string name="error_sharing_cover">Fehler beim Teilen vom Vorschaubild</string>
-    <string name="error_saving_cover">Fehler beim Speichern vom Vorschaubild</string>
-    <string name="cover_saved">Vorschaubild gespeichert</string>
+    <string name="error_sharing_cover">Fehler beim Teilen des Covers</string>
+    <string name="error_saving_cover">Fehler beim Speichern des Covers</string>
+    <string name="cover_saved">Cover gespeichert</string>
     <string name="enable_zoom_out">Rauszoomen aktivieren</string>
     <string name="unofficial_extension_message">Diese Erweiterung stammt nicht von der offiziellen Tachiyomi-Erweiterungsliste.</string>
     <string name="nsfw_short">Ü18</string>
@@ -674,10 +674,7 @@
     <string name="may_contain_nsfw">Kann NSFW/Ü18-Inhalte enthalten</string>
     <string name="no_chapters_error">Keine Kapitel gefunden</string>
     <string name="badges">Abzeichen</string>
-    <string name="create_legacy_backup">Legacy-Sicherung erstellen</string>
-    <string name="can_be_used_in_older_tachi">Können in älteren Versionen von Tachiyomi verwendet werden</string>
     <string name="automatic_backups">Automatische Datensicherungen</string>
-    <string name="also_create_legacy_backup">Auch eine Legacy-Sicherung erstellen</string>
     <string name="invalid_backup_file">Ungültige Sicherungsdatei</string>
     <string name="invalid_backup_file_type">Ungültiger Sicherungsdateientyp: %1$s
 \nDie Datei sollte mit .proto.gz oder .json enden.</string>
@@ -792,7 +789,6 @@
     <string name="follow_system_theme">Wie System</string>
     <string name="flat_lime">Limette</string>
     <string name="hot_pink">Heißes Pink</string>
-    <string name="black_and_red">Schwarz und rot</string>
     <string name="spring_blossom">Blühender Frühling</string>
     <string name="midnight_dusk">Mitternachtsdämmerung</string>
     <string name="pauses_reading_history">Leseverlauf pausieren</string>
@@ -870,6 +866,5 @@
     <string name="mark_range_as_unread">Markiere einen Abschnitt von Kapiteln als ungelesen</string>
     <string name="mark_range_as_read">Markiere einen Abschnitt von Kapiteln als gelesen</string>
     <string name="cancel_all_for_series">Alles für diese Serie abbrechen</string>
-    <string name="show_recent_in_shortcuts">Zeige die letzten Quellen und Serien in App-Verknüpfungen an</string>
     <string name="app_shortcuts">App-Verknüpfungen</string>
 </resources>

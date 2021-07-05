@@ -16,7 +16,7 @@
     <string name="filter">Filtra</string>
     <string name="downloaded">Descarregats</string>
     <string name="bookmarked">Marcats</string>
-    <string name="unread">No llegits</string>
+    <string name="unread">Sense llegir</string>
     <string name="read">Llegits</string>
     <string name="alphabetically">Alfabèticament</string>
     <string name="total_chapters">Capítols en total</string>
@@ -368,7 +368,7 @@
         <item quantity="one">Voleu eliminar %1$d capítol descarregat\?</item>
         <item quantity="other">Voleu eliminar %1$d capítols descarregats\?</item>
     </plurals>
-    <string name="chapter_not_found">No s\'ha trobat el capítol</string>
+    <string name="chapter_not_found">Capítol no trobat</string>
     <string name="chapters_removed">S\'han eliminat els capítols.</string>
     <string name="removed_bookmark">S\'ha esborrat de marcats</string>
     <string name="marked_as_unread">S\'ha marcat com a no llegit</string>
@@ -413,8 +413,8 @@
     <string name="restoring_backup_canceled">S\'ha cancel·lat la restauració</string>
     <string name="restore_duration">%02d min i %02d s</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Fet en %1$s amb %2$s errorFet en %1$s amb %2$s errors</item>
-        <item quantity="other"/>
+        <item quantity="one">Fet en %1$s amb %2$s error</item>
+        <item quantity="other">Fet en %1$s amb %2$s errors</item>
     </plurals>
     <string name="badges">Icones</string>
     <string name="last_used">Utilitzada per darrer cop</string>
@@ -435,10 +435,7 @@
     <string name="myanimelist_relogin">Torneu a iniciar la sessió a MAL</string>
     <string name="search_settings">Configuració de la cerca</string>
     <string name="locale">Llengua</string>
-    <string name="create_legacy_backup">Crea una còpia de seguretat en format antic</string>
-    <string name="can_be_used_in_older_tachi">Es pot utilitzar en versions més antigues del Tachiyomi</string>
     <string name="automatic_backups">Còpies de seguretat automàtiques</string>
-    <string name="also_create_legacy_backup">Crea també una còpia de seguretat en format antic</string>
     <string name="invalid_backup_file">Fitxer de còpia de seguretat invàlid</string>
     <string name="invalid_backup_file_type">Tipus de fitxer de còpia de seguretat invàlid: %1$s
 \nHauria d\'acabar en .proto.gz o .json.</string>
@@ -471,4 +468,11 @@
     <string name="updated_to_">S\'ha actualitzat a la v%1$s</string>
     <string name="hide_app_block_screenshots">Amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
     <string name="label_global_search">Cerca global</string>
+    <string name="cancel_all_for_series">Cancel·la-ho tot per a aquesta sèrie</string>
+    <string name="portrait">Vertical</string>
+    <string name="landscape">Horitzontal</string>
+    <string name="disabled">Desactivat</string>
+    <string name="error_sharing_cover">S\'ha produït un error en compartir la coberta</string>
+    <string name="error_saving_cover">S\'ha produït un error en desar la coberta</string>
+    <string name="cover_saved">Coberta desada</string>
 </resources>

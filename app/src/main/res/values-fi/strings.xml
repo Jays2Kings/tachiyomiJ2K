@@ -22,7 +22,7 @@
     <string name="cover_updated">Kansikuva päivitetty</string>
     <string name="page_">Sivu: %1$d</string>
     <string name="next_chapter_not_found">Seuraavaa lukua ei löydy</string>
-    <string name="decode_image_error">Kuvaa ei voitu decoodata</string>
+    <string name="decode_image_error">Kuvaa ei voitu purkaa</string>
     <string name="use_image_as_cover">Haluatko asettaa tämän kuvan kansikuvaksi\?</string>
     <string name="finished_chapter">Valmistunut:</string>
     <string name="current_chapter">Nykyinen:</string>
@@ -42,7 +42,7 @@
     <string name="new_version_available">Uusi päivitys saatavilla!</string>
     <string name="ignore">Ohita</string>
     <string name="no_new_updates_available">Ei päivityksiä saatavilla</string>
-    <string name="searching_for_updates">Tarkistetaan päivityksiä</string>
+    <string name="searching_for_updates">Tarkistetaan päivityksiä…</string>
     <string name="download_complete">Lataus valmis</string>
     <string name="download_error">Latausvirhe</string>
     <string name="update_available">Päivitys saatavilla</string>
@@ -142,7 +142,7 @@
 \n
 \nLuottamalla tähän sertifikaattiin hyväksyt nämä riskit.</string>
     <string name="version_">Versio: %1$s</string>
-    <string name="language_">"Kieli:  %1$s"</string>
+    <string name="language_">Kieli: %1$s</string>
     <string name="fullscreen">Koko näyttö</string>
     <string name="double_tap_anim_speed">Tuplanäpäytyksen animaation nopeus</string>
     <string name="show_page_number">Näytä sivunumero</string>
@@ -237,7 +237,7 @@
     <string name="source_not_installed_">Lähdettä ei ole asennettu: %1$s</string>
     <string name="chapter_">Luku %1$s</string>
     <string name="downloading">Ladataan</string>
-    <string name="downloading_progress">"Ladataan  (%1$d/%2$d)"</string>
+    <string name="downloading_progress">Ladataan (%1$d/%2$d)</string>
     <string name="paused">Pysäytetty</string>
     <string name="reading">Luettavana</string>
     <string name="completed">Päättynyt</string>
@@ -302,16 +302,16 @@
     <string name="date_added">Lisäyspäivämäärä</string>
     <string name="latest_chapter">Viimeisin luku</string>
     <plurals name="notification_update_failed">
-        <item quantity="one">1 päivitys epäonnistui%1$d päivitystä epäonnistui</item>
-        <item quantity="other"/>
+        <item quantity="one">1 päivitys epäonnistui</item>
+        <item quantity="other">%1$d päivitystä epäonnistui</item>
     </plurals>
     <string name="local_source_help_guide">Paikallinen lähdeopas</string>
     <string name="check_site_in_web">Katso sivu WebViewissä</string>
     <string name="obsolete">Vanhentunut</string>
     <string name="obsolete_extension_message">Tämä laajennus ei ole enää saatavilla.</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Laajennuspäivitys saatavilla%d laajennuspäivitystä saatavilla</item>
-        <item quantity="other"/>
+        <item quantity="one">Laajennuspäivitys saatavilla</item>
+        <item quantity="other">%d laajennuspäivitystä saatavilla</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Vähentää juovia, mutta vaikuttaa suorituskykyyn</string>
     <string name="skip_filtered_chapters">Ohita suodatetut luvut</string>
@@ -437,10 +437,7 @@
     <string name="hide_category_hopper">Piilota kategoriavalikko</string>
     <string name="tracked">Seuratut</string>
     <string name="locale">Paikallinen</string>
-    <string name="create_legacy_backup">Luo vanha varmuuskopio</string>
-    <string name="can_be_used_in_older_tachi">Voidaan käyttää Tachiyomin vanhemmissa versioissa</string>
     <string name="automatic_backups">Automaattiset varmuuskopiot</string>
-    <string name="also_create_legacy_backup">Luo myös vanha varmuuskopio</string>
     <string name="invalid_backup_file">Virheellinen varmuuskopio</string>
     <string name="invalid_backup_file_type">Virheellinen varmuuskopiotiedosto: %1$s
 \nSen pitäisi päättyä .proto.gz or .json.</string>
@@ -769,8 +766,7 @@
     <string name="only_downloaded">Vain ladatut</string>
     <string name="hide_app_block_screenshots">Piilota sovelluksen sisältö kun sovelluksia vaihdetaan ja estä kuvakaappauksien otto</string>
     <string name="follow_system_theme">Seuraa järjestelmän teemaa</string>
-    <string name="midnight_dusk">Midnight Dusk</string>
-    <string name="black_and_red">Punamusta</string>
+    <string name="midnight_dusk">Keskiyön hämärä</string>
     <string name="top">Ylin</string>
     <string name="clean_orphaned_downloads">Poista hylätyt</string>
     <string name="spring_blossom">Spring blossom</string>
@@ -835,6 +831,5 @@
     <string name="mark_range_as_unread">Merkitse lukuja lukemattomiksi</string>
     <string name="mark_range_as_read">Merkitse useat luvut luetuiksi</string>
     <string name="cancel_all_for_series">Peruuta kaikki tälle sarjalle</string>
-    <string name="show_recent_in_shortcuts">Näytä viimeisimmät lähteet ja sarjat sovelluksen pikavalinnoissa</string>
     <string name="app_shortcuts">Sovelluksen pikavalinnat</string>
 </resources>
