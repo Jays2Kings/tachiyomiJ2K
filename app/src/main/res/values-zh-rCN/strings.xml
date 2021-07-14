@@ -845,4 +845,15 @@
 \n
 \n在下一个屏幕上，启用“允许访问管理所有文件”</string>
     <string name="all_files_permission_required">需要文件权限</string>
+    <string name="orientation">方向</string>
+    <string name="default_orientation">默认方向</string>
+    <string name="restore_miui_warning">要让还原正确工作必须启用MIUI优化。</string>
+    <string name="yang">阳</string>
+    <string name="yin">阴</string>
+    <string name="set_as_default">设为默认</string>
+    <string name="extensions_miui_warning">要安装扩展必须禁用MIUI优化。</string>
+    <string name="by_update_date">按上传日期</string>
+    <string name="by_chapter_number">按章节数</string>
+    <string name="by_source_order">按图源顺序</string>
+    <string name="not_bookmarked">未加为书签</string>
 </resources>

@@ -530,7 +530,7 @@
         <item quantity="one">Cache libera. Il file %d è stato rimosso</item>
         <item quantity="other">Cache libera. I file %d sono stati rimossi</item>
     </plurals>
-    <string name="data_management">Gestione dei Dati</string>
+    <string name="data_management">Gestione dei dati</string>
     <string name="not_logged_into_">Non connesso in %1$s</string>
     <string name="restore_error">Impossibile ripristinare il backup</string>
     <string name="white_theme">Bianco Puro</string>
@@ -716,8 +716,8 @@
     <string name="backup_and_restore">Backup e ripristino</string>
     <string name="progress">Progresso</string>
     <string name="complete">Completo</string>
-    <string name="crash_logs">Resoconto dei crash</string>
-    <string name="dump_crash_logs">Salva un resoconto dei crash</string>
+    <string name="crash_logs">Registri degli arresti anomali</string>
+    <string name="dump_crash_logs">Salva un resoconto degli arresti</string>
     <string name="saves_error_logs">Salva un resoconto degli errori su un file per condividerlo con gli sviluppatori</string>
     <string name="crash_log_saved">Resoconto salvato</string>
     <string name="updated_to_">Aggiornato verso v%1$s</string>
@@ -847,12 +847,12 @@
     <string name="app_info">Info app</string>
     <string name="show_on_long_press">Mostra su pressione prolungata</string>
     <string name="actions">Azioni</string>
-    <string name="pure_black_dark_mode">Modalità scura pure black</string>
+    <string name="pure_black_dark_mode">Modalità scura nero puro</string>
     <string name="side_nav_icon_alignment">Allinea icona di navigazione laterale</string>
     <string name="hide_bottom_nav">Nascondi automaticamente i tasti di navigazione</string>
     <string name="flat_lime">Lime</string>
-    <string name="hot_pink">Rosa Caldo</string>
-    <string name="chocolate_strawberries">Fragole al Cioccolato</string>
+    <string name="hot_pink">Rosa caldo</string>
+    <string name="chocolate_strawberries">Fragole al cioccolato</string>
     <string name="yotsuba">Yotsuba</string>
     <string name="strawberry_daiquiri">Daiquiri alla Fragola</string>
     <string name="spring_blossom">Fiori di primavera</string>
@@ -881,19 +881,19 @@
     <string name="hide_unread_badges">Nascondi badge non letti</string>
     <string name="open_random_series">Apri una serie casuale</string>
     <string name="show_number_of_items">Mostra il numero di oggetti</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare capitoli. Fai tap qui, poi fornisci il permesso di \"Accesso a tutti i file.\"</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare capitoli. Fai tap qui, poi fornisci il permesso di «Accesso a tutti i file».</string>
     <string name="external_storage_permission_notice">Per scaricare capitoli, creare backup automatici e leggere manga in locale TachiJ2K richiede accesso ai file di Android 11.
 \n
-\nSulla prossima schermata, fornisci il permesso di \"Accesso a tutti i file.\"</string>
-    <string name="all_files_permission_required">Permessi di scrittura richiesti</string>
+\nSulla prossima schermata, fornisci il permesso di «Accesso a tutti i file».</string>
+    <string name="all_files_permission_required">Permessi dei file richiesti</string>
     <string name="turn_off_">Disattiva %s</string>
     <string name="turn_on_">Attiva %s</string>
     <string name="suggested_date_">Data suggerita: %1$s</string>
     <string name="selection">Selezione</string>
     <string name="include_">Includi: %s</string>
     <string name="exclude_">Escludi: %s</string>
-    <string name="force_download_cache_refresh_summary">Forza il ricalcolo della cache di download. Utile se hai modificato i file scaricati al di fuori di questa app e vuoi che vengano rilevati</string>
-    <string name="force_download_cache_refresh">Ricarica la cache di download</string>
+    <string name="force_download_cache_refresh_summary">Forza il ricalcolo della cache di scaricamento. Utile se hai modificato i file scaricati al di fuori di questa app e vuoi che vengano rilevati</string>
+    <string name="force_download_cache_refresh">Ricarica la cache di scaricamento</string>
     <string name="no_new_chapters_open_details">Apri i dettagli della serie quando non ci sono nuovi capitoli</string>
     <string name="series_opens_new_chapters">Scorciatoie delle serie aprono i nuovi capitoli</string>
     <string name="includes_recently_read_updated_added">Includi letti di recente, aggiornati, e nuove serie</string>

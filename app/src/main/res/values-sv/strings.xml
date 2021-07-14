@@ -867,4 +867,15 @@
 \n
 \nPå nästa skärm aktiverar du \"Tillåt åtkomst för att hantera alla filer\".</string>
     <string name="all_files_permission_required">Filbehörigheter krävs</string>
+    <string name="orientation">Orientering</string>
+    <string name="default_orientation">Standardorientering</string>
+    <string name="restore_miui_warning">MIUI-optimering måste vara aktiverad för att återställningen ska fungera korrekt.</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="set_as_default">Ange som standard</string>
+    <string name="extensions_miui_warning">MIUI-optimering måste inaktiveras för att installera tillägg.</string>
+    <string name="by_update_date">Efter uppladdningsdatum</string>
+    <string name="by_chapter_number">Efter kapitelnummer</string>
+    <string name="by_source_order">Enligt källans ordning</string>
+    <string name="not_bookmarked">Inte bokmärkt</string>
 </resources>

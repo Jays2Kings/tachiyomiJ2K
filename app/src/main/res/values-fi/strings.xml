@@ -832,4 +832,5 @@
     <string name="mark_range_as_read">Merkitse useat luvut luetuiksi</string>
     <string name="cancel_all_for_series">Peruuta kaikki tälle sarjalle</string>
     <string name="app_shortcuts">Sovelluksen pikavalinnat</string>
+    <string name="all_files_permission_required">Tiedoston käyttöoikeudet vaaditaan</string>
 </resources>

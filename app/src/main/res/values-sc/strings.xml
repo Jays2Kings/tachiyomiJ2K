@@ -820,7 +820,7 @@
     <string name="landscape">Orizontale</string>
     <string name="portrait">Verticale</string>
     <string name="date_fetched">Data recuperada</string>
-    <string name="release_page">Pàgina de intregada</string>
+    <string name="release_page">Pàgina de publicatzione</string>
     <string name="save_pages_separately">Sarvat sas pàginas in cartellas separadas</string>
     <string name="show_on_long_press">Ammustra cun un\'incarcu longu</string>
     <string name="create_folders_by_manga_title">Creat cartellas in base a su tìtulu de su manga</string>
@@ -832,4 +832,39 @@
     <string name="mark_range_as_read">Marca un\'intervallu de capìtulos comente lèghidos</string>
     <string name="cancel_all_for_series">Annulla totu pro custa sèrie</string>
     <string name="app_shortcuts">Incurtzadas de s\'aplicatzione</string>
+    <string name="include_">Include: %s</string>
+    <string name="exclude_">Esclude: %s</string>
+    <string name="force_download_cache_refresh_summary">Custu at a fortzare unu càrculu nou de sa memòria temporànea de iscarrigamentu. Est ùtile si as modificadu sos documentos iscarrigados in foras de custa aplicatzione e boles chi s\'aplicatzione los rilevet</string>
+    <string name="force_download_cache_refresh">Annoa sa memòria de iscarrigamentu temporànea</string>
+    <string name="series_opens_new_chapters">Sos incurtziadòrgios de sas sèries aberint sos capìtulos noos</string>
+    <string name="no_new_chapters_open_details">Cando non b\'ant a èssere capìtulos noos, imbetzes, s\'ant a abèrrere sos detàllios de sa sèrie</string>
+    <string name="includes_recently_read_updated_added">Includet sas leghiduras reghentes, sos agiornamentos e sas sèries annantas</string>
+    <string name="show_recent_series">Ammustra sas sèries reghentes</string>
+    <string name="show_recent_sources">Ammustra sas fontes impreadas dae pagu</string>
+    <string name="hide_notification_content">Cua su cuntenutu de sas notìficas</string>
+    <string name="pure_black_dark_mode">Modalidade iscura niedda pura</string>
+    <string name="side_nav_icon_alignment">Alliniamentu de s\'icona de navigatzione laterale</string>
+    <string name="chocolate_strawberries">Fràgolas a su Tziculate</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Daiquiri a sa Fràgola</string>
+    <string name="dark_theme">Tema iscuru</string>
+    <string name="light_theme">Tema craru</string>
+    <string name="no_match_found">Perunu resurtadu agatadu</string>
+    <string name="source_unsupported">Fonte non suportada</string>
+    <string name="only_applies_silent_trackers">S\'àplicat petzi a sos arrastadores a sa muda, che a Komga</string>
+    <string name="track_when_adding_to_library">Arrastamentu a pustis de s\'annanghidura a sa biblioteca</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d agiornamentu in isetu</item>
+        <item quantity="other">%d agiornamentos in isetu</item>
+    </plurals>
+    <string name="could_not_install_extension">Installatzione de s\'estensione fallida</string>
+    <string name="global_updates">Agiornamentos globales</string>
+    <string name="checking_for_new_chapters">Chirchende capìtulos noos</string>
+    <string name="open_random_series">Aberi una sèrie a casu</string>
+    <string name="show_number_of_items">Ammustra su nùmeru de elementos</string>
+    <string name="external_storage_download_notice">Pro iscarrigare capìtulos TachiyomiJ2K tenet bisòngiu de s\'atzessu a totu sos documentos. Incarca inoghe, e a pustis abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
+    <string name="external_storage_permission_notice">Pro iscarrigare capìtulos, creare còpias de seguresa e lèghere manga in locale TachiyomiJ2K tenet bisòngiu de s\'atzessu a sos documentos de Android 11.
+\n
+\nIn s\'ischermada imbeniente abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
+    <string name="all_files_permission_required">Permissos de iscritura pedidos</string>
 </resources>

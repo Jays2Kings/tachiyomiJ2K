@@ -449,7 +449,7 @@
     <string name="not_logged_into_">Nicht angemeldet in %1$s</string>
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Kapitel-Zwischenspeicher leeren</string>
-    <string name="data_management">Datenmanagement</string>
+    <string name="data_management">Datenverwaltung</string>
     <string name="network">Netzwerk</string>
     <string name="requires_app_restart">Erfordert einen Neustart der Anwendung, um wirksam zu werden</string>
     <string name="used_">Belegt: %1$s</string>
@@ -867,4 +867,50 @@
     <string name="mark_range_as_read">Markiere einen Abschnitt von Kapiteln als gelesen</string>
     <string name="cancel_all_for_series">Alles für diese Serie abbrechen</string>
     <string name="app_shortcuts">App-Verknüpfungen</string>
+    <string name="only_applies_silent_trackers">Gilt nur für stille Tracker, wie z. B. Komga</string>
+    <string name="include_">Einschließen: %s</string>
+    <string name="exclude_">Ausschließen: %s</string>
+    <string name="force_download_cache_refresh_summary">Dadurch wird der Herunterladen-Cache zur Neuberechnung gezwungen. Nützlich, wenn Sie Datenübertragungen außerhalb dieser Anwendungen geändert haben und möchten, dass die Anwendung sie aufhebt</string>
+    <string name="force_download_cache_refresh">Den Herunterladen-Cache aktualisieren</string>
+    <string name="no_new_chapters_open_details">Wenn es keine neuen Kapitel gibt, werden stattdessen die Details der Serie geöffnet</string>
+    <string name="series_opens_new_chapters">Serienkurzbefehle öffnen neue Kapitel</string>
+    <string name="includes_recently_read_updated_added">Enthält kürzlich gelesene, aktualisierte und hinzugefügte Serien</string>
+    <string name="show_recent_series">Aktuelle Serien anzeigen</string>
+    <string name="show_recent_sources">Zuletzt verwendete Quellen anzeigen</string>
+    <string name="pure_black_dark_mode">Rein schwarzer Dunkelmodus</string>
+    <string name="side_nav_icon_alignment">Ausrichtung der seitlichen Navigationssymbole</string>
+    <string name="chocolate_strawberries">Schokolade-Erdbeeren</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Erdbeer-Daiquiri</string>
+    <string name="dark_theme">Dunkelmodus</string>
+    <string name="light_theme">Hellmodus</string>
+    <string name="no_match_found">Keine Übereinstimmung gefunden</string>
+    <string name="track_when_adding_to_library">Nachverfolgen beim Hinzufügen zur Bibliothek</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d Aktualisierung ausstehend</item>
+        <item quantity="other">%d Aktualisierungen ausstehend</item>
+    </plurals>
+    <string name="could_not_install_extension">Erweiterung konnte nicht installiert werden</string>
+    <string name="global_updates">Globale Aktualisierungen</string>
+    <string name="checking_for_new_chapters">Überprüfe auf neue Kapitel</string>
+    <string name="open_random_series">Eine beliebige Serie öffnen</string>
+    <string name="show_number_of_items">Anzahl der Elemente anzeigen</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen“.</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11, um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Mangas zu lesen.
+\n
+\nAktivieren Sie im nächsten Bildschirm „Zugriff auf die Verwaltung aller Dateien zulassen“.</string>
+    <string name="all_files_permission_required">Dateiberechtigungen erforderlich</string>
+    <string name="hide_notification_content">Benachrichtigungsinhalt ausblenden</string>
+    <string name="source_unsupported">Quelle wird nicht unterstützt</string>
+    <string name="orientation">Ausrichtung</string>
+    <string name="default_orientation">Standardausrichtung</string>
+    <string name="restore_miui_warning">MIUI Optimierung muss aktiviert sein, damit die Wiederherstellung richtig funktioniert.</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="set_as_default">Als Standard setzen</string>
+    <string name="extensions_miui_warning">MIUI Optimierung muss deaktiviert sein, um Erweiterungen zu installieren.</string>
+    <string name="by_update_date">Nach Uploaddatum</string>
+    <string name="by_chapter_number">Nach Kapitelnummer</string>
+    <string name="by_source_order">Nach Quellenreihenfolge</string>
+    <string name="not_bookmarked">Nicht mit Lesezeichen versehen</string>
 </resources>

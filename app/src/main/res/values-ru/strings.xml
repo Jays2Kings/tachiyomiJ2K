@@ -902,4 +902,52 @@
     <string name="mark_range_as_read">Отметить определённое количество глав как \"Прочитано\"</string>
     <string name="cancel_all_for_series">Отменить всё для этой серии</string>
     <string name="app_shortcuts">Ярлыки приложения</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K требует доступ ко всем файлам системы Android 11 для загрузки глав, создания автоматических резервных копий, и чтения локальной манги.
+\n
+\nНа следующем экране включите \"Разрешить доступ к управлению всеми файлами.\"</string>
+    <string name="include_">Включать: %s</string>
+    <string name="exclude_">Исключать: %s</string>
+    <string name="force_download_cache_refresh_summary">Это заставит пересчитать кэш загрузок. Полезно, если вы изменили загрузки вне этого приложения и хотите, чтобы приложение их подхватило</string>
+    <string name="force_download_cache_refresh">Обновить кэш загрузки</string>
+    <string name="no_new_chapters_open_details">Когда нет новых глав, вместо них открывается информация о серии</string>
+    <string name="series_opens_new_chapters">Ярлыки серии открывают новые главы</string>
+    <string name="includes_recently_read_updated_added">Включая недавно прочитанные, обновленные, и добавленные серии</string>
+    <string name="show_recent_series">Показывать последние серии</string>
+    <string name="show_recent_sources">Показывать недавно использованные источники</string>
+    <string name="hide_notification_content">Скрыть содержимое уведомлений</string>
+    <string name="pure_black_dark_mode">Тёмный режим с чистым чёрным</string>
+    <string name="side_nav_icon_alignment">Выравнивание значков боковой навигации</string>
+    <string name="chocolate_strawberries">Шоколадная Клубника</string>
+    <string name="yotsuba">Ёцуба</string>
+    <string name="strawberry_daiquiri">Клубничный Дайкири</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="no_match_found">Совпадений не найдено</string>
+    <string name="source_unsupported">Источник не поддерживается</string>
+    <string name="only_applies_silent_trackers">Относится только к бесшумным трекерам, таким как Komga</string>
+    <string name="track_when_adding_to_library">Отслеживать при добавлении в библиотеку</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d обновление ожидается</item>
+        <item quantity="few">%d обновления ожидаются</item>
+        <item quantity="many">%d обновлений ожидаются</item>
+        <item quantity="other">%d обновлений ожидаются</item>
+    </plurals>
+    <string name="could_not_install_extension">Не удалось установить расширение</string>
+    <string name="global_updates">Глобальные обновления</string>
+    <string name="checking_for_new_chapters">Проверка наличия новых глав</string>
+    <string name="open_random_series">Открыть случайную серию</string>
+    <string name="show_number_of_items">Показать количество объектов</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K требует доступ ко всем файлам для загрузки глав. Нажмите здесь, затем включите \"Разрешить доступ к управлению всеми файлами.\"</string>
+    <string name="all_files_permission_required">Требуются права доступа к файлам</string>
+    <string name="orientation">Ориентация</string>
+    <string name="default_orientation">Ориентация по умолчанию</string>
+    <string name="restore_miui_warning">Оптимизация MIUI должна быть включена для корректной работы восстановления.</string>
+    <string name="yang">Янь</string>
+    <string name="yin">Инь</string>
+    <string name="set_as_default">Установить по умолчанию</string>
+    <string name="extensions_miui_warning">Оптимизация MIUI должна быть отключена для установки расширений.</string>
+    <string name="by_update_date">По дате загрузки</string>
+    <string name="by_chapter_number">По номеру главы</string>
+    <string name="by_source_order">По расположению источников</string>
+    <string name="not_bookmarked">Не в закладках</string>
 </resources>

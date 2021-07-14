@@ -717,7 +717,7 @@
     <string name="backup_and_restore">Sauvegarde et restauration</string>
     <string name="progress">Progression</string>
     <string name="complete">Compléter</string>
-    <string name="crash_logs">Journaux d\'erreur</string>
+    <string name="crash_logs">Journaux de plantage</string>
     <string name="dump_crash_logs">Copie des journaux endommagés</string>
     <string name="saves_error_logs">Enregistre les journaux d\'erreur dans un fichier pour le partager avec les développeurs</string>
     <string name="crash_log_saved">Sauvegarde des journaux endommagés</string>
@@ -858,12 +858,47 @@
     <string name="search_tips_show_periodically">Des suggestions de recherche apparaîtront périodiquement. Appuyez longuement sur la suggestion pour la rechercher.</string>
     <string name="search_suggestions">Suggestions de recherche</string>
     <string name="date_fetched">Date récupérée</string>
-    <string name="mark_range_as_unread">Marquer une partie des chapitres comme non-lus</string>
-    <string name="mark_range_as_read">Marquer une partie des chapitres comme lus</string>
+    <string name="mark_range_as_unread">Marquer une partie des chapitres comme non-lue</string>
+    <string name="mark_range_as_read">Marquer une partie des chapitres comme lue</string>
     <string name="automatic_removal">Suppression automatique</string>
     <string name="flat_lime">Citron vert plate</string>
     <string name="cutout_behavior_only_applies">Les zones de découpe s\'appliquent uniquement en mode portrait avec certains types d\'échelles</string>
     <string name="pad_cutout_areas">Surfaces coupées du bloc</string>
     <string name="category_hopper_long_press">Action d\'un appui long sur le filtre par Catégorie</string>
     <string name="cancel_all_for_series">Tout annuler pour cette série</string>
+    <string name="external_storage_download_notice">Pour télécharger des chapitres, TachiyomiJ2K nécessite l\'accès à tous les fichiers. Appuyez ici, puis activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
+    <string name="external_storage_permission_notice">Pour télécharger des chapitres, créer des sauvegardes automatiques et lire des mangas locaux, TachiyomiJ2K nécessite l\'accès à tous les fichiers d\'Android 11.
+\n
+\nSur l\'écran suivant, activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
+    <string name="include_">Inclure : %s</string>
+    <string name="force_download_cache_refresh_summary">Cela forcera le recalcul du cache de téléchargement. Utile si vous avez modifié des fichiers téléchargés en dehors de l\'application et que vous souhaitez que l\'application les récupère</string>
+    <string name="force_download_cache_refresh">Rafraichir le cache de téléchargement</string>
+    <string name="series_opens_new_chapters">Les raccourcis de la série ouvrent de nouveaux chapitres</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Daiquiri fraise</string>
+    <string name="only_applies_silent_trackers">S\'applique uniquement aux trackers silencieux, comme Komga</string>
+    <string name="track_when_adding_to_library">Suivre lors de l\'ajout à la bibliothèque</string>
+    <string name="global_updates">Mises à jour globales</string>
+    <string name="open_random_series">Ouvrir une série aléatoire</string>
+    <string name="show_number_of_items">Afficher le nombre d\'objets</string>
+    <string name="exclude_">Exclure : %s</string>
+    <string name="no_new_chapters_open_details">Quand il n\'y a aucun nouveau chapitre, les détails de la série s\'afficheront à la place</string>
+    <string name="includes_recently_read_updated_added">Inclus les séries lu récemment, mises à jour et ajoutées</string>
+    <string name="show_recent_series">Afficher les séries récentes</string>
+    <string name="show_recent_sources">Voir les sources récemment utilisées</string>
+    <string name="hide_notification_content">Masquer le contenu des notifications</string>
+    <string name="dark_theme">Thème sombre</string>
+    <string name="light_theme">Thème clair</string>
+    <string name="no_match_found">Aucun résultat trouvé</string>
+    <string name="source_unsupported">La source n\'est pas prise en charge</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d mise à jour en attente</item>
+        <item quantity="other">%d mises à jour en attente</item>
+    </plurals>
+    <string name="could_not_install_extension">Échec de l\'installation de l\'extension</string>
+    <string name="checking_for_new_chapters">Recherche de nouveaux chapitres</string>
+    <string name="pure_black_dark_mode">Mode sombre noir pur</string>
+    <string name="side_nav_icon_alignment">Alignement de l\'icône de navigation latérale</string>
+    <string name="chocolate_strawberries">Fraises au chocolat</string>
+    <string name="all_files_permission_required">Autorisations de fichiers requises</string>
 </resources>

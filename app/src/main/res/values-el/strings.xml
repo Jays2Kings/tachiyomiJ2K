@@ -832,4 +832,7 @@
     <string name="mark_range_as_read">Σήμανση μιας σειράς κεφαλαίων ως αναγνωσμένα</string>
     <string name="cancel_all_for_series">Ακύρωση όλων για αυτήν τη σειρά</string>
     <string name="app_shortcuts">Συντομεύσεις εφαρμογής</string>
+    <string name="no_match_found">Δεν βρέθηκε αντιστοιχία</string>
+    <string name="source_unsupported">Η πηγή δεν υποστηρίζεται</string>
+    <string name="hide_notification_content">Απόκρυψη περιεχομένου ειδοποιήσεων</string>
 </resources>

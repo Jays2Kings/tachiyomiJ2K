@@ -84,7 +84,7 @@
     <string name="updating_">Atualizando %1$s</string>
     <string name="update_available">Atualização disponível</string>
     <string name="new_version_available">Nova atualização disponível!</string>
-    <string name="no_new_updates_available">Sem atualizações disponíveis</string>
+    <string name="no_new_updates_available">Sem novas atualizações disponíveis</string>
     <string name="searching_for_updates">Procurando por atualizações…</string>
     <!-- Main Screens -->
     <!-- Library -->
@@ -93,7 +93,7 @@
     <string name="selected_">Selecionado: %1$d</string>
     <string name="local">Local</string>
     <string name="remove_from_library_question">Remover da biblioteca?</string>
-    <string name="library_search_hint">Pesquisar título, tags, fonte</string>
+    <string name="library_search_hint">Pesquisar título, marcações, fonte</string>
     <string name="library_is_empty_add_from_browse">Sua biblioteca está vazia, adicione séries 
         à sua biblioteca na aba Navegar.</string>
     <string name="no_matches_for_filters">Nenhum resultado corresponde aos seus filtros atuais</string>
@@ -880,4 +880,24 @@
     <string name="mark_range_as_read">Marcar um intervalo de capítulos como lido</string>
     <string name="cancel_all_for_series">Cancelar todos para esta série</string>
     <string name="app_shortcuts">Atalhos do app</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K querer acesso a todos arquivos no Android 11 para baixar capítulos, criar backups automáticos, e ler mangás locais.
+\n
+\nNa próxima tela, ative \"Permitir acesso de gerenciamento de todos arquivos.\"</string>
+    <string name="dark_theme">Tema escuro</string>
+    <string name="light_theme">Tema claro</string>
+    <string name="no_match_found">Não foi encontrado resultado similar</string>
+    <string name="source_unsupported">Essa fonte não é suportada</string>
+    <string name="only_applies_silent_trackers">Aplicar apenas a rastreadores silenciosos, assim como o Komga</string>
+    <string name="track_when_adding_to_library">Rastrear ao adicionar a biblioteca</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d atualização pendente</item>
+        <item quantity="other">%d atualizações pendentes</item>
+    </plurals>
+    <string name="could_not_install_extension">Não foi possível instalar a extensão</string>
+    <string name="global_updates">Atualizações globais</string>
+    <string name="checking_for_new_chapters">Verificar por novos capítulos</string>
+    <string name="open_random_series">Abrir uma série aleatória</string>
+    <string name="show_number_of_items">Mostrar o número de itens</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
+    <string name="all_files_permission_required">Permissões de arquivo necessárias</string>
 </resources>

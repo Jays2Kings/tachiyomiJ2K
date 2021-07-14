@@ -229,7 +229,7 @@
     <string name="title">Başlık</string>
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
-    <string name="url_not_set_click_again">Manga url\'si ayarlı değil, lütfen başlığa dokunun ve mangayı yeniden seçin</string>
+    <string name="url_not_set_click_again">Manga URL\'si ayarlı değil, lütfen başlığa dokunun ve mangayı yeniden seçin</string>
     <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
     <string name="this_will_remove_the_read_date_question">Bu, bu bölümün okunma tarihini kaldıracak. Emin misiniz?</string>
     <string name="picture_saved">Resim kaydedildi</string>
@@ -832,4 +832,39 @@
     <string name="mark_range_as_read">Bir bölüm aralığını okundu olarak işaretle</string>
     <string name="cancel_all_for_series">Bu seri için tümünü iptal et</string>
     <string name="app_shortcuts">Uygulama kısayolları</string>
+    <string name="open_random_series">Rastgele bir seri aç</string>
+    <string name="include_">Dahil Et: %s</string>
+    <string name="exclude_">Hariç tut: %s</string>
+    <string name="force_download_cache_refresh_summary">Bu, indirme önbelleğini yeniden hesaplamaya zorlar. Bu uygulamanın dışındaki indirmeleri değiştirdiyseniz ve uygulamanın bunları almasını istiyorsanız kullanışlıdır</string>
+    <string name="force_download_cache_refresh">İndirme önbelleğini yenile</string>
+    <string name="no_new_chapters_open_details">Yeni bölüm olmayınca serinin detayları açılacak</string>
+    <string name="series_opens_new_chapters">Seri kısayolları yeni bölümler açar</string>
+    <string name="includes_recently_read_updated_added">Son okunan, güncellenen ve eklenen serileri içerir</string>
+    <string name="show_recent_series">Son serileri göster</string>
+    <string name="show_recent_sources">Son kullanılan kaynakları göster</string>
+    <string name="hide_notification_content">Bildirim içeriğini gizle</string>
+    <string name="pure_black_dark_mode">Saf siyah karanlık mod</string>
+    <string name="side_nav_icon_alignment">Yan gezinti simgesi hizalaması</string>
+    <string name="chocolate_strawberries">Çikolatalı Çilek</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Çilekli Kokteyl</string>
+    <string name="dark_theme">Karanlık tema</string>
+    <string name="light_theme">Aydınlık tema</string>
+    <string name="no_match_found">Eşleşme bulunamadı</string>
+    <string name="source_unsupported">Kaynak desteklenmiyor</string>
+    <string name="only_applies_silent_trackers">Yalnızca Komga gibi sessiz izleyiciler için geçerlidir</string>
+    <string name="track_when_adding_to_library">Kitaplığa eklerken izle</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">1 güncelleme beklemede</item>
+        <item quantity="other">%d güncelleme beklemede</item>
+    </plurals>
+    <string name="could_not_install_extension">Uzantı yüklenemedi</string>
+    <string name="global_updates">Genel güncellemeler</string>
+    <string name="checking_for_new_chapters">Yeni bölümler aranıyor</string>
+    <string name="show_number_of_items">Öge sayısını göster</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K\'in, bölümleri indirmek için tüm dosyalara erişmesi gerekir. Buraya dokunun, ardından \"Tüm dosyaları yönetmek için erişime izin ver\"i etkinleştirin</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K\'in, bölümleri indirmek, otomatik yedeklemeler oluşturmak ve yerel mangaları okumak için Android 11\'deki tüm dosyalara erişimesi gerekir.
+\n
+\nBir sonraki ekranda, \"Tüm dosyaları yönetmek için erişime izin ver\" seçeneğini etkinleştirin</string>
+    <string name="all_files_permission_required">Dosya izinleri gerekli</string>
 </resources>
