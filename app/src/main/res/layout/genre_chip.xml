@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_chip"
+    style="@style/Theme.Widget.Chip.Outline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_width="wrap_content"
+    tools:layout_height="30dp"
+    tools:text="This is A Test" />

@@ -295,7 +295,7 @@
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="manga_summary,manga_summary_label,sub_button_scroll" />
 
-    <me.gujun.android.taggroup.TagGroup
+    <com.google.android.material.chip.ChipGroup
         android:id="@+id/manga_genres_tags"
         style="@style/TagGroup"
         android:layout_width="0dp"
@@ -304,10 +304,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:visibility="gone"
-        app:atg_backgroundColor="@android:color/transparent"
-        app:atg_borderColor="?colorAccent"
-        app:atg_borderStrokeWidth="1dp"
-        app:atg_textColor="?colorAccent"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toTopOf="@id/less_button"
         app:layout_constraintEnd_toEndOf="parent"

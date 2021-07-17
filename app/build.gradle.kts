@@ -226,7 +226,7 @@ dependencies {
 
     implementation("com.github.kizitonwose:AndroidTagGroup:1.6.0")
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
-    implementation("com.github.carlosesco:DirectionalViewPager:a844dbca0a")
+    implementation("com.github.tachiyomiorg:DirectionalViewPager:1.0.0")
     implementation("com.github.florent37:viewtooltip:1.2.2")
     implementation("com.getkeepsafe.taptargetview:taptargetview:1.13.0")
 

@@ -297,6 +297,14 @@
         <item name="android:tint">?colorAccent</item>
     </style>
 
+    <style name="Theme.Widget.Chip.Outline" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="chipStrokeColor">?attr/colorAccent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:checkable">false</item>
+    </style>
+
 
     <!--===-->
     <!--OLD-->
