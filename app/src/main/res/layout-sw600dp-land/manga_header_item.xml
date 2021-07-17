@@ -298,7 +298,6 @@
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/manga_genres_tags"
-        style="@style/TagGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
