@@ -812,4 +812,11 @@
     <string name="app_shortcuts">Pintasan apl</string>
     <string name="mark_range_as_unread">Tandakan julat bab sebagai belum dibaca</string>
     <string name="mark_range_as_read">Tandakan julat bab sebagai dibaca</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K memerlukan akses kepada semua fail di Android 11 untuk memuat turun bab, membuat sandaran automatik, dan membaca manga lokal.
+\n
+\nPada skrin berikutnya, hidupkan \"benarkan akses mengurus semua fail.\"</string>
+    <string name="all_files_permission_required">Kebenaran fail diperlukan</string>
+    <string name="source_unsupported">Sumber tidak disokong</string>
+    <string name="hide_notification_content">Sembunyikan kandungan pemberitahuan</string>
+    <string name="about_dont_kill_my_app">Sesetengah pengeluar ada sekatan tambahan pada aplikasi yang akan menghentikan perkidmatan latar belakang. Laman web ini ada maklumat cara membaikinya.</string>
 </resources>

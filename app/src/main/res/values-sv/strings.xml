@@ -878,4 +878,20 @@
     <string name="by_chapter_number">Efter kapitelnummer</string>
     <string name="by_source_order">Enligt källans ordning</string>
     <string name="not_bookmarked">Inte bokmärkt</string>
+    <string name="warning">Varning</string>
+    <string name="about_dont_kill_my_app">Vissa tillverkare har ytterligare appbegränsningar som dödar bakgrundstjänster. Denna webbplats har mer information om hur du åtgärdar det.</string>
+    <string name="dont_auto_update">Uppdatera inte automatiskt</string>
+    <string name="over_any_network">Över vilket nätverk som helst</string>
+    <string name="over_wifi_only">Endast via Wi-Fi</string>
+    <string name="auto_update_app">Uppdatera appen automatiskt</string>
+    <string name="auto_updates">Automatiska uppdateringar</string>
+    <string name="tako">Tako</string>
+    <string name="a_calmer_you">En lugnare du</string>
+    <string name="a_brighter_you">Ett ljusare du</string>
+    <string name="add_tag">Lägg till tagg</string>
+    <string name="updating_extensions">Uppdaterar tillägg</string>
+    <string name="some_extensions_may_prompt">Vissa tillägg kan fortfarande uppmana till att installeras först.</string>
+    <string name="update_all">Uppdatera alla</string>
+    <string name="update_completed">Uppdatering slutförd</string>
+    <string name="could_not_install_update">Det gick inte att installera uppdateringen</string>
 </resources>

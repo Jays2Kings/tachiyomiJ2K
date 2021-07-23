@@ -423,8 +423,8 @@
     <string name="cover_saved">Kapak kaydedildi</string>
     <string name="remember_this_choice">Bu seçeneği hatırla</string>
     <string name="reset_cover">Kapağı sıfırla</string>
-    <string name="reset_tags">Etiketleri Sıfırla</string>
-    <string name="clear_tags">Etiketleri Temizle</string>
+    <string name="reset_tags">Etiketleri sıfırla</string>
+    <string name="clear_tags">Etiketleri temizle</string>
     <string name="oldest_first">Eskiden yeniye</string>
     <string name="newest_first">Yeniden eskiye</string>
     <string name="sort_by_chapter_number">Bölüm sayısına göre sırala</string>
@@ -867,4 +867,31 @@
 \n
 \nBir sonraki ekranda, \"Tüm dosyaları yönetmek için erişime izin ver\" seçeneğini etkinleştirin</string>
     <string name="all_files_permission_required">Dosya izinleri gerekli</string>
+    <string name="default_orientation">Öntanımlı yönelim</string>
+    <string name="orientation">Yönelim</string>
+    <string name="restore_miui_warning">Geri yüklemenin düzgün işlemesi için MIUI Optimizasyonu etkinleştirilmeli.</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="set_as_default">Öntanımlı yap</string>
+    <string name="extensions_miui_warning">Uzantı yüklemek için MIUI Optimizasyonu devre dışı bırakılmalıdır.</string>
+    <string name="by_update_date">Yükleme tarihiyle</string>
+    <string name="by_chapter_number">Bölüm numarasıyla</string>
+    <string name="by_source_order">Kaynak sırasıyla</string>
+    <string name="not_bookmarked">İşaretsiz</string>
+    <string name="updating_extensions">Eklentiler Güncelleniyor</string>
+    <string name="update_all">Tümünü güncelle</string>
+    <string name="update_completed">Güncelleme tamamlandı</string>
+    <string name="could_not_install_update">Güncelleme yüklenemedi</string>
+    <string name="warning">Uyarı</string>
+    <string name="about_dont_kill_my_app">Bazı üreticilerin arka plan hizmetlerini öldüren ek uygulama kısıtlamaları vardır. Bu web sitesinde nasıl düzeltileceği hakkında daha fazla bilgi al.</string>
+    <string name="dont_auto_update">Otomatik güncelleme</string>
+    <string name="over_any_network">Herhangi bir ağ</string>
+    <string name="over_wifi_only">Yalnızca Wi-fi</string>
+    <string name="auto_update_app">Otomatik-güncelleme uygulaması</string>
+    <string name="auto_updates">Otomatik-güncelleme</string>
+    <string name="tako">Tako</string>
+    <string name="a_calmer_you">Daha Sakin Bir Sen</string>
+    <string name="a_brighter_you">Daha Parlak Bir Sen</string>
+    <string name="add_tag">Etiket ekle</string>
+    <string name="some_extensions_may_prompt">Bazı uzantılar yine de önce yüklenmesini isteyebilir.</string>
 </resources>

@@ -829,7 +829,7 @@
     <string name="dark_theme">深色主题</string>
     <string name="light_theme">浅色主题</string>
     <string name="no_match_found">未找到匹配项</string>
-    <string name="source_unsupported">不支持此图源</string>
+    <string name="source_unsupported">图源不受支持</string>
     <string name="only_applies_silent_trackers">仅适用于静默追踪器，例如 Komga</string>
     <string name="track_when_adding_to_library">添加到书库时跟踪</string>
     <plurals name="_updates_pending">
@@ -856,4 +856,21 @@
     <string name="by_chapter_number">按章节数</string>
     <string name="by_source_order">按图源顺序</string>
     <string name="not_bookmarked">未加为书签</string>
+    <string name="start_past_cutout">首次打开时忽略刘海屏</string>
+    <string name="a_calmer_you">更平静的你</string>
+    <string name="a_brighter_you">更聪明的你</string>
+    <string name="warning">警告</string>
+    <string name="dont_auto_update">不自动更新</string>
+    <string name="over_any_network">任何网络连接</string>
+    <string name="over_wifi_only">仅 Wi-Fi</string>
+    <string name="auto_update_app">自动更新应用</string>
+    <string name="auto_updates">自动更新</string>
+    <string name="add_tag">添加标签</string>
+    <string name="updating_extensions">更新扩展中</string>
+    <string name="some_extensions_may_prompt">仍然会提示先安装有些扩展。</string>
+    <string name="update_all">更新全部</string>
+    <string name="update_completed">已完成更新</string>
+    <string name="could_not_install_update">无法安装更新</string>
+    <string name="about_dont_kill_my_app">一些制造商有额外的应用限制，会扼杀后台服务。这个网站有更多关于如何修复它的信息。</string>
+    <string name="tako">Tako</string>
 </resources>

@@ -320,7 +320,7 @@
     <string name="chapters_">Κεφάλαια %1$s</string>
     <string name="remove_from_library">Κατάργηση από τη βιβλιοθήκη</string>
     <string name="refresh_tracking">Ανανέωση παρακολούθησης</string>
-    <string name="add_tracking">Προσθήκη παρακολούθησης</string>
+    <string name="add_tracking">Προσθήκη tracking</string>
     <string name="copy_value">Αντιγραφή</string>
     <string name="date_format">Μορφή ημερομηνίας</string>
     <string name="secure_screen">Ασφάλισε την οθόνη</string>
@@ -624,7 +624,7 @@
     <string name="flat_lime">Επίπεδο Μοσχολέμονο</string>
     <string name="hot_pink">Καυτό ροζ</string>
     <string name="spring_blossom">Ανοιξιάτικο Άνθος</string>
-    <string name="midnight_dusk">Μεταμεσονύκτιο σούρουπο</string>
+    <string name="midnight_dusk">Midnight Dusk</string>
     <string name="pauses_reading_history">Παύει το ιστορικό ανάγνωσης</string>
     <string name="incognito_mode">Λειτουργία ανώνυμης περιήγησης</string>
     <string name="turn_off_">Απενεργοποίηση %s</string>
@@ -835,4 +835,47 @@
     <string name="no_match_found">Δεν βρέθηκε αντιστοιχία</string>
     <string name="source_unsupported">Η πηγή δεν υποστηρίζεται</string>
     <string name="hide_notification_content">Απόκρυψη περιεχομένου ειδοποιήσεων</string>
+    <string name="orientation">Προσανατολισμός</string>
+    <string name="default_orientation">Προεπιλεγμένος προσανατολισμός</string>
+    <string name="include_">Συμπερίληψη: %s</string>
+    <string name="exclude_">Εξαίρεση: %s</string>
+    <string name="force_download_cache_refresh_summary">Αυτό θα αναγκάσει την προσωρινή μνήμη λήψης να υπολογιστεί ξανά. Χρήσιμο εάν τροποποιήσατε τις λήψεις εκτός αυτής της εφαρμογής και θέλετε να τις παραλάβει η εφαρμογή</string>
+    <string name="force_download_cache_refresh">Ανανέωση της προσωρινής μνήμης λήψης</string>
+    <string name="restore_miui_warning">Η Βελτιστοποίηση MIUI πρέπει να είναι ενεργοποιημένη για να λειτουργήσει σωστά η επαναφορά.</string>
+    <string name="no_new_chapters_open_details">Όταν δεν υπάρχουν νέα κεφάλαια, θα ανοίγουν οι λεπτομέρειες της σειράς</string>
+    <string name="series_opens_new_chapters">Οι συντομεύσεις σειράς ανοίγουν νέα κεφάλαια</string>
+    <string name="includes_recently_read_updated_added">Περιλαμβάνει πρόσφατα διαβασμένες, ενημερωμένες και προστιθέμενες σειρές</string>
+    <string name="show_recent_series">Εμφάνιση πρόσφατων σειρών</string>
+    <string name="show_recent_sources">Εμφάνιση πρόσφατα χρησιμοποιημένων πηγών</string>
+    <string name="pure_black_dark_mode">Απόλυτα μαύρη σκοτεινή λειτουργία</string>
+    <string name="side_nav_icon_alignment">Στοίχιση εικονιδίων πλευρικής πλοήγησης</string>
+    <string name="chocolate_strawberries">Φράουλες σοκολάτας</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Strawberry Daiquiri</string>
+    <string name="dark_theme">Σκοτεινό θέμα</string>
+    <string name="light_theme">Φωτεινό θέμα</string>
+    <string name="only_applies_silent_trackers">Ισχύει μόνο για σιωπηλούς ιχνηλάτες, όπως η Komga</string>
+    <string name="track_when_adding_to_library">Παρακολούθηση κατά την προσθήκη στη βιβλιοθήκη</string>
+    <string name="set_as_default">Ορισμός ως προεπιλογή</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d εκκρεμεί ενημέρωση</item>
+        <item quantity="other">%d εκκρεμούν ενημερώσεις</item>
+    </plurals>
+    <string name="could_not_install_extension">Δεν ήταν δυνατή η εγκατάσταση της επέκτασης</string>
+    <string name="extensions_miui_warning">Η βελτιστοποίηση MIUI πρέπει να απενεργοποιηθεί για την εγκατάσταση επεκτάσεων.</string>
+    <string name="global_updates">Παγκόσμιες ενημερώσεις</string>
+    <string name="checking_for_new_chapters">Έλεγχος για νέα κεφάλαια</string>
+    <string name="open_random_series">Άνοιγμα μιας τυχαία σειράς</string>
+    <string name="show_number_of_items">Εμφάνιση αριθμού στοιχείων</string>
+    <string name="by_update_date">Κατά ημερομηνία μεταφόρτωσης</string>
+    <string name="by_chapter_number">Κατά αριθμό κεφαλαίου</string>
+    <string name="by_source_order">Κατά σειρά πηγής</string>
+    <string name="not_bookmarked">Χωρίς σελιδοδείκτη</string>
+    <string name="external_storage_download_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία για να κατεβάσετε κεφάλαια. Πατήστε εδώ και στη συνέχεια, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
+    <string name="external_storage_permission_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία στο Android 11 για να κατεβάζει κεφάλαια, να δημιουργεί αυτόματα αντίγραφα ασφαλείας και να διαβάζει τοπικά manga.
+\n
+\nΣτην επόμενη οθόνη, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
+    <string name="all_files_permission_required">Απαιτούνται δικαιώματα αρχείου</string>
 </resources>

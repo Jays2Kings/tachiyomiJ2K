@@ -900,4 +900,13 @@
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
     <string name="all_files_permission_required">Permissões de arquivo necessárias</string>
+    <string name="restore_miui_warning">A Otimização da MIUI deve estar habilitada para a restauração funcionar corretamente.</string>
+    <string name="set_as_default">Definir como padrão</string>
+    <string name="add_tag">Adicionar tag</string>
+    <string name="updating_extensions">Atualizando extensões</string>
+    <string name="some_extensions_may_prompt">Algumas extensões podem solicitar sua instalação antes.</string>
+    <string name="update_completed">Atualização completa</string>
+    <string name="could_not_install_update">Não foi possível instalar atualização</string>
+    <string name="by_update_date">Por data de upload</string>
+    <string name="by_chapter_number">Por número do capítulo</string>
 </resources>

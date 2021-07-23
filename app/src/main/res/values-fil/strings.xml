@@ -536,4 +536,5 @@
     <string name="large">L</string>
     <string name="medium">M</string>
     <string name="small">S</string>
+    <string name="source_unsupported">Di suportado ang pinagkukunan</string>
 </resources>

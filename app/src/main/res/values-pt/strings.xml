@@ -730,9 +730,9 @@
 \nApagar as suas descarregas\?</item>
     </plurals>
     <string name="custom_manga_info">Informações de mangá personalizada</string>
-    <string name="error_sharing_cover">Erro ao compartilhar a capa</string>
-    <string name="error_saving_cover">Erro ao gravar a capa</string>
-    <string name="cover_saved">Capa salva</string>
+    <string name="error_sharing_cover">Erro ao partilhar capa</string>
+    <string name="error_saving_cover">Erro ao guardar capa</string>
+    <string name="cover_saved">Capa guardada</string>
     <string name="remember_this_choice">Lembrar esta opção</string>
     <string name="reset_cover">Redefinir capa</string>
     <string name="reset_tags">Redefinir tags</string>
@@ -858,4 +858,7 @@
     <string name="no_chapters_to_delete">Sem capítulos para apagar</string>
     <string name="remove_all_downloads">Remover todas as descarregas\?</string>
     <string name="no_pages_found">Nenhuma página encontrada</string>
+    <string name="source_unsupported">Fonte não é suportada</string>
+    <string name="restore_miui_warning">A otimização MIUI deve estar ligada para que a restauração funcione corretamente.</string>
+    <string name="cancel_all_for_series">Cancelar tudo para esta série</string>
 </resources>

@@ -860,4 +860,5 @@
     <string name="move_x_to">Przenieś %1$s do…</string>
     <string name="landscape">Orientacja pozioma</string>
     <string name="portrait">Orientacja pionowa</string>
+    <string name="about_dont_kill_my_app">Niektórzy producenci mają dodatkowe ograniczenia, które zabijają usługi działające w tle. Ta strona zawiera więcej informacji na ten temat.</string>
 </resources>

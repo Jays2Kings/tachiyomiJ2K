@@ -832,4 +832,50 @@
     <string name="mark_range_as_read">Markeer een reeks hoofstukken als gelezen</string>
     <string name="cancel_all_for_series">Alles annuleren voor deze serie</string>
     <string name="app_shortcuts">App-snelkoppelingen</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden in Android 11 om hoofdstukken te downloaden, automatische backups aan te maken, en lokale manga te lezen.
+\n
+\nOp het volgende scherm, schakel \"Toegang verlenen om alle bestanden te beheren\" in.</string>
+    <string name="orientation">Oriëntatie</string>
+    <string name="default_orientation">Standaardoriëntatie</string>
+    <string name="include_">Inbegrepen: %s</string>
+    <string name="exclude_">Uitgezonderd: %s</string>
+    <string name="force_download_cache_refresh_summary">Dit zal de downloadcache opnieuw berekenen. Dit is handig als je downloads buiten de app om hebt gewijzigd en je wil dat de app dit oppikt</string>
+    <string name="force_download_cache_refresh">Downloadcache vernieuwen</string>
+    <string name="no_new_chapters_open_details">Als er geen nieuwe hoofdstukken zijn, dan worden de seriedetails geopend</string>
+    <string name="series_opens_new_chapters">Seriesneltoets opent nieuwe hoofdstukken</string>
+    <string name="includes_recently_read_updated_added">Inclusief recent gelezen, bijgewerkte, en toegevoegde series</string>
+    <string name="show_recent_series">Toon recente series</string>
+    <string name="show_recent_sources">Toon recent gebruikte bronnen</string>
+    <string name="hide_notification_content">Meldingsinhoud verbergen</string>
+    <string name="pure_black_dark_mode">Puur-zwarte donkere modus</string>
+    <string name="side_nav_icon_alignment">Uitlijning zijnavigatiepictogram</string>
+    <string name="chocolate_strawberries">Chocolade-aardbeien</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="strawberry_daiquiri">Aardbeien Daiquiri</string>
+    <string name="dark_theme">Donker thema</string>
+    <string name="light_theme">Licht thema</string>
+    <string name="no_match_found">Geen overeenkomst gevonden</string>
+    <string name="source_unsupported">Bron wordt niet ondersteund</string>
+    <string name="only_applies_silent_trackers">Alleen van toepassing op stille trackers, zoals Komga</string>
+    <string name="track_when_adding_to_library">Tracken bij het toevoegen aan de bibliotheek</string>
+    <string name="set_as_default">Instellen als standaard</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d wachtende update</item>
+        <item quantity="other">%d wachtende updates</item>
+    </plurals>
+    <string name="could_not_install_extension">Kon extensie niet installeren</string>
+    <string name="extensions_miui_warning">MIUI-optimalisatie moet worden uitgeschakeld om extensies te installeren.</string>
+    <string name="global_updates">Globale updates</string>
+    <string name="checking_for_new_chapters">Zoeken naar nieuwe hoofdstukken</string>
+    <string name="open_random_series">Open een willekeurige serie</string>
+    <string name="show_number_of_items">Aantal items tonen</string>
+    <string name="by_update_date">Op uploaddatum</string>
+    <string name="by_chapter_number">Op hoofdstuknummer</string>
+    <string name="by_source_order">Op volgorde van de bron</string>
+    <string name="not_bookmarked">Geen bladwijzer</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden om hoofdstukken te downloaden. Tik hier, en zet dan \"Toegang verlenen om alle bestanden te beheren.\" aan.</string>
+    <string name="all_files_permission_required">Bestandsrechten vereist</string>
+    <string name="restore_miui_warning">MIUI-optimalisatie moet geactiveerd zijn voordat het terugzetten goed kan werken.</string>
 </resources>

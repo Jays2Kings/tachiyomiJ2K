@@ -15,7 +15,7 @@
     <string name="extension_info">Informatziones de s\'estensione</string>
     <string name="filter">Filtru</string>
     <string name="downloaded">Iscarrigados</string>
-    <string name="bookmarked">Sinnados</string>
+    <string name="bookmarked">Cun sinnalibru</string>
     <string name="unread">Non lèghidos</string>
     <string name="read">Lèghidos</string>
     <string name="alphabetically">Alfabeticamente</string>
@@ -552,7 +552,7 @@
         <item quantity="other">Pro %d tìtulos</item>
     </plurals>
     <string name="more_library_settings">Àteras impostatziones de sa biblioteca</string>
-    <string name="hide_category_hopper">Cua su mojolu de categorias</string>
+    <string name="hide_category_hopper">Cua s\'optzione pro brincare categoria</string>
     <string name="display_as">Ammustra comente</string>
     <string name="tap_library_to_show_filters">Toca s\'icona de sa Biblioteca pro ammustrare sos filtros</string>
     <string name="x_large">XL</string>
@@ -808,7 +808,7 @@
     <string name="can_be_found_in_library_filters">Si podet agatare fintzas ismanniende sos filtros de sa biblioteca</string>
     <string name="series">Sèries</string>
     <string name="expand_collapse_all_categories">Ismànnia/mìnima totu sas categorias</string>
-    <string name="category_hopper_long_press">Brincu intre sas categorias cun un\'incarcu longu</string>
+    <string name="category_hopper_long_press">Atzione cun un\'incarcu longu in su brincadore de categoria</string>
     <string name="when_grouping_by_sources_tags">Cando agrupas sa biblioteca pro fonte, istadu, etz.</string>
     <string name="move_dynamic_to_bottom">Move sas categorias dinàmicas cara a giosso</string>
     <string name="your_library">Sa biblioteca tua</string>
@@ -825,7 +825,7 @@
     <string name="show_on_long_press">Ammustra cun un\'incarcu longu</string>
     <string name="create_folders_by_manga_title">Creat cartellas in base a su tìtulu de su manga</string>
     <string name="actions">Atziones</string>
-    <string name="search_tips_show_periodically">Sos impòsitos de chirca s\'ant a ammustrare periodicamente. Incarca a longu in un\'impòsitu pro lu chircare.</string>
+    <string name="search_tips_show_periodically">Sos impòsitos de chirca s\'ant a ammustrare in manera periòdica. Incarca a longu in un\'impòsitu pro lu chircare.</string>
     <string name="search_suggestions">Impòsitos de chirca</string>
     <string name="automatic_removal">Bogadura automàtica</string>
     <string name="mark_range_as_unread">Marca un\'intervallu de capìtulos comente non lèghidos</string>
@@ -867,4 +867,29 @@
 \n
 \nIn s\'ischermada imbeniente abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
     <string name="all_files_permission_required">Permissos de iscritura pedidos</string>
+    <string name="orientation">Orientamentu</string>
+    <string name="default_orientation">Orientamentu predefinidu</string>
+    <string name="restore_miui_warning">S\'otimizatzione MIUI depet èssere abilitada pro chi su riprìstinu funtzionet comente si tocat.</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="set_as_default">Imposta comente predefinidu</string>
+    <string name="extensions_miui_warning">S\'otimizatzione MIUI depet èssere istudada pro installare estensiones.</string>
+    <string name="by_update_date">Pro data de carrigamentu</string>
+    <string name="by_chapter_number">Pro nùmeru de capìtulu</string>
+    <string name="by_source_order">Pro òrdine de sa fonte</string>
+    <string name="not_bookmarked">Chene sinnalibru</string>
+    <string name="tako">Tako</string>
+    <string name="warning">Avisu</string>
+    <string name="about_dont_kill_my_app">Unos cantos produtores tenent restritziones de s\'aplicatzione chi istudant sos servìtzios in s\'isfundu. Custu situ web tenet informatziones in prus in subra de comente acontzare su problema.</string>
+    <string name="dont_auto_update">No agiornes in manera automàtica</string>
+    <string name="over_any_network">Cun cale si siat retza</string>
+    <string name="over_wifi_only">Cun su Wi-Fi ebbia</string>
+    <string name="auto_update_app">Agiorna automaticamente s\'aplicatzione</string>
+    <string name="auto_updates">Agiornamentos automàticos</string>
+    <string name="add_tag">Annanghe un\'eticheta</string>
+    <string name="updating_extensions">Agiornende sas estensiones</string>
+    <string name="some_extensions_may_prompt">Unas cantas estensiones diant pòdere galu pedire de èssere installadas in antis.</string>
+    <string name="update_all">Agiorna totu</string>
+    <string name="update_completed">Agiornamentu acabadu</string>
+    <string name="could_not_install_update">Installatzione de s\'agiornamentu fallida</string>
 </resources>

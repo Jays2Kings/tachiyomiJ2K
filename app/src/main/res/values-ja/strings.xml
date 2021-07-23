@@ -802,4 +802,6 @@
     <string name="mark_range_as_unread">選択範囲の章を未読にする</string>
     <string name="mark_range_as_read">選択範囲の章を既読にする</string>
     <string name="cancel_all_for_series">このシリーズの全項目をキャンセル</string>
+    <string name="dark_theme">ダークテーマ</string>
+    <string name="light_theme">ライトテーマ</string>
 </resources>

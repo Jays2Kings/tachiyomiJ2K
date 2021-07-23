@@ -941,7 +941,7 @@
     <string name="all_files_permission_required">Требуются права доступа к файлам</string>
     <string name="orientation">Ориентация</string>
     <string name="default_orientation">Ориентация по умолчанию</string>
-    <string name="restore_miui_warning">Оптимизация MIUI должна быть включена для корректной работы восстановления.</string>
+    <string name="restore_miui_warning">Оптимизация MIUI должна быть включена, чтобы восстановление работало правильно.</string>
     <string name="yang">Янь</string>
     <string name="yin">Инь</string>
     <string name="set_as_default">Установить по умолчанию</string>
@@ -950,4 +950,20 @@
     <string name="by_chapter_number">По номеру главы</string>
     <string name="by_source_order">По расположению источников</string>
     <string name="not_bookmarked">Не в закладках</string>
+    <string name="warning">Предупреждение</string>
+    <string name="dont_auto_update">Не обновлять автоматически</string>
+    <string name="over_any_network">По любой сети</string>
+    <string name="over_wifi_only">Только через Wi-Fi</string>
+    <string name="auto_update_app">Автообновление приложения</string>
+    <string name="auto_updates">Автообновления</string>
+    <string name="add_tag">Добавить тег</string>
+    <string name="updating_extensions">Обновление расширений</string>
+    <string name="some_extensions_may_prompt">Некоторые расширения могут потребовать предварительной установки.</string>
+    <string name="update_all">Обновить все</string>
+    <string name="update_completed">Обновление завершено</string>
+    <string name="could_not_install_update">Не удалось установить обновление</string>
+    <string name="about_dont_kill_my_app">У некоторых производителей есть дополнительные ограничения для приложений, которые убивают фоновые службы. На этом веб-сайте есть более подробная информация о том, как это исправить.</string>
+    <string name="tako">Тако</string>
+    <string name="a_calmer_you">Спокойный ты</string>
+    <string name="a_brighter_you">Яркий ты</string>
 </resources>

@@ -846,4 +846,5 @@
     <string name="extension_updates">Cập nhật phần mở rộng</string>
     <string name="last_used">Sử dụng gần đây</string>
     <string name="source_hidden">Nguồn ẩn</string>
+    <string name="about_dont_kill_my_app">Một vài nhà sản xuất có các hạn chế về việc chạy ngầm của ứng dụng. Xem thêm ở địa chỉ này để sửa chữa chúng.</string>
 </resources>

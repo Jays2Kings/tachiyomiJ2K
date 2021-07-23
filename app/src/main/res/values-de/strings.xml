@@ -350,7 +350,7 @@
 \nDiese heruntergeladenen Dateien löschen\?</item>
     </plurals>
     <!-- Tracking -->
-    <string name="tracking">Synchronisation</string>
+    <string name="tracking">Tracking</string>
     <string name="tracked">Synchronisiert</string>
     <string name="not_tracked">Nicht synchronisiert</string>
     <string name="services">Anbieter</string>
@@ -369,7 +369,7 @@
     <string name="type">Typ</string>
     <string name="url_not_set_click_again">Manga URL ist nicht gesetzt. Bitte auf den Titel drücken und den Manga erneut wählen</string>
     <string name="refresh_tracking">Synchronisation aktualisieren</string>
-    <string name="add_tracking">Verfolgung hinzufügen</string>
+    <string name="add_tracking">Tracking hinzufügen</string>
     <string name="remove_tracking">Synchronisation aus App entfernen</string>
     <string name="remove_tracking_from_">Auch aus %1$s entfernen</string>
     <!-- Migration -->
@@ -518,7 +518,7 @@
     <string name="successfully_logged_out">Du bist jetzt abgemeldet</string>
     <!-- Downloads -->
     <string name="downloads">Heruntergeladene</string>
-    <string name="download_queue">Herunterladen-Warteschlange</string>
+    <string name="download_queue">Download-Warteschlange</string>
     <string name="downloading_">Am Herunterladen: %1$s</string>
     <string name="cancel_all">Alles abbrechen</string>
     <string name="downloaded">Heruntergeladen</string>
@@ -555,8 +555,8 @@
     <string name="download_new_chapters">Neue Kapitel herunterladen</string>
     <string name="categories_to_include_in_download">Kategorien die Heruntergeladen werden sollen</string>
     <string name="delete_removed_chapters">Entfernte Kapitel löschen</string>
-    <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online entfernt hat.</string>
-    <string name="ask_on_chapters_page">Löschen während globalen Aktualisierungen. Auf Kapitelseite nachfragen.</string>
+    <string name="delete_downloaded_if_removed_online">Heruntergeladene Kapitel löschen, wenn die Quelle das Kapitel online entfernt hat</string>
+    <string name="ask_on_chapters_page">Löschen während globaler Aktualisierungen, auf Kapitelseite nachfragen</string>
     <string name="always_keep">Immer behalten</string>
     <string name="always_delete">Immer löschen</string>
     <!-- Time -->
@@ -613,7 +613,7 @@
     <string name="keep">Behalten</string>
     <string name="left">Links</string>
     <string name="less">Weniger</string>
-    <string name="loading">Wird geladen …</string>
+    <string name="loading">Wird geladen…</string>
     <string name="lock">Gesperrt</string>
     <string name="mark_all_as_read">Alle als gelesen markieren</string>
     <string name="mark_all_as_unread">Alle als ungelesen markieren</string>
@@ -682,7 +682,7 @@
     <string name="backup_has_no_manga">Sicherung beinhaltet keinerlei Manga.</string>
     <string name="restore_missing_sources">Fehlende Quellen:</string>
     <string name="restore_missing_trackers">Nicht-angemeldete Tracker:</string>
-    <string name="restore_content">Beim Wiederherstellen einer Datensicherung werden Daten von den Quellen abgerufen, wodurch Mobilfunkkosten enstehen können.
+    <string name="restore_content">Beim Wiederherstellen einer Datensicherung werden Daten von den Quellen abgerufen, wodurch Mobilfunkkosten entstehen können.
 \n
 \nVergewissere dich zudem, dass du alle benötigten Seitenanmeldungsdaten bereitgestellt hast, bevor du mit dem Wiederherstellen beginnst.</string>
     <string name="restore_content_full">Die Daten der Sicherungsdatei werden wiederhergestellt.
@@ -853,7 +853,7 @@
     <string name="actions">Aktionen</string>
     <string name="automatic_removal">Automatisches Löschen</string>
     <string name="create_folders_by_manga_title">Erstellt Ordner nach Manga-Titel</string>
-    <string name="save_pages_separately">Seiten in seperaten Ordnern speichern</string>
+    <string name="save_pages_separately">Seiten in separaten Ordnern speichern</string>
     <string name="show_on_long_press">Bei langem Tippen anzeigen</string>
     <string name="locked_landscape">Querformat erzwingen</string>
     <string name="locked_portrait">Hochformat erzwingen</string>
@@ -895,12 +895,12 @@
     <string name="checking_for_new_chapters">Überprüfe auf neue Kapitel</string>
     <string name="open_random_series">Eine beliebige Serie öffnen</string>
     <string name="show_number_of_items">Anzahl der Elemente anzeigen</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen“.</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11, um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Mangas zu lesen.
 \n
-\nAktivieren Sie im nächsten Bildschirm „Zugriff auf die Verwaltung aller Dateien zulassen“.</string>
+\nAktivieren Sie im nächsten Bildschirm „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
     <string name="all_files_permission_required">Dateiberechtigungen erforderlich</string>
-    <string name="hide_notification_content">Benachrichtigungsinhalt ausblenden</string>
+    <string name="hide_notification_content">Benachrichtigungsinhalt verbergen</string>
     <string name="source_unsupported">Quelle wird nicht unterstützt</string>
     <string name="orientation">Ausrichtung</string>
     <string name="default_orientation">Standardausrichtung</string>
@@ -913,4 +913,20 @@
     <string name="by_chapter_number">Nach Kapitelnummer</string>
     <string name="by_source_order">Nach Quellenreihenfolge</string>
     <string name="not_bookmarked">Nicht mit Lesezeichen versehen</string>
+    <string name="warning">Warnung</string>
+    <string name="dont_auto_update">Nicht automatisch aktualisieren</string>
+    <string name="over_any_network">Über jedes Netzwerk</string>
+    <string name="over_wifi_only">Nur WLAN</string>
+    <string name="auto_update_app">Anwendung automatisch aktualisieren</string>
+    <string name="auto_updates">Automatische Aktualisierungen</string>
+    <string name="a_calmer_you">Ein ruhigeres „You“</string>
+    <string name="a_brighter_you">Ein helleres „You“</string>
+    <string name="add_tag">Markierung hinzufügen</string>
+    <string name="updating_extensions">Aktualisiere Erweiterungen</string>
+    <string name="some_extensions_may_prompt">Einige Erweiterungen benötigen möglicherweise eine Bestätigung zum Installieren.</string>
+    <string name="update_all">Alle aktualisieren</string>
+    <string name="could_not_install_update">Aktualisierung konnte nicht installiert werden</string>
+    <string name="update_completed">Aktualisierung abgeschlossen</string>
+    <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche Anwendungsbeschränkungen, die Hintergrunddienste stoppen. Diese Website hat mehr Informationen darüber, wie man dies beheben kann.</string>
+    <string name="tako">Tako</string>
 </resources>
