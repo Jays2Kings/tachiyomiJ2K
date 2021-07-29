@@ -297,7 +297,7 @@
     <string name="webtoon_side_padding_20">20%</string>
     <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
-    <string name="about_this_">Sobre isto %1$s</string>
+    <string name="about_this_">Sobre este %1$s</string>
     <string name="start_reading">Comece a ler</string>
     <string name="start_reading_chapter_">Começar a ler Capítulo %1$s</string>
     <string name="continue_reading_chapter_">Continuar a ler o capítulo %1$s</string>
@@ -319,7 +319,7 @@
     <string name="next_unread_chapter">Próximo capítulo não lido</string>
     <string name="next_5_unread">Próximos 5 capítulos</string>
     <string name="custom_range">Intervalo personalizado</string>
-    <string name="all_chapters">Todos os capítuloss</string>
+    <string name="all_chapters">Todos os capítulos</string>
     <string name="all_unread_chapters">Todos os capítulos não lidos</string>
     <string name="all_read_chapters">Todos os capítulos lidos</string>
     <string name="all_but_bookmarked_chapters">Todos, exceto os capítulos favoritos</string>
@@ -610,7 +610,7 @@
     <string name="mark_all_as_read">Marcar tudo como lido</string>
     <string name="mark_all_as_unread">Marcar tudo como não lido</string>
     <string name="mark_as_read">Marcar como lido</string>
-    <string name="mark_previous_as_read">Marcar capítulo anterior como lido</string>
+    <string name="mark_previous_as_read">Marcar capítulos anteriores como lidos</string>
     <string name="more">Mais</string>
     <string name="move_to_bottom">Mover para baixo</string>
     <string name="move_to_top">Mover para o topo</string>
