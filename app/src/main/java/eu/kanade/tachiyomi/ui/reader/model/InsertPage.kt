@@ -1,6 +1,6 @@
 package eu.kanade.tachiyomi.ui.reader.model
 
-class InsertPage(val parent: ReaderPage) : ReaderPage(
+class InsertPage(parent: ReaderPage) : ReaderPage(
     parent.index,
     parent.url,
     parent.imageUrl

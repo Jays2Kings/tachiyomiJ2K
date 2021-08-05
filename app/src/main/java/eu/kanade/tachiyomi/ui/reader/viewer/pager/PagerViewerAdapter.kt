@@ -256,7 +256,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
                         )
                         // Add a shifted page to the first place there isnt a full page
                         (fullPageBeforeIndex until items.size).forEach {
-                            if (items[it]?.fullPage == false) {
+                            if (items[it]?.fullPage != true) {
                                 items[it]?.shiftedPage = true
                                 return@loop
                             }
@@ -327,8 +327,8 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
                 (
                     readerPage != null && newReaderPage != null &&
                         (
-                            readerPage.imageUrl == newReaderPage.imageUrl ||
-                                readerPage2?.imageUrl == newReaderPage.imageUrl
+                            readerPage.isFromSamePage(newReaderPage) ||
+                                readerPage2?.isFromSamePage(newReaderPage) == true
                             ) &&
                         (readerPage.firstHalf == !useSecondPage || readerPage.firstHalf == null)
                     )
@@ -345,6 +345,8 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             }
             index = joinedItems.indexOfFirst { it.first == newerPage || it.second == newerPage }
         }
-        viewer.pager.setCurrentItem(index, false)
+        if (index > -1) {
+            viewer.pager.setCurrentItem(index, false)
+        }
     }
 }

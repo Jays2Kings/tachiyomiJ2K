@@ -28,4 +28,7 @@ open class ReaderPage(
             longPage = value
             if (value == true) shiftedPage = false
         }
+
+    fun isFromSamePage(page: ReaderPage): Boolean =
+        index == page.index && chapter.chapter.id == page.chapter.chapter.id
 }

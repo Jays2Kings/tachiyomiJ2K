@@ -282,7 +282,8 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         val position = adapter.joinedItems.indexOfFirst {
             it.first == page || it.second == page ||
                 (
-                    config.splitPages && (it.first as? ReaderPage)?.imageUrl == page.imageUrl &&
+                    config.splitPages && it.first is ReaderPage &&
+                        (it.first as? ReaderPage)?.isFromSamePage(page) == true &&
                         (it.first as? ReaderPage)?.firstHalf != false
                     )
         }
