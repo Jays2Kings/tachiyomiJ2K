@@ -4,6 +4,8 @@
     <style name="Theme.Tachiyomi" parent="Theme.Base">
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="colorOnSurface">@color/md_white_1000</item>
+        <item name="colorOnBackground">@color/md_white_1000</item>
     </style>
 
     <style name="Theme.Tachiyomi.Strawberries">
@@ -21,7 +23,6 @@
         <item name="colorSecondaryVariant">@color/colorAccentLime</item>
         <item name="colorPrimaryVariant">@color/dialogLime</item>
         <item name="colorSecondary">@color/backgroundLime</item>
-        <item name="background">@color/backgroundLime</item>
         <item name="background">@color/backgroundLime</item>
         <item name="colorSurface">@color/colorAccentLimeText</item>
         <item name="colorOnSecondary">@color/colorOnLime</item>

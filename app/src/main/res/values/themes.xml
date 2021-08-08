@@ -15,6 +15,7 @@
         <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">775</item>
         <!--Standard Material colors -->
         <item name="colorPrimary">@color/tachiPrimaryBlue</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
         <item name="colorSurface">@color/background</item> //old colorSecondary
         <item name="colorOnSurface">@color/md_black_1000</item> //old colorOnSecondary
         <item name="colorSecondary">@color/tachiBlue</item> //colorAccent
@@ -25,7 +26,6 @@
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
-        <item name="colorPrimaryVariant">@color/colorPrimary</item>
 
         <item name="readerBackground">@color/colorPrimary</item>
         <item name="android:listSelector">?attr/colorSecondary</item>
@@ -95,10 +95,10 @@
 
     <style name="Theme.Tachiyomi.MidnightDusk">
         <item name="colorPrimary">@color/primaryDuskDawn</item>
-        <item name="colorAccent">@color/colorAccentDuskDawn</item>
+        <item name="colorSecondary">@color/colorAccentDuskDawn</item>
         <item name="colorSecondaryVariant">@color/colorAccentDuskDawnText</item>
         <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
-        <item name="colorSecondary">@color/backgroundDuskDawn</item>
+        <item name="colorSurface">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
         <item name="colorOnBackground">@color/textPrimaryDuskDawn</item>
         <item name="actionBarTintColor">@color/appBarTextDuskDawn</item>
