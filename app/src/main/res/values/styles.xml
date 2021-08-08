@@ -322,7 +322,7 @@
     </style>
 
     <style name="Theme.Widget.Chip.Outline" parent="Widget.MaterialComponents.Chip.Action">
-        <item name="chipBackgroundColor">@color/accent_alpha</item>
+        <item name="chipBackgroundColor">@color/secondary_alpha</item>
         <item name="chipMinHeight">28dp</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textAppearance">@style/Theme.TextAppearance.Chip</item>

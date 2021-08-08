@@ -46,7 +46,7 @@
         <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:navigationBarColor">#B3000000</item>
         <item name="android:colorEdgeEffect">?attr/colorSecondary</item>
-        <item name="tabHighlightBackground">@color/accent_alpha</item>
+        <item name="tabHighlightBackground">@color/secondary_alpha</item>
 
         <!-- Material Dialog colors -->
         <item name="md_color_title">?attr/colorOnBackground</item>
