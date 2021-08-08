@@ -9,7 +9,7 @@
     <style name="Theme.Tachiyomi.Strawberries">
         <item name="colorPrimary">@color/primaryRed</item>
         <item name="colorAccent">@color/holo_red</item>
-        <item name="colorAccentText">@color/md_red_500</item>
+        <item name="colorSecondaryVariant">@color/md_red_500</item>
         <item name="colorPrimaryVariant">@color/secondaryChocolateStrawberries</item>
         <item name="android:colorBackground">@color/backgroundChocolateStrawberries</item>
         <item name="colorSecondary">@color/backgroundChocolateStrawberries</item>
@@ -19,7 +19,7 @@
         <item name="colorPrimary">@color/primaryLime</item>
         <item name="colorPrimaryDark">@color/backgroundLime</item>
         <item name="colorAccent">@color/colorAccentLime</item>
-        <item name="colorAccentText">@color/colorAccentLime</item>
+        <item name="colorSecondaryVariant">@color/colorAccentLime</item>
         <item name="colorPrimaryVariant">@color/dialogLime</item>
         <item name="colorSecondary">@color/backgroundLime</item>
         <item name="background">@color/backgroundLime</item>

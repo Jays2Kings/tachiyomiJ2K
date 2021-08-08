@@ -15,17 +15,17 @@
         <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">775</item>
         <item name="colorPrimary">@color/app_color_primary</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
-        <item name="colorSurface">@color/background</item>
-        <item name="colorOnSurface">@color/md_black_1000</item>
-        <item name="colorSecondary">@color/tachiBlue</item>
-        <item name="colorOnSecondary">@color/md_white_1000</item>
+        <item name="colorSurface">@color/background</item> //old colorSecondary
+        <item name="colorOnSurface">@color/md_black_1000</item> //old colorOnSecondary
+        <item name="colorSecondary">@color/tachiBlue</item> //colorAccent
+        <item name="colorOnSecondary">@color/md_white_1000</item> // colorOnAccent
+        <item name="colorSecondaryVariant">@color/tachiBlueVariant</item> //colorAccentText
 
 
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
         <item name="colorPrimaryDark">?colorPrimary</item>
-        <item name="colorAccentText">@color/colorAccentText</item>
         <item name="colorControlActivated">?attr/colorSecondary</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColorHint">@color/text_color_hint</item>
@@ -103,7 +103,7 @@
     <style name="Theme.Tachiyomi.MidnightDusk">
         <item name="colorPrimary">@color/primaryDuskDawn</item>
         <item name="colorAccent">@color/colorAccentDuskDawn</item>
-        <item name="colorAccentText">@color/colorAccentDuskDawnText</item>
+        <item name="colorSecondaryVariant">@color/colorAccentDuskDawnText</item>
         <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
         <item name="colorSecondary">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
@@ -114,7 +114,7 @@
 
     <style name="Theme.Tachiyomi.Strawberries">
         <item name="colorAccent">@color/colorAccentStrawberry</item>
-        <item name="colorAccentText">@color/colorAccentStrawberryText</item>
+        <item name="colorSecondaryVariant">@color/colorAccentStrawberryText</item>
     </style>
 
     <!--== Tako Theme ==-->
@@ -129,20 +129,20 @@
         <item name="colorSecondary">@color/backgroundTako</item>
         <item name="actionBarTintColor">@color/actionTintTako</item>
         <item name="android:colorBackground">@color/backgroundTako</item>
-        <item name="colorAccentText">@color/colorAccentTextTako</item>
+        <item name="colorSecondaryVariant">@color/colorAccentTextTako</item>
         <item name="tabBarIconInactive">@color/inactiveTabTako</item>
     </style>
 
     <style name="Theme.Tachiyomi.Yotsuba">
         <item name="colorAccent">@color/colorAccentYotsuba</item>
-        <item name="colorAccentText">@color/colorAccentYotsubaText</item>
+        <item name="colorSecondaryVariant">@color/colorAccentYotsubaText</item>
     </style>
 
     <!--== Yin Yang theme ==-->
     <style name="Theme.Tachiyomi.YinYang">
         <!-- Theme colors -->
         <item name="colorAccent">@color/colorAccentYinyang</item>
-        <item name="colorAccentText">@color/colorAccentYinyangText</item>
+        <item name="colorSecondaryVariant">@color/colorAccentYinyangText</item>
         <item name="colorDownloadBadge">@color/downloadBadgeDayNight</item>
         <item name="colorOnDownloadBadge">@color/colorOnDownloadBadgeDayNight</item>
         <item name="colorOnAccent">@color/colorOnAccentYinyang</item>

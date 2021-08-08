@@ -5,7 +5,7 @@
         <item name="colorAccent">@android:color/system_accent1_600</item>
         <item name="colorDownloadBadge">@android:color/system_accent3_300</item>
         <item name="colorOnDownloadBadge">@color/black</item>
-        <item name="colorAccentText">@android:color/system_accent1_800</item>
+        <item name="colorSecondaryVariant">@android:color/system_accent1_800</item>
         <item name="colorPrimaryVariant">@android:color/system_accent2_50</item>
         <item name="colorSecondary">@android:color/system_neutral1_50</item>
         <item name="background">@android:color/system_neutral1_50</item>

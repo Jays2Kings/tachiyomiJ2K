@@ -13,7 +13,6 @@
 
     <attr name="actionBarTintColor" format="color"/>
     <attr name="readerBackground" format="color"/>
-    <attr name="colorAccentText" format="color"/>
     <attr name="colorDownloadBadge" format="color"/>
     <attr name="colorOnDownloadBadge" format="color"/>
     <attr name="colorOnAccent" format="color"/>
