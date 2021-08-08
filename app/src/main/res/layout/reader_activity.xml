@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:titleTextColor="?actionBarTintColor"
-                app:subtitleTextColor="@color/tint_color_secondary"
+                app:subtitleTextColor="@color/action_bar_tint_alpha"
                 android:background="@drawable/reader_toolbar_ripple" />
 
         </FrameLayout>
