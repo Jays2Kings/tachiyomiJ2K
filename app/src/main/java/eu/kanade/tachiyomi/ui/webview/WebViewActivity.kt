@@ -92,9 +92,9 @@ open class WebViewActivity : BaseWebViewActivity() {
     fun parseHTMLColor(color: String): Int {
         val trimmedColor = color.trim('"')
         val rgb = Regex("""^rgb\((\d+),\s*(\d+),\s*(\d+)\)$""").find(trimmedColor)
-        val red = rgb?.groupValues?.getOrNull(1)?.toIntOrNull() ?: return getResourceColor(android.R.attr.colorBackground)
-        val green = rgb.groupValues.getOrNull(2)?.toIntOrNull() ?: return getResourceColor(android.R.attr.colorBackground)
-        val blue = rgb.groupValues.getOrNull(3)?.toIntOrNull() ?: return getResourceColor(android.R.attr.colorBackground)
+        val red = rgb?.groupValues?.getOrNull(1)?.toIntOrNull() ?: return getResourceColor(R.attr.background)
+        val green = rgb.groupValues.getOrNull(2)?.toIntOrNull() ?: return getResourceColor(R.attr.background)
+        val blue = rgb.groupValues.getOrNull(3)?.toIntOrNull() ?: return getResourceColor(R.attr.background)
         return Color.rgb(red, green, blue)
     }
 

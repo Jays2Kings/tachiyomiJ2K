@@ -15,7 +15,7 @@
     <attr name="readerBackground" format="color"/>
     <attr name="colorDownloadBadge" format="color"/>
     <attr name="colorOnDownloadBadge" format="color"/>
-    <attr name="colorOnAccent" format="color"/>
+    <attr name="colorOnSecondary" format="color"/>
     <attr name="tabBarIconColor" format="reference|integer"/>
     <attr name="tabBarIconInactive" format="reference|integer"/>
     <attr name="tabHighlightBackground" format="color"/>

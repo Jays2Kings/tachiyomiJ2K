@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:background="?android:attr/colorBackground"
+                android:background="?attr/background"
                 tools:ignore="ContentDescription"
                 tools:src="@mipmap/ic_launcher" />
 

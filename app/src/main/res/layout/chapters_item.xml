@@ -5,7 +5,7 @@
     android:id="@+id/chapter_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/colorBackground">
+    android:background="?attr/background">
 
     <FrameLayout
         android:id="@+id/right_view"

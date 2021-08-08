@@ -8,6 +8,6 @@
     android:elevation="6dp"
     android:textAlignment="center"
     android:paddingTop="8dp"
-    android:textColor="?colorOnAccent"
+    android:textColor="?colorOnSecondary"
     android:backgroundTint="?attr/colorSecondary"
     android:background="@drawable/ic_rounded_tooltip_24dp" />

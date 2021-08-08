@@ -252,7 +252,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                         if (nightMode) android.R.color.system_neutral1_800
                         else android.R.color.system_accent2_50
                     )
-                    val colorBackground = context.contextCompatColor(
+                    val background = context.contextCompatColor(
                         if (nightMode) android.R.color.system_neutral1_900
                         else android.R.color.system_neutral1_50
                     )
@@ -277,7 +277,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                     binding.themeItem2.imageTintList = ColorStateList.valueOf(colorSecondary)
                     binding.themeItem3.imageTintList =
                         ColorStateList.valueOf(item.colors.inactiveTab)
-                    binding.themeLayout.setBackgroundColor(colorBackground)
+                    binding.themeLayout.setBackgroundColor(background)
                 } else {
                     binding.themeToolbar.setBackgroundColor(item.colors.appBar)
                     binding.themeAppBarText.imageTintList =
@@ -299,7 +299,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                     binding.themeItem2.imageTintList = ColorStateList.valueOf(item.colors.activeTab)
                     binding.themeItem3.imageTintList =
                         ColorStateList.valueOf(item.colors.inactiveTab)
-                    binding.themeLayout.setBackgroundColor(item.colors.colorBackground)
+                    binding.themeLayout.setBackgroundColor(item.colors.background)
                 }
                 if (item.isDarkTheme && preferences.themeDarkAmoled().get()) {
                     binding.themeLayout.setBackgroundColor(Color.BLACK)

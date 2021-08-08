@@ -2,7 +2,6 @@
 <resources>
     <!-- Application Colors -->
     <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#212121</color>
     <color name="colorPrimaryInactive">@color/md_white_1000_76</color>
 
     <color name="rippleColor">@color/md_white_1000_20</color>
@@ -28,7 +27,7 @@
 
     <!-- Tako Theme -->
     <color name="accentTako">#F3B375</color>
-    <color name="colorOnAccentTako">#242431</color>
+    <color name="colorOnSecondaryTako">#242431</color>
         <color name="tabBarIconColorTako">@color/accentTako</color>
     <color name="rippleColoredTako">#1FF3B375</color>
     <color name="surfaceTako">#2A2A3C</color>
@@ -49,5 +48,5 @@
     <!-- Yin Yang Theme -->
     <color name="colorAccentYinyang">#FFFFFF</color>
     <color name="colorAccentYinyangText">#999999</color>
-    <color name="colorOnAccentYinyang">@color/md_black_1000</color>
+    <color name="colorOnSecondaryYinyang">@color/md_black_1000</color>
 </resources>

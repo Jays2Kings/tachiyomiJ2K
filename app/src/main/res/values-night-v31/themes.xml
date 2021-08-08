@@ -10,8 +10,8 @@
         <item name="colorSecondary">@android:color/system_neutral1_900</item>
         <item name="background">@android:color/system_neutral1_900</item>
         <item name="android:textColorPrimary">@android:color/system_neutral1_10</item>
-        <item name="android:colorBackground">@android:color/system_neutral1_900</item>
+        <item name="background">@android:color/system_neutral1_900</item>
         <item name="actionBarTintColor">@android:color/system_accent2_10</item>
-        <item name="colorOnAccent">@android:color/system_neutral2_900</item>
+        <item name="colorOnSecondary">@android:color/system_neutral2_900</item>
     </style>
 </resources>

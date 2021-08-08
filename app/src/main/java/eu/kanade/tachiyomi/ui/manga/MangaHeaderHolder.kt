@@ -256,7 +256,7 @@ class MangaHeaderHolder(
         }
         binding.trueBackdrop.setBackgroundColor(
             adapter.delegate.coverColor()
-                ?: itemView.context.getResourceColor(android.R.attr.colorBackground)
+                ?: itemView.context.getResourceColor(R.attr.background)
         )
 
         val tracked = presenter.isTracked() && !item.isLocked

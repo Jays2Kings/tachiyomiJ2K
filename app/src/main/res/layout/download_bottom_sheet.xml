@@ -60,7 +60,7 @@
         android:id="@+id/recycler_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:attr/colorBackground">
+        android:background="?attr/background">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dl_recycler"

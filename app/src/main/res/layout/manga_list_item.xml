@@ -37,14 +37,14 @@
             android:layout_width="@dimen/material_layout_avatar"
             android:layout_height="@dimen/material_layout_avatar"
             android:adjustViewBounds="true"
-            android:background="?android:attr/colorBackground"
+            android:background="?attr/background"
             app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:scaleType="centerCrop"
-            tools:background="?android:attr/colorBackground"
+            tools:background="?attr/background"
             tools:ignore="ContentDescription"
             tools:src="@mipmap/ic_launcher" />
 

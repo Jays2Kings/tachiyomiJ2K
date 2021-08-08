@@ -256,7 +256,7 @@ class ReaderActivity :
 
         binding.chaptersSheet.chaptersBottomSheet.setup(this)
         if (ThemeUtil.isColoredTheme(getPrefTheme(preferences))) {
-            binding.chaptersSheet.chapterRecycler.setBackgroundColor(getResourceColor(android.R.attr.colorBackground))
+            binding.chaptersSheet.chapterRecycler.setBackgroundColor(getResourceColor(R.attr.background))
         }
         config = ReaderConfig()
         initializeMenu()
@@ -912,7 +912,7 @@ class ReaderActivity :
             if (viewer is WebtoonViewer) {
                 Color.BLACK
             } else {
-                getResourceColor(android.R.attr.colorBackground)
+                getResourceColor(R.attr.background)
             }
         )
 

@@ -57,7 +57,7 @@
             android:maxLines="1"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:textColor="?colorOnAccent"
+            android:textColor="?colorOnSecondary"
             android:textSize="13sp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/download_text"

@@ -39,7 +39,7 @@ class LibraryBadge @JvmOverloads constructor(context: Context, attrs: AttributeS
                 when {
                     unread == -1 && !showTotalChapters -> unreadBadgeBackground
                     showTotalChapters -> context.contextCompatColor(R.color.total_badge_text)
-                    else -> context.getResourceColor(R.attr.colorOnAccent)
+                    else -> context.getResourceColor(R.attr.colorOnSecondary)
                 }
             )
             setBackgroundColor(unreadBadgeBackground)

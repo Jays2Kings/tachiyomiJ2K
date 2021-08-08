@@ -209,7 +209,7 @@ class RecentsController(bundle: Bundle? = null) :
             binding.downloadBottomSheet.sheetLayout.backgroundTintList = ColorStateList.valueOf(
                 ColorUtils.blendARGB(
                     view.context.getResourceColor(R.attr.colorPrimaryVariant),
-                    view.context.getResourceColor(android.R.attr.colorBackground),
+                    view.context.getResourceColor(R.attr.background),
                     isExpanded.toInt().toFloat()
                 )
             )
@@ -251,7 +251,7 @@ class RecentsController(bundle: Bundle? = null) :
                     binding.downloadBottomSheet.sheetLayout.backgroundTintList = ColorStateList.valueOf(
                         ColorUtils.blendARGB(
                             view.context.getResourceColor(R.attr.colorPrimaryVariant),
-                            view.context.getResourceColor(android.R.attr.colorBackground),
+                            view.context.getResourceColor(R.attr.background),
                             (progress * 2f).coerceIn(0f, 1f)
                         )
                     )

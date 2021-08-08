@@ -10,7 +10,7 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:attr/colorBackground"
+        android:background="?attr/background"
         android:clipToPadding="false"
         android:nestedScrollingEnabled="false"
         tools:listitem="@layout/extension_card_header" />

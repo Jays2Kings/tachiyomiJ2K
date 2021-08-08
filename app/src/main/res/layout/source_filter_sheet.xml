@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bottom_sheet_rounded_background"
     app:layout_constraintVertical_chainStyle="packed"
-    android:backgroundTint="?android:attr/colorBackground">
+    android:backgroundTint="?attr/background">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"

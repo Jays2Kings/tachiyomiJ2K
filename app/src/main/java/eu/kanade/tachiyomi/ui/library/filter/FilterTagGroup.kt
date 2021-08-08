@@ -118,7 +118,7 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
             binding.firstButton.isActivated = !binding.firstButton.isActivated
             binding.firstButton.setTextColor(
                 context.getResourceColor(
-                    if (binding.firstButton.isActivated) R.attr.colorOnAccent
+                    if (binding.firstButton.isActivated) R.attr.colorOnSecondary
                     else android.R.attr.textColorPrimary
                 )
             )
@@ -150,7 +150,7 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
         }
         mainButton.setTextColor(
             context.getResourceColor(
-                if (mainButton.isActivated) R.attr.colorOnAccent
+                if (mainButton.isActivated) R.attr.colorOnSecondary
                 else android.R.attr.textColorPrimary
             )
         )

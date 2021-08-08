@@ -360,7 +360,7 @@ class MangaDetailsController :
                     Palette.from(bitmap).generate {
                         if (it == null) return@generate
                         val colorBack = view.context.getResourceColor(
-                            android.R.attr.colorBackground
+                            R.attr.background
                         )
                         // this makes the color more consistent regardless of theme
                         val backDropColor =

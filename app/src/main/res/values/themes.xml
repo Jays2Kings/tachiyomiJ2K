@@ -13,32 +13,29 @@
         <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/colorPrimary</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/anim_tachij2k_splash</item>
         <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">775</item>
+        <!--Standard Material colors -->
         <item name="colorPrimary">@color/tachiPrimaryBlue</item>
-        <item name="colorPrimaryVariant">@color/colorPrimary</item>
         <item name="colorSurface">@color/background</item> //old colorSecondary
         <item name="colorOnSurface">@color/md_black_1000</item> //old colorOnSecondary
         <item name="colorSecondary">@color/tachiBlue</item> //colorAccent
-        <item name="colorOnSecondary">@color/md_white_1000</item> // colorOnAccent
+        <item name="colorOnSecondary">@color/md_white_1000</item> // colorOnSecondary
         <item name="colorSecondaryVariant">@color/tachiBlueVariant</item> //colorAccentText
-
-
+        <item name="background">@color/background</item>
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
-        <item name="colorPrimaryDark">?colorPrimary</item>
-        <item name="colorControlActivated">?attr/colorSecondary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColorHint">@color/text_color_hint</item>
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
         <item name="android:textColorSecondaryInverse">@color/text_color_inverse_secondary</item>
         <item name="android:textColorHintInverse">@color/text_color_inverse_hint</item>
-        <item name="android:colorBackground">@color/background</item>
         <item name="readerBackground">@color/colorPrimary</item>
         <item name="android:listSelector">?attr/colorSecondary</item>
         <item name="android:divider">@color/divider</item>
         <item name="android:listDivider">@drawable/line_divider</item>
         <item name="actionModeStyle">@style/CustomActionModeStyle</item>
-        <item name="colorOnAccent">@color/md_white_1000</item>
 
         <!-- Themes -->
         <item name="windowActionModeOverlay">true</item>
@@ -58,7 +55,7 @@
         <item name="md_color_title">?android:attr/textColorPrimary</item>
         <item name="md_color_content">?android:textColorSecondary</item>
         <item name="md_color_button_text">?attr/colorSecondary</item>
-        <item name="md_background_color">?android:attr/colorBackground</item>
+        <item name="md_background_color">?attr/background</item>
         <item name="md_button_casing">literal</item>
         <item name="md_corner_radius">16dp</item>
 
@@ -91,7 +88,7 @@
         <item name="colorSecondary">@color/md_black_1000</item>
         <item name="colorPrimaryVariant">@color/md_black_1000</item>
         <item name="colorOnPrimary">@color/md_black_1000</item>
-        <item name="android:colorBackground">@color/md_black_1000</item>
+        <item name="background">@color/md_black_1000</item>
         <item name="readerBackground">@color/md_black_1000</item>
 
         <!-- Material Dialog colors -->
@@ -108,7 +105,7 @@
         <item name="colorSecondary">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
         <item name="android:textColorPrimary">@color/textPrimaryDuskDawn</item>
-        <item name="android:colorBackground">@color/backgroundDuskDawn</item>
+        <item name="background">@color/backgroundDuskDawn</item>
         <item name="actionBarTintColor">@color/appBarTextDuskDawn</item>
     </style>
 
@@ -120,7 +117,7 @@
     <!--== Tako Theme ==-->
     <style name="Theme.Tachiyomi.Tako">
         <item name="colorAccent">@color/accentTako</item>
-        <item name="colorOnAccent">@color/colorOnAccentTako</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryTako</item>
         <item name="colorPrimaryVariant">@color/surfaceTako</item>
         <item name="colorDownloadBadge">@color/downloadBadgeDayNight</item>
         <item name="colorOnDownloadBadge">@color/colorOnDownloadBadgeDayNight</item>
@@ -128,7 +125,7 @@
         <item name="colorControlHighlight">@color/rippleColoredTako</item>
         <item name="colorSecondary">@color/backgroundTako</item>
         <item name="actionBarTintColor">@color/actionTintTako</item>
-        <item name="android:colorBackground">@color/backgroundTako</item>
+        <item name="background">@color/backgroundTako</item>
         <item name="colorSecondaryVariant">@color/colorAccentTextTako</item>
         <item name="tabBarIconInactive">@color/inactiveTabTako</item>
     </style>
@@ -145,7 +142,7 @@
         <item name="colorSecondaryVariant">@color/colorAccentYinyangText</item>
         <item name="colorDownloadBadge">@color/downloadBadgeDayNight</item>
         <item name="colorOnDownloadBadge">@color/colorOnDownloadBadgeDayNight</item>
-        <item name="colorOnAccent">@color/colorOnAccentYinyang</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryYinyang</item>
     </style>
     <style name="Theme.Tachiyomi.Monet"/>
 
@@ -162,7 +159,6 @@
 
     <style name="Theme.OSS" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@android:color/black</item>
         <item name="android:colorEdgeEffect">@color/tachiBlue</item>
     </style>
 </resources>

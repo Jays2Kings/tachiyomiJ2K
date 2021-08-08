@@ -30,7 +30,7 @@
             <item android:id="@android:id/mask">
                 <shape android:shape="rectangle">
                     <corners android:radius="4dp" />
-                    <solid android:color="?android:colorBackground" />
+                    <solid android:color="?attr/background" />
                 </shape>
             </item>
         </selector>

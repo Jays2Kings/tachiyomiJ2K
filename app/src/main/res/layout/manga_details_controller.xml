@@ -5,13 +5,13 @@
     android:id="@+id/frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:colorBackground">
+    android:background="?attr/background">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:colorBackground">
+        android:background="?attr/background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linear_recycler_layout"
@@ -47,7 +47,7 @@
             <View
                 android:id="@+id/tablet_overlay"
                 android:visibility="gone"
-                android:background="?android:attr/colorBackground"
+                android:background="?attr/background"
                 android:alpha=".80"
                 android:layout_width="0dp"
                 android:layout_height="20dp"

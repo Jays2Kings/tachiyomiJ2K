@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:id="@+id/front_view"
         android:layout_height="wrap_content"
-        android:background="?android:attr/colorBackground"
+        android:background="?attr/background"
         android:paddingTop="@dimen/material_component_lists_padding_above_list">
 
         <ImageView

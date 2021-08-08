@@ -5,7 +5,7 @@
     android:id="@+id/recent_manga_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/colorBackground">
+    android:background="?attr/background">
 
     <FrameLayout
         android:id="@+id/right_view"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
-                    android:background="?android:attr/colorBackground"
+                    android:background="?attr/background"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:maxHeight="60dp"
                     app:layout_constraintBottom_toBottomOf="parent"

@@ -131,7 +131,7 @@ enum class Themes(@StyleRes val styleRes: Int, val nightMode: Int, @StringRes va
     @ColorInt
     val darkSecondaryText: Int = ColorUtils.setAlphaComponent(darkPrimaryText, (0.54f * 255f).roundToInt())
 
-    /** Complies with colorBackground */
+    /** Complies with background */
     @ColorInt
     val lightBackground: Int = Color.parseColor(
         when (styleRes) {
@@ -141,7 +141,7 @@ enum class Themes(@StyleRes val styleRes: Int, val nightMode: Int, @StringRes va
         }
     )
 
-    /** Complies with colorBackground (probably night) */
+    /** Complies with background (probably night) */
     @ColorInt
     val darkBackground: Int = Color.parseColor(
         when (styleRes) {
@@ -267,7 +267,7 @@ enum class Themes(@StyleRes val styleRes: Int, val nightMode: Int, @StringRes va
     data class Colors(
         @ColorInt val primaryText: Int,
         @ColorInt val secondaryText: Int,
-        @ColorInt val colorBackground: Int,
+        @ColorInt val background: Int,
         @ColorInt val colorSecondary: Int,
         /** Complies with colorSecondary */
         @ColorInt val appBar: Int,

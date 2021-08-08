@@ -15,7 +15,7 @@
             android:id="@+id/install_progress"
             android:layout_width="0dp"
             style="?android:attr/progressBarStyleHorizontal"
-            android:progressBackgroundTint="?android:attr/colorBackground"
+            android:progressBackgroundTint="?attr/background"
             android:progressTint="?attr/colorSecondary"
             android:layout_height="2dp"
             android:visibility="gone"

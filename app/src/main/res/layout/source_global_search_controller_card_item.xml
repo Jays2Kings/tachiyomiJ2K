@@ -25,8 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:background="?android:attr/colorBackground"
-            tools:background="?android:attr/colorBackground"
+            android:background="?attr/background"
+            tools:background="?attr/background"
             tools:ignore="ContentDescription"
             tools:src="@mipmap/ic_launcher" />
 
@@ -61,7 +61,7 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:textSize="13sp"
-            android:textColor="?attr/colorOnAccent"
+            android:textColor="?attr/colorOnSecondary"
             style="@style/TextAppearance.Regular.Caption.Light"
             android:layout_height="wrap_content"
             android:tint="@color/md_white_1000"
