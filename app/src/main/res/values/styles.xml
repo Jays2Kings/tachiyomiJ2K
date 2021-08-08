@@ -62,7 +62,7 @@
     </style>
 
     <style name="TextAppearance.Regular.Caption.Hint">
-        <item name="android:textColor">?android:attr/textColorHint</item>
+        <item name="android:textColor">@color/material_on_background_disabled</item>
     </style>
 
     <style name="TextAppearance.Regular.SubHeading">
@@ -90,7 +90,7 @@
     </style>
 
     <style name="TextAppearance.Medium.Body2.Hint">
-        <item name="android:textColor">?android:attr/textColorHint</item>
+        <item name="android:textColor">@color/material_on_background_disabled</item>
     </style>
 
     <style name="TextAppearance.Widget.Tab" parent="TextAppearance.MaterialComponents.Button">
@@ -154,7 +154,7 @@
     <style name="Theme.Widget.GridView.Catalogue">
         <item name="android:gravity">top|left</item>
         <item name="android:smoothScrollbar">true</item>
-        <item name="android:cacheColorHint">?android:attr/textColorHint</item>
+        <item name="android:cacheColorHint">@color/material_on_background_disabled</item>
         <item name="android:fastScrollEnabled">true</item>
         <item name="android:horizontalSpacing">0dp</item>
         <item name="android:verticalSpacing">0dp</item>
@@ -210,7 +210,7 @@
     <style name="Theme.Widget.TextInputLayout.OutlinedBox.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/text_input_stroke</item>
         <item name="hintTextColor">?attr/colorSecondary</item>
-        <item name="android:textColorHint">?android:attr/textColorHint</item>
+        <item name="android:textColorHint">@color/material_on_background_disabled</item>
     </style>
 
     <!--=================-->

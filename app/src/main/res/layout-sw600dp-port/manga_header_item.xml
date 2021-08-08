@@ -393,7 +393,7 @@
             android:maxLines="2"
             android:padding="5dp"
             android:textAlignment="textEnd"
-            android:textColor="?android:textColorHint"
+            android:textColor="@color/material_on_background_disabled"
             app:layout_constraintBottom_toBottomOf="@id/filter_button"
             app:layout_constraintEnd_toStartOf="@id/filter_button"
             app:layout_constraintStart_toEndOf="@+id/chapters_title"

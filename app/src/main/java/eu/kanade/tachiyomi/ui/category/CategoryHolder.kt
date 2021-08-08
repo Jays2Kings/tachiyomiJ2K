@@ -50,7 +50,7 @@ class CategoryHolder(view: View, val adapter: CategoryAdapter) : BaseFlexibleVie
         }
         createCategory = category.order == CREATE_CATEGORY_ORDER
         if (createCategory) {
-            binding.title.setTextColor(ContextCompat.getColor(itemView.context, R.color.text_color_hint))
+            binding.title.setTextColor(ContextCompat.getColor(itemView.context, R.color.material_on_background_disabled))
             regularDrawable = ContextCompat.getDrawable(
                 itemView.context,
                 R.drawable

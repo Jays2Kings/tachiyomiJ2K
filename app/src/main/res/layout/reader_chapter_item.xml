@@ -59,7 +59,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_bookmark_border_24dp"
-            app:tint="?android:attr/textColorHint" />
+            app:tint="@color/material_on_background_disabled" />
 
         <ProgressBar
             android:id="@+id/progress"
