@@ -5,7 +5,7 @@ https://github.com/material-components/material-components-android/blob/master/l
 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="?attr/colorSecondary" android:state_focused="true" />
-    <item android:alpha="0.87" android:color="?android:attr/textColorPrimary" android:state_hovered="true" />
-    <item android:alpha="0.12" android:color="?android:attr/textColorPrimary" android:state_enabled="false" />
-    <item android:alpha="0.38" android:color="?android:attr/textColorPrimary" />
+    <item android:alpha="0.87" android:color="?attr/colorOnBackground" android:state_hovered="true" />
+    <item android:alpha="0.12" android:color="?attr/colorOnBackground" android:state_enabled="false" />
+    <item android:alpha="0.38" android:color="?attr/colorOnBackground" />
 </selector>

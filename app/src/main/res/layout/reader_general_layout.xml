@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/show_page_number"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/fullscreen"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/fullscreen"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/keepscreen"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/keep_screen_on"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/always_show_chapter_transition"
@@ -93,6 +93,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/always_show_chapter_transition"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
     </LinearLayout>
 </eu.kanade.tachiyomi.ui.reader.settings.ReaderGeneralView>

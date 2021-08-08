@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!--========-->
     <!--Toolbars-->
@@ -26,7 +26,7 @@
     <!--Text Appearance-->
     <!--===============-->
     <style name="TextAppearance" parent="@android:style/TextAppearance">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="TextAppearance.Regular">
@@ -46,7 +46,7 @@
     </style>
 
     <style name="TextAppearance.Regular.Body1.Light">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="TextAppearance.Regular.Body1.Secondary">
@@ -58,7 +58,7 @@
     </style>
 
     <style name="TextAppearance.Regular.Caption.Light">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="TextAppearance.Regular.Caption.Hint">
@@ -74,7 +74,7 @@
     </style>
 
     <style name="TextAppearance.Regular.SubHeading.Light">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="TextAppearance.Regular.SubHeading.Light.Bold">
@@ -162,7 +162,7 @@
 
 
     <style name="Theme.Widget.SpinnerItem" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="android:background">@drawable/list_item_selector</item>
     </style>
 
@@ -291,7 +291,7 @@
         <item name="android:layout_height">40dp</item>
         <item name="iconTint">?attr/colorSecondary</item>
         <item name="rippleColor">@color/fullRippleColor</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="cornerRadius">20dp</item>
     </style>
 

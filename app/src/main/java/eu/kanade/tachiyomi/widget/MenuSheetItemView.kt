@@ -82,8 +82,8 @@ class MenuSheetItemView @JvmOverloads constructor(context: Context, attrs: Attri
             setIconColor(context.getResourceColor(R.attr.colorSecondary))
             setTextColor(context.getResourceColor(R.attr.colorSecondary))
         } else {
-            setTextColor(context.getResourceColor(android.R.attr.textColorPrimary))
-            setIconColor(context.getResourceColor(android.R.attr.textColorPrimary))
+            setTextColor(context.getResourceColor(R.attr.colorOnBackground))
+            setIconColor(context.getResourceColor(R.attr.colorOnBackground))
             setEndIcon(0)
         }
     }

@@ -19,6 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/group_chapters_together"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
     </LinearLayout>
 </eu.kanade.tachiyomi.ui.recents.options.RecentsHistoryView>

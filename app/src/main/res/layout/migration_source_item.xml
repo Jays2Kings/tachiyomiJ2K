@@ -38,6 +38,6 @@
         android:scaleType="center"
         android:layout_gravity="end"
         app:srcCompat="@drawable/ic_drag_handle_24dp"
-        android:tint="?android:attr/textColorPrimary"/>
+        android:tint="?attr/colorOnBackground"/>
 
 </FrameLayout>

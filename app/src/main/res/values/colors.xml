@@ -24,7 +24,6 @@
 
     <color name="colorAmoledPrimary">@color/md_black_1000</color>
 
-    <color name="textColorPrimary">@color/md_black_1000_87</color>
     <color name="textColorPrimaryInverse">@color/md_white_1000</color>
 
     <color name="strong_divider">@color/md_black_1000_38</color>

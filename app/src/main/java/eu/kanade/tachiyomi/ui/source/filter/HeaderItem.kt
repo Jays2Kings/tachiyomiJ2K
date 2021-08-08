@@ -8,6 +8,7 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.AbstractHeaderItem
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.davidea.viewholders.FlexibleViewHolder
+import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.source.model.Filter
 import eu.kanade.tachiyomi.util.system.getResourceColor
 
@@ -25,7 +26,7 @@ class HeaderItem(val filter: Filter.Header) : AbstractHeaderItem<HeaderItem.Hold
     override fun bindViewHolder(adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>, holder: Holder, position: Int, payloads: MutableList<Any?>?) {
         val view = holder.itemView as TextView
         view.text = filter.name
-        view.setTextColor(view.context.getResourceColor(android.R.attr.textColorPrimary))
+        view.setTextColor(view.context.getResourceColor(R.attr.colorOnBackground))
     }
 
     override fun equals(other: Any?): Boolean {

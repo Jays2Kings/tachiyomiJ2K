@@ -51,11 +51,11 @@ class MigrationProcessHolder(
 
             binding.migrationMenu.setVectorCompat(
                 R.drawable.ic_more_vert_24dp,
-                android.R.attr.textColorPrimary
+                R.attr.colorOnBackground
             )
             binding.skipManga.setVectorCompat(
                 R.drawable.ic_close_24dp,
-                android.R.attr.textColorPrimary
+                R.attr.colorOnBackground
             )
             binding.migrationMenu.isInvisible = true
             binding.skipManga.isVisible = true

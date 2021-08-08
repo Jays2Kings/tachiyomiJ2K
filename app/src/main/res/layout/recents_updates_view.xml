@@ -20,7 +20,7 @@
             android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
             android:text="@string/show_updated_time"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toTopOf="@+id/show_read_in_all" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -29,6 +29,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/group_chapters_together"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
     </LinearLayout>
 </eu.kanade.tachiyomi.ui.recents.options.RecentsUpdatesView>

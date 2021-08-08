@@ -51,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:alpha="0"
                 android:background="@drawable/bottom_sheet_rounded_background"
-                android:backgroundTint="?android:textColorPrimaryInverse" />
+                android:backgroundTint="?attr/background" />
         </FrameLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

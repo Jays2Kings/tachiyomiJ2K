@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/invert_double_pages"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/crop_borders"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/crop_borders"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/page_transitions"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="@string/animate_page_transitions"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <!-- Webtoon Prefs -->
         <eu.kanade.tachiyomi.widget.MaterialSpinnerView
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/crop_borders"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/enable_zoom_out"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintTop_toBottomOf="@id/webtoon_side_padding" />
 
         <androidx.constraintlayout.widget.Group

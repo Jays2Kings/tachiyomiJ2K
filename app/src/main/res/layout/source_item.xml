@@ -70,7 +70,7 @@
             android:maxLines="1"
             android:paddingStart="0dp"
             android:paddingEnd="8dp"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/source_latest"
             app:layout_constraintStart_toEndOf="@+id/source_image"

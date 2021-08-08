@@ -402,7 +402,7 @@ class MangaDetailsController :
             )
 
             val iconPrimary = view?.context?.getResourceColor(
-                if (forThis) android.R.attr.textColorPrimary
+                if (forThis) R.attr.colorOnBackground
                 else R.attr.actionBarTintColor
             ) ?: Color.BLACK
             activityBinding.toolbar.setTitleTextColor(iconPrimary)
@@ -822,7 +822,7 @@ class MangaDetailsController :
             R.string.migrate_,
             presenter.manga.seriesType(view!!.context)
         )
-        val iconPrimary = view?.context?.getResourceColor(android.R.attr.textColorPrimary)
+        val iconPrimary = view?.context?.getResourceColor(R.attr.colorOnBackground)
             ?: Color.BLACK
         menu.findItem(R.id.action_download).icon?.mutate()?.setTint(iconPrimary)
         editItem.icon?.mutate()?.setTint(iconPrimary)

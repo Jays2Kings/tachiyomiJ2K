@@ -89,9 +89,9 @@
                     android:layout_marginEnd="10dp"
                     android:maxLines="2"
                     android:text="@string/group_library_by"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="?attr/colorOnBackground"
                     app:icon="@drawable/ic_label_outline_24dp"
-                    app:iconTint="?android:attr/textColorPrimary" />
+                    app:iconTint="?attr/colorOnBackground" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/expand_categories"
@@ -100,9 +100,9 @@
                     android:layout_height="wrap_content"
                     android:maxLines="2"
                     android:text="@string/expand_all_categories"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="?attr/colorOnBackground"
                     app:icon="@drawable/ic_expand_more_24dp"
-                    app:iconTint="?android:attr/textColorPrimary" />
+                    app:iconTint="?attr/colorOnBackground" />
             </LinearLayout>
 
             <LinearLayout
@@ -119,9 +119,9 @@
                     android:layout_marginStart="10dp"
                     android:maxLines="2"
                     android:text="@string/display_options"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="?attr/colorOnBackground"
                     app:icon="@drawable/ic_tune_24dp"
-                    app:iconTint="?android:attr/textColorPrimary" />
+                    app:iconTint="?attr/colorOnBackground" />
 
             </LinearLayout>
         </LinearLayout>
@@ -134,7 +134,7 @@
             android:alpha="0.25"
             android:contentDescription="@string/drag_handle"
             android:src="@drawable/draggable_pill"
-            app:tint="?android:attr/textColorPrimary"
+            app:tint="?attr/colorOnBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

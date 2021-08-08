@@ -95,7 +95,7 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
         }
         for (i in 0 until itemCount) {
             buttons[i].isVisible = true
-            buttons[i].setTextColor(context.getResourceColor(android.R.attr.textColorPrimary))
+            buttons[i].setTextColor(context.getResourceColor(R.attr.colorOnBackground))
         }
         for (i in 0 until (itemCount - 1)) separators[i].isVisible = true
     }
@@ -119,7 +119,7 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
             binding.firstButton.setTextColor(
                 context.getResourceColor(
                     if (binding.firstButton.isActivated) R.attr.colorOnSecondary
-                    else android.R.attr.textColorPrimary
+                    else R.attr.colorOnBackground
                 )
             )
             listener?.onFilterClicked(
@@ -151,7 +151,7 @@ class FilterTagGroup@JvmOverloads constructor(context: Context, attrs: Attribute
         mainButton.setTextColor(
             context.getResourceColor(
                 if (mainButton.isActivated) R.attr.colorOnSecondary
-                else android.R.attr.textColorPrimary
+                else R.attr.colorOnBackground
             )
         )
     }

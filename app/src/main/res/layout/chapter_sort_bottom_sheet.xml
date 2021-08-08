@@ -109,5 +109,5 @@
         android:alpha="0.25"
         android:contentDescription="@string/drag_handle"
         android:src="@drawable/draggable_pill"
-        app:tint="?android:attr/textColorPrimary" />
+        app:tint="?attr/colorOnBackground" />
 </FrameLayout>

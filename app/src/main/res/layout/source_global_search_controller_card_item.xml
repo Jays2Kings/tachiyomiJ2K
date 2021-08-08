@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="?android:attr/textColorPrimary"
+        android:textColor="?attr/colorOnBackground"
         android:textSize="12sp"
         app:layout_constrainedHeight="true"
         app:layout_constraintEnd_toEndOf="parent"

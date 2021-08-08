@@ -55,7 +55,7 @@
             android:layout_gravity="start"
             android:contentDescription="@string/reorder"
             android:scaleType="center"
-            app:tint="?android:attr/textColorPrimary"
+            app:tint="?attr/colorOnBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -86,7 +86,7 @@ class ChapterUtil {
 
         private fun readColor(context: Context): Int = context.contextCompatColor(R.color.read_chapter)
 
-        private fun unreadColor(context: Context): Int = context.getResourceColor(android.R.attr.textColorPrimary)
+        private fun unreadColor(context: Context): Int = context.getResourceColor(R.attr.colorOnBackground)
 
         private fun bookmarkedColor(context: Context): Int = context.getResourceColor(android.R.attr.colorSecondary)
 

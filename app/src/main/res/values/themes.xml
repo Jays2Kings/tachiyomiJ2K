@@ -21,14 +21,13 @@
         <item name="colorOnSecondary">@color/md_white_1000</item> // colorOnSecondary
         <item name="colorSecondaryVariant">@color/tachiBlueVariant</item> //colorAccentText
         <item name="background">@color/background</item>
+        <item name="colorOnBackground">@color/md_black_1000_87</item>
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
 
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColorHint">@color/text_color_hint</item>
-        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
         <item name="android:textColorSecondaryInverse">@color/text_color_inverse_secondary</item>
         <item name="android:textColorHintInverse">@color/text_color_inverse_hint</item>
         <item name="readerBackground">@color/colorPrimary</item>
@@ -43,7 +42,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
 
         <!-- Custom Attributes-->
-        <item name="actionBarTintColor">?android:textColorPrimary</item>
+        <item name="actionBarTintColor">?attr/colorOnBackground</item>
         <item name="tabBarIconColor">?attr/colorSecondary</item>
         <item name="tabBarIconInactive">@color/colorPrimaryInactive</item>
         <item name="android:statusBarColor">@color/status_bar</item>
@@ -52,7 +51,7 @@
         <item name="tabHighlightBackground">@color/accent_alpha</item>
 
         <!-- Material Dialog colors -->
-        <item name="md_color_title">?android:attr/textColorPrimary</item>
+        <item name="md_color_title">?attr/colorOnBackground</item>
         <item name="md_color_content">?android:textColorSecondary</item>
         <item name="md_color_button_text">?attr/colorSecondary</item>
         <item name="md_background_color">?attr/background</item>
@@ -104,8 +103,7 @@
         <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
         <item name="colorSecondary">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
-        <item name="android:textColorPrimary">@color/textPrimaryDuskDawn</item>
-        <item name="background">@color/backgroundDuskDawn</item>
+        <item name="colorOnBackground">@color/textPrimaryDuskDawn</item>
         <item name="actionBarTintColor">@color/appBarTextDuskDawn</item>
     </style>
 

@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:drawableTint="?android:attr/textColorPrimary"
+                    app:drawableTint="?attr/colorOnBackground"
                     tools:text="10"
                     app:drawableEndCompat="@drawable/ic_star_12dp" />
             </FrameLayout>

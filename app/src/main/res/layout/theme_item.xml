@@ -72,7 +72,7 @@
                     android:src="@drawable/rounded_preview_rect"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/theme_hero_preview"
-                    app:tint="?android:attr/textColorPrimary"
+                    app:tint="?attr/colorOnBackground"
                     android:alpha="0.70"
                     android:layout_marginTop="@dimen/theme_padding_preview"
                     android:layout_marginStart="@dimen/theme_padding_preview"
@@ -92,7 +92,7 @@
                     android:src="@drawable/rounded_preview_rect"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/theme_hero_image"
-                    app:tint="?android:attr/textColorPrimary"
+                    app:tint="?attr/colorOnBackground"
                     tools:ignore="ContentDescription" />
 
                 <ImageView

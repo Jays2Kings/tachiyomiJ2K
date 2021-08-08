@@ -29,7 +29,7 @@
             android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
             android:text="@string/show_reset_history_button"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toTopOf="@+id/show_read_in_all" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -38,14 +38,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/show_read_chapters_all"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?attr/colorOnBackground" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/show_title_first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/show_title_first"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?attr/colorOnBackground"
             android:layout_marginTop="8dp" />
     </LinearLayout>
 </eu.kanade.tachiyomi.ui.recents.options.RecentsGeneralView>

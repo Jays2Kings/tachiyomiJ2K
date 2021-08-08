@@ -107,8 +107,8 @@
                 android:textAlignment="textStart"
                 app:icon="@drawable/ic_swap_vert_24dp"
                 style="@style/Theme.Widget.Button.TextButton"
-                android:textColor="?android:attr/textColorPrimary"
-                app:iconTint="?android:attr/textColorPrimary"
+                android:textColor="?attr/colorOnBackground"
+                app:iconTint="?attr/colorOnBackground"
                 android:text="@string/reorder_filters" />
         </LinearLayout>
 

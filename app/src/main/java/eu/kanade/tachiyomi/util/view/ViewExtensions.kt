@@ -395,7 +395,7 @@ inline fun View.popupMenu(
     if (selectedItemId != null) {
         val blendedAccent = ColorUtils.blendARGB(
             context.getResourceColor(android.R.attr.colorSecondary),
-            context.getResourceColor(android.R.attr.textColorPrimary),
+            context.getResourceColor(R.attr.colorOnBackground),
             0.5f
         )
         (popup.menu as? MenuBuilder)?.setOptionalIconsVisible(true)

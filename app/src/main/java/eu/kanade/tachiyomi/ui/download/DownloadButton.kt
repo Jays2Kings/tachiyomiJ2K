@@ -21,7 +21,7 @@ class DownloadButton @JvmOverloads constructor(context: Context, attrs: Attribut
 
     private val activeColor = ColorUtils.blendARGB(
         context.getResourceColor(R.attr.colorSecondary),
-        context.getResourceColor(android.R.attr.textColorPrimaryInverse),
+        context.getResourceColor(R.attr.background),
         0.05f
     )
     private val progressBGColor = ContextCompat.getColor(
@@ -34,10 +34,10 @@ class DownloadButton @JvmOverloads constructor(context: Context, attrs: Attribut
     )
     private val downloadedColor = ColorUtils.blendARGB(
         context.getResourceColor(R.attr.colorSecondary),
-        context.getResourceColor(android.R.attr.textColorPrimary),
+        context.getResourceColor(R.attr.colorOnBackground),
         0.3f
     )
-    private val downloadedTextColor = context.getResourceColor(android.R.attr.textColorPrimaryInverse)
+    private val downloadedTextColor = context.getResourceColor(R.attr.background)
     private val errorColor = ContextCompat.getColor(
         context,
         R.color.material_red_500
