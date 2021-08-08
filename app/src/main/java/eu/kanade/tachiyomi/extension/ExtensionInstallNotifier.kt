@@ -38,7 +38,7 @@ class ExtensionInstallNotifier(private val context: Context) {
             setOngoing(true)
             setSilent(true)
             setOnlyAlertOnce(true)
-            color = ContextCompat.getColor(context, R.color.colorAccent)
+            color = ContextCompat.getColor(context, R.color.tachiBlue)
             addAction(R.drawable.ic_close_24dp, context.getString(android.R.string.cancel), cancelIntent)
         }
     }

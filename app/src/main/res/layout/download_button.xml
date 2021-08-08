@@ -40,7 +40,7 @@
 
     <ImageView
         android:id="@+id/download_icon"
-        app:tint="?colorAccent"
+        app:tint="?attr/colorSecondary"
         android:layout_gravity="center"
         android:layout_width="30dp"
         android:layout_height="30dp"

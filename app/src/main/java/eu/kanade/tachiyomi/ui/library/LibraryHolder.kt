@@ -20,7 +20,7 @@ abstract class LibraryHolder(
     val adapter: LibraryCategoryAdapter
 ) : BaseFlexibleViewHolder(view, adapter) {
 
-    protected val color = ColorUtils.setAlphaComponent(itemView.context.getResourceColor(R.attr.colorAccent), 75)
+    protected val color = ColorUtils.setAlphaComponent(itemView.context.getResourceColor(R.attr.colorSecondary), 75)
 
     /**
      * Method called from [LibraryCategoryAdapter.onBindViewHolder]. It updates the data for this

@@ -35,7 +35,7 @@
         android:background="@null"
         android:padding="5dp"
         android:src="@drawable/ic_filter_list_24dp"
-        app:tint="?colorAccent"
+        app:tint="?attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="@id/chapters_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/chapters_title" />

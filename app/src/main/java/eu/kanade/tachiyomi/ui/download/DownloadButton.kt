@@ -20,7 +20,7 @@ class DownloadButton @JvmOverloads constructor(context: Context, attrs: Attribut
     FrameLayout(context, attrs) {
 
     private val activeColor = ColorUtils.blendARGB(
-        context.getResourceColor(R.attr.colorAccent),
+        context.getResourceColor(R.attr.colorSecondary),
         context.getResourceColor(android.R.attr.textColorPrimaryInverse),
         0.05f
     )
@@ -33,7 +33,7 @@ class DownloadButton @JvmOverloads constructor(context: Context, attrs: Attribut
         R.color.material_on_surface_disabled
     )
     private val downloadedColor = ColorUtils.blendARGB(
-        context.getResourceColor(R.attr.colorAccent),
+        context.getResourceColor(R.attr.colorSecondary),
         context.getResourceColor(android.R.attr.textColorPrimary),
         0.3f
     )

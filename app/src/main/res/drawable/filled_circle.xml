@@ -3,11 +3,11 @@
 
     android:shape="oval"
     android:thicknessRatio="2">
-    <solid android:color="?colorAccent" />
+    <solid android:color="?attr/colorSecondary" />
     <size
         android:height="25dp"
         android:width="25dp" />
     <stroke
         android:width="2dp"
-        android:color="?colorAccent" />
+        android:color="?attr/colorSecondary" />
 </shape>

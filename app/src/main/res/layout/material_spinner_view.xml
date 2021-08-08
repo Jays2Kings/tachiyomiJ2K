@@ -43,7 +43,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="1dp"
-        app:tint="?android:attr/textColorSecondary"
+        app:tint="@color/material_on_surface_emphasis_medium"
         android:src="@drawable/ic_expand_more_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/detail_view"

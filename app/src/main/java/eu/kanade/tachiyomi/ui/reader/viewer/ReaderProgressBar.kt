@@ -44,7 +44,7 @@ class ReaderProgressBar @JvmOverloads constructor(
      * The paint to use to draw the progress bar.
      */
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = context.getResourceColor(R.attr.colorAccent)
+        color = context.getResourceColor(R.attr.colorSecondary)
         isAntiAlias = true
         strokeCap = Paint.Cap.ROUND
         style = Paint.Style.STROKE

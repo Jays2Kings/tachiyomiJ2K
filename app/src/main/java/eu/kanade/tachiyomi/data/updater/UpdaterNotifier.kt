@@ -57,7 +57,7 @@ internal class UpdaterNotifier(private val context: Context) {
             setContentIntent(pendingIntent)
             setAutoCancel(true)
             setSmallIcon(android.R.drawable.stat_sys_download_done)
-            color = context.getResourceColor(R.attr.colorAccent)
+            color = context.getResourceColor(R.attr.colorSecondary)
             clearActions()
             val isOnA12 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
             // Download action
@@ -196,7 +196,7 @@ internal class UpdaterNotifier(private val context: Context) {
             setOnlyAlertOnce(false)
             setAutoCancel(false)
             setProgress(0, 0, false)
-            color = ContextCompat.getColor(context, R.color.colorAccent)
+            color = ContextCompat.getColor(context, R.color.tachiBlue)
             clearActions()
             // Retry action
             addAction(
@@ -222,7 +222,7 @@ internal class UpdaterNotifier(private val context: Context) {
             setOnlyAlertOnce(false)
             setAutoCancel(false)
             setProgress(0, 0, false)
-            color = ContextCompat.getColor(context, R.color.colorAccent)
+            color = ContextCompat.getColor(context, R.color.tachiBlue)
             clearActions()
             // Retry action
             addAction(

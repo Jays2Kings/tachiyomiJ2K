@@ -277,7 +277,7 @@ class BrowseController :
         binding.bottomSheet.sheetLayout.backgroundTintList = ColorStateList.valueOf(
             ColorUtils.blendARGB(
                 bottomSheet.context.getResourceColor(R.attr.colorPrimaryVariant),
-                bottomSheet.context.getResourceColor(R.attr.colorSecondary),
+                bottomSheet.context.getResourceColor(R.attr.colorSurface),
                 progress
             )
         )

@@ -219,10 +219,10 @@ class ReaderActivity :
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             systemUiFlag = systemUiFlag.or(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
         }
-        binding.appBar.setBackgroundColor(contextCompatColor(R.color.secondary_alpha))
+        binding.appBar.setBackgroundColor(contextCompatColor(R.color.surface_alpha))
         ViewCompat.setBackgroundTintList(
             binding.readerNav.root,
-            ColorStateList.valueOf(contextCompatColor(R.color.secondary_alpha))
+            ColorStateList.valueOf(contextCompatColor(R.color.surface_alpha))
         )
         binding.readerLayout.systemUiVisibility = when (lightStatusBar) {
             true -> binding.readerLayout.systemUiVisibility.or(systemUiFlag)
@@ -534,7 +534,7 @@ class ReaderActivity :
         // Set binding.toolbar
         setSupportActionBar(binding.toolbar)
         val primaryColor = ColorUtils.setAlphaComponent(
-            getResourceColor(R.attr.colorSecondary),
+            getResourceColor(R.attr.colorSurface),
             200
         )
         binding.appBar.setBackgroundColor(primaryColor)
@@ -756,7 +756,7 @@ class ReaderActivity :
                     false
                 }
                 insets.hasSideNavBar() -> {
-                    window.navigationBarColor = getResourceColor(R.attr.colorSecondary)
+                    window.navigationBarColor = getResourceColor(R.attr.colorSurface)
                     false
                 }
                 // if in portrait with 2/3 button mode, translucent nav bar
@@ -1333,7 +1333,7 @@ class ReaderActivity :
                     }
                 }
                 if (sheetManageNavColor) window.navigationBarColor =
-                    getResourceColor(R.attr.colorSecondary)
+                    getResourceColor(R.attr.colorSurface)
                 binding.readerMenu.isVisible = true
                 val toolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.enter_from_top)
                 toolbarAnimation.setAnimationListener(

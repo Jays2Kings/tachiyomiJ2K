@@ -413,7 +413,7 @@ open class MainActivity : BaseActivity<MainActivityBinding>(), DownloadServiceLi
         binding.cardFrame.isVisible = show
         if (changeBG) {
             binding.appBar.setBackgroundColor(
-                if (show && !solidBG) Color.TRANSPARENT else getResourceColor(R.attr.colorSecondary)
+                if (show && !solidBG) Color.TRANSPARENT else getResourceColor(R.attr.colorSurface)
             )
         }
         currentToolbar?.setNavigationOnClickListener {
@@ -513,7 +513,7 @@ open class MainActivity : BaseActivity<MainActivityBinding>(), DownloadServiceLi
                     recentsItem,
                     getString(R.string.manage_whats_downloading),
                     getString(R.string.visit_recents_for_download_queue)
-                ).outerCircleColorInt(getResourceColor(R.attr.colorAccent)).outerCircleAlpha(0.95f)
+                ).outerCircleColorInt(getResourceColor(R.attr.colorSecondary)).outerCircleAlpha(0.95f)
                     .titleTextSize(
                         20
                     )
@@ -879,9 +879,6 @@ open class MainActivity : BaseActivity<MainActivityBinding>(), DownloadServiceLi
             tabAnimation?.start()
         } else {
             binding.tabsFrameLayout.isVisible = show
-        }
-        if (show) {
-            binding.appBar.setBackgroundColor(getResourceColor(R.attr.colorSecondary))
         }
     }
 

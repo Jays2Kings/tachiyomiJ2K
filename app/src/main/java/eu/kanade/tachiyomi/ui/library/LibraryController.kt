@@ -430,7 +430,7 @@ class LibraryController(
         filterTooltip =
             ViewTooltip.on(activity, icon).autoHide(false, 0L).align(ViewTooltip.ALIGN.START)
                 .position(ViewTooltip.Position.TOP).text(R.string.tap_library_to_show_filters)
-                .color(activity.getResourceColor(R.attr.colorAccent))
+                .color(activity.getResourceColor(R.attr.colorSecondary))
                 .textSize(TypedValue.COMPLEX_UNIT_SP, 15f).textColor(Color.WHITE).withShadow(false)
                 .corner(30).arrowWidth(15).arrowHeight(15).distanceWithView(0)
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_activated="true" android:color="?colorOnAccent"/>
+    <item android:state_activated="true" android:color="?attr/colorOnSecondary"/>
     <item android:state_enabled="false" android:color="@color/text_color_hint"/>
-    <item android:color="?colorAccent"/>
+    <item android:color="?attr/colorSecondary"/>
 </selector>

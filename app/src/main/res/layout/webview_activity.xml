@@ -20,7 +20,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorSecondary"
+            android:background="?attr/colorSurface"
             android:theme="?attr/actionBarTheme"
             app:titleTextColor="?actionBarTintColor"
             app:navigationIcon="@drawable/ic_close_24dp"
@@ -44,7 +44,7 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:progressTint="?colorAccent"
+                android:progressTint="?attr/colorSecondary"
                 android:progressBackgroundTint="@color/colorPrimary"
                 />
         </WebView>

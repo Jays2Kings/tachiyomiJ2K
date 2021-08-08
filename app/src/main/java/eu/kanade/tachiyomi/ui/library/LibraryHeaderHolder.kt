@@ -51,7 +51,7 @@ class LibraryHeaderHolder(val view: View, private val adapter: LibraryCategoryAd
             ViewTooltip.on(itemView.context as? Activity, binding.categoryTitle).autoHide(true, 5000L)
                 .align(ViewTooltip.ALIGN.START).position(ViewTooltip.Position.TOP)
                 .text(R.string.long_press_category)
-                .color(itemView.context.getResourceColor(R.attr.colorAccent))
+                .color(itemView.context.getResourceColor(R.attr.colorSecondary))
                 .textSize(TypedValue.COMPLEX_UNIT_SP, 15f).textColor(Color.WHITE)
                 .withShadow(false).corner(30).arrowWidth(15).arrowHeight(15).distanceWithView(0)
                 .show()
@@ -233,7 +233,7 @@ class LibraryHeaderHolder(val view: View, private val adapter: LibraryCategoryAd
         )
         val tintedDrawable = drawable?.mutate()
         tintedDrawable?.setTint(
-            if (allSelected) contentView.context.getResourceColor(R.attr.colorAccent)
+            if (allSelected) contentView.context.getResourceColor(R.attr.colorSecondary)
             else ContextCompat.getColor(contentView.context, R.color.gray_button)
         )
         binding.checkbox.setImageDrawable(tintedDrawable)

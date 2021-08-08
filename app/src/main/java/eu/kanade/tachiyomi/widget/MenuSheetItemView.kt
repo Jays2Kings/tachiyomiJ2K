@@ -79,8 +79,8 @@ class MenuSheetItemView @JvmOverloads constructor(context: Context, attrs: Attri
     override fun setSelected(selected: Boolean) {
         super.setSelected(selected)
         if (isSelected) {
-            setIconColor(context.getResourceColor(R.attr.colorAccent))
-            setTextColor(context.getResourceColor(R.attr.colorAccent))
+            setIconColor(context.getResourceColor(R.attr.colorSecondary))
+            setTextColor(context.getResourceColor(R.attr.colorSecondary))
         } else {
             setTextColor(context.getResourceColor(android.R.attr.textColorPrimary))
             setIconColor(context.getResourceColor(android.R.attr.textColorPrimary))

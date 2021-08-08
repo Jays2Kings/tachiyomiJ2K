@@ -36,7 +36,7 @@ class SourceHolder(view: View, val adapter: SourceAdapter) :
         binding.sourcePin.apply {
             imageTintList = ColorStateList.valueOf(
                 context.getResourceColor(
-                    if (isPinned) R.attr.colorAccent
+                    if (isPinned) R.attr.colorSecondary
                     else android.R.attr.textColorSecondary
                 )
             )

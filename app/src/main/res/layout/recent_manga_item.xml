@@ -152,7 +152,7 @@
             android:background="#66000000"
             android:indeterminate="false"
             android:progress="10"
-            android:progressTint="?colorAccent"
+            android:progressTint="?attr/colorSecondary"
             android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@id/button_layout"
             app:layout_constraintStart_toStartOf="@id/title"

@@ -66,7 +66,7 @@
         android:paddingEnd="0dp"
         android:paddingBottom="16dp"
         app:layout_constraintHeight_default="wrap"
-        android:textColor="?android:textColorSecondary"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:visibility="gone"

@@ -42,7 +42,7 @@ class MaterialSpinnerView @JvmOverloads constructor(context: Context, attrs: Att
         }
 
     private val blendedAccent = ColorUtils.blendARGB(
-        context.getResourceColor(android.R.attr.colorAccent),
+        context.getResourceColor(android.R.attr.colorSecondary),
         context.getResourceColor(android.R.attr.textColorPrimary),
         0.5f
     )

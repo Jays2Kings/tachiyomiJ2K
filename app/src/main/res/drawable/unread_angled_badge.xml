@@ -8,8 +8,8 @@
     tools:background="@color/material_red_500">
 
     <path
-        android:fillColor="?colorAccent"
+        android:fillColor="?attr/colorSecondary"
         android:pathData="M0 20 L100 0 L100 20 Z"
-        android:strokeColor="?colorAccent" />
+        android:strokeColor="?attr/colorSecondary" />
 
 </vector>

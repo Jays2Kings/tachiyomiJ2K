@@ -14,7 +14,7 @@
         android:id="@+id/category_hopper_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?colorAccent"
+        android:background="?attr/colorSecondary"
         android:clickable="true"
         android:focusable="true">
 

@@ -244,7 +244,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                         if (nightMode) android.R.color.system_accent2_10
                         else android.R.color.system_accent2_800
                     )
-                    val colorAccent = context.contextCompatColor(
+                    val colorSecondary = context.contextCompatColor(
                         if (nightMode) android.R.color.system_accent1_100
                         else android.R.color.system_accent1_600
                     )
@@ -265,7 +265,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                     binding.themePrimaryText.imageTintList =
                         ColorStateList.valueOf(item.colors.primaryText)
                     binding.themeAccentedButton.imageTintList =
-                        ColorStateList.valueOf(colorAccent)
+                        ColorStateList.valueOf(colorSecondary)
                     binding.themeSecondaryText.imageTintList =
                         ColorStateList.valueOf(item.colors.secondaryText)
                     binding.themeSecondaryText2.imageTintList =
@@ -274,7 +274,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                     binding.themeBottomBar.setBackgroundColor(bottomBar)
                     binding.themeItem1.imageTintList =
                         ColorStateList.valueOf(item.colors.inactiveTab)
-                    binding.themeItem2.imageTintList = ColorStateList.valueOf(colorAccent)
+                    binding.themeItem2.imageTintList = ColorStateList.valueOf(colorSecondary)
                     binding.themeItem3.imageTintList =
                         ColorStateList.valueOf(item.colors.inactiveTab)
                     binding.themeLayout.setBackgroundColor(colorBackground)
@@ -287,7 +287,7 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                     binding.themePrimaryText.imageTintList =
                         ColorStateList.valueOf(item.colors.primaryText)
                     binding.themeAccentedButton.imageTintList =
-                        ColorStateList.valueOf(item.colors.colorAccent)
+                        ColorStateList.valueOf(item.colors.colorSecondary)
                     binding.themeSecondaryText.imageTintList =
                         ColorStateList.valueOf(item.colors.secondaryText)
                     binding.themeSecondaryText2.imageTintList =

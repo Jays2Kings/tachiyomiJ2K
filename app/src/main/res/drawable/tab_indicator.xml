@@ -4,5 +4,5 @@
         android:topLeftRadius="4dp"
         android:topRightRadius="4dp" />
     <size android:height="3dp"/>
-    <solid android:color="?attr/colorAccent" />
+    <solid android:color="?attr/colorSecondary" />
 </shape>

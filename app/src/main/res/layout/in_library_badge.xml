@@ -7,6 +7,6 @@
     android:layout_height="10dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp"
-    app:cardBackgroundColor="?attr/colorAccent"
+    app:cardBackgroundColor="?attr/colorSecondary"
     android:visibility="gone"
     tools:visibility="visible"/>

@@ -50,7 +50,7 @@ class ReaderChapterSheet @JvmOverloads constructor(context: Context, attrs: Attr
 
     fun setup(activity: ReaderActivity) {
         presenter = activity.presenter
-        val fullPrimary = activity.getResourceColor(R.attr.colorSecondary)
+        val fullPrimary = activity.getResourceColor(R.attr.colorSurface)
 
         val primary = ColorUtils.setAlphaComponent(fullPrimary, 200)
 

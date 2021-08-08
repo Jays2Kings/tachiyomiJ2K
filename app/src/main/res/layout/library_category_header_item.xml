@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/category_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/category_title"
-        tools:tint="?attr/colorAccent"
+        tools:tint="?attr/colorSecondary"
         tools:visibility="gone" />
 
     <ImageView

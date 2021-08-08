@@ -22,9 +22,9 @@ class QuadStateCheckBox @JvmOverloads constructor(context: Context, attrs: Attri
                 },
                 R.attr.colorControlNormal
             )
-            State.INDETERMINATE -> setVectorCompat(R.drawable.ic_indeterminate_check_box_24dp, R.attr.colorAccent)
-            State.CHECKED -> setAnimVectorCompat(R.drawable.anim_check_box_blank_to_checked_24dp, R.attr.colorAccent)
-            State.INVERSED -> setAnimVectorCompat(R.drawable.anim_check_box_checked_to_x_24dp, R.attr.colorAccentText)
+            State.INDETERMINATE -> setVectorCompat(R.drawable.ic_indeterminate_check_box_24dp, R.attr.colorSecondary)
+            State.CHECKED -> setAnimVectorCompat(R.drawable.anim_check_box_blank_to_checked_24dp, R.attr.colorSecondary)
+            State.INVERSED -> setAnimVectorCompat(R.drawable.anim_check_box_checked_to_x_24dp, R.attr.colorOnSurface)
         }
         this.state = state
     }
@@ -32,9 +32,9 @@ class QuadStateCheckBox @JvmOverloads constructor(context: Context, attrs: Attri
     fun updateDrawable() {
         when (state) {
             State.UNCHECKED -> setVectorCompat(R.drawable.ic_check_box_outline_blank_24dp, R.attr.colorControlNormal)
-            State.INDETERMINATE -> setVectorCompat(R.drawable.ic_indeterminate_check_box_24dp, R.attr.colorAccent)
-            State.CHECKED -> setVectorCompat(R.drawable.ic_check_box_24dp, R.attr.colorAccent)
-            State.INVERSED -> setVectorCompat(R.drawable.ic_check_box_x_24dp, R.attr.colorAccentText)
+            State.INDETERMINATE -> setVectorCompat(R.drawable.ic_indeterminate_check_box_24dp, R.attr.colorSecondary)
+            State.CHECKED -> setVectorCompat(R.drawable.ic_check_box_24dp, R.attr.colorSecondary)
+            State.INVERSED -> setVectorCompat(R.drawable.ic_check_box_x_24dp, R.attr.colorOnSurface)
         }
     }
 

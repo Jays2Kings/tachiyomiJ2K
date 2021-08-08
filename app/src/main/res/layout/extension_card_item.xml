@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             style="?android:attr/progressBarStyleHorizontal"
             android:progressBackgroundTint="?android:attr/colorBackground"
-            android:progressTint="?colorAccent"
+            android:progressTint="?attr/colorSecondary"
             android:layout_height="2dp"
             android:visibility="gone"
             tools:visibility="visible"
@@ -135,7 +135,7 @@
                 app:layout_constraintStart_toEndOf="@id/ext_button"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_close_24dp"
-                app:tint="?colorAccent" />
+                app:tint="?attr/colorSecondary" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

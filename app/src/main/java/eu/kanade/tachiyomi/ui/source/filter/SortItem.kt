@@ -37,10 +37,10 @@ class SortItem(val name: String, val group: SortGroup) : AbstractSectionableItem
         fun getIcon() = when (filter.state) {
             Filter.Sort.Selection(i, false) ->
                 VectorDrawableCompat.create(view.resources, R.drawable.ic_arrow_downward_32dp, null)
-                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorAccent)) }
+                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorSecondary)) }
             Filter.Sort.Selection(i, true) ->
                 VectorDrawableCompat.create(view.resources, R.drawable.ic_arrow_upward_32dp, null)
-                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorAccent)) }
+                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorSecondary)) }
             else -> ContextCompat.getDrawable(view.context, R.drawable.empty_drawable_32dp)
         }
 

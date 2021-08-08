@@ -48,7 +48,7 @@
                     android:id="@+id/theme_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/theme_app_bar_preview"
-                    android:background="?attr/colorSecondary"
+                    android:background="?attr/colorSurface"
                     android:elevation="1dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
                     android:src="@drawable/oval"
                     android:layout_width="@dimen/theme_accent_width_preview"
                     android:layout_height="@dimen/theme_text_preview"
-                    app:tint="?colorAccent"
+                    app:tint="?attr/colorSecondary"
                     android:layout_marginStart="3dp"
                     app:layout_constraintTop_toTopOf="@id/theme_primary_text"
                     app:layout_constraintBottom_toBottomOf="@id/theme_primary_text"
@@ -118,7 +118,7 @@
                     app:layout_constraintEnd_toStartOf="@id/theme_secondary_text_2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/theme_primary_text"
-                    app:tint="?android:attr/textColorSecondary"
+                    app:tint="?attr/colorOnSurface"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -130,7 +130,7 @@
                     app:layout_constraintBottom_toBottomOf="@id/theme_secondary_text"
                     app:layout_constraintStart_toEndOf="@id/theme_secondary_text"
                     app:layout_constraintTop_toTopOf="@id/theme_secondary_text"
-                    app:tint="?android:attr/textColorSecondary"
+                    app:tint="?attr/colorOnSurface"
                     tools:ignore="ContentDescription" />
 
 
@@ -192,7 +192,7 @@
                 android:layout_height="20dp"
                 android:contentDescription="@string/select_all"
                 android:src="@drawable/ic_check_circle_24dp"
-                app:tint="?attr/colorAccent"
+                app:tint="?attr/colorSecondary"
                 android:layout_marginEnd="4dp"
                 android:layout_marginTop="4dp"
                 app:layout_constraintTop_toTopOf="parent"

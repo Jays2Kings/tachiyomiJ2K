@@ -71,13 +71,13 @@ class SortTextView constructor(context: Context, attrs: AttributeSet?) :
         with(binding.sortImageView) {
             when (state) {
                 State.ASCENDING -> {
-                    setVectorCompat(R.drawable.ic_arrow_upward_24dp, R.attr.colorAccent)
+                    setVectorCompat(R.drawable.ic_arrow_upward_24dp, R.attr.colorSecondary)
                 }
                 State.DESCENDING -> {
-                    setVectorCompat(R.drawable.ic_arrow_downward_24dp, R.attr.colorAccent)
+                    setVectorCompat(R.drawable.ic_arrow_downward_24dp, R.attr.colorSecondary)
                 }
                 State.NONE -> {
-                    setVectorCompat(R.drawable.ic_blank_24dp, R.attr.colorAccentText)
+                    setVectorCompat(R.drawable.ic_blank_24dp, R.attr.colorOnSurface)
                 }
             }
         }

@@ -27,7 +27,7 @@
         android:layout_height="?actionBarSize"
         android:layout_gravity="top"
         android:background="@drawable/bottom_sheet_rounded_background"
-        android:backgroundTint="?attr/colorSecondary"
+        android:backgroundTint="?attr/colorSurface"
         android:clickable="true"
         android:elevation="0dp"
         android:focusable="true"

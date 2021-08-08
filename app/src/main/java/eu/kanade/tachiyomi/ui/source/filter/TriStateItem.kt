@@ -43,9 +43,9 @@ open class TriStateItem(val filter: Filter.TriState) : AbstractFlexibleItem<TriS
             null
         )?.apply {
             val color = if (filter.state == Filter.TriState.STATE_INCLUDE) {
-                R.attr.colorAccent
+                R.attr.colorSecondary
             } else {
-                android.R.attr.textColorSecondary
+                R.attr.colorSecondary
             }
 
             setTint(view.context.getResourceColor(color))

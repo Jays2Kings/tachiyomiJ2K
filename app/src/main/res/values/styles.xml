@@ -113,7 +113,7 @@
         <item name="android:scaleType">fitCenter</item>
         <item name="layout_anchorGravity">bottom|right|end</item>
         <item name="tint">?attr/colorOnAccent</item>
-        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="backgroundTint">?attr/colorSecondary</item>
         <item name="android:tint">?attr/colorOnAccent</item>
         <item name="iconTint">?attr/colorOnAccent</item>
         <item name="textAllCaps">false</item>
@@ -209,7 +209,7 @@
 
     <style name="Theme.Widget.TextInputLayout.OutlinedBox.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/text_input_stroke</item>
-        <item name="hintTextColor">?colorAccent</item>
+        <item name="hintTextColor">?attr/colorSecondary</item>
         <item name="android:textColorHint">?android:attr/textColorHint</item>
     </style>
 
@@ -219,7 +219,7 @@
     <style name="Theme.Widget.Tabs" parent="Widget.MaterialComponents.TabLayout.Colored">
         <item name="tabGravity">center</item>
         <item name="tabIndicator">@drawable/tab_indicator</item>
-        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorColor">?attr/colorSecondary</item>
         <item name="tabTextColor">@color/tabs_selector</item>
         <item name="tabRippleColor">@color/rippleColor</item>
         <item name="tabIndicatorFullWidth">false</item>
@@ -262,12 +262,12 @@
     <style name="Theme.Widget.Button" parent="Widget.AppCompat.Button" />
 
     <style name="Theme.Widget.Button.Colored" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="backgroundTint">?attr/colorSecondary</item>
     </style>
 
     <style name="Theme.Widget.Button.Borderless" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
         <item name="rippleColor">@color/fullRippleColor</item>
     </style>
 
@@ -289,7 +289,7 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0.0</item>
         <item name="android:layout_height">40dp</item>
-        <item name="iconTint">?colorAccent</item>
+        <item name="iconTint">?attr/colorSecondary</item>
         <item name="rippleColor">@color/fullRippleColor</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="cornerRadius">20dp</item>
@@ -305,12 +305,12 @@
     <style name="Theme.Widget.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0.0</item>
-        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
     </style>
 
     <style name="Theme.Widget.ImageBorderless" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">?selectableItemBackgroundBorderless</item>
-        <item name="android:tint">?colorAccent</item>
+        <item name="android:tint">?attr/colorSecondary</item>
         <item name="rippleColor">@color/fullRippleColor</item>
     </style>
 
@@ -318,13 +318,13 @@
         <item name="android:background">@drawable/round_ripple</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="android:tint">?colorAccent</item>
+        <item name="android:tint">?attr/colorSecondary</item>
     </style>
 
     <style name="Theme.Widget.Chip.Outline" parent="Widget.MaterialComponents.Chip.Action">
         <item name="chipBackgroundColor">@color/accent_alpha</item>
         <item name="chipMinHeight">28dp</item>
-        <item name="android:textColor">?colorAccentText</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textAppearance">@style/Theme.TextAppearance.Chip</item>
         <item name="chipStrokeWidth">0dp</item>
         <item name="android:checkable">false</item>
@@ -352,7 +352,7 @@
     <style name="FilePickerTheme" parent="NNF_BaseTheme.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/tachiBlue</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
         <item name="android:textSize">14sp</item>
 

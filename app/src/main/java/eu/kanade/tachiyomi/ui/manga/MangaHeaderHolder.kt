@@ -339,7 +339,7 @@ class MangaHeaderHolder(
             val accentArray = FloatArray(3)
 
             ColorUtils.colorToHSL(baseTagColor, bgArray)
-            ColorUtils.colorToHSL(context.getResourceColor(R.attr.colorAccent), accentArray)
+            ColorUtils.colorToHSL(context.getResourceColor(R.attr.colorSecondary), accentArray)
             val downloadedColor = ColorUtils.setAlphaComponent(
                 ColorUtils.HSLToColor(
                     floatArrayOf(
@@ -394,7 +394,7 @@ class MangaHeaderHolder(
         if (checked) {
             backgroundTintList = ColorStateList.valueOf(
                 ColorUtils.setAlphaComponent(
-                    context.getResourceColor(R.attr.colorAccent),
+                    context.getResourceColor(R.attr.colorSecondary),
                     75
                 )
             )

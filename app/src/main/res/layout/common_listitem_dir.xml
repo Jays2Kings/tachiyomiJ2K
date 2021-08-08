@@ -19,7 +19,7 @@
         android:adjustViewBounds="true"
         android:scaleType="center"
         android:src="@drawable/nnf_ic_file_folder"
-        android:tint="?attr/colorAccent"
+        android:tint="?attr/colorSecondary"
         android:visibility="visible"
         tools:ignore="ContentDescription"/>
 

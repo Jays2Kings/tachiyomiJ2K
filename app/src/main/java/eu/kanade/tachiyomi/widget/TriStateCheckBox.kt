@@ -109,16 +109,16 @@ class TriStateCheckBox constructor(context: Context, attrs: AttributeSet?) :
                 State.CHECKED -> {
                     setAnimVectorCompat(
                         R.drawable.anim_check_box_blank_to_checked_24dp,
-                        R.attr.colorAccent
+                        R.attr.colorSecondary
                     )
-                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorAccent))
+                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorSecondary))
                 }
                 State.INVERSED -> {
                     setAnimVectorCompat(
                         R.drawable.anim_check_box_checked_to_x_24dp,
-                        R.attr.colorAccentText
+                        R.attr.colorOnSurface
                     )
-                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorAccentText))
+                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorOnSurface))
                 }
             }
         }
@@ -135,15 +135,15 @@ class TriStateCheckBox constructor(context: Context, attrs: AttributeSet?) :
                     backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorControlNormal))
                 }
                 State.CHECKED -> {
-                    setVectorCompat(R.drawable.ic_check_box_24dp, R.attr.colorAccent)
-                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorAccent))
+                    setVectorCompat(R.drawable.ic_check_box_24dp, R.attr.colorSecondary)
+                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorSecondary))
                 }
                 State.INVERSED -> {
                     setVectorCompat(
                         R.drawable.ic_check_box_x_24dp,
-                        R.attr.colorAccentText
+                        R.attr.colorOnSurface
                     )
-                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorAccentText))
+                    backgroundTintList = ColorStateList.valueOf(context.getResourceColor(R.attr.colorOnSurface))
                 }
             }
         }

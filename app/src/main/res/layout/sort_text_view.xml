@@ -16,7 +16,7 @@
         android:padding="4dp"
         tools:srcCompat="@drawable/ic_arrow_upward_24dp"
         app:srcCompat="@drawable/ic_blank_24dp"
-        app:tint="?colorAccent"
+        app:tint="?attr/colorSecondary"
         style="@style/MD_ListItem_Control" />
 
     <com.google.android.material.textview.MaterialTextView

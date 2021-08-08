@@ -18,7 +18,7 @@
         android:fontFamily="sans-serif-medium"
         app:layout_constraintStart_toEndOf="@id/arrow"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="?colorAccent"
+        android:textColor="?attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="@string/view_all_updates" />
 
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_arrow_forward_24dp"
-        app:tint="?colorAccent"
+        app:tint="?attr/colorSecondary"
         android:layout_marginStart="12dp"
         app:layout_constraintTop_toTopOf="@id/title"
         app:layout_constraintBottom_toBottomOf="@id/title"

@@ -9,5 +9,5 @@
     android:textAlignment="center"
     android:paddingTop="8dp"
     android:textColor="?colorOnAccent"
-    android:backgroundTint="?colorAccent"
+    android:backgroundTint="?attr/colorSecondary"
     android:background="@drawable/ic_rounded_tooltip_24dp" />
