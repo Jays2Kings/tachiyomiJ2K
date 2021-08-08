@@ -28,7 +28,6 @@
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
 
         <item name="android:textColorSecondaryInverse">@color/text_color_inverse_secondary</item>
-        <item name="android:textColorHintInverse">@color/text_color_inverse_hint</item>
         <item name="readerBackground">@color/colorPrimary</item>
         <item name="android:listSelector">?attr/colorSecondary</item>
         <item name="android:divider">@color/divider</item>
