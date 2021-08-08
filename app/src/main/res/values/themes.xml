@@ -13,7 +13,7 @@
         <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/colorPrimary</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/anim_tachij2k_splash</item>
         <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">775</item>
-        <item name="colorPrimary">@color/app_color_primary</item>
+        <item name="colorPrimary">@color/tachiPrimaryBlue</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
         <item name="colorSurface">@color/background</item> //old colorSecondary
         <item name="colorOnSurface">@color/md_black_1000</item> //old colorOnSecondary
@@ -68,8 +68,8 @@
 
     <style name="Theme.Tachiyomi" parent="Theme.Base"/>
     <style name="Theme.Tachiyomi.AllBlue">
-        <item name="colorPrimaryVariant">@color/app_color_primary</item>
-        <item name="colorSecondary">@color/app_color_primary</item>
+        <item name="colorPrimaryVariant">@color/tachiPrimaryBlue</item>
+        <item name="colorSecondary">@color/tachiPrimaryBlue</item>
         <item name="tabBarIconColor">@color/md_white_1000</item>
         <item name="tabBarIconInactive">@color/md_white_1000_50</item>
         <item name="tabHighlightBackground">@color/md_white_1000_50</item>
@@ -80,8 +80,8 @@
     </style>
 
     <style name="ThemeOverlay.Tachiyomi.AllBlue" parent="">
-        <item name="colorPrimaryVariant">@color/app_color_primary</item>
-        <item name="colorSecondary">@color/app_color_primary</item>
+        <item name="colorPrimaryVariant">@color/tachiPrimaryBlue</item>
+        <item name="colorSecondary">@color/tachiPrimaryBlue</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
