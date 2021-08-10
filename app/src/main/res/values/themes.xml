@@ -95,9 +95,9 @@
 
     <style name="Theme.Tachiyomi.MidnightDusk">
         <item name="colorPrimary">@color/primaryDuskDawn</item>
+        <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
         <item name="colorSecondary">@color/colorAccentDuskDawn</item>
         <item name="colorSecondaryVariant">@color/colorAccentDuskDawnText</item>
-        <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
         <item name="colorSurface">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
         <item name="colorOnBackground">@color/textPrimaryDuskDawn</item>
