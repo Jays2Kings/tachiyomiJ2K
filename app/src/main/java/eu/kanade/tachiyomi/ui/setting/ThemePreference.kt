@@ -303,10 +303,8 @@ class ThemePreference @JvmOverloads constructor(context: Context, attrs: Attribu
                 }
                 if (item.isDarkTheme && preferences.themeDarkAmoled().get()) {
                     binding.themeLayout.setBackgroundColor(Color.BLACK)
-                    if (!ThemeUtil.isColoredTheme(item.theme)) {
-                        binding.themeBottomBar.setBackgroundColor(Color.BLACK)
-                        binding.themeToolbar.setBackgroundColor(Color.BLACK)
-                    }
+                    binding.themeBottomBar.setBackgroundColor(Color.BLACK)
+                    binding.themeToolbar.setBackgroundColor(Color.BLACK)
                 }
             }
 

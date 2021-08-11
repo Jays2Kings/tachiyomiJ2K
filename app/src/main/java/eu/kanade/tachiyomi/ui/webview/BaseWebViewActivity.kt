@@ -18,7 +18,6 @@ import androidx.core.view.isVisible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.WebviewActivityBinding
 import eu.kanade.tachiyomi.ui.base.activity.BaseActivity
-import eu.kanade.tachiyomi.util.system.ThemeUtil
 import eu.kanade.tachiyomi.util.system.getPrefTheme
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
@@ -155,9 +154,6 @@ open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
         setTheme(prefTheme.styleRes)
         if (!lightMode && preferences.themeDarkAmoled().get()) {
             setTheme(R.style.ThemeOverlay_Tachiyomi_Amoled)
-            if (ThemeUtil.isColoredTheme(prefTheme)) {
-                setTheme(R.style.ThemeOverlay_Tachiyomi_AllBlue)
-            }
         }
         window.statusBarColor = ColorUtils.setAlphaComponent(
             getResourceColor(

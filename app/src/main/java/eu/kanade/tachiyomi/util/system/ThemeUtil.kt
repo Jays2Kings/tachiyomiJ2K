@@ -23,18 +23,9 @@ object ThemeUtil {
                 else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
             }
         )
-        preferences.lightTheme().set(
-            when (theme) {
-                1 -> Themes.CLASSIC_BLUE
-                else -> Themes.DEFAULT
-            }
-        )
-        preferences.darkTheme().set(
-            when (theme) {
-                4 -> Themes.CLASSIC_BLUE
-                else -> Themes.DEFAULT
-            }
-        )
+
+        preferences.lightTheme().set(Themes.DEFAULT)
+        preferences.darkTheme().set(Themes.DEFAULT)
     }
 
     /** Migration method */
@@ -49,7 +40,6 @@ object ThemeUtil {
                 when (lightTheme) {
                     "SPRING" -> Themes.SPRING_AND_DUSK
                     "STRAWBERRY_DAIQUIRI" -> Themes.STRAWBERRIES
-                    "LIGHT_BLUE" -> Themes.CLASSIC_BLUE
                     else -> Themes.DEFAULT
                 }.name
             )
@@ -58,15 +48,10 @@ object ThemeUtil {
                 when (darkTheme) {
                     "DUSK" -> Themes.SPRING_AND_DUSK
                     "CHOCOLATE_STRAWBERRIES" -> Themes.STRAWBERRIES
-                    "DARK_BLUE" -> Themes.CLASSIC_BLUE
                     else -> Themes.DEFAULT
                 }.name
             )
         }
-    }
-
-    fun isColoredTheme(theme: Themes): Boolean {
-        return theme.styleRes == R.style.Theme_Tachiyomi_AllBlue
     }
 
     fun isPitchBlack(context: Context): Boolean {
@@ -75,7 +60,7 @@ object ThemeUtil {
     }
 
     fun hasDarkActionBarInLight(context: Context, theme: Themes): Boolean {
-        return !context.isInNightMode() && isColoredTheme(theme)
+        return !context.isInNightMode()
     }
 
     fun readerBackgroundColor(theme: Int): Int {
@@ -108,10 +93,6 @@ fun AppCompatActivity.getThemeWithExtras(theme: Resources.Theme, preferences: Pr
     }
     if (useAmoled) {
         theme.applyStyle(R.style.ThemeOverlay_Tachiyomi_Amoled, true)
-        val prefTheme = getPrefTheme(preferences)
-        if (ThemeUtil.isColoredTheme(prefTheme)) {
-            theme.applyStyle(R.style.ThemeOverlay_Tachiyomi_AllBlue, true)
-        }
     }
     return theme
 }
