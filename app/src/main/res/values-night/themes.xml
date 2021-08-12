@@ -10,11 +10,11 @@
 
     <style name="Theme.Tachiyomi.Strawberries">
         <item name="colorPrimary">@color/primaryRed</item>
-        <item name="colorAccent">@color/holo_red</item>
+        <item name="colorSecondary">@color/holo_red</item>
         <item name="colorSecondaryVariant">@color/md_red_500</item>
         <item name="colorPrimaryVariant">@color/secondaryChocolateStrawberries</item>
         <item name="background">@color/backgroundChocolateStrawberries</item>
-        <item name="colorSecondary">@color/backgroundChocolateStrawberries</item>
+        <item name="colorSurface">@color/backgroundChocolateStrawberries</item>
     </style>
 
     <style name="Theme.Tachiyomi.FlatLime">
