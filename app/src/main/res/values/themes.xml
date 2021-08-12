@@ -96,16 +96,16 @@
     <style name="Theme.Tachiyomi.MidnightDusk">
         <item name="colorPrimary">@color/primaryDuskDawn</item>
         <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
-        <item name="colorSecondary">@color/colorAccentDuskDawn</item>
-        <item name="colorSecondaryVariant">@color/colorAccentDuskDawnText</item>
+        <item name="colorSecondary">@color/secondaryDuskDawn</item>
+        <item name="colorSecondaryVariant">@color/secondaryAlternativeDuskDawn</item>
         <item name="colorSurface">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
-        <item name="colorOnBackground">@color/textPrimaryDuskDawn</item>
+        <item name="colorOnBackground">@color/colorOnBackgroundDuskDawn</item>
         <item name="actionBarTintColor">@color/appBarTextDuskDawn</item>
     </style>
 
     <style name="Theme.Tachiyomi.Strawberries">
-        <item name="colorAccent">@color/colorAccentStrawberry</item>
+        <item name="colorSecondary">@color/colorAccentStrawberry</item>
         <item name="colorSecondaryVariant">@color/colorAccentStrawberryText</item>
     </style>
 

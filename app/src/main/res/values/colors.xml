@@ -70,12 +70,12 @@
     <color name="navigation_prev">#CC7D1128</color>
 
     <!-- Spring Blossom -->
-    <color name="colorAccentDuskDawn">#c43c97</color>
-    <color name="colorAccentDuskDawnText">#803d6a</color>
+    <color name="secondaryDuskDawn">#c43c97</color>
+    <color name="secondaryAlternativeDuskDawn">#803d6a</color>
     <color name="backgroundDuskDawn">#f7f4f8</color>
     <color name="dialogDuskDawn">#efe3f3</color>
     <color name="primaryDuskDawn">#efe3f3</color>
-    <color name="textPrimaryDuskDawn">#DE240728</color>
+    <color name="colorOnBackgroundDuskDawn">#DE240728</color>
     <color name="appBarTextDuskDawn">#DE4c0d4b</color>
 
     <!-- Flat Lime Theme -->

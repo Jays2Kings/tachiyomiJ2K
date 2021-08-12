@@ -36,12 +36,12 @@
     <color name="colorAccentTextTako">#f4d1af</color>
 
     <!-- Midnight Dusk Theme -->
-    <color name="colorAccentDuskDawn">#F02475</color>
-    <color name="colorAccentDuskDawnText">#f091b7</color>
+    <color name="secondaryDuskDawn">#F02475</color>
+    <color name="secondaryAlternativeDuskDawn">#f091b7</color>
     <color name="backgroundDuskDawn">#16151D</color>
     <color name="dialogDuskDawn">#201F27</color>
     <color name="primaryDuskDawn">#E570A0</color>
-    <color name="textPrimaryDuskDawn">@color/md_white_1000</color>
+    <color name="colorOnBackgroundDuskDawn">@color/md_white_1000</color>
     <color name="appBarTextDuskDawn">@color/md_white_1000</color>
 
     <!-- Yin Yang Theme -->
