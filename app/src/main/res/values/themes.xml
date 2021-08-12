@@ -105,8 +105,8 @@
     </style>
 
     <style name="Theme.Tachiyomi.Strawberries">
-        <item name="colorSecondary">@color/colorAccentStrawberry</item>
-        <item name="colorSecondaryVariant">@color/colorAccentStrawberryText</item>
+        <item name="colorSecondary">@color/secondaryStrawberry</item>
+        <item name="colorSecondaryVariant">@color/secondaryAlternativeStrawberry</item>
     </style>
 
     <!--== Tako Theme ==-->
