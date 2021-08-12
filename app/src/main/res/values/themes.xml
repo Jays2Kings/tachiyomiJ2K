@@ -97,7 +97,7 @@
         <item name="colorPrimary">@color/primaryDuskDawn</item>
         <item name="colorPrimaryVariant">@color/dialogDuskDawn</item>
         <item name="colorSecondary">@color/secondaryDuskDawn</item>
-        <item name="colorSecondaryVariant">@color/secondaryAlternativeDuskDawn</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariantDuskDawn</item>
         <item name="colorSurface">@color/backgroundDuskDawn</item>
         <item name="background">@color/backgroundDuskDawn</item>
         <item name="colorOnBackground">@color/colorOnBackgroundDuskDawn</item>
@@ -111,17 +111,17 @@
 
     <!--== Tako Theme ==-->
     <style name="Theme.Tachiyomi.Tako">
-        <item name="colorAccent">@color/accentTako</item>
-        <item name="colorOnSecondary">@color/colorOnSecondaryTako</item>
+        <item name="colorSecondary">@color/secondaryTako</item>
+        <item name="colorOnSecondary">@color/onSecondaryTako</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariantTako</item>
         <item name="colorPrimaryVariant">@color/surfaceTako</item>
         <item name="colorDownloadBadge">@color/downloadBadgeDayNight</item>
         <item name="colorOnDownloadBadge">@color/colorOnDownloadBadgeDayNight</item>
         <item name="tabBarIconColor">@color/tabBarIconColorTako</item>
         <item name="colorControlHighlight">@color/rippleColoredTako</item>
-        <item name="colorSecondary">@color/backgroundTako</item>
+        <item name="colorSurface">@color/backgroundTako</item>
         <item name="actionBarTintColor">@color/actionTintTako</item>
         <item name="background">@color/backgroundTako</item>
-        <item name="colorSecondaryVariant">@color/colorAccentTextTako</item>
         <item name="tabBarIconInactive">@color/inactiveTabTako</item>
     </style>
 

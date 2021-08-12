@@ -25,19 +25,19 @@
     <color name="gray_button">#BFBFBF</color>
 
     <!-- Tako Theme -->
-    <color name="accentTako">#F3B375</color>
-    <color name="colorOnSecondaryTako">#242431</color>
-        <color name="tabBarIconColorTako">@color/accentTako</color>
+    <color name="secondaryTako">#F3B375</color>
+    <color name="onSecondaryTako">#242431</color>
+    <color name="secondaryVariantTako">#f4d1af</color>
+    <color name="tabBarIconColorTako">@color/secondaryTako</color>
     <color name="rippleColoredTako">#1FF3B375</color>
     <color name="surfaceTako">#2A2A3C</color>
     <color name="backgroundTako">#21212E</color>
     <color name="actionTintTako">#f4ece5</color>
     <color name="inactiveTabTako">#C2f4ece5</color>
-    <color name="colorAccentTextTako">#f4d1af</color>
 
     <!-- Midnight Dusk Theme -->
     <color name="secondaryDuskDawn">#F02475</color>
-    <color name="secondaryAlternativeDuskDawn">#f091b7</color>
+    <color name="secondaryVariantDuskDawn">#f091b7</color>
     <color name="backgroundDuskDawn">#16151D</color>
     <color name="dialogDuskDawn">#201F27</color>
     <color name="primaryDuskDawn">#E570A0</color>

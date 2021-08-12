@@ -71,7 +71,7 @@
 
     <!-- Spring Blossom -->
     <color name="secondaryDuskDawn">#c43c97</color>
-    <color name="secondaryAlternativeDuskDawn">#803d6a</color>
+    <color name="secondaryVariantDuskDawn">#803d6a</color>
     <color name="backgroundDuskDawn">#f7f4f8</color>
     <color name="dialogDuskDawn">#efe3f3</color>
     <color name="primaryDuskDawn">#efe3f3</color>
@@ -98,15 +98,15 @@
     <color name="secondaryChocolateStrawberries">#211b19</color>
 
     <!-- Tako Theme -->
-    <color name="accentTako">#66577E</color>
-    <color name="colorOnSecondaryTako">#F3B375</color>
+    <color name="secondaryTako">#66577E</color>
+    <color name="onSecondaryTako">#F3B375</color>
+    <color name="secondaryVariantTako">#2b1f31</color>
     <color name="tabBarIconColorTako">#574360</color>
     <color name="rippleColoredTako">#1F66577E</color>
     <color name="surfaceTako">#F7F5FF</color>
     <color name="backgroundTako">#F2EDF7</color>
     <color name="actionTintTako">#221b28</color>
     <color name="inactiveTabTako">#C2221b28</color>
-    <color name="colorAccentTextTako">#2b1f31</color>
 
     <!-- Yotsuba Theme -->
     <color name="colorAccentYotsuba">#dc6d3d</color>
