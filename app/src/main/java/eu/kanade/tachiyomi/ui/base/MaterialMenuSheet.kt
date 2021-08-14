@@ -10,6 +10,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.FastAdapter
@@ -21,7 +22,6 @@ import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.view.RecyclerWindowInsetsListener
 import eu.kanade.tachiyomi.util.view.checkHeightThen
 import eu.kanade.tachiyomi.util.view.expand
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.widget.E2EBottomSheetDialog
 import kotlin.math.max
 import kotlin.math.min

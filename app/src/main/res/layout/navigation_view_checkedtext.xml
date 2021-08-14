@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?attr/listPreferredItemHeightSmall"
-    android:paddingStart="?attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?attr/listPreferredItemPaddingEnd"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/selectableItemBackground"
     android:focusable="true">
 
-    <CheckedTextView
+    <eu.kanade.tachiyomi.widget.SortTextView
         android:id="@+id/nav_view_item"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:drawablePadding="@dimen/material_component_lists_icon_left_padding"
+        tools:text="Sorting by"
         android:gravity="center_vertical|start"
-        android:maxLines="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:maxLines="1" />
 
 </LinearLayout>

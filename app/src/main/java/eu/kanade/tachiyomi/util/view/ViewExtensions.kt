@@ -37,6 +37,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.forEach
+import androidx.core.view.updateLayoutParams
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
@@ -196,18 +197,6 @@ object ControllerViewWindowInsetsListener : View.OnApplyWindowInsetsListener {
     }
 }
 
-object HeightTopWindowInsetsListener : View.OnApplyWindowInsetsListener {
-    override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {
-        val topInset = insets.systemWindowInsetTop
-        v.setPadding(0, topInset, 0, 0)
-        if (v.layoutParams.height != topInset) {
-            v.layoutParams.height = topInset
-            v.requestLayout()
-        }
-        return insets
-    }
-}
-
 fun View.doOnApplyWindowInsets(f: (View, WindowInsets, ViewPaddingState) -> Unit) {
     // Create a snapshot of the view's padding state
     val paddingState = createStateForView(this)
@@ -260,12 +249,6 @@ fun View.requestApplyInsetsWhenAttached() {
             }
         )
     }
-}
-
-inline fun <reified T : ViewGroup.LayoutParams> View.updateLayoutParams(block: T.() -> Unit) {
-    val params = layoutParams as T
-    block(params)
-    layoutParams = params
 }
 
 inline fun View.updatePadding(

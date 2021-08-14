@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -18,6 +19,7 @@ import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.databinding.ExtensionsBottomSheetBinding
 import eu.kanade.tachiyomi.databinding.RecyclerWithScrollerBinding
 import eu.kanade.tachiyomi.extension.model.Extension
+import eu.kanade.tachiyomi.extension.model.InstalledExtensionsOrder
 import eu.kanade.tachiyomi.ui.extension.details.ExtensionDetailsController
 import eu.kanade.tachiyomi.ui.migration.MangaAdapter
 import eu.kanade.tachiyomi.ui.migration.MangaItem
@@ -30,6 +32,7 @@ import eu.kanade.tachiyomi.util.view.collapse
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsets
 import eu.kanade.tachiyomi.util.view.expand
 import eu.kanade.tachiyomi.util.view.isExpanded
+import eu.kanade.tachiyomi.util.view.popupMenu
 import eu.kanade.tachiyomi.util.view.smoothScrollToTop
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
@@ -214,6 +217,18 @@ class ExtensionBottomSheet @JvmOverloads constructor(context: Context, attrs: At
                 .show()
         } else {
             updateAllExtensions(position)
+        }
+    }
+
+    override fun onExtSortClicked(view: TextView, position: Int) {
+        view.popupMenu(
+            InstalledExtensionsOrder.values().map { it.value to it.nameRes },
+            presenter.preferences.installedExtensionsOrder().get()
+        ) {
+            presenter.preferences.installedExtensionsOrder().set(itemId)
+            extAdapter?.installedSortOrder = itemId
+            view.setText(InstalledExtensionsOrder.fromValue(itemId).nameRes)
+            presenter.refreshExtensions()
         }
     }
 

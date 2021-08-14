@@ -152,6 +152,8 @@ object PreferenceKeys {
 
     const val automaticExtUpdates = "automatic_ext_updates"
 
+    const val installedExtensionsOrder = "installed_extensions_order"
+
     const val autoHideHopper = "autohide_hopper"
 
     const val hopperLongPress = "hopper_long_press"

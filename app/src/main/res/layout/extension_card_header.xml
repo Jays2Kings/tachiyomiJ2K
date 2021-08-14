@@ -12,6 +12,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,7 +34,7 @@
             android:textAllCaps="false"
             android:textColor="@color/accent_text_btn_color_selector"
             android:visibility="gone"
-            tools:visibility="visible"
+            tools:visibility="gone"
             app:layout_constraintBaseline_toBaselineOf="@id/title"
             app:layout_constraintBottom_toBottomOf="@id/title"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +43,35 @@
             app:layout_constraintTop_toTopOf="@id/title"
             app:rippleColor="@color/fullRippleColor"
             android:text="@string/update_all" />
+
+        <TextView
+            android:id="@+id/ext_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/square_ripple"
+            android:clickable="true"
+            android:drawablePadding="6dp"
+            android:alpha=".8"
+            app:drawableTint="?android:textColorPrimary"
+            android:ellipsize="start"
+            android:focusable="true"
+            android:gravity="center|end"
+            android:maxLines="2"
+            android:padding="6dp"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBaseline_toBaselineOf="@id/title"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/title"
+            tools:text="Recently Updated"
+            app:drawableEndCompat="@drawable/ic_sort_24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

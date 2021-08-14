@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.CheckedTextView
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
@@ -147,7 +146,7 @@ open class SimpleNavigationView @JvmOverloads constructor(
     class MultiStateHolder(parent: ViewGroup, listener: View.OnClickListener?) :
         ClickableHolder(parent.inflate(TR.layout.navigation_view_checkedtext), listener) {
 
-        val text: CheckedTextView = itemView.findViewById(TR.id.nav_view_item)
+        val text: TriStateCheckBox = itemView.findViewById(TR.id.nav_view_item)
     }
 
     class SpinnerHolder(parent: ViewGroup, listener: OnClickListener? = null) :

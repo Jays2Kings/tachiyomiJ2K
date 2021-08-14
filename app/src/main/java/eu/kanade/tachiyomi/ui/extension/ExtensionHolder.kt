@@ -3,6 +3,7 @@ package eu.kanade.tachiyomi.ui.extension
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.View
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import coil.clear
 import coil.load
@@ -14,6 +15,8 @@ import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.ExtensionCardItemBinding
+import eu.kanade.tachiyomi.extension.model.InstalledExtensionsOrder
+import eu.kanade.tachiyomi.util.system.timeSpanFromNow
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
@@ -41,7 +44,34 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
 
         // Set source name
         binding.extTitle.text = extension.name
-        binding.version.text = extension.versionName
+
+        val infoText = mutableListOf(extension.versionName)
+        if (extension is Extension.Installed) {
+            when (InstalledExtensionsOrder.fromValue(adapter.installedSortOrder)) {
+                InstalledExtensionsOrder.RecentlyUpdated -> {
+                    binding.date.isVisible = true
+                    binding.date.text = itemView.context.getString(
+                        R.string.updated_,
+                        extensionUpdateDate(extension.pkgName).timeSpanFromNow
+                    )
+                    infoText.add("")
+                }
+                InstalledExtensionsOrder.RecentlyInstalled -> {
+                    binding.date.isVisible = true
+                    binding.date.text = itemView.context.getString(
+                        R.string.installed_,
+                        extensionInstallDate(extension.pkgName).timeSpanFromNow
+                    )
+                    infoText.add("")
+                }
+                else -> binding.date.isVisible = false
+            }
+        } else {
+            binding.date.isVisible = false
+        }
+        binding.lang.isVisible = binding.date.isGone
+
+        binding.version.text = infoText.joinToString(" • ")
         binding.lang.text = LocaleHelper.getDisplayName(extension.lang)
         binding.warning.text = when {
             extension is Extension.Untrusted -> itemView.context.getString(R.string.untrusted)
@@ -111,6 +141,24 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         } else {
             resetStrokeColor()
             setText(R.string.install)
+        }
+    }
+
+    private fun extensionInstallDate(pkgName: String): Long {
+        val context = itemView.context
+        return try {
+            context.packageManager.getPackageInfo(pkgName, 0).firstInstallTime
+        } catch (e: java.lang.Exception) {
+            0
+        }
+    }
+
+    private fun extensionUpdateDate(pkgName: String): Long {
+        val context = itemView.context
+        return try {
+            context.packageManager.getPackageInfo(pkgName, 0).lastUpdateTime
+        } catch (e: java.lang.Exception) {
+            0
         }
     }
 }

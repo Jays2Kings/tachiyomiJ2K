@@ -174,6 +174,19 @@ class ReaderChapterSheet @JvmOverloads constructor(context: Context, attrs: Attr
             else fullPrimary
         )
 
+        binding.chapterRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_IDLE ||
+                    newState == RecyclerView.SCROLL_STATE_SETTLING
+                ) {
+                    sheetBehavior?.isDraggable = true
+                } else {
+                    sheetBehavior?.isDraggable = !recyclerView.canScrollVertically(-1)
+                }
+            }
+        })
+
         binding.chapterRecycler.layoutManager = LinearLayoutManager(context)
         refreshList()
     }

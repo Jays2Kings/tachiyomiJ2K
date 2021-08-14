@@ -3,6 +3,7 @@ package eu.kanade.tachiyomi.ui.library
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
@@ -10,7 +11,6 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.MaterialTextButtonBinding
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 
 class SearchGlobalItem : AbstractFlexibleItem<SearchGlobalItem.Holder>() {
 

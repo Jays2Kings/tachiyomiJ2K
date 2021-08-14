@@ -1,17 +1,14 @@
 package eu.kanade.tachiyomi.ui.source.filter
 
 import android.view.View
-import android.widget.CheckedTextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.AbstractSectionableItem
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.davidea.viewholders.FlexibleViewHolder
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.source.model.Filter
-import eu.kanade.tachiyomi.util.system.getResourceColor
+import eu.kanade.tachiyomi.widget.SortTextView
 
 class SortItem(val name: String, val group: SortGroup) : AbstractSectionableItem<SortItem.Holder, SortGroup>(group) {
 
@@ -30,29 +27,17 @@ class SortItem(val name: String, val group: SortGroup) : AbstractSectionableItem
     override fun bindViewHolder(adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>, holder: Holder, position: Int, payloads: MutableList<Any?>?) {
         val view = holder.text
         view.text = name
+
         val filter = group.filter
-
         val i = filter.values.indexOf(name)
-
-        fun getIcon() = when (filter.state) {
-            Filter.Sort.Selection(i, false) ->
-                VectorDrawableCompat.create(view.resources, R.drawable.ic_arrow_downward_32dp, null)
-                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorSecondary)) }
-            Filter.Sort.Selection(i, true) ->
-                VectorDrawableCompat.create(view.resources, R.drawable.ic_arrow_upward_32dp, null)
-                    ?.apply { setTint(view.context.getResourceColor(R.attr.colorSecondary)) }
-            else -> ContextCompat.getDrawable(view.context, R.drawable.empty_drawable_32dp)
+        view.state = when (filter.state) {
+            Filter.Sort.Selection(i, false) -> SortTextView.State.DESCENDING
+            Filter.Sort.Selection(i, true) -> SortTextView.State.ASCENDING
+            else -> SortTextView.State.NONE
         }
 
-        view.setCompoundDrawablesWithIntrinsicBounds(getIcon(), null, null, null)
-        holder.itemView.setOnClickListener {
-            val pre = filter.state?.index ?: i
-            if (pre != i) {
-                filter.state = Filter.Sort.Selection(i, false)
-            } else {
-                filter.state = Filter.Sort.Selection(i, filter.state?.ascending == false)
-            }
-
+        view.setOnSortChangeListener { _, state ->
+            filter.state = Filter.Sort.Selection(i, state == SortTextView.State.ASCENDING)
             group.subItems.forEach { adapter.notifyItemChanged(adapter.getGlobalPositionOf(it)) }
         }
     }
@@ -72,6 +57,6 @@ class SortItem(val name: String, val group: SortGroup) : AbstractSectionableItem
 
     class Holder(view: View, adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>) : FlexibleViewHolder(view, adapter) {
 
-        val text: CheckedTextView = itemView.findViewById(R.id.nav_view_item)
+        val text: SortTextView = itemView.findViewById(R.id.nav_view_item)
     }
 }

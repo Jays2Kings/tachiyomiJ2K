@@ -10,6 +10,7 @@ import eu.kanade.tachiyomi.extension.ExtensionManager
 import eu.kanade.tachiyomi.extension.ExtensionsChangedListener
 import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.extension.model.InstallStep
+import eu.kanade.tachiyomi.extension.model.InstalledExtensionsOrder
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceManager
@@ -24,7 +25,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -181,11 +181,25 @@ class ExtensionBottomPresenter(
 
         val items = mutableListOf<ExtensionItem>()
 
-        val updatesSorted = installed.filter { it.hasUpdate && (showNsfwExtensions || !it.isNsfw) }.sortedBy { it.pkgName }
+        val updatesSorted = installed.filter { it.hasUpdate && (showNsfwExtensions || !it.isNsfw) }.sortedBy { it.name }
+        val sortOrder = InstalledExtensionsOrder.fromPreference(preferences)
         val installedSorted = installed
             .filter { !it.hasUpdate && (showNsfwExtensions || !it.isNsfw) }
-            .sortedWith(compareBy({ !it.isObsolete }, { it.pkgName }))
-        val untrustedSorted = untrusted.sortedBy { it.pkgName }
+            .sortedWith(
+                compareBy(
+                    { !it.isObsolete },
+                    {
+                        when (sortOrder) {
+                            InstalledExtensionsOrder.Name -> it.name
+                            InstalledExtensionsOrder.RecentlyUpdated -> Long.MAX_VALUE - extensionUpdateDate(it.pkgName)
+                            InstalledExtensionsOrder.RecentlyInstalled -> Long.MAX_VALUE - extensionInstallDate(it.pkgName)
+                            InstalledExtensionsOrder.Language -> it.lang
+                        }
+                    },
+                    { it.name }
+                )
+            )
+        val untrustedSorted = untrusted.sortedBy { it.name }
         val availableSorted = available
             // Filter out already installed extensions and disabled languages
             .filter { avail ->
@@ -194,7 +208,7 @@ class ExtensionBottomPresenter(
                     (avail.lang in activeLangs || avail.lang == "all") &&
                     (showNsfwExtensions || !avail.isNsfw)
             }
-            .sortedBy { it.pkgName }
+            .sortedBy { it.name }
 
         if (updatesSorted.isNotEmpty()) {
             val header = ExtensionGroupItem(
@@ -211,7 +225,7 @@ class ExtensionBottomPresenter(
             }
         }
         if (installedSorted.isNotEmpty() || untrustedSorted.isNotEmpty()) {
-            val header = ExtensionGroupItem(context.getString(R.string.installed), installedSorted.size + untrustedSorted.size)
+            val header = ExtensionGroupItem(context.getString(R.string.installed), installedSorted.size + untrustedSorted.size, installedSorting = preferences.installedExtensionsOrder().get())
             items += installedSorted.map { extension ->
                 ExtensionItem(extension, header, currentDownloads[extension.pkgName])
             }
@@ -237,8 +251,25 @@ class ExtensionBottomPresenter(
         return items
     }
 
+    private fun extensionInstallDate(pkgName: String): Long {
+        val context = bottomSheet.context
+        return try {
+            context.packageManager.getPackageInfo(pkgName, 0).firstInstallTime
+        } catch (e: java.lang.Exception) {
+            0
+        }
+    }
+
+    private fun extensionUpdateDate(pkgName: String): Long {
+        val context = bottomSheet.context
+        return try {
+            context.packageManager.getPackageInfo(pkgName, 0).lastUpdateTime
+        } catch (e: java.lang.Exception) {
+            0
+        }
+    }
+
     fun getExtensionUpdateCount(): Int = preferences.extensionUpdatesCount().getOrDefault()
-    fun getAutoCheckPref() = preferences.automaticExtUpdates()
 
     @Synchronized
     private fun updateInstallStep(

@@ -96,9 +96,8 @@
         android:layout_marginEnd="0dp"
         android:background="@drawable/square_ripple"
         android:clickable="true"
-        android:drawableEnd="@drawable/ic_sort_24dp"
         android:drawablePadding="6dp"
-        android:drawableTint="?attr/colorOnBackground"
+        app:drawableTint="?attr/colorOnBackground"
         android:ellipsize="start"
         android:focusable="true"
         android:gravity="center|end"
@@ -115,7 +114,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/space"
         app:layout_constraintTop_toTopOf="@id/category_title"
-        tools:text="Drag and Drop" />
+        tools:text="Drag and Drop"
+        app:drawableEndCompat="@drawable/ic_sort_24dp" />
 
     <ImageButton
         android:id="@+id/update_button"

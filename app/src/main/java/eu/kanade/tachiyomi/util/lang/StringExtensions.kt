@@ -15,6 +15,7 @@ import androidx.annotation.ColorInt
 import androidx.annotation.StringRes
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.getResourceColor
+import net.greypanther.natsort.CaseInsensitiveSimpleNaturalComparator
 import kotlin.math.floor
 
 /**
@@ -89,7 +90,8 @@ fun String.capitalizeWords(): String {
  * Case-insensitive natural comparator for strings.
  */
 fun String.compareToCaseInsensitiveNaturalOrder(other: String): Int {
-    return String.CASE_INSENSITIVE_ORDER.then(naturalOrder()).compare(this, other)
+    val comparator = CaseInsensitiveSimpleNaturalComparator.getInstance<String>()
+    return comparator.compare(this, other)
 }
 
 fun CharSequence.tintText(@ColorInt color: Int): Spanned {

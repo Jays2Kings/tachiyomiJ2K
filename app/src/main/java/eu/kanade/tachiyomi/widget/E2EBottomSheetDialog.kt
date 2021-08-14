@@ -5,12 +5,12 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 
 /**
  * Edge to Edge BottomSheetDiolag that uses a custom theme and settings to extend pass the nav bar

@@ -209,6 +209,9 @@ dependencies {
     // Logging
     implementation("com.jakewharton.timber:timber:${Versions.TIMBER}")
 
+    // Sort
+    implementation("com.github.gpanther:java-nat-sort:natural-comparator-1.1")
+
     // UI
     implementation("com.dmitrymalkovich.android:material-design-dimens:1.4")
     implementation("br.com.simplepass:loading-button-android:2.2.0")

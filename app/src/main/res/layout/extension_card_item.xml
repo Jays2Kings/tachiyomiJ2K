@@ -49,7 +49,7 @@
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.Regular.SubHeading"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/lang"
+            app:layout_constraintBottom_toTopOf="@id/version"
             app:layout_constraintEnd_toStartOf="@id/button_layout"
             app:layout_constraintStart_toEndOf="@id/source_image"
             app:layout_constraintTop_toTopOf="parent"
@@ -63,8 +63,13 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textSize="12sp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/source_image"
+            app:layout_constraintEnd_toStartOf="@id/version"
             app:layout_constraintTop_toBottomOf="@+id/ext_title"
             tools:text="English"
             tools:visibility="visible" />
@@ -74,13 +79,28 @@
             style="@style/TextAppearance.Regular.Body1.Secondary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
             android:maxLines="1"
+            android:ellipsize="middle"
             android:textSize="12sp"
-            app:layout_constraintBaseline_toBaselineOf="@id/lang"
+            app:layout_constraintTop_toBottomOf="@+id/ext_title"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/lang"
-            tools:text="Version" />
+            app:layout_constraintEnd_toStartOf="@id/date"
+            tools:text="Version • " />
 
+        <TextView
+            android:id="@+id/date"
+            style="@style/TextAppearance.Regular.Body1.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="start"
+            app:layout_constrainedWidth="true"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/ext_title"
+            app:layout_constraintStart_toEndOf="@id/version"
+            app:layout_constraintEnd_toStartOf="@id/warning"
+            tools:text="Updated 5 days ago" />
 
         <TextView
             android:id="@+id/warning"
@@ -91,8 +111,11 @@
             android:maxLines="1"
             android:textColor="?attr/colorError"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@id/version"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintEnd_toStartOf="@id/button_layout"
             app:layout_constraintTop_toBottomOf="@+id/ext_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/date"
             tools:text="Warning" />
 
         <androidx.constraintlayout.widget.ConstraintLayout

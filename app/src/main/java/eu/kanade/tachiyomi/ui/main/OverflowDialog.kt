@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Build
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.updateLayoutParams
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.R
@@ -14,7 +15,6 @@ import eu.kanade.tachiyomi.databinding.TachiOverflowLayoutBinding
 import eu.kanade.tachiyomi.util.lang.withSubtitle
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.openInBrowser
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import uy.kohesive.injekt.injectLazy
 
 class OverflowDialog(activity: MainActivity) : Dialog(activity, R.style.OverflowDialogTheme) {

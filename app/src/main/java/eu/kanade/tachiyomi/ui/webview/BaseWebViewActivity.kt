@@ -15,6 +15,7 @@ import androidx.core.graphics.ColorUtils
 import androidx.core.net.toUri
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.WebviewActivityBinding
 import eu.kanade.tachiyomi.ui.base.activity.BaseActivity
@@ -25,7 +26,6 @@ import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.system.setDefaultSettings
 import eu.kanade.tachiyomi.util.view.marginBottom
 import eu.kanade.tachiyomi.util.view.setStyle
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.updatePadding
 
 open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
@@ -122,7 +122,6 @@ open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
             val marginB = binding.webview.marginBottom
             binding.swipeRefresh.setOnApplyWindowInsetsListener { v, insets ->
                 val bottomInset = insets.systemWindowInsetBottom
-//                v.updatePaddingRelative(bottom = bottomInset)
                 v.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                     bottomMargin = marginB + bottomInset
                 }

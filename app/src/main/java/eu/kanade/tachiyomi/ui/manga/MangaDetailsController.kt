@@ -25,11 +25,11 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.appcompat.widget.SearchView
 import androidx.core.graphics.ColorUtils
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import coil.Coil
 import coil.imageLoader
 import coil.request.ImageRequest
 import com.afollestad.materialdialogs.MaterialDialog
@@ -71,8 +71,10 @@ import eu.kanade.tachiyomi.ui.manga.track.TrackItem
 import eu.kanade.tachiyomi.ui.manga.track.TrackingBottomSheet
 import eu.kanade.tachiyomi.ui.migration.manga.design.PreMigrationController
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
+import eu.kanade.tachiyomi.ui.recents.RecentsController
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
 import eu.kanade.tachiyomi.ui.source.BrowseController
+import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
 import eu.kanade.tachiyomi.ui.source.global_search.GlobalSearchController
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
 import eu.kanade.tachiyomi.util.addOrRemoveToFavorites
@@ -96,7 +98,6 @@ import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
 import eu.kanade.tachiyomi.util.view.setStyle
 import eu.kanade.tachiyomi.util.view.snack
 import eu.kanade.tachiyomi.util.view.toolbarHeight
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import eu.kanade.tachiyomi.util.view.updatePaddingRelative
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import timber.log.Timber
@@ -355,23 +356,26 @@ class MangaDetailsController :
         val request = ImageRequest.Builder(view.context).data(presenter.manga).allowHardware(false).memoryCacheKey(presenter.manga.key())
             .target(
                 onSuccess = { drawable ->
-                    val bitmap = (drawable as BitmapDrawable).bitmap
+                    val bitmap = (drawable as? BitmapDrawable)?.bitmap
                     // Generate the Palette on a background thread.
-                    Palette.from(bitmap).generate {
-                        if (it == null) return@generate
-                        val colorBack = view.context.getResourceColor(
+                    if (bitmap != null) {
+                        Palette.from(bitmap).generate {
+                            if (it == null) return@generate
+                            val colorBack = view.context.getResourceColor(
                             R.attr.background
-                        )
-                        // this makes the color more consistent regardless of theme
-                        val backDropColor =
-                            ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
+                            )
+                            // this makes the color more consistent regardless of theme
+                            val backDropColor =
+                                ColorUtils.blendARGB(it.getVibrantColor(colorBack), colorBack, .35f)
 
-                        coverColor = backDropColor
-                        getHeader()?.setBackDrop(backDropColor)
-                        if (toolbarIsColored) {
-                            val translucentColor = ColorUtils.setAlphaComponent(backDropColor, 175)
-                            activityBinding?.toolbar?.setBackgroundColor(translucentColor)
-                            activity?.window?.statusBarColor = translucentColor
+                            coverColor = backDropColor
+                            getHeader()?.setBackDrop(backDropColor)
+                            if (toolbarIsColored) {
+                                val translucentColor =
+                                    ColorUtils.setAlphaComponent(backDropColor, 175)
+                                activityBinding?.toolbar?.setBackgroundColor(translucentColor)
+                                activity?.window?.statusBarColor = translucentColor
+                            }
                         }
                     }
                     binding.mangaCoverFull.setImageDrawable(drawable)
@@ -919,15 +923,7 @@ class MangaDetailsController :
 
     override fun prepareToShareManga() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            val request = ImageRequest.Builder(activity!!).data(manga).target(
-                onError = {
-                    shareManga()
-                },
-                onSuccess = {
-                    presenter.shareManga((it as BitmapDrawable).bitmap)
-                }
-            ).build()
-            Coil.imageLoader(activity!!).enqueue(request)
+            presenter.shareManga()
         } else {
             shareManga()
         }
@@ -1134,10 +1130,29 @@ class MangaDetailsController :
     }
 
     override fun tagClicked(text: String) {
-        val firstController = router.backstack.first()?.controller
-        if (firstController is LibraryController && router.backstack.size == 2) {
-            router.handleBack()
-            firstController.search(text)
+        if (router.backstackSize < 2) {
+            return
+        }
+
+        when (val previousController = router.backstack[router.backstackSize - 2].controller) {
+            is LibraryController -> {
+                router.handleBack()
+                previousController.search(text)
+            }
+            is RecentsController -> {
+                // Manually navigate to LibraryController
+                router.handleBack()
+                (activity as? MainActivity)?.goToTab(R.id.nav_library)
+                val controller =
+                    router.getControllerWithTag(R.id.nav_library.toString()) as LibraryController
+                controller.search(text)
+            }
+            is BrowseSourceController -> {
+                if (presenter.source is HttpSource) {
+                    router.handleBack()
+                    previousController.searchWithGenre(text)
+                }
+            }
         }
     }
 
@@ -1379,11 +1394,12 @@ class MangaDetailsController :
 
     override fun zoomImageFromThumb(thumbView: View) {
         if (fullCoverActive) return
+        val drawable = binding.mangaCoverFull.drawable ?: return
         fullCoverActive = true
-        val expandedImageView = binding.mangaCoverFull
+        drawable.alpha = 255
         val fullCoverDialog = FullCoverDialog(
             this,
-            expandedImageView.drawable,
+            drawable,
             thumbView
         )
         fullCoverDialog.setOnDismissListener {
@@ -1393,7 +1409,6 @@ class MangaDetailsController :
             fullCoverActive = false
         }
         fullCoverDialog.show()
-        return
     }
 
     companion object {

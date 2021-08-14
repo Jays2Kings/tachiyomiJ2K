@@ -173,7 +173,6 @@
     <string name="download_badge">Download badges</string>
     <string name="hide_start_reading_button">Hide start reading button</string>
     <string name="badges">Badges</string>
-    <string name="uniform_covers">Uniform covers</string>
     <string name="uniform_grid_covers">Uniform grid covers</string>
     <string name="grid_size">Grid size</string>
     <string name="x_small">XS</string>
@@ -261,12 +260,16 @@
     <string name="only_unread">Only unread</string>
     <string name="only_downloaded">Only downloaded</string>
     <string name="unread_or_downloaded">Unread or downloaded</string>
+
+    <!-- Recents Settings -->
     <string name="show_reset_history_button">Show reset history button</string>
     <string name="show_read_chapters_all">Show read chapters in Grouped and All</string>
     <string name="show_title_first">Show title first</string>
     <string name="a_while_ago">A while ago</string>
     <string name="show_updated_time">Show updated time</string>
     <string name="group_chapters_together">Group chapters together</string>
+    <string name="uniform_covers">Uniform covers</string>
+    <string name="affects_library_grid">Affects library grid covers</string>
 
     <!-- Browse -->
     <string name="search_filters">Search filters</string>
@@ -309,6 +312,7 @@
     <string name="version_">Version: %1$s</string>
     <string name="language_">Language: %1$s</string>
     <string name="nsfw_short">18+</string>
+    <string name="installed_">Installed %1$s</string>
     <string name="unofficial">Unofficial</string>
     <string name="extensions_miui_warning">MIUI Optimization must be disabled to install extensions.</string>
     <string name="may_contain_nsfw">May contain NSFW (18+) content</string>
@@ -960,6 +964,9 @@
     <string name="move_to_top">Move to top</string>
     <string name="move_to_">Move to %1$s</string>
     <string name="moved_to_">Moved to %1$s</string>
+    <string name="name">Name</string>
+    <string name="recently_updated">Recently updated</string>
+    <string name="recently_installed">Recently installed</string>
     <string name="never">Never</string>
     <string name="newest">Newest</string>
     <string name="next">Next</string>

@@ -17,6 +17,7 @@ import androidx.core.graphics.ColorUtils
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import coil.request.CachePolicy
 import eu.kanade.tachiyomi.util.system.isInNightMode
 import com.google.android.material.button.MaterialButton
@@ -32,7 +33,6 @@ import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isLTR
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 
 @SuppressLint("ClickableViewAccessibility")
 class MangaHeaderHolder(

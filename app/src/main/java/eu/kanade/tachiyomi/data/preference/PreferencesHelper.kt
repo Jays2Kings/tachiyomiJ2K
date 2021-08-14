@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.f2prateek.rx.preferences.Preference
 import com.f2prateek.rx.preferences.RxSharedPreferences
@@ -15,6 +14,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.track.TrackService
 import eu.kanade.tachiyomi.data.updater.AutoUpdaterJob
+import eu.kanade.tachiyomi.extension.model.InstalledExtensionsOrder
 import eu.kanade.tachiyomi.ui.library.filter.FilterBottomSheet
 import eu.kanade.tachiyomi.ui.reader.settings.OrientationType
 import eu.kanade.tachiyomi.ui.reader.settings.PageLayout
@@ -296,7 +296,9 @@ class PreferencesHelper(val context: Context) {
 
     fun librarySortingAscending() = rxPrefs.getBoolean("library_sorting_ascending", true)
 
-    fun automaticExtUpdates() = rxPrefs.getBoolean(Keys.automaticExtUpdates, true)
+    fun automaticExtUpdates() = flowPrefs.getBoolean(Keys.automaticExtUpdates, true)
+
+    fun installedExtensionsOrder() = flowPrefs.getInt(Keys.installedExtensionsOrder, InstalledExtensionsOrder.Name.value)
 
     fun collapsedCategories() = rxPrefs.getStringSet("collapsed_categories", mutableSetOf())
 

@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import androidx.core.view.updateLayoutParams
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.SortTextViewBinding
 import eu.kanade.tachiyomi.util.view.setVectorCompat
@@ -44,6 +45,18 @@ class SortTextView constructor(context: Context, attrs: AttributeSet?) :
 
         val maxLines = a.getInt(R.styleable.SortTextView_android_maxLines, Int.MAX_VALUE)
         binding.textView.maxLines = maxLines
+
+        val resourceId = a.getResourceId(R.styleable.SortTextView_android_textAppearance, 0)
+        if (resourceId != 0) {
+            binding.textView.setTextAppearance(resourceId)
+        }
+
+        val drawablePadding = a.getDimensionPixelSize(R.styleable.SortTextView_android_drawablePadding, 0)
+        if (drawablePadding != 0) {
+            binding.textView.updateLayoutParams<MarginLayoutParams> {
+                marginStart = drawablePadding
+            }
+        }
 
         a.recycle()
 

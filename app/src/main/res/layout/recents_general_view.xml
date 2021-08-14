@@ -47,5 +47,13 @@
             android:text="@string/show_title_first"
             android:textColor="?attr/colorOnBackground"
             android:layout_marginTop="8dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/uniform_covers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/uniform_covers"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="8dp" />
     </LinearLayout>
 </eu.kanade.tachiyomi.ui.recents.options.RecentsGeneralView>

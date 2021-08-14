@@ -40,15 +40,15 @@ class RecentMangaHolder(
             RecentMangaAdapter.ShowRecentsDLs.All -> true
         } && !item.mch.manga.isLocal()
 
-        val isUpdates = adapter.viewType == RecentsPresenter.VIEW_TYPE_ONLY_UPDATES &&
+        val isSmallUpdates = adapter.viewType == RecentsPresenter.VIEW_TYPE_ONLY_UPDATES &&
             !adapter.showUpdatedTime
         binding.cardLayout.updateLayoutParams<ConstraintLayout.LayoutParams> {
-            height = (if (isUpdates) 40 else 80).dpToPx
-            width = (if (isUpdates) 40 else 60).dpToPx
+            height = (if (isSmallUpdates) 40 else 80).dpToPx
+            width = (if (isSmallUpdates) 40 else 60).dpToPx
         }
         listOf(binding.title, binding.subtitle).forEach {
             it.updateLayoutParams<ConstraintLayout.LayoutParams> {
-                if (isUpdates) {
+                if (isSmallUpdates) {
                     if (it == binding.title) topMargin = 5.dpToPx
                     endToStart = R.id.button_layout
                     endToEnd = -1
@@ -60,7 +60,7 @@ class RecentMangaHolder(
             }
         }
         binding.buttonLayout.updateLayoutParams<ConstraintLayout.LayoutParams> {
-            if (isUpdates) {
+            if (isSmallUpdates) {
                 topToBottom = -1
                 topToTop = R.id.front_view
             } else {
@@ -68,13 +68,14 @@ class RecentMangaHolder(
                 topToBottom = R.id.subtitle
             }
         }
+        val freeformCovers = !isSmallUpdates && !adapter.uniformCovers
         with(binding.coverThumbnail) {
-            adjustViewBounds = !isUpdates
-            scaleType = if (isUpdates) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
+            adjustViewBounds = freeformCovers
+            scaleType = if (!freeformCovers) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
         }
         listOf(binding.coverThumbnail, binding.card).forEach {
             it.updateLayoutParams<ViewGroup.LayoutParams> {
-                width = if (isUpdates) {
+                width = if (!freeformCovers) {
                     ViewGroup.LayoutParams.MATCH_PARENT
                 } else {
                     ViewGroup.LayoutParams.WRAP_CONTENT
@@ -108,13 +109,13 @@ class RecentMangaHolder(
             )
         }
         val notValidNum = item.mch.chapter.chapter_number <= 0
-        binding.body.isVisible = !isUpdates
+        binding.body.isVisible = !isSmallUpdates
         binding.body.text = when {
             item.mch.chapter.id == null -> binding.body.context.getString(
                 R.string.added_,
                 item.mch.manga.date_added.timeSpanFromNow(itemView.context)
             )
-            isUpdates -> ""
+            isSmallUpdates -> ""
             item.mch.history.id == null -> binding.body.context.getString(
                 R.string.updated_,
                 item.chapter.date_upload.timeSpanFromNow(itemView.context)

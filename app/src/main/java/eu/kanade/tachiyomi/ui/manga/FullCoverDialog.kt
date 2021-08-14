@@ -12,6 +12,7 @@ import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.animation.addListener
+import androidx.core.view.updateLayoutParams
 import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
@@ -22,10 +23,9 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.FullCoverDialogBinding
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.animateBlur
-import eu.kanade.tachiyomi.util.view.updateLayoutParams
 import uy.kohesive.injekt.injectLazy
 
-class FullCoverDialog(val controller: MangaDetailsController, drawable: Drawable, val thumbView: View) :
+class FullCoverDialog(val controller: MangaDetailsController, drawable: Drawable, private val thumbView: View) :
     Dialog(controller.activity!!, R.style.FullCoverDialogTheme) {
 
     val activity = controller.activity

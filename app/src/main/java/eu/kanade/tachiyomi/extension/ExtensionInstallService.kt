@@ -113,7 +113,7 @@ class ExtensionInstallService(
                 notifier.showUpdatedNotification(installedExtensions, preferences.hideNotificationContent())
             }
             if (reRunUpdateCheck || installedExtensions.size != list.size) {
-                ExtensionUpdateJob.runJobAgain(this, NetworkType.CONNECTED)
+                ExtensionUpdateJob.runJobAgain(this, NetworkType.CONNECTED, false)
             }
             stopSelf(startId)
         }
