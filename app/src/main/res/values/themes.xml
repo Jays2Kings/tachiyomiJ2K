@@ -10,24 +10,24 @@
         <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
         <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/colorPrimary</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/primaryVariantTachiyomi</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/anim_tachij2k_splash</item>
         <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">775</item>
         <!--Standard Material colors -->
-        <item name="colorPrimary">@color/tachiPrimaryBlue</item>
-        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/primaryTachiyomi</item>
+        <item name="colorPrimaryVariant">@color/primaryVariantTachiyomi</item>
         <item name="colorSurface">@color/background</item> //old colorSecondary
         <item name="colorOnSurface">@color/md_black_1000</item> //old colorOnSecondary
-        <item name="colorSecondary">@color/tachiBlue</item> //colorAccent
+        <item name="colorSecondary">@color/secondaryTachiyomi</item> //colorAccent
         <item name="colorOnSecondary">@color/md_white_1000</item> // colorOnSecondary
-        <item name="colorSecondaryVariant">@color/tachiBlueVariant</item> //colorAccentText
+        <item name="colorSecondaryVariant">@color/secondaryVariantTachiyomi</item> //colorAccentText
         <item name="background">@color/background</item>
         <item name="colorOnBackground">@color/md_black_1000_87</item>
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
 
-        <item name="readerBackground">@color/colorPrimary</item>
+        <item name="readerBackground">@color/primaryVariantTachiyomi</item>
         <item name="android:listSelector">?attr/colorSecondary</item>
         <item name="android:divider">@color/divider</item>
         <item name="android:listDivider">@drawable/line_divider</item>
@@ -61,8 +61,8 @@
 
     <style name="Theme.Tachiyomi" parent="Theme.Base"/>
     <style name="Theme.Tachiyomi.AllBlue">
-        <item name="colorPrimaryVariant">@color/tachiPrimaryBlue</item>
-        <item name="colorSecondary">@color/tachiPrimaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryTachiyomi</item>
+        <item name="colorSecondary">@color/primaryTachiyomi</item>
         <item name="tabBarIconColor">@color/md_white_1000</item>
         <item name="tabBarIconInactive">@color/md_white_1000_50</item>
         <item name="tabHighlightBackground">@color/md_white_1000_50</item>
@@ -73,8 +73,8 @@
     </style>
 
     <style name="ThemeOverlay.Tachiyomi.AllBlue" parent="">
-        <item name="colorPrimaryVariant">@color/tachiPrimaryBlue</item>
-        <item name="colorSecondary">@color/tachiPrimaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryTachiyomi</item>
+        <item name="colorSecondary">@color/primaryTachiyomi</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
@@ -126,18 +126,18 @@
     </style>
 
     <style name="Theme.Tachiyomi.Yotsuba">
-        <item name="colorAccent">@color/colorAccentYotsuba</item>
-        <item name="colorSecondaryVariant">@color/colorAccentYotsubaText</item>
+        <item name="colorSecondary">@color/secondaryYotsuba</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariantYotsuba</item>
     </style>
 
     <!--== Yin Yang theme ==-->
     <style name="Theme.Tachiyomi.YinYang">
         <!-- Theme colors -->
-        <item name="colorAccent">@color/colorAccentYinyang</item>
-        <item name="colorSecondaryVariant">@color/colorAccentYinyangText</item>
+        <item name="colorSecondary">@color/secondaryYinYang</item>
+        <item name="colorOnSecondary">@color/onSecondaryYinYang</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariantYinYang</item>
         <item name="colorDownloadBadge">@color/downloadBadgeDayNight</item>
         <item name="colorOnDownloadBadge">@color/colorOnDownloadBadgeDayNight</item>
-        <item name="colorOnSecondary">@color/colorOnSecondaryYinyang</item>
     </style>
     <style name="Theme.Tachiyomi.Monet"/>
 
@@ -153,7 +153,7 @@
     </style>
 
     <style name="Theme.OSS" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="android:colorEdgeEffect">@color/tachiBlue</item>
+        <item name="colorPrimary">@color/primaryTachiyomi</item>
+        <item name="android:colorEdgeEffect">@color/secondaryTachiyomi</item>
     </style>
 </resources>

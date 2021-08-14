@@ -19,12 +19,11 @@
 
     <style name="Theme.Tachiyomi.FlatLime">
         <item name="colorPrimary">@color/primaryLime</item>
-        <item name="colorAccent">@color/colorAccentLime</item>
-        <item name="colorSecondaryVariant">@color/colorAccentLime</item>
+        <item name="colorSecondary">@color/secondaryLime</item>
+        <item name="colorSecondaryVariant">@color/secondaryLime</item>
         <item name="colorPrimaryVariant">@color/dialogLime</item>
-        <item name="colorSecondary">@color/backgroundLime</item>
+        <item name="colorSurface">@color/backgroundLime</item>
         <item name="background">@color/backgroundLime</item>
-        <item name="colorSurface">@color/colorAccentLimeText</item>
         <item name="colorOnSecondary">@color/colorOnLime</item>
         <item name="colorDownloadBadge">@color/download_badge_light</item>
         <item name="colorOnDownloadBadge">@color/md_white_1000</item>

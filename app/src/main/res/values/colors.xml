@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Application Colors -->
-    <color name="colorPrimary">@color/md_white_1000</color>
+    <color name="primaryVariantTachiyomi">@color/md_white_1000</color>
     <color name="colorPrimaryInactive">#C2424242</color>
-    <color name="tachiPrimaryBlue">#54759E</color>
-    <color name="splashBackground">@color/tachiPrimaryBlue</color>
+    <color name="primaryTachiyomi">#54759E</color>
+    <color name="splashBackground">@color/primaryTachiyomi</color>
     <color name="fullRippleColor">#C2C2C2</color>
     <color name="rippleColor">@color/md_black_1000_12</color>
-    <color name="tachiBlue">@color/md_blue_A400</color>
-    <color name="tachiBlueVariant">#184798</color>
+    <color name="secondaryTachiyomi">@color/md_blue_A400</color>
+    <color name="secondaryVariantTachiyomi">#184798</color>
     <color name="actionModeShadow">@color/md_black_1000_38</color>
     <color name="gray_button">#404040</color>
 
@@ -80,13 +80,13 @@
 
     <!-- Flat Lime Theme -->
     <color name="primaryLime">#7CF7A5</color>
-    <color name="colorAccentLime">#4AF88A</color>
+    <color name="secondaryLime">#4AF88A</color>
     <color name="textColorPrimaryLime">@color/md_white_1000</color>
     <color name="textColorSecondaryLime">@color/md_white_1000_76</color>
     <color name="textColorHintLime">@color/md_white_1000_50</color>
     <color name="rippleColorLime">@color/md_white_1000_20</color>
     <color name="backgroundLime">#202125</color>
-    <color name="colorAccentLimeText">#2C2D32</color>
+    <color name="secondaryVariantLime">#2C2D32</color>
     <color name="dialogLime">#282A2E</color>
     <color name="colorOnLime">#2C2D32</color>
 
@@ -109,11 +109,11 @@
     <color name="inactiveTabTako">#C2221b28</color>
 
     <!-- Yotsuba Theme -->
-    <color name="colorAccentYotsuba">#dc6d3d</color>
-    <color name="colorAccentYotsubaText">#9f431c</color>
+    <color name="secondaryYotsuba">#dc6d3d</color>
+    <color name="secondaryVariantYotsuba">#9f431c</color>
 
     <!-- Yin Yang Theme -->
-    <color name="colorAccentYinyang">#000000</color>
-    <color name="colorAccentYinyangText">#777777</color>
-    <color name="colorOnSecondaryYinyang">@color/md_white_1000</color>
+    <color name="secondaryYinYang">#000000</color>
+    <color name="secondaryVariantYinYang">#777777</color>
+    <color name="onSecondaryYinYang">@color/md_white_1000</color>
 </resources>

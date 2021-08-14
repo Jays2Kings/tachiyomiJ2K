@@ -78,10 +78,7 @@ open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
         }
 
         window.statusBarColor = ColorUtils.setAlphaComponent(
-            getResourceColor(
-                R.attr
-                    .colorSecondary
-            ),
+            getResourceColor(R.attr.colorSurface),
             255
         )
 
@@ -160,10 +157,7 @@ open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
             }
         }
         window.statusBarColor = ColorUtils.setAlphaComponent(
-            getResourceColor(
-                R.attr
-                    .colorSecondary
-            ),
+            getResourceColor(R.attr.colorSurface),
             255
         )
         binding.toolbar.setBackgroundColor(getResourceColor(R.attr.colorSecondary))

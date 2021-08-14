@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:hint="@string/username"
-        app:boxStrokeColor="@color/tachiBlue"
-        app:hintTextColor="@color/tachiBlue">
+        app:boxStrokeColor="?attr/colorSecondary"
+        app:hintTextColor="?attr/colorSecondary">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
