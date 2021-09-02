@@ -2,10 +2,10 @@
 <resources>
     <style name="Theme.Tachiyomi.Monet">
         <item name="colorPrimary">@android:color/system_accent2_800</item>
-        <item name="colorSecondary">@android:color/system_accent1_300</item>
+        <item name="colorSecondary">@android:color/system_accent1_100</item>
         <item name="colorSecondaryVariant">@android:color/system_accent1_50</item>
-        <item name="colorDownloadBadge">@android:color/system_accent3_300</item>
-        <item name="colorOnDownloadBadge">@color/md_black_1000</item>
+        <item name="colorDownloadBadge">@android:color/system_accent3_800</item>
+        <item name="colorOnDownloadBadge">@color/md_white_1000</item>
         <item name="colorPrimaryVariant">@android:color/system_neutral1_800</item>
         <item name="colorSurface">@android:color/system_neutral1_900</item>
         <item name="background">@android:color/system_neutral1_900</item>
