@@ -182,7 +182,7 @@ class RecentMangaHolder(
         return binding.frontView
     }
 
-    override fun getRearRightView(): View {
-        return binding.rightView
+    override fun getRearEndView(): View {
+        return binding.endView
     }
 }

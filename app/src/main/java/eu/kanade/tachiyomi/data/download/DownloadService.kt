@@ -11,12 +11,15 @@ import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
 import androidx.core.app.NotificationCompat
+import androidx.work.NetworkType
 import com.github.pwittchen.reactivenetwork.library.Connectivity
 import com.github.pwittchen.reactivenetwork.library.ReactiveNetwork
 import com.jakewharton.rxrelay.BehaviorRelay
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.extension.ExtensionUpdateJob
 import eu.kanade.tachiyomi.util.lang.plusAssign
 import eu.kanade.tachiyomi.util.system.connectivityManager
 import eu.kanade.tachiyomi.util.system.isServiceRunning
@@ -137,6 +140,10 @@ class DownloadService : Service() {
         downloadManager.stopDownloads()
         callListeners(downloadManager.hasQueue())
         wakeLock.releaseIfNeeded()
+        if (LibraryUpdateService.runExtensionUpdatesAfter) {
+            ExtensionUpdateJob.runJobAgain(this, NetworkType.CONNECTED)
+            LibraryUpdateService.runExtensionUpdatesAfter = false
+        }
         super.onDestroy()
     }
 

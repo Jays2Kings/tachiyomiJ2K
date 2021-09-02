@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceController
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
@@ -21,6 +20,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.main.FloatingSearchInterface
+import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 import kotlinx.coroutines.MainScope
 import rx.Observable
@@ -88,7 +88,7 @@ abstract class SettingsController : PreferenceController() {
 
     private fun animatePreferenceHighlight(view: View) {
         ValueAnimator
-            .ofObject(ArgbEvaluator(), Color.TRANSPARENT, ContextCompat.getColor(view.context, R.color.fullRippleColor))
+            .ofObject(ArgbEvaluator(), Color.TRANSPARENT, view.context.getResourceColor(R.attr.colorControlHighlight))
             .apply {
                 duration = 500L
                 repeatCount = 2

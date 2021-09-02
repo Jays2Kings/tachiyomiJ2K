@@ -139,9 +139,6 @@ object Migrations {
                         remove("show_manga_app_shortcuts")
                     }
                 }
-                if (preferences.lang().get() in listOf("en-US", "en-GB")) {
-                    preferences.lang().set("en")
-                }
                 // Handle removed every 1 or 2 hour library updates
                 val updateInterval = preferences.libraryUpdateInterval().get()
                 if (updateInterval == 1 || updateInterval == 2) {

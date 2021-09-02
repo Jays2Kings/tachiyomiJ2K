@@ -9,6 +9,10 @@
         <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
     </style>
 
+    <style name="Theme.ActionBar.DayNight" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <item name="colorControlHighlight">@color/secondary_highlight</item>
+    </style>
+
     <!--====-->
     <!--Tabs-->
     <!--====-->
@@ -221,7 +225,7 @@
         <item name="tabIndicator">@drawable/tab_indicator</item>
         <item name="tabIndicatorColor">?attr/colorSecondary</item>
         <item name="tabTextColor">@color/tabs_selector</item>
-        <item name="tabRippleColor">@color/rippleColor</item>
+        <item name="tabRippleColor">?colorControlHighlight</item>
         <item name="tabIndicatorFullWidth">false</item>
         <item name="tabInlineLabel">true</item>
         <item name="tabMinWidth">75dp</item>
@@ -242,6 +246,26 @@
         <item name="tabIndicatorFullWidth">true</item>
     </style>
 
+    <style name="Theme.Widget.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="trackColorInactive">@color/secondary_alpha</item>
+        <item name="trackColorActive">?colorSecondary</item>
+        <item name="thumbColor">?colorSecondary</item>
+        <item name="labelStyle">@style/Theme.Widget.Tooltip</item>
+        <item name="tickColorActive">?colorOnSecondary</item>
+        <item name="tickColorInactive">?android:textColorSecondary</item>
+        <item name="haloColor">?colorControlHighlight</item>
+    </style>
+
+
+    <style name="Theme.Widget.Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="backgroundTint">?colorSecondary</item>
+        <item name="android:textAppearance">@style/Theme.TextAppearance.Tooltip</item>
+    </style>
+
+    <style name="Theme.TextAppearance.Tooltip" parent="@style/TextAppearance.MaterialComponents.Tooltip">
+        <item name="android:textColor">?colorOnSecondary</item>
+    </style>
+
     <!--==============-->
     <!--Widgets.Button-->
     <!--==============-->
@@ -254,9 +278,13 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="Widget.Tachiyomi.Button.ActionButton.White.Landscape">
+        <item name="iconGravity">start</item>
+    </style>
+
     <style name="Widget.Tachiyomi.Button.ActionButton.White">
-        <item name="iconTint">@color/md_white_1000</item>
-        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="iconTint">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="Theme.Widget.Button" parent="Widget.AppCompat.Button" />
@@ -268,14 +296,14 @@
     <style name="Theme.Widget.Button.Borderless" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">?attr/colorSecondary</item>
-        <item name="rippleColor">@color/fullRippleColor</item>
+        <item name="rippleColor">?colorControlHighlight</item>
     </style>
 
     <style name="Theme.Widget.Button.OutlinedButtonAccent" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@android:color/transparent</item>
         <item name="backgroundTint">@color/ext_bg_selector</item>
         <item name="android:textColor">@color/ext_button_text_selector</item>
-        <item name="rippleColor">@color/fullRippleColor</item>
+        <item name="rippleColor">?colorControlHighlight</item>
     </style>
 
 
@@ -290,7 +318,7 @@
         <item name="android:letterSpacing">0.0</item>
         <item name="android:layout_height">40dp</item>
         <item name="iconTint">?attr/colorSecondary</item>
-        <item name="rippleColor">@color/fullRippleColor</item>
+        <item name="rippleColor">?colorControlHighlight</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="cornerRadius">20dp</item>
     </style>
@@ -311,7 +339,7 @@
     <style name="Theme.Widget.ImageBorderless" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">?selectableItemBackgroundBorderless</item>
         <item name="android:tint">?attr/colorSecondary</item>
-        <item name="rippleColor">@color/fullRippleColor</item>
+        <item name="rippleColor">?colorControlHighlight</item>
     </style>
 
     <style name="Theme.Widget.CustomImageButton">
@@ -319,6 +347,10 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:tint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="PopupMenu" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">?android:colorBackground</item>
     </style>
 
     <style name="Theme.Widget.Chip.Outline" parent="Widget.MaterialComponents.Chip.Action">

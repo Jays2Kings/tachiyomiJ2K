@@ -84,6 +84,8 @@
     <string name="create_new_category">Create new category</string>
     <string name="new_category">New category</string>
     <string name="category_is_empty">Category is empty</string>
+    <string name="show_categories_while_filtering">Show empty categories while filtering</string>
+    <string name="no_matches_for_filters_short">No matches for your filters</string>
     <string name="top_category">Top category (%1$s)</string>
     <string name="default_category">Default category</string>
     <string name="first_category">First category</string>
@@ -133,6 +135,7 @@
     <string name="library_is_empty_add_from_browse">Your library is empty, add series to your
         library from the browse tab.</string>
     <string name="no_matches_for_filters">No matches found for your current filters</string>
+    <string name="getting_started_guide">Getting started guide</string>
     <string name="show_all_categories">Show all categories</string>
     <string name="move_dynamic_to_bottom">Move collapsed dynamic categories to bottom</string>
     <string name="show_number_of_items">Show number of items</string>
@@ -560,10 +563,14 @@
     <string name="url_not_set_click_again">Manga URL not set, please click title and select manga again</string>
     <string name="refresh_tracking">Refresh tracking</string>
     <string name="add_tracking">Add tracking</string>
+    <string name="select_an_entry">Select an entry</string>
     <string name="source_unsupported">Source is not supported</string>
     <string name="no_match_found">No match found</string>
     <string name="remove_tracking">Remove tracking from app</string>
     <string name="remove_tracking_from_">Also remove from %1$s</string>
+    <string name="remove_previous_tracker">Remove previous tracker?</string>
+    <string name="remove_x_from_service_and_add_y">Remove %1$s from %2$s and add %3$s</string>
+    <string name="keep_both_on_service">Keep both on %1$s and only replace locally</string>
     <string name="anilist" translatable="false">AniList</string>
     <string name="myanimelist" translatable="false">MyAnimeList</string>
     <string name="kitsu" translatable="false">Kitsu</string>
@@ -654,7 +661,6 @@
     <string name="white_theme">Pure White</string>
     <string name="locale">Locale</string>
     <string name="last_used_library_recents">Last used (Library or Recents)</string>
-    <string name="language">Language</string>
     <string name="system_default">System default</string>
     <string name="date_format">Date format</string>
     <string name="check_for_updates">Check for updates</string>
@@ -714,7 +720,7 @@
     <string name="what_should_backup">What do you want to backup?</string>
     <string name="restoring_backup">Restoring backup</string>
     <string name="restore_duration">%02d min, %02d sec</string>
-    <string name="restore_miui_warning">MIUI Optimization must be enabled for restore to work correctly.</string>
+    <string name="restore_miui_warning">Backup/restore may not function properly if MIUI Optimization is disabled.</string>
     <string name="progress">Progress</string>
     <string name="complete">Complete</string>
     <plurals name="restore_completed_message">
@@ -967,6 +973,7 @@
     <string name="name">Name</string>
     <string name="recently_updated">Recently updated</string>
     <string name="recently_installed">Recently installed</string>
+    <string name="language">Language</string>
     <string name="never">Never</string>
     <string name="newest">Newest</string>
     <string name="next">Next</string>

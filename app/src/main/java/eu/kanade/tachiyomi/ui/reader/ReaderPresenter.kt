@@ -726,7 +726,7 @@ class ReaderPresenter(
             File.separator + Environment.DIRECTORY_PICTURES +
             File.separator + context.getString(R.string.app_name)
         val destDir = if (preferences.folderPerManga()) {
-            File(baseDir + File.separator + manga.title)
+            File(baseDir + File.separator + DiskUtil.buildValidFilename(manga.title))
         } else {
             File(baseDir)
         }

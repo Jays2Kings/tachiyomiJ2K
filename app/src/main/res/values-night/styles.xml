@@ -3,5 +3,6 @@
     <style name="Theme.ActionBar.Dark.DayNight"
         parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
         <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
+        <item name="colorControlHighlight">?colorControlHighlight</item>
     </style>
 </resources>

@@ -109,11 +109,11 @@ class DownloadHolder(private val view: View, val adapter: DownloadAdapter) :
         return binding.frontView
     }
 
-    override fun getRearRightView(): View {
-        return binding.rightView
+    override fun getRearStartView(): View {
+        return binding.startView
     }
 
-    override fun getRearLeftView(): View {
-        return binding.leftView
+    override fun getRearEndView(): View {
+        return binding.endView
     }
 }

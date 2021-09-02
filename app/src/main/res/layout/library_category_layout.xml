@@ -36,12 +36,12 @@
             android:text="@string/move_dynamic_to_bottom" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/show_number_of_items"
+            android:id="@+id/show_empty_cats_filtering"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:text="@string/show_number_of_items" />
+            android:text="@string/show_categories_while_filtering" />
 
         <eu.kanade.tachiyomi.widget.MaterialSpinnerView
             android:id="@+id/hide_hopper_spinner"

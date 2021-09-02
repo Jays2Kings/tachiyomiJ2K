@@ -292,6 +292,8 @@ class PreferencesHelper(val context: Context) {
 
     fun filterMangaType() = rxPrefs.getInteger(Keys.filterMangaType, 0)
 
+    fun showEmptyCategoriesWhileFiltering() = flowPrefs.getBoolean(Keys.showEmptyCategoriesFiltering, false)
+
     fun librarySortingMode() = rxPrefs.getInteger(Keys.librarySortingMode, 0)
 
     fun librarySortingAscending() = rxPrefs.getBoolean("library_sorting_ascending", true)
@@ -314,8 +316,6 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadNewCategories() = flowPrefs.getStringSet(Keys.downloadNewCategories, emptySet())
     fun downloadNewCategoriesExclude() = flowPrefs.getStringSet(Keys.downloadNewCategoriesExclude, emptySet())
-
-    fun lang() = flowPrefs.getString(Keys.lang, "")
 
     fun defaultCategory() = prefs.getInt(Keys.defaultCategory, -1)
 

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
+import androidx.work.NetworkType
 import coil.Coil
 import coil.request.CachePolicy
 import coil.request.ImageRequest
@@ -27,6 +28,7 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.UnattendedTrackService
+import eu.kanade.tachiyomi.extension.ExtensionUpdateJob
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.model.toSChapter
@@ -355,6 +357,10 @@ class LibraryUpdateService(
         mangaShortcutManager.updateShortcuts()
         failedUpdates.clear()
         notifier.cancelProgressNotification()
+        if (runExtensionUpdatesAfter && !DownloadService.isRunning(this)) {
+            ExtensionUpdateJob.runJobAgain(this, NetworkType.CONNECTED)
+            runExtensionUpdatesAfter = false
+        }
     }
 
     private suspend fun updateMangaInSource(source: Long): Boolean {
@@ -561,14 +567,14 @@ class LibraryUpdateService(
          */
         const val KEY_MANGAS = "mangas"
 
+        var runExtensionUpdatesAfter = false
+
         /**
          * Returns the status of the service.
          *
          * @return true if the service is running, false otherwise.
          */
-        fun isRunning(): Boolean {
-            return instance != null
-        }
+        fun isRunning() = instance != null
 
         /**
          * Starts the service. It will be started only if there isn't another instance already

@@ -41,7 +41,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@id/title"
             app:layout_constraintTop_toTopOf="@id/title"
-            app:rippleColor="@color/fullRippleColor"
+            app:rippleColor="?colorControlHighlight"
             android:text="@string/update_all" />
 
         <TextView

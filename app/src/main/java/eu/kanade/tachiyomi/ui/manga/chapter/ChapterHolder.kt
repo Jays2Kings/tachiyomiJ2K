@@ -104,14 +104,14 @@ class ChapterHolder(
         val animatorSet = AnimatorSet()
         val anim1 = slideAnimation(0f, slide)
         anim1.startDelay = 1000
-        anim1.addListener(StartAnimatorListener { binding.leftView.isVisible = true })
+        anim1.addListener(StartAnimatorListener { binding.startView.isVisible = true })
         val anim2 = slideAnimation(slide, -slide)
         anim2.duration = 600
         anim2.startDelay = 500
         anim2.addUpdateListener {
-            if (binding.leftView.isVisible && binding.frontView.translationX <= 0) {
-                binding.leftView.isVisible = false
-                binding.rightView.isVisible = true
+            if (binding.startView.isVisible && binding.frontView.translationX <= 0) {
+                binding.startView.isVisible = false
+                binding.endView.isVisible = true
             }
         }
         val anim3 = slideAnimation(-slide, 0f)
@@ -134,12 +134,12 @@ class ChapterHolder(
         return binding.frontView
     }
 
-    override fun getRearRightView(): View {
-        return binding.rightView
+    override fun getRearEndView(): View {
+        return binding.endView
     }
 
-    override fun getRearLeftView(): View {
-        return binding.leftView
+    override fun getRearStartView(): View {
+        return binding.startView
     }
 
     private fun resetFrontView() {

@@ -1275,7 +1275,7 @@ class MangaDetailsController :
 
     //region Tracking methods
     fun refreshTracking(trackings: List<TrackItem>) {
-        trackingBottomSheet?.onNextTrackings(trackings)
+        trackingBottomSheet?.onNextTrackersUpdate(trackings)
     }
 
     fun onTrackSearchResults(results: List<TrackSearch>) {
@@ -1296,7 +1296,6 @@ class MangaDetailsController :
     }
 
     fun trackSearchError(error: Exception) {
-        Timber.e(error)
         trackingBottomSheet?.onSearchResultsError(error)
     }
     //endregion

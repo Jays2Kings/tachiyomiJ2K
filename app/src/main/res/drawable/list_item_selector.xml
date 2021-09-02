@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/fullRippleColor">
+    android:color="?colorControlHighlight">
     <item android:id="@android:id/mask">
-            <color android:color="@color/fullRippleColor" />
+            <color android:color="?colorControlHighlight" />
     </item>
     <item>
         <selector>
             <item android:state_selected="true">
-                <color android:color="@color/fullRippleColor" />
+                <color android:color="?colorControlHighlight" />
             </item>
 
             <item android:state_activated="true">
-                <color android:color="@color/fullRippleColor" />
+                <color android:color="?colorControlHighlight" />
             </item>
 
             <item android:id="@android:id/mask">

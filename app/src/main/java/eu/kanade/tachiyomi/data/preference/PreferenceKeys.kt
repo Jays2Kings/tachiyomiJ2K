@@ -148,6 +148,8 @@ object PreferenceKeys {
 
     const val filterMangaType = "pref_filter_manga_type_key"
 
+    const val showEmptyCategoriesFiltering = "show_empty_categories_filtering"
+
     const val librarySortingMode = "library_sorting_mode"
 
     const val automaticExtUpdates = "automatic_ext_updates"
@@ -170,8 +172,6 @@ object PreferenceKeys {
     const val gridSize = "grid_size_float"
 
     const val uniformGrid = "uniform_grid"
-
-    const val lang = "app_language"
 
     const val dateFormat = "app_date_format"
 

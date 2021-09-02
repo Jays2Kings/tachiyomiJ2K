@@ -74,6 +74,7 @@ class RecentMangaAdapter(val delegate: RecentsInterface) :
         super.onItemSwiped(position, direction)
         when (direction) {
             ItemTouchHelper.LEFT -> delegate.markAsRead(position)
+            ItemTouchHelper.RIGHT -> delegate.markAsRead(position)
         }
     }
 

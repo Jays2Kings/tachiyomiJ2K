@@ -31,8 +31,8 @@ class CategoryRecyclerView @JvmOverloads constructor(
         adapter = fastAdapter
     }
 
-    fun setCategories(items: List<Category>) {
-        itemAdapter.set(items.map(::CategoryItem))
+    fun setCategories(items: List<Category>, itemsMap: Map<Int, Int>) {
+        itemAdapter.set(items.map { CategoryItem(it, itemsMap[it.id]) })
         fastAdapter.onBindViewHolderListener =
             (
                 object : OnBindViewHolderListenerImpl<CategoryItem>() {

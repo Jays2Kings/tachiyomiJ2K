@@ -11,6 +11,7 @@ import androidx.viewpager.widget.ViewPager
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
+import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.BaseViewer
@@ -223,6 +224,18 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
             // No more chapters, show menu because the user is probably going to close the reader
             activity.showMenu()
         }
+    }
+
+    private fun getItem(position: Int, currentChapter: ReaderChapter?): Pair<Any, Any?>? {
+        return adapter.joinedItems.firstOrNull {
+            val readerPage = it.first as? ReaderPage ?: return@firstOrNull false
+            readerPage.index == position && readerPage.chapter.chapter.id == currentChapter?.chapter?.id
+        }
+    }
+
+    fun hasExtraPage(position: Int, currentChapter: ReaderChapter?): Boolean {
+        val item = getItem(position, currentChapter) ?: return false
+        return item.second is ReaderPage
     }
 
     fun setChaptersDoubleShift(chapters: ViewerChapters) {

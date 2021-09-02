@@ -28,11 +28,11 @@ fun runCommand(command: String): String {
 }
 
 android {
-    compileSdkVersion(AndroidVersions.compileSdk)
+    compileSdk = AndroidVersions.compileSdk
 
     defaultConfig {
-        minSdkVersion(AndroidVersions.minSdk)
-        targetSdkVersion(AndroidVersions.targetSdk)
+        minSdk = AndroidVersions.minSdk
+        targetSdk = AndroidVersions.targetSdk
         applicationId = "eu.kanade.tachiyomi"
         versionCode = AndroidVersions.versionCode
         versionName = AndroidVersions.versionName
@@ -61,18 +61,19 @@ android {
         viewBinding = true
     }
 
-    flavorDimensions("default")
+    flavorDimensions.add("default")
 
     productFlavors {
         create("standard") {
             buildConfigField("Boolean", "INCLUDE_UPDATER", "true")
         }
         create("dev") {
-            resConfig("en")
+            resourceConfigurations.clear()
+            resourceConfigurations.add("en")
         }
     }
 
-    lintOptions {
+    lint {
         disable("MissingTranslation")
         isAbortOnError = false
         isCheckReleaseBuilds = false
@@ -98,7 +99,7 @@ dependencies {
     implementation("tachiyomi.sourceapi:source-api:1.1")
 
     // Android X libraries
-    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
@@ -109,11 +110,11 @@ dependencies {
     implementation("androidx.palette:palette:1.0.0")
     implementation("androidx.core:core-ktx:1.6.0")
 
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
     implementation("androidx.multidex:multidex:2.0.1")
 
-    implementation("com.google.firebase:firebase-core:19.0.0")
+    implementation("com.google.firebase:firebase-core:19.0.1")
 
     val lifecycleVersion = "2.2.0"
     implementation("androidx.lifecycle:lifecycle-extensions:$lifecycleVersion")
@@ -138,8 +139,8 @@ dependencies {
 
     // Chucker
     val chuckerVersion = "3.2.0"
-    debugImplementation("com.github.ChuckerTeam.Chucker:library:${Versions.CHUCKER}")
-    releaseImplementation("com.github.ChuckerTeam.Chucker:library-no-op:${Versions.CHUCKER}")
+    debugImplementation("com.github.ChuckerTeam.Chucker:library:$chuckerVersion")
+    releaseImplementation("com.github.ChuckerTeam.Chucker:library-no-op:$chuckerVersion")
 
     // hyperion
     debugImplementation("com.willowtreeapps.hyperion:hyperion-core:${Versions.HYPERION}")

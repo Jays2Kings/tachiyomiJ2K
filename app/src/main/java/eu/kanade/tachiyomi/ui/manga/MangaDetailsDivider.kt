@@ -8,7 +8,7 @@ import android.view.View
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.isLTR
 
-class MangaDetailsDivider(context: Context) : androidx.recyclerview.widget.RecyclerView.ItemDecoration() {
+class MangaDetailsDivider(context: Context, val padding: Int = 12.dpToPx) : androidx.recyclerview.widget.RecyclerView.ItemDecoration() {
 
     private val divider: Drawable
 
@@ -30,9 +30,9 @@ class MangaDetailsDivider(context: Context) : androidx.recyclerview.widget.Recyc
                 child.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
             val top = child.bottom + params.bottomMargin
             val bottom = top + divider.intrinsicHeight
-            val left = parent.paddingStart + if (parent.context.resources.isLTR) 12.dpToPx else 0
+            val left = parent.paddingStart + if (parent.context.resources.isLTR) padding else 0
             val right =
-                parent.width - parent.paddingEnd - if (!parent.context.resources.isLTR) 12.dpToPx else 0
+                parent.width - parent.paddingEnd - if (!parent.context.resources.isLTR) padding else 0
 
             divider.setBounds(left, top, right, bottom)
             divider.draw(c)

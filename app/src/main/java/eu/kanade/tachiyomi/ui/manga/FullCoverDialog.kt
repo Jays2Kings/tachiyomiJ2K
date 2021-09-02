@@ -89,16 +89,16 @@ class FullCoverDialog(val controller: MangaDetailsController, drawable: Drawable
             // begins, it will position the zoomed-in view in the place of the
             // thumbnail.
             thumbView.alpha = 0f
-            val defMargin = 16.dpToPx
-            if (Build.VERSION.SDK_INT >= 31) {
+            val defMargin = 8.dpToPx
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 activity?.window?.decorView?.animateBlur(1f, 20f, 50)?.start()
             }
             expandedImageView.updateLayoutParams<ConstraintLayout.LayoutParams> {
                 height = 0
                 width = 0
-                topMargin = defMargin
-                leftMargin = defMargin
-                rightMargin = defMargin
+                topMargin = defMargin + 48.dpToPx
+                marginStart = defMargin
+                marginEnd = defMargin
                 bottomMargin = defMargin
                 horizontalBias = 0.5f
                 verticalBias = 0.5f

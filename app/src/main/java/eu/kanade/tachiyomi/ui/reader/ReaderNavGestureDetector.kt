@@ -10,9 +10,7 @@ class ReaderNavGestureDetector(private val activity: ReaderActivity) : GestureDe
 .SimpleOnGestureListener() {
 
     var hasScrollHorizontal = false
-        private set
     var lockVertical = false
-        private set
 
     override fun onDown(e: MotionEvent): Boolean {
         lockVertical = false

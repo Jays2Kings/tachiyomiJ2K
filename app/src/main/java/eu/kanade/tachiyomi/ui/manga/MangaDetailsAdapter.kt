@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterAdapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.util.chapter.ChapterUtil
+import eu.kanade.tachiyomi.util.system.isLTR
 import uy.kohesive.injekt.injectLazy
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -62,8 +63,16 @@ class MangaDetailsAdapter(
     override fun onItemSwiped(position: Int, direction: Int) {
         super.onItemSwiped(position, direction)
         when (direction) {
-            ItemTouchHelper.RIGHT -> controller.bookmarkChapter(position)
-            ItemTouchHelper.LEFT -> controller.toggleReadChapter(position)
+            ItemTouchHelper.RIGHT -> if (recyclerView.resources.isLTR) {
+                controller.bookmarkChapter(position)
+            } else {
+                controller.toggleReadChapter(position)
+            }
+            ItemTouchHelper.LEFT -> if (recyclerView.resources.isLTR) {
+                controller.toggleReadChapter(position)
+            } else {
+                controller.bookmarkChapter(position)
+            }
         }
     }
 

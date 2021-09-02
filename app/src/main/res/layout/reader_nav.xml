@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<eu.kanade.tachiyomi.ui.reader.ReaderNavView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/reader_nav"
@@ -63,14 +63,18 @@
             android:textSize="15sp"
             tools:text="1-2" />
 
-        <eu.kanade.tachiyomi.ui.reader.ReaderSeekBar
+        <eu.kanade.tachiyomi.ui.reader.ReaderSlider
             android:id="@+id/page_seekbar"
+            style="@style/Theme.Widget.Slider"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:progressBackgroundTint="@color/action_bar_tint_alpha"
             android:maxHeight="?attr/actionBarSize"
-            android:minHeight="?attr/actionBarSize" />
+            android:minHeight="?attr/actionBarSize"
+            android:stepSize="1"
+            tools:value="4"
+            tools:valueTo="10"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/right_page_text"
@@ -111,4 +115,4 @@
         android:layout_height="40dp"
         android:layout_gravity="center" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</eu.kanade.tachiyomi.ui.reader.ReaderNavView>

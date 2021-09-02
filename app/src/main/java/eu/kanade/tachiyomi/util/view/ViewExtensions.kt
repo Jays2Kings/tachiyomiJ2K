@@ -343,11 +343,11 @@ fun RecyclerView.smoothScrollToTop() {
     }
 }
 
-fun View.rowsForValue(value: Int): Int {
-    return rowsForValue((value / 2f) - .5f)
+fun View.rowsForValue(value: Float): Int {
+    return trueRowsForValue((value / 2f) - .5f)
 }
 
-fun View.rowsForValue(value: Float): Int {
+private fun View.trueRowsForValue(value: Float): Int {
     val size = 1.5f.pow(value)
     val trueSize = AutofitRecyclerView.MULTIPLE * ((size * 100 / AutofitRecyclerView.MULTIPLE).roundToInt()) / 100f
     val dpWidth = (measuredWidth.pxToDp / 100f).roundToInt()

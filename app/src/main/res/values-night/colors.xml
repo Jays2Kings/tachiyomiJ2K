@@ -4,8 +4,6 @@
     <color name="primaryVariantTachiyomi">#212121</color>
     <color name="colorPrimaryInactive">@color/md_white_1000_76</color>
 
-    <color name="rippleColor">@color/md_white_1000_20</color>
-    <color name="fullRippleColor">#707070</color>
     <color name="secondaryTachiyomi">#3399FF</color>
     <color name="secondaryVariantTachiyomi">#cce5ff</color>
     <color name="splashBackground">#212121</color>

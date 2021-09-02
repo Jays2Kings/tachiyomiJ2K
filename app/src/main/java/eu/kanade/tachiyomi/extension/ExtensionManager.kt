@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.extension.api.ExtensionGithubApi
 import eu.kanade.tachiyomi.extension.model.Extension
+import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.extension.model.LoadResult
 import eu.kanade.tachiyomi.extension.util.ExtensionInstallReceiver
 import eu.kanade.tachiyomi.extension.util.ExtensionInstaller
@@ -54,7 +55,7 @@ class ExtensionManager(
     val downloadRelay
         get() = installer.downloadsStateFlow
 
-    fun getExtension(downloadId: Long): String? {
+    private fun getExtension(downloadId: Long): String? {
         return installer.activeDownloads.entries.find { downloadId == it.value }?.key
     }
 
@@ -266,7 +267,16 @@ class ExtensionManager(
      * @param result Whether the extension was installed or not.
      */
     fun setInstallationResult(downloadId: Long, result: Boolean) {
-        installer.setInstallationResult(downloadId, result)
+        val pkgName = getExtension(downloadId) ?: return
+        setInstallationResult(pkgName, result)
+    }
+
+    fun cleanUpInstallation(pkgName: String) {
+        installer.cleanUpInstallation(pkgName)
+    }
+
+    fun setInstallationResult(pkgName: String, result: Boolean) {
+        installer.setInstallationResult(pkgName, result)
     }
 
     /** Sets the result of the installation of an extension.
@@ -284,7 +294,39 @@ class ExtensionManager(
      * @param downloadId The id of the download.
      */
     fun setInstalling(downloadId: Long, sessionId: Int) {
-        installer.setInstalling(downloadId, sessionId)
+        val pkgName = getExtension(downloadId) ?: return
+        setInstalling(pkgName, sessionId)
+    }
+
+    fun setInstalling(pkgName: String, sessionId: Int) {
+        installer.setInstalling(pkgName, sessionId)
+    }
+
+    suspend fun setPending(pkgName: String) {
+        installer.setPending(pkgName)
+    }
+
+    fun getInstallInfo(pkgName: String): ExtensionIntallInfo? {
+        val installStep = when {
+            installer.downloadInstallerMap[pkgName] != null &&
+                context.packageManager.packageInstaller
+                .getSessionInfo(installer.downloadInstallerMap[pkgName] ?: 0) != null -> {
+                InstallStep.Installing
+            }
+            installer.activeDownloads[pkgName] != null -> InstallStep.Downloading
+            ExtensionInstallService.activeInstalls()
+                ?.contains(pkgName) == true -> InstallStep.Pending
+            else -> return null
+        }
+        val sessionInfo = run {
+            val sessionId = installer.downloadInstallerMap[pkgName]
+            if (sessionId != null) {
+                context.packageManager.packageInstaller.getSessionInfo(sessionId)
+            } else {
+                null
+            }
+        }
+        return ExtensionIntallInfo(installStep, sessionInfo)
     }
 
     /**

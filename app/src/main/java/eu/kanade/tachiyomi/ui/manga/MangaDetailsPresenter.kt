@@ -886,21 +886,9 @@ class MangaDetailsPresenter(
                     service.search(query)
                 } catch (e: Exception) {
                     withContext(Dispatchers.Main) { controller.trackSearchError(e) }
-                    null
+                    return@launch
                 }
-                if (!results.isNullOrEmpty()) {
-                    withContext(Dispatchers.Main) { controller.onTrackSearchResults(results) }
-                } else {
-                    withContext(Dispatchers.Main) {
-                        controller.trackSearchError(
-                            Exception(
-                                preferences.context.getString(
-                                    R.string.no_results_found
-                                )
-                            )
-                        )
-                    }
-                }
+                withContext(Dispatchers.Main) { controller.onTrackSearchResults(results.orEmpty()) }
             }
         }
     }

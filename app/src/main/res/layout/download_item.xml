@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <FrameLayout
-        android:id="@+id/right_view"
+        android:id="@+id/end_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
@@ -24,7 +24,7 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/left_view"
+        android:id="@+id/start_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"

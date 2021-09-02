@@ -31,6 +31,9 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
 
     var showNumber = preferences.categoryNumberOfItems().get()
 
+    val hasActiveFilters: Boolean
+        get() = controller.hasActiveFilters
+
     init {
         setDisplayHeadersAtStartUp(true)
     }
@@ -62,9 +65,12 @@ class LibraryCategoryAdapter(val controller: LibraryController) :
         performFilter()
     }
 
-    fun setItemsPerCategoryMap() {
+    private fun setItemsPerCategoryMap() {
         itemsPerCategory = headerItems.map { header ->
-            (header as LibraryHeaderItem).catId to getSectionItemPositions(header).size
+            (header as LibraryHeaderItem).catId to getSectionItems(header).filter {
+                val manga = (it as? LibraryItem)?.manga ?: return@filter false
+                !manga.isHidden() && !manga.isBlank()
+            }.size
         }.toMap()
     }
 

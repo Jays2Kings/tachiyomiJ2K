@@ -1,52 +1,50 @@
 package eu.kanade.tachiyomi.ui.manga.track
 
-import android.content.Context
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
 import coil.clear
 import coil.load
+import com.google.android.material.shape.CornerFamily
+import com.mikepenz.fastadapter.FastAdapter
+import com.mikepenz.fastadapter.items.AbstractItem
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.track.model.TrackSearch
 import eu.kanade.tachiyomi.databinding.TrackSearchItemBinding
-import eu.kanade.tachiyomi.util.view.inflate
-import java.util.ArrayList
+import eu.kanade.tachiyomi.util.system.dpToPx
 import java.util.Locale
 
-class TrackSearchAdapter(context: Context) :
-    ArrayAdapter<TrackSearch>(context, R.layout.track_search_item, ArrayList<TrackSearch>()) {
+class TrackSearchItem(val trackSearch: TrackSearch) : AbstractItem<TrackSearchItem.ViewHolder>() {
 
-    override fun getView(position: Int, view: View?, parent: ViewGroup): View {
-        var v = view
-        // Get the data item for this position
-        val track = getItem(position)!!
-        // Check if an existing view is being reused, otherwise inflate the view
-        val holder: TrackSearchHolder // view lookup cache stored in tag
-        if (v == null) {
-            v = parent.inflate(R.layout.track_search_item)
-            holder = TrackSearchHolder(v)
-            v.tag = holder
-        } else {
-            holder = v.tag as TrackSearchHolder
+    /** defines the type defining this item. must be unique. preferably an id */
+    override val type: Int = R.id.track_search_cover
+
+    /**
+     * Returns the layout resource for this item.
+     */
+    override val layoutRes: Int = R.layout.track_search_item
+    override var identifier = trackSearch.media_id.toLong()
+
+    override fun getViewHolder(v: View): ViewHolder {
+        return ViewHolder(v)
+    }
+
+    class ViewHolder(view: View) : FastAdapter.ViewHolder<TrackSearchItem>(view) {
+
+        val binding = TrackSearchItemBinding.bind(view)
+
+        init {
+            binding.trackSearchCover.shapeAppearanceModel =
+                binding.trackSearchCover.shapeAppearanceModel.toBuilder()
+                    .setAllCorners(CornerFamily.ROUNDED, 5f.dpToPx)
+                    .build()
         }
-        holder.onSetValues(track)
-        return v
-    }
 
-    fun setItems(syncs: List<TrackSearch>) {
-        setNotifyOnChange(false)
-        clear()
-        addAll(syncs)
-        notifyDataSetChanged()
-    }
-
-    class TrackSearchHolder(private val view: View) {
-
-        fun onSetValues(track: TrackSearch) {
-            val binding = TrackSearchItemBinding.bind(view)
+        override fun bindView(item: TrackSearchItem, payloads: List<Any>) {
+            val track = item.trackSearch
+            binding.checkbox.isVisible = item.isSelected
             binding.trackSearchTitle.text = track.title
             binding.trackSearchSummary.text = track.summary
+            binding.trackSearchSummary.isVisible = track.summary.isNotBlank()
             binding.trackSearchCover.clear()
             if (track.cover_url.isNotEmpty()) {
                 binding.trackSearchCover.load(track.cover_url)
@@ -72,6 +70,9 @@ class TrackSearchAdapter(context: Context) :
             } else {
                 binding.trackSearchStartResult.text = track.start_date
             }
+        }
+
+        override fun unbindView(item: TrackSearchItem) {
         }
     }
 }

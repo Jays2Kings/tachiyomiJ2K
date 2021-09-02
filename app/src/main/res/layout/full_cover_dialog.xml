@@ -16,24 +16,23 @@
         android:layout_width="0dp"
         android:layout_height="0dp"/>
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/manga_cover_full"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            tools:src="@mipmap/ic_launcher"
-            android:contentDescription="@string/cover_of_image"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_container" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/manga_cover_full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        tools:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/cover_of_image"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_container"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/button_container"
@@ -46,7 +45,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_save"
-            style="@style/Widget.Tachiyomi.Button.ActionButton.White"
+            style="@style/Widget.Tachiyomi.Button.ActionButton.White.Landscape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +56,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_share"
-            style="@style/Widget.Tachiyomi.Button.ActionButton.White"
+            style="@style/Widget.Tachiyomi.Button.ActionButton.White.Landscape"
             app:layout_constraintStart_toEndOf="@id/btn_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

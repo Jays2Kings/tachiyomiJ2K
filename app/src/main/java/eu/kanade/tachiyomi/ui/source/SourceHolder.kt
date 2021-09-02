@@ -56,22 +56,18 @@ class SourceHolder(view: View, val adapter: SourceAdapter) :
             }
         }
 
-        if (source.supportsLatest) {
-            binding.sourceLatest.isVisible = true
-        } else {
-            binding.sourceLatest.isVisible = false
-        }
+        binding.sourceLatest.isVisible = source.supportsLatest
     }
 
     override fun getFrontView(): View {
         return binding.card
     }
 
-    override fun getRearLeftView(): View {
-        return binding.leftView
+    override fun getRearStartView(): View {
+        return binding.startView
     }
 
-    override fun getRearRightView(): View {
-        return binding.rightView
+    override fun getRearEndView(): View {
+        return binding.endView
     }
 }

@@ -60,16 +60,10 @@ internal class QuadStateMultiChoiceDialogAdapter(
             else -> QuadStateCheckBox.State.CHECKED.ordinal
         }
         currentSelection = newSelection.toIntArray()
-        val selectedItems = this.items.pullIndices(this.currentSelection)
-        selection?.invoke(dialog, currentSelection, selectedItems)
-    }
-
-    internal inline fun <reified T> List<T>.pullIndices(indices: IntArray): List<T> {
-        return mutableListOf<T>().apply {
-            for (index in indices) {
-                add(this@pullIndices[index])
-            }
+        val selectedItems = this.items.filterIndexed { index, _ ->
+            currentSelection[index] != 0
         }
+        selection?.invoke(dialog, currentSelection, selectedItems)
     }
 
     override fun onCreateViewHolder(

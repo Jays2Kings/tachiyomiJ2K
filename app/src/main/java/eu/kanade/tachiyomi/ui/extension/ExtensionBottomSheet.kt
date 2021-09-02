@@ -235,15 +235,18 @@ class ExtensionBottomSheet @JvmOverloads constructor(context: Context, attrs: At
     fun updateAllExtensions(position: Int) {
         val header = (extAdapter?.getSectionHeader(position)) as? ExtensionGroupItem ?: return
         val items = extAdapter?.getSectionItemPositions(header)
-        items?.forEach {
+        val extensions = items?.mapNotNull {
             val extItem = (extAdapter?.getItem(it) as? ExtensionItem) ?: return
             val extension = (extAdapter?.getItem(it) as? ExtensionItem)?.extension ?: return
             if (extItem.installStep == null &&
                 extension is Extension.Installed && extension.hasUpdate
             ) {
-                presenter.updateExtension(extension)
+                extension
+            } else {
+                null
             }
-        }
+        }.orEmpty()
+        presenter.updateExtensions(extensions)
     }
 
     override fun onItemClick(view: View?, position: Int): Boolean {

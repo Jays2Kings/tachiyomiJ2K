@@ -46,7 +46,7 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         binding.extTitle.text = extension.name
 
         val infoText = mutableListOf(extension.versionName)
-        if (extension is Extension.Installed) {
+        if (extension is Extension.Installed && !extension.hasUpdate) {
             when (InstalledExtensionsOrder.fromValue(adapter.installedSortOrder)) {
                 InstalledExtensionsOrder.RecentlyUpdated -> {
                     binding.date.isVisible = true

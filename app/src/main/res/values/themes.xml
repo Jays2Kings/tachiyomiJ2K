@@ -32,10 +32,12 @@
         <item name="android:divider">@color/divider</item>
         <item name="android:listDivider">@drawable/line_divider</item>
         <item name="actionModeStyle">@style/CustomActionModeStyle</item>
+        <item name="colorControlHighlight">@color/secondary_highlight</item>
+        <item name="android:colorControlHighlight">@color/secondary_highlight</item>
 
         <!-- Themes -->
         <item name="windowActionModeOverlay">true</item>
-        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.DayNight.ActionBar</item>
+        <item name="actionBarTheme">@style/Theme.ActionBar.DayNight</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
 
         <!-- Custom Attributes-->

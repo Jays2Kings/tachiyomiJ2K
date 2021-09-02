@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorSurface"
         android:stateListAnimator="@null"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -187,6 +186,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation"
-        app:tabRippleColor="@color/rippleColor"
+        app:tabRippleColor="?colorControlHighlight"
         app:tabTextColor="?attr/tabBarIconColor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

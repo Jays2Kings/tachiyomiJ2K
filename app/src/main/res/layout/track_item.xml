@@ -41,6 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:progressTint="@color/md_white_1000"
+                android:indeterminateTint="@color/md_white_1000"
                 android:padding="4dp"
                 android:visibility="gone" />
 
@@ -65,7 +67,7 @@
                 android:maxLines="1"
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
-                android:paddingEnd="30dp"
+                android:paddingEnd="44dp"
                 android:paddingBottom="16dp"
                 android:text="@string/title"
                 android:textSize="14sp"
@@ -73,15 +75,15 @@
                 app:layout_constraintEnd_toEndOf="@id/status_container"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Tracking name that is really long so i can see the padding" />
+                tools:text="Tracking name that is really long so i can see the padding in work like so here" />
 
             <ImageView
                 android:id="@+id/track_remove"
                 style="@style/Theme.Widget.CustomImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
                 android:layout_marginEnd="4dp"
+                android:padding="6dp"
                 android:contentDescription="@string/open_in_webview"
                 android:src="@drawable/ic_close_circle_24dp"
                 app:tint="@color/text_color_secondary"

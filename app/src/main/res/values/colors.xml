@@ -5,8 +5,6 @@
     <color name="colorPrimaryInactive">#C2424242</color>
     <color name="primaryTachiyomi">#54759E</color>
     <color name="splashBackground">@color/primaryTachiyomi</color>
-    <color name="fullRippleColor">#C2C2C2</color>
-    <color name="rippleColor">@color/md_black_1000_12</color>
     <color name="secondaryTachiyomi">@color/md_blue_A400</color>
     <color name="secondaryVariantTachiyomi">#184798</color>
     <color name="actionModeShadow">@color/md_black_1000_38</color>

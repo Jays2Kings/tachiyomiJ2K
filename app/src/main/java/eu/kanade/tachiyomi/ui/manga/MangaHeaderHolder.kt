@@ -156,10 +156,12 @@ class MangaHeaderHolder(
         if (binding.moreButton.visibility == View.VISIBLE || isTablet) {
             binding.mangaSummary.maxLines = Integer.MAX_VALUE
             binding.mangaSummary.setTextIsSelectable(true)
+            setDescription()
             binding.mangaGenresTags.isVisible = true
             binding.lessButton.isVisible = !isTablet
             binding.moreButtonGroup.isVisible = false
             binding.title.maxLines = Integer.MAX_VALUE
+            binding.mangaAuthor.maxLines = Integer.MAX_VALUE
             binding.mangaSummary.requestFocus()
         }
     }
@@ -170,12 +172,31 @@ class MangaHeaderHolder(
         binding.mangaSummary.setTextIsSelectable(false)
         binding.mangaSummary.isClickable = true
         binding.mangaSummary.maxLines = 3
+        setDescription()
         binding.mangaGenresTags.isVisible = isTablet
         binding.lessButton.isVisible = false
         binding.moreButtonGroup.isVisible = !isTablet
         binding.title.maxLines = 4
+        binding.mangaAuthor.maxLines = 2
         adapter.recyclerView.post {
             adapter.delegate.updateScroll()
+        }
+    }
+
+    private fun setDescription() {
+        if (binding != null) {
+            val desc = adapter.controller.mangaPresenter().manga.description
+            binding.mangaSummary.text = when {
+                desc.isNullOrBlank() -> itemView.context.getString(R.string.no_description)
+                binding.mangaSummary.maxLines != Int.MAX_VALUE -> desc.replace(
+                    Regex(
+                        "[\\r\\n]{2,}",
+                        setOf(RegexOption.MULTILINE)
+                    ),
+                    "\n"
+                )
+                else -> desc.trim()
+            }
         }
     }
 
@@ -214,9 +235,7 @@ class MangaHeaderHolder(
         } else {
             binding.mangaAuthor.text = listOfNotNull(manga.author?.trim(), manga.artist?.trim()).joinToString(", ")
         }
-        binding.mangaSummary.text =
-            if (manga.description.isNullOrBlank()) itemView.context.getString(R.string.no_description)
-            else manga.description?.trim()
+        setDescription()
 
         binding.mangaSummary.post {
 //            if (binding.subItemGroup.isVisible) {

@@ -1,26 +1,15 @@
 package eu.kanade.tachiyomi.util.system
 
 import android.content.Context
-import android.content.ContextWrapper
-import android.content.res.Configuration
-import android.os.Build
-import android.os.LocaleList
 import androidx.core.os.LocaleListCompat
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.ui.source.SourcePresenter
-import uy.kohesive.injekt.injectLazy
 import java.util.Locale
 
 /**
  * Utility class to change the application's language in runtime.
  */
 object LocaleHelper {
-
-    /**
-     * Preferences helper.
-     */
-    private val preferences: PreferencesHelper by injectLazy()
 
     /**
      * Returns Display name of a string language code
@@ -54,22 +43,7 @@ object LocaleHelper {
     }
 
     /**
-     * Creates a ContextWrapper using selected Locale
-     */
-    fun createLocaleWrapper(context: Context): ContextWrapper {
-        val appLocale = getLocaleFromString(preferences.lang().get())
-        val newConfiguration = Configuration(context.resources.configuration)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            val localeList = LocaleList(appLocale)
-            newConfiguration.setLocales(localeList)
-        } else {
-            newConfiguration.setLocale(appLocale)
-        }
-        return ContextWrapper(context.createConfigurationContext(newConfiguration))
-    }
-
-    /*Return Locale from string language code
-
+     * Return Locale from string language code
      */
     private fun getLocale(lang: String): Locale {
         val sp = lang.split("_", "-")
@@ -78,17 +52,5 @@ object LocaleHelper {
             3 -> Locale(sp[0], sp[1], sp[2])
             else -> Locale(lang)
         }
-    }
-
-    /**
-     * Returns the locale for the value stored in preferences, defaults to main system language.
-     *
-     * @param pref the string value stored in preferences.
-     */
-    private fun getLocaleFromString(pref: String?): Locale {
-        if (pref.isNullOrEmpty()) {
-            return LocaleListCompat.getDefault()[0]
-        }
-        return getLocale(pref)
     }
 }

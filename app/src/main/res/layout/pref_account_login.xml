@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:hint="@string/username"
-        app:boxStrokeColor="?attr/colorSecondary"
-        app:hintTextColor="?attr/colorSecondary">
+        app:boxStrokeColor="@color/text_box_stroke_selector"
+        app:hintTextColor="?attr/colorSecondary" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:hint="@string/password"
-        app:boxStrokeColor="?attr/colorSecondary"
+        app:boxStrokeColor="@color/text_box_stroke_selector"
         app:endIconMode="password_toggle"
         app:hintTextColor="?attr/colorSecondary">
 

@@ -64,19 +64,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <SeekBar
+                <com.google.android.material.slider.Slider
                     android:id="@+id/grid_seekbar"
+                    style="@style/Theme.Widget.Slider"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginStart="12dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:max="7"
-                    android:layout_width="0dp"
+                    android:valueFrom="0"
+                    android:valueTo="7"
+                    tools:value="3"
+                    android:stepSize="1"
+                    app:tickVisible="false"
                     app:layout_constraintStart_toEndOf="@id/grid_size_text"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/reset_grid_size"
-                    app:layout_constraintWidth_max="350dp"
-                    android:layout_height="wrap_content"/>
+                    app:layout_constraintWidth_max="350dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/reset_grid_size"
@@ -111,13 +116,5 @@
                 app:iconTint="?attr/colorOnBackground"
                 android:text="@string/reorder_filters" />
         </LinearLayout>
-
-        <include
-            android:id="@+id/seek_bar_text_view"
-            android:visibility="gone"
-            android:alpha="0"
-            tools:alpha="1"
-            tools:visibility="visible"
-            layout="@layout/tooltip_text_view"/>
     </FrameLayout>
 </eu.kanade.tachiyomi.ui.library.display.LibraryDisplayView>

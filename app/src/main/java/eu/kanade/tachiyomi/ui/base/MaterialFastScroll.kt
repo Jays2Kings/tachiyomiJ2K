@@ -11,6 +11,7 @@ import eu.davidea.fastscroller.FastScroller
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.dpToPxEnd
+import eu.kanade.tachiyomi.util.system.isLTR
 import eu.kanade.tachiyomi.util.view.marginTop
 import kotlin.math.abs
 
@@ -39,7 +40,13 @@ class MaterialFastScroll @JvmOverloads constructor(context: Context, attrs: Attr
 
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                if (event.x < handle.x - ViewCompat.getPaddingStart(handle)) return false
+                if (
+                    if (context.resources.isLTR) {
+                        event.x < handle.x - ViewCompat.getPaddingStart(handle)
+                    } else {
+                        event.x > handle.width + ViewCompat.getPaddingStart(handle)
+                    }
+                ) return false
                 val y = event.y
                 startY = event.y
                 if (canScroll) {

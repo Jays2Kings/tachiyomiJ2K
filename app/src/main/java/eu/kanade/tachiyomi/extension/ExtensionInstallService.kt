@@ -12,6 +12,7 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.extension.ExtensionManager.ExtensionInfo
 import eu.kanade.tachiyomi.extension.model.Extension
+import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.util.system.notificationManager
 import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.CoroutineScope
@@ -49,6 +50,8 @@ class ExtensionInstallService(
 
     private val preferences: PreferencesHelper = Injekt.get()
 
+    private var activeInstalls = listOf<String>()
+
     /**
      * This method needs to be implemented, but it's not used/needed.
      */
@@ -85,6 +88,11 @@ class ExtensionInstallService(
                 ) < it.versionCode
         }
             ?: return START_NOT_STICKY
+
+        activeInstalls = list.map { it.pkgName }
+        serviceScope.launch {
+            list.forEach { extensionManager.setPending(it.pkgName) }
+        }
         var installed = 0
         val installedExtensions = mutableListOf<ExtensionInfo>()
         job = serviceScope.launch {
@@ -143,6 +151,8 @@ class ExtensionInstallService(
     override fun onDestroy() {
         job?.cancel()
         serviceScope.cancel()
+        activeInstalls.forEach { extensionManager.cleanUpInstallation(it) }
+        extensionManager.downloadRelay.tryEmit("Finished" to (InstallStep.Installed to null))
         if (instance == this) {
             instance = null
         }
@@ -165,6 +175,15 @@ class ExtensionInstallService(
             instance?.serviceScope?.cancel()
             context.stopService(Intent(context, ExtensionUpdateJob::class.java))
         }
+
+        fun activeInstalls(): List<String>? = instance?.activeInstalls
+
+        /**
+         * Returns the status of the service.
+         *
+         * @return true if the service is running, false otherwise.
+         */
+        fun isRunning() = instance != null
 
         /**
          * Key that defines what should be updated.

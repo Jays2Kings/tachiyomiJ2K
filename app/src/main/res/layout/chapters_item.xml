@@ -8,7 +8,7 @@
     android:background="?attr/background">
 
     <FrameLayout
-        android:id="@+id/right_view"
+        android:id="@+id/end_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
@@ -30,7 +30,7 @@
 
 
     <FrameLayout
-        android:id="@+id/left_view"
+        android:id="@+id/start_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
@@ -46,7 +46,7 @@
             android:layout_height="24dp"
             android:layout_gravity="start|center"
             android:layout_marginStart="21dp"
-            app:tint="@color/md_white_1000"
+            app:tint="?colorOnAccent"
             android:src="@drawable/ic_bookmark_24dp" />
     </FrameLayout>
 
