@@ -23,6 +23,7 @@
         <item name="colorSecondaryVariant">@color/secondaryVariantTachiyomi</item> //colorAccentText
         <item name="background">@color/background</item>
         <item name="colorOnBackground">@color/md_black_1000_87</item>
+        <item name="colorBackgroundFloating">?colorSurface</item>
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
@@ -35,6 +36,8 @@
         <item name="colorControlHighlight">@color/secondary_highlight</item>
         <item name="android:colorBackground">?background</item>
         <item name="android:colorControlHighlight">@color/secondary_highlight</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
 
         <!-- Themes -->
         <item name="windowActionModeOverlay">true</item>
@@ -65,22 +68,28 @@
     <style name="Theme.Tachiyomi" parent="Theme.Base"/>
     <style name="Theme.Tachiyomi.AllBlue">
         <item name="colorPrimaryVariant">@color/primaryTachiyomi</item>
-        <item name="colorSecondary">@color/primaryTachiyomi</item>
         <item name="tabBarIconColor">@color/md_white_1000</item>
+		<item name="colorSurface">@color/primaryTachiyomi</item>
+        <item name="colorBackgroundFloating">?android:colorBackground</item>
         <item name="tabBarIconInactive">@color/md_white_1000_50</item>
         <item name="tabHighlightBackground">@color/md_white_1000_50</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>
+        <item name="popupMenuBackground">@drawable/alt_popupmenu_background</item>
         <item name="actionBarTheme">@style/Theme.ActionBar.Dark.DayNight</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:statusBarColor">@color/surface_status_bar</item>
     </style>
 
     <style name="ThemeOverlay.Tachiyomi.AllBlue" parent="">
         <item name="colorPrimaryVariant">@color/primaryTachiyomi</item>
-        <item name="colorSecondary">@color/primaryTachiyomi</item>
+        <item name="colorSurface">@color/primaryTachiyomi</item>
+        <item name="colorBackgroundFloating">?android:colorBackground</item>
+        <item name="android:colorBackgroundFloating">?android:colorBackground</item>
         <item name="actionBarTintColor">@color/md_white_1000</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:statusBarColor">@color/surface_status_bar</item>
     </style>
 
     <style name="ThemeOverlay.Tachiyomi.Amoled" parent="">

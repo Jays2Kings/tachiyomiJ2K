@@ -398,13 +398,6 @@ class MangaDetailsController :
         val activityBinding = activityBinding ?: return
         // if the theme is using inverted toolbar color
         if (ThemeUtil.hasDarkActionBarInLight(activity, activity.getPrefTheme(presenter.preferences))) {
-            if (forThis) activityBinding.appBar.context.setTheme(
-                R.style.ThemeOverlay_AppCompat_DayNight_ActionBar
-            )
-            else activityBinding.appBar.context.setTheme(
-                R.style.Theme_ActionBar_Dark_DayNight
-            )
-
             val iconPrimary = view?.context?.getResourceColor(
                 if (forThis) R.attr.colorOnBackground
                 else R.attr.actionBarTintColor
@@ -474,19 +467,19 @@ class MangaDetailsController :
             colorAnimator?.cancel()
 
             getHeader()?.clearDescFocus()
-            val colorSecondary = activity?.getResourceColor(
-                R.attr.colorSecondary
+            val colorSurface = activity?.getResourceColor(
+                R.attr.colorSurface
             ) ?: Color.BLACK
             if (router.backstackSize > 0 &&
                 router.backstack.last().controller !is MangaDetailsController
             ) {
                 if (router.backstack.last().controller !is FloatingSearchInterface) {
-                    activityBinding?.appBar?.setBackgroundColor(colorSecondary)
+                    activityBinding?.appBar?.setBackgroundColor(colorSurface)
                 }
-                activityBinding?.toolbar?.setBackgroundColor(colorSecondary)
+                activityBinding?.toolbar?.setBackgroundColor(colorSurface)
                 activity?.window?.statusBarColor = activity?.getResourceColor(
                     android.R.attr.statusBarColor
-                ) ?: colorSecondary
+                ) ?: colorSurface
             }
         }
     }

@@ -178,6 +178,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimaryVariant"
+        app:itemBackground="?colorPrimaryVariant"
         app:itemIconTint="@color/bottom_nav_item_selector"
         app:itemRippleColor="@color/ripple_nav"
         app:itemTextColor="@color/bottom_nav_item_selector"
