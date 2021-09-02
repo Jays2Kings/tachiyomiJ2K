@@ -144,7 +144,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@drawable/oval"
-        android:backgroundTint="?colorOnAccent"
+        android:backgroundTint="?colorOnSecondary"
         android:contentDescription="@string/selection"
         android:src="@drawable/ic_check_circle_24dp"
         app:tint="?attr/colorSecondary"

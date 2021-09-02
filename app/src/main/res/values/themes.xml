@@ -33,6 +33,7 @@
         <item name="android:listDivider">@drawable/line_divider</item>
         <item name="actionModeStyle">@style/CustomActionModeStyle</item>
         <item name="colorControlHighlight">@color/secondary_highlight</item>
+        <item name="android:colorBackground">?background</item>
         <item name="android:colorControlHighlight">@color/secondary_highlight</item>
 
         <!-- Themes -->

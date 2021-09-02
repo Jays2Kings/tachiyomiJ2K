@@ -306,7 +306,7 @@ fun Controller.scrollViewWith(
                         val params = fakeToolbarView?.layoutParams
                         params?.height = recycler.paddingTop
                         params?.width = MATCH_PARENT
-                        v.setBackgroundColor(v.context.getResourceColor(R.attr.colorSecondary))
+                        v.setBackgroundColor(v.context.getResourceColor(R.attr.colorSurface))
                         v.layoutParams = params
                         onLeavingController?.invoke()
                     }
