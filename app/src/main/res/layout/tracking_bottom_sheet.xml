@@ -169,7 +169,7 @@
             android:hint="@string/title"
             app:endIconMode="clear_text"
             app:hintEnabled="false"
-            app:hintTextColor="?colorAccent">
+            app:hintTextColor="?colorSecondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/track_search"
