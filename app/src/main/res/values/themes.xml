@@ -24,6 +24,7 @@
         <item name="background">@color/background</item>
         <item name="colorOnBackground">@color/md_black_1000_87</item>
         <item name="colorBackgroundFloating">?colorSurface</item>
+        <item name="elevationOverlayEnabled">false</item>
 
         <item name="colorDownloadBadge">@color/download_badge</item>
         <item name="colorOnDownloadBadge">@color/black</item>
