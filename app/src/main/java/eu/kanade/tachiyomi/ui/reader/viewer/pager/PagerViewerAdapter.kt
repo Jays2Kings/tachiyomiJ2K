@@ -7,6 +7,7 @@ import eu.kanade.tachiyomi.ui.reader.model.InsertPage
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
+import eu.kanade.tachiyomi.ui.reader.viewer.hasMissingChapters
 import eu.kanade.tachiyomi.widget.ViewPagerAdapter
 import timber.log.Timber
 import kotlin.math.max
@@ -46,6 +47,10 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     fun setChapters(chapters: ViewerChapters, forceTransition: Boolean) {
         val newItems = mutableListOf<Any>()
 
+        // Force chapter transition page if there are missing chapters
+        val prevHasMissingChapters = hasMissingChapters(chapters.currChapter, chapters.prevChapter)
+        val nextHasMissingChapters = hasMissingChapters(chapters.nextChapter, chapters.currChapter)
+
         this.forceTransition = forceTransition
         // Add previous chapter pages and transition.
         if (chapters.prevChapter != null) {
@@ -65,7 +70,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
         }
 
         // Skip transition page if the chapter is loaded & current page is not a transition page
-        if (forceTransition || chapters.prevChapter?.state !is ReaderChapter.State.Loaded) {
+        if (prevHasMissingChapters || forceTransition || chapters.prevChapter?.state !is ReaderChapter.State.Loaded) {
             newItems.add(ChapterTransition.Prev(chapters.currChapter, chapters.prevChapter))
         }
 
@@ -80,7 +85,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
         // Add next chapter transition and pages.
         nextTransition = ChapterTransition.Next(chapters.currChapter, chapters.nextChapter)
             .also {
-                if (forceTransition ||
+                if (nextHasMissingChapters || forceTransition ||
                     chapters.nextChapter?.state !is ReaderChapter.State.Loaded
                 ) {
                     newItems.add(it)
