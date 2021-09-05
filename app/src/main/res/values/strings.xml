@@ -479,11 +479,16 @@
         <item quantity="one">%1$d page</item>
         <item quantity="other">%1$d pages</item>
     </plurals>
-    <plurals name="missing_chapter_warning">
+    <plurals name="missing_chapters_warning">
         <item quantity="one">There is 1 missing chapter</item>
         <item quantity="other">There are %d missing chapters</item>
     </plurals>
-
+    <string name="transition_finished">Finished:</string>
+    <string name="transition_current">Current:</string>
+    <string name="transition_next">Next:</string>
+    <string name="transition_previous">Previous:</string>
+    <string name="transition_no_next">There\'s no next chapter</string>
+    <string name="transition_no_previous">There\'s no previous chapter</string>
 
     <!-- Manga details -->
     <string name="about_this_">About this %1$s</string>
