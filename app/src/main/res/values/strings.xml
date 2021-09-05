@@ -479,6 +479,10 @@
         <item quantity="one">%1$d page</item>
         <item quantity="other">%1$d pages</item>
     </plurals>
+    <plurals name="missing_chapter_warning">
+        <item quantity="one">There is 1 missing chapter</item>
+        <item quantity="other">There are %d missing chapters</item>
+    </plurals>
 
 
     <!-- Manga details -->
