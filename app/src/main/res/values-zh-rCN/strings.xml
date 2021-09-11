@@ -273,12 +273,11 @@
     <string name="common">普通</string>
     <string name="dark_blue">暗蓝色主题</string>
     <string name="open_in_webview">用外部浏览器打开</string>
-    <string name="true_32bit_color">32位色彩</string>
+    <string name="true_32bit_color">32 位色彩</string>
     <string name="skip_read_chapters">跳过已读章节</string>
     <string name="color_filter_blend_mode">滤镜调和模式</string>
     <string name="help">帮助</string>
     <string name="library_update_order">书架更新顺序</string>
-    <string name="select_order_to_update">选择 Tachiyomi 检查书架更新的顺序</string>
     <string name="overlay">悬浮窗</string>
     <string name="multiply">正片叠底</string>
     <string name="screen">屏幕</string>
@@ -360,7 +359,7 @@
     <string name="search_manually">手动搜索</string>
     <string name="migration">迁移</string>
     <string name="select_sources">选择图源</string>
-    <string name="cover_saved">已保存封面</string>
+    <string name="cover_saved">封面已保存</string>
     <string name="reset_cover">重置封面</string>
     <string name="reset_tags">重置标签</string>
     <string name="clear_tags">清除标签</string>
@@ -590,7 +589,7 @@
     <string name="webtoon_style">卷纸样式</string>
     <string name="reading_">正在阅读 %1$s</string>
     <string name="set_as_default_for_all">设置为全局默认</string>
-    <string name="extension_updates">拓展更新</string>
+    <string name="extension_updates">扩展更新</string>
     <string name="last_used">上次使用</string>
     <string name="source_hidden">隐藏图源</string>
     <string name="all_sources">所有图源</string>
@@ -847,7 +846,7 @@
     <string name="all_files_permission_required">需要文件权限</string>
     <string name="orientation">方向</string>
     <string name="default_orientation">默认方向</string>
-    <string name="restore_miui_warning">要让还原正确工作必须启用MIUI优化。</string>
+    <string name="restore_miui_warning">如果 MIUI 优化被禁用，备份/恢复可能无法正常工作。</string>
     <string name="yang">阳</string>
     <string name="yin">阴</string>
     <string name="set_as_default">设为默认</string>
@@ -857,8 +856,8 @@
     <string name="by_source_order">按图源顺序</string>
     <string name="not_bookmarked">未加为书签</string>
     <string name="start_past_cutout">首次打开时忽略刘海屏</string>
-    <string name="a_calmer_you">更平静的你</string>
-    <string name="a_brighter_you">更聪明的你</string>
+    <string name="a_calmer_you">更平静的你 (动态)</string>
+    <string name="a_brighter_you">更明亮的你 (动态)</string>
     <string name="warning">警告</string>
     <string name="dont_auto_update">不自动更新</string>
     <string name="over_any_network">任何网络连接</string>
@@ -871,6 +870,38 @@
     <string name="update_all">更新全部</string>
     <string name="update_completed">已完成更新</string>
     <string name="could_not_install_update">无法安装更新</string>
-    <string name="about_dont_kill_my_app">一些制造商有额外的应用限制，会扼杀后台服务。这个网站有更多关于如何修复它的信息。</string>
+    <string name="about_dont_kill_my_app">某些厂商有额外的应用限制，会扼杀后台服务。这个网站有更多关于如何修复此问题的信息。</string>
     <string name="tako">Tako</string>
+    <string name="split_double_pages_portrait">竖排拆分双页</string>
+    <string name="recently_installed">最近安装</string>
+    <string name="recently_updated">最近更新</string>
+    <string name="name">名称</string>
+    <string name="some_extensions_may_not_update">一些扩展可能不会自动更新，如果它们是通过外部途径安装的</string>
+    <string name="notify_extension_updated">通知扩展已更新</string>
+    <string name="auto_update_extensions">自动更新扩展</string>
+    <string name="split_double_pages">拆分双页</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="other">更新了 %d 个扩展</item>
+    </plurals>
+    <string name="extensions_updated">扩展已更新</string>
+    <string name="installed_">已安装 %1$s</string>
+    <string name="extension_updates_pending">待更新扩展</string>
+    <string name="affects_library_grid">影响书架网格封面</string>
+    <string name="restrictions_">限制：%1$s</string>
+    <string name="keep_both_on_service">保留 %1$s 上的两个，仅本地替换</string>
+    <string name="remove_x_from_service_and_add_y">从 %2$s 删除 %1$s 并添加 %3$s</string>
+    <string name="remove_previous_tracker">删除先前追踪器？</string>
+    <string name="select_an_entry">选择一个条目</string>
+    <string name="getting_started_guide">入门指南</string>
+    <string name="no_matches_for_filters_short">没有匹配过滤的结果</string>
+    <string name="show_categories_while_filtering">过滤时显示空类别</string>
+    <string name="sapphire_dusk">蓝宝石黄昏</string>
+    <string name="teal_ocean">青色海洋</string>
+    <string name="appearance">外观</string>
+    <string name="by_default_side_nav_info">侧导航默认仅用于某些手机和小型平板电脑上的横屏模式；在较大平板电脑上不论横屏或竖屏总是显示</string>
+    <string name="default_behavior">默认行为</string>
+    <string name="use_side_navigation">使用侧导航</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="other">缺少 %d 个章节</item>
+    </plurals>
 </resources>

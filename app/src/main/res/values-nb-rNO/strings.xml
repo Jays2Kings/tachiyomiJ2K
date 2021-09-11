@@ -283,7 +283,6 @@
     <string name="dodge_lighten">Unngå / lysne</string>
     <string name="burn_darken">Brenn / mørkere</string>
     <string name="library_update_order">Rekkefølge for biblioteksoppdatering</string>
-    <string name="select_order_to_update">Velg rekkefølgen Tachiyomi ser etter oppdateringer</string>
     <string name="no_results_found">Resultatløst</string>
     <string name="lock_with_biometrics">Lås med biometri</string>
     <string name="lock_when_idle">Lås ved lediggang</string>

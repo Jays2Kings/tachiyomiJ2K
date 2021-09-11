@@ -115,8 +115,8 @@
     <string name="remove_after_read">Supprimer après avoir lu</string>
     <string name="last_read_chapter">Dernier chapitre lu</string>
     <string name="second_to_last">Avant-dernier chapitre lu</string>
-    <string name="third_to_last">Du troisième au dernier chapitre</string>
-    <string name="fourth_to_last">Du quatrième au dernier chapitre</string>
+    <string name="third_to_last">Troisième chapitre avant la fin</string>
+    <string name="fourth_to_last">Quatrième chapitre avant la fin</string>
     <string name="download_new_chapters">Télécharger les nouveaux chapitres</string>
     <!-- Sync section -->
     <string name="services">Services</string>
@@ -219,7 +219,7 @@
     <string name="clear_database_confirmation">Êtes-vous sûr(e) \? Les chapitres lus et la progression des mangas non présents dans la bibliothèque seront perdus</string>
     <string name="custom_location">Répertoire personnalisé</string>
     <string name="could_not_download_unexpected_error">Une erreur inattendue s\'est produite lors du téléchargement du chapitre</string>
-    <string name="fifth_to_last">Du cinquième au dernier chapitre</string>
+    <string name="fifth_to_last">Cinquième chapitre avant la fin</string>
     <string name="successfully_logged_in">Connexion réussie</string>
     <string name="clear_chapter_cache">Effacer le cache des chapitres</string>
     <string name="remove_when_marked_as_read">Supprimer quand marqué comme lu</string>
@@ -320,7 +320,7 @@
     <string name="forward">Suivant</string>
     <string name="no_results_found">Aucun résultat trouvé</string>
     <string name="lock_with_biometrics">Verrouillage biométrique</string>
-    <string name="lock_when_idle">Verrouiller quand inactif</string>
+    <string name="lock_when_idle">Verrouiller en cas d\'inactivité</string>
     <string name="refresh_tracking">Actualiser les métadonnées de suivi</string>
     <string name="add_tracking">Ajouter le suivi</string>
     <string name="copy_value">Copier</string>
@@ -411,7 +411,6 @@
     <string name="include_in_global_update">Inclure dans la mise à jour globale</string>
     <string name="when_sorting_ignore_articles">Lors du tri par ordre alphabétique, ne pas tenir compte des déterminants (un, une, le) au début des titres de manga</string>
     <string name="sort_by_ignoring_articles">Trier en ignorant les déterminants</string>
-    <string name="select_order_to_update">Sélectionnez l\'ordre dans lequel Tachiyomi vérifie la mise à jour</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">et %1$d autre chapitre</item>
         <item quantity="other">et %1$d autres chapitres</item>
@@ -906,7 +905,7 @@
     <string name="not_bookmarked">Non mis en favoris</string>
     <string name="orientation">Orientation</string>
     <string name="default_orientation">Orientation par défaut</string>
-    <string name="restore_miui_warning">L\'optimisation MIUI doit être activée pour que la restauration fonctionne correctement.</string>
+    <string name="restore_miui_warning">La sauvegarde/restauration peut ne pas fonctionner correctement si l\'optimisation MIUI est désactivée.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="extensions_miui_warning">L\'optimisation MIUI doit être désactivée pour installer des extensions.</string>
@@ -923,9 +922,43 @@
     <string name="update_all">Tout mettre à jour</string>
     <string name="update_completed">Mise à jour terminée</string>
     <string name="could_not_install_update">Impossible d\'installer la mise à jour</string>
-    <string name="a_calmer_you">Un « You » plus calme</string>
+    <string name="a_calmer_you">Un « You » plus calme (Dynamic)</string>
     <string name="about_dont_kill_my_app">Certains fabricants ont mis en place des restrictions supplémentaires sur les applications qui tuent les services d\'arrière-plan. Ce site Web contient plus d\'informations sur la manière de résoudre ce problème.</string>
     <string name="tako">Tako</string>
-    <string name="a_brighter_you">Un « You » plus lumineux</string>
+    <string name="a_brighter_you">Un « You » plus lumineux (Dynamic)</string>
     <string name="some_extensions_may_prompt">Certaines extensions peuvent encore demander à être installées au préalable.</string>
+    <string name="notify_extension_updated">Notifier que l\'extension a été mise à jour</string>
+    <string name="recently_installed">Récemment installé</string>
+    <string name="recently_updated">Récemment mis à jour</string>
+    <string name="some_extensions_may_not_update">Certaines extensions peuvent ne pas être mises à jour automatiquement si elles ont été installées en dehors de cette application</string>
+    <string name="auto_update_extensions">Mettre à jour les extensions automatiquement</string>
+    <string name="split_double_pages">Double page divisée</string>
+    <string name="split_double_pages_portrait">Double page fractionnée en portrait</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Extension mise à jour</item>
+        <item quantity="other">%d extensions mises à jour</item>
+    </plurals>
+    <string name="extensions_updated">Extensions mises à jour</string>
+    <string name="installed_">Installés %1$s</string>
+    <string name="extension_updates_pending">Mises à jour de l\'extension en attente</string>
+    <string name="affects_library_grid">Affecte les couvertures de la grille de la bibliothèque</string>
+    <string name="restrictions_">Restrictions : %1$s</string>
+    <string name="name">Nom</string>
+    <string name="keep_both_on_service">Garder les deux sur %1$s et les remplacer seulement localement</string>
+    <string name="remove_x_from_service_and_add_y">Retirer %1$s de %2$s et ajouter %3$s</string>
+    <string name="remove_previous_tracker">Supprimer le traceur précédent \?</string>
+    <string name="select_an_entry">Sélectionnez une entrée</string>
+    <string name="sapphire_dusk">Crépuscule saphir</string>
+    <string name="teal_ocean">Sarcelle océan</string>
+    <string name="appearance">Apparence</string>
+    <string name="no_matches_for_filters_short">Aucune correspondance pour vos filtres</string>
+    <string name="show_categories_while_filtering">Afficher les catégories vides lors du filtrage</string>
+    <string name="getting_started_guide">Guide de démarrage</string>
+    <string name="by_default_side_nav_info">Par défaut, la navigation latérale est utilisée pour certains téléphones et petites tablettes en mode paysage, et elle s\'affiche toujours sur les tablettes plus grandes</string>
+    <string name="default_behavior">Comportement par défaut</string>
+    <string name="use_side_navigation">Utiliser la navigation latérale</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Il manque 1 chapitre</item>
+        <item quantity="other">Il manque %d chapitres</item>
+    </plurals>
 </resources>

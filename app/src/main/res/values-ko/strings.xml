@@ -92,11 +92,11 @@
     <string name="untrusted">신뢰되지않음</string>
     <string name="uninstall">삭제</string>
     <string name="untrusted_extension">신뢰할 수 없는 확장기능</string>
-    <string name="untrusted_extension_message">이 확장기능은 신뢰할 수 없는 인증서로 서명되있으며 활성화 되지 않았습니다.
+    <string name="untrusted_extension_message">이 확장기능은 신뢰할 수 없는 인증서로 서명되었으며 활성화되지도 않았습니다.
 \n
-\n악의적인 확장기능은 Tachiyomi 내부에 저장된 로그인 정보들을 읽거나 임의를 코드를 실행할 수 있습니다.
+\n일부 악의적인 확장기능은 Tachiyomi에 저장된 로그인 정보를 읽거나 임의의 코드를 실행할 수도 있습니다.
 \n
-\n이 인증서를 신뢰함으로써 이런 위험들을 감수합니다.</string>
+\n이 인증서를 신뢰하면 이러한 위험을 수락하게 됩니다. 이 인증서를 신뢰 하시겠습니까\?</string>
     <string name="version_">버전: %1$s</string>
     <string name="language_">언어: %1$s</string>
     <string name="fullscreen">전체화면</string>
@@ -294,4 +294,19 @@
     <string name="next_chapter">다음 챕터</string>
     <string name="previous_chapter">이전 챕터</string>
     <string name="label_global_search">전역 검색</string>
+    <string name="error_sharing_cover">표지 이미지 공유 오류</string>
+    <string name="error_saving_cover">표지 이미지 저장 오류</string>
+    <string name="cover_saved">표지 이미지 저장</string>
+    <string name="requires_app_restart">설정을 적용하기 위해 앱을 재시작해야 합니다</string>
+    <string name="restoring_backup_canceled">복원 취소</string>
+    <string name="restore_duration">%02d 분,%02d초</string>
+    <string name="invalid_backup_file_type">부적합한 백업 파일 타입: %1$s
+\n백업파일은 .photo .gz 또는 .json으로 끝나야 합니다.</string>
+    <string name="invalid_backup_file">부적합한 백업 파일</string>
+    <string name="disabled">비활성화 됨</string>
+    <string name="right_and_left_nav">오른쪽, 왼쪽</string>
+    <string name="restore_miui_warning">MIUI 최적화가 꺼져 있을 경우 백업/복원 기능은 정상 작동하지 않을 수 있습니다.</string>
+    <string name="landscape">가로</string>
+    <string name="portrait">세로</string>
+    <string name="name">이름</string>
 </resources>

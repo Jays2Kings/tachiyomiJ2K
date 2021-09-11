@@ -408,7 +408,6 @@
     <string name="auto_refresh_covers_summary">Obnovit přebaly v knihovně i při aktualizaci knihovny</string>
     <string name="auto_refresh_covers">Automaticky obnovovat přebaly</string>
     <string name="when_sorting_ignore_articles">Při řazení dle abecedy, zahrnovat i ignorované členy (a, an, the) na začátku názvů mang</string>
-    <string name="select_order_to_update">Vyberte pořadí, ve kterém bude Tachiyomi kontrolovat aktualizace</string>
     <plurals name="notification_update_failed">
         <item quantity="one">1 aktualizace selhala</item>
         <item quantity="few">%1$d aktualizace selhaly</item>
@@ -621,4 +620,76 @@
     <string name="added_">Přidáno %1$s</string>
     <string name="updated_">Aktualizováno %1$s</string>
     <string name="read_">Číst %1$s</string>
+    <string name="by_update_date">Podle data nahrání</string>
+    <string name="by_chapter_number">Podle čísla kapitoly</string>
+    <string name="by_source_order">Podle pořadí zdroje</string>
+    <string name="not_bookmarked">Nezaloženo</string>
+    <string name="all_files_permission_required">Je vyžadováno oprávnění k souborům</string>
+    <plurals name="deleted_chapters">
+        <item quantity="one">Jedna kapitola byla z tohoto zdroje odstraněna:
+\n%2$s
+\nChcete ji smazat\?</item>
+        <item quantity="few">%1$s kapitoly byly z tohoto zdroje odstraněny:
+\n%2$s
+\nChcete je smazat\?</item>
+        <item quantity="other">%1$s kapitol bylo z tohoto zdroje odstraněno:
+\n%2$s
+\nChcete je smazat\?</item>
+    </plurals>
+    <string name="set_as_default">Nastavit jako výchozí</string>
+    <string name="custom_manga_info">Vlastní info o manze</string>
+    <string name="source_not_installed">Zdroj není nainstalován</string>
+    <string name="remember_this_choice">Zapamatovat si tuto volbu</string>
+    <string name="reset_cover">Obnovit přebal</string>
+    <string name="add_tag">Přidat značku</string>
+    <string name="oldest_first">Od nejstaršího po nejnovější</string>
+    <string name="newest_first">Od nejnovějšího po nejstarší</string>
+    <string name="sort_by_chapter_number">Seřadit podle čísla kapitoly</string>
+    <string name="sort_by_source_s_order">Seřadit podle pořadí zdroje</string>
+    <string name="hide_chapter_titles">Skrýt názvy kapitol</string>
+    <string name="show_read_chapters">Zobrazit přečtené kapitoly</string>
+    <string name="show_unread_chapters">Zobrazit nepřečtené kapitoly</string>
+    <string name="show_downloaded_chapters">Zobrazit stažené kapitoly</string>
+    <string name="show_bookmarked_chapters">Zobrazit založené kapitoly</string>
+    <string name="show_all">Zobrazit Vše</string>
+    <string name="add_x_to_library">Přidat %1$s do knihovny\?</string>
+    <string name="all_but_bookmarked_chapters">Všechny kromě založených</string>
+    <string name="all_read_chapters">Všechny přečtené kapitoly</string>
+    <string name="next_unread_chapter">Další nepřečtená kapitola</string>
+    <string name="select_ending_chapter">Vybrat závěrečnou kapitolu</string>
+    <string name="select_starting_chapter">Vybrat počáteční kapitolu</string>
+    <string name="mark_all_chapters_as_unread">Označit všechny kapitoly jako nepřečtené\?</string>
+    <string name="mark_all_chapters_as_read">Označit všechny kapitoly jako přečtené\?</string>
+    <string name="no_description">Bez popisu</string>
+    <string name="add_to_library">Přidat do knihovny</string>
+    <string name="volume_">Svazek %1$d</string>
+    <string name="start_reading_chapter_">Začít číst Kapitolu %1$s</string>
+    <string name="start_reading">Začít číst</string>
+    <plurals name="pages_plural">
+        <item quantity="one">%1$d stránka</item>
+        <item quantity="few">%1$d stránky</item>
+        <item quantity="other">%1$d stránek</item>
+    </plurals>
+    <string name="create_folders_by_manga_title">Vytvoří složky podle názvu mangy</string>
+    <string name="show_on_long_press">Zobrazit při dlouhém stisknutí</string>
+    <string name="actions">Akce</string>
+    <plurals name="_updates_pending">
+        <item quantity="one">%d aktualizace čeká</item>
+        <item quantity="few">%d aktualizace čekají</item>
+        <item quantity="other">%d aktualizací čeká</item>
+    </plurals>
+    <string name="updating_extensions">Aktualizuji rozšíření</string>
+    <string name="some_extensions_may_prompt">Některá rozšíření můžou nejdřív žádat o instalaci.</string>
+    <string name="update_all">Aktualizovat vše</string>
+    <string name="could_not_install_extension">Nepodařilo se nainstalovat rozšíření</string>
+    <string name="extensions_miui_warning">MIUI optimalizace musí být zakázána, aby bylo možné instalovat rozšíření.</string>
+    <string name="global_updates">Globální aktualizace</string>
+    <string name="checking_for_new_chapters">Hledám nové kapitoly</string>
+    <string name="open_random_series">Otevřít náhodnou sérii</string>
+    <string name="when_grouping_by_sources_tags">Při seskupování knihoven podle zdrojů, stavu apod.</string>
+    <string name="show_number_of_items">Zobrazit počet položek</string>
+    <string name="move_dynamic_to_bottom">Přesunout sbalené dynamické kategorie dolů</string>
+    <string name="update_completed">Aktualizace dokončena</string>
+    <string name="could_not_install_update">Nepodařilo se nainstalovat aktualizaci</string>
+    <string name="getting_started_guide">Příručka Začínáme</string>
 </resources>

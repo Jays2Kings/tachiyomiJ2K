@@ -280,7 +280,6 @@
     <string name="screen">Οθόνη</string>
     <string name="help">Βοήθεια</string>
     <string name="library_update_order">Συχνότητα ανανέωσης της Βιβλιοθήκης</string>
-    <string name="select_order_to_update">Διαλέξτε την σύχνοτητα που το Tachiyomi ελένχει για διαθέσιμη ενημέρωση</string>
     <string name="lock_with_biometrics">Κλείδωμα με βιομετρικά στοιχεία</string>
     <string name="lock_when_idle">Κλείδωμα όταν είναι αδρανής</string>
     <string name="update">Ενημέρωση</string>
@@ -687,7 +686,7 @@
     <string name="remember_this_choice">Να θυμάσαι την επιλογή</string>
     <string name="reset_cover">Επαναφορά εξωφύλλου</string>
     <string name="reset_tags">Επαναφορά ετικετών</string>
-    <string name="clear_tags">Εκκαθάριση ετικετών</string>
+    <string name="clear_tags">Διαγραφή ετικετών</string>
     <string name="oldest_first">Παλαιότερο προς νεότερο</string>
     <string name="newest_first">Νεότερο προς παλαιότερο</string>
     <string name="sort_by_chapter_number">Ταξινόμηση κατά αριθμό κεφαλαίου</string>
@@ -841,7 +840,7 @@
     <string name="exclude_">Εξαίρεση: %s</string>
     <string name="force_download_cache_refresh_summary">Αυτό θα αναγκάσει την προσωρινή μνήμη λήψης να υπολογιστεί ξανά. Χρήσιμο εάν τροποποιήσατε τις λήψεις εκτός αυτής της εφαρμογής και θέλετε να τις παραλάβει η εφαρμογή</string>
     <string name="force_download_cache_refresh">Ανανέωση της προσωρινής μνήμης λήψης</string>
-    <string name="restore_miui_warning">Η Βελτιστοποίηση MIUI πρέπει να είναι ενεργοποιημένη για να λειτουργήσει σωστά η επαναφορά.</string>
+    <string name="restore_miui_warning">Η δημιουργία αντιγράφων ασφαλείας/επαναφορά ενδέχεται να μη λειτουργεί σωστά εάν είναι απενεργοποιημένη η Βελτιστοποίηση MIUI.</string>
     <string name="no_new_chapters_open_details">Όταν δεν υπάρχουν νέα κεφάλαια, θα ανοίγουν οι λεπτομέρειες της σειράς</string>
     <string name="series_opens_new_chapters">Οι συντομεύσεις σειράς ανοίγουν νέα κεφάλαια</string>
     <string name="includes_recently_read_updated_added">Περιλαμβάνει πρόσφατα διαβασμένες, ενημερωμένες και προστιθέμενες σειρές</string>
@@ -878,4 +877,54 @@
 \n
 \nΣτην επόμενη οθόνη, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
     <string name="all_files_permission_required">Απαιτούνται δικαιώματα αρχείου</string>
+    <string name="tako">Tako</string>
+    <string name="a_calmer_you">A Calmer You (Δυναμικό)</string>
+    <string name="warning">Προειδοποίηση</string>
+    <string name="dont_auto_update">Να μην ενημερώνετε αυτόματα</string>
+    <string name="over_any_network">Μέσω οποιουδήποτε δικτύου</string>
+    <string name="over_wifi_only">Μόνο μέσω Wi-Fi</string>
+    <string name="auto_update_app">Αυτόματη ενημέρωση εφαρμογής</string>
+    <string name="auto_updates">Αυτόματες ενημερώσεις</string>
+    <string name="a_brighter_you">A Brighter You (Δυναμικό)</string>
+    <string name="add_tag">Προσθήκη ετικέτας</string>
+    <string name="updating_extensions">Ενημέρωση επεκτάσεων</string>
+    <string name="some_extensions_may_prompt">Ορισμένες επεκτάσεις ενδέχεται να εξακολουθούν να ζητούν την εγκατάστασή τους πρώτα.</string>
+    <string name="update_all">Ενημέρωση όλων</string>
+    <string name="update_completed">Η ενημέρωση ολοκληρώθηκε</string>
+    <string name="could_not_install_update">Δεν ήταν δυνατή η εγκατάσταση της ενημέρωσης</string>
+    <string name="about_dont_kill_my_app">Ορισμένοι κατασκευαστές έχουν πρόσθετους περιορισμούς εφαρμογών που εξουδετερώνουν τις υπηρεσίες παρασκηνίου. Αυτός ο ιστότοπος έχει περισσότερες πληροφορίες για το πώς να το διορθώσετε.</string>
+    <string name="notify_extension_updated">Ειδοποίησή ενημέρωσής επέκτασης</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Η επέκταση ενημερώθηκε</item>
+        <item quantity="other">%d επεκτάσεις ενημερώθηκαν</item>
+    </plurals>
+    <string name="installed_">Εγκαταστάθηκε %1$s</string>
+    <string name="extension_updates_pending">Εκκρεμούν ενημερώσεις επέκτασης</string>
+    <string name="recently_installed">Πρόσφατα εγκατεστημένο</string>
+    <string name="recently_updated">Πρόσφατα ενημερωμένο</string>
+    <string name="some_extensions_may_not_update">Ορισμένες επεκτάσεις ενδέχεται να μην ενημερώνονται αυτόματα εάν έχουν εγκατασταθεί εκτός αυτής της εφαρμογής</string>
+    <string name="auto_update_extensions">Αυτόματη ενημέρωση επεκτάσεων</string>
+    <string name="split_double_pages">Διαίρεση διπλών σελίδων</string>
+    <string name="split_double_pages_portrait">Διαίρεση διπλών σελίδων σε πορτραίτο</string>
+    <string name="extensions_updated">Οι επεκτάσεις ενημερώθηκαν</string>
+    <string name="affects_library_grid">Επηρεάζει τα εξώφυλλα του πλέγματος βιβλιοθήκης</string>
+    <string name="restrictions_">Περιορισμοί: %1$s</string>
+    <string name="name">Όνομα</string>
+    <string name="by_default_side_nav_info">Από προεπιλογή, η πλευρική πλοήγηση χρησιμοποιείται για ορισμένα τηλέφωνα και μικρές ταμπλέτες όταν είναι οριζόντια και εμφανίζεται πάντα στις μεγαλύτερες ταμπλέτες.</string>
+    <string name="default_behavior">Προεπιλεγμένη συμπεριφορά</string>
+    <string name="use_side_navigation">Χρήση πλευρικής πλοήγησης</string>
+    <string name="sapphire_dusk">Sapphire Dusk</string>
+    <string name="teal_ocean">Teal Ocean</string>
+    <string name="appearance">Εμφάνιση</string>
+    <string name="keep_both_on_service">Διατήρηση και των δύο στο %1$s και αντικατάσταση μόνο τοπικά</string>
+    <string name="remove_x_from_service_and_add_y">Κατάργηση %1$s από το %2$s και προσθήκη %3$s</string>
+    <string name="remove_previous_tracker">Αφαίρεση προηγούμενου tracker\?</string>
+    <string name="select_an_entry">Επιλογή καταχώρησης</string>
+    <string name="no_matches_for_filters_short">Δεν υπάρχουν αντιστοιχίσεις για τα φίλτρα σας</string>
+    <string name="show_categories_while_filtering">Εμφάνιση κενών κατηγοριών κατά το φιλτράρισμα</string>
+    <string name="getting_started_guide">Οδηγός για τα πρώτα βήματα</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Λείπει 1 κεφάλαιο</item>
+        <item quantity="other">Λείπουν %d κεφάλαια</item>
+    </plurals>
 </resources>

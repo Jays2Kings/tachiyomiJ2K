@@ -317,7 +317,6 @@
     <string name="burn_darken">Затъмнен</string>
     <string name="help">Помощ</string>
     <string name="library_update_order">Ред на обновяване на библиотеката</string>
-    <string name="select_order_to_update">Изберете реда, в който Tachiyomi ще търси обновления</string>
     <string name="lock_with_biometrics">Заключи с биометрични данни</string>
     <string name="lock_when_idle">Заключи при неактивност</string>
     <string name="date_format">Формат на датата</string>

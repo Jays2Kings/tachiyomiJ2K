@@ -283,7 +283,6 @@
     <string name="burn_darken">Brùsia / Iscuri</string>
     <string name="help">Agiudu</string>
     <string name="library_update_order">Òrdine de agiornamentu de sa biblioteca</string>
-    <string name="select_order_to_update">Ischerta s\'òrdine chi Tachiyomi at a impreare pro sos agiornamentos</string>
     <string name="no_results_found">Perunu resultadu agadadu</string>
     <string name="lock_with_biometrics">Bloca cun sa biometria</string>
     <string name="lock_when_idle">Bloca cando no est ativu</string>
@@ -869,7 +868,7 @@
     <string name="all_files_permission_required">Permissos de iscritura pedidos</string>
     <string name="orientation">Orientamentu</string>
     <string name="default_orientation">Orientamentu predefinidu</string>
-    <string name="restore_miui_warning">S\'otimizatzione MIUI depet èssere abilitada pro chi su riprìstinu funtzionet comente si tocat.</string>
+    <string name="restore_miui_warning">Sa còpia de seguresa e su riprìstinu diant pòdere non funtzionare comente si tocat si s\'otimizatzione MIUI est disabilitada.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="set_as_default">Imposta comente predefinidu</string>
@@ -892,4 +891,40 @@
     <string name="update_all">Agiorna totu</string>
     <string name="update_completed">Agiornamentu acabadu</string>
     <string name="could_not_install_update">Installatzione de s\'agiornamentu fallida</string>
+    <string name="a_calmer_you">Unu \"You\" prus calmu (dinàmicu)</string>
+    <string name="a_brighter_you">Unu \"You\" prus luminosu (dinàmicu)</string>
+    <string name="recently_installed">Installadas dae pagu</string>
+    <string name="recently_updated">Agiornadas dae pagu</string>
+    <string name="name">Nùmene</string>
+    <string name="some_extensions_may_not_update">Unas cantas estensiones si diant non pòdere agiornare in manera automàtica si sunt istadas installadas in foras de custa aplicatzione</string>
+    <string name="notify_extension_updated">Notìfica·mi cando s\'estensione s\'est agiornada</string>
+    <string name="auto_update_extensions">Agiorna in automàticu sas estensiones</string>
+    <string name="split_double_pages">Partzi sas pàginas dòpias</string>
+    <string name="split_double_pages_portrait">Partzi in duos sas pàginas dòpias in modalidade verticale</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Estensione agiornada</item>
+        <item quantity="other">%d estensiones agiornadas</item>
+    </plurals>
+    <string name="extensions_updated">Estensiones agiornadas</string>
+    <string name="installed_">%1$s installados</string>
+    <string name="extension_updates_pending">Agiornamentos de sas estensiones in suspesu</string>
+    <string name="affects_library_grid">Influentzat sas coberteddas de sa grìllia de sa biblioteca</string>
+    <string name="restrictions_">Restritziones: %1$s</string>
+    <string name="keep_both_on_service">Mantene·los totu sos duos in %1$s e remplasa in locale ebbia</string>
+    <string name="remove_x_from_service_and_add_y">Boga %1$s dae %2$s e annanghe %3$s</string>
+    <string name="remove_previous_tracker">Iscantzellare s\'arrastadore antepostu\?</string>
+    <string name="select_an_entry">Ischerta un\'insertada</string>
+    <string name="no_matches_for_filters_short">Peruna currispondèntzia cun sos filtros tuos</string>
+    <string name="show_categories_while_filtering">Ammustra sas categorias bòidas cando ses filtrende</string>
+    <string name="getting_started_guide">Ghia pro incumintzare</string>
+    <string name="by_default_side_nav_info">Sighende sas impostatziones predefinidas sa navigatzione laterale s\'impreat in unos cantos telefoneddos e in sas tauleddas minores cando sunt in orizontale. e semper in sas tauleddas prus mannas</string>
+    <string name="default_behavior">Cumportamentu predefinidu</string>
+    <string name="use_side_navigation">Imprea sa navigatzione laterale</string>
+    <string name="sapphire_dusk">Intrinada zafiru</string>
+    <string name="teal_ocean">Otzèanu birde abba (teal - fògia de tè)</string>
+    <string name="appearance">Aparèntzia</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Mancat 1 capìtulu</item>
+        <item quantity="other">Mancant %d capìtulos</item>
+    </plurals>
 </resources>

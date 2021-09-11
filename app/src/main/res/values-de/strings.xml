@@ -151,7 +151,6 @@
     <!-- Library settings -->
     <string name="library_update_frequency">Häufigkeit der Bibliotheksaktualisierung</string>
     <string name="library_update_order">Reihenfolge der Bibliotheksaktualisierung</string>
-    <string name="select_order_to_update">Bestimme die Reihenfolge in der Tachiyomi nach Aktualisierungen sucht</string>
     <string name="library_update_restriction">Bibliotheksaktualisierung einschränken</string>
     <string name="library_update_restriction_summary">Nur wenn folgende Bedingungen eintreffen aktualisieren</string>
     <string name="only_update_ongoing">Nur fortlaufende Manga aktualisieren</string>
@@ -904,7 +903,7 @@
     <string name="source_unsupported">Quelle wird nicht unterstützt</string>
     <string name="orientation">Ausrichtung</string>
     <string name="default_orientation">Standardausrichtung</string>
-    <string name="restore_miui_warning">MIUI Optimierung muss aktiviert sein, damit die Wiederherstellung richtig funktioniert.</string>
+    <string name="restore_miui_warning">Die Sicherung/Wiederherstellung funktioniert möglicherweise nicht richtig, wenn die MIUI-Optimierung deaktiviert ist.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="set_as_default">Als Standard setzen</string>
@@ -919,8 +918,8 @@
     <string name="over_wifi_only">Nur WLAN</string>
     <string name="auto_update_app">Anwendung automatisch aktualisieren</string>
     <string name="auto_updates">Automatische Aktualisierungen</string>
-    <string name="a_calmer_you">Ein ruhigeres „You“</string>
-    <string name="a_brighter_you">Ein helleres „You“</string>
+    <string name="a_calmer_you">Ein ruhigeres „You“ (Dynamisch)</string>
+    <string name="a_brighter_you">Ein helleres „You“ (Dynamisch)</string>
     <string name="add_tag">Markierung hinzufügen</string>
     <string name="updating_extensions">Aktualisiere Erweiterungen</string>
     <string name="some_extensions_may_prompt">Einige Erweiterungen benötigen möglicherweise eine Bestätigung zum Installieren.</string>
@@ -929,4 +928,38 @@
     <string name="update_completed">Aktualisierung abgeschlossen</string>
     <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche Anwendungsbeschränkungen, die Hintergrunddienste stoppen. Diese Website hat mehr Informationen darüber, wie man dies beheben kann.</string>
     <string name="tako">Tako</string>
+    <string name="recently_installed">Kürzlich installiert</string>
+    <string name="recently_updated">Kürzlich aktualisiert</string>
+    <string name="name">Name</string>
+    <string name="some_extensions_may_not_update">Einige Erweiterungen werden möglicherweise nicht automatisch aktualisiert, wenn sie außerhalb der App installiert wurden</string>
+    <string name="notify_extension_updated">Über aktualisierte Erweiterungen benachrichtigen</string>
+    <string name="auto_update_extensions">Erweiterungen automatisch aktualisieren</string>
+    <string name="split_double_pages">Doppelseiten aufteilen</string>
+    <string name="split_double_pages_portrait">Doppelseiten im Hochformat aufteilen</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Erweiterung aktualisiert</item>
+        <item quantity="other">%d Erweiterungen aktualisiert</item>
+    </plurals>
+    <string name="extensions_updated">Erweiterungen aktualisiert</string>
+    <string name="installed_">Installiert %1$s</string>
+    <string name="extension_updates_pending">Erweiterungsaktualisierungen ausstehend</string>
+    <string name="affects_library_grid">Beeinflusst die Bibliotheksrastercover</string>
+    <string name="restrictions_">Einschränkungen: %1$s</string>
+    <string name="keep_both_on_service">Beides auf %1$s lassen und nur lokal ersetzen</string>
+    <string name="remove_x_from_service_and_add_y">%1$s aus %2$s entfernen und %3$s hinzufügen</string>
+    <string name="remove_previous_tracker">Vorherigen Tracker entfernen\?</string>
+    <string name="select_an_entry">Einen Eintrag wählen</string>
+    <string name="sapphire_dusk">Saphir-Dämmerung</string>
+    <string name="teal_ocean">Blaugrüner Ozean</string>
+    <string name="appearance">Erscheinungsbild</string>
+    <string name="getting_started_guide">Leitfaden für den Einstieg</string>
+    <string name="no_matches_for_filters_short">Keine Ergebnisse für deine Filter</string>
+    <string name="show_categories_while_filtering">Beim Filtern leere Kategorien anzeigen</string>
+    <string name="by_default_side_nav_info">Standardmäßig wird die Seitennavigation bei bestimmten Mobiltelefonen und kleinen Tablets im Querformat verwendet und bei größeren Tablets immer angezeigt</string>
+    <string name="default_behavior">Standardverhalten</string>
+    <string name="use_side_navigation">Seitennavigation verwenden</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Es gibt 1 fehlendes Kapitel</item>
+        <item quantity="other">Es gibt %d fehlende Kapitel</item>
+    </plurals>
 </resources>

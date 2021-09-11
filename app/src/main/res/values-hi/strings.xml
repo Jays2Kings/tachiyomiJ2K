@@ -283,7 +283,6 @@
     <string name="burn_darken">जल/गहरा</string>
     <string name="help">मदद</string>
     <string name="library_update_order">लाइब्रेरी अद्यतन क्रम</string>
-    <string name="select_order_to_update">उस क्रम का चयन करें जिसमें टचियोमी अद्यतन की जांच करे</string>
     <string name="no_results_found">कोई परिणाम नहीं मिला</string>
     <string name="lock_with_biometrics">बायोमेट्रिक्स के साथ लॉक करें</string>
     <string name="lock_when_idle">निष्क्रिय होने पर लॉक करें</string>
@@ -424,4 +423,14 @@
     <string name="hide_app_block_screenshots">एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाएं और स्क्रीनशॉट ब्लॉक करें</string>
     <string name="label_global_search">विश्वीय खोज</string>
     <string name="cancel_all_for_series">इस श्रृंखला के लिए सभी रद्द करें</string>
+    <string name="change">परिवर्तन</string>
+    <string name="bottom">सबसे नीचे</string>
+    <string name="beta">बेटा</string>
+    <plurals name="after_minutes">
+        <item quantity="one">%1$s मिनट बाद</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="delete_downloaded_if_removed_online">डाउनलोड किए गए अध्यायों को हटा दें यदि स्रोत ने अध्याय को ऑनलाइन हटा दिया है</string>
+    <string name="always_delete">हमेशा हटाएं</string>
+    <string name="always_keep">हमेशा रखें</string>
 </resources>

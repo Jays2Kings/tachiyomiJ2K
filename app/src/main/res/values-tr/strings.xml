@@ -13,7 +13,7 @@
     <string name="source_migration">Kaynak geçişi</string>
     <string name="extensions">Eklentiler</string>
     <string name="extension_info">Eklenti bilgisi</string>
-    <string name="filter">Süz</string>
+    <string name="filter">Filtre</string>
     <string name="downloaded">İndirilen</string>
     <string name="bookmarked">İşaretli</string>
     <string name="unread">Okunmayan</string>
@@ -108,7 +108,7 @@
     <string name="show_page_number">Sayfa numarası göster</string>
     <string name="crop_borders">Kenarları kırp</string>
     <string name="use_custom_brightness">Özel parlaklık kullan</string>
-    <string name="use_custom_color_filter">Özel renk süzgeçi kullan</string>
+    <string name="use_custom_color_filter">Özel renk filtresi kullan</string>
     <string name="keep_screen_on">Ekranı açık tut</string>
     <string name="navigation">Gezinme</string>
     <string name="volume_keys">Ses tuşları</string>
@@ -283,7 +283,6 @@
     <string name="burn_darken">Yakma / Karartma</string>
     <string name="help">Yardım</string>
     <string name="library_update_order">Kitaplık güncelleme sırası</string>
-    <string name="select_order_to_update">Tachiyomi\'nin güncelleme denetleme sırasını seçin</string>
     <string name="no_results_found">Sonuç bulunmadı</string>
     <string name="lock_with_biometrics">Biyometriyle kilitle</string>
     <string name="lock_when_idle">Boştayken kilitle</string>
@@ -445,7 +444,7 @@
     <string name="smart_by_theme">Akıllı (temaya göre)</string>
     <string name="smart_based_on_page">Akıllı (sayfaya dayalı)</string>
     <string name="smart_based_on_page_and_theme">Akıllı (sayfaya ve temaya dayalı)</string>
-    <string name="extension_updates">Eklenti Güncellemeleri</string>
+    <string name="extension_updates">Eklenti güncellemeleri</string>
     <string name="search_extensions">Eklentileri ara…</string>
     <string name="view_all_updates">Tüm güncellemeleri göster</string>
     <string name="view_history">Geçmişi göster</string>
@@ -519,7 +518,7 @@
     <string name="next_chapter">Sonraki bölüm</string>
     <string name="previous_chapter">Önceki bölüm</string>
     <string name="animate_page_transitions">Sayfa geçişlerini canladır</string>
-    <string name="default_reading_mode">Öntanımlı okuma kipi</string>
+    <string name="default_reading_mode">Varsayılan okuma modu</string>
     <string name="nav_layout">Gezinme düzeni</string>
     <string name="l_nav">L şeklinde</string>
     <string name="kindlish_nav">Kindle gibi</string>
@@ -867,12 +866,12 @@
 \n
 \nBir sonraki ekranda, \"Tüm dosyaları yönetmek için erişime izin ver\" seçeneğini etkinleştirin</string>
     <string name="all_files_permission_required">Dosya izinleri gerekli</string>
-    <string name="default_orientation">Öntanımlı yönelim</string>
-    <string name="orientation">Yönelim</string>
-    <string name="restore_miui_warning">Geri yüklemenin düzgün işlemesi için MIUI Optimizasyonu etkinleştirilmeli.</string>
+    <string name="default_orientation">Varsayılan yön</string>
+    <string name="orientation">Yön</string>
+    <string name="restore_miui_warning">Yedekleme/geri yükleme, MIUI Optimizasyonu devre dışıysa düzgün çalışmayabilir.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
-    <string name="set_as_default">Öntanımlı yap</string>
+    <string name="set_as_default">Varsayılan yap</string>
     <string name="extensions_miui_warning">Uzantı yüklemek için MIUI Optimizasyonu devre dışı bırakılmalıdır.</string>
     <string name="by_update_date">Yükleme tarihiyle</string>
     <string name="by_chapter_number">Bölüm numarasıyla</string>
@@ -890,8 +889,42 @@
     <string name="auto_update_app">Otomatik-güncelleme uygulaması</string>
     <string name="auto_updates">Otomatik-güncelleme</string>
     <string name="tako">Tako</string>
-    <string name="a_calmer_you">Daha Sakin Bir Sen</string>
-    <string name="a_brighter_you">Daha Parlak Bir Sen</string>
+    <string name="a_calmer_you">Daha Sakin Bir Sen (Dinamik)</string>
+    <string name="a_brighter_you">Daha Parlak Bir Sen (Dinamik)</string>
     <string name="add_tag">Etiket ekle</string>
     <string name="some_extensions_may_prompt">Bazı uzantılar yine de önce yüklenmesini isteyebilir.</string>
+    <string name="split_double_pages_portrait">Çift sayfaları dikeyde böl</string>
+    <string name="recently_installed">Son yüklenen</string>
+    <string name="recently_updated">Son güncellenen</string>
+    <string name="name">Ad</string>
+    <string name="some_extensions_may_not_update">Bazı uzantılar, bu uygulamanın dışına yüklendiyse otomatik olarak güncellenmeyebilir</string>
+    <string name="notify_extension_updated">Bildirim uzantısı güncellendi</string>
+    <string name="auto_update_extensions">Uzantıları otomatik güncelle</string>
+    <string name="split_double_pages">Çift sayfaları böl</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Uzantı güncellendi</item>
+        <item quantity="other">%d uzantı güncellendi</item>
+    </plurals>
+    <string name="extensions_updated">Uzantılar güncellendi</string>
+    <string name="installed_">Yüklendi %1$s</string>
+    <string name="extension_updates_pending">Uzantı güncellemeleri beklemede</string>
+    <string name="affects_library_grid">Kitaplık ızgara kapaklarını etkiler</string>
+    <string name="restrictions_">Kısıtlamalar: %1$s</string>
+    <string name="keep_both_on_service">Her ikisini de %1$s\'de tut ve yalnızca yerel olarak değiştir</string>
+    <string name="remove_x_from_service_and_add_y">%1$s\'i %2$s\'den kaldır ve %3$s ekle</string>
+    <string name="remove_previous_tracker">Önceki izleyici kaldırılsın mı\?</string>
+    <string name="select_an_entry">Girdi seç</string>
+    <string name="getting_started_guide">Başlangıç kılavuzu</string>
+    <string name="no_matches_for_filters_short">Filtreleriniz için eşleşme yok</string>
+    <string name="show_categories_while_filtering">Filtreleme sırasında boş kategorileri göster</string>
+    <string name="by_default_side_nav_info">Öntanımlı olarak, yan gezinme, belirli telefonlarda ve küçük tabletlerde yatay konumdayken kullanılır, ve daha büyük tabletlerde her zaman görünür</string>
+    <string name="default_behavior">Öntanımlı davranış</string>
+    <string name="use_side_navigation">Yan gezinmeyi kullan</string>
+    <string name="sapphire_dusk">Safir Alacakaranlık</string>
+    <string name="teal_ocean">Mavi Okyanus</string>
+    <string name="appearance">Görünüm</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">1 eksik bölüm var</item>
+        <item quantity="other">%d eksik bölüm var</item>
+    </plurals>
 </resources>

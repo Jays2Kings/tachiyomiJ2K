@@ -236,7 +236,6 @@
     <string name="screen">หน้าจอ</string>
     <string name="dodge_lighten">ดอดจ์ / แบ่งเบา</string>
     <string name="library_update_order">ลำดับการปรับปรุงห้องสมุด</string>
-    <string name="select_order_to_update">เลือกลำดับที่ให้ Tachiyomi ตรวจสอบการปรับปรุง</string>
     <string name="no_results_found">ไม่พบผลลัพธ์</string>
     <string name="title">ชื่อเรื่อง</string>
     <string name="started">เริ่มต้นแล้ว</string>

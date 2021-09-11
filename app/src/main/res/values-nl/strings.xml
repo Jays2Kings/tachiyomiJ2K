@@ -168,7 +168,7 @@
     <string name="cover_of_image">Omslag van de manga</string>
     <string name="no_recent_chapters">Geen recente hoofdstukken</string>
     <string name="library_is_empty_add_from_browse">De bibliotheek is leeg, manga kunnen toegevoegd worden vanuit de catalogi.</string>
-    <string name="no_wifi_connection">Geen Wi-Fi verbinding beschikbaar</string>
+    <string name="no_wifi_connection">Geen Wi-Fi-verbinding beschikbaar</string>
     <string name="no_network_connection">Geen netwerkverbinding beschikbaar</string>
     <string name="download_paused">Download gepauzeerd</string>
     <string name="recent_updates">Bibliotheek updates</string>
@@ -280,7 +280,6 @@
     <string name="screen">Bleken</string>
     <string name="help">Help</string>
     <string name="library_update_order">Updatevolgorde bibliotheken</string>
-    <string name="select_order_to_update">Selecteer de volgorde waarop Tachiyomi zoekt naar updates</string>
     <string name="lock_with_biometrics">Biometrisch vergrendelen</string>
     <string name="lock_when_idle">Vergrendelen indien niet in gebruik</string>
     <string name="date_format">Datumformaat</string>
@@ -878,4 +877,20 @@
     <string name="external_storage_download_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden om hoofdstukken te downloaden. Tik hier, en zet dan \"Toegang verlenen om alle bestanden te beheren.\" aan.</string>
     <string name="all_files_permission_required">Bestandsrechten vereist</string>
     <string name="restore_miui_warning">MIUI-optimalisatie moet geactiveerd zijn voordat het terugzetten goed kan werken.</string>
+    <string name="over_wifi_only">Alleen via Wi-Fi</string>
+    <string name="tako">Tako</string>
+    <string name="a_calmer_you">A Calmer You</string>
+    <string name="a_brighter_you">A Brighter You</string>
+    <string name="update_completed">Update voltooid</string>
+    <string name="warning">Waarschuwing</string>
+    <string name="about_dont_kill_my_app">Sommige fabrikanten hebben extra beperkingen op apps die achtergronddiensten uitschakelen. Informatie over hoe je dit kan oplossen kan je vinden op de deze website.</string>
+    <string name="dont_auto_update">Niet automatisch updaten</string>
+    <string name="over_any_network">Via elk netwerk</string>
+    <string name="auto_update_app">App automatisch updaten</string>
+    <string name="auto_updates">Automatische updates</string>
+    <string name="add_tag">Tag toevoegen</string>
+    <string name="updating_extensions">Extensies aan het updaten</string>
+    <string name="some_extensions_may_prompt">Mogelijk wordt er eerst nog door extensies gevraagd om geïnstalleerd te worden.</string>
+    <string name="update_all">Alles updaten</string>
+    <string name="could_not_install_update">Kon update niet installeren</string>
 </resources>

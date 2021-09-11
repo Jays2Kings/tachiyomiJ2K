@@ -283,7 +283,6 @@
     <string name="skip_read_chapters">Treci peste capitolele marcate citit</string>
     <string name="help">Ajutor</string>
     <string name="library_update_order">Ordinea actualizării bibliotecii</string>
-    <string name="select_order_to_update">Selectați ordinea în care Tachiyomi verifică actualizarea</string>
     <string name="lock_with_biometrics">Blocare cu amprentă</string>
     <string name="lock_when_idle">Blocați când este inactiv</string>
     <string name="update">Actualizează</string>

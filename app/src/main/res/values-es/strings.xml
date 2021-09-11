@@ -9,7 +9,7 @@
     <!-- Actions -->
     <string name="filter">Filtrar</string>
     <string name="downloaded">Descargados</string>
-    <string name="unread">Sin leer</string>
+    <string name="unread">No leídos</string>
     <string name="search">Buscar</string>
     <string name="select_all">Seleccionar todo</string>
     <string name="mark_as_read">Marcar como leído</string>
@@ -129,7 +129,7 @@
     <string name="description">Descripción</string>
     <string name="ongoing">En publicación</string>
     <string name="unknown">Desconocido</string>
-    <string name="licensed">En hiatus</string>
+    <string name="licensed">Con licencia</string>
     <string name="author">Autor</string>
     <string name="artist">Artista</string>
     <string name="status">Estado</string>
@@ -314,9 +314,8 @@
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
     <string name="library_update_order">Orden de actualización de la biblioteca</string>
-    <string name="select_order_to_update">Selecciona el orden en el que Tachiyomi buscará actualizaciones</string>
     <string name="no_results_found">No se han encontrado resultados</string>
-    <string name="lock_with_biometrics">Bloquear con huella</string>
+    <string name="lock_with_biometrics">Bloquear con biométricos</string>
     <string name="lock_when_idle">Bloquear cuando está inactivo</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
@@ -739,7 +738,7 @@
     <string name="not_logged_into_">Sin iniciar sesion en %1$s</string>
     <string name="hot_pink">Rosa chicle</string>
     <string name="spring_blossom">Florecer de Primavera</string>
-    <string name="midnight_dusk">Crepusculo de Medianoche</string>
+    <string name="midnight_dusk">Crepúsculo de Medianoche</string>
     <string name="turn_off_">Desactivar %s</string>
     <string name="turn_on_">Activar %s</string>
     <plurals name="pages_plural">
@@ -848,7 +847,7 @@
     <string name="mark_range_as_unread">Marcar un rango de capítulos como no leídos</string>
     <string name="mark_range_as_read">Marcar una serie de capítulos como leídos</string>
     <string name="automatic_removal">Eliminación automática</string>
-    <string name="cancel_all_for_series">Cancelar todo lo relacionado con esta serie</string>
+    <string name="cancel_all_for_series">Cancelar todo para esta serie</string>
     <string name="app_shortcuts">Atajos de las aplicación</string>
     <string name="create_folders_by_manga_title">Crear las carpetas según el título del manga</string>
     <string name="save_pages_separately">Guardar las páginas en carpetas separadas</string>
@@ -856,7 +855,7 @@
     <string name="actions">Acciones</string>
     <string name="locked_landscape">Forzar en paisaje</string>
     <string name="locked_portrait">Bloqueado en modo retrato</string>
-    <string name="landscape">Apaisado</string>
+    <string name="landscape">Panorama</string>
     <string name="portrait">Retrato</string>
     <string name="group_chapters_together">Agrupar los capítulos juntos</string>
     <string name="show_updated_time">Mostrar la hora de la actualización</string>
@@ -898,4 +897,65 @@
 \n
 \nEn la siguiente pantalla por favor habilite “Acceso a todos los archivos”</string>
     <string name="all_files_permission_required">Permiso de Gestion de Archivos Requerido</string>
+    <string name="warning">Advertencia</string>
+    <string name="orientation">Orientación</string>
+    <string name="default_orientation">Orientación por defecto</string>
+    <string name="about_dont_kill_my_app">Algunos fabricantes tienen restricciones adicionales para aplicaciones que matan los servicios en segundo plano. Esta pagina web tiene más información sobre cómo solucionarlo.</string>
+    <string name="restore_miui_warning">Es posible que las funciones de copia de seguridad y restauración no funcionen correctamente si la opción Optimización de MIUI está desactivada.</string>
+    <string name="dont_auto_update">No actualizar automáticamente</string>
+    <string name="over_any_network">Con cualquier red</string>
+    <string name="over_wifi_only">Unicamente con WiFi</string>
+    <string name="auto_update_app">Actualizaciones automáticas de la aplicación</string>
+    <string name="auto_updates">Actualizaciones automáticas</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="tako">Tako</string>
+    <string name="a_calmer_you">Un Tú Más Calmado (Dinámico)</string>
+    <string name="a_brighter_you">Un Tú Más Radiante (Dinámico)</string>
+    <string name="set_as_default">Establecer por defecto</string>
+    <string name="add_tag">Añadir etiqueta</string>
+    <string name="updating_extensions">Extensiones actualizándose</string>
+    <string name="some_extensions_may_prompt">Algunas extensiones todavía pueden desplegarse para ser actualizadas primero.</string>
+    <string name="update_all">Actualizar todo</string>
+    <string name="extensions_miui_warning">Las \"Optimizaciones de MIUI\" deberán ser desactivadas para instalar extensiones.</string>
+    <string name="update_completed">Actualización completada</string>
+    <string name="could_not_install_update">No se ha podido instalar la actualización</string>
+    <string name="by_update_date">Por fecha de subida</string>
+    <string name="by_chapter_number">Por número de capítulo</string>
+    <string name="by_source_order">Por orden de la fuente</string>
+    <string name="not_bookmarked">Sin marcar</string>
+    <string name="name">Nombre</string>
+    <string name="recently_installed">Instalado recientemente</string>
+    <string name="recently_updated">Actualizado recientemente</string>
+    <string name="some_extensions_may_not_update">Es posible que algunas extensiones no se actualicen automáticamente si fueron instaladas fuera de esta aplicación</string>
+    <string name="notify_extension_updated">Notificar cuando una extensión ha sido actualizada</string>
+    <string name="auto_update_extensions">Actualizar extensiones automáticamente</string>
+    <string name="sapphire_dusk">Atardecer de Zafiro</string>
+    <string name="teal_ocean">Azul Marino</string>
+    <string name="appearance">Apariencia</string>
+    <string name="keep_both_on_service">Mantener ambos en %1$s y sólo reemplazar localmente</string>
+    <string name="remove_x_from_service_and_add_y">Eliminar %1$s de %2$s y añadir %3$s</string>
+    <string name="remove_previous_tracker">¿Quitar el seguimiento anterior\?</string>
+    <string name="select_an_entry">Selecciona una entrada</string>
+    <string name="split_double_pages">Dividir páginas dobles</string>
+    <string name="split_double_pages_portrait">Separar páginas dobles en formato vertical</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Extensión actualizada</item>
+        <item quantity="other">%d extensiones actualizadas</item>
+    </plurals>
+    <string name="extensions_updated">Extensiones actualizadas</string>
+    <string name="installed_">Instalado %1$s</string>
+    <string name="extension_updates_pending">Actualizaciones de la extensión pendientes</string>
+    <string name="affects_library_grid">Afecta a la rejilla de la biblioteca</string>
+    <string name="restrictions_">Restricciones: %1$s</string>
+    <string name="no_matches_for_filters_short">Ningún resultado con tus filtros</string>
+    <string name="show_categories_while_filtering">Mostrar categorías vacías al filtrar</string>
+    <string name="getting_started_guide">Guía de introducción</string>
+    <string name="by_default_side_nav_info">Por defecto, la navegación lateral se utiliza para ciertos teléfonos y tabletas pequeñas cuando están en horizontal, y siempre se muestra en las tabletas más grandes</string>
+    <string name="default_behavior">Comportamiento por defecto</string>
+    <string name="use_side_navigation">Usar la navegación lateral</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Falta 1 capítulo</item>
+        <item quantity="other">Faltan %d capítulos</item>
+    </plurals>
 </resources>

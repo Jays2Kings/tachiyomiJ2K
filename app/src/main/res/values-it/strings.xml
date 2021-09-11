@@ -66,7 +66,7 @@
     <string name="library_update_restriction">Restrizioni dell\'aggiornamento della libreria</string>
     <string name="library_update_restriction_summary">Aggiorna solo quando sono soddisfatte le condizioni</string>
     <string name="wifi">Wi-Fi</string>
-    <string name="charging">Caricamento</string>
+    <string name="charging">In carica</string>
     <string name="only_update_ongoing">Aggiorna solo manga in corso</string>
     <string name="sync_chapters_after_reading">Sincronizza capitoli dopo la lettura</string>
     <string name="app_theme">Tema dell\'applicazione</string>
@@ -86,8 +86,8 @@
     <string name="background_color">Colore sfondo</string>
     <string name="white">Bianco</string>
     <string name="black">Nero</string>
-    <string name="left_to_right_viewer">Da sinistra a destra</string>
-    <string name="right_to_left_viewer">Da destra a sinistra</string>
+    <string name="left_to_right_viewer">Sinistra a destra</string>
+    <string name="right_to_left_viewer">Destra a sinistra</string>
     <string name="vertical_viewer">Verticale</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Scala</string>
@@ -131,7 +131,7 @@
     <string name="cookies_cleared">Cookie cancellati</string>
     <string name="clear_database">Pulisci database</string>
     <string name="clear_database_summary">Elimina manga e capitoli che non sono nella tua libreria</string>
-    <string name="clear_database_confirmation">Sei sicuro/a\? I capitoli letti e i progressi di lettura di elementi fuori dalla libreria verranno persi</string>
+    <string name="clear_database_confirmation">Sei sicuro\? I capitoli letti e i progressi di lettura di elementi fuori dalla libreria verranno persi</string>
     <string name="clear_database_completed">Elementi eliminati</string>
     <string name="refresh_library_metadata">Aggiorna metadati libreria</string>
     <string name="updates_covers_genres_desc">Aggiorna copertine, generi, descrizioni e stato dei manga</string>
@@ -171,7 +171,7 @@
     <string name="reading">In lettura</string>
     <string name="completed">Completato</string>
     <string name="dropped">Abbandonato</string>
-    <string name="on_hold">Sospeso</string>
+    <string name="on_hold">In sospeso</string>
     <string name="plan_to_read">Lettura pianificata</string>
     <string name="score">Punteggio</string>
     <string name="title">Titolo</string>
@@ -267,12 +267,12 @@
     <string name="trust">Mi fido</string>
     <string name="untrusted">Non affidabile</string>
     <string name="uninstall">Disinstalla</string>
-    <string name="untrusted_extension">Estensione non affidabile</string>
+    <string name="untrusted_extension">Estensione non attendibile</string>
     <string name="untrusted_extension_message">Questa estensione è stata firmata con un certificato non affidabile e non è stata attivata.
 \n
-\nUn\'estensione pericolosa potrebbe leggere credenziali di accesso all\'interno di Tachiyomi o eseguire codice dannoso.
+\nUn\'estensione maliziosa potrebbe leggere credenziali di accesso all\'interno di Tachiyomi o eseguire codice dannoso.
 \n
-\nContinuando con questo certificato accetti questi rischi.</string>
+\nFidandoti di questo certificato accetti questi rischi.</string>
     <string name="version_">Versione: %1$s</string>
     <string name="language_">Lingua: %1$s</string>
     <string name="double_tap_anim_speed">Velocità animazioni doppio tocco</string>
@@ -288,13 +288,13 @@
     <string name="added_to_library">Aggiunto alla libreria</string>
     <string name="removed_from_library">Rimosso dalla libreria</string>
     <string name="_copied_to_clipboard">%1$s copiato negli appunti</string>
-    <string name="source_not_installed_">Sorgente non installata: %1$s</string>
+    <string name="source_not_installed_">Fonte non installata: %1$s</string>
     <string name="custom_range">Download personalizzato</string>
     <string name="rereading">Ri-leggendo</string>
     <string name="started">Iniziato</string>
     <string name="type">Tipo</string>
     <string name="url_not_set_click_again">L\'URL del manga non è impostato, clicca sul titolo e selezionalo ancora</string>
-    <string name="migrate">Migrare</string>
+    <string name="migrate">Migra</string>
     <string name="common">Comune</string>
     <string name="finished_chapter">Finito:</string>
     <string name="current_chapter">Attuale:</string>
@@ -316,7 +316,6 @@
     <string name="burn_darken">Scurisci</string>
     <string name="help">Aiuto</string>
     <string name="library_update_order">Ordine di aggiornamento della libreria</string>
-    <string name="select_order_to_update">Seleziona l\'ordine in cui vuoi che Tachiyomi controlli gli aggiornamenti</string>
     <string name="no_results_found">Nessun risultato trovato</string>
     <string name="lock_with_biometrics">Blocca con biometria</string>
     <string name="lock_when_idle">Blocca quando inattivo</string>
@@ -352,7 +351,7 @@
     <string name="continuous_vertical">Verticale continuo</string>
     <string name="paged">Pagina</string>
     <string name="always_show_chapter_transition">Mostra sempre la transizione tra capitoli</string>
-    <string name="pref_webtoon_side_padding">Distanziamento laterale</string>
+    <string name="pref_webtoon_side_padding">Riempimento laterale</string>
     <string name="webtoon_side_padding_0">Nessuno</string>
     <string name="webtoon_side_padding_10">10%</string>
     <string name="webtoon_side_padding_15">15%</string>
@@ -361,7 +360,7 @@
     <string name="chapters_">Capitoli %1$s</string>
     <string name="remove_from_library">Rimuovi dalla libreria</string>
     <string name="refresh_tracking">Aggiorna monitoraggio</string>
-    <string name="add_tracking">Aggiungi monitoraggio</string>
+    <string name="add_tracking">Aggiungi tracciamento</string>
     <string name="copy_value">Copia</string>
     <string name="website">Sito web</string>
     <string name="open_source_licenses">Licenze codice sorgente aperto</string>
@@ -447,7 +446,7 @@
     <string name="not_downloaded">Non scaricato</string>
     <string name="downloading_">Scaricando: %1$s</string>
     <string name="logout_from_">Uscire da %1$s\?</string>
-    <string name="logout">Esci</string>
+    <string name="logout">Disconnetti</string>
     <string name="top_category">Miglior categoria (%1$s)</string>
     <string name="uniform_covers">Rendi uniformi le copertine</string>
     <string name="hide_start_reading_button">Nascondi il bottone di inizio lettura</string>
@@ -558,7 +557,7 @@
     <string name="migrating_to">migrazione verso</string>
     <string name="use_most_chapters">Usa la sorgente con più capitoli (più lento)</string>
     <string name="select_sources">Seleziona sorgenti</string>
-    <string name="source_not_installed">Sorgente non installata</string>
+    <string name="source_not_installed">Fonte non installata</string>
     <string name="source_hidden">Sorgente nascosta</string>
     <string name="x_large">XL</string>
     <string name="large">L</string>
@@ -613,7 +612,7 @@
     <string name="select_starting_chapter">Seleziona il capitolo da cui iniziare</string>
     <string name="mark_all_chapters_as_read">Segnare tutti i capitoli come letti\?</string>
     <string name="no_description">Nessuna descrizione</string>
-    <string name="add_to_library">Aggiungi alla Libreria</string>
+    <string name="add_to_library">Aggiungi alla libreria</string>
     <string name="season_">Stagione %1$d</string>
     <string name="volume_">Volume %1$d</string>
     <string name="continue_reading">Continua a leggere</string>
@@ -630,11 +629,11 @@
     <string name="webtoon_style">stile webtoon</string>
     <string name="reading_">Stai leggendo %1$s</string>
     <string name="set_as_default_for_all">Imposta come predefinito per tutti</string>
-    <string name="extension_updates">Aggiornamento Estensioni</string>
+    <string name="extension_updates">Aggiornamento estensioni</string>
     <string name="last_used">Ultimo uso</string>
     <string name="all_sources">Tutte le sorgenti</string>
     <string name="search_extensions">Cerca estensioni…</string>
-    <string name="in_library">Nella Libreria</string>
+    <string name="in_library">Nella libreria</string>
     <string name="reset_chapter_question">Resettare il capitolo\?</string>
     <string name="search_recents">Cerca recenti…</string>
     <string name="view_all_updates">Visualizza tutti gli aggiornamenti</string>
@@ -667,7 +666,7 @@
     <string name="previous_chapter">Capitolo precedente</string>
     <string name="animate_page_transitions">Anima le transazioni di pagina</string>
     <string name="no_chapters_error">Nessun capitolo trovato</string>
-    <string name="restore_duration">%02d min %02d s</string>
+    <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Completato in %1$s con %2$s errore</item>
         <item quantity="other">Completato in %1$s con %2$s errori</item>
@@ -687,9 +686,9 @@
     <string name="default_reading_mode">Modalità di lettura predefinita</string>
     <string name="nav_layout">Layout della navigazione</string>
     <string name="l_nav">A forma di L</string>
-    <string name="kindlish_nav">Tipo un Kindle</string>
+    <string name="kindlish_nav">Stile Kindle</string>
     <string name="edge_nav">Bordo</string>
-    <string name="right_and_left_nav">Navigazione destra/sinistra</string>
+    <string name="right_and_left_nav">Destra e Sinistra</string>
     <string name="invert_tapping">Inverti i tasti</string>
     <string name="none">Nessuno</string>
     <string name="started_reading_date">Data di inizio lettura</string>
@@ -699,7 +698,7 @@
     <string name="locale">Locale</string>
     <string name="automatic_backups">Backup automatici</string>
     <string name="invalid_backup_file">File di backup invalido</string>
-    <string name="invalid_backup_file_type">File di backup non valido: %1$s
+    <string name="invalid_backup_file_type">File di backup invalido: %1$s
 \nDovrebbe terminare con .proto.gz oppure .json.</string>
     <string name="file_is_missing_data">Il file risulta corrotto o in mancanza di dati.</string>
     <string name="backup_has_no_manga">Il backup non contiene nessun manga.</string>
@@ -719,7 +718,7 @@
     <string name="crash_logs">Registri degli arresti anomali</string>
     <string name="dump_crash_logs">Salva un resoconto degli arresti</string>
     <string name="saves_error_logs">Salva un resoconto degli errori su un file per condividerlo con gli sviluppatori</string>
-    <string name="crash_log_saved">Resoconto salvato</string>
+    <string name="crash_log_saved">Registro dei crash salvato</string>
     <string name="updated_to_">Aggiornato verso v%1$s</string>
     <string name="restore_in_progress">Ripristino già in corso</string>
     <string name="add_edit_categories">Aggiungi/Modifica categorie</string>
@@ -728,7 +727,7 @@
         <item quantity="one">%1$d capitolo</item>
         <item quantity="other">%1$d capitoli</item>
     </plurals>
-    <string name="backup_in_progress">Un backup è già in corso</string>
+    <string name="backup_in_progress">Il backup è già in corso</string>
     <string name="next">Successivo</string>
     <string name="hide_app_block_screenshots">Nascondi i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
     <string name="disabled">Disabilitato</string>
@@ -860,7 +859,7 @@
     <string name="dark_theme">Tema scuro</string>
     <string name="light_theme">Tema chiaro</string>
     <string name="no_match_found">Nessun risultato trovato</string>
-    <string name="source_unsupported">Origine non supportata</string>
+    <string name="source_unsupported">Fonte non supportata</string>
     <string name="only_applies_silent_trackers">Si applica solo a tracker silenziosi, come Komga</string>
     <string name="track_when_adding_to_library">Track dopo aver aggiunto alla libreria</string>
     <string name="custom_manga_info">Informazioni manga personalizzate</string>
@@ -870,7 +869,7 @@
         <item quantity="one">%d aggiornamento in attesa</item>
         <item quantity="other">%d aggiornamenti in attesa</item>
     </plurals>
-    <string name="hide_notification_content">Nascondi il contenuto delle notifiche</string>
+    <string name="hide_notification_content">Nascondi contenuto notifiche</string>
     <string name="cutout_behavior_only_applies">Il comportamento dell\'area ritagliata si applica solo in modalità verticale con determinati tipi di scala</string>
     <string name="start_past_cutout">Inizia dopo il ritaglio</string>
     <string name="could_not_install_extension">Installazione estensione fallita</string>
@@ -881,10 +880,10 @@
     <string name="hide_unread_badges">Nascondi badge non letti</string>
     <string name="open_random_series">Apri una serie casuale</string>
     <string name="show_number_of_items">Mostra il numero di oggetti</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare capitoli. Fai tap qui, poi fornisci il permesso di «Accesso a tutti i file».</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare capitoli. Fai tap qui, poi fornisci il permesso di \"Accesso a tutti i file.\"</string>
     <string name="external_storage_permission_notice">Per scaricare capitoli, creare backup automatici e leggere manga in locale TachiJ2K richiede accesso ai file di Android 11.
 \n
-\nSulla prossima schermata, fornisci il permesso di «Accesso a tutti i file».</string>
+\nSulla prossima schermata, fornisci il permesso di \"Accesso a tutti i file.\"</string>
     <string name="all_files_permission_required">Permessi dei file richiesti</string>
     <string name="turn_off_">Disattiva %s</string>
     <string name="turn_on_">Attiva %s</string>
@@ -903,8 +902,8 @@
     <string name="warning">Avviso</string>
     <string name="orientation">Orientamento</string>
     <string name="default_orientation">Orientamento predefinito</string>
-    <string name="about_dont_kill_my_app">Alcuni produttori hanno restrizioni aggiuntive per le app che uccidono i servizi in sfondo. Questo sito web ha più informazioni su come risolvere il problema.</string>
-    <string name="restore_miui_warning">L\'ottimizzazione MIUI deve essere abilitata affinché il ripristino funzioni correttamente.</string>
+    <string name="about_dont_kill_my_app">Alcuni produttori hanno restrizioni aggiuntive per le app che chiudono i servizi in secondo piano. Questo sito ha più informazioni su come risolvere il problema.</string>
+    <string name="restore_miui_warning">Le funzioni di backup e ripristino potrebbero non funzionare correttamente se le ottimizzazioni MIUI sono disabilitate.</string>
     <string name="dont_auto_update">Non aggiornare automaticamente</string>
     <string name="over_any_network">Su qualsiasi rete</string>
     <string name="over_wifi_only">Solo su Wi-Fi</string>
@@ -913,8 +912,8 @@
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="tako">Tako</string>
-    <string name="a_calmer_you">Un You più calmo</string>
-    <string name="a_brighter_you">Un You più luminoso</string>
+    <string name="a_calmer_you">A Calmer You (Dinamico)</string>
+    <string name="a_brighter_you">A Brighter You (Dinamico)</string>
     <string name="set_as_default">Imposta come predefinito</string>
     <string name="add_tag">Aggiungi un\'etichetta</string>
     <string name="updating_extensions">Aggiornamento delle estensioni</string>
@@ -927,4 +926,38 @@
     <string name="by_chapter_number">Per numero di capitolo</string>
     <string name="by_source_order">Per ordine di fonte</string>
     <string name="not_bookmarked">Senza segnalibro</string>
+    <string name="name">Nome</string>
+    <string name="recently_installed">Installato di recente</string>
+    <string name="recently_updated">Aggionato di recente</string>
+    <string name="some_extensions_may_not_update">Le estensioni installate esternamente non verranno automaticamente aggiornate</string>
+    <string name="notify_extension_updated">Notifica l\'aggiornamento delle estensioni</string>
+    <string name="auto_update_extensions">Aggiorna estensioni automaticamente</string>
+    <string name="split_double_pages">Dividi doppie pagine</string>
+    <string name="split_double_pages_portrait">Dividi doppie pagine in modalità ritratto</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Estensione aggiornata</item>
+        <item quantity="other">%d estensioni aggiornate</item>
+    </plurals>
+    <string name="extensions_updated">Estensioni aggiornate</string>
+    <string name="installed_">Installati %1$s</string>
+    <string name="extension_updates_pending">Aggiornamenti estensioni in attesa</string>
+    <string name="affects_library_grid">Ha effetto su griglia cover della libreria</string>
+    <string name="restrictions_">Restrizioni: %1$s</string>
+    <string name="keep_both_on_service">Mantieni entrambi su %1$s e sostituisci solo localmente</string>
+    <string name="remove_x_from_service_and_add_y">Rimuovi %1$s da %2$s e aggiungi %3$s</string>
+    <string name="remove_previous_tracker">Rimuovere il tracciamento precedente\?</string>
+    <string name="select_an_entry">Seleziona una voce</string>
+    <string name="getting_started_guide">Guida introduttiva</string>
+    <string name="sapphire_dusk">Zaffiro Crepuscolo</string>
+    <string name="teal_ocean">Oceano verde acqua</string>
+    <string name="appearance">Aspetto</string>
+    <string name="no_matches_for_filters_short">Nessuna corrispondenza per i tuoi filtri</string>
+    <string name="show_categories_while_filtering">Mostra categorie vuote nel filtro</string>
+    <string name="default_behavior">Comportamento predefinito</string>
+    <string name="use_side_navigation">Usa navigazione laterale</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">C\'è un capitolo mancante</item>
+        <item quantity="other">Ci sono %d capitoli mancanti</item>
+    </plurals>
+    <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
 </resources>

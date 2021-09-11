@@ -283,7 +283,6 @@
     <string name="burn_darken">Crema / Enfosqueix</string>
     <string name="help">Ajuda</string>
     <string name="library_update_order">Ordre d\'actualització de la biblioteca</string>
-    <string name="select_order_to_update">Seleccioneu l\'ordre amb què el Tachiyomi comprova si hi ha actualitzacions</string>
     <string name="no_results_found">No s\'ha trobat cap resultat</string>
     <string name="lock_with_biometrics">Bloca amb biomètriques</string>
     <string name="lock_when_idle">Bloca per inactivitat</string>

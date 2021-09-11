@@ -314,7 +314,6 @@
     <string name="multiply">Nhân</string>
     <string name="help">Trợ giúp</string>
     <string name="library_update_order">Thứ tự ưu tiên cập nhật</string>
-    <string name="select_order_to_update">Chọn thứ tự để Tachiyomi kiểm tra cập nhật</string>
     <string name="no_results_found">Không tìm thấy kết quả nào</string>
     <string name="lock_with_biometrics">Khoá sinh trắc học</string>
     <string name="lock_when_idle">Khoá khi rảnh rỗi</string>

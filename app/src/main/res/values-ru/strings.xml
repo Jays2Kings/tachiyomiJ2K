@@ -268,7 +268,6 @@
     <string name="categories_to_include_in_global_update">Категории включенные в глобальный поиск</string>
     <string name="library_update_frequency">Частота обновления библиотеки</string>
     <string name="library_update_order">Порядок обновления библиотеки</string>
-    <string name="select_order_to_update">Выберите порядок, в котором Tachiyomi проверяет наличие обновлений</string>
     <string name="library_update_restriction">Ограничения обновления библиотеки</string>
     <string name="library_update_restriction_summary">Обновлять когда условия соблюдены</string>
     <string name="tapping">Нажатие</string>
@@ -915,7 +914,7 @@
     <string name="show_recent_series">Показывать последние серии</string>
     <string name="show_recent_sources">Показывать недавно использованные источники</string>
     <string name="hide_notification_content">Скрыть содержимое уведомлений</string>
-    <string name="pure_black_dark_mode">Тёмный режим с чистым чёрным</string>
+    <string name="pure_black_dark_mode">Чисто чёрный тёмный режим</string>
     <string name="side_nav_icon_alignment">Выравнивание значков боковой навигации</string>
     <string name="chocolate_strawberries">Шоколадная Клубника</string>
     <string name="yotsuba">Ёцуба</string>
@@ -941,7 +940,7 @@
     <string name="all_files_permission_required">Требуются права доступа к файлам</string>
     <string name="orientation">Ориентация</string>
     <string name="default_orientation">Ориентация по умолчанию</string>
-    <string name="restore_miui_warning">Оптимизация MIUI должна быть включена, чтобы восстановление работало правильно.</string>
+    <string name="restore_miui_warning">Резервная копия/Восстановление может не работать должным образом, если отключена Оптимизация MIUI.</string>
     <string name="yang">Янь</string>
     <string name="yin">Инь</string>
     <string name="set_as_default">Установить по умолчанию</string>
@@ -964,6 +963,44 @@
     <string name="could_not_install_update">Не удалось установить обновление</string>
     <string name="about_dont_kill_my_app">У некоторых производителей есть дополнительные ограничения для приложений, которые убивают фоновые службы. На этом веб-сайте есть более подробная информация о том, как это исправить.</string>
     <string name="tako">Тако</string>
-    <string name="a_calmer_you">Спокойный ты</string>
-    <string name="a_brighter_you">Яркий ты</string>
+    <string name="a_calmer_you">Спокойный ты (Динамично)</string>
+    <string name="a_brighter_you">Яркий ты (Динамично)</string>
+    <string name="recently_installed">Недавно установленный</string>
+    <string name="recently_updated">Недавно обновленный</string>
+    <string name="some_extensions_may_not_update">Некоторые расширения не могут автообновляться, если они были установлены вне этого приложения</string>
+    <string name="notify_extension_updated">Расширение уведомлений было обновлено</string>
+    <string name="auto_update_extensions">Автообновлять расширения</string>
+    <string name="split_double_pages">Разделить двойные страницы</string>
+    <string name="split_double_pages_portrait">Разделить двойные страницы в портретном режиме</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Обновлено расширение</item>
+        <item quantity="few">Обновлено %d расширения</item>
+        <item quantity="many">Обновлено %d расширений</item>
+        <item quantity="other">Обновлено %d расширений</item>
+    </plurals>
+    <string name="extensions_updated">Расширение обновлено</string>
+    <string name="installed_">Установлено %1$s</string>
+    <string name="extension_updates_pending">Ожидается обновление для расширения</string>
+    <string name="affects_library_grid">Влияет на сетки библиотечных обложек</string>
+    <string name="restrictions_">Ограничения: %1$s</string>
+    <string name="name">Название</string>
+    <string name="select_an_entry">Выберите запись</string>
+    <string name="keep_both_on_service">Оставить оба в %1$s и только заменить локально</string>
+    <string name="remove_x_from_service_and_add_y">Удалить %1$s из %2$s и добавить %3$s</string>
+    <string name="remove_previous_tracker">Удалить предыдущий трекер\?</string>
+    <string name="sapphire_dusk">Сапфировые Сумерки</string>
+    <string name="teal_ocean">Бирюзовый Океан</string>
+    <string name="appearance">Отображение</string>
+    <string name="getting_started_guide">Руководство по началу работы</string>
+    <string name="no_matches_for_filters_short">Нет совпадений для ваших фильтров</string>
+    <string name="show_categories_while_filtering">Показывать пустые категории при фильтрации</string>
+    <string name="by_default_side_nav_info">По умолчанию, боковая навигация используется для определенных телефонов и небольших планшетов в альбомной ориентации, и всегда отображается на больших планшетах</string>
+    <string name="default_behavior">Поведение по умолчанию</string>
+    <string name="use_side_navigation">Использовать боковую навигацию</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Отсутствует %d глава</item>
+        <item quantity="few">Отсутствуют %d главы</item>
+        <item quantity="many">Отсутствуют %d глав</item>
+        <item quantity="other">Отсутствуют %d глав</item>
+    </plurals>
 </resources>

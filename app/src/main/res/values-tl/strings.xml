@@ -6,7 +6,7 @@
     <string name="tracking">Sinusundan</string>
     <string name="history">Kasaysayan</string>
     <string name="settings">Pagsasaayos</string>
-    <string name="download_queue">Toka sa Download</string>
+    <string name="download_queue">Pila sa Download</string>
     <string name="library">Aklatan</string>
     <string name="recent_updates">Mga update sa aklatan</string>
     <string name="selected_">Napili: %1$d</string>
@@ -178,7 +178,6 @@
     <string name="burn_darken">Sunog / Dilim (Burn / Darken)</string>
     <string name="help">Tulong</string>
     <string name="library_update_order">Ayos ng pag-update ng Aklatan</string>
-    <string name="select_order_to_update">Piliin ang ayos ng pag-check ng mga update ng Tachiyomi</string>
     <string name="what_should_backup">Ano ang gusto mong i-backup\?</string>
     <string name="restoring_backup">Nire-restore ang backup</string>
     <string name="clear_chapter_cache">Linisin ang cache ng kabanata</string>
@@ -187,7 +186,7 @@
     <string name="clear_cookies">Linisin ang mga cookies</string>
     <string name="cookies_cleared">Nalinis ang mga cookies</string>
     <string name="clear_database">Linisin ang database</string>
-    <string name="clear_database_summary">Burahin ang mga manga at kabanatang wala sa iyong aklatan</string>
+    <string name="clear_database_summary">Burahin ang mga manga at kabanatang wala sa iyong library</string>
     <string name="clear_database_confirmation">Sigurado ka ba\? Mawawala ang mga nabasang kabanata at ang daloy ng mga manga na wala sa aklatan</string>
     <string name="clear_database_completed">Binura ang mga tala</string>
     <string name="refresh_library_metadata">I-refresh ang metadata ng aklatan</string>
@@ -199,9 +198,9 @@
     <string name="check_for_updates">Tumingin ng update</string>
     <string name="send_crash_report">Ipadala ang mga ulat ng pagka-crash</string>
     <string name="helps_fix_bugs">Nakakatulong sa pagsasaayos ng mga bugs. Walang sensitibong data ang ipapadala</string>
-    <string name="log_in_to_">Mag-login para kay %1$s</string>
-    <string name="username">Taguri (Username)</string>
-    <string name="password">Kontrasenyas (Password)</string>
+    <string name="log_in_to_">Mag-login sa %1$s</string>
+    <string name="username">Sagisag (username)</string>
+    <string name="password">Hudyat (password)</string>
     <string name="login">Mag-login</string>
     <string name="successfully_logged_in">Tagumpay ang login</string>
     <string name="unknown_error">Hindi malamang error</string>
@@ -284,4 +283,53 @@
     <string name="no_network_connection">Walang koneksyon sa Network</string>
     <string name="download_paused">Nakahinto ang pag-download</string>
     <string name="common">Karaniwan</string>
+    <string name="cancel_all_for_series">Ikansela lahat para sa seryeng ito</string>
+    <string name="cancel_all">Ikansela lahat</string>
+    <string name="downloading_">Nagda-download: %1$s</string>
+    <string name="successfully_logged_out">Nakapag-logout ka na</string>
+    <string name="username_must_not_be_blank">Hindi maaaring blangko ang username o password</string>
+    <string name="logout_from_">Mag-logout sa %%1$s\?</string>
+    <string name="logout">Mag-logout</string>
+    <string name="email">Email address</string>
+    <string name="open_source_licenses">Mga lisensiya sa open source</string>
+    <string name="website">Pook-sapot</string>
+    <string name="whats_new_this_release">Mga bago sa release na ito</string>
+    <string name="whats_new">Mga bago</string>
+    <string name="does_not_prevent_unofficial_nsfw">Hindi nito naiiwasan ang pagpakita ng mga NSFW (18+) ng mga di-opisyal o posibleng maling naka-flag na extension sa loob ng app.</string>
+    <string name="label_in_extensions">Label sa listahan ng extension</string>
+    <string name="show_in_extensions">Ipakita base sa listahan ng extension</string>
+    <string name="show_in_sources">Ipakita base sa mga pinagkukunan</string>
+    <string name="nsfw_sources">Mga Pinagkukunang NSFW (pang-18+)</string>
+    <string name="source_migration_guide">Gabay sa paglipat ng pinagkukunan</string>
+    <string name="you_can_migrate_in_library">Maaari din mag-migrate gamit ang pag-pili ng manga sa iyong library</string>
+    <string name="migration_sources_changed">Nabago na ang mga pinagkukunan para sa migrasyon.</string>
+    <string name="use_last_saved_migration_preferences">Gamitin ang huling naka-save na pre-migration na kagustuhan at mga pagkukunan para sa malawakang migrasyon</string>
+    <string name="only_enable_enabled_for_migration">I-enable lamang ang iyong mga kasalukuyang naka-enable na pinagkukunan para sa migrasyon.</string>
+    <string name="only_enable_pinned_for_migration">I-enable lamang ang mga nakamarkang pinagkukunan para sa migrasyon</string>
+    <string name="match_enabled_sources">Itugma sa naka-enable na pinagkukunan</string>
+    <string name="match_pinned_sources">Itugma sa mga nakamarkang punagkukunan</string>
+    <string name="only_search_pinned_when">Maghanap lamang sa mga nakamarkang pinagkukunan</string>
+    <string name="check_for_extension_updates">Maghanap ng update para sa mga extension</string>
+    <string name="pref_global_search">Pangkalahatang Paghahanap</string>
+    <string name="delete_all_covers__not_in_library_used_">Burahin lahat ng naka-cache na pabalat na wala sa iyong library
+\nKasalukuyang ginagamit: %1$s</string>
+    <string name="clear_cached_covers_non_library">Burahin ang mga naka-cache na pabalat na wala sa iyong library</string>
+    <string name="delete_old_covers_in_library_used_">Burahin ang mga luma at hindi na ginagamit na naka-cache na pabalat sa iyong library na pinalitan na.
+\nKasalukuyang ginagamit: %1$s</string>
+    <string name="clean_up_cached_covers">Linisin ang naka-cache na pabalat</string>
+    <plurals name="cleanup_done">
+        <item quantity="one">Tapos na ang paglilinis. Nakapagtanggal ng %d folder.</item>
+        <item quantity="other">Tapos na ang paglilinis. Nakapagtanggal ng %d na mga folder.</item>
+    </plurals>
+    <string name="battery_optimization_disabled">Naka-disable na ang battery optimization</string>
+    <string name="disable_if_issues_with_updating">I-disable ito kapag ikaw ay nakararanas ng aberya sa pag-update o restore ng iyong library</string>
+    <string name="disable_battery_optimization">I-disable ang pag-optimize sa baterya</string>
+    <string name="no_folders_to_cleanup">Walang folder na lilinisin</string>
+    <string name="starting_cleanup">Simulan ang paglilinis</string>
+    <string name="clean_read_manga_not_in_library">Linisin ang manga na wala sa library</string>
+    <string name="clean_read_downloads">Linisin ang mga nabasá</string>
+    <string name="clean_orphaned_downloads">Linisin ang mga naulilang download</string>
+    <string name="delete_unused_chapters">Burahin ang mga folder ng hindi nag-eexist, bahagyang nadownload, at nabasa nang mga kabatana</string>
+    <string name="clean_up_downloaded_chapters">Linisin ang mga nadownload na kabanata</string>
+    <string name="label_global_search">Pangkalahatang Paghahanap</string>
 </resources>

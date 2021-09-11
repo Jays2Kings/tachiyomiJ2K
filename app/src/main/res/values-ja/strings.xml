@@ -725,7 +725,6 @@
     <string name="you_can_migrate_in_library">ライブラリでマンガを選択して移行することもできます</string>
     <string name="when_sorting_ignore_articles">アルファベット順に並べ替える場合は、マンガのタイトルの先頭にある冠詞（a、an、the）を無視して並べ替えます</string>
     <string name="sort_by_ignoring_articles">冠詞を無視してソート</string>
-    <string name="select_order_to_update">Tachiyomiが更新を確認する順番を選択します</string>
     <string name="use_most_chapters">章が最も多いソースを使用する（遅い）</string>
     <string name="data_to_include_in_migration">移行に含めるデータ</string>
     <string name="search_parameter_eg">検索パラメータ（例：language:english）</string>
@@ -804,4 +803,5 @@
     <string name="cancel_all_for_series">このシリーズの全項目をキャンセル</string>
     <string name="dark_theme">ダークテーマ</string>
     <string name="light_theme">ライトテーマ</string>
+    <string name="about_dont_kill_my_app">一部のスマホメーカーはバックアップグラウンドサービスを終了する追加のアプリ制限を施しています。修正する方法についてはこのWebサイトをご覧ください。</string>
 </resources>

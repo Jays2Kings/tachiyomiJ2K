@@ -150,7 +150,6 @@
     <!-- Library settings -->
     <string name="library_update_frequency">Frequência de atualização da biblioteca</string>
     <string name="library_update_order">Ordem de atualização da biblioteca</string>
-    <string name="select_order_to_update">Selecione a ordem que o Tachiyomi verificará por atualizações</string>
     <string name="library_update_restriction">Restrições de atualização da biblioteca</string>
     <string name="library_update_restriction_summary">Atualizar apenas quando as condições se cumprirem</string>
     <string name="only_update_ongoing">Atualizar apenas mangás em andamento</string>
@@ -201,7 +200,7 @@
     <!-- Other Screens -->
     <!-- Extensions -->
     <string name="extensions">Extensões</string>
-    <string name="extension_updates">Atualizações da extensão</string>
+    <string name="extension_updates">Atualizações de extensão</string>
     <string name="extension_info">Informações da extensão</string>
     <string name="obsolete">Obsoleto</string>
     <string name="pending">Pendente</string>
@@ -880,9 +879,9 @@
     <string name="mark_range_as_read">Marcar um intervalo de capítulos como lido</string>
     <string name="cancel_all_for_series">Cancelar todos para esta série</string>
     <string name="app_shortcuts">Atalhos do app</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K querer acesso a todos arquivos no Android 11 para baixar capítulos, criar backups automáticos, e ler mangás locais.
+    <string name="external_storage_permission_notice">TachiyomiJ2K requer o acesso ao armazenamento de arquivos no Android 11 para baixar capítulos, criar backups automáticos e ler mangás locais.
 \n
-\nNa próxima tela, ative \"Permitir acesso de gerenciamento de todos arquivos.\"</string>
+\nNa próxima tela ative \"Permitir acesso de gerenciamento de todos arquivos.\"</string>
     <string name="dark_theme">Tema escuro</string>
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">Não foi encontrado resultado similar</string>
@@ -900,7 +899,7 @@
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
     <string name="all_files_permission_required">Permissões de arquivo necessárias</string>
-    <string name="restore_miui_warning">A Otimização da MIUI deve estar habilitada para a restauração funcionar corretamente.</string>
+    <string name="restore_miui_warning">Backup/restauração pode não funcionar adequadamente se a Otimização MIUI não foi desabilitada.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="add_tag">Adicionar tag</string>
     <string name="updating_extensions">Atualizando extensões</string>
@@ -909,4 +908,44 @@
     <string name="could_not_install_update">Não foi possível instalar atualização</string>
     <string name="by_update_date">Por data de upload</string>
     <string name="by_chapter_number">Por número do capítulo</string>
+    <string name="warning">Aviso</string>
+    <string name="orientation">Orientação</string>
+    <string name="default_orientation">Orientação padrão</string>
+    <string name="recently_installed">Instalado recentemente</string>
+    <string name="recently_updated">Atualizado recentemente</string>
+    <string name="name">Nome</string>
+    <string name="include_">Incluir: %s</string>
+    <string name="exclude_">Excluir: %s</string>
+    <string name="some_extensions_may_not_update">Algumas extensões podem não atualizar automaticamente se elas forem instaladas fora do aplicativo</string>
+    <string name="notify_extension_updated">Notificar que a extensão foi atualizada</string>
+    <string name="auto_update_extensions">Extensão de atualização automática</string>
+    <string name="about_dont_kill_my_app">Algumas distribuidoras possuem restrições de aplicativo adicionais que fecham os serviços em segundo plano. Esse site tem mais informações sobre como consertar isso.</string>
+    <string name="force_download_cache_refresh">Limpar o cache de download</string>
+    <string name="no_new_chapters_open_details">Mostrar os detalhes da série quando não houver novos capítulos</string>
+    <string name="series_opens_new_chapters">Atalhos para as séries abrem novos capítulos</string>
+    <string name="includes_recently_read_updated_added">Incluir o que foi recentemente lido, atualizado e séries adicionadas</string>
+    <string name="show_recent_series">Mostras as séries recentes</string>
+    <string name="show_recent_sources">Mostrar as fontes utilizadas recentemente</string>
+    <string name="dont_auto_update">Não atualizar automaticamente</string>
+    <string name="over_any_network">Com qualquer tipo de conexão</string>
+    <string name="over_wifi_only">Apenas com Wi-Fi</string>
+    <string name="auto_update_app">Atualizações automáticas para o app</string>
+    <string name="auto_updates">Atualizações automáticas</string>
+    <string name="hide_notification_content">Esconder os conteúdos das notificações</string>
+    <string name="pure_black_dark_mode">Modo Escuro completamente preto</string>
+    <string name="side_nav_icon_alignment">Alinhamento do ícone de navegação lateral</string>
+    <string name="split_double_pages">Dividir em página dupla</string>
+    <string name="split_double_pages_portrait">Dividir página dupla em retrato</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Extensão atualizada</item>
+        <item quantity="other">%d extensões atualizadas</item>
+    </plurals>
+    <string name="extensions_updated">Extensões atualizadas</string>
+    <string name="update_all">Atualizar tudo</string>
+    <string name="extensions_miui_warning">Otimização MIUI precisa ser desativada para instalar as extensões.</string>
+    <string name="installed_">Instalado %1$s</string>
+    <string name="extension_updates_pending">Atualizações de extensão pendentes</string>
+    <string name="restrictions_">Restrições: %1$s</string>
+    <string name="by_source_order">Pela ordem da fonte</string>
+    <string name="not_bookmarked">Não foi marcado</string>
 </resources>

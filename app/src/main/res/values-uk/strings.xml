@@ -283,7 +283,6 @@
     <string name="burn_darken">Темніше</string>
     <string name="help">Допомога</string>
     <string name="library_update_order">Порядок оновлення бібліотеки</string>
-    <string name="select_order_to_update">Оберіть порядок у якому Tachiyomi перевірятиме оновлення</string>
     <string name="lock_with_biometrics">Біометричне блокування</string>
     <string name="lock_when_idle">Блокувати в режимі очікування</string>
     <string name="creating_backup">Створення резервної копії</string>
@@ -296,7 +295,7 @@
     <string name="open_source_licenses">Ліцензії з відкритим кодом</string>
     <string name="email">Електропошта</string>
     <string name="successfully_logged_out">Ви вийшли з системи</string>
-    <string name="cancel_all">Відмінити все</string>
+    <string name="cancel_all">Скасувати все</string>
     <string name="invalid_download_location">Недійсне місце завантаження</string>
     <string name="update">Оновити</string>
     <string name="updating_library">Оновлення бібліотеки</string>
@@ -651,7 +650,7 @@
     <string name="username_must_not_be_blank">Ім`я користувача чи пароль не можуть бути порожніми</string>
     <string name="logout_from_">Вийти з %1$s\?</string>
     <string name="logout">Вихід</string>
-    <string name="whats_new">Що новенького в цьому релізі</string>
+    <string name="whats_new">Що новенького</string>
     <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши мангу з вашої бібліотеки</string>
     <string name="badges">Значки</string>
     <string name="started_reading_date">Дата початку читання</string>
@@ -718,5 +717,14 @@
     <string name="updated_to_">Оновлено до v%1$s</string>
     <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
     <string name="label_global_search">Глобальний пошук</string>
-    <string name="cancel_all_for_series">Відмінити для усієї серії</string>
+    <string name="cancel_all_for_series">Скасувати для усієї серії</string>
+    <string name="about_dont_kill_my_app">У деяких виробників є додаткові обмеження, котрі вбивають фонові сервіси. На цьому сайті більше інформації з приводу того, як це виправити.</string>
+    <string name="hide_notification_content">Приховати вміст сповіщення</string>
+    <string name="source_unsupported">Джерело не підтримується</string>
+    <string name="restore_miui_warning">Резервування/Відновлення можуть не працювати належним чином, у випадку, якщо вимкнено Оптимізацію MIUI.</string>
+    <string name="disabled">Вимкнено</string>
+    <string name="landscape">Альбомна</string>
+    <string name="portrait">Портретна</string>
+    <string name="name">Ім\'я</string>
+    <string name="getting_started_guide">Посібник з початку роботи</string>
 </resources>

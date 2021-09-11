@@ -278,7 +278,6 @@
     <string name="color_filter_blend_mode">Mod turas warna campuran</string>
     <string name="help">Bantuan</string>
     <string name="library_update_order">Susunan kemas kini koleksi</string>
-    <string name="select_order_to_update">Pilih susunan untuk Tachiyomi semak kemas kini</string>
     <string name="overlay">Lapisan atas</string>
     <string name="multiply">Berganda</string>
     <string name="screen">Skrin</string>
@@ -819,4 +818,7 @@
     <string name="source_unsupported">Sumber tidak disokong</string>
     <string name="hide_notification_content">Sembunyikan kandungan pemberitahuan</string>
     <string name="about_dont_kill_my_app">Sesetengah pengeluar ada sekatan tambahan pada aplikasi yang akan menghentikan perkidmatan latar belakang. Laman web ini ada maklumat cara membaikinya.</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="other">Ada %d bab yang hilang</item>
+    </plurals>
 </resources>

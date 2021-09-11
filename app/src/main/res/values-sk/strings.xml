@@ -78,7 +78,6 @@
     <string name="categories_to_include_in_global_update">Kategórie, ktoré sa majú zahrnúť do globálnej aktualizácie</string>
     <string name="all">Všetko</string>
     <string name="library_update_order">Poradie aktualizácie knižnice</string>
-    <string name="select_order_to_update">Vyberte poradie, v ktorom Tachiyomi kontroluje aktualizácie</string>
     <string name="library_update_restriction">Obmedzenia aktualizácii knižnice</string>
     <string name="library_update_restriction_summary">Aktualizovať len vtedy, keď sú splnené podmienky</string>
     <string name="wifi">Wi-Fi</string>
@@ -289,4 +288,10 @@
     <string name="next_chapter">Nasledujúca kapitola</string>
     <string name="previous_chapter">Predošlá kapitola</string>
     <string name="label_global_search">Hľadať všade</string>
+    <string name="local_source">Lokálny zdroj</string>
+    <string name="disabled">Zakázané</string>
+    <string name="landscape">Na šírku</string>
+    <string name="portrait">Na výšku</string>
+    <string name="name">Názov</string>
+    <string name="hide_notification_content">Skryť obsah upozornení</string>
 </resources>

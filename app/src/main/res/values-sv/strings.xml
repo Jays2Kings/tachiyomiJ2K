@@ -283,7 +283,6 @@
     <string name="burn_darken">Mörkna</string>
     <string name="help">Hjälp</string>
     <string name="library_update_order">Bibliotekets uppdateringsordning</string>
-    <string name="select_order_to_update">Välj i vilken ordning Tachiyomi söker efter uppdateringar</string>
     <string name="lock_with_biometrics">Lås med biometri</string>
     <string name="lock_when_idle">Lås vid inaktivitet</string>
     <string name="security">Säkerhet</string>
@@ -894,4 +893,17 @@
     <string name="update_all">Uppdatera alla</string>
     <string name="update_completed">Uppdatering slutförd</string>
     <string name="could_not_install_update">Det gick inte att installera uppdateringen</string>
+    <string name="getting_started_guide">Komma igång guide</string>
+    <string name="split_double_pages_portrait">Dela dubbelsidor i porträtt</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Tillägget uppdaterat</item>
+        <item quantity="other">%d tillägg uppdaterade</item>
+    </plurals>
+    <string name="extensions_updated">Tilläggsuppdateringar</string>
+    <string name="installed_">Installerat %1$s</string>
+    <string name="extension_updates_pending">Väntande tilläggsuppdateringar</string>
+    <string name="affects_library_grid">Påverkar biblioteksnätets omslag</string>
+    <string name="restrictions_">Begränsningar: %1$s</string>
+    <string name="no_matches_for_filters_short">Inga träffar med dina filter</string>
+    <string name="show_categories_while_filtering">Visa tomma kategorier vid filtrering</string>
 </resources>

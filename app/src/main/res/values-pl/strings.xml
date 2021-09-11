@@ -167,7 +167,6 @@
     <!-- Library settings -->
     <string name="library_update_frequency">Częstotliwość aktualizowania biblioteki</string>
     <string name="library_update_order">Kolejność aktualizacji biblioteki</string>
-    <string name="select_order_to_update">Ustaw kolejność, w jakiej Tachiyomi ma sprawdzać aktualizacje</string>
     <string name="library_update_restriction">Warunki aktualizacji biblioteki</string>
     <string name="library_update_restriction_summary">Aktualizuj tylko kiedy spełnione są te warunki</string>
     <string name="only_update_ongoing">Aktualizuj tylko nieukończone mangi</string>
@@ -389,7 +388,7 @@
     <string name="currently_reading">Teraz czytane</string>
     <string name="dropped">Porzucone</string>
     <string name="on_hold">Wstrzymane</string>
-    <string name="plan_to_read">Planowane do przeczytania</string>
+    <string name="plan_to_read">Planowane</string>
     <string name="want_to_read">Do przeczytania</string>
     <string name="paused">Wstrzymane</string>
     <string name="rereading">Czytane ponownie</string>
@@ -861,4 +860,19 @@
     <string name="landscape">Orientacja pozioma</string>
     <string name="portrait">Orientacja pionowa</string>
     <string name="about_dont_kill_my_app">Niektórzy producenci mają dodatkowe ograniczenia, które zabijają usługi działające w tle. Ta strona zawiera więcej informacji na ten temat.</string>
+    <string name="name">Nazwa</string>
+    <string name="single_page">Pojedyncza strona</string>
+    <string name="save_combined_pages">Zapisz połączone strony</string>
+    <string name="updating_extensions">Aktualizowanie rozszerzeń</string>
+    <string name="update_all">Zaktualizuj wszystko</string>
+    <string name="could_not_install_extension">Nie można zainstalować rozszerzenia</string>
+    <string name="extensions_miui_warning">Optymalizacja nakładki MIUI musi zostać wyłączona, aby zainstalować rozszerzenia.</string>
+    <string name="installed_">Zainstalowano %1$s</string>
+    <string name="extension_updates_pending">Oczekujące aktualizacje rozszerzeń</string>
+    <string name="checking_for_new_chapters">Sprawdzanie nowych rozdziałów</string>
+    <string name="update_completed">Aktualizacja zakończona</string>
+    <string name="could_not_install_update">Nie można zainstalować aktualizacji</string>
+    <string name="source_unsupported">Źródło nie jest wspierane</string>
+    <string name="restore_miui_warning">Funkcje kopii zapasowej mogą nie działać, jeśli optymalizacja nakładki MIUI jest wyłączona.</string>
+    <string name="hide_notification_content">Ukryj zawartość powiadomienia</string>
 </resources>
