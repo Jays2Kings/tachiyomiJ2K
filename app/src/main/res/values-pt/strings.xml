@@ -435,11 +435,6 @@
     <string name="tracked">Monitorizado</string>
     <string name="display_as">Visualizar como</string>
     <string name="tap_library_to_show_filters">Clicar no icone da Libraria para mostrar filtros</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Capas uniformes</string>
     <string name="hide_start_reading_button">Esconder butão de iniciar leitura</string>
     <string name="comfortable_grid">Grelha confortável</string>
@@ -928,4 +923,32 @@
 \n
 \nNo próximo ecrã ative \"Permitir acesso de gestão de todos ficheiros.\"</string>
     <string name="all_files_permission_required">Permissões de ficheiro necessárias</string>
+    <string name="force_download_cache_refresh_summary">Isto forçará um recálculo do cache baixado. Auxilia em caso de modificação em arquivos baixados fora do aplicativo e que serão adicionados a ele.</string>
+    <string name="use_side_navigation">Usar navegação lateral</string>
+    <string name="sapphire_dusk">Safira sombreado</string>
+    <string name="teal_ocean">Verde azulado oceânico</string>
+    <string name="chocolate_strawberries">Morango Chocolate</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="tako">Polvo</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="a_calmer_you">Mais calmo (dinâmico)</string>
+    <string name="a_brighter_you">Brilho mais claro (dinâmico)</string>
+    <string name="strawberry_daiquiri">Coquetel de Morango</string>
+    <string name="appearance">Aparência</string>
+    <string name="keep_both_on_service">Manter ambos em %1$s e apenas substituir localmente</string>
+    <string name="remove_x_from_service_and_add_y">Remover %1$s de %2$s e adicionar %3$s</string>
+    <string name="remove_previous_tracker">Remover o rastreador anterior\?</string>
+    <string name="select_an_entry">Selecione uma entrada</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Existe 1 capítulo faltando</item>
+        <item quantity="other">Existem %d capítulos faltando</item>
+    </plurals>
+    <string name="affects_library_grid">Afeta as grades de cobertura da biblioteca</string>
+    <string name="getting_started_guide">Iniciar o guia de introdução</string>
+    <string name="no_matches_for_filters_short">Sem resultados para os filtros selecionados</string>
+    <string name="show_categories_while_filtering">Mostrar categorias vazias enquanto está filtrando</string>
+    <string name="hide_notification_content">Esconder conteúdo das notificações</string>
+    <string name="by_default_side_nav_info">Pelo padrão, a navegação lateral é usada em determinados celulares e pequenos tablets quando colocado em modo paisagem, sempre ocorre em tablets maiores</string>
+    <string name="default_behavior">Comportamento padrão</string>
 </resources>

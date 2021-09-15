@@ -652,11 +652,6 @@
     <string name="show_unread_count">Okunmayan sayısını göster</string>
     <string name="show_unread_badges">Okunmayan rozetleri göster</string>
     <string name="hide_unread_badges">Okunmayan rozetleri gizle</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Düzenli kapaklar</string>
     <string name="comfortable_grid">Rahat Izgara</string>
     <string name="series_type">Seri türü</string>
@@ -927,4 +922,6 @@
         <item quantity="one">1 eksik bölüm var</item>
         <item quantity="other">%d eksik bölüm var</item>
     </plurals>
+    <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
+    <string name="help_translate">Çeviriye yardım edin</string>
 </resources>

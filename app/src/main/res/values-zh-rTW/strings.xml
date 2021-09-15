@@ -484,10 +484,6 @@
     <string name="show_unread_count">顯示未讀數量</string>
     <string name="show_unread_badges">顯示未讀章節</string>
     <string name="hide_unread_badges">隱藏未讀章節</string>
-    <string name="x_large">最大</string>
-    <string name="large">大</string>
-    <string name="medium">中</string>
-    <string name="small">小</string>
     <string name="_unread">%d 未讀</string>
     <string name="library_search_hint">搜尋標題，標籤，來源</string>
     <string name="remove_from_library_question">從書櫃移除\?</string>
@@ -507,4 +503,5 @@
 \n請在下一個畫面開啟\"允許存取儲存空間\"</string>
     <string name="external_storage_download_notice">Tachiyomi 需要有儲存空間存取權限才能下載漫畫。請允許\"管理儲存空間\"</string>
     <string name="getting_started_guide">入門指南</string>
+    <string name="help_translate">協助翻譯</string>
 </resources>

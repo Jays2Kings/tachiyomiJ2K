@@ -419,9 +419,6 @@
     <string name="include_in_global_update">این را در بروزرسانی جهانی قرار دهید</string>
     <string name="more_library_settings">باقی تنظیمات کتابخانه</string>
     <string name="tap_library_to_show_filters">روی گزینه کتابخانه کلیک کنید تا فیلترها نمایش داده شوند</string>
-    <string name="large">بزرگ</string>
-    <string name="medium">متوسط</string>
-    <string name="small">کوچک</string>
     <string name="hide_start_reading_button">دکمه شروع به خواندن را پنهان کن</string>
     <string name="display_options">گزینه های نمایش</string>
     <string name="drag_and_drop">بکشید و رها کنید</string>

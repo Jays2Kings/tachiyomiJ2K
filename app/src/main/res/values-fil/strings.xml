@@ -529,12 +529,7 @@
     <string name="error_sharing_cover">Di maibahagi ang pabalat</string>
     <string name="error_saving_cover">Di ma-save ang pabalat</string>
     <string name="cover_saved">Na-save na ang pabalat</string>
-    <string name="x_small">XS</string>
     <string name="show_unread_badges">Ipakita ang bilang ng babasahin</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
     <string name="source_unsupported">Di suportado ang source</string>
     <string name="hide_chapter_titles">Itago ang pamagat ng mga kabanata</string>
     <string name="hide">Itago</string>
@@ -681,4 +676,7 @@
     <string name="not_bookmarked">Walang pananda</string>
     <string name="about_dont_kill_my_app">May dagdag na mga restriksyon sa app ang ilang mga modelo ng phone na pumapatay sa mga serbisyong nasa likuran. May impormasyon sa site na ito para maayos ang naturang problema.</string>
     <string name="getting_started_guide">Gabay sa Pagsisimula</string>
+    <string name="no_matches_for_filters_short">Walang tumugma sa mga sinala</string>
+    <string name="show_categories_while_filtering">Ipakita ang bakanteng kategorya kapag sinala</string>
+    <string name="help_translate">Tumulong sa pagsalin</string>
 </resources>

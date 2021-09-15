@@ -230,11 +230,6 @@
     <string name="invalid_backup_file">Érvénytelen backup fájl</string>
     <string name="edge_nav">Él</string>
     <string name="_per_row">Soronként %d</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="sort_by">Rendezés</string>
     <string name="ungrouped">Csoportosítatlan</string>
     <string name="series">Sorozat</string>

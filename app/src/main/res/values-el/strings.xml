@@ -186,7 +186,7 @@
     <string name="build_time">Χρόνος κατασκευής</string>
     <string name="check_for_updates">Έλεγχος για ενημερώσεις</string>
     <string name="send_crash_report">Αποστολή αναφορών σφαλμάτων</string>
-    <string name="helps_fix_bugs">Βοηθά στην επιδιόρθωση τυχόν σφαλμάτων. Δεν θα αποστέλλονται ευαίσθητα δεδομένα</string>
+    <string name="helps_fix_bugs">Βοηθά στην επιδιόρθωση τυχόν σφαλμάτων. Δε θα αποστέλλονται ευαίσθητα δεδομένα</string>
     <string name="log_in_to_">Σύνδεση για %1$s</string>
     <string name="username">Όνομα χρήστη</string>
     <string name="password">Κωδικός πρόσβασης</string>
@@ -397,11 +397,6 @@
     <string name="more_library_settings">Περισσότερες ρυθμίσεις βιβλιοθήκης</string>
     <string name="display_as">Εμφάνιση ως</string>
     <string name="tap_library_to_show_filters">Πατήστε το εικονίδιο Βιβλιοθήκη για εμφάνιση φίλτρων</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Ομοιόμορφα καλύμματα</string>
     <string name="hide_start_reading_button">Απόκρυψη κουμπιού έναρξης ανάγνωσης</string>
     <string name="comfortable_grid">Άνετο πλέγμα</string>
@@ -927,4 +922,6 @@
         <item quantity="one">Λείπει 1 κεφάλαιο</item>
         <item quantity="other">Λείπουν %d κεφάλαια</item>
     </plurals>
+    <string name="helpful_translation_links">Χρήσιμοι σύνδεσμοι μετάφρασης</string>
+    <string name="help_translate">Βοηθήστε στη μετάφραση</string>
 </resources>

@@ -124,11 +124,6 @@
     <string name="download_badge">Selos de download</string>
     <string name="hide_start_reading_button">Ocultar botão de iniciar leitura</string>
     <string name="uniform_covers">Capas uniformes</string>
-    <string name="x_small">PP</string>
-    <string name="small">P</string>
-    <string name="medium">M</string>
-    <string name="large">G</string>
-    <string name="x_large">GG</string>
     <string name="tap_library_to_show_filters">Toque no ícone da Biblioteca para mostrar os filtros</string>
     <string name="display_as">Exibir como</string>
     <string name="hide_category_hopper">Ocultar seletor de categoria</string>
@@ -154,7 +149,7 @@
     <string name="library_update_restriction_summary">Atualizar apenas quando as condições se cumprirem</string>
     <string name="only_update_ongoing">Atualizar apenas mangás em andamento</string>
     <string name="sort_by_ignoring_articles">Ordenar ignorando artigos</string>
-    <string name="when_sorting_ignore_articles">Ao ordenar em ordem alfabética, ignore artigos (a, an, the) no início dos títulos de mangá</string>
+    <string name="when_sorting_ignore_articles">Ao ordenar em ordem alfabética, ignore artigos (a, an, the) no início dos títulos dos mangás</string>
     <string name="categories_to_include_in_global_update">Categorias para incluir na atualização global</string>
     <string name="include_in_global_update">Incluir na atualização global</string>
     <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
@@ -228,7 +223,7 @@
     <string name="cover_updated">Capa atualizada</string>
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Próximo capítulo não encontrado</string>
-    <string name="decode_image_error">A imagem não pôde ser codificada</string>
+    <string name="decode_image_error">A imagem não pôde ser decodificada</string>
     <string name="use_image_as_cover">Deseja usar esta imagem como capa?</string>
     <string name="finished_chapter">Concluído:</string>
     <string name="current_chapter">Atual:</string>
@@ -296,7 +291,7 @@
     <string name="webtoon_side_padding_20">20%</string>
     <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
-    <string name="about_this_">Sobre isto %1$s</string>
+    <string name="about_this_">Sobre este %1$s</string>
     <string name="start_reading">Comece a ler</string>
     <string name="start_reading_chapter_">Começar a ler Capítulo %1$s</string>
     <string name="continue_reading_chapter_">Continuar a ler o capítulo %1$s</string>
@@ -318,7 +313,7 @@
     <string name="next_unread_chapter">Próximo capítulo não lido</string>
     <string name="next_5_unread">Próximos 5 capítulos</string>
     <string name="custom_range">Intervalo personalizado</string>
-    <string name="all_chapters">Todos os capítuloss</string>
+    <string name="all_chapters">Todos os capítulos</string>
     <string name="all_unread_chapters">Todos os capítulos não lidos</string>
     <string name="all_read_chapters">Todos os capítulos lidos</string>
     <string name="all_but_bookmarked_chapters">Todos, exceto os capítulos favoritos</string>
@@ -609,7 +604,7 @@
     <string name="mark_all_as_read">Marcar tudo como lido</string>
     <string name="mark_all_as_unread">Marcar tudo como não lido</string>
     <string name="mark_as_read">Marcar como lido</string>
-    <string name="mark_previous_as_read">Marcar capítulo anterior como lido</string>
+    <string name="mark_previous_as_read">Marcar capítulos anteriores como lidos</string>
     <string name="more">Mais</string>
     <string name="move_to_bottom">Mover para baixo</string>
     <string name="move_to_top">Mover para o topo</string>
@@ -786,7 +781,7 @@
     <string name="whats_new_this_release">O que há de novo neste lançamento</string>
     <string name="disabled">Desativado</string>
     <string name="doh">DNS sobre HTTPS</string>
-    <string name="backup_in_progress">Backup já em progresso</string>
+    <string name="backup_in_progress">Há uma recuperação em progresso</string>
     <string name="restore_in_progress">Restauração já em progresso</string>
     <string name="pressing_back_to_start">Pressionando voltar para a tela inicial</string>
     <string name="back_to_start">Voltar ao início</string>
@@ -842,7 +837,7 @@
     <string name="pages_">Páginas %1$s</string>
     <string name="reader_settings">Configurações do leitor</string>
     <string name="_must_be_enabled_first">%1$s deve ser ativado primeiro</string>
-    <string name="app_info">Informações do aplicativo</string>
+    <string name="app_info">Informações</string>
     <string name="filter_languages">Filtrar idiomas</string>
     <string name="a_while_ago">Há um tempo</string>
     <string name="show_title_first">Mostrar título primeiro</string>
@@ -898,7 +893,7 @@
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
-    <string name="all_files_permission_required">Permissões de arquivo necessárias</string>
+    <string name="all_files_permission_required">É necessária a permissão para acessar arquivos</string>
     <string name="restore_miui_warning">Backup/restauração pode não funcionar adequadamente se a Otimização MIUI não foi desabilitada.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="add_tag">Adicionar tag</string>
@@ -919,7 +914,7 @@
     <string name="some_extensions_may_not_update">Algumas extensões podem não atualizar automaticamente se elas forem instaladas fora do aplicativo</string>
     <string name="notify_extension_updated">Notificar que a extensão foi atualizada</string>
     <string name="auto_update_extensions">Extensão de atualização automática</string>
-    <string name="about_dont_kill_my_app">Algumas distribuidoras possuem restrições de aplicativo adicionais que fecham os serviços em segundo plano. Esse site tem mais informações sobre como consertar isso.</string>
+    <string name="about_dont_kill_my_app">Algumas fabricantes possuem restrições adicionais que fecham os serviços em segundo plano. Esse site tem mais informações sobre como resolver isto.</string>
     <string name="force_download_cache_refresh">Limpar o cache de download</string>
     <string name="no_new_chapters_open_details">Mostrar os detalhes da série quando não houver novos capítulos</string>
     <string name="series_opens_new_chapters">Atalhos para as séries abrem novos capítulos</string>
@@ -933,7 +928,7 @@
     <string name="auto_updates">Atualizações automáticas</string>
     <string name="hide_notification_content">Esconder os conteúdos das notificações</string>
     <string name="pure_black_dark_mode">Modo Escuro completamente preto</string>
-    <string name="side_nav_icon_alignment">Alinhamento do ícone de navegação lateral</string>
+    <string name="side_nav_icon_alignment">Alinhamento dos ícones da navegação lateral</string>
     <string name="split_double_pages">Dividir em página dupla</string>
     <string name="split_double_pages_portrait">Dividir página dupla em retrato</string>
     <plurals name="extensions_updated_plural">
@@ -948,4 +943,33 @@
     <string name="restrictions_">Restrições: %1$s</string>
     <string name="by_source_order">Pela ordem da fonte</string>
     <string name="not_bookmarked">Não foi marcado</string>
+    <string name="default_behavior">Padrão</string>
+    <string name="by_default_side_nav_info">Por padrão, a navegação lateral é utilizada para certos celulares e pequenos tablets quando em modo panorama, e sempre ativa em tablets maiores</string>
+    <string name="keep_both_on_service">Mantenha ambos em %1$s e apenas substitua localmente</string>
+    <string name="remove_x_from_service_and_add_y">Remova %1$s de %2$s e adicione%3$s</string>
+    <string name="select_an_entry">Selecione uma entrada</string>
+    <string name="affects_library_grid">Afeta a grade das capas na biblioteca</string>
+    <string name="getting_started_guide">Guia de introdução</string>
+    <string name="no_matches_for_filters_short">Sem resultados para os filtros escolhidos</string>
+    <string name="show_categories_while_filtering">Mostrar categorias vazias enquanto filtra</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Existe 1 capítulo faltando</item>
+        <item quantity="other">Existem %d capítulos faltando</item>
+    </plurals>
+    <string name="force_download_cache_refresh_summary">Isso irá forçar o cache de download á recalcular. Útil se você modificou downloads fora do aplicativo e quer que ele seja selecionado novamente pelo aplicativo</string>
+    <string name="use_side_navigation">Usar navegação lateral</string>
+    <string name="appearance">Aparência</string>
+    <string name="remove_previous_tracker">Remover rastreadores anteriores\?</string>
+    <string name="help_translate">Tradução auxiliar</string>
+    <string name="strawberry_daiquiri">Coquetel de Morango</string>
+    <string name="helpful_translation_links">Links auxiliares com traduções</string>
+    <string name="sapphire_dusk">Safira Sombreado</string>
+    <string name="teal_ocean">Verde azulado Oceânico</string>
+    <string name="chocolate_strawberries">Morango Chocolate</string>
+    <string name="yang">Yang</string>
+    <string name="yin">Yin</string>
+    <string name="tako">Polvo</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="a_calmer_you">Mais calmo (dinâmico)</string>
+    <string name="a_brighter_you">Um brilho mais claro (dinâmico)</string>
 </resources>

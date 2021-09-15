@@ -424,4 +424,14 @@
     <string name="does_not_prevent_unofficial_nsfw">Dette forhindrer ikke uoffisielle eller potensielt feilaktig kategoriserte tillegg fra å vise innhold for 18+ i appen.</string>
     <string name="hide_app_block_screenshots">Skjul programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
     <string name="label_global_search">Globalt søk</string>
+    <string name="getting_started_guide">Oppstartsveiledning</string>
+    <string name="source_unsupported">Kilde støttes ikke</string>
+    <string name="error_sharing_cover">Klarte ikke å dele omslag</string>
+    <string name="error_saving_cover">Klarte ikke å lagre omslag</string>
+    <string name="cover_saved">Omslag lagret</string>
+    <string name="chapter_not_found">Fant ikke kapittelet</string>
+    <string name="cancel_all_for_series">Avbryt alle for denne serien</string>
+    <string name="about_dont_kill_my_app">Noen tilvirkere har ytterligere programbegrensninger som dreper bakgrunnstjenester. Denne nettsiden har mer info om hvordan det kan fikses.</string>
+    <string name="restore_miui_warning">Sikkerhetskopier/gjenoppretting kan krangle hvis MIUI-optimalisering er avskrudd.</string>
+    <string name="help_translate">Bistå oversettelsen</string>
 </resources>

@@ -414,11 +414,6 @@
     <string name="hide_category_hopper">隐藏分类漏斗</string>
     <string name="display_as">显示为</string>
     <string name="tap_library_to_show_filters">点击「书架」图标以显示过滤</string>
-    <string name="x_large">特大</string>
-    <string name="large">大</string>
-    <string name="medium">中</string>
-    <string name="small">小</string>
-    <string name="x_small">特小</string>
     <string name="uniform_covers">统一封面</string>
     <string name="hide_start_reading_button">隐藏开始阅读按钮</string>
     <string name="comfortable_grid">宽松网格</string>
@@ -904,4 +899,6 @@
     <plurals name="missing_chapters_warning">
         <item quantity="other">缺少 %d 个章节</item>
     </plurals>
+    <string name="helpful_translation_links">有帮助的翻译链接</string>
+    <string name="help_translate">协助翻译</string>
 </resources>

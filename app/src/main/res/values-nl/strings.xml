@@ -400,11 +400,6 @@
     <string name="hide_category_hopper">Categoriehopper verbergen</string>
     <string name="display_as">Weergeven als</string>
     <string name="tap_library_to_show_filters">Tik op het Bibliotheekicoon om filters weer te geven</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Eenduidige omslagen</string>
     <string name="hide_start_reading_button">\"Begin met lezen\"-knop verbergen</string>
     <string name="comfortable_grid">Comfortabel raster</string>
@@ -876,11 +871,11 @@
     <string name="not_bookmarked">Geen bladwijzer</string>
     <string name="external_storage_download_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden om hoofdstukken te downloaden. Tik hier, en zet dan \"Toegang verlenen om alle bestanden te beheren.\" aan.</string>
     <string name="all_files_permission_required">Bestandsrechten vereist</string>
-    <string name="restore_miui_warning">MIUI-optimalisatie moet geactiveerd zijn voordat het terugzetten goed kan werken.</string>
+    <string name="restore_miui_warning">Backup/herstellen werkt waarschijnlijk niet goed als de MIUI Optimalisatie is uitgeschakeld.</string>
     <string name="over_wifi_only">Alleen via Wi-Fi</string>
     <string name="tako">Tako</string>
-    <string name="a_calmer_you">A Calmer You</string>
-    <string name="a_brighter_you">A Brighter You</string>
+    <string name="a_calmer_you">A Calmer You (Dynamisch)</string>
+    <string name="a_brighter_you">A Brighter You (Dynamisch)</string>
     <string name="update_completed">Update voltooid</string>
     <string name="warning">Waarschuwing</string>
     <string name="about_dont_kill_my_app">Sommige fabrikanten hebben extra beperkingen op apps die achtergronddiensten uitschakelen. Informatie over hoe je dit kan oplossen kan je vinden op de deze website.</string>
@@ -893,4 +888,40 @@
     <string name="some_extensions_may_prompt">Mogelijk wordt er eerst nog door extensies gevraagd om geïnstalleerd te worden.</string>
     <string name="update_all">Alles updaten</string>
     <string name="could_not_install_update">Kon update niet installeren</string>
+    <string name="remove_previous_tracker">Verwijder vorige tracker\?</string>
+    <string name="select_an_entry">Selecteer een item</string>
+    <string name="recently_installed">Recentelijk geïnstalleerd</string>
+    <string name="recently_updated">Recentelijk bijgewerkt</string>
+    <string name="name">Naam</string>
+    <string name="helpful_translation_links">Handige vertaallinks</string>
+    <string name="some_extensions_may_not_update">Sommige extensies zullen niet automatisch bijgewerkt zijn als ze buiten de app zijn gedownload</string>
+    <string name="notify_extension_updated">Meldingsextensie is bijgewerkt</string>
+    <string name="auto_update_extensions">Update extensies automatisch</string>
+    <string name="by_default_side_nav_info">Standaard wordt zijnavigatie gebruikt voor bepaalde telefoons en kleine tablets in landschap, en wordt altijd weergegeven op grotere tablets</string>
+    <string name="default_behavior">Standaard gedrag</string>
+    <string name="use_side_navigation">Zijnavigatie gebruiken</string>
+    <string name="sapphire_dusk">Saffier Schemering</string>
+    <string name="teal_ocean">Teal Oceaan</string>
+    <string name="appearance">Uiterlijk</string>
+    <string name="keep_both_on_service">Houd beiden op %1$s en vervang maar eentje lokaal</string>
+    <string name="remove_x_from_service_and_add_y">Verwijder %1$s van %2$s en voeg %3$s toe</string>
+    <string name="split_double_pages">Dubbele pagina\'s splitsen</string>
+    <string name="split_double_pages_portrait">Dubbele pagina\'s in portret splitsen</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Extensie bijgewerkt</item>
+        <item quantity="other">%d extensies bijgewerkt</item>
+    </plurals>
+    <string name="extensions_updated">Extensies bijgewerkt</string>
+    <string name="installed_">%1$s Geïnstalleerd</string>
+    <string name="extension_updates_pending">Extensie-updates in behandeling</string>
+    <string name="affects_library_grid">Beïnvloedt bibliotheekrasteromslagen</string>
+    <string name="restrictions_">Restricties: %1$s</string>
+    <string name="show_categories_while_filtering">Laat lege categoriën zien tijdens het filteren</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Er is 1 missend hoofdstuk</item>
+        <item quantity="other">Er zijn %d missende hoofstukken</item>
+    </plurals>
+    <string name="getting_started_guide">Gids voor beginners</string>
+    <string name="help_translate">Help met vertalen</string>
+    <string name="no_matches_for_filters_short">Geen resultaten voor uw filters</string>
 </resources>

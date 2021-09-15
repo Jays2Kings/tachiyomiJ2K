@@ -125,11 +125,6 @@
     <string name="download_badge">Downloadzähler</string>
     <string name="hide_start_reading_button">„Jetzt lesen“-Symbol verstecken</string>
     <string name="uniform_covers">Einheitliche Vorschaubilder</string>
-    <string name="x_small">XS</string>
-    <string name="small">S</string>
-    <string name="medium">M</string>
-    <string name="large">L</string>
-    <string name="x_large">XL</string>
     <string name="tap_library_to_show_filters">Das „Meine Bibliothek“-Symbol antippen zum Anzeigen des Filtermenus</string>
     <string name="display_as">Anzeigen als</string>
     <string name="hide_category_hopper">Kategorienhüpfer verstecken</string>
@@ -962,4 +957,6 @@
         <item quantity="one">Es gibt 1 fehlendes Kapitel</item>
         <item quantity="other">Es gibt %d fehlende Kapitel</item>
     </plurals>
+    <string name="helpful_translation_links">Hilfreiche Übersetzungslinks</string>
+    <string name="help_translate">Beim Übersetzen mithelfen</string>
 </resources>

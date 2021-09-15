@@ -435,8 +435,6 @@
     <string name="include_in_global_update">Termasuk dalam kemas kini</string>
     <string name="when_sorting_ignore_articles">Apabila di susun mengikut huruf, susun endahkan artikel(a, an, the) di permulaan judul</string>
     <string name="sort_by_ignoring_articles">Di susun dengan mengendahkan</string>
-    <string name="x_large">Lebih</string>
-    <string name="x_small">Lebih</string>
     <string name="in_progress">Dalam kemajuan</string>
     <string name="comic">Komik</string>
     <string name="manhua">Manhua</string>
@@ -603,9 +601,6 @@
     <string name="tag">Tag</string>
     <string name="bottom">Bawah</string>
     <string name="migration">Pemindahan</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
     <plurals name="category_plural">
         <item quantity="other">%d kategori</item>
     </plurals>

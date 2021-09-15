@@ -22,7 +22,7 @@
     <string name="search">بحث</string>
     <string name="select_all">اختر الكل</string>
     <string name="mark_as_read">تحديد كمقروء</string>
-    <string name="mark_previous_as_read">تحديد السابق كمقروء</string>
+    <string name="mark_previous_as_read">تحديد الفصول السابقة كمقروء</string>
     <string name="download">تنزيل</string>
     <string name="delete">حذف</string>
     <string name="edit">تعديل</string>
@@ -459,7 +459,7 @@
     <string name="tag">وسم</string>
     <string name="select_none">إلغاء التحديد</string>
     <string name="moved_to_">تم النقل إلى %1$s</string>
-    <string name="mark_previous_as_unread">تحديد السابق كغير مقروء</string>
+    <string name="mark_previous_as_unread">تحديد الفصول السابقة كغير مقروء</string>
     <string name="mark_all_as_read">تحديد الكل كمقروء</string>
     <string name="mark_all_as_unread">تحديد الكل كغير مقروء</string>
     <string name="keep">أبقي</string>
@@ -501,7 +501,7 @@
     <string name="username_must_not_be_blank">لا يمكن أن يكون اسم المستخدم أو كلمة المرور فارغًا</string>
     <string name="logout_from_">تسجيل الخروج من %1$s؟</string>
     <string name="logout">تسجيل الخروج</string>
-    <string name="whats_new">ما الجديد في هذا الإصدار</string>
+    <string name="whats_new">ما الجديد</string>
     <string name="you_can_migrate_in_library">يمكنك أيضاً الترحيل عن طريق اختيار المانجا في مكتبتك</string>
     <string name="migration_sources_changed">مصادر الترحيل التي تم تغييرها</string>
     <string name="use_last_saved_migration_preferences">استخدم آخر تفضيلات المصادر المحفوظة للترحيل العادي للترحيل الجماعي</string>
@@ -578,7 +578,7 @@
     <string name="continue_reading_chapter_">مواصلة قراءة الفصل %1$s</string>
     <string name="start_reading_chapter_">بدء قراءة الفصل %1$s</string>
     <string name="start_reading">بدء القراءة</string>
-    <string name="about_this_">حول هذا %1$s</string>
+    <string name="about_this_">حول هذه %1$s</string>
     <string name="if_disabled_transition_will_skip">إذا تم تعطيله ، فسيتم تخطي صفحة الانتقال إذا تم تحميل الفصل التالي</string>
     <string name="smart_based_on_page_and_theme">ذكي (بناءً على الصفحة والنسق)</string>
     <string name="smart_based_on_page">ذكي (استناداً إلى الصفحة)</string>
@@ -606,8 +606,6 @@
     <string name="last_read_">المقروءة اخيرا %1$s</string>
     <string name="newly_added">المُضافة حديثاً</string>
     <string name="show_notification_error">إظهار إشعار بالأخطاء</string>
-    <string name="large">L</string>
-    <string name="small">S</string>
     <string name="delete_all_covers__not_in_library_used_">حذف كافة الأغلفة المخزنة مؤقتاً غير الموجودة في مكتبتك
 \nحاليا يتم استخدام: %1$s</string>
     <string name="clear_cached_covers_non_library">مسح الأغلفة المخزنة مؤقتًا غير الموجودة في المكتبة</string>
@@ -644,9 +642,6 @@
     <string name="hide_category_hopper">إخفاء الفئة</string>
     <string name="display_as">عرض ك</string>
     <string name="tap_library_to_show_filters">انقر على أيقونة المكتبة لعرض المُرشحات</string>
-    <string name="x_large">XL</string>
-    <string name="medium">M</string>
-    <string name="x_small">XS</string>
     <string name="hide_start_reading_button">إخفاء زر بدء القراءة</string>
     <string name="drag_and_drop">سحب و إفلات</string>
     <string name="tracked">مُتتبَعة</string>
@@ -934,7 +929,7 @@
     <string name="split_double_pages_portrait">تقسيم الصفحات المزدوجة في الوضع الرأسي</string>
     <string name="extensions_updated">تم تحديث الإضافات</string>
     <plurals name="_updates_pending">
-        <item quantity="zero"/>
+        <item quantity="zero">%d لا يوجد تحديثات معلقة</item>
         <item quantity="one">%d تحديث واحد معلق</item>
         <item quantity="two">%d تحديثان معلقان</item>
         <item quantity="few">%d بضعة تحديثات معلقة</item>
@@ -950,7 +945,7 @@
     <string name="installed_">تم تثبيت %1$s</string>
     <string name="extension_updates_pending">تحديثات الإضافات معلقة</string>
     <string name="affects_library_grid">يؤثر على أغلفة المكتبة في وضع الشبكة</string>
-    <string name="global_updates">تحديثات عمومية</string>
+    <string name="global_updates">تحديثات شاملة</string>
     <string name="restrictions_">القيود: %1$s</string>
     <string name="checking_for_new_chapters">جارٍ التحقق من وجود فصول جديدة</string>
     <string name="open_random_series">افتح سلسلة عشوائية</string>
@@ -966,4 +961,59 @@
 \n
 \nفي الشاشة التالية ، قم بتمكين \"السماح بالوصول لإدارة جميع الملفات.\"</string>
     <string name="all_files_permission_required">إذن الوصول إلى الملفات مطلوب</string>
+    <string name="warning">تحذير</string>
+    <string name="search_">بحث %1$s</string>
+    <string name="orientation">الاتجاه</string>
+    <string name="default_orientation">الاتجاه الافتراضي</string>
+    <string name="previous">السابق</string>
+    <string name="preview">معاينة</string>
+    <string name="recently_installed">تم تثبيته مؤخرا</string>
+    <string name="recently_updated">تم تحديثها مؤخرا</string>
+    <string name="menu">القائمة</string>
+    <string name="mark_range_as_unread">تحديد نطاق من الفصول كلًَم يتم قراءتها</string>
+    <string name="mark_range_as_read">تحديد نطاق من الفصول كتًَم قراءتها</string>
+    <string name="include_">يشمل: %s</string>
+    <string name="exclude_">استبعاد: %s</string>
+    <string name="enable">تفعيل</string>
+    <string name="beta">بيتا</string>
+    <string name="whats_new_this_release">ما الجديد في هذا الاصدار</string>
+    <string name="some_extensions_may_not_update">بعض الملحقات لا يتم تحديثها تلقائياً لو تم تثبيتها من خارج التطبيق</string>
+    <string name="notify_extension_updated">شعار ملحق تم تحديثه</string>
+    <string name="by_default_side_nav_info">بشكل افتراضي، التنقل الجانبي يستخدم لبضعة هواتف معينة و الالواح الذكية صغيرة الحجم، ودائماً يظهر في الالواح الذكية كبيرة الحجم.</string>
+    <string name="default_behavior">السلوك الافتراضي</string>
+    <string name="use_side_navigation">استخدام التنقل الجانبي</string>
+    <string name="appearance">المظهر</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="zero">لم يتم تحديث اي ملحق</item>
+        <item quantity="one">تم تحديث ملحق واحد</item>
+        <item quantity="two">تم تحديث ملحقان</item>
+        <item quantity="few">تم تحديث %d ملحق</item>
+        <item quantity="many">تم تحديث %d ملحق</item>
+        <item quantity="other">تم تحديث %d ملحق</item>
+    </plurals>
+    <plurals name="missing_chapters_warning">
+        <item quantity="zero">لا يوجد فصول مفقودة</item>
+        <item quantity="one">هناك فصل مفقود</item>
+        <item quantity="two">هناك فصلان مفقودان</item>
+        <item quantity="few">هناك %d فصل مفقود</item>
+        <item quantity="many">هناك %d فصل مفقود</item>
+        <item quantity="other">هناك %d فصل مفقود</item>
+    </plurals>
+    <string name="getting_started_guide">دليل البدء</string>
+    <string name="no_matches_for_filters_short">لا يوجد تطابق للتصفية الخاصة بك</string>
+    <string name="show_categories_while_filtering">أظهر الفئات الفارغة أثناء التصفية</string>
+    <string name="move_to_">اذهب إلى %1$s</string>
+    <string name="clear_filters">مسح المرشحات</string>
+    <string name="sapphire_dusk">غسق ياقوتي</string>
+    <string name="teal_ocean">محيط تركواز</string>
+    <plurals name="cache_cleared">
+        <item quantity="zero">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+        <item quantity="one">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+        <item quantity="two">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+        <item quantity="few">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+        <item quantity="many">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+        <item quantity="other">تم تنظيف الملفات المؤقتة. تم حذف %d من الملفات</item>
+    </plurals>
+    <string name="helpful_translation_links">روابط مساعدة للترجمة</string>
+    <string name="help_translate">ساعد بالترجمة</string>
 </resources>

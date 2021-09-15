@@ -507,11 +507,6 @@
     <string name="show_unread_count">Visa oläst antal</string>
     <string name="show_unread_badges">Visa olästmarkering</string>
     <string name="hide_unread_badges">Dölj olästmarkering</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Enhetliga omslag</string>
     <string name="hide_start_reading_button">Dölj knappen för \"Börja läsa\"</string>
     <string name="comfortable_grid">Bekvämt rutnät</string>
@@ -906,4 +901,5 @@
     <string name="restrictions_">Begränsningar: %1$s</string>
     <string name="no_matches_for_filters_short">Inga träffar med dina filter</string>
     <string name="show_categories_while_filtering">Visa tomma kategorier vid filtrering</string>
+    <string name="help_translate">Hjälp till med översättning</string>
 </resources>

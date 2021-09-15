@@ -426,11 +426,6 @@
     <string name="more_library_settings">Daljnje postavke biblioteke</string>
     <string name="display_as">Prikaži kao</string>
     <string name="tap_library_to_show_filters">Dodirni ikonu biblioteke za prikazivanje filtara</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="want_to_read">Želim čitati</string>
     <string name="mark_all_chapters_as_read">Sva poglavlja označiti kao pročitana\?</string>
     <string name="no_description">Bez opisa</string>
@@ -872,7 +867,7 @@
     <string name="include_">Uključi: %s</string>
     <string name="exclude_">Isključi: %s</string>
     <string name="force_download_cache_refresh">Aktualiziraj predmemoriju preuzimanja</string>
-    <string name="restore_miui_warning">Za ispravno obnavljanje, MIUI optimizacija mora biti aktivirana.</string>
+    <string name="restore_miui_warning">Spremanje sigurnosne kopije i obnavljanje možda neće ispravno raditi, ako MIUI optimizacija nije aktivirana.</string>
     <string name="no_new_chapters_open_details">Kad nema novih poglavlja, otvorit će se detalji o seriji</string>
     <string name="series_opens_new_chapters">Prečaci serije otvaraju nova poglavlja</string>
     <string name="includes_recently_read_updated_added">Uključuje nedavno pročitane, aktualizirane i dodane serije</string>
@@ -891,8 +886,8 @@
     <string name="yin">Yin</string>
     <string name="tako">Tako</string>
     <string name="yotsuba">Yotsuba</string>
-    <string name="a_calmer_you">Tamnije</string>
-    <string name="a_brighter_you">Svjetlije</string>
+    <string name="a_calmer_you">Mirniji ti (dinamički)</string>
+    <string name="a_brighter_you">Svjetliji ti (dinamički)</string>
     <string name="strawberry_daiquiri">Strawberry Daiquiri</string>
     <string name="dark_theme">Tamna tema</string>
     <string name="light_theme">Svjetla tema</string>
@@ -919,9 +914,9 @@
     <string name="split_double_pages">Podijelite dvostruke stranice</string>
     <string name="split_double_pages_portrait">Podijelite dvostruke stranice u portretu</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">Ekstenzija ažurirana</item>
-        <item quantity="few">%d ekstenzija ažurirano</item>
-        <item quantity="other">%d ekstenzija ažurirano</item>
+        <item quantity="one">%d proširenje aktualizirano</item>
+        <item quantity="few">%d proširenja aktualizirana</item>
+        <item quantity="other">%d proširenja aktualizirano</item>
     </plurals>
     <string name="extensions_updated">Ekstenzije ažurirane</string>
     <string name="installed_">Instalirano %1$s</string>
@@ -931,4 +926,23 @@
     <string name="getting_started_guide">Početni vodič</string>
     <string name="no_matches_for_filters_short">Nema podudaranja za vaše filtre</string>
     <string name="show_categories_while_filtering">Prikaži prazne kategorije tijekom filtritanja</string>
+    <string name="recently_installed">Nedavno instalirano</string>
+    <string name="recently_updated">Nedavno aktualizirano</string>
+    <string name="name">Ime</string>
+    <string name="helpful_translation_links">Korisne poveznice za prevođenje</string>
+    <string name="help_translate">Pomogni prevoditi</string>
+    <string name="some_extensions_may_not_update">Neka se proširenja možda neće automatski aktualizirati ako su instalirana izvan ovog programa</string>
+    <string name="notify_extension_updated">Obavijesti da je proširenje aktualizirano</string>
+    <string name="auto_update_extensions">Aktualiziraj proširenja automatski</string>
+    <string name="by_default_side_nav_info">Bočna navigacija standardno se koristi za određene telefone i male tablete u vodoravnom položaju i uvijek se prikazuje na većim tabletima</string>
+    <string name="default_behavior">Standardno ponašanje</string>
+    <string name="use_side_navigation">Koristi bočnu navigaciju</string>
+    <string name="sapphire_dusk">Safirni sumrak</string>
+    <string name="teal_ocean">Tirkizni ocean</string>
+    <string name="appearance">Izgled</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Nedostaje %d poglavlje</item>
+        <item quantity="few">Nedostaju %d poglavlja</item>
+        <item quantity="other">Nedostaje %d poglavlja</item>
+    </plurals>
 </resources>

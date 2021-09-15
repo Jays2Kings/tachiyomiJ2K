@@ -479,11 +479,6 @@
     <string name="show_unread_count">Afișează numărul necititelor</string>
     <string name="show_unread_badges">Afișați insignele de necitire</string>
     <string name="hide_unread_badges">Ascundeți insignele de necitire</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">Xs</string>
     <string name="uniform_covers">Coperte uniforme</string>
     <string name="hide_start_reading_button">Ascunde butonul de pornire a citirii</string>
     <string name="comfortable_grid">Grilă confortabilă</string>

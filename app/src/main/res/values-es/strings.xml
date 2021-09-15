@@ -24,7 +24,7 @@
     <string name="pause">Pausa</string>
     <string name="clear">Borrar</string>
     <string name="retry">Reintentar</string>
-    <string name="remove">Eliminar</string>
+    <string name="remove">Quitar</string>
     <string name="resume">Continuar</string>
     <string name="open_in_browser">Abrir en el navegador</string>
     <string name="cancel">Cancelar</string>
@@ -58,8 +58,8 @@
     <string name="only_update_ongoing">Solo actualizar el manga en curso</string>
     <string name="sync_chapters_after_reading">Sincronizar capítulos después de leerlos</string>
     <string name="app_theme">Tema de la aplicación</string>
-    <string name="light_blue">Tema principal</string>
-    <string name="dark">Tema oscuro</string>
+    <string name="light_blue">Azul claro</string>
+    <string name="dark">Oscuro</string>
     <!-- Reader section -->
     <string name="fullscreen">Pantalla completa</string>
     <string name="show_page_number">Mostrar el número de página</string>
@@ -102,7 +102,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Borrar la caché de los capítulos</string>
     <string name="used_">Usado: %1$s</string>
-    <string name="cache_delete_error">Se ha producido un error al borrar el caché</string>
+    <string name="cache_delete_error">Se produjo un error al vaciar la antememoria</string>
     <string name="clear_cookies">Borrar cookies</string>
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
@@ -112,7 +112,7 @@
     <!-- About section -->
     <string name="version">Versión</string>
     <string name="build_time">Hora de compilación</string>
-    <string name="check_for_updates">Comprobar las actualizaciones</string>
+    <string name="check_for_updates">Buscar actualizaciones</string>
     <!-- ACRA -->
     <string name="send_crash_report">Enviar informes de fallos</string>
     <string name="helps_fix_bugs">Ayuda a corregir cualquier error. No se enviarán datos sensibles</string>
@@ -162,7 +162,7 @@
     <string name="could_not_download_chapter_can_try_again">Se ha producido un error al descargar capítulos. Puede intentarlo de nuevo en la sección de descargas</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Nuevos capítulos encontrados</string>
-    <string name="must_be_in_library_to_edit">Por favor, añade el título a la biblioteca antes de editar</string>
+    <string name="must_be_in_library_to_edit">El manga debe existir en la biblioteca para poder editarlo</string>
     <!-- File Picker Titles -->
     <string name="select_cover_image">Seleccione la imagen de portada</string>
     <string name="select_backup_file">Seleccione la copia de seguridad</string>
@@ -212,7 +212,7 @@
     <string name="weekly">Semanalmente</string>
     <string name="categories_to_include_in_global_update">Categorías a incluir en actualización global</string>
     <string name="all">Todos</string>
-    <string name="amoled_black">Tema AMOLED</string>
+    <string name="amoled_black">Negro AMOLED</string>
     <string name="language">Idioma</string>
     <string name="system_default">Predeterminado</string>
     <string name="default_category">Categoría predeterminada</string>
@@ -296,7 +296,7 @@
     <string name="rereading">Relectura</string>
     <string name="started">Empezado</string>
     <string name="type">Tipo</string>
-    <string name="url_not_set_click_again">La dirección del manga no está fijada, por favor haga clic en el título y seleccione el manga de nuevo</string>
+    <string name="url_not_set_click_again">El URL del manga no se ha definido. Pulse en el título y seleccione el manga de nuevo</string>
     <string name="finished_chapter">Finalizado:</string>
     <string name="current_chapter">Actual:</string>
     <string name="loading_pages">Cargando páginas…</string>
@@ -355,8 +355,8 @@
     <string name="continuous_vertical">Vertical continuo</string>
     <string name="paged">Paginado</string>
     <string name="always_show_chapter_transition">Mostrar siempre la transición del capítulo</string>
-    <string name="pref_webtoon_side_padding">Relleno lateral</string>
-    <string name="webtoon_side_padding_0">Sin margen</string>
+    <string name="pref_webtoon_side_padding">Espaciado lateral</string>
+    <string name="webtoon_side_padding_0">Ninguno</string>
     <string name="webtoon_side_padding_10">10 %</string>
     <string name="webtoon_side_padding_15">15 %</string>
     <string name="webtoon_side_padding_20">20 %</string>
@@ -487,11 +487,6 @@
     <string name="hide_category_hopper">Ocultar tolva de categoría</string>
     <string name="display_as">Mostrar como</string>
     <string name="tap_library_to_show_filters">Toca el icono de la Biblioteca para mostrar los filtros</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Cubiertas uniformes</string>
     <string name="hide_start_reading_button">Ocultar el botón de inicio de lectura</string>
     <string name="comfortable_grid">Cuadrícula agradable</string>
@@ -611,13 +606,13 @@
     <string name="include_extra_search_parameter">Incluir un parámetro de búsqueda adicional al buscar</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">No oficial</string>
-    <string name="may_contain_nsfw">Puede contener contenido 18+</string>
+    <string name="may_contain_nsfw">Puede incluir contenido solo apto para adultos</string>
     <string name="next_page">Siguiente página</string>
     <string name="previous_page">Página anterior</string>
     <string name="next_chapter">Siguiente capítulo</string>
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar las transiciones de página</string>
-    <string name="default_reading_mode">Modo de lectura por defecto</string>
+    <string name="default_reading_mode">Modo de lectura predeterminado</string>
     <string name="nav_layout">Estructura de navegación</string>
     <string name="no_chapters_error">No hay capítulos</string>
     <string name="badges">Insignias</string>
@@ -631,7 +626,7 @@
     <string name="finished_reading_date">Fecha de lectura finalizada</string>
     <string name="myanimelist_relogin">Vuelva a iniciar sesión en MAL</string>
     <string name="search_settings">Buscar en configuración</string>
-    <string name="locale">Localización</string>
+    <string name="locale">Configuración regional</string>
     <string name="automatic_backups">Copias de seguridad automáticas</string>
     <string name="invalid_backup_file">Un archivo invalido de copia de seguridad</string>
     <string name="invalid_backup_file_type">Tipo de archivo de copia de seguridad no válido: %1$s
@@ -670,8 +665,8 @@
     <string name="starting_screen">Pantalla de inicio</string>
     <string name="hides_on_scroll">Ocultar al desplazarse</string>
     <string name="hide_bottom_nav">Ocultar automáticamente la barra de navegación</string>
-    <string name="last_used_library_recents">Último utilizado (Biblioteca o Recientes)</string>
-    <string name="white_theme">Blanco Puro</string>
+    <string name="last_used_library_recents">Última utilización (Biblioteca o Recientes)</string>
+    <string name="white_theme">Blanco puro</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga migrado</item>
         <item quantity="other">%d mangas migrados</item>
@@ -737,8 +732,8 @@
     </plurals>
     <string name="not_logged_into_">Sin iniciar sesion en %1$s</string>
     <string name="hot_pink">Rosa chicle</string>
-    <string name="spring_blossom">Florecer de Primavera</string>
-    <string name="midnight_dusk">Crepúsculo de Medianoche</string>
+    <string name="spring_blossom">Florecer de primavera</string>
+    <string name="midnight_dusk">Crepúsculo de medianoche</string>
     <string name="turn_off_">Desactivar %s</string>
     <string name="turn_on_">Activar %s</string>
     <plurals name="pages_plural">
@@ -751,7 +746,7 @@
     <string name="series">Series</string>
     <string name="category_hopper_long_press">Salto entre categoria despues de una accion de pulsacion larga</string>
     <string name="top">Superior</string>
-    <string name="selection">Seleccion</string>
+    <string name="selection">Selección</string>
     <string name="select_none">Seleccionar ninguno</string>
     <string name="previous">Anterior</string>
     <string name="preview">Avance</string>
@@ -785,7 +780,7 @@
     <string name="clean_read_manga_not_in_library">Limpiar mangas que no estan en la biblioteca</string>
     <string name="delete_unused_chapters">Elimiar carpetas de capitulos inexistentes, parcialmente descargados o leidos</string>
     <string name="clean_up_downloaded_chapters">Limpiar capitulos descargados</string>
-    <string name="disabled">Deshabilitado</string>
+    <string name="disabled">Desactivado</string>
     <string name="doh">DNS sobre HTTPS</string>
     <string name="data_management">Gestion de datos</string>
     <string name="restore_content_full">Datos de la copia de seguridad seran restaurados.
@@ -796,7 +791,7 @@
     <string name="pressing_back_to_start">Presionar atras para la pantalla de inicio</string>
     <string name="follow_system_theme">Predeterminado del sistema</string>
     <string name="flat_lime">Lima Plano</string>
-    <string name="pauses_reading_history">Pausar historia de lectura</string>
+    <string name="pauses_reading_history">Pausa el historial de lectura</string>
     <string name="incognito_mode">Modo incógnito</string>
     <string name="webtoon_cannot_change">No es posible cambiar el modo lectura de webtoon. Cambie el tipo de series primero.</string>
     <string name="automatic_orientation">Automático (basado en orientacion)</string>
@@ -874,13 +869,13 @@
     <string name="hide_notification_content">Ocultar contenido de la notificación</string>
     <string name="pure_black_dark_mode">Modo negro puro</string>
     <string name="side_nav_icon_alignment">Alineamientos de icono de navegación lateral</string>
-    <string name="chocolate_strawberries">Chocolate de Fresa</string>
+    <string name="chocolate_strawberries">Fresas con chocolate</string>
     <string name="yotsuba">Yotsuba</string>
-    <string name="strawberry_daiquiri">Daiquiri Fresa</string>
+    <string name="strawberry_daiquiri">Daiquiri de fresa</string>
     <string name="dark_theme">Tema oscuro</string>
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">No se han encontrado resultados iguales</string>
-    <string name="source_unsupported">Fuente no soportada</string>
+    <string name="source_unsupported">No se admite el origen</string>
     <string name="only_applies_silent_trackers">Solo aplicado en seguidores silenciosos tales como Komga</string>
     <string name="track_when_adding_to_library">Seguimiento al añadir a la biblioteca</string>
     <plurals name="_updates_pending">
@@ -892,27 +887,27 @@
     <string name="checking_for_new_chapters">Buscando nuevos capítulos</string>
     <string name="open_random_series">Abrir una serie aleatoria</string>
     <string name="show_number_of_items">Mostrar el numero de objetos</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K requiere acceso a todos los archivos para descargar capítulos. Presione aquí y seguido habilite \"Acceso a todos los archivos\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K requiere acceso a todos los archivos con Android 11 para descargar capítulos, crear copias de seguridad o leer manga localmente.
+    <string name="external_storage_download_notice">TachiyomiJ2K requiere acceso a todos los archivos para descargar capítulos. Toque aquí y, acto seguido, active «Acceso a todos los archivos».</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K requiere acceso a todos los archivos con Android 11 para descargar capítulos, crear copias de respaldo o leer manga localmente.
 \n
-\nEn la siguiente pantalla por favor habilite “Acceso a todos los archivos”</string>
-    <string name="all_files_permission_required">Permiso de Gestion de Archivos Requerido</string>
+\nEn la siguiente pantalla active «Acceso a todos los archivos».</string>
+    <string name="all_files_permission_required">Se necesita el permiso de archivos</string>
     <string name="warning">Advertencia</string>
     <string name="orientation">Orientación</string>
-    <string name="default_orientation">Orientación por defecto</string>
+    <string name="default_orientation">Orientación predeterminada</string>
     <string name="about_dont_kill_my_app">Algunos fabricantes tienen restricciones adicionales para aplicaciones que matan los servicios en segundo plano. Esta pagina web tiene más información sobre cómo solucionarlo.</string>
     <string name="restore_miui_warning">Es posible que las funciones de copia de seguridad y restauración no funcionen correctamente si la opción Optimización de MIUI está desactivada.</string>
     <string name="dont_auto_update">No actualizar automáticamente</string>
     <string name="over_any_network">Con cualquier red</string>
-    <string name="over_wifi_only">Unicamente con WiFi</string>
-    <string name="auto_update_app">Actualizaciones automáticas de la aplicación</string>
+    <string name="over_wifi_only">Únicamente con wifi</string>
+    <string name="auto_update_app">Actualizar aplicación automáticamente</string>
     <string name="auto_updates">Actualizaciones automáticas</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="tako">Tako</string>
-    <string name="a_calmer_you">Un Tú Más Calmado (Dinámico)</string>
-    <string name="a_brighter_you">Un Tú Más Radiante (Dinámico)</string>
-    <string name="set_as_default">Establecer por defecto</string>
+    <string name="a_calmer_you">You: tranquilidad (dinámico)</string>
+    <string name="a_brighter_you">You: radiante (dinámico)</string>
+    <string name="set_as_default">Establecer como predeterminado</string>
     <string name="add_tag">Añadir etiqueta</string>
     <string name="updating_extensions">Extensiones actualizándose</string>
     <string name="some_extensions_may_prompt">Algunas extensiones todavía pueden desplegarse para ser actualizadas primero.</string>
@@ -951,11 +946,13 @@
     <string name="no_matches_for_filters_short">Ningún resultado con tus filtros</string>
     <string name="show_categories_while_filtering">Mostrar categorías vacías al filtrar</string>
     <string name="getting_started_guide">Guía de introducción</string>
-    <string name="by_default_side_nav_info">Por defecto, la navegación lateral se utiliza para ciertos teléfonos y tabletas pequeñas cuando están en horizontal, y siempre se muestra en las tabletas más grandes</string>
-    <string name="default_behavior">Comportamiento por defecto</string>
+    <string name="by_default_side_nav_info">De manera predeterminada, la navegación lateral se utiliza en ciertos teléfonos y tabletas pequeñas cuando están en horizontal, y siempre se muestra en tabletas más grandes</string>
+    <string name="default_behavior">Comportamiento predeterminado</string>
     <string name="use_side_navigation">Usar la navegación lateral</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Falta 1 capítulo</item>
         <item quantity="other">Faltan %d capítulos</item>
     </plurals>
+    <string name="helpful_translation_links">Enlaces útiles para la traducción</string>
+    <string name="help_translate">Ayudar a traducir</string>
 </resources>

@@ -554,11 +554,6 @@
     <string name="hide_category_hopper">Cua s\'optzione pro brincare categoria</string>
     <string name="display_as">Ammustra comente</string>
     <string name="tap_library_to_show_filters">Toca s\'icona de sa Biblioteca pro ammustrare sos filtros</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Coberteddas uniformes</string>
     <string name="hide_start_reading_button">Cua su butone pro incumintzare a lèghere</string>
     <string name="comfortable_grid">Grìllia discansosa</string>
@@ -927,4 +922,6 @@
         <item quantity="one">Mancat 1 capìtulu</item>
         <item quantity="other">Mancant %d capìtulos</item>
     </plurals>
+    <string name="helpful_translation_links">Ligàmenes ùtiles pro sa tradutzione</string>
+    <string name="help_translate">Agiuda a bortare</string>
 </resources>

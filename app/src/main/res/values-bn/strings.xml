@@ -515,11 +515,6 @@
     <string name="include_in_global_update">সর্বত্র আপডেটে অন্তর্ভুক্ত করুন</string>
     <string name="more_library_settings">আরো লাইব্রেরি সেটিংস</string>
     <string name="tap_library_to_show_filters">ফিল্টারগুলো দেখানোর জন্য লাইব্রেরি আইকনটিতে চাপুন</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="hide_start_reading_button">পড়া শুরু করুন বোতামটি লুকান</string>
     <string name="drag_and_drop">টেনে আনুন এবং ছাড়ুন</string>
     <string name="ungrouped">গ্রুপহীন</string>

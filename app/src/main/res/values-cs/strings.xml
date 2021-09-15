@@ -114,9 +114,9 @@
     <string name="custom_range">Stáhnout vlastní</string>
     <string name="all_chapters">Stáhnout vše</string>
     <string name="all_unread_chapters">Stáhnout nepřečtené</string>
-    <string name="reading">Čtení</string>
+    <string name="reading">Rozečtené</string>
     <string name="completed">Kompletní</string>
-    <string name="plan_to_read">Plánováno číst</string>
+    <string name="plan_to_read">Plánuji číst</string>
     <string name="rereading">Znovu čtení</string>
     <string name="score">Skóre</string>
     <string name="title">Název</string>
@@ -240,7 +240,7 @@
     <string name="artist">Kreslíř</string>
     <string name="status">Stav</string>
     <string name="_copied_to_clipboard">%1$s zkopírováno do schránky</string>
-    <string name="dropped">Upuštěno</string>
+    <string name="dropped">Již nečtu</string>
     <string name="on_hold">Pozastaveno</string>
     <string name="started">Započato</string>
     <string name="set_as_cover">Nastavit jako obal</string>
@@ -426,11 +426,6 @@
     <string name="more_library_settings">Další nastavení knihovny</string>
     <string name="display_as">Zobrazit jako</string>
     <string name="tap_library_to_show_filters">Klepnutím na ikonu Knihovna zobrazíte filtry</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="hide_start_reading_button">Skrýt tlačítko pro začátek čtení</string>
     <string name="comfortable_grid">Pohodlná mřížka</string>
     <string name="display_options">Možnosti zobrazení</string>
@@ -692,4 +687,5 @@
     <string name="update_completed">Aktualizace dokončena</string>
     <string name="could_not_install_update">Nepodařilo se nainstalovat aktualizaci</string>
     <string name="getting_started_guide">Příručka Začínáme</string>
+    <string name="help_translate">Pomozte s překladem</string>
 </resources>

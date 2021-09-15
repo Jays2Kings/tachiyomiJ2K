@@ -262,7 +262,7 @@
     <string name="rereading">Baca ulang</string>
     <string name="started">Dimulai</string>
     <string name="type">Tipe</string>
-    <string name="url_not_set_click_again">URL Manga belum siap, silahkan klik judul dan pilih manga lagi</string>
+    <string name="url_not_set_click_again">URL Manga belum diatur, klik judul dan pilih manga lagi</string>
     <string name="dark_blue">Biru gelap</string>
     <string name="finished_chapter">Selesai:</string>
     <string name="current_chapter">Saat ini:</string>
@@ -318,7 +318,7 @@
     <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Chapter %1$s</string>
     <string name="remove_from_library">Hapus dari pustaka</string>
-    <string name="refresh_tracking">Segarkan pelacakan metadata</string>
+    <string name="refresh_tracking">Segarkan pelacakan</string>
     <string name="add_tracking">Tambahkan pelacak</string>
     <string name="security">Keamanan</string>
     <string name="backup_failed">Pencadangan data gagal</string>
@@ -408,11 +408,6 @@
     <string name="hide_category_hopper">Sembunyikan kategori lompat</string>
     <string name="display_as">Tampilkan sebagai</string>
     <string name="tap_library_to_show_filters">Ketuk ikon pustaka untuk menampilkan filter</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Sampul halaman</string>
     <string name="hide_start_reading_button">Sembunyikan tombol mulai membaca</string>
     <string name="comfortable_grid">Grid Nyaman</string>
@@ -883,7 +878,7 @@
     <string name="sapphire_dusk">Senja Safir</string>
     <string name="teal_ocean">Samudera Teal</string>
     <string name="appearance">Penampilan</string>
-    <string name="keep_both_on_service">Simpan keduanya di %1$s</string>
+    <string name="keep_both_on_service">Simpan keduanya di %1$s dan hanya ganti secara lokal</string>
     <string name="remove_previous_tracker">Hapus pelacak sebelumnya\?</string>
     <string name="select_an_entry">Pilih entri</string>
     <string name="split_double_pages">Pisahkan halaman ganda</string>
@@ -899,4 +894,12 @@
     <string name="show_categories_while_filtering">Tampilkan kategori kosong saat menyaring</string>
     <string name="name">Nama</string>
     <string name="getting_started_guide">Panduan awal mulai</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="other">Terdapat %d chapter hilang</item>
+    </plurals>
+    <string name="help_translate">Bantu terjemahkan</string>
+    <string name="helpful_translation_links">Tautan terjemahan yang membantu</string>
+    <string name="by_default_side_nav_info">Secara default, navigasi samping digunakan untuk handphone dan tablet tertentu saat landscape, dan selalu ditampilkan di tablet yang lebih besar</string>
+    <string name="default_behavior">Tindakan default</string>
+    <string name="use_side_navigation">Gunakan navigasi samping</string>
 </resources>

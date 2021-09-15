@@ -384,11 +384,6 @@
     <string name="manhwa">Manhwa</string>
     <string name="display_as">Näytä</string>
     <string name="tap_library_to_show_filters">Näytä suodattimet napauttamalla Kirjasto-kuvaketta</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="uniform_covers">Yhtenäiset kannet</string>
     <string name="hide_start_reading_button">Piilota aloita lukeminen -painike</string>
     <string name="no_matches_for_filters">Nykyisillä suodattimillasi ei löytynyt osumaa</string>

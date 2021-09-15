@@ -10,7 +10,7 @@
         <item quantity="one">Forigi %1$d elŝutitan ĉapitron\?</item>
         <item quantity="other">Forigi %1$d elŝutitajn ĉapitrojn\?</item>
     </plurals>
-    <string name="chapter_not_found">Ĉapitro netrovebla</string>
+    <string name="chapter_not_found">Ĉapitro netrovita</string>
     <string name="marked_as_unread">Marki kiel nelegita</string>
     <string name="marked_as_read">Marki kiel legita</string>
     <string name="all_chapters_read">Ĉiuj ĉapitroj estas legitaj</string>
@@ -132,7 +132,7 @@
     <string name="webtoon_side_padding_10">10%</string>
     <string name="vertical_viewer">Vertikale</string>
     <string name="right_and_left_nav">Dekstra kaj Maldekstra</string>
-    <string name="l_nav">En formo kiel \"L\"</string>
+    <string name="l_nav">«L» forme</string>
     <string name="obsolete_extension_message">Ĉi tiu aldonaĵo ne estas plu disponebla.</string>
     <string name="all">Ĉio</string>
     <string name="updating_library">Ĝisdatigas bibliotekon</string>
@@ -164,4 +164,26 @@
         <item quantity="other">Farita en %1$s kun %2$s eraroj</item>
     </plurals>
     <string name="restore_duration">%02d min, %02d sek</string>
+    <string name="last_read_chapter">Laste legita ĉapitro</string>
+    <string name="right_to_left_viewer">Dekstre maldekstren</string>
+    <string name="left_to_right_viewer">Maldekstre dekstren</string>
+    <string name="edge_nav">Rande</string>
+    <string name="kindlish_nav">Kindle-e</string>
+    <string name="source_unsupported">Fonto ne subtenita</string>
+    <string name="myanimelist_relogin">Bonvole ensalutu al MAL denove</string>
+    <string name="plan_to_read">Planas legi</string>
+    <string name="paused">Paŭzita</string>
+    <string name="on_hold">Haltetita</string>
+    <string name="local_source">Loka fonta</string>
+    <string name="check_for_updates">Kontroli por trovi ĝisdatigojn</string>
+    <string name="help_translate">Helpu traduki</string>
+    <string name="restoring_backup">Restaŭras savkopion</string>
+    <string name="restore_completed">Restaŭrado kompletita</string>
+    <string name="invalid_backup_file_type">Nevalida savkopia dosierspeco: %1$s
+\nĜi devas fini kun .proto.gz aŭ .json.</string>
+    <string name="untrusted_extension">Malfidinda kromaĵo</string>
+    <string name="charging">Ŝarĝas</string>
+    <string name="lock_when_idle">Ŝlosi kiam senokupas</string>
+    <string name="loading">Ŝargas…</string>
+    <string name="cancel_all_for_series">Nuligi ĉiujn por ĉi tiu serio</string>
 </resources>

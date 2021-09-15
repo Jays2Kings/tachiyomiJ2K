@@ -20,7 +20,7 @@
     <string name="mark_as_read">Segna come letto</string>
     <string name="mark_previous_as_read">Segna i capitoli precedenti come letti</string>
     <string name="download">Scarica</string>
-    <string name="delete">Cancella</string>
+    <string name="delete">Elimina</string>
     <string name="edit">Modifica</string>
     <string name="edit_categories">Modifica categorie</string>
     <string name="move_to_categories">Assegna categorie</string>
@@ -35,7 +35,7 @@
     <string name="display">Visualizzazione</string>
     <string name="compact_grid">Griglia</string>
     <string name="list">Lista</string>
-    <string name="cancel">Cancella</string>
+    <string name="cancel">Annulla</string>
     <string name="sort">Ordina</string>
     <string name="install">Installa</string>
     <string name="share">Condividi</string>
@@ -404,8 +404,8 @@
     <string name="chapter_not_found">Capitolo non trovato</string>
     <string name="chapters_removed">Capitoli rimossi.</string>
     <string name="removed_bookmark">Segnalibro rimosso</string>
-    <string name="marked_as_unread">Contrassegna come non letto</string>
-    <string name="marked_as_read">Contrassegna come letto</string>
+    <string name="marked_as_unread">Segnato come non letto</string>
+    <string name="marked_as_read">Segnato come letto</string>
     <string name="all_chapters_read">Tutti i capitoli letti</string>
     <string name="chapter_x_of_y">Capitolo %1$d di %2$d</string>
     <string name="new_chapters">Nuovi capitoli</string>
@@ -447,7 +447,7 @@
     <string name="downloading_">Scaricando: %1$s</string>
     <string name="logout_from_">Uscire da %1$s\?</string>
     <string name="logout">Disconnetti</string>
-    <string name="top_category">Miglior categoria (%1$s)</string>
+    <string name="top_category">Categoria sopra (%1$s)</string>
     <string name="uniform_covers">Rendi uniformi le copertine</string>
     <string name="hide_start_reading_button">Nascondi il bottone di inizio lettura</string>
     <string name="drag_and_drop">Trascina e rilascia</string>
@@ -559,11 +559,6 @@
     <string name="select_sources">Seleziona sorgenti</string>
     <string name="source_not_installed">Fonte non installata</string>
     <string name="source_hidden">Sorgente nascosta</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="latest_">Più recente: %1$s</string>
     <string name="to_show_again_setting_sources">Per mostrare nuovamente questa schermata, vai in Impostazioni -&gt; Sorgenti.</string>
     <string name="skip_this_step_next_time">Salta questo step la prossima volta</string>
@@ -874,17 +869,17 @@
     <string name="start_past_cutout">Inizia dopo il ritaglio</string>
     <string name="could_not_install_extension">Installazione estensione fallita</string>
     <string name="global_updates">Aggiornamenti globali</string>
-    <string name="checking_for_new_chapters">Cerco nuovi capitoli</string>
+    <string name="checking_for_new_chapters">Cercando nuovi capitoli</string>
     <string name="show_unread_count">Visualizza il numero di non letti</string>
     <string name="show_unread_badges">Mostra badge non letti</string>
     <string name="hide_unread_badges">Nascondi badge non letti</string>
     <string name="open_random_series">Apri una serie casuale</string>
     <string name="show_number_of_items">Mostra il numero di oggetti</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare capitoli. Fai tap qui, poi fornisci il permesso di \"Accesso a tutti i file.\"</string>
-    <string name="external_storage_permission_notice">Per scaricare capitoli, creare backup automatici e leggere manga in locale TachiJ2K richiede accesso ai file di Android 11.
+    <string name="external_storage_download_notice">TachiyomiJ2K richiede accesso a tutti i file per scaricare i capitoli. Fai tap qui, poi fornisci l\'autorizzazione per \"Accesso a tutti i file.\"</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K richiede accesso ai file per scaricare capitoli, creare backup automatici e leggere manga in locale.
 \n
-\nSulla prossima schermata, fornisci il permesso di \"Accesso a tutti i file.\"</string>
-    <string name="all_files_permission_required">Permessi dei file richiesti</string>
+\nAlla prossima schermata, fornisci l\'autorizzazione per \"Accesso a tutti i file.\"</string>
+    <string name="all_files_permission_required">Permessi per la gesione file richiesti</string>
     <string name="turn_off_">Disattiva %s</string>
     <string name="turn_on_">Attiva %s</string>
     <string name="suggested_date_">Data suggerita: %1$s</string>
@@ -924,7 +919,7 @@
     <string name="could_not_install_update">Impossibile installare l\'aggiornamento</string>
     <string name="by_update_date">Per data di pubblicazione</string>
     <string name="by_chapter_number">Per numero di capitolo</string>
-    <string name="by_source_order">Per ordine di fonte</string>
+    <string name="by_source_order">Per ordine della fonte</string>
     <string name="not_bookmarked">Senza segnalibro</string>
     <string name="name">Nome</string>
     <string name="recently_installed">Installato di recente</string>
@@ -960,4 +955,6 @@
         <item quantity="other">Ci sono %d capitoli mancanti</item>
     </plurals>
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
+    <string name="helpful_translation_links">Collegamenti utili per la traduzione</string>
+    <string name="help_translate">Aiuta a tradurre</string>
 </resources>

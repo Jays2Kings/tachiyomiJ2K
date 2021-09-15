@@ -475,11 +475,6 @@
     <string name="comfortable_grid">Удобная сетка</string>
     <string name="hide_start_reading_button">Скрыть кнопку \"Начала чтения\"</string>
     <string name="uniform_covers">Одинаковые обложки</string>
-    <string name="x_small">XS</string>
-    <string name="small">S</string>
-    <string name="medium">M</string>
-    <string name="large">L</string>
-    <string name="x_large">XL</string>
     <string name="tap_library_to_show_filters">Нажмите на значок библиотеки, чтобы отобразить фильтры</string>
     <string name="display_as">Показать как</string>
     <string name="hide_category_hopper">Скрыть переключатель категорий</string>
@@ -1003,4 +998,6 @@
         <item quantity="many">Отсутствуют %d глав</item>
         <item quantity="other">Отсутствуют %d глав</item>
     </plurals>
+    <string name="helpful_translation_links">Полезные ссылки на перевод</string>
+    <string name="help_translate">Помочь перевести</string>
 </resources>

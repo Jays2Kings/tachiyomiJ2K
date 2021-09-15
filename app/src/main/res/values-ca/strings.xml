@@ -391,11 +391,6 @@
     <string name="show_notification_error">Mostra una notificació per als errors</string>
     <string name="more_library_settings">Més opcions de la biblioteca</string>
     <string name="display_as">Mostra com a</string>
-    <string name="x_large">XL</string>
-    <string name="large">L</string>
-    <string name="medium">M</string>
-    <string name="small">S</string>
-    <string name="x_small">XS</string>
     <string name="comfortable_grid">Graella confortable</string>
     <string name="always_show_current_category">Mostra sempre la categoria actual</string>
     <string name="show_all_categories">Mostra totes les categories</string>

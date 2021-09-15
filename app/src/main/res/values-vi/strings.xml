@@ -730,11 +730,6 @@
     <string name="show_unread_badges">Hiện huy hiệu chưa đọc</string>
     <string name="hide_unread_badges">Ẩn huy hiệu chưa đọc</string>
     <string name="_per_row">%d mỗi hàng</string>
-    <string name="x_large">Cực lớn</string>
-    <string name="large">Lớn</string>
-    <string name="medium">Vừa</string>
-    <string name="small">Nhỏ</string>
-    <string name="x_small">Cực nhỏ</string>
     <string name="grid_size">Kích cỡ lưới</string>
     <string name="uniform_grid_covers">Định hình bìa lưới</string>
     <string name="uniform_covers">Hình bìa</string>
@@ -826,7 +821,7 @@
     <string name="save_combined_pages">Lưu lại trang được kết hợp</string>
     <string name="share_combined_pages">Chia sẻ trang được kết hợp</string>
     <string name="save_second_page">Lưu trang thứ hai</string>
-    <string name="share_second_page">Chia sẻ trnag thứ hai</string>
+    <string name="share_second_page">Chia sẻ trang thứ hai</string>
     <string name="set_second_page_as_cover">Lấy trang thứ hai làm ảnh bìa</string>
     <string name="save_first_page">Lưu trang đầu tiên</string>
     <string name="share_first_page">Chia sẻ trang đầu tiên</string>
@@ -846,4 +841,9 @@
     <string name="last_used">Sử dụng gần đây</string>
     <string name="source_hidden">Nguồn ẩn</string>
     <string name="about_dont_kill_my_app">Một vài nhà sản xuất có các hạn chế về việc chạy ngầm của ứng dụng. Xem thêm ở địa chỉ này để sửa chữa chúng.</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="other">Có tất cả %d chương không tìm thấy</item>
+    </plurals>
+    <string name="getting_started_guide">Hướng dẫn sử dụng</string>
+    <string name="restore_miui_warning">Tính năng tối ưu hóa của MIUI phải được bật lên để việc sao lưu/khôi phục hoạt động tốt.</string>
 </resources>

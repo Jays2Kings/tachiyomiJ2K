@@ -444,11 +444,6 @@
     <string name="hide_category_hopper">Приховати категорію</string>
     <string name="display_as">Показати як</string>
     <string name="tap_library_to_show_filters">Тицьніть іконку бібліотеки аби показати фільтри</string>
-    <string name="x_large">Оверсайз</string>
-    <string name="large">Норма</string>
-    <string name="medium">Макро</string>
-    <string name="small">Мікро</string>
-    <string name="x_small">Нано</string>
     <string name="uniform_covers">Вигляд обкладинки</string>
     <string name="reorder_filters">Пересортувати фільтри</string>
     <string name="hide_start_reading_button">Приховувати кнопку початку читання</string>
