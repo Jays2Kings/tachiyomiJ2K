@@ -17,6 +17,7 @@ import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_CHAPTER_FLAGS
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_DATE_ADDED
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_DESCRIPTION
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_FAVORITE
+import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_FILTERED_SCANLATORS
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_GENRE
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_HIDE_TITLE
 import eu.kanade.tachiyomi.data.database.tables.MangaTable.COL_ID
@@ -66,6 +67,7 @@ class MangaPutResolver : DefaultPutResolver<Manga>() {
         put(COL_HIDE_TITLE, obj.hide_title)
         put(COL_CHAPTER_FLAGS, obj.chapter_flags)
         put(COL_DATE_ADDED, obj.date_added)
+        put(COL_FILTERED_SCANLATORS, obj.filtered_scanlators)
     }
 }
 
@@ -88,6 +90,7 @@ interface BaseMangaGetResolver {
         chapter_flags = cursor.getInt(cursor.getColumnIndex(COL_CHAPTER_FLAGS))
         hide_title = cursor.getInt(cursor.getColumnIndex(COL_HIDE_TITLE)) == 1
         date_added = cursor.getLong(cursor.getColumnIndex(COL_DATE_ADDED))
+        filtered_scanlators = cursor.getString(cursor.getColumnIndex(COL_FILTERED_SCANLATORS))
     }
 }
 

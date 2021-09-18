@@ -51,7 +51,10 @@ class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downl
         if (preferences.skipFiltered()) {
             filteredChapters = filterChapters(filteredChapters, manga)
         }
-
+        manga.filtered_scanlators?.let { filteredScanlatorString ->
+            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
+            filteredChapters = filteredChapters.filter { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
+        }
         // add the selected chapter to the list in case it was filtered out
         if (selectedChapter?.id != null) {
             val find = filteredChapters.find { it.id == selectedChapter.id }
@@ -61,6 +64,7 @@ class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downl
                 filteredChapters = mutableList.toList()
             }
         }
+
         return filteredChapters
     }
 }

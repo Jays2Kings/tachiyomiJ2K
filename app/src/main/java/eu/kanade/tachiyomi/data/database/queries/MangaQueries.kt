@@ -9,6 +9,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.resolvers.LibraryMangaGetResolver
 import eu.kanade.tachiyomi.data.database.resolvers.MangaDateAddedPutResolver
 import eu.kanade.tachiyomi.data.database.resolvers.MangaFavoritePutResolver
+import eu.kanade.tachiyomi.data.database.resolvers.MangaFilteredScanlatorsPutResolver
 import eu.kanade.tachiyomi.data.database.resolvers.MangaFlagsPutResolver
 import eu.kanade.tachiyomi.data.database.resolvers.MangaInfoPutResolver
 import eu.kanade.tachiyomi.data.database.resolvers.MangaLastUpdatedPutResolver
@@ -167,4 +168,9 @@ interface MangaQueries : DbProvider {
 
     fun getTotalChapterManga() = db.get().listOfObjects(Manga::class.java)
         .withQuery(RawQuery.builder().query(getTotalChapterMangaQuery()).observesTables(MangaTable.TABLE).build()).prepare()
+
+    fun updateMangaFilteredScanlators(manga: Manga) = db.put()
+        .`object`(manga)
+        .withPutResolver(MangaFilteredScanlatorsPutResolver())
+        .prepare()
 }

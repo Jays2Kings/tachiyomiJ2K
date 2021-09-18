@@ -31,6 +31,8 @@ interface Manga : SManga {
 
     var hide_title: Boolean
 
+    var filtered_scanlators: String?
+
     fun isBlank() = id == Long.MIN_VALUE
     fun isHidden() = status == -1
 
