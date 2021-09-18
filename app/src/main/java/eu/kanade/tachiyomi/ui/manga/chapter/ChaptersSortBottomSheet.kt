@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.list.listItemsMultiChoice
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -152,36 +153,34 @@ class ChaptersSortBottomSheet(controller: MangaDetailsController) :
             binding.chapterFilterLayout.setAsDefaultFilter.isInvisible = true
             binding.chapterFilterLayout.resetAsDefaultFilter.isInvisible = true
         }
-        if (presenter.allChapterScanlators.isNotEmpty()) {
-            binding.filterGroupsButton.setOnClickListener {
-                val scanlators = presenter.allChapterScanlators.toList()
-                val filteredScanlators =
-                    presenter.manga.filtered_scanlators?.let { ChapterUtil.getScanlators(it) }
-                        ?: scanlators.toSet()
-                val preselected = if (filteredScanlators.isNullOrEmpty()) {
-                    scanlators.mapIndexed { index, _ -> index }
-                } else {
-                    filteredScanlators.map { scanlators.indexOf(it) }
-                }.toIntArray()
+        binding.filterGroupsButton.isVisible = presenter.allChapterScanlators.isNotEmpty()
 
-                MaterialDialog(activity!!)
-                    .title(R.string.filter_groups_title)
-                    .listItemsMultiChoice(
-                        items = scanlators,
-                        initialSelection = preselected,
-                        allowEmptySelection = false
-                    ) { _, selections, _ ->
-                        val selected = selections.map { scanlators[it] }.toSet()
-                        presenter.setScanlatorFilter(selected)
-                    }
-                    .negativeButton(R.string.reset_group_filter) {
-                        presenter.setScanlatorFilter(presenter.allChapterScanlators)
-                    }
-                    .positiveButton(android.R.string.ok)
-                    .show()
-            }
-        } else {
-            binding.filterGroupsButton.isInvisible = true
+        binding.filterGroupsButton.setOnClickListener {
+            val scanlators = presenter.allChapterScanlators.toList()
+            val filteredScanlators =
+                presenter.manga.filtered_scanlators?.let { ChapterUtil.getScanlators(it) }
+                    ?: scanlators.toSet()
+            val preselected = if (filteredScanlators.isNullOrEmpty()) {
+                scanlators.mapIndexed { index, _ -> index }
+            } else {
+                filteredScanlators.map { scanlators.indexOf(it) }
+            }.toIntArray()
+
+            MaterialDialog(activity!!)
+                .title(R.string.filter_groups_title)
+                .listItemsMultiChoice(
+                    items = scanlators,
+                    initialSelection = preselected,
+                    allowEmptySelection = false
+                ) { _, selections, _ ->
+                    val selected = selections.map { scanlators[it] }.toSet()
+                    presenter.setScanlatorFilter(selected)
+                }
+                .negativeButton(R.string.reset_group_filter) {
+                    presenter.setScanlatorFilter(presenter.allChapterScanlators)
+                }
+                .positiveButton(android.R.string.ok)
+                .show()
         }
     }
 

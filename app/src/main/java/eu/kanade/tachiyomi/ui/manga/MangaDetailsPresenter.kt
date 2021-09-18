@@ -230,13 +230,12 @@ class MangaDetailsPresenter(
         if (isLockedFromSearch) {
             return chapterList
         }
-        var observable = chapterList
         getScrollType(chapterList)
-        manga.filtered_scanlators?.let { filteredScanlatorString ->
+        val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
             val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            observable = observable.filter { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
-        }
-        return chapterSort.getChaptersSorted(observable)
+            return chapterList.filter { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
+        } ?: chapterList
+        return chapterSort.getChaptersSorted(filteredChapterList)
     }
 
     private fun getScrollType(chapters: List<ChapterItem>) {
