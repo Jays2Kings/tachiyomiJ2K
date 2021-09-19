@@ -231,11 +231,7 @@ class MangaDetailsPresenter(
             return chapterList
         }
         getScrollType(chapterList)
-        val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
-            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            return chapterList.filter { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
-        } ?: chapterList
-        return chapterSort.getChaptersSorted(filteredChapterList)
+        return chapterSort.getChaptersSorted(chapterList)
     }
 
     private fun getScrollType(chapters: List<ChapterItem>) {
