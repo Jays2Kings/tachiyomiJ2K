@@ -532,8 +532,6 @@
     <string name="custom_manga_info">Custom manga info</string>
     <string name="set_as_default">Set as default</string>
     <string name="filter_groups">Filter scanlator groups</string>
-    <string name="filter_groups_title">Scanlator groups to show</string>
-    <string name="reset_group_filter">Reset to all</string>
     <plurals name="deleted_chapters">
         <item quantity="one">A chapter has been removed from the source:\n%2$s\nDelete
             its download?</item>

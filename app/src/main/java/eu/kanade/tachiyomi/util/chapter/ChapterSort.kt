@@ -16,7 +16,7 @@ class ChapterSort(val manga: Manga, val chapterFilter: ChapterFilter = Injekt.ge
     ): List<T> {
         val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
             val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            return rawChapters.filter { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
+            return rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
         } ?: rawChapters
         val chapters = when {
             filterForReader -> chapterFilter.filterChaptersForReader(
