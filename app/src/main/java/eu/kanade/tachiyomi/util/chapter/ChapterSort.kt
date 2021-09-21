@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.util.chapter
 
+import android.util.Log
 import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
@@ -16,7 +17,7 @@ class ChapterSort(val manga: Manga, val chapterFilter: ChapterFilter = Injekt.ge
     ): List<T> {
         val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
             val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            return rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
+            rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
         } ?: rawChapters
         val chapters = when {
             filterForReader -> chapterFilter.filterChaptersForReader(
@@ -32,10 +33,15 @@ class ChapterSort(val manga: Manga, val chapterFilter: ChapterFilter = Injekt.ge
     }
 
     fun <T : Chapter> getNextUnreadChapter(rawChapters: List<T>, andFiltered: Boolean = true,): T? {
+        val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
+            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
+            rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
+        } ?: rawChapters
         val chapters = when {
-            andFiltered -> chapterFilter.filterChapters(rawChapters, manga)
-            else -> rawChapters
+            andFiltered -> chapterFilter.filterChapters(filteredChapterList, manga)
+            else -> filteredChapterList
         }
+        
         return chapters.sortedWith(sortComparator(true)).find { !it.read }
     }
 
