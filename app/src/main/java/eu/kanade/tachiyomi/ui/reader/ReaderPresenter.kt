@@ -114,13 +114,14 @@ class ReaderPresenter(
      */
     private val chapterList by lazy {
         val manga = manga!!
+        val chapterSort = ChapterSort(manga, chapterFilter, preferences)
         val dbChapters = db.getChapters(manga).executeAsBlocking()
 
         val selectedChapter = dbChapters.find { it.id == chapterId }
             ?: error("Requested chapter of id $chapterId not found in chapter list")
 
         val chaptersForReader =
-            chapterFilter.filterChaptersForReader(dbChapters, manga, selectedChapter)
+            chapterSort.getChaptersSorted(dbChapters, filterForReader = true, currentChapter = selectedChapter)
 
         when (manga.chapterOrder(preferences)) {
             Manga.CHAPTER_SORTING_SOURCE -> ChapterLoadBySource().get(chaptersForReader)
