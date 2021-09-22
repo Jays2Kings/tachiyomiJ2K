@@ -19,8 +19,9 @@ class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downl
         val notBookmarkEnabled = manga.bookmarkedFilter(preferences) == Manga.CHAPTER_SHOW_NOT_BOOKMARKED
 
         // if none of the filters are enabled skip the filtering of them
+        val filteredChapters = filterChaptersByScanlators(chapters, manga)
         return if (readEnabled || unreadEnabled || downloadEnabled || notDownloadEnabled || bookmarkEnabled || notBookmarkEnabled) {
-            chapters.filter {
+            filteredChapters.filter {
                 if (readEnabled && it.read.not() ||
                     (unreadEnabled && it.read) ||
                     (bookmarkEnabled && it.bookmark.not()) ||
@@ -33,18 +34,18 @@ class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downl
                 return@filter true
             }
         } else {
-            chapters
+            filteredChapters
         }
     }
 
     // filter chapters for the reader
     fun <T : Chapter> filterChaptersForReader(chapters: List<T>, manga: Manga, selectedChapter: T? = null): List<T> {
+        var filteredChapters = filterChaptersByScanlators(chapters, manga)
         // if neither preference is enabled don't even filter
         if (!preferences.skipRead() && !preferences.skipFiltered()) {
-            return chapters
+            return filteredChapters
         }
 
-        var filteredChapters = chapters
         if (preferences.skipRead()) {
             filteredChapters = filteredChapters.filter { !it.read }
         }
@@ -62,5 +63,13 @@ class ChapterFilter(val preferences: PreferencesHelper = Injekt.get(), val downl
         }
 
         return filteredChapters
+    }
+    // filters chapters for scanlators
+
+    fun <T : Chapter> filterChaptersByScanlators(chapters: List<T>, manga: Manga): List<T> {
+        return manga.filtered_scanlators?.let { filteredScanlatorString ->
+            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
+            chapters.filter { ChapterUtil.getScanlators(it.scanlator).none { group -> filteredScanlators.contains(group) } }
+        } ?: chapters
     }
 }

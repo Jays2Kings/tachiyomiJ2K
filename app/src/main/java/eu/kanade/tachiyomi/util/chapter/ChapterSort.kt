@@ -14,33 +14,26 @@ class ChapterSort(val manga: Manga, val chapterFilter: ChapterFilter = Injekt.ge
         filterForReader: Boolean = false,
         currentChapter: T? = null
     ): List<T> {
-        val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
-            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
-        } ?: rawChapters
         val chapters = when {
             filterForReader -> chapterFilter.filterChaptersForReader(
-                filteredChapterList,
+                rawChapters,
                 manga,
                 currentChapter
             )
-            andFiltered -> chapterFilter.filterChapters(filteredChapterList, manga)
-            else -> filteredChapterList
+            andFiltered -> chapterFilter.filterChapters(rawChapters, manga)
+            else -> rawChapters
         }
 
         return chapters.sortedWith(sortComparator())
     }
 
     fun <T : Chapter> getNextUnreadChapter(rawChapters: List<T>, andFiltered: Boolean = true,): T? {
-        val filteredChapterList = manga.filtered_scanlators?.let { filteredScanlatorString ->
-            val filteredScanlators = ChapterUtil.getScanlators(filteredScanlatorString)
-            rawChapters.filterNot { ChapterUtil.getScanlators(it.scanlator).any { group -> filteredScanlators.contains(group) } }
-        } ?: rawChapters
+        var filteredChapters = chapterFilter.filterChaptersByScanlators(rawChapters, manga)
         val chapters = when {
-            andFiltered -> chapterFilter.filterChapters(filteredChapterList, manga)
-            else -> filteredChapterList
+            andFiltered -> chapterFilter.filterChapters(rawChapters, manga)
+            else -> filteredChapters
         }
-        
+
         return chapters.sortedWith(sortComparator(true)).find { !it.read }
     }
 

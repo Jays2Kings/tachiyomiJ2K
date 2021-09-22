@@ -121,7 +121,7 @@ class ReaderPresenter(
             ?: error("Requested chapter of id $chapterId not found in chapter list")
 
         val chaptersForReader =
-            chapterSort.getChaptersSorted(dbChapters, filterForReader = true, currentChapter = selectedChapter)
+            chapterFilter.filterChaptersForReader(dbChapters, manga, selectedChapter)
 
         when (manga.chapterOrder(preferences)) {
             Manga.CHAPTER_SORTING_SOURCE -> ChapterLoadBySource().get(chaptersForReader)
