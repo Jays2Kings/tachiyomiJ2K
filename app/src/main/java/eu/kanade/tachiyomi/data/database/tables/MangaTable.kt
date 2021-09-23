@@ -65,7 +65,7 @@ object MangaTable {
             $COL_VIEWER INTEGER NOT NULL,
             $COL_HIDE_TITLE INTEGER NOT NULL,
             $COL_CHAPTER_FLAGS INTEGER NOT NULL,
-            $COL_DATE_ADDED LONG
+            $COL_DATE_ADDED LONG,
             $COL_FILTERED_SCANLATORS TEXT
 
             )"""
