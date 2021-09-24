@@ -631,7 +631,7 @@ class MangaDetailsPresenter(
 
     fun setScanlatorFilter(filteredScanlators: Set<String>) {
         val manga = manga
-        manga.filtered_scanlators = if (filteredScanlators.size == allChapterScanlators.size) null else ChapterUtil.getScanlatorString(filteredScanlators)
+        manga.filtered_scanlators = if (filteredScanlators.size == allChapterScanlators.size || filteredScanlators.isEmpty()) null else ChapterUtil.getScanlatorString(filteredScanlators)
         db.updateMangaFilteredScanlators(manga).executeAsBlocking()
         asyncUpdateMangaAndChapters()
     }

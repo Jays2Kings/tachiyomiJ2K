@@ -114,7 +114,6 @@ class ReaderPresenter(
      */
     private val chapterList by lazy {
         val manga = manga!!
-        val chapterSort = ChapterSort(manga, chapterFilter, preferences)
         val dbChapters = db.getChapters(manga).executeAsBlocking()
 
         val selectedChapter = dbChapters.find { it.id == chapterId }
