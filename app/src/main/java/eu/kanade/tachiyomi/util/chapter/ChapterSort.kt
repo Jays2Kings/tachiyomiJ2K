@@ -28,10 +28,9 @@ class ChapterSort(val manga: Manga, val chapterFilter: ChapterFilter = Injekt.ge
     }
 
     fun <T : Chapter> getNextUnreadChapter(rawChapters: List<T>, andFiltered: Boolean = true,): T? {
-        var filteredChapters = chapterFilter.filterChaptersByScanlators(rawChapters, manga)
         val chapters = when {
             andFiltered -> chapterFilter.filterChapters(rawChapters, manga)
-            else -> filteredChapters
+            else -> chapterFilter.filterChaptersByScanlators(rawChapters, manga)
         }
 
         return chapters.sortedWith(sortComparator(true)).find { !it.read }
