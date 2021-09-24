@@ -32,7 +32,7 @@ fun syncChaptersWithSource(
     }
 
     val downloadManager: DownloadManager = Injekt.get()
-
+    val chapterFilter: ChapterFilter = Injekt.get()
     // Chapters from db.
     val dbChapters = db.getChapters(manga).executeAsBlocking()
 
@@ -161,8 +161,10 @@ fun syncChaptersWithSource(
         } else manga.last_update = newestChapterDate
         db.updateLastUpdated(manga).executeAsBlocking()
     }
-
-    return Pair(toAdd.subtract(readded).toList(), toDelete - readded)
+    return Pair(
+        chapterFilter.filterChaptersByScanlators(toAdd.subtract(readded).toList(), manga),
+        toDelete - readded
+    )
 }
 
 // checks if the chapter in db needs updated
