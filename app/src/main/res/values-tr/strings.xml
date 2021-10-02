@@ -241,7 +241,6 @@
     <string name="decode_image_error">Görsel kodu çözülemedi</string>
     <string name="use_image_as_cover">Bu görseli kapak olarak ayarlamak istiyor musunuz?</string>
     <string name="migrate">Geçiş yap</string>
-    <string name="could_not_download_chapter_can_try_again">Bölümler indirilirken bir hata oluştu. İndirmeler bölümünden yeniden deneyebilirsiniz</string>
     <string name="new_chapters_found">Yeni bölümler bulundu</string>
     <string name="failed_to_update_cover">Kapak güncellenemedi</string>
     <string name="must_be_in_library_to_edit">Düzenleme için manga kitaplığınızda olmalı</string>
@@ -924,4 +923,5 @@
     </plurals>
     <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
     <string name="help_translate">Çeviriye yardım edin</string>
+    <string name="filter_groups">Tarama gruplarını filtrele</string>
 </resources>

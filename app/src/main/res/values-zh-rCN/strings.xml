@@ -249,7 +249,6 @@
     <string name="loading_pages">页面加载中…</string>
     <string name="failed_to_load_pages_">加载页面: %1$s失败</string>
     <string name="migrate">迁移</string>
-    <string name="could_not_download_chapter_can_try_again">下载时发生错误。请再试一次</string>
     <string name="new_chapters_found">发现新章节</string>
     <string name="failed_to_update_cover">更新封面失败</string>
     <string name="must_be_in_library_to_edit">请先收藏漫画到书架再进行更新</string>
@@ -901,4 +900,5 @@
     </plurals>
     <string name="helpful_translation_links">有帮助的翻译链接</string>
     <string name="help_translate">协助翻译</string>
+    <string name="filter_groups">过滤扫译群组</string>
 </resources>

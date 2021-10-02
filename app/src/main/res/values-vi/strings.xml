@@ -200,7 +200,6 @@
     <string name="backup">Sao lưu</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Có lỗi đã xảy ra khi đang tải chương. Bạn có thể thử lại trong phần tải xuống</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Đã tìm thấy chương mới</string>
     <string name="failed_to_update_cover">Cập nhật ảnh bìa thất bại</string>
@@ -846,4 +845,22 @@
     </plurals>
     <string name="getting_started_guide">Hướng dẫn sử dụng</string>
     <string name="restore_miui_warning">Tính năng tối ưu hóa của MIUI phải được bật lên để việc sao lưu/khôi phục hoạt động tốt.</string>
+    <string name="restrictions_">Giới hạn: %1$s</string>
+    <string name="checking_for_new_chapters">Kiểm tra chương mới</string>
+    <string name="no_matches_for_filters_short">Lọc không có kết quả</string>
+    <string name="show_categories_while_filtering">Hiện danh mục trống khi lọc</string>
+    <string name="by_chapter_number">Theo số chương</string>
+    <string name="not_bookmarked">Chưa đánh dấu.</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K cần quyền truy cập tất cả các file để tải chương. Ấn vào đây, rồi xác nhận \"Cho phép quyền quản lý tất cả các file.\"</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K sẽ yêu cầu quyền truy cập vào tất cả các file trên Android 11 để tải xuống các chương, tạo bản sao lưu tự động và đọc truyện tranh địa phương.
+\n
+\nTrong màn hình tiếp theo, bạn hãy cho phép \"Cho phép truy cập để quản lý tất cả tệp.\"</string>
+    <string name="all_files_permission_required">Cần quyền truy cập tập tin</string>
+    <string name="help_translate">Trợ giúp dịch thuật</string>
+    <string name="open_random_series">Mở truyện ngẫu nhiên</string>
+    <string name="show_number_of_items">Hiển thị số truyện trong danh mục</string>
+    <string name="update_completed">Cập nhật hoàn tất</string>
+    <string name="could_not_install_update">Không thể cài đặt bản cập nhật</string>
+    <string name="by_update_date">theo ngày tải lên</string>
+    <string name="by_source_order">Theo thứ tự nguồn</string>
 </resources>

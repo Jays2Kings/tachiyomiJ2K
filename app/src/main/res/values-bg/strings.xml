@@ -201,7 +201,6 @@
     <string name="backup">Резервно копие</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Получи се грешка при изтеглянето на главите. Може да опитате пак в секцията на изтеглянията</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Нови глави</string>
     <string name="failed_to_update_cover">Грешка при обновяването на корицата</string>

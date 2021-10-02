@@ -50,8 +50,8 @@
     <string name="download_badge">Тиенисен палли</string>
     <string name="new_chapters_found">Ҫӗнӗ сыпӑксем тупӑнман</string>
     <plurals name="notification_update_failed">
-        <item quantity="one">1 ҫӗнетӳ йӑнӑшӗ%1$d ҫӗнетӳ йӑнӑшӗ</item>
-        <item quantity="other"/>
+        <item quantity="one">1 ҫӗнетӳ йӑнӑшӗ</item>
+        <item quantity="other">%1$d ҫӗнетӳ йӑнӑшӗ</item>
     </plurals>
     <string name="library_update_frequency">Вулавӑша ҫӗнетни тӑтӑшлӑхӗ</string>
     <string name="library_update_order">Вулавӑша ҫӗнетни йӗрки</string>
@@ -77,8 +77,8 @@
     <string name="version_">%1$s верссийӗ</string>
     <string name="language_">Чӗлхе: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Хушма валли ҫӗнетӳ пур%d хушма валли ҫӗнетӳ пур</item>
-        <item quantity="other"/>
+        <item quantity="one">Хушма валли ҫӗнетӳ пур</item>
+        <item quantity="other">%d хушма валли ҫӗнетӳ пур</item>
     </plurals>
     <string name="next_chapter_not_found">Малалли сыпӑк тупӑнман</string>
     <string name="use_image_as_cover">Ҫак ӳкерчĕке хуплашка пек усӑ курмалла-и\?</string>

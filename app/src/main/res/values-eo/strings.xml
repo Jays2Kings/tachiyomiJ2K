@@ -142,10 +142,10 @@
     <string name="score">Takso</string>
     <string name="dropped">Forĵetitaj</string>
     <string name="completed">Finitaj</string>
-    <string name="reading">Legataj</string>
-    <string name="add_tracking">Aldoni ŝanĝospurilon</string>
+    <string name="reading">Legata</string>
+    <string name="add_tracking">Aldoni ŝanospuron</string>
     <string name="no_chapters_error">Neniu ĉapitro trovita</string>
-    <string name="remove_from_library">Forigi el biblioteko</string>
+    <string name="remove_from_library">Forigi de biblioteko</string>
     <string name="unknown">Nekonata</string>
     <string name="ongoing">Okazanta</string>
     <string name="latest">Lastaj</string>
@@ -157,7 +157,7 @@
     <string name="version">Versio</string>
     <string name="clear_database_completed">Eroj forigitaj</string>
     <string name="cache_delete_error">Eraro okazis dum viŝado de kaŝmemoro</string>
-    <string name="cookies_cleared">Kuketoj viŝitaj</string>
+    <string name="cookies_cleared">Kuketoj viŝitis</string>
     <string name="creating_backup">Kreas savkopion</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Farita en %1$s kun %2$s eraro</item>
@@ -186,4 +186,18 @@
     <string name="lock_when_idle">Ŝlosi kiam senokupas</string>
     <string name="loading">Ŝargas…</string>
     <string name="cancel_all_for_series">Nuligi ĉiujn por ĉi tiu serio</string>
+    <string name="restoring_backup_canceled">Rezignita restaŭro</string>
+    <string name="services">Servoj</string>
+    <string name="unofficial_extension_message">Ĉi tiu kromaĵo ne estas de la oficiala Tachiyomi kromaĵlisto.</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Mankas 1 ĉapitron</item>
+        <item quantity="other">Mankas %d ĉapitrojn</item>
+    </plurals>
+    <string name="secure_screen">Sekura ekrano</string>
+    <string name="licensed"></string>
+    <string name="set_as_cover">Agordi kiel kovrilo</string>
+    <string name="error_sharing_cover">Eraro dumo kovrila kunigado</string>
+    <string name="error_saving_cover">Eraro dum kovrila konservado</string>
+    <string name="cover_updated">Kovrilo aktualigita</string>
+    <string name="cover_saved">Kovrilo konservita</string>
 </resources>

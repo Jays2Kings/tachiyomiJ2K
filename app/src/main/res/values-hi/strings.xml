@@ -209,7 +209,6 @@
     <string name="next_chapter_not_found">अगले अध्याय नहीं मिला</string>
     <string name="decode_image_error">छवि को डीकोड नहीं किया जा सका</string>
     <string name="use_image_as_cover">क्या आप इस छवि को कवर के रूप में सेट करना चाहते हैं?</string>
-    <string name="could_not_download_chapter_can_try_again">अध्याय डाउनलोड करते समय एक त्रुटि हुई आप डाउनलोड अनुभाग में पुनः प्रयास कर सकते हैं</string>
     <string name="new_chapters_found">नए अध्याय पाए गए</string>
     <string name="failed_to_update_cover">कवर को अपडेट करने में विफल</string>
     <string name="must_be_in_library_to_edit">ऐसा करने से पहले कृपया अपनी लाइब्रेरी में मंगा को जोड़ें</string>
@@ -355,7 +354,7 @@
     <string name="view_chapters">अध्याय देखें</string>
     <string name="tracked">ट्रैक किए गए</string>
     <string name="l_nav">एल आकार</string>
-    <string name="kindlish_nav">किंडल-ईश</string>
+    <string name="kindlish_nav">किंडल-जैसे</string>
     <string name="edge_nav">धार</string>
     <string name="right_and_left_nav">दाएं और बाएं</string>
     <string name="invert_tapping">उलटा दोहन</string>

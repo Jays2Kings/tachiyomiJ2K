@@ -250,7 +250,6 @@
     <string name="loading_pages">Laddar sidor…</string>
     <string name="failed_to_load_pages_">Misslyckades att ladda sidor: %1$s</string>
     <string name="migrate">Migrera</string>
-    <string name="could_not_download_chapter_can_try_again">Ett fel inträffade vid nedladdning av kapitlen. Du kan försöka igen i nedladdningssektionen</string>
     <string name="new_chapters_found">Nya kapitel hittades</string>
     <string name="failed_to_update_cover">Misslyckades att uppdatera omslag</string>
     <string name="must_be_in_library_to_edit">Vänligen lägg till mangan i ditt bibliotek innan du gör detta</string>
@@ -902,4 +901,9 @@
     <string name="no_matches_for_filters_short">Inga träffar med dina filter</string>
     <string name="show_categories_while_filtering">Visa tomma kategorier vid filtrering</string>
     <string name="help_translate">Hjälp till med översättning</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Där saknas 1 kapitel</item>
+        <item quantity="other">Där sankas %d kapitlar</item>
+    </plurals>
+    <string name="split_double_pages">Dela på dubbel sidor</string>
 </resources>

@@ -102,7 +102,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Borrar la caché de los capítulos</string>
     <string name="used_">Usado: %1$s</string>
-    <string name="cache_delete_error">Se produjo un error al vaciar la antememoria</string>
+    <string name="cache_delete_error">Se produjo un error al vaciar la caché</string>
     <string name="clear_cookies">Borrar cookies</string>
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
@@ -159,7 +159,6 @@
     <string name="backup">Copia de seguridad</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Se ha producido un error al descargar capítulos. Puede intentarlo de nuevo en la sección de descargas</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Nuevos capítulos encontrados</string>
     <string name="must_be_in_library_to_edit">El manga debe existir en la biblioteca para poder editarlo</string>
@@ -283,9 +282,9 @@
     <string name="migrate">Migrar</string>
     <string name="untrusted_extension_message">Esta extensión fue firmada por una fuente no certificada y no fue activada.
 \n
-\nUna extensión maliciosa puede leer cualquier credencial de inicio guardada en Tachiyomi o ejecutar código arbitrario.
+\nUna extensión maliciosa puede leer cualquier credencial de inicio guardado en Tachiyomi o ejecutar código arbitrario.
 \n
-\nConfiando en este certificado aceptas estos riesgos.</string>
+\nAl confiar en este certificado aceptas estos riesgos.</string>
     <string name="no_animation">Sin animación</string>
     <string name="search_filters">Filtros de búsqueda</string>
     <string name="added_to_library">Añadido a la biblioteca</string>
@@ -320,12 +319,12 @@
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
     <string name="network">Red</string>
-    <string name="requires_app_restart">Requiere el reinicio de la aplicación para que surta efecto</string>
+    <string name="requires_app_restart">Requiere reiniciar la aplicación para que surta efecto</string>
     <string name="disable_battery_optimization">Desactivar optimización de la batería</string>
     <string name="battery_optimization_disabled">La optimización de la batería ya está desactivada</string>
     <string name="pref_global_search">Búsqueda global</string>
     <string name="check_for_extension_updates">Buscar actualizaciones de extensiones</string>
-    <string name="website">Sitio web</string>
+    <string name="website">Página web</string>
     <string name="open_source_licenses">Licencias de código abierto</string>
     <string name="email">Correo electrónico</string>
     <string name="successfully_logged_out">Has cerrado sesión</string>
@@ -357,10 +356,10 @@
     <string name="always_show_chapter_transition">Mostrar siempre la transición del capítulo</string>
     <string name="pref_webtoon_side_padding">Espaciado lateral</string>
     <string name="webtoon_side_padding_0">Ninguno</string>
-    <string name="webtoon_side_padding_10">10 %</string>
-    <string name="webtoon_side_padding_15">15 %</string>
-    <string name="webtoon_side_padding_20">20 %</string>
-    <string name="webtoon_side_padding_25">25 %</string>
+    <string name="webtoon_side_padding_10">10%</string>
+    <string name="webtoon_side_padding_15">15%</string>
+    <string name="webtoon_side_padding_20">20%</string>
+    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Capítulos %1$s</string>
     <string name="remove_from_library">Eliminar de biblioteca</string>
     <string name="refresh_tracking">Refrescar el seguimiento</string>
@@ -628,7 +627,7 @@
     <string name="search_settings">Buscar en configuración</string>
     <string name="locale">Configuración regional</string>
     <string name="automatic_backups">Copias de seguridad automáticas</string>
-    <string name="invalid_backup_file">Un archivo invalido de copia de seguridad</string>
+    <string name="invalid_backup_file">Archivo de copia de seguridad no válido</string>
     <string name="invalid_backup_file_type">Tipo de archivo de copia de seguridad no válido: %1$s
 \nDebería terminar con .proto.gz o .json.</string>
     <string name="file_is_missing_data">En archivo faltan datos.</string>
@@ -895,7 +894,7 @@
     <string name="warning">Advertencia</string>
     <string name="orientation">Orientación</string>
     <string name="default_orientation">Orientación predeterminada</string>
-    <string name="about_dont_kill_my_app">Algunos fabricantes tienen restricciones adicionales para aplicaciones que matan los servicios en segundo plano. Esta pagina web tiene más información sobre cómo solucionarlo.</string>
+    <string name="about_dont_kill_my_app">Algunos fabricantes tienen restricciones adicionales para aplicaciones que matan los servicios en segundo plano. Esta página web tiene más información sobre cómo solucionarlo.</string>
     <string name="restore_miui_warning">Es posible que las funciones de copia de seguridad y restauración no funcionen correctamente si la opción Optimización de MIUI está desactivada.</string>
     <string name="dont_auto_update">No actualizar automáticamente</string>
     <string name="over_any_network">Con cualquier red</string>

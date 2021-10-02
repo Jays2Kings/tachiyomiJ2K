@@ -33,7 +33,6 @@
     <string name="loading_pages">Ladataan sivuja…</string>
     <string name="failed_to_load_pages_">Sivujen lataus epäonnistui: %1$s</string>
     <string name="migrate">Vaihda</string>
-    <string name="could_not_download_chapter_can_try_again">Virhe tapahtui ladatessa lukuja. Voit yrittää uudelleen lataukset-osiossa</string>
     <string name="new_chapters_found">Uusia lukuja löydetty</string>
     <string name="failed_to_update_cover">Kansikuvan päivitys epäonnistui</string>
     <string name="must_be_in_library_to_edit">Lisää sarja kirjastoosi ensin</string>

@@ -250,7 +250,6 @@
     <string name="loading_pages">Încărcând paginile…</string>
     <string name="failed_to_load_pages_">Încărcarea paginilor eșuată: %1$s</string>
     <string name="migrate">Migrează</string>
-    <string name="could_not_download_chapter_can_try_again">Am întâmpinat o eroare descărcând capitolele. Puteți încerca din noi în secțiunea de descărcări</string>
     <string name="new_chapters_found">Capitol nou găsit</string>
     <string name="failed_to_update_cover">Actualizare copertă eșuată</string>
     <string name="must_be_in_library_to_edit">Vă rugăma să adăugați mangaul la bibliotecă incinte de a face asta</string>

@@ -250,7 +250,6 @@
     <string name="loading_pages">Завантаження сторінок…</string>
     <string name="failed_to_load_pages_">Не вдалось завантажити сторінки %1$s</string>
     <string name="migrate">Мігрувати</string>
-    <string name="could_not_download_chapter_can_try_again">Сталась помилка при завантаженні глав. Спробуйте ще раз у розділі завантаження</string>
     <string name="new_chapters_found">Знайдено нові глави</string>
     <string name="failed_to_update_cover">Не вдалось оновити обкладинку</string>
     <string name="must_be_in_library_to_edit">Будь ласка, додайте мангу до своєї бібліотеки перед тим як робити це</string>

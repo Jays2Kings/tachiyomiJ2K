@@ -260,7 +260,6 @@
     <string name="loading_pages">กำลังโหลดหน้า …</string>
     <string name="failed_to_load_pages_">ไม่สามารถโหลดหน้าได้: %1$s</string>
     <string name="migrate">ย้าย</string>
-    <string name="could_not_download_chapter_can_try_again">เกิดข้อผิดพลาดขณะดาวน์โหลดบท คุณสามารถลองอีกครั้งในส่วนการดาวน์โหลด</string>
     <string name="new_chapters_found">พบบทใหม่</string>
     <string name="failed_to_update_cover">ไม่สามารถอัปเดตหน้าปก</string>
     <string name="must_be_in_library_to_edit">กรุณาเพิ่มมังงะในห้องสมุดของคุณก่อนที่จะทำเช่นนี้</string>

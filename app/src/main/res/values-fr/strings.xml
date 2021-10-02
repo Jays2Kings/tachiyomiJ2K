@@ -189,7 +189,6 @@
     <string name="backup">Sauvegarder</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Une erreur est survenue lors du téléchargement des chapitres. Vous pouvez recommencer à nouveau dans la section téléchargements</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Des nouveaux chapitres ont été trouvés</string>
     <string name="failed_to_update_cover">La mise à jour de la couverture a échoué</string>
@@ -363,7 +362,7 @@
     <string name="network">Réseau</string>
     <string name="requires_app_restart">Nécessite un redémarrage de l\'application pour prendre effet</string>
     <string name="disable_battery_optimization">Désactiver la fonction Optimisation utilisation batterie</string>
-    <string name="battery_optimization_disabled">La fonction Optimisation utilisation batterie est déjà désactivée</string>
+    <string name="battery_optimization_disabled">La fonction d\'optimisation de la batterie est déjà désactivée</string>
     <string name="pref_global_search">Recherche globale</string>
     <string name="check_for_extension_updates">Vérifier les mises à jour d’extensions</string>
     <string name="website">Site web</string>
@@ -714,7 +713,7 @@
     <string name="crash_logs">Journaux de plantage</string>
     <string name="dump_crash_logs">Copie des journaux endommagés</string>
     <string name="saves_error_logs">Enregistre les journaux d\'erreur dans un fichier pour le partager avec les développeurs</string>
-    <string name="crash_log_saved">Sauvegarde des journaux endommagés</string>
+    <string name="crash_log_saved">Registre d\'incident sauvegardé</string>
     <string name="updated_to_">Mise à jour de v%1$s</string>
     <string name="pressing_back_to_start">Revenir à l\'écran de démarrage en appuyant sur retour</string>
     <string name="ignore_cutout_areas">Ignorer les zones de découpe</string>
@@ -958,4 +957,5 @@
     </plurals>
     <string name="helpful_translation_links">Liens utiles pour la traduction</string>
     <string name="help_translate">Aider à traduire</string>
+    <string name="filter_groups">Filtrer les groupes de scanlateurs</string>
 </resources>

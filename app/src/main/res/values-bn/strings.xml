@@ -209,7 +209,6 @@
     <string name="next_chapter_not_found">পরবর্তী অধ্যায় খুঁজে পাওয়া যায়নি</string>
     <string name="decode_image_error">ছবি decoded করা যাবে না</string>
     <string name="use_image_as_cover">আপনি কি এই ছবিটিকে কভার হিসেবে সেট করতে চান?</string>
-    <string name="could_not_download_chapter_can_try_again">অধ্যায়গুলো ডাউনলোডের সময় একটি ত্রুটি দেখা দিয়েছে। ডাউনলোডস সেকশন থেকে আপনি আবার চেষ্টা করতে পারেন</string>
     <string name="new_chapters_found">নতুন অধ্যায় পাওয়া গিয়েছে</string>
     <string name="failed_to_update_cover">কভার আপডেট করতে অসফল হয়েছে</string>
     <string name="must_be_in_library_to_edit">এটা করার আগে দয়া করে মাংগাটি আপনার মাংগাশালায় যোগ করুন</string>

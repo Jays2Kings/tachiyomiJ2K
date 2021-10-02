@@ -4,7 +4,7 @@
     <string name="app_short_name" translatable="false">TachiJ2K</string>
     <!--Models-->
     <!-- Manga Type -->
-    <string name="manga">Mangá</string>
+    <string name="manga">Mangás</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
     <string name="comic">HQ</string>
@@ -519,7 +519,6 @@
     <string name="nothing_is_downloading">Nada está sendo baixando no momento</string>
     <string name="download_complete">Download concluído</string>
     <string name="download_error">Erro ao fazer download</string>
-    <string name="could_not_download_chapter_can_try_again">Não foi possível baixar os capítulos. Você pode tentar novamente na seção de downloads</string>
     <string name="manage_whats_downloading">"Gerenciar o que está baixando"</string>
     <string name="visit_recents_for_download_queue">Visite a aba Recentes para acessar a fila de download. Também é possível tocar duas vezes ou pressionar e segurar para acesso rápido</string>
     <!-- Download Notification -->
@@ -914,7 +913,7 @@
     <string name="some_extensions_may_not_update">Algumas extensões podem não atualizar automaticamente se elas forem instaladas fora do aplicativo</string>
     <string name="notify_extension_updated">Notificar que a extensão foi atualizada</string>
     <string name="auto_update_extensions">Extensão de atualização automática</string>
-    <string name="about_dont_kill_my_app">Algumas fabricantes possuem restrições adicionais que fecham os serviços em segundo plano. Esse site tem mais informações sobre como resolver isto.</string>
+    <string name="about_dont_kill_my_app">Algumas fabricantes possuem restrições adicionais de aplicativos que encerram os serviços em segundo plano. Este site possui mais informações sobre como corrigir este problema.</string>
     <string name="force_download_cache_refresh">Limpar o cache de download</string>
     <string name="no_new_chapters_open_details">Mostrar os detalhes da série quando não houver novos capítulos</string>
     <string name="series_opens_new_chapters">Atalhos para as séries abrem novos capítulos</string>

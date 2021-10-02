@@ -208,7 +208,6 @@
     <string name="next_chapter_not_found">لم يتم العثور على الفصل التالي</string>
     <string name="decode_image_error">لا يمكن فكّ تشفير هذه الصورةِ</string>
     <string name="use_image_as_cover">هل تريد تعيين هذه الصورة كغلاف؟</string>
-    <string name="could_not_download_chapter_can_try_again">حدث خطأ أثناء تنزيل الفصول. يمكنك إعادة المحاولة في قسم التنزيلات</string>
     <string name="new_chapters_found">تم إيجاد فصول جديدة</string>
     <string name="failed_to_update_cover">فشل تحديث الغلاف</string>
     <string name="must_be_in_library_to_edit">من فضلك أضف المانجا إلى مكتبتك قبل القيام بذلك</string>

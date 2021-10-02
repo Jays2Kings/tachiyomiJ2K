@@ -266,7 +266,6 @@
     <string name="url_not_set_click_again">만화 URL이 설정 되지 않았습니다. 제목을 클릭하고 만화를 다시 선택해주세요</string>
     <string name="category_with_name_exists">같은 이름을 가진 카테고리가 이미 존재합니다!</string>
     <string name="migrate">이동</string>
-    <string name="could_not_download_chapter_can_try_again">챕터 다운로드 도중 오류가 발생했습니다. 다운로드 섹션에서 다시시도 할 수 있습니다</string>
     <string name="must_be_in_library_to_edit">이 행동을 하기 전 서재에 만화를 추가해주세요</string>
     <string name="library_is_empty_add_from_browse">서재가 비어있습니다. 카탈로그에서 만화 시리즈를 서재에 추가 할 수 있습니다.</string>
     <string name="no_wifi_connection">Wifi 연결 사용 불가능</string>

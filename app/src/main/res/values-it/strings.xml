@@ -194,7 +194,6 @@
     <string name="backup">Backup</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Si è verificato un errore durante il download dei capitoli. Puoi provare di nuovo nella sezione download</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Nuovi capitoli trovati</string>
     <string name="failed_to_update_cover">Impossibile aggiornare la copertina</string>
@@ -957,4 +956,5 @@
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
     <string name="helpful_translation_links">Collegamenti utili per la traduzione</string>
     <string name="help_translate">Aiuta a tradurre</string>
+    <string name="filter_groups">Filtra i gruppi di scanlator</string>
 </resources>

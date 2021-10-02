@@ -166,7 +166,6 @@
     <string name="backup">Cópia de segurança</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
-    <string name="could_not_download_chapter_can_try_again">Ocorreu um erro ao transferir capítulos. Poderá tentar novamente na secção das transferências</string>
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Novos capítulos encontrados</string>
     <string name="must_be_in_library_to_edit">Por favor adicione a manga à sua biblioteca antes de fazer isto</string>
@@ -574,8 +573,8 @@
     <string name="restore_in_progress">Restauro em progresso</string>
     <string name="backup_in_progress">Cópia de segurança em progresso</string>
     <string name="disabled">Desativado</string>
-    <string name="portrait">Vertical</string>
-    <string name="landscape">Horizontal</string>
+    <string name="portrait">Retrato</string>
+    <string name="landscape">Paisagem</string>
     <string name="drag_handle">Alça de arrasto</string>
     <string name="view_all_errors">Ver todos os erros</string>
     <string name="use_default">Usar padrão</string>

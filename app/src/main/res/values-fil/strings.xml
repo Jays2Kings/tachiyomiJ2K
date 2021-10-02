@@ -679,4 +679,5 @@
     <string name="no_matches_for_filters_short">Walang tumugma sa mga sinala</string>
     <string name="show_categories_while_filtering">Ipakita ang bakanteng kategorya kapag sinala</string>
     <string name="help_translate">Tumulong sa pagsalin</string>
+    <string name="name">Pangalan</string>
 </resources>

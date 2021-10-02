@@ -712,7 +712,6 @@
     <string name="remove_after_read">Ukloni nakon čitanja</string>
     <string name="remove_when_marked_as_read">Ukloni kad je označeno kao pročitano</string>
     <string name="manage_whats_downloading">Upravljaj preuzimanjem</string>
-    <string name="could_not_download_chapter_can_try_again">Nije moguće preuzeti poglavlja. Možeš ponovo pokušati u odjeljku preuzimanja</string>
     <string name="nothing_is_downloading">Trenutačno se ništa ne preuzima</string>
     <string name="remove_downloads">Ukloni preuzimanja</string>
     <string name="remove_download">Ukloni preuzimanje</string>

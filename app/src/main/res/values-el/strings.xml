@@ -250,7 +250,6 @@
     <string name="loading_pages">Φόρτωση σελίδων…</string>
     <string name="failed_to_load_pages_">Η φόρτωση σελίδων απέτυχε: %1$s</string>
     <string name="migrate">Μεταφορά</string>
-    <string name="could_not_download_chapter_can_try_again">Παρουσιάστηκε σφάλμα κατά τη λήψη κεφαλαίων. Μπορείτε να δοκιμάσετε ξανά στην ενότητα λήψεων</string>
     <string name="new_chapters_found">Βρέθηκαν νέα κεφάλαια</string>
     <string name="failed_to_update_cover">Δεν ήταν δυνατή η ενημέρωση του εξώφυλλου</string>
     <string name="must_be_in_library_to_edit">Παρακαλώ προσθέστε το manga στη βιβλιοθήκη σας πριν κάνετε κάτι τέτοιο</string>
@@ -924,4 +923,5 @@
     </plurals>
     <string name="helpful_translation_links">Χρήσιμοι σύνδεσμοι μετάφρασης</string>
     <string name="help_translate">Βοηθήστε στη μετάφραση</string>
+    <string name="filter_groups">Φιλτράρισμα ομάδων scanlator</string>
 </resources>

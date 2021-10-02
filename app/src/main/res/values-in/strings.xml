@@ -179,7 +179,7 @@
     <string name="author">Penulis</string>
     <string name="artist">Artis</string>
     <string name="status">Status</string>
-    <string name="chapter_">Chapter %1$s</string>
+    <string name="chapter_">Bab %1$s</string>
     <string name="downloading">Mengunduh</string>
     <string name="downloading_progress">Mengunduh (%1$d/%2$d)</string>
     <string name="paused">Dijeda</string>
@@ -201,9 +201,8 @@
     <string name="cover_updated">Sampul telah diperbarui</string>
     <string name="page_">Halaman: %1$d</string>
     <string name="next_chapter_not_found">Chapter berikutnya tidak ditemukan</string>
-    <string name="decode_image_error">Gambar tidak bisa ditampilkan</string>
+    <string name="decode_image_error">Gambar tidak dapat dimuat</string>
     <string name="use_image_as_cover">Gunakan gambar ini sebagai sampul\?</string>
-    <string name="could_not_download_chapter_can_try_again">Terjadi kesalahan saat mengunduh chapter. Anda bisa mencoba lagi di halaman sedang diunduh</string>
     <string name="new_chapters_found">Chapter baru ditemukan</string>
     <string name="failed_to_update_cover">Gagal memperbarui sampul</string>
     <string name="must_be_in_library_to_edit">Manga harus sudah ditambahkan ke pustaka Anda sebelum diubah</string>
@@ -550,7 +549,7 @@
     <string name="new_category">Tambah kategori baru</string>
     <string name="category">Kategori</string>
     <plurals name="chapters_plural">
-        <item quantity="other">%1$d chapter</item>
+        <item quantity="other">%1$d bab</item>
     </plurals>
     <string name="move_x_to">Pindah %1$s ke…</string>
     <string name="add_x_to">Tambah %1$s ke …</string>
@@ -560,7 +559,7 @@
     <string name="want_to_read">Ingin dibaca</string>
     <string name="currently_reading">Sedang Dibaca</string>
     <plurals name="deleted_chapters">
-        <item quantity="other">Chapter %1$s telah dihapus dari sumber:
+        <item quantity="other">%1$s bab telah dihapus dari sumber:
 \n%2$s
 \n
 \nHapus unduhan\?</item>
@@ -902,4 +901,5 @@
     <string name="by_default_side_nav_info">Secara default, navigasi samping digunakan untuk handphone dan tablet tertentu saat landscape, dan selalu ditampilkan di tablet yang lebih besar</string>
     <string name="default_behavior">Tindakan default</string>
     <string name="use_side_navigation">Gunakan navigasi samping</string>
+    <string name="filter_groups">Saring grup pemindai</string>
 </resources>

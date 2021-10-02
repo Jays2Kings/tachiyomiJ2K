@@ -261,7 +261,6 @@
     <string name="loading_pages">Kinakarga ang mga pahina…</string>
     <string name="failed_to_load_pages_">Pumalya sa pagkarga ng mga pahina: %1$s</string>
     <string name="migrate">Lumipat</string>
-    <string name="could_not_download_chapter_can_try_again">Nagkaproblema habang nagda-download ng mga kabanata. Maaring mong ulitin ito sa Downloads section.</string>
     <string name="new_chapters_found">May nakitang bagong (mga) kabanata</string>
     <string name="failed_to_update_cover">Pumalya sa pag-update ng pabalat</string>
     <string name="must_be_in_library_to_edit">Mangyaring idagdag muna ang manga sa iyong aklatan bago gawin ito</string>

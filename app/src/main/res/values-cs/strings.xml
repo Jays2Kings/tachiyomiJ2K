@@ -134,7 +134,6 @@
     <string name="theres_no_previous_chapter">Žádná předchozí kapitola</string>
     <string name="loading_pages">Načítání stránek…</string>
     <string name="migrate">Migrovat</string>
-    <string name="could_not_download_chapter_can_try_again">Došlo k chybě při stahování kapitol. Zkuste to znovu v sekci stahování</string>
     <string name="new_chapters_found">Nalezeny nové kapitoly</string>
     <string name="select_backup_file">Vybrat záložní soubor</string>
     <string name="new_version_available">Dostupná nová aktualizace!</string>

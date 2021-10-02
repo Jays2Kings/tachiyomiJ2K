@@ -304,5 +304,18 @@
     <string name="logout">Kijelentkezés</string>
     <string name="browse">Böngészés</string>
     <string name="cancel_all_for_series">Mégse az összesre a sorozatból</string>
-    <string name="webtoon_side_padding_0">Semmi</string>
+    <string name="webtoon_side_padding_0">Semennyi</string>
+    <string name="services">Szolgáltatások</string>
+    <string name="fifth_to_last">Hátulról az ötödik fejezet</string>
+    <string name="fourth_to_last">Hátulról a negyedik fejezet</string>
+    <string name="third_to_last">Utolsó előtti előtti fejezet</string>
+    <string name="second_to_last">Utolsó előtti fejezet</string>
+    <string name="disabled">Kikapcsolva</string>
+    <string name="webtoon_side_padding_25">25%</string>
+    <string name="webtoon_side_padding_20">20%</string>
+    <string name="webtoon_side_padding_15">15%</string>
+    <string name="webtoon_side_padding_10">10%</string>
+    <string name="pref_webtoon_side_padding">Bélés oldalon</string>
+    <string name="kindlish_nav">Kindle-féle</string>
+    <string name="l_nav">L alakú</string>
 </resources>

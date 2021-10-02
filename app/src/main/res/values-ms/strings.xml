@@ -209,7 +209,6 @@
     <string name="next_chapter_not_found">Bab seterusnya tidak dijumpai</string>
     <string name="decode_image_error">Imej tidak dapat diyahkod</string>
     <string name="use_image_as_cover">Adakah anda ingin set imej ini sebagai muka hadapan?</string>
-    <string name="could_not_download_chapter_can_try_again">Ralat ketika memuat turun bab. Anda boleh mencuba lagi di bahagian muat turun</string>
     <string name="new_chapters_found">Bab baharu dijumpai</string>
     <string name="failed_to_update_cover">Gagal untuk kemas kini muka hadapan</string>
     <string name="must_be_in_library_to_edit">Mohon tambahkan manga kepada koleksi sebelum melakukan ini</string>

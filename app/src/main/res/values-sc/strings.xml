@@ -250,7 +250,6 @@
     <string name="loading_pages">Carrighende pàginas…</string>
     <string name="failed_to_load_pages_">Carrigamentu de pàginas fallidu: %1$s</string>
     <string name="migrate">Tràmuda</string>
-    <string name="could_not_download_chapter_can_try_again">B’at àpidu un\'errore in s’iscarrigamentu de sos capìtulos. Podes torrare a proare in sa setzione de sos iscarrigamentos</string>
     <string name="new_chapters_found">Capìtulos noos agatados</string>
     <string name="failed_to_update_cover">Agiornamentu de sa cobertedda fallidu</string>
     <string name="must_be_in_library_to_edit">Pro praghere annanghe su manga a sa biblioteca tua in antis de fàghere custu</string>
@@ -924,4 +923,5 @@
     </plurals>
     <string name="helpful_translation_links">Ligàmenes ùtiles pro sa tradutzione</string>
     <string name="help_translate">Agiuda a bortare</string>
+    <string name="filter_groups">Filtra sos grupos de iscansidores</string>
 </resources>

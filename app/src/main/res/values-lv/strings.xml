@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">Kategorijas</string>
-    <string name="manga">Manga</string>
+    <string name="manga"></string>
     <string name="chapters">Nodaļas</string>
     <string name="tracking">Sekošana</string>
     <string name="history">Vēsture</string>
@@ -14,7 +14,7 @@
     <string name="downloaded">Lejupieladēts</string>
     <string name="bookmarked">Ar grāmatzīmēm</string>
     <string name="unread">Neizlasītie</string>
-    <string name="read">Izlasītie</string>
+    <string name="read">Izlasīts</string>
     <string name="alphabetically">Alfabētiski</string>
     <string name="total_chapters">Nodaļu daudzums</string>
     <string name="last_read">Pēdēji izlasīti</string>
@@ -169,11 +169,11 @@
     <string name="artist">Mākslinieks</string>
     <string name="author">Autors</string>
     <string name="title">Nosaukums</string>
-    <string name="not_started">Nav iesākts</string>
-    <string name="webtoon">Vebtūns</string>
+    <string name="not_started">Nav sākts</string>
+    <string name="webtoon">Webtūns</string>
     <string name="comic">Komikss</string>
-    <string name="manhua">Manhua</string>
-    <string name="manhwa">Manhva</string>
+    <string name="manhua"></string>
+    <string name="manhwa"></string>
     <string name="invert_tapping">Invertēt spiešanu</string>
     <string name="none">Nav</string>
     <string name="tracked">Izsekots</string>
@@ -185,13 +185,52 @@
 \nPirms atjaunošanas pārliecinieties, vai esat instalējis visus nepieciešamos paplašinājumus un esat pieteicies avotos un izsekošanas pakalpojumos.</string>
     <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
-        <item quantity="zero">Pabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdāmPabeigts %1$s ar %2$s kļūdām</item>
-        <item quantity="one"/>
-        <item quantity="other"/>
+        <item quantity="zero">Pabeigts %1$s ar %2$s kļūdām</item>
+        <item quantity="one">Pabeigts %1$s ar %2$s kļūdu</item>
+        <item quantity="other">Pabeigts %1$s ar %2$s kļūdām</item>
     </plurals>
     <string name="open_log">Atvērt žurnālfailu</string>
     <string name="next_chapter">Nākama nodaļa</string>
     <string name="previous_chapter">Iepriekšēja nodaļa</string>
     <string name="hide_app_block_screenshots">Slēpt lietotnes saturu mainot lietotnes, un bloķēt ekrānuzņēmumus</string>
     <string name="label_global_search">Globālā meklēšana</string>
+    <string name="invalid_backup_file_type">"Nederīgs dublējuma faila tips: %1$s
+\nTam vajadzētu beigties ar  .proto.gz vai .json."</string>
+    <string name="restrictions_">Ierobežojumi: %1$s</string>
+    <string name="library_update_restriction">Bibliotēkas atjaunināšanas ierobežojumi</string>
+    <string name="library_update_order">Bibliotēkas atjaunināšanas secība</string>
+    <plurals name="notification_update_failed">
+        <item quantity="zero">%1$d atjauninājumi neizdevās</item>
+        <item quantity="one">1 atjauninājums neizdevās</item>
+        <item quantity="other">%1$d atjauninājumi neizdevās</item>
+    </plurals>
+    <plurals name="notification_and_n_more">
+        <item quantity="zero">un vēl %1$d nodaļas</item>
+        <item quantity="one">un vēl %1$d nodaļa</item>
+        <item quantity="other">un vēl %1$d nodaļas</item>
+    </plurals>
+    <string name="new_chapters_found">Atrastas jaunas nodaļas</string>
+    <string name="more_library_settings">Vairāk bibliotēkas iestatījumu</string>
+    <string name="update_completed">Atjauninājums pabeigts</string>
+    <string name="category_cannot_be_blank">Kategorijas nosaukums nevar būt tukšs</string>
+    <string name="add_edit_categories">Pievienot/Rediģēt kategorijas</string>
+    <string name="new_category">Jauna kategorija</string>
+    <plurals name="pages_left">
+        <item quantity="zero">Palikušas %1$d lapas</item>
+        <item quantity="one">Palikusi %1$d lapa</item>
+        <item quantity="other">Palikušas %1$d lapas</item>
+    </plurals>
+    <plurals name="chapters_plural">
+        <item quantity="zero">%1$d nodaļas</item>
+        <item quantity="one">%1$d nodaļa</item>
+        <item quantity="other">%1$d nodaļas</item>
+    </plurals>
+    <string name="by_update_date">Pēc augšupielādes datuma</string>
+    <string name="by_chapter_number">Pēc nodaļas numura</string>
+    <string name="by_source_order">Pēc avota secības</string>
+    <string name="no_chapters_to_delete">Nav nodaļu, ko izdzēst</string>
+    <string name="remove_all_downloads">Noņemt visas lejupielādes\?</string>
+    <string name="category">Kategorija</string>
+    <string name="backup_in_progress">Dublēšana jau notiek</string>
+    <string name="move_x_to">Pārvietot %1$s uz…</string>
 </resources>

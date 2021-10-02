@@ -250,7 +250,6 @@
     <string name="loading_pages">S\'estan carregant les pàgines…</string>
     <string name="failed_to_load_pages_">No s\'han pogut carregar les pàgines: %1$s</string>
     <string name="migrate">Migra</string>
-    <string name="could_not_download_chapter_can_try_again">S\'ha produït un error en descarregar capítols. Podeu tornar-ho a provar a la secció de descàrregues</string>
     <string name="new_chapters_found">S\'han trobat nous capítols</string>
     <string name="failed_to_update_cover">No s\'ha pogut actualitzar la portada</string>
     <string name="must_be_in_library_to_edit">Afegiu el manga a la vostra biblioteca abans de fer això</string>

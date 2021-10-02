@@ -184,9 +184,9 @@
         rozdziału. Kontynuować?</string>
     <string name="reset_all_chapters_for_this_">Zresetuj wszystkie rozdziały dla %1$s</string>
     <string name="last_read_">Wcześniej czytano %1$s</string>
-    <string name="read_">Czytany %1$s</string>
-    <string name="updated_">Zaktualizowany %1$s</string>
-    <string name="added_">Dodany %1$s</string>
+    <string name="read_">Czytano %1$s</string>
+    <string name="updated_">Zaktualizowano %1$s</string>
+    <string name="added_">Dodano %1$s</string>
     <string name="view_history">Przeglądaj historię</string>
     <string name="view_all_updates">Przeglądaj wszystkie aktualizacje</string>
     <string name="search_recents">Przeszukaj ostatnie…</string>
@@ -218,7 +218,7 @@
     <string name="obsolete">Przestarzałe</string>
     <string name="pending">Oczekujące</string>
     <string name="installing">Instalowanie</string>
-    <string name="installed">Zainstalowano</string>
+    <string name="installed">Zainstalowane</string>
     <string name="trust">Ufaj</string>
     <string name="untrusted">Niezaufane</string>
     <string name="uninstall">Odinstaluj</string>
@@ -327,16 +327,16 @@
     <string name="no_description">Brak opisu</string>
     <string name="mark_all_chapters_as_read">Oznaczyć wszystkie rozdziały jako przeczytane\?</string>
     <string name="remove_from_library">Usuń z biblioteki</string>
-    <string name="select_starting_chapter">Wybierz startowy rozdział</string>
+    <string name="select_starting_chapter">Wybierz początkowy rozdział</string>
     <string name="select_ending_chapter">Wybierz końcowy rozdział</string>
-    <string name="search_chapters">Szukaj rozdziałów</string>
+    <string name="search_chapters">Przeszukaj rozdziały</string>
     <string name="next_unread_chapter">Następny nieprzeczytany rozdział</string>
     <string name="next_5_unread">Następne 5 nieprzeczytanych</string>
-    <string name="custom_range">Własne ustawienie</string>
-    <string name="all_chapters">Wszystkie</string>
+    <string name="custom_range">Własny zakres</string>
+    <string name="all_chapters">Wszystkie rozdziały</string>
     <string name="all_unread_chapters">Wszystkie nieprzeczytane</string>
     <string name="all_read_chapters">Wszystkie przeczytane</string>
-    <string name="all_but_bookmarked_chapters">Wszystkie zapisane w zakładkach</string>
+    <string name="all_but_bookmarked_chapters">Wszystkie poza zapisanymi w zakładkach</string>
     <string name="add_x_to_library">Dodać %1$s do biblioteki?</string>
     <string name="show_all">Wyświetl wszystko</string>
     <string name="show_bookmarked_chapters">Wyświetl rozdziały zapisane w zakładkach</string>
@@ -569,7 +569,6 @@
     <string name="nothing_is_downloading">Nic nie jest pobierane</string>
     <string name="download_complete">Pobieranie ukończone</string>
     <string name="download_error">Błąd pobierania</string>
-    <string name="could_not_download_chapter_can_try_again">Wystąpił błąd podczas pobierania rozdziałów. Możesz spróbować ponownie w sekcji pobierania</string>
     <string name="manage_whats_downloading">Zarządzaj co jest pobierane</string>
     <string name="visit_recents_for_download_queue">Przejdź do zakładki Ostatnie, aby uzyskać dostęp do kolejki pobierania. Możesz także dwukrotnie stuknąć lub nacisnąć i przytrzymać, aby uzyskać szybszy dostęp</string>
     <!-- Download Notification -->
@@ -640,7 +639,7 @@
     <string name="drag_handle">Uchwyt przeciągania</string>
     <string name="edit">Edytuj</string>
     <string name="enabled">Włączone</string>
-    <string name="fast">Szybko</string>
+    <string name="fast">Szybka</string>
     <string name="filter">Filtr</string>
     <string name="forward">Naprzód</string>
     <string name="free">Dowolna</string>
@@ -663,7 +662,7 @@
     <string name="never">Nigdy</string>
     <string name="newest">Najnowsze</string>
     <string name="no_animation">Brak animacji</string>
-    <string name="normal">Normalny</string>
+    <string name="normal">Normalna</string>
     <string name="oldest">Najstarszy</string>
     <string name="open_in_browser">Otwórz w przeglądarce</string>
     <string name="open_in_webview">Otwórz w trybie WebView</string>
@@ -690,7 +689,7 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="tag">Tag</string>
-    <string name="top">Top</string>
+    <string name="top">Góra</string>
     <string name="undo">Cofnij</string>
     <string name="unknown_error">Nieznany błąd</string>
     <string name="unpin">Odepnij</string>
@@ -771,7 +770,7 @@
 \n
 \nBędziesz musiał zainstalować wszystkie brakujące rozszerzenia oraz zalogować się do usług śledzenia by móc je używać.</string>
     <string name="backup_in_progress">Kopia zapasowa jest już w trakcie tworzenia</string>
-    <string name="restore_in_progress">Kopia zapasowa jest w trakcie przywracania</string>
+    <string name="restore_in_progress">Kopia zapasowa jest już w trakcie przywracania</string>
     <string name="pressing_back_to_start">Wciskanie wstecz by wrócić na ekran startowy</string>
     <string name="back_to_start">Wróć na początek</string>
     <string name="starting_screen">Ekran startowy</string>
@@ -811,7 +810,7 @@
     <string name="changing_will_reset_reading_mode">Zmiana tego spowoduje reset trybu czytania dla tej serii</string>
     <string name="reading_mode">Tryb czytania</string>
     <string name="pages_">Strony %1$s</string>
-    <string name="group_chapters_together">Zgrupuj rozdziały</string>
+    <string name="group_chapters_together">Grupuj rozdziały</string>
     <string name="show_updated_time">Pokaż czas aktualizacji</string>
     <string name="a_while_ago">Jakiś czas temu</string>
     <string name="show_title_first">Pokaż tytuł jako pierwszy</string>
@@ -821,7 +820,7 @@
     <string name="only_downloaded">Tylko pobrane</string>
     <string name="only_unread">Tylko nieprzeczytane</string>
     <string name="show_download_button">Pokaż przycisk pobierania</string>
-    <string name="press_and_hold_to_also_reset">Historię rozdziału można również zresetować przytrzymując go</string>
+    <string name="press_and_hold_to_also_reset">Przytrzymanie rozdziału również pozwala zresetować jego historię</string>
     <string name="grouped">Zgrupowane</string>
     <string name="no_recent_read_updated_manga">Brak ostatnio czytanych / aktualizowanych mang</string>
     <string name="fetched_">Informacje pobrano %1$s</string>
@@ -1011,4 +1010,5 @@
     <string name="a_brighter_you">Pogoda Ducha (Dynamiczny)</string>
     <string name="flat_lime">Zwykła Limonka</string>
     <string name="pauses_reading_history">Wstrzymuje zapisywanie historii czytania</string>
+    <string name="filter_groups">Filtruj grupy skanlatorów</string>
 </resources>
