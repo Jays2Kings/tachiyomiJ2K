@@ -62,6 +62,7 @@
     <string name="by_source_order">By source\'s order</string>
     <string name="by_chapter_number">By chapter number</string>
     <string name="by_update_date">By upload date</string>
+    <string name="scanlators_hidden">Scanlators hidden</string>
 
     <plurals name="remove_n_chapters">
         <item quantity="one">Remove %1$d downloaded chapter?</item>
