@@ -626,7 +626,7 @@ class MangaDetailsPresenter(
         filtersId.add(if (manga.downloadedFilter(preferences) == Manga.CHAPTER_SHOW_NOT_DOWNLOADED) R.string.not_downloaded else null)
         filtersId.add(if (manga.bookmarkedFilter(preferences) == Manga.CHAPTER_SHOW_BOOKMARKED) R.string.bookmarked else null)
         filtersId.add(if (manga.bookmarkedFilter(preferences) == Manga.CHAPTER_SHOW_NOT_BOOKMARKED) R.string.not_bookmarked else null)
-        filtersId.add(if (manga.filtered_scanlators?.isNotEmpty() == true) R.string.scanlators_hidden else null)
+        filtersId.add(if (manga.filtered_scanlators?.isNotEmpty() == true) R.string.scanlators else null)
         return filtersId.filterNotNull().joinToString(", ") { preferences.context.getString(it) }
     }
 
