@@ -894,6 +894,8 @@
     <string name="always_keep">Always keep</string>
     <string name="always_delete">Always delete</string>
     <string name="automatic_removal">Automatic removal</string>
+    <string name="save_chapters_as_cbz">Save chapters as CBZ</string>
+    <string name="cbz_compression_level">CBZ compression level</string>
 
     <!-- Time -->
     <string name="manual">Manual</string>

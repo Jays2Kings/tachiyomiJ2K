@@ -14,10 +14,12 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.asImmediateFlow
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.data.preference.getOrDefault
 import eu.kanade.tachiyomi.util.system.getFilePicker
 import eu.kanade.tachiyomi.util.system.withOriginalWidth
+import kotlinx.coroutines.flow.launchIn
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
@@ -108,6 +110,25 @@ class SettingsDownloadController : SettingsController() {
                     )
                     entryRange = 0..2
                     defaultValue = 0
+                }
+            }
+            preferenceCategory {
+                titleRes = R.string.save_chapters_as_cbz
+
+                switchPreference {
+                    key = Keys.saveChaptersAsCBZ
+                    titleRes = R.string.save_chapters_as_cbz
+                    defaultValue = false
+                }
+
+                intListPreference(activity) {
+                    key = Keys.saveChaptersAsCBZLevel
+                    titleRes = R.string.cbz_compression_level
+                    entries = listOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
+                    entryRange = 0..10
+                    defaultValue = 0
+                    preferences.saveChaptersAsCBZ().asImmediateFlow { isVisible = it }
+                        .launchIn(viewScope)
                 }
             }
         }
