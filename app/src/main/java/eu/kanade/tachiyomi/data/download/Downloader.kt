@@ -524,8 +524,7 @@ class Downloader(
 
         // Only rename the directory if it's downloaded.
         if (download.status == Download.State.DOWNLOADED) {
-            val test = true
-            if (test == true) {
+            if (preferences.saveChaptersAsCBZ().get()) {
                 val zip = mangaDir.createFile("$dirname.cbz.tmp")
                 val zipOut = ZipOutputStream(BufferedOutputStream(zip.openOutputStream()))
                 val compressionLevel = preferences.saveChaptersAsCBZLevel().get()
