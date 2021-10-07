@@ -85,7 +85,7 @@ class DownloadCache(
 
         val files = mangaFiles[manga.id]?.toHashSet() ?: return false
         return provider.getValidChapterDirNames(chapter).any {
-            it in files
+            it in files || "$it.cbz" in files
         }
     }
 
@@ -153,7 +153,7 @@ class DownloadCache(
 
             val mangaDirs = sourceDir.dir.listFiles().orEmpty().mapNotNull { mangaDir ->
                 val name = mangaDir.name ?: return@mapNotNull null
-                val chapterDirs = mangaDir.listFiles().orEmpty().mapNotNull { chapterFile -> chapterFile.name }.toHashSet()
+                val chapterDirs = mangaDir.listFiles().orEmpty().mapNotNull { chapterFile -> chapterFile.name?.replace("cbz", "") }.toHashSet()
                 name to MangaDirectory(mangaDir, chapterDirs)
             }.toMap()
 
