@@ -197,6 +197,10 @@ class DownloadProvider(private val context: Context) {
         val mangaDir = findMangaDir(manga, source) ?: return emptyList()
         return chapters.mapNotNull { mangaDir.findFile("${getChapterDirName(it)}_tmp") }
     }
+    fun findCBZFiles(chapters: List<Chapter>, manga: Manga, source: Source): List<UniFile> {
+        val mangaDir = findMangaDir(manga, source) ?: return emptyList()
+        return chapters.mapNotNull { mangaDir.findFile("${getChapterDirName(it)}.cbz") }
+    }
 
     /**
      * Returns the download directory name for a source.
