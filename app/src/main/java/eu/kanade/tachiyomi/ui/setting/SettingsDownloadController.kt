@@ -124,8 +124,8 @@ class SettingsDownloadController : SettingsController() {
                 intListPreference(activity) {
                     key = Keys.saveChaptersAsCBZLevel
                     titleRes = R.string.cbz_compression_level
-                    entries = listOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
-                    entryRange = 0..10
+                    entries = (0..9).map { it.toString() }
+                    entryRange = 0..9
                     defaultValue = 0
                     preferences.saveChaptersAsCBZ().asImmediateFlow { isVisible = it }
                         .launchIn(viewScope)
