@@ -226,7 +226,6 @@
     <string name="log_in_to_">%1$s kirjautuminen</string>
     <string name="username">Käyttäjätunnus</string>
     <string name="password">Salasana</string>
-    <string name="login">Kirjaudu</string>
     <string name="successfully_logged_in">Kirjautuminen onnistui</string>
     <string name="unknown_error">Tuntematon virhe</string>
     <string name="local">Paikallinen</string>
@@ -476,9 +475,6 @@
     <string name="previous_chapter">Aiempi luku</string>
     <string name="source_migration_guide">Lähteen siirto-opas</string>
     <string name="nsfw_sources">NSFW (18+) lähteet</string>
-    <string name="show_in_sources">Näytä lähdeluettelossa</string>
-    <string name="show_in_extensions">Näytä laajennusluettelossa</string>
-    <string name="label_in_extensions">Laajennusluettelon otsikko</string>
     <string name="does_not_prevent_unofficial_nsfw">Tämä ei estä epävirallisia tai mahdollisesti väärin merkittyjä laajennuksia näyttämästä NSFW 18+ sisältöä sovelluksessa.</string>
     <string name="whats_new">Mitä uutta</string>
     <string name="file_picker_error">Tiedostonvalitsinsovellusta ei löytynyt</string>
@@ -536,7 +532,6 @@
     <string name="skip_pre_migration">Ohita esisiirto</string>
     <string name="migration">Siirto</string>
     <string name="select_sources">Valitse lähteet</string>
-    <string name="suggested_date_">Ehdotettu päivämäärä: %1$s</string>
     <string name="remove_tracking_from_">Poista myös kohteesta %1$s</string>
     <string name="remove_tracking">Poista seuranta sovelluksesta</string>
     <string name="want_to_read">Halu lukea</string>
@@ -620,7 +615,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Tämä poistaa \"%1$s\" -lukupäivän. Oletko varma\?</string>
     <string name="newly_added">Äskettäin lisätty</string>
     <string name="recents">Viimeisimmät</string>
-    <string name="show_notification_error">Näytä virheilmoitus</string>
     <string name="auto_refresh_covers_summary">Päivitä kirjaston kannet myös kirjastoa päivitettäessä</string>
     <string name="auto_refresh_covers">Päivitä kannet automaattisesti</string>
     <string name="include_in_global_update">Sisällytä globaaliin päivitykseen</string>
@@ -711,8 +705,6 @@
     <string name="not_downloaded">Ei ladattu</string>
     <string name="downloading_">Ladataan: %1$s</string>
     <string name="username_must_not_be_blank">Käyttäjänimi tai salasana ei voi olla tyhjä</string>
-    <string name="logout_from_">Kirjaudu ulos %1$s\?</string>
-    <string name="logout">Kirjaudu ulos</string>
     <string name="whats_new_this_release">Mikä on uutta tässä julkaisussa</string>
     <string name="you_can_migrate_in_library">Voit myös siirtää valitsemalla mangan kirjastostasi</string>
     <string name="migration_sources_changed">Siirtolähteet muuttuneet</string>

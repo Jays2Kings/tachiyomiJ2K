@@ -190,7 +190,6 @@
     <string name="log_in_to_">Inicieu la sessió a %1$s</string>
     <string name="username">Nom d\'usuari</string>
     <string name="password">Contrasenya</string>
-    <string name="login">Inicia la sessió</string>
     <string name="successfully_logged_in">S\'ha iniciat la sessió correctament</string>
     <string name="unknown_error">S\'ha produït un error desconegut</string>
     <string name="local">Local</string>
@@ -387,7 +386,6 @@
     </plurals>
     <string name="create_new_category">Crea una categoria nova</string>
     <string name="include_in_global_update">Inclou a l\'actualització global</string>
-    <string name="show_notification_error">Mostra una notificació per als errors</string>
     <string name="more_library_settings">Més opcions de la biblioteca</string>
     <string name="display_as">Mostra com a</string>
     <string name="comfortable_grid">Graella confortable</string>
@@ -444,9 +442,6 @@
 \nCaldrà que instal·leu les extensions que manquin i que després inicieu la sessió als serveis de seguiment per a utilitzar-los.</string>
     <string name="source_migration_guide">Guia de migració de fonts</string>
     <string name="nsfw_sources">Fonts NSFW (+18)</string>
-    <string name="show_in_sources">Mostra a la llista de fonts</string>
-    <string name="show_in_extensions">Mostra a la llista d\'extensions</string>
-    <string name="label_in_extensions">Etiqueta a la llista d\'extensions</string>
     <string name="does_not_prevent_unofficial_nsfw">Això no evita que les extensions no oficials o possiblement mal etiquetades puguin mostrar contingut NSFW (+18) a l\'aplicació.</string>
     <string name="whats_new">Novetats</string>
     <string name="file_picker_error">No s\'ha trobat cap aplicació de selecció de fitxers</string>

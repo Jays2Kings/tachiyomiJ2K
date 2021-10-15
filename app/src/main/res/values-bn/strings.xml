@@ -168,7 +168,6 @@
     <string name="log_in_to_">লগিন করা হয়েছে %1$s</string>
     <string name="username">ব্যাবহারকারীর নাম</string>
     <string name="password">গোপন শব্দ</string>
-    <string name="login">প্রবেশ করুন</string>
     <string name="successfully_logged_in">লগ ইন সফল</string>
     <string name="unknown_error">অজানা ত্রুটি</string>
     <string name="local">স্থানীয়</string>
@@ -421,8 +420,6 @@
     <string name="not_downloaded">ডাউনলোড হয়নি</string>
     <string name="downloading_">ডাউনলোড হচ্ছে: %1$s</string>
     <string name="username_must_not_be_blank">ব্যবহারকারীর নাম বা পাসওয়ার্ড ফাঁকা থাকতে পারে না</string>
-    <string name="logout_from_">%1$s থেকে লগ‌আউট করুন\?</string>
-    <string name="logout">লগ‌আউট</string>
     <string name="whats_new">নতুন কি</string>
     <string name="migration_sources_changed">স্থানান্তর উৎস পরিবর্তন করা হয়েছে</string>
     <string name="clear_cached_covers_non_library">লাইব্রেরিতে নেই ক্যাশেড কভারগুলো পরিষ্কার করুন</string>
@@ -506,7 +503,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">এটা %1$s এর পড়ার তারিখ মুছে ফেলবে। আপনি কি নিশ্চিত\?</string>
     <string name="newly_added">নবসংযোজিত</string>
     <string name="recents">নতুন</string>
-    <string name="show_notification_error">এররের জন্য একটি নোটিফিকেশন প্রদর্শন করুন</string>
     <string name="sort_by">সাজান</string>
     <string name="series_type">সিরিজের ধরণ</string>
     <string name="categories_in_global_update">সর্বত্র আপডেটে সকল বিভাগ</string>
@@ -528,9 +524,6 @@
     <string name="no_chapters_error">কোনও অধ্যায় পাওয়া যায় নি</string>
     <string name="badges">প্রতীক গুলি</string>
     <string name="source_migration_guide">উৎস স্থানান্তর গাইড</string>
-    <string name="show_in_sources">উৎস তালিকায় প্রদর্শন করুন</string>
-    <string name="show_in_extensions">এক্সটেনশন গুলোর তালিকায় প্রদর্শন করুন</string>
-    <string name="label_in_extensions">এক্সটেনশন গুলোর তালিকায় লেবেল করুন</string>
     <string name="file_picker_error">কোনো ফাইল বাছাইকারী অ্যাপ পাওয়া যায় নি</string>
     <string name="unofficial_extension_message">এক্সটেনশনটি তাচিওমির অনুমোদিত এক্সটেনশন তালিকায় নেই।</string>
     <string name="nsfw_short">১৮+</string>

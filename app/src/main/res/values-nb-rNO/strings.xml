@@ -186,7 +186,6 @@
     <string name="log_in_to_">Innlogging for %1$s</string>
     <string name="username">Brukernavn</string>
     <string name="password">Passord</string>
-    <string name="login">Logg inn</string>
     <string name="successfully_logged_in">Innlogget</string>
     <string name="unknown_error">Ukjent feil</string>
     <string name="local">Lokal</string>
@@ -417,9 +416,6 @@
     <string name="check_for_extension_updates">Se etter oppdateringer for utvidelser</string>
     <string name="source_migration_guide">Veiledning for kildemigrering</string>
     <string name="nsfw_sources">Aldersgrense 18+ kilder</string>
-    <string name="show_in_sources">Vis i kildelisten</string>
-    <string name="show_in_extensions">Vis i utvidelseslisten</string>
-    <string name="label_in_extensions">Merk i utvidelseslisten</string>
     <string name="does_not_prevent_unofficial_nsfw">Dette forhindrer ikke uoffisielle eller potensielt feilaktig kategoriserte tillegg fra å vise innhold for 18+ i appen.</string>
     <string name="hide_app_block_screenshots">Skjul programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
     <string name="label_global_search">Globalt søk</string>
@@ -498,7 +494,6 @@
     <string name="all_files_permission_required">Filtilganger kreves</string>
     <string name="name">Navn</string>
     <string name="download_unread">Ulest</string>
-    <string name="logout">Logg ut</string>
     <string name="disabled">Avskrudd</string>
     <string name="restore_in_progress">Gjenoppretting allerede underveis</string>
     <string name="hide_notification_content">Skjul merknadsinnhold</string>
@@ -569,7 +564,6 @@
     <string name="use_side_navigation">Bruk sidenavigasjon</string>
     <string name="a_calmer_you">Et roligere deg (dynamisk)</string>
     <string name="when_sorting_ignore_articles">Ved alfabetisk sortering, sorter uten å ta hensyn til artikler (en, ei, et, de, osv) i starten av manga-titler</string>
-    <string name="checking_for_new_chapters">Leter etter nye kapitler …</string>
     <string name="can_be_found_in_library_filters">Er også å finne ved utvidelse av biblioteksfiltre</string>
     <string name="tracking_status">Oppsynsstatus</string>
     <string name="reorder_filters">Omorganiser filtre</string>
@@ -639,7 +633,6 @@
     <string name="show_title_first">Vis tittel først</string>
     <string name="certain_buttons_can_be_found">Noen knapper kan opptre på andre steder hvis de skrus av her</string>
     <string name="display_buttons_bottom_reader">Knapper på bunnen av leseren</string>
-    <string name="show_notification_error">Vis en merknad ved feil</string>
     <string name="auto_refresh_covers_summary">Gjenoppfrisk omslag i biblioteket også ved oppdatering av bibliotek</string>
     <string name="auto_refresh_covers">Gjenoppfrisk omslag automatisk</string>
     <string name="restrictions_">Begrensninger: %1$s</string>
@@ -712,7 +705,6 @@
     <string name="not_downloaded">Ikke nedlastet</string>
     <string name="username_must_not_be_blank">Brukernavn og passord kan ikke stå tomt</string>
     <string name="downloading_">Laster ned: %1$s</string>
-    <string name="logout_from_">Logg ut fra %1$s\?</string>
     <string name="doh">DNS over HTTPS</string>
     <string name="show_recent_series">Vis nylige serier</string>
     <string name="show_recent_sources">Vis nylig brukte kilder</string>
@@ -764,7 +756,6 @@
     <string name="skip_pre_migration">Hopp over forhåndsflytting</string>
     <string name="migration">Flytting</string>
     <string name="select_sources">Velg kilder</string>
-    <string name="suggested_date_">Foreslått dato: %1$s</string>
     <string name="keep_both_on_service">Behold begge på %1$s og kun erstatt lokalt</string>
     <string name="remove_x_from_service_and_add_y">Fjern %1$s fra %2$s og legg til %3$s</string>
     <string name="set_as_default">Sett som forvalg</string>

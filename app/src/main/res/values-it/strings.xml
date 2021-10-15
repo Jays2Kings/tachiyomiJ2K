@@ -146,7 +146,6 @@
     <string name="log_in_to_">Accedi a %1$s</string>
     <string name="username">Nome utente</string>
     <string name="password">Password</string>
-    <string name="login">Accedi</string>
     <string name="successfully_logged_in">Accesso completato</string>
     <string name="unknown_error">Errore sconosciuto</string>
     <!-- Library fragment -->
@@ -444,8 +443,6 @@
     <string name="start_downloading_now">Inizia subito lo scaricamento</string>
     <string name="not_downloaded">Non scaricato</string>
     <string name="downloading_">Scaricando: %1$s</string>
-    <string name="logout_from_">Uscire da %1$s\?</string>
-    <string name="logout">Disconnetti</string>
     <string name="top_category">Categoria sopra (%1$s)</string>
     <string name="uniform_covers">Rendi uniformi le copertine</string>
     <string name="hide_start_reading_button">Nascondi il bottone di inizio lettura</string>
@@ -496,7 +493,7 @@
     <string name="delete_downloaded_if_removed_online">Elimina i capitoli scaricati se non sono più disponibili online</string>
     <string name="delete_removed_chapters">Elimina i capitoli rimossi</string>
     <string name="visit_recents_for_download_queue">Visita le schede recenti per accedere alla lista dei download. Per un accesso più veloce, puoi premere due volte oppure premere e tenere premuto</string>
-    <string name="username_must_not_be_blank">Username e password non possono essere vuoti</string>
+    <string name="username_must_not_be_blank">Il nome utente o la password non possono essere vuoti</string>
     <string name="whats_new">Le novità</string>
     <string name="you_can_migrate_in_library">Puoi migrare anche selezionando i manga nella tua libreria</string>
     <string name="migration_sources_changed">Migrazione delle sorgenti modificata</string>
@@ -637,7 +634,6 @@
     <string name="last_read_">Ultima lettura %1$s</string>
     <string name="newly_added">Aggiunti recentemente</string>
     <string name="recents">Recenti</string>
-    <string name="show_notification_error">Mostra gli errori con una notifica</string>
     <string name="auto_refresh_covers">Ricarica automaticamente le copertine</string>
     <string name="auto_refresh_covers_summary">Ricarica anche le copertine quando aggiorni la libreria</string>
     <string name="include_in_global_update">Includi nell\'aggiornamento globale</string>
@@ -667,9 +663,6 @@
     </plurals>
     <string name="source_migration_guide">Guida alla migrazione di origine</string>
     <string name="nsfw_sources">Fonti NSFW (18+)</string>
-    <string name="show_in_sources">Mostra nella lista delle fonti</string>
-    <string name="show_in_extensions">Mostra nella lista delle estensioni</string>
-    <string name="label_in_extensions">Etichetta nella lista delle estensioni</string>
     <string name="does_not_prevent_unofficial_nsfw">Questo non impedisce a estensioni non ufficiali o potenzialmente segnalate in modo errato mostrare contenuti 18+ all\'interno dell\'applicazione.</string>
     <string name="file_picker_error">Nessuna app per la selezione dei file trovata</string>
     <string name="badges">Caratteristiche</string>
@@ -868,7 +861,6 @@
     <string name="start_past_cutout">Inizia dopo il ritaglio</string>
     <string name="could_not_install_extension">Installazione estensione fallita</string>
     <string name="global_updates">Aggiornamenti globali</string>
-    <string name="checking_for_new_chapters">Cercando nuovi capitoli</string>
     <string name="show_unread_count">Visualizza il numero di non letti</string>
     <string name="show_unread_badges">Mostra badge non letti</string>
     <string name="hide_unread_badges">Nascondi badge non letti</string>
@@ -881,7 +873,6 @@
     <string name="all_files_permission_required">Permessi per la gesione file richiesti</string>
     <string name="turn_off_">Disattiva %s</string>
     <string name="turn_on_">Attiva %s</string>
-    <string name="suggested_date_">Data suggerita: %1$s</string>
     <string name="selection">Selezione</string>
     <string name="include_">Includi: %s</string>
     <string name="exclude_">Escludi: %s</string>
@@ -950,11 +941,24 @@
     <string name="default_behavior">Comportamento predefinito</string>
     <string name="use_side_navigation">Usa navigazione laterale</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">C\'è un capitolo mancante</item>
-        <item quantity="other">Ci sono %d capitoli mancanti</item>
+        <item quantity="one">1 capitolo saltato, o la fonte non ce l\'ha o è stato filtrato</item>
+        <item quantity="other">%d capitoli saltati, o la fonte non ce li ha o sono stati filtrati</item>
     </plurals>
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
     <string name="helpful_translation_links">Collegamenti utili per la traduzione</string>
     <string name="help_translate">Aiuta a tradurre</string>
     <string name="filter_groups">Filtra i gruppi di scanlator</string>
+    <string name="log_out">Esci</string>
+    <string name="remove_from_">Rimuovi da %1$s</string>
+    <string name="cannot_remove_tracking_while_offline">Il tracciatore non può essere rimosso da %1$s mentre è fuori linea</string>
+    <string name="use_suggested_date">Usa la data suggerita</string>
+    <string name="details_page">Pagina dei dettagli</string>
+    <string name="theme_buttons_based_on_cover">Pulsanti a tema basati sulla copertina</string>
+    <string name="log_in">Accedi</string>
+    <string name="log_out_from_">Disconnettersi da %1$s\?</string>
+    <string name="keep_in_">Tieni in %1$s</string>
+    <string name="scanlators">Scanlator</string>
+    <string name="channel_errors">Errori</string>
+    <string name="notification_size_warning">Grossi aggiornamenti possono portare a un maggiore utilizzo della batteria e a un rallentamento delle fonti</string>
+    <string name="show_in_sources_and_extensions">Mostra nelle liste di fonti ed estensioni</string>
 </resources>

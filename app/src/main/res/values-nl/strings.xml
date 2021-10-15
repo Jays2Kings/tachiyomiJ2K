@@ -129,7 +129,6 @@
     <string name="log_in_to_">Login voor %1$s</string>
     <string name="username">Gebruikersnaam</string>
     <string name="password">Wachtwoord</string>
-    <string name="login">Log in</string>
     <string name="unknown_error">Onbekende fout</string>
     <string name="no_more_results">Geen verdere resultaten</string>
     <string name="local_source">Lokale bron</string>
@@ -381,7 +380,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Dit verwijdert de datum waarop \"%1$s\" is gelezen. Weet je het zeker\?</string>
     <string name="newly_added">Nieuw toegevoegd</string>
     <string name="recents">Nieuwste</string>
-    <string name="show_notification_error">Laat een notificatie zien bij fouten</string>
     <string name="auto_refresh_covers_summary">Omslagen in bibliotheek ook verversen bij het bijwerken van de bibliotheek</string>
     <string name="auto_refresh_covers">Omslagen automatisch vernieuwen</string>
     <string name="include_in_global_update">Meenemen in globale update</string>
@@ -478,8 +476,6 @@
     <string name="not_downloaded">Niet gedownload</string>
     <string name="downloading_">Downloaden: %1$s</string>
     <string name="username_must_not_be_blank">Gebruikersnaam of wachtwoord mag niet leeg zijn</string>
-    <string name="logout_from_">Afmelden uit %1$s\?</string>
-    <string name="logout">Afmelden</string>
     <string name="whats_new">Wat is er nieuw</string>
     <string name="you_can_migrate_in_library">U kunt ook migreren door manga in uw bibliotheek te selecteren</string>
     <string name="migration_sources_changed">Migratiebronnen gewijzigd</string>
@@ -665,9 +661,6 @@
     </plurals>
     <string name="source_migration_guide">Bronmigratiegids</string>
     <string name="nsfw_sources">NSFW-bronnen (18+)</string>
-    <string name="show_in_sources">Weergeven in bronnenlijst</string>
-    <string name="show_in_extensions">Weergeven in extensielijst</string>
-    <string name="label_in_extensions">Markeren in extensielijst</string>
     <string name="does_not_prevent_unofficial_nsfw">Dit voorkomt niet dat onofficiële of mogelijk incorrect gemarkeerde extensies NSFW-inhoud (18+) kunnen laten zien in de app.</string>
     <string name="file_picker_error">Geen bestandskiezer-app gevonden</string>
     <string name="backup_and_restore">Back-up en herstel</string>
@@ -694,7 +687,6 @@
     <string name="hides_on_scroll">Verbergen tijdens scrollen</string>
     <string name="hide_bottom_nav">Onderste navigatiebalk automatisch verbergen</string>
     <string name="last_used_library_recents">Laatst gebruikt (Bibliotheek of Nieuwste)</string>
-    <string name="suggested_date_">Voorgestelde datum: %1$s</string>
     <string name="custom_manga_info">Aangepaste manga-informatie</string>
     <string name="mark_all_chapters_as_unread">Alle hoofstukken als ongelezen markeren\?</string>
     <string name="ignore_cutout_areas">Uitgeknipte gebieden negeren</string>
@@ -861,7 +853,6 @@
     <string name="could_not_install_extension">Kon extensie niet installeren</string>
     <string name="extensions_miui_warning">MIUI-optimalisatie moet worden uitgeschakeld om extensies te installeren.</string>
     <string name="global_updates">Globale updates</string>
-    <string name="checking_for_new_chapters">Zoeken naar nieuwe hoofdstukken</string>
     <string name="open_random_series">Open een willekeurige serie</string>
     <string name="show_number_of_items">Aantal items tonen</string>
     <string name="by_update_date">Op uploaddatum</string>

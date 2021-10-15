@@ -100,7 +100,7 @@
     <string name="black">Hitam</string>
     <string name="left_to_right_viewer">Kiri ke kanan</string>
     <string name="right_to_left_viewer">Kanan ke kiri</string>
-    <string name="vertical_viewer">Vertikal</string>
+    <string name="vertical_viewer">Tegak</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Tipe skala</string>
     <string name="fit_screen">Pas layar</string>
@@ -167,7 +167,6 @@
     <string name="log_in_to_">Masuk ke %1$s</string>
     <string name="username">Nama pengguna</string>
     <string name="password">Kata sandi</string>
-    <string name="login">Masuk</string>
     <string name="successfully_logged_in">Login berhasil</string>
     <string name="unknown_error">Terdapat suatu kesalahan</string>
     <string name="no_more_results">Tidak ada hasil lainnya</string>
@@ -391,7 +390,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Ini akan menghapus tanggal baca dari \"%1$s\". Apakah Anda yakin\?</string>
     <string name="newly_added">Baru ditambahkan</string>
     <string name="recents">Terbaru</string>
-    <string name="show_notification_error">Tampilkan notifikasi untuk kesalahan pada aplikasi</string>
     <string name="auto_refresh_covers_summary">Perbarui sampul di pustaka ketika memperbarui pustaka</string>
     <string name="auto_refresh_covers">Perbaharui sampul secara otomatis</string>
     <string name="include_in_global_update">Sertakan pembaharuan global</string>
@@ -495,24 +493,21 @@
     <string name="badges">Penanda</string>
     <string name="source_migration_guide">Petunjuk migrasi</string>
     <string name="nsfw_sources">Sumber NSFW (18+)</string>
-    <string name="show_in_sources">Tampilkan dalam daftar sumber</string>
-    <string name="show_in_extensions">Tampilkan dalam daftar ekstensi</string>
-    <string name="label_in_extensions">Label dalam daftar ekstensi</string>
     <string name="does_not_prevent_unofficial_nsfw">Hal ini tidak mencegah ekstensi tidak resmi atau yang berpotensi salahnya label untuk menampilkan konten NSFW (18+) dalam aplikasi.</string>
     <string name="whats_new">Apa yang baru</string>
     <string name="file_picker_error">Tidak ada aplikasi pemilih berkas yang ditemukan</string>
-    <string name="unofficial_extension_message">Ekstensi ini bukan dari daftar resmi Tachiyomi.</string>
+    <string name="unofficial_extension_message">Ekstensi ini bukan dari daftar ekstensi resmi Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Tidak resmi</string>
     <string name="may_contain_nsfw">Mungkin berisi konten 18+</string>
-    <string name="l_nav">Berbentuk L</string>
+    <string name="l_nav">Bentuk L</string>
     <string name="edge_nav">Tepi</string>
     <string name="right_and_left_nav">Kanan dan Kiri</string>
     <string name="invert_tapping">Ketukan arah sebaliknya</string>
     <string name="none">Kosong</string>
     <string name="started_reading_date">Tanggal mulai membaca</string>
     <string name="finished_reading_date">Tanggal selesai membaca</string>
-    <string name="myanimelist_relogin">Harap login kembali ke MAL</string>
+    <string name="myanimelist_relogin">Harap masuk kembali ke MAL</string>
     <string name="search_settings">Cari pengaturan</string>
     <string name="locale">Daerah</string>
     <string name="automatic_backups">Pencadangan otomatis</string>
@@ -565,7 +560,6 @@
 \nHapus unduhan\?</item>
     </plurals>
     <string name="shift_one_page_over">Geser satu halaman ke atas</string>
-    <string name="suggested_date_">Tanggal yang disarankan: %1$s</string>
     <string name="switch_to_single">Beralih ke satu halaman</string>
     <string name="switch_to_double">Beralih ke dua halaman</string>
     <string name="single_page">Satu halaman</string>
@@ -611,15 +605,13 @@
     <string name="username_must_not_be_blank">Nama pengguna atau kata sandi tidak boleh kosong</string>
     <string name="downloading_">Mengunduh: %1$s</string>
     <string name="whats_new_this_release">Apa yang baru dirilis kali ini</string>
-    <string name="logout_from_">Keluar dari %1$s\?</string>
-    <string name="logout">Keluar</string>
     <string name="not_downloaded">Tidak terunduh</string>
     <string name="view_all_errors">Lihat semua galat</string>
     <string name="filter_languages">Filter Bahasa</string>
     <string name="label_global_search">Pencarian Global</string>
     <string name="cancel_all_for_series">Batal semua untuk seri ini</string>
-    <string name="landscape">Layar Menyamping</string>
-    <string name="portrait">Layar Tegak</string>
+    <string name="landscape">Layar mendatar</string>
+    <string name="portrait">Layar tegak</string>
     <string name="kindlish_nav">semacam Kindle</string>
     <string name="select_none">Pilih tidak ada</string>
     <string name="search_suggestions">Saran pencarian</string>
@@ -855,7 +847,6 @@
     <string name="updating_extensions">Memperbarui ekstensi</string>
     <string name="update_all">Perbarui semua</string>
     <string name="global_updates">Pembaruan global</string>
-    <string name="checking_for_new_chapters">Mengecek chapter baru</string>
     <string name="open_random_series">Buka seri acak</string>
     <string name="by_update_date">Menurut tanggal pengunggahan</string>
     <string name="by_chapter_number">Menurut nomor chapter</string>
@@ -902,4 +893,15 @@
     <string name="default_behavior">Tindakan default</string>
     <string name="use_side_navigation">Gunakan navigasi samping</string>
     <string name="filter_groups">Saring grup pemindai</string>
+    <string name="use_suggested_date">Gunakan tanggal yang disarankan</string>
+    <string name="log_out_from_">Keluar dari %1$s\?</string>
+    <string name="remove_from_">Hapus dari %1$s</string>
+    <string name="channel_errors">Masalah</string>
+    <string name="cannot_remove_tracking_while_offline">Pelacak tidak dapat di hapus dari %1$s ketika sedang offline</string>
+    <string name="details_page">Halaman detail</string>
+    <string name="theme_buttons_based_on_cover">Tombol tema berdasarkan sampul</string>
+    <string name="scanlators">Scanlators</string>
+    <string name="log_in">Masuk</string>
+    <string name="log_out">Keluar</string>
+    <string name="keep_in_">Simpan di dalam %1$s</string>
 </resources>

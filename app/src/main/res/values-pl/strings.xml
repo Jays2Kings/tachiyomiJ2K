@@ -171,7 +171,6 @@
     <string name="include_in_global_update">Zawrzyj w globalnej aktualizacji</string>
     <string name="auto_refresh_covers">Automatycznie odśwież okładki</string>
     <string name="auto_refresh_covers_summary">Odśwież okładki w bibliotece podczas aktualizowania biblioteki</string>
-    <string name="show_notification_error">Pokaż powiadomienia dla błędów</string>
     <!-- Recents -->
     <string name="recents">Ostatnie</string>
     <string name="updates">Aktualizacje</string>
@@ -545,9 +544,6 @@
     <string name="username">Nazwa użytkownika</string>
     <string name="email">Adres e-mail</string>
     <string name="password">Hasło</string>
-    <string name="login">Zaloguj się</string>
-    <string name="logout">Wyloguj</string>
-    <string name="logout_from_">Wyloguj z %1$s?</string>
     <string name="successfully_logged_in">Logowanie udane</string>
     <string name="username_must_not_be_blank">Nazwa użytkownika i hasło nie mogą być puste</string>
     <string name="successfully_logged_out">Wylogowanie udane</string>
@@ -676,7 +672,7 @@
     <string name="reset">Resetuj</string>
     <string name="restore">Przywróć</string>
     <string name="resume">Wznów</string>
-    <string name="retry">Powtórz</string>
+    <string name="retry">Spróbuj ponownie</string>
     <string name="right">Od prawej</string>
     <string name="rotation">Orientacja ekranu</string>
     <string name="save">Zapisz</string>
@@ -749,9 +745,6 @@
     </plurals>
     <string name="source_migration_guide">Migracja źródła - poradnik</string>
     <string name="nsfw_sources">NFSW Materiały 18+</string>
-    <string name="show_in_sources">Pokazuj na liście źródeł</string>
-    <string name="show_in_extensions">Pokazuj na liście rozszerzeń</string>
-    <string name="label_in_extensions">Pokazuj etykiety na liście rozszerzeń</string>
     <string name="does_not_prevent_unofficial_nsfw">Nie zapobiega to nieoficjalnym lub potencjalnie niepoprawnie oflagowanym rozszerzeniom przed pokazywaniem zwartości NSFW(18+) w aplikacji.</string>
     <string name="file_picker_error">Nie znaleziono aplikacji do przeglądania plików</string>
     <string name="backup_and_restore">Kopia zapasowa i odzyskiwanie</string>
@@ -777,7 +770,6 @@
     <string name="hides_on_scroll">Ukrywane przy przewijaniu</string>
     <string name="hide_bottom_nav">Automatyczne ukrywanie dolnej nawigacji</string>
     <string name="last_used_library_recents">Ostatnio użyte (Biblioteka lub Ostatnie)</string>
-    <string name="suggested_date_">Sugerowana data: %1$s</string>
     <string name="custom_manga_info">Własna informacja o mandze</string>
     <string name="mark_all_chapters_as_unread">Oznaczyć wszystkie rozdziały jako nieprzeczytane\?</string>
     <string name="ignore_cutout_areas">Ignoruj obszary wycięcia</string>
@@ -863,7 +855,6 @@
     <string name="extensions_miui_warning">Optymalizacja nakładki MIUI musi zostać wyłączona, aby zainstalować rozszerzenia.</string>
     <string name="installed_">Zainstalowano %1$s</string>
     <string name="extension_updates_pending">Oczekujące aktualizacje rozszerzeń</string>
-    <string name="checking_for_new_chapters">Szukanie nowych rozdziałów</string>
     <string name="update_completed">Aktualizacja zakończona</string>
     <string name="could_not_install_update">Nie można zainstalować aktualizacji</string>
     <string name="source_unsupported">Źródło nie jest wspierane</string>
@@ -1011,4 +1002,16 @@
     <string name="flat_lime">Zwykła Limonka</string>
     <string name="pauses_reading_history">Wstrzymuje zapisywanie historii czytania</string>
     <string name="filter_groups">Filtruj grupy skanlatorów</string>
+    <string name="log_out">Wyloguj się</string>
+    <string name="scanlators">Skanlatorzy</string>
+    <string name="channel_errors">Błędy</string>
+    <string name="log_in">Zaloguj się</string>
+    <string name="cannot_remove_tracking_while_offline">Nie można usunąć śledzenia z %1$s będąc offline</string>
+    <string name="theme_buttons_based_on_cover">Kolor przycisków na podstawie okładki</string>
+    <string name="use_suggested_date">Użyj proponowanej daty</string>
+    <string name="details_page">Strona ze szczegółami</string>
+    <string name="remove_from_">Usuń z %1$s</string>
+    <string name="log_out_from_">Wylogować z %1$s\?</string>
+    <string name="keep_in_">Zostaw w %1$s</string>
+    <string name="show_in_sources_and_extensions">Pokazuj na liście źródeł i rozszerzeń</string>
 </resources>

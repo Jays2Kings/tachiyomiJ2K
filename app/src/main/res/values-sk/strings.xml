@@ -247,7 +247,6 @@
     <string name="helps_fix_bugs">Pomáha opraviť akékoľvek chyby. Nebudú odoslané žiadne citlivé údaje</string>
     <string name="username">Užívateľské meno</string>
     <string name="password">Heslo</string>
-    <string name="login">Prihlásenie</string>
     <string name="cancel_all">Zrušiť všetky</string>
     <string name="downloading">Sťahujem</string>
     <string name="downloading_progress">Sťahovanie (%1$d/%2$d)</string>

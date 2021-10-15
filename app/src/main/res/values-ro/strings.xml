@@ -190,7 +190,6 @@
     <string name="log_in_to_">Autentificare pentru %1$s</string>
     <string name="username">Nume de utilizator</string>
     <string name="password">Parolă</string>
-    <string name="login">Autentificare</string>
     <string name="successfully_logged_in">Autentificare reușită</string>
     <string name="unknown_error">Eroare necunoscută</string>
     <string name="local">Local</string>
@@ -389,9 +388,6 @@
     </plurals>
     <string name="source_migration_guide">Ghid de migrare a sursei</string>
     <string name="nsfw_sources">Conținut NSFW (18+)</string>
-    <string name="show_in_sources">Arată în lista surselor</string>
-    <string name="show_in_extensions">Arată în lista extensiilor</string>
-    <string name="label_in_extensions">Etichetează în lista extensiilor</string>
     <string name="whats_new">Ce este nou</string>
     <string name="file_picker_error">Nicio aplicație de ales fișiere nu a fost găsite</string>
     <string name="open_log">Deschide jurnal</string>
@@ -439,7 +435,6 @@
     <string name="marked_as_unread">Marcat ca necitit</string>
     <string name="marked_as_read">Marcat ca citit</string>
     <string name="download_unread">Descărcă necititele</string>
-    <string name="logout">Deconectează-te</string>
     <string name="invalid_backup_file_type">Tip de fișier de restaurare nevalid: %1$s
 \nAr trebui să se termine cu .proto.gz sau .json.</string>
     <string name="backup_in_progress">Crearea copiei de rezervă este deja în curs de desfășurare</string>
@@ -588,7 +583,6 @@
     <string name="newly_added">Nou adăugate</string>
     <string name="certain_buttons_can_be_found">Anumite butoane pot fi găsite în alte locuri dacă sunt dezactivate aici</string>
     <string name="display_buttons_bottom_reader">Butoanele în partea de jos a cititorului</string>
-    <string name="show_notification_error">Afișați o notificare pentru erori</string>
     <string name="auto_refresh_covers_summary">Reîmprospătarea coperților din bibliotecă și la actualizarea bibliotecii</string>
     <string name="auto_refresh_covers">Reîmprospătează automat coperțile</string>
     <string name="include_in_global_update">Includeți în actualizarea globală</string>
@@ -646,7 +640,6 @@
     <string name="search_parameter_eg">Parametru de căutare (de exemplu, language:english)</string>
     <string name="select_a_source_then_item_to_migrate">Selectați o sursă, apoi selectați un element de migrat</string>
     <string name="select_sources">Selectați sursele</string>
-    <string name="suggested_date_">Data propusă: %1$s</string>
     <string name="finished_reading_date">Data la care s-a terminat citirea</string>
     <string name="started_reading_date">Data la care s-a început citirea</string>
     <string name="remove_tracking_from_">De asemenea, eliminați din %1$s</string>

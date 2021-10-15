@@ -168,7 +168,6 @@
     <string name="log_in_to_">%1$s के लिए लॉगिन</string>
     <string name="username">उपयोगकर्ता नाम</string>
     <string name="password">पासवर्ड</string>
-    <string name="login">लॉग इन करें</string>
     <string name="successfully_logged_in">सफलतापूर्ण लॉग इन</string>
     <string name="unknown_error">अज्ञात त्रुटि</string>
     <string name="local">लोकल</string>
@@ -400,9 +399,6 @@
     </plurals>
     <string name="source_migration_guide">स्रोत माइग्रेशन गाइड</string>
     <string name="nsfw_sources">NSFW (18+) स्रोत</string>
-    <string name="show_in_sources">स्रोत सूची में दिखाएं</string>
-    <string name="show_in_extensions">एक्सटेंशन सूची में दिखाएं</string>
-    <string name="label_in_extensions">एक्सटेंशन सूची में लेबल</string>
     <string name="does_not_prevent_unofficial_nsfw">यह अनौपचारिक या संभावित रूप से फ़्लैग किए गए एक्सटेंशन को ऐप के भीतर NSFW (18+) सामग्री के सामने आने से नहीं रोकता है।</string>
     <string name="whats_new">नया क्या है</string>
     <string name="file_picker_error">कोई फ़ाइल पिकर ऐप नहीं मिला</string>
@@ -432,4 +428,17 @@
     <string name="delete_downloaded_if_removed_online">डाउनलोड किए गए अध्यायों को हटा दें यदि स्रोत ने अध्याय को ऑनलाइन हटा दिया है</string>
     <string name="always_delete">हमेशा हटाएं</string>
     <string name="always_keep">हमेशा रखें</string>
+    <string name="chapter_not_found">अध्याय नहीं मिला</string>
+    <string name="source_unsupported">स्रोत समर्थित नहीं है</string>
+    <string name="restore_miui_warning">MIUI ऑप्टिमाइज़ेशन अक्षम होने पर बैकअप/पुनर्स्थापना ठीक से काम नहीं कर सकता है।</string>
+    <string name="error_sharing_cover">कवर पेज साझा करने में त्रुटि</string>
+    <string name="help_translate">अनुवाद में मदद करें</string>
+    <string name="about_dont_kill_my_app">कुछ निर्माताओं के पास अतिरिक्त ऐप प्रतिबंध हैं जो पृष्ठभूमि सेवाओं को मारते हैं। इस वेबसाइट में इसे ठीक करने के बारे में अधिक जानकारी है।</string>
+    <string name="cover_saved">कवर पेज सहेजा गया</string>
+    <string name="error_saving_cover">कवर पेज सहेजने में त्रुटि</string>
+    <string name="getting_started_guide">प्रारंभिक मार्गदर्शन</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">1 लापता अध्याय है</item>
+        <item quantity="other">%d लापता अध्याय हैं</item>
+    </plurals>
 </resources>

@@ -191,7 +191,6 @@
     <string name="log_in_to_">เข้าสู่ระบบสำหรับ %1$s</string>
     <string name="username">ชื่อผู้ใช้</string>
     <string name="password">รหัสผ่าน</string>
-    <string name="login">ลงชื่อเข้าใช้</string>
     <string name="successfully_logged_in">เข้าสู่ระบบสำเร็จ</string>
     <string name="unknown_error">ความผิดพลาดที่ไม่อาจระบุได้</string>
     <string name="local">ท้องถิ่น</string>

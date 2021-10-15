@@ -191,7 +191,6 @@
     <string name="log_in_to_">Prijavi se za %1$s</string>
     <string name="username">Korisničko ime</string>
     <string name="password">Lozinka</string>
-    <string name="login">Prijavi se</string>
     <string name="successfully_logged_in">Prijava uspješna</string>
     <string name="unknown_error">Nepoznata greška</string>
     <string name="local">Lokalno</string>

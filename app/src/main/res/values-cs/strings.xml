@@ -95,7 +95,6 @@
     <string name="download_new_chapters">Stahovat nové kapitoly</string>
     <string name="username">Uživatelské jméno</string>
     <string name="password">Heslo</string>
-    <string name="login">Přihlásit se</string>
     <string name="successfully_logged_in">Přihlášení úspěšné</string>
     <string name="unknown_error">Neznámá chyba</string>
     <string name="no_more_results">Žádné další výsledky</string>
@@ -403,7 +402,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Tímto se odstraní datum přečtení \"%1$s\". Jste si jistý/á\?</string>
     <string name="newly_added">Nově přidané</string>
     <string name="recents">Nedávné</string>
-    <string name="show_notification_error">Při chybě zobrazit oznámení</string>
     <string name="auto_refresh_covers_summary">Obnovit přebaly v knihovně i při aktualizaci knihovny</string>
     <string name="auto_refresh_covers">Automaticky obnovovat přebaly</string>
     <string name="when_sorting_ignore_articles">Při řazení dle abecedy, zahrnovat i ignorované členy (a, an, the) na začátku názvů mang</string>
@@ -509,9 +507,6 @@
     <string name="check_for_extension_updates">Kontrolovat dostupnost aktualizací rozšíření</string>
     <string name="source_migration_guide">Návod k přesunu zdrojů</string>
     <string name="nsfw_sources">NSFW (18+) zdroje</string>
-    <string name="show_in_sources">Zobrazovat v seznamu zdrojů</string>
-    <string name="show_in_extensions">Zobrazovat v seznamu rozšíření</string>
-    <string name="label_in_extensions">Štítek v seznamu rozšíření</string>
     <string name="does_not_prevent_unofficial_nsfw">Toto nastavení nemůže zamezit neoficiálním nebo špatně označeným rozšířením v zobrazování NSFW (18+) obsahu v aplikaci.</string>
     <string name="open_source_licenses">Open Source licence</string>
     <string name="successfully_logged_out">Nyní jste odhlášený</string>
@@ -678,7 +673,6 @@
     <string name="could_not_install_extension">Nepodařilo se nainstalovat rozšíření</string>
     <string name="extensions_miui_warning">MIUI optimalizace musí být zakázána, aby bylo možné instalovat rozšíření.</string>
     <string name="global_updates">Globální aktualizace</string>
-    <string name="checking_for_new_chapters">Hledám nové kapitoly</string>
     <string name="open_random_series">Otevřít náhodnou sérii</string>
     <string name="when_grouping_by_sources_tags">Při seskupování knihoven podle zdrojů, stavu apod.</string>
     <string name="show_number_of_items">Zobrazit počet položek</string>

@@ -154,7 +154,6 @@
     <string name="log_in_to_">%1$sにログイン</string>
     <string name="username">ユーザー名</string>
     <string name="password">パスワード</string>
-    <string name="login">ログイン</string>
     <string name="successfully_logged_in">ログイン成功</string>
     <string name="add">追加</string>
     <string name="move_to_categories">カテゴリーに移動</string>
@@ -443,9 +442,6 @@
     </plurals>
     <string name="source_migration_guide">ソース移行ガイド</string>
     <string name="nsfw_sources">成人向けのソース</string>
-    <string name="show_in_sources">ソースリストに表示</string>
-    <string name="show_in_extensions">拡張機能リストに表示</string>
-    <string name="label_in_extensions">拡張機能リストでマーク</string>
     <string name="does_not_prevent_unofficial_nsfw">非公式や誤ってフラグ付けされた可能性のある拡張機能の成人向けのコンテンツはこれからも表示される恐れがあります。</string>
     <string name="whats_new">更新情報</string>
     <string name="file_picker_error">ファイルを選択できるアプリが見つかりません</string>
@@ -479,8 +475,6 @@
     <string name="uniform_grid_covers">グリッドカバーを整形する</string>
     <string name="uniform_covers">カバーを整形する</string>
     <string name="_per_row">1行%d列</string>
-    <string name="logout_from_">%1$sからログアウトしますか？</string>
-    <string name="logout">ログアウト</string>
     <string name="ungrouped">グループ化しない</string>
     <string name="tag">タグ</string>
     <string name="group_library_by">ライブラリのグループ化…</string>
@@ -661,7 +655,6 @@
     <plurals name="chapters_plural">
         <item quantity="other">%1$d章</item>
     </plurals>
-    <string name="show_notification_error">エラーの通知を表示</string>
     <string name="auto_refresh_covers_summary">ライブラリを更新する時に、ライブラリのカバーも更新する</string>
     <string name="group_chapters_together">章をグループ化する</string>
     <string name="webtoon_style">webtoonスタイル</string>
@@ -778,7 +771,6 @@
     <string name="skip_this_step_next_time">次回はこのステップをスキップ</string>
     <string name="use_first_source">最初のソースを代わりに使用</string>
     <string name="skip_pre_migration">移行設定をスキップ</string>
-    <string name="suggested_date_">提案された日付：%1$s</string>
     <string name="remove_tracking_from_">%1$sからも削除する</string>
     <string name="url_not_set_click_again">マンガのURLが設定されていません。タイトルをクリックして、もう一度マンガを選択してください</string>
     <string name="currently_reading">現在読書中</string>
@@ -854,7 +846,7 @@
     <string name="set_as_default">既定として設定</string>
     <string name="add_tag">タグを追加</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">%d章が足りていません</item>
+        <item quantity="other">ソースにないか、フィルターによって排除されたため、%d章がスキップされました</item>
     </plurals>
     <string name="split_double_pages">ダブルページを分割</string>
     <string name="remove_crop">クロップを除去</string>
@@ -883,7 +875,6 @@
     <plurals name="for_n_titles">
         <item quantity="other">%d件のタイトル</item>
     </plurals>
-    <string name="checking_for_new_chapters">新章を確認しています</string>
     <string name="open_random_series">ランダムにシリーズを開く</string>
     <string name="show_number_of_items">項目数を表示</string>
     <string name="getting_started_guide">入門ガイド</string>
@@ -900,4 +891,18 @@
 \n
 \n次の画面で「全てのファイルの管理を許可」を有効にしてください。</string>
     <string name="all_files_permission_required">ファイルアクセス権限が必要</string>
+    <string name="filter_groups">スキャナー&amp;翻訳者グループを絞り込む</string>
+    <string name="cannot_remove_tracking_while_offline">オフライン中では%1$sからトラッカーを削除できません</string>
+    <string name="use_suggested_date">推奨の日付を使用</string>
+    <string name="scanlators">スキャナー&amp;翻訳者</string>
+    <string name="channel_errors">エラー</string>
+    <string name="details_page">詳細ページ</string>
+    <string name="theme_buttons_based_on_cover">表紙に基づいたテーマのボタン</string>
+    <string name="log_in">ログイン</string>
+    <string name="log_out">ログアウト</string>
+    <string name="log_out_from_">%1$sからログアウトしますか？</string>
+    <string name="keep_in_">%1$sにキープ</string>
+    <string name="remove_from_">%1$sから削除</string>
+    <string name="notification_size_warning">大規模のアップデートは電池を急激に消耗し、ソースを遅くする可能性があります</string>
+    <string name="show_in_sources_and_extensions">ソース・拡張機能リストに表示</string>
 </resources>

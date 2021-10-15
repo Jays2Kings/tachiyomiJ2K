@@ -190,7 +190,6 @@
     <string name="log_in_to_">Σύνδεση για %1$s</string>
     <string name="username">Όνομα χρήστη</string>
     <string name="password">Κωδικός πρόσβασης</string>
-    <string name="login">Σύνδεση</string>
     <string name="successfully_logged_in">Επιτυχής σύνδεση</string>
     <string name="unknown_error">Άγνωστο σφάλμα</string>
     <string name="local">Τοπικό</string>
@@ -379,7 +378,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Αυτό θα αφαιρέσει την ημερομηνία ανάγνωσης \"%1$s\". Είστε σίγουροι;</string>
     <string name="newly_added">Προστέθηκε πρόσφατα</string>
     <string name="recents">Πρόσφατα</string>
-    <string name="show_notification_error">Εμφάνιση ειδοποίησης για σφάλματα</string>
     <string name="auto_refresh_covers_summary">Ανανέωση εξώφυλλων στη βιβλιοθήκη και κατά την ενημέρωση της βιβλιοθήκης</string>
     <string name="auto_refresh_covers">Αυτόματη ανανέωση εξωφύλλων</string>
     <string name="include_in_global_update">Συμπερίληψη σε καθολική ενημέρωση</string>
@@ -462,8 +460,6 @@
     <string name="add_to_library">Προσθήκη στη βιβλιοθήκη</string>
     <string name="library_search_hint">Αναζήτηση τίτλου, ετικετών, πηγής</string>
     <string name="username_must_not_be_blank">Το όνομα χρήστη ή ο κωδικός πρόσβασης δεν μπορούν να είναι κενά</string>
-    <string name="logout_from_">Αποσύνδεση από το %1$s;</string>
-    <string name="logout">Αποσύνδεση</string>
     <string name="whats_new">Τι νέο υπάρχει</string>
     <string name="default_reading_mode">Προεπιλεγμένη λειτουργία ανάγνωσης</string>
     <string name="nav_layout">Διάταξη πλοήγησης</string>
@@ -513,9 +509,6 @@
     </plurals>
     <string name="source_migration_guide">Οδηγός μετεγκατάστασης πηγής</string>
     <string name="nsfw_sources">Πηγές NSFW (18+)</string>
-    <string name="show_in_sources">Εμφάνιση στη λίστα πηγών</string>
-    <string name="show_in_extensions">Εμφάνιση στη λίστα επεκτάσεων</string>
-    <string name="label_in_extensions">Ετικέτα στη λίστα επεκτάσεων</string>
     <string name="does_not_prevent_unofficial_nsfw">Αυτό δεν εμποδίζει τις ανεπίσημες ή ενδεχομένως εσφαλμένα επισημασμένες επεκτάσεις να εμφανίζουν περιεχόμενο NSFW (18+) μέσα στην εφαρμογή.</string>
     <string name="file_picker_error">Δεν βρέθηκε εφαρμογή επιλογής αρχείων</string>
     <string name="restore_in_progress">Η επαναφορά βρίσκεται ήδη σε εξέλιξη</string>
@@ -660,7 +653,6 @@
     <string name="migration">Μετεγκατάσταση</string>
     <string name="select_a_source_then_item_to_migrate">Επιλέξτε μια πηγή, στη συνέχεια επιλέξτε ένα στοιχείο για μετεγκατάσταση</string>
     <string name="select_sources">Επιλέξτε πηγές</string>
-    <string name="suggested_date_">Προτεινόμενη ημερομηνία: %1$s</string>
     <string name="remove_tracking_from_">Κατάργηση επίσης από %1$s</string>
     <string name="remove_tracking">Κατάργηση παρακολούθησης από την εφαρμογή</string>
     <string name="not_tracked">Δεν παρακολουθείται</string>
@@ -859,7 +851,6 @@
     <string name="could_not_install_extension">Δεν ήταν δυνατή η εγκατάσταση της επέκτασης</string>
     <string name="extensions_miui_warning">Η βελτιστοποίηση MIUI πρέπει να απενεργοποιηθεί για την εγκατάσταση επεκτάσεων.</string>
     <string name="global_updates">Παγκόσμιες ενημερώσεις</string>
-    <string name="checking_for_new_chapters">Έλεγχος για νέα κεφάλαια</string>
     <string name="open_random_series">Άνοιγμα μιας τυχαία σειράς</string>
     <string name="show_number_of_items">Εμφάνιση αριθμού στοιχείων</string>
     <string name="by_update_date">Κατά ημερομηνία μεταφόρτωσης</string>
@@ -918,10 +909,23 @@
     <string name="show_categories_while_filtering">Εμφάνιση κενών κατηγοριών κατά το φιλτράρισμα</string>
     <string name="getting_started_guide">Οδηγός για τα πρώτα βήματα</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Λείπει 1 κεφάλαιο</item>
-        <item quantity="other">Λείπουν %d κεφάλαια</item>
+        <item quantity="one">Παραλείπεται 1 κεφάλαιο, είτε λείπει από την πηγή είτε έχει φιλτραριστεί</item>
+        <item quantity="other">Παραλείπονται %d κεφάλαια, είτε λείπουν από την πηγή είτε έχουν φιλτραριστεί</item>
     </plurals>
     <string name="helpful_translation_links">Χρήσιμοι σύνδεσμοι μετάφρασης</string>
     <string name="help_translate">Βοηθήστε στη μετάφραση</string>
     <string name="filter_groups">Φιλτράρισμα ομάδων scanlator</string>
+    <string name="details_page">Σελίδα λεπτομερειών</string>
+    <string name="cannot_remove_tracking_while_offline">Δεν είναι δυνατή η κατάργηση του ιχνηλάτη από το %1$s ενώ είστε εκτός σύνδεσης</string>
+    <string name="use_suggested_date">Χρήση προτεινόμενης ημερομηνίας</string>
+    <string name="log_in">Σύνδεση</string>
+    <string name="theme_buttons_based_on_cover">Κουμπιά θέματος με βάση το εξώφυλλο</string>
+    <string name="log_out_from_">Αποσύνδεση από το %1$s;</string>
+    <string name="remove_from_">Κατάργηση από %1$s</string>
+    <string name="log_out">Αποσύνδεση</string>
+    <string name="keep_in_">Διατήρηση σε %1$s</string>
+    <string name="scanlators">Scanlators</string>
+    <string name="channel_errors">Σφάλματα</string>
+    <string name="show_in_sources_and_extensions">Εμφάνιση στις λίστες πηγών και επεκτάσεων</string>
+    <string name="notification_size_warning">Οι μεγάλες ενημερώσεις μπορεί να οδηγήσουν σε αυξημένη χρήση της μπαταρίας και οι πηγές να γίνουν πιο αργές</string>
 </resources>

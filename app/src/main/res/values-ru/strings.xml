@@ -181,10 +181,8 @@
     <string name="never">Никогда</string>
     <string name="lock_when_idle">Блокировать при бездействии</string>
     <string name="lock_with_biometrics">Блокировать отпечатком</string>
-    <string name="login">Вход</string>
     <string name="successfully_logged_in">Успешный вход</string>
     <string name="log_in_to_">Вход в %1$s</string>
-    <string name="logout">Выход</string>
     <string name="successfully_logged_out">Вы успешно вышли</string>
     <string name="added_to_library">Добавлено в библиотеку</string>
     <string name="artist">Художник</string>
@@ -381,7 +379,7 @@
     <string name="left">Слева</string>
     <string name="right">Справа</string>
     <!-- Manga Type -->
-    <string name="manga">Манга</string>
+    <string name="manga">Комикс</string>
     <string name="manhwa">Манхва</string>
     <string name="manhua">Маньхуа</string>
     <string name="comic">Комикс</string>
@@ -481,7 +479,6 @@
     <!-- Library update service notifications -->
     <!-- Library settings -->
     <string name="include_in_global_update">Включить в глобальное обновление</string>
-    <string name="show_notification_error">Показывать уведомление об ошибках</string>
     <plurals name="notification_update_failed">
         <item quantity="one">%1$d обновление не удалось</item>
         <item quantity="few">%1$d обновления не удалось</item>
@@ -639,7 +636,6 @@
     <string name="open_source_licenses">Лицензии с открытым исходным кодом</string>
     <!-- Login/Logout dialog -->
     <string name="email">Адрес электронной почты</string>
-    <string name="logout_from_">Выйти из %1$s\?</string>
     <string name="username_must_not_be_blank">Имя пользователя или пароль не могут быть пустыми</string>
     <!-- Downloads -->
     <string name="downloading_">Загрузка: %1$s</string>
@@ -676,7 +672,7 @@
     <string name="select_none">Ничего не выбирать</string>
     <string name="sort_and_filter">Сортировка &amp; Фильтрация</string>
     <string name="tag">Тег</string>
-    <string name="top">Верхнее</string>
+    <string name="top">По верху</string>
     <string name="unpin">Открепить</string>
     <string name="use_default">Использовать по умолчанию</string>
     <!-- Extensions -->
@@ -705,9 +701,6 @@
     <string name="nav_layout">Схема навигации</string>
     <string name="source_migration_guide">Руководство по миграции источников</string>
     <string name="nsfw_sources">Источники NSFW (18+)</string>
-    <string name="show_in_sources">Показывать в списке источников</string>
-    <string name="show_in_extensions">Показывать в списке расширений</string>
-    <string name="label_in_extensions">Метка в списке расширений</string>
     <string name="does_not_prevent_unofficial_nsfw">Это не предотвращает появление внутри приложения контента NSFW (18+) из неофициальных или потенциально неправильно помеченных расширений.</string>
     <string name="no_chapters_error">Нет глав</string>
     <string name="badges">Значки</string>
@@ -759,7 +752,6 @@
     <string name="hides_on_scroll">Скрывается при прокрутке</string>
     <string name="hide_bottom_nav">Скрывать панель навигации</string>
     <string name="last_used_library_recents">Последнее использованное (Библиотека или Недавние)</string>
-    <string name="suggested_date_">Предлагаемая дата: %1$s</string>
     <string name="custom_manga_info">Пользовательская информация о комиксе</string>
     <string name="both_axes">Горизонтально и Вертикально</string>
     <string name="vertically">Вертикально</string>
@@ -927,7 +919,6 @@
     </plurals>
     <string name="could_not_install_extension">Не удалось установить расширение</string>
     <string name="global_updates">Глобальные обновления</string>
-    <string name="checking_for_new_chapters">Проверка наличия новых глав</string>
     <string name="open_random_series">Открыть случайный комикс</string>
     <string name="show_number_of_items">Показать количество элементов</string>
     <string name="external_storage_download_notice">TachiyomiJ2K требует доступ ко всем файлам для загрузки глав. Нажмите здесь, затем включите \"Разрешить доступ к управлению всеми файлами.\"</string>
@@ -1000,4 +991,17 @@
     <string name="helpful_translation_links">Полезные ссылки на перевод</string>
     <string name="help_translate">Помочь перевести</string>
     <string name="filter_groups">Фильтровать группы переводчиков</string>
+    <string name="use_suggested_date">Использовать предложенную дату</string>
+    <string name="cannot_remove_tracking_while_offline">Услуга отслеживания, не может быть удалена из %1$s, в автономном режиме</string>
+    <string name="log_out">Выйти</string>
+    <string name="keep_in_">Оставить в %1$s</string>
+    <string name="remove_from_">Убрать из %1$s</string>
+    <string name="details_page">Сведения комикса</string>
+    <string name="theme_buttons_based_on_cover">Цвет кнопок на основе обложки</string>
+    <string name="log_in">Войти</string>
+    <string name="log_out_from_">Выйти из %1$s\?</string>
+    <string name="scanlators">Переводчики</string>
+    <string name="channel_errors">Ошибки</string>
+    <string name="notification_size_warning">Большие обновления, могут привести, к повышенному расходу батареи и замедлению работы источников</string>
+    <string name="show_in_sources_and_extensions">Показать в списке источников и расширений</string>
 </resources>

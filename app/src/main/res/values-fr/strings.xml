@@ -141,7 +141,6 @@
     <string name="log_in_to_">Se connecter à %1$s</string>
     <string name="username">Nom d\'utilisateur</string>
     <string name="password">Mot de passe</string>
-    <string name="login">Se connecter</string>
     <string name="unknown_error">Erreur inconnue</string>
     <!-- Library fragment -->
     <!-- Catalogue fragment -->
@@ -318,7 +317,7 @@
     <string name="burn_darken">Brûlé / Assombri</string>
     <string name="forward">Suivant</string>
     <string name="no_results_found">Aucun résultat trouvé</string>
-    <string name="lock_with_biometrics">Verrouillage biométrique</string>
+    <string name="lock_with_biometrics">Imposer un déverrouillage à l\'ouverture</string>
     <string name="lock_when_idle">Verrouiller en cas d\'inactivité</string>
     <string name="refresh_tracking">Actualiser les métadonnées de suivi</string>
     <string name="add_tracking">Ajouter le suivi</string>
@@ -404,7 +403,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">La date de lecture du « %1$s » sera supprimé. Êtes-vous sûr·e \?</string>
     <string name="newly_added">Nouvellement ajouté</string>
     <string name="recents">Récents</string>
-    <string name="show_notification_error">Afficher une notification pour les erreurs</string>
     <string name="auto_refresh_covers_summary">Rafraîchir aussi les couvertures dans la bibliothèque lors de la mise à jour de la bibliothèque</string>
     <string name="auto_refresh_covers">Rafraîchir automatiquement les couvertures</string>
     <string name="include_in_global_update">Inclure dans la mise à jour globale</string>
@@ -501,8 +499,6 @@
     <string name="smart_by_theme">Intelligent (par thème)</string>
     <string name="downloading_">Téléchargement : %1$s</string>
     <string name="username_must_not_be_blank">Le nom d\'utilisateur ou le mot de passe ne peuvent pas être vides</string>
-    <string name="logout_from_">Se déconnecter de %1$s \?</string>
-    <string name="logout">Se déconnecter</string>
     <string name="smart_by_page">Intelligent (par page)</string>
     <string name="enable_zoom_out">Activer le zoom arrière</string>
     <string name="webtoon_style">style webtoon</string>
@@ -703,9 +699,6 @@
     </plurals>
     <string name="source_migration_guide">Guide de migration des sources</string>
     <string name="nsfw_sources">Contenu +18</string>
-    <string name="show_in_sources">Afficher dans la liste de sources</string>
-    <string name="show_in_extensions">Afficher dans la liste d\'extensions</string>
-    <string name="label_in_extensions">Étiqueter dans la liste d\'extension</string>
     <string name="does_not_prevent_unofficial_nsfw">Cela n\'empêche pas les extensions non officielles ou potentiellement mal signalées de diffuser du contenu +18 dans l\'application.</string>
     <string name="backup_and_restore">Sauvegarde et restauration</string>
     <string name="progress">Progression</string>
@@ -728,7 +721,6 @@
     <string name="hides_on_scroll">Se cache lors du défilement</string>
     <string name="hide_bottom_nav">Masquer automatiquement la navigation du bas</string>
     <string name="last_used_library_recents">Dernière utilisation (Bibliothèque ou Récents)</string>
-    <string name="suggested_date_">Date suggérée : %1$s</string>
     <string name="custom_manga_info">Infos personnalisées sur le manga</string>
     <string name="mark_all_chapters_as_unread">Marquer tous les chapitres comme non lus \?</string>
     <string name="cutout_area_behavior">Comportement de la zone de découpe</string>
@@ -889,7 +881,6 @@
         <item quantity="other">%d mises à jour en attente</item>
     </plurals>
     <string name="could_not_install_extension">Échec de l\'installation de l\'extension</string>
-    <string name="checking_for_new_chapters">Recherche de nouveaux chapitres</string>
     <string name="pure_black_dark_mode">Mode sombre noir pur</string>
     <string name="side_nav_icon_alignment">Alignement de l\'icône de navigation latérale</string>
     <string name="chocolate_strawberries">Fraises au chocolat</string>
@@ -952,10 +943,23 @@
     <string name="default_behavior">Comportement par défaut</string>
     <string name="use_side_navigation">Utiliser la navigation latérale</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Il manque 1 chapitre</item>
-        <item quantity="other">Il manque %d chapitres</item>
+        <item quantity="one">Un chapitre a été sauté, soit la source ne l\'a pas, soit il a été filtré</item>
+        <item quantity="other">%d chapitres ont été sautés, soit la source ne l\'a pas, soit il ont été filtrés</item>
     </plurals>
     <string name="helpful_translation_links">Liens utiles pour la traduction</string>
     <string name="help_translate">Aider à traduire</string>
     <string name="filter_groups">Filtrer les groupes de scanlateurs</string>
+    <string name="log_out_from_">Se déconnecter de %1$s \?</string>
+    <string name="details_page">Page de détails</string>
+    <string name="log_out">Se déconnecter</string>
+    <string name="remove_from_">Retirer de %1$s</string>
+    <string name="cannot_remove_tracking_while_offline">Le suivi ne peut pas être retiré de %1$s lorsqu\'il est hors ligne</string>
+    <string name="use_suggested_date">Utiliser la date suggérée</string>
+    <string name="theme_buttons_based_on_cover">Thèmes des boutons en fonction de la couverture</string>
+    <string name="log_in">Se connecter</string>
+    <string name="keep_in_">Conserver dans %1$s</string>
+    <string name="scanlators">Scanlateurs</string>
+    <string name="channel_errors">Erreurs</string>
+    <string name="notification_size_warning">Les mises à jour importantes peuvent entraîner une augmentation de la consommation de la batterie et un ralentissement des sources</string>
+    <string name="show_in_sources_and_extensions">Afficher dans les listes de sources et d\'extensions</string>
 </resources>

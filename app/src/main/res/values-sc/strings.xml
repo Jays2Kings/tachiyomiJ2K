@@ -190,7 +190,6 @@
     <string name="log_in_to_">Intrada pro %1$s</string>
     <string name="username">Nùmene impreadore</string>
     <string name="password">Crae de intrada</string>
-    <string name="login">Intra</string>
     <string name="successfully_logged_in">S\'intrada at tentu sutzessu</string>
     <string name="unknown_error">Errore disconnotu</string>
     <string name="local">Locale</string>
@@ -387,8 +386,6 @@
     <string name="not_downloaded">No iscarrigadu</string>
     <string name="downloading_">Iscarrighende: %1$s</string>
     <string name="username_must_not_be_blank">Su nùmene de impreadore e sa crae non podent abarrare bòidos</string>
-    <string name="logout_from_">Essire dae %1$s\?</string>
-    <string name="logout">Essi</string>
     <string name="whats_new">Ite b\'at de nou</string>
     <string name="you_can_migrate_in_library">Podes fintzas tramudare ischertende sos manga in sa biblioteca tua</string>
     <string name="migration_sources_changed">Mitzas de tramudòngiu mudadas</string>
@@ -535,7 +532,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Custu at a bogare s\'istadu de leghidura dae \"%1$s\". Seguru ses\?</string>
     <string name="newly_added">Annànghidos dae pagu</string>
     <string name="recents">Reghentes</string>
-    <string name="show_notification_error">Ammustra una notìfica pro sos errores</string>
     <string name="auto_refresh_covers_summary">Annoa fintzas sas coberteddas in sa biblioteca cando ses agiornende sa biblioteca</string>
     <string name="auto_refresh_covers">Annoa sas coberteddas automaticamente</string>
     <string name="include_in_global_update">Include in s\'agiornamentu globale</string>
@@ -629,7 +625,7 @@
     <string name="none">Perunu</string>
     <string name="started_reading_date">Data de incumintzu de sa leghidura</string>
     <string name="finished_reading_date">Data de fine de sa leghidura</string>
-    <string name="myanimelist_relogin">Pro praghere torra a intrare in MAL</string>
+    <string name="myanimelist_relogin">Pro praghere torra a intrare a MAL</string>
     <string name="search_settings">Impostatziones de chirca</string>
     <string name="locale">Limba</string>
     <string name="automatic_backups">Còpias de seguresa automàticas</string>
@@ -654,9 +650,6 @@
     </plurals>
     <string name="source_migration_guide">Ghia a su tramudòngiu de sas mitzas</string>
     <string name="nsfw_sources">Cuntenutu NSFW (18+)</string>
-    <string name="show_in_sources">Ammustra in sa lista de sas mitzas</string>
-    <string name="show_in_extensions">Ammustra in sa lista de sas estensiones</string>
-    <string name="label_in_extensions">Eticheta in sa lista de sas estensiones</string>
     <string name="does_not_prevent_unofficial_nsfw">Custu no impedit a estensiones no ufitziales o potentzialmente non curretas de ammustrare cuntenutos NSFW (18+) in s\'aplicatzione.</string>
     <string name="no_chapters_error">Perunu capìtulu agatadu</string>
     <string name="badges">Distintivos</string>
@@ -692,7 +685,6 @@
     <string name="starting_screen">Ischermada de incumintzu</string>
     <string name="hides_on_scroll">Si cuat cando iscurres</string>
     <string name="last_used_library_recents">Ùrtimu impreu (Biblioteca o Reghentes)</string>
-    <string name="suggested_date_">Data cussigiada: %1$s</string>
     <string name="mark_all_chapters_as_unread">Marcare totu sos capìtulos comente non lèghidos\?</string>
     <string name="both_axes">Ambos sos asses</string>
     <string name="vertically">Verticalmente</string>
@@ -852,7 +844,6 @@
     </plurals>
     <string name="could_not_install_extension">Installatzione de s\'estensione fallida</string>
     <string name="global_updates">Agiornamentos globales</string>
-    <string name="checking_for_new_chapters">Chirchende capìtulos noos</string>
     <string name="open_random_series">Aberi una sèrie a casu</string>
     <string name="show_number_of_items">Ammustra su nùmeru de elementos</string>
     <string name="external_storage_download_notice">Pro iscarrigare capìtulos TachiyomiJ2K tenet bisòngiu de s\'atzessu a totu sos documentos. Incarca inoghe, e a pustis abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
@@ -918,10 +909,23 @@
     <string name="teal_ocean">Otzèanu birde abba (teal - fògia de tè)</string>
     <string name="appearance">Aparèntzia</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Mancat 1 capìtulu</item>
-        <item quantity="other">Mancant %d capìtulos</item>
+        <item quantity="one">Brinchende 1 capìtulu, sa fonte non lu tenet o est istadu bogadu cun unu filtru</item>
+        <item quantity="other">Brinchende %d capìtulos, sa fonte non los tenet o sunt istados bogados cun unu filtru</item>
     </plurals>
     <string name="helpful_translation_links">Ligàmenes ùtiles pro sa tradutzione</string>
     <string name="help_translate">Agiuda a bortare</string>
     <string name="filter_groups">Filtra sos grupos de iscansidores</string>
+    <string name="cannot_remove_tracking_while_offline">S\'arrastadore non si podet bogare dae %1$s cando no est in lìnia</string>
+    <string name="use_suggested_date">Imprea sa data cussigiada</string>
+    <string name="log_out">Essi</string>
+    <string name="channel_errors">Errores</string>
+    <string name="scanlators">Iscandutores</string>
+    <string name="details_page">Pàgina de sos detàllios</string>
+    <string name="log_in">Intra</string>
+    <string name="theme_buttons_based_on_cover">Butones de su tema basados subra de sa cobertedda</string>
+    <string name="log_out_from_">Essire dae %1$s\?</string>
+    <string name="keep_in_">Mantene in %1$s</string>
+    <string name="remove_from_">Boga dae %1$s</string>
+    <string name="notification_size_warning">Sos agiornamentos mannos diant pòdere batire a un\'impreu de sa bateria prus mannu e a unu rallentamentu de sas fontes</string>
+    <string name="show_in_sources_and_extensions">Ammustra in sa lista de sas mitzas e de sas estensiones</string>
 </resources>

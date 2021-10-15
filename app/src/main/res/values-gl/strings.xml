@@ -201,9 +201,6 @@
     <string name="search_settings">Procurar axustes</string>
     <string name="locale">Localización</string>
     <string name="nsfw_sources">Fontes NSFW (+18)</string>
-    <string name="show_in_sources">Amosar na lista de fontes</string>
-    <string name="show_in_extensions">Amosar na lista de extensións</string>
-    <string name="label_in_extensions">Etiquetar na lista de extensións</string>
     <string name="file_picker_error">Non se atopou unha aplicación para seleccionar arquivos</string>
     <string name="open_log">Abrir rexistro</string>
     <string name="chapters">Capítulos</string>

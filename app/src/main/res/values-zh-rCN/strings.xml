@@ -189,7 +189,6 @@
     <string name="log_in_to_">登录到%1$s</string>
     <string name="username">用户名</string>
     <string name="password">密码</string>
-    <string name="login">登录</string>
     <string name="successfully_logged_in">登录成功</string>
     <string name="unknown_error">未知错误</string>
     <string name="local">本地</string>
@@ -370,7 +369,7 @@
     <string name="continue_reading_chapter_">继续阅读第 %1$s 章</string>
     <string name="start_reading_chapter_">开始阅读第 %1$s 章</string>
     <string name="start_reading">开始阅读</string>
-    <string name="about_this_">关于此%1$s</string>
+    <string name="about_this_">关于此 %1$s</string>
     <string name="auto_refresh_covers">自动刷新封面</string>
     <string name="read_progress">阅读进度</string>
     <string name="search_globally">全局搜索「%1$s」</string>
@@ -545,8 +544,6 @@
     <string name="start_downloading_now">现在开始下载</string>
     <string name="username_must_not_be_blank">用户名或密码不能为空</string>
     <string name="not_downloaded">未下载</string>
-    <string name="logout_from_">从%1$s中登出？</string>
-    <string name="logout">登出</string>
     <string name="whats_new">更新记录</string>
     <string name="you_can_migrate_in_library">您还可以通过选择书架中的漫画进行迁移</string>
     <string name="migration_sources_changed">迁移图源已更改</string>
@@ -600,7 +597,6 @@
     <string name="reset_all_chapters_for_this_">重置%1$s的所有章节状态</string>
     <string name="this_will_remove_the_read_date_for_x_question">这将移除\"%1$s\"的阅读日期，确定要移除吗？</string>
     <string name="newly_added">最近添加</string>
-    <string name="show_notification_error">显示出错的通知</string>
     <string name="auto_refresh_covers_summary">更新书架的同时更新书架漫画封面</string>
     <string name="include_in_global_update">包含在全局更新中</string>
     <string name="when_sorting_ignore_articles">当按字母排序时，排序忽略漫画标题开头的（a，an，the）</string>
@@ -649,9 +645,6 @@
     </plurals>
     <string name="source_migration_guide">图源迁移指南</string>
     <string name="nsfw_sources">NSFW (18+) 图源</string>
-    <string name="show_in_sources">在图源列表中显示</string>
-    <string name="show_in_extensions">在扩展插件列表中显示</string>
-    <string name="label_in_extensions">在扩展插件列表中添加标签</string>
     <string name="does_not_prevent_unofficial_nsfw">这并不能防止非官方或可能被错误标记的扩展插件在应用程序中显示 NSFW (18+) 内容。</string>
     <string name="file_picker_error">未找到文件选择应用</string>
     <string name="next">下一个</string>
@@ -668,7 +661,6 @@
     <string name="starting_screen">启动屏幕</string>
     <string name="hides_on_scroll">滚动时隐藏</string>
     <string name="hide_bottom_nav">自动隐藏底部导航栏</string>
-    <string name="suggested_date_">建议日期：%1$s</string>
     <string name="custom_manga_info">自定义漫画信息</string>
     <string name="both_axes">两根轴</string>
     <string name="vertically">垂直地</string>
@@ -830,7 +822,6 @@
     </plurals>
     <string name="could_not_install_extension">无法安装扩展</string>
     <string name="global_updates">全局更新</string>
-    <string name="checking_for_new_chapters">检查新章节中</string>
     <string name="open_random_series">打开一个随机系列</string>
     <string name="show_number_of_items">显示项目数</string>
     <string name="external_storage_download_notice">TachiyomiJ2K 需要访问所有文件才能下载章节。 点按此处，然后启用“允许访问以管理所有文件”</string>
@@ -896,9 +887,22 @@
     <string name="default_behavior">默认行为</string>
     <string name="use_side_navigation">使用侧导航</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">缺少 %d 个章节</item>
+        <item quantity="other">跳过 %d 个章节，要么是缺少来源，要么是被过滤掉了</item>
     </plurals>
     <string name="helpful_translation_links">有帮助的翻译链接</string>
     <string name="help_translate">协助翻译</string>
     <string name="filter_groups">过滤扫译群组</string>
+    <string name="cannot_remove_tracking_while_offline">离线时无法从 %1$s 删除追踪器</string>
+    <string name="use_suggested_date">使用建议日期</string>
+    <string name="log_out">退出</string>
+    <string name="details_page">详情页</string>
+    <string name="theme_buttons_based_on_cover">基于封面的主题按钮</string>
+    <string name="log_in">登录</string>
+    <string name="log_out_from_">从 %1$s 登出？</string>
+    <string name="keep_in_">保留在 %1$s</string>
+    <string name="remove_from_">从 %1$s 删除</string>
+    <string name="scanlators">扫译小组</string>
+    <string name="channel_errors">错误</string>
+    <string name="notification_size_warning">大型更新可能会导致电池使用量增加和来源变慢</string>
+    <string name="show_in_sources_and_extensions">显示在图源和扩展列表中</string>
 </resources>

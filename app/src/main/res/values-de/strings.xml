@@ -155,7 +155,6 @@
     <string name="include_in_global_update">In globaler Aktualisierung einschließen</string>
     <string name="auto_refresh_covers">Vorschaubilder automatisch aktualisieren</string>
     <string name="auto_refresh_covers_summary">Vorschaubilder automatisch aktualisieren wenn die Bibliothek aktualisiert wird</string>
-    <string name="show_notification_error">Push-Nachrichten für Fehler anzeigen</string>
     <!-- Recents -->
     <string name="recents">Neues</string>
     <string name="updates">Aktualisierungen</string>
@@ -504,9 +503,6 @@
     <string name="username">Benutzername</string>
     <string name="email">E-Mail-Adresse</string>
     <string name="password">Passwort</string>
-    <string name="login">Anmelden</string>
-    <string name="logout">Abmelden</string>
-    <string name="logout_from_">Von %1$s abmelden?</string>
     <string name="successfully_logged_in">Anmeldung erfolgreich</string>
     <string name="username_must_not_be_blank">Benutzername und Passwort dürfen nicht leer sein</string>
     <string name="successfully_logged_out">Du bist jetzt abgemeldet</string>
@@ -689,9 +685,6 @@
     </plurals>
     <string name="source_migration_guide">Quellenmigration</string>
     <string name="nsfw_sources">NSFW/Ü18-Quellen</string>
-    <string name="show_in_sources">In der Quellenliste anzeigen</string>
-    <string name="show_in_extensions">In der Erweiterungsliste</string>
-    <string name="label_in_extensions">In der Erweiterungsliste markieren</string>
     <string name="does_not_prevent_unofficial_nsfw">Dies verhindert nicht, dass inoffizielle oder möglicherweise falsch gekennzeichnete Erweiterungen NSFW/Ü18-Inhalte in der App anzeigen.</string>
     <string name="next_page">Nächste Seite</string>
     <string name="previous_page">Vorherige Seite</string>
@@ -708,7 +701,7 @@
     <string name="none">Nichts</string>
     <string name="started_reading_date">Datum des Lesebeginns</string>
     <string name="finished_reading_date">Datum des Leseabschlusses</string>
-    <string name="myanimelist_relogin">Bitte logge dich erneut in MAL ein</string>
+    <string name="myanimelist_relogin">Bitte melde dich erneut in MAL ein</string>
     <string name="search_settings">Sucheinstellungen</string>
     <string name="locale">Lokal</string>
     <string name="file_picker_error">Keine Dateiauswahl-App gefunden</string>
@@ -738,7 +731,6 @@
     <string name="hides_on_scroll">Verstecken beim Scrollen</string>
     <string name="hide_bottom_nav">Navigations-Bar automatisch verstecken</string>
     <string name="last_used_library_recents">Zuletzt benutzt (Bibliothek oder Neueste)</string>
-    <string name="suggested_date_">Vorgeschlagenes Datum: %1$s</string>
     <string name="custom_manga_info">Benutzerdefinierte Infos des Mangas</string>
     <string name="mark_all_chapters_as_unread">Alle Kapitel als ungelesen markieren\?</string>
     <string name="ignore_cutout_areas">Ausschnittbereiche ignorieren</string>
@@ -885,7 +877,6 @@
     </plurals>
     <string name="could_not_install_extension">Erweiterung konnte nicht installiert werden</string>
     <string name="global_updates">Globale Aktualisierungen</string>
-    <string name="checking_for_new_chapters">Überprüfe auf neue Kapitel</string>
     <string name="open_random_series">Eine beliebige Serie öffnen</string>
     <string name="show_number_of_items">Anzahl der Elemente anzeigen</string>
     <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
@@ -953,10 +944,23 @@
     <string name="default_behavior">Standardverhalten</string>
     <string name="use_side_navigation">Seitennavigation verwenden</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Es gibt 1 fehlendes Kapitel</item>
-        <item quantity="other">Es gibt %d fehlende Kapitel</item>
+        <item quantity="one">1 Kapitel wird übersprungen, da die Quelle dieses entweder nicht besitzt, oder, weil es rausgefiltert wurde</item>
+        <item quantity="other">%d Kapitel werden übersprungen, da die Quelle diese entweder nicht besitzt, oder, weil sie rausgefiltert wurden</item>
     </plurals>
     <string name="helpful_translation_links">Hilfreiche Übersetzungslinks</string>
     <string name="help_translate">Beim Übersetzen mithelfen</string>
     <string name="filter_groups">Scanlator-Gruppen filtern</string>
+    <string name="use_suggested_date">Vorgeschlagenes Datum verwenden</string>
+    <string name="log_out">Abmelden</string>
+    <string name="log_out_from_">Aus %1$s abmelden\?</string>
+    <string name="details_page">Detailseite</string>
+    <string name="theme_buttons_based_on_cover">Themenschaltflächen basierend auf dem Cover</string>
+    <string name="log_in">Anmelden</string>
+    <string name="remove_from_">Von %1$s entfernen</string>
+    <string name="cannot_remove_tracking_while_offline">Tracker kann nicht von %1$s entfernt werden, während du offline bist</string>
+    <string name="keep_in_">In %1$s behalten</string>
+    <string name="scanlators">Scanlator</string>
+    <string name="channel_errors">Fehler</string>
+    <string name="notification_size_warning">Große Aktualisierungen könnten zu einem höheren Akkuverbrauch und langsameren Quellen führen</string>
+    <string name="show_in_sources_and_extensions">In Quellen- und Erweiterungslisten anzeigen</string>
 </resources>

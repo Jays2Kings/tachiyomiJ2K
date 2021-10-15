@@ -201,7 +201,6 @@
     <string name="log_in_to_">Mag-login sa %1$s</string>
     <string name="username">Sagisag (username)</string>
     <string name="password">Hudyat (password)</string>
-    <string name="login">Mag-login</string>
     <string name="successfully_logged_in">Tagumpay ang login</string>
     <string name="unknown_error">Hindi malamang error</string>
     <string name="local">Lokal</string>
@@ -287,17 +286,12 @@
     <string name="downloading_">Nagda-download: %1$s</string>
     <string name="successfully_logged_out">Nakapag-logout ka na</string>
     <string name="username_must_not_be_blank">Hindi maaaring blangko ang username o password</string>
-    <string name="logout_from_">Mag-logout sa %%1$s\?</string>
-    <string name="logout">Mag-logout</string>
     <string name="email">Email address</string>
     <string name="open_source_licenses">Mga lisensiya sa open source</string>
     <string name="website">Pook-sapot</string>
     <string name="whats_new_this_release">Mga bago sa release na ito</string>
     <string name="whats_new">Mga bago</string>
     <string name="does_not_prevent_unofficial_nsfw">Hindi nito naiiwasan ang pagpakita ng mga NSFW (18+) ng mga di-opisyal o posibleng maling naka-flag na extension sa loob ng app.</string>
-    <string name="label_in_extensions">Label sa listahan ng extension</string>
-    <string name="show_in_extensions">Ipakita base sa listahan ng extension</string>
-    <string name="show_in_sources">Ipakita base sa mga pinagkukunan</string>
     <string name="nsfw_sources">Mga Pinagkukunang NSFW (pang-18+)</string>
     <string name="source_migration_guide">Gabay sa paglipat ng pinagkukunan</string>
     <string name="you_can_migrate_in_library">Maaari din mag-migrate gamit ang pag-pili ng manga sa iyong library</string>

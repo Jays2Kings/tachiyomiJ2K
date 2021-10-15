@@ -163,7 +163,6 @@
     <string name="log_in_to_">%1$s 으로 로그인</string>
     <string name="username">유저네임</string>
     <string name="password">비밀번호</string>
-    <string name="login">로그인</string>
     <string name="successfully_logged_in">로그인 성공</string>
     <string name="unknown_error">알 수 없는 오류</string>
     <string name="search_filters">검색 필터</string>

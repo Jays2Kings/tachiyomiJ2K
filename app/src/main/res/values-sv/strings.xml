@@ -190,7 +190,6 @@
     <string name="log_in_to_">Login för %1$s</string>
     <string name="username">Användarnamn</string>
     <string name="password">Lösenord</string>
-    <string name="login">Logga in</string>
     <string name="successfully_logged_in">Inloggningen lyckades</string>
     <string name="unknown_error">Okänt fel</string>
     <string name="local">Lokal</string>
@@ -385,9 +384,6 @@
     </plurals>
     <string name="source_migration_guide">Migreringsguide för källor</string>
     <string name="nsfw_sources">NSFW (18+) källor</string>
-    <string name="show_in_sources">Visa i källistan</string>
-    <string name="show_in_extensions">Visa i tilläggslistan</string>
-    <string name="label_in_extensions">Etikett i tilläggslistan</string>
     <string name="does_not_prevent_unofficial_nsfw">Detta förhindrar inte inofficiella eller potentiellt felaktigt flaggade tillägg från att visa NSFW(18+) innehåll i appen.</string>
     <string name="whats_new">Vad är nytt</string>
     <string name="next">Nästa</string>
@@ -493,7 +489,6 @@
     </plurals>
     <string name="more_library_settings">Fler biblioteksinställningar</string>
     <string name="download_unread">Ladda ner olästa</string>
-    <string name="logout">Logga ut</string>
     <string name="backup_in_progress">Säkerhetskopiering pågår redan</string>
     <string name="restore_in_progress">Återställningen pågår redan</string>
     <string name="want_to_read">Planerar att läsa</string>
@@ -546,7 +541,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Detta tar bort läsdatumet \"%1$s\". Är du säker\?</string>
     <string name="newly_added">Nyligen tillagda</string>
     <string name="recents">Senaste</string>
-    <string name="show_notification_error">Visa en avisering för fel</string>
     <string name="auto_refresh_covers_summary">Uppdatera även omslagen i biblioteket när du uppdaterar biblioteket</string>
     <string name="hide_category_hopper">Dölj kategori behållare</string>
     <string name="search_manually">Sök manuellt</string>
@@ -564,7 +558,6 @@
     <string name="skip_pre_migration">Hoppa över förflyttning</string>
     <string name="migration">Migration</string>
     <string name="select_sources">Välj källor</string>
-    <string name="suggested_date_">Föreslaget datum: %1$s</string>
     <string name="remove_tracking_from_">Ta också bort från %1$s</string>
     <string name="remove_tracking">Ta bort spårning från appen</string>
     <string name="not_tracked">Spåras inte</string>
@@ -753,7 +746,6 @@
     <string name="not_downloaded">Inte nedladdad</string>
     <string name="downloading_">Hämtar: %1$s</string>
     <string name="username_must_not_be_blank">Användarnamn eller lösenord kan inte vara tomt</string>
-    <string name="logout_from_">Logga ut från %1$s\?</string>
     <string name="whats_new_this_release">Vad är nytt i den här versionen</string>
     <string name="you_can_migrate_in_library">Du kan också migrera genom att välja manga i ditt bibliotek</string>
     <string name="migration_sources_changed">Migrationskällor har ändrats</string>
@@ -852,7 +844,6 @@
     </plurals>
     <string name="could_not_install_extension">Det gick inte att installera tillägget</string>
     <string name="global_updates">Globala uppdateringar</string>
-    <string name="checking_for_new_chapters">Letar efter nya kapitel</string>
     <string name="open_random_series">Öppna en slumpmässig serie</string>
     <string name="show_number_of_items">Visa antal artiklar</string>
     <string name="external_storage_download_notice">TachiyomiJ2K kräver åtkomst till alla filer för att ladda ner kapitel. Tryck här och aktivera sedan \"Tillåt åtkomst för att hantera alla filer.\"</string>
@@ -879,8 +870,8 @@
     <string name="auto_update_app">Uppdatera appen automatiskt</string>
     <string name="auto_updates">Automatiska uppdateringar</string>
     <string name="tako">Tako</string>
-    <string name="a_calmer_you">En lugnare du</string>
-    <string name="a_brighter_you">Ett ljusare du</string>
+    <string name="a_calmer_you">Ett lugnare du (Dynamisk)</string>
+    <string name="a_brighter_you">Ett ljusare du (Dynamisk)</string>
     <string name="add_tag">Lägg till tagg</string>
     <string name="updating_extensions">Uppdaterar tillägg</string>
     <string name="some_extensions_may_prompt">Vissa tillägg kan fortfarande uppmana till att installeras först.</string>
@@ -902,8 +893,17 @@
     <string name="show_categories_while_filtering">Visa tomma kategorier vid filtrering</string>
     <string name="help_translate">Hjälp till med översättning</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Där saknas 1 kapitel</item>
-        <item quantity="other">Där sankas %d kapitlar</item>
+        <item quantity="one">Hoppar över ett kapitel, antingen saknar källan det eller så har det filtrerats bort</item>
+        <item quantity="other">Hoppar över %d kapitel, antingen saknar källan det eller så har det filtrerats bort</item>
     </plurals>
     <string name="split_double_pages">Dela på dubbel sidor</string>
+    <string name="recently_installed">Nyligen installerad</string>
+    <string name="recently_updated">Nyligen uppdaterad</string>
+    <string name="name">Namn</string>
+    <string name="notify_extension_updated">Tillägget Notify har uppdaterats</string>
+    <string name="auto_update_extensions">Automatisk uppdatering av tillägg</string>
+    <string name="default_behavior">Standardbeteende</string>
+    <string name="use_side_navigation">Använd sidnavigering</string>
+    <string name="appearance">Utseende</string>
+    <string name="remove_x_from_service_and_add_y">Ta bort %1$s från %2$s och lägg till %3$s</string>
 </resources>

@@ -189,7 +189,6 @@
     <string name="log_in_to_">%1$s için giriş</string>
     <string name="username">Kullanıcı adı</string>
     <string name="password">Parola</string>
-    <string name="login">Giriş</string>
     <string name="successfully_logged_in">Giriş başarılı</string>
     <string name="unknown_error">Bilinmeyen hata</string>
     <string name="local">Yerel</string>
@@ -448,7 +447,6 @@
     <string name="view_all_updates">Tüm güncellemeleri göster</string>
     <string name="view_history">Geçmişi göster</string>
     <string name="newly_added">Yeni eklenen</string>
-    <string name="show_notification_error">Hatalar için bir bildirim göster</string>
     <string name="auto_refresh_covers_summary">Kütüphaneyi yenilerken kütüphanedeki kapakları da yenileyin</string>
     <string name="auto_refresh_covers">Kapakları otomatik yenile</string>
     <string name="no_matches_for_filters">Şu anki filtreleriniz için eşleşme bulunamadı</string>
@@ -471,13 +469,9 @@
     <string name="nothing_is_downloading">Şu anda hiçbirşey indirilmiyor</string>
     <string name="downloading_">İndiriliyor: %1$s</string>
     <string name="username_must_not_be_blank">Kullanıcı adı veya şifre boş bırakılamaz</string>
-    <string name="logout">Çıkış yap</string>
     <string name="whats_new">Yenilikler</string>
     <string name="source_migration_guide">Kaynak geçiş kılavuzu</string>
     <string name="nsfw_sources">Yetişkin içerik (18+) kaynakları</string>
-    <string name="show_in_sources">Kaynaklar listesinde göster</string>
-    <string name="show_in_extensions">Uzantılar listesinde göster</string>
-    <string name="label_in_extensions">Uzantılar listesinde etiketle</string>
     <string name="does_not_prevent_unofficial_nsfw">Bu, resmi olmayan veya yanlış işaretlenmiş uzantıların, uygulama içinde yetişkin (18+) içeriği göstermesini engellemez.</string>
     <string name="file_picker_error">Dosya seçme uygulaması bulunamadı</string>
     <string name="started_reading_date">Okumaya başlama tarihi</string>
@@ -561,7 +555,6 @@
     <string name="skip_pre_migration">Geçişi öncesini atla</string>
     <string name="migration">Geçiş</string>
     <string name="select_sources">Kaynakları seç</string>
-    <string name="suggested_date_">Önerilen tarih: %1$s</string>
     <string name="remove_tracking_from_">%1$s \'den de kaldır</string>
     <string name="custom_manga_info">Özel manga bilgisi</string>
     <string name="error_sharing_cover">Kapak paylaşılamadı</string>
@@ -706,7 +699,6 @@
     <string name="remove_download">İndirmeyi kaldır</string>
     <string name="start_downloading_now">Şimdi indirmeye başla</string>
     <string name="not_downloaded">İndirilmedi</string>
-    <string name="logout_from_">%1$s\'den çık\?</string>
     <string name="whats_new_this_release">Bu sürümdeki yenilikler</string>
     <string name="migration_sources_changed">Geçiş kaynakları değişti</string>
     <string name="match_enabled_sources">Etkin kaynakları eşleştir</string>
@@ -853,7 +845,6 @@
     </plurals>
     <string name="could_not_install_extension">Uzantı yüklenemedi</string>
     <string name="global_updates">Genel güncellemeler</string>
-    <string name="checking_for_new_chapters">Yeni bölümler aranıyor</string>
     <string name="show_number_of_items">Öge sayısını göster</string>
     <string name="external_storage_download_notice">TachiyomiJ2K\'in, bölümleri indirmek için tüm dosyalara erişmesi gerekir. Buraya dokunun, ardından \"Tüm dosyaları yönetmek için erişime izin ver\"i etkinleştirin</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K\'in, bölümleri indirmek, otomatik yedeklemeler oluşturmak ve yerel mangaları okumak için Android 11\'deki tüm dosyalara erişimesi gerekir.
@@ -924,4 +915,17 @@
     <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
     <string name="help_translate">Çeviriye yardım edin</string>
     <string name="filter_groups">Tarama gruplarını filtrele</string>
+    <string name="remove_from_">%1$s ögesinden kaldır</string>
+    <string name="use_suggested_date">Önerilen tarihi kullan</string>
+    <string name="cannot_remove_tracking_while_offline">İzleyici çevrimdışıyken %1$s ögesinden kaldırılamaz</string>
+    <string name="details_page">Ayrıntılar sayfası</string>
+    <string name="theme_buttons_based_on_cover">Kapağa dayalı tema düğmeleri</string>
+    <string name="log_in">Oturum aç</string>
+    <string name="log_out">Oturumu kapat</string>
+    <string name="log_out_from_">%1$s\'ten çıkış yapılsın mı\?</string>
+    <string name="keep_in_">%1$s içinde kal</string>
+    <string name="scanlators">Tarayıcılar</string>
+    <string name="channel_errors">Hatalar</string>
+    <string name="notification_size_warning">Büyük güncellemeler pil kullanımının artmasına ve kaynakların yavaşlamasına neden olabilir</string>
+    <string name="show_in_sources_and_extensions">Kaynaklar ve uzantılar listesinde göster</string>
 </resources>

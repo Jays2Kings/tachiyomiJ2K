@@ -152,7 +152,6 @@
     <string name="no_results_found">Neniu rezulto trovita</string>
     <string name="no_more_results">Ne pli rezultoj</string>
     <string name="unknown_error">Nekonata eraro</string>
-    <string name="login">Ensaluti</string>
     <string name="whats_new">Kio novas</string>
     <string name="version">Versio</string>
     <string name="clear_database_completed">Eroj forigitaj</string>
@@ -194,7 +193,7 @@
         <item quantity="other">Mankas %d ĉapitrojn</item>
     </plurals>
     <string name="secure_screen">Sekura ekrano</string>
-    <string name="licensed"></string>
+    <string name="licensed"/>
     <string name="set_as_cover">Agordi kiel kovrilo</string>
     <string name="error_sharing_cover">Eraro dumo kovrila kunigado</string>
     <string name="error_saving_cover">Eraro dum kovrila konservado</string>

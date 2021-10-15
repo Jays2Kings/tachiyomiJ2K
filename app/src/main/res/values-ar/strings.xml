@@ -168,7 +168,6 @@
     <string name="log_in_to_">تسجيل الدخول إلى %1$s</string>
     <string name="username">اسم المستخدم</string>
     <string name="password">كلمة المرور</string>
-    <string name="login">تسجيل الدخول</string>
     <string name="successfully_logged_in">تم تسجيل الدخول بنجاح</string>
     <string name="unknown_error">خطأ غير معروف</string>
     <string name="no_more_results">لا يوجد نتائج أخرى</string>
@@ -498,8 +497,6 @@
     <string name="start_downloading_now">ابدأ التنزيل الآن</string>
     <string name="downloading_">جاري تنزيل: %1$s</string>
     <string name="username_must_not_be_blank">لا يمكن أن يكون اسم المستخدم أو كلمة المرور فارغًا</string>
-    <string name="logout_from_">تسجيل الخروج من %1$s؟</string>
-    <string name="logout">تسجيل الخروج</string>
     <string name="whats_new">ما الجديد</string>
     <string name="you_can_migrate_in_library">يمكنك أيضاً الترحيل عن طريق اختيار المانجا في مكتبتك</string>
     <string name="migration_sources_changed">مصادر الترحيل التي تم تغييرها</string>
@@ -604,7 +601,6 @@
     <string name="read_">قراءة %1$s</string>
     <string name="last_read_">المقروءة اخيرا %1$s</string>
     <string name="newly_added">المُضافة حديثاً</string>
-    <string name="show_notification_error">إظهار إشعار بالأخطاء</string>
     <string name="delete_all_covers__not_in_library_used_">حذف كافة الأغلفة المخزنة مؤقتاً غير الموجودة في مكتبتك
 \nحاليا يتم استخدام: %1$s</string>
     <string name="clear_cached_covers_non_library">مسح الأغلفة المخزنة مؤقتًا غير الموجودة في المكتبة</string>
@@ -705,9 +701,6 @@
     </plurals>
     <string name="source_migration_guide">دليل ترحيل المصدر</string>
     <string name="nsfw_sources">محتوى +18</string>
-    <string name="show_in_sources">إعرض في قائمة المصادر</string>
-    <string name="show_in_extensions">إعرض في قائمة الإضافات</string>
-    <string name="label_in_extensions">تسمية في قائمة الملحقات</string>
     <string name="does_not_prevent_unofficial_nsfw">هذا لا يمنع الإضافات غير الرسمية أو التي تم وضع علامة عليها بشكل غير صحيح من إظهار محتوى غير لائق داخل التطبيق.</string>
     <string name="backup_and_restore">النسخ الاحتياطي والاستعادة</string>
     <string name="progress">التقدّم</string>
@@ -798,7 +791,6 @@
     <string name="crop_borders_webtoon">أقتصاص الحدود (ويب توون)</string>
     <string name="crop_borders_paged">أقتصاص الحدود (صفحات)</string>
     <string name="couldnt_download_low_space">لا توجد مساحة كافية لتحميل الفصول</string>
-    <string name="suggested_date_">التاريخ المقترح:%1$s</string>
     <string name="amount_of_pages_to_preload">عدد الصفحات التي يتم تحمليها بينما تقرأ، قيم أكبر ستسبب في تجربة أفضل للقراءة لكن ستكلف استخدام أكبر للإنترنت.</string>
     <string name="backup_in_progress">النسخ الاحتياطي قيد التقدم بالفعل</string>
     <string name="restore_in_progress">أسترجع الذي يتم قرائته</string>
@@ -946,7 +938,6 @@
     <string name="affects_library_grid">يؤثر على أغلفة المكتبة في وضع الشبكة</string>
     <string name="global_updates">تحديثات شاملة</string>
     <string name="restrictions_">القيود: %1$s</string>
-    <string name="checking_for_new_chapters">جارٍ التحقق من وجود فصول جديدة</string>
     <string name="open_random_series">افتح سلسلة عشوائية</string>
     <string name="show_number_of_items">إظهار عدد العناصر</string>
     <string name="update_completed">اكتمل التحديث</string>
@@ -1015,4 +1006,5 @@
     </plurals>
     <string name="helpful_translation_links">روابط مساعدة للترجمة</string>
     <string name="help_translate">ساعد بالترجمة</string>
+    <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وتصبح المصادر أبطأ</string>
 </resources>

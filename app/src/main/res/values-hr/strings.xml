@@ -39,7 +39,6 @@
     <string name="username">Korisničko ime</string>
     <string name="email">Adresa e-pošte</string>
     <string name="password">Lozinka</string>
-    <string name="login">Prijava</string>
     <string name="successfully_logged_out">Odjava uspjela</string>
     <string name="downloads">Preuzimanja</string>
     <string name="download_queue">Popis preuzimanja</string>
@@ -407,7 +406,6 @@
     <string name="recent_updates">Nedavna ažuriranja</string>
     <string name="newly_added">Novo dodani</string>
     <string name="recents">Nedavni</string>
-    <string name="show_notification_error">Prikaži obavijest za greške</string>
     <string name="auto_refresh_covers_summary">Također osvježi naslovnice u biblioteci prilikom aktualiziranja biblioteke</string>
     <string name="auto_refresh_covers">Automatski osvježi naslovnice</string>
     <string name="include_in_global_update">Uključi u globalno ažuriranje</string>
@@ -563,9 +561,6 @@
     </plurals>
     <string name="source_migration_guide">Vodič za migraciju izvora</string>
     <string name="nsfw_sources">Izvori neprikladnog sadržaja (18+)</string>
-    <string name="show_in_sources">Pokaži u popisu izvora</string>
-    <string name="show_in_extensions">Pokaži u popisu dodataka</string>
-    <string name="label_in_extensions">Oznaka u popisu dodataka</string>
     <string name="does_not_prevent_unofficial_nsfw">To ne sprečava neslužbene ili potencijalno krivo označene dodatke prikazati neprikladan sadržaj (18+) unutar aplikacije.</string>
     <string name="whats_new">Što je novo</string>
     <string name="file_picker_error">Nije pronađen nijedan program za biranje datoteka</string>
@@ -580,7 +575,6 @@
     <string name="crash_log_saved">Zapisi rušenja programa su spremljeni</string>
     <string name="updated_to_">Aktualizirano na v%1$s</string>
     <string name="download_unread">Preuzmi nepročitane</string>
-    <string name="logout">Odjava</string>
     <string name="backup_in_progress">Spremanje sigurnosne kopije je već u tijeku</string>
     <string name="restore_in_progress">Obnavljanje je već u tijeku</string>
     <string name="pressing_back_to_start">Pritisni gumb za natrag za vraćanje na početak</string>
@@ -668,7 +662,6 @@
     <string name="migration">Migracija</string>
     <string name="source_migration">Migracija izvora</string>
     <string name="select_sources">Odaberi izvore</string>
-    <string name="suggested_date_">Predloženi datum: %1$s</string>
     <string name="remember_this_choice">Zapamti ovaj izbor</string>
     <string name="must_be_in_library_to_edit">Za uređivanje se manga mora nalaziti u tvojoj biblioteci</string>
     <string name="reset_tags">Obnovi oznake</string>
@@ -720,7 +713,6 @@
     <string name="downloading_">Preuzima se: %1$s</string>
     <string name="successfully_logged_in">Prijava uspjela</string>
     <string name="username_must_not_be_blank">Korisničko ime ili lozinka ne smiju biti prazni</string>
-    <string name="logout_from_">Odjaviti se iz %1$s\?</string>
     <string name="whats_new_this_release">Novosti u ovom izdanju</string>
     <string name="you_can_migrate_in_library">Migrirati možeš i putem biranja mange u tvojoj biblioteci</string>
     <string name="migration_sources_changed">Izvori migracije su se promijenili</string>
@@ -848,7 +840,6 @@
 \nNa sljedećem ekranu aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
     <string name="all_files_permission_required">Potrebna su dopuštenja za pristup datotekama</string>
     <string name="global_updates">Globalna ažuriranja</string>
-    <string name="checking_for_new_chapters">Traženje novih poglavlja</string>
     <string name="open_random_series">Otvaranje slučajne serije</string>
     <string name="show_number_of_items">Prikaži broj elemenata</string>
     <string name="update_completed">Aktualiziranje je dovršeno</string>

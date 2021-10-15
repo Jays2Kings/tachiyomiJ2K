@@ -167,7 +167,6 @@
     <string name="log_in_to_">Log masuk untuk %1$s</string>
     <string name="username">Nama pengguna</string>
     <string name="password">Kata laluan</string>
-    <string name="login">Log masuk</string>
     <string name="successfully_logged_in">Log masuk berjaya</string>
     <string name="unknown_error">Ralat tidak diketahui</string>
     <string name="local">lokal</string>
@@ -428,7 +427,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Ini akan membuang tarikh bacaan bagi \"%1$s\". Anda pasti\?</string>
     <string name="newly_added">Baharu di</string>
     <string name="recents">Baru</string>
-    <string name="show_notification_error">Tunjukkan pemberitahuan untuk ralat</string>
     <string name="auto_refresh_covers_summary">Segar semula covers di pustaka juga apabila mengemas kini pustaka</string>
     <string name="auto_refresh_covers">Segar semula covers secara</string>
     <string name="include_in_global_update">Termasuk dalam kemas kini</string>
@@ -469,8 +467,6 @@
     <string name="not_downloaded">Tidak di muat</string>
     <string name="downloading_">Memuat turun: %1$s</string>
     <string name="username_must_not_be_blank">Nama pengguna atau kata laluan tidak boleh</string>
-    <string name="logout_from_">Log keluar daripada %1$s\?</string>
-    <string name="logout">Log keluar</string>
     <string name="whats_new">Apa yang terbaharu</string>
     <string name="you_can_migrate_in_library">Anda juga boleh pindah dengan memilih manga di pustaka</string>
     <string name="migration_sources_changed">Sumber perpindahan di</string>
@@ -618,9 +614,6 @@
     <string name="no_chapters_error">Tiada bab dijumpai</string>
     <string name="source_migration_guide">Panduan memindahkan sumber</string>
     <string name="nsfw_sources">Sumber NSFW (18+)</string>
-    <string name="show_in_sources">Tunjuk dalam senarai sumber</string>
-    <string name="show_in_extensions">Tunjuk dalam senarai sambungan</string>
-    <string name="label_in_extensions">Label dalam senarai</string>
     <string name="does_not_prevent_unofficial_nsfw">Ini tidak menghalang sambungan yang tidak rasmi atau berpotensi tidak menggunakan tetapan yang betul daripada menayangkan kandungan 18+ tahun keatas dalam aplikasi.</string>
     <string name="badges">Penanda</string>
     <string name="l_nav">Bentuk L</string>
@@ -673,7 +666,6 @@
     <string name="updated_to_">Dikemaskini ke v%1$s</string>
     <string name="hide_bottom_nav">Auto-sembunyi navigasi bawah</string>
     <string name="last_used_library_recents">Akhir digunakan (Pustaka atau Terkini)</string>
-    <string name="suggested_date_">Tarikh cadangan: %1$s</string>
     <string name="custom_manga_info">Maklumat manga tersuai</string>
     <string name="mark_all_chapters_as_unread">Tanda semua bab sebagai belum dibaca\?</string>
     <string name="ignore_cutout_areas">Abai kawasan bertakuk</string>
@@ -813,6 +805,6 @@
     <string name="hide_notification_content">Sembunyikan kandungan pemberitahuan</string>
     <string name="about_dont_kill_my_app">Sesetengah pengeluar ada sekatan tambahan pada aplikasi yang akan menghentikan perkidmatan latar belakang. Laman web ini ada maklumat cara membaikinya.</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">Ada %d bab yang hilang</item>
+        <item quantity="other">Melangkau %d bab, sama ada sumber tidak mempunyai bab tersebut, atau ia ditapis keluar</item>
     </plurals>
 </resources>

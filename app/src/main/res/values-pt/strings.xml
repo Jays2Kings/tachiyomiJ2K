@@ -127,7 +127,6 @@
     <string name="log_in_to_">Iniciar sessão para %1$s</string>
     <string name="username">Nome de utilizador</string>
     <string name="password">Palavra-passe</string>
-    <string name="login">Iniciar sessão</string>
     <string name="successfully_logged_in">Início de sessão bem sucedido</string>
     <string name="unknown_error">Erro desconhecido</string>
     <!-- Library fragment -->
@@ -497,9 +496,6 @@
     </plurals>
     <string name="source_migration_guide">Guia de migração de fonte</string>
     <string name="nsfw_sources">Conteúdo 18+ (NSFW)</string>
-    <string name="show_in_sources">Mostrar na lista de fontes</string>
-    <string name="show_in_extensions">Mostrar na lista de extensões</string>
-    <string name="label_in_extensions">Nome na lista de extensões</string>
     <string name="does_not_prevent_unofficial_nsfw">Isto não impede que extensões não oficiais ou potencialmente marcadas de forma incorreta surjam com conteúdos de NSFW (18+) dentro da aplicação.</string>
     <string name="whats_new">Novidades</string>
     <string name="file_picker_error">Não foi encontrada app de selecção de ficheiros</string>
@@ -533,7 +529,6 @@
     <string name="category">Categoria</string>
     <string name="back_to_start">Voltar para o início</string>
     <string name="pressing_back_to_start">Pressionar voltar para o ecrã inicial</string>
-    <string name="show_notification_error">Mostrar uma notificação para erros</string>
     <string name="auto_refresh_covers_summary">Atualizar também capas na biblioteca ao atualizar a biblioteca</string>
     <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
     <string name="include_in_global_update">Incluir na atualização global</string>
@@ -569,7 +564,6 @@
     <string name="source_not_installed">Fonte não instalada</string>
     <string name="in_library">Na Biblioteca</string>
     <string name="add_to_library">Adicionar à Biblioteca</string>
-    <string name="logout">Terminar sessão</string>
     <string name="restore_in_progress">Restauro em progresso</string>
     <string name="backup_in_progress">Cópia de segurança em progresso</string>
     <string name="disabled">Desativado</string>
@@ -625,7 +619,6 @@
     <string name="not_downloaded">Não descarregado</string>
     <string name="downloading_">A descarregar: %1$s</string>
     <string name="username_must_not_be_blank">Utilizador ou palavra-passe não podem estar em branco</string>
-    <string name="logout_from_">Sair de %1$s\?</string>
     <string name="whats_new_this_release">O que há de novo neste lançamento</string>
     <string name="you_can_migrate_in_library">Também pode migrar a selecionar mangá na sua biblioteca</string>
     <string name="migration_sources_changed">Fontes de migração alteradas</string>
@@ -709,7 +702,6 @@
     <string name="skip_pre_migration">Pular pré-migração</string>
     <string name="migration">Migração</string>
     <string name="select_sources">Selecionar fontes</string>
-    <string name="suggested_date_">Data sugerida: %1$s</string>
     <string name="remove_tracking_from_">Também remover de %1$s</string>
     <string name="remove_tracking">Remover monitoramento da app</string>
     <string name="not_tracked">Não monitorado</string>
@@ -908,7 +900,6 @@
     <string name="extension_updates_pending">Atualizações de extensão pendentes</string>
     <string name="global_updates">Atualizações globais</string>
     <string name="restrictions_">Restrições: %1$s</string>
-    <string name="checking_for_new_chapters">Verificar por novos capítulos</string>
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar a quantidade de itens</string>
     <string name="update_completed">Atualização completa</string>

@@ -158,7 +158,6 @@
     <string name="newest">Legújabb</string>
     <string name="oldest">Legrégebbi</string>
     <string name="last_read_chapter">Utoljára olvasott fejezet</string>
-    <string name="login">Bejelentkezés</string>
     <string name="untrusted_extension">Nem megbízható bővítmény</string>
     <string name="obsolete_extension_message">Ez a bővítmény nem elérhető többé.</string>
     <string name="date_added">Dátum hozzáadva</string>
@@ -178,8 +177,6 @@
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Nem hivatalos</string>
     <string name="nsfw_sources">NSFW (18+) források</string>
-    <string name="show_in_sources">Megjelenítés a forráslistában</string>
-    <string name="show_in_extensions">Megjelenítés a bővítménylistában</string>
     <string name="open_log">Napló megnyitása</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategória</item>
@@ -301,7 +298,6 @@
     <string name="none">Semmi</string>
     <string name="secure_screen">Biztonságos képernyő</string>
     <string name="lock_when_idle">Zárás tétlen állapotban</string>
-    <string name="logout">Kijelentkezés</string>
     <string name="browse">Böngészés</string>
     <string name="cancel_all_for_series">Mégse az összesre a sorozatból</string>
     <string name="webtoon_side_padding_0">Semennyi</string>

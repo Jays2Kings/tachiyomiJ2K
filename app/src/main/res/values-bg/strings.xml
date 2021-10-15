@@ -10,7 +10,7 @@
     <string name="filter">Филтрирай</string>
     <string name="downloaded">Изтеглени</string>
     <string name="bookmarked">Отбелязани</string>
-    <string name="unread">Непрочетени</string>
+    <string name="unread">Непрочетена</string>
     <string name="read">Прочетени</string>
     <string name="alphabetically">Азбучен ред</string>
     <string name="last_read">Последно четене</string>
@@ -151,7 +151,6 @@
     <string name="log_in_to_">Влизане в %1$s</string>
     <string name="username">Потребителско име</string>
     <string name="password">Парола</string>
-    <string name="login">Влез</string>
     <string name="successfully_logged_in">Влизане успешно</string>
     <string name="unknown_error">Неизвестна грешка</string>
     <!-- Library fragment -->
@@ -174,7 +173,7 @@
     <string name="all_chapters">Изтегли всички глави</string>
     <string name="all_unread_chapters">Изтегли непрочетени глави</string>
     <!-- MyAnimeList fragment -->
-    <string name="reading">В прочит</string>
+    <string name="reading">Чета</string>
     <string name="completed">Завършена</string>
     <string name="dropped">Изоставена</string>
     <string name="on_hold">На заден план</string>
@@ -388,14 +387,14 @@
     <string name="default_reading_mode">Режим на четене по подразбиране</string>
     <string name="no_chapters_error">Не са намерени глави</string>
     <string name="does_not_prevent_unofficial_nsfw">Тази настройка няма да спре неофициални или потенциално неправилно маркирани разширения да позволяват достъп до съдържание за възрастни (18+) в апликацията.</string>
-    <string name="whats_new">Какво е ново</string>
+    <string name="whats_new">Какво е новото</string>
     <string name="badges">Значки</string>
     <string name="last_used">Последно използвани</string>
     <string name="unofficial_extension_message">Това разширение не е част от официалните разширения на Тачийоми.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Неофициален</string>
     <string name="animate_page_transitions">Анимирани преходи</string>
-    <string name="none">Без</string>
+    <string name="none">Никоя</string>
     <string name="locale">Език</string>
     <string name="automatic_backups">Автоматично запазване</string>
     <string name="invalid_backup_file">Невалиден резервен файл</string>
@@ -465,4 +464,27 @@
     <string name="previous_chapter">Предишна глава</string>
     <string name="hide_app_block_screenshots">Скрий съдържанието на приложението и блокирай скрийншотове</string>
     <string name="label_global_search">Глобално търсене</string>
+    <string name="crash_log_saved">Записите са запазени</string>
+    <string name="cover_saved">Корицата запазена</string>
+    <string name="restore_miui_warning">Съхраняването/възстановяването може да не функционира правилно, ако MIUI Optimization е изключено.</string>
+    <string name="help_translate">Помогни с превода</string>
+    <string name="secure_screen">Сигурност</string>
+    <string name="edge_nav">Край</string>
+    <string name="right_and_left_nav">Дясно и Ляво</string>
+    <string name="error_saving_cover">Грешка при запазването на корицата</string>
+    <string name="source_unsupported">Източникът не се поддържа</string>
+    <string name="cancel_all_for_series">Премахни всичко от тази серия</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Има 1 липсваща глава</item>
+        <item quantity="other">Има %d липсващи глави</item>
+    </plurals>
+    <string name="l_nav">L-образно</string>
+    <string name="kindlish_nav">Kindle-подобно</string>
+    <string name="invalid_backup_file_type">Невалиден тип на файла: %1$s
+\nТрябва да завършва на .proto.gz или .json.</string>
+    <string name="requires_app_restart">Изисква рестартиране, за да влезе в сила</string>
+    <string name="about_dont_kill_my_app">Някои производители ограничават приложенията, за да убият задноплановите услуги. Следният уебсайт съдържа информация за разрешаването на проблема.</string>
+    <string name="error_sharing_cover">Грешка при споделянето на корицата</string>
+    <string name="file_picker_error">Не бе намерено приложение за подбор на файлове</string>
+    <string name="getting_started_guide">Първи стъпки</string>
 </resources>

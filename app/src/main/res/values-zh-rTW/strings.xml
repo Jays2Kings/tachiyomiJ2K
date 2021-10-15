@@ -136,7 +136,6 @@
     <string name="check_for_updates">檢查更新</string>
     <string name="send_crash_report">傳送錯誤報告</string>
     <string name="password">密碼</string>
-    <string name="login">登入</string>
     <string name="successfully_logged_in">登入成功</string>
     <string name="added_to_library">已收藏至書櫃</string>
     <string name="removed_from_library">已從書櫃中移除</string>
@@ -266,7 +265,7 @@
     <string name="refresh_tracking_metadata">更新閱讀歷程</string>
     <string name="updates_tracking_details">與歷程平台同步處理閱讀狀態、評分以及進度</string>
     <string name="latest">新上架</string>
-    <string name="reading">翻閱</string>
+    <string name="reading">閱讀中</string>
     <string name="plan_to_read">準備讀</string>
     <string name="rereading">重溫中</string>
     <string name="started">創刊</string>
@@ -408,9 +407,6 @@
     <string name="none">無</string>
     <string name="source_migration_guide">來源遷移說明</string>
     <string name="nsfw_sources">未滿十八歲之人不宜瀏覽的來源</string>
-    <string name="show_in_sources">在來源清單中顯示</string>
-    <string name="show_in_extensions">在擴充套件清單中顯示</string>
-    <string name="label_in_extensions">在擴充套件清單中標幟</string>
     <string name="does_not_prevent_unofficial_nsfw">即使啟用監護限制，還是可能有漏網之魚。使用者仍可藉由非官方或未正確標幟的擴充套件在本應用程式中瀏覽未滿十八歲之人不宜觀賞的內容。</string>
     <string name="whats_new">更新日誌</string>
     <string name="file_picker_error">找不到檔案選擇器</string>
@@ -440,7 +436,6 @@
     <string name="in_library">在書櫃中</string>
     <string name="add_to_library">加入書櫃</string>
     <string name="unknown_status">連載狀態不明</string>
-    <string name="logout">登出</string>
     <string name="restore_in_progress">還原已在進行</string>
     <string name="backup_in_progress">備份已在進行</string>
     <string name="hide_notification_content">隱藏通知內容</string>
@@ -504,6 +499,6 @@
     <string name="getting_started_guide">入門指南</string>
     <string name="help_translate">協助翻譯</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">此處有 %d 篇章節散佚</item>
+        <item quantity="other">略過了 %d 章，也許是來源沒有這些章節，或其已被你的篩選規則排除</item>
     </plurals>
 </resources>

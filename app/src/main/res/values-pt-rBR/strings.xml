@@ -155,7 +155,6 @@
     <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
     <string name="auto_refresh_covers_summary">Atualizar capas na biblioteca também 
         ao atualizar a biblioteca</string>
-    <string name="show_notification_error">Mostrar uma notificação para erros</string>
     <!-- Recents -->
     <string name="recents">Recentes</string>
     <string name="updates">Atualizações</string>
@@ -497,8 +496,6 @@
     <string name="username">Nome de usuário</string>
     <string name="email">Endereço de email</string>
     <string name="password">Senha</string>
-    <string name="login">Fazer login</string>
-    <string name="logout">Desconectar</string>
     <string name="successfully_logged_in">Conectado com sucesso</string>
     <string name="successfully_logged_out">Agora você está desconectado</string>
     <!-- Downloads -->
@@ -657,7 +654,6 @@
     <string name="mark_previous_as_unread">Marcar capítulos anteriores como não lidos</string>
     <string name="download_unread">Baixar não lidos</string>
     <string name="username_must_not_be_blank">Usuário ou senha não podem estar em branco</string>
-    <string name="logout_from_">Sair de %1$s\?</string>
     <string name="migration_sources_changed">Fontes de migração alteradas</string>
     <string name="delete_all_covers__not_in_library_used_">Exclui todas as capas em cache fora da sua biblioteca.
 \nAtualmente usando: %1$s</string>
@@ -720,9 +716,6 @@
     </plurals>
     <string name="source_migration_guide">Guia de migração de fonte</string>
     <string name="nsfw_sources">Fontes NSFW (+18)</string>
-    <string name="show_in_sources">Mostrar na lista de fontes</string>
-    <string name="show_in_extensions">Mostrar na lista de extensões</string>
-    <string name="label_in_extensions">Rotular na lista de extensões</string>
     <string name="does_not_prevent_unofficial_nsfw">Isso não impede que extensões não oficiais ou potencialmente sinalizadas de maneira incorreta apresentem conteúdo NSFW (+18) no aplicativo.</string>
     <string name="file_picker_error">Nenhum aplicativo de seleção de arquivos encontrado</string>
     <string name="next">Próxima</string>
@@ -761,7 +754,6 @@
     <string name="category_hopper_long_press">Ação ao pressionar e segurar o seletor de categoria</string>
     <string name="when_grouping_by_sources_tags">Ao agrupar a biblioteca por: fontes, estados etc.</string>
     <string name="no_pages_found">Nenhuma página encontrada</string>
-    <string name="suggested_date_">Data sugerida: %1$s</string>
     <string name="custom_manga_info">Informações de mangá personalizada</string>
     <string name="mark_all_chapters_as_unread">Marcar todos os capítulos como não lidos\?</string>
     <string name="selection">Seleção</string>
@@ -888,7 +880,6 @@
     </plurals>
     <string name="could_not_install_extension">Não foi possível instalar a extensão</string>
     <string name="global_updates">Atualizações globais</string>
-    <string name="checking_for_new_chapters">Verificar por novos capítulos</string>
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
@@ -952,8 +943,8 @@
     <string name="no_matches_for_filters_short">Sem resultados para os filtros escolhidos</string>
     <string name="show_categories_while_filtering">Mostrar categorias vazias enquanto filtra</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Existe 1 capítulo faltando</item>
-        <item quantity="other">Existem %d capítulos faltando</item>
+        <item quantity="one">Pulando %d capítulo, ou ele está faltando na fonte, ou ele foi filtrado</item>
+        <item quantity="other">Pulando %d capítulos, ou eles estão faltando na fonte, ou eles foram filtrados</item>
     </plurals>
     <string name="force_download_cache_refresh_summary">Isso irá forçar o cache de download á recalcular. Útil se você modificou downloads fora do aplicativo e quer que ele seja selecionado novamente pelo aplicativo</string>
     <string name="use_side_navigation">Usar navegação lateral</string>

@@ -190,7 +190,6 @@
     <string name="log_in_to_">Авторизація для %1$s</string>
     <string name="username">Ім`я користувача</string>
     <string name="password">Пароль</string>
-    <string name="login">Логін</string>
     <string name="successfully_logged_in">Вхід успішний</string>
     <string name="unknown_error">Невідома помилка</string>
     <string name="local">Локальна</string>
@@ -421,7 +420,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Це видалить дату прочитання для \"%1$s\". Ви впевнені\?</string>
     <string name="newly_added">Свіжо додані</string>
     <string name="recents">Останні</string>
-    <string name="show_notification_error">Показувати сповіщення при помилках</string>
     <string name="auto_refresh_covers_summary">Оновлювати обкладинки при оновленні бібліотеки</string>
     <string name="auto_refresh_covers">Автоматично оновлювати обкладинки</string>
     <string name="include_in_global_update">Включити до глобального оновлення</string>
@@ -642,8 +640,6 @@
     <string name="not_downloaded">Не завантажено</string>
     <string name="downloading_">Завантаження: %1$s</string>
     <string name="username_must_not_be_blank">Ім`я користувача чи пароль не можуть бути порожніми</string>
-    <string name="logout_from_">Вийти з %1$s\?</string>
-    <string name="logout">Вихід</string>
     <string name="whats_new">Що новенького</string>
     <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши мангу з вашої бібліотеки</string>
     <string name="badges">Значки</string>
@@ -696,9 +692,6 @@
     </plurals>
     <string name="source_migration_guide">Гайд по міграції джерел</string>
     <string name="nsfw_sources">NSFW (18+) джерела</string>
-    <string name="show_in_sources">Показувати в списку джерел</string>
-    <string name="show_in_extensions">Показувати в списку розширень</string>
-    <string name="label_in_extensions">Мітка в списку розширень</string>
     <string name="does_not_prevent_unofficial_nsfw">Це не заважає неофіційним або потенційно невірним розширенням розміщувати вміст NSFW (18+) у додатку.</string>
     <string name="file_picker_error">Додаток вибору файлів не знайдено</string>
     <string name="backup_and_restore">Бекап та відновлення</string>
@@ -721,4 +714,5 @@
     <string name="portrait">Портретна</string>
     <string name="name">Ім\'я</string>
     <string name="getting_started_guide">Посібник з початку роботи</string>
+    <string name="help_translate">Допомогти з перекладом</string>
 </resources>

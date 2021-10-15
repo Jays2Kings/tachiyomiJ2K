@@ -242,8 +242,6 @@
     <string name="second_to_last">Юлашкинчен маларахри</string>
     <string name="last_read_chapter">Юлашки вуланӑ сыпăк</string>
     <string name="downloading">Тиенет…</string>
-    <string name="logout">Тух</string>
-    <string name="login">Кӗр</string>
     <string name="password">Кӗме сӑмах</string>
     <string name="email">Ылӑккӑтрунлӑ пуштӑ тӗлӗ</string>
     <string name="username">Усӑҫ ячӗ</string>
@@ -399,9 +397,6 @@
     </plurals>
     <string name="source_migration_guide">Ҫӑл куҫ куҫарассипе пулӑшу</string>
     <string name="nsfw_sources">NSFW (18+) шалаш</string>
-    <string name="show_in_sources">Ҫӑл куҫсен ят-йышра кӑтарт</string>
-    <string name="show_in_extensions">Хушмасен ят-йышра кӑтарт</string>
-    <string name="label_in_extensions">Хушмасен ят-йышра карт</string>
     <string name="does_not_prevent_unofficial_nsfw">Ҫакӑ хушӑмра официаллӑ мар е тӗрӗс мар палӑртнӑ хушмасен NSFW (18+) шалашне кӑтартма чӑрмантармасть.</string>
     <string name="file_picker_error">Файлсене суйламалли хушӑм тупӑнман</string>
     <string name="no_chapters_error">Сыпӑксем ҫук</string>
