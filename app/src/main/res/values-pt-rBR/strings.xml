@@ -962,4 +962,17 @@
     <string name="yotsuba">Yotsuba</string>
     <string name="a_calmer_you">Mais calmo (dinâmico)</string>
     <string name="a_brighter_you">Um brilho mais claro (dinâmico)</string>
+    <string name="use_suggested_date">Usar data sugerida</string>
+    <string name="log_out">Sair</string>
+    <string name="details_page">Página de detalhes</string>
+    <string name="theme_buttons_based_on_cover">Tema dos botões baseado na capa</string>
+    <string name="show_in_sources_and_extensions">Mostrar nas fontes e na lista de extensões</string>
+    <string name="keep_in_">Manter em %1$s</string>
+    <string name="log_in">Entrar</string>
+    <string name="log_out_from_">Sair de %1$s\?</string>
+    <string name="remove_from_">Remover de %1$s</string>
+    <string name="filter_groups">filtrar grupos de scanlators</string>
+    <string name="cannot_remove_tracking_while_offline">Monitorador não pode ser removido do %1$s enquanto offiline</string>
+    <string name="notification_size_warning">Grandes atualizações podem levar ao aumento do uso da bateria e as fontes a ficarem lentas</string>
+    <string name="channel_errors">Erros</string>
 </resources>
