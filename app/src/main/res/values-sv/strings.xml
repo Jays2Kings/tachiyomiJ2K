@@ -853,7 +853,7 @@
     <string name="all_files_permission_required">Filbehörigheter krävs</string>
     <string name="orientation">Orientering</string>
     <string name="default_orientation">Standardorientering</string>
-    <string name="restore_miui_warning">MIUI-optimering måste vara aktiverad för att återställningen ska fungera korrekt.</string>
+    <string name="restore_miui_warning">Säkerhetskopiering/återställning kanske inte fungerar korrekt om MIUI-optimering är inaktiverat.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="set_as_default">Ange som standard</string>
@@ -906,4 +906,26 @@
     <string name="use_side_navigation">Använd sidnavigering</string>
     <string name="appearance">Utseende</string>
     <string name="remove_x_from_service_and_add_y">Ta bort %1$s från %2$s och lägg till %3$s</string>
+    <string name="notification_size_warning">Stora uppdateringar kan leda till ökad batterianvändning och att källor blir långsammare</string>
+    <string name="log_out">Logga ut</string>
+    <string name="remove_from_">Ta bort från %1$s</string>
+    <string name="some_extensions_may_not_update">Vissa tillägg uppdateras kanske inte automatiskt om de är installerade utanför appen</string>
+    <string name="keep_in_">Behåll i %1$s</string>
+    <string name="details_page">Informations sida</string>
+    <string name="theme_buttons_based_on_cover">Temaknappar baserade på omslag</string>
+    <string name="show_in_sources_and_extensions">Visa i källor och tilläggslistor</string>
+    <string name="log_in">Logga in</string>
+    <string name="log_out_from_">Logga ut från %1$s\?</string>
+    <string name="filter_groups">Filtrera översättningsgrupp</string>
+    <string name="sapphire_dusk">Safirskymning</string>
+    <string name="helpful_translation_links">Användbara översättningslänkar</string>
+    <string name="select_an_entry">Välj ett objekt</string>
+    <string name="remove_previous_tracker">Ta bort förregående spårare\?</string>
+    <string name="keep_both_on_service">Behåll båda på %1$s och ersätt bara lokalt</string>
+    <string name="cannot_remove_tracking_while_offline">Spårare kan inte tas bort från %1$s medans du är offline</string>
+    <string name="use_suggested_date">Använd föreslaget datum</string>
+    <string name="channel_errors">Fel</string>
+    <string name="teal_ocean">Turkos Hav</string>
+    <string name="scanlators">Skanner &amp; översättare</string>
+    <string name="by_default_side_nav_info">Som standard används sidnavigering för vissa telefoner och små surfplattor i liggande läge och visas alltid på större surfplattor</string>
 </resources>

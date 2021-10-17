@@ -528,7 +528,7 @@
     <string name="clear_tags">タグを全消去</string>
     <string name="reset_tags">タグをリセット</string>
     <string name="reading_mode">ビューアモード</string>
-    <string name="display_buttons_bottom_reader">リーダー下のボタン</string>
+    <string name="display_buttons_bottom_reader">ビューア下のボタン</string>
     <string name="page_preload_amount">プリロードするページの数</string>
     <string name="sort_by">ソート順</string>
     <string name="preview">プレビュー</string>

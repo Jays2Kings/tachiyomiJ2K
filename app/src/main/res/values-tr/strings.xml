@@ -909,8 +909,8 @@
     <string name="teal_ocean">Mavi Okyanus</string>
     <string name="appearance">Görünüm</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 eksik bölüm var</item>
-        <item quantity="other">%d eksik bölüm var</item>
+        <item quantity="one">1 bölüm atlanıyor, ya kaynakta yok ya da filtrelenmiş</item>
+        <item quantity="other">%d bölüm atlanıyor, ya kaynakta yok ya da filtrelenmiş</item>
     </plurals>
     <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
     <string name="help_translate">Çeviriye yardım edin</string>
@@ -928,4 +928,5 @@
     <string name="channel_errors">Hatalar</string>
     <string name="notification_size_warning">Büyük güncellemeler pil kullanımının artmasına ve kaynakların yavaşlamasına neden olabilir</string>
     <string name="show_in_sources_and_extensions">Kaynaklar ve uzantılar listesinde göster</string>
+    <string name="show_outline_around_covers">Kapakların etrafında anahattı göster</string>
 </resources>

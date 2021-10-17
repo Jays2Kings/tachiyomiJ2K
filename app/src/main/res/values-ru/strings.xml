@@ -55,7 +55,7 @@
     <string name="view_chapters">Посмотреть главы</string>
     <string name="back">Назад</string>
     <string name="forward">Вперёд</string>
-    <string name="all">Все</string>
+    <string name="all">Объединить</string>
     <string name="amoled_black">AMOLED чёрная</string>
     <string name="backup">Резервная копия</string>
     <string name="what_should_backup">Что вы хотите добавить в резервную копию\?</string>
@@ -189,10 +189,10 @@
     <string name="author">Автор</string>
     <string name="status">Статус</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d манга перемещена</item>
-        <item quantity="few">%d манги перемещено</item>
-        <item quantity="many">%d манг перемещено</item>
-        <item quantity="other">%d манг перемещено</item>
+        <item quantity="one">%d комикс перемещён</item>
+        <item quantity="few">%d комикса перемещено</item>
+        <item quantity="many">%d комиксов перемещено</item>
+        <item quantity="other">%d комиксов перемещено</item>
     </plurals>
     <string name="removed_from_library">Удалено из библиотеки</string>
     <string name="migrating_to">Мигрировать в</string>
@@ -379,7 +379,7 @@
     <string name="left">Слева</string>
     <string name="right">Справа</string>
     <!-- Manga Type -->
-    <string name="manga">Комикс</string>
+    <string name="manga">Манга</string>
     <string name="manhwa">Манхва</string>
     <string name="manhua">Маньхуа</string>
     <string name="comic">Комикс</string>
@@ -795,7 +795,7 @@
         <item quantity="other">%1$d страниц</item>
     </plurals>
     <string name="automatic_orientation">Автоматически (на основе ориентации)</string>
-    <string name="automatic_can_still_switch">При использовании автоматической схемы страницы, вы всё ещё можете переключиться между схемами, когда читаете, не измененяя этой настройки</string>
+    <string name="automatic_can_still_switch">При использовании автоматической схемы страницы, вы всё ещё можете переключиться между схемами, когда читаете, не изменяя этой настройки</string>
     <string name="page_layout">Схема страницы</string>
     <string name="switch_to_single">Переключиться на одну страницу</string>
     <string name="switch_to_double">Переключиться на двойные страницы</string>
@@ -832,7 +832,7 @@
     <string name="share_combined_pages">Поделиться объединёнными страницами</string>
     <string name="pages_">Страницы %1$s</string>
     <string name="couldnt_download_low_space">Невозможно загрузить главы из-за нехватки места на диске</string>
-    <string name="show_read_chapters_all">Показывать прочитанные главы в \"Группировать\" и \"Всё\"</string>
+    <string name="show_read_chapters_all">Показывать прочитанные главы в \"Группировать\" и \"Объединить\"</string>
     <string name="when_grouping_by_sources_tags">При группировке библиотеки по источникам, статусу, и т.д.</string>
     <string name="move_dynamic_to_bottom">Переместить свёрнутые категории вниз</string>
     <string name="clear_filters">Сбросить фильтры</string>
@@ -1004,4 +1004,5 @@
     <string name="channel_errors">Ошибки</string>
     <string name="notification_size_warning">Большие обновления, могут привести, к повышенному расходу батареи и замедлению работы источников</string>
     <string name="show_in_sources_and_extensions">Показать в списке источников и расширений</string>
+    <string name="show_outline_around_covers">Показать контур вокруг обложек</string>
 </resources>

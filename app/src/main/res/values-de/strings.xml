@@ -959,8 +959,9 @@
     <string name="remove_from_">Von %1$s entfernen</string>
     <string name="cannot_remove_tracking_while_offline">Tracker kann nicht von %1$s entfernt werden, während du offline bist</string>
     <string name="keep_in_">In %1$s behalten</string>
-    <string name="scanlators">Scanlator</string>
+    <string name="scanlators">Scanlatoren</string>
     <string name="channel_errors">Fehler</string>
     <string name="notification_size_warning">Große Aktualisierungen könnten zu einem höheren Akkuverbrauch und langsameren Quellen führen</string>
     <string name="show_in_sources_and_extensions">In Quellen- und Erweiterungslisten anzeigen</string>
+    <string name="show_outline_around_covers">Rahmen um Cover anzeigen</string>
 </resources>

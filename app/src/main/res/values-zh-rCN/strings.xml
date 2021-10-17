@@ -905,4 +905,5 @@
     <string name="channel_errors">错误</string>
     <string name="notification_size_warning">大型更新可能会导致电池使用量增加和来源变慢</string>
     <string name="show_in_sources_and_extensions">显示在图源和扩展列表中</string>
+    <string name="show_outline_around_covers">显示封面图轮廓</string>
 </resources>

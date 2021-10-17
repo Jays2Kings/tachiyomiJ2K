@@ -885,7 +885,7 @@
     <string name="name">Nama</string>
     <string name="getting_started_guide">Panduan awal mulai</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">Terdapat %d chapter hilang</item>
+        <item quantity="other">Melewati %d chapter, diantara sumber menghilangkannya atau telah disaringkan</item>
     </plurals>
     <string name="help_translate">Bantu terjemahkan</string>
     <string name="helpful_translation_links">Tautan terjemahan yang membantu</string>
@@ -904,4 +904,7 @@
     <string name="log_in">Masuk</string>
     <string name="log_out">Keluar</string>
     <string name="keep_in_">Simpan di dalam %1$s</string>
+    <string name="show_in_sources_and_extensions">Tampilkan di sumber dan daftar ekstensi</string>
+    <string name="notification_size_warning">Pembaruan berskala besar dapat meningkatkan penggunaan baterai dan sumber menjadi lambat</string>
+    <string name="show_outline_around_covers">Tampilkan garis di sekitar sampul</string>
 </resources>

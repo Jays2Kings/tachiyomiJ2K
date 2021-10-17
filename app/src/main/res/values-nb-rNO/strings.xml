@@ -916,4 +916,18 @@
     <string name="you_can_migrate_in_library">Du kan også flytte ved å velge manga i biblioteket ditt</string>
     <string name="migration_sources_changed">Flyttingskilder endret</string>
     <string name="use_last_saved_migration_preferences">Bruk sist lagrede forhåndsflyttingsinnstillinger og kilder for å mengdeflytte</string>
+    <string name="notification_size_warning">Store oppdateringer kan lede til økt batteribruk og tregere kilder</string>
+    <string name="log_out">Logg ut</string>
+    <string name="log_out_from_">Logg ut fra %1$s\?</string>
+    <string name="keep_in_">Behold i %1$s</string>
+    <string name="cannot_remove_tracking_while_offline">Sporer kan ikke fjernes fra %1$s når frakoblet</string>
+    <string name="scanlators">Skanningsoversettere</string>
+    <string name="channel_errors">Feil</string>
+    <string name="log_in">Logg inn</string>
+    <string name="show_outline_around_covers">Vis omriss rundt omslag</string>
+    <string name="use_suggested_date">Bruk foreslått dato</string>
+    <string name="details_page">Detaljside</string>
+    <string name="theme_buttons_based_on_cover">Knappedraktvalg basert på omslag</string>
+    <string name="remove_from_">Fjern fra %1$s</string>
+    <string name="show_in_sources_and_extensions">Vis i kilder og utvidelseslister</string>
 </resources>

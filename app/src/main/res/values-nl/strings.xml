@@ -126,7 +126,7 @@
     <string name="updates_tracking_details">Update status, score en laatst gelezen hoofdstuk van de tracking services</string>
     <string name="version">Versie</string>
     <string name="check_for_updates">Controleer op updates</string>
-    <string name="log_in_to_">Login voor %1$s</string>
+    <string name="log_in_to_">Inloggen bij %1$s</string>
     <string name="username">Gebruikersnaam</string>
     <string name="password">Wachtwoord</string>
     <string name="unknown_error">Onbekende fout</string>
@@ -260,7 +260,7 @@
     <string name="rereading">Herlezen</string>
     <string name="started">Gestart</string>
     <string name="type">Soort</string>
-    <string name="url_not_set_click_again">Manga url is niet ingesteld, klik alstublieft op de titel en selecteer de manga opnieuw</string>
+    <string name="url_not_set_click_again">Manga url is niet ingesteld, klik alsjeblieft op de titel en selecteer de manga opnieuw</string>
     <string name="finished_chapter">Afgerond:</string>
     <string name="current_chapter">Huidige:</string>
     <string name="next_title">Volgende:</string>
@@ -627,7 +627,7 @@
     <string name="none">Geen</string>
     <string name="started_reading_date">Datum begonnen met lezen</string>
     <string name="finished_reading_date">Datum klaar met lezen</string>
-    <string name="myanimelist_relogin">Log alstublieft opnieuw in op MAL</string>
+    <string name="myanimelist_relogin">Log alsjeblieft opnieuw in op MAL</string>
     <string name="no_chapters_error">Geen hoofdstukken gevonden</string>
     <string name="badges">Badges</string>
     <string name="open_log">Open log</string>
@@ -908,10 +908,25 @@
     <string name="restrictions_">Restricties: %1$s</string>
     <string name="show_categories_while_filtering">Laat lege categoriën zien tijdens het filteren</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Er is 1 missend hoofdstuk</item>
-        <item quantity="other">Er zijn %d missende hoofstukken</item>
+        <item quantity="one">1 hoofstuk wordt overgeslagen, mogelijk mist de bron deze of wordt deze eruit gefilterd</item>
+        <item quantity="other">"%d hoofstukken  worden overgeslagen, mogelijk missen de bronnen deze of worden deze eruit gefilterd"</item>
     </plurals>
     <string name="getting_started_guide">Gids voor beginners</string>
     <string name="help_translate">Help met vertalen</string>
     <string name="no_matches_for_filters_short">Geen resultaten voor uw filters</string>
+    <string name="notification_size_warning">Grote updates kunnen leiden tot een verhoogd batterijgebruik en trager werkende bronnen</string>
+    <string name="filter_groups">Filter scanlator-groepen</string>
+    <string name="use_suggested_date">Voorgestelde datum gebruiken</string>
+    <string name="show_outline_around_covers">Geef rand rond omslagen weer</string>
+    <string name="show_in_sources_and_extensions">Weergeven in bronnen- en extensielijst</string>
+    <string name="log_in">Log in</string>
+    <string name="log_out">Log uit</string>
+    <string name="log_out_from_">Uitloggen bij %1$s\?</string>
+    <string name="scanlators">Scanlators</string>
+    <string name="channel_errors">Foutmeldingen</string>
+    <string name="keep_in_">In %1$s laten</string>
+    <string name="cannot_remove_tracking_while_offline">Tracker kan niet van %1$s verwijderd worden wanneer je offline bent</string>
+    <string name="remove_from_">Verwijder uit %1$s</string>
+    <string name="details_page">Detailpagina</string>
+    <string name="theme_buttons_based_on_cover">Themaknoppen gebaseerd op de omslag</string>
 </resources>

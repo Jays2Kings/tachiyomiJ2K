@@ -959,4 +959,5 @@
     <string name="scanlators">Sanlations</string>
     <string name="notification_size_warning">Las actualizaciones grandes pueden implicar un mayor uso de la batería y a que las fuentes se vuelvan más lentas</string>
     <string name="show_in_sources_and_extensions">Mostrar en la lista de fuentes y extensiones</string>
+    <string name="show_outline_around_covers">Portadas con borde grueso</string>
 </resources>

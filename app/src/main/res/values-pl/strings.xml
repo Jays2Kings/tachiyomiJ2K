@@ -19,7 +19,7 @@
     <string name="description">Opis</string>
     <!-- Status -->
     <string name="ongoing">Nieukończone</string>
-    <string name="unknown">Nie wiadomo</string>
+    <string name="unknown">Nieznany</string>
     <string name="unknown_status">Nieznany status</string>
     <string name="licensed">Licencjonowane</string>
     <string name="completed">Ukończone</string>
@@ -1014,4 +1014,5 @@
     <string name="log_out_from_">Wylogować z %1$s\?</string>
     <string name="keep_in_">Zostaw w %1$s</string>
     <string name="show_in_sources_and_extensions">Pokazuj na liście źródeł i rozszerzeń</string>
+    <string name="notification_size_warning">Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł</string>
 </resources>

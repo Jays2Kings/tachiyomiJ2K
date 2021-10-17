@@ -962,4 +962,5 @@
     <string name="channel_errors">Erreurs</string>
     <string name="notification_size_warning">Les mises à jour importantes peuvent entraîner une augmentation de la consommation de la batterie et un ralentissement des sources</string>
     <string name="show_in_sources_and_extensions">Afficher dans les listes de sources et d\'extensions</string>
+    <string name="show_outline_around_covers">Afficher le contour des couvertures</string>
 </resources>
