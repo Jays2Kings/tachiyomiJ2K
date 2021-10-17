@@ -14,11 +14,9 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.asImmediateFlow
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.util.system.getFilePicker
 import eu.kanade.tachiyomi.util.system.withOriginalWidth
-import kotlinx.coroutines.flow.launchIn
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
@@ -48,6 +46,11 @@ class SettingsDownloadController : SettingsController() {
             key = Keys.downloadOnlyOverWifi
             titleRes = R.string.only_download_over_wifi
             defaultValue = true
+        }
+        switchPreference {
+            key = Keys.saveChaptersAsCBZ
+            titleRes = R.string.save_chapters_as_cbz
+            defaultValue = false
         }
         preferenceCategory {
             titleRes = R.string.remove_after_read
@@ -108,25 +111,6 @@ class SettingsDownloadController : SettingsController() {
                     )
                     entryRange = 0..2
                     defaultValue = 0
-                }
-            }
-            preferenceCategory {
-                titleRes = R.string.save_chapters_as_cbz
-
-                switchPreference {
-                    key = Keys.saveChaptersAsCBZ
-                    titleRes = R.string.save_chapters_as_cbz
-                    defaultValue = false
-                }
-
-                intListPreference(activity) {
-                    key = Keys.saveChaptersAsCBZLevel
-                    titleRes = R.string.cbz_compression_level
-                    entries = (0..9).map { it.toString() }
-                    entryRange = 0..9
-                    defaultValue = 0
-                    preferences.saveChaptersAsCBZ().asImmediateFlow { isVisible = it }
-                        .launchIn(viewScope)
                 }
             }
         }

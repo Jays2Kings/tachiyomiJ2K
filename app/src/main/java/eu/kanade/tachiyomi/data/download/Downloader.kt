@@ -532,24 +532,18 @@ class Downloader(
             if (preferences.saveChaptersAsCBZ().get()) {
                 val zip = mangaDir.createFile("$dirname.cbz.tmp")
                 val zipOut = ZipOutputStream(BufferedOutputStream(zip.openOutputStream()))
-                val compressionLevel = preferences.saveChaptersAsCBZLevel().get()
+                zipOut.setMethod(ZipEntry.STORED)
 
-                zipOut.setLevel(compressionLevel)
-                if (compressionLevel == 0) {
-                    zipOut.setMethod(ZipEntry.STORED)
-                }
                 tmpDir.listFiles()?.forEach { img ->
                     val input = img.openInputStream()
                     val data = input.readBytes()
                     val entry = ZipEntry(img.name)
-                    if (compressionLevel == 0) {
-                        val crc = CRC32()
-                        val size = img.length()
-                        crc.update(data)
-                        entry.crc = crc.value
-                        entry.compressedSize = size
-                        entry.size = size
-                    }
+                    val crc = CRC32()
+                    val size = img.length()
+                    crc.update(data)
+                    entry.crc = crc.value
+                    entry.compressedSize = size
+                    entry.size = size
                     zipOut.putNextEntry(entry)
                     zipOut.write(data)
                     input.close()
