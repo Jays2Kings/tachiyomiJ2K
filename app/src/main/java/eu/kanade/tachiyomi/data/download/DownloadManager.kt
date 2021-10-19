@@ -255,7 +255,7 @@ class DownloadManager(val context: Context) {
                     chapters,
                     manga,
                     source
-                ) + provider.findCBZFiles(chapters, manga, source)
+                )
             chapterDirs.forEach { it.delete() }
             cache.removeChapters(chapters, manga)
             if (cache.getDownloadCount(manga, true) == 0) { // Delete manga directory if empty
