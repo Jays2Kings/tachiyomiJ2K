@@ -153,7 +153,7 @@ class DownloadCache(
 
             val mangaDirs = sourceDir.dir.listFiles().orEmpty().mapNotNull { mangaDir ->
                 val name = mangaDir.name ?: return@mapNotNull null
-                val chapterDirs = mangaDir.listFiles().orEmpty().mapNotNull { chapterFile -> chapterFile.name?.replace("cbz", "") }.toHashSet()
+                val chapterDirs = mangaDir.listFiles().orEmpty().mapNotNull { chapterFile -> chapterFile.name?.replace(".cbz", "") }.toHashSet()
                 name to MangaDirectory(mangaDir, chapterDirs)
             }.toMap()
 
