@@ -55,9 +55,6 @@
     <string name="default_value">Standaard</string>
     <string name="library_update_frequency">Bibliotheek update frequentie</string>
     <string name="manual">Manueel</string>
-    <string name="hourly">Ieder uur</string>
-    <string name="every_2_hours">Iedere 2 uur</string>
-    <string name="every_3_hours">Iedere 3 uur</string>
     <string name="every_6_hours">Iedere 6 uur</string>
     <string name="every_12_hours">Iedere 12 uur</string>
     <string name="daily">Iedere dag</string>
@@ -141,9 +138,9 @@
     <string name="downloading">Aan het downloaden</string>
     <string name="downloading_progress">Aan het downloaden (%1$d/%2$d)</string>
     <string name="paused">Gepauzeerd</string>
-    <string name="next_5_unread">Download de volgende 5 hoofdstukken</string>
-    <string name="all_chapters">Download alles</string>
-    <string name="all_unread_chapters">Download ongelezen</string>
+    <string name="next_5_unread">Volgende 5 ongelezen hoofdstukken</string>
+    <string name="all_chapters">Alle hoofdstukken</string>
+    <string name="all_unread_chapters">Alle ongelezen hoofdstukken</string>
     <string name="completed">Voltooid</string>
     <string name="score">Score</string>
     <string name="title">Titel</string>
@@ -178,7 +175,6 @@
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Aan het opladen</string>
     <string name="app_theme">Thema</string>
-    <string name="light_blue">Hoofdthema</string>
     <string name="navigation">Navigatie</string>
     <string name="invert_volume_keys">Keer volumeknoppen om</string>
     <string name="scale_type">Schaalmodus</string>
@@ -232,7 +228,6 @@
     <string name="source_migration">Bronmigratie</string>
     <string name="extensions">Extensies</string>
     <string name="extension_info">Informatie over extensie</string>
-    <string name="dark_blue">Donkerblauw</string>
     <string name="pending">Aan het afwachten</string>
     <string name="installing">Aan het installeren</string>
     <string name="installed">Geïnstalleerd</string>
@@ -256,7 +251,7 @@
     <string name="removed_from_library">Verwijderd uit bibliotheek</string>
     <string name="_copied_to_clipboard">%1$s gekopieerd naar het klembord</string>
     <string name="source_not_installed_">Bron niet geïnstalleerd: %1$s</string>
-    <string name="custom_range">Download aangepaste hoeveelheid</string>
+    <string name="custom_range">Aangepaste reeks</string>
     <string name="rereading">Herlezen</string>
     <string name="started">Gestart</string>
     <string name="type">Soort</string>
@@ -627,7 +622,7 @@
     <string name="none">Geen</string>
     <string name="started_reading_date">Datum begonnen met lezen</string>
     <string name="finished_reading_date">Datum klaar met lezen</string>
-    <string name="myanimelist_relogin">Log alsjeblieft opnieuw in op MAL</string>
+    <string name="myanimelist_relogin">Log alstublieft opnieuw in op MAL</string>
     <string name="no_chapters_error">Geen hoofdstukken gevonden</string>
     <string name="badges">Badges</string>
     <string name="open_log">Open log</string>
@@ -773,7 +768,6 @@
     <string name="save_pages_separately">Pagina\'s opslaan in aparte mappen</string>
     <string name="show_on_long_press">Weergeven bij lang indrukken</string>
     <string name="actions">Acties</string>
-    <string name="webtoon_cannot_change">Kan de leesmodus niet veranderen van webtoon. Pas eerst het serietype aan om te veranderen.</string>
     <string name="locked_landscape">Vergrendeld liggend</string>
     <string name="locked_portrait">Vergrendeld staand</string>
     <string name="landscape">Liggend</string>
@@ -908,25 +902,31 @@
     <string name="restrictions_">Restricties: %1$s</string>
     <string name="show_categories_while_filtering">Laat lege categoriën zien tijdens het filteren</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 hoofstuk wordt overgeslagen, mogelijk mist de bron deze of wordt deze eruit gefilterd</item>
-        <item quantity="other">"%d hoofstukken  worden overgeslagen, mogelijk missen de bronnen deze of worden deze eruit gefilterd"</item>
+        <item quantity="one">1 hoofdstuk is overgeslagen, of de bron mist 1 hoofdstuk of het is uitgefilterd</item>
+        <item quantity="other">%d hoofdstukken zijn overgeslagen, de bron mist ze of ze zijn uitgefilterd</item>
     </plurals>
     <string name="getting_started_guide">Gids voor beginners</string>
     <string name="help_translate">Help met vertalen</string>
     <string name="no_matches_for_filters_short">Geen resultaten voor uw filters</string>
-    <string name="notification_size_warning">Grote updates kunnen leiden tot een verhoogd batterijgebruik en trager werkende bronnen</string>
-    <string name="filter_groups">Filter scanlator-groepen</string>
-    <string name="use_suggested_date">Voorgestelde datum gebruiken</string>
+    <string name="notification_size_warning">Grote updates kunnen leiden tot verhoogd batterijgebruik en vertraagde bronnen</string>
+    <string name="filter_groups">Filter scanlator groepen</string>
+    <string name="use_suggested_date">Gebruik de voorgestelde datum</string>
     <string name="show_outline_around_covers">Geef rand rond omslagen weer</string>
     <string name="show_in_sources_and_extensions">Weergeven in bronnen- en extensielijst</string>
     <string name="log_in">Log in</string>
     <string name="log_out">Log uit</string>
     <string name="log_out_from_">Uitloggen bij %1$s\?</string>
     <string name="scanlators">Scanlators</string>
-    <string name="channel_errors">Foutmeldingen</string>
+    <string name="channel_errors">Fouten</string>
     <string name="keep_in_">In %1$s laten</string>
-    <string name="cannot_remove_tracking_while_offline">Tracker kan niet van %1$s verwijderd worden wanneer je offline bent</string>
+    <string name="cannot_remove_tracking_while_offline">Tracker van %1$s kan niet offline worden verwijderd</string>
     <string name="remove_from_">Verwijder uit %1$s</string>
     <string name="details_page">Detailpagina</string>
     <string name="theme_buttons_based_on_cover">Themaknoppen gebaseerd op de omslag</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku wordt niet uitgevoerd</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installeer en start Shizuku om deze als extensie-installatieprogramma te gebruiken.</string>
+    <string name="use_shizuku_summary">Staat extensies toe om geïnstalleerd te worden zonder bevestigingsvenster en schakelt automatische updates voor apparaten onder Android 12 in</string>
+    <string name="use_shizuku_to_install">Gebruik Shizuku om extensies te installeren</string>
+    <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
+    <string name="every_3_days">Iedere 3 dagen</string>
 </resources>

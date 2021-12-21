@@ -237,9 +237,6 @@
     <string name="download_new_chapters">Preuzmi nova poglavlja</string>
     <string name="categories_to_include_in_download">Kategorije koje treba uključiti u preuzimanje</string>
     <string name="manual">Ručno</string>
-    <string name="hourly">Svaki sat</string>
-    <string name="every_2_hours">Svaka 2 sata</string>
-    <string name="every_3_hours">Svaka 3 sata</string>
     <string name="every_6_hours">Svakih 6 sati</string>
     <string name="every_12_hours">Svakih 12 sati</string>
     <string name="daily">Dnevno</string>
@@ -545,7 +542,7 @@
     <string name="file_is_missing_data">Datoteci nedostaju podaci.</string>
     <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan manga.</string>
     <string name="restore_missing_sources">Nedostaju izvori:</string>
-    <string name="restore_missing_trackers">Praćenja bez prijave:</string>
+    <string name="restore_missing_trackers">Neprijavljene usluge praćenja:</string>
     <string name="restore_content">Obnavljanje koristi izvore za dohvaćanje podataka, može prouzročiti troškove.
 \n
 \nPrije obnavljanja, provjeri jesu li instalirana sva potrebna proširenja i da si prijavljen/a u izvorima i uslugama za praćenje.</string>
@@ -584,9 +581,7 @@
     <string name="hide_bottom_nav">Automatski sakrij donju navigaciju</string>
     <string name="last_used_library_recents">Zadnje korišteno (biblioteka ili nedavni)</string>
     <string name="white_theme">Potpuno bijela</string>
-    <string name="dark_blue">Tamnoplava</string>
     <string name="dark">Tamna</string>
-    <string name="light_blue">Svjetloplava</string>
     <string name="app_theme">Tema programa</string>
     <string name="system_default">Standard sustava</string>
     <string name="remove_tracking_from_">Također ukloni iz %1$s</string>
@@ -784,7 +779,6 @@
     <string name="incognito_mode">Anonimni modus</string>
     <string name="turn_off_">Isključi %s</string>
     <string name="turn_on_">Uključi %s</string>
-    <string name="webtoon_cannot_change">Nije moguće promijeniti modus čitanja iz digitalnog stripa. Za mijenjanje modusa, najprije uredi vrstu serije.</string>
     <string name="remove_crop">Ukloni odrezivanje</string>
     <string name="crop_borders_webtoon">Odreži rubove (digitalni strip)</string>
     <string name="crop_borders_paged">Odreži rubove (stranice)</string>
@@ -883,7 +877,7 @@
     <string name="light_theme">Svjetla tema</string>
     <string name="no_match_found">Ništa nije pronađeno</string>
     <string name="source_unsupported">Izvor nije podržan</string>
-    <string name="only_applies_silent_trackers">Odnosi se samo na tihe pratioce, kao što je Komga</string>
+    <string name="only_applies_silent_trackers">Primjenjuje se samo na usluge tihog praćenja kao što je Komga</string>
     <string name="track_when_adding_to_library">Prati prilikom dodavanja u biblioteku</string>
     <string name="set_as_default">Postavi kao standardno</string>
     <string name="add_tag">Dodaj oznaku</string>
@@ -899,7 +893,7 @@
     <string name="extensions_miui_warning">Za instaliranje proširenja, MIUI optimizacije mora biti deaktivirana.</string>
     <string name="keep_both_on_service">Zadrži oboje na %1$s i samo zamjeni lokalno</string>
     <string name="remove_x_from_service_and_add_y">Ukloni %1$s iz %2$s i dodaj %3$s</string>
-    <string name="remove_previous_tracker">Ukloniti prethodni alat za praćenje\?</string>
+    <string name="remove_previous_tracker">Ukloniti prethodnu uslugu praćenja\?</string>
     <string name="select_an_entry">Odaberite unos</string>
     <string name="split_double_pages">Podijelite dvostruke stranice</string>
     <string name="split_double_pages_portrait">Podijelite dvostruke stranice u portretu</string>
@@ -931,8 +925,32 @@
     <string name="teal_ocean">Tirkizni ocean</string>
     <string name="appearance">Izgled</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Nedostaje %d poglavlje</item>
-        <item quantity="few">Nedostaju %d poglavlja</item>
-        <item quantity="other">Nedostaje %d poglavlja</item>
+        <item quantity="one">Preskače se %d poglavlje. Izvor ga nema ili je izdvojen filtrom</item>
+        <item quantity="few">Preskaču se %d poglavlja. Izvor ih nema ili su izdvojeni filtrom</item>
+        <item quantity="other">Preskaču se %d poglavlja. Izvor ih nema ili su izdvojeni filtrom</item>
     </plurals>
+    <string name="log_out">Odjava</string>
+    <string name="log_out_from_">Odjaviti se iz %1$s\?</string>
+    <string name="channel_errors">Greške</string>
+    <string name="show_outline_around_covers">Prikaži rubove oko naslovnica</string>
+    <string name="show_in_sources_and_extensions">Prikaži u popisu izvora i proširenja</string>
+    <string name="log_in">Prijava</string>
+    <string name="keep_in_">Sačuvaj u %1$s</string>
+    <string name="remove_from_">Ukloni iz %1$s</string>
+    <string name="scanlators">Scanlatori</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku ne radi</string>
+    <string name="use_shizuku_to_install">Koristi Shizuku za instaliranje proširenja</string>
+    <string name="use_shizuku_summary">Omogućuje instalaciju proširenja bez korisničkih upita i omogućuje automatska aktualiziranja za uređaje pod Androidom 12</string>
+    <string name="use_suggested_date">Koristi predloženi datum</string>
+    <string name="details_page">Stranica s detaljima</string>
+    <string name="notification_size_warning">Velika aktualiziranja mogu dovesti do povećane potrošnje baterije i usporavanja izvora</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Instaliraj i pokreni Shizuku za korištenje Shizukua kao instalacijskog programa za proširenja.</string>
+    <string name="filter_groups">Filtriraj grupe scanlatora</string>
+    <string name="theme_buttons_based_on_cover">Gumbi tema na osnovi naslovnice</string>
+    <string name="cannot_remove_tracking_while_offline">Usluga praćenja se ne može ukloniti iz %1$s bez internetske veze</string>
+    <string name="classic_blue">Klasična plava</string>
+    <string name="lime_time">Limetasta</string>
+    <string name="every_3_days">Svaka 3 dana</string>
+    <string name="download_queue_size_warning">Upozorenje: velika skupna preuzimanja mogu dovesti do usporavanja izvora i/ili blokiranja Tachiyomija</string>
+    <string name="save_chapters_as_cbz">Spremi poglavlja kao CBZ</string>
 </resources>

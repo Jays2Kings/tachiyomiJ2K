@@ -412,10 +412,8 @@
     <string name="help">Hilfe</string>
     <!-- General settings -->
     <string name="app_theme">App-Design</string>
-    <string name="light_blue">Hellblau</string>
     <string name="dark">Dunkel</string>
     <string name="amoled_black">AMOLED Schwarz</string>
-    <string name="dark_blue">Dunkelblau</string>
     <string name="white_theme">Reines Weiß</string>
     <string name="language">Sprache</string>
     <string name="system_default">Systemstandard</string>
@@ -550,9 +548,6 @@
     <string name="always_delete">Immer löschen</string>
     <!-- Time -->
     <string name="manual">Manuell</string>
-    <string name="hourly">Stündlich</string>
-    <string name="every_2_hours">Alle 2 Stunden</string>
-    <string name="every_3_hours">Alle 3 Stunden</string>
     <string name="every_6_hours">Alle 6 Stunden</string>
     <string name="every_12_hours">Alle 12 Stunden</string>
     <string name="daily">Täglich</string>
@@ -772,7 +767,7 @@
     <string name="disabled">Deaktiviert</string>
     <string name="doh">DNS über HTTPS</string>
     <string name="follow_system_theme">Wie System</string>
-    <string name="flat_lime">Limette</string>
+    <string name="flat_lime">Flache Limette</string>
     <string name="hot_pink">Heißes Pink</string>
     <string name="spring_blossom">Blühender Frühling</string>
     <string name="midnight_dusk">Mitternachtsdämmerung</string>
@@ -784,7 +779,6 @@
         <item quantity="one">%1$d Seite</item>
         <item quantity="other">%1$d Seiten</item>
     </plurals>
-    <string name="webtoon_cannot_change">Lesemodus kann nicht im Webtoon geändert werden. Serientyp muss geändert werden.</string>
     <string name="automatic_orientation">Automatisch (basierend auf Ausrichtung)</string>
     <string name="automatic_can_still_switch">Bei Verwendung des automatischen Seitenlayouts kann man beim Lesen immer noch zwischen Layouts wechseln, ohne diese Einstellung zu überschreiben</string>
     <string name="page_layout">Seitenlayout</string>
@@ -964,4 +958,13 @@
     <string name="notification_size_warning">Große Aktualisierungen könnten zu einem höheren Akkuverbrauch und langsameren Quellen führen</string>
     <string name="show_in_sources_and_extensions">In Quellen- und Erweiterungslisten anzeigen</string>
     <string name="show_outline_around_covers">Rahmen um Cover anzeigen</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku läuft nicht</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installiere und starte Shizuku, um Shizuku als Installationsprogramm für Erweiterungen zu verwenden.</string>
+    <string name="use_shizuku_to_install">Installiere Erweiterungen mit Shizuku</string>
+    <string name="use_shizuku_summary">Erlaube Erweiterungen, ohne Eingabeaufforderungen installiert zu werden und aktiviere automatische Aktualisierungen für Geräte unter Android 12</string>
+    <string name="classic_blue">Klassisches Blau</string>
+    <string name="lime_time">Limettenzeit</string>
+    <string name="download_queue_size_warning">Achtung: Große Downloads könnten dazu führen, dass Quellen langsamer werden und/oder Tachiyomi blockieren</string>
+    <string name="every_3_days">Alle 3 Tage</string>
+    <string name="save_chapters_as_cbz">Kapitel als CBZ speichern</string>
 </resources>

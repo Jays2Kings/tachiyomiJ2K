@@ -56,9 +56,6 @@
     <string name="default_value">デフォルト</string>
     <string name="library_update_frequency">ライブラリの更新頻度</string>
     <string name="manual">マニュアル</string>
-    <string name="hourly">毎時</string>
-    <string name="every_2_hours">2時間ごと</string>
-    <string name="every_3_hours">3時間ごと</string>
     <string name="every_6_hours">6時間ごと</string>
     <string name="every_12_hours">12時間ごと</string>
     <string name="daily">毎日</string>
@@ -73,10 +70,8 @@
     <string name="only_update_ongoing">連載中の漫画のみ更新</string>
     <string name="sync_chapters_after_reading">読んだ後に章を同期</string>
     <string name="app_theme">アプリケーションテーマ</string>
-    <string name="light_blue">メインテーマ</string>
     <string name="dark">ダークテーマ</string>
     <string name="amoled_black">AMOLEDテーマ</string>
-    <string name="dark_blue">ダークブルー</string>
     <string name="language">言語</string>
     <string name="system_default">システム標準</string>
     <string name="default_category">デフォルトカテゴリー</string>
@@ -693,7 +688,6 @@
     <string name="disable_if_issues_with_updating">ライブラリの復元や更新に不具合が発生した場合無効にしてください</string>
     <string name="updates_covers_genres_desc">カバー、ジャンル、説明と漫画のステータス情報を更新します</string>
     <string name="clean_read_downloads">既読をクリア</string>
-    <string name="webtoon_cannot_change">Webtoonではビューアモードを変更できません。最初にシリーズタイプを編集してください。</string>
     <string name="only_enable_enabled_for_migration">有効化したソースを移行する際にのみ有効にしてください</string>
     <string name="only_enable_pinned_for_migration">ピン留めしたソースを移行する際にのみ有効にしてください</string>
     <string name="migration_sources_changed">移行ソースが変更されました</string>
@@ -905,4 +899,14 @@
     <string name="remove_from_">%1$sから削除</string>
     <string name="notification_size_warning">大規模のアップデートは電池を急激に消耗し、ソースを遅くする可能性があります</string>
     <string name="show_in_sources_and_extensions">ソース・拡張機能リストに表示</string>
+    <string name="ext_installer_shizuku_stopped">Shizukuは実行中ではありません</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Shizukuを拡張機能インストーラーとして使用するには、Shizukuをインストールして起動してください。</string>
+    <string name="show_outline_around_covers">表紙に輪郭を表示</string>
+    <string name="use_shizuku_to_install">Shizuku経由で拡張機能をインストール</string>
+    <string name="use_shizuku_summary">拡張機能のインストールをユーザー入力なしで行うことができ、Android 12以前のシステムで自動アップデートをONにします</string>
+    <string name="every_3_days">3日ごと</string>
+    <string name="download_queue_size_warning">警告：大量の一括ダウンロードにより、ソースは遅くなったり、Tachiyomiを接続禁止したりする恐れがあります</string>
+    <string name="save_chapters_as_cbz">章をCBZとして保存</string>
+    <string name="lime_time">石灰の世代</string>
+    <string name="classic_blue">クラシックブルー</string>
 </resources>

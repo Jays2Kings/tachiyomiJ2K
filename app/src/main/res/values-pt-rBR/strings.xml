@@ -408,10 +408,8 @@
     <string name="help">Ajuda</string>
     <!-- General settings -->
     <string name="app_theme">Tema do aplicativo</string>
-    <string name="light_blue">Azul Claro</string>
     <string name="dark">Escuro</string>
     <string name="amoled_black">Preto AMOLED</string>
-    <string name="dark_blue">Azul Escuro</string>
     <string name="white_theme">Branco Puro</string>
     <string name="language">Idioma</string>
     <string name="system_default">Padrão do sistema</string>
@@ -543,9 +541,6 @@
     <string name="always_delete">Sempre excluir</string>
     <!-- Time -->
     <string name="manual">Manual</string>
-    <string name="hourly">A cada hora</string>
-    <string name="every_2_hours">A cada 2 horas</string>
-    <string name="every_3_hours">A cada 3 horas</string>
     <string name="every_6_hours">A cada 6 horas</string>
     <string name="every_12_hours">A cada 12 horas</string>
     <string name="daily">Diariamente</string>
@@ -789,7 +784,6 @@
     <string name="incognito_mode">Modo anônimo</string>
     <string name="turn_off_">Desativar %s</string>
     <string name="turn_on_">Ativar %s</string>
-    <string name="webtoon_cannot_change">Não é possível mudar do webtoon o modo de leitura. Edite o tipo de série primeiro para mudar.</string>
     <string name="automatic_orientation">Automático (baseado na orientação)</string>
     <string name="automatic_can_still_switch">Ao usar o layout de página automático, você ainda pode mudar entre os layouts enquanto lê sem sobrepôr esta configuração</string>
     <string name="page_layout">Layout de página</string>
@@ -975,4 +969,9 @@
     <string name="cannot_remove_tracking_while_offline">Monitorador não pode ser removido do %1$s enquanto offiline</string>
     <string name="notification_size_warning">Grandes atualizações podem levar ao aumento do uso da bateria e as fontes a ficarem lentas</string>
     <string name="channel_errors">Erros</string>
+    <string name="show_outline_around_covers">Mostrar contorno ao redor da capa</string>
+    <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
+    <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi</string>
+    <string name="every_3_days">A cada 3 dias</string>
 </resources>

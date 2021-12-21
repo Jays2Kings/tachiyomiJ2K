@@ -65,9 +65,6 @@
     <string name="default_value">Predefinidu</string>
     <string name="library_update_frequency">Frecuèntzia de agiornamentu de sa biblioteca</string>
     <string name="manual">Manuale</string>
-    <string name="hourly">Cada ora</string>
-    <string name="every_2_hours">Cada 2 oras</string>
-    <string name="every_3_hours">Cada 3 oras</string>
     <string name="every_6_hours">Cada 6 oras</string>
     <string name="every_12_hours">Cada 12 oras</string>
     <string name="daily">Cada die</string>
@@ -82,10 +79,8 @@
     <string name="only_update_ongoing">Agiorna sos manga in cursu ebbia</string>
     <string name="sync_chapters_after_reading">Sincroniza sos capìtulos a pustis de sa leghidura</string>
     <string name="app_theme">Tema de s\'aplicatzione</string>
-    <string name="light_blue">Tema printzipale</string>
     <string name="dark">Tema iscuru</string>
     <string name="amoled_black">Tema AMOLED</string>
-    <string name="dark_blue">Biaitu iscuru</string>
     <string name="language">Limba</string>
     <string name="system_default">Predefinida de su sistema</string>
     <string name="default_category">Categoria predefinida</string>
@@ -771,7 +766,6 @@
     <string name="incognito_mode">Modalidade anònima</string>
     <string name="turn_off_">Istuda %s</string>
     <string name="turn_on_">Allughe %s</string>
-    <string name="webtoon_cannot_change">Non podes cambiare sa modalidade de leghidura de unu webtoon. In antis muda sa casta de sèrie.</string>
     <string name="pad_cutout_areas">Prena sas àreas segadas</string>
     <string name="remove_crop">Boga su ritàlliu</string>
     <string name="crop_borders_webtoon">Sega sos oros (Webtoon)</string>
@@ -928,4 +922,14 @@
     <string name="remove_from_">Boga dae %1$s</string>
     <string name="notification_size_warning">Sos agiornamentos mannos diant pòdere batire a un\'impreu de sa bateria prus mannu e a unu rallentamentu de sas fontes</string>
     <string name="show_in_sources_and_extensions">Ammustra in sa lista de sas mitzas e de sas estensiones</string>
+    <string name="show_outline_around_covers">Ammustra sos oros de sas coberteddas</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku no est in esecutzione</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installa e avia Shizuku pro l\'impreare comente installadore de estensiones.</string>
+    <string name="use_shizuku_to_install">Imprea Shizuku pro installare estensiones</string>
+    <string name="use_shizuku_summary">Permitit s\'installatzione de estensiones chene interventu de s\'utente e abilitat sos agiornamentos automàticos pro sos dispositivos in suta de Android 12</string>
+    <string name="download_queue_size_warning">Dae cara: sos iscarrigamentos de massa mannos diant pòdere rallentare sas fontes e/o blocare Tachiyomi</string>
+    <string name="every_3_days">Cada 3 dies</string>
+    <string name="classic_blue">Biaitu clàssicu</string>
+    <string name="lime_time">Tempus de lime</string>
+    <string name="save_chapters_as_cbz">Sarva sos capìtulos comente CBZ</string>
 </resources>

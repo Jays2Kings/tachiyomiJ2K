@@ -65,9 +65,6 @@
     <string name="default_value">Öntanımlı</string>
     <string name="library_update_frequency">Kitaplık güncelleme sıklığı</string>
     <string name="manual">Elle</string>
-    <string name="hourly">Her saat</string>
-    <string name="every_2_hours">2 saatte bir</string>
-    <string name="every_3_hours">3 saatte bir</string>
     <string name="every_6_hours">6 saatte bir</string>
     <string name="every_12_hours">12 saatte bir</string>
     <string name="daily">Her gün</string>
@@ -82,7 +79,6 @@
     <string name="only_update_ongoing">Yalnızca devam eden mangaları güncelleme</string>
     <string name="sync_chapters_after_reading">Okudukdan sonra bölümleri eşitle</string>
     <string name="app_theme">Uygulama teması</string>
-    <string name="light_blue">Açık Mavi</string>
     <string name="dark">Koyu tema</string>
     <string name="amoled_black">AMOLED Siyah</string>
     <string name="language">Dil</string>
@@ -269,7 +265,6 @@
     <string name="theres_no_previous_chapter">Önceki bölüm yok</string>
     <string name="loading_pages">Sayfalar yükleniyor…</string>
     <string name="failed_to_load_pages_">Sayfalar yüklenemedi: %1$s</string>
-    <string name="dark_blue">Koyu Mavi</string>
     <string name="open_in_webview">Web görünümünde aç</string>
     <string name="true_32bit_color">32-bit renk</string>
     <string name="skip_read_chapters">Okundu olarak işaretli bölümleri atla</string>
@@ -769,7 +764,6 @@
     <string name="incognito_mode">Gizli kip</string>
     <string name="turn_off_">%s kapat</string>
     <string name="turn_on_">%s aç</string>
-    <string name="webtoon_cannot_change">Webtoon\'dan okuma kipi değiştirilemez. Değiştirmek için önce seri türünü düzenleyin.</string>
     <string name="remove_crop">Kırpmayı kaldır</string>
     <string name="crop_borders_webtoon">Kenarları kırp (Webtoon)</string>
     <string name="crop_borders_paged">Kenarları kırp (Sayfalı)</string>
@@ -929,4 +923,10 @@
     <string name="notification_size_warning">Büyük güncellemeler pil kullanımının artmasına ve kaynakların yavaşlamasına neden olabilir</string>
     <string name="show_in_sources_and_extensions">Kaynaklar ve uzantılar listesinde göster</string>
     <string name="show_outline_around_covers">Kapakların etrafında anahattı göster</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku çalışmıyor</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Uzantı kurucusu olarak kullanmak için Shizuku\'yu kurun ve başlatın.</string>
+    <string name="use_shizuku_to_install">Uzantıları kurmak için Shizuku\'yu kullan</string>
+    <string name="use_shizuku_summary">Uzantıların kullanıcı istemleri olmadan kurulmasına izin verir ve Android 12\'nin altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
+    <string name="every_3_days">Her 3 günde</string>
+    <string name="download_queue_size_warning">Uyarı: büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir</string>
 </resources>

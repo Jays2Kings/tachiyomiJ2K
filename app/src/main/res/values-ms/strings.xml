@@ -61,9 +61,6 @@
     <string name="default_value">Lalai</string>
     <string name="library_update_frequency">Kekerapan kemas kini koleksi</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Setiap jam</string>
-    <string name="every_2_hours">Setiap 2 jam</string>
-    <string name="every_3_hours">Setiap 3 jam</string>
     <string name="every_6_hours">Setiap 6 jam</string>
     <string name="every_12_hours">Setiap 12 jam</string>
     <string name="daily">Setiap hari</string>
@@ -78,7 +75,6 @@
     <string name="only_update_ongoing">Hanya kemas kini manga yang masih berterusan</string>
     <string name="sync_chapters_after_reading">Sinkronkan bab setelah dibaca</string>
     <string name="app_theme">Tema aplikasi</string>
-    <string name="light_blue">Tema utama</string>
     <string name="dark">Tema gelap</string>
     <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Bahasa</string>
@@ -233,7 +229,6 @@
     <string name="extensions">Sambungan</string>
     <string name="extension_info">Info sambungan</string>
     <string name="open_in_webview">Buka dalam WebView</string>
-    <string name="dark_blue">Biru gelap</string>
     <string name="pending">Masih menunggu</string>
     <string name="installing">Memasang</string>
     <string name="installed">Dipasang</string>
@@ -714,7 +709,6 @@
     <plurals name="pages_plural">
         <item quantity="other">%1$d halaman</item>
     </plurals>
-    <string name="webtoon_cannot_change">Tidak boleh menukar mod membaca dari webtoon. Edit jenis siri dahulu untuk tukar.</string>
     <string name="automatic_orientation">Automatik(bedasarkan susunan)</string>
     <string name="automatic_can_still_switch">Apabila menggunakan halaman automatik, anda boleh menukar antara corak ketika membaca tanpa menukar tetapan ini</string>
     <string name="page_layout">Corak halaman</string>
@@ -807,4 +801,31 @@
     <plurals name="missing_chapters_warning">
         <item quantity="other">Melangkau %d bab, sama ada sumber tidak mempunyai bab tersebut, atau ia ditapis keluar</item>
     </plurals>
+    <string name="by_chapter_number">Mengikut nombor bab</string>
+    <string name="set_as_default">Tetapkan sebagai lalai</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="side_nav_icon_alignment">Penyejajaran ikon navigasi sisi</string>
+    <string name="strawberry_daiquiri">Strawberry Daiquiri</string>
+    <string name="exclude_">Kecuali: %s</string>
+    <string name="by_update_date">Mengikut tarikh muat naik</string>
+    <string name="show_number_of_items">Tunjuk jumlah bilangan</string>
+    <string name="channel_errors">Ralat</string>
+    <string name="getting_started_guide">Panduan penggunaan</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku tidak dijalankan</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Pasang dan mulakan Shizuku untuk guna Shizuku sebagai pemasang sambungan.</string>
+    <string name="update_all">Kemas kini semua</string>
+    <string name="no_match_found">Tiada padanan dijumpai</string>
+    <string name="appearance">Tampilan</string>
+    <string name="tako">Tako</string>
+    <string name="pure_black_dark_mode">Mod gelap hitam asli</string>
+    <string name="restore_miui_warning">Sandaran/memulih mungkin tidak berfungsi dengan betul jika pengoptimuman MIUI dinyahaktifkan.</string>
+    <string name="show_in_sources_and_extensions">Tunjuk dalam senarai sumber dan sambungan</string>
+    <string name="help_translate">Bantu menterjemah</string>
+    <string name="log_out">Log keluar</string>
+    <string name="log_out_from_">Log keluar daripada %1$s\?</string>
+    <string name="include_">Hanya: %s</string>
+    <string name="name">Nama</string>
+    <string name="warning">Amaran</string>
+    <string name="every_3_days">Setiap 3 hari</string>
+    <string name="download_queue_size_warning">Amaran: muat turun secara pukal besar boleh menyebabkan sumber menjadi lebih perlahan dan/atau menyekat Tachiyomi</string>
 </resources>

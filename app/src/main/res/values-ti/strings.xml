@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="extension_info">ተወሰኽቲ ሓበሬታ</string>
+    <string name="search_settings">አለሻ ስንድኦት</string>
+    <string name="backup_and_restore">መሐለውታን መመለሲን</string>
+    <string name="download_queue">ምውራድ ሰልፊ</string>
+    <string name="filter">ሚሐ</string>
+    <string name="search">አለሻ</string>
+    <string name="manga">ማንጋ</string>
+    <string name="chapters">ምዕራፋት</string>
+    <string name="unread">ዘይተነበበ</string>
+    <string name="bookmarked">ተቐሚጡ</string>
+    <string name="alphabetically">ብፊደል</string>
+    <string name="tracking">ምክትታል</string>
+    <string name="tracked">ተኸታቲሉ</string>
+    <string name="name">ስም</string>
+    <string name="categories">ምድባት</string>
+    <string name="library">ቤተ ንባብ</string>
+    <string name="total_chapters">ብዝሒ ምዕራፍ</string>
+    <string name="date_added">ዝተመዝገበሉ መዓልቲ</string>
+    <string name="last_read">ንመወዳእታ ግዜ ዝተነበበ</string>
+    <string name="date_fetched">መዓልቲ ተሓዲሱ</string>
+    <string name="latest_chapter">እዋናዊ ምዕራፍ</string>
+    <string name="updates">ምምሕያሽ</string>
+    <string name="history">መዝገብ</string>
+    <string name="sources">ፍልፍላት</string>
+    <string name="extensions">ተወሰኽቲ</string>
+    <string name="migrate">ቅብብል</string>
+    <string name="settings">ስንድኦት</string>
+    <string name="help">ሓገዝ</string>
+    <string name="downloaded">ወሪዱ</string>
+    <string name="more">ተወሳኺ</string>
+</resources>

@@ -447,10 +447,8 @@
     <string name="help">Pomoc</string>
     <!-- General settings -->
     <string name="app_theme">Motyw aplikacji</string>
-    <string name="light_blue">Jasnoniebieski</string>
     <string name="dark">Ciemny</string>
     <string name="amoled_black">Ciemny AMOLED</string>
-    <string name="dark_blue">Ciemnoniebieski</string>
     <string name="white_theme">Jasny</string>
     <string name="language">Język</string>
     <string name="system_default">Domyślny w systemie</string>
@@ -591,9 +589,6 @@
     <string name="always_delete">Zawsze usuń</string>
     <!-- Time -->
     <string name="manual">Ręcznie</string>
-    <string name="hourly">Co godzinę</string>
-    <string name="every_2_hours">Co 2 godziny</string>
-    <string name="every_3_hours">Co 3 godziny</string>
     <string name="every_6_hours">Co 6 godziny</string>
     <string name="every_12_hours">Co 12 godziny</string>
     <string name="daily">Codziennie</string>
@@ -916,7 +911,6 @@
     <string name="save_pages_separately">Zapisuj strony w osobnych folderach</string>
     <string name="show_on_long_press">Pokaż po przytrzymaniu</string>
     <string name="actions">Akcje</string>
-    <string name="webtoon_cannot_change">Nie można zmienić trybu czytania z webtoon. Aby zmienić, najpierw edytuj typ serii.</string>
     <string name="automatic_orientation">Automatyczny (na podstawie orientacji)</string>
     <string name="page_layout">Układ stron</string>
     <string name="automatic_can_still_switch">Używając automatycznego układu stron, nadal można przełączać pomiędzy układami podczas czytania bez nadpisywania tego ustawienia</string>
@@ -1015,4 +1009,14 @@
     <string name="keep_in_">Zostaw w %1$s</string>
     <string name="show_in_sources_and_extensions">Pokazuj na liście źródeł i rozszerzeń</string>
     <string name="notification_size_warning">Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł</string>
+    <string name="show_outline_around_covers">Pokaż obrys wokół okładek</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku nie jest aktywne</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Zainstaluj i uruchom Shizuku, aby używać go jako instalatora rozszerzeń.</string>
+    <string name="use_shizuku_to_install">Używaj Shizuku do instalowania rozszerzeń</string>
+    <string name="use_shizuku_summary">Umożliwia instalowanie rozszerzeń bez wyświetlania monitów oraz pozwala na automatyczne aktualizacje dla urządzeń pracujących na Android 12</string>
+    <string name="classic_blue">Klasyczny Niebieski</string>
+    <string name="lime_time">Pora na Limonkę</string>
+    <string name="download_queue_size_warning">Ostrzeżenie: duża ilość zakolejkowanych pobrań może doprowadzić do spowolnienia źródeł i/lub zablokowania Tachiyomi</string>
+    <string name="every_3_days">Co 3 dni</string>
+    <string name="save_chapters_as_cbz">Zapisz rozdziały jako CBZ</string>
 </resources>

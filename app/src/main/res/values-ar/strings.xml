@@ -61,9 +61,6 @@
     <string name="default_value">الافتراضي</string>
     <string name="library_update_frequency">فترة تحديث المكتبة</string>
     <string name="manual">يدويا</string>
-    <string name="hourly">كل ساعة</string>
-    <string name="every_2_hours">كل ساعتين</string>
-    <string name="every_3_hours">كل 3 ساعات</string>
     <string name="every_6_hours">كل 6 ساعات</string>
     <string name="every_12_hours">كل 12 ساعة</string>
     <string name="daily">يوميا</string>
@@ -78,9 +75,7 @@
     <string name="only_update_ongoing">تحديث المانجا المستمرة فقط</string>
     <string name="sync_chapters_after_reading">مزامنة الفصول بعد القراءة</string>
     <string name="app_theme">سمة التطبيق</string>
-    <string name="light_blue">السمة الرئيسية</string>
     <string name="dark">السمة الليلية</string>
-    <string name="dark_blue">أزرق غامق</string>
     <string name="amoled_black">سمة شاشات AMOLED</string>
     <string name="language">اللغة</string>
     <string name="system_default">لغة النظام الافتراضية</string>
@@ -835,7 +830,6 @@
     <string name="save_pages_separately">أحفظ الصفحات في ملفات مختلفة</string>
     <string name="actions">أفعال</string>
     <string name="automatic_orientation">أوتوماتيك</string>
-    <string name="webtoon_cannot_change">لا يمكنك تغيير وضع القراءة من ويب توون. عدل نوع السلسلة أولاً للتغيير.</string>
     <string name="create_folders_by_manga_title">أنشئ ملفات طبقاً لعنوان المانجا</string>
     <string name="show_on_long_press">أظهر عند الضغط لمدة طويلة</string>
     <string name="vertically">عمودي</string>
@@ -1007,4 +1001,17 @@
     <string name="helpful_translation_links">روابط مساعدة للترجمة</string>
     <string name="help_translate">ساعد بالترجمة</string>
     <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وتصبح المصادر أبطأ</string>
+    <string name="use_suggested_date">استعمل التاريخ المقترح</string>
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="remove_from_">احذف من %1$s</string>
+    <string name="keep_in_">احتفظ ب%1$s</string>
+    <string name="channel_errors">أخطاء</string>
+    <string name="log_out_from_">تسجيل الخروج من %1$s ؟</string>
+    <string name="details_page">صفحة المعلومات</string>
+    <string name="show_outline_around_covers">إظهار الخط الخارجى حول غطاء المانجا‌‍‎‪‌</string>
+    <string name="cannot_remove_tracking_while_offline">لا يمكن ازالة المتابع من %1$s و انت غير متصل</string>
+    <string name="theme_buttons_based_on_cover">مظهر الأزرار تبعا للغطاء</string>
+    <string name="show_in_sources_and_extensions">أظهر في قائمة المصادر و الملحقات</string>
+    <string name="every_3_days">كل ثلاثة ايام</string>
 </resources>

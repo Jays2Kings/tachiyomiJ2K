@@ -65,9 +65,6 @@
     <string name="default_value">Standard</string>
     <string name="library_update_frequency">Bibliotekets uppdateringsfrekvens</string>
     <string name="manual">Manuell</string>
-    <string name="hourly">Varje timme</string>
-    <string name="every_2_hours">Varannan timme</string>
-    <string name="every_3_hours">Var tredje timme</string>
     <string name="every_6_hours">Var 6:e timme</string>
     <string name="every_12_hours">Var 12:e timme</string>
     <string name="daily">Dagligen</string>
@@ -82,10 +79,8 @@
     <string name="only_update_ongoing">Uppdatera endast pågående manga</string>
     <string name="sync_chapters_after_reading">Synkronisera kapitel efter läsning</string>
     <string name="app_theme">Programtema</string>
-    <string name="light_blue">Huvudtema</string>
     <string name="dark">Mörkt tema</string>
     <string name="amoled_black">AMOLED tema</string>
-    <string name="dark_blue">Mörkblå</string>
     <string name="language">Språk</string>
     <string name="system_default">Systemstandard</string>
     <string name="default_category">Standardkategori</string>
@@ -769,7 +764,6 @@
     <string name="incognito_mode">Inkognitoläge</string>
     <string name="turn_off_">Stäng av %s</string>
     <string name="turn_on_">Slå på %s</string>
-    <string name="webtoon_cannot_change">Det går inte att ändra läsläge från webtoon. Redigera serietypen först för att ändra.</string>
     <string name="remove_crop">Ta bort beskärning</string>
     <string name="crop_borders_webtoon">Beskära kantlinjer (Webtoon)</string>
     <string name="crop_borders_paged">Beskära kantlinjer (sida vid sida)</string>
@@ -928,4 +922,11 @@
     <string name="teal_ocean">Turkos Hav</string>
     <string name="scanlators">Skanner &amp; översättare</string>
     <string name="by_default_side_nav_info">Som standard används sidnavigering för vissa telefoner och små surfplattor i liggande läge och visas alltid på större surfplattor</string>
+    <string name="show_outline_around_covers">Visa konturer runt omslag</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku körs inte</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installera och starta Shizuku för att använda Shizuku som tilläggsinstallationsprogram.</string>
+    <string name="use_shizuku_to_install">Använd Shizuku för att installera tillägg</string>
+    <string name="use_shizuku_summary">Gör det möjligt att installera tillägg utan uppmaningar från användaren och möjliggör automatiska uppdateringar för enheter med Android 12</string>
+    <string name="every_3_days">Var 3:e dag</string>
+    <string name="download_queue_size_warning">Varning: stora massnerladdningar kan leda till att källor blir långsamma och/eller blockerar Tachiyomi</string>
 </resources>

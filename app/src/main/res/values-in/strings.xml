@@ -2,7 +2,7 @@
 <resources>
     <string name="categories">Kategori</string>
     <string name="manga">Manga</string>
-    <string name="chapters">Chapter</string>
+    <string name="chapters">Bab</string>
     <string name="tracking">Pelacakan</string>
     <string name="history">Riwayat</string>
     <string name="settings">Pengaturan</string>
@@ -61,9 +61,6 @@
     <string name="default_value">Default</string>
     <string name="library_update_frequency">Frekuensi pembaruan pustaka</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Tiap jam</string>
-    <string name="every_2_hours">Tiap 2 jam</string>
-    <string name="every_3_hours">Tiap 3 jam</string>
     <string name="every_6_hours">Tiap 6 jam</string>
     <string name="every_12_hours">Tiap 12 jam</string>
     <string name="daily">Tiap hari</string>
@@ -78,7 +75,6 @@
     <string name="only_update_ongoing">Perbarui manga yang belum tamat saja</string>
     <string name="sync_chapters_after_reading">Sinkronkan chapter setelah membaca</string>
     <string name="app_theme">Tema aplikasi</string>
-    <string name="light_blue">Tema utama</string>
     <string name="dark">Tema gelap</string>
     <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Bahasa</string>
@@ -173,7 +169,7 @@
     <string name="local_source">Sumber lokal</string>
     <string name="description">Deskripsi</string>
     <string name="ongoing">Berlanjut</string>
-    <string name="unknown">Tidak diketahui</string>
+    <string name="unknown">Tak diketahui</string>
     <string name="licensed">Berlisensi</string>
     <string name="author">Penulis</string>
     <string name="artist">Artis</string>
@@ -261,7 +257,6 @@
     <string name="started">Dimulai</string>
     <string name="type">Tipe</string>
     <string name="url_not_set_click_again">URL Manga belum diatur, klik judul dan pilih manga lagi</string>
-    <string name="dark_blue">Biru gelap</string>
     <string name="finished_chapter">Selesai:</string>
     <string name="current_chapter">Saat ini:</string>
     <string name="next_title">Selanjutnya:</string>
@@ -349,11 +344,11 @@
     <string name="pin">Tandai</string>
     <string name="pinned">Tersemat</string>
     <string name="reorder">Susun ulang</string>
-    <string name="marked_as_unread">Tandai sebagai belum dibaca</string>
-    <string name="marked_as_read">Tandai sebagai telah dibaca</string>
-    <string name="chapter_x_of_y">Chapter %1$d dari %2$d</string>
-    <string name="new_chapters">Chapter baru</string>
-    <string name="unknown_status">Status tidak diketahui</string>
+    <string name="marked_as_unread">Tandai belum dibaca</string>
+    <string name="marked_as_read">Tandai telah dibaca</string>
+    <string name="chapter_x_of_y">Bab ke-%1$d dari %2$d</string>
+    <string name="new_chapters">Bab baru</string>
+    <string name="unknown_status">Status tak diketahui</string>
     <string name="manhwa">Manhwa</string>
     <string name="add_to_library">Tambahkan ke pustaka</string>
     <string name="season_">Sesi %1$d</string>
@@ -454,11 +449,11 @@
     <plurals name="remove_n_chapters">
         <item quantity="other">Hapus %1$d dari chapter yang diunduh\?</item>
     </plurals>
-    <string name="chapter_not_found">Chapter tidak ditemukan</string>
-    <string name="chapters_removed">Chapter dihapus.</string>
+    <string name="chapter_not_found">Bab tak ditemukan</string>
+    <string name="chapters_removed">Bab dihapus.</string>
     <string name="removed_bookmark">Hapus tanda</string>
-    <string name="all_chapters_read">Semua chapter dibaca</string>
-    <string name="last_read_chapter_">Chapter yang terakhir dibaca %1$s</string>
+    <string name="all_chapters_read">Semua bab telah dibaca</string>
+    <string name="last_read_chapter_">Terakhir membaca Bab %1$s</string>
     <string name="unlock">Buka kunci</string>
     <string name="unlock_library">Buka kunci untuk mengakses pustaka</string>
     <string name="in_progress">Sedang dibaca</string>
@@ -489,7 +484,7 @@
     <string name="animate_page_transitions">Animasikan transisi halaman</string>
     <string name="default_reading_mode">Mode baca default</string>
     <string name="nav_layout">Tata letak navigasi</string>
-    <string name="no_chapters_error">Chapter tidak ditemukan</string>
+    <string name="no_chapters_error">Bab tak ditemukan</string>
     <string name="badges">Penanda</string>
     <string name="source_migration_guide">Petunjuk migrasi</string>
     <string name="nsfw_sources">Sumber NSFW (18+)</string>
@@ -621,9 +616,9 @@
     <string name="actions">Tindakan</string>
     <string name="webview_is_required">WebView diperlukan untuk Tachiyomi</string>
     <string name="release_page">Halaman rilisan</string>
-    <string name="no_chapters_to_delete">Tidak ada chapter untuk dihapus</string>
+    <string name="no_chapters_to_delete">Tak ada chapter untuk dihapus</string>
     <string name="remove_all_downloads">Hapus semua unduhan\?</string>
-    <string name="no_pages_found">Halaman tidak ditemukan</string>
+    <string name="no_pages_found">Halaman tak ditemukan</string>
     <string name="disabled">Tidak Aktif</string>
     <string name="deleted_">Dihapus: %1$s</string>
     <string name="use_default">Gunakan opsi default</string>
@@ -673,7 +668,6 @@
     <string name="create_folders_by_manga_title">Buat halaman berdasarkan judul manga</string>
     <string name="save_pages_separately">Simpan halaman dalam folder terpisah</string>
     <string name="show_on_long_press">Tampilkan pada tekan lama</string>
-    <string name="webtoon_cannot_change">Tidak dapat mengganti mode baca dari webtoon. Edit tipe seri terlebih dahulu untuk mengubah.</string>
     <string name="automatic_orientation">Otomatis (berdasarkan orientasi)</string>
     <string name="automatic_can_still_switch">Ketika menggunakan tata letak halaman secara otomatis, Anda masih dapat menukar tata letak ketika sedang membaca tanpa menimpa pengaturan ini</string>
     <string name="page_layout">Tata letak halaman</string>
@@ -853,7 +847,7 @@
     <string name="by_source_order">Menurut urutan sumber</string>
     <string name="show_number_of_items">Tampilkan jumlah item</string>
     <string name="update_completed">Pembaruan selesai</string>
-    <string name="not_bookmarked">Tidak ditandai</string>
+    <string name="not_bookmarked">Tak ditandai</string>
     <string name="external_storage_download_notice">TachiyomiJ2K membutuhkan akses semua berkas untuk mengunduh chapter. Klik di sini, lalu izinkan \"Izinkan akses untuk mengatur semua berkas.\"</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses pada semua berkas di Android 11 untuk mengunduh chapter, membuat cadangan otomatis, dan membaca manga lokal.
 \n
@@ -900,11 +894,17 @@
     <string name="cannot_remove_tracking_while_offline">Pelacak tidak dapat di hapus dari %1$s ketika sedang offline</string>
     <string name="details_page">Halaman detail</string>
     <string name="theme_buttons_based_on_cover">Tombol tema berdasarkan sampul</string>
-    <string name="scanlators">Scanlators</string>
+    <string name="scanlators">Scanlator</string>
     <string name="log_in">Masuk</string>
     <string name="log_out">Keluar</string>
     <string name="keep_in_">Simpan di dalam %1$s</string>
     <string name="show_in_sources_and_extensions">Tampilkan di sumber dan daftar ekstensi</string>
     <string name="notification_size_warning">Pembaruan berskala besar dapat meningkatkan penggunaan baterai dan sumber menjadi lambat</string>
     <string name="show_outline_around_covers">Tampilkan garis di sekitar sampul</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku tidak berjalan</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Pasang dan mulai Shizuku untuk menggunakan Shizuku sebagai pemasang ekstensi.</string>
+    <string name="use_shizuku_to_install">Gunakan Shizuku untuk memasang ekstensi</string>
+    <string name="use_shizuku_summary">Izinkan ekstensi untuk dipasang tanpa peringatan ke pengguna dan aktifkan pembaruan otomatis untuk perangkat di bawah Android 12</string>
+    <string name="download_queue_size_warning">Peringatan: mengunduh dalam jumlah besar bisa menyebabkan sumber menjadi lambat dan/atau memblokir Tachiyomi</string>
+    <string name="every_3_days">Tiap 3 hari</string>
 </resources>

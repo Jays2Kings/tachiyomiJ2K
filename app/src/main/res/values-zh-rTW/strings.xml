@@ -66,9 +66,6 @@
     <string name="default_value">預設</string>
     <string name="library_update_frequency">書櫃更新頻率</string>
     <string name="manual">手動</string>
-    <string name="hourly">每小時</string>
-    <string name="every_2_hours">每 2 小時</string>
-    <string name="every_3_hours">每 3 小時</string>
     <string name="every_6_hours">每 6 小時</string>
     <string name="every_12_hours">每 12 小時</string>
     <string name="daily">每日</string>
@@ -82,10 +79,8 @@
     <string name="charging">充電時</string>
     <string name="only_update_ongoing">僅更新連載中的漫畫</string>
     <string name="app_theme">佈景主題</string>
-    <string name="light_blue">淺藍</string>
     <string name="dark">深色</string>
     <string name="amoled_black">全黑</string>
-    <string name="dark_blue">深藍</string>
     <string name="language">語言</string>
     <string name="system_default">系統預設</string>
     <string name="default_category">預設分類</string>
@@ -143,8 +138,8 @@
     <string name="source_not_installed_">來源未安裝：%1$s</string>
     <string name="paused">擱置中</string>
     <string name="picture_saved">圖片已儲存</string>
-    <string name="set_as_cover">設為書封</string>
-    <string name="cover_updated">已更新書封</string>
+    <string name="set_as_cover">設為封面</string>
+    <string name="cover_updated">已更新封面</string>
     <string name="new_version_available">有可用的更新！</string>
     <string name="ignore">忽略</string>
     <string name="no_new_updates_available">沒有可用的更新</string>
@@ -272,7 +267,7 @@
     <string name="type">類型</string>
     <string name="url_not_set_click_again">漫畫網址未設置，請點擊標題再選擇一次漫畫</string>
     <string name="this_will_remove_the_read_date_question">這將會清除此章節的閱讀日期，確定嗎？</string>
-    <string name="current_chapter">當前章節:</string>
+    <string name="current_chapter">目前章節：</string>
     <string name="previous_title">上一章：</string>
     <string name="could_not_download_unexpected_error">下載時發生不可預期的錯誤</string>
     <string name="lock_with_biometrics">生物特徵辨識鎖定</string>
@@ -357,7 +352,7 @@
     <string name="comfortable_grid">鬆散格狀</string>
     <string name="confirm_category_deletion">確定要刪除分類？</string>
     <plurals name="category_plural">
-        <item quantity="other">分類</item>
+        <item quantity="other">%d 個分類</item>
     </plurals>
     <string name="marked_as_unread">標示為未讀</string>
     <string name="marked_as_read">標示為已讀</string>
@@ -372,7 +367,7 @@
     <string name="automatic_backups">自動備份</string>
     <string name="invalid_backup_file">無效的備份檔</string>
     <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
-\n副檔名應為 .proto.gz 或 .json</string>
+\n副檔名應為 .proto.gz 或 .json。</string>
     <string name="file_is_missing_data">檔案遺失資料</string>
     <string name="backup_has_no_manga">備份檔並未包含任何漫畫</string>
     <string name="restore_missing_sources">遺失來源：</string>
@@ -394,8 +389,8 @@
     <string name="may_contain_nsfw">可能包含未滿十八歲之人不宜觀賞的內容</string>
     <string name="next_page">下一頁</string>
     <string name="previous_page">上一頁</string>
-    <string name="next_chapter">下一頁</string>
-    <string name="previous_chapter">上一頁</string>
+    <string name="next_chapter">下一章</string>
+    <string name="previous_chapter">上一章</string>
     <string name="animate_page_transitions">翻頁轉場動畫</string>
     <string name="default_reading_mode">預設閱讀模式</string>
     <string name="nav_layout">輕觸翻頁模式</string>
@@ -501,4 +496,65 @@
     <plurals name="missing_chapters_warning">
         <item quantity="other">略過了 %d 章，也許是來源沒有這些章節，或其已被你的篩選規則排除</item>
     </plurals>
+    <string name="search_extensions">搜尋擴充套件…</string>
+    <string name="restore_miui_warning">若停用 MIUI 最佳化，備份與還原可能無法正確執行。</string>
+    <string name="log_out">登出</string>
+    <string name="log_out_from_">登出 %1$s？</string>
+    <string name="category">分類</string>
+    <plurals name="chapters_plural">
+        <item quantity="other">共 %1$d 章</item>
+    </plurals>
+    <plurals name="pages_left">
+        <item quantity="other">餘 %1$d 頁</item>
+    </plurals>
+    <string name="new_category">新分類</string>
+    <string name="remove_from_">從「%1$s」移出</string>
+    <string name="disabled">已停用</string>
+    <string name="app_info">程式資訊</string>
+    <string name="reading_mode">閱讀模式</string>
+    <plurals name="cache_cleared">
+        <item quantity="other">已清除快取，%d 個檔案已被刪除</item>
+    </plurals>
+    <string name="webview_is_required">WebView 為 Tachiyomi 的必要元件</string>
+    <string name="create_new_category">建立新分類</string>
+    <string name="log_in">登入</string>
+    <string name="update_all">全部更新</string>
+    <string name="updating_">正在更新「%1$s」</string>
+    <string name="warning">警告</string>
+    <string name="category_deleted">已刪除分類</string>
+    <string name="category_cannot_be_blank">分類名稱不能為空</string>
+    <string name="long_press_category">輕觸並按住以編輯分類</string>
+    <string name="actions">操作</string>
+    <string name="side_nav_icon_alignment">側邊導覽圖示對齊</string>
+    <string name="bottom">底端</string>
+    <string name="no_match_found">未找到匹配項</string>
+    <string name="name">名稱</string>
+    <string name="top">頂端</string>
+    <string name="create_folders_by_manga_title">根據漫畫標題建立資料夾</string>
+    <string name="yotsuba">四葉</string>
+    <string name="tako">Tako</string>
+    <string name="locked_portrait">鎖定直向</string>
+    <string name="midnight_dusk">午夜幽暗</string>
+    <string name="start_downloading_now">立刻開始下載</string>
+    <string name="show_number_of_items">顯示藏書數目</string>
+    <string name="date_fetched">擷取日期</string>
+    <string name="channel_errors">錯誤</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku 未執行</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">若要使用 Shizuku 來安裝擴充套件，請先安裝 Shizuku 並開啟之。</string>
+    <string name="locked_landscape">鎖定橫向</string>
+    <string name="appearance">外觀</string>
+    <string name="incognito_mode">無痕模式</string>
+    <string name="pauses_reading_history">暫停閱讀記錄</string>
+    <string name="strawberry_daiquiri">草莓黛綺莉</string>
+    <string name="pure_black_dark_mode">純黑深色模式</string>
+    <string name="restore_content_full">即將還原備份中的資料。
+\n
+\n隨後請安裝所有遺失的擴充套件並重新登入各歷程平台。</string>
+    <string name="show_in_sources_and_extensions">在來源和擴充套件清單中顯示</string>
+    <string name="exclude_">排除：%s</string>
+    <string name="include_">包含：%s</string>
+    <string name="extension_updates">擴充套件可供更新</string>
+    <string name="next">下一頁</string>
+    <string name="every_3_days">每 3 日</string>
+    <string name="download_queue_size_warning">警告：大量批次下載可能壅塞來源並 (或) 使其封鎖 Tachiyomi</string>
 </resources>

@@ -65,9 +65,6 @@
     <string name="default_value">默认</string>
     <string name="library_update_frequency">书架更新频率</string>
     <string name="manual">手动</string>
-    <string name="hourly">每小时</string>
-    <string name="every_2_hours">每2小时</string>
-    <string name="every_3_hours">每3小时</string>
     <string name="every_6_hours">每6小时</string>
     <string name="every_12_hours">每12小时</string>
     <string name="daily">每天</string>
@@ -82,7 +79,6 @@
     <string name="only_update_ongoing">仅更新连载中的漫画</string>
     <string name="sync_chapters_after_reading">阅读之后同步</string>
     <string name="app_theme">主题</string>
-    <string name="light_blue">默认主题</string>
     <string name="dark">夜间模式</string>
     <string name="amoled_black">AMOLED模式</string>
     <string name="language">语言</string>
@@ -164,18 +160,18 @@
     <string name="backup_location">备份目录</string>
     <string name="backup_frequency">备份频率</string>
     <string name="max_auto_backups">最大自动备份数</string>
-    <string name="backup_created">已创建备份</string>
-    <string name="restore_completed">还原完成</string>
+    <string name="backup_created">备份已创建</string>
+    <string name="restore_completed">还原完毕</string>
     <string name="what_should_backup">需要备份什么？</string>
     <string name="restoring_backup">正在还原备份</string>
     <string name="clear_chapter_cache">清除缓存数据</string>
     <string name="used_">已使用空间：%1$s</string>
     <string name="cache_delete_error">清除缓存时出现错误</string>
     <string name="clear_cookies">清除 Cookies</string>
-    <string name="cookies_cleared">已清除 Cookies</string>
+    <string name="cookies_cleared">Cookies 已清除</string>
     <string name="clear_database">清除数据库</string>
     <string name="clear_database_summary">删除未在书架的漫画与章节</string>
-    <string name="clear_database_confirmation">你确定吗？未在书架中的漫画的已读章节和进度将会丢失</string>
+    <string name="clear_database_confirmation">你确定吗？不在书架中的漫画的已读章节和进度将会丢失</string>
     <string name="clear_database_completed">已删除条目</string>
     <string name="refresh_library_metadata">刷新书架数据</string>
     <string name="updates_covers_genres_desc">更新封面，类型，描述与漫画状态信息</string>
@@ -233,7 +229,7 @@
     <string name="this_will_remove_the_read_date_question">将清除此章节的阅读日期，确定吗？</string>
     <string name="picture_saved">图片已保存</string>
     <string name="options">选项</string>
-    <string name="set_as_cover">设置为封面</string>
+    <string name="set_as_cover">设为封面</string>
     <string name="cover_updated">封面已更新</string>
     <string name="page_">第 %1$d 页</string>
     <string name="next_chapter_not_found">后面没有啦</string>
@@ -269,7 +265,6 @@
     <string name="no_network_connection">无网络连接</string>
     <string name="download_paused">下载暂停</string>
     <string name="common">普通</string>
-    <string name="dark_blue">暗蓝色主题</string>
     <string name="open_in_webview">用外部浏览器打开</string>
     <string name="true_32bit_color">32 位色彩</string>
     <string name="skip_read_chapters">跳过已读章节</string>
@@ -302,7 +297,7 @@
     <string name="check_for_extension_updates">自动检查扩展插件更新</string>
     <string name="website">官网</string>
     <string name="open_source_licenses">开源许可证</string>
-    <string name="email">邮箱地址</string>
+    <string name="email">电子邮件地址</string>
     <string name="successfully_logged_out">你已登出</string>
     <string name="cancel_all">全部取消</string>
     <string name="update">更新</string>
@@ -544,7 +539,7 @@
     <string name="start_downloading_now">现在开始下载</string>
     <string name="username_must_not_be_blank">用户名或密码不能为空</string>
     <string name="not_downloaded">未下载</string>
-    <string name="whats_new">更新记录</string>
+    <string name="whats_new">更新日志</string>
     <string name="you_can_migrate_in_library">您还可以通过选择书架中的漫画进行迁移</string>
     <string name="migration_sources_changed">迁移图源已更改</string>
     <string name="only_enable_enabled_for_migration">仅启用当前启用的图源用于迁移</string>
@@ -682,7 +677,7 @@
     <string name="crash_logs">崩溃记录</string>
     <string name="dump_crash_logs">转储崩溃记录</string>
     <string name="saves_error_logs">将错误记录保存到文件中，以便与开发人员共享</string>
-    <string name="crash_log_saved">崩溃记录已保存</string>
+    <string name="crash_log_saved">崩溃日志已保存</string>
     <string name="updated_to_">已更新到 v%1$s</string>
     <string name="ignore_cutout_areas">忽略刘海屏区域</string>
     <string name="pad_cutout_areas">平板刘海屏区域</string>
@@ -749,7 +744,6 @@
     <string name="incognito_mode">无痕模式</string>
     <string name="turn_off_">关闭 %s</string>
     <string name="turn_on_">打开 %s</string>
-    <string name="webtoon_cannot_change">无法从网络漫画（webtoon）改变阅读模式。首先编辑系列类型以进行更改。</string>
     <string name="crop_borders_webtoon">裁剪边缘（网络漫画）</string>
     <string name="crop_borders_paged">裁剪边缘（分页）</string>
     <string name="changing_will_reset_reading_mode">更改此值将重置这个系列的阅读模式</string>
@@ -794,7 +788,7 @@
     <string name="automatic_removal">自动移除</string>
     <string name="mark_range_as_unread">将一些章节标记为未读</string>
     <string name="mark_range_as_read">将一些章节标记为已读</string>
-    <string name="cancel_all_for_series">取消这个系列的全部</string>
+    <string name="cancel_all_for_series">取消此丛书</string>
     <string name="app_shortcuts">应用快捷方式</string>
     <string name="include_">包含：%s</string>
     <string name="exclude_">排除：%s</string>
@@ -831,7 +825,7 @@
     <string name="all_files_permission_required">需要文件权限</string>
     <string name="orientation">方向</string>
     <string name="default_orientation">默认方向</string>
-    <string name="restore_miui_warning">如果 MIUI 优化被禁用，备份/恢复可能无法正常工作。</string>
+    <string name="restore_miui_warning">如果 MIUI 优化被禁用，备份/还原可能无法正常工作。</string>
     <string name="yang">阳</string>
     <string name="yin">阴</string>
     <string name="set_as_default">设为默认</string>
@@ -855,7 +849,7 @@
     <string name="update_all">更新全部</string>
     <string name="update_completed">已完成更新</string>
     <string name="could_not_install_update">无法安装更新</string>
-    <string name="about_dont_kill_my_app">某些厂商有额外的应用限制，会扼杀后台服务。这个网站有更多关于如何修复此问题的信息。</string>
+    <string name="about_dont_kill_my_app">部分制造商会设置额外的应用限制来杀死后台服务。此网站提供了更多有关修复此问题的信息。</string>
     <string name="tako">Tako</string>
     <string name="split_double_pages_portrait">竖排拆分双页</string>
     <string name="recently_installed">最近安装</string>
@@ -906,4 +900,13 @@
     <string name="notification_size_warning">大型更新可能会导致电池使用量增加和来源变慢</string>
     <string name="show_in_sources_and_extensions">显示在图源和扩展列表中</string>
     <string name="show_outline_around_covers">显示封面图轮廓</string>
+    <string name="use_shizuku_to_install">使用 Shizuku 安装扩展</string>
+    <string name="use_shizuku_summary">允许不提示用户安装扩展，并对运行 Android 12 以下系统的设备启用自动更新</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku 未在运行</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">安装并启动 Shizuku 以将 Shizuku 用作扩展插件安装程序。</string>
+    <string name="lime_time">石灰时代</string>
+    <string name="classic_blue">经典蓝</string>
+    <string name="every_3_days">每 3 天</string>
+    <string name="download_queue_size_warning">警告：批量下载可能会导致图源变慢和/或图源封锁 Tachiyomi</string>
+    <string name="save_chapters_as_cbz">将章节保存为 CBZ 文件</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">Kategorijas</string>
-    <string name="manga"></string>
+    <string name="manga"/>
     <string name="chapters">Nodaļas</string>
     <string name="tracking">Sekošana</string>
     <string name="history">Vēsture</string>
@@ -172,8 +172,8 @@
     <string name="not_started">Nav sākts</string>
     <string name="webtoon">Webtūns</string>
     <string name="comic">Komikss</string>
-    <string name="manhua"></string>
-    <string name="manhwa"></string>
+    <string name="manhua"/>
+    <string name="manhwa"/>
     <string name="invert_tapping">Invertēt spiešanu</string>
     <string name="none">Nav</string>
     <string name="tracked">Izsekots</string>
@@ -233,4 +233,17 @@
     <string name="category">Kategorija</string>
     <string name="backup_in_progress">Dublēšana jau notiek</string>
     <string name="move_x_to">Pārvietot %1$s uz…</string>
+    <string name="portrait">Portrets</string>
+    <string name="download_location">Lejuplādes vieta</string>
+    <string name="extension_updates">Paplašinājumu atjauninājumi</string>
+    <string name="restore_backup">Atjaunot dublējumu</string>
+    <string name="landscape">Ainava</string>
+    <string name="show_number_of_items">Parādīt lietu skaitu</string>
+    <string name="hide_notification_content">Slēpt paziņojumu saturu</string>
+    <string name="restore_missing_trackers">Nav pieslēgts pie izsekotājiems:</string>
+    <string name="restore_content_full">Dati no dublējuma faila būs atjaunoti.
+\n
+\nJums būs nepieciešams instalēt jebkādus trūkstošos paplašinājumus un pēc tam pieslēgties izsekošanas pakalpojumiem.</string>
+    <string name="webview_is_required">Tachiyomi ir nepieciešams WebView</string>
+    <string name="name">Nosaukums</string>
 </resources>

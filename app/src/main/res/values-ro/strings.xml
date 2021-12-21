@@ -64,9 +64,6 @@
     <string name="default_value">Prestabilit</string>
     <string name="library_update_frequency">Frecvență actualizări</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Fiecare oră</string>
-    <string name="every_2_hours">Fiecare 2 ore</string>
-    <string name="every_3_hours">Fiecare 3 ore</string>
     <string name="every_6_hours">Fiecare 6 ore</string>
     <string name="every_12_hours">Fiecare 12 ore</string>
     <string name="daily">Fiecare zi</string>
@@ -81,7 +78,6 @@
     <string name="only_update_ongoing">Actualizează doar manga în curs de desfășurare</string>
     <string name="sync_chapters_after_reading">Sincronizează capitolele după citire</string>
     <string name="app_theme">Temă aplicație</string>
-    <string name="light_blue">Tema principală</string>
     <string name="dark">Tema întunecată</string>
     <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Limbă</string>
@@ -104,7 +100,6 @@
     <string name="language_">Limbă: %1$s</string>
     <string name="fullscreen">Ecran complet</string>
     <string name="download_badge">Insigne pentru descărcări</string>
-    <string name="dark_blue">Albastru închis</string>
     <string name="double_tap_anim_speed">Animație pentru apăsare dublă</string>
     <string name="show_page_number">Arată numărul paginii</string>
     <string name="crop_borders">Taie marginile</string>
@@ -697,7 +692,6 @@
         <item quantity="few">%1$d pagini</item>
         <item quantity="other">%1$d pagini</item>
     </plurals>
-    <string name="webtoon_cannot_change">Nu se poate schimba modul de citire din webtoon. Editați mai întâi tipul de serie pentru a schimba.</string>
     <string name="automatic_orientation">Automat (în funcție de orientare)</string>
     <string name="page_preload_amount">Cantitatea de preîncărcare a paginii</string>
     <string name="reading_">Citire %1$s</string>
@@ -715,4 +709,26 @@
     <string name="shift_double_pages">Schimbați paginile duble</string>
     <string name="landscape">Peisaj</string>
     <string name="portrait">Portret</string>
+    <string name="by_chapter_number">După numărul capitolului</string>
+    <string name="by_update_date">După data postării</string>
+    <string name="crash_logs">Jurnale de erori fatale</string>
+    <string name="name">Titlu</string>
+    <string name="show_number_of_items">Afișare număr de elemente</string>
+    <string name="date_fetched">Data preluată</string>
+    <string name="set_as_default">Setați ca implicit</string>
+    <string name="incognito_mode">Modul incognito</string>
+    <string name="pauses_reading_history">Întrerupe citirea istoricului</string>
+    <string name="hide_notification_content">Ascunde conținutul notificării</string>
+    <string name="dump_crash_logs">Aruncați jurnalele de erori fatale</string>
+    <string name="saves_error_logs">Salvează jurnalele de erori într-un fișier pentru partajarea cu dezvoltatorii</string>
+    <string name="doh">DNS peste HTTPS</string>
+    <string name="log_out">Deconectează-te</string>
+    <string name="log_out_from_">Deconectează-te de la %1$s\?</string>
+    <string name="exclude_">Excludeți: %s</string>
+    <string name="include_">Includeți: %s</string>
+    <string name="next">Următorul</string>
+    <string name="channel_errors">Erori</string>
+    <string name="restore_content_full">Datele din fișierul de rezervă vor fi restaurate.
+\n
+\nVa trebui să instalați toate extensiile lipsă și să vă conectați ulterior la serviciile de urmărire pentru a le utiliza.</string>
 </resources>

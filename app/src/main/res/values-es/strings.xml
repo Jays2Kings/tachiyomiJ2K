@@ -44,9 +44,6 @@
     <string name="default_value">Predefinido</string>
     <string name="library_update_frequency">Frecuencia de actualización de la biblioteca</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Cada hora</string>
-    <string name="every_2_hours">Cada 2 horas</string>
-    <string name="every_3_hours">Cada 3 horas</string>
     <string name="every_6_hours">Cada 6 horas</string>
     <string name="every_12_hours">Cada 12 horas</string>
     <string name="daily">Cada día</string>
@@ -54,11 +51,10 @@
     <string name="library_update_restriction">Restricciones de actualización de la biblioteca</string>
     <string name="library_update_restriction_summary">Actualizar solo cuando se cumplan las condiciones</string>
     <string name="wifi">Wi-Fi</string>
-    <string name="charging">Cargando</string>
+    <string name="charging">Mientras se carga la batería</string>
     <string name="only_update_ongoing">Solo actualizar el manga en curso</string>
     <string name="sync_chapters_after_reading">Sincronizar capítulos después de leerlos</string>
     <string name="app_theme">Tema de la aplicación</string>
-    <string name="light_blue">Azul claro</string>
     <string name="dark">Oscuro</string>
     <!-- Reader section -->
     <string name="fullscreen">Pantalla completa</string>
@@ -102,7 +98,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Borrar la caché de los capítulos</string>
     <string name="used_">Usado: %1$s</string>
-    <string name="cache_delete_error">Se produjo un error al limpiar el caché</string>
+    <string name="cache_delete_error">Se produjo un error al limpiar la caché</string>
     <string name="clear_cookies">Borrar cookies</string>
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
@@ -279,9 +275,9 @@
     <string name="theres_no_next_chapter">No hay capítulo siguiente</string>
     <string name="theres_no_previous_chapter">No hay capítulo anterior</string>
     <string name="migrate">Migrar</string>
-    <string name="untrusted_extension_message">Esta extensión fue firmada por una fuente no certificada y no fue activada.
+    <string name="untrusted_extension_message">Esta extensión está firmada por una fuente sin certificar y por lo tanto no se ha activado.
 \n
-\nUna extensión maliciosa puede leer cualquier credencial de inicio guardado en Tachiyomi o ejecutar código arbitrario.
+\nUna extensión maliciosa puede leer credenciales de inicio guardadas en Tachiyomi o ejecutar cualquier tipo de código en tu dispositivo.
 \n
 \nAl confiar en este certificado aceptas estos riesgos.</string>
     <string name="no_animation">Sin animación</string>
@@ -300,7 +296,6 @@
     <string name="loading_pages">Cargando páginas…</string>
     <string name="failed_to_load_pages_">Error al cargar páginas: %1$s</string>
     <string name="double_tap_anim_speed">Velocidad de animación de doble toque</string>
-    <string name="dark_blue">Azul oscuro</string>
     <string name="open_in_webview">Abrir en vista web</string>
     <string name="skip_read_chapters">Saltar capítulos marcados como leídos</string>
     <string name="true_32bit_color">Color en 32 bits</string>
@@ -616,7 +611,7 @@
     <string name="kindlish_nav">Estilo Kindle</string>
     <string name="edge_nav">Borde</string>
     <string name="invert_tapping">Tapping invertido</string>
-    <string name="none">Ninguno</string>
+    <string name="none">Ninguna</string>
     <string name="started_reading_date">Fecha de inicio de lectura</string>
     <string name="finished_reading_date">Fecha de lectura finalizada</string>
     <string name="myanimelist_relogin">Por favor inicie sesión de nuevo en MAL</string>
@@ -636,8 +631,8 @@
     <string name="restoring_backup_canceled">Se ha cancelado la restauración</string>
     <string name="restore_duration">%02d min, %02d seg</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Hecho en %1$s con %2$s error</item>
-        <item quantity="other">Hecho en %1$s con %2$s errores</item>
+        <item quantity="one">Completada en %1$s con %2$s error</item>
+        <item quantity="other">Completada en %1$s con %2$s errores</item>
     </plurals>
     <string name="source_migration_guide">Guía de migración de fuentes</string>
     <string name="nsfw_sources">Fuentes NSFW (18+)</string>
@@ -784,7 +779,6 @@
     <string name="flat_lime">Lima Plano</string>
     <string name="pauses_reading_history">Pausa el historial de lectura</string>
     <string name="incognito_mode">Modo incógnito</string>
-    <string name="webtoon_cannot_change">No es posible cambiar el modo lectura de webtoon. Cambie el tipo de series primero.</string>
     <string name="automatic_orientation">Automático (basado en orientación)</string>
     <string name="automatic_can_still_switch">Al usar diseño automático de página, todavía es viable cambiar entre diseños al leer sin sobrescribir este ajuste</string>
     <string name="page_layout">Diseño de página</string>
@@ -841,8 +835,8 @@
     <string name="actions">Acciones</string>
     <string name="locked_landscape">Forzar en paisaje</string>
     <string name="locked_portrait">Bloqueado en modo retrato</string>
-    <string name="landscape">Panorama</string>
-    <string name="portrait">Retrato</string>
+    <string name="landscape">En horizontal</string>
+    <string name="portrait">En vertical</string>
     <string name="group_chapters_together">Agrupar los capítulos juntos</string>
     <string name="show_updated_time">Mostrar la hora de la actualización</string>
     <string name="search_tips_show_periodically">Los consejos de búsqueda aparecerán periódicamente. Mantenga presionada las sugerencias para buscarlos.</string>
@@ -857,7 +851,7 @@
     <string name="includes_recently_read_updated_added">Incluye series recientemente leídas, actualizadas y añadidas</string>
     <string name="show_recent_series">Mostrar series recientes</string>
     <string name="show_recent_sources">Mostrar fuentes recientemente usadas</string>
-    <string name="hide_notification_content">Ocultar contenido de la notificación</string>
+    <string name="hide_notification_content">Ocultar el contenido de las notificaciones</string>
     <string name="pure_black_dark_mode">Modo negro puro</string>
     <string name="side_nav_icon_alignment">Alineamientos de icono de navegación lateral</string>
     <string name="chocolate_strawberries">Fresas con chocolate</string>
@@ -960,4 +954,13 @@
     <string name="notification_size_warning">Las actualizaciones grandes pueden implicar un mayor uso de la batería y a que las fuentes se vuelvan más lentas</string>
     <string name="show_in_sources_and_extensions">Mostrar en la lista de fuentes y extensiones</string>
     <string name="show_outline_around_covers">Portadas con borde grueso</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku no está activo</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Instala e inicia Shizuku para utilizar Shizuku como instalador de extensiones.</string>
+    <string name="use_shizuku_to_install">Utilizar Shizuku para instalar extensiones</string>
+    <string name="use_shizuku_summary">Permite instalar extensiones sin preguntarte y las actualiza automáticamente en versiones inferiores a Android 12</string>
+    <string name="classic_blue">Azul clásico</string>
+    <string name="lime_time">Lima limonera</string>
+    <string name="download_queue_size_warning">Advertencia: Las descargas grandes pueden llevar a que las fuentes se vuelvan cada vez más lentas y en casos extremos que los servidores limiten o impidan el acceso a Tachiyomi</string>
+    <string name="every_3_days">Cada 3 días</string>
+    <string name="save_chapters_as_cbz">Guardar los capítulos como CBZ</string>
 </resources>

@@ -124,9 +124,6 @@
     <string name="only_download_over_wifi">Só descargar con Wi-Fi</string>
     <string name="custom_location">Ubicación personalizada</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Cada hora</string>
-    <string name="every_2_hours">Cada 2 horas</string>
-    <string name="every_3_hours">Cada 3 horas</string>
     <string name="every_6_hours">Cada 6 horas</string>
     <string name="every_12_hours">Cada 12 horas</string>
     <string name="daily">Diariamente</string>
@@ -212,4 +209,10 @@
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="hide_app_block_screenshots">Esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
     <string name="label_global_search">Procura global</string>
+    <string name="name">Nome</string>
+    <string name="portrait">Vertical</string>
+    <string name="landscape">Horizontal</string>
+    <string name="disabled">Deshabilitado</string>
+    <string name="reading_mode">Modo de lectura</string>
+    <string name="hide_notification_content">Esconde os contidos de notificacións</string>
 </resources>

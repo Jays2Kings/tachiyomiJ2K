@@ -45,9 +45,6 @@
     <string name="default_value">Padrão</string>
     <string name="library_update_frequency">Frequência de atualização da biblioteca</string>
     <string name="manual">Manual</string>
-    <string name="hourly">Hora à hora</string>
-    <string name="every_2_hours">A cada 2 horas</string>
-    <string name="every_3_hours">A cada 3 horas</string>
     <string name="every_6_hours">A cada 6 horas</string>
     <string name="every_12_hours">A cada 12 horas</string>
     <string name="daily">Diariamente</string>
@@ -61,7 +58,6 @@
     <string name="only_update_ongoing">Atualizar apenas mangás a decorrer</string>
     <string name="sync_chapters_after_reading">Sincronizar capítulos após leitura</string>
     <string name="app_theme">Tema da aplicação</string>
-    <string name="light_blue">Tema principal</string>
     <string name="dark">Tema escuro</string>
     <!-- Reader section -->
     <string name="fullscreen">Ocultar barra de estado</string>
@@ -247,7 +243,6 @@
     <string name="restoring_backup">Restaurando cópia de segurança</string>
     <string name="source_migration">Migração de fonte</string>
     <string name="reset">Reiniciar</string>
-    <string name="dark_blue">Preto/Azul</string>
     <string name="double_tap_anim_speed">Velocidade animação dois toques</string>
     <string name="red_initial">R</string>
     <string name="categories_to_include_in_download">Categorias para incluir na transferência</string>
@@ -312,7 +307,7 @@
     <string name="help">Ajuda</string>
     <string name="library_update_order">Ordem de atualização da biblioteca</string>
     <string name="lock_with_biometrics">Bloqueio com biometria</string>
-    <string name="lock_when_idle">Bloquear automaticamente</string>
+    <string name="lock_when_idle">Bloquear quando inativo</string>
     <string name="copy_value">Copiar</string>
     <string name="date_format">Formato da data</string>
     <string name="secure_screen">Ecrã seguro</string>
@@ -757,7 +752,6 @@
     <string name="save_pages_separately">Salvar páginas em pastas separadas</string>
     <string name="show_on_long_press">Mostrar no toque longo</string>
     <string name="actions">Ações</string>
-    <string name="webtoon_cannot_change">Não é possível mudar do webtoon o modo de leitura. Edite o tipo de série primeiro para mudar.</string>
     <string name="automatic_orientation">Automático (baseado na orientação)</string>
     <string name="automatic_can_still_switch">Ao usar o layout de página automático, ainda pode mudar entre os layouts enquanto lê sem sobrepôr esta configuração</string>
     <string name="page_layout">Layout de página</string>
@@ -941,4 +935,10 @@
     <string name="hide_notification_content">Esconder conteúdo das notificações</string>
     <string name="by_default_side_nav_info">Pelo padrão, a navegação lateral é usada em determinados celulares e pequenos tablets quando colocado em modo paisagem, sempre ocorre em tablets maiores</string>
     <string name="default_behavior">Comportamento padrão</string>
+    <string name="channel_errors">Erros</string>
+    <string name="about_dont_kill_my_app">Alguns fabricantes têm restrições adicionais de aplicação que desligam os serviços em segundo plano. Este sítio web tem mais informações sobre como corrigi-lo.</string>
+    <string name="show_in_sources_and_extensions">Mostrar na lista de fontes e extensões</string>
+    <string name="log_out">Terminar sessão</string>
+    <string name="log_out_from_">Terminar sessão em %1$s\?</string>
+    <string name="every_3_days">A cada 3 dias</string>
 </resources>

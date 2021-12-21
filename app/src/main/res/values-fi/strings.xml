@@ -103,9 +103,6 @@
     <string name="default_value">Oletus</string>
     <string name="library_update_frequency">Kirjaston automaattipäivitys</string>
     <string name="manual">Manuaalinen</string>
-    <string name="hourly">Tunnin välein</string>
-    <string name="every_2_hours">Kahden tunnin välein</string>
-    <string name="every_3_hours">Kolmen tunnin välein</string>
     <string name="every_6_hours">Kuuden tunnin välein</string>
     <string name="every_12_hours">12 tunnin välein</string>
     <string name="daily">Päivittäin</string>
@@ -120,10 +117,8 @@
     <string name="only_update_ongoing">Päivitä vain jatkuvat sarjat</string>
     <string name="sync_chapters_after_reading">Synkronoi luvut lukemisen jälkeen</string>
     <string name="app_theme">Sovelluksen teema</string>
-    <string name="light_blue">Oletusteema</string>
     <string name="dark">Tumma teema</string>
     <string name="amoled_black">AMOLED teema</string>
-    <string name="dark_blue">Tumman sininen</string>
     <string name="language">Kieli</string>
     <string name="system_default">Järjestelmän oletus</string>
     <string name="default_category">Oletus kategoria</string>
@@ -775,7 +770,6 @@
     <string name="save_pages_separately">Tallenna sivut erillisiin kansioihin</string>
     <string name="show_on_long_press">Näytä pitkällä painalluksella</string>
     <string name="actions">Toiminnot</string>
-    <string name="webtoon_cannot_change">Lukutilaa ei voi vaihtaa webtoonista. Muokkaa ensin sarjatyyppiä muuttaaksesi sitä.</string>
     <string name="locked_landscape">Lukittu vaakataso</string>
     <string name="locked_portrait">Lukittu pystysuunta</string>
     <string name="landscape">Vaakataso</string>
@@ -818,4 +812,17 @@
     <string name="cancel_all_for_series">Peruuta kaikki tälle sarjalle</string>
     <string name="app_shortcuts">Sovelluksen pikavalinnat</string>
     <string name="all_files_permission_required">Tiedoston käyttöoikeudet vaaditaan</string>
+    <string name="hide_notification_content">Piilota ilmoitusten sisältö</string>
+    <string name="exclude_">Lukuun ottamatta: %s</string>
+    <string name="source_unsupported">Lähdettä ei tueta</string>
+    <string name="name">Nimi</string>
+    <string name="show_number_of_items">Näytä kohteiden määrä</string>
+    <string name="by_chapter_number">Luvunumeron mukaan</string>
+    <string name="by_update_date">Lisäyspäivämäärän mukaan</string>
+    <string name="set_as_default">Aseta oletukseksi</string>
+    <string name="no_match_found">Yhtään osumaa ei löytynyt</string>
+    <string name="log_out">Kirjaudu ulos</string>
+    <string name="log_out_from_">Kirjaa ulos kohteesta %1$s\?</string>
+    <string name="include_">Sisällytä: %s</string>
+    <string name="channel_errors">Virheet</string>
 </resources>

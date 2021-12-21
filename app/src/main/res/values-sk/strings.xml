@@ -67,9 +67,6 @@
     <string name="default_value">Predvolené</string>
     <string name="library_update_frequency">Frekvencia aktualizácie knižnice</string>
     <string name="manual">Manuálne</string>
-    <string name="hourly">Raz za hodinu</string>
-    <string name="every_2_hours">Každé 2 hodiny</string>
-    <string name="every_3_hours">Každé 3 hodiny</string>
     <string name="every_6_hours">Každých 6 hodín</string>
     <string name="every_12_hours">Každých 12 hodín</string>
     <string name="daily">Raz za deň</string>
@@ -85,10 +82,8 @@
     <string name="only_update_ongoing">Aktualizovať iba nedokončenú Mangu</string>
     <string name="sync_chapters_after_reading">Synchronizovať kapitoly po prečítaní</string>
     <string name="app_theme">Motív aplikácie</string>
-    <string name="light_blue">Hlavná téma</string>
     <string name="dark">Tmavý motív</string>
     <string name="amoled_black">AMOLED téma</string>
-    <string name="dark_blue">Tmavomodrá téma</string>
     <string name="language">Jazyk</string>
     <string name="system_default">Predvolené nastavenie systému</string>
     <string name="default_category">Predvolená kategória</string>
@@ -293,4 +288,19 @@
     <string name="portrait">Na výšku</string>
     <string name="name">Názov</string>
     <string name="hide_notification_content">Skryť obsah upozornení</string>
+    <string name="chapters_">%1$s kapitoly</string>
+    <string name="search_settings">Hľadať v nastaveniach</string>
+    <string name="failed_to_bypass_cloudflare">Nepodarilo sa obísť službu Cloudflare</string>
+    <string name="date_added">Dátum pridaný</string>
+    <string name="date_fetched">Dátum načítaný</string>
+    <string name="by_chapter_number">Podľa čísla kapitoly</string>
+    <string name="new_version_available">Dostupná nová aktualizácia!</string>
+    <plurals name="extension_updates_available">
+        <item quantity="one">Dostupná aktualizácia rozšírenia%d dostupných aktualizácii rozšírenia%d dostupné aktualizácie rozšírenia</item>
+        <item quantity="few"/>
+        <item quantity="other"/>
+    </plurals>
+    <string name="log_in_to_">Prihláste sa do %1$s</string>
+    <string name="please_update_webview">Prosím aktualizujte si aplikáciu WebView pre lepšiu kompatibilitu</string>
+    <string name="more">Viac</string>
 </resources>

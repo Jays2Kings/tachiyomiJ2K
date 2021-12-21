@@ -54,9 +54,6 @@
     <string name="default_value">Predefinito</string>
     <string name="library_update_frequency">Frequenza di aggiornamento della libreria</string>
     <string name="manual">Manuale</string>
-    <string name="hourly">Ogni ora</string>
-    <string name="every_2_hours">Ogni 2 ore</string>
-    <string name="every_3_hours">Ogni 3 ore</string>
     <string name="every_6_hours">Ogni 6 ore</string>
     <string name="every_12_hours">Ogni 12 ore</string>
     <string name="daily">Quotidiana</string>
@@ -70,7 +67,6 @@
     <string name="only_update_ongoing">Aggiorna solo manga in corso</string>
     <string name="sync_chapters_after_reading">Sincronizza capitoli dopo la lettura</string>
     <string name="app_theme">Tema dell\'applicazione</string>
-    <string name="light_blue">Tema principale</string>
     <string name="dark">Tema scuro</string>
     <string name="language">Lingua</string>
     <string name="system_default">Predefinita</string>
@@ -302,7 +298,6 @@
     <string name="theres_no_previous_chapter">Nessun capitolo precedente</string>
     <string name="loading_pages">Caricamento pagine…</string>
     <string name="failed_to_load_pages_">Caricamento pagine fallito: %1$s</string>
-    <string name="dark_blue">Blu scuro</string>
     <string name="open_in_webview">Apri nella WebView</string>
     <string name="true_32bit_color">Colori a 32 bit</string>
     <string name="skip_read_chapters">Salta i capitoli segnati come letti</string>
@@ -786,7 +781,6 @@
     </plurals>
     <string name="create_folders_by_manga_title">Crea cartelle relative al titolo del manga</string>
     <string name="save_pages_separately">Salva pagine in cartelle separate</string>
-    <string name="webtoon_cannot_change">Impossibile cambiare la modalità di lettura da webtoon. Modifica prima il tipo di serie per cambiarla.</string>
     <string name="page_layout">Impaginazione</string>
     <string name="switch_to_single">Passa a pagina singola</string>
     <string name="switch_to_double">Passa a doppia pagina</string>
@@ -962,4 +956,13 @@
     <string name="notification_size_warning">Grossi aggiornamenti possono portare a un maggiore utilizzo della batteria e a un rallentamento delle fonti</string>
     <string name="show_in_sources_and_extensions">Mostra nelle liste di fonti ed estensioni</string>
     <string name="show_outline_around_covers">Mostra il contorno delle coperture</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku non è in esecuzione</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installa e avvia Shizuku per usarlo come installatore delle estensioni.</string>
+    <string name="use_shizuku_to_install">Usa Shizuku per installare le estensioni</string>
+    <string name="use_shizuku_summary">Permette l\'installazione di estensioni senza le richieste dell\'utente e abilita gli aggiornamenti automatici per i dispositivi sotto Android 12</string>
+    <string name="classic_blue">Blu classico</string>
+    <string name="lime_time">Tempo di lime</string>
+    <string name="every_3_days">Ogni 3 giorni</string>
+    <string name="download_queue_size_warning">Attenzione: grossi download di massa possono rallentare le fonti e/o bloccare tachiyomi</string>
+    <string name="save_chapters_as_cbz">Salva i capitoli come CBZ</string>
 </resources>

@@ -65,9 +65,6 @@
     <string name="default_value">Προεπιλογή</string>
     <string name="library_update_frequency">Συχνότητα ενημέρωσης βιβλιοθήκης</string>
     <string name="manual">Εγχειρίδιο</string>
-    <string name="hourly">Ωριαία</string>
-    <string name="every_2_hours">Κάθε 2 ώρες</string>
-    <string name="every_3_hours">Κάθε 3 ώρες</string>
     <string name="every_6_hours">Κάθε 6 ώρες</string>
     <string name="every_12_hours">Κάθε 12 ώρες</string>
     <string name="daily">Καθημερινά</string>
@@ -82,10 +79,8 @@
     <string name="only_update_ongoing">Ενημέρωση μόνο manga σε εξέλιξη</string>
     <string name="sync_chapters_after_reading">Συγχρονισμός κεφάλαιων μετά τη ανάγνωση</string>
     <string name="app_theme">Θέμα εφαρμογής</string>
-    <string name="light_blue">Γαλάζιο</string>
     <string name="dark">Σκοτεινό</string>
     <string name="amoled_black">Μαύρο AMOLED</string>
-    <string name="dark_blue">Σκούρο μπλε</string>
     <string name="language">Γλώσσα</string>
     <string name="system_default">Προεπιλογή συστήματος</string>
     <string name="default_category">Προεπιλεγμένη κατηγορία</string>
@@ -704,7 +699,6 @@
         <item quantity="one">%1$d σελίδα</item>
         <item quantity="other">%1$d σελίδες</item>
     </plurals>
-    <string name="webtoon_cannot_change">Δεν είναι δυνατή η αλλαγή της λειτουργίας ανάγνωσης από το webtoon. Επεξεργαστείτε πρώτα τον τύπο σειράς για αλλαγή.</string>
     <string name="automatic_orientation">Αυτόματη (βάση προσανατολισμού)</string>
     <string name="page_layout">Διάταξη σελίδας</string>
     <string name="cutout_behavior_only_applies">Η συμπεριφορά της περιοχής αποκοπής ισχύει μόνο σε λειτουργία πορτραίτου με ορισμένους τύπους κλίμακας</string>
@@ -928,4 +922,14 @@
     <string name="channel_errors">Σφάλματα</string>
     <string name="show_in_sources_and_extensions">Εμφάνιση στις λίστες πηγών και επεκτάσεων</string>
     <string name="notification_size_warning">Οι μεγάλες ενημερώσεις μπορεί να οδηγήσουν σε αυξημένη χρήση της μπαταρίας και οι πηγές να γίνουν πιο αργές</string>
+    <string name="show_outline_around_covers">Εμφάνιση περιγράμματος γύρω από τα εξώφυλλα</string>
+    <string name="ext_installer_shizuku_stopped">Το Shizuku δεν τρέχει</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Εγκαταστήστε και ξεκινήστε το Shizuku για να χρησιμοποιήσετε το Shizuku ως πρόγραμμα εγκατάστασης επεκτάσεων.</string>
+    <string name="use_shizuku_to_install">Χρησιμοποιήστε το Shizuku για να εγκαταστήσετε επεκτάσεις</string>
+    <string name="use_shizuku_summary">Επιτρέπει την εγκατάσταση επεκτάσεων χωρίς προτροπές από το χρήστη και επιτρέπει αυτόματες ενημερώσεις για συσκευές κάτω από το Android 12</string>
+    <string name="download_queue_size_warning">Προειδοποίηση: οι μαζικές λήψεις ενδέχεται να οδηγήσουν σε επιβράδυνση των πηγών ή/και αποκλεισμό του Tachiyomi</string>
+    <string name="every_3_days">Κάθε 3 ημέρες</string>
+    <string name="save_chapters_as_cbz">Αποθήκευση κεφαλαίων ως CBZ</string>
+    <string name="classic_blue">Κλασικό Μπλε</string>
+    <string name="lime_time">Lime Time</string>
 </resources>

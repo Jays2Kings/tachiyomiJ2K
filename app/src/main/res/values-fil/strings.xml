@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="manga">Mga Manga</string>
-    <string name="webtoon">Pa-webtoon</string>
+    <string name="manga">Manga</string>
+    <string name="webtoon">Webtoon</string>
     <string name="title">Pamagat</string>
     <string name="author">May-akda</string>
     <string name="description">Paglalarawan</string>
@@ -18,7 +18,7 @@
     <string name="unread">Hindi basahin</string>
     <string name="chapter_">Kabanata %1$s</string>
     <string name="bookmarked">Tinandaan</string>
-    <string name="categories">Mga kategorya</string>
+    <string name="categories">Mga Kategorya</string>
     <string name="migrate">Ilipat</string>
     <string name="copy_value">Kopyahin</string>
     <string name="settings">Pagsasaayos</string>
@@ -96,9 +96,6 @@
     <string name="download_new_chapters">I-download ang mga bagong kabanata</string>
     <string name="categories_to_include_in_download">Mga kategoryang kasama sa download</string>
     <string name="manual">Mano-mano</string>
-    <string name="hourly">Kada oras</string>
-    <string name="every_2_hours">Kada 2 oras</string>
-    <string name="every_3_hours">Kada 3 oras</string>
     <string name="every_6_hours">Kada 6 na oras</string>
     <string name="every_12_hours">Kada 12 oras</string>
     <string name="daily">Araw-araw</string>
@@ -185,8 +182,8 @@
         <item quantity="one">May update sa dugtong</item>
         <item quantity="other">May update sa $d (na) dugtong</item>
     </plurals>
-    <string name="set_as_cover">Gawing pabalat</string>
-    <string name="cover_updated">Binago na ang pabalat</string>
+    <string name="set_as_cover">Gawing cover</string>
+    <string name="cover_updated">Napalitan na ang cover</string>
     <string name="next_chapter_not_found">Di makita ang susunod na kabanata</string>
     <string name="use_image_as_cover">Gamitin ang larawang ito bilang pabalat\?</string>
     <string name="next">Susunod</string>
@@ -339,10 +336,10 @@
     <string name="artist">Gumuhit</string>
     <string name="read">Basahin</string>
     <string name="in_progress">Ginagawa</string>
-    <string name="not_started">Di pa nagsisimula</string>
-    <string name="comic">Mga Komiks</string>
-    <string name="manhua">Mga Manhua</string>
-    <string name="manhwa">Mga Manhwa</string>
+    <string name="not_started">Di pa nagsimula</string>
+    <string name="comic">Komiks</string>
+    <string name="manhua">Manhua</string>
+    <string name="manhwa">Manhwa</string>
     <string name="last_used">Huling ginamit</string>
     <string name="unofficial_extension_message">Wala sa opisyal na listahan ng mga dugtong ng Tachiyomi ang dugtong na ito.</string>
     <string name="nsfw_short">18+</string>
@@ -394,7 +391,7 @@
     <string name="restore_duration">%02d (na) min, %02d (na) seg</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Na-restore sa loob ng %1$s na may %2$s error</item>
-        <item quantity="other">Na-restore sa loob ng %1$s na may %2$s (na) mga error</item>
+        <item quantity="other">Na-restore sa loob ng %1$s na may %2$s (na) error</item>
     </plurals>
     <string name="file_picker_error">Walang nakitang app para makapili</string>
     <string name="open_log">Buksan ang log</string>
@@ -461,8 +458,6 @@
     <string name="include_in_global_update">Isama sa panlahatang update</string>
     <string name="last_updated">Huling in-update</string>
     <string name="date_fetched">Petsa kinuha</string>
-    <string name="dark_blue">Itim na Asul</string>
-    <string name="light_blue">Puting Asul</string>
     <string name="hot_pink">Mapusyaw</string>
     <string name="amoled_black">Itim na AMOLED</string>
     <string name="flat_lime">Lunti</string>
@@ -521,9 +516,9 @@
     <string name="portrait">Patayo</string>
     <string name="disabled">Sarado</string>
     <string name="landscape">Pahiga</string>
-    <string name="error_sharing_cover">Di maibahagi ang pabalat</string>
-    <string name="error_saving_cover">Di ma-save ang pabalat</string>
-    <string name="cover_saved">Na-save na ang pabalat</string>
+    <string name="error_sharing_cover">Di maibahagi ang cover</string>
+    <string name="error_saving_cover">Di ma-save ang cover</string>
+    <string name="cover_saved">Na-save na ang cover</string>
     <string name="show_unread_badges">Ipakita ang bilang ng babasahin</string>
     <string name="source_unsupported">Di suportado ang source</string>
     <string name="hide_chapter_titles">Itago ang pamagat ng mga kabanata</string>
@@ -562,7 +557,7 @@
     <string name="restore_miui_warning">Maaaring hindi gumana nang maayos ang pag-backup/pag-restore kung nakasara ang MIUI optimization.</string>
     <string name="backup_in_progress">Ang pag-backup ay isinasagawa na</string>
     <string name="restore_in_progress">Ang pagsasauli sa dati ay isinasagawa.</string>
-    <string name="hide_notification_content">Itago ang laman ng notification</string>
+    <string name="hide_notification_content">Itago ang laman ng abiso</string>
     <string name="want_to_read">Gustong Basahin</string>
     <string name="currently_reading">Kasalukuyang Binabasa</string>
     <string name="source_not_installed">Hindi naka-install ang pinanggagalingan</string>
@@ -640,11 +635,11 @@
         <item quantity="one">Para sa %d na titulo</item>
         <item quantity="other">Para sa %d na mga titulo</item>
     </plurals>
-    <string name="external_storage_download_notice">Kinakailangan ng TachiyomiJ2K ang access sa lahat ng files para mag-download ng mga kabanata. Pindutin dito, at i-enable ang \"Allow access to manage all files.\"</string>
-    <string name="external_storage_permission_notice">Kinakailangan ng TachiyomiJ2K ang access sa lahat ng file sa Android 11 upang mag-download ng mga kabanata, gumawa ng automatic backups, at magbasa ng lokal na manga.
+    <string name="external_storage_download_notice">Kailangan ng TachiyomiJ2K ng access sa lahat ng mga file para makapag-download ng kabanata. Pakipindot ito, saka buksan ang \"Payagang pamahalaan ang lahat ng mga file.\"</string>
+    <string name="external_storage_permission_notice">Kailangan ng TachiyomiJ2K ng access sa lahat ng mga file sa Android 11 para makapag-download ng mga kabanata, makagawa ng mga kusang backup, at basahin ang mga lokal na manga.
 \n
-\nSa susunod na screen, payagan gamit ang \"Allow access fo manage all files.\"</string>
-    <string name="all_files_permission_required">Kailangan ng pahintulot sa pamamahala ng mga file</string>
+\nSa susunod na screen, pakibuksan po ang \"Payagang pamahalaan ang lahat ng file.\"</string>
+    <string name="all_files_permission_required">Kailangan ng pahintulot sa file</string>
     <string name="when_sorting_ignore_articles">Kapag nagsusunod-sunod nang ayon sa alpabeto, magsunod-sunud nang bina-balewala ang mga pantukoy (si, sina, mga) sa simula ng mga pamagat.</string>
     <string name="sort_by_ignoring_articles">Pagsunod-sunurin nang bina-balewala ang mga pantukoy</string>
     <plurals name="notification_and_n_more">
@@ -711,4 +706,30 @@
     <string name="scanlators">Scanlator</string>
     <string name="create_folders_by_manga_title">Gumawa ng folder ayon sa pamagat ng manga</string>
     <string name="select_ending_chapter">Piliin ang huling kabanata</string>
+    <string name="bottom">Baba</string>
+    <string name="start_downloading_now">I-download na</string>
+    <string name="warning">Babala</string>
+    <string name="pauses_reading_history">Hinihinto ang pagtala sa mga binabasa</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="include_">Kasama: %s</string>
+    <string name="strawberry_daiquiri">Presas</string>
+    <string name="actions">Gawain</string>
+    <string name="set_as_default">Ipagpaubaya</string>
+    <string name="ext_installer_shizuku_stopped">Di tumatakbo ang Shizuku</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Paki-install at buksan ang Shizuku para magamit ito bilang taga-install ng dugtong.</string>
+    <string name="no_match_found">Walang nahanap na kapares</string>
+    <string name="appearance">Hitsura</string>
+    <string name="incognito_mode">Nakatago</string>
+    <string name="tako">Tako</string>
+    <string name="side_nav_icon_alignment">Hilera ng nabigasyon sa gilid</string>
+    <string name="doh">DNS kesa HTTPS</string>
+    <string name="show_in_sources_and_extensions">Ipakita sa Mga Source at Dugtong</string>
+    <string name="log_out">Mag-logout</string>
+    <string name="log_out_from_">Mag-logout sa %1$s\?</string>
+    <string name="webview_is_required">Kinakailangan ng Tachiyomi ang WebView</string>
+    <string name="exclude_">Di-kasama: %s</string>
+    <string name="top">Taas</string>
+    <string name="show_outline_around_covers">Ipakita ang outline sapaligid ng cover</string>
+    <string name="download_queue_size_warning">Babala: maaaring humantong sa pagbagal ng mga source at/o pagharang sa Tachiyomi kung magda-download nang maramihan</string>
+    <string name="every_3_days">Kada 3 araw</string>
 </resources>

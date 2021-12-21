@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Mga Kategorya</string>
-    <string name="manga">Mga Manga</string>
+    <string name="categories">Kategorya</string>
+    <string name="manga">Manga</string>
     <string name="chapters">Mga Kabanata</string>
     <string name="tracking">Sinusundan</string>
     <string name="history">Kasaysayan</string>
@@ -66,9 +66,6 @@
     <string name="default_value">Default</string>
     <string name="library_update_frequency">Dalas ng pag-a-update ng aklatan</string>
     <string name="manual">Mano-mano</string>
-    <string name="hourly">Oras-oras</string>
-    <string name="every_2_hours">Kada 2 oras</string>
-    <string name="every_3_hours">Kada 3 oras</string>
     <string name="every_6_hours">Kada 6 na oras</string>
     <string name="every_12_hours">Kada 12 oras</string>
     <string name="daily">Araw-araw</string>
@@ -83,10 +80,8 @@
     <string name="only_update_ongoing">I-update lamang ang (mga) nagpapatuloy na manga</string>
     <string name="sync_chapters_after_reading">I-sync ang mga kabanata pagkatapos basahin</string>
     <string name="app_theme">Tema ng application</string>
-    <string name="light_blue">Pangunahing tema</string>
     <string name="dark">Madilim na tema</string>
     <string name="amoled_black">Temang AMOLED</string>
-    <string name="dark_blue">Madilim na bughaw</string>
     <string name="language">Wika</string>
     <string name="system_default">Default ng sistema</string>
     <string name="default_category">Default na kategorya</string>
@@ -325,4 +320,6 @@
     <string name="delete_unused_chapters">Burahin ang mga folder ng hindi nag-eexist, bahagyang nadownload, at nabasa nang mga kabatana</string>
     <string name="clean_up_downloaded_chapters">Linisin ang mga nadownload na kabanata</string>
     <string name="label_global_search">Pangkalahatang Paghahanap</string>
+    <string name="name">Pangalan</string>
+    <string name="all_files_permission_required">Kailangan ng pahintulot sa file</string>
 </resources>

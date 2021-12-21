@@ -62,9 +62,6 @@
     <string name="about">Om</string>
     <string name="default_value">Forvalg</string>
     <string name="manual">Manuell</string>
-    <string name="hourly">Timevis</string>
-    <string name="every_2_hours">Hver andre time</string>
-    <string name="every_3_hours">Hver tredje time</string>
     <string name="every_6_hours">Hver sjette time</string>
     <string name="every_12_hours">Hver tolvte time</string>
     <string name="daily">Daglig</string>
@@ -73,10 +70,8 @@
     <string name="all">Alle</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Lading</string>
-    <string name="light_blue">Hoveddrakt</string>
     <string name="dark">Mørk drakt</string>
     <string name="amoled_black">AMOLED-drakt</string>
-    <string name="dark_blue">Mørkeblå</string>
     <string name="language">Språk</string>
     <string name="system_default">Systemforvalg</string>
     <string name="default_category">Forvalgt kategori</string>
@@ -858,7 +853,6 @@
     <string name="track_when_adding_to_library">Hold oppsyn med når tillagt i bibliotek</string>
     <string name="not_tracked">Holdes ikke oppsyn med</string>
     <string name="filter_groups">Filtrer scanlator-grupper</string>
-    <string name="webtoon_cannot_change">Kan ikke endre lesemodus fra nett-tegneserie. Rediger serietypen først hvis du vil endret dette.</string>
     <string name="automatic_can_still_switch">Ved bruk av automatisk sideoppsett kan du fremdeles bytte mellom oppsett mens du leser, uten å overstyre denne innstillingen</string>
     <string name="page_layout">Sideoppsett</string>
     <string name="cutout_behavior_only_applies">Oppførsel for utklippsområde har kun innvirkning i stående sideretning med noen skaleringstyper</string>
@@ -930,4 +924,6 @@
     <string name="theme_buttons_based_on_cover">Knappedraktvalg basert på omslag</string>
     <string name="remove_from_">Fjern fra %1$s</string>
     <string name="show_in_sources_and_extensions">Vis i kilder og utvidelseslister</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku kjører ikke</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Installer og start Shizuku for å bruke det som utvidelsesinstallatør.</string>
 </resources>

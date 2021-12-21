@@ -200,9 +200,6 @@
     <string name="download_new_chapters">دانلود فصل‌های جدید</string>
     <string name="categories_to_include_in_download">دسته بندی هایی که در دانلود شامل می شوند</string>
     <string name="manual">فقط دستی</string>
-    <string name="hourly">یک ساعت یکبار</string>
-    <string name="every_2_hours">هر ۲ ساعت یکبار</string>
-    <string name="every_3_hours">هر ۳ ساعت یکبار</string>
     <string name="every_6_hours">هر ۶ ساعت یکبار</string>
     <string name="every_12_hours">هر ۱۲ ساعت یکبار</string>
     <string name="pause">مکث</string>
@@ -463,4 +460,20 @@
     <string name="manhua">مانهوا</string>
     <string name="hide_app_block_screenshots">محتویات برنامه هنگام تعویض برنامه ها مخفی و از عکس گرفتن از صفحه برنامه جلوگیری شود</string>
     <string name="label_global_search">جست و جوی کامل</string>
+    <string name="by_chapter_number">بر اساس شماره قسمت</string>
+    <string name="by_update_date">بر اساس تاریخ آپلود</string>
+    <string name="channel_errors">خطاها</string>
+    <string name="landscape">افقی</string>
+    <string name="webview_is_required">WebView برای Tachiyomi مورد نیاز است</string>
+    <string name="no_pages_found">صفحه ای یافت نشد</string>
+    <string name="name">نام</string>
+    <string name="set_as_default">تنظیم به عنوان پیشفرض</string>
+    <string name="incognito_mode">حالت ناشناس</string>
+    <string name="pauses_reading_history">متوقف کردن تاریخچه خواندن</string>
+    <string name="reading_mode">حالت خواندن</string>
+    <string name="disabled">غیرفعال شده</string>
+    <string name="log_out">خروج</string>
+    <string name="log_out_from_">از%1$s خارج می شوید؟</string>
+    <string name="portrait">عمودی</string>
+    <string name="hide_notification_content">مخفی کردن اعلان‌ها</string>
 </resources>
