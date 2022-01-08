@@ -862,7 +862,7 @@ class ReaderPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(readerChapter: ReaderChapter) {
-        if (!preferences.autoUpdateTrack()) return
+        if (!preferences.autoUpdateReadingTrack()) return
         val manga = manga ?: return
 
         val chapterRead = readerChapter.chapter.chapter_number.toInt()

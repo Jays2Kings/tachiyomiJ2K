@@ -551,7 +551,9 @@
     <string name="tracked">Tracked</string>
     <string name="not_tracked">Not tracked</string>
     <string name="services">Services</string>
-    <string name="sync_chapters_after_reading">Sync chapters after reading</string>
+    <string name="sync_chapters">Sync chapters</string>
+    <string name="sync_chapters_after_reading">After reading</string>
+    <string name="sync_chapters_after_toggle">After toggle read/unread</string>
     <string name="track_when_adding_to_library">Track when adding to library</string>
     <string name="only_applies_silent_trackers">Only applies to silent trackers, such as Komga</string>
     <string name="reading">Reading</string>

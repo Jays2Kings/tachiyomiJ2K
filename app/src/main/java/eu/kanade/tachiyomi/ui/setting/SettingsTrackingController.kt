@@ -27,10 +27,15 @@ class SettingsTrackingController :
     override fun setupPreferenceScreen(screen: PreferenceScreen) = screen.apply {
         titleRes = R.string.tracking
 
-        switchPreference {
-            key = Keys.autoUpdateTrack
-            titleRes = R.string.sync_chapters_after_reading
-            defaultValue = true
+        multiSelectListPreferenceMat(activity) {
+            key = Keys.autoUpdateSyncReadingAndToggleTrack
+            titleRes = R.string.sync_chapters
+            noSelectionRes = R.string.never
+
+            entriesRes = arrayOf(R.string.sync_chapters_after_reading, R.string.sync_chapters_after_toggle)
+            entryValues = listOf("reading", "toggle")
+
+            defaultValue = listOf("reading")
         }
         switchPreference {
             key = Keys.autoAddTrack
