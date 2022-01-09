@@ -23,6 +23,7 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
+import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -38,6 +39,7 @@ import eu.kanade.tachiyomi.util.lang.getUrlWithoutDomain
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
+import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -503,6 +505,47 @@ class ReaderPresenter(
             onChapterChanged(currentChapters.currChapter)
             loadNewChapter(selectedChapter)
         }
+    }
+
+    /**
+     * Called from the activity to download the next chapters.
+     */
+    fun downloadNextChapters() {
+        val shouldDownload = preferences.downloadWhileReading()
+        val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
+        val context = Injekt.get<Application>()
+        if (!context.isConnectedToWifi() && preferences.autoDownloadOnlyOverWifi() ||
+            manga?.favorite == false
+        ) return
+        if (shouldDownload) {
+            downloadAutoNextChapters(chaptersNumberToDownload)
+        }
+    }
+
+    private fun downloadAutoNextChapters(choice: Int) {
+        val chaptersToDownload = if (choice == -1) getUnreadChaptersExceptCurrentSorted() else {
+            getUnreadChaptersExceptCurrentSorted().take(choice)
+        }
+        if (chaptersToDownload.isNotEmpty()) {
+            downloadChapters(chaptersToDownload)
+        }
+    }
+
+    private fun getUnreadChaptersExceptCurrentSorted(): List<ChapterItem> {
+        val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
+        val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
+
+        return chapters.filter { !it.read && getCurrentChapter()?.chapter?.id != it.id }
+            .distinctBy { it.name }
+            .sortedWith(chapterSort.sortComparator(true))
+    }
+
+    /**
+     * Downloads the given list of chapters with the manager.
+     * @param chapters the list of chapters to download.
+     */
+    private fun downloadChapters(chapters: List<ChapterItem>) {
+        downloadManager.downloadChapters(manga!!, chapters.filter { !it.isDownloaded })
     }
 
     /**

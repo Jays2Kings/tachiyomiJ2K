@@ -13,7 +13,9 @@ import com.hippo.unifile.UniFile
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
+import eu.kanade.tachiyomi.data.preference.NEW_CHAPTERS
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.READING_DOWNLOAD
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.util.system.getFilePicker
 import eu.kanade.tachiyomi.util.system.withOriginalWidth
@@ -75,26 +77,74 @@ class SettingsDownloadController : SettingsController() {
             }
         }
 
-        val dbCategories = db.getCategories().executeAsBlocking()
-        val categories = listOf(Category.createDefault(context)) + dbCategories
-
         preferenceCategory {
-            titleRes = R.string.download_new_chapters
+            titleRes = R.string.auto_download_from_library
+
+            multiSelectListPreferenceMat(activity) {
+                key = Keys.autoDownloadChapters
+                titleRes = R.string.auto_download_from_library
+                noSelectionRes = R.string.never
+                defaultValue = emptyList<String>()
+
+                entriesRes = arrayOf(R.string.auto_download_while_reading, R.string.auto_download_new_chapters)
+                entryValues = listOf(READING_DOWNLOAD, NEW_CHAPTERS)
+            }
+
+            intListPreference(activity) {
+                key = Keys.autoDownloadRestrictions
+                titleRes = R.string.auto_download_restrictions
+                entriesRes = arrayOf(
+                    R.string.next_unread_chapter,
+                    R.string.next_2_unread,
+                    R.string.next_3_unread,
+                    R.string.next_5_unread,
+                    R.string.next_10_unread,
+                    R.string.all_unread_chapters,
+                )
+                entryValues = listOf(1, 2, 3, 5, 10, -1)
+                defaultValue = 2
+
+                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
+                    isVisible = it.isNotEmpty()
+                }
+            }
 
             switchPreference {
-                key = Keys.downloadNew
-                titleRes = R.string.download_new_chapters
+                key = Keys.autoDownloadOnlyOverWifi
+                titleRes = R.string.only_auto_download_over_wifi
                 defaultValue = false
-            }
-            triStateListPreference(activity) {
-                key = Keys.downloadNewCategories
-                excludeKey = Keys.downloadNewCategoriesExclude
-                titleRes = R.string.categories
-                entries = categories.map { it.name }
-                entryValues = categories.map { it.id.toString() }
-                allSelectionRes = R.string.all
 
-                preferences.downloadNewChapters().asImmediateFlowIn(viewScope) { isVisible = it }
+                preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { onlyOverWifi ->
+                    preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) { auto ->
+                        isVisible = auto.isNotEmpty() && !onlyOverWifi
+                    }
+                }
+            }
+
+            val dbCategories = db.getCategories().executeAsBlocking()
+            val categories = listOf(Category.createDefault(context)) + dbCategories
+
+            preferenceCategory {
+                titleRes = R.string.new_chapters
+
+                triStateListPreference(activity) {
+                    key = Keys.downloadNewCategories
+                    excludeKey = Keys.downloadNewCategoriesExclude
+                    titleRes = R.string.categories
+                    entries = categories.map { it.name }
+                    entryValues = categories.map { it.id.toString() }
+                    allSelectionRes = R.string.all
+                }
+                switchPreference {
+                    key = Keys.downloadOnlyCompletelyRead
+                    titleRes = R.string.pref_download_only_completely_read
+                    summaryRes = R.string.pref_download_only_completely_read_summary
+                    defaultValue = false
+                }
+
+                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
+                    isVisible = it.contains(NEW_CHAPTERS)
+                }
             }
             preferenceCategory {
                 titleRes = R.string.automatic_removal

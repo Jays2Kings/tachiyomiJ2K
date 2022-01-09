@@ -9,8 +9,12 @@ import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import androidx.core.view.isVisible
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.database.DatabaseHelper
+import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.databinding.ReaderTransitionViewBinding
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 
 class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     LinearLayout(context, attrs) {
@@ -41,13 +45,21 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
         binding.lowerText.isVisible = hasPrevChapter
         if (hasPrevChapter) {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_TEXT_START
+            val downloadManager = Injekt.get<DownloadManager>()
+            val db = Injekt.get<DatabaseHelper>()
+            val manga = db.getManga(prevChapter!!.chapter.manga_id!!).executeAsBlocking()!!
+            val isPrevDownloaded = downloadManager.isChapterDownloaded(prevChapter.chapter, manga)
+            val isCurrentDownloaded =
+                downloadManager.isChapterDownloaded(transition.from.chapter, manga)
+            val downloadedPrevText = if (isPrevDownloaded) " (Downloaded)" else ""
+            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.previous_title)) }
-                append("\n${prevChapter!!.chapter.name}")
+                append("\n${prevChapter.chapter.name}$downloadedPrevText")
             }
             binding.lowerText.text = buildSpannedString {
                 bold { append(context.getString(R.string.current_chapter)) }
-                append("\n${transition.from.chapter.name}")
+                append("\n${transition.from.chapter.name}$downloadedCurrentText")
             }
         } else {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_CENTER
@@ -65,13 +77,21 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
         binding.lowerText.isVisible = hasNextChapter
         if (hasNextChapter) {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_TEXT_START
+            val downloadManager = Injekt.get<DownloadManager>()
+            val db = Injekt.get<DatabaseHelper>()
+            val manga = db.getManga(nextChapter!!.chapter.manga_id!!).executeAsBlocking()!!
+            val isCurrentDownloaded =
+                downloadManager.isChapterDownloaded(transition.from.chapter, manga)
+            val isNextDownloaded = downloadManager.isChapterDownloaded(nextChapter.chapter, manga)
+            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
+            val downloadedNextText = if (isNextDownloaded) " (Downloaded)" else ""
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.finished_chapter)) }
-                append("\n${transition.from.chapter.name}")
+                append("\n${transition.from.chapter.name}$downloadedCurrentText")
             }
             binding.lowerText.text = buildSpannedString {
                 bold { append(context.getString(R.string.next_title)) }
-                append("\n${nextChapter!!.chapter.name}")
+                append("\n${nextChapter.chapter.name}$downloadedNextText")
             }
         } else {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_CENTER
