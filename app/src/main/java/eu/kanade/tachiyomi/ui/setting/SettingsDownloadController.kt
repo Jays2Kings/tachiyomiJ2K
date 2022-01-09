@@ -53,7 +53,7 @@ class SettingsDownloadController : SettingsController() {
             defaultValue = false
         }
         preferenceCategory {
-            titleRes = R.string.remove_after_read
+            titleRes = R.string.after_read
 
             switchPreference {
                 key = Keys.removeAfterMarkedAsRead
@@ -72,6 +72,21 @@ class SettingsDownloadController : SettingsController() {
                     R.string.fifth_to_last
                 )
                 entryRange = -1..4
+                defaultValue = -1
+            }
+
+            intListPreference(activity) {
+                key = Keys.autoDownloadNextChapters
+                titleRes = R.string.download_next_chapters_after_read
+                entriesRes = arrayOf(
+                    R.string.never,
+                    R.string.next_unread_chapter,
+                    R.string.next_2_unread,
+                    R.string.next_3_unread,
+                    R.string.next_4_unread,
+                    R.string.next_5_unread
+                )
+                entryValues = listOf(-1, 1, 2, 3, 4, 5)
                 defaultValue = -1
             }
         }

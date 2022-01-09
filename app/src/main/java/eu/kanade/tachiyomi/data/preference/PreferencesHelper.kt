@@ -248,6 +248,8 @@ class PreferencesHelper(val context: Context) {
 
     fun removeAfterReadSlots() = prefs.getInt(Keys.removeAfterReadSlots, -1)
 
+    fun autoDownloadNextChapters() = prefs.getInt(Keys.autoDownloadNextChapters, -1)
+
     fun removeAfterMarkedAsRead() = prefs.getBoolean(Keys.removeAfterMarkedAsRead, false)
 
     fun libraryUpdateInterval() = flowPrefs.getInt(Keys.libraryUpdateInterval, 24)

@@ -25,6 +25,7 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
+import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -496,6 +497,10 @@ class ReaderPresenter(
             selectedChapter.chapter.read = true
             updateTrackChapterRead(oldLastChapter, selectedChapter)
             deleteChapterIfNeeded(selectedChapter)
+            val chaptersAutoDownload = preferences.autoDownloadNextChapters()
+            if (chaptersAutoDownload != -1) {
+                downloadAutoNextChapters(chaptersAutoDownload)
+            }
         }
 
         if (selectedChapter != currentChapters.currChapter) {
@@ -503,6 +508,30 @@ class ReaderPresenter(
             onChapterChanged(currentChapters.currChapter)
             loadNewChapter(selectedChapter)
         }
+    }
+
+    private fun downloadAutoNextChapters(choice: Int) {
+        val chaptersToDownload = getUnreadForAutoChaptersSorted()
+            .take(choice)
+        if (chaptersToDownload.isNotEmpty()) {
+            downloadChapters(chaptersToDownload)
+        }
+    }
+
+    private fun getUnreadForAutoChaptersSorted(): List<ChapterItem> {
+        val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
+        val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
+
+        return chapters.filter { !it.read }.distinctBy { it.name }
+            .sortedWith(chapterSort.sortComparator(true))
+    }
+
+    /**
+     * Downloads the given list of chapters with the manager.
+     * @param chapters the list of chapters to download.
+     */
+    private fun downloadChapters(chapters: List<ChapterItem>) {
+        downloadManager.downloadChapters(manga!!, chapters.filter { !it.isDownloaded })
     }
 
     /**
