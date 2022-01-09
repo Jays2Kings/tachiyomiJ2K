@@ -53,7 +53,7 @@ class SettingsDownloadController : SettingsController() {
             defaultValue = false
         }
         preferenceCategory {
-            titleRes = R.string.after_read
+            titleRes = R.string.remove_after_read
 
             switchPreference {
                 key = Keys.removeAfterMarkedAsRead
@@ -74,20 +74,31 @@ class SettingsDownloadController : SettingsController() {
                 entryRange = -1..4
                 defaultValue = -1
             }
+        }
+
+        preferenceCategory {
+            titleRes = R.string.auto_download_next_unread_chapters
 
             intListPreference(activity) {
                 key = Keys.autoDownloadNextChapters
-                titleRes = R.string.download_next_chapters_after_read
+                titleRes = R.string.auto_download_next_unread_chapters
                 entriesRes = arrayOf(
                     R.string.never,
                     R.string.next_unread_chapter,
                     R.string.next_2_unread,
                     R.string.next_3_unread,
-                    R.string.next_4_unread,
-                    R.string.next_5_unread
+                    R.string.next_5_unread,
+                    R.string.next_10_unread
                 )
-                entryValues = listOf(-1, 1, 2, 3, 4, 5)
+                entryValues = listOf(-1, 1, 2, 3, 5, 10)
                 defaultValue = -1
+            }
+            switchPreference {
+                key = Keys.noTryAutoDownloadOnlyOverWifi
+                titleRes = R.string.ignore_auto_download_no_wifi
+                defaultValue = false
+
+                preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { isVisible = it }
             }
         }
 

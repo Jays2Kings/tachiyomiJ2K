@@ -129,6 +129,8 @@ object PreferenceKeys {
 
     const val autoDownloadNextChapters = "auto_download_next_chapters"
 
+    const val noTryAutoDownloadOnlyOverWifi = "no_try_auto_download_only_over_wifi_key"
+
     const val removeAfterReadSlots = "remove_after_read_slots"
 
     const val deleteRemovedChapters = "delete_removed_chapters"

@@ -1309,6 +1309,14 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
     }
 
     /**
+     * Called from the viewer when the next chapters should be downloaded. It should be called when
+     * the viewer is reaching the beginning or end of a chapter or the transition page is active.
+     */
+    fun requestDownloadNextChapters() {
+        presenter.downloadNextChapters()
+    }
+
+    /**
      * Called from the viewer to toggle the visibility of the menu. It's implemented on the
      * viewer because each one implements its own touch and key events.
      */

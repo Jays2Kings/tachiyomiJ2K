@@ -510,8 +510,8 @@
     <string name="next_unread_chapter">Next unread chapter</string>
     <string name="next_2_unread">Next 2 unread</string>
     <string name="next_3_unread">Next 3 unread</string>
-    <string name="next_4_unread">Next 4 unread</string>
     <string name="next_5_unread">Next 5 unread</string>
+    <string name="next_10_unread">Next 10 unread</string>
     <string name="custom_range">Custom range</string>
     <string name="all_chapters">All chapters</string>
     <string name="all_unread_chapters">All unread chapters</string>
@@ -891,7 +891,6 @@
     <string name="download_location">Download location</string>
     <string name="only_download_over_wifi">Only download over Wi-Fi</string>
     <string name="remove_when_marked_as_read">Remove when marked as read</string>
-    <string name="after_read">After read</string>
     <string name="remove_after_read">Remove after read</string>
     <string name="custom_location">Custom location</string>
     <string name="last_read_chapter">Last read chapter</string>
@@ -899,7 +898,8 @@
     <string name="third_to_last">Third to last chapter</string>
     <string name="fourth_to_last">Fourth to last chapter</string>
     <string name="fifth_to_last">Fifth to last chapter</string>
-    <string name="download_next_chapters_after_read">Download next chapters after read</string>
+    <string name="auto_download_next_unread_chapters">Auto download next unread chapters</string>
+    <string name="ignore_auto_download_no_wifi">Ignore auto download when no Wi-Fi</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
     <string name="delete_removed_chapters">Delete removed chapters</string>

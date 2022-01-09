@@ -39,6 +39,7 @@ import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
+import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -497,10 +498,6 @@ class ReaderPresenter(
             selectedChapter.chapter.read = true
             updateTrackChapterRead(oldLastChapter, selectedChapter)
             deleteChapterIfNeeded(selectedChapter)
-            val chaptersAutoDownload = preferences.autoDownloadNextChapters()
-            if (chaptersAutoDownload != -1) {
-                downloadAutoNextChapters(chaptersAutoDownload)
-            }
         }
 
         if (selectedChapter != currentChapters.currChapter) {
@@ -510,19 +507,31 @@ class ReaderPresenter(
         }
     }
 
+    /**
+     * Called from the activity to download the next chapters.
+     */
+    fun downloadNextChapters() {
+        val chaptersNumberToDownload = preferences.autoDownloadNextChapters()
+        val context = Injekt.get<Application>()
+        if (preferences.downloadOnlyOverWifi().get() && !context.isConnectedToWifi() && preferences.noTryAutoDownloadOnlyOverWifi()) return
+        if (chaptersNumberToDownload != -1) {
+            downloadAutoNextChapters(chaptersNumberToDownload)
+        }
+    }
+
     private fun downloadAutoNextChapters(choice: Int) {
-        val chaptersToDownload = getUnreadForAutoChaptersSorted()
+        val chaptersToDownload = getUnreadChaptersExceptCurrentSorted()
             .take(choice)
         if (chaptersToDownload.isNotEmpty()) {
             downloadChapters(chaptersToDownload)
         }
     }
 
-    private fun getUnreadForAutoChaptersSorted(): List<ChapterItem> {
+    private fun getUnreadChaptersExceptCurrentSorted(): List<ChapterItem> {
         val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
         val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
 
-        return chapters.filter { !it.read }.distinctBy { it.name }
+        return chapters.filter { !it.read && chapterId != it.id }.distinctBy { it.name }
             .sortedWith(chapterSort.sortComparator(true))
     }
 

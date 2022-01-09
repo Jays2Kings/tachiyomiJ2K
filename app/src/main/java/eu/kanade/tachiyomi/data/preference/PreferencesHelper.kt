@@ -250,6 +250,8 @@ class PreferencesHelper(val context: Context) {
 
     fun autoDownloadNextChapters() = prefs.getInt(Keys.autoDownloadNextChapters, -1)
 
+    fun noTryAutoDownloadOnlyOverWifi() = prefs.getBoolean(Keys.noTryAutoDownloadOnlyOverWifi, false)
+
     fun removeAfterMarkedAsRead() = prefs.getBoolean(Keys.removeAfterMarkedAsRead, false)
 
     fun libraryUpdateInterval() = flowPrefs.getInt(Keys.libraryUpdateInterval, 24)

@@ -200,12 +200,19 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         } else {
             Timber.d("onReaderPageSelected: ${page.number}/${pages.size}")
         }
+        // Download next chapters once we've read at least a few pages
+        val inDownloadRange = page.number.toDouble() / pages.size > 0.2
         // Preload next chapter once we're within the last 5 pages of the current chapter
         val inPreloadRange = pages.size - page.number < 5
-        if (inPreloadRange && allowPreload && page.chapter == adapter.currentChapter) {
-            Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
-            adapter.nextTransition?.to?.let {
-                activity.requestPreloadChapter(it)
+        if (allowPreload && page.chapter == adapter.currentChapter) {
+            if (inDownloadRange) {
+                activity.requestDownloadNextChapters()
+            }
+            if (inPreloadRange) {
+                Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
+                adapter.nextTransition?.to?.let {
+                    activity.requestPreloadChapter(it)
+                }
             }
         }
     }
