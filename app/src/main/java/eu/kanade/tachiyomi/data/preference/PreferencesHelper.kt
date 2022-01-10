@@ -192,6 +192,8 @@ class PreferencesHelper(val context: Context) {
 
     fun autoUpdateToggleTrack() = "toggle" in autoUpdateReadingAndToggleTrack().get()
 
+    fun autoUpdateLibraryTrack() = "library" in autoUpdateReadingAndToggleTrack().get()
+
     fun autoAddTrack() = prefs.getBoolean(Keys.autoAddTrack, true)
 
     fun trackingsToAddOnline() = flowPrefs.getStringSet(Keys.trackingsToAddOnline, emptySet())

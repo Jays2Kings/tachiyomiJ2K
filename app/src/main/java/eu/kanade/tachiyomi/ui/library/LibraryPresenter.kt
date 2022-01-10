@@ -13,6 +13,7 @@ import eu.kanade.tachiyomi.data.preference.DelayedLibrarySuggestionsJob
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.minusAssign
 import eu.kanade.tachiyomi.data.preference.plusAssign
+import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.SourceManager
@@ -35,12 +36,15 @@ import eu.kanade.tachiyomi.util.lang.capitalizeWords
 import eu.kanade.tachiyomi.util.lang.chopByWords
 import eu.kanade.tachiyomi.util.lang.removeArticles
 import eu.kanade.tachiyomi.util.system.executeOnIO
+import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.util.ArrayList
@@ -1053,7 +1057,9 @@ class LibraryPresenter(
                 mangaList.forEach {
                     withContext(Dispatchers.IO) {
                         val chapters = db.getChapters(it).executeAsBlocking()
+                        var hasChanged = false
                         chapters.forEach {
+                            hasChanged = hasChanged || it.read != markRead
                             it.read = markRead
                             it.last_page_read = 0
                         }
@@ -1061,9 +1067,57 @@ class LibraryPresenter(
                         if (markRead && preferences.removeAfterMarkedAsRead()) {
                             deleteChapters(it, chapters)
                         }
+
+                        if (preferences.autoUpdateLibraryTrack()) {
+                            val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
+                            if (hasChanged) {
+                                updateTrackChapterRead(newLastChapter, it)
+                            }
+                        }
                     }
                 }
                 getLibrary()
+            }
+        }
+    }
+
+    /**
+     * Starts the service that updates the last chapter read in sync services. This operation
+     * will run in a background thread and errors are ignored.
+     */
+    private fun updateTrackChapterRead(readerChapter: Chapter?, manga: Manga) {
+        if (!preferences.autoUpdateLibraryTrack()) return
+
+        val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
+
+        val trackManager = Injekt.get<TrackManager>()
+
+        // We want these to execute even if the presenter is destroyed so launch on GlobalScope
+        GlobalScope.launch {
+            withContext(Dispatchers.IO) {
+                val trackList = db.getTracks(manga).executeAsBlocking()
+                trackList.map { track ->
+                    val service = trackManager.getService(track.sync_id)
+                    if (service != null && service.isLogged) {
+                        if (!preferences.context.isOnline()) {
+                            val mangaId = manga.id ?: return@map
+                            val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
+                            val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
+                            trackings.remove(currentTracking)
+                            trackings.add("$mangaId:${track.sync_id}:$chapterRead")
+                            preferences.trackingsToAddOnline().set(trackings)
+                            DelayedTrackingUpdateJob.setupTask(preferences.context)
+                        } else {
+                            try {
+                                track.last_chapter_read = chapterRead
+                                service.update(track, true)
+                                db.insertTrack(track).executeAsBlocking()
+                            } catch (e: Exception) {
+                                Timber.e(e)
+                            }
+                        }
+                    }
+                }
             }
         }
     }

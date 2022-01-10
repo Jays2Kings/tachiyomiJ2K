@@ -494,7 +494,7 @@ class MangaDetailsPresenter(
             getChapters()
             if (preferences.autoUpdateToggleTrack()) {
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-                if (newLastChapter != null && oldLastChapter != newLastChapter) {
+                if (oldLastChapter != newLastChapter) {
                     updateTrackChapterRead(newLastChapter)
                 }
             }
@@ -506,10 +506,10 @@ class MangaDetailsPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(readerChapter: ChapterItem) {
+    private fun updateTrackChapterRead(readerChapter: ChapterItem?) {
         if (!preferences.autoUpdateToggleTrack()) return
 
-        val chapterRead = readerChapter.chapter_number.toInt()
+        val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
 
         val trackManager = Injekt.get<TrackManager>()
 

@@ -32,8 +32,8 @@ class SettingsTrackingController :
             titleRes = R.string.sync_chapters
             noSelectionRes = R.string.never
 
-            entriesRes = arrayOf(R.string.sync_chapters_after_reading, R.string.sync_chapters_after_toggle)
-            entryValues = listOf("reading", "toggle")
+            entriesRes = arrayOf(R.string.sync_chapters_after_reading, R.string.sync_chapters_after_toggle, R.string.sync_chapters_after_library)
+            entryValues = listOf("reading", "toggle", "library")
 
             defaultValue = listOf("reading")
         }
