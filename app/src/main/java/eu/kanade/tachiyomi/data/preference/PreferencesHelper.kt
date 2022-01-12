@@ -186,13 +186,9 @@ class PreferencesHelper(val context: Context) {
 
     fun updateOnlyNonCompleted() = prefs.getBoolean(Keys.updateOnlyNonCompleted, false)
 
-    fun autoUpdateReadingAndToggleTrack() = flowPrefs.getStringSet(Keys.autoUpdateSyncReadingAndToggleTrack, setOf("reading"))
+    private fun autoUpdateReadingAndToggleTrack() = flowPrefs.getStringSet(Keys.autoUpdateSyncReadingAndToggleTrack, setOf("reading"))
 
-    fun autoUpdateReadingTrack() = "reading" in autoUpdateReadingAndToggleTrack().get()
-
-    fun autoUpdateToggleTrack() = "toggle" in autoUpdateReadingAndToggleTrack().get()
-
-    fun autoUpdateLibraryTrack() = "library" in autoUpdateReadingAndToggleTrack().get()
+    fun autoUpdateTrack(trackValue: String) = trackValue in autoUpdateReadingAndToggleTrack().get()
 
     fun autoAddTrack() = prefs.getBoolean(Keys.autoAddTrack, true)
 

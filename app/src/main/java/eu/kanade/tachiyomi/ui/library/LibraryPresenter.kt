@@ -1068,7 +1068,7 @@ class LibraryPresenter(
                             deleteChapters(it, chapters)
                         }
 
-                        if (preferences.autoUpdateLibraryTrack()) {
+                        if (preferences.autoUpdateTrack("library")) {
                             val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                             if (hasChanged) {
                                 updateTrackChapterRead(newLastChapter, it)
@@ -1086,7 +1086,7 @@ class LibraryPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(readerChapter: Chapter?, manga: Manga) {
-        if (!preferences.autoUpdateLibraryTrack()) return
+        if (!preferences.autoUpdateTrack("library")) return
 
         val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
 

@@ -492,7 +492,7 @@ class MangaDetailsPresenter(
                 deleteChapters(selectedChapters, false)
             }
             getChapters()
-            if (preferences.autoUpdateToggleTrack()) {
+            if (preferences.autoUpdateTrack("toggle")) {
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                 if (oldLastChapter != newLastChapter) {
                     updateTrackChapterRead(newLastChapter)
@@ -507,7 +507,7 @@ class MangaDetailsPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(readerChapter: ChapterItem?) {
-        if (!preferences.autoUpdateToggleTrack()) return
+        if (!preferences.autoUpdateTrack("toggle")) return
 
         val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
 
