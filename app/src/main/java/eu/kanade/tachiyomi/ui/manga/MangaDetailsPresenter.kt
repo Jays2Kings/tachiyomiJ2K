@@ -495,7 +495,7 @@ class MangaDetailsPresenter(
             if (preferences.autoUpdateTrack("toggle")) {
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                 if (oldLastChapter != newLastChapter) {
-                    updateTrackChapterRead(newLastChapter)
+                    updateTrackChapterRead(oldLastChapter, newLastChapter)
                 }
             }
             withContext(Dispatchers.Main) { controller.updateChapters(chapters) }
@@ -506,10 +506,11 @@ class MangaDetailsPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(readerChapter: ChapterItem?) {
+    private fun updateTrackChapterRead(oldLastChapter: ChapterItem?, newLastChapter: ChapterItem?) {
         if (!preferences.autoUpdateTrack("toggle")) return
 
-        val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
+        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+        val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
         val trackManager = Injekt.get<TrackManager>()
 
@@ -520,17 +521,18 @@ class MangaDetailsPresenter(
                 trackList.map { track ->
                     val service = trackManager.getService(track.sync_id)
                     if (service != null && service.isLogged) {
+                        val newCountChapter = (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
                         if (!preferences.context.isOnline()) {
                             val mangaId = manga.id ?: return@map
                             val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                             val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
                             trackings.remove(currentTracking)
-                            trackings.add("$mangaId:${track.sync_id}:$chapterRead")
+                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
                             preferences.trackingsToAddOnline().set(trackings)
                             DelayedTrackingUpdateJob.setupTask(preferences.context)
                         } else {
                             try {
-                                track.last_chapter_read = chapterRead
+                                track.last_chapter_read = newCountChapter
                                 service.update(track, true)
                                 db.insertTrack(track).executeAsBlocking()
                                 refreshTracking(false)

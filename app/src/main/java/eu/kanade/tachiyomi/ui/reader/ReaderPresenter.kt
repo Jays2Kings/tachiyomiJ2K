@@ -489,8 +489,11 @@ class ReaderPresenter(
                     (hasExtraPage && selectedChapter.pages?.lastIndex?.minus(1) == page.index)
                 )
         ) {
+            val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
+            val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
+
             selectedChapter.chapter.read = true
-            updateTrackChapterRead(selectedChapter)
+            updateTrackChapterRead(oldLastChapter, selectedChapter)
             deleteChapterIfNeeded(selectedChapter)
         }
 
@@ -861,11 +864,12 @@ class ReaderPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(readerChapter: ReaderChapter) {
+    private fun updateTrackChapterRead(oldLastChapter: ChapterItem?, newLastChapter: ReaderChapter) {
         if (!preferences.autoUpdateTrack("reading")) return
         val manga = manga ?: return
 
-        val chapterRead = readerChapter.chapter.chapter_number.toInt()
+        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+        val newChapterRead = newLastChapter.chapter.chapter_number.toInt()
 
         val trackManager = Injekt.get<TrackManager>()
 
@@ -875,18 +879,19 @@ class ReaderPresenter(
                 val trackList = db.getTracks(manga).executeAsBlocking()
                 trackList.map { track ->
                     val service = trackManager.getService(track.sync_id)
-                    if (service != null && service.isLogged && chapterRead > track.last_chapter_read) {
+                    if (service != null && service.isLogged && newChapterRead > oldChapterRead) {
+                        val newCountChapter = (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
                         if (!preferences.context.isOnline()) {
                             val mangaId = manga.id ?: return@map
                             val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                             val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
                             trackings.remove(currentTracking)
-                            trackings.add("$mangaId:${track.sync_id}:$chapterRead")
+                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
                             preferences.trackingsToAddOnline().set(trackings)
                             DelayedTrackingUpdateJob.setupTask(preferences.context)
                         } else {
                             try {
-                                track.last_chapter_read = chapterRead
+                                track.last_chapter_read = newCountChapter
                                 service.update(track, true)
                                 db.insertTrack(track).executeAsBlocking()
                             } catch (e: Exception) {

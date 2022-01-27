@@ -1054,24 +1054,23 @@ class LibraryPresenter(
     fun markReadStatus(mangaList: List<Manga>, markRead: Boolean) {
         presenterScope.launch {
             withContext(Dispatchers.IO) {
-                mangaList.forEach {
+                mangaList.forEach { manga ->
                     withContext(Dispatchers.IO) {
-                        val chapters = db.getChapters(it).executeAsBlocking()
-                        var hasChanged = false
+                        val chapters = db.getChapters(manga).executeAsBlocking()
+                        val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                         chapters.forEach {
-                            hasChanged = hasChanged || it.read != markRead
                             it.read = markRead
                             it.last_page_read = 0
                         }
                         db.updateChaptersProgress(chapters).executeAsBlocking()
                         if (markRead && preferences.removeAfterMarkedAsRead()) {
-                            deleteChapters(it, chapters)
+                            deleteChapters(manga, chapters)
                         }
 
                         if (preferences.autoUpdateTrack("library")) {
                             val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-                            if (hasChanged) {
-                                updateTrackChapterRead(newLastChapter, it)
+                            if (oldLastChapter != newLastChapter) {
+                                updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
                             }
                         }
                     }
@@ -1085,10 +1084,11 @@ class LibraryPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(readerChapter: Chapter?, manga: Manga) {
+    private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, manga: Manga) {
         if (!preferences.autoUpdateTrack("library")) return
 
-        val chapterRead = readerChapter?.chapter_number?.toInt() ?: 0
+        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+        val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
         val trackManager = Injekt.get<TrackManager>()
 
@@ -1099,17 +1099,18 @@ class LibraryPresenter(
                 trackList.map { track ->
                     val service = trackManager.getService(track.sync_id)
                     if (service != null && service.isLogged) {
+                        val newCountChapter = (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
                         if (!preferences.context.isOnline()) {
                             val mangaId = manga.id ?: return@map
                             val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                             val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
                             trackings.remove(currentTracking)
-                            trackings.add("$mangaId:${track.sync_id}:$chapterRead")
+                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
                             preferences.trackingsToAddOnline().set(trackings)
                             DelayedTrackingUpdateJob.setupTask(preferences.context)
                         } else {
                             try {
-                                track.last_chapter_read = chapterRead
+                                track.last_chapter_read = newCountChapter
                                 service.update(track, true)
                                 db.insertTrack(track).executeAsBlocking()
                             } catch (e: Exception) {
