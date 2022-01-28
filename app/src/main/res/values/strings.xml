@@ -556,6 +556,7 @@
     <string name="sync_chapters_after_toggle">After toggle read/unread</string>
     <string name="sync_chapters_after_library">After library read/unread</string>
     <string name="sync_chapters_after_notification">After notification read</string>
+    <string name="paused_tracking">Paused tracking</string>
     <string name="track_when_adding_to_library">Track when adding to library</string>
     <string name="only_applies_silent_trackers">Only applies to silent trackers, such as Komga</string>
     <string name="reading">Reading</string>

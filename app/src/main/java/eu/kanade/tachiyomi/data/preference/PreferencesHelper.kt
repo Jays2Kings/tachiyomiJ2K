@@ -188,7 +188,7 @@ class PreferencesHelper(val context: Context) {
 
     private fun autoUpdateReadingAndToggleTrack() = flowPrefs.getStringSet(Keys.autoUpdateSyncReadingAndToggleTrack, setOf("reading"))
 
-    fun autoUpdateTrack(trackValue: String) = trackValue in autoUpdateReadingAndToggleTrack().get()
+    fun autoUpdateTrack(trackValue: String) = trackValue in autoUpdateReadingAndToggleTrack().get() && !pausedTracking().get()
 
     fun autoAddTrack() = prefs.getBoolean(Keys.autoAddTrack, true)
 
@@ -441,4 +441,6 @@ class PreferencesHelper(val context: Context) {
     fun chaptersDescAsDefault() = flowPrefs.getBoolean(Keys.chaptersDescAsDefault, true)
 
     fun sortChapterByAscendingOrDescending() = prefs.getInt(Keys.defaultChapterSortByAscendingOrDescending, Manga.CHAPTER_SORT_DESC)
+
+    fun pausedTracking() = flowPrefs.getBoolean(Keys.pausedTracking, false)
 }

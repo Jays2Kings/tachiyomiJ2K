@@ -38,6 +38,11 @@ class SettingsTrackingController :
             defaultValue = listOf("reading")
         }
         switchPreference {
+            key = Keys.pausedTracking
+            titleRes = R.string.paused_tracking
+            defaultValue = false
+        }
+        switchPreference {
             key = Keys.autoAddTrack
             titleRes = R.string.track_when_adding_to_library
             summaryRes = R.string.only_applies_silent_trackers
