@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.data.library
 
+import android.app.Application
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -39,6 +40,7 @@ import eu.kanade.tachiyomi.util.manga.MangaShortcutManager
 import eu.kanade.tachiyomi.util.shouldDownloadNewChapters
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.createFileInCacheDir
+import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
@@ -101,7 +103,7 @@ class LibraryUpdateService(
     val jobCount = AtomicInteger(0)
 
     // Boolean to determine if user wants to automatically download new chapters.
-    private val downloadNew: Boolean = preferences.downloadNew().get()
+    private val downloadNew: Boolean = preferences.downloadNew()
 
     // Boolean to determine if DownloadManager has downloads
     private var hasDownloads = false
@@ -394,6 +396,20 @@ class LibraryUpdateService(
         return hasDownloads
     }
 
+    private fun prepareDownloadChapters(manga: Manga, chapters: List<Chapter>) {
+        val shouldDownload = preferences.downloadNew()
+        val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
+        val context = Injekt.get<Application>()
+        if (!context.isConnectedToWifi() && preferences.noTryAutoDownloadOnlyOverWifi()) return
+        if (shouldDownload) {
+            val downloadCount = downloadManager.getDownloadCount(manga)
+            val chaptersToDownload = chapters.take((chaptersNumberToDownload - downloadCount).coerceAtLeast(0))
+            if (chaptersToDownload.isNotEmpty()) {
+                downloadChapters(manga, chaptersToDownload)
+            }
+        }
+    }
+
     private suspend fun updateMangaChapters(
         manga: LibraryManga,
         progress: Int,
@@ -414,7 +430,7 @@ class LibraryUpdateService(
                 val newChapters = syncChaptersWithSource(db, fetchedChapters, manga, source)
                 if (newChapters.first.isNotEmpty()) {
                     if (shouldDownload) {
-                        downloadChapters(manga, newChapters.first.sortedBy { it.chapter_number })
+                        prepareDownloadChapters(manga, newChapters.first.sortedBy { it.chapter_number })
                         hasDownloads = true
                     }
                     newUpdates[manga] =

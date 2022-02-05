@@ -10,6 +10,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.DelayedLibrarySuggestionsJob
+import eu.kanade.tachiyomi.data.preference.LIBRARY
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.minusAssign
 import eu.kanade.tachiyomi.data.preference.plusAssign
@@ -1068,7 +1069,7 @@ class LibraryPresenter(
                             deleteChapters(manga, chapters)
                         }
 
-                        if (preferences.autoUpdateTrack("library")) {
+                        if (preferences.autoUpdateTrack(LIBRARY)) {
                             val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                             if (oldLastChapter != newLastChapter) {
                                 updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
@@ -1086,7 +1087,7 @@ class LibraryPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, manga: Manga) {
-        if (!preferences.autoUpdateTrack("library")) return
+        if (!preferences.autoUpdateTrack(LIBRARY)) return
 
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
         val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0

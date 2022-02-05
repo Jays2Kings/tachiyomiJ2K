@@ -17,6 +17,7 @@ import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.notification.NotificationReceiver
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.READING_TRACKING
 import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.source.LocalSource
@@ -511,12 +512,13 @@ class ReaderPresenter(
      * Called from the activity to download the next chapters.
      */
     fun downloadNextChapters() {
-        val chaptersNumberToDownload = preferences.autoDownloadNextChapters()
+        val shouldDownload = preferences.downloadWhileReading()
+        val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
         val context = Injekt.get<Application>()
-        if (preferences.downloadOnlyOverWifi().get() && !context.isConnectedToWifi() && preferences.noTryAutoDownloadOnlyOverWifi() ||
+        if (!context.isConnectedToWifi() && preferences.noTryAutoDownloadOnlyOverWifi() ||
             manga?.favorite == false
         ) return
-        if (chaptersNumberToDownload != -1) {
+        if (shouldDownload) {
             downloadAutoNextChapters(chaptersNumberToDownload)
         }
     }
@@ -906,7 +908,7 @@ class ReaderPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(oldLastChapter: ChapterItem?, newLastChapter: ReaderChapter) {
-        if (!preferences.autoUpdateTrack("reading")) return
+        if (!preferences.autoUpdateTrack(READING_TRACKING)) return
         val manga = manga ?: return
 
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0

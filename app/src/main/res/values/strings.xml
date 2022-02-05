@@ -900,8 +900,11 @@
     <string name="third_to_last">Third to last chapter</string>
     <string name="fourth_to_last">Fourth to last chapter</string>
     <string name="fifth_to_last">Fifth to last chapter</string>
-    <string name="auto_download_next_unread_chapters">Auto download next unread chapters while reading manga from library</string>
-    <string name="ignore_auto_download_no_wifi">Deactivate auto download when no Wi-Fi</string>
+    <string name="auto_download_from_library">Auto download unread chapters from library</string>
+    <string name="auto_download_while_reading">While reading</string>
+    <string name="auto_download_new_chapters">New chapters</string>
+    <string name="auto_download_restrictions">Auto download restrictions</string>
+    <string name="ignore_auto_download_no_wifi">Ignore auto download when no Wi-Fi</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
     <string name="pref_download_only_completely_read">Only download completely read manga</string>

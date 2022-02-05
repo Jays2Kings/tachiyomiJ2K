@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
+import eu.kanade.tachiyomi.data.preference.NOTIFICATION
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
@@ -216,7 +217,7 @@ class NotificationReceiver : BroadcastReceiver() {
             }
         }
 
-        if (preferences.autoUpdateTrack("notification")) {
+        if (preferences.autoUpdateTrack(NOTIFICATION)) {
             val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
             chapters = db.getChapters(mangaId).executeAsBlocking()
             val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
@@ -232,7 +233,7 @@ class NotificationReceiver : BroadcastReceiver() {
      */
     private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, mangaId: Long) {
         val preferences: PreferencesHelper = Injekt.get()
-        if (!preferences.autoUpdateTrack("notification")) return
+        if (!preferences.autoUpdateTrack(NOTIFICATION)) return
 
         val db: DatabaseHelper = Injekt.get()
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0

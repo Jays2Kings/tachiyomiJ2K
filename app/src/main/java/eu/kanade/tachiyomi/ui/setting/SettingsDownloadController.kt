@@ -13,7 +13,9 @@ import com.hippo.unifile.UniFile
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
+import eu.kanade.tachiyomi.data.preference.NEW_CHAPTERS
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.READING_DOWNLOAD
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.util.system.getFilePicker
 import eu.kanade.tachiyomi.util.system.withOriginalWidth
@@ -77,60 +79,70 @@ class SettingsDownloadController : SettingsController() {
         }
 
         preferenceCategory {
-            titleRes = R.string.auto_download_next_unread_chapters
+            titleRes = R.string.auto_download_from_library
+
+            multiSelectListPreferenceMat(activity) {
+                key = Keys.autoDownloadChapters
+                titleRes = R.string.auto_download_from_library
+                noSelectionRes = R.string.never
+                defaultValue = emptyList<String>()
+
+                entriesRes = arrayOf(R.string.auto_download_while_reading, R.string.auto_download_new_chapters)
+                entryValues = listOf(READING_DOWNLOAD, NEW_CHAPTERS)
+            }
 
             intListPreference(activity) {
-                key = Keys.autoDownloadNextChapters
-                titleRes = R.string.auto_download_next_unread_chapters
+                key = Keys.autoDownloadRestrictions
+                titleRes = R.string.auto_download_restrictions
                 entriesRes = arrayOf(
-                    R.string.never,
                     R.string.next_unread_chapter,
                     R.string.next_2_unread,
                     R.string.next_3_unread,
                     R.string.next_5_unread,
                     R.string.next_10_unread
                 )
-                entryValues = listOf(-1, 1, 2, 3, 5, 10)
-                defaultValue = -1
+                entryValues = listOf(1, 2, 3, 5, 10)
+                defaultValue = 2
+
+                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
+                    isVisible = it.isNotEmpty()
+                }
             }
+
             switchPreference {
                 key = Keys.noTryAutoDownloadOnlyOverWifi
                 titleRes = R.string.ignore_auto_download_no_wifi
-                summary = "Don't show download error popup when reading without wifi"
                 defaultValue = false
 
-                preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { isVisible = it }
+                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
+                    isVisible = it.isNotEmpty()
+                }
             }
-        }
 
-        val dbCategories = db.getCategories().executeAsBlocking()
-        val categories = listOf(Category.createDefault(context)) + dbCategories
+            val dbCategories = db.getCategories().executeAsBlocking()
+            val categories = listOf(Category.createDefault(context)) + dbCategories
 
-        preferenceCategory {
-            titleRes = R.string.download_new_chapters
+            preferenceCategory {
+                titleRes = R.string.new_chapters
 
-            switchPreference {
-                key = Keys.downloadNew
-                titleRes = R.string.download_new_chapters
-                defaultValue = false
-            }
-            triStateListPreference(activity) {
-                key = Keys.downloadNewCategories
-                excludeKey = Keys.downloadNewCategoriesExclude
-                titleRes = R.string.categories
-                entries = categories.map { it.name }
-                entryValues = categories.map { it.id.toString() }
-                allSelectionRes = R.string.all
+                triStateListPreference(activity) {
+                    key = Keys.downloadNewCategories
+                    excludeKey = Keys.downloadNewCategoriesExclude
+                    titleRes = R.string.categories
+                    entries = categories.map { it.name }
+                    entryValues = categories.map { it.id.toString() }
+                    allSelectionRes = R.string.all
+                }
+                switchPreference {
+                    key = Keys.downloadOnlyCompletelyRead
+                    titleRes = R.string.pref_download_only_completely_read
+                    summaryRes = R.string.pref_download_only_completely_read_summary
+                    defaultValue = false
+                }
 
-                preferences.downloadNew().asImmediateFlowIn(viewScope) { isVisible = it }
-            }
-            switchPreference {
-                key = Keys.downloadOnlyCompletelyRead
-                titleRes = R.string.pref_download_only_completely_read
-                summaryRes = R.string.pref_download_only_completely_read_summary
-                defaultValue = false
-
-                preferences.downloadNew().asImmediateFlowIn(viewScope) { isVisible = it }
+                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
+                    isVisible = it.contains(NEW_CHAPTERS)
+                }
             }
             preferenceCategory {
                 titleRes = R.string.automatic_removal

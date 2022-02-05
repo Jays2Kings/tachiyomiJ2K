@@ -129,7 +129,9 @@ object PreferenceKeys {
 
     const val backupInterval = "backup_interval"
 
-    const val autoDownloadNextChapters = "auto_download_next_chapters"
+    const val autoDownloadChapters = "auto_download_chapters"
+
+    const val autoDownloadRestrictions = "auto_download_restrictions"
 
     const val noTryAutoDownloadOnlyOverWifi = "no_try_auto_download_only_over_wifi_key"
 
@@ -171,8 +173,6 @@ object PreferenceKeys {
     const val hopperLongPress = "hopper_long_press"
 
     const val onlySearchPinned = "only_search_pinned"
-
-    const val downloadNew = "download_new"
 
     const val downloadNewCategories = "download_new_categories"
     const val downloadNewCategoriesExclude = "download_new_categories_exclude"

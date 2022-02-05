@@ -32,7 +32,7 @@ fun Manga.shouldDownloadNewChapters(db: DatabaseHelper, prefs: PreferencesHelper
     if (!favorite) return false
 
     // Boolean to determine if user wants to automatically download new chapters.
-    val downloadNew = prefs.downloadNew().get()
+    val downloadNew = prefs.downloadNew()
     if (!downloadNew) return false
 
     val categoriesToDownload = prefs.downloadNewCategories().get().map(String::toInt)

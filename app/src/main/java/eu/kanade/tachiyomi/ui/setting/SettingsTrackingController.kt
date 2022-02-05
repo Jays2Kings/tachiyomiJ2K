@@ -3,6 +3,10 @@ package eu.kanade.tachiyomi.ui.setting
 import android.app.Activity
 import androidx.preference.PreferenceScreen
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.preference.LIBRARY
+import eu.kanade.tachiyomi.data.preference.NOTIFICATION
+import eu.kanade.tachiyomi.data.preference.READING_TRACKING
+import eu.kanade.tachiyomi.data.preference.TOGGLE
 import eu.kanade.tachiyomi.data.track.NoLoginTrackService
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackService
@@ -33,9 +37,9 @@ class SettingsTrackingController :
             noSelectionRes = R.string.never
 
             entriesRes = arrayOf(R.string.sync_chapters_after_reading, R.string.sync_chapters_after_toggle, R.string.sync_chapters_after_library, R.string.sync_chapters_after_notification)
-            entryValues = listOf("reading", "toggle", "library", "notification")
+            entryValues = listOf(READING_TRACKING, TOGGLE, LIBRARY, NOTIFICATION)
 
-            defaultValue = listOf("reading")
+            defaultValue = listOf(READING_TRACKING)
         }
         switchPreference {
             key = Keys.pausedTracking

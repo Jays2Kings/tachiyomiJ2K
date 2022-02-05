@@ -250,7 +250,13 @@ class PreferencesHelper(val context: Context) {
 
     fun removeAfterReadSlots() = prefs.getInt(Keys.removeAfterReadSlots, -1)
 
-    fun autoDownloadNextChapters() = prefs.getInt(Keys.autoDownloadNextChapters, -1)
+    fun autoDownloadChapters() = flowPrefs.getStringSet(Keys.autoDownloadChapters, mutableSetOf())
+
+    fun autoDownloadRestrictions() = prefs.getInt(Keys.autoDownloadRestrictions, 2)
+
+    fun downloadWhileReading() = READING_DOWNLOAD in autoDownloadChapters().get()
+
+    fun downloadNew() = NEW_CHAPTERS in autoDownloadChapters().get()
 
     fun noTryAutoDownloadOnlyOverWifi() = prefs.getBoolean(Keys.noTryAutoDownloadOnlyOverWifi, false)
 
@@ -304,8 +310,6 @@ class PreferencesHelper(val context: Context) {
     fun hiddenSources() = flowPrefs.getStringSet("hidden_catalogues", mutableSetOf())
 
     fun pinnedCatalogues() = flowPrefs.getStringSet("pinned_catalogues", mutableSetOf())
-
-    fun downloadNew() = flowPrefs.getBoolean(Keys.downloadNew, false)
 
     fun saveChaptersAsCBZ() = flowPrefs.getBoolean(Keys.saveChaptersAsCBZ, false)
 

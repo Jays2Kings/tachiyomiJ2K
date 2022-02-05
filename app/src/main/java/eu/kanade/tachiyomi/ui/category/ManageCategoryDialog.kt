@@ -12,6 +12,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.library.LibraryUpdateJob
+import eu.kanade.tachiyomi.data.preference.NEW_CHAPTERS
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MangaCategoryDialogBinding
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
@@ -101,6 +102,7 @@ class ManageCategoryDialog(bundle: Bundle? = null) :
                 return false
             }
         }
+        val autoDownloadChapters = preferences.autoDownloadChapters().get().toMutableSet()
         when (
             updatePref(
                 preferences.downloadNewCategories(),
@@ -108,9 +110,10 @@ class ManageCategoryDialog(bundle: Bundle? = null) :
                 binding.downloadNew
             )
         ) {
-            true -> preferences.downloadNew().set(true)
-            false -> preferences.downloadNew().set(false)
+            true -> autoDownloadChapters.add(NEW_CHAPTERS)
+            false -> autoDownloadChapters.remove(NEW_CHAPTERS)
         }
+        preferences.autoDownloadChapters().set(autoDownloadChapters)
         if (preferences.libraryUpdateInterval().get() > 0 &&
             updatePref(
                     preferences.libraryUpdateCategories(),
@@ -149,7 +152,7 @@ class ManageCategoryDialog(bundle: Bundle? = null) :
         binding.title.hint =
             category?.name ?: binding.editCategories.context.getString(R.string.category)
         binding.title.append(category?.name ?: "")
-        val downloadNew = preferences.downloadNew().get()
+        val downloadNew = preferences.downloadNew()
         setCheckbox(
             binding.downloadNew,
             preferences.downloadNewCategories(),

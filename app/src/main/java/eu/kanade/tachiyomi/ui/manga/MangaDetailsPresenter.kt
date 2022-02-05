@@ -27,6 +27,7 @@ import eu.kanade.tachiyomi.data.library.CustomMangaManager
 import eu.kanade.tachiyomi.data.library.LibraryServiceListener
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.preference.TOGGLE
 import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackService
@@ -493,7 +494,7 @@ class MangaDetailsPresenter(
                 deleteChapters(selectedChapters, false)
             }
             getChapters()
-            if (preferences.autoUpdateTrack("toggle")) {
+            if (preferences.autoUpdateTrack(TOGGLE)) {
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                 if (oldLastChapter != newLastChapter) {
                     updateTrackChapterRead(oldLastChapter, newLastChapter)
@@ -508,7 +509,7 @@ class MangaDetailsPresenter(
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterRead(oldLastChapter: ChapterItem?, newLastChapter: ChapterItem?) {
-        if (!preferences.autoUpdateTrack("toggle")) return
+        if (!preferences.autoUpdateTrack(TOGGLE)) return
 
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
         val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
