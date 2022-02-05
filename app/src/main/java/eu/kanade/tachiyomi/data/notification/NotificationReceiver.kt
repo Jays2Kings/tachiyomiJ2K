@@ -38,6 +38,7 @@ import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.File
+import kotlin.math.abs
 import eu.kanade.tachiyomi.BuildConfig.APPLICATION_ID as ID
 
 /**
@@ -246,7 +247,10 @@ class NotificationReceiver : BroadcastReceiver() {
                 trackList.map { track ->
                     val service = trackManager.getService(track.sync_id)
                     if (service != null && service.isLogged) {
-                        val newCountChapter = (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
+                        val newCountChapter = if (shouldCustomCount) {
+                            (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        } else newChapterRead
                         if (!preferences.context.isOnline()) {
                             val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                             val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }

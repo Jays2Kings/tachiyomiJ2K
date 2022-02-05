@@ -75,6 +75,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.Date
+import kotlin.math.abs
 
 class MangaDetailsPresenter(
     private val controller: MangaDetailsController,
@@ -521,7 +522,10 @@ class MangaDetailsPresenter(
                 trackList.map { track ->
                     val service = trackManager.getService(track.sync_id)
                     if (service != null && service.isLogged) {
-                        val newCountChapter = (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
+                        val newCountChapter = if (shouldCustomCount) {
+                            (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        } else newChapterRead
                         if (!preferences.context.isOnline()) {
                             val mangaId = manga.id ?: return@map
                             val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
