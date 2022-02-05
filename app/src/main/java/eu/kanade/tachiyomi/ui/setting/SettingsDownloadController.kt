@@ -96,6 +96,7 @@ class SettingsDownloadController : SettingsController() {
             switchPreference {
                 key = Keys.noTryAutoDownloadOnlyOverWifi
                 titleRes = R.string.ignore_auto_download_no_wifi
+                summary = "Don't show download error popup when reading without wifi"
                 defaultValue = false
 
                 preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { isVisible = it }
@@ -120,6 +121,14 @@ class SettingsDownloadController : SettingsController() {
                 entries = categories.map { it.name }
                 entryValues = categories.map { it.id.toString() }
                 allSelectionRes = R.string.all
+
+                preferences.downloadNew().asImmediateFlowIn(viewScope) { isVisible = it }
+            }
+            switchPreference {
+                key = Keys.downloadOnlyCompletelyRead
+                titleRes = R.string.pref_download_only_completely_read
+                summaryRes = R.string.pref_download_only_completely_read_summary
+                defaultValue = false
 
                 preferences.downloadNew().asImmediateFlowIn(viewScope) { isVisible = it }
             }

@@ -216,6 +216,8 @@
     <string name="library_update_restriction_summary">Update only when the conditions are met</string>
     <string name="restrictions_">Restrictions: %1$s</string>
     <string name="only_update_ongoing">Only update ongoing manga</string>
+    <string name="pref_update_only_completely_read">Only update completely read manga</string>
+    <string name="pref_update_only_completely_read_summary">Only update manga if there is no unread chapter (completely read)</string>
     <string name="sort_by_ignoring_articles">Sort by ignoring articles</string>
     <string name="when_sorting_ignore_articles">When sorting alphabetically, sort ignoring
         articles (a, an, the) at the start of manga titles</string>
@@ -898,10 +900,12 @@
     <string name="third_to_last">Third to last chapter</string>
     <string name="fourth_to_last">Fourth to last chapter</string>
     <string name="fifth_to_last">Fifth to last chapter</string>
-    <string name="auto_download_next_unread_chapters">Auto download next unread chapters</string>
-    <string name="ignore_auto_download_no_wifi">Ignore auto download when no Wi-Fi</string>
+    <string name="auto_download_next_unread_chapters">Auto download next unread chapters while reading manga from library</string>
+    <string name="ignore_auto_download_no_wifi">Deactivate auto download when no Wi-Fi</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
+    <string name="pref_download_only_completely_read">Only download completely read manga</string>
+    <string name="pref_download_only_completely_read_summary">Only download manga if there is no unread chapter (completely read)</string>
     <string name="delete_removed_chapters">Delete removed chapters</string>
     <string name="delete_downloaded_if_removed_online">Delete downloaded chapters if the source
         has removed the chapter online</string>

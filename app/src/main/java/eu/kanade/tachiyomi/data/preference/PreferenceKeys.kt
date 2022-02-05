@@ -95,6 +95,8 @@ object PreferenceKeys {
 
     const val updateOnlyNonCompleted = "pref_update_only_non_completed_key"
 
+    const val updateOnlyCompletelyRead = "pref_update_only_completely_read"
+
     const val autoUpdateSyncReadingAndToggleTrack = "auto_update_sync_reading_toggle_track"
 
     const val autoAddTrack = "pref_auto_add_track_key"
@@ -174,6 +176,8 @@ object PreferenceKeys {
 
     const val downloadNewCategories = "download_new_categories"
     const val downloadNewCategoriesExclude = "download_new_categories_exclude"
+
+    const val downloadOnlyCompletelyRead = "pref_download_only_completely_read"
 
     const val libraryLayout = "pref_display_library_layout"
 

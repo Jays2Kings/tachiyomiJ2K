@@ -147,7 +147,12 @@ class SettingsLibraryController : SettingsController() {
                 titleRes = R.string.only_update_ongoing
                 defaultValue = false
             }
-
+            switchPreference {
+                key = Keys.updateOnlyCompletelyRead
+                titleRes = R.string.pref_update_only_completely_read
+                summaryRes = R.string.pref_update_only_completely_read_summary
+                defaultValue = false
+            }
             intListPreference(activity) {
                 key = Keys.libraryUpdatePrioritization
                 titleRes = R.string.library_update_order

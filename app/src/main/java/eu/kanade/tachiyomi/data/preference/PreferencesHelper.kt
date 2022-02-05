@@ -186,6 +186,8 @@ class PreferencesHelper(val context: Context) {
 
     fun updateOnlyNonCompleted() = prefs.getBoolean(Keys.updateOnlyNonCompleted, false)
 
+    fun updateOnlyCompletelyRead() = prefs.getBoolean(Keys.updateOnlyCompletelyRead, false)
+
     private fun autoUpdateReadingAndToggleTrack() = flowPrefs.getStringSet(Keys.autoUpdateSyncReadingAndToggleTrack, setOf("reading"))
 
     fun autoUpdateTrack(trackValue: String) = trackValue in autoUpdateReadingAndToggleTrack().get() && !pausedTracking().get()
@@ -309,6 +311,8 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadNewCategories() = flowPrefs.getStringSet(Keys.downloadNewCategories, emptySet())
     fun downloadNewCategoriesExclude() = flowPrefs.getStringSet(Keys.downloadNewCategoriesExclude, emptySet())
+
+    fun downloadOnlyCompletelyRead() = prefs.getBoolean(Keys.downloadOnlyCompletelyRead, false)
 
     fun defaultCategory() = prefs.getInt(Keys.defaultCategory, -1)
 

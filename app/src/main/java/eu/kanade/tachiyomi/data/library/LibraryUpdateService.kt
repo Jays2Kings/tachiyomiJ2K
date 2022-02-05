@@ -221,6 +221,9 @@ class LibraryUpdateService(
         if (target == Target.CHAPTERS && preferences.updateOnlyNonCompleted()) {
             listToUpdate = listToUpdate.filter { it.status != SManga.COMPLETED }
         }
+        if (target == Target.CHAPTERS && preferences.updateOnlyCompletelyRead()) {
+            listToUpdate = listToUpdate.filter { it.unread == 0 }
+        }
 
         val categoriesToExclude =
             preferences.libraryUpdateCategoriesExclude().get().map(String::toInt)
@@ -378,7 +381,10 @@ class LibraryUpdateService(
         var hasDownloads = false
         while (count < mangaToUpdateMap[source]!!.size) {
             val manga = mangaToUpdateMap[source]!![count]
-            val shouldDownload = manga.shouldDownloadNewChapters(db, preferences)
+            val noUnreadChapters = mangaToUpdateMap[source]!![count].unread == 0
+            val downloadOnlyCompletelyRead = preferences.downloadOnlyCompletelyRead()
+            val shouldDownload = (!downloadOnlyCompletelyRead || noUnreadChapters) &&
+                manga.shouldDownloadNewChapters(db, preferences)
             if (updateMangaChapters(manga, this.count.andIncrement, shouldDownload)) {
                 hasDownloads = true
             }
