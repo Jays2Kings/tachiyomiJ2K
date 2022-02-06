@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.util
 
 import android.app.Activity
+import android.app.Application
 import android.view.View
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
@@ -17,6 +18,7 @@ import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.category.addtolibrary.SetCategoriesSheet
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithTrackServiceTwoWay
+import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
 import eu.kanade.tachiyomi.util.view.snack
@@ -34,6 +36,8 @@ fun Manga.shouldDownloadNewChapters(db: DatabaseHelper, prefs: PreferencesHelper
     // Boolean to determine if user wants to automatically download new chapters.
     val downloadNew = prefs.downloadNew()
     if (!downloadNew) return false
+    val context = Injekt.get<Application>()
+    if (!context.isConnectedToWifi() && prefs.noTryAutoDownloadOnlyOverWifi()) return false
 
     val categoriesToDownload = prefs.downloadNewCategories().get().map(String::toInt)
     if (categoriesToDownload.isEmpty()) return true

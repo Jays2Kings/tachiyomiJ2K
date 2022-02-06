@@ -99,9 +99,10 @@ class SettingsDownloadController : SettingsController() {
                     R.string.next_2_unread,
                     R.string.next_3_unread,
                     R.string.next_5_unread,
-                    R.string.next_10_unread
+                    R.string.next_10_unread,
+                    R.string.all_unread_chapters,
                 )
-                entryValues = listOf(1, 2, 3, 5, 10)
+                entryValues = listOf(1, 2, 3, 5, 10, -1)
                 defaultValue = 2
 
                 preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {

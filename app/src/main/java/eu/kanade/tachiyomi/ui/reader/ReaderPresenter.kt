@@ -524,8 +524,9 @@ class ReaderPresenter(
     }
 
     private fun downloadAutoNextChapters(choice: Int) {
-        val chaptersToDownload = getUnreadChaptersExceptCurrentSorted()
-            .take(choice)
+        val chaptersToDownload = if (choice == -1) getUnreadChaptersExceptCurrentSorted() else {
+            getUnreadChaptersExceptCurrentSorted().take(choice)
+        }
         if (chaptersToDownload.isNotEmpty()) {
             downloadChapters(chaptersToDownload)
         }
