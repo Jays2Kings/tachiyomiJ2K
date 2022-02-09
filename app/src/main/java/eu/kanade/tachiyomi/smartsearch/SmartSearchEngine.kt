@@ -4,6 +4,8 @@ import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.source.model.SManga
+import eu.kanade.tachiyomi.source.model.SManga.Companion.setTitleNormalized
+import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.await
 import info.debatty.java.stringsimilarity.NormalizedLevenshtein
 import kotlinx.coroutines.CoroutineScope
@@ -11,6 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.supervisorScope
 import rx.schedulers.Schedulers
+import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import kotlin.coroutines.CoroutineContext
 
@@ -54,18 +57,26 @@ class SmartSearchEngine(
     }*/
 
     suspend fun normalSearch(source: CatalogueSource, title: String): SManga? {
+        Timber.d("normalSearch $title")
+        val titleNormalized = title.toNormalized()
+        Timber.d("normalSearch $titleNormalized")
         val eligibleManga = supervisorScope {
             val searchQuery = if (extraSearchParams != null) {
-                "$title ${extraSearchParams.trim()}"
-            } else title
-            val searchResults = source.fetchSearchManga(1, searchQuery, source.getFilterList()).toSingle().await(Schedulers.io())
+                "$titleNormalized ${extraSearchParams.trim()}"
+            } else titleNormalized
+            val searchResults =
+                source.fetchSearchManga(1, searchQuery, source.getFilterList()).toSingle()
+                    .await(Schedulers.io())
 
             if (searchResults.mangas.size == 1) {
-                return@supervisorScope listOf(SearchEntry(searchResults.mangas.first(), 0.0))
+                val onlyManga = searchResults.mangas.first()
+                onlyManga.setTitleNormalized()
+                return@supervisorScope listOf(SearchEntry(onlyManga, 0.0))
             }
 
             searchResults.mangas.map {
-                val normalizedDistance = normalizedLevenshtein.similarity(title, it.title)
+                it.setTitleNormalized()
+                val normalizedDistance = normalizedLevenshtein.similarity(titleNormalized, it.title)
                 SearchEntry(it, normalizedDistance)
             }.filter { (_, normalizedDistance) ->
                 normalizedDistance >= MIN_NORMAL_ELIGIBLE_THRESHOLD
@@ -127,6 +138,9 @@ class SmartSearchEngine(
      * @return a manga from the database.
      */
     suspend fun networkToLocalManga(sManga: SManga, sourceId: Long): Manga {
+        Timber.d("toLocalSmart ${sManga.title}")
+        sManga.setTitleNormalized()
+        Timber.d("toLocalSmart ${sManga.title}")
         var localManga = db.getManga(sManga.url, sourceId).executeAsBlocking()
         if (localManga == null) {
             val newManga = Manga.create(sManga.url, sManga.title, sourceId)
@@ -134,6 +148,9 @@ class SmartSearchEngine(
             val result = db.insertManga(newManga).executeAsBlocking()
             newManga.id = result.insertedId()
             localManga = newManga
+        } else if (localManga.title.isBlank() || localManga.title.contains("’")) {
+            localManga.title = sManga.title
+            db.insertManga(localManga).executeAsBlocking()
         }
         return localManga
     }

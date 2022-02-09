@@ -140,9 +140,31 @@ fun String.withSubtitle(context: Context, subtitle: String): Spanned {
 fun String.addBetaTag(context: Context): Spanned {
     val betaText = context.getString(R.string.beta)
     val betaSpan = SpannableStringBuilder(this + betaText)
-    betaSpan.setSpan(SuperscriptSpan(), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    betaSpan.setSpan(RelativeSizeSpan(0.75f), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    betaSpan.setSpan(StyleSpan(Typeface.BOLD), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    betaSpan.setSpan(ForegroundColorSpan(context.getResourceColor(R.attr.colorSecondary)), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    betaSpan.setSpan(
+        SuperscriptSpan(),
+        length,
+        length + betaText.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+    betaSpan.setSpan(
+        RelativeSizeSpan(0.75f),
+        length,
+        length + betaText.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+    betaSpan.setSpan(
+        StyleSpan(Typeface.BOLD),
+        length,
+        length + betaText.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+    betaSpan.setSpan(
+        ForegroundColorSpan(context.getResourceColor(R.attr.colorSecondary)),
+        length,
+        length + betaText.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
     return betaSpan
 }
+
+fun String.toNormalized(): String = replace("’", "'")
