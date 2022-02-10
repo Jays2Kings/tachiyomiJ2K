@@ -112,7 +112,6 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import java.util.ArrayList
 import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.max
@@ -1751,12 +1750,62 @@ class LibraryController(
                 presenter.downloadUnread(selectedMangas.toList())
             }
             R.id.action_mark_as_read -> {
-                presenter.markReadStatus(selectedMangas.toList(), true)
+                val markRead = true
+                val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
                 destroyActionModeIfNeeded()
+                snack?.dismiss()
+                snack = view?.snack(R.string.mark_as_read) {
+                    anchorView = anchorView()
+                    view.elevation = 15f.dpToPx
+                    var undo = false
+                    setAction(R.string.undo) {
+                        presenter.undoMarkReadStatus(mapMangaChapters)
+                        undo = true
+                    }
+                    addCallback(
+                        object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                            override fun onDismissed(
+                                transientBottomBar: Snackbar?,
+                                event: Int
+                            ) {
+                                super.onDismissed(transientBottomBar, event)
+                                if (!undo) presenter.confirmMarkReadStatus(
+                                    mapMangaChapters,
+                                    markRead
+                                )
+                            }
+                        }
+                    )
+                }
             }
             R.id.action_mark_as_unread -> {
-                presenter.markReadStatus(selectedMangas.toList(), false)
+                val markRead = false
+                val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
                 destroyActionModeIfNeeded()
+                snack?.dismiss()
+                snack = view?.snack(R.string.marked_as_unread) {
+                    anchorView = anchorView()
+                    view.elevation = 15f.dpToPx
+                    var undo = false
+                    setAction(R.string.undo) {
+                        presenter.undoMarkReadStatus(mapMangaChapters)
+                        undo = true
+                    }
+                    addCallback(
+                        object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                            override fun onDismissed(
+                                transientBottomBar: Snackbar?,
+                                event: Int
+                            ) {
+                                super.onDismissed(transientBottomBar, event)
+                                if (!undo) presenter.confirmMarkReadStatus(
+                                    mapMangaChapters,
+                                    markRead
+                                )
+                            }
+                        }
+                    )
+                }
             }
             R.id.action_migrate -> {
                 val skipPre = preferences.skipPreMigration().get()
