@@ -5,6 +5,7 @@ import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.database.models.Chapter
+import eu.kanade.tachiyomi.data.database.models.Chapter.Companion.copy
 import eu.kanade.tachiyomi.data.database.models.LibraryManga
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
@@ -48,9 +49,7 @@ import kotlinx.coroutines.withContext
 import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import java.util.ArrayList
 import java.util.Calendar
-import java.util.Comparator
 import java.util.Date
 import java.util.Locale
 import java.util.concurrent.TimeUnit
@@ -1053,32 +1052,72 @@ class LibraryPresenter(
         }
     }
 
-    fun markReadStatus(mangaList: List<Manga>, markRead: Boolean) {
+    fun markReadStatus(
+        mangaList: List<Manga>,
+        markRead: Boolean
+    ): HashMap<Manga, Pair<List<Chapter>, Chapter?>> {
+        val mapMangaChapters = HashMap<Manga, Pair<List<Chapter>, Chapter?>>()
         presenterScope.launch {
             withContext(Dispatchers.IO) {
                 mangaList.forEach { manga ->
-                    withContext(Dispatchers.IO) {
-                        val chapters = db.getChapters(manga).executeAsBlocking()
-                        val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-                        chapters.forEach {
-                            it.read = markRead
-                            it.last_page_read = 0
-                        }
-                        db.updateChaptersProgress(chapters).executeAsBlocking()
-                        if (markRead && preferences.removeAfterMarkedAsRead()) {
-                            deleteChapters(manga, chapters)
-                        }
+                    val oldChapters = db.getChapters(manga).executeAsBlocking()
+                    val chapters = oldChapters.copy()
+                    val oldLastChapter = oldChapters.filter { it.read }
+                        .minByOrNull { it.source_order }
+                    chapters.forEach {
+                        it.read = markRead
+                        it.last_page_read = 0
+                    }
+                    db.updateChaptersProgress(chapters).executeAsBlocking()
 
-                        if (preferences.autoUpdateTrack(LIBRARY)) {
-                            val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-                            if (oldLastChapter != newLastChapter) {
-                                updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
-                            }
-                        }
+                    val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
+
+                    if (preferences.autoUpdateTrack(LIBRARY) && oldLastChapter != newLastChapter) {
+                        mapMangaChapters[manga] = Pair(oldChapters, newLastChapter)
+                    } else {
+                        mapMangaChapters[manga] = Pair(oldChapters, null)
                     }
                 }
                 getLibrary()
             }
+        }
+        return mapMangaChapters
+    }
+
+    fun undoMarkReadStatus(
+        mangaList: HashMap<Manga, Pair<List<Chapter>, Chapter?>>,
+    ) {
+        launchIO {
+            mangaList.forEach { (_, chapters) ->
+                db.updateChaptersProgress(chapters.first).executeAsBlocking()
+            }
+            getLibrary()
+        }
+    }
+
+    fun confirmMarkReadStatus(
+        mangaList: HashMap<Manga, Pair<List<Chapter>, Chapter?>>,
+        markRead: Boolean
+    ) {
+        launchIO {
+            mangaList.forEach { (manga, chapters) ->
+                if (preferences.removeAfterMarkedAsRead() && markRead) {
+                    deleteChapters(
+                        manga,
+                        chapters.first
+                    )
+                }
+                if (chapters.second != null) {
+                    val oldLastChapter = chapters.first.filter { it.read }
+                        .minByOrNull { it.source_order }
+                    updateTrackChapterRead(
+                        oldLastChapter,
+                        chapters.second,
+                        manga
+                    )
+                }
+            }
+            getLibrary()
         }
     }
 
@@ -1086,7 +1125,11 @@ class LibraryPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, manga: Manga) {
+    private fun updateTrackChapterRead(
+        oldLastChapter: Chapter?,
+        newLastChapter: Chapter?,
+        manga: Manga
+    ) {
         if (!preferences.autoUpdateTrack(LIBRARY)) return
 
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
