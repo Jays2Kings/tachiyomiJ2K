@@ -1054,66 +1054,55 @@ class LibraryPresenter(
     fun markReadStatus(
         mangaList: List<Manga>,
         markRead: Boolean
-    ): HashMap<Manga, Pair<List<Chapter>, Chapter?>> {
-        val mapMangaChapters = HashMap<Manga, Pair<List<Chapter>, Chapter?>>()
-        presenterScope.launch {
-            withContext(Dispatchers.IO) {
-                mangaList.forEach { manga ->
-                    val oldChapters = db.getChapters(manga).executeAsBlocking()
-                    val chapters = oldChapters.copy()
-                    val oldLastChapter = oldChapters.filter { it.read }
-                        .minByOrNull { it.source_order }
-                    chapters.forEach {
-                        it.read = markRead
-                        it.last_page_read = 0
-                    }
-                    db.updateChaptersProgress(chapters).executeAsBlocking()
-
-                    val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-
-                    if (preferences.autoUpdateTrack(LIBRARY) && oldLastChapter != newLastChapter) {
-                        mapMangaChapters[manga] = Pair(oldChapters, newLastChapter)
-                    } else {
-                        mapMangaChapters[manga] = Pair(oldChapters, null)
-                    }
+    ): HashMap<Manga, List<Chapter>> {
+        val mapMangaChapters = HashMap<Manga, List<Chapter>>()
+        presenterScope.launchIO {
+            mangaList.forEach { manga ->
+                val oldChapters = db.getChapters(manga).executeAsBlocking()
+                val chapters = oldChapters.copy()
+                chapters.forEach {
+                    it.read = markRead
+                    it.last_page_read = 0
                 }
-                getLibrary()
+                db.updateChaptersProgress(chapters).executeAsBlocking()
+
+                mapMangaChapters[manga] = oldChapters
             }
+            getLibrary()
         }
         return mapMangaChapters
     }
 
     fun undoMarkReadStatus(
-        mangaList: HashMap<Manga, Pair<List<Chapter>, Chapter?>>,
+        mangaList: HashMap<Manga, List<Chapter>>,
     ) {
         launchIO {
             mangaList.forEach { (_, chapters) ->
-                db.updateChaptersProgress(chapters.first).executeAsBlocking()
+                db.updateChaptersProgress(chapters).executeAsBlocking()
             }
             getLibrary()
         }
     }
 
     fun confirmMarkReadStatus(
-        mangaList: HashMap<Manga, Pair<List<Chapter>, Chapter?>>,
+        mangaList: HashMap<Manga, List<Chapter>>,
         markRead: Boolean
     ) {
         launchIO {
-            mangaList.forEach { (manga, chapters) ->
+            mangaList.forEach { (manga, oldChapters) ->
                 if (preferences.removeAfterMarkedAsRead() && markRead) {
-                    deleteChapters(
-                        manga,
-                        chapters.first
-                    )
+                    deleteChapters(manga, oldChapters)
                 }
-                if (chapters.second != null) {
-                    val oldLastChapter = chapters.first.filter { it.read }
-                        .minByOrNull { it.source_order }
-                    updateTrackChapterRead(
-                        oldLastChapter,
-                        chapters.second,
-                        manga
-                    )
+                if (preferences.autoUpdateTrack(LIBRARY)) {
+                    val newChapters = db.getChapters(manga).executeAsBlocking()
+                    val oldLastChapter =
+                        oldChapters.filter { it.read }.minByOrNull { it.source_order }
+                    val newLastChapter =
+                        newChapters.filter { it.read }.minByOrNull { it.source_order }
+
+                    if (oldLastChapter != newLastChapter) {
+                        updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
+                    }
                 }
             }
             getLibrary()
