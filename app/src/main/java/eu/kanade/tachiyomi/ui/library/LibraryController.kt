@@ -1754,13 +1754,13 @@ class LibraryController(
                 val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
                 destroyActionModeIfNeeded()
                 snack?.dismiss()
-                snack = view?.snack(R.string.mark_as_read) {
+                snack = view?.snack(R.string.marked_as_read, Snackbar.LENGTH_INDEFINITE) {
                     anchorView = anchorView()
                     view.elevation = 15f.dpToPx
-                    var undo = false
+                    var undoing = false
                     setAction(R.string.undo) {
                         presenter.undoMarkReadStatus(mapMangaChapters)
-                        undo = true
+                        undoing = true
                     }
                     addCallback(
                         object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
@@ -1769,27 +1769,27 @@ class LibraryController(
                                 event: Int
                             ) {
                                 super.onDismissed(transientBottomBar, event)
-                                if (!undo) presenter.confirmMarkReadStatus(
-                                    mapMangaChapters,
-                                    markRead
+                                if (!undoing) presenter.confirmMarkReadStatus(
+                                    mapMangaChapters, markRead
                                 )
                             }
                         }
                     )
                 }
+                (activity as? MainActivity)?.setUndoSnackBar(snack)
             }
             R.id.action_mark_as_unread -> {
                 val markRead = false
                 val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
                 destroyActionModeIfNeeded()
                 snack?.dismiss()
-                snack = view?.snack(R.string.marked_as_unread) {
+                snack = view?.snack(R.string.marked_as_unread, Snackbar.LENGTH_INDEFINITE) {
                     anchorView = anchorView()
                     view.elevation = 15f.dpToPx
-                    var undo = false
+                    var undoing = false
                     setAction(R.string.undo) {
                         presenter.undoMarkReadStatus(mapMangaChapters)
-                        undo = true
+                        undoing = true
                     }
                     addCallback(
                         object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
@@ -1798,14 +1798,14 @@ class LibraryController(
                                 event: Int
                             ) {
                                 super.onDismissed(transientBottomBar, event)
-                                if (!undo) presenter.confirmMarkReadStatus(
-                                    mapMangaChapters,
-                                    markRead
+                                if (!undoing) presenter.confirmMarkReadStatus(
+                                    mapMangaChapters, markRead
                                 )
                             }
                         }
                     )
                 }
+                (activity as? MainActivity)?.setUndoSnackBar(snack)
             }
             R.id.action_migrate -> {
                 val skipPre = preferences.skipPreMigration().get()
