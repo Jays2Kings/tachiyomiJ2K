@@ -29,10 +29,13 @@ class SourceHolder(view: View, val adapter: SourceAdapter) :
         val source = item.source
         // setCardEdges(item)
 
+        val underPinnedSection = item.header?.code?.equals(SourcePresenter.PINNED_KEY) ?: false
+        val isPinned = item.isPinned ?: underPinnedSection
         // Set source name
-        binding.title.text = source.name
+        val sourceName =
+            if (adapter.isMultiLanguage && underPinnedSection) source.toString() else source.name
+        binding.title.text = sourceName
 
-        val isPinned = item.isPinned ?: item.header?.code?.equals(SourcePresenter.PINNED_KEY) ?: false
         binding.sourcePin.apply {
             imageTintList = ColorStateList.valueOf(
                 context.getResourceColor(

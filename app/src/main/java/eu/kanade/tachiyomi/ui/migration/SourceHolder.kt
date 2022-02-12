@@ -19,7 +19,9 @@ class SourceHolder(view: View, val adapter: SourceAdapter) :
         val source = item.source
 
         // Set source name
-        binding.title.text = source.name
+        val sourceName =
+            if (adapter.isMultiLanguage) source.toString() else source.name.capitalize()
+        binding.title.text = sourceName
 
         // Set circle letter image.
         itemView.post {
