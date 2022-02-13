@@ -113,12 +113,14 @@ class HttpPageLoader(
      * Returns an observable that loads a page through the queue and listens to its result to
      * emit new states. It handles re-enqueueing pages if they were evicted from the cache.
      */
-    override fun getPage(page: ReaderPage): Observable<Int> {
+    override fun getPage(page: ReaderPage, shouldPreload: Boolean): Observable<Int> {
         return Observable.defer {
             val imageUrl = page.imageUrl
 
             // Check if the image has been deleted
-            if (page.status == Page.READY && imageUrl != null && !chapterCache.isImageInCache(imageUrl)) {
+            if (page.status == Page.READY && imageUrl != null &&
+                !chapterCache.isImageInCache(imageUrl)
+            ) {
                 page.status = Page.QUEUE
             }
 
@@ -134,7 +136,7 @@ class HttpPageLoader(
             if (page.status == Page.QUEUE) {
                 queuedPages += PriorityPage(page, 1).also { queue.offer(it) }
             }
-            queuedPages += preloadNextPages(page, preloadSize)
+            if (shouldPreload) queuedPages += preloadNextPages(page, preloadSize)
 
             statusSubject.startWith(page.status)
                 .doOnUnsubscribe {

@@ -401,7 +401,7 @@ class ReaderPresenter(
             .also(::add)
     }
 
-    fun loadChapter(chapter: Chapter) {
+    fun loadChapter(chapter: Chapter, shouldRefresh: Boolean = true) {
         val loader = loader ?: return
 
         viewerChaptersRelay.value?.currChapter?.let(::onChapterChanged)
@@ -418,7 +418,7 @@ class ReaderPresenter(
                     scope.launchUI {
                         view.moveToPageIndex(lastPage, false)
                     }
-                    view.refreshChapters()
+                    if (shouldRefresh) view.refreshChapters()
                 },
                 { _, _ ->
                     // Ignore onError event, viewers handle that state
@@ -536,7 +536,8 @@ class ReaderPresenter(
         val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
         val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
 
-        return chapters.filter { !it.read && chapterId != it.id }.distinctBy { it.name }
+        return chapters.filter { !it.read && getCurrentChapter()?.chapter?.id != it.id }
+            .distinctBy { it.name }
             .sortedWith(chapterSort.sortComparator(true))
     }
 
