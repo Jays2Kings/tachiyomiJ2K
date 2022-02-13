@@ -417,7 +417,7 @@ class ReaderPresenter(
             .also(::add)
     }
 
-    fun loadChapter(chapter: Chapter) {
+    fun loadChapter(chapter: Chapter, shouldRefresh: Boolean = true) {
         val loader = loader ?: return
 
         viewerChaptersRelay.value?.currChapter?.let(::onChapterChanged)
@@ -434,7 +434,7 @@ class ReaderPresenter(
                     scope.launchUI {
                         view.moveToPageIndex(lastPage, false)
                     }
-                    view.refreshChapters()
+                    if (shouldRefresh) view.refreshChapters()
                 },
                 { _, _ ->
                     // Ignore onError event, viewers handle that state

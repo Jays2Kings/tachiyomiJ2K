@@ -35,7 +35,7 @@ abstract class PageLoader {
      * Returns an observable that should inform of the progress of the page (see the Page class
      * for the available states)
      */
-    abstract fun getPage(page: ReaderPage): Observable<Int>
+    abstract fun getPage(page: ReaderPage, shouldPreload: Boolean = true): Observable<Int>
 
     /**
      * Retries the given [page] in case it failed to load. This method only makes sense when an
