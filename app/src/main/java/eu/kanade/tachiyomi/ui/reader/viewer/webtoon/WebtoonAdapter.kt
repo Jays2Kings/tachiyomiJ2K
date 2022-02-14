@@ -10,6 +10,8 @@ import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderPageImageView
 import eu.kanade.tachiyomi.ui.reader.viewer.hasMissingChapters
+import eu.kanade.tachiyomi.util.system.launchUI
+import timber.log.Timber
 
 /**
  * RecyclerView Adapter used by this [viewer] to where [ViewerChapters] updates are posted.
@@ -23,6 +25,12 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
         private set
 
     var currentChapter: ReaderChapter? = null
+
+    /** Variables used to switch to download loader when download is finished while reading */
+    private var newItemsWaiting: List<Any> = emptyList()
+    private var firstItemWaiting: Int = 0
+    private var lastItemWaiting: Int = 0
+    var switchToDownloadLoader = false
 
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
@@ -72,6 +80,17 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
             }
         }
 
+        if (switchToDownloadLoader) {
+            newItemsWaiting = newItems.toMutableList()
+            firstItemWaiting = (viewer.recycler.firstVisibleItemPosition - 1).coerceAtLeast(0)
+            Timber.d("firstItemWaiting: $firstItemWaiting")
+            lastItemWaiting =
+                (viewer.recycler.lastVisibleItemPosition + 1).coerceAtMost(itemCount - 2)
+            Timber.d("lastItemWaiting: $lastItemWaiting")
+
+            newItems.removeAll(newItems.subList(firstItemWaiting, lastItemWaiting + 1))
+            newItems.addAll(firstItemWaiting, items.subList(firstItemWaiting, lastItemWaiting + 1))
+        }
         val result = DiffUtil.calculateDiff(Callback(items, newItems))
         items = newItems
         result.dispatchUpdatesTo(this)
@@ -116,6 +135,26 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
      * Binds an existing view [holder] with the item at the given [position].
      */
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (switchToDownloadLoader && newItemsWaiting.isNotEmpty() &&
+            listOf(
+                    viewer.recycler.firstVisibleItemPosition, viewer.recycler.lastVisibleItemPosition
+                ).all { it !in firstItemWaiting..lastItemWaiting }
+        ) {
+            launchUI {
+                val result = DiffUtil.calculateDiff(Callback(items, newItemsWaiting))
+                val diff = newItemsWaiting.filterNot { items.contains(it) }
+                diff.forEach {
+                    if (it is ReaderPage) {
+                        Timber.d("result: ${it.number} from chap ${it.chapter.chapter.chapter_number}")
+                    } else {
+                        Timber.d("result: ChapterTransition")
+                    }
+                }
+                items = newItemsWaiting
+                result.dispatchUpdatesTo(this@WebtoonAdapter)
+            }
+            switchToDownloadLoader = false
+        }
         val item = items[position]
         when (holder) {
             is WebtoonPageHolder -> holder.bind(item as ReaderPage)
