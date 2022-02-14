@@ -41,6 +41,12 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     var currentChapter: ReaderChapter? = null
     var forceTransition = false
 
+    /** Variables used to switch to download loader when download is finished while reading */
+    private var firstItemWaiting: Int = 0
+    private var lastItemWaiting: Int = 0
+    private var newItemsWaiting: MutableList<Any> = mutableListOf()
+    var switchToDownloadLoader = false
+
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
      * next/previous chapter to allow seamless transitions and inverting the pages if the viewer
@@ -103,17 +109,19 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             }
         }
 
-        subItems = newItems.toMutableList()
+        if (switchToDownloadLoader) {
+            newItemsWaiting = newItems.toMutableList()
+            val index = subItems.indexOf(viewer.currentPage)
+            firstItemWaiting = (index - 1).coerceAtLeast(0)
+            lastItemWaiting = (index + 1).coerceAtMost(subItems.size - 2)
 
-        var useSecondPage = false
-        if (shifted != viewer.config.shiftDoublePage || (doubledUp != viewer.config.doublePages && doubledUp)) {
-            if (shifted && (doubledUp == viewer.config.doublePages)) {
-                useSecondPage = true
-            }
-            shifted = viewer.config.shiftDoublePage
+            newItems.removeAll(newItems.subList(firstItemWaiting, lastItemWaiting + 1))
+            newItems.addAll(
+                firstItemWaiting, subItems.subList(firstItemWaiting, lastItemWaiting + 1)
+            )
         }
-        doubledUp = viewer.config.doublePages
-        setJoinedItems(useSecondPage)
+        subItems = newItems.toMutableList()
+        setJoinedItems(shouldUseSecondPage())
     }
 
     /**
@@ -123,10 +131,40 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
         return joinedItems.size
     }
 
+    private fun shouldUseSecondPage(): Boolean {
+        var useSecondPage = false
+        if (shifted != viewer.config.shiftDoublePage || (doubledUp != viewer.config.doublePages && doubledUp)) {
+            if (shifted && (doubledUp == viewer.config.doublePages)) {
+                useSecondPage = true
+            }
+            shifted = viewer.config.shiftDoublePage
+        }
+        doubledUp = viewer.config.doublePages
+        return useSecondPage
+    }
+
     /**
      * Creates a new view for the item at the given [position].
      */
     override fun createView(container: ViewGroup, position: Int): View {
+        if (switchToDownloadLoader && newItemsWaiting.isNotEmpty() &&
+            subItems.indexOf(viewer.currentPage) !in firstItemWaiting..lastItemWaiting
+        ) {
+            launchUI {
+                val diff = newItemsWaiting.filterNot { subItems.contains(it) }
+                diff.forEach {
+                    if (it is ReaderPage) {
+                        Timber.d("result: ${it.number} from chap ${it.chapter.chapter.chapter_number}")
+                    } else {
+                        Timber.d("result: ChapterTransition")
+                    }
+                }
+                subItems = newItemsWaiting
+                notifyDataSetChanged()
+                setJoinedItems(shouldUseSecondPage())
+            }
+            switchToDownloadLoader = false
+        }
         val item = joinedItems[position].first
         val item2 = joinedItems[position].second
         return when (item) {

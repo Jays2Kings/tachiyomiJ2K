@@ -31,7 +31,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.source.model.Page
-import eu.kanade.tachiyomi.ui.reader.loader.DownloadPageLoader
+import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderProgressBar
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.PagerConfig.Companion.CUTOUT_IGNORE
@@ -186,12 +186,12 @@ class PagerPageHolder(
         // Switch to DownloadPageLoader when it's downloaded and all loaded pages already read
         val downloadManager = Injekt.get<DownloadManager>()
         val isDownloading = downloadManager.queue.any { it.chapter.id == page.chapter.chapter.id }
-        if (loader !is DownloadPageLoader && !isDownloading) {
+        if (loader is HttpPageLoader && !isDownloading) {
             val manga = viewer.activity.presenter.manga
-            val isDownloaded =
-                downloadManager.isChapterDownloaded(page.chapter.chapter, manga!!, true)
+            val isDownloaded = downloadManager.isChapterDownloaded(page.chapter.chapter, manga!!)
             if (isDownloaded) {
                 if (page.status != Page.READY) {
+                    (viewer.pager.adapter as PagerViewerAdapter).switchToDownloadLoader = true
                     viewer.activity.presenter.loadChapter(page.chapter.chapter)
                 }
                 statusSubscription = loader.getPage(page, false)

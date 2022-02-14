@@ -415,10 +415,12 @@ class ReaderPresenter(
             .doOnUnsubscribe { isLoadingAdjacentChapterRelay.call(false) }
             .subscribeFirst(
                 { view, _ ->
-                    scope.launchUI {
-                        view.moveToPageIndex(lastPage, false)
+                    if (shouldRefresh) {
+                        scope.launchUI {
+                            view.moveToPageIndex(lastPage, false)
+                        }
+                        view.refreshChapters()
                     }
-                    if (shouldRefresh) view.refreshChapters()
                 },
                 { _, _ ->
                     // Ignore onError event, viewers handle that state
