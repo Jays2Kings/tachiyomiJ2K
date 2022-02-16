@@ -42,9 +42,9 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     var forceTransition = false
 
     /** Variables used to switch to download loader when download is finished while reading */
-    private var firstItemWaiting: Int = 0
-    private var lastItemWaiting: Int = 0
-    private var newItemsWaiting: MutableList<Any> = mutableListOf()
+    private var firstPageIndexTemp: Int = 0
+    private var lastPageIndexTemp: Int = 0
+    private var itemsTemp: MutableList<Any> = mutableListOf()
     var switchToDownloadLoader = false
 
     /**
@@ -110,14 +110,14 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
         }
 
         if (switchToDownloadLoader) {
-            newItemsWaiting = newItems.toMutableList()
+            itemsTemp = newItems.toMutableList()
             val index = subItems.indexOf(viewer.currentPage)
-            firstItemWaiting = (index - 1).coerceAtLeast(0)
-            lastItemWaiting = (index + 1).coerceAtMost(subItems.size - 2)
+            firstPageIndexTemp = (index - 1).coerceAtLeast(0)
+            lastPageIndexTemp = (index + 1).coerceAtMost(subItems.size - 2)
 
-            newItems.removeAll(newItems.subList(firstItemWaiting, lastItemWaiting + 1))
+            newItems.removeAll(newItems.subList(firstPageIndexTemp, lastPageIndexTemp + 1))
             newItems.addAll(
-                firstItemWaiting, subItems.subList(firstItemWaiting, lastItemWaiting + 1)
+                firstPageIndexTemp, subItems.subList(firstPageIndexTemp, lastPageIndexTemp + 1)
             )
         }
         subItems = newItems.toMutableList()
@@ -147,19 +147,11 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
      * Creates a new view for the item at the given [position].
      */
     override fun createView(container: ViewGroup, position: Int): View {
-        if (switchToDownloadLoader && newItemsWaiting.isNotEmpty() &&
-            subItems.indexOf(viewer.currentPage) !in firstItemWaiting..lastItemWaiting
+        if (switchToDownloadLoader && itemsTemp.isNotEmpty() &&
+            subItems.indexOf(viewer.currentPage) !in firstPageIndexTemp..lastPageIndexTemp
         ) {
             launchUI {
-                val diff = newItemsWaiting.filterNot { subItems.contains(it) }
-                diff.forEach {
-                    if (it is ReaderPage) {
-                        Timber.d("result: ${it.number} from chap ${it.chapter.chapter.chapter_number}")
-                    } else {
-                        Timber.d("result: ChapterTransition")
-                    }
-                }
-                subItems = newItemsWaiting
+                subItems = itemsTemp
                 notifyDataSetChanged()
                 setJoinedItems(shouldUseSecondPage())
             }

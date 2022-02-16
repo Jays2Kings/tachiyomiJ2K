@@ -904,7 +904,7 @@
     <string name="auto_download_while_reading">While reading</string>
     <string name="auto_download_new_chapters">New chapters</string>
     <string name="auto_download_restrictions">Auto download restrictions</string>
-    <string name="ignore_auto_download_no_wifi">Ignore auto download when no Wi-Fi</string>
+    <string name="only_auto_download_over_wifi">Only auto download over Wi-Fi</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
     <string name="pref_download_only_completely_read">Only download completely read manga</string>

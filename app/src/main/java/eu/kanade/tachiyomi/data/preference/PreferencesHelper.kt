@@ -234,7 +234,7 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadsDirectory() = flowPrefs.getString(Keys.downloadsDirectory, defaultDownloadsDir.toString())
 
-    fun downloadOnlyOverWifi() = prefs.getBoolean(Keys.downloadOnlyOverWifi, true)
+    fun downloadOnlyOverWifi() = flowPrefs.getBoolean(Keys.downloadOnlyOverWifi, true)
 
     fun folderPerManga() = prefs.getBoolean(Keys.folderPerManga, false)
 
@@ -258,7 +258,8 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadNew() = NEW_CHAPTERS in autoDownloadChapters().get()
 
-    fun noTryAutoDownloadOnlyOverWifi() = prefs.getBoolean(Keys.noTryAutoDownloadOnlyOverWifi, false)
+    fun autoDownloadOnlyOverWifi() =
+        prefs.getBoolean(Keys.autoDownloadOnlyOverWifi, false) || downloadOnlyOverWifi().get()
 
     fun removeAfterMarkedAsRead() = prefs.getBoolean(Keys.removeAfterMarkedAsRead, false)
 

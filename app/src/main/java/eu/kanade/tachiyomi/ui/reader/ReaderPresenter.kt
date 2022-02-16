@@ -517,7 +517,7 @@ class ReaderPresenter(
         val shouldDownload = preferences.downloadWhileReading()
         val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
         val context = Injekt.get<Application>()
-        if (!context.isConnectedToWifi() && preferences.noTryAutoDownloadOnlyOverWifi() ||
+        if (!context.isConnectedToWifi() && preferences.autoDownloadOnlyOverWifi() ||
             manga?.favorite == false
         ) return
         if (shouldDownload) {

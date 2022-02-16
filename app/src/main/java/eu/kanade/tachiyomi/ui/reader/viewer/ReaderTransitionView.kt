@@ -48,12 +48,11 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
             val downloadManager = Injekt.get<DownloadManager>()
             val db = Injekt.get<DatabaseHelper>()
             val manga = db.getManga(prevChapter!!.chapter.manga_id!!).executeAsBlocking()!!
-            val isPrevDownloaded =
-                downloadManager.isChapterDownloaded(prevChapter.chapter, manga, true)
+            val isPrevDownloaded = downloadManager.isChapterDownloaded(prevChapter.chapter, manga)
             val isCurrentDownloaded =
-                downloadManager.isChapterDownloaded(transition.from.chapter, manga, true)
-            val downloadedPrevText = " (Downloaded)".takeIf { isPrevDownloaded }
-            val downloadedCurrentText = " (Downloaded)".takeIf { isCurrentDownloaded }
+                downloadManager.isChapterDownloaded(transition.from.chapter, manga)
+            val downloadedPrevText = if (isPrevDownloaded) " (Downloaded)" else ""
+            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.previous_title)) }
                 append("\n${prevChapter.chapter.name}$downloadedPrevText")
@@ -82,11 +81,10 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
             val db = Injekt.get<DatabaseHelper>()
             val manga = db.getManga(nextChapter!!.chapter.manga_id!!).executeAsBlocking()!!
             val isCurrentDownloaded =
-                downloadManager.isChapterDownloaded(transition.from.chapter, manga, true)
-            val isNextDownloaded =
-                downloadManager.isChapterDownloaded(nextChapter.chapter, manga, true)
-            val downloadedCurrentText = " (Downloaded)".takeIf { isCurrentDownloaded }
-            val downloadedNextText = " (Downloaded)".takeIf { isNextDownloaded }
+                downloadManager.isChapterDownloaded(transition.from.chapter, manga)
+            val isNextDownloaded = downloadManager.isChapterDownloaded(nextChapter.chapter, manga)
+            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
+            val downloadedNextText = if (isNextDownloaded) " (Downloaded)" else ""
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.finished_chapter)) }
                 append("\n${transition.from.chapter.name}$downloadedCurrentText")

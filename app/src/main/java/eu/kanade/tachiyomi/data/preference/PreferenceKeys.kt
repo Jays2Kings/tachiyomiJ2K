@@ -133,7 +133,7 @@ object PreferenceKeys {
 
     const val autoDownloadRestrictions = "auto_download_restrictions"
 
-    const val noTryAutoDownloadOnlyOverWifi = "no_try_auto_download_only_over_wifi_key"
+    const val autoDownloadOnlyOverWifi = "auto_download_only_over_wifi_key"
 
     const val removeAfterReadSlots = "remove_after_read_slots"
 

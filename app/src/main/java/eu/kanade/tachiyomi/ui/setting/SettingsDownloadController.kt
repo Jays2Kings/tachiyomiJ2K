@@ -111,12 +111,14 @@ class SettingsDownloadController : SettingsController() {
             }
 
             switchPreference {
-                key = Keys.noTryAutoDownloadOnlyOverWifi
-                titleRes = R.string.ignore_auto_download_no_wifi
+                key = Keys.autoDownloadOnlyOverWifi
+                titleRes = R.string.only_auto_download_over_wifi
                 defaultValue = false
 
-                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
-                    isVisible = it.isNotEmpty()
+                preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { onlyOverWifi ->
+                    preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) { auto ->
+                        isVisible = auto.isNotEmpty() && !onlyOverWifi
+                    }
                 }
             }
 

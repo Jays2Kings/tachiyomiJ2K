@@ -37,7 +37,7 @@ fun Manga.shouldDownloadNewChapters(db: DatabaseHelper, prefs: PreferencesHelper
     val downloadNew = prefs.downloadNew()
     if (!downloadNew) return false
     val context = Injekt.get<Application>()
-    if (!context.isConnectedToWifi() && prefs.noTryAutoDownloadOnlyOverWifi()) return false
+    if (!context.isConnectedToWifi() && prefs.autoDownloadOnlyOverWifi()) return false
 
     val categoriesToDownload = prefs.downloadNewCategories().get().map(String::toInt)
     if (categoriesToDownload.isEmpty()) return true
