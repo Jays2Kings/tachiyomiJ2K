@@ -18,9 +18,7 @@ import androidx.core.view.isVisible
 import androidx.core.view.updatePaddingRelative
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.source.model.Page
-import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderPageImageView
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderProgressBar
@@ -31,8 +29,6 @@ import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import timber.log.Timber
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 import java.io.InputStream
 import java.util.concurrent.TimeUnit
 
@@ -152,25 +148,6 @@ class WebtoonPageHolder(
 
         val page = page ?: return
         val loader = page.chapter.pageLoader ?: return
-        // Switch to DownloadPageLoader when it's downloaded and all loaded pages already read
-        val downloadManager = Injekt.get<DownloadManager>()
-        val isDownloading = downloadManager.queue.any { it.chapter.id == page.chapter.chapter.id }
-        if (loader is HttpPageLoader && !isDownloading) {
-            val manga = viewer.activity.presenter.manga
-            val isDownloaded = downloadManager.isChapterDownloaded(page.chapter.chapter, manga!!)
-            if (isDownloaded) {
-                if (page.status != Page.READY) {
-                    (viewer.recycler.adapter as WebtoonAdapter).switchToDownloadLoader = true
-                    viewer.activity.presenter.loadChapter(page.chapter.chapter, false)
-                }
-                statusSubscription = loader.getPage(page, false)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe { processStatus(it) }
-
-                addSubscription(statusSubscription)
-                return
-            }
-        }
         statusSubscription = loader.getPage(page)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { processStatus(it) }

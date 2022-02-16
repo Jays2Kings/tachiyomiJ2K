@@ -48,7 +48,7 @@ class ZipPageLoader(file: File) : PageLoader() {
     /**
      * Returns an observable that emits a ready state unless the loader was recycled.
      */
-    override fun getPage(page: ReaderPage, shouldPreload: Boolean): Observable<Int> {
+    override fun getPage(page: ReaderPage): Observable<Int> {
         return Observable.just(
             if (isRecycled) {
                 Page.ERROR

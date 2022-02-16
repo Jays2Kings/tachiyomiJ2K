@@ -11,7 +11,6 @@ import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderPageImageView
 import eu.kanade.tachiyomi.ui.reader.viewer.hasMissingChapters
 import eu.kanade.tachiyomi.util.system.launchUI
-import timber.log.Timber
 
 /**
  * RecyclerView Adapter used by this [viewer] to where [ViewerChapters] updates are posted.
@@ -27,10 +26,10 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
     var currentChapter: ReaderChapter? = null
 
     /** Variables used to switch to download loader when download is finished while reading */
-    private var newItemsWaiting: List<Any> = emptyList()
-    private var firstItemWaiting: Int = 0
-    private var lastItemWaiting: Int = 0
-    var switchToDownloadLoader = false
+    private var itemsTemp: List<Any> = emptyList()
+    private var firstPageIndexTemp: Int = 0
+    private var lastPageIndexTemp: Int = 0
+    var switchToDownloadLoaderStep: Int = 0
 
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
@@ -80,16 +79,18 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
             }
         }
 
-        if (switchToDownloadLoader) {
-            newItemsWaiting = newItems.toMutableList()
-            firstItemWaiting = (viewer.recycler.firstVisibleItemPosition - 1).coerceAtLeast(0)
-            Timber.d("firstItemWaiting: $firstItemWaiting")
-            lastItemWaiting =
-                (viewer.recycler.lastVisibleItemPosition + 1).coerceAtMost(itemCount - 2)
-            Timber.d("lastItemWaiting: $lastItemWaiting")
+        if (switchToDownloadLoaderStep == 1) {
+            itemsTemp = newItems.toMutableList()
+            firstPageIndexTemp = viewer.recycler.firstVisibleItemPosition.coerceAtLeast(0)
+            lastPageIndexTemp = viewer.recycler.lastVisibleItemPosition.coerceAtMost(itemCount - 1)
 
-            newItems.removeAll(newItems.subList(firstItemWaiting, lastItemWaiting + 1))
-            newItems.addAll(firstItemWaiting, items.subList(firstItemWaiting, lastItemWaiting + 1))
+            for (index in firstPageIndexTemp..lastPageIndexTemp) {
+                val item = items[index] as? ReaderPage ?: continue
+                val indexNewItems =
+                    newItems.indexOfFirst { it is ReaderPage && it.isFromSamePage(item) }
+                if (indexNewItems != -1) newItems[indexNewItems] = item
+            }
+            switchToDownloadLoaderStep = 2
         }
         val result = DiffUtil.calculateDiff(Callback(items, newItems))
         items = newItems
@@ -135,25 +136,16 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
      * Binds an existing view [holder] with the item at the given [position].
      */
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (switchToDownloadLoader && newItemsWaiting.isNotEmpty() &&
-            listOf(
-                    viewer.recycler.firstVisibleItemPosition, viewer.recycler.lastVisibleItemPosition
-                ).all { it !in firstItemWaiting..lastItemWaiting }
+        if (switchToDownloadLoaderStep == 2 && itemsTemp.isNotEmpty() &&
+            (viewer.recycler.firstVisibleItemPosition..viewer.recycler.lastVisibleItemPosition)
+                .none { it in firstPageIndexTemp..lastPageIndexTemp }
         ) {
             launchUI {
-                val result = DiffUtil.calculateDiff(Callback(items, newItemsWaiting))
-                val diff = newItemsWaiting.filterNot { items.contains(it) }
-                diff.forEach {
-                    if (it is ReaderPage) {
-                        Timber.d("result: ${it.number} from chap ${it.chapter.chapter.chapter_number}")
-                    } else {
-                        Timber.d("result: ChapterTransition")
-                    }
-                }
-                items = newItemsWaiting
+                val result = DiffUtil.calculateDiff(Callback(items, itemsTemp))
+                items = itemsTemp
                 result.dispatchUpdatesTo(this@WebtoonAdapter)
             }
-            switchToDownloadLoader = false
+            switchToDownloadLoaderStep = 0
         }
         val item = items[position]
         when (holder) {

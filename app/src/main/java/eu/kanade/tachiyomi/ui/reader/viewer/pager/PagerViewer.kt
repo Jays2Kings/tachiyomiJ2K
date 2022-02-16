@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
+import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
 import eu.kanade.tachiyomi.ui.reader.model.InsertPage
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -23,6 +24,8 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 
 /**
  * Implementation of a [BaseViewer] to display pages with a [ViewPager].
@@ -224,6 +227,9 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
     private fun onReaderPageSelected(page: ReaderPage, allowPreload: Boolean, hasExtraPage: Boolean, forward: Boolean?) {
         activity.onPageSelected(page, hasExtraPage)
 
+        val currentReaderChapter = activity.presenter.getCurrentChapter() ?: return
+        verifyIfShouldSwitchToDownloadLoader(currentReaderChapter)
+
         // Notify holder of page change
         val holder = getPageHolder(page)
         if (holder == null && forward != null && heldForwardZoom == null) {
@@ -244,6 +250,26 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
             Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
             adapter.nextTransition?.to?.let {
                 activity.requestPreloadChapter(it)
+            }
+        }
+    }
+
+    /**
+     * Switch to DownloadPageLoader when the chapter is downloaded
+     */
+    private fun verifyIfShouldSwitchToDownloadLoader(currentReaderChapter: ReaderChapter) {
+        val loader = currentReaderChapter.pageLoader ?: return
+        if (loader is HttpPageLoader) {
+            val downloadManager = Injekt.get<DownloadManager>()
+            val currentChapter = currentReaderChapter.chapter
+            val manga = activity.presenter.manga
+            val isDownloaded = downloadManager.isChapterDownloaded(currentChapter, manga!!)
+            if (isDownloaded) {
+                val adapter = pager.adapter as PagerViewerAdapter
+                if (adapter.switchToDownloadLoaderStep == 1) {
+                    activity.presenter.loadChapter(currentChapter, false)
+                }
+                adapter.switchToDownloadLoaderStep = 1
             }
         }
     }

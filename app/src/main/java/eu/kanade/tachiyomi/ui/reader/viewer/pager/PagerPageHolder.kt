@@ -29,10 +29,8 @@ import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.github.chrisbanes.photoview.PhotoView
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.source.model.Page
-import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderProgressBar
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.PagerConfig.Companion.CUTOUT_IGNORE
@@ -62,8 +60,6 @@ import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import timber.log.Timber
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.InputStream
 import java.util.concurrent.TimeUnit
@@ -334,34 +330,6 @@ class PagerPageHolder(
         statusSubscription?.unsubscribe()
 
         val loader = page.chapter.pageLoader ?: return
-        // Switch to DownloadPageLoader when it's downloaded and all loaded pages already read
-        val downloadManager = Injekt.get<DownloadManager>()
-        val isDownloading = downloadManager.queue.any { it.chapter.id == page.chapter.chapter.id }
-        if (loader is HttpPageLoader && !isDownloading) {
-            val manga = viewer.activity.presenter.manga
-            val isDownloaded = downloadManager.isChapterDownloaded(page.chapter.chapter, manga!!)
-            if (isDownloaded) {
-                if (page.status != Page.READY) {
-                    (viewer.pager.adapter as PagerViewerAdapter).switchToDownloadLoader = true
-                    viewer.activity.presenter.loadChapter(page.chapter.chapter)
-                }
-                statusSubscription = loader.getPage(page, false)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe {
-                        status = it
-                        processStatus(it)
-                    }
-                val extraPage = extraPage ?: return
-                val loader2 = extraPage.chapter.pageLoader ?: return
-                extraStatusSubscription = loader2.getPage(extraPage, false)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe {
-                        extraStatus = it
-                        processStatus2(it)
-                    }
-                return
-            }
-        }
         statusSubscription = loader.getPage(page)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
