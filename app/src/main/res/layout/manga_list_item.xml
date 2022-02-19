@@ -99,16 +99,46 @@
         app:layout_constraintVertical_bias="0.0"
         tools:text="Manga artist" />
 
-    <include layout="@layout/unread_download_badge"
+    <include
+        layout="@layout/unread_download_badge"
         android:id="@+id/unread_download_badge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/language_layout_card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/language_layout_card"
+        app:strokeColor="@color/library_stroke_selector"
+        app:strokeWidth="0.50dp"
+        app:cardElevation="0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="3dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="30dp"
+        android:layout_height="20dp">
+
+        <ImageView
+            android:id="@+id/language_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/ic_flag_fr"
+            android:contentDescription="@string/cover_of_image" />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/bottom_list_line"

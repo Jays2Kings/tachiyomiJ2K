@@ -5,8 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.children
-import androidx.core.view.isVisible
-import androidx.core.view.updatePaddingRelative
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.LibraryBadgesLayoutBinding
 import eu.kanade.tachiyomi.util.bindToPreference
@@ -22,25 +20,17 @@ class LibraryBadgesView @JvmOverloads constructor(context: Context, attrs: Attri
             controller?.presenter?.requestUnreadBadgesUpdate()
         }
         binding.hideReading.bindToPreference(preferences.hideStartReadingButton())
-        binding.languageBadges.bindToPreference(preferences.languageBadge()) {
+        binding.languageBadges.bindToPreference(preferences.languageBadge()) { languageBadge ->
             controller?.presenter?.requestLanguageBadgesUpdate()
-            val viewGroup = controller?.view as ViewGroup
-            val itemsPlay = viewGroup.findViewsById(R.id.play_layout)
-            for (item in itemsPlay) {
-                val playLayout = item.layoutParams as LayoutParams
-                playLayout.topMargin =
-                    if (preferences.languageBadge().get()) 25.dpToPx else 0.dpToPx
-                item.layoutParams = playLayout
-            }
-            val itemsLanguageText = viewGroup.findViewsById(R.id.language_text)
-            itemsLanguageText.forEach { it.isVisible = preferences.languageBadge().get() }
-            val itemsLanguageAngle = viewGroup.findViewsById(R.id.language_angle)
-            itemsLanguageAngle.forEach { it.isVisible = preferences.languageBadge().get() }
-            val itemsUnread = viewGroup.findViewsById(R.id.unread_text)
-            val startPadding = if (preferences.languageBadge().get()) 2.dpToPx else 5.dpToPx
-            val endPadding = if (preferences.languageBadge().get()) 8.dpToPx else 5.dpToPx
-            itemsUnread.forEach {
-                it.updatePaddingRelative(start = startPadding, end = endPadding)
+            val isCompact = preferences.libraryLayout().get() == 1
+            if (isCompact) {
+                val viewGroup = controller?.view as ViewGroup
+                val itemsPlay = viewGroup.findViewsById(R.id.play_layout)
+                for (item in itemsPlay) {
+                    val itemLayout = item.layoutParams as LayoutParams
+                    itemLayout.topMargin = if (languageBadge) 25.dpToPx else 0.dpToPx
+                    item.layoutParams = itemLayout
+                }
             }
         }
         binding.downloadBadge.bindToPreference(preferences.downloadBadge()) {

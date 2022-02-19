@@ -90,8 +90,17 @@ class LibraryGridHolder(
         // Update the cover.
         binding.coverThumbnail.clear()
         setCover(item.manga)
+
+        // Set language flags visibility
         binding.languageLayout.isVisible = item.sourceLanguage.isNotEmpty()
-        binding.languageText.text = item.sourceLanguage
+        if (item.sourceLanguage.isNotEmpty()) {
+            val flagId = view.resources.getIdentifier(
+                "ic_flag_${item.sourceLanguage}",
+                "drawable",
+                view.context.packageName
+            )
+            binding.languageText.setImageResource(flagId)
+        }
     }
 
     override fun toggleActivation() {

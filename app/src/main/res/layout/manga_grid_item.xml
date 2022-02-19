@@ -46,8 +46,6 @@
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_gravity="end"
-                android:clickable="true"
-                android:focusable="true"
                 android:visibility="gone"
                 tools:visibility="visible">
 
@@ -58,21 +56,18 @@
                     app:cardElevation="0dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="3dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="30dp"
+                    android:layout_height="20dp">
 
-                    <com.google.android.material.textview.MaterialTextView
+
+                    <ImageView
                         android:id="@+id/language_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?attr/colorTertiary"
-                        android:maxLines="1"
-                        android:paddingStart="3dp"
-                        android:paddingEnd="3dp"
-                        android:textColor="?attr/colorOnTertiary"
-                        android:textSize="13sp"
-                        tools:text="EN" />
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        tools:src="@drawable/ic_flag_fr"
+                        android:contentDescription="@string/language" />
 
                 </com.google.android.material.card.MaterialCardView>
             </FrameLayout>
