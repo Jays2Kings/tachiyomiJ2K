@@ -405,7 +405,7 @@ class LibraryPresenter(
         val showLanguageBadges = preferences.languageBadge().get()
         for (item in itemList) {
             item.sourceLanguage = if (showLanguageBadges) {
-                sourceManager.getOrStub(item.manga.source).lang.uppercase()
+                sourceManager.getOrStub(item.manga.source).lang
             } else ""
         }
     }

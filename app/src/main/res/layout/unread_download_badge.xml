@@ -62,45 +62,11 @@
             android:textSize="13sp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/download_text"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/download_text"
             app:layout_constraintTop_toTopOf="@+id/download_text"
             tools:text="20"
-            tools:paddingStart="2dp"
-            tools:paddingEnd="8dp"
-            tools:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/language_angle"
-            android:layout_width="10dp"
-            android:scaleType="fitXY"
-            android:layout_height="0dp"
-            android:src="@drawable/language_angled_badge"
-            app:layout_constraintBottom_toBottomOf="@+id/language_text"
-            app:layout_constraintEnd_toStartOf="@id/language_text"
-            app:layout_constraintTop_toTopOf="@+id/language_text"
-            android:visibility="gone"
             tools:visibility="visible"
-            tools:ignore="ContentDescription" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/language_text"
-            style="?textAppearanceCaption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/download_badge"
-            android:gravity="center"
-            android:maxLines="1"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:textColor="@color/download_badge_text"
-            android:textSize="13sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/unread_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/unread_text"
-            app:layout_constraintTop_toTopOf="@+id/unread_text"
-            tools:text="EN"
-            tools:paddingStart="2dp"
-            tools:visibility="visible" />
+            tools:paddingStart="2dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </eu.kanade.tachiyomi.ui.library.LibraryBadge>

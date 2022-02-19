@@ -4,16 +4,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
-import androidx.core.view.updatePaddingRelative
 import coil.clear
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.image.coil.loadManga
-import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MangaListItemBinding
 import eu.kanade.tachiyomi.util.lang.highlightText
 import eu.kanade.tachiyomi.util.system.dpToPx
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 
 /**
  * Class used to hold the displayed data of a manga in the library, like the cover or the binding.title.
@@ -26,8 +22,7 @@ import uy.kohesive.injekt.api.get
 
 class LibraryListHolder(
     private val view: View,
-    adapter: LibraryCategoryAdapter,
-    preferences: PreferencesHelper = Injekt.get()
+    adapter: LibraryCategoryAdapter
 ) : LibraryHolder(view, adapter) {
 
     private val binding = MangaListItemBinding.bind(view)
@@ -58,6 +53,7 @@ class LibraryListHolder(
             binding.title.textAlignment = View.TEXT_ALIGNMENT_CENTER
             binding.card.isVisible = false
             binding.unreadDownloadBadge.badgeView.isVisible = false
+            binding.languageLayoutCard.isVisible = false
             binding.padding.isVisible = false
             binding.subtitle.isVisible = false
             return
@@ -95,14 +91,17 @@ class LibraryListHolder(
         // Update the cover.
         binding.coverThumbnail.clear()
         binding.coverThumbnail.loadManga(item.manga)
-        binding.unreadDownloadBadge.languageAngle.isVisible = item.sourceLanguage.isNotEmpty()
-        binding.unreadDownloadBadge.languageText.isVisible = item.sourceLanguage.isNotEmpty()
-        binding.unreadDownloadBadge.languageText.text = item.sourceLanguage
-        val startPadding = if (item.sourceLanguage.isNotEmpty()) 2.dpToPx else 5.dpToPx
-        val endPadding = if (item.sourceLanguage.isNotEmpty()) 8.dpToPx else 5.dpToPx
-        binding.unreadDownloadBadge.unreadText.updatePaddingRelative(
-            start = startPadding, end = endPadding
-        )
+
+        // Set language flags visibility
+        binding.languageLayoutCard.isVisible = item.sourceLanguage.isNotEmpty()
+        if (item.sourceLanguage.isNotEmpty()) {
+            val flagId = view.resources.getIdentifier(
+                "ic_flag_${item.sourceLanguage}",
+                "drawable",
+                view.context.packageName
+            )
+            binding.languageText.setImageResource(flagId)
+        }
     }
 
     override fun onActionStateChanged(position: Int, actionState: Int) {
