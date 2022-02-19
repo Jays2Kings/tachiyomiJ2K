@@ -10,9 +10,12 @@ import coil.size.Precision
 import coil.size.Scale
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.image.coil.loadManga
+import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MangaGridItemBinding
 import eu.kanade.tachiyomi.util.lang.highlightText
 import eu.kanade.tachiyomi.util.system.dpToPx
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 
 /**
  * Class used to hold the displayed data of a manga in the library, like the cover or the title.
@@ -28,7 +31,8 @@ class LibraryGridHolder(
     adapter: LibraryCategoryAdapter,
     var width: Int,
     compact: Boolean,
-    private var fixedSize: Boolean
+    private var fixedSize: Boolean,
+    preferences: PreferencesHelper = Injekt.get()
 ) : LibraryHolder(view, adapter) {
 
     private val binding = MangaGridItemBinding.bind(view)
@@ -36,15 +40,17 @@ class LibraryGridHolder(
         binding.playLayout.setOnClickListener { playButtonClicked() }
         if (compact) {
             binding.textLayout.isVisible = false
+            if (!preferences.languageBadge().get()) {
+                val playLayout = binding.playLayout.layoutParams as FrameLayout.LayoutParams
+                playLayout.topMargin = 0.dpToPx
+                binding.playLayout.layoutParams = playLayout
+            }
         } else {
             binding.compactTitle.isVisible = false
             binding.gradient.isVisible = false
             val playLayout = binding.playLayout.layoutParams as FrameLayout.LayoutParams
-            val buttonLayout = binding.playButton.layoutParams as FrameLayout.LayoutParams
             playLayout.gravity = Gravity.BOTTOM or Gravity.END
-            buttonLayout.gravity = Gravity.BOTTOM or Gravity.END
             binding.playLayout.layoutParams = playLayout
-            binding.playButton.layoutParams = buttonLayout
         }
     }
 
@@ -84,6 +90,8 @@ class LibraryGridHolder(
         // Update the cover.
         binding.coverThumbnail.clear()
         setCover(item.manga)
+        binding.languageLayout.isVisible = item.sourceLanguage.isNotEmpty()
+        binding.languageText.text = item.sourceLanguage
     }
 
     override fun toggleActivation() {

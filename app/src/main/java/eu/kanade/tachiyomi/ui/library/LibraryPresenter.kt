@@ -164,6 +164,7 @@ class LibraryPresenter(
             library.apply {
                 setDownloadCount(library)
                 setUnreadBadge(library)
+                setSourceLanguage(library)
             }
             allLibraryItems = library
             var mangaMap = library
@@ -402,6 +403,15 @@ class LibraryPresenter(
         val unreadType = preferences.unreadBadgeType().get()
         for (item in itemList) {
             item.unreadType = unreadType
+        }
+    }
+
+    private fun setSourceLanguage(itemList: List<LibraryItem>) {
+        val showLanguageBadges = preferences.languageBadge().get()
+        for (item in itemList) {
+            item.sourceLanguage = if (showLanguageBadges) {
+                sourceManager.getOrStub(item.manga.source).lang.uppercase()
+            } else ""
         }
     }
 
@@ -789,6 +799,18 @@ class LibraryPresenter(
             allLibraryItems = mangaMap
             val current = libraryItems
             setUnreadBadge(current)
+            sectionLibrary(current)
+        }
+    }
+
+    /** Requests the library to have unread badges changed. */
+    fun requestLanguageBadgesUpdate() {
+        presenterScope.launch {
+            val mangaMap = allLibraryItems
+            setSourceLanguage(mangaMap)
+            allLibraryItems = mangaMap
+            val current = libraryItems
+            setSourceLanguage(current)
             sectionLibrary(current)
         }
     }

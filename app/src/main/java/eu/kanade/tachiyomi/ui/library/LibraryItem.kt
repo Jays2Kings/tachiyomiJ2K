@@ -35,6 +35,7 @@ class LibraryItem(
     var downloadCount = -1
     var unreadType = 2
     var filter = ""
+    var sourceLanguage = ""
 
     private val sourceManager: SourceManager by injectLazy()
     private val uniformSize: Boolean
