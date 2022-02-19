@@ -42,12 +42,49 @@
                 tools:src="@mipmap/ic_launcher" />
 
             <FrameLayout
-                android:id="@+id/play_layout"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/language_layout"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
                 android:layout_gravity="end"
                 android:clickable="true"
                 android:focusable="true"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/language_layout_card"
+                    app:strokeColor="@color/library_stroke_selector"
+                    app:strokeWidth="0.50dp"
+                    app:cardElevation="0dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/language_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/colorTertiary"
+                        android:maxLines="1"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp"
+                        android:textColor="?attr/colorOnTertiary"
+                        android:textSize="13sp"
+                        tools:text="EN" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/play_layout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="25dp"
                 android:visibility="gone"
                 tools:visibility="visible">
 
@@ -55,10 +92,7 @@
                     android:id="@+id/play_button"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/round_play_background"
                     android:contentDescription="@string/start_reading"
                     android:padding="6dp"

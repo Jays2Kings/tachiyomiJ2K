@@ -265,6 +265,8 @@ class PreferencesHelper(val context: Context) {
 
     fun outlineOnCovers() = flowPrefs.getBoolean(Keys.outlineOnCovers, true)
 
+    fun languageBadge() = flowPrefs.getBoolean(Keys.languageBadge, false)
+
     fun downloadBadge() = flowPrefs.getBoolean(Keys.downloadBadge, false)
 
     fun filterDownloaded() = flowPrefs.getInt(Keys.filterDownloaded, 0)
