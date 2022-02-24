@@ -84,7 +84,7 @@ class DownloadPageLoader(
         }
     }
 
-    override fun getPage(page: ReaderPage, shouldPreload: Boolean): Observable<Int> {
+    override fun getPage(page: ReaderPage): Observable<Int> {
         return Observable.just(Page.READY) // TODO maybe check if file still exists?
     }
 }

@@ -11,8 +11,11 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.WebtoonLayoutManager
+import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
+import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
+import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.BaseViewer
@@ -21,6 +24,8 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import rx.subscriptions.CompositeSubscription
 import timber.log.Timber
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 import kotlin.math.max
 import kotlin.math.min
 
@@ -186,7 +191,10 @@ class WebtoonViewer(val activity: ReaderActivity, val hasMargins: Boolean = fals
     private fun onPageSelected(page: ReaderPage, allowPreload: Boolean) {
         activity.onPageSelected(page, false)
 
-        val pages = page.chapter.pages ?: return
+        val currentReaderChapter = activity.presenter.getCurrentChapter() ?: return
+        verifyIfShouldSwitchToDownloadLoader(currentReaderChapter)
+
+        val pages = currentReaderChapter.pages ?: return
         Timber.d("onReaderPageSelected: ${page.number}/${pages.size}")
         // Download next chapters once we've read at least a few pages
         val inDownloadRange = page.number.toDouble() / pages.size > 0.2
@@ -205,6 +213,26 @@ class WebtoonViewer(val activity: ReaderActivity, val hasMargins: Boolean = fals
                     Timber.d("Requesting to preload chapter ${transitionChapter.chapter.chapter_number}")
                     activity.requestPreloadChapter(transitionChapter)
                 }
+            }
+        }
+    }
+
+    /**
+     * Switch to DownloadPageLoader when the chapter is downloaded
+     */
+    private fun verifyIfShouldSwitchToDownloadLoader(currentReaderChapter: ReaderChapter) {
+        val loader = currentReaderChapter.pageLoader ?: return
+        if (loader is HttpPageLoader) {
+            val downloadManager = Injekt.get<DownloadManager>()
+            val currentChapter = currentReaderChapter.chapter
+            val manga = activity.presenter.manga
+            val isDownloaded = downloadManager.isChapterDownloaded(currentChapter, manga!!)
+            if (isDownloaded) {
+                val adapter = recycler.adapter as WebtoonAdapter
+                if (adapter.switchToDownloadLoaderStep == 1) {
+                    activity.presenter.loadChapter(currentChapter, false)
+                }
+                adapter.switchToDownloadLoaderStep = 1
             }
         }
     }
