@@ -299,9 +299,7 @@ open class GlobalSearchPresenter(
      * @return a manga from the database.
      */
     protected open fun networkToLocalManga(sManga: SManga, sourceId: Long): Manga {
-        Timber.d("toLocalGlobal ${sManga.title}")
         sManga.setTitleNormalized()
-        Timber.d("toLocalGlobal ${sManga.title}")
         var localManga = db.getManga(sManga.url, sourceId).executeAsBlocking()
         if (localManga == null) {
             val newManga = Manga.create(sManga.url, sManga.title, sourceId)

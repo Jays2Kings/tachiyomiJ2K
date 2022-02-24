@@ -13,7 +13,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.supervisorScope
 import rx.schedulers.Schedulers
-import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import kotlin.coroutines.CoroutineContext
 
@@ -57,9 +56,7 @@ class SmartSearchEngine(
     }*/
 
     suspend fun normalSearch(source: CatalogueSource, title: String): SManga? {
-        Timber.d("normalSearch $title")
         val titleNormalized = title.toNormalized()
-        Timber.d("normalSearch $titleNormalized")
         val eligibleManga = supervisorScope {
             val searchQuery = if (extraSearchParams != null) {
                 "$titleNormalized ${extraSearchParams.trim()}"
@@ -138,9 +135,7 @@ class SmartSearchEngine(
      * @return a manga from the database.
      */
     suspend fun networkToLocalManga(sManga: SManga, sourceId: Long): Manga {
-        Timber.d("toLocalSmart ${sManga.title}")
         sManga.setTitleNormalized()
-        Timber.d("toLocalSmart ${sManga.title}")
         var localManga = db.getManga(sManga.url, sourceId).executeAsBlocking()
         if (localManga == null) {
             val newManga = Manga.create(sManga.url, sManga.title, sourceId)
