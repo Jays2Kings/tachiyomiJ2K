@@ -60,11 +60,11 @@ import eu.kanade.tachiyomi.util.system.withUIContext
 import eu.kanade.tachiyomi.widget.TriStateCheckBox
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -106,6 +106,7 @@ class MangaDetailsPresenter(
     private var tracks = emptyList<Track>()
 
     var trackList: List<TrackItem> = emptyList()
+    private var job: Job? = null
 
     var chapters: List<ChapterItem> = emptyList()
         private set
@@ -546,33 +547,33 @@ class MangaDetailsPresenter(
         val trackManager = Injekt.get<TrackManager>()
 
         // We want these to execute even if the presenter is destroyed so launch on GlobalScope
-        GlobalScope.launch {
-            withContext(Dispatchers.IO) {
-                val trackList = db.getTracks(manga).executeAsBlocking()
-                trackList.map { track ->
-                    val service = trackManager.getService(track.sync_id)
-                    if (service != null && service.isLogged) {
-                        val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
-                        val newCountChapter = if (shouldCustomCount) {
-                            (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
-                        } else newChapterRead
-                        if (!preferences.context.isOnline()) {
-                            val mangaId = manga.id ?: return@map
-                            val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
-                            val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
-                            trackings.remove(currentTracking)
-                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
-                            preferences.trackingsToAddOnline().set(trackings)
-                            DelayedTrackingUpdateJob.setupTask(preferences.context)
-                        } else {
-                            try {
-                                track.last_chapter_read = newCountChapter
-                                service.update(track, true)
-                                db.insertTrack(track).executeAsBlocking()
-                                refreshTracking(false)
-                            } catch (e: Exception) {
-                                Timber.e(e)
-                            }
+        job?.cancel()
+        job = launchIO {
+            delay(3000)
+            val trackList = db.getTracks(manga).executeAsBlocking()
+            trackList.map { track ->
+                val service = trackManager.getService(track.sync_id)
+                if (service != null && service.isLogged) {
+                    val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
+                    val newCountChapter = if (shouldCustomCount) {
+                        (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                    } else newChapterRead
+                    if (!preferences.context.isOnline()) {
+                        val mangaId = manga.id ?: return@map
+                        val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
+                        val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
+                        trackings.remove(currentTracking)
+                        trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
+                        preferences.trackingsToAddOnline().set(trackings)
+                        DelayedTrackingUpdateJob.setupTask(preferences.context)
+                    } else {
+                        try {
+                            track.last_chapter_read = newCountChapter
+                            service.update(track, true)
+                            db.insertTrack(track).executeAsBlocking()
+                            refreshTracking(false)
+                        } catch (e: Exception) {
+                            Timber.e(e)
                         }
                     }
                 }
