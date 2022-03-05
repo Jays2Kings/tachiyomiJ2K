@@ -1088,24 +1088,13 @@ class LibraryPresenter(
         mangaList: HashMap<Manga, List<Chapter>>,
         markRead: Boolean
     ) {
-        launchIO {
+        if (preferences.removeAfterMarkedAsRead() && markRead) {
             mangaList.forEach { (manga, oldChapters) ->
-                if (preferences.removeAfterMarkedAsRead() && markRead) {
-                    deleteChapters(manga, oldChapters)
-                }
-                if (preferences.autoUpdateTrack(LIBRARY)) {
-                    val newChapters = db.getChapters(manga).executeAsBlocking()
-                    val oldLastChapter =
-                        oldChapters.filter { it.read }.minByOrNull { it.source_order }
-                    val newLastChapter =
-                        newChapters.filter { it.read }.minByOrNull { it.source_order }
-
-                    if (oldLastChapter != newLastChapter) {
-                        updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
-                    }
-                }
+                deleteChapters(manga, oldChapters)
             }
-            getLibrary()
+            if (preferences.downloadBadge().get()) {
+                requestDownloadBadgesUpdate()
+            }
         }
     }
 
