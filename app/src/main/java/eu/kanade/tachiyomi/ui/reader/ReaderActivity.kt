@@ -74,6 +74,7 @@ import eu.kanade.tachiyomi.ui.reader.viewer.pager.R2LPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.VerticalPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.webtoon.WebtoonViewer
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
+import eu.kanade.tachiyomi.util.lang.getUrlWithoutDomain
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.GLUtil
 import eu.kanade.tachiyomi.util.system.contextCompatColor
@@ -1526,11 +1527,13 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
 
     private fun openMangaInBrowser() {
         val source = presenter.getSource() ?: return
-        val url = try {
+        val chapterUrl = presenter.getCurrentChapter()?.chapter?.url?.getUrlWithoutDomain()
+        val url = if (chapterUrl.isNullOrBlank()) try {
             source.mangaDetailsRequest(presenter.manga!!).url.toString()
         } catch (e: Exception) {
+            toast(e.message)
             return
-        }
+        } else source.baseUrl + chapterUrl
 
         val intent = WebViewActivity.newIntent(
             applicationContext,

@@ -16,6 +16,8 @@ import androidx.annotation.StringRes
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import net.greypanther.natsort.CaseInsensitiveSimpleNaturalComparator
+import java.net.URI
+import java.net.URISyntaxException
 import kotlin.math.floor
 
 /**
@@ -140,31 +142,27 @@ fun String.withSubtitle(context: Context, subtitle: String): Spanned {
 fun String.addBetaTag(context: Context): Spanned {
     val betaText = context.getString(R.string.beta)
     val betaSpan = SpannableStringBuilder(this + betaText)
-    betaSpan.setSpan(
-        SuperscriptSpan(),
-        length,
-        length + betaText.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-    )
-    betaSpan.setSpan(
-        RelativeSizeSpan(0.75f),
-        length,
-        length + betaText.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-    )
-    betaSpan.setSpan(
-        StyleSpan(Typeface.BOLD),
-        length,
-        length + betaText.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-    )
-    betaSpan.setSpan(
-        ForegroundColorSpan(context.getResourceColor(R.attr.colorSecondary)),
-        length,
-        length + betaText.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-    )
+    betaSpan.setSpan(SuperscriptSpan(), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    betaSpan.setSpan(RelativeSizeSpan(0.75f), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    betaSpan.setSpan(StyleSpan(Typeface.BOLD), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    betaSpan.setSpan(ForegroundColorSpan(context.getResourceColor(R.attr.colorSecondary)), length, length + betaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
     return betaSpan
 }
 
 fun String.toNormalized(): String = replace("’", "'")
+
+fun String.getUrlWithoutDomain(): String {
+    return try {
+        val uri = URI(this.replace(" ", "%20"))
+        var out = uri.path
+        if (uri.query != null) {
+            out += "?" + uri.query
+        }
+        if (uri.fragment != null) {
+            out += "#" + uri.fragment
+        }
+        out
+    } catch (e: URISyntaxException) {
+        this
+    }
+}
