@@ -749,11 +749,14 @@ class ReaderPresenter(
             notifier.onClear()
 
             // Pictures directory.
-            val destDir = File(
-                Environment.getExternalStorageDirectory().absolutePath +
+            val baseDir = Environment.getExternalStorageDirectory().absolutePath +
                     File.separator + Environment.DIRECTORY_PICTURES +
                     File.separator + context.getString(R.string.app_name)
-            )
+            val destDir = if (preferences.folderPerManga()) {
+                File(baseDir + File.separator + DiskUtil.buildValidFilename(manga.title))
+            } else {
+                File(baseDir)
+            }
 
             try {
                 val file = saveImages(firstPage, secondPage, isLTR, bg, destDir, manga)
