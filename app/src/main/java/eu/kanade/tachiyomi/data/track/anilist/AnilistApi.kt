@@ -12,7 +12,7 @@ import com.google.gson.JsonParser
 import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.data.track.model.TrackSearch
 import eu.kanade.tachiyomi.network.await
-import eu.kanade.tachiyomi.network.interceptor.RateLimitInterceptor
+import eu.kanade.tachiyomi.network.interceptor.rateLimit
 import eu.kanade.tachiyomi.network.jsonMime
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -28,7 +28,7 @@ class AnilistApi(val client: OkHttpClient, interceptor: AnilistInterceptor) {
 
     private val authClient = client.newBuilder()
         .addInterceptor(interceptor)
-        .addInterceptor(RateLimitInterceptor(85, 1, TimeUnit.MINUTES))
+        .rateLimit(85, 1, TimeUnit.MINUTES)
         .build()
 
     suspend fun addLibManga(track: Track): Track {
