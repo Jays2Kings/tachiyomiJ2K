@@ -874,7 +874,7 @@
     <string name="open_random_series">Eine beliebige Serie öffnen</string>
     <string name="show_number_of_items">Anzahl der Elemente anzeigen</string>
     <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11, um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Manga zu lesen.
+    <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11/12, um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Manga zu lesen.
 \n
 \nAktivieren Sie im nächsten Bildschirm „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
     <string name="all_files_permission_required">Dateiberechtigungen erforderlich</string>
@@ -967,4 +967,13 @@
     <string name="download_queue_size_warning">Achtung: Große Downloads könnten dazu führen, dass Quellen langsamer werden und/oder Tachiyomi blockieren</string>
     <string name="every_3_days">Alle 3 Tage</string>
     <string name="save_chapters_as_cbz">Kapitel als CBZ speichern</string>
+    <string name="cancelled">Abgebrochen</string>
+    <string name="enhanced_services">Erweiterte Anbieter</string>
+    <string name="publishing_finished">Veröffentlichung abgeschlossen</string>
+    <string name="on_hiatus">Unterbrochen</string>
+    <string name="tracking_info">Einweg-Synchronisation zum Aktualisieren der Kapitelfortschritte in den Trackingdiensten. Richte Tracking für einzelne Manga über deren jeweiligen Tracking-Button ein.</string>
+    <string name="enhanced_tracking_info">Anbieter, die für bestimmte Quellen erweiterte Features anbieten. Manga werden automatisch getrackt, wenn sie deiner Bibliothek hinzugefügt werden.</string>
+    <string name="update_tracking_scoring_type">Bewertungsart von %1$s aktualisieren</string>
+    <string name="scoring_type_updated">Bewertungsart aktualisiert</string>
+    <string name="could_not_update_scoring_">Bewertungsart konnte nicht aktualisiert werden: %1$s</string>
 </resources>

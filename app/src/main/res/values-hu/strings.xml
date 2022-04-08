@@ -138,7 +138,7 @@
     <string name="view_chapters">Fejezetek megtekintése</string>
     <string name="date_format">Dátum formátum</string>
     <string name="pref_global_search">Globális keresés</string>
-    <string name="email">E-mail cím</string>
+    <string name="email">E-mail-cím</string>
     <string name="download_paused">Letöltés szüneteltetve</string>
     <string name="download_complete">Letöltés kész</string>
     <string name="download_error">Letöltési hiba</string>
@@ -398,4 +398,6 @@
     <string name="warning">Figyelmeztetés</string>
     <string name="update_all">Az összes frissítése</string>
     <string name="every_3_days">3 naponta</string>
+    <string name="tracking_info">Egyirányú szinkronizálás, hogy a fejezetben való előrehaladás frissítve legyen a követési szolgáltatásokban. Állíts be követést egyéni manga bejegyzésekre, a követési gomb lenyomásával.</string>
+    <string name="enhanced_services">Továbbfejlesztett szolgáltatások</string>
 </resources>

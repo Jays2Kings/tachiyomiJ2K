@@ -929,4 +929,16 @@
     <string name="use_shizuku_summary">Uzantıların kullanıcı istemleri olmadan kurulmasına izin verir ve Android 12\'nin altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="every_3_days">Her 3 günde</string>
     <string name="download_queue_size_warning">Uyarı: büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir</string>
+    <string name="lime_time">Limon Zamanı</string>
+    <string name="save_chapters_as_cbz">Bölümleri CBZ olarak kaydet</string>
+    <string name="classic_blue">Klasik Mavi</string>
+    <string name="publishing_finished">Yayımı tamamlandı</string>
+    <string name="cancelled">İptal edildi</string>
+    <string name="on_hiatus">Molada</string>
+    <string name="tracking_info">Bölüm ilerlemesini, izleme hizmetlerinde güncellemek için tek yönlü eşitleme. Her manga girdisinin izleme düğmesinden, izlemeyi ayarlayın.</string>
+    <string name="enhanced_services">Gelişmiş hizmetler</string>
+    <string name="enhanced_tracking_info">Belirli kaynaklar için gelişmiş özellikler sağlayan hizmetler. Manga, kitaplığınıza eklendiğinde otomatik olarak izlenir.</string>
+    <string name="update_tracking_scoring_type">%1$s puanlama türünü güncelle</string>
+    <string name="scoring_type_updated">Puanlama türü güncellendi</string>
+    <string name="could_not_update_scoring_">Puanlama türü güncellenemedi: %1$s</string>
 </resources>

@@ -189,7 +189,7 @@
     <string name="cover_updated">Đã cập nhật ảnh bìa</string>
     <string name="page_">Trang: %1$d</string>
     <string name="next_chapter_not_found">Không tìm thấy chương kế tiếp</string>
-    <string name="decode_image_error">Ảnh không thể được giải mã tổng thể</string>
+    <string name="decode_image_error">Không thể giải mã ảnh</string>
     <string name="use_image_as_cover">Bạn có chắc muốn đặt ảnh này làm ảnh bìa?</string>
     <!-- Backup fragment -->
     <string name="backup">Sao lưu</string>
@@ -223,7 +223,7 @@
     <string name="no_network_connection">Không có kết nối mạng</string>
     <string name="download_paused">Tải xuống đã tạm dừng</string>
     <string name="categories">Hạng mục</string>
-    <string name="manga">Truyện Manga</string>
+    <string name="manga">Manga</string>
     <string name="tracking">Theo dõi</string>
     <string name="history">Lịch sử</string>
     <string name="source_migration">Di chuyển nguồn</string>
@@ -308,7 +308,7 @@
     <string name="help">Trợ giúp</string>
     <string name="library_update_order">Thứ tự ưu tiên cập nhật</string>
     <string name="no_results_found">Không tìm thấy kết quả nào</string>
-    <string name="lock_with_biometrics">Bảo mật với đa trắc sinh học</string>
+    <string name="lock_with_biometrics">Bảo mật sinh trắc học</string>
     <string name="lock_when_idle">Khóa khi hoạt động nền</string>
     <string name="refresh_tracking">Làm mới theo dõi</string>
     <string name="copy_value">Sao chép</string>
@@ -412,7 +412,7 @@
     <string name="edge_nav">Dạng góc cạnh</string>
     <string name="kindlish_nav">Dạng giống Kindle</string>
     <string name="l_nav">Dạng chữ L</string>
-    <string name="myanimelist_relogin">Xin hãy đăng nhập lại MAL</string>
+    <string name="myanimelist_relogin">Xin hãy đăng nhập MAL lại</string>
     <string name="crash_log_saved">Thông tin lỗi đã được lưu</string>
     <string name="file_picker_error">Không tìm thấy ứng dụng chọn tệp</string>
     <string name="add_tracking">Thêm theo dõi</string>
@@ -580,8 +580,8 @@
     <string name="migrating_to">di chuyển tới</string>
     <string name="latest_">Mới nhất :%1$s</string>
     <string name="to_show_again_setting_sources">Để hiện lại, vào Cài đặt -&gt; Nguồn.</string>
-    <string name="skip_this_step_next_time">Bỏ qua bước này vào lúc này</string>
-    <string name="use_most_chapters">Sử dụng nguồn với những chương mới nhất( chậm hơn)</string>
+    <string name="skip_this_step_next_time">Bỏ qua bước này vào lần sau</string>
+    <string name="use_most_chapters">Sử dụng nguồn có nhiều chương nhất( chậm hơn)</string>
     <string name="include_extra_search_parameter">Bao gồm cả params khi tìm kiếm</string>
     <string name="search_parameter_eg">Tìm kiếm theo tham số (ví dụ như language:english)</string>
     <string name="data_to_include_in_migration">Thêm dữ liệu vào để di chuyển</string>
@@ -589,9 +589,9 @@
     <string name="skip_pre_migration">Bỏ qua cài đặt trước di chuyển</string>
     <string name="migration">Di chuyển</string>
     <string name="select_sources">Lựa chọn nguồn</string>
-    <string name="finished_reading_date">Ngày đọc kết thúc</string>
+    <string name="finished_reading_date">Ngày đọc xong</string>
     <string name="started_reading_date">Ngày bắt đầu đọc</string>
-    <string name="remove_tracking_from_">Ngoài ra xoá khỏi %1$s</string>
+    <string name="remove_tracking_from_">Xóa cả ở %1$s</string>
     <string name="remove_tracking">Xoá theo dõi từ ứng dụng</string>
     <string name="want_to_read">Muốn đọc</string>
     <string name="currently_reading">Đang đọc</string>
@@ -868,9 +868,9 @@
     <string name="over_wifi_only">Chỉ dùng khi có Wi-Fi</string>
     <string name="split_double_pages">Tách các trang đôi</string>
     <string name="series_opens_new_chapters">Lối tắt của loạt truyện sẽ mở lên các chương mới</string>
-    <string name="cannot_remove_tracking_while_offline">Mục theo dõi không thể bị loại bỏ từ %1$s khi ngoại tuyến</string>
-    <string name="remove_x_from_service_and_add_y">Gỡ %1$s từ %2$s và thêm %3$s</string>
-    <string name="keep_both_on_service">Giữ tất trên %1$s và chỉ thay thế nội dung cục bộ</string>
+    <string name="cannot_remove_tracking_while_offline">Mục theo dõi không thể bị loại bỏ khỏi %1$s khi ngoại tuyến</string>
+    <string name="remove_x_from_service_and_add_y">Xóa %1$s khỏi %2$s và thêm %3$s</string>
+    <string name="keep_both_on_service">Giữ cả hai trên %1$s và chỉ thay thế nội dung cục bộ</string>
     <string name="scanlators">Phần tìm kiếm</string>
     <string name="channel_errors">Lỗi</string>
     <string name="installed_">Đã cài đặt %1$s</string>
@@ -882,7 +882,7 @@
     </plurals>
     <string name="set_as_default">Đặt làm mặc định</string>
     <string name="remove_previous_tracker">Có gỡ bỏ theo dõi cũ không \?</string>
-    <string name="use_suggested_date">Sử dụng lịch được đề xuất</string>
+    <string name="use_suggested_date">Sử dụng ngày được đề xuất</string>
     <string name="sapphire_dusk">Chủ đề: Hoàng Hôn Sapphire</string>
     <string name="chocolate_strawberries">Chủ đề: Sô-cô-la Dâu Tây</string>
     <string name="yang">Chủ đề: Dương</string>
@@ -940,4 +940,13 @@
     <string name="use_shizuku_to_install">Sử dụng Shizuku để cài đặt các tiện ích</string>
     <string name="download_queue_size_warning">Cảnh báo: các tải xuống hàng loạt lớn có thể dẫn đến các nguồn trở nên chậm hơn và / hoặc chặn Tachiyomi</string>
     <string name="every_3_days">3 ngày một lần</string>
+    <string name="save_chapters_as_cbz">Lưu chương ở định dạng CBZ</string>
+    <string name="lime_time">Tới Lúc Xanh Mạ</string>
+    <string name="classic_blue">Xanh Nước Biển Cổ Điển</string>
+    <string name="enhanced_services">Nguồn nâng cao</string>
+    <string name="publishing_finished">Xuất bản đã hoàn thành</string>
+    <string name="cancelled">Đã hủy</string>
+    <string name="on_hiatus">Bị gián đoạn</string>
+    <string name="tracking_info">Đồng bộ một chiều để cập nhật tiến trình chương trong các dịch vụ theo dõi. Thiết lập theo dõi cho các truyện riêng lẻ từ các nút theo dõi.</string>
+    <string name="enhanced_tracking_info">Dịch vụ cung cấp các tính năng nâng cao cho các nguồn cụ thể. Truyện sẽ được tự động theo dõi khi được thêm vào thư viện của bạn.</string>
 </resources>

@@ -280,7 +280,7 @@
     <string name="lock_when_idle">قفل في حالة السكون</string>
     <string name="copy_value">نسخ</string>
     <string name="update">تحديث</string>
-    <string name="updating_library">تحديث المكتبة</string>
+    <string name="updating_library">يجري تحديث المكتبة</string>
     <string name="date_added">تاريخ الاضافة</string>
     <string name="latest_chapter">أحدث الفصول</string>
     <plurals name="notification_update_failed">
@@ -361,12 +361,12 @@
     <string name="_already_in_queue">%1$s موجود في قائمة الإنتظار بالفعل</string>
     <string name="adding_category_to_queue">إضافة %1$s إلى قائمة التحديث</string>
     <plurals name="category_plural">
-        <item quantity="zero">%dالفئة</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="zero">%d الفئة</item>
+        <item quantity="one">%d الفئة</item>
+        <item quantity="two">%d الفئة</item>
+        <item quantity="few">%d الفئة</item>
+        <item quantity="many">%d الفئة</item>
+        <item quantity="other">%d الفئة</item>
     </plurals>
     <string name="chapter_not_found">لم يتم العثور على الفصل</string>
     <string name="chapters_removed">تم إزالةُ الفصول.</string>
@@ -421,7 +421,7 @@
         <item quantity="one">قد تم إزالة فصل من المصدر:
 \n%2$s
 \nهل تريد حذف تحميله؟</item>
-        <item quantity="two">فصلان تم إزالتهما من المصدر:
+        <item quantity="two">قد تم إزالة فصلان من المصدر:
 \n%2$s
 \n
 \nهل تريد حذف تنزيلاتهما؟</item>
@@ -736,8 +736,7 @@
     <string name="press_and_hold_to_also_reset">اضغط باستمرار لإعادة تعيين سجل الفصل</string>
     <string name="grouped">مجمّعة</string>
     <string name="no_recent_read_updated_manga">لا توجد مانجا مقروءة أو مُحّدثة مؤخراً</string>
-    <string name="fetched_">تم تحديث:
-\n%1$s</string>
+    <string name="fetched_">تم تحديث %1$s</string>
     <string name="reset_chapter_history">إعادة تعيين تاريخ الفصل</string>
     <string name="updates_and_history">التحديثات &amp; السجل</string>
     <string name="search_tips_show_periodically">ستظهر نصائح البحث بشكل دوري. اضغط مطولاً على الاقتراح للبحث عنه.</string>
@@ -762,7 +761,7 @@
     <string name="your_library">مكتبتك</string>
     <string name="release_page">صفحة النشر</string>
     <string name="category_cannot_be_blank">لا تتركها فارغاً</string>
-    <string name="add_edit_categories">ضفّ/عدّل الاصناف</string>
+    <string name="add_edit_categories">ضفّ/عدّل الفئات</string>
     <string name="cancel_all_for_series">إلغاء الكل لهذه السلسلة</string>
     <string name="add_to_">إضافة إلى%1$s</string>
     <string name="added_to_">أُضيف إلى%1$s</string>
@@ -772,11 +771,11 @@
     <string name="share_combined_pages">شارك صفحات مجمعة</string>
     <plurals name="manga_migrated">
         <item quantity="zero">مانجا تم ترحيلها%d</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">مانجا تم ترحيلها%d</item>
+        <item quantity="two">مانجا تم ترحيلها%d</item>
+        <item quantity="few">مانجا تم ترحيلها%d</item>
+        <item quantity="many">مانجا تم ترحيلها%d</item>
+        <item quantity="other">مانجا تم ترحيلها%d</item>
     </plurals>
     <string name="automatic_removal">الحذف التلقائي</string>
     <string name="pressing_back_to_start">الضغط للعودة لشاشة البداية</string>
@@ -799,20 +798,20 @@
     <string name="filter_languages">صفي اللغات</string>
     <string name="show_read_chapters_all">أظهر الفصول المقروئة في مجموعات</string>
     <plurals name="copy_manga">
-        <item quantity="zero">أنقل %1$d%2$s المانجا؟</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="zero">أنقل المانجا؟</item>
+        <item quantity="one">أنقل المانجا؟</item>
+        <item quantity="two">أنقل المانجا؟</item>
+        <item quantity="few">أنقل المانجا؟</item>
+        <item quantity="many">أنقل المانجا؟</item>
+        <item quantity="other">أنقل المانجا؟</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="zero">أنقل %1$d%2$s المانجا؟</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="zero">أنقل المانجا؟</item>
+        <item quantity="one">أنقل المانجا؟</item>
+        <item quantity="two">أنقل المانجا؟</item>
+        <item quantity="few">أنقل المانجا؟</item>
+        <item quantity="many">أنقل المانجا؟</item>
+        <item quantity="other">أنقل المانجا؟</item>
     </plurals>
     <string name="app_info">حول التطبيق</string>
     <string name="hide_bottom_nav">أخفي التنقل بشكل أوتوماتيكي</string>
@@ -820,12 +819,12 @@
     <string name="custom_manga_info">معلومات عن المانجا</string>
     <string name="automatic_can_still_switch">عند استخدام مظهر صفحة أوتوماتيكي، سيكون ما زال بإمكانك أن تغير بين المظاهر بينما تقرأ</string>
     <plurals name="pages_plural">
-        <item quantity="zero">%1$d صفحة</item>
-        <item quantity="one"/>
-        <item quantity="two"/>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="zero">لا صفحات</item>
+        <item quantity="one">صفحة</item>
+        <item quantity="two">صفحتان</item>
+        <item quantity="few">%1$d صفحات</item>
+        <item quantity="many">%1$d صفحة</item>
+        <item quantity="other">%1$d صفحة</item>
     </plurals>
     <string name="save_pages_separately">أحفظ الصفحات في ملفات مختلفة</string>
     <string name="actions">أفعال</string>
@@ -860,7 +859,7 @@
     <string name="show_title_first">أظهر العنوان أولاً</string>
     <string name="show_reset_history_button">أظهر زر مسح السجل</string>
     <string name="about_dont_kill_my_app">تقوم بعض الشركات المصنعة بوضع قيود إضافية على التطبيقات التي قد تقضي على الخدمات التي تعمل في الخلفية. يحتوي هذا الموقع على مزيد من المعلومات حول كيفية إصلاحه.</string>
-    <string name="name">الاسم</string>
+    <string name="name">الإسم</string>
     <string name="auto_update_extensions">التحديث التلقائي للإضافات</string>
     <string name="doh">إستخدام DNS بدلا من HTTPS</string>
     <string name="force_download_cache_refresh_summary">سيؤدي هذا إلى إجبار ذاكرة التخزين المؤقت للتنزيل على إعادة الحساب. مفيد إذا قمت بتعديل التنزيلات خارج هذا التطبيق وتريد أن يلتقطها التطبيق</string>
@@ -919,7 +918,7 @@
         <item quantity="two">%d تحديثان معلقان</item>
         <item quantity="few">%d بضعة تحديثات معلقة</item>
         <item quantity="many">%d عدة تحديثات معلقة</item>
-        <item quantity="other"/>
+        <item quantity="other">%d تحديث معلق</item>
     </plurals>
     <string name="hide_notification_content">اخفاء محتوى الإشعارات</string>
     <string name="updating_extensions">جارٍ تحديث الإضافات</string>
@@ -963,7 +962,7 @@
     <string name="whats_new_this_release">ما الجديد في هذا الاصدار</string>
     <string name="some_extensions_may_not_update">بعض الملحقات لا يتم تحديثها تلقائياً لو تم تثبيتها من خارج التطبيق</string>
     <string name="notify_extension_updated">شعار ملحق تم تحديثه</string>
-    <string name="by_default_side_nav_info">بشكل افتراضي، التنقل الجانبي يستخدم لبضعة هواتف معينة و الالواح الذكية صغيرة الحجم، ودائماً يظهر في الالواح الذكية كبيرة الحجم.</string>
+    <string name="by_default_side_nav_info">بشكل افتراضي، التنقل الجانبي يستخدم لبضعة هواتف معينة و الالواح الذكية صغيرة الحجم، ودائماً يظهر في الالواح الذكية كبيرة الحجم</string>
     <string name="default_behavior">السلوك الافتراضي</string>
     <string name="use_side_navigation">استخدام التنقل الجانبي</string>
     <string name="appearance">المظهر</string>
@@ -977,11 +976,11 @@
     </plurals>
     <plurals name="missing_chapters_warning">
         <item quantity="zero">لا يوجد فصول مفقودة</item>
-        <item quantity="one">هناك فصل مفقود</item>
-        <item quantity="two">هناك فصلان مفقودان</item>
-        <item quantity="few">هناك %d فصل مفقود</item>
-        <item quantity="many">هناك %d فصل مفقود</item>
-        <item quantity="other">هناك %d فصل مفقود</item>
+        <item quantity="one">تخطي فصل واحد ، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="two">تخطي فصلان، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="few">تخطي بعض الفصول، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="many">تخطي الكثير من الفصول ، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="other">تخطي %d فصل، إما أن المصدر مفقود أو تمت تصفيته</item>
     </plurals>
     <string name="getting_started_guide">دليل البدء</string>
     <string name="no_matches_for_filters_short">لا يوجد تطابق للتصفية الخاصة بك</string>
@@ -1000,7 +999,7 @@
     </plurals>
     <string name="helpful_translation_links">روابط مساعدة للترجمة</string>
     <string name="help_translate">ساعد بالترجمة</string>
-    <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وتصبح المصادر أبطأ</string>
+    <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وقد تصبح المصادر أبطأ</string>
     <string name="use_suggested_date">استعمل التاريخ المقترح</string>
     <string name="log_in">تسجيل الدخول</string>
     <string name="log_out">تسجيل الخروج</string>
@@ -1014,4 +1013,20 @@
     <string name="theme_buttons_based_on_cover">مظهر الأزرار تبعا للغطاء</string>
     <string name="show_in_sources_and_extensions">أظهر في قائمة المصادر و الملحقات</string>
     <string name="every_3_days">كل ثلاثة ايام</string>
+    <string name="download_queue_size_warning">تحذير: التحميلات كبيرة الحجم والعدد يمكن أن تؤدي إلى تباطؤ المصادر و/أو تقم بحظر \"Tachiyomi\"</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">قم بتثبيت \"Shizuku\" لاستخدامه كمثبت ملحق.</string>
+    <string name="ext_installer_shizuku_stopped">\"Shizuku\" لا يعمل</string>
+    <string name="lime_time">وقت اللّيْم (الليمون الاخضر)</string>
+    <string name="use_shizuku_to_install">استخدم Shizuku لتثبيت الامتدادات</string>
+    <string name="use_shizuku_summary">يسمح بتثبيت الإضافات دون مطالبات من المستخدم وتمكين التحديثات التلقائية للأجهزة التي تعمل بنظام Android 12</string>
+    <string name="scanlators">مترجمين</string>
+    <string name="filter_groups">تصفية مجموعات المترجمين</string>
+    <string name="classic_blue">ازرق كلاسيكي</string>
+    <string name="save_chapters_as_cbz">حفظ الفصول كCBZ</string>
+    <string name="publishing_finished">تم النشر</string>
+    <string name="cancelled">ملغي</string>
+    <string name="on_hiatus">في فترة راحة</string>
+    <string name="tracking_info">مزامنة أحاديّة لتحديث تقدم الفصول في خدمات التتبع. قم بإعداد التتبع الخاص بمانجا محدّدة من زر التتبع الخاص بها.</string>
+    <string name="enhanced_services">خدمات محسنة</string>
+    <string name="enhanced_tracking_info">الخدمات التي تقدم ميزات محسنة لأجل مصادر معينه. المانجات سوف يتم تتبعها عندما يتم إضافتها الي المكتبة.</string>
 </resources>

@@ -703,7 +703,7 @@
     <string name="affects_library_grid">Nakakaapekto sa mga pabalat ng grid library</string>
     <string name="extensions_updated">Na-update ang mga extension</string>
     <string name="horizontally">Pahalang</string>
-    <string name="scanlators">Scanlator</string>
+    <string name="scanlators">Mga Scanlator</string>
     <string name="create_folders_by_manga_title">Gumawa ng folder ayon sa pamagat ng manga</string>
     <string name="select_ending_chapter">Piliin ang huling kabanata</string>
     <string name="bottom">Baba</string>
@@ -732,4 +732,15 @@
     <string name="show_outline_around_covers">Ipakita ang outline sapaligid ng cover</string>
     <string name="download_queue_size_warning">Babala: maaaring humantong sa pagbagal ng mga source at/o pagharang sa Tachiyomi kung magda-download nang maramihan</string>
     <string name="every_3_days">Kada 3 araw</string>
+    <string name="view_all_errors">Tignan ang lahat na error</string>
+    <plurals name="after_minutes">
+        <item quantity="one">Pagkatapos ng %1$s minutoPagkatapos ng %1$s (na) minuto</item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="publishing_finished">Tapos na\'ng mailathala</string>
+    <string name="enhanced_services">Pinahusay na serbisyo</string>
+    <string name="cancelled">Kinansela</string>
+    <string name="on_hiatus">Naka-hiatus</string>
+    <string name="tracking_info">Isahang pagsabay para ma-update ang bilang ng nabasang kabanata sa mga tracker. Isaayos ang pag-track sa mga ito sa Pagta-track na makikita sa screen nila.</string>
+    <string name="enhanced_tracking_info">Mga serbisyong nagbibigay ng pinahusay na tampok para sa mga piling source. Kusang ita-track ang manga kapag dinagdag ito sa Aklatan mo.</string>
 </resources>

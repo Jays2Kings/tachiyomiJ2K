@@ -731,4 +731,12 @@
     <string name="restore_content_full">Datele din fișierul de rezervă vor fi restaurate.
 \n
 \nVa trebui să instalați toate extensiile lipsă și să vă conectați ulterior la serviciile de urmărire pentru a le utiliza.</string>
+    <string name="cancel_all_for_series">Anulează totul pentru această serie</string>
+    <string name="midnight_dusk">Amurg de Miazănoapte</string>
+    <string name="strawberry_daiquiri">Daiquiri de căpșuni</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="tako">Tako</string>
+    <string name="warning">Avertizare</string>
+    <string name="appearance">Aspect</string>
+    <string name="tracking_info">Sincronizare unidirecțională pentru a actualiza progresul capitolului în serviciile de urmărire. Configurați urmărirea pentru intrările individuale de manga din butonul lor de urmărire.</string>
 </resources>

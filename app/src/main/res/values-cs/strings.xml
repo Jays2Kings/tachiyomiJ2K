@@ -109,7 +109,7 @@
     <string name="all_chapters">Stáhnout vše</string>
     <string name="all_unread_chapters">Stáhnout nepřečtené</string>
     <string name="reading">Rozečtené</string>
-    <string name="completed">Kompletní</string>
+    <string name="completed">Dokončeno</string>
     <string name="plan_to_read">Plánuji číst</string>
     <string name="rereading">Znovu čtení</string>
     <string name="score">Skóre</string>
@@ -202,7 +202,7 @@
     <string name="backup_location">Adresář zálohy</string>
     <string name="backup_frequency">Frekvence zálohy</string>
     <string name="backup_created">Záloha vytvořena</string>
-    <string name="restore_completed">Obnova kompletní</string>
+    <string name="restore_completed">Obnova dokončena</string>
     <string name="what_should_backup">Co chcete zálohovat\?</string>
     <string name="restoring_backup">Obnovování zálohy</string>
     <string name="clear_chapter_cache">Vymazat mezipaměť kapitol</string>
@@ -212,7 +212,7 @@
     <string name="cookies_cleared">Cookies vymazány</string>
     <string name="clear_database">Vyčistit databázi</string>
     <string name="clear_database_summary">Smaže mangy a kapitoly, které nejsou ve vaší knihovně</string>
-    <string name="clear_database_confirmation">Jste si jistý\? Přečtené kapitoly a postup v mangách mimo knihovnu budou ztraceny</string>
+    <string name="clear_database_confirmation">Jsi si jist\? Přečtené kapitoly a postup v mangách mimo knihovnu budou ztraceny</string>
     <string name="clear_database_completed">Položky byly smazány</string>
     <string name="refresh_library_metadata">Obnovit metadata knihovny</string>
     <string name="refresh_tracking_metadata">Obnovit metadata sledování</string>
@@ -328,7 +328,7 @@
     <string name="l_nav">Ve tvaru písmene L</string>
     <string name="unofficial_extension_message">Toto rozšíření není z oficiálního seznamu rozšíření pro Tachiyomi.</string>
     <string name="secure_screen">Chráněná obrazovka</string>
-    <string name="lock_with_biometrics">Uzamknout pomocí biometrik</string>
+    <string name="lock_with_biometrics">Uzamknout pomocí biometrie</string>
     <string name="updating_library">Aktualizuji knihovnu</string>
     <string name="myanimelist_relogin">Prosím přihlašte se do MAL znovu</string>
     <string name="kindlish_nav">Podobné Kindlu</string>
@@ -538,7 +538,7 @@
     <string name="_must_be_enabled_first">Nejdřív musí být povoleno %1$s</string>
     <string name="app_info">Info o aplikaci</string>
     <string name="filter_languages">Filtrovat Jazyky</string>
-    <string name="extension_updates">Aktualizace Rozšíření</string>
+    <string name="extension_updates">Aktualizace rozšíření</string>
     <string name="source_hidden">Zdroj skrytý</string>
     <string name="all_sources">Všechny zdroje</string>
     <string name="search_extensions">Hledat rozšíření…</string>
@@ -677,9 +677,9 @@
     <string name="getting_started_guide">Příručka Začínáme</string>
     <string name="help_translate">Pomozte s překladem</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Přeskočena 1 kapitola, buď chybí ve zdroji nebo byla vyfiltrována.</item>
-        <item quantity="few">Přeskočeny %d kapitoly, buď chybí ve zdroji nebo byly vyfiltrovány.</item>
-        <item quantity="other">Přeskočeno %d kapitol, buď chybí ve zdroji nebo byly vyfiltrovány.</item>
+        <item quantity="one">Přeskočena 1 kapitola, buď chybí ve zdroji nebo byla vyfiltrována</item>
+        <item quantity="few">Přeskočeny %d kapitoly, buď chybí ve zdroji nebo byly vyfiltrovány</item>
+        <item quantity="other">Přeskočeno %d kapitol, buď chybí ve zdroji nebo byly vyfiltrovány</item>
     </plurals>
     <string name="doh">DNS přes HTTPS</string>
     <string name="disabled">Zakázáno</string>
@@ -704,7 +704,7 @@
     <string name="pure_black_dark_mode">Čistě černý tmavý režim</string>
     <string name="hide_notification_content">Skrýt obsah oznámení</string>
     <string name="restore_miui_warning">Pokud je MIUI optimalizace vypnutá, zálohování/obnovování nemusí fungovat správně.</string>
-    <string name="about_dont_kill_my_app">Někteří výrobci používají další omezení aplikací, která vypíná služby na pozadí. Na této webové stránce najdete další informace o tom, jak to napravit.</string>
+    <string name="about_dont_kill_my_app">Někteří výrobci používají další omezení aplikací, která vypíná služby na pozadí. Na této webové stránce najdete další informace o tom, jak to opravit.</string>
     <string name="log_out">Odhlásit se</string>
     <string name="log_out_from_">Odhlásit z %1$s\?</string>
     <string name="start_downloading_now">Začít stahovat nyní</string>
@@ -717,4 +717,46 @@
     <string name="channel_errors">Chyby</string>
     <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi</string>
     <string name="every_3_days">Každé 3 dny</string>
+    <string name="reduces_banding_impacts_performance">Snižuje proužkování, ale ovlivňuje výkon</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uloženou mangu.
+\n
+\nNa obrazovce povolte \"Povolit aplikaci přístup ke všem souborům.\"</string>
+    <string name="extension_updates_pending">Rozšíření čekající na aktualizaci</string>
+    <string name="use_shizuku_summary">Umožňuje aby rozšíření byly nainstalovány bez zásahu uživatele a povoluje automatické aktualizace pro zařízení se systémem nižším než Android 12</string>
+    <string name="reading_">Čtení %1$s</string>
+    <string name="grouped">Ve skupině</string>
+    <string name="show_updated_time">Zobrazit čas aktualizace</string>
+    <string name="uniform_covers">Uniformní obaly</string>
+    <string name="use_shizuku_to_install">Použít Shizuku pro instalaci rozšíření</string>
+    <string name="installed_">Nainstalováno %1$s</string>
+    <string name="extensions_updated">Rozšíření aktualizována</string>
+    <plurals name="extensions_updated_plural">
+        <item quantity="one">Rozšíření bylo aktualizováno</item>
+        <item quantity="few">%d rozšíření byla aktualizována</item>
+        <item quantity="other">%d rozšíření bylo aktualizováno</item>
+    </plurals>
+    <string name="save_combined_pages">Uložit kombinované strany</string>
+    <string name="invert_double_pages">Invertovat dvojité strany</string>
+    <string name="split_double_pages_portrait">Rozdělit dvojité strany na portrét</string>
+    <string name="crop_borders_paged">Oříznout okraje (Strankované)</string>
+    <string name="crop_borders_webtoon">Oříznout okraje (Webtoon)</string>
+    <string name="split_double_pages">Rozdělit dvojité strany</string>
+    <string name="pad_cutout_areas">Vyplnit vystřihnuté oblasti</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K potřebuje přístup k celému úložišti, aby mohlo stahovat kapitoly. Klikněte sem, poté povolte \"Povolit aplikaci přístup k souborům.\"</string>
+    <string name="show_read_chapters_all">Zobrazovat přečtené kapitoly v Ve skupině a Všechny</string>
+    <string name="share_combined_pages">Sdílet kombinované strany</string>
+    <string name="smart_by_page">Chytře (podle strany)</string>
+    <string name="smart_by_theme">Chytře (podle tématu)</string>
+    <string name="affects_library_grid">Ovlivňuje mřížku obalů v knihovně</string>
+    <plurals name="after_minutes">
+        <item quantity="one">Po %1$s minutěPo %1$s minutáchPo %1$s minutách</item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="publishing_finished">Zveřejnění dokončeno</string>
+    <string name="cancelled">Zrušeno</string>
+    <string name="on_hiatus">Má pauzu</string>
+    <string name="tracking_info">Jednosměrná synchronizace pro aktualizaci počtu přečtených kapitol ve sledovacích službách. Nastavení sledování pro každou mangu je možné z jejich tlačítka sledování.</string>
+    <string name="enhanced_services">Rozšířené služby</string>
+    <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Mangy jsou po přidání do knihovny automaticky sledovány.</string>
 </resources>

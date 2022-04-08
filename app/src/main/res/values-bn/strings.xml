@@ -930,4 +930,7 @@
     <string name="download_queue_size_warning">সতর্কতা: বৃহৎ বাল্ক ডাউনলোডের ফলে উৎসগুলি ধীর হয়ে যেতে পারে এবং/অথবা ব্লক হতে পারে তাছিয়মি</string>
     <string name="every_3_days">প্রতি ৩ দিন</string>
     <string name="classic_blue">ক্লাসিক নীল</string>
+    <string name="tracking_info">ট্র্যাকিং সার্ভিসে অধ্যায়ের অগ্রগতি হালনাগাদের একমুখী পথ। স্বতন্ত্র মাঙ্গার ট্র্যকিং সেটাপের জন্য তাদের নিজস্ব ট্র্যাকিং বাটন ব্যবহার করুন।</string>
+    <string name="enhanced_services">উন্নত সেবা</string>
+    <string name="enhanced_tracking_info">নির্দিষ্ট উৎসের জন্য উন্নত বৈশিষ্ট্য প্রদান করে এমন পরিষেবা। আপনার লাইব্রেরিতে যোগ করা হলে মাঙ্গা স্বয়ংক্রিয়ভাবে ট্র্যাক করা হয়।</string>
 </resources>

@@ -157,7 +157,7 @@
     <string name="alpha_initial">A</string>
     <string name="always_show_chapter_transition">Uvijek prikaži prijelaze između poglavlja</string>
     <string name="pref_webtoon_side_padding">Odmak od ruba</string>
-    <string name="webtoon_side_padding_0">Ništa</string>
+    <string name="webtoon_side_padding_0">Bez</string>
     <string name="webtoon_side_padding_10">10 %</string>
     <string name="webtoon_side_padding_15">15 %</string>
     <string name="webtoon_side_padding_20">20 %</string>
@@ -831,7 +831,7 @@
     <string name="cancel_all_for_series">Prekini sve za ovu seriju</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K zahtijeva pristup svim datotekama u Androidu 11 za preuzimanje poglavlja, za stvaranje automatskih sigurnosnih kopija i za čitanje lokalne mange.
 \n
-\nNa sljedećem ekranu aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
+\nNa sljedećem prozoru aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
     <string name="all_files_permission_required">Potrebna su dopuštenja za pristup datotekama</string>
     <string name="global_updates">Globalna ažuriranja</string>
     <string name="open_random_series">Otvaranje slučajne serije</string>
@@ -953,4 +953,13 @@
     <string name="every_3_days">Svaka 3 dana</string>
     <string name="download_queue_size_warning">Upozorenje: velika skupna preuzimanja mogu dovesti do usporavanja izvora i/ili blokiranja Tachiyomija</string>
     <string name="save_chapters_as_cbz">Spremi poglavlja kao CBZ</string>
+    <string name="publishing_finished">Objavljivanje završeno</string>
+    <string name="cancelled">Prekinuto</string>
+    <string name="on_hiatus">Prekid</string>
+    <string name="tracking_info">Jednosmjerna sinkronizacija za aktualiziranje napretka poglavlja u usluzi praćenja. Postavi praćenje pojedinačnih unosa manga putem gumba za praćenje.</string>
+    <string name="enhanced_services">Poboljšane usluge</string>
+    <string name="enhanced_tracking_info">Usluge koje pružaju poboljšane funkcije za određene izvore. Manga se automatski prati kad se doda u tvoju biblioteku.</string>
+    <string name="scoring_type_updated">Vrsta bodovanja je aktualizirana</string>
+    <string name="could_not_update_scoring_">Nije bilo moguće aktualizirati vrstu bodovanja: %1$s</string>
+    <string name="update_tracking_scoring_type">Aktualiziraj vrstu bodovanja za %1$s</string>
 </resources>

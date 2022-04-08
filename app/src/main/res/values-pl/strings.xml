@@ -1013,10 +1013,16 @@
     <string name="ext_installer_shizuku_stopped">Shizuku nie jest aktywne</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Zainstaluj i uruchom Shizuku, aby używać go jako instalatora rozszerzeń.</string>
     <string name="use_shizuku_to_install">Używaj Shizuku do instalowania rozszerzeń</string>
-    <string name="use_shizuku_summary">Umożliwia instalowanie rozszerzeń bez wyświetlania monitów oraz pozwala na automatyczne aktualizacje dla urządzeń pracujących na Android 12</string>
+    <string name="use_shizuku_summary">Umożliwia instalowanie rozszerzeń bez wyświetlania monitów oraz pozwala na automatyczne aktualizacje dla urządzeń pracujących na systemie starszym niż Android 12</string>
     <string name="classic_blue">Klasyczny Niebieski</string>
     <string name="lime_time">Pora na Limonkę</string>
     <string name="download_queue_size_warning">Ostrzeżenie: duża ilość zakolejkowanych pobrań może doprowadzić do spowolnienia źródeł i/lub zablokowania Tachiyomi</string>
     <string name="every_3_days">Co 3 dni</string>
     <string name="save_chapters_as_cbz">Zapisz rozdziały jako CBZ</string>
+    <string name="cancelled">Anulowane</string>
+    <string name="publishing_finished">Opublikowane w całości</string>
+    <string name="on_hiatus">Przerwa wydawnicza</string>
+    <string name="tracking_info">Przesyłanie postępu czytania do zewnętrznego serwisu. Ustaw śledzenie guzikiem \"Śledzenie\" w wybranych tytułach.</string>
+    <string name="enhanced_services">Ulepszone usługi śledzenia</string>
+    <string name="enhanced_tracking_info">Usługi dostarczania ulepszonych funkcji dla niektórych źródeł. Mangi po dodaniu do biblioteki są automatycznie śledzone.</string>
 </resources>

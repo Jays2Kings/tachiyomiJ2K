@@ -167,7 +167,7 @@
     <string name="completed">Completato</string>
     <string name="dropped">Abbandonato</string>
     <string name="on_hold">In sospeso</string>
-    <string name="plan_to_read">Lettura pianificata</string>
+    <string name="plan_to_read">Da leggere</string>
     <string name="score">Punteggio</string>
     <string name="title">Titolo</string>
     <string name="chapters">Capitoli</string>
@@ -246,7 +246,7 @@
     <string name="restoring_backup">Ripristino backup</string>
     <string name="refresh_tracking_metadata">Ricarica metadati progresso</string>
     <string name="updates_tracking_details">Aggiorna stato, voto e ultimo capitolo letto dalla funzione segna progresso</string>
-    <string name="no_more_results">Non ci sono altri risultati</string>
+    <string name="no_more_results">Nessun altro risultato</string>
     <string name="local_source">Fonte locale</string>
     <string name="paused">In pausa</string>
     <string name="download_paused">Scaricamento in pausa</string>
@@ -262,9 +262,9 @@
     <string name="untrusted">Non affidabile</string>
     <string name="uninstall">Disinstalla</string>
     <string name="untrusted_extension">Estensione non attendibile</string>
-    <string name="untrusted_extension_message">Questa estensione è stata firmata con un certificato non affidabile e non è stata attivata.
+    <string name="untrusted_extension_message">Questa estensione è stata firmata con un certificato non attendibile e non è stata attivata.
 \n
-\nUn\'estensione maliziosa potrebbe leggere credenziali di accesso all\'interno di Tachiyomi o eseguire codice dannoso.
+\nUn\'estensione maliziosa potrebbe leggere credenziali di accesso all\'interno di Tachiyomi, o eseguire codice dannoso.
 \n
 \nFidandoti di questo certificato accetti questi rischi.</string>
     <string name="version_">Versione: %1$s</string>
@@ -353,7 +353,7 @@
     <string name="chapters_">Capitoli %1$s</string>
     <string name="remove_from_library">Rimuovi dalla libreria</string>
     <string name="refresh_tracking">Aggiorna monitoraggio</string>
-    <string name="add_tracking">Aggiungi tracciamento</string>
+    <string name="add_tracking">Aggiungi tracking</string>
     <string name="copy_value">Copia</string>
     <string name="website">Sito web</string>
     <string name="open_source_licenses">Licenze codice sorgente aperto</string>
@@ -672,7 +672,7 @@
     <string name="edge_nav">Bordo</string>
     <string name="right_and_left_nav">Destra e Sinistra</string>
     <string name="invert_tapping">Inverti i tasti</string>
-    <string name="none">Nessuno</string>
+    <string name="none">Nessuna</string>
     <string name="started_reading_date">Data di inizio lettura</string>
     <string name="finished_reading_date">Data di fine lettura</string>
     <string name="myanimelist_relogin">Per favore accedi di nuovo a MAL</string>
@@ -751,7 +751,7 @@
     <string name="your_library">La tua libreria</string>
     <string name="landscape">Orizzontale</string>
     <string name="portrait">Verticale</string>
-    <string name="cancel_all_for_series">Annulla tutto per questa serie</string>
+    <string name="cancel_all_for_series">Annulla tutti per questa serie</string>
     <string name="search_">Cerca %1$s</string>
     <string name="move_to_">Sposta in %1$s</string>
     <string name="menu">menu</string>
@@ -935,8 +935,8 @@
     <string name="default_behavior">Comportamento predefinito</string>
     <string name="use_side_navigation">Usa navigazione laterale</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 capitolo saltato, o la fonte non ce l\'ha o è stato filtrato</item>
-        <item quantity="other">%d capitoli saltati, o la fonte non ce li ha o sono stati filtrati</item>
+        <item quantity="one">Un capitolo saltato, la fonte non ce l\'ha o è stato filtrato</item>
+        <item quantity="other">%d capitoli saltati, la fonte non ce li ha o sono stati filtrati</item>
     </plurals>
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
     <string name="helpful_translation_links">Collegamenti utili per la traduzione</string>
@@ -965,4 +965,13 @@
     <string name="every_3_days">Ogni 3 giorni</string>
     <string name="download_queue_size_warning">Attenzione: grossi download di massa possono rallentare le fonti e/o bloccare tachiyomi</string>
     <string name="save_chapters_as_cbz">Salva i capitoli come CBZ</string>
+    <string name="publishing_finished">Pubblicazione terminata</string>
+    <string name="enhanced_services">Servizi migliorati</string>
+    <string name="cancelled">Cancellata</string>
+    <string name="on_hiatus">In pausa</string>
+    <string name="tracking_info">Sincronizzazione a senso unico per aggiornare l\'avanzamento del capitolo sui servizi di tracking. Imposta il tracking per i singoli manga dai loro pulsanti di tracking.</string>
+    <string name="enhanced_tracking_info">Servizi che offrono funzioni migliorate per fonti specifiche. I manga sono tracciati automaticamente quando aggiunti alla libreria.</string>
+    <string name="update_tracking_scoring_type">Aggiorna il sistema di voto di %1$s</string>
+    <string name="scoring_type_updated">Tipo di voto aggiornato</string>
+    <string name="could_not_update_scoring_">Impossibile aggiornare il sistema di voto: %1$s</string>
 </resources>

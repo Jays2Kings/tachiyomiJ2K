@@ -2,7 +2,7 @@
 <resources>
     <string name="webtoon">وب تون(Webtoon)</string>
     <string name="author">نویسنده</string>
-    <string name="unread">خوانده ‌نشده</string>
+    <string name="unread">خوانده نشده</string>
     <string name="chapter_">فصل %1$s</string>
     <string name="bookmarked">بوک مارک شده</string>
     <string name="failed_to_load_pages_">لود صفحات با خطا مواجه شد: %1$s</string>
@@ -476,4 +476,11 @@
     <string name="log_out_from_">از%1$s خارج می شوید؟</string>
     <string name="portrait">عمودی</string>
     <string name="hide_notification_content">مخفی کردن اعلان‌ها</string>
+    <string name="warning">اخطار</string>
+    <string name="update_all">آپدیت همگی</string>
+    <string name="enhanced_services">سرویس های بهینه شده</string>
+    <string name="no_match_found">هیچ مورد مشابهی پیدا نشد</string>
+    <string name="create_folders_by_manga_title">ساخت پوشه بر اساس نام مانگا</string>
+    <string name="tracked">دنبال شده</string>
+    <string name="tracking_info">برای به روز رسانی وضعیت پیشرفت قسمت ها، در سایت های خدمات ردیابی، همگام سازی یک طرفه انجام دهید. برای ردیابی هر مانگا از تب ردیابی اقدام کنید.</string>
 </resources>

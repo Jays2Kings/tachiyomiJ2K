@@ -909,4 +909,10 @@
     <string name="save_chapters_as_cbz">章をCBZとして保存</string>
     <string name="lime_time">石灰の世代</string>
     <string name="classic_blue">クラシックブルー</string>
+    <string name="publishing_finished">完結済み</string>
+    <string name="cancelled">キャンセル済み</string>
+    <string name="on_hiatus">休載中</string>
+    <string name="tracking_info">一方同期の追跡サービスにある章の読書進捗を更新します。個別のマンガの「同期」ボタンで追跡サービスを設定してください。</string>
+    <string name="enhanced_services">高度なサービス</string>
+    <string name="enhanced_tracking_info">特定ソース専用の高度な機能を提供するサービスです。漫画はライブラリに追加される時、自動で追跡され始めます。</string>
 </resources>

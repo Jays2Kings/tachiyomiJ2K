@@ -13,13 +13,13 @@
     <string name="wifi">Wi-Fi</string>
     <string name="secure_screen">Asegurar pantalla</string>
     <string name="lock_when_idle">Bloquear con inactividade</string>
-    <string name="lock_with_biometrics">Bloquear con datos biométricos</string>
+    <string name="lock_with_biometrics">Bloquear cos datos biométricos</string>
     <string name="requires_app_restart">Require reiniciar a aplicación para que surxa efecto</string>
     <string name="loading">Cargando…</string>
     <string name="history">Historial</string>
     <plurals name="chapters_plural">
-        <item quantity="one">Capítulos</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$d Capítulo</item>
+        <item quantity="other">%1$d Capítulos</item>
     </plurals>
     <string name="categories">Categorías</string>
     <string name="browse">Explorar</string>
@@ -29,7 +29,7 @@
     <string name="app_name" translatable="false">TachiyomiJ2K</string>
     <string name="webtoon">Webtoon</string>
     <string name="unread">Sen ler</string>
-    <string name="bookmarked">Con marcador</string>
+    <string name="bookmarked">Gardado nos marcadores</string>
     <string name="reading">Lendo</string>
     <string name="migrate">Migrar</string>
     <string name="settings">Axustes</string>
@@ -46,16 +46,16 @@
     <string name="library">Biblioteca</string>
     <string name="total_chapters">Capítulos totais</string>
     <string name="date_added">Data de engadido</string>
-    <string name="last_read">Último leído</string>
+    <string name="last_read">Último lido</string>
     <string name="latest_chapter">Capítulo máis recente</string>
     <string name="list">Lista</string>
     <string name="download_badge">Descargar insignias</string>
-    <string name="library_update_frequency">Frecuancia de actualización da biblioteca</string>
+    <string name="library_update_frequency">Frecuencia de actualización da biblioteca</string>
     <string name="library_update_order">Orden de actualización da biblioteca</string>
     <string name="library_update_restriction">Restriccións de actualización da biblioteca</string>
     <string name="library_update_restriction_summary">Actualizar soamente cando as condicións se cumpren</string>
-    <string name="only_update_ongoing">Actualiza só manga en curso</string>
-    <string name="categories_to_include_in_global_update">Categorías a incluír nas actualizacións globais</string>
+    <string name="only_update_ongoing">Actualiza só o manga en curso</string>
+    <string name="categories_to_include_in_global_update">Categorías a incluír na actualización global</string>
     <string name="updates">Actualizacións</string>
     <string name="sources">Fontes</string>
     <string name="extensions">Extensións</string>
@@ -202,8 +202,8 @@
     <string name="open_log">Abrir rexistro</string>
     <string name="chapters">Capítulos</string>
     <plurals name="category_plural">
-        <item quantity="one">%d categoría%d categorías</item>
-        <item quantity="other"/>
+        <item quantity="one">%d categoría</item>
+        <item quantity="other">%d categorías</item>
     </plurals>
     <string name="next_chapter">Capítulo seguinte</string>
     <string name="previous_chapter">Capítulo anterior</string>
@@ -215,4 +215,49 @@
     <string name="disabled">Deshabilitado</string>
     <string name="reading_mode">Modo de lectura</string>
     <string name="hide_notification_content">Esconde os contidos de notificacións</string>
+    <string name="removed_bookmark">Marcador borrado</string>
+    <string name="remove_all_downloads">¿Borrar todas as descargas\?</string>
+    <string name="no_chapters_to_delete">Non hai capítulos para borrar</string>
+    <string name="by_source_order">Por orde de fonte</string>
+    <string name="by_chapter_number">Por número de capítulo</string>
+    <string name="by_update_date">Por data de subida</string>
+    <string name="comic">Cómic</string>
+    <string name="description">Descripción</string>
+    <string name="ongoing">En curso</string>
+    <string name="unknown">Descoñecido</string>
+    <string name="completed">Completado</string>
+    <string name="chapter_x_of_y">Capítulo %1$d de %2$d</string>
+    <string name="add_x_to">Engade %1$s a…</string>
+    <string name="unknown_status">Estado descoñecido</string>
+    <string name="licensed">Licenciado</string>
+    <string name="chapters_removed">Capítulos borrados.</string>
+    <string name="chapter_not_found">Capítulo non atopado</string>
+    <string name="unlock_library">Desbloquea para acceder á biblioteca</string>
+    <string name="unlock">Desbloquear</string>
+    <string name="new_chapters">Novos capítulos</string>
+    <string name="no_chapters_error">Non se atoparon capítulos</string>
+    <string name="no_pages_found">Non se atoparon páxinas</string>
+    <string name="marked_as_read">Lido</string>
+    <string name="marked_as_unread">Non lido</string>
+    <string name="not_started">Sen comezar</string>
+    <string name="in_progress">En proceso</string>
+    <string name="read">Ler</string>
+    <string name="title">Título</string>
+    <string name="artist">Artista</string>
+    <string name="last_read_chapter_">Último capítulo lido %1$s</string>
+    <string name="chapter_">Capítulo %1$s</string>
+    <string name="all_chapters_read">Todos os capítulos lidos</string>
+    <string name="scanlators">Scanlators</string>
+    <plurals name="remove_n_chapters">
+        <item quantity="one">¿Borrar %1$d capítulo descargado\?</item>
+        <item quantity="other">¿Borrar %1$d capítulos descargados\?</item>
+    </plurals>
+    <string name="external_storage_permission_notice">TachiyomiJ2K require acceso a tódolos arquivos de Android 11 para descargar capítulos, facer copias de seguridade automáticas e ler manga en local.
+\n
+\nNa seguinte pantalla, marca \"Permitir acceso á xestión de tódolos arquivos.\"</string>
+    <string name="all_files_permission_required">Requírense permisos de arquivo</string>
+    <string name="not_bookmarked">Non gardado nos marcadores</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K require acceso a tódolos arquivos para descargar capítulos, Preme eiquí, e despóis marca \"Permitir acceso á xestión de tódolos arquivos.\"</string>
+    <string name="author">Autor</string>
+    <string name="move_x_to">Move %1$s a…</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <string name="categories">카테고리</string>
     <string name="manga">만화</string>
-    <string name="chapters">챕터</string>
+    <string name="chapters">회차</string>
     <string name="tracking">동기화</string>
     <string name="selected_">%1$d 선택됨</string>
     <string name="filter">필터</string>
@@ -87,11 +87,11 @@
     <string name="untrusted">신뢰되지않음</string>
     <string name="uninstall">삭제</string>
     <string name="untrusted_extension">신뢰할 수 없는 확장기능</string>
-    <string name="untrusted_extension_message">이 확장기능은 신뢰할 수 없는 인증서로 서명되었으며 활성화되지도 않았습니다.
+    <string name="untrusted_extension_message">이 확장기능은 신뢰할 수 없는 인증서로 서명되어 활성화되지 않았습니다.
 \n
 \n일부 악의적인 확장기능은 Tachiyomi에 저장된 로그인 정보를 읽거나 임의의 코드를 실행할 수도 있습니다.
 \n
-\n이 인증서를 신뢰하면 이러한 위험을 수락하게 됩니다. 이 인증서를 신뢰 하시겠습니까\?</string>
+\n이 인증서를 신뢰하면 이러한 위험에 노출될 수 있습니다.</string>
     <string name="version_">버전: %1$s</string>
     <string name="language_">언어: %1$s</string>
     <string name="fullscreen">전체화면</string>
@@ -103,9 +103,9 @@
     <string name="keep_screen_on">화면 켜짐 유지</string>
     <string name="volume_keys">볼륨 키</string>
     <string name="invert_volume_keys">볼륨 키 뒤바꾸기</string>
-    <string name="left_to_right_viewer">왼쪽에서 오른쪽으로</string>
-    <string name="right_to_left_viewer">오른쪽에서 왼쪽으로</string>
-    <string name="vertical_viewer">수직으로</string>
+    <string name="left_to_right_viewer">왼쪽에서 오른쪽</string>
+    <string name="right_to_left_viewer">오른쪽에서 왼쪽</string>
+    <string name="vertical_viewer">수직</string>
     <string name="webtoon">웹툰</string>
     <string name="stretch">늘리기</string>
     <string name="fit_width">가로 맞추기</string>
@@ -125,7 +125,7 @@
     <string name="only_download_over_wifi">Wi-Fi만 사용해서 다운로드</string>
     <string name="remove_when_marked_as_read">읽음 표시 후에 자동으로 삭제</string>
     <string name="remove_after_read">읽은 후에 자동으로 삭제</string>
-    <string name="last_read_chapter">마지막으로 읽은 챕터</string>
+    <string name="last_read_chapter">마지막 회차</string>
     <string name="download_new_chapters">새로운 챕터 다운로드</string>
     <string name="services">서비스</string>
     <string name="backup">백업</string>
@@ -145,7 +145,7 @@
     <string name="cookies_cleared">쿠키 삭제됨</string>
     <string name="clear_database">데이터베이스 삭제</string>
     <string name="clear_database_summary">서재에 추가되지 않은 만화와 챕터들을 삭제합니다</string>
-    <string name="clear_database_confirmation">확실합니까\? 서재에 없는 만화의 읽은 챕터와 진행사항이 삭제됩니다</string>
+    <string name="clear_database_confirmation">확실합니까\? 서재에 없는 만화의 읽은 기록이 삭제됩니다</string>
     <string name="refresh_library_metadata">서재 메타데이터 갱신</string>
     <string name="updates_covers_genres_desc">표지와 장르, 설명, 만화 상태 정보들을 업데이트합니다</string>
     <string name="refresh_tracking_metadata">동기화 메타데이터 새로 고침</string>
@@ -243,14 +243,14 @@
     <string name="what_should_backup">어떤 항목들을 백업하겠습니까\?</string>
     <string name="clear_database_completed">항목 삭제됨</string>
     <string name="local">로컬</string>
-    <string name="local_source">로컬 만화</string>
+    <string name="local_source">로컬 저장소</string>
     <string name="other">기타</string>
     <string name="browse">찾아보기</string>
     <string name="licensed">판권작</string>
     <string name="_copied_to_clipboard">클립보드에 %1$s 복사됨</string>
     <string name="custom_range">사용자 정의 다운로드</string>
-    <string name="reading">읽는중</string>
-    <string name="completed">완료함</string>
+    <string name="reading">읽는 중</string>
+    <string name="completed">다운로드 완료</string>
     <string name="dropped">포기함</string>
     <string name="on_hold">일시중지중</string>
     <string name="plan_to_read">계획중</string>
@@ -292,12 +292,12 @@
     <string name="cover_saved">표지 이미지 저장</string>
     <string name="requires_app_restart">설정을 적용하기 위해 앱을 재시작해야 합니다</string>
     <string name="restoring_backup_canceled">복원 취소</string>
-    <string name="restore_duration">%02d 분,%02d초</string>
+    <string name="restore_duration">%02d분 %02d초</string>
     <string name="invalid_backup_file_type">부적합한 백업 파일 타입: %1$s
 \n백업파일은 .photo .gz 또는 .json으로 끝나야 합니다.</string>
     <string name="invalid_backup_file">부적합한 백업 파일</string>
-    <string name="disabled">비활성화 됨</string>
-    <string name="right_and_left_nav">오른쪽, 왼쪽</string>
+    <string name="disabled">끄기</string>
+    <string name="right_and_left_nav">좌우 이동</string>
     <string name="restore_miui_warning">MIUI 최적화가 꺼져 있을 경우 백업/복원 기능은 정상 작동하지 않을 수 있습니다.</string>
     <string name="landscape">가로</string>
     <string name="portrait">세로</string>
@@ -330,4 +330,50 @@
     <string name="open_source_licenses">오픈 소스 라이센스</string>
     <string name="successfully_logged_out">로그아웃 되었습니다</string>
     <string name="more">더보기</string>
+    <string name="help_translate">번역에 참여하기</string>
+    <string name="whats_new">업데이트 내역</string>
+    <string name="l_nav">L자 모양</string>
+    <string name="kindlish_nav">Kindle식</string>
+    <string name="edge_nav">양쪽 가장자리</string>
+    <string name="pref_webtoon_side_padding">모서리 여백</string>
+    <string name="none">없음</string>
+    <string name="getting_started_guide">초기 설정 도움말</string>
+    <string name="webtoon_side_padding_0">없음</string>
+    <plurals name="restore_completed_message">
+        <item quantity="other">소요 시간: %1$s, 발생한 오류: %2$s</item>
+    </plurals>
+    <string name="lock_when_idle">자동 잠금</string>
+    <string name="secure_screen">스크린 보안</string>
+    <string name="hide_notification_content">알림 내용 숨기기</string>
+    <string name="updating_library">서재 업데이트 중</string>
+    <string name="channel_errors">오류</string>
+    <string name="reduces_banding_impacts_performance">밴딩 효과가 감소하지만 성능이 낮아질 수 있습니다</string>
+    <string name="always_show_chapter_transition">회차 변경 항상 표시</string>
+    <string name="set_as_default">기본값으로 설정</string>
+    <plurals name="after_minutes">
+        <item quantity="other">%1$s분 후</item>
+    </plurals>
+    <string name="always">항상</string>
+    <string name="never">끄기</string>
+    <string name="invert_tapping">터치 반전</string>
+    <string name="actions">행동</string>
+    <string name="appearance">모양</string>
+    <string name="last_used">마지막으로 사용</string>
+    <string name="view_chapters">회차 목록 보기</string>
+    <string name="warning">경고</string>
+    <plurals name="category_plural">
+        <item quantity="other">항목 %d개</item>
+    </plurals>
+    <string name="extension_updates">확장기능 업데이트</string>
+    <string name="app_info">앱 정보</string>
+    <string name="reading_mode">읽기 모드</string>
+    <string name="skip_filtered_chapters">필터링된 회차 건너뛰기</string>
+    <string name="default_reading_mode">기본 읽기 모드</string>
+    <string name="continuous_vertical">웹툰 (이미지 간격 띄움)</string>
+    <string name="paged">페이지 설정</string>
+    <string name="nav_layout">터치 영역 설정</string>
+    <string name="pauses_reading_history">읽은 내역의 기록을 일시 정지합니다</string>
+    <string name="date_format">날짜 표시 형식</string>
+    <string name="security">보안</string>
+    <string name="progress">진행 상황</string>
 </resources>

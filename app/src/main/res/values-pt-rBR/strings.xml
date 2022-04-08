@@ -767,7 +767,7 @@
     <string name="whats_new_this_release">O que há de novo neste lançamento</string>
     <string name="disabled">Desativado</string>
     <string name="doh">DNS sobre HTTPS</string>
-    <string name="backup_in_progress">Há uma recuperação em progresso</string>
+    <string name="backup_in_progress">Há um Backup em progresso</string>
     <string name="restore_in_progress">Restauração já em progresso</string>
     <string name="pressing_back_to_start">Pressionando voltar para a tela inicial</string>
     <string name="back_to_start">Voltar ao início</string>
@@ -974,4 +974,16 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi</string>
     <string name="every_3_days">A cada 3 dias</string>
+    <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem notificações de usuário e permite atualizações automáticas para dispositivos abaixo do Android 12</string>
+    <string name="save_chapters_as_cbz">Salve capítulos como CBZ</string>
+    <string name="classic_blue">Azul Clássico</string>
+    <string name="scanlators">Grupos de tradução</string>
+    <string name="use_shizuku_to_install">Use Shizuku para instalar extensões</string>
+    <string name="lime_time">Tempo de vida</string>
+    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitoramento. Configure o monitoramento para entradas individuais dos mangás a partir de seus botões de monitoramento.</string>
+    <string name="enhanced_services">Serviços aprimorados</string>
+    <string name="enhanced_tracking_info">Serviços que oferecem recursos aprimorados para fontes específicas. Os mangás são automaticamente monitorados quando adicionados em sua biblioteca.</string>
+    <string name="publishing_finished">Publicação finalizada</string>
+    <string name="cancelled">Cancelado</string>
+    <string name="on_hiatus">Em hiato</string>
 </resources>

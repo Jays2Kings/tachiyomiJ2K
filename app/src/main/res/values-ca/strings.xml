@@ -16,7 +16,7 @@
     <string name="filter">Filtra</string>
     <string name="downloaded">Descarregats</string>
     <string name="bookmarked">Marcats</string>
-    <string name="unread">Sense llegir</string>
+    <string name="unread">No llegit</string>
     <string name="read">Llegits</string>
     <string name="alphabetically">Alfabèticament</string>
     <string name="total_chapters">Capítols en total</string>
@@ -25,7 +25,7 @@
     <string name="search">Cerca</string>
     <string name="select_all">Selecciona-ho tot</string>
     <string name="mark_as_read">Marca com a llegit</string>
-    <string name="mark_previous_as_read">Marca els anteriors com a llegits</string>
+    <string name="mark_previous_as_read">Marca els capítols anteriors com a llegits</string>
     <string name="download">Descarrega</string>
     <string name="delete">Suprimeix</string>
     <string name="edit">Edita</string>
@@ -360,7 +360,7 @@
         <item quantity="one">Voleu eliminar %1$d capítol descarregat\?</item>
         <item quantity="other">Voleu eliminar %1$d capítols descarregats\?</item>
     </plurals>
-    <string name="chapter_not_found">Capítol no trobat</string>
+    <string name="chapter_not_found">No s\'ha trobat el capítol</string>
     <string name="chapters_removed">S\'han eliminat els capítols.</string>
     <string name="removed_bookmark">S\'ha esborrat de marcats</string>
     <string name="marked_as_unread">S\'ha marcat com a no llegit</string>
@@ -372,8 +372,8 @@
     <string name="unlock">Desbloca</string>
     <string name="unlock_library">Desbloqueu per a accedir a la biblioteca</string>
     <plurals name="category_plural">
-        <item quantity="one">Categoria</item>
-        <item quantity="other"/>
+        <item quantity="one">%d categoria</item>
+        <item quantity="other">%d categories</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pàgina restant</item>
@@ -392,8 +392,8 @@
     <string name="confirm_category_deletion">Voleu suprimir la categoria\?</string>
     <string name="next_page">Pàgina següent</string>
     <string name="previous_page">Pàgina anterior</string>
-    <string name="next_chapter">Pàgina següent</string>
-    <string name="previous_chapter">Pàgina anterior</string>
+    <string name="next_chapter">Capítol següent</string>
+    <string name="previous_chapter">Capítol anterior</string>
     <string name="animate_page_transitions">Anima les transicions de pàgina</string>
     <string name="no_chapters_error">No s\'ha trobat cap capítol</string>
     <string name="restoring_backup_canceled">S\'ha cancel·lat la restauració</string>
@@ -455,9 +455,9 @@
     <string name="portrait">Vertical</string>
     <string name="landscape">Horitzontal</string>
     <string name="disabled">Desactivat</string>
-    <string name="error_sharing_cover">S\'ha produït un error en compartir la coberta</string>
-    <string name="error_saving_cover">S\'ha produït un error en desar la coberta</string>
-    <string name="cover_saved">Coberta desada</string>
+    <string name="error_sharing_cover">S\'ha produït un error en compartir la portada</string>
+    <string name="error_saving_cover">S\'ha produït un error en desar la portada</string>
+    <string name="cover_saved">S\'ha desat la portada</string>
     <string name="side_nav_icon_alignment">Alineació de la icona de navegació lateral</string>
     <string name="no_pages_found">No s\'ha trobat cap pàgina</string>
     <string name="reading_mode">Mode de lectura</string>
@@ -473,7 +473,7 @@
     <string name="by_update_date">Per data de pujada</string>
     <string name="extension_updates">Actualitzacions d\'extensions</string>
     <string name="top">Part superior</string>
-    <string name="source_unsupported">Font no es compatible</string>
+    <string name="source_unsupported">La font no està suportada</string>
     <string name="no_match_found">No s\'ha trobat cap coincidència</string>
     <string name="incognito_mode">Mode d\'incògnit</string>
     <string name="pauses_reading_history">Pausa l\'historial de lectura</string>
@@ -487,4 +487,73 @@
     <string name="locked_portrait">Vertical bloquejat</string>
     <string name="locked_landscape">Horitzontal bloquejat</string>
     <string name="channel_errors">Errors</string>
+    <string name="long_press_category">Mantingueu premut per a editar una categoria</string>
+    <string name="add_edit_categories">Afegeix/edita categories</string>
+    <string name="top_category">Categoria superior (%1$s)</string>
+    <string name="category_cannot_be_blank">El nom de la categoria no pot ser buit</string>
+    <string name="by_source_order">Per l\'ordre de la font</string>
+    <string name="no_matches_for_filters_short">No hi ha cap coincidència per als vostres filtres</string>
+    <string name="remove_all_downloads">Voleu eliminar totes les baixades\?</string>
+    <string name="no_chapters_to_delete">No hi ha capítols per a eliminar</string>
+    <string name="show_categories_while_filtering">Mostra les categories buides en filtrar</string>
+    <string name="first_category">Primera categoria</string>
+    <string name="category">Categoria</string>
+    <string name="move_x_to">Mou %1$s a…</string>
+    <string name="add_x_to">Afegeix %1$s a…</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$d capítol</item>
+        <item quantity="other">%1$d capítols</item>
+    </plurals>
+    <string name="all_files_permission_required">Calen permisos de fitxers</string>
+    <string name="category_deleted">Categoria suprimida</string>
+    <string name="jump_to_category">Vés a la categoria</string>
+    <string name="manage_category">Gestiona la categoria</string>
+    <string name="scanlators">Escanejadors i traductors</string>
+    <string name="new_category">Categoria nova</string>
+    <string name="start_downloading_now">Començar la baixada ara</string>
+    <string name="tako">Tako</string>
+    <string name="pure_black_dark_mode">Mode negre fosc pur</string>
+    <string name="every_3_days">Cada 3 dies</string>
+    <string name="appearance">Aparença</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="midnight_dusk">Capvespre</string>
+    <string name="strawberry_daiquiri">Daiquiri de Maduixa</string>
+    <string name="warning">Advertència</string>
+    <string name="show_in_sources_and_extensions">Mostra a la llista de fonts i extensions</string>
+    <string name="not_bookmarked">No marcats</string>
+    <string name="categories_on_manual">Categories que s\'actualitzaran en actualitzar manualment</string>
+    <string name="categories_in_global_update">Totes les categories de l\'actualització global</string>
+    <string name="library_search_hint">Cerca un títol, etiquetes o una font</string>
+    <string name="already_in_category">El manga ja és a la categoria</string>
+    <string name="restore_miui_warning">És possible que la còpia de seguretat i la restauració no funcionin correctament si l\'Optimització del MIUI està desactivada.</string>
+    <string name="about_dont_kill_my_app">Alguns fabricants tenen restriccions addicionals per a les aplicacions que finalitzen els serveis en segon pla. Aquest lloc web té més informació de com solucionar-ho.</string>
+    <string name="download_queue_size_warning">Advertència: Les baixades massa grosses poden fer que les fonts es tornin més lentes i/o bloquin el Tachiyomi</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">S\'ha omès 1 capítol. És possible que manqui a la font o que hagi estat filtrat</item>
+        <item quantity="other">S\'han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
+    </plurals>
+    <string name="no_matches_for_filters">No s\'ha trobat cap coincidència amb els vostres filtres actuals</string>
+    <string name="backup_in_progress">Ja s\'està fent una còpia de seguretat</string>
+    <string name="help_translate">Ajudeu a traduir</string>
+    <string name="getting_started_guide">Guia d\'introducció</string>
+    <string name="what_should_update">Què s\'hauria d\'actualitzar\?</string>
+    <string name="updating_">S\'està actualitzant %1$s</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Instal·leu i inicieu el Shizuku per a utilitzar-lo com a instal·lador d\'extensions.</string>
+    <string name="ext_installer_shizuku_stopped">El Shizuku no s\'està executant</string>
+    <string name="update_all">Actualitza-ho tot</string>
+    <string name="app_info">Informació de l\'aplicació</string>
+    <string name="on_hiatus">En pausa</string>
+    <string name="publishing_finished">Publicació finalitzada</string>
+    <string name="cancelled">Cancel·lada</string>
+    <string name="tracking_info">Sincronització unidireccional per a actualitzar el progrés dels capítols als serveis de seguiment. Configureu el seguiment d\'entrades individuals de manga al seu botó de seguiment.</string>
+    <string name="enhanced_services">Serveis millorats</string>
+    <string name="enhanced_tracking_info">Serveix que proporcionen funcionalitats millorades per a fonts específiques. El manga se segueix automàticament en afegir-lo a la vostra biblioteca.</string>
+    <plurals name="for_n_titles">
+        <item quantity="one">Per a %d títolPer a %d títols</item>
+        <item quantity="other"></item>
+    </plurals>
+    <plurals name="after_minutes">
+        <item quantity="one">Després d\'%1$s minutDesprés de %1$s minuts</item>
+        <item quantity="other"></item>
+    </plurals>
 </resources>

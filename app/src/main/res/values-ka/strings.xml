@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_new_updates_available">განახლება ვერ მოიძებნა</string>
+    <string name="reading_mode">კითხვის რეჟიმი</string>
+    <string name="loading_pages">გვერდები იტვირთება…</string>
+    <string name="right_and_left_nav">მარჯვენა და მარცხენა</string>
+    <string name="invert_tapping">დაჭერის ინვერსია</string>
+    <string name="network">ქსელი</string>
+    <plurals name="category_plural">
+        <item quantity="one">%d კატეგორია%d კატეგორიები</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="searching_for_updates">განახლების ძებნა…</string>
+    <string name="show_number_of_items">საგნების რაოდენობის ჩვენება</string>
+    <string name="date_added">დამატების თარიღი</string>
+    <string name="global_search">გლობალური ძებნა…</string>
+    <string name="untrusted_extension_message">ეს დამატება ხელმოწერილია უცნობი სერთიფიკატის მიერ და არ არის აქტივირებული.
+\n
+\nმავნე დამატებას შეუძლია წაიკითხოს შესვლის მონაცემები შენახული ამ აპლიკაციაში ან გაუშვას თავისი კოდი.
+\n
+\nამ სერტიფიკატის ნდობით თქვენ თქვენს თავზე იღებთ რისკებს და პასუხისმგებლობას.</string>
+    <string name="obsolete_extension_message">დამატება აღარ არის ხელმისაწვდომი.</string>
+    <string name="unofficial_extension_message">დამატება არ არის Tachiyomi-ს ოფიციალური დამატებების სიიდან.</string>
+    <string name="nsfw_short">18+</string>
+    <string name="may_contain_nsfw">შეიძლება შეიჩაცდეს უცენზურო(18+) კონტენტს</string>
+    <plurals name="extension_updates_available">
+        <item quantity="one">ნაპოვნია გაფართოების განახლებანაპოვნია %d გაფართოების განახლება</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="vertical_viewer">ვერტიკალური</string>
+    <string name="webtoon_side_padding_0">არცერთი</string>
+    <string name="none">არცერთი</string>
+    <string name="search_settings">პარამეტრების ძიება</string>
+    <string name="updated_to_">განახლებულია v%1$s-მდე</string>
+    <string name="backup_has_no_manga">რეზერვი არ შეიცავს არცერთ მანგას.</string>
+    <string name="restore_content">აღდგენა იყენებს წყაროებს მონაცემების გადმოსაწერად.
+\n
+\nდარწმუნდი რომ გაქვს დაინსტალირებული ყველა საჭირო დამატება და ხარ დალოგინებული წყაროებში და თვალყურის სადევნებელ სერვისებში ააღდგენამდე.</string>
+    <string name="what_should_backup">რას გსურს რომ შეუქმნა რეზერვი\?</string>
+    <plurals name="restore_completed_message">
+        <item quantity="one">გაკეთებულია %1$s %2$s შეცდომითგაკეთებულია %1$s %2$s შეცდომებით</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="does_not_prevent_unofficial_nsfw">ეს არ აღმოფხვრავს პროგრამაში NSFW (18+) შიგთავსის არაოფიციალურ, ან შესაძლო არასწორად მონიშნული გაფართოებებოიდან გამოჩენას.</string>
+    <string name="whats_new">რა არის ახალი</string>
+    <string name="download_queue">გადმოწერის რიგი</string>
+    <string name="loading">იტვირთება…</string>
+    <string name="start">დაწყება</string>
+    <string name="name">სახელი</string>
+    <string name="navigation">ნავიგაცია</string>
+    <string name="started">დაწყებული</string>
+    <string name="appearance">გარეგნობა</string>
+    <string name="app_theme">აპლიკაციის თემა</string>
+    <string name="start_downloading_now">დაიწყე ჩამოტვირთვა</string>
+    <string name="default_value">ნაგულისხმევი</string>
+    <string name="reader">წამკითხველი</string>
+    <string name="warning">გაფრთხილება</string>
+</resources>

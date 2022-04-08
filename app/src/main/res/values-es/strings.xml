@@ -137,7 +137,7 @@
     <string name="all_unread_chapters">Descargar no leídos</string>
     <!-- MyAnimeList fragment -->
     <string name="reading">Leyendo</string>
-    <string name="completed">Finalizado</string>
+    <string name="completed">Completado</string>
     <string name="dropped">Abandonado</string>
     <string name="on_hold">En espera</string>
     <string name="plan_to_read">Para leer luego</string>
@@ -309,7 +309,7 @@
     <string name="library_update_order">Orden de actualización de la biblioteca</string>
     <string name="no_results_found">No se han encontrado resultados</string>
     <string name="lock_with_biometrics">Bloquear con huella dactilar</string>
-    <string name="lock_when_idle">Bloquear cuando está inactivo</string>
+    <string name="lock_when_idle">Bloquear por inactividad</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
     <string name="network">Red</string>
@@ -963,4 +963,12 @@
     <string name="download_queue_size_warning">Advertencia: Las descargas grandes pueden llevar a que las fuentes se vuelvan cada vez más lentas y en casos extremos que los servidores limiten o impidan el acceso a Tachiyomi</string>
     <string name="every_3_days">Cada 3 días</string>
     <string name="save_chapters_as_cbz">Guardar los capítulos como CBZ</string>
+    <string name="publishing_finished">Serie terminada</string>
+    <string name="cancelled">Cancelada</string>
+    <string name="on_hiatus">En pausa</string>
+    <string name="tracking_info">La sincronización de estos servicios solo funciona en un solo sentido. Cada manga en tu biblioteca tiene un botón de seguimiento y tendrás que configurarlo a mano, uno a uno.</string>
+    <string name="enhanced_services">Servicios mejorados</string>
+    <string name="enhanced_tracking_info">Servicios que ofrecen funciones mejoradas para ciertas fuentes. Se hace un seguimiento automático del manga al añadirlo a la biblioteca.</string>
+    <string name="scoring_type_updated">Tipo de puntuación actualizado</string>
+    <string name="could_not_update_scoring_">No se pudo actualizar el tipo de puntuación: %1$s</string>
 </resources>

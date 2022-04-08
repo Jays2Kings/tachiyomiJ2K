@@ -156,7 +156,7 @@
     <!-- Reader activity -->
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Capítulo seguinte não encontrado</string>
-    <string name="decode_image_error">A imagem não pôde ser descodificada</string>
+    <string name="decode_image_error">A imagem não pôde ser decodificada</string>
     <!-- Backup fragment -->
     <string name="backup">Cópia de segurança</string>
     <!-- Recent manga fragment -->
@@ -562,8 +562,8 @@
     <string name="restore_in_progress">Restauro em progresso</string>
     <string name="backup_in_progress">Cópia de segurança em progresso</string>
     <string name="disabled">Desativado</string>
-    <string name="portrait">Retrato</string>
-    <string name="landscape">Paisagem</string>
+    <string name="portrait">Vertical</string>
+    <string name="landscape">Horizontal</string>
     <string name="drag_handle">Alça de arrasto</string>
     <string name="view_all_errors">Ver todos os erros</string>
     <string name="use_default">Usar padrão</string>
@@ -838,7 +838,7 @@
     <string name="remove_all_downloads">Remover todas as descarregas\?</string>
     <string name="no_pages_found">Nenhuma página encontrada</string>
     <string name="source_unsupported">Fonte não é suportada</string>
-    <string name="restore_miui_warning">A otimização MIUI deve estar ligada para que a restauração funcione corretamente.</string>
+    <string name="restore_miui_warning">Restauros de cópias de segurança podem não funcionar corretamente se a otimização MIUI estiver desativada.</string>
     <string name="cancel_all_for_series">Cancelar tudo para esta série</string>
     <string name="warning">Aviso</string>
     <string name="orientation">Orientação</string>
@@ -925,11 +925,11 @@
     <string name="remove_previous_tracker">Remover o rastreador anterior\?</string>
     <string name="select_an_entry">Selecione uma entrada</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Existe 1 capítulo faltando</item>
-        <item quantity="other">Existem %d capítulos faltando</item>
+        <item quantity="one">A saltar 1 capítulo, ou está em falta na fonte ou foi filtrado</item>
+        <item quantity="other">A saltar %d capítulos, ou está em falta na fonte ou foi filtrado</item>
     </plurals>
     <string name="affects_library_grid">Afeta as grades de cobertura da biblioteca</string>
-    <string name="getting_started_guide">Iniciar o guia de introdução</string>
+    <string name="getting_started_guide">Guia de introdução</string>
     <string name="no_matches_for_filters_short">Sem resultados para os filtros selecionados</string>
     <string name="show_categories_while_filtering">Mostrar categorias vazias enquanto está filtrando</string>
     <string name="hide_notification_content">Esconder conteúdo das notificações</string>
@@ -941,4 +941,31 @@
     <string name="log_out">Terminar sessão</string>
     <string name="log_out_from_">Terminar sessão em %1$s\?</string>
     <string name="every_3_days">A cada 3 dias</string>
+    <string name="download_queue_size_warning">Aviso: grandes transferências em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi</string>
+    <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
+    <string name="help_translate">Ajude a traduzir</string>
+    <string name="use_shizuku_to_install">Use o Shizuku para instalar extensões</string>
+    <string name="show_outline_around_covers">Mostrar contorno ao redor das capas</string>
+    <string name="notification_size_warning">Grandes atualizações podem aumentar o uso da bateria e as fontes se tornarem mais lentas</string>
+    <string name="scanlators">Tradutores</string>
+    <string name="save_chapters_as_cbz">Salvar capítulos como CBZ</string>
+    <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem avisos do usuário e ativa atualizações automáticas para dispositivos com Android 12</string>
+    <string name="theme_buttons_based_on_cover">Tema dos botões com base na capa</string>
+    <string name="helpful_translation_links">Links de tradução úteis</string>
+    <string name="filter_groups">Filtrar grupos de tradutores</string>
+    <string name="cannot_remove_tracking_while_offline">O rastreador não pode ser removido de %1$s enquanto estiver off-line</string>
+    <string name="use_suggested_date">Usar data sugerida</string>
+    <string name="lime_time">Tempo de cal</string>
+    <string name="details_page">Página de detalhes</string>
+    <string name="log_in">Conecte-se</string>
+    <string name="keep_in_">Manter em %1$s</string>
+    <string name="remove_from_">Remover de %1$s</string>
+    <string name="classic_blue">Azul clássico</string>
+    <string name="on_hiatus">Em hiato</string>
+    <string name="enhanced_services">Serviços melhorados</string>
+    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitorização. Defina a monitorização para entradas individuais das mangás no seu botão de monitorização.</string>
+    <string name="publishing_finished">Publicação concluída</string>
+    <string name="cancelled">Cancelado</string>
+    <string name="enhanced_tracking_info">Serviços que oferecem características melhoradas para fontes específicas. Mangás são automaticamente monitorizados quando adicionados à sua biblioteca.</string>
 </resources>

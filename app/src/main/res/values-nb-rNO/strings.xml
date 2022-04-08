@@ -377,7 +377,7 @@
     <string name="crash_log_saved">Feillogger lagret</string>
     <string name="invalid_backup_file_type">Ugyldig backup filtype: %1$s
 \nDen burde ende med .proto.gz eller .json.</string>
-    <string name="edge_nav">Edge</string>
+    <string name="edge_nav">Kant</string>
     <string name="kindlish_nav">Kindle-basert</string>
     <string name="l_nav">L-formet</string>
     <string name="requires_app_restart">Krever omstart for å tre i kraft</string>
@@ -421,7 +421,7 @@
     <string name="cover_saved">Omslag lagret</string>
     <string name="chapter_not_found">Fant ikke kapittelet</string>
     <string name="cancel_all_for_series">Avbryt alle for denne serien</string>
-    <string name="about_dont_kill_my_app">Noen tilvirkere har ytterligere programbegrensninger som dreper bakgrunnstjenester. Denne nettsiden har mer info om hvordan det kan fikses.</string>
+    <string name="about_dont_kill_my_app">Noen produsenter har ytterligere appbegrensninger som dreper bakgrunnstjenester. Denne nettsiden har mer info om hvordan det kan fikses.</string>
     <string name="restore_miui_warning">Sikkerhetskopier/gjenoppretting kan krangle hvis MIUI-optimalisering er avskrudd.</string>
     <string name="help_translate">Bistå oversettelsen</string>
     <string name="no_description">Ingen beskrivelse</string>
@@ -458,7 +458,7 @@
     <string name="move_dynamic_to_bottom">Flytt sammenfoldede dynamiske kategorier til bunnen</string>
     <string name="no_matches_for_filters">Ingen samsvar med dine nåværende filtre</string>
     <string name="show_all_categories">Vis alle kategorier</string>
-    <string name="updating_">Oppdaterer %1$s …</string>
+    <string name="updating_">Oppdaterer %1$s</string>
     <string name="what_should_update">Hva skal oppdateres\?</string>
     <string name="confirm_category_deletion">Slett kategori\?</string>
     <string name="category_is_empty">Kategorien er tom</string>
@@ -497,8 +497,8 @@
     <string name="source_not_installed">Kilde ikke installert</string>
     <string name="add_to_library">Legg til i bibliotek</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Det er ett manglende kapittel</item>
-        <item quantity="other">Det er %d manglende kapittel</item>
+        <item quantity="one">Hopper over 1 kapittel, enten så mangler kilden den eller så har den blitt filtrert ut</item>
+        <item quantity="other">Hopper over %d kapitler, enten så mangler kilden de eller så har de blitt filtrert ut</item>
     </plurals>
     <string name="landscape">Liggende</string>
     <string name="portrait">Stående</string>
@@ -552,7 +552,7 @@
     </plurals>
     <string name="pad_cutout_areas">Legg til luft rundt utklippsområder</string>
     <string name="confirm_category_deletion_message">Manga i denne kategorien vil bli flyttet inn i den forvalgte kategorien.</string>
-    <string name="categories_in_global_update">Alle kategorier i fullstendig oppdatering</string>
+    <string name="categories_in_global_update">Alle kategorier i global oppdatering</string>
     <string name="series_opens_new_chapters">Seriesnarveier åpner nye kapitler</string>
     <string name="by_default_side_nav_info">Som forvalg brukes sidenavigasjon for noen telefoner og små nettbrett i vannrett modus, og vises alltid på større nettbrett</string>
     <string name="side_nav_icon_alignment">Plassering av ikon i sidenavigasjon</string>
@@ -882,7 +882,7 @@
     <string name="hide_unread_badges">Skjul ulestmarkering</string>
     <string name="uniform_grid_covers">Enhetlige rutenettsomslag</string>
     <string name="hide_start_reading_button">Skjul «Begynn å lese»-knapp</string>
-    <string name="search_globally">Søk etter «%1$s» i alt</string>
+    <string name="search_globally">Søk etter «%1$s» globalt</string>
     <string name="category_hopper_long_press">Langtrykkshandling for kategorihopper</string>
     <string name="not_logged_into_">Ikke innlogget i %1$s</string>
     <string name="teal_ocean">Grønnblått hav</string>
@@ -926,4 +926,20 @@
     <string name="show_in_sources_and_extensions">Vis i kilder og utvidelseslister</string>
     <string name="ext_installer_shizuku_stopped">Shizuku kjører ikke</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installer og start Shizuku for å bruke det som utvidelsesinstallatør.</string>
+    <string name="classic_blue">Klassisk blå</string>
+    <string name="save_chapters_as_cbz">Lagre kapitler som CBZ</string>
+    <string name="every_3_days">Hver 3. dag</string>
+    <string name="publishing_finished">Ferdig publisert</string>
+    <string name="cancelled">Kansellert</string>
+    <string name="on_hiatus">På pause</string>
+    <string name="tracking_info">Enveissynkronisering for å oppdatere kapittelfremdrift i sporingstjenester. Sett opp sporing for individuelle mangaer med sporingsknappen på sidene til mangaene.</string>
+    <string name="enhanced_services">Forbedrede tjenester</string>
+    <string name="enhanced_tracking_info">Tjenester som gir forbedrede funksjoner for spesifikke ressurser. Det holdes automatisk øye med manga når den legges til i biblioteket ditt.</string>
+    <string name="download_queue_size_warning">Advarsel: store bulknedlastinger kan føre til at kilder blir tregere og/eller blokkerer Tachiyomi</string>
+    <string name="use_shizuku_to_install">Bruk Shizuku for å installere utvidelser</string>
+    <string name="use_shizuku_summary">Lar utvidelser installeres uten manuell bekreftelse og aktiverer automatiske oppdateringer for Android 12 enheter</string>
+    <string name="update_tracking_scoring_type">Oppdater %1$s sin poengtype</string>
+    <string name="scoring_type_updated">Poengtype oppdatert</string>
+    <string name="could_not_update_scoring_">Kunne ikke oppdatere poengtype: %1$s</string>
+    <string name="lime_time">Lime tid</string>
 </resources>

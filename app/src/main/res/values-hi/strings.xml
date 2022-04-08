@@ -501,4 +501,38 @@
     <string name="all_chapters_read">सरे अध्याय पढ़े जा चुके हैं</string>
     <string name="download_queue_size_warning">चेतावनी: बड़े बल्क डाउनलोड के कारण स्रोत धीमे हो सकते हैं और/या टैचियोमी को अवरुद्ध कर सकते हैं</string>
     <string name="every_3_days">हर 3 दिन</string>
+    <string name="by_source_order">स्त्रोत के क्रम के अनुसार</string>
+    <string name="category">श्रेणी</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">अध्याय %1$d</item>
+        <item quantity="other"/>
+    </plurals>
+    <plurals name="pages_left">
+        <item quantity="one">%1$d पृष्ठ बाकि</item>
+        <item quantity="other">%1$d पृष्ठ बाकि</item>
+    </plurals>
+    <string name="chapters_removed">अध्याय हटा दिया गया है।</string>
+    <string name="removed_bookmark">बुकमार्क हटा दिया गया है</string>
+    <string name="remove_all_downloads">क्या सभी डौन्लोडस को हटाना है\?</string>
+    <string name="no_chapters_to_delete">नष्ट करने के लिए कोई अध्याय नहीं है</string>
+    <string name="scanlators">स्कैनलेटर्स</string>
+    <string name="adding_category_to_queue">%1$s को अद्यतन कतार में जोड़ा जा रहा है</string>
+    <string name="_already_in_queue">%1$s अद्यतन कतार में मौजूद है</string>
+    <string name="create_new_category">नई श्रेड़ी का निर्माण करें</string>
+    <string name="new_category">नई श्रेणी</string>
+    <string name="category_is_empty">श्रेणी खाली है</string>
+    <string name="first_category">पहली श्रेणी</string>
+    <string name="confirm_category_deletion">क्या श्रेणी को नष्ट करना है\?</string>
+    <plurals name="remove_n_chapters">
+        <item quantity="one">%1$d डाउनलोड अध्याय को निकालें\?</item>
+        <item quantity="other">%1$d डाउनलोड अध्यायों को निकालें\?</item>
+    </plurals>
+    <string name="marked_as_read">पठित जैसा चिह्नित</string>
+    <string name="marked_as_unread">अपठित जैसा चिह्नित</string>
+    <string name="tracking_info">ट्रैकिंग सेवाओं में अध्याय की प्रगति को अद्यतन करने के लिए एकतरफा सिंक। अपने ट्रैकिंग बटन से व्यक्तिगत मंगा प्रविष्टियों के लिए ट्रैकिंग सेट अप करें।</string>
+    <string name="publishing_finished">प्रकाशन समाप्त</string>
+    <string name="cancelled">रद्द किया गया</string>
+    <string name="on_hiatus">अंतराल पर है</string>
+    <string name="enhanced_services">उन्नत सेवाएं</string>
+    <string name="enhanced_tracking_info">ऐसी सेवाएँ जो विशिष्ट स्रोतों के लिए उन्नत सुविधाएँ प्रदान करती हैं। आपकी पुस्तकालय में जोड़े जाने पर पुस्तकें स्वचालित रूप से ट्रैक की जाती हैं।</string>
 </resources>

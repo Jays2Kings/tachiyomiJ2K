@@ -932,4 +932,10 @@
     <string name="save_chapters_as_cbz">Αποθήκευση κεφαλαίων ως CBZ</string>
     <string name="classic_blue">Κλασικό Μπλε</string>
     <string name="lime_time">Lime Time</string>
+    <string name="enhanced_services">Βελτιωμένες υπηρεσίες</string>
+    <string name="publishing_finished">Η έκδοσή ολοκληρώθηκε</string>
+    <string name="cancelled">Ακυρώθηκε</string>
+    <string name="on_hiatus">Σε αναστολή</string>
+    <string name="tracking_info">Μονόδρομος συγχρονισμός για ενημέρωση των υπηρεσιών παρακολούθησης προόδου κεφαλαίων. Ρυθμίστε την παρακολούθηση για μεμονωμένες καταχωρήσεις manga από το κουμπί παρακολούθησης τους.</string>
+    <string name="enhanced_tracking_info">Υπηρεσίες που παρέχουν βελτιωμένες δυνατότητες για συγκεκριμένες πηγές. Τα manga παρακολουθούνται αυτόματα όταν προστίθεται στη βιβλιοθήκη σας.</string>
 </resources>

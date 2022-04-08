@@ -19,7 +19,7 @@
     <string name="select_all">Alles selecteren</string>
     <string name="mark_as_read">Als gelezen markeren</string>
     <string name="mark_previous_as_read">Markeer vorige hoofdstukken als gelezen</string>
-    <string name="download">Downloaden</string>
+    <string name="download">Download</string>
     <string name="delete">Verwijderen</string>
     <string name="edit">Bewerken</string>
     <string name="add">Toevoegen</string>
@@ -29,7 +29,7 @@
     <string name="stop">Stop</string>
     <string name="pause">Pauzeer</string>
     <string name="close">Sluiten</string>
-    <string name="download_queue">Downloads</string>
+    <string name="download_queue">Downloadwachtrij</string>
     <string name="retry">Opnieuw proberen</string>
     <string name="remove">Verwijderen</string>
     <string name="resume">Hervatten</string>
@@ -213,7 +213,7 @@
     <string name="decode_image_error">De afbeelding kon niet worden geladen</string>
     <string name="failed_to_update_cover">Updaten van omslag mislukt</string>
     <string name="searching_for_updates">Zoeken naar updates…</string>
-    <string name="download_error">Fout bij het downloaden</string>
+    <string name="download_error">Downloadfout</string>
     <string name="bookmarked">Met bladwijzer</string>
     <string name="successfully_logged_in">Login geslaagd</string>
     <string name="licensed">Gelicenseerd</string>
@@ -467,7 +467,7 @@
     <string name="nothing_is_downloading">Er wordt momenteel niets gedownload</string>
     <string name="remove_downloads">Downloads verwijderen</string>
     <string name="remove_download">Download verwijderen</string>
-    <string name="start_downloading_now">Begin nu met downloaden</string>
+    <string name="start_downloading_now">Begin downloaden nu</string>
     <string name="not_downloaded">Niet gedownload</string>
     <string name="downloading_">Downloaden: %1$s</string>
     <string name="username_must_not_be_blank">Gebruikersnaam of wachtwoord mag niet leeg zijn</string>
@@ -733,9 +733,9 @@
     <string name="set_first_page_as_cover">Eerste pagina als omslag instellen</string>
     <string name="show_title_first">Eerst titel weergeven</string>
     <string name="show_reset_history_button">\"Geschiedenis vergeten\"-knop laten zien</string>
-    <string name="show_download_button">Downloadknop laten zien</string>
+    <string name="show_download_button">Downloadknop tonen</string>
     <string name="unread_or_downloaded">Ongelezen of gedownload</string>
-    <string name="only_downloaded">Alleen gedownload</string>
+    <string name="only_downloaded">Alleen gedownloade</string>
     <string name="only_unread">Alleen ongelezen</string>
     <string name="press_and_hold_to_also_reset">Ingedrukt houden kan ook de hoofdstukgeschiedenis vergeten</string>
     <string name="grouped">Gegroepeerd</string>
@@ -929,4 +929,16 @@
     <string name="use_shizuku_to_install">Gebruik Shizuku om extensies te installeren</string>
     <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
     <string name="every_3_days">Iedere 3 dagen</string>
+    <string name="classic_blue">Klassiek Blauw</string>
+    <string name="lime_time">Limoen Groen</string>
+    <string name="save_chapters_as_cbz">Sla hoofdstukken op als CBZ</string>
+    <string name="publishing_finished">Uitgave voltooid</string>
+    <string name="cancelled">Geannuleerd</string>
+    <string name="on_hiatus">Gepauzeerd</string>
+    <string name="tracking_info">Eenzijdige synchronisatie om voortang van hoofdstukken bij te werken bij trackingdiensten. Stel tracking in bij individuele manga via de \"Tracking\"-knop.</string>
+    <string name="enhanced_services">Verbeterde diensten</string>
+    <string name="enhanced_tracking_info">Diensten die uitgebreidere functionaliteit bieden voor bepaalde bronnen. Het tracken van manga gebeurt automatisch wanneer je deze toevoegt aan je bibliotheek.</string>
+    <string name="update_tracking_scoring_type">%1$s\'s scoretype bijwerken</string>
+    <string name="scoring_type_updated">Scoringstype bijgewerkt</string>
+    <string name="could_not_update_scoring_">Kan scoretype niet bijwerken: %1$s</string>
 </resources>

@@ -116,7 +116,7 @@
     <string name="left_to_right_viewer">从左到右</string>
     <string name="right_to_left_viewer">从右到左</string>
     <string name="vertical_viewer">从上到下</string>
-    <string name="webtoon">Webtoon 模式</string>
+    <string name="webtoon">条漫</string>
     <string name="scale_type">显示模式</string>
     <string name="fit_screen">填充屏幕</string>
     <string name="stretch">拉伸</string>
@@ -235,7 +235,7 @@
     <string name="next_chapter_not_found">后面没有啦</string>
     <string name="decode_image_error">无法解码该图片</string>
     <string name="use_image_as_cover">要将此页设为封面吗？</string>
-    <string name="current_chapter">当前:</string>
+    <string name="current_chapter">本章：</string>
     <string name="finished_chapter">已读完:</string>
     <string name="next_title">下一章:</string>
     <string name="previous_title">上一章:</string>
@@ -289,7 +289,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d 个扩展插件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">减少色彩带，但会降低性能</string>
+    <string name="reduces_banding_impacts_performance">减少色带，但会降低性能</string>
     <string name="skip_filtered_chapters">跳过已筛选章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已被禁用</string>
@@ -565,7 +565,7 @@
     <string name="clean_up_downloaded_chapters">清除已下载章节</string>
     <string name="delete_unused_chapters">删除不存在、部分下载和已读过章节目录</string>
     <string name="data_management">数据管理</string>
-    <string name="not_logged_into_">尚未登陆 %1$s</string>
+    <string name="not_logged_into_">尚未登录 %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="other">缓存已清除，%d 的文件已被删除</item>
     </plurals>
@@ -881,7 +881,7 @@
     <string name="default_behavior">默认行为</string>
     <string name="use_side_navigation">使用侧导航</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">跳过 %d 个章节，要么是缺少来源，要么是被过滤掉了</item>
+        <item quantity="other">跳过 %d 个章节，这可能是因为图源没有这些章节，或者你把它们过滤掉了</item>
     </plurals>
     <string name="helpful_translation_links">有帮助的翻译链接</string>
     <string name="help_translate">协助翻译</string>
@@ -909,4 +909,13 @@
     <string name="every_3_days">每 3 天</string>
     <string name="download_queue_size_warning">警告：批量下载可能会导致图源变慢和/或图源封锁 Tachiyomi</string>
     <string name="save_chapters_as_cbz">将章节保存为 CBZ 文件</string>
+    <string name="update_tracking_scoring_type">更新 %1$s 的评分类型</string>
+    <string name="scoring_type_updated">已更新评分类型</string>
+    <string name="could_not_update_scoring_">无法更新评分类型：%1$s</string>
+    <string name="publishing_finished">发布完成</string>
+    <string name="cancelled">已取消</string>
+    <string name="on_hiatus">中断</string>
+    <string name="tracking_info">将章节进度单向同步到追踪服务。点击「追踪」按钮以设置漫画的追踪源。</string>
+    <string name="enhanced_services">增强服务</string>
+    <string name="enhanced_tracking_info">为特定图源提供增强功能的服务。漫画在添加到书架时会被自动追踪。</string>
 </resources>

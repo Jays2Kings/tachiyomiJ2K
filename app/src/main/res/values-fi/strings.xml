@@ -129,7 +129,7 @@
     <string name="trust">Luota</string>
     <string name="untrusted">Luottamaton</string>
     <string name="uninstall">Poista asennus</string>
-    <string name="untrusted_extension">Luottamattomat laajennukset</string>
+    <string name="untrusted_extension">Luottamattomat laajennokset</string>
     <string name="untrusted_extension_message">Tämä laajennus on allekirjoitettu luottamattomalla sertifikaatilla ja sitä ei ole aktivoitu.
 \n
 \nHaitallinen laajennus voisi lukea mahdolliset kirjautumistiedot Tachiyomista tai suorittaa luvatonta koodia.
@@ -302,8 +302,8 @@
     <string name="obsolete">Vanhentunut</string>
     <string name="obsolete_extension_message">Tämä laajennus ei ole enää saatavilla.</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Laajennuspäivitys saatavilla</item>
-        <item quantity="other">%d laajennuspäivitystä saatavilla</item>
+        <item quantity="one">Laajennospäivitys saatavilla</item>
+        <item quantity="other">%d laajennospäivitystä saatavilla</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Vähentää juovia, mutta vaikuttaa suorituskykyyn</string>
     <string name="skip_filtered_chapters">Ohita suodatetut luvut</string>
@@ -593,7 +593,7 @@
     <string name="_must_be_enabled_first">%1$s on otettava käyttöön ensin</string>
     <string name="app_info">Sovelluksen tiedot</string>
     <string name="filter_languages">Suodata kieliä</string>
-    <string name="extension_updates">Laajennuspäivitykset</string>
+    <string name="extension_updates">Laajennospäivitykset</string>
     <string name="source_hidden">Lähde piilotettu</string>
     <string name="all_sources">Kaikki lähteet</string>
     <string name="search_extensions">Etsi laajennuksia…</string>
@@ -825,4 +825,19 @@
     <string name="log_out_from_">Kirjaa ulos kohteesta %1$s\?</string>
     <string name="include_">Sisällytä: %s</string>
     <string name="channel_errors">Virheet</string>
+    <string name="not_bookmarked">Ei kirjanmerkeissä</string>
+    <string name="by_source_order">Lähteen järjestyksen mukaan</string>
+    <string name="notification_size_warning">Laajat päivitykset voivat aiheuttaa suurempaa akun kulutusta, sekä lähteiden päivitysten hidastumista</string>
+    <string name="download_queue_size_warning">Varoitus: massalataukset voivat johtaa siihen, että lähteet muuttuvat hitaammiksi käyttää ja/tai ne estävät Tachiyomin käytön</string>
+    <string name="affects_library_grid">Vaikuttaa kirjaston kansiin ruudukossa</string>
+    <string name="could_not_install_update">Päivitystä ei voitu asentaa</string>
+    <string name="update_completed">Päivitys asennettu</string>
+    <string name="restrictions_">Rajoitukset: %1$s</string>
+    <string name="show_outline_around_covers">Näytä kansikuvien reunus</string>
+    <string name="scanlators">Scanlaattorit</string>
+    <string name="show_categories_while_filtering">Näytä tyhjät kategoriat suodatettaessa</string>
+    <string name="no_matches_for_filters_short">Ei osumia suodattimillesi</string>
+    <string name="getting_started_guide">Aloitusopas</string>
+    <string name="open_random_series">Avaa satunnainen sarja</string>
+    <string name="tracking_info">Yksisuuntainen synkronointi lukujen seurantapalveluiden päivittämiseksi. Määritä yksittäisten mangamerkintöjen seuranta seurantapainikkeesta.</string>
 </resources>

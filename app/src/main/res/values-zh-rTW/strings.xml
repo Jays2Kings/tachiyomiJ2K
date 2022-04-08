@@ -167,7 +167,7 @@
     <string name="left_to_right_viewer">由左至右</string>
     <string name="right_to_left_viewer">由右至左</string>
     <string name="vertical_viewer">由上至下</string>
-    <string name="webtoon">Webtoon 式</string>
+    <string name="webtoon">條漫</string>
     <string name="scale_type">縮放模式</string>
     <string name="fit_screen">符合螢幕</string>
     <string name="stretch">延展</string>
@@ -254,7 +254,7 @@
 \n惡意的擴充套件可能存取任何儲存於 Tachiyomi 中的登錄憑證，或執行任意的程式碼。
 \n
 \n信任這個憑證，即表示你願意承擔上述風險。</string>
-    <string name="last_read_chapter">最後閱讀的章節</string>
+    <string name="last_read_chapter">最後閱畢的章節</string>
     <string name="max_auto_backups">最大備份保留數</string>
     <string name="clear_database_confirmation">不在書櫃中的漫畫閱讀進度將被清除，你確定嗎？</string>
     <string name="refresh_tracking_metadata">更新閱讀歷程</string>
@@ -292,7 +292,7 @@
         <item quantity="other">有 %1$d 項更新失敗</item>
     </plurals>
     <string name="no_results_found">找不到結果</string>
-    <string name="local_source_help_guide">本機來源入門教學</string>
+    <string name="local_source_help_guide">本機來源入門指南</string>
     <string name="check_site_in_web">在 WebView 中檢查網站</string>
     <string name="obsolete">過舊</string>
     <string name="obsolete_extension_message">這個擴充套件已無法使用。</string>
@@ -557,4 +557,33 @@
     <string name="next">下一頁</string>
     <string name="every_3_days">每 3 日</string>
     <string name="download_queue_size_warning">警告：大量批次下載可能壅塞來源並 (或) 使其封鎖 Tachiyomi</string>
+    <string name="confirm_category_deletion_message">在這個分類中的漫畫會被移動至默認分類。</string>
+    <string name="manage_category">管理分類</string>
+    <plurals name="remove_n_chapters">
+        <item quantity="other">移除 %1$d 個已下載的章節？</item>
+    </plurals>
+    <string name="already_in_category">漫畫原本已在該分類中</string>
+    <string name="recents">最新</string>
+    <string name="updates_and_history">更新與閱讀記錄</string>
+    <string name="newly_added">最新入櫃</string>
+    <string name="added_">於 %1$s 加入</string>
+    <string name="search_manually">手動搜尋</string>
+    <string name="show_categories_while_filtering">篩選時顯示空白分類</string>
+    <string name="no_matches_for_filters_short">沒有符合條件的結果</string>
+    <string name="search_">搜尋 %1$s</string>
+    <string name="add_edit_categories">建立/修改分類</string>
+    <string name="jump_to_category">跳至分類</string>
+    <string name="search_globally">全域搜尋「%1$s」</string>
+    <string name="category_is_empty">分類為空</string>
+    <string name="fetched_">於 %1$s 擷取</string>
+    <string name="grouped">分組</string>
+    <string name="about_this_">關於此%1$s</string>
+    <string name="reset_chapter_history">重設章節閱讀記錄</string>
+    <string name="search_suggestions">搜尋建議</string>
+    <string name="publishing_finished">出版完畢</string>
+    <string name="cancelled">已取消</string>
+    <string name="on_hiatus">休刊中</string>
+    <string name="tracking_info">將章節進度單向同步至閱讀歷程平台，請逕行前往個別作品的「歷程」專區以設置。</string>
+    <string name="enhanced_services">增強服務</string>
+    <string name="enhanced_tracking_info">為特定來源提供增強功能的服務。當漫畫被加入書櫃時，將自動登錄閱讀歷程。</string>
 </resources>
