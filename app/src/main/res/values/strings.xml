@@ -492,6 +492,7 @@
         <item quantity="other">Skipping %d chapters, either the source is missing them or they have been filtered out</item>
     </plurals>
 
+
     <!-- Manga details -->
     <string name="about_this_">About this %1$s</string>
     <string name="start_reading">Start reading</string>
@@ -791,9 +792,11 @@
     <string name="clear_cookies">Clear cookies</string>
     <string name="cookies_cleared">Cookies cleared</string>
     <string name="clear_database">Clear database</string>
+    <string name="clear_database_source_item_count">%1$d non-library manga in database</string>
     <string name="clear_database_summary">Delete manga and chapters that are not in your library</string>
     <string name="clear_database_confirmation">Are you sure? Read chapters and progress of non-library manga will be lost</string>
     <string name="clear_database_completed">Entries deleted</string>
+    <string name="database_clean">Database clean</string>
     <string name="refresh_library_metadata">Refresh library metadata</string>
     <string name="updates_covers_genres_desc">Updates covers, genres, description and manga status information</string>
     <string name="refresh_tracking_metadata">Refresh tracking metadata</string>

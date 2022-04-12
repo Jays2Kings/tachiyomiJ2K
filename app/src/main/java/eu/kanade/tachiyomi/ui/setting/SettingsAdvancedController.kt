@@ -31,6 +31,7 @@ import eu.kanade.tachiyomi.network.PREF_DOH_GOOGLE
 import eu.kanade.tachiyomi.network.PREF_DOH_QUAD9
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
+import eu.kanade.tachiyomi.ui.setting.database.ClearDatabaseController
 import eu.kanade.tachiyomi.util.CrashLogUtil
 import eu.kanade.tachiyomi.util.system.disableItems
 import eu.kanade.tachiyomi.util.system.isPackageInstalled
@@ -39,6 +40,7 @@ import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.openInBrowser
+import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -214,12 +216,7 @@ class SettingsAdvancedController : SettingsController() {
                 key = "clear_database"
                 titleRes = R.string.clear_database
                 summaryRes = R.string.clear_database_summary
-
-                onClick {
-                    val ctrl = ClearDatabaseDialogController()
-                    ctrl.targetController = this@SettingsAdvancedController
-                    ctrl.showDialog(router)
-                }
+                onClick { router.pushController(ClearDatabaseController().withFadeTransaction()) }
             }
         }
 
@@ -408,24 +405,6 @@ class SettingsAdvancedController : SettingsController() {
                         resources?.getString(R.string.used_, chapterCache.readableSize)
                 }
             )
-    }
-
-    class ClearDatabaseDialogController : DialogController() {
-        override fun onCreateDialog(savedViewState: Bundle?): Dialog {
-            return activity!!.materialAlertDialog()
-                .setMessage(R.string.clear_database_confirmation)
-                .setPositiveButton(android.R.string.ok) { _, _ ->
-                    (targetController as? SettingsAdvancedController)?.clearDatabase()
-                }
-                .setNegativeButton(android.R.string.cancel, null)
-                .create()
-        }
-    }
-
-    private fun clearDatabase() {
-        db.deleteMangasNotInLibrary().executeAsBlocking()
-        db.deleteHistoryNoLastRead().executeAsBlocking()
-        activity?.toast(R.string.clear_database_completed)
     }
 
     private companion object {
