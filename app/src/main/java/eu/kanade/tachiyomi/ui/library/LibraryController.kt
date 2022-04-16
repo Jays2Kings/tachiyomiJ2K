@@ -1750,62 +1750,22 @@ class LibraryController(
                 presenter.downloadUnread(selectedMangas.toList())
             }
             R.id.action_mark_as_read -> {
-                val markRead = true
-                val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
-                destroyActionModeIfNeeded()
-                snack?.dismiss()
-                snack = view?.snack(R.string.marked_as_read, Snackbar.LENGTH_INDEFINITE) {
-                    anchorView = anchorView()
-                    view.elevation = 15f.dpToPx
-                    var undoing = false
-                    setAction(R.string.undo) {
-                        presenter.undoMarkReadStatus(mapMangaChapters)
-                        undoing = true
+                activity!!.materialAlertDialog()
+                    .setMessage(R.string.mark_all_chapters_as_read)
+                    .setPositiveButton(R.string.mark_as_read) { _, _ ->
+                        markReadStatus(R.string.marked_as_read, true)
                     }
-                    addCallback(
-                        object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                            override fun onDismissed(
-                                transientBottomBar: Snackbar?,
-                                event: Int
-                            ) {
-                                super.onDismissed(transientBottomBar, event)
-                                if (!undoing) presenter.confirmMarkReadStatus(
-                                    mapMangaChapters, markRead
-                                )
-                            }
-                        }
-                    )
-                }
-                (activity as? MainActivity)?.setUndoSnackBar(snack)
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .show()
             }
             R.id.action_mark_as_unread -> {
-                val markRead = false
-                val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
-                destroyActionModeIfNeeded()
-                snack?.dismiss()
-                snack = view?.snack(R.string.marked_as_unread, Snackbar.LENGTH_INDEFINITE) {
-                    anchorView = anchorView()
-                    view.elevation = 15f.dpToPx
-                    var undoing = false
-                    setAction(R.string.undo) {
-                        presenter.undoMarkReadStatus(mapMangaChapters)
-                        undoing = true
+                activity!!.materialAlertDialog()
+                    .setMessage(R.string.mark_all_chapters_as_unread)
+                    .setPositiveButton(R.string.mark_as_unread) { _, _ ->
+                        markReadStatus(R.string.marked_as_unread, false)
                     }
-                    addCallback(
-                        object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                            override fun onDismissed(
-                                transientBottomBar: Snackbar?,
-                                event: Int
-                            ) {
-                                super.onDismissed(transientBottomBar, event)
-                                if (!undoing) presenter.confirmMarkReadStatus(
-                                    mapMangaChapters, markRead
-                                )
-                            }
-                        }
-                    )
-                }
-                (activity as? MainActivity)?.setUndoSnackBar(snack)
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .show()
             }
             R.id.action_migrate -> {
                 val skipPre = preferences.skipPreMigration().get()
@@ -1819,6 +1779,35 @@ class LibraryController(
             else -> return false
         }
         return true
+    }
+
+    private fun markReadStatus(resource: Int, markRead: Boolean) {
+        val mapMangaChapters = presenter.markReadStatus(selectedMangas.toList(), markRead)
+        destroyActionModeIfNeeded()
+        snack?.dismiss()
+        snack = view?.snack(resource, Snackbar.LENGTH_INDEFINITE) {
+            anchorView = anchorView()
+            view.elevation = 15f.dpToPx
+            var undoing = false
+            setAction(R.string.undo) {
+                presenter.undoMarkReadStatus(mapMangaChapters)
+                undoing = true
+            }
+            addCallback(
+                object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
+                    override fun onDismissed(
+                        transientBottomBar: Snackbar?,
+                        event: Int
+                    ) {
+                        super.onDismissed(transientBottomBar, event)
+                        if (!undoing) presenter.confirmMarkReadStatus(
+                            mapMangaChapters, markRead
+                        )
+                    }
+                }
+            )
+        }
+        (activity as? MainActivity)?.setUndoSnackBar(snack)
     }
 
     private fun shareManga() {
