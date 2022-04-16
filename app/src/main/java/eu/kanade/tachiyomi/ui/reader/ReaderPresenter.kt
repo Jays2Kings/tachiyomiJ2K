@@ -35,6 +35,7 @@ import eu.kanade.tachiyomi.ui.reader.settings.ReadingModeType
 import eu.kanade.tachiyomi.util.chapter.ChapterFilter
 import eu.kanade.tachiyomi.util.chapter.ChapterSort
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithSource
+import eu.kanade.tachiyomi.util.lang.getUrlWithoutDomain
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
@@ -563,6 +564,18 @@ class ReaderPresenter(
      */
     fun getCurrentChapter(): ReaderChapter? {
         return viewerChaptersRelay.value?.currChapter
+    }
+
+    fun getChapterUrl(): String? {
+        val source = getSource() ?: return null
+        val chapterUrl = getCurrentChapter()?.chapter?.url?.getUrlWithoutDomain()
+
+        return if (chapterUrl.isNullOrBlank()) try {
+            val manga = manga ?: return null
+            source.mangaDetailsRequest(manga).url.toString()
+        } catch (e: Exception) {
+            null
+        } else source.baseUrl + chapterUrl
     }
 
     fun getSource() = sourceManager.getOrStub(manga!!.source) as? HttpSource

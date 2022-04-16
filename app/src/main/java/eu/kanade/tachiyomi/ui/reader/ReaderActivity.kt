@@ -51,7 +51,6 @@ import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.data.preference.toggle
 import eu.kanade.tachiyomi.databinding.ReaderActivityBinding
 import eu.kanade.tachiyomi.source.model.Page
-import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.MaterialMenuSheet
 import eu.kanade.tachiyomi.ui.base.activity.BaseRxActivity
 import eu.kanade.tachiyomi.ui.main.MainActivity
@@ -74,7 +73,6 @@ import eu.kanade.tachiyomi.ui.reader.viewer.pager.R2LPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.VerticalPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.webtoon.WebtoonViewer
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
-import eu.kanade.tachiyomi.util.lang.getUrlWithoutDomain
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.GLUtil
 import eu.kanade.tachiyomi.util.system.contextCompatColor
@@ -1380,17 +1378,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
 
     override fun onProvideAssistContent(outContent: AssistContent) {
         super.onProvideAssistContent(outContent)
-        val source = presenter.source as? HttpSource ?: return
-        val chapterUrl = presenter.getCurrentChapter()?.chapter?.url?.getUrlWithoutDomain()
-        val url = if (chapterUrl.isNullOrBlank()) try {
-            val manga = presenter.manga ?: return
-            source.mangaDetailsRequest(manga).url.toString()
-        } catch (e: Exception) {
-            toast(e.message)
-            return
-        } else source.baseUrl + chapterUrl
-
-        outContent.webUri = Uri.parse(url)
+        val chapterUrl = presenter.getChapterUrl() ?: return
+        outContent.webUri = Uri.parse(chapterUrl)
     }
 
     /**
@@ -1530,18 +1519,12 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
 
     private fun openMangaInBrowser() {
         val source = presenter.getSource() ?: return
-        val chapterUrl = presenter.getCurrentChapter()?.chapter?.url?.getUrlWithoutDomain()
-        val url = if (chapterUrl.isNullOrBlank()) try {
-            source.mangaDetailsRequest(presenter.manga!!).url.toString()
-        } catch (e: Exception) {
-            toast(e.message)
-            return
-        } else source.baseUrl + chapterUrl
+        val chapterUrl = presenter.getChapterUrl() ?: return
 
         val intent = WebViewActivity.newIntent(
             applicationContext,
             source.id,
-            url,
+            chapterUrl,
             presenter.manga!!.title
         )
         startActivity(intent)
