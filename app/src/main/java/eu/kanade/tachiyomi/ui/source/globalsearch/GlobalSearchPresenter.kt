@@ -12,7 +12,6 @@ import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.MangasPage
 import eu.kanade.tachiyomi.source.model.SManga
-import eu.kanade.tachiyomi.source.model.SManga.Companion.setTitleNormalized
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourcePresenter
 import rx.Observable
@@ -299,7 +298,6 @@ open class GlobalSearchPresenter(
      * @return a manga from the database.
      */
     protected open fun networkToLocalManga(sManga: SManga, sourceId: Long): Manga {
-        sManga.setTitleNormalized()
         var localManga = db.getManga(sManga.url, sourceId).executeAsBlocking()
         if (localManga == null) {
             val newManga = Manga.create(sManga.url, sManga.title, sourceId)
@@ -307,9 +305,6 @@ open class GlobalSearchPresenter(
             val result = db.insertManga(newManga).executeAsBlocking()
             newManga.id = result.insertedId()
             localManga = newManga
-        } else if (localManga.title.isBlank() || localManga.title.contains("’")) {
-            localManga.title = sManga.title
-            db.insertManga(localManga).executeAsBlocking()
         }
         return localManga
     }

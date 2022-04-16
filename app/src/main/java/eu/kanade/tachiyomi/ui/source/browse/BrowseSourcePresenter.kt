@@ -13,7 +13,6 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Filter
 import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.model.SManga
-import eu.kanade.tachiyomi.source.model.SManga.Companion.setTitleNormalized
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
 import eu.kanade.tachiyomi.ui.source.filter.CheckboxItem
 import eu.kanade.tachiyomi.ui.source.filter.CheckboxSectionItem
@@ -255,7 +254,6 @@ open class BrowseSourcePresenter(
      * @return a manga from the database.
      */
     private fun networkToLocalManga(sManga: SManga, sourceId: Long): Manga {
-        sManga.setTitleNormalized()
         var localManga = db.getManga(sManga.url, sourceId).executeAsBlocking()
         if (localManga == null) {
             val newManga = Manga.create(sManga.url, sManga.title, sourceId)
@@ -263,7 +261,7 @@ open class BrowseSourcePresenter(
             val result = db.insertManga(newManga).executeAsBlocking()
             newManga.id = result.insertedId()
             localManga = newManga
-        } else if (localManga.title.isBlank() || localManga.title.contains("’")) {
+        } else if (localManga.title.isBlank()) {
             localManga.title = sManga.title
             db.insertManga(localManga).executeAsBlocking()
         }
