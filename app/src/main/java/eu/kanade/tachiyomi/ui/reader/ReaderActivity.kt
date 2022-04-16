@@ -1380,13 +1380,16 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
 
     override fun onProvideAssistContent(outContent: AssistContent) {
         super.onProvideAssistContent(outContent)
-        val manga = presenter.manga ?: return
         val source = presenter.source as? HttpSource ?: return
-        val url = try {
+        val chapterUrl = presenter.getCurrentChapter()?.chapter?.url?.getUrlWithoutDomain()
+        val url = if (chapterUrl.isNullOrBlank()) try {
+            val manga = presenter.manga ?: return
             source.mangaDetailsRequest(manga).url.toString()
         } catch (e: Exception) {
+            toast(e.message)
             return
-        }
+        } else source.baseUrl + chapterUrl
+
         outContent.webUri = Uri.parse(url)
     }
 
