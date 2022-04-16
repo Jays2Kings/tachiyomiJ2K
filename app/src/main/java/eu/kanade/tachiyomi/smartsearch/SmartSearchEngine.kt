@@ -4,7 +4,6 @@ import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.source.model.SManga
-import eu.kanade.tachiyomi.source.model.SManga.Companion.setTitleNormalized
 import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.await
 import info.debatty.java.stringsimilarity.NormalizedLevenshtein
@@ -66,14 +65,11 @@ class SmartSearchEngine(
                     .await(Schedulers.io())
 
             if (searchResults.mangas.size == 1) {
-                val onlyManga = searchResults.mangas.first()
-                onlyManga.setTitleNormalized()
-                return@supervisorScope listOf(SearchEntry(onlyManga, 0.0))
+                return@supervisorScope listOf(SearchEntry(searchResults.mangas.first(), 0.0))
             }
 
             searchResults.mangas.map {
-                it.setTitleNormalized()
-                val normalizedDistance = normalizedLevenshtein.similarity(titleNormalized, it.title)
+                val normalizedDistance = normalizedLevenshtein.similarity(titleNormalized, it.title.toNormalized())
                 SearchEntry(it, normalizedDistance)
             }.filter { (_, normalizedDistance) ->
                 normalizedDistance >= MIN_NORMAL_ELIGIBLE_THRESHOLD

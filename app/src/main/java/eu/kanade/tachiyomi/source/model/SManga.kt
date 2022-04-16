@@ -77,10 +77,6 @@ interface SManga : Serializable {
         fun create(): SManga {
             return MangaImpl()
         }
-
-        fun SManga.setTitleNormalized() {
-            this.title = this.title.replace("’", "'")
-        }
     }
 }
 
