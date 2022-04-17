@@ -7,13 +7,33 @@
     android:layout_gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/upper_text"
+    <LinearLayout
+        android:id="@+id/upper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:textAppearance="?attr/textAppearanceSubtitle1"
-        tools:text="Top" />
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/upper_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_file_download_24dp"
+            app:tint="?attr/colorError"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/upper_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            tools:text="Top" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/warning"
@@ -40,11 +60,32 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/lower_text"
+    <LinearLayout
+        android:id="@+id/lower"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceSubtitle1"
-        tools:text="Bottom" />
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/lower_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_file_download_24dp"
+            app:tint="?attr/colorError"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/lower_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            tools:text="Bottom" />
+
+    </LinearLayout>
 
 </LinearLayout>

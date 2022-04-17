@@ -1,8 +1,11 @@
 package eu.kanade.tachiyomi.ui.reader.viewer
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.annotation.ColorInt
 import androidx.core.text.bold
@@ -13,6 +16,7 @@ import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.databinding.ReaderTransitionViewBinding
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
+import eu.kanade.tachiyomi.util.system.contextCompatDrawable
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
@@ -51,15 +55,25 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
             val isPrevDownloaded = downloadManager.isChapterDownloaded(prevChapter.chapter, manga)
             val isCurrentDownloaded =
                 downloadManager.isChapterDownloaded(transition.from.chapter, manga)
-            val downloadedPrevText = if (isPrevDownloaded) " (Downloaded)" else ""
-            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
+
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.previous_title)) }
-                append("\n${prevChapter.chapter.name}$downloadedPrevText")
+                append("\n${prevChapter.chapter.name}")
             }
             binding.lowerText.text = buildSpannedString {
                 bold { append(context.getString(R.string.current_chapter)) }
-                append("\n${transition.from.chapter.name}$downloadedCurrentText")
+                append("\n${transition.from.chapter.name}")
+            }
+
+            val downloadIcon = context.contextCompatDrawable(R.drawable.ic_file_download_24dp)?.mutate()
+            val cloudIcon = context.contextCompatDrawable(R.drawable.ic_cloud_24dp)?.mutate()
+            binding.lowerImage.visibility = View.INVISIBLE
+
+            if (!isCurrentDownloaded && isPrevDownloaded) binding.upperImage.setDrawable(downloadIcon)
+            else if (isCurrentDownloaded && !isPrevDownloaded) binding.upperImage.setDrawable(cloudIcon)
+            else if (!isCurrentDownloaded && !isPrevDownloaded) {
+                binding.lowerImage.visibility = View.GONE
+                binding.upperImage.visibility = View.GONE
             }
         } else {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_CENTER
@@ -83,20 +97,35 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
             val isCurrentDownloaded =
                 downloadManager.isChapterDownloaded(transition.from.chapter, manga)
             val isNextDownloaded = downloadManager.isChapterDownloaded(nextChapter.chapter, manga)
-            val downloadedCurrentText = if (isCurrentDownloaded) " (Downloaded)" else ""
-            val downloadedNextText = if (isNextDownloaded) " (Downloaded)" else ""
             binding.upperText.text = buildSpannedString {
                 bold { append(context.getString(R.string.finished_chapter)) }
-                append("\n${transition.from.chapter.name}$downloadedCurrentText")
+                append("\n${transition.from.chapter.name}")
             }
             binding.lowerText.text = buildSpannedString {
                 bold { append(context.getString(R.string.next_title)) }
-                append("\n${nextChapter.chapter.name}$downloadedNextText")
+                append("\n${nextChapter.chapter.name}")
+            }
+
+            val downloadIcon = context.contextCompatDrawable(R.drawable.ic_file_download_24dp)?.mutate()
+            val cloudIcon = context.contextCompatDrawable(R.drawable.ic_cloud_24dp)?.mutate()
+            binding.upperImage.visibility = View.INVISIBLE
+
+            if (!isCurrentDownloaded && isNextDownloaded) binding.lowerImage.setDrawable(downloadIcon)
+            else if (isCurrentDownloaded && !isNextDownloaded) binding.lowerImage.setDrawable(cloudIcon)
+            else if (!isCurrentDownloaded && !isNextDownloaded) {
+                binding.lowerImage.visibility = View.GONE
+                binding.upperImage.visibility = View.GONE
             }
         } else {
             binding.upperText.textAlignment = TEXT_ALIGNMENT_CENTER
             binding.upperText.text = context.getString(R.string.theres_no_next_chapter)
         }
+    }
+
+    private fun ImageView.setDrawable(drawable: Drawable?) {
+        setImageDrawable(drawable)
+        drawable?.setTint(binding.upperText.currentTextColor)
+        visibility = View.VISIBLE
     }
 
     fun setTextColors(@ColorInt color: Int) {
