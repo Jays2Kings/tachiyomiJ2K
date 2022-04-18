@@ -172,6 +172,7 @@ class ReaderPresenter(
             currentChapters.unref()
             saveChapterProgress(currentChapters.currChapter)
             saveChapterHistory(currentChapters.currChapter)
+            downloadNextChapters()
         }
     }
 
@@ -511,15 +512,13 @@ class ReaderPresenter(
      * Called from the activity to download the next chapters.
      */
     fun downloadNextChapters() {
-        val shouldDownload = preferences.downloadWhileReading()
+        if (!preferences.downloadWhileReading()) return
         val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
         val context = Injekt.get<Application>()
         if (!context.isConnectedToWifi() && preferences.autoDownloadOnlyOverWifi() ||
             manga?.favorite == false
         ) return
-        if (shouldDownload) {
-            downloadAutoNextChapters(chaptersNumberToDownload)
-        }
+        downloadAutoNextChapters(chaptersNumberToDownload)
     }
 
     private fun downloadAutoNextChapters(choice: Int) {

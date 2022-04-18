@@ -86,7 +86,7 @@ class SettingsDownloadController : SettingsController() {
                 noSelectionRes = R.string.never
                 defaultValue = emptyList<String>()
 
-                entriesRes = arrayOf(R.string.auto_download_while_reading, R.string.auto_download_new_chapters)
+                entriesRes = arrayOf(R.string.auto_download_after_exit_reader, R.string.auto_download_new_chapters)
                 entryValues = listOf(READING_DOWNLOAD, NEW_CHAPTERS)
             }
 

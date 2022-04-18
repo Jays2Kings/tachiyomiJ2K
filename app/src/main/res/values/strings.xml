@@ -936,7 +936,7 @@
     <string name="fourth_to_last">Fourth to last chapter</string>
     <string name="fifth_to_last">Fifth to last chapter</string>
     <string name="auto_download_from_library">Auto download unread chapters from library</string>
-    <string name="auto_download_while_reading">While reading</string>
+    <string name="auto_download_after_exit_reader">After exiting the reader</string>
     <string name="auto_download_new_chapters">New chapters</string>
     <string name="auto_download_restrictions">Auto download restrictions</string>
     <string name="only_auto_download_over_wifi">Only auto download over Wi-Fi</string>
