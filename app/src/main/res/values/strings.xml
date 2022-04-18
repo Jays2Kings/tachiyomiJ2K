@@ -588,6 +588,8 @@
     <string name="select_an_entry">Select an entry</string>
     <string name="source_unsupported">Source is not supported</string>
     <string name="no_match_found">No match found</string>
+    <string name="update_chapters_progress_with_tracker">Update chapters progress with tracker ?</string>
+    <string name="update_chapters_with_tracker">Update chapters with tracker</string>
     <string name="remove_tracking">Remove tracking from app</string>
     <string name="cannot_remove_tracking_while_offline">Tracker cannot be removed from %1$s while offline</string>
     <string name="remove_tracking_from_">Also remove from %1$s</string>

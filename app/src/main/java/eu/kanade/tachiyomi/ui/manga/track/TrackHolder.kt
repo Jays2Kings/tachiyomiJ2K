@@ -33,6 +33,7 @@ class TrackHolder(view: View, adapter: TrackAdapter) : BaseViewHolder(view) {
             listener.onTitleLongClick(bindingAdapterPosition)
             true
         }
+        binding.trackUpdateChapters.setOnClickListener { listener.onUpdateChaptersClick(bindingAdapterPosition) }
         binding.trackRemove.setOnClickListener { listener.onRemoveClick(bindingAdapterPosition) }
         binding.trackStatus.setOnClickListener { listener.onStatusClick(bindingAdapterPosition) }
         binding.trackChapters.setOnClickListener { listener.onChaptersClick(bindingAdapterPosition) }
