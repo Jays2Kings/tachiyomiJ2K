@@ -16,7 +16,6 @@ import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.updater.AppUpdateService
 import eu.kanade.tachiyomi.extension.ExtensionInstallService
 import eu.kanade.tachiyomi.source.SourceManager
@@ -24,16 +23,15 @@ import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.setting.AboutController
+import eu.kanade.tachiyomi.util.chapter.updateTrackChapterRead
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.notificationManager
-import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.File
-import kotlin.math.abs
 import eu.kanade.tachiyomi.BuildConfig.APPLICATION_ID as ID
 
 /**
@@ -216,7 +214,7 @@ class NotificationReceiver : BroadcastReceiver() {
             chapters = db.getChapters(mangaId).executeAsBlocking()
             val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
             if (oldLastChapter != newLastChapter) {
-                updateTrackChapterRead(db, oldLastChapter, newLastChapter, mangaId)
+                updateTrackChapterMarkedAsRead(db, oldLastChapter, newLastChapter, mangaId)
             }
         }
     }
@@ -225,38 +223,15 @@ class NotificationReceiver : BroadcastReceiver() {
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterRead(
-        db: DatabaseHelper,
-        oldLastChapter: Chapter?,
-        newLastChapter: Chapter?,
-        mangaId: Long?
+    private fun updateTrackChapterMarkedAsRead(
+        db: DatabaseHelper, oldLastChapter: Chapter?, newLastChapter: Chapter?, mangaId: Long?
     ) {
         val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
         val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
-        val trackManager = Injekt.get<TrackManager>()
-
         // We want these to execute even if the presenter is destroyed so launch on GlobalScope
         launchIO {
-            val trackList = db.getTracks(mangaId).executeAsBlocking()
-            trackList.map { track ->
-                val service = trackManager.getService(track.sync_id)
-                if (service != null && service.isLogged) {
-                    val shouldCustomCount = listOf(
-                        abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read
-                    ).all { it > 15 }
-                    val newCountChapter = if (shouldCustomCount) {
-                        (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
-                    } else newChapterRead
-                    try {
-                        track.last_chapter_read = newCountChapter
-                        service.update(track, true)
-                        db.insertTrack(track).executeAsBlocking()
-                    } catch (e: Exception) {
-                        Timber.e(e)
-                    }
-                }
-            }
+            updateTrackChapterRead(db, mangaId, oldChapterRead, newChapterRead)
         }
     }
 

@@ -1,5 +1,7 @@
 package eu.kanade.tachiyomi.util.chapter
 
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.bluelinelabs.conductor.Controller
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Chapter
@@ -70,33 +72,36 @@ fun Controller.updateTrackChapterMarkedAsRead(
     val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
     val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
-    val trackManager = Injekt.get<TrackManager>()
-
     // To avoid unnecessary calls if multiple marked as read for same manga
     if (mangaId == oldMangaId) job?.cancel() else oldMangaId = mangaId
 
     // We want these to execute even if the presenter is destroyed
-    job = launchIO {
+    job = (activity as AppCompatActivity).lifecycleScope.launchIO {
         delay(delay)
-        val trackList = db.getTracks(mangaId).executeAsBlocking()
-        trackList.map { track ->
-            val service = trackManager.getService(track.sync_id)
-            if (service != null && service.isLogged) {
-                val shouldCustomCount = listOf(
-                    abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read
-                ).all { it > 15 }
-                val newCountChapter = if (shouldCustomCount) {
-                    (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
-                } else newChapterRead
-                try {
-                    track.last_chapter_read = newCountChapter
-                    service.update(track, true)
-                    db.insertTrack(track).executeAsBlocking()
-                } catch (e: Exception) {
-                    Timber.e(e)
-                }
+        updateTrackChapterRead(db, mangaId, oldChapterRead, newChapterRead)
+        (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
+    }
+}
+
+suspend fun updateTrackChapterRead(db: DatabaseHelper, mangaId: Long?, oldChapterRead: Int, newChapterRead: Int) {
+    val trackManager = Injekt.get<TrackManager>()
+    val trackList = db.getTracks(mangaId).executeAsBlocking()
+    trackList.map { track ->
+        val service = trackManager.getService(track.sync_id)
+        if (service != null && service.isLogged) {
+            val shouldCustomCount = listOf(
+                abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read
+            ).all { it > 15 }
+            val newCountChapter = if (shouldCustomCount) {
+                (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+            } else newChapterRead
+            try {
+                track.last_chapter_read = newCountChapter
+                service.update(track, true)
+                db.insertTrack(track).executeAsBlocking()
+            } catch (e: Exception) {
+                Timber.e(e)
             }
         }
-        (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
     }
 }
