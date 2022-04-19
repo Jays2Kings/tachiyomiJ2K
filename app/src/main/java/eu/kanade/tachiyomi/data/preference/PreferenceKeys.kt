@@ -93,7 +93,9 @@ object PreferenceKeys {
 
     const val updateOnlyNonCompleted = "pref_update_only_non_completed_key"
 
-    const val autoUpdateSyncReadingAndToggleTrack = "auto_update_sync_reading_toggle_track"
+    const val autoUpdateTrack = "pref_auto_update_manga_sync_key"
+
+    const val trackMarkedAsRead = "track_marked_as_read"
 
     const val trackingsToAddOnline = "pref_tracking_for_online"
 

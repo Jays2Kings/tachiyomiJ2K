@@ -50,6 +50,7 @@ import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.recents.options.TabbedRecentsOptionsSheet
 import eu.kanade.tachiyomi.ui.source.browse.ProgressItem
+import eu.kanade.tachiyomi.util.chapter.updateTrackChapterMarkedAsRead
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getBottomGestureInsets
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -668,6 +669,8 @@ class RecentsController(bundle: Bundle? = null) :
     }
 
     override fun markAsRead(position: Int) {
+        val preferences = presenter.preferences
+        val db = presenter.db
         val item = adapter.getItem(position) as? RecentMangaItem ?: return
         val chapter = item.chapter
         val manga = item.mch.manga
@@ -675,6 +678,8 @@ class RecentsController(bundle: Bundle? = null) :
         val pagesLeft = chapter.pages_left
         lastChapterId = chapter.id
         val wasRead = chapter.read
+        val oldChapters = db.getChapters(manga).executeAsBlocking()
+        val oldLastChapter = oldChapters.filter { it.read }.minByOrNull { it.source_order }
         presenter.markChapterRead(chapter, !wasRead)
         snack = view?.snack(
             if (wasRead) R.string.marked_as_unread
@@ -691,11 +696,18 @@ class RecentsController(bundle: Bundle? = null) :
                 object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
                     override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
                         super.onDismissed(transientBottomBar, event)
-                        if (!undoing && presenter.preferences.removeAfterMarkedAsRead() &&
-                            !wasRead
-                        ) {
+                        if (!undoing && presenter.preferences.removeAfterMarkedAsRead() && !wasRead) {
                             lastChapterId = chapter.id
                             presenter.deleteChapter(chapter, manga)
+                        }
+                        if (preferences.trackMarkedAsRead()) {
+                            val newChapters = db.getChapters(manga).executeAsBlocking()
+                            val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
+                            if (oldLastChapter != newLastChapter) {
+                                updateTrackChapterMarkedAsRead(
+                                    db, preferences, oldLastChapter, newLastChapter, manga.id
+                                )
+                            }
                         }
                     }
                 }
