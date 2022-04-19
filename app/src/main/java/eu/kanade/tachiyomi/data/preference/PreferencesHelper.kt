@@ -451,6 +451,4 @@ class PreferencesHelper(val context: Context) {
     fun chaptersDescAsDefault() = flowPrefs.getBoolean(Keys.chaptersDescAsDefault, true)
 
     fun sortChapterByAscendingOrDescending() = prefs.getInt(Keys.defaultChapterSortByAscendingOrDescending, Manga.CHAPTER_SORT_DESC)
-
-    fun pausedTracking() = flowPrefs.getBoolean(Keys.pausedTracking, false)
 }

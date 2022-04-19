@@ -41,11 +41,6 @@ class SettingsTrackingController :
             titleRes = R.string.sync_chapters_marked_read
             defaultValue = false
         }
-        switchPreference {
-            key = Keys.pausedTracking
-            titleRes = R.string.paused_tracking
-            defaultValue = false
-        }
         preferenceCategory {
             titleRes = R.string.services
 
