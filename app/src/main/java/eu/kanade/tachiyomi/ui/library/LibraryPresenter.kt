@@ -1100,13 +1100,13 @@ class LibraryPresenter(
         mangaList: HashMap<Manga, List<Chapter>>,
         markRead: Boolean
     ) {
-        launchIO {
+        if (preferences.removeAfterMarkedAsRead() && markRead) {
             mangaList.forEach { (manga, oldChapters) ->
-                if (preferences.removeAfterMarkedAsRead() && markRead) {
-                    deleteChapters(manga, oldChapters)
-                }
+                deleteChapters(manga, oldChapters)
             }
-            getLibrary()
+            if (preferences.downloadBadge().get()) {
+                requestDownloadBadgesUpdate()
+            }
         }
     }
 
