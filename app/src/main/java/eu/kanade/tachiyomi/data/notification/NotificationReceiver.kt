@@ -195,7 +195,7 @@ class NotificationReceiver : BroadcastReceiver() {
     private fun markAsRead(chapterUrls: Array<String>, mangaId: Long) {
         val db: DatabaseHelper = Injekt.get()
         val preferences: PreferencesHelper = Injekt.get()
-        var chapters = db.getChapters(mangaId).executeAsBlocking()
+        val chapters = db.getChapters(mangaId).executeAsBlocking()
 
         chapterUrls.forEach {
             val chapter = db.getChapter(it, mangaId).executeAsBlocking() ?: return
@@ -208,15 +208,7 @@ class NotificationReceiver : BroadcastReceiver() {
                 downloadManager.deleteChapters(listOf(chapter), manga, source)
             }
         }
-
-        if (preferences.trackMarkedAsRead()) {
-            val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-            chapters = db.getChapters(mangaId).executeAsBlocking()
-            val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-            if (oldLastChapter != newLastChapter) {
-                updateTrackChapterMarkedAsRead(db, oldLastChapter, newLastChapter, mangaId)
-            }
-        }
+        updateTrackChapterMarkedAsRead(db, preferences, chapters, mangaId)
     }
 
     /**
@@ -224,14 +216,25 @@ class NotificationReceiver : BroadcastReceiver() {
      * will run in a background thread and errors are ignored.
      */
     private fun updateTrackChapterMarkedAsRead(
-        db: DatabaseHelper, oldLastChapter: Chapter?, newLastChapter: Chapter?, mangaId: Long?
+        db: DatabaseHelper,
+        preferences: PreferencesHelper,
+        oldChapters: MutableList<Chapter>,
+        mangaId: Long?
     ) {
-        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
-        val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
+        if (!preferences.trackMarkedAsRead()) return
 
-        // We want these to execute even if the presenter is destroyed so launch on GlobalScope
-        launchIO {
-            updateTrackChapterRead(db, mangaId, oldChapterRead, newChapterRead)
+        val oldLastChapter = oldChapters.filter { it.read }.minByOrNull { it.source_order }
+        val newChapters = db.getChapters(mangaId).executeAsBlocking()
+        val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
+
+        if (oldLastChapter != newLastChapter) {
+            val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+            val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
+
+            // We want these to execute even if the presenter is destroyed so launch on GlobalScope
+            launchIO {
+                updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead)
+            }
         }
     }
 
