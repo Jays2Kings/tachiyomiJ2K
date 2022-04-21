@@ -492,7 +492,6 @@
         <item quantity="other">Skipping %d chapters, either the source is missing them or they have been filtered out</item>
     </plurals>
 
-
     <!-- Manga details -->
     <string name="about_this_">About this %1$s</string>
     <string name="start_reading">Start reading</string>

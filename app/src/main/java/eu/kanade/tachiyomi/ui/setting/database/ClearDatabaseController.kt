@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.os.Bundle
 import android.view.*
 import androidx.core.view.*
+import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -17,9 +18,8 @@ import eu.kanade.tachiyomi.ui.base.controller.DialogController
 import eu.kanade.tachiyomi.ui.base.controller.FabController
 import eu.kanade.tachiyomi.ui.base.controller.NucleusController
 import eu.kanade.tachiyomi.util.system.toast
-import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsetsCompat
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
-import eu.kanade.tachiyomi.util.view.marginBottom
+import eu.kanade.tachiyomi.util.view.scrollViewWith
 
 class ClearDatabaseController :
     NucleusController<ClearDatabaseControllerBinding, ClearDatabasePresenter>(),
@@ -62,19 +62,15 @@ class ClearDatabaseController :
         adapter?.fastScroller = binding.fastScroller
         recycler = binding.recycler
         val fabBaseMarginBottom = binding.fab.marginBottom
-        binding.recycler.doOnApplyWindowInsetsCompat { v, insets, _ ->
 
-            binding.fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                bottomMargin = fabBaseMarginBottom + insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom
+        scrollViewWith(
+            recycler!!, true,
+            afterInsets = { insets ->
+                binding.fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                    bottomMargin = insets.getInsets(systemBars()).bottom + fabBaseMarginBottom
+                }
             }
-            v.post {
-                // offset the binding.recycler by the binding.fab's inset + some inset on top
-                v.updatePaddingRelative(
-                    bottom = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom + binding.fab.marginBottom +
-                        (binding.fab.height)
-                )
-            }
-        }
+        )
         binding.fab.setOnClickListener {
             if (adapter!!.selectedItemCount > 0) {
                 val ctrl = ClearDatabaseSourcesDialog()
@@ -121,7 +117,7 @@ class ClearDatabaseController :
             )
         }
 
-        menu?.forEach { menuItem -> menuItem.isVisible = size > 0 }
+        activity?.invalidateOptionsMenu()
     }
 
     override fun onItemClick(view: View?, position: Int): Boolean {
@@ -129,6 +125,12 @@ class ClearDatabaseController :
         adapter.toggleSelection(position)
         adapter.notifyItemChanged(position, Payload.SELECTION)
         return true
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        super.onPrepareOptionsMenu(menu)
+        val size = adapter?.itemCount ?: 0
+        menu.forEach { menuItem -> menuItem.isVisible = size > 0 }
     }
 
     fun setItems(items: List<ClearDatabaseSourceItem>) {
