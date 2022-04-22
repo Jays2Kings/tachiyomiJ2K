@@ -68,7 +68,7 @@
                 android:maxLines="1"
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
-                android:paddingEnd="78dp"
+                android:paddingEnd="44dp"
                 android:paddingBottom="16dp"
                 android:text="@string/title"
                 android:textSize="14sp"
@@ -77,21 +77,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Tracking name that is really long so i can see the padding in work like so here" />
-
-            <ImageView
-                android:id="@+id/track_update_chapters"
-                style="@style/Theme.Widget.CustomImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:padding="6dp"
-                android:contentDescription="@string/update_chapters_with_tracker"
-                android:src="@drawable/ic_cloud_download_24dp"
-                app:tint="@color/text_color_secondary"
-                android:tooltipText="@string/update_chapters_with_tracker"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/track_remove"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/track_remove"

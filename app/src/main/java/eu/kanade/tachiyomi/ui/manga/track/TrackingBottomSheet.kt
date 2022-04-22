@@ -410,19 +410,6 @@ class TrackingBottomSheet(private val controller: MangaDetailsController) :
             .show()
     }
 
-    override fun onUpdateChaptersClick(position: Int) {
-        val item = adapter?.getItem(position) ?: return
-        item.track ?: return
-
-        activity.materialAlertDialog()
-            .setMessage(R.string.update_chapters_progress_with_tracker)
-            .setPositiveButton(R.string.update) { _, _ ->
-                presenter.updateChaptersProgress(item.track.last_chapter_read)
-            }
-            .setNegativeButton(android.R.string.cancel, null)
-            .show()
-    }
-
     override fun onRemoveClick(position: Int) {
         val item = adapter?.getItem(position) ?: return
         if (item.track == null) return

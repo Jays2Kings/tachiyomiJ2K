@@ -944,23 +944,6 @@ class MangaDetailsPresenter(
         }
     }
 
-    fun updateChaptersProgress(lastChapterRead: Int) {
-        presenterScope.launchIO {
-            val (chaptersRead, chaptersUnread) = mutableListOf<ChapterItem>() to mutableListOf<ChapterItem>()
-            allChapters.forEach { chapterItem ->
-                if (chapterItem.chapter_number <= lastChapterRead && !chapterItem.read) {
-                    chapterItem.read = true
-                    chaptersRead.add(chapterItem)
-                } else if (chapterItem.chapter_number > lastChapterRead && chapterItem.read) {
-                    chapterItem.read = false
-                    chaptersUnread.add(chapterItem)
-                }
-            }
-            if (chaptersRead.isNotEmpty()) markChaptersRead(chaptersRead, true)
-            if (chaptersUnread.isNotEmpty()) markChaptersRead(chaptersUnread, false)
-        }
-    }
-
     fun removeTracker(trackItem: TrackItem, removeFromService: Boolean) {
         presenterScope.launch {
             withContext(Dispatchers.IO) {
