@@ -112,8 +112,7 @@ class ClearDatabaseController :
                 R.string.database_clean,
             )
         }
-
-        activity?.invalidateOptionsMenu()
+        menu?.forEach { menuItem -> menuItem.isVisible = size > 0 }
     }
 
     override fun onItemClick(view: View?, position: Int): Boolean {
