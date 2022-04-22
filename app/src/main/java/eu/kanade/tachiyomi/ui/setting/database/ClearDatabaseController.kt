@@ -7,7 +7,6 @@ import android.view.*
 import androidx.core.view.*
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.Payload
@@ -23,9 +22,9 @@ import eu.kanade.tachiyomi.util.view.scrollViewWith
 
 class ClearDatabaseController :
     NucleusController<ClearDatabaseControllerBinding, ClearDatabasePresenter>(),
-    FlexibleAdapter.OnItemClickListener {
+    FlexibleAdapter.OnItemClickListener,
+    FlexibleAdapter.OnUpdateListener {
 
-    private var recycler: RecyclerView? = null
     private var adapter: FlexibleAdapter<ClearDatabaseSourceItem>? = null
     private var menu: Menu? = null
 
@@ -50,7 +49,6 @@ class ClearDatabaseController :
         binding.recycler.layoutManager = LinearLayoutManager(view.context)
         binding.recycler.setHasFixedSize(true)
         adapter?.fastScroller = binding.fastScroller
-        recycler = binding.recycler
         val fabBaseMarginBottom = binding.fab.marginBottom
 
         scrollViewWith(
@@ -105,7 +103,7 @@ class ClearDatabaseController :
         return super.onOptionsItemSelected(item)
     }
 
-    fun onUpdateEmptyView(size: Int) {
+    override fun onUpdateEmptyView(size: Int) {
         if (size > 0) {
             binding.emptyView.hide()
         } else {
