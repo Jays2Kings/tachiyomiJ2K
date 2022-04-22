@@ -9,35 +9,25 @@ import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.Payload
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.ClearDatabaseControllerBinding
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
-import eu.kanade.tachiyomi.ui.base.controller.FabController
 import eu.kanade.tachiyomi.ui.base.controller.NucleusController
 import eu.kanade.tachiyomi.util.system.toast
+import eu.kanade.tachiyomi.util.view.activityBinding
+import eu.kanade.tachiyomi.util.view.fullAppBarHeight
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 
 class ClearDatabaseController :
     NucleusController<ClearDatabaseControllerBinding, ClearDatabasePresenter>(),
-    FlexibleAdapter.OnItemClickListener,
-    FlexibleAdapter.OnUpdateListener,
-    FabController {
+    FlexibleAdapter.OnItemClickListener {
 
     private var recycler: RecyclerView? = null
     private var adapter: FlexibleAdapter<ClearDatabaseSourceItem>? = null
-
     private var menu: Menu? = null
-
-    private var actionFab: ExtendedFloatingActionButton? = null
-    private var actionFabScrollListener: RecyclerView.OnScrollListener? = null
-
-    init {
-        setHasOptionsMenu(true)
-    }
 
     override fun createBinding(inflater: LayoutInflater): ClearDatabaseControllerBinding {
         return ClearDatabaseControllerBinding.inflate(inflater)
@@ -64,11 +54,19 @@ class ClearDatabaseController :
         val fabBaseMarginBottom = binding.fab.marginBottom
 
         scrollViewWith(
-            recycler!!, true,
+            binding.recycler,
+            true,
             afterInsets = { insets ->
                 binding.fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                     bottomMargin = insets.getInsets(systemBars()).bottom + fabBaseMarginBottom
                 }
+                binding.recycler.updatePadding(
+                    bottom = binding.fab.height + binding.fab.marginBottom
+                )
+                binding.emptyView.updatePadding(
+                    top = (fullAppBarHeight ?: 0) + (activityBinding?.appBar?.paddingTop ?: 0),
+                    bottom = insets.getInsets(systemBars()).bottom
+                )
             }
         )
         binding.fab.setOnClickListener {
@@ -107,7 +105,7 @@ class ClearDatabaseController :
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onUpdateEmptyView(size: Int) {
+    fun onUpdateEmptyView(size: Int) {
         if (size > 0) {
             binding.emptyView.hide()
         } else {
