@@ -14,7 +14,6 @@ import kotlinx.coroutines.delay
 import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import kotlin.math.abs
 
 /**
  * Helper method for syncing a remote track with the local chapters, and back
@@ -59,7 +58,6 @@ private var trackingJobs = HashMap<Long, Pair<Job?, Int?>>()
 fun updateTrackChapterMarkedAsRead(
     db: DatabaseHelper,
     preferences: PreferencesHelper,
-    oldLastChapter: Chapter?,
     newLastChapter: Chapter?,
     mangaId: Long?,
     fetchTracks: (suspend () -> Unit)? = null,
@@ -68,53 +66,44 @@ fun updateTrackChapterMarkedAsRead(
     if (!preferences.trackMarkedAsRead()) return
     mangaId ?: return
 
-    val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
     val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
     // To avoid unnecessary calls if multiple marked as read for same manga
     if (trackingJobs[mangaId]?.second ?: 0 < newChapterRead) {
         trackingJobs[mangaId]?.first?.cancel()
-    }
 
-    // We want these to execute even if the presenter is destroyed
-    trackingJobs[mangaId] = launchIO {
-        delay(delay)
-        updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead)
-        fetchTracks?.invoke()
-        trackingJobs.remove(mangaId)
-    } to newChapterRead
+        // We want these to execute even if the presenter is destroyed
+        trackingJobs[mangaId] = launchIO {
+            delay(delay)
+            updateTrackChapterRead(db, preferences, mangaId, newChapterRead)
+            fetchTracks?.invoke()
+            trackingJobs.remove(mangaId)
+        } to newChapterRead
+    }
 }
 
 suspend fun updateTrackChapterRead(
     db: DatabaseHelper,
     preferences: PreferencesHelper,
     mangaId: Long?,
-    oldChapterRead: Int,
     newChapterRead: Int,
     retryWhenOnline: Boolean = false
 ) {
-    if (newChapterRead <= oldChapterRead) return
     val trackManager = Injekt.get<TrackManager>()
     val trackList = db.getTracks(mangaId).executeAsBlocking()
     trackList.map { track ->
         val service = trackManager.getService(track.sync_id)
-        if (service != null && service.isLogged) {
-            val shouldCustomCount = listOf(
-                abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read
-            ).all { it > 15 }
-            val newCountChapter = if (shouldCustomCount) {
-                (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
-            } else newChapterRead
+        if (service != null && service.isLogged && newChapterRead > track.last_chapter_read) {
             if (retryWhenOnline && !preferences.context.isOnline()) {
                 val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                 val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
                 trackings.remove(currentTracking)
-                trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
+                trackings.add("$mangaId:${track.sync_id}:$newChapterRead")
                 preferences.trackingsToAddOnline().set(trackings)
                 DelayedTrackingUpdateJob.setupTask(preferences.context)
             } else if (preferences.context.isOnline()) {
                 try {
-                    track.last_chapter_read = newCountChapter
+                    track.last_chapter_read = newChapterRead
                     service.update(track, true)
                     db.insertTrack(track).executeAsBlocking()
                 } catch (e: Exception) {

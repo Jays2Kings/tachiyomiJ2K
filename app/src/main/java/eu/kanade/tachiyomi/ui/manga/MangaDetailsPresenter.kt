@@ -478,7 +478,6 @@ class MangaDetailsPresenter(
         pagesLeft: Int? = null
     ) {
         presenterScope.launch(Dispatchers.IO) {
-            val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
             selectedChapters.forEach {
                 it.read = read
                 if (!read) {
@@ -491,15 +490,11 @@ class MangaDetailsPresenter(
                 deleteChapters(selectedChapters, false)
             }
             getChapters()
-            if (preferences.trackMarkedAsRead()) {
-                val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-                if (oldLastChapter != newLastChapter) {
-                    updateTrackChapterMarkedAsRead(
-                        db, preferences, oldLastChapter, newLastChapter, manga.id, ::fetchTracks, delay = 3000
-                    )
-                }
-            }
             withContext(Dispatchers.Main) { controller?.updateChapters(chapters) }
+            if (read && deleteNow) {
+                val latestReadChapter = selectedChapters.maxByOrNull { it.chapter_number.toInt() }?.chapter
+                updateTrackChapterMarkedAsRead(db, preferences, latestReadChapter, manga.id, ::fetchTracks, 3000)
+            }
         }
     }
 

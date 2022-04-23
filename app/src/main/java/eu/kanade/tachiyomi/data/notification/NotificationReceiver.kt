@@ -194,9 +194,7 @@ class NotificationReceiver : BroadcastReceiver() {
     private fun markAsRead(chapterUrls: Array<String>, mangaId: Long) {
         val db: DatabaseHelper = Injekt.get()
         val preferences: PreferencesHelper = Injekt.get()
-        val oldChapters = db.getChapters(mangaId).executeAsBlocking()
-
-        chapterUrls.forEach {
+        val chapters = chapterUrls.map {
             val chapter = db.getChapter(it, mangaId).executeAsBlocking() ?: return
             chapter.read = true
             db.updateChapterProgress(chapter).executeAsBlocking()
@@ -206,11 +204,10 @@ class NotificationReceiver : BroadcastReceiver() {
                 val source = sourceManager.get(manga.source) ?: return
                 downloadManager.deleteChapters(listOf(chapter), manga, source)
             }
+            return@map chapter
         }
-        val oldLastChapter = oldChapters.filter { it.read }.minByOrNull { it.source_order }
-        val newChapters = db.getChapters(mangaId).executeAsBlocking()
-        val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
-        updateTrackChapterMarkedAsRead(db, preferences, oldLastChapter, newLastChapter, mangaId)
+        val newLastChapter = chapters.maxByOrNull { it.chapter_number.toInt() }
+        updateTrackChapterMarkedAsRead(db, preferences, newLastChapter, mangaId)
     }
 
     /** Method called when user wants to stop a restore

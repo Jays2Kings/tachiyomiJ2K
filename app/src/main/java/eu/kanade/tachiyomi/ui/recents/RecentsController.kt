@@ -678,8 +678,6 @@ class RecentsController(bundle: Bundle? = null) :
         val pagesLeft = chapter.pages_left
         lastChapterId = chapter.id
         val wasRead = chapter.read
-        val oldChapters = db.getChapters(manga).executeAsBlocking()
-        val oldLastChapter = oldChapters.filter { it.read }.minByOrNull { it.source_order }
         presenter.markChapterRead(chapter, !wasRead)
         snack = view?.snack(
             if (wasRead) R.string.marked_as_unread
@@ -696,22 +694,16 @@ class RecentsController(bundle: Bundle? = null) :
                 object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
                     override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
                         super.onDismissed(transientBottomBar, event)
-                        if (!undoing && presenter.preferences.removeAfterMarkedAsRead() && !wasRead) {
-                            lastChapterId = chapter.id
-                            presenter.deleteChapter(chapter, manga)
-                        }
-                        if (preferences.trackMarkedAsRead()) {
-                            val newChapters = db.getChapters(manga).executeAsBlocking()
-                            val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
-                            if (oldLastChapter != newLastChapter) {
-                                updateTrackChapterMarkedAsRead(
-                                    db, preferences, oldLastChapter, newLastChapter, manga.id,
-                                    {
-                                        (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
-                                    },
-                                    delay = 3000
-                                )
+                        if (!undoing && !wasRead) {
+                            if (preferences.removeAfterMarkedAsRead()) {
+                                lastChapterId = chapter.id
+                                presenter.deleteChapter(chapter, manga)
                             }
+                            updateTrackChapterMarkedAsRead(
+                                db, preferences, chapter, manga.id,
+                                { (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks() },
+                                3000
+                            )
                         }
                     }
                 }

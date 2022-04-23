@@ -23,7 +23,6 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
-import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -489,11 +488,8 @@ class ReaderPresenter(
                     (hasExtraPage && selectedChapter.pages?.lastIndex?.minus(1) == page.index)
                 )
         ) {
-            val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
-            val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
-
             selectedChapter.chapter.read = true
-            updateTrackChapterAfterReading(oldLastChapter, selectedChapter)
+            updateTrackChapterAfterReading(selectedChapter)
             deleteChapterIfNeeded(selectedChapter)
         }
 
@@ -876,17 +872,12 @@ class ReaderPresenter(
      * Starts the service that updates the last chapter read in sync services. This operation
      * will run in a background thread and errors are ignored.
      */
-    private fun updateTrackChapterAfterReading(oldLastChapter: ChapterItem?, newLastChapter: ReaderChapter) {
+    private fun updateTrackChapterAfterReading(readerChapter: ReaderChapter) {
         if (!preferences.autoUpdateTrack()) return
-        val manga = manga ?: return
 
-        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
-        val newChapterRead = newLastChapter.chapter.chapter_number.toInt()
-
-        if (newChapterRead > oldChapterRead) {
-            launchIO {
-                updateTrackChapterRead(db, preferences, manga.id, oldChapterRead, newChapterRead, true)
-            }
+        launchIO {
+            val newChapterRead = readerChapter.chapter.chapter_number.toInt()
+            updateTrackChapterRead(db, preferences, manga?.id, newChapterRead, true)
         }
     }
 
