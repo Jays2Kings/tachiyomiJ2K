@@ -495,7 +495,7 @@ class MangaDetailsPresenter(
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                 if (oldLastChapter != newLastChapter) {
                     updateTrackChapterMarkedAsRead(
-                        db, preferences, oldLastChapter, newLastChapter, manga.id, ::fetchTracks
+                        db, preferences, oldLastChapter, newLastChapter, manga.id, ::fetchTracks, delay = 3000
                     )
                 }
             }

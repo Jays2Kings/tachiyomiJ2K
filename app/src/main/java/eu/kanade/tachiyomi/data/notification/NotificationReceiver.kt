@@ -23,10 +23,9 @@ import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.setting.AboutController
-import eu.kanade.tachiyomi.util.chapter.updateTrackChapterRead
+import eu.kanade.tachiyomi.util.chapter.updateTrackChapterMarkedAsRead
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.storage.getUriCompat
-import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.notificationManager
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
@@ -195,7 +194,7 @@ class NotificationReceiver : BroadcastReceiver() {
     private fun markAsRead(chapterUrls: Array<String>, mangaId: Long) {
         val db: DatabaseHelper = Injekt.get()
         val preferences: PreferencesHelper = Injekt.get()
-        val chapters = db.getChapters(mangaId).executeAsBlocking()
+        val oldChapters = db.getChapters(mangaId).executeAsBlocking()
 
         chapterUrls.forEach {
             val chapter = db.getChapter(it, mangaId).executeAsBlocking() ?: return
@@ -208,34 +207,10 @@ class NotificationReceiver : BroadcastReceiver() {
                 downloadManager.deleteChapters(listOf(chapter), manga, source)
             }
         }
-        updateTrackChapterMarkedAsRead(db, preferences, chapters, mangaId)
-    }
-
-    /**
-     * Starts the service that updates the last chapter read in sync services. This operation
-     * will run in a background thread and errors are ignored.
-     */
-    private fun updateTrackChapterMarkedAsRead(
-        db: DatabaseHelper,
-        preferences: PreferencesHelper,
-        oldChapters: MutableList<Chapter>,
-        mangaId: Long?
-    ) {
-        if (!preferences.trackMarkedAsRead()) return
-
         val oldLastChapter = oldChapters.filter { it.read }.minByOrNull { it.source_order }
         val newChapters = db.getChapters(mangaId).executeAsBlocking()
         val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
-
-        if (oldLastChapter != newLastChapter) {
-            val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
-            val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
-
-            // We want these to execute even if the presenter is destroyed so launch on GlobalScope
-            launchIO {
-                updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead)
-            }
-        }
+        updateTrackChapterMarkedAsRead(db, preferences, oldLastChapter, newLastChapter, mangaId)
     }
 
     /** Method called when user wants to stop a restore

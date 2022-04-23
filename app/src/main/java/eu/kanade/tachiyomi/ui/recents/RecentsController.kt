@@ -708,7 +708,8 @@ class RecentsController(bundle: Bundle? = null) :
                                     db, preferences, oldLastChapter, newLastChapter, manga.id,
                                     {
                                         (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
-                                    }
+                                    },
+                                    delay = 3000
                                 )
                             }
                         }

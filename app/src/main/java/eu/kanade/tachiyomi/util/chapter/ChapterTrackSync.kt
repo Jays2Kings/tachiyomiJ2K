@@ -63,8 +63,7 @@ fun updateTrackChapterMarkedAsRead(
     newLastChapter: Chapter?,
     mangaId: Long?,
     fetchTracks: (suspend () -> Unit)? = null,
-    retryWhenOnline: Boolean = false,
-    delay: Long = 3000
+    delay: Long = 0
 ) {
     if (!preferences.trackMarkedAsRead()) return
     mangaId ?: return
@@ -80,7 +79,7 @@ fun updateTrackChapterMarkedAsRead(
     // We want these to execute even if the presenter is destroyed
     trackingJobs[mangaId] = launchIO {
         delay(delay)
-        updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead, retryWhenOnline)
+        updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead)
         fetchTracks?.invoke()
         trackingJobs.remove(mangaId)
     } to newChapterRead
@@ -94,6 +93,7 @@ suspend fun updateTrackChapterRead(
     newChapterRead: Int,
     retryWhenOnline: Boolean = false
 ) {
+    if (newChapterRead <= oldChapterRead) return
     val trackManager = Injekt.get<TrackManager>()
     val trackList = db.getTracks(mangaId).executeAsBlocking()
     trackList.map { track ->

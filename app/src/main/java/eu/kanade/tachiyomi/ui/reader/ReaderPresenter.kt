@@ -885,7 +885,7 @@ class ReaderPresenter(
 
         if (newChapterRead > oldChapterRead) {
             launchIO {
-                updateTrackChapterRead(db, preferences, manga.id, oldChapterRead, newChapterRead)
+                updateTrackChapterRead(db, preferences, manga.id, oldChapterRead, newChapterRead, true)
             }
         }
     }
