@@ -1,8 +1,5 @@
 package eu.kanade.tachiyomi.util.chapter
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import com.bluelinelabs.conductor.Controller
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.Track
@@ -10,7 +7,6 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackService
-import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchIO
 import kotlinx.coroutines.Job
@@ -54,35 +50,40 @@ fun syncChaptersWithTrackServiceTwoWay(db: DatabaseHelper, chapters: List<Chapte
     }
 }
 
-private var job: Job? = null
-private var oldMangaId: Long? = null
+private var trackingJobs = HashMap<Long, Pair<Job?, Int?>>()
 
 /**
  * Starts the service that updates the last chapter read in sync services. This operation
  * will run in a background thread and errors are ignored.
  */
-fun Controller.updateTrackChapterMarkedAsRead(
+fun updateTrackChapterMarkedAsRead(
     db: DatabaseHelper,
     preferences: PreferencesHelper,
     oldLastChapter: Chapter?,
     newLastChapter: Chapter?,
     mangaId: Long?,
+    fetchTracks: (suspend () -> Unit)? = null,
+    retryWhenOnline: Boolean = false,
     delay: Long = 3000
 ) {
     if (!preferences.trackMarkedAsRead()) return
+    mangaId ?: return
 
     val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
     val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
 
     // To avoid unnecessary calls if multiple marked as read for same manga
-    if (mangaId == oldMangaId) job?.cancel() else oldMangaId = mangaId
+    if (trackingJobs[mangaId]?.second ?: 0 < newChapterRead) {
+        trackingJobs[mangaId]?.first?.cancel()
+    }
 
     // We want these to execute even if the presenter is destroyed
-    job = (activity as AppCompatActivity).lifecycleScope.launchIO {
+    trackingJobs[mangaId] = launchIO {
         delay(delay)
-        updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead)
-        (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
-    }
+        updateTrackChapterRead(db, preferences, mangaId, oldChapterRead, newChapterRead, retryWhenOnline)
+        fetchTracks?.invoke()
+        trackingJobs.remove(mangaId)
+    } to newChapterRead
 }
 
 suspend fun updateTrackChapterRead(
@@ -90,7 +91,8 @@ suspend fun updateTrackChapterRead(
     preferences: PreferencesHelper,
     mangaId: Long?,
     oldChapterRead: Int,
-    newChapterRead: Int
+    newChapterRead: Int,
+    retryWhenOnline: Boolean = false
 ) {
     val trackManager = Injekt.get<TrackManager>()
     val trackList = db.getTracks(mangaId).executeAsBlocking()
@@ -103,14 +105,14 @@ suspend fun updateTrackChapterRead(
             val newCountChapter = if (shouldCustomCount) {
                 (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
             } else newChapterRead
-            if (!preferences.context.isOnline()) {
+            if (retryWhenOnline && !preferences.context.isOnline()) {
                 val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
                 val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
                 trackings.remove(currentTracking)
                 trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
                 preferences.trackingsToAddOnline().set(trackings)
                 DelayedTrackingUpdateJob.setupTask(preferences.context)
-            } else {
+            } else if (preferences.context.isOnline()) {
                 try {
                     track.last_chapter_read = newCountChapter
                     service.update(track, true)

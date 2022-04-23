@@ -33,12 +33,12 @@ class SettingsTrackingController :
 
         switchPreference {
             key = Keys.autoUpdateTrack
-            titleRes = R.string.sync_chapters_after_reading
+            titleRes = R.string.update_tracking_after_reading
             defaultValue = true
         }
         switchPreference {
             key = Keys.trackMarkedAsRead
-            titleRes = R.string.sync_chapters_marked_read
+            titleRes = R.string.update_tracking_marked_read
             defaultValue = false
         }
         preferenceCategory {

@@ -63,7 +63,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -495,8 +494,8 @@ class MangaDetailsPresenter(
             if (preferences.trackMarkedAsRead()) {
                 val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
                 if (oldLastChapter != newLastChapter) {
-                    controller?.updateTrackChapterMarkedAsRead(
-                        db, preferences, oldLastChapter, newLastChapter, manga.id
+                    updateTrackChapterMarkedAsRead(
+                        db, preferences, oldLastChapter, newLastChapter, manga.id, ::fetchTracks
                     )
                 }
             }

@@ -705,7 +705,10 @@ class RecentsController(bundle: Bundle? = null) :
                             val newLastChapter = newChapters.filter { it.read }.minByOrNull { it.source_order }
                             if (oldLastChapter != newLastChapter) {
                                 updateTrackChapterMarkedAsRead(
-                                    db, preferences, oldLastChapter, newLastChapter, manga.id
+                                    db, preferences, oldLastChapter, newLastChapter, manga.id,
+                                    {
+                                        (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
+                                    }
                                 )
                             }
                         }

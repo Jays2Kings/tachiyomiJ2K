@@ -562,8 +562,8 @@
     <string name="tracking_info">One-way sync to update the chapter progress in tracking services. Set up tracking for individual manga entries from their tracking button.</string>
     <string name="enhanced_services">Enhanced services</string>
     <string name="enhanced_tracking_info">Services that provide enhanced features for specific sources. Manga are automatically tracked when added to your library.</string>
-    <string name="sync_chapters_after_reading">Sync chapters after reading</string>
-    <string name="sync_chapters_marked_read">Sync chapters when marked as read</string>
+    <string name="update_tracking_after_reading">Update tracking after reading</string>
+    <string name="update_tracking_marked_read">Update tracking when marked as read</string>
     <string name="track_when_adding_to_library">Track when adding to library</string>
     <string name="only_applies_silent_trackers">Only applies to silent trackers, such as Komga</string>
     <string name="reading">Reading</string>
