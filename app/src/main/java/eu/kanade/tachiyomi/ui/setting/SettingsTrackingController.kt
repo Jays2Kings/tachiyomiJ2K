@@ -31,10 +31,20 @@ class SettingsTrackingController :
     override fun setupPreferenceScreen(screen: PreferenceScreen) = screen.apply {
         titleRes = R.string.tracking
 
+        multiSelectListPreferenceMat(activity) {
+            key = Keys.autoUpdateSyncReadingAndToggleTrack
+            titleRes = R.string.sync_chapters
+            noSelectionRes = R.string.never
+
+            entriesRes = arrayOf(R.string.sync_chapters_after_reading, R.string.sync_chapters_after_toggle, R.string.sync_chapters_after_library, R.string.sync_chapters_after_notification)
+            entryValues = listOf("reading", "toggle", "library", "notification")
+
+            defaultValue = listOf("reading")
+        }
         switchPreference {
-            key = Keys.autoUpdateTrack
-            titleRes = R.string.sync_chapters_after_reading
-            defaultValue = true
+            key = Keys.pausedTracking
+            titleRes = R.string.paused_tracking
+            defaultValue = false
         }
         preferenceCategory {
             titleRes = R.string.services

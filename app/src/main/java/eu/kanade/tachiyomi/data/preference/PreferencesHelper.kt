@@ -192,7 +192,9 @@ class PreferencesHelper(val context: Context) {
 
     fun updateOnlyNonCompleted() = prefs.getBoolean(Keys.updateOnlyNonCompleted, false)
 
-    fun autoUpdateTrack() = prefs.getBoolean(Keys.autoUpdateTrack, true)
+    private fun autoUpdateReadingAndToggleTrack() = flowPrefs.getStringSet(Keys.autoUpdateSyncReadingAndToggleTrack, setOf("reading"))
+
+    fun autoUpdateTrack(trackValue: String) = trackValue in autoUpdateReadingAndToggleTrack().get() && !pausedTracking().get()
 
     fun trackingsToAddOnline() = flowPrefs.getStringSet(Keys.trackingsToAddOnline, emptySet())
 
@@ -449,4 +451,6 @@ class PreferencesHelper(val context: Context) {
     fun chaptersDescAsDefault() = flowPrefs.getBoolean(Keys.chaptersDescAsDefault, true)
 
     fun sortChapterByAscendingOrDescending() = prefs.getInt(Keys.defaultChapterSortByAscendingOrDescending, Manga.CHAPTER_SORT_DESC)
+
+    fun pausedTracking() = flowPrefs.getBoolean(Keys.pausedTracking, false)
 }

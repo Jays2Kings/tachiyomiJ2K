@@ -93,7 +93,7 @@ object PreferenceKeys {
 
     const val updateOnlyNonCompleted = "pref_update_only_non_completed_key"
 
-    const val autoUpdateTrack = "pref_auto_update_manga_sync_key"
+    const val autoUpdateSyncReadingAndToggleTrack = "auto_update_sync_reading_toggle_track"
 
     const val trackingsToAddOnline = "pref_tracking_for_online"
 
@@ -260,6 +260,8 @@ object PreferenceKeys {
     const val chaptersDescAsDefault = "chapters_desc_as_default"
 
     const val saveChaptersAsCBZ = "save_chapter_as_cbz"
+
+    const val pausedTracking = "paused_tracking"
 
     fun trackUsername(syncId: Int) = "pref_mangasync_username_$syncId"
 

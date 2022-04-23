@@ -16,6 +16,8 @@ import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.download.DownloadService
 import eu.kanade.tachiyomi.data.library.LibraryUpdateService
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
+import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.updater.AppUpdateService
 import eu.kanade.tachiyomi.extension.ExtensionInstallService
 import eu.kanade.tachiyomi.source.SourceManager
@@ -25,11 +27,18 @@ import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.setting.AboutController
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.storage.getUriCompat
+import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.notificationManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 import java.io.File
+import kotlin.math.abs
 import eu.kanade.tachiyomi.BuildConfig.APPLICATION_ID as ID
 
 /**
@@ -192,16 +201,74 @@ class NotificationReceiver : BroadcastReceiver() {
      */
     private fun markAsRead(chapterUrls: Array<String>, mangaId: Long) {
         val db: DatabaseHelper = Injekt.get()
+        val preferences: PreferencesHelper = Injekt.get()
+        var chapters = db.getChapters(mangaId).executeAsBlocking()
+
         chapterUrls.forEach {
             val chapter = db.getChapter(it, mangaId).executeAsBlocking() ?: return
             chapter.read = true
             db.updateChapterProgress(chapter).executeAsBlocking()
-            val preferences: PreferencesHelper = Injekt.get()
             if (preferences.removeAfterMarkedAsRead()) {
                 val manga = db.getManga(mangaId).executeAsBlocking() ?: return
                 val sourceManager: SourceManager = Injekt.get()
                 val source = sourceManager.get(manga.source) ?: return
                 downloadManager.deleteChapters(listOf(chapter), manga, source)
+            }
+        }
+
+        if (preferences.autoUpdateTrack("notification")) {
+            val oldLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
+            chapters = db.getChapters(mangaId).executeAsBlocking()
+            val newLastChapter = chapters.filter { it.read }.minByOrNull { it.source_order }
+            if (oldLastChapter != newLastChapter) {
+                updateTrackChapterRead(oldLastChapter, newLastChapter, mangaId)
+            }
+        }
+    }
+
+    /**
+     * Starts the service that updates the last chapter read in sync services. This operation
+     * will run in a background thread and errors are ignored.
+     */
+    private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, mangaId: Long) {
+        val preferences: PreferencesHelper = Injekt.get()
+        if (!preferences.autoUpdateTrack("notification")) return
+
+        val db: DatabaseHelper = Injekt.get()
+        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+        val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
+
+        val trackManager = Injekt.get<TrackManager>()
+
+        // We want these to execute even if the presenter is destroyed so launch on GlobalScope
+        GlobalScope.launch {
+            withContext(Dispatchers.IO) {
+                val trackList = db.getTracks(mangaId).executeAsBlocking()
+                trackList.map { track ->
+                    val service = trackManager.getService(track.sync_id)
+                    if (service != null && service.isLogged) {
+                        val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
+                        val newCountChapter = if (shouldCustomCount) {
+                            (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        } else newChapterRead
+                        if (!preferences.context.isOnline()) {
+                            val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
+                            val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
+                            trackings.remove(currentTracking)
+                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
+                            preferences.trackingsToAddOnline().set(trackings)
+                            DelayedTrackingUpdateJob.setupTask(preferences.context)
+                        } else {
+                            try {
+                                track.last_chapter_read = newCountChapter
+                                service.update(track, true)
+                                db.insertTrack(track).executeAsBlocking()
+                            } catch (e: Exception) {
+                                Timber.e(e)
+                            }
+                        }
+                    }
+                }
             }
         }
     }

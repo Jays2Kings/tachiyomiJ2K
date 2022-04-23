@@ -14,6 +14,7 @@ import eu.kanade.tachiyomi.data.preference.DelayedLibrarySuggestionsJob
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.minusAssign
 import eu.kanade.tachiyomi.data.preference.plusAssign
+import eu.kanade.tachiyomi.data.track.DelayedTrackingUpdateJob
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.SourceManager
@@ -36,12 +37,15 @@ import eu.kanade.tachiyomi.util.lang.capitalizeWords
 import eu.kanade.tachiyomi.util.lang.chopByWords
 import eu.kanade.tachiyomi.util.lang.removeArticles
 import eu.kanade.tachiyomi.util.system.executeOnIO
+import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.util.ArrayList
@@ -50,6 +54,7 @@ import java.util.Comparator
 import java.util.Date
 import java.util.Locale
 import java.util.concurrent.TimeUnit
+import kotlin.math.abs
 import kotlin.random.Random
 
 /**
@@ -1102,12 +1107,69 @@ class LibraryPresenter(
         mangaList: HashMap<Manga, List<Chapter>>,
         markRead: Boolean
     ) {
-        if (preferences.removeAfterMarkedAsRead() && markRead) {
+        launchIO {
             mangaList.forEach { (manga, oldChapters) ->
-                deleteChapters(manga, oldChapters)
+                if (preferences.removeAfterMarkedAsRead() && markRead) {
+                    deleteChapters(manga, oldChapters)
+                }
+                if (preferences.autoUpdateTrack("library")) {
+                    val newChapters = db.getChapters(manga).executeAsBlocking()
+                    val oldLastChapter =
+                        oldChapters.filter { it.read }.minByOrNull { it.source_order }
+                    val newLastChapter =
+                        newChapters.filter { it.read }.minByOrNull { it.source_order }
+
+                    if (oldLastChapter != newLastChapter) {
+                        updateTrackChapterRead(oldLastChapter, newLastChapter, manga)
+                    }
+                }
             }
-            if (preferences.downloadBadge().get()) {
-                requestDownloadBadgesUpdate()
+            getLibrary()
+        }
+    }
+
+    /**
+     * Starts the service that updates the last chapter read in sync services. This operation
+     * will run in a background thread and errors are ignored.
+     */
+    private fun updateTrackChapterRead(oldLastChapter: Chapter?, newLastChapter: Chapter?, manga: Manga) {
+        if (!preferences.autoUpdateTrack("library")) return
+
+        val oldChapterRead = oldLastChapter?.chapter_number?.toInt() ?: 0
+        val newChapterRead = newLastChapter?.chapter_number?.toInt() ?: 0
+
+        val trackManager = Injekt.get<TrackManager>()
+
+        // We want these to execute even if the presenter is destroyed so launch on GlobalScope
+        GlobalScope.launch {
+            withContext(Dispatchers.IO) {
+                val trackList = db.getTracks(manga).executeAsBlocking()
+                trackList.map { track ->
+                    val service = trackManager.getService(track.sync_id)
+                    if (service != null && service.isLogged) {
+                        val shouldCustomCount = listOf(abs(track.last_chapter_read - oldChapterRead), oldChapterRead, track.last_chapter_read).all { it > 15 }
+                        val newCountChapter = if (shouldCustomCount) {
+                            (track.last_chapter_read + (newChapterRead - oldChapterRead)).coerceAtLeast(0)
+                        } else newChapterRead
+                        if (!preferences.context.isOnline()) {
+                            val mangaId = manga.id ?: return@map
+                            val trackings = preferences.trackingsToAddOnline().get().toMutableSet()
+                            val currentTracking = trackings.find { it.startsWith("$mangaId:${track.sync_id}:") }
+                            trackings.remove(currentTracking)
+                            trackings.add("$mangaId:${track.sync_id}:$newCountChapter")
+                            preferences.trackingsToAddOnline().set(trackings)
+                            DelayedTrackingUpdateJob.setupTask(preferences.context)
+                        } else {
+                            try {
+                                track.last_chapter_read = newCountChapter
+                                service.update(track, true)
+                                db.insertTrack(track).executeAsBlocking()
+                            } catch (e: Exception) {
+                                Timber.e(e)
+                            }
+                        }
+                    }
+                }
             }
         }
     }

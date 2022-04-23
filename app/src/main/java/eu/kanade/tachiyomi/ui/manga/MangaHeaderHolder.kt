@@ -146,6 +146,16 @@ class MangaHeaderHolder(
             applyBlur()
             mangaCover.setOnClickListener { adapter.delegate.zoomImageFromThumb(coverCard) }
             trackButton.setOnClickListener { adapter.delegate.showTrackingSheet() }
+            trackButton.setOnLongClickListener {
+                val presenter = adapter.delegate.mangaPresenter()
+                val tracked = presenter.isTracked()
+                if (tracked) {
+                    val pausedTracking = presenter.preferences.pausedTracking().get()
+                    presenter.preferences.pausedTracking().set(!pausedTracking)
+                    updateTracking()
+                }
+                true
+            }
             if (startExpanded) expandDesc()
             else collapseDesc()
             if (isTablet) {
@@ -343,14 +353,22 @@ class MangaHeaderHolder(
 
         with(binding.trackButton) {
             isVisible = presenter.hasTrackers()
+            val pausedTracking = presenter.preferences.pausedTracking().get()
             text = itemView.context.getString(
-                if (tracked) R.string.tracked
-                else R.string.tracking
+                when {
+                    pausedTracking && tracked -> R.string.paused
+                    tracked -> R.string.tracked
+                    else -> R.string.tracking
+                }
             )
 
             icon = ContextCompat.getDrawable(
                 itemView.context,
-                if (tracked) R.drawable.ic_check_24dp else R.drawable.ic_sync_24dp
+                when {
+                    pausedTracking && tracked -> R.drawable.ic_pause_24dp
+                    tracked -> R.drawable.ic_check_24dp
+                    else -> R.drawable.ic_sync_24dp
+                }
             )
             checked(tracked)
         }
@@ -581,15 +599,22 @@ class MangaHeaderHolder(
         val presenter = adapter.delegate.mangaPresenter()
         val tracked = presenter.isTracked()
         with(binding.trackButton) {
+            val pausedTracking = presenter.preferences.pausedTracking().get()
             text = itemView.context.getString(
-                if (tracked) R.string.tracked
-                else R.string.tracking
+                when {
+                    pausedTracking && tracked -> R.string.paused
+                    tracked -> R.string.tracked
+                    else -> R.string.tracking
+                }
             )
 
             icon = ContextCompat.getDrawable(
                 itemView.context,
-                if (tracked) R.drawable
-                    .ic_check_24dp else R.drawable.ic_sync_24dp
+                when {
+                    pausedTracking && tracked -> R.drawable.ic_pause_24dp
+                    tracked -> R.drawable.ic_check_24dp
+                    else -> R.drawable.ic_sync_24dp
+                }
             )
             checked(tracked)
         }
