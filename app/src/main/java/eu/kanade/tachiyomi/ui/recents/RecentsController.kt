@@ -699,11 +699,9 @@ class RecentsController(bundle: Bundle? = null) :
                                 lastChapterId = chapter.id
                                 presenter.deleteChapter(chapter, manga)
                             }
-                            updateTrackChapterMarkedAsRead(
-                                db, preferences, chapter, manga.id,
-                                { (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks() },
-                                3000
-                            )
+                            updateTrackChapterMarkedAsRead(db, preferences, chapter, manga.id) {
+                                (router.backstack.lastOrNull()?.controller as? MangaDetailsController)?.presenter?.fetchTracks()
+                            }
                         }
                     }
                 }

@@ -60,8 +60,8 @@ fun updateTrackChapterMarkedAsRead(
     preferences: PreferencesHelper,
     newLastChapter: Chapter?,
     mangaId: Long?,
-    fetchTracks: (suspend () -> Unit)? = null,
-    delay: Long = 0
+    delay: Long = 3000,
+    fetchTracks: (suspend () -> Unit)? = null
 ) {
     if (!preferences.trackMarkedAsRead()) return
     mangaId ?: return

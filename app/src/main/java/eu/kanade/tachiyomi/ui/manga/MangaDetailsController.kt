@@ -892,9 +892,9 @@ class MangaDetailsController :
                             if (preferences.removeAfterMarkedAsRead()) {
                                 presenter.deleteChapters(listOf(item))
                             }
-                            updateTrackChapterMarkedAsRead(
-                                db, preferences, chapter, manga?.id, presenter::fetchTracks, 3000
-                            )
+                            updateTrackChapterMarkedAsRead(db, preferences, chapter, manga?.id) {
+                                presenter.fetchTracks()
+                            }
                         }
                     }
                 }

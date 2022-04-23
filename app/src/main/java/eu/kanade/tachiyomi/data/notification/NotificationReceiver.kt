@@ -207,7 +207,7 @@ class NotificationReceiver : BroadcastReceiver() {
             return@map chapter
         }
         val newLastChapter = chapters.maxByOrNull { it.chapter_number.toInt() }
-        updateTrackChapterMarkedAsRead(db, preferences, newLastChapter, mangaId)
+        updateTrackChapterMarkedAsRead(db, preferences, newLastChapter, mangaId, 0)
     }
 
     /** Method called when user wants to stop a restore

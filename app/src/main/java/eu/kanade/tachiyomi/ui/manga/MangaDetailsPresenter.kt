@@ -60,7 +60,6 @@ import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.withUIContext
 import eu.kanade.tachiyomi.widget.TriStateCheckBox
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
@@ -100,7 +99,6 @@ class MangaDetailsPresenter(
     private var tracks = emptyList<Track>()
 
     var trackList: List<TrackItem> = emptyList()
-    private var job: Job? = null
 
     var chapters: List<ChapterItem> = emptyList()
         private set
@@ -493,7 +491,9 @@ class MangaDetailsPresenter(
             withContext(Dispatchers.Main) { controller?.updateChapters(chapters) }
             if (read && deleteNow) {
                 val latestReadChapter = selectedChapters.maxByOrNull { it.chapter_number.toInt() }?.chapter
-                updateTrackChapterMarkedAsRead(db, preferences, latestReadChapter, manga.id, ::fetchTracks, 3000)
+                updateTrackChapterMarkedAsRead(db, preferences, latestReadChapter, manga.id) {
+                    fetchTracks()
+                }
             }
         }
     }
