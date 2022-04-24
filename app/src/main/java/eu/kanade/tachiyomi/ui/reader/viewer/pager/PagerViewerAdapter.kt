@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.ui.reader.viewer.pager
 
 import android.view.View
 import android.view.ViewGroup
+import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
 import eu.kanade.tachiyomi.ui.reader.model.InsertPage
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -12,12 +13,15 @@ import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.widget.ViewPagerAdapter
 import kotlinx.coroutines.delay
 import timber.log.Timber
+import uy.kohesive.injekt.injectLazy
 import kotlin.math.max
 
 /**
  * Pager adapter used by this [viewer] to where [ViewerChapters] updates are posted.
  */
 class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
+
+    val downloadManager: DownloadManager by injectLazy()
 
     /**
      * Paired list of currently set items.

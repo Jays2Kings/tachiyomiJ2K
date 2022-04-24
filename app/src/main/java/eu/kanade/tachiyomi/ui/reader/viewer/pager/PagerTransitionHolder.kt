@@ -57,7 +57,7 @@ class PagerTransitionHolder(
         addView(transitionView)
         addView(pagesContainer)
 
-        transitionView.bind(transition)
+        transitionView.bind(transition, viewer.adapter.downloadManager, viewer.activity.presenter.manga)
         transition.to?.let { observeStatus(it) }
     }
 

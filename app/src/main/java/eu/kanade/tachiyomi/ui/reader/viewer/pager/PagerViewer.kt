@@ -44,7 +44,7 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
     /**
      * Adapter of the pager.
      */
-    private val adapter = PagerViewerAdapter(this)
+    val adapter = PagerViewerAdapter(this)
 
     /**
      * Currently active item. It can be a chapter page or a chapter transition.
