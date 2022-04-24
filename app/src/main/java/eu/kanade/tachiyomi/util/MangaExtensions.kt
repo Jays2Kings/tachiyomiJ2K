@@ -46,7 +46,7 @@ fun Manga.shouldDownloadNewChapters(db: DatabaseHelper, prefs: PreferencesHelper
     if (!favorite) return false
 
     // Boolean to determine if user wants to automatically download new chapters.
-    val downloadNewChapters = prefs.downloadNewChapters()
+    val downloadNewChapters = prefs.downloadNewChapters().get()
     if (!downloadNewChapters) return false
     val context = Injekt.get<Application>()
     if (!context.isConnectedToWifi() && prefs.autoDownloadOnlyOverWifi()) return false

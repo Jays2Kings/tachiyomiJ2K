@@ -251,13 +251,11 @@ class PreferencesHelper(val context: Context) {
 
     fun removeAfterReadSlots() = prefs.getInt(Keys.removeAfterReadSlots, -1)
 
-    fun autoDownloadChapters() = flowPrefs.getStringSet(Keys.autoDownloadChapters, mutableSetOf())
-
     fun autoDownloadRestrictions() = prefs.getInt(Keys.autoDownloadRestrictions, 2)
 
-    fun downloadWhileReading() = READING_DOWNLOAD in autoDownloadChapters().get()
+    fun downloadWhileReading() = flowPrefs.getBoolean(Keys.downloadWhileReading, false)
 
-    fun downloadNewChapters() = NEW_CHAPTERS in autoDownloadChapters().get()
+    fun downloadNewChapters() = flowPrefs.getBoolean(Keys.downloadNew, false)
 
     fun autoDownloadOnlyOverWifi() =
         prefs.getBoolean(Keys.autoDownloadOnlyOverWifi, false) || downloadOnlyOverWifi().get()

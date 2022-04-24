@@ -512,9 +512,9 @@ class ReaderPresenter(
      * Called from the activity to download the next chapters.
      */
     fun downloadNextChapters() {
-        if (!preferences.downloadWhileReading()) return
+        if (!preferences.downloadWhileReading().get()) return
         val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
-        val context = Injekt.get<Application>()
+        val context = preferences.context
         if (!context.isConnectedToWifi() && preferences.autoDownloadOnlyOverWifi() ||
             manga?.favorite == false
         ) return

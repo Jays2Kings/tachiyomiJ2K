@@ -13,9 +13,7 @@ import com.hippo.unifile.UniFile
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
-import eu.kanade.tachiyomi.data.preference.NEW_CHAPTERS
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.preference.READING_DOWNLOAD
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.util.system.getFilePicker
 import eu.kanade.tachiyomi.util.system.withOriginalWidth
@@ -80,14 +78,14 @@ class SettingsDownloadController : SettingsController() {
         preferenceCategory {
             titleRes = R.string.auto_download_from_library
 
-            multiSelectListPreferenceMat(activity) {
-                key = Keys.autoDownloadChapters
-                titleRes = R.string.auto_download_from_library
-                noSelectionRes = R.string.never
-                defaultValue = emptyList<String>()
+            switchPreference {
+                bindTo(preferences.downloadWhileReading())
+                titleRes = R.string.auto_download_after_exit_reader
+            }
 
-                entriesRes = arrayOf(R.string.auto_download_after_exit_reader, R.string.auto_download_new_chapters)
-                entryValues = listOf(READING_DOWNLOAD, NEW_CHAPTERS)
+            switchPreference {
+                bindTo(preferences.downloadNewChapters())
+                titleRes = R.string.download_new_chapters
             }
 
             intListPreference(activity) {
@@ -104,8 +102,10 @@ class SettingsDownloadController : SettingsController() {
                 entryValues = listOf(1, 2, 3, 5, 10, -1)
                 defaultValue = 2
 
-                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
-                    isVisible = it.isNotEmpty()
+                preferences.downloadNewChapters().asImmediateFlowIn(viewScope) { new ->
+                    preferences.downloadWhileReading().asImmediateFlowIn(viewScope) { reading ->
+                        isVisible = new || reading
+                    }
                 }
             }
 
@@ -115,8 +115,10 @@ class SettingsDownloadController : SettingsController() {
                 defaultValue = false
 
                 preferences.downloadOnlyOverWifi().asImmediateFlowIn(viewScope) { onlyOverWifi ->
-                    preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) { auto ->
-                        isVisible = auto.isNotEmpty() && !onlyOverWifi
+                    preferences.downloadNewChapters().asImmediateFlowIn(viewScope) { new ->
+                        preferences.downloadWhileReading().asImmediateFlowIn(viewScope) { reading ->
+                            isVisible = !onlyOverWifi && (new || reading)
+                        }
                     }
                 }
             }
@@ -142,10 +144,9 @@ class SettingsDownloadController : SettingsController() {
                     defaultValue = false
                 }
 
-                preferences.autoDownloadChapters().asImmediateFlowIn(viewScope) {
-                    isVisible = it.contains(NEW_CHAPTERS)
-                }
+                preferences.downloadNewChapters().asImmediateFlowIn(viewScope) { isVisible = it }
             }
+
             preferenceCategory {
                 titleRes = R.string.automatic_removal
 

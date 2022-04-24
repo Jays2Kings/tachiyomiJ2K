@@ -8,7 +8,3 @@ const val MANGA_NON_READ = "manga_started"
 // Device
 const val DEVICE_ONLY_ON_WIFI = "wifi"
 const val DEVICE_CHARGING = "ac"
-
-// Download
-const val READING_DOWNLOAD = "reading"
-const val NEW_CHAPTERS = "new_chapters"

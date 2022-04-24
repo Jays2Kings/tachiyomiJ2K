@@ -123,7 +123,9 @@ object PreferenceKeys {
 
     const val backupInterval = "backup_interval"
 
-    const val autoDownloadChapters = "auto_download_chapters"
+    const val downloadWhileReading = "download_while_reading"
+
+    const val downloadNew = "download_new"
 
     const val autoDownloadRestrictions = "auto_download_restrictions"
 
