@@ -237,6 +237,8 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadOnlyOverWifi() = prefs.getBoolean(Keys.downloadOnlyOverWifi, true)
 
+    fun splitLongImages() = flowPrefs.getBoolean("split_long_images", true)
+
     fun folderPerManga() = prefs.getBoolean(Keys.folderPerManga, false)
 
     fun librarySearchSuggestion() = flowPrefs.getString(Keys.librarySearchSuggestion, "")
