@@ -39,7 +39,6 @@ import eu.kanade.tachiyomi.util.lang.getUrlWithoutDomain
 import eu.kanade.tachiyomi.util.storage.DiskUtil
 import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
-import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -509,31 +508,33 @@ class ReaderPresenter(
     }
 
     private fun downloadNextChapters() {
+        val manga = manga ?: return
         val chaptersNumberToDownload = preferences.autoDownloadAfterReading().get()
-        if (chaptersNumberToDownload == 0) return
-        if (!preferences.context.isConnectedToWifi() || manga?.favorite == false) return
-        val isChapterDownloaded = downloadManager.isChapterDownloaded(getCurrentChapter()!!.chapter, manga!!)
+        if (chaptersNumberToDownload == 0 || !manga.favorite) return
+        val isChapterDownloaded = downloadManager.isChapterDownloaded(getCurrentChapter()!!.chapter, manga)
         if (isChapterDownloaded) {
             downloadAutoNextChapters(chaptersNumberToDownload)
         }
     }
 
     private fun downloadAutoNextChapters(choice: Int) {
-        val chaptersToDownload = if (choice == -1) getUnreadChaptersExceptCurrentSorted() else {
-            getUnreadChaptersExceptCurrentSorted().take(choice)
-        }
+        val chaptersToDownload = getNextUnreadChaptersSorted().take(choice)
         if (chaptersToDownload.isNotEmpty()) {
             downloadChapters(chaptersToDownload)
         }
     }
 
-    private fun getUnreadChaptersExceptCurrentSorted(): List<ChapterItem> {
-        val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
+    private fun getNextUnreadChaptersSorted(): List<ChapterItem> {
+        val currentChapterId = getCurrentChapter()?.chapter?.id
         val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
 
-        return chapters.filter { !it.read && getCurrentChapter()?.chapter?.id != it.id }
+        val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
+            .filter { !it.read }
             .distinctBy { it.name }
             .sortedWith(chapterSort.sortComparator(true))
+
+        val currentChapterIndex = chapters.indexOfFirst { it.id == currentChapterId }
+        return chapters.takeLast(chapters.lastIndex - currentChapterIndex)
     }
 
     /**
