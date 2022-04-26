@@ -651,6 +651,11 @@ class Downloader(
      * Returns true if all the queued downloads are in DOWNLOADED or ERROR state.
      */
     private fun areAllDownloadsFinished(): Boolean {
+        if (queue.none { it.status <= Download.State.DOWNLOADING }) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                context.dataDir.let { File("$it/app_webview/").deleteRecursively() }
+            }
+        }
         return queue.none { it.status <= Download.State.DOWNLOADING }
     }
 
