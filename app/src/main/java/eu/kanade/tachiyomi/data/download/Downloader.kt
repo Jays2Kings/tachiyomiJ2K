@@ -2,6 +2,8 @@ package eu.kanade.tachiyomi.data.download
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Environment
 import android.provider.Settings
@@ -40,6 +42,8 @@ import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import java.io.BufferedOutputStream
 import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
 import java.util.zip.CRC32
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
@@ -532,6 +536,69 @@ class Downloader(
 
         // Only rename the directory if it's downloaded.
         if (download.status == Download.State.DOWNLOADED) {
+            // Implementation of Auto Split long images upon download.
+            if (preferences.splitLongImages().get()) {
+                for (curPage in downloadedImages) {
+                    // Checking the image dimensions without loading it in the memory.
+                    val options = BitmapFactory.Options()
+                    options.inJustDecodeBounds = true
+                    BitmapFactory.decodeFile(curPage.filePath, options)
+                    val width = options.outWidth
+                    val height = options.outHeight
+                    val ratio = height / width
+
+                    // Check ratio and if this is a tall image then split
+                    if (ratio > 3 && height > 2000) {
+                        val splitsCount: Int =
+                            height / context.resources.displayMetrics.heightPixels + 1
+
+                        // For height and width of the small image splits
+                        val splitHeight = height / splitsCount
+
+                        // To store all the small image splits in bitmap format in this list
+                        val splittedImages: ArrayList<Bitmap> = ArrayList(splitsCount)
+
+                        // Getting the scaled bitmap of the source image
+                        val bitmap = BitmapFactory.decodeFile(curPage.filePath)
+                        val scaledBitmap: Bitmap =
+                            Bitmap.createScaledBitmap(bitmap, bitmap.width, bitmap.height, true)
+
+                        // xCoord and yCoord are the pixel positions of the image splits
+                        var yCoord = 0
+                        val xCoord = 0
+                        for (y in 0 until splitsCount) {
+                            splittedImages.add(
+                                Bitmap.createBitmap(
+                                    scaledBitmap,
+                                    xCoord,
+                                    yCoord,
+                                    width,
+                                    splitHeight,
+                                ),
+                            )
+                            yCoord += splitHeight
+                        }
+
+                        for ((i, splitBitmap) in splittedImages.withIndex()) {
+                            // Initialize a new file instance to save bitmap object
+                            var splitPath = curPage.parentFile!!.filePath.toString()
+                            splitPath =
+                                splitPath + "/" + curPage.name!!.substringBefore(".") + "_${"%03d".format(i + 1)}.jpg"
+                            try {
+                                // Compress the bitmap and save in jpg format
+                                val stream: OutputStream = FileOutputStream(splitPath)
+                                splitBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                                stream.flush()
+                                stream.close()
+                            } catch (e: Exception) {
+                                // Image splits were not successfully saved..
+                                throw e
+                            }
+                        }
+                        curPage.delete()
+                    }
+                }
+            }
             if (preferences.saveChaptersAsCBZ().get()) {
                 val zip = mangaDir.createFile("$dirname.cbz.tmp")
                 val zipOut = ZipOutputStream(BufferedOutputStream(zip.openOutputStream()))
