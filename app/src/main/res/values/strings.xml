@@ -528,7 +528,6 @@
     <string name="next_2_unread">Next 2 unread</string>
     <string name="next_3_unread">Next 3 unread</string>
     <string name="next_5_unread">Next 5 unread</string>
-    <string name="next_10_unread">Next 10 unread</string>
     <string name="custom_range">Custom range</string>
     <string name="all_chapters">All chapters</string>
     <string name="all_unread_chapters">All unread chapters</string>
@@ -935,15 +934,11 @@
     <string name="third_to_last">Third to last chapter</string>
     <string name="fourth_to_last">Fourth to last chapter</string>
     <string name="fifth_to_last">Fifth to last chapter</string>
-    <string name="auto_download_from_library">Auto download unread chapters from library</string>
-    <string name="auto_download_after_exit_reader">Download after exiting the reader</string>
-    <string name="auto_download_new_chapters">New chapters</string>
-    <string name="auto_download_restrictions">Auto download restrictions</string>
-    <string name="only_auto_download_over_wifi">Only auto download over Wi-Fi</string>
+    <string name="download_ahead">Download ahead</string>
+    <string name="auto_download_after_reading">Download next unread chapters after reading</string>
+    <string name="download_ahead_info">Only for manga in library and if the last read chapter was downloaded</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
-    <string name="pref_download_only_completely_read">Only download completely read manga</string>
-    <string name="pref_download_only_completely_read_summary">Only download manga if there is no unread chapter (completely read)</string>
     <string name="delete_removed_chapters">Delete removed chapters</string>
     <string name="delete_downloaded_if_removed_online">Delete downloaded chapters if the source
         has removed the chapter online</string>

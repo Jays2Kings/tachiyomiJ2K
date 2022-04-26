@@ -1,7 +1,6 @@
 package eu.kanade.tachiyomi.util
 
 import android.app.Activity
-import android.app.Application
 import android.content.DialogInterface
 import android.view.View
 import android.widget.Toast
@@ -26,7 +25,6 @@ import eu.kanade.tachiyomi.ui.migration.MigrationFlags
 import eu.kanade.tachiyomi.ui.migration.manga.process.MigrationProcessAdapter
 import eu.kanade.tachiyomi.util.chapter.syncChaptersWithTrackServiceTwoWay
 import eu.kanade.tachiyomi.util.lang.asButton
-import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.setCustomTitleAndMessage
@@ -48,8 +46,6 @@ fun Manga.shouldDownloadNewChapters(db: DatabaseHelper, prefs: PreferencesHelper
     // Boolean to determine if user wants to automatically download new chapters.
     val downloadNewChapters = prefs.downloadNewChapters().get()
     if (!downloadNewChapters) return false
-    val context = Injekt.get<Application>()
-    if (!context.isConnectedToWifi() && prefs.autoDownloadOnlyOverWifi()) return false
 
     val includedCategories = prefs.downloadNewChaptersInCategories().get().map(String::toInt)
     val excludedCategories = prefs.excludeCategoriesInDownloadNew().get().map(String::toInt)

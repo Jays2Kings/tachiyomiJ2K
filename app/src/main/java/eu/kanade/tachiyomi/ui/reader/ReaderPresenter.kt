@@ -508,17 +508,14 @@ class ReaderPresenter(
         }
     }
 
-    /**
-     * Called from the activity to download the next chapters.
-     */
-    fun downloadNextChapters() {
-        if (!preferences.downloadWhileReading().get()) return
-        val chaptersNumberToDownload = preferences.autoDownloadRestrictions()
-        val context = preferences.context
-        if (!context.isConnectedToWifi() && preferences.autoDownloadOnlyOverWifi() ||
-            manga?.favorite == false
-        ) return
-        downloadAutoNextChapters(chaptersNumberToDownload)
+    private fun downloadNextChapters() {
+        val chaptersNumberToDownload = preferences.autoDownloadAfterReading().get()
+        if (chaptersNumberToDownload == 0) return
+        if (!preferences.context.isConnectedToWifi() || manga?.favorite == false) return
+        val isChapterDownloaded = downloadManager.isChapterDownloaded(getCurrentChapter()!!.chapter, manga!!)
+        if (isChapterDownloaded) {
+            downloadAutoNextChapters(chaptersNumberToDownload)
+        }
     }
 
     private fun downloadAutoNextChapters(choice: Int) {

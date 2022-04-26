@@ -123,14 +123,6 @@ object PreferenceKeys {
 
     const val backupInterval = "backup_interval"
 
-    const val downloadWhileReading = "download_while_reading"
-
-    const val downloadNew = "download_new"
-
-    const val autoDownloadRestrictions = "auto_download_restrictions"
-
-    const val autoDownloadOnlyOverWifi = "auto_download_only_over_wifi_key"
-
     const val removeAfterReadSlots = "remove_after_read_slots"
 
     const val deleteRemovedChapters = "delete_removed_chapters"
@@ -166,10 +158,12 @@ object PreferenceKeys {
 
     const val onlySearchPinned = "only_search_pinned"
 
+    const val downloadNew = "download_new"
+
     const val downloadNewCategories = "download_new_categories"
     const val downloadNewCategoriesExclude = "download_new_categories_exclude"
 
-    const val downloadOnlyCompletelyRead = "pref_download_only_completely_read"
+    const val autoDownloadAfterReading = "auto_download_after_reading"
 
     const val libraryLayout = "pref_display_library_layout"
 

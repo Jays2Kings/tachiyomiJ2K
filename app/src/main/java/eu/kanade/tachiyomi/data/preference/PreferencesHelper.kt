@@ -235,7 +235,7 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadsDirectory() = flowPrefs.getString(Keys.downloadsDirectory, defaultDownloadsDir.toString())
 
-    fun downloadOnlyOverWifi() = flowPrefs.getBoolean(Keys.downloadOnlyOverWifi, true)
+    fun downloadOnlyOverWifi() = prefs.getBoolean(Keys.downloadOnlyOverWifi, true)
 
     fun folderPerManga() = prefs.getBoolean(Keys.folderPerManga, false)
 
@@ -250,15 +250,6 @@ class PreferencesHelper(val context: Context) {
     fun backupInterval() = flowPrefs.getInt(Keys.backupInterval, 0)
 
     fun removeAfterReadSlots() = prefs.getInt(Keys.removeAfterReadSlots, -1)
-
-    fun autoDownloadRestrictions() = prefs.getInt(Keys.autoDownloadRestrictions, 2)
-
-    fun downloadWhileReading() = flowPrefs.getBoolean(Keys.downloadWhileReading, false)
-
-    fun downloadNewChapters() = flowPrefs.getBoolean(Keys.downloadNew, false)
-
-    fun autoDownloadOnlyOverWifi() =
-        prefs.getBoolean(Keys.autoDownloadOnlyOverWifi, false) || downloadOnlyOverWifi().get()
 
     fun removeAfterMarkedAsRead() = prefs.getBoolean(Keys.removeAfterMarkedAsRead, false)
 
@@ -315,10 +306,12 @@ class PreferencesHelper(val context: Context) {
 
     fun saveChaptersAsCBZ() = flowPrefs.getBoolean("save_chapter_as_cbz", true)
 
+    fun downloadNewChapters() = flowPrefs.getBoolean(Keys.downloadNew, false)
+
     fun downloadNewChaptersInCategories() = flowPrefs.getStringSet(Keys.downloadNewCategories, emptySet())
     fun excludeCategoriesInDownloadNew() = flowPrefs.getStringSet(Keys.downloadNewCategoriesExclude, emptySet())
 
-    fun downloadOnlyCompletelyRead() = prefs.getBoolean(Keys.downloadOnlyCompletelyRead, false)
+    fun autoDownloadAfterReading() = flowPrefs.getInt(Keys.autoDownloadAfterReading, 0)
 
     fun defaultCategory() = prefs.getInt(Keys.defaultCategory, -1)
 

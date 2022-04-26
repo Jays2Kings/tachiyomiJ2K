@@ -320,7 +320,6 @@ class MangaDetailsPresenter(
         if (controller?.isNotOnline() == true && manga.source != LocalSource.ID) return
         presenterScope.launch {
             isLoading = true
-            val alreadyInitialized = manga.initialized
             var mangaError: java.lang.Exception? = null
             var chapterError: java.lang.Exception? = null
             val chapters = async(Dispatchers.IO) {
@@ -373,8 +372,8 @@ class MangaDetailsPresenter(
             if (finChapters.isNotEmpty()) {
                 val newChapters = syncChaptersWithSource(db, finChapters, manga, source)
                 if (newChapters.first.isNotEmpty()) {
-                    if (manga.shouldDownloadNewChapters(db, preferences) && alreadyInitialized) {
-                        prepareDownloadChapters(
+                    if (manga.shouldDownloadNewChapters(db, preferences)) {
+                        downloadChapters(
                             newChapters.first.sortedBy { it.chapter_number }
                                 .map { it.toModel() }
                         )
@@ -412,37 +411,6 @@ class MangaDetailsPresenter(
                     trimException(mangaError!!)
                 )
             }
-        }
-    }
-
-    /**
-     * Method to filter which chapters should be downloaded among the new chapters
-     */
-    private fun prepareDownloadChapters(newChapters: List<ChapterItem>) {
-        val downloadOnlyCompletelyRead = preferences.downloadOnlyCompletelyRead()
-        val chaptersNumberRestrictions = preferences.autoDownloadRestrictions()
-
-        val newChaptersIds = newChapters.map { it.id }
-        val chaptersUnread = allChapters.filter { !it.read }
-            .distinctBy { it.name }
-            .sortedWith(chapterSort.sortComparator(true))
-            .filter { it.id !in newChaptersIds }
-
-        if (downloadOnlyCompletelyRead && chaptersUnread.isNotEmpty()) return
-
-        var chaptersToDownload = newChapters
-        var shouldDownload = true
-        if (chaptersNumberRestrictions != -1) {
-            val chaptersUnreadDownloadedNumber = chaptersUnread.takeLast(chaptersNumberRestrictions)
-                .takeLastWhile { it.isDownloaded }.count()
-
-            chaptersToDownload = newChapters.take(
-                (chaptersNumberRestrictions - chaptersUnreadDownloadedNumber).coerceAtLeast(0)
-            )
-            shouldDownload = chaptersUnreadDownloadedNumber != 0
-        }
-        if ((chaptersUnread.isEmpty() || shouldDownload) && chaptersToDownload.isNotEmpty()) {
-            downloadChapters(chaptersToDownload)
         }
     }
 
