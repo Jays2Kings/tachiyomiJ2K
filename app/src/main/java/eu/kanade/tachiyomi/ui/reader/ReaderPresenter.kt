@@ -169,9 +169,13 @@ class ReaderPresenter(
         val currentChapters = viewerChaptersRelay.value
         if (currentChapters != null) {
             currentChapters.unref()
-            saveChapterProgress(currentChapters.currChapter)
-            saveChapterHistory(currentChapters.currChapter)
-            downloadNextChapters()
+            val currentChapter = currentChapters.currChapter
+            saveChapterProgress(currentChapter)
+            saveChapterHistory(currentChapter)
+            val currentChapterPageCount = currentChapter.pages?.size ?: 1
+            if (currentChapter.chapter.last_page_read.toDouble() / currentChapterPageCount > 0.2) {
+                downloadNextChapters()
+            }
         }
     }
 
