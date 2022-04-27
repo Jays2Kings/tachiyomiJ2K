@@ -936,7 +936,7 @@
     <string name="fifth_to_last">Fifth to last chapter</string>
     <string name="download_ahead">Download ahead</string>
     <string name="auto_download_after_reading">Download next unread chapters after reading</string>
-    <string name="download_ahead_info">Only for manga in library and if the last read chapter was downloaded</string>
+    <string name="download_ahead_info">Download ahead only applies to entries in library and if any chapter read during last session was downloaded</string>
     <string name="download_new_chapters">Download new chapters</string>
     <string name="categories_to_include_in_download">Categories to include in download</string>
     <string name="delete_removed_chapters">Delete removed chapters</string>

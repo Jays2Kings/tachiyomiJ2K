@@ -44,7 +44,7 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
     private fun bindPrevChapterTransition(
         transition: ChapterTransition,
         downloadManager: DownloadManager,
-        manga: Manga
+        manga: Manga,
     ) {
         val prevChapter = transition.to
 
@@ -81,7 +81,7 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
     private fun bindNextChapterTransition(
         transition: ChapterTransition,
         downloadManager: DownloadManager,
-        manga: Manga
+        manga: Manga,
     ) {
         val nextChapter = transition.to
 
@@ -114,7 +114,7 @@ class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: At
 
     private fun TextView.setDrawable(drawable: Drawable?) {
         drawable?.setTint(binding.lowerText.currentTextColor)
-        setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null)
+        setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, drawable, null)
         compoundDrawablePadding = 8.dpToPx
     }
 

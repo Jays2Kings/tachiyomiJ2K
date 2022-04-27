@@ -41,6 +41,7 @@ import eu.kanade.tachiyomi.util.system.ImageUtil
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.launchUI
+import eu.kanade.tachiyomi.util.system.toInt
 import eu.kanade.tachiyomi.util.system.withUIContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -109,6 +110,11 @@ class ReaderPresenter(
     private val isLoadingAdjacentChapterRelay = BehaviorRelay.create<Boolean>()
 
     /**
+     * To check if any chapter of the current reading session was downloaded
+     */
+    private var isAnyPrevChapterDownloaded = false
+
+    /**
      * Chapter list for the active manga. It's retrieved lazily and should be accessed for the first
      * time in a background thread to avoid blocking the UI.
      */
@@ -172,8 +178,8 @@ class ReaderPresenter(
             val currentChapter = currentChapters.currChapter
             saveChapterProgress(currentChapter)
             saveChapterHistory(currentChapter)
-            val currentChapterPageCount = currentChapter.pages?.size ?: 1
-            if (currentChapter.chapter.last_page_read.toDouble() / currentChapterPageCount > 0.2) {
+            val currentChapterPageCount = currentChapter.chapter.last_page_read + currentChapter.chapter.pages_left
+            if ((currentChapter.chapter.last_page_read + 1.0) / currentChapterPageCount > 0.33 || isAnyPrevChapterDownloaded) {
                 downloadNextChapters()
             }
         }
@@ -499,6 +505,9 @@ class ReaderPresenter(
                     (hasExtraPage && selectedChapter.pages?.lastIndex?.minus(1) == page.index)
                 )
         ) {
+            if (!isAnyPrevChapterDownloaded) {
+                isAnyPrevChapterDownloaded = downloadManager.isChapterDownloaded(selectedChapter.chapter, manga!!)
+            }
             selectedChapter.chapter.read = true
             updateTrackChapterAfterReading(selectedChapter)
             deleteChapterIfNeeded(selectedChapter)
@@ -515,30 +524,31 @@ class ReaderPresenter(
         val manga = manga ?: return
         val chaptersNumberToDownload = preferences.autoDownloadAfterReading().get()
         if (chaptersNumberToDownload == 0 || !manga.favorite) return
-        val isChapterDownloaded = downloadManager.isChapterDownloaded(getCurrentChapter()!!.chapter, manga)
-        if (isChapterDownloaded) {
-            downloadAutoNextChapters(chaptersNumberToDownload)
+        val currentChapter = viewerChapters?.currChapter ?: return
+        val isChapterDownloaded = downloadManager.isChapterDownloaded(currentChapter.chapter, manga)
+        if (isChapterDownloaded || isAnyPrevChapterDownloaded) {
+            downloadAutoNextChapters(chaptersNumberToDownload, !isChapterDownloaded && !currentChapter.chapter.read)
         }
     }
 
-    private fun downloadAutoNextChapters(choice: Int) {
-        val chaptersToDownload = getNextUnreadChaptersSorted().take(choice)
+    private fun downloadAutoNextChapters(choice: Int, includeCurrentChapter: Boolean) {
+        val chaptersToDownload = getNextUnreadChaptersSorted(includeCurrentChapter).take(choice)
         if (chaptersToDownload.isNotEmpty()) {
             downloadChapters(chaptersToDownload)
         }
     }
 
-    private fun getNextUnreadChaptersSorted(): List<ChapterItem> {
+    private fun getNextUnreadChaptersSorted(includeCurrentChapter: Boolean): List<ChapterItem> {
         val currentChapterId = getCurrentChapter()?.chapter?.id
         val chapterSort = ChapterSort(manga!!, chapterFilter, preferences)
 
         val chapters = chapterList.map { ChapterItem(it.chapter, manga!!) }
-            .filter { !it.read }
+            .filter { !it.read || it.id == currentChapterId }
             .distinctBy { it.name }
             .sortedWith(chapterSort.sortComparator(true))
 
         val currentChapterIndex = chapters.indexOfFirst { it.id == currentChapterId }
-        return chapters.takeLast(chapters.lastIndex - currentChapterIndex)
+        return chapters.takeLast(chapters.lastIndex - currentChapterIndex + includeCurrentChapter.toInt())
     }
 
     /**
