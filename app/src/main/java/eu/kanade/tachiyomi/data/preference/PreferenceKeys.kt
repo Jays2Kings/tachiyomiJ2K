@@ -163,8 +163,6 @@ object PreferenceKeys {
     const val downloadNewCategories = "download_new_categories"
     const val downloadNewCategoriesExclude = "download_new_categories_exclude"
 
-    const val autoDownloadAfterReading = "auto_download_after_reading"
-
     const val libraryLayout = "pref_display_library_layout"
 
     const val gridSize = "grid_size_float"

@@ -109,10 +109,12 @@ class ReaderPresenter(
      */
     private val isLoadingAdjacentChapterRelay = BehaviorRelay.create<Boolean>()
 
-    /**
-     * To check if any chapter of the current reading session was downloaded
-     */
-    private var isAnyPrevChapterDownloaded = false
+    companion object {
+        /**
+         * To check if any chapter of the current reading session was downloaded
+         */
+        private var isAnyPrevChapterDownloaded = false
+    }
 
     /**
      * Chapter list for the active manga. It's retrieved lazily and should be accessed for the first
@@ -182,6 +184,7 @@ class ReaderPresenter(
             if ((currentChapter.chapter.last_page_read + 1.0) / currentChapterPageCount > 0.33 || isAnyPrevChapterDownloaded) {
                 downloadNextChapters()
             }
+            isAnyPrevChapterDownloaded = false
         }
     }
 
