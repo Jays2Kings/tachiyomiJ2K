@@ -228,7 +228,6 @@
     <string name="alpha_initial">Vid\'</string>
     <string name="source_not_installed_">Fonto ne instalita: %1$s</string>
     <string name="rereading">Legataj denove</string>
-    <string name="only_update_ongoing">Nur ĝisdatigi okazantaj mangaojn</string>
     <string name="free">Libera</string>
     <string name="restore">Restaŭro</string>
     <string name="move_to_bottom">Movi al malsupro</string>
@@ -265,10 +264,6 @@
     <string name="global_search">Ĉiea serĉo…</string>
     <string name="last_used">Laste uzitaj</string>
     <string name="date_fetched">Dato venigita</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 ĝisdatigo malsukcesis%1$d ĝisdatigoj malsukcesis</item>
-        <item quantity="other"></item>
-    </plurals>
     <string name="may_contain_nsfw">Enhaveblas NSFW (18+) enhavon</string>
     <string name="use_image_as_cover">Ĉu uzi ĉi-bildon kiel kovrilo\?</string>
     <string name="current_chapter">Aktuala:</string>
@@ -287,7 +282,6 @@
     <string name="skip_read_chapters">Preterpasi ĉapitrojn markitajn kiel legitaj</string>
     <string name="skip_filtered_chapters">Preterpasi filtritajn ĉapitroj</string>
     <string name="invert_volume_keys">Inversigi laŭtec-butonojn</string>
-    <string name="tapping">Tuŝetado</string>
     <string name="actions">Agoj</string>
     <string name="create_folders_by_manga_title">Kreas dosierujojn laŭ mangaaj titoloj</string>
     <string name="removed_from_library">Forigita de biblioteko</string>
@@ -375,4 +369,15 @@
     <string name="type">Speco</string>
     <string name="complete">Finitaj</string>
     <string name="send_crash_report">Sendadi raportojn de rompoj</string>
+    <string name="local_invalid_format">Nevalida ĉapitra formato</string>
+    <string name="order_by">Ordigi laŭ</string>
+    <string name="grayscale">Grizoskalo</string>
+    <string name="pref_inverted_colors">Inversigita</string>
+    <string name="ascending">Kreskante</string>
+    <string name="date">Dato</string>
+    <string name="descending">Malkreskante</string>
+    <string name="select_inverse">Elekti inverse</string>
+    <string name="clear_history">Viŝi historion</string>
+    <string name="clear_history_completed">Historio viŝita</string>
+    <string name="clear_history_confirmation">Ĉu vi certas\? La tuta historio forigos.</string>
 </resources>

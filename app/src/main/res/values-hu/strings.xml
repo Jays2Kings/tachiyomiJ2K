@@ -38,7 +38,6 @@
     <string name="library_update_restriction_summary">Frissítés csak akkor, ha a feltételek teljesülnek</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Töltés</string>
-    <string name="only_update_ongoing">Csak a folyamatban lévő mangákat frissítse</string>
     <string name="app_theme">Alkalmazás téma</string>
     <string name="dark">Sötét téma</string>
     <string name="amoled_black">AMOLED téma</string>
@@ -52,7 +51,6 @@
     <string name="navigation">Lapozás</string>
     <string name="volume_keys">Hangerőszabályzó gombokkal</string>
     <string name="invert_volume_keys">Gombok felcserélése</string>
-    <string name="tapping">Koppintással</string>
     <string name="background_color">Háttérszín</string>
     <string name="download_location">Letöltések könyvtára</string>
     <string name="backup">Biztonsági mentés</string>
@@ -80,7 +78,6 @@
     <string name="alphabetically">Betűrendben</string>
     <string name="total_chapters">Összes fejezet</string>
     <string name="last_read">Legutóbb olvasott</string>
-    <string name="last_updated">Legutóbb frissített</string>
     <string name="mark_as_read">Olvasottnak jelölés</string>
     <string name="mark_previous_as_read">Előző olvasottnak jelölése</string>
     <string name="download">Letöltés</string>
@@ -103,7 +100,6 @@
     <string name="create">Létrehozás</string>
     <string name="restore">Visszaállítás</string>
     <string name="updates">Frissítések</string>
-    <string name="sync_chapters_after_reading">Olvasás után a fejezetek szinkronizálása</string>
     <string name="crop_borders">Szegélyek vágása</string>
     <string name="use_custom_brightness">Egyéni fényerő használata</string>
     <string name="use_custom_color_filter">Egyéni színprofil használata</string>
@@ -124,7 +120,6 @@
     <string name="installed">Telepítve</string>
     <string name="open_in_webview">Webnézet</string>
     <string name="help">Segítség</string>
-    <string name="library_update_order">Könyvtár frissítési sorrend</string>
     <string name="chapter_">%1$s. fejezet</string>
     <string name="migrate">Áttelepítés</string>
     <string name="update">Frissítés</string>
@@ -190,10 +185,6 @@
     <string name="set_as_cover">Beállítás borítóként</string>
     <string name="right_and_left_nav">Jobb és bal</string>
     <string name="badges">Jelvények</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">%1$d frissítés sikertelen%1$d frissítés sikertelen</item>
-        <item quantity="other"/>
-    </plurals>
     <string name="reading">Olvasás</string>
     <string name="other">Egyéb</string>
     <string name="center">Központ</string>
@@ -248,8 +239,6 @@
     <string name="already_in_category">Manga már a kategóriában van</string>
     <string name="confirm_category_deletion_message">Manga ebben a kategóriában az alapértelmezett kategóriába fog áthelyeződni.</string>
     <string name="confirm_category_deletion">Ki akarod törölni a kategóriát\?</string>
-    <string name="first_category">Első kategória</string>
-    <string name="top_category">Top kategória (%1$s)</string>
     <string name="category_is_empty">A kategória üres</string>
     <string name="new_category">Új kategória</string>
     <string name="create_new_category">Új kategória létrehozása</string>
@@ -400,4 +389,9 @@
     <string name="every_3_days">3 naponta</string>
     <string name="tracking_info">Egyirányú szinkronizálás, hogy a fejezetben való előrehaladás frissítve legyen a követési szolgáltatásokban. Állíts be követést egyéni manga bejegyzésekre, a követési gomb lenyomásával.</string>
     <string name="enhanced_services">Továbbfejlesztett szolgáltatások</string>
+    <string name="grayscale">Szürkeárnyalatos</string>
+    <string name="pref_inverted_colors">Fordított</string>
+    <string name="ascending">Növekvő</string>
+    <string name="descending">Csökkenő</string>
+    <string name="select_inverse">Kiválasztás megfordítása</string>
 </resources>

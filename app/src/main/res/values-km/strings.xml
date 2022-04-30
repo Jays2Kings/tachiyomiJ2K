@@ -134,4 +134,9 @@
     <string name="external_storage_download_notice">តាឈិយ៉ូមិJ2Kត្រូវការaccessរាល់ហ្វាល់ទាំងអស់ដើម្បីទាញយកភាគ ចុចត្រង់នេះបន្ទាប់មក \"អនុញ្ញាតឲ្យaccessដើម្បីគ្រប់គ្រងរាល់ហ្វាល់ទាំងអស់\"</string>
     <string name="in_progress">កំពុងដំណើរការ</string>
     <string name="description">សង្ខេបរឿង</string>
+    <string name="ascending">ឡើង</string>
+    <string name="descending">ចុះ</string>
+    <string name="select_inverse">ជ្រើសរើសផ្ទុយ</string>
+    <string name="cover_only_grid">ជ្រុងដែលមានតែគម្រប</string>
+    <string name="tap_to_see_details">ប៉ះដើម្បីមើលលម្អិត</string>
 </resources>

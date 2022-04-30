@@ -49,15 +49,9 @@
     <string name="list">Ят-йыш</string>
     <string name="download_badge">Тиенисен палли</string>
     <string name="new_chapters_found">Ҫӗнӗ сыпӑксем тупӑнман</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 ҫӗнетӳ йӑнӑшӗ</item>
-        <item quantity="other">%1$d ҫӗнетӳ йӑнӑшӗ</item>
-    </plurals>
     <string name="library_update_frequency">Вулавӑша ҫӗнетни тӑтӑшлӑхӗ</string>
-    <string name="library_update_order">Вулавӑша ҫӗнетни йӗрки</string>
     <string name="library_update_restriction">Вулавӑша ҫӗнетни чарӑвӗсем</string>
     <string name="library_update_restriction_summary">Майсем пурнӑҫланӑ чухне кӑна ҫӗнет</string>
-    <string name="only_update_ongoing">Тухакан манкка ҫеҫ ҫӗнетмелле</string>
     <string name="categories_to_include_in_global_update">Пур ҫӗрте шырава кӗртнӗ пухмӑшсем</string>
     <string name="updates">Ҫӗнетӳсем</string>
     <string name="this_will_remove_the_read_date_question">Ҫакӑ вара сыпӑка вулани вӑхӑта катертӗ. Чӑнах катертесшӗн-и\?</string>
@@ -82,7 +76,7 @@
     </plurals>
     <string name="next_chapter_not_found">Малалли сыпӑк тупӑнман</string>
     <string name="use_image_as_cover">Ҫак ӳкерчĕке хуплашка пек усӑ курмалла-и\?</string>
-    <string name="next">Малалли:</string>
+    <string name="next">Малалли</string>
     <string name="previous">Умӗнхи:</string>
     <string name="theres_no_next_chapter">Малалли сыпӑк ҫук</string>
     <string name="theres_no_previous_chapter">Умӗнхи сыпӑк ҫук</string>
@@ -106,7 +100,6 @@
     <string name="navigation">Куҫӑм</string>
     <string name="volume_keys">Янравлӑх пускӑчӗсем</string>
     <string name="invert_volume_keys">Янравлӑх пускӑчӗсене вырӑнсемпе улӑштар</string>
-    <string name="tapping">Пусни</string>
     <string name="background_color">Ӳкерчĕк хыҫӑн тӗсӗ</string>
     <string name="white">Шурӑ</string>
     <string name="black">Хура</string>
@@ -243,7 +236,7 @@
     <string name="email">Ылӑккӑтрунлӑ пуштӑ тӗлӗ</string>
     <string name="username">Усӑҫ ячӗ</string>
     <string name="website">Сайт</string>
-    <string name="whats_new">Мӗн ҫӗнни ҫак тухӑмра</string>
+    <string name="whats_new">Мӗн ҫӗнни</string>
     <string name="build_time">Пуҫтарнӑ вӑхӑт</string>
     <string name="version">Версси</string>
     <string name="battery_optimization_disabled">Петтерей лайӑхлатнине сӳнтернӗ ӗнтӗ</string>
@@ -272,7 +265,7 @@
     <string name="source_not_installed">Ҫӑл куҫа лартман</string>
     <string name="remove_from_library">Вулавӑшран катерт</string>
     <string name="add_to_library">Вулавӑша хуш</string>
-    <string name="added_to_library">Вулавӑша хушнӑ</string>
+    <string name="added_to_library">Вулавӑша хуш</string>
     <string name="webtoon_side_padding_25">25%</string>
     <string name="webtoon_side_padding_20">20%</string>
     <string name="webtoon_side_padding_15">15%</string>
@@ -349,7 +342,6 @@
     <string name="chapters_removed">Сыпӑксене катертнӗ.</string>
     <string name="removed_bookmark">Карт катертнӗ</string>
     <string name="marked_as_unread">Вуламан пек паллӑ тунӑ</string>
-    <string name="first_category">Пӗрремӗш пухмӑш</string>
     <string name="category_is_empty">Пухмӑшӗ пушӑ</string>
     <string name="create_new_category">Ҫӗнӗ пухмӑш ту</string>
     <string name="read_progress">Вуланӑ ӳсӗмӗ</string>
@@ -363,8 +355,6 @@
     <string name="already_in_category">Манкӑ пухмӑшра</string>
     <string name="confirm_category_deletion_message">Ҫак пухмӑшри манкӑ яланхилле пухмӑша куҫӗ.</string>
     <string name="confirm_category_deletion">Пухмӑша катерт\?</string>
-    <string name="categories_in_global_update">Пур пухмӑшсем пӗтӗмпех ҫӗнетнинче</string>
-    <string name="top_category">Ҫӳл пухмӑш (%1$s)</string>
     <string name="_already_in_queue">%1$s черетре</string>
     <string name="adding_category_to_queue">%1$s ҫӗнетӳ черече хушни</string>
     <string name="unlock">Ҫаклату салт</string>
@@ -404,8 +394,8 @@
     <string name="previous_title">Умӗнхи:</string>
     <string name="next_page">Маллали сыпӑк</string>
     <string name="previous_page">Умӗнхи эл</string>
-    <string name="next_chapter">Маллали сыпӑк</string>
-    <string name="previous_chapter">Умӗнхи эл</string>
+    <string name="next_chapter">Малалли сыпӑка</string>
+    <string name="previous_chapter">Умӗнхи сыпӑк</string>
     <string name="animate_page_transitions">Энимленӗ элсен куҫни</string>
     <string name="default_reading_mode">Яланхилле вулав тытӑмӗ</string>
     <string name="nav_layout">Куҫӑм палли</string>
@@ -434,7 +424,6 @@
     <string name="selected_">Суйланӑ: %1$d</string>
     <string name="update_available">Ҫӗнетӳ пур</string>
     <string name="updating_">%1$s ҫӗнетни</string>
-    <string name="what_should_update">Мӗн ҫӗнетмелле\?</string>
     <string name="jump_to_category">Пухмӑша хуш</string>
     <string name="category_with_name_exists">Ҫакӑн пек ятлӑ пухмӑш пур-уш!</string>
     <string name="add_edit_categories">Пухмӑшсем хуш/тӳрлет</string>
@@ -476,4 +465,10 @@
     <string name="disabled">Сӳнтернӗ</string>
     <string name="channel_errors">Йӑнӑшсем</string>
     <string name="tracking_info">Сӑнану сервиссенче сыпӑкӑн ӳсӗмне ҫӗнетме пӗр енлӗ пӗрлӗхлени. Манкӑн уйрӑм ҫыравӗсемпе вӗсен сӑнану пускӑчсем валли сӑнану ӗнерле.</string>
+    <string name="ascending">Пысӑкланнипе</string>
+    <string name="descending">Пӗчӗкленнипе</string>
+    <string name="select_inverse">Тепӗр майлӑ суйла</string>
+    <string name="clear_history">Кун-ҫул тасат</string>
+    <string name="clear_history_completed">Кун-ҫула катертнӗ</string>
+    <string name="clear_history_confirmation">Чӑнах катертесшӗн-и\? Веҫ кун-ҫулӗ ҫухалӗ.</string>
 </resources>

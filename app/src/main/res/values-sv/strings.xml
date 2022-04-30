@@ -21,7 +21,6 @@
     <string name="alphabetically">Alfabetiskt</string>
     <string name="total_chapters">Totalt kapitel</string>
     <string name="last_read">Senast läst</string>
-    <string name="last_updated">Senast uppdaterad</string>
     <string name="search">Sök</string>
     <string name="select_all">Välj alla</string>
     <string name="mark_as_read">Markera som läst</string>
@@ -72,12 +71,10 @@
     <string name="weekly">Varje vecka</string>
     <string name="categories_to_include_in_global_update">Kategorier som ska inkluderas i global uppdatering</string>
     <string name="all">Alla</string>
-    <string name="library_update_restriction">Biblioteks uppdateringsrestriktioner</string>
+    <string name="library_update_restriction">Enhetsbegränsningar</string>
     <string name="library_update_restriction_summary">Uppdatera endast när vilkoren är uppfyllda</string>
     <string name="wifi">WiFi</string>
     <string name="charging">Laddning</string>
-    <string name="only_update_ongoing">Uppdatera endast pågående manga</string>
-    <string name="sync_chapters_after_reading">Synkronisera kapitel efter läsning</string>
     <string name="app_theme">Programtema</string>
     <string name="dark">Mörkt tema</string>
     <string name="amoled_black">AMOLED tema</string>
@@ -109,7 +106,6 @@
     <string name="navigation">Navigering</string>
     <string name="volume_keys">Volymknapparna</string>
     <string name="invert_volume_keys">Invertera volymknapparna</string>
-    <string name="tapping">Tryckning</string>
     <string name="background_color">Bakgrundsfärg</string>
     <string name="white">Vit</string>
     <string name="black">Svart</string>
@@ -166,7 +162,7 @@
     <string name="restoring_backup">Återställer säkerhetskopia</string>
     <string name="clear_chapter_cache">Rensa kapitelcache</string>
     <string name="used_">Används: %1$s</string>
-    <string name="cache_delete_error">Ett fel uppstod medan cache rensades</string>
+    <string name="cache_delete_error">Fel inträffade vid rensning</string>
     <string name="clear_cookies">Radera cookies</string>
     <string name="cookies_cleared">Cookies rensade</string>
     <string name="clear_database">Rensa databas</string>
@@ -275,7 +271,6 @@
     <string name="dodge_lighten">Ljusna</string>
     <string name="burn_darken">Mörkna</string>
     <string name="help">Hjälp</string>
-    <string name="library_update_order">Bibliotekets uppdateringsordning</string>
     <string name="lock_with_biometrics">Lås med biometri</string>
     <string name="lock_when_idle">Lås vid inaktivitet</string>
     <string name="security">Säkerhet</string>
@@ -297,10 +292,6 @@
     <string name="updating_library">Uppdaterar biblioteket</string>
     <string name="date_added">Datum tillagd</string>
     <string name="latest_chapter">Senaste kapitel</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 uppdatering misslyckades</item>
-        <item quantity="other">%1$d uppdateringar misslyckades</item>
-    </plurals>
     <string name="no_results_found">Inga resultat funna</string>
     <string name="local_source_help_guide">Lokal källa guide</string>
     <string name="check_site_in_web">Kontrollera webbplatsen i WebView</string>
@@ -428,7 +419,6 @@
     <string name="library_search_hint">Sök titel, taggar, källa</string>
     <string name="remove_from_library_question">Ta bort från bibliotek\?</string>
     <string name="updating_">Uppdaterar %1$s</string>
-    <string name="what_should_update">Vad ska uppdateras\?</string>
     <string name="jump_to_category">Hoppa till kategori</string>
     <string name="long_press_category">Tryck och håll ned för att redigera en kategori</string>
     <string name="category_deleted">Kategori borttagen</string>
@@ -438,10 +428,6 @@
     <string name="already_in_category">Mangan finns redan i kategorin</string>
     <string name="confirm_category_deletion_message">Mangan i denna kategori kommer att flyttas till standardkategorin.</string>
     <string name="confirm_category_deletion">Ta bort kategori\?</string>
-    <string name="categories_in_global_update">Alla kategorier i den globala uppdateringen</string>
-    <string name="categories_on_manual">Kategorier som ska uppdateras när du uppdaterar manuellt</string>
-    <string name="first_category">Första kategorin</string>
-    <string name="top_category">Toppkategori (%1$s)</string>
     <string name="category_is_empty">Kategorin är tom</string>
     <string name="create_new_category">Skapa ny kategori</string>
     <string name="_already_in_queue">%1$s är redan i kö</string>
@@ -697,7 +683,6 @@
     <string name="migrate_">Migrera %1$s</string>
     <string name="copy_now">Kopiera nu</string>
     <string name="migrate_now">Migrera nu</string>
-    <string name="view_all_errors">Visa alla fel</string>
     <string name="use_default">Använd standard</string>
     <string name="top">Topp</string>
     <string name="tag">Tagg</string>
@@ -900,7 +885,7 @@
     <string name="use_side_navigation">Använd sidnavigering</string>
     <string name="appearance">Utseende</string>
     <string name="remove_x_from_service_and_add_y">Ta bort %1$s från %2$s och lägg till %3$s</string>
-    <string name="notification_size_warning">Stora uppdateringar kan leda till ökad batterianvändning och att källor blir långsammare</string>
+    <string name="notification_size_warning">Stora uppdateringar kan leda till ökad batterianvändning och att källor blir långsammare. Tryck för att få veta mer.</string>
     <string name="log_out">Logga ut</string>
     <string name="remove_from_">Ta bort från %1$s</string>
     <string name="some_extensions_may_not_update">Vissa tillägg uppdateras kanske inte automatiskt om de är installerade utanför appen</string>
@@ -928,9 +913,9 @@
     <string name="use_shizuku_to_install">Använd Shizuku för att installera tillägg</string>
     <string name="use_shizuku_summary">Gör det möjligt att installera tillägg utan uppmaningar från användaren och möjliggör automatiska uppdateringar för enheter med Android 12</string>
     <string name="every_3_days">Var 3:e dag</string>
-    <string name="download_queue_size_warning">Varning: stora massnerladdningar kan leda till att källor blir långsamma och/eller blockerar Tachiyomi</string>
+    <string name="download_queue_size_warning">Varning: stora massnerladdningar kan leda till att källor blir långsamma och/eller blockerar Tachiyomi. Tryck för att få veta mer.</string>
     <string name="classic_blue">Klassisk blå</string>
-    <string name="save_chapters_as_cbz">Spara kapitel som CBZ</string>
+    <string name="save_chapters_as_cbz">Spara som CBZ-arkiv</string>
     <string name="lime_time">Lime tid</string>
     <string name="tracking_info">Envägssynkronisering för att uppdatera kapitelförloppet i spårningstjänster. Ställ in spårning för enskilda manga från spårningsknappen under manga info.</string>
     <string name="enhanced_services">Förbättrade tjänster</string>
@@ -941,4 +926,61 @@
     <string name="update_tracking_scoring_type">Uppdatera %1$s\'s poängtyp</string>
     <string name="scoring_type_updated">Poängtyp uppdaterad</string>
     <string name="could_not_update_scoring_">Kunde inte uppdatera poängtyp: %1$s</string>
+    <string name="language_badge">Språkmärken</string>
+    <string name="local_invalid_format">Ogiltigt kapitelformat</string>
+    <string name="order_by">Sortera efter</string>
+    <string name="pref_inverted_colors">Omvänd</string>
+    <string name="navigate_pan">Navigera till pan</string>
+    <string name="grayscale">Gråskala</string>
+    <string name="empty_backup_error">Inga biblioteksposter att säkerhetskopiera</string>
+    <string name="move_series_to_top">Flytta serien till toppen</string>
+    <string name="ascending">Stigande</string>
+    <string name="date">Datum</string>
+    <string name="descending">Fallande</string>
+    <string name="clear_database_source_item_count">%1$d manga i databasen som inte är biblioteksmanga</string>
+    <string name="database_clean">Rengör databasen</string>
+    <string name="warning_enroll_into_beta">Betaversioner kan vara instabila och kan kräva att du rensar appdata.</string>
+    <string name="expanded_toolbar">Utökat verktygsfält</string>
+    <string name="try_new_features">Prova nya funktioner innan de släpps officiellt. Betaversioner kan vara instabila och tillhandahålls för att ge återkoppling till utvecklaren.</string>
+    <string name="zoom_double_page_spreads">Zooma in i dubbelsidiga uppslag</string>
+    <string name="show_larger_toolbar">Visa ett större, utökat verktygsfält högst upp på de flesta sidor (visas inte på mindre enheter oavsett inställning)</string>
+    <string name="check_for_beta_releases">Kontrollera om det finns betaversioner</string>
+    <string name="new_beta_version_available">Ny beta-version tillgänglig!</string>
+    <string name="warning_unenroll_from_beta">Att återgå till den tidigare produktionsversionen kan orsaka problem och kan kräva att du rensar appdata.</string>
+    <string name="confirm_manga_add_duplicate">Du har en post i ditt bibliotek med samma namn men från en annan källa (%1$s).
+\n
+\nVill du fortfarande fortsätta\?</string>
+    <string name="select_inverse">Välj omvänd</string>
+    <string name="cover_only_grid">Endast omslags-rutnät</string>
+    <string name="notification_update_error">%1$d uppdatering(ar) misslyckades</string>
+    <string name="notification_update_skipped">%1$d uppdatering(ar) hoppades över</string>
+    <string name="skipped_reason_completed">Hoppade över eftersom serien är klar</string>
+    <string name="skipped_reason_not_caught_up">Hoppade över eftersom det finns olästa kapitel</string>
+    <string name="skipped_reason_not_started">Hoppade över eftersom inga kapitel läses</string>
+    <string name="channel_skipped">Hoppat över</string>
+    <string name="pref_library_update_manga_restriction">Hoppa över att uppdatera titlar</string>
+    <string name="pref_update_only_completely_read">Med olästa kapitel</string>
+    <string name="pref_update_only_non_completed">Med status \"Avslutat\"</string>
+    <string name="pref_update_only_started">Som inte har startats</string>
+    <string name="tap_to_see_details">Tryck för att se detaljer</string>
+    <string name="tap_to_learn_more">Tryck på för att få veta mer</string>
+    <string name="clear_history">Rensa historik</string>
+    <string name="clear_history_completed">Historiken har tagits bort</string>
+    <string name="clear_history_confirmation">Är du säker\? All historik kommer att försvinna.</string>
+    <string name="use_staggered_grid">Använd ett förskjutet rutnät</string>
+    <string name="pref_update_only_completely_read_summary">Uppdatera bara manga om det inte finns några olästa kapitel (helt lästa)</string>
+    <string name="select_uninstalled_sources">Välj avinstallerade källor</string>
+    <string name="show_">Visa %1$s</string>
+    <string name="update_tracking_after_reading">Uppdatera spårning efter läsning</string>
+    <string name="most_entries">Flest inlägg</string>
+    <string name="downloads_swipe_tutorial">Nedladdningar kan avbrytas genom att svepa bort dem
+\nSvep det här tipset för att avlägsna det</string>
+    <string name="pref_clear_webview_data">Rensa data från WebView</string>
+    <string name="learn_more_at_">Läs mer på: %1$s</string>
+    <string name="must_view_details_before_migration">Den här posten\'s informationssida måste ses innan du kan migrera</string>
+    <string name="view_all">Visa alla</string>
+    <string name="webview_data_deleted">WebView-data rensas</string>
+    <string name="update_tracking_marked_read">Uppdatera spårningen när den markeras som läst</string>
+    <string name="backup_restore_invalid_uri">Fel: tom URI</string>
+    <string name="backup_info">Automatisk säkerhetskopiering rekommenderas starkt. Du bör också förvara kopior på andra ställen.</string>
 </resources>

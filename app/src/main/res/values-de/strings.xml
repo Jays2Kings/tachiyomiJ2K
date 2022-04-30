@@ -59,11 +59,7 @@
     <string name="_already_in_queue">%1$s ist schon in der Warteschlange</string>
     <string name="create_new_category">Neue Kategorie erstellen</string>
     <string name="category_is_empty">Kategorie ist leer</string>
-    <string name="top_category">Beste Kategorie (%1$s)</string>
     <string name="default_category">Standardkategorie</string>
-    <string name="first_category">Erste Kategorie</string>
-    <string name="categories_on_manual">Kategorien zum Aktualisieren wenn manuell aktualisiert wird</string>
-    <string name="categories_in_global_update">Alle Kategorien in globaler Aktualisierung</string>
     <string name="confirm_category_deletion">Kategorie löschen?</string>
     <string name="confirm_category_deletion_message">Manga in dieser Kategorie werden in die Standardkategorie verschoben.</string>
     <string name="already_in_category">Manga ist schon in dieser Kategorie</string>
@@ -81,7 +77,6 @@
     <string name="jump_to_category">Zu Kategorie springen</string>
     <!-- Updates -->
     <string name="update">Aktualisierung</string>
-    <string name="what_should_update">Was soll aktualisiert werden?</string>
     <string name="updating_">Aktualisiere %1$s</string>
     <string name="update_available">Aktualisierung verfügbar</string>
     <string name="new_version_available">Neue Aktualisierung verfügbar!</string>
@@ -114,7 +109,6 @@
     <string name="total_chapters">Kapitelanzahl</string>
     <string name="date_added">Datum hinzugefügt</string>
     <string name="last_read">Zuletzt gelesen</string>
-    <string name="last_updated">Zuletzt aktualisiert</string>
     <string name="latest_chapter">Letztes Kapitel</string>
     <string name="drag_and_drop">Ziehen und Ablegen</string>
     <!-- Library Display -->
@@ -139,16 +133,10 @@
         <item quantity="one">und %1$d weiteres Kapitel</item>
         <item quantity="other">und %1$d weitere Kapitel</item>
     </plurals>
-    <plurals name="notification_update_failed">
-        <item quantity="one">%1$d Aktualisierung fehlgeschlagen</item>
-        <item quantity="other">%1$d Aktualisierungen fehlgeschlagen</item>
-    </plurals>
     <!-- Library settings -->
     <string name="library_update_frequency">Häufigkeit der Bibliotheksaktualisierung</string>
-    <string name="library_update_order">Reihenfolge der Bibliotheksaktualisierung</string>
-    <string name="library_update_restriction">Bibliotheksaktualisierung einschränken</string>
+    <string name="library_update_restriction">Gerätebeschränkungen</string>
     <string name="library_update_restriction_summary">Nur wenn folgende Bedingungen eintreffen aktualisieren</string>
-    <string name="only_update_ongoing">Nur fortlaufende Manga aktualisieren</string>
     <string name="sort_by_ignoring_articles">Englische Artikel beim Sortieren ignorieren</string>
     <string name="when_sorting_ignore_articles">Wenn alphabetisch sortiert wird, dann werden englische Artikel (a, an, the) am Anfang des Mangatitels ignoriert</string>
     <string name="categories_to_include_in_global_update">Einzuschließende Kategorien in globaler Aktualisierung</string>
@@ -255,7 +243,6 @@
     <string name="navigation">Navigation</string>
     <string name="volume_keys">Lautstärketasten</string>
     <string name="invert_volume_keys">Lautstärketasten umkehren</string>
-    <string name="tapping">Tippen</string>
     <string name="background_color">Hintergrundfarbe</string>
     <string name="white">Weiß</string>
     <string name="black">Schwarz</string>
@@ -347,7 +334,6 @@
     <string name="tracked">Synchronisiert</string>
     <string name="not_tracked">Nicht synchronisiert</string>
     <string name="services">Anbieter</string>
-    <string name="sync_chapters_after_reading">Kapitel nach dem Lesen synchronisieren</string>
     <string name="reading">Am Lesen</string>
     <string name="currently_reading">Am Lesen</string>
     <string name="dropped">Abgebrochen</string>
@@ -448,7 +434,7 @@
         <item quantity="one">Zwischenspeicher geleert. %d Datei wurde gelöscht</item>
         <item quantity="other">Zwischenspeicher geleert. %d Dateien wurde gelöscht</item>
     </plurals>
-    <string name="cache_delete_error">Ein Fehler ist während dem Leeren des Zwischenspeichers aufgetreten</string>
+    <string name="cache_delete_error">Fehler während dem Leeren aufgetreten</string>
     <string name="clear_cookies">Cookies löschen</string>
     <string name="cookies_cleared">Cookies gelöscht</string>
     <string name="clear_database">Datenbank leeren</string>
@@ -520,7 +506,7 @@
     <string name="invalid_download_location">Ungültiger Herunterladen-Ort</string>
     <string name="download_paused">Herunterladen pausiert</string>
     <string name="nothing_is_downloading">Nichts wird aktuell heruntergeladen</string>
-    <string name="download_complete">Herunterladenereignis abgeschlossen</string>
+    <string name="download_complete">Download abgeschlossen</string>
     <string name="download_error">Fehler beim Herunterladen</string>
     <string name="manage_whats_downloading">Verwalte was heruntergeladen werden soll</string>
     <string name="visit_recents_for_download_queue">Die Neues-Registerkarte für Zugriff auf die Herunterladen-Warteschlange besuchen. Sie können auch Doppeltippen oder drücken und halten für schnelleren Zugriff</string>
@@ -534,7 +520,7 @@
     <string name="remove_when_marked_as_read">Gelesene Kapitel löschen</string>
     <string name="remove_after_read">Nach dem Lesen löschen</string>
     <string name="custom_location">Eigenes Verzeichnis</string>
-    <string name="last_read_chapter">ab zuletzt gelesenem Kapitel</string>
+    <string name="last_read_chapter">Ab zuletzt gelesenem Kapitel</string>
     <string name="second_to_last">ab zweitletzt gelesenem Kapitel</string>
     <string name="third_to_last">ab drittletzt gelesenem Kapitel</string>
     <string name="fourth_to_last">ab viertletzt gelesenem Kapitel</string>
@@ -597,7 +583,7 @@
     <string name="keep">Behalten</string>
     <string name="left">Links</string>
     <string name="less">Weniger</string>
-    <string name="loading">Wird geladen…</string>
+    <string name="loading">Wird geladen …</string>
     <string name="lock">Gesperrt</string>
     <string name="mark_all_as_read">Alle als gelesen markieren</string>
     <string name="mark_all_as_unread">Alle als ungelesen markieren</string>
@@ -642,7 +628,6 @@
     <string name="unknown_error">Unbekannter Fehler</string>
     <string name="unpin">Loslösen</string>
     <string name="use_default">Standard nutzen</string>
-    <string name="view_all_errors">Alle Fehler zeigen</string>
     <string name="view_chapters">Kapitel anzeigen</string>
     <string name="wifi">WLAN</string>
     <string name="mark_as_unread">Als ungelesen markieren</string>
@@ -955,7 +940,7 @@
     <string name="keep_in_">In %1$s behalten</string>
     <string name="scanlators">Scanlatoren</string>
     <string name="channel_errors">Fehler</string>
-    <string name="notification_size_warning">Große Aktualisierungen könnten zu einem höheren Akkuverbrauch und langsameren Quellen führen</string>
+    <string name="notification_size_warning">Eine große Anzahl von Aktualisierungen könnte zu einem erhöhten Akkuverbrauch und langsameren Quellen führen</string>
     <string name="show_in_sources_and_extensions">In Quellen- und Erweiterungslisten anzeigen</string>
     <string name="show_outline_around_covers">Rahmen um Cover anzeigen</string>
     <string name="ext_installer_shizuku_stopped">Shizuku läuft nicht</string>
@@ -964,9 +949,9 @@
     <string name="use_shizuku_summary">Erlaube Erweiterungen, ohne Eingabeaufforderungen installiert zu werden und aktiviere automatische Aktualisierungen für Geräte unter Android 12</string>
     <string name="classic_blue">Klassisches Blau</string>
     <string name="lime_time">Limettenzeit</string>
-    <string name="download_queue_size_warning">Achtung: Große Downloads könnten dazu führen, dass Quellen langsamer werden und/oder Tachiyomi blockieren</string>
+    <string name="download_queue_size_warning">Achtung: Große Downloads könnten dazu führen, dass Quellen langsamer werden und/oder Tachiyomi blockieren. Tippe, um mehr zu erfahren.</string>
     <string name="every_3_days">Alle 3 Tage</string>
-    <string name="save_chapters_as_cbz">Kapitel als CBZ speichern</string>
+    <string name="save_chapters_as_cbz">Als CBZ-Archiv speichern</string>
     <string name="cancelled">Abgebrochen</string>
     <string name="enhanced_services">Erweiterte Anbieter</string>
     <string name="publishing_finished">Veröffentlichung abgeschlossen</string>
@@ -976,4 +961,61 @@
     <string name="update_tracking_scoring_type">Bewertungsart von %1$s aktualisieren</string>
     <string name="scoring_type_updated">Bewertungsart aktualisiert</string>
     <string name="could_not_update_scoring_">Bewertungsart konnte nicht aktualisiert werden: %1$s</string>
+    <string name="new_beta_version_available">Neue Beta-Version verfügbar!</string>
+    <string name="empty_backup_error">Keine zu sichernden Bibliothekseinträge</string>
+    <string name="date">Datum</string>
+    <string name="local_invalid_format">Ungültiges Kapitelformat</string>
+    <string name="order_by">Sortiere nach</string>
+    <string name="navigate_pan">Innerhalb der Seite navigieren</string>
+    <string name="grayscale">Graustufen</string>
+    <string name="pref_inverted_colors">Invertiert</string>
+    <string name="move_series_to_top">Serie nach oben verschieben</string>
+    <string name="ascending">Aufsteigend</string>
+    <string name="descending">Absteigend</string>
+    <string name="clear_database_source_item_count">%1$d Nicht-Bibliotheksmanga in der Datenbank</string>
+    <string name="database_clean">Datenbank bereinigt</string>
+    <string name="confirm_manga_add_duplicate">In deiner Bibliothek existiert ein Eintrag mit dem gleichen Namen, aber aus einer anderen Quelle (%1$s).
+\n
+\nMöchtest du trotzdem fortfahren\?</string>
+    <string name="select_inverse">Auswahl umkehren</string>
+    <string name="cover_only_grid">Nur-Cover-Kacheln</string>
+    <string name="notification_update_error">%1$d Aktualisierung(en) fehlgeschlagen</string>
+    <string name="notification_update_skipped">%1$d Aktualisierung(en) übersprungen</string>
+    <string name="skipped_reason_completed">Übersprungen, da die Serie abgeschlossen ist</string>
+    <string name="skipped_reason_not_caught_up">Übersprungen, weil es ungelesene Kapitel gibt</string>
+    <string name="skipped_reason_not_started">Übersprungen, weil keine Kapitel gelesen wurden</string>
+    <string name="pref_library_update_manga_restriction">Aktualisierung der Titel überspringen</string>
+    <string name="pref_update_only_completely_read">Mit ungelesenen Kapiteln</string>
+    <string name="pref_update_only_non_completed">Mit dem Status „Abgeschlossen“</string>
+    <string name="pref_update_only_started">Die noch nicht begonnen wurden</string>
+    <string name="pref_clear_webview_data">WebView-Daten löschen</string>
+    <string name="webview_data_deleted">WebView-Daten gelöscht</string>
+    <string name="tap_to_see_details">Tippe, um Details anzuzeigen</string>
+    <string name="tap_to_learn_more">Antippen, um mehr zu erfahren</string>
+    <string name="channel_skipped">Übersprungen</string>
+    <string name="warning_unenroll_from_beta">Auf die letzte stabile Version zurückzusetzen kann Probleme verursachen und kann das Entfernen der Anwendungsdaten erfordern.</string>
+    <string name="expanded_toolbar">Erweiterte Symbolleiste</string>
+    <string name="pref_update_only_completely_read_summary">Manga nur aktualisieren, wenn es keine ungelesenen Kapitel gibt (vollständig gelesen)</string>
+    <string name="check_for_beta_releases">Nach Beta-Versionen suchen</string>
+    <string name="view_all">Alle anzeigen</string>
+    <string name="most_entries">Meiste Einträge</string>
+    <string name="learn_more_at_">Erfahren Sie mehr unter: %1$s</string>
+    <string name="try_new_features">Testen Sie neue Funktionen, bevor sie offiziell veröffentlicht werden. Beta-Versionen können instabil sein und werden bereitgestellt, um den Entwicklern Rückmeldung zu geben.</string>
+    <string name="warning_enroll_into_beta">Beta-Versionen können instabil sein und können das Entfernen der Anwendungsdaten erfordern.</string>
+    <string name="select_uninstalled_sources">Deinstallierte Quellen auswählen</string>
+    <string name="show_">%1$s anzeigen</string>
+    <string name="downloads_swipe_tutorial">Datenübertragungen können entfernt werden indem man sie zur Seite wegwischt
+\nDieser Hinweis kann auf die gleiche Weise entfernt werden</string>
+    <string name="clear_history">Verlauf löschen</string>
+    <string name="clear_history_completed">Verlauf gelöscht</string>
+    <string name="clear_history_confirmation">Bist du sicher\? Der gesamte Verlauf wird verloren sein.</string>
+    <string name="backup_restore_invalid_uri">Fehler: leerer URI</string>
+    <string name="backup_info">Automatische Sicherungen sind sehr zu empfehlen. Du solltest auch Kopien an anderen Orten aufbewahren.</string>
+    <string name="language_badge">Sprachlabels</string>
+    <string name="show_larger_toolbar">Zeige grössere, erweiterte Toolbar oberhalb der meisten Seiten (diese Einstellung greift nicht bei zu kleinen Bildschirmen)</string>
+    <string name="use_staggered_grid">Versetztes Cover-Raster verwenden</string>
+    <string name="zoom_double_page_spreads">Doppelseiten heranzoomen</string>
+    <string name="must_view_details_before_migration">Vor der Migration müssen die Details des Eintrags geprüft werden</string>
+    <string name="update_tracking_after_reading">Nach dem Lesen den Tracker aktualisieren</string>
+    <string name="update_tracking_marked_read">Markieren als gelesen aktualisiert den Tracker</string>
 </resources>

@@ -14,7 +14,6 @@
     <string name="read">Прочетени</string>
     <string name="alphabetically">Азбучен ред</string>
     <string name="last_read">Последно четене</string>
-    <string name="last_updated">Последно обновени</string>
     <string name="search">Търсене</string>
     <string name="select_all">Избери всички</string>
     <string name="mark_as_read">Отбележи като прочетена</string>
@@ -67,8 +66,6 @@
     <string name="library_update_restriction_summary">Обновявай само когато дадените условия са спазени</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">На зарядно устройство</string>
-    <string name="only_update_ongoing">Обновявай само излизаща манга</string>
-    <string name="sync_chapters_after_reading">Синхронизирай глави след прочитане</string>
     <string name="app_theme">Тема на приложението</string>
     <string name="dark">Тъмна тема</string>
     <string name="amoled_black">AMOLED тема</string>
@@ -82,7 +79,6 @@
     <string name="keep_screen_on">Не изключвай екрана</string>
     <string name="navigation">Навигация</string>
     <string name="volume_keys">Бутони за звука</string>
-    <string name="tapping">Докосване</string>
     <string name="background_color">Цвят на фона</string>
     <string name="white">Бял</string>
     <string name="black">Черен</string>
@@ -309,7 +305,6 @@
     <string name="dodge_lighten">Осветен</string>
     <string name="burn_darken">Затъмнен</string>
     <string name="help">Помощ</string>
-    <string name="library_update_order">Ред на обновяване на библиотеката</string>
     <string name="lock_with_biometrics">Заключи с биометрични данни</string>
     <string name="lock_when_idle">Заключи при неактивност</string>
     <string name="date_format">Формат на датата</string>
@@ -317,10 +312,6 @@
     <string name="updating_library">Обновяване на библиотеката</string>
     <string name="date_added">Добавено на</string>
     <string name="latest_chapter">Последна глава</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 актуализация не бе успешна</item>
-        <item quantity="other">%1$d актуализации бяха неуспешни</item>
-    </plurals>
     <string name="no_results_found">Не бяха намерени резултати</string>
     <string name="local_source_help_guide">Помощ за локални източници</string>
     <string name="check_site_in_web">Виж уебсайта в WebView</string>
@@ -417,10 +408,6 @@
     <string name="updated_to_">Обновена до v%1$s</string>
     <string name="confirm_category_deletion_message">Мангата в тази категория ще се премести в категорията по подразбиране.</string>
     <string name="confirm_category_deletion">Да се изтрие ли категорията\?</string>
-    <string name="categories_in_global_update">Всички категории в глобалната актуализация</string>
-    <string name="categories_on_manual">Категории за актуализиране при ръчно опресняване</string>
-    <string name="first_category">Първа категория</string>
-    <string name="top_category">Топ категория %1$s</string>
     <string name="category_is_empty">Категорията е празна</string>
     <string name="create_new_category">Създайте нова категория</string>
     <string name="_already_in_queue">%1$s вече е на опашка</string>
@@ -543,7 +530,6 @@
     <string name="remove_all_downloads">Премахване на всички изтегляния\?</string>
     <string name="no_chapters_to_delete">Няма глави за изтриване</string>
     <string name="by_source_order">По поръчка на източника</string>
-    <string name="what_should_update">Какво трябва да се актуализира\?</string>
     <string name="hide_start_reading_button">Скриване на бутона за начало на четене</string>
     <string name="reset_all_chapters_for_this_">Изчисти всички глави за %1$s</string>
     <string name="view_history">Преглед на историята</string>
@@ -864,7 +850,6 @@
     <string name="dark_theme">Тъмна тема</string>
     <string name="notification_size_warning">Големите актуализации могат да доведат до повишено използване на батерията и забавяне на източниците</string>
     <string name="couldnt_download_low_space">Главите не можаха да бъдат изтеглени поради недостатъчно място</string>
-    <string name="view_all_errors">Преглед на всички грешки</string>
     <string name="deleted_">Изтрити: %1$s</string>
     <string name="downloading_">Изтегляне на %1$s</string>
     <string name="data_management">Управление на данни</string>
@@ -969,4 +954,19 @@
     <string name="tracking_info">Еднопосочна синхронизация на прочетените глави. Установи проследяване за отделни манги от индивидуалния бутон за проследяване.</string>
     <string name="enhanced_services">Подобрени услуги</string>
     <string name="enhanced_tracking_info">Услуги, предлагащи подобрени особености за определени източници. Манга се проследява автоматично, щом бъде добавена към библиотеката Ви.</string>
+    <string name="local_invalid_format">Невалиден формат на главата</string>
+    <string name="order_by">Нареди по</string>
+    <string name="grayscale">Черно-бяло</string>
+    <string name="pref_inverted_colors">Инвертирани цветове</string>
+    <string name="ascending">Възходящ</string>
+    <string name="date">Дата</string>
+    <string name="descending">Низходящ</string>
+    <string name="clear_database_source_item_count">%1$d небиблиотечна манга в базата данни</string>
+    <string name="database_clean">Почистване на базата данни</string>
+    <string name="select_inverse">Избери обратно</string>
+    <string name="cover_only_grid">Решетка само с корици</string>
+    <string name="clear_history">Изчисти историята</string>
+    <string name="clear_history_completed">Историята изтрита</string>
+    <string name="clear_history_confirmation">Напълно ли сте сигурен\? Всичката ви история ще бъде загубена.</string>
+    <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места.</string>
 </resources>

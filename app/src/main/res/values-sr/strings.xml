@@ -21,7 +21,6 @@
     <string name="alphabetically">Alfabetno</string>
     <string name="total_chapters">Ukupno poglavlja</string>
     <string name="last_read">Zadnje čitano</string>
-    <string name="last_updated">Zadnje ažurirano</string>
     <string name="search">Pretraži</string>
     <string name="select_all">Izaberi sve</string>
     <string name="mark_as_read">Označi kao pročitano</string>
@@ -72,12 +71,10 @@
     <string name="weekly">Nedeljno</string>
     <string name="categories_to_include_in_global_update">Kategorije koje su ubrajane u globalnom ažuriranju</string>
     <string name="all">Све</string>
-    <string name="library_update_restriction">Restrikcije ažuriranja biblioteke</string>
+    <string name="library_update_restriction">Ograničenja uredjaja</string>
     <string name="library_update_restriction_summary">Ažuriraj samo kada su uslovi zadovoljeni</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Пуњење</string>
-    <string name="only_update_ongoing">Samo ažuriraj mangu koja je u toku</string>
-    <string name="sync_chapters_after_reading">Sinhronizuj poglavlja nakon čitanja</string>
     <string name="app_theme">Tema aplikacije</string>
     <string name="dark">Tamna tema</string>
     <string name="amoled_black">AMOLED tema</string>
@@ -109,7 +106,6 @@
     <string name="navigation">Navigacija</string>
     <string name="volume_keys">Dugmići za zvuk</string>
     <string name="invert_volume_keys">Invertuj dugmiće za zvuk</string>
-    <string name="tapping">Tapkanje</string>
     <string name="background_color">Boja pozadine</string>
     <string name="white">Bela</string>
     <string name="black">Crna</string>
@@ -166,7 +162,7 @@
     <string name="restoring_backup">Враћа се на резервну копију</string>
     <string name="clear_chapter_cache">Izbriši keš poglavlja</string>
     <string name="used_">Koristio: %1$s</string>
-    <string name="cache_delete_error">Дошло је до грешке током пражњења кеша</string>
+    <string name="cache_delete_error">Došlo je do greške prilikom brisanja</string>
     <string name="clear_cookies">Izbriši kolačiće</string>
     <string name="cookies_cleared">Колачићи су избрисани</string>
     <string name="clear_database">Izbriši baze podataka</string>
@@ -229,7 +225,6 @@
     <string name="date_added">Datum dodavanja</string>
     <string name="latest_chapter">Poslednje poglavlje</string>
     <string name="new_chapters_found">Pronađena su nova poglavlja</string>
-    <string name="library_update_order">Red ažuriranja biblioteke</string>
     <string name="this_will_remove_the_read_date_question">Ovo će ukloniti datum čitanja ovog poglavlja. Da li ste sigurni\?</string>
     <string name="no_results_found">Nema pronadjenih rezultata</string>
     <string name="local_source_help_guide">Vodič za lokalni izvor</string>
@@ -402,11 +397,6 @@
     <string name="log_out_from_">Izloguj se od %1$s\?</string>
     <string name="could_not_download_unexpected_error">Nije moguće preuzeti poglavlje zbog neočekivane greške</string>
     <string name="no_wifi_connection">Nema dostupne Wi-Fi veze</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 ažuriranje nije uspelo</item>
-        <item quantity="few">%1$d ažuriranja nije uspelo</item>
-        <item quantity="other">%1$d ažuriranja nije uspelo</item>
-    </plurals>
     <string name="date_fetched">Datum preuzimanja</string>
     <string name="badges">Oznake</string>
     <string name="by_update_date">Po datumu postavljanja</string>
@@ -471,7 +461,6 @@
     <string name="manhua">Kineska manga</string>
     <string name="update_available">Ažuriranje je moguće</string>
     <string name="not_bookmarked">Nije zabeleženo</string>
-    <string name="first_category">Prva kategorija</string>
     <string name="uniform_grid_covers">Ujednačeni mrežasti pokrivači</string>
     <string name="no_chapters_to_delete">Nema poglavlja za brisanje</string>
     <string name="remove_all_downloads">Želi te li da izbrišete sva preuzimanja\?</string>
@@ -563,7 +552,7 @@
     <string name="delete_downloaded_if_removed_online">Izbriši preuzeta poglavlja ako je izvor uklonio poglavlje sa mreže</string>
     <string name="ask_on_chapters_page">Izbriši tokom globalnih ažuriranja, pitajte na stranici poglavlja</string>
     <string name="always_delete">Uvek izbriši</string>
-    <string name="save_chapters_as_cbz">Sačuvaj poglavlje kao CBZ</string>
+    <string name="save_chapters_as_cbz">Sačuvaj kao CBZ arhivu</string>
     <plurals name="after_minutes">
         <item quantity="one">Nakon %1$s minut</item>
         <item quantity="few">Nakon %1$s minuta</item>
@@ -589,7 +578,6 @@
     <string name="orientation">Orijentacija</string>
     <string name="selection">Izabrati</string>
     <string name="use_default">Koristi podramuzevane vrednosti</string>
-    <string name="view_all_errors">Pogledajte sve greške</string>
     <string name="include_in_global_update">Uključiti u globalnom ažuriranju</string>
     <string name="global_updates">Globalna ažuriranja</string>
     <string name="search_suggestions">Pretraži predloge</string>
@@ -764,7 +752,6 @@
         <item quantity="few">%1$d strana ostalo</item>
         <item quantity="other">%1$d strana ostalo</item>
     </plurals>
-    <string name="categories_on_manual">Kategorije koje se same ažuriraju prilikom manuelnog osvežavanja</string>
     <string name="by_source_order">Po redosledu izvora</string>
     <string name="category_with_name_exists">Kategorija sa tim imenom već postoji!</string>
     <string name="could_not_install_update">Nije moguće instalirati ažuriranje</string>
@@ -908,15 +895,12 @@
     <string name="scanlators">Prevodioci</string>
     <string name="adding_category_to_queue">Dodavanje %1$s u red za ažuriranje</string>
     <string name="manage_category">Upravljanje kategorijama</string>
-    <string name="top_category">Top kategorija (%1$s)</string>
-    <string name="categories_in_global_update">Sve kategorije u globalnom ažuriranju</string>
     <string name="confirm_category_deletion">Izbrisati kategoriju\?</string>
     <string name="confirm_category_deletion_message">Manga u ovoj kategoriji će se premestiti u podrazumevanoj kategoriji.</string>
     <string name="category_cannot_be_blank">Ime kategorije nesme ostati prazno</string>
     <string name="category_deleted">Kategorija izbrisana</string>
     <string name="long_press_category">Pritisni i zadrži kako bi uredio/la kategoriju</string>
     <string name="jump_to_category">Predjite na kategoriju</string>
-    <string name="what_should_update">Šta se treba ažurirati\?</string>
     <string name="updating_">Ažuriranje %1$s</string>
     <string name="your_library">Tvoja biblioteka</string>
     <string name="when_grouping_by_sources_tags">Prilikom grupisanja biblioteke prema izvoru,statusu itd.</string>
@@ -961,4 +945,64 @@
     <string name="tracking_info">Једносмерна синхронизација за ажурирање броја прочитаних поглавља у пратиоцима. Пратиоц за појединачни серијал се може подесити путем дугмића за пратиоце у том серијалу.</string>
     <string name="enhanced_services">Побољшани сервиси</string>
     <string name="enhanced_tracking_info">Сервиси који пружају побољшане услуге за одређене изворе. Манга се аутоматски прати када је додате у колекцију.</string>
+    <string name="update_tracking_scoring_type">Ažuriranje %1$s tipa bodovanja</string>
+    <string name="scoring_type_updated">Ažuriran tip bodovanja</string>
+    <string name="could_not_update_scoring_">Nije moguće ažurirati tip bodovanja: %1$s</string>
+    <string name="grayscale">Црно-бело</string>
+    <string name="local_invalid_format">Nevažeći format poglavlja</string>
+    <string name="order_by">Poređaj po</string>
+    <string name="navigate_pan">Управљај померањем слике</string>
+    <string name="pref_inverted_colors">Инвертовано</string>
+    <string name="ascending">Rastuće</string>
+    <string name="date">Datum</string>
+    <string name="move_series_to_top">Pomakni serijal na vrh</string>
+    <string name="descending">Opadajuće</string>
+    <string name="clear_database_source_item_count">Број манги у бази података које нису у колекцији: %1$d</string>
+    <string name="database_clean">Čišćenje baze podataka</string>
+    <string name="confirm_manga_add_duplicate">Imate unos u kolekciji sa istim imenom, ali iz drugog izvora (%1$s).
+\n
+\nDa li i dalje želite da nastavite\?</string>
+    <string name="select_inverse">Izaberi obrnuto</string>
+    <string name="skipped_reason_not_caught_up">Preskočeno jer ima nepročitanih poglavlja</string>
+    <string name="channel_skipped">Preskočeno</string>
+    <string name="tap_to_see_details">Prikaži detalje</string>
+    <string name="tap_to_learn_more">Pritisnite za više</string>
+    <string name="cover_only_grid">Мрежа насловница</string>
+    <string name="notification_update_error">%1$d ažuriranje nije uspelo</string>
+    <string name="notification_update_skipped">%1$d ažuriranje je preskočeno</string>
+    <string name="skipped_reason_completed">Preskočeno jer je serijal završen</string>
+    <string name="skipped_reason_not_started">Preskočeno jer nijedno poglavlje nije pročitano</string>
+    <string name="new_beta_version_available">Dostupna je nova verzija bete!</string>
+    <string name="language_badge">Jezičke značke</string>
+    <string name="warning_unenroll_from_beta">Vraćanje na prethodnu proizvodnu verziju može izazvati probleme i može zahtevati brisanje podataka aplikacije.</string>
+    <string name="warning_enroll_into_beta">Beta izdanja mogu biti nestabilna i mogu zahtevati brisanje podataka aplikacije.</string>
+    <string name="expanded_toolbar">Proširena traka sa alatkama</string>
+    <string name="show_larger_toolbar">Prikaži veću, proširenu traku sa alatkama na vrhu većine stranica(ne prikazuje se na manjim uredjajima bez obzira na podešavanje)</string>
+    <string name="empty_backup_error">Nema unosa u biblioteku za pravljenje rezervnih kopija</string>
+    <string name="check_for_beta_releases">Proverite za novo beta izdanje</string>
+    <string name="try_new_features">Isprobajte nove funkcije pre nego što budu zvanično objavljene.Beta izdanja mogu biti nestabilna i obezbedjena su da bi se programeru dale povratne informacije.</string>
+    <string name="use_staggered_grid">Koristite poredjanu sliku</string>
+    <string name="pref_library_update_manga_restriction">Preskočite ažuriranje naslova</string>
+    <string name="pref_update_only_completely_read">Sa neporcitanim poglavljem(ima)</string>
+    <string name="pref_update_only_non_completed">Sa završenim \"Statusom\"</string>
+    <string name="pref_update_only_started">To nije započeto</string>
+    <string name="pref_update_only_completely_read_summary">Ažurirajte mangu samo ako nema pročitanog poglavlja (potpuno pročitano)</string>
+    <string name="zoom_double_page_spreads">Zumirajte duple stranice</string>
+    <string name="update_tracking_after_reading">Ažurirajte praćenja nakon čitanja</string>
+    <string name="update_tracking_marked_read">Ažurirajte praćenja kada je označeno kao pročitano</string>
+    <string name="pref_clear_webview_data">Obrišite podatke WebView-a</string>
+    <string name="webview_data_deleted">Podaci WebView-a su obrisani</string>
+    <string name="most_entries">Većina unosa</string>
+    <string name="must_view_details_before_migration">Stranica sa detaljima ovog unosa mora da se pogleda pre nego što se omogući migracija</string>
+    <string name="show_">Prikaži%1$s</string>
+    <string name="clear_history">Избриши историју</string>
+    <string name="clear_history_completed">Историја је избрисана</string>
+    <string name="clear_history_confirmation">Да ли сте сигурни\? Цела историја ће бити изгубљена.</string>
+    <string name="learn_more_at_">Saznajte više na: %1$s</string>
+    <string name="view_all">Pogledati sve</string>
+    <string name="select_uninstalled_sources">Izaberite deinstalirane izvore</string>
+    <string name="downloads_swipe_tutorial">Preuzimanja se mogu otkazati prevlačenjem
+\nPrevocite ovaj savet kako biste ga odbacili</string>
+    <string name="backup_restore_invalid_uri">Greška: prazan URI</string>
+    <string name="backup_info">Препоручује се аутоматско прављење резервне копије. Чувајте копије и на другим местима.</string>
 </resources>

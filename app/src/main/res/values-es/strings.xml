@@ -9,7 +9,7 @@
     <!-- Actions -->
     <string name="filter">Filtrar</string>
     <string name="downloaded">Descargados</string>
-    <string name="unread">No leídos</string>
+    <string name="unread">Sin leer</string>
     <string name="search">Buscar</string>
     <string name="select_all">Seleccionar todo</string>
     <string name="mark_as_read">Marcar como leído</string>
@@ -48,12 +48,10 @@
     <string name="every_12_hours">Cada 12 horas</string>
     <string name="daily">Cada día</string>
     <string name="every_2_days">Cada 2 días</string>
-    <string name="library_update_restriction">Restricciones de actualización de la biblioteca</string>
+    <string name="library_update_restriction">Restricciones del dispositivo</string>
     <string name="library_update_restriction_summary">Actualizar solo cuando se cumplan las condiciones</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Mientras se carga la batería</string>
-    <string name="only_update_ongoing">Solo actualizar el manga en curso</string>
-    <string name="sync_chapters_after_reading">Sincronizar capítulos después de leerlos</string>
     <string name="app_theme">Tema de la aplicación</string>
     <string name="dark">Oscuro</string>
     <!-- Reader section -->
@@ -63,7 +61,6 @@
     <string name="keep_screen_on">Mantener la pantalla encendida</string>
     <string name="navigation">Navegación</string>
     <string name="volume_keys">Teclas de volumen</string>
-    <string name="tapping">Tocar pantalla</string>
     <string name="background_color">Color de fondo</string>
     <string name="white">Blanco</string>
     <string name="black">Negro</string>
@@ -98,7 +95,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Borrar la caché de los capítulos</string>
     <string name="used_">Usado: %1$s</string>
-    <string name="cache_delete_error">Se produjo un error al limpiar la caché</string>
+    <string name="cache_delete_error">Se produjo un error al limpiar</string>
     <string name="clear_cookies">Borrar cookies</string>
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
@@ -187,7 +184,6 @@
     <string name="alphabetically">Alfabéticamente</string>
     <string name="total_chapters">N.º de capítulos</string>
     <string name="last_read">Última lectura</string>
-    <string name="last_updated">Última actualización</string>
     <string name="add">Añadir</string>
     <string name="no_network_connection">Conexión a la red no disponible</string>
     <string name="download_paused">Descarga detenida</string>
@@ -249,7 +245,7 @@
     <string name="set_as_cover">Establecer como cubierta</string>
     <string name="cover_updated">Cubierta actualizada</string>
     <string name="failed_to_update_cover">Error al actualizar la portada</string>
-    <string name="download_badge">Iconos de descarga</string>
+    <string name="download_badge">Insignias de descarga</string>
     <string name="local">Local</string>
     <string name="other">Otros</string>
     <string name="global_search">Búsqueda global…</string>
@@ -306,7 +302,6 @@
     <string name="dodge_lighten">Esquivar / Aligerar</string>
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
-    <string name="library_update_order">Orden de actualización de la biblioteca</string>
     <string name="no_results_found">No se han encontrado resultados</string>
     <string name="lock_with_biometrics">Bloquear con huella dactilar</string>
     <string name="lock_when_idle">Bloquear por inactividad</string>
@@ -331,10 +326,6 @@
     <string name="updating_library">Actualizando biblioteca</string>
     <string name="date_added">Fecha de añadido</string>
     <string name="latest_chapter">Capítulo más reciente</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 actualización fallida</item>
-        <item quantity="other">%1$d actualizaciónes fallidas</item>
-    </plurals>
     <string name="local_source_help_guide">Guía de fuente local</string>
     <string name="check_site_in_web">Abrir sitio en WebView</string>
     <string name="obsolete">Obsoleto</string>
@@ -501,7 +492,6 @@
     <string name="library_search_hint">Buscar título, autor, fuente</string>
     <string name="remove_from_library_question">¿Eliminar de la biblioteca\?</string>
     <string name="updating_">Actualizando %1$s</string>
-    <string name="what_should_update">¿Qué debería actualizar\?</string>
     <string name="jump_to_category">Saltar a la categoría</string>
     <string name="long_press_category">Mantén presionado para editar una categoría</string>
     <string name="category_deleted">Categoría eliminada</string>
@@ -510,10 +500,6 @@
     <string name="already_in_category">El manga ya está en categoría</string>
     <string name="confirm_category_deletion_message">El manga en esta categoría se moverá a la predeterminada.</string>
     <string name="confirm_category_deletion">¿Eliminar categoría\?</string>
-    <string name="categories_in_global_update">Todas las categorías en la actualización global</string>
-    <string name="categories_on_manual">Categorías para actualizar al refrescar manualmente</string>
-    <string name="first_category">Primera categoría</string>
-    <string name="top_category">Categoría superior (%1$s)</string>
     <string name="category_is_empty">Esta categoría está vacía</string>
     <string name="create_new_category">Crear nueva categoría</string>
     <string name="_already_in_queue">%1$s ya está en la cola</string>
@@ -533,7 +519,6 @@
     <string name="source_not_installed">Fuente no instalada</string>
     <string name="remember_this_choice">Recordar selección</string>
     <string name="reset_cover">Recolocar portada</string>
-    <string name="view_all_errors">Mostrar todos los errores</string>
     <string name="use_default">Usar predefinida</string>
     <string name="tag">Etiqueta</string>
     <string name="sort_and_filter">Ordenar y filtrar</string>
@@ -590,7 +575,7 @@
     <string name="select_a_source_then_item_to_migrate">Selecciona una fuente, luego selecciona un objeto para migrar</string>
     <string name="select_sources">Seleccionar fuentes</string>
     <string name="remove_tracking_from_">También eliminar desde %1$s</string>
-    <string name="remove_tracking">Eliminar seguimiento desde la aplicación</string>
+    <string name="remove_tracking">Eliminar seguimiento de la aplicación</string>
     <string name="not_tracked">Sin seguimiento</string>
     <string name="to_show_again_setting_sources">Para volver a mostrar esta pantalla, vaya a Configuración -&gt; Fuentes.</string>
     <string name="include_extra_search_parameter">Incluir un parámetro de búsqueda adicional al buscar</string>
@@ -685,8 +670,8 @@
     <string name="app_info">Información de la aplicación</string>
     <string name="filter_languages">Filtrar idiomas</string>
     <string name="show_unread_count">Mostrar recuento de no leídos</string>
-    <string name="show_unread_badges">Mostrar insignias no leídas</string>
-    <string name="hide_unread_badges">Ocultar insignias no leídas</string>
+    <string name="show_unread_badges">Ver insignias por leer</string>
+    <string name="hide_unread_badges">Ocultar insignias por leer</string>
     <string name="add_edit_categories">Agregar/Editar categorías</string>
     <string name="category">Categoría</string>
     <plurals name="chapters_plural">
@@ -860,7 +845,7 @@
     <string name="dark_theme">Tema oscuro</string>
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">No se han encontrado resultados iguales</string>
-    <string name="source_unsupported">No se admite el origen</string>
+    <string name="source_unsupported">Fuente no soportada</string>
     <string name="only_applies_silent_trackers">Solo aplicado en seguidores silenciosos tales como Komga</string>
     <string name="track_when_adding_to_library">Seguimiento al añadir a la biblioteca</string>
     <plurals name="_updates_pending">
@@ -903,7 +888,7 @@
     <string name="by_chapter_number">Por número de capítulo</string>
     <string name="by_source_order">Por orden de la fuente</string>
     <string name="not_bookmarked">Sin marcar</string>
-    <string name="name">Nombre</string>
+    <string name="name">Español</string>
     <string name="recently_installed">Instalado recientemente</string>
     <string name="recently_updated">Actualizado recientemente</string>
     <string name="some_extensions_may_not_update">Es posible que algunas extensiones no se actualicen automáticamente si fueron instaladas fuera de esta aplicación</string>
@@ -960,9 +945,9 @@
     <string name="use_shizuku_summary">Permite instalar extensiones sin preguntarte y las actualiza automáticamente en versiones inferiores a Android 12</string>
     <string name="classic_blue">Azul clásico</string>
     <string name="lime_time">Lima limonera</string>
-    <string name="download_queue_size_warning">Advertencia: Las descargas grandes pueden llevar a que las fuentes se vuelvan cada vez más lentas y en casos extremos que los servidores limiten o impidan el acceso a Tachiyomi</string>
+    <string name="download_queue_size_warning">Advertencia: Las descargas grandes pueden llevar a que las fuentes se vuelvan cada vez más lentas y en casos extremos que los servidores limiten o impidan el acceso a Tachiyomi. Toca aquí para más información.</string>
     <string name="every_3_days">Cada 3 días</string>
-    <string name="save_chapters_as_cbz">Guardar los capítulos como CBZ</string>
+    <string name="save_chapters_as_cbz">Guardar como archivo CBZ</string>
     <string name="publishing_finished">Serie terminada</string>
     <string name="cancelled">Cancelada</string>
     <string name="on_hiatus">En pausa</string>
@@ -971,4 +956,51 @@
     <string name="enhanced_tracking_info">Servicios que ofrecen funciones mejoradas para ciertas fuentes. Se hace un seguimiento automático del manga al añadirlo a la biblioteca.</string>
     <string name="scoring_type_updated">Tipo de puntuación actualizado</string>
     <string name="could_not_update_scoring_">No se pudo actualizar el tipo de puntuación: %1$s</string>
+    <string name="update_tracking_scoring_type">Actualizando el %1$s de la puntuación</string>
+    <string name="language_badge">Insignias de idioma</string>
+    <string name="check_for_beta_releases">Buscar versiones beta</string>
+    <string name="zoom_double_page_spreads">Hacer zoom en páginas dobles</string>
+    <string name="expanded_toolbar">Barra de herramientas extendida</string>
+    <string name="try_new_features">Pruebe nuevas funciones antes de que se publiquen oficialmente. Las versiones beta pueden ser inestables y se proporcionan para dar información al desarrollador.</string>
+    <string name="warning_unenroll_from_beta">Volver a la versión estable anterior puede causar problemas y podría requerir borrar los datos de la aplicación.</string>
+    <string name="new_beta_version_available">¡Nueva versión beta disponible!</string>
+    <string name="show_larger_toolbar">Mostrar una barra de herramientas más grande en la parte superior de la mayoría de las páginas (no se muestra en dispositivos pequeños independientemente de la selección)</string>
+    <string name="warning_enroll_into_beta">Las versiones beta pueden ser inestables y podrían requerir borrar los datos de la aplicación.</string>
+    <string name="grayscale">Escala de grises</string>
+    <string name="local_invalid_format">El formato del capítulo no es correcto</string>
+    <string name="order_by">Ordenar por</string>
+    <string name="navigate_pan">Desplazarse por el resto de la página antes de cambiar</string>
+    <string name="pref_inverted_colors">Invertido</string>
+    <string name="empty_backup_error">No hay ningún elemento en la biblioteca que respaldar</string>
+    <string name="move_series_to_top">Mover al primer puesto</string>
+    <string name="ascending">Ascendente</string>
+    <string name="date">Fecha</string>
+    <string name="descending">Descendiente</string>
+    <string name="clear_database_source_item_count">Hay %1$d manga que no pertenece a la biblioteca en la base de datos</string>
+    <string name="database_clean">Base de datos limpia</string>
+    <string name="confirm_manga_add_duplicate">Tienes un elemento en tu biblioteca con el mismo nombre pero de distinto origen (%1$s).
+\n
+\n¿Quieres seguir\?</string>
+    <string name="select_inverse">Invertir selección</string>
+    <string name="cover_only_grid">Cuadrícula sólo de portadas</string>
+    <string name="notification_update_skipped">Actualizaciones omitidas: %1$d</string>
+    <string name="skipped_reason_completed">Omitido porque la serie está completa</string>
+    <string name="skipped_reason_not_caught_up">Omitido porque hay capítulos sin leer</string>
+    <string name="notification_update_error">Actualizaciones fallidas: %1$d</string>
+    <string name="skipped_reason_not_started">Omitido porque no hay capítulos leídos</string>
+    <string name="channel_skipped">Omitidas</string>
+    <string name="pref_library_update_manga_restriction">Omitir actualizaciones</string>
+    <string name="pref_update_only_completely_read">Con capítulos sin leer</string>
+    <string name="pref_update_only_non_completed">Series completadas</string>
+    <string name="pref_update_only_started">Series sin empezar</string>
+    <string name="tap_to_see_details">Toca para ver los detalles del error</string>
+    <string name="tap_to_learn_more">Ver más detalles</string>
+    <string name="pref_clear_webview_data">Limpiar datos del WebView</string>
+    <string name="webview_data_deleted">Se han limpiado los datos del WebView</string>
+    <string name="show_">Ver %1$s</string>
+    <string name="clear_history">Borrar historial</string>
+    <string name="clear_history_completed">Historial eliminado</string>
+    <string name="clear_history_confirmation">¿Estás seguro\? Perderás todo el historial.</string>
+    <string name="backup_restore_invalid_uri">Error: dirección URI vacía</string>
+    <string name="backup_info">Es una buena idea tener copias de respaldo automáticas, así como respaldarlas fuera de tu dispositivo.</string>
 </resources>

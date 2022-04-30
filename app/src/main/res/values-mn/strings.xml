@@ -1,4 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="all_files_permission_required">Файлийн зөвшөөрөл шаардлагатай</string>
+    <string name="comic">Комик</string>
+    <string name="external_storage_permission_notice">\"TachiyomiJ2K\" нь Андройд 11-ийн бүх файлыг хэрэглэх зөвшөөрөл авч байж утсан дээрээс тань манга уншиж, манга татах боломжтой.
+\n
+\nДараа гарч ирэх хэсэгт, бүх файлийг удирдахыг зөвшөөрнө үү.</string>
+    <string name="not_started">Эхлээгүй</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K бүх файлуудыг ашиглах зөвшөөрөлтэй байж манга татах боломжтой. Энд дараад, бүх файлыг удирдах зөвшөөрөл олгоно уу.</string>
+    <string name="manhwa">Манхуа</string>
+    <string name="manhua">Манхуа</string>
+    <string name="unlock_library">Ашиглахын тулд онгойлгоно уу</string>
+    <string name="webtoon">Вебтүүн</string>
+    <string name="lock_with_biometrics">Биометрик-ээр цоожлох</string>
+    <string name="completed">Дууссан</string>
+    <string name="unknown">Үл мэдэгдэх</string>
+    <string name="unknown_status">Байдал үл мэдэгднэ</string>
+    <string name="licensed">Лицензтэй</string>
+    <string name="unlock">Онгойлгох</string>
+    <string name="manga">Манга</string>
+    <string name="in_progress">Эхэлсэн</string>
+    <string name="read">Унших</string>
+    <string name="title">Гарчиг</string>
+    <string name="author">Зохиолч</string>
+    <string name="artist">Зураач</string>
+    <string name="description">Тайлбар</string>
+    <string name="move_x_to">%1$s-ийг хаашаа зөөх…</string>
+    <string name="add_x_to">%1$s-ийг хаашаа нэмэх…</string>
+    <string name="ongoing">Гаргаж буй</string>
+    <string name="publishing_finished">Гаргалт дууссан</string>
+    <string name="cancelled">Цуцлагдсан</string>
+    <string name="on_hiatus">Түр зогссон</string>
+    <string name="lock_when_idle">Хэрэглээгүй үед унтраах</string>
+    <string name="chapters">Бүлгүүд</string>
+    <string name="new_chapters">Шинэ бүлгүүд</string>
+    <string name="unread">Уншаагүй</string>
+    <string name="last_read_chapter_">Сүүлд уншсан бүлэг - %1$s</string>
+    <string name="chapter_">Бүлэг %1$s</string>
+    <string name="chapter_x_of_y">%2$d-ы бүлэг %1$d</string>
+    <string name="all_chapters_read">Бүх бүлгийг уншсан</string>
+    <string name="bookmarked">Тэмдгэлсэн</string>
+    <string name="not_bookmarked">Тэмдгэлээгүй</string>
+    <string name="marked_as_read">Уншсан гэж тэмдгэлсэн</string>
+    <string name="marked_as_unread">Уншаагүй гэж тэмдгэлсэн</string>
+    <string name="removed_bookmark">Тэмдгийг устгалаа</string>
+    <string name="chapters_removed">Бүлгийг устгалаа.</string>
+    <string name="chapter_not_found">Бүлэг олдсонгүй</string>
+    <string name="no_chapters_error">Ямар ч бүлэг олдсонгүй</string>
 </resources>

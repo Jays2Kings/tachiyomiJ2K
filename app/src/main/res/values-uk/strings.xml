@@ -21,7 +21,6 @@
     <string name="alphabetically">В алфавітному порядку</string>
     <string name="total_chapters">За кількістю глав</string>
     <string name="last_read">Остання прочитана</string>
-    <string name="last_updated">Останнє оновлення</string>
     <string name="search">Пошук</string>
     <string name="select_all">Обрати все</string>
     <string name="mark_as_read">Позначити як прочитане</string>
@@ -76,8 +75,6 @@
     <string name="library_update_restriction_summary">Оновлювати коли умови виконано</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Заряджається</string>
-    <string name="only_update_ongoing">Оновлювати тільки ongoing мангу</string>
-    <string name="sync_chapters_after_reading">Синхронізувати глави після прочитання</string>
     <string name="app_theme">Тема програми</string>
     <string name="dark">Темна тема</string>
     <string name="amoled_black">AMOLED тема</string>
@@ -109,7 +106,6 @@
     <string name="navigation">Навігація</string>
     <string name="volume_keys">Клавіші гучності</string>
     <string name="invert_volume_keys">Інвертувати клавіші гучності</string>
-    <string name="tapping">Натиснення</string>
     <string name="background_color">Колір фону</string>
     <string name="white">Білий</string>
     <string name="black">Чорний</string>
@@ -275,7 +271,6 @@
     <string name="dodge_lighten">Світліше</string>
     <string name="burn_darken">Темніше</string>
     <string name="help">Допомога</string>
-    <string name="library_update_order">Порядок оновлення бібліотеки</string>
     <string name="lock_with_biometrics">Біометричне блокування</string>
     <string name="lock_when_idle">Блокувати в режимі очікування</string>
     <string name="creating_backup">Створення резервної копії</string>
@@ -294,12 +289,6 @@
     <string name="updating_library">Оновлення бібліотеки</string>
     <string name="date_added">Дата додавання</string>
     <string name="latest_chapter">Остання глава</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 оновлення схалепилось</item>
-        <item quantity="few">%1$d оновлень схалепилось</item>
-        <item quantity="many">%1$d оновлень схалепилось</item>
-        <item quantity="other">%1$d оновлень схалепилось</item>
-    </plurals>
     <string name="no_results_found">Нічого не знайдено</string>
     <string name="local_source_help_guide">Посібник місцевого джерела</string>
     <string name="check_site_in_web">Глипнути сайт в WebView</string>
@@ -351,10 +340,6 @@
     <string name="view_chapters">Подивитись глави</string>
     <string name="confirm_category_deletion_message">Манґу з цієї категорії буде переміщено до катогорії за замовчуванням.</string>
     <string name="confirm_category_deletion">Видалити категорію\?</string>
-    <string name="categories_in_global_update">Всі категорії в глобальному оновленні</string>
-    <string name="categories_on_manual">Категорії, які потрібно оновити при ручному оновленні</string>
-    <string name="first_category">Перша категорія</string>
-    <string name="top_category">Вища категорія (%1$s)</string>
     <string name="category_is_empty">Категорія порожня</string>
     <string name="create_new_category">Створити нову категорію</string>
     <string name="_already_in_queue">%1$s вже в черзі</string>
@@ -458,7 +443,6 @@
     <string name="library_search_hint">Пошук за заголовком, тегами чи джерелом</string>
     <string name="remove_from_library_question">Видалити з бібліотеки\?</string>
     <string name="updating_">Оновлюється %1$s</string>
-    <string name="what_should_update">Що оновлюватимемо\?</string>
     <string name="jump_to_category">Перейти до категорії</string>
     <string name="long_press_category">Натисніть та утримуйте для редагування категорії</string>
     <string name="category_deleted">Категорію видалено</string>
@@ -599,7 +583,6 @@
     <string name="clean_orphaned_downloads">Очистити загублене</string>
     <string name="delete_unused_chapters">Видалити не існуючі, частково завантажені а також прочитані глави</string>
     <string name="visit_recents_for_download_queue">Відвідайте вкладку \"недавні\", щоб отримати доступ до черги завантаження. Ви також можете двічі торкнутися або натиснути та утримувати для швидшого доступу</string>
-    <string name="view_all_errors">Переглянути всі помилки</string>
     <string name="use_default">Використовувати за замовчуванням</string>
     <string name="top">Згори</string>
     <string name="tag">Тег</string>
@@ -952,7 +935,7 @@
     <string name="shift_one_page_over">Пересунути на одну сторінку далі</string>
     <string name="shift_double_pages">Пересунути подвійні сторінки</string>
     <string name="notification_size_warning">Великі оновлення можуть призвести до збільшення використання акумулятора та сповільнення джерел</string>
-    <string name="save_chapters_as_cbz">Зберігати розділи як CBZ</string>
+    <string name="save_chapters_as_cbz">Зберегти архів як CBZ</string>
     <string name="beta">БЕТА</string>
     <string name="automatic_removal">Автоматичне видалення</string>
     <string name="added_to_">Додано до %1$s</string>
@@ -981,4 +964,22 @@
     <string name="tracking_info">Одностороння синхронізація для оновлення прогресу глави в службах відстеження. Налаштуйте відстеження для окремих записів манги з їх кнопками відстеження.</string>
     <string name="enhanced_services">Розширені сервіси</string>
     <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Манга буде автоматично відслідковуватись при додаванні до бібліотеки.</string>
+    <string name="local_invalid_format">Невірний формат глав</string>
+    <string name="order_by">Сортувати за</string>
+    <string name="grayscale">Відтінки сірого</string>
+    <string name="pref_inverted_colors">Інвертовано</string>
+    <string name="move_series_to_top">Перемістити серію на початок</string>
+    <string name="ascending">За зростанням</string>
+    <string name="date">Дата</string>
+    <string name="descending">За спаданням</string>
+    <string name="clear_database_source_item_count">%1$d небібліотечний комікс у базі даних</string>
+    <string name="database_clean">Очищення бази даних</string>
+    <string name="select_inverse">Інвертувати вибір</string>
+    <string name="cover_only_grid">Сітка тільки з обкладинками</string>
+    <string name="tap_to_see_details">Тицьніть для перегляду подробиць</string>
+    <string name="clear_history">Очистити історію</string>
+    <string name="clear_history_completed">Історію видалено</string>
+    <string name="clear_history_confirmation">Ви впевнені\? Всю історію буде втрачено.</string>
+    <string name="backup_restore_invalid_uri">Помилка: порожній URI</string>
+    <string name="backup_info">Наполегливо рекомендується використовувати автоматичне резервування. Також ви повинні зберігати копії в інших місцях.</string>
 </resources>

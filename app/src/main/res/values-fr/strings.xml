@@ -14,7 +14,6 @@
     <string name="read">Lus</string>
     <string name="alphabetically">Alphabétiquement</string>
     <string name="last_read">Dernier lu</string>
-    <string name="last_updated">Dernière mise à jour</string>
     <string name="search">Rechercher</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="mark_as_read">Marquer comme lu</string>
@@ -62,12 +61,10 @@
     <string name="every_2_days">Tous les 2 jours</string>
     <string name="categories_to_include_in_global_update">Catégories à inclure dans une mise à jour globale</string>
     <string name="all">Tout</string>
-    <string name="library_update_restriction">Restrictions de mise à jour de la bibliothèque</string>
+    <string name="library_update_restriction">Restrictions relatives à l\'appareil</string>
     <string name="library_update_restriction_summary">Mettre à jour uniquement lorsque les conditions sont remplies</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Appareil en charge</string>
-    <string name="only_update_ongoing">Ne mettre à jour que les mangas en cours</string>
-    <string name="sync_chapters_after_reading">Synchroniser les chapitres après les avoir lus</string>
     <string name="app_theme">Thème de l\'application</string>
     <string name="dark">Thème sombre</string>
     <!-- Reader section -->
@@ -78,7 +75,6 @@
     <string name="keep_screen_on">Garder l\'écran allumé</string>
     <string name="navigation">Navigation</string>
     <string name="volume_keys">Boutons de volume</string>
-    <string name="tapping">Appui</string>
     <string name="background_color">Couleur de fond</string>
     <string name="white">Blanc</string>
     <string name="black">Noir</string>
@@ -307,7 +303,6 @@
     <string name="color_filter_blend_mode">Mode de filtrage via couleurs mélangées</string>
     <string name="overlay">Interface</string>
     <string name="help">Aide</string>
-    <string name="library_update_order">Ordre de mise à jour de la librairie</string>
     <string name="dodge_lighten">Densité/Éclaircir</string>
     <string name="burn_darken">Brûlé / Assombri</string>
     <string name="forward">Suivant</string>
@@ -324,10 +319,6 @@
     <string name="updating_library">Mise à jour de la bibliothèque</string>
     <string name="date_added">Date d\'ajout</string>
     <string name="latest_chapter">Dernier chapitre</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 mise à jour a échoué</item>
-        <item quantity="other">%1$d mises à jour ont échoué</item>
-    </plurals>
     <string name="local_source_help_guide">Guide des sources locales</string>
     <string name="check_site_in_web">Consultez le site Web de WebView</string>
     <string name="obsolete">Obsolète</string>
@@ -437,7 +428,6 @@
     <string name="library_search_hint">Recherche par titre, étiquettes, source</string>
     <string name="remove_from_library_question">Retirer de la bibliothèque \?</string>
     <string name="updating_">Mise à jour %1$s</string>
-    <string name="what_should_update">Que faut-il mettre à jour \?</string>
     <string name="jump_to_category">Aller à la catégorie</string>
     <string name="long_press_category">Maintenez la touche enfoncée pour modifier une catégorie</string>
     <string name="category_deleted">Catégorie supprimée</string>
@@ -446,14 +436,10 @@
     <string name="already_in_category">Manga déjà dans la catégorie</string>
     <string name="confirm_category_deletion_message">Les mangas de cette catégorie seront déplacés dans la catégorie par défaut.</string>
     <string name="confirm_category_deletion">Supprimer la catégorie \?</string>
-    <string name="categories_in_global_update">Toutes les catégories dans la mise à jour globale</string>
-    <string name="categories_on_manual">Catégories à mettre à jour lors d\'un rafraîchissement manuel</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Supprimer %1$d chapitre téléchargé \?</item>
         <item quantity="other">Supprimer %1$d chapitres téléchargés \?</item>
     </plurals>
-    <string name="first_category">Première catégorie</string>
-    <string name="top_category">Meilleure catégorie (%1$s)</string>
     <string name="category_is_empty">La catégorie est vide</string>
     <string name="create_new_category">Créer une nouvelle catégorie</string>
     <string name="_already_in_queue">%1$s est déjà dans la file d\'attente</string>
@@ -483,7 +469,6 @@
     <string name="in_progress">En cours</string>
     <string name="comic">Bande dessinée</string>
     <string name="manhwa">Manhwa</string>
-    <string name="view_all_errors">Afficher toutes les erreurs</string>
     <string name="tag">Étiquette</string>
     <string name="reset_tags">Réinitialiser les étiquettes</string>
     <string name="clear_tags">Effacer les étiquettes</string>
@@ -965,7 +950,7 @@
     <string name="lime_time">Temps citron vert</string>
     <string name="every_3_days">Tous les 3 jours</string>
     <string name="download_queue_size_warning">Avertissement : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi</string>
-    <string name="save_chapters_as_cbz">Enregistrer les chapitres en CBZ</string>
+    <string name="save_chapters_as_cbz">Enregistrer comme archive CBZ</string>
     <string name="publishing_finished">Publication terminée</string>
     <string name="cancelled">Annulé</string>
     <string name="on_hiatus">En attente</string>
@@ -975,4 +960,61 @@
     <string name="update_tracking_scoring_type">Mettre à jour le type de notation de %1$s</string>
     <string name="could_not_update_scoring_">Impossible de mettre à jour le type de notation : %1$s</string>
     <string name="scoring_type_updated">Type de notation mis à jour</string>
+    <string name="language_badge">Badges de langues</string>
+    <string name="check_for_beta_releases">Vérifier les versions bêta</string>
+    <string name="new_beta_version_available">Nouvelle version bêta disponible !</string>
+    <string name="try_new_features">Essayez les nouvelles fonctionnalités avant leur sortie officielle. Les versions bêta peuvent être instables et sont fournies pour faire un retour au concepteur.</string>
+    <string name="warning_enroll_into_beta">Les versions bêta peuvent être instables et nécessiter la suppression des données de l\'application.</string>
+    <string name="show_larger_toolbar">Affichage d\'une barre d\'outils élargie en haut de la plupart des pages (elle ne s\'affiche pas sur les petits appareils, quel que soit le paramètre)</string>
+    <string name="warning_unenroll_from_beta">Le retour à la version de production précédente peut entraîner des problèmes et nécessiter l\'effacement des données de l\'application.</string>
+    <string name="expanded_toolbar">Barre d\'outils élargie</string>
+    <string name="local_invalid_format">Format de chapitre invalide</string>
+    <string name="order_by">Trier par</string>
+    <string name="navigate_pan">Naviguer jusqu\'au panoramique</string>
+    <string name="grayscale">Niveaux de gris</string>
+    <string name="pref_inverted_colors">Inversé</string>
+    <string name="move_series_to_top">Déplacer la série vers le haut</string>
+    <string name="empty_backup_error">Aucune entrée de bibliothèque à sauvegarder</string>
+    <string name="ascending">Croissante</string>
+    <string name="date">Date</string>
+    <string name="descending">Décroissant</string>
+    <string name="clear_database_source_item_count">%1$d manga hors bibliothèque dans la base de données</string>
+    <string name="database_clean">Base de données effacée</string>
+    <string name="confirm_manga_add_duplicate">Vous avez une entrée dans votre bibliothèque portant le même nom mais provenant d\'une source différente (%1$s).
+\n
+\nSouhaitez-vous toujours continuer \?</string>
+    <string name="select_inverse">Inverser la sélection</string>
+    <string name="cover_only_grid">Grille avec seulement la couverture</string>
+    <string name="notification_update_error">Échec de %1$d mise(s) à jour</string>
+    <string name="notification_update_skipped">%1$d mise à jour(s) ignorée(s)</string>
+    <string name="skipped_reason_completed">Sauté car la série est complète</string>
+    <string name="skipped_reason_not_caught_up">Sauté car il y a des chapitres non lus</string>
+    <string name="skipped_reason_not_started">Sauté car aucun chapitre n\'est lu</string>
+    <string name="channel_skipped">Ignoré</string>
+    <string name="pref_library_update_manga_restriction">Ignorer la mise à jour</string>
+    <string name="pref_update_only_completely_read">Avec des chapitres non lus</string>
+    <string name="pref_update_only_non_completed">Avec le statut « achevé »</string>
+    <string name="pref_update_only_started">Qui n\'ont pas encore commencé</string>
+    <string name="pref_clear_webview_data">Effacer les données WebView</string>
+    <string name="webview_data_deleted">Données WebView effacées</string>
+    <string name="tap_to_see_details">Appuyez pour voir les détails</string>
+    <string name="tap_to_learn_more">Appuyez pour en savoir plus</string>
+    <string name="zoom_double_page_spreads">Zoom sur les doubles pages</string>
+    <string name="show_">Afficher %1$s</string>
+    <string name="most_entries">La plupart des entrées</string>
+    <string name="select_uninstalled_sources">Sélectionner les sources désinstallées</string>
+    <string name="use_staggered_grid">Utiliser une grille échelonnée</string>
+    <string name="pref_update_only_completely_read_summary">Ne mettre à jour le manga que s\'il n\'y a pas de chapitre non lu (complètement lu)</string>
+    <string name="update_tracking_after_reading">Mettre à jour le suivi après lecture</string>
+    <string name="update_tracking_marked_read">Mettre à joure suivi quand marqué comme lu</string>
+    <string name="downloads_swipe_tutorial">Les téléchargements peuvent être annulés en les faisant glisser.
+\nFaites glisser ce conseil pour l\'annuler</string>
+    <string name="learn_more_at_">Pour en savoir plus : %1$s</string>
+    <string name="must_view_details_before_migration">La page de détails de cet article doit être consultée avant de pouvoir migrer</string>
+    <string name="view_all">Tout voir</string>
+    <string name="clear_history">Effacer l\'historique</string>
+    <string name="clear_history_completed">Historique supprimé</string>
+    <string name="clear_history_confirmation">Êtes-vous sûr(e) \? Tout l\'historique sera effacé.</string>
+    <string name="backup_restore_invalid_uri">Erreur : URI vide</string>
+    <string name="backup_info">Les sauvegardes automatiques sont fortement conseillées. Nous vous recommandons aussi de conserver des copies ailleurs.</string>
 </resources>

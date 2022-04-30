@@ -16,7 +16,6 @@
     <string name="read">Přečteno</string>
     <string name="alphabetically">Abecedně</string>
     <string name="last_read">Naposledy čteno</string>
-    <string name="last_updated">Poslední aktualizace</string>
     <string name="search">Vyhledávání</string>
     <string name="select_all">Vybrat vše</string>
     <string name="mark_as_read">Označit jako přečtené</string>
@@ -45,8 +44,6 @@
     <string name="daily">Denně</string>
     <string name="every_2_days">Každé 2 dny</string>
     <string name="weekly">Týdně</string>
-    <string name="only_update_ongoing">Aktualizovat pouze vycházející mangy</string>
-    <string name="sync_chapters_after_reading">Synchronizovat kapitoly po přečtení</string>
     <string name="app_theme">Téma aplikace</string>
     <string name="dark">Tmavé téma</string>
     <string name="amoled_black">AMOLED téma</string>
@@ -177,7 +174,6 @@
     <string name="crop_borders">Oříznout okraje</string>
     <string name="use_custom_brightness">Použít vlastní jas</string>
     <string name="use_custom_color_filter">Použít vlastní barevný filtr</string>
-    <string name="tapping">Klepnutím</string>
     <string name="vertical_viewer">Vertikální</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Typ úpravy velikosti</string>
@@ -269,7 +265,6 @@
     <string name="pref_global_search">Globální vyhledávání</string>
     <string name="back">Zpět</string>
     <string name="update">Aktualizovat</string>
-    <string name="library_update_order">Pořadí aktualizace knihovny</string>
     <string name="no_results_found">Nenalezeny žádné výsledky</string>
     <string name="obsolete">Zastaralý</string>
     <string name="obsolete_extension_message">Tohle rozšíření již není dostupné.</string>
@@ -342,7 +337,6 @@
     <string name="library_search_hint">Prohledat názvy, značky, zdroje</string>
     <string name="remove_from_library_question">Odstranit z knihovny\?</string>
     <string name="updating_">Aktualizuji %1$s</string>
-    <string name="what_should_update">Co se má aktualizovat\?</string>
     <string name="jump_to_category">Přejít na kategorii</string>
     <string name="long_press_category">Stiskněte a podržte pro upravení kategorie</string>
     <string name="category_deleted">Kategorie smazána</string>
@@ -357,8 +351,6 @@
     <string name="already_in_category">Manga již je v kategorii</string>
     <string name="confirm_category_deletion_message">Manga v této kategorii bude přesunuta do výchozí kategorie.</string>
     <string name="confirm_category_deletion">Smazat kategorii\?</string>
-    <string name="categories_on_manual">Kategorie, které se aktualizují při manuálním obnovení</string>
-    <string name="first_category">První kategorie</string>
     <string name="category_is_empty">Kategorie je prázdná</string>
     <string name="create_new_category">Vytvořit novou kategori</string>
     <string name="_already_in_queue">%1$s již je ve frontě</string>
@@ -400,11 +392,6 @@
     <string name="auto_refresh_covers_summary">Obnovit přebaly v knihovně i při aktualizaci knihovny</string>
     <string name="auto_refresh_covers">Automaticky obnovovat přebaly</string>
     <string name="when_sorting_ignore_articles">Při řazení dle abecedy, zahrnovat i ignorované členy (a, an, the) na začátku názvů mang</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 aktualizace selhala</item>
-        <item quantity="few">%1$d aktualizace selhaly</item>
-        <item quantity="other">%1$d aktualizací selhalo</item>
-    </plurals>
     <plurals name="notification_and_n_more">
         <item quantity="one">a %1$d další kapitolu</item>
         <item quantity="few">a %1$d další kapitoly</item>
@@ -432,7 +419,6 @@
     <string name="search_globally">Vyhledat \"%1$s\" globálně</string>
     <string name="in_progress">Čtu</string>
     <string name="not_started">Neotevřené</string>
-    <string name="categories_in_global_update">Všechny kategorie zahrnuté do globální aktualizace</string>
     <string name="hide_category_hopper">Skrýt menu výběru kategorie</string>
     <string name="show_unread_count">Zobrazovat počet nepřečtených kapitol</string>
     <string name="show_unread_badges">Ukazovat odznáčky u nepřečtených</string>
@@ -555,7 +541,6 @@
     <string name="can_be_found_in_library_filters">Lze také najít rozbalením filtrů knihovny</string>
     <string name="series">Série</string>
     <string name="expand_collapse_all_categories">Rozbalit / sbalit všechny kategorie</string>
-    <string name="top_category">Nejvyšší kategorie (%1$s)</string>
     <string name="no_pages_found">Nebyly nalezeny žádné stránky</string>
     <string name="remove_crop">Odstranit oříznutí</string>
     <string name="amount_of_pages_to_preload">Počet stránek, které se mají přednačíst při čtení. Vyšší hodnoty mohou mít za následek příjemnější zážitek ze čtení za cenu většího využití internetu a cache.</string>
@@ -750,8 +735,8 @@
     <string name="affects_library_grid">Ovlivňuje mřížku obalů v knihovně</string>
     <plurals name="after_minutes">
         <item quantity="one">Po %1$s minutěPo %1$s minutáchPo %1$s minutách</item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <string name="publishing_finished">Zveřejnění dokončeno</string>
     <string name="cancelled">Zrušeno</string>
@@ -759,4 +744,35 @@
     <string name="tracking_info">Jednosměrná synchronizace pro aktualizaci počtu přečtených kapitol ve sledovacích službách. Nastavení sledování pro každou mangu je možné z jejich tlačítka sledování.</string>
     <string name="enhanced_services">Rozšířené služby</string>
     <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Mangy jsou po přidání do knihovny automaticky sledovány.</string>
+    <string name="local_invalid_format">Neplatný formát kapitoly</string>
+    <string name="order_by">Seřadit podle</string>
+    <string name="grayscale">Odstíny šedé</string>
+    <string name="pref_inverted_colors">Invertované</string>
+    <string name="move_series_to_top">Přesunout sérii na začátek</string>
+    <string name="ascending">Vzestupně</string>
+    <string name="date">Datum</string>
+    <string name="descending">Sestupně</string>
+    <string name="clear_database_source_item_count">v databázi je manga %1$d mimo knihovnu</string>
+    <string name="database_clean">vyčištění databáze</string>
+    <string name="confirm_manga_add_duplicate">Ve své knihovně máte položku se stejným názvem, ale z jiného zdroje (%1$s).
+\n
+\nPřejete si přesto pokračovat\?</string>
+    <string name="select_inverse">Vybrat obráceně</string>
+    <string name="cover_only_grid">Mřížka jen s přebaly</string>
+    <string name="notification_update_error">%1$d aktualizace(í) selhalo</string>
+    <string name="notification_update_skipped">%1$d aktualizace(í) přeskočena(y)</string>
+    <string name="skipped_reason_completed">Přeskočeno, protože série je dokončena</string>
+    <string name="skipped_reason_not_caught_up">Přeskočeno, protože obsahuje nepřečtené kapitoly</string>
+    <string name="skipped_reason_not_started">Přeskočeno, protože nebyly přečteny žádné kapitoly</string>
+    <string name="channel_skipped">Přeskočeno</string>
+    <string name="pref_update_only_completely_read">S nepřečtenými kapitolami</string>
+    <string name="pref_update_only_non_completed">Ve stavu \"Dokončeno\"</string>
+    <string name="pref_update_only_started">Které nebyly rozečteny</string>
+    <string name="tap_to_see_details">Klepněte pro zobrazení podrobností</string>
+    <string name="save_chapters_as_cbz">Uložit jako CBZ archiv</string>
+    <string name="clear_history_completed">Historie vymazána</string>
+    <string name="clear_history_confirmation">Jste si jistý/á\? Všechna historie bude navždy ztracena.</string>
+    <string name="clear_history">Vymazat historii</string>
+    <string name="backup_restore_invalid_uri">Chyba: prázdná URI</string>
+    <string name="backup_info">Automatické zálohy jsou vřele doporučeny. Měli byste si uchovat kopii zálohy na více místech.</string>
 </resources>

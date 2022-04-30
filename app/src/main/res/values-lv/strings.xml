@@ -18,7 +18,6 @@
     <string name="alphabetically">Alfabētiski</string>
     <string name="total_chapters">Nodaļu daudzums</string>
     <string name="last_read">Pēdēji izlasīti</string>
-    <string name="last_updated">Pēdēji atjaunināti</string>
     <string name="search">Meklēt</string>
     <string name="select_all">Atlasīt visus</string>
     <string name="mark_as_read">Atzīmēt kā izlasītu</string>
@@ -131,10 +130,8 @@
     <string name="new_version_available">Pieejama jauna versija!</string>
     <string name="update_available">Pieejams atjauninājums</string>
     <string name="updating_">Artjauninās %1$s</string>
-    <string name="what_should_update">Kas jāatjaunina\?</string>
     <string name="jump_to_category">Pārlec uz kategoriju</string>
     <string name="long_press_category">Nospied un turi lai labotu kategoriju</string>
-    <string name="categories_in_global_update">Visas kategorijas globālajā atjauninājumā</string>
     <string name="chapter_x_of_y">%1$d Nodaļa no %2$d</string>
     <string name="in_progress">Turpinājumā</string>
     <string name="category_deleted">Kategorija dzēsta</string>
@@ -144,7 +141,6 @@
     <string name="already_in_category">Manga jau ir kategorijā</string>
     <string name="confirm_category_deletion_message">Manga šajā kategorijā tiks pārvietota uz noklusēto kategoriju.</string>
     <string name="confirm_category_deletion">Dzēst kategoriju\?</string>
-    <string name="first_category">Pirmā kategorija</string>
     <string name="default_category">Noklusētā kategorija</string>
     <string name="category_is_empty">Kategorija ir tukša</string>
     <string name="create_new_category">Izveido jaunu kategoriju</string>
@@ -194,16 +190,10 @@
     <string name="previous_chapter">Iepriekšēja nodaļa</string>
     <string name="hide_app_block_screenshots">Slēpt lietotnes saturu mainot lietotnes, un bloķēt ekrānuzņēmumus</string>
     <string name="label_global_search">Globālā meklēšana</string>
-    <string name="invalid_backup_file_type">"Nederīgs dublējuma faila tips: %1$s
-\nTam vajadzētu beigties ar  .proto.gz vai .json."</string>
+    <string name="invalid_backup_file_type">Nederīgs dublējuma faila tips: %1$s
+\nTam vajadzētu beigties ar .proto.gz vai .json.</string>
     <string name="restrictions_">Ierobežojumi: %1$s</string>
     <string name="library_update_restriction">Bibliotēkas atjaunināšanas ierobežojumi</string>
-    <string name="library_update_order">Bibliotēkas atjaunināšanas secība</string>
-    <plurals name="notification_update_failed">
-        <item quantity="zero">%1$d atjauninājumi neizdevās</item>
-        <item quantity="one">1 atjauninājums neizdevās</item>
-        <item quantity="other">%1$d atjauninājumi neizdevās</item>
-    </plurals>
     <plurals name="notification_and_n_more">
         <item quantity="zero">un vēl %1$d nodaļas</item>
         <item quantity="one">un vēl %1$d nodaļa</item>
@@ -246,4 +236,7 @@
 \nJums būs nepieciešams instalēt jebkādus trūkstošos paplašinājumus un pēc tam pieslēgties izsekošanas pakalpojumiem.</string>
     <string name="webview_is_required">Tachiyomi ir nepieciešams WebView</string>
     <string name="name">Nosaukums</string>
+    <string name="ascending">Augoši</string>
+    <string name="descending">Dilstoši</string>
+    <string name="select_inverse">Atlasiet apgrieztu</string>
 </resources>

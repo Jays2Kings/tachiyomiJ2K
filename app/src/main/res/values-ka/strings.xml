@@ -55,4 +55,5 @@
     <string name="default_value">ნაგულისხმევი</string>
     <string name="reader">წამკითხველი</string>
     <string name="warning">გაფრთხილება</string>
+    <string name="tap_to_see_details">დააჭირე დეტალების სანახავად</string>
 </resources>

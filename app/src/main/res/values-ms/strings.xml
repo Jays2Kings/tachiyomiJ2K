@@ -18,7 +18,6 @@
     <string name="alphabetically">Abjad</string>
     <string name="total_chapters">Jumlah bab</string>
     <string name="last_read">Bacaan terakhir</string>
-    <string name="last_updated">Kemas kini terakhir</string>
     <string name="search">Carian</string>
     <string name="select_all">Pilih semua</string>
     <string name="mark_as_read">Tandakan sebagai sudah dibaca</string>
@@ -72,8 +71,6 @@
     <string name="library_update_restriction_summary">Kemas kini hanya apabila syarat dipenuhi</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Ketika mengecas</string>
-    <string name="only_update_ongoing">Hanya kemas kini manga yang masih berterusan</string>
-    <string name="sync_chapters_after_reading">Sinkronkan bab setelah dibaca</string>
     <string name="app_theme">Tema aplikasi</string>
     <string name="dark">Tema gelap</string>
     <string name="amoled_black">Tema AMOLED</string>
@@ -90,7 +87,6 @@
     <string name="navigation">Navigasi</string>
     <string name="volume_keys">Butang volum</string>
     <string name="invert_volume_keys">Songsangkan butang volum</string>
-    <string name="tapping">Tekan skrin</string>
     <string name="background_color">Warna latar</string>
     <string name="white">Putih</string>
     <string name="black">Hitam</string>
@@ -144,7 +140,7 @@
     <string name="restoring_backup">Dalam proses memulihkan sandaran</string>
     <string name="clear_chapter_cache">Hapus cache bab</string>
     <string name="used_">%1$s digunakan</string>
-    <string name="cache_delete_error">Ralat ketika menghapuskan cache</string>
+    <string name="cache_delete_error">Ralat berlaku ketika menghapus</string>
     <string name="clear_cookies">Hapus cookies</string>
     <string name="cookies_cleared">Cookies dihapuskan</string>
     <string name="clear_database">Hapus pangkalan data</string>
@@ -270,7 +266,6 @@
     <string name="migrate">Beralih</string>
     <string name="color_filter_blend_mode">Mod turas warna campuran</string>
     <string name="help">Bantuan</string>
-    <string name="library_update_order">Susunan kemas kini koleksi</string>
     <string name="overlay">Lapisan atas</string>
     <string name="multiply">Berganda</string>
     <string name="screen">Skrin</string>
@@ -331,9 +326,6 @@
     <string name="updating_library">Mengemas kini pustaka</string>
     <string name="date_added">Tarikh ditambah</string>
     <string name="latest_chapter">Bab terkini</string>
-    <plurals name="notification_update_failed">
-        <item quantity="other">%1$d gagal kemas kini</item>
-    </plurals>
     <string name="local_source_help_guide">Panduan penggunaan sumber setempat</string>
     <string name="check_site_in_web">Semak laman web dalam WebView</string>
     <string name="obsolete">Usang</string>
@@ -376,7 +368,6 @@
     <string name="library_search_hint">Cari tajuk, tanda, sumber</string>
     <string name="remove_from_library_question">Buang daripada pustaka\?</string>
     <string name="updating_">Mengemas kini %1$s</string>
-    <string name="what_should_update">Apa yang perlu di kemas kini\?</string>
     <string name="jump_to_category">Lompat ke kategori</string>
     <string name="long_press_category">Tekan dan tahan untuk edit</string>
     <string name="category_deleted">Kategori telah</string>
@@ -385,10 +376,6 @@
     <string name="already_in_category">Manga sudah tersedia di pustaka</string>
     <string name="confirm_category_deletion_message">Manga di kategori ini akan dipindahkan ke kategori.</string>
     <string name="confirm_category_deletion">Padam kategori\?</string>
-    <string name="categories_in_global_update">Semua kategori di kemas kini</string>
-    <string name="categories_on_manual">Kategori untuk dikemas kini apabila menyegarkan semula secara manual</string>
-    <string name="first_category">Kategori pertama</string>
-    <string name="top_category">Kategori teratas (%1$s)</string>
     <string name="category_is_empty">Kategori kosong</string>
     <string name="create_new_category">Cipta kategori baharu</string>
     <string name="_already_in_queue">%1$s sudah tersedia di barisan</string>
@@ -431,7 +418,6 @@
     <string name="comic">Komik</string>
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhwa</string>
-    <string name="view_all_errors">Lihat semua</string>
     <string name="enabled">Di</string>
     <string name="only_enable_enabled_for_migration">Hanya benarkan sumber yang di telah di benarkan untuk</string>
     <string name="use_default">Pilih</string>
@@ -579,7 +565,7 @@
     <string name="webtoon_style">Gaya</string>
     <string name="reading_">Membaca %1$s</string>
     <string name="set_as_default_for_all">set semua sebagai</string>
-    <string name="extension_updates">Kemas kini</string>
+    <string name="extension_updates">Kemas kini sambungan</string>
     <string name="last_used">Terakhir digunakan</string>
     <string name="source_hidden">Sumber</string>
     <string name="all_sources">Semua</string>
@@ -827,11 +813,48 @@
     <string name="name">Nama</string>
     <string name="warning">Amaran</string>
     <string name="every_3_days">Setiap 3 hari</string>
-    <string name="download_queue_size_warning">Amaran: muat turun secara pukal besar boleh menyebabkan sumber menjadi lebih perlahan dan/atau menyekat Tachiyomi</string>
+    <string name="download_queue_size_warning">Amaran: muat turun secara pukal besar boleh menyebabkan sumber menjadi lebih perlahan dan/atau menyekat Tachiyomi. Ketik untuk ketahui selebihnya.</string>
     <string name="publishing_finished">Penerbitan selesai</string>
     <string name="cancelled">Dibatalkan</string>
     <string name="on_hiatus">Dalam keadaan rehat</string>
     <string name="tracking_info">Sinkron satu hala untuk kemas kini bab kemajuan dalam sistem penjejakan. Sediakan penjejakan untuk penyertaan manga persendirian dari butang penjejakan mereka.</string>
     <string name="enhanced_services">Pertingkat perkhidmatan</string>
     <string name="enhanced_tracking_info">Perkidmatan yang menyediakan fungsi yang dipertingkatkan untuk sumber tertentu. Manga akan dijejaki secara automatik apabila ditambahkan ke pustaka.</string>
+    <string name="empty_backup_error">Tiada entri pustaka untuk disandarkan</string>
+    <string name="local_invalid_format">Format bab tidak sah</string>
+    <string name="order_by">Susun mengikut</string>
+    <string name="navigate_pan">Navigasi seperti panorama</string>
+    <string name="grayscale">Skala kelabu</string>
+    <string name="pref_inverted_colors">Songsang</string>
+    <string name="move_series_to_top">Alih siri ke atas</string>
+    <string name="ascending">Menaik</string>
+    <string name="date">Tarikh</string>
+    <string name="descending">Menurun</string>
+    <string name="clear_database_source_item_count">%1$d manga bukan pustaka dalam pangkalan data</string>
+    <string name="database_clean">Bersihkan pengkalan data</string>
+    <string name="confirm_manga_add_duplicate">Anda mempunyai entri yang mempunyai nama yang sama tetapi daripada sumber yang berlainan (%1$s).
+\n
+\nAdakah anda masih ingin meneruskan\?</string>
+    <string name="select_inverse">Pilih songsang</string>
+    <string name="cover_only_grid">Cuma grid muka hadapan</string>
+    <string name="notification_update_error">%1$d kemas kini gagal</string>
+    <string name="notification_update_skipped">%1$d kemas kini dilangkau</string>
+    <string name="skipped_reason_completed">Dilangkau kerana siri sudah lengkap</string>
+    <string name="skipped_reason_not_caught_up">Dilangkau kerana ada bab yang belum dibaca</string>
+    <string name="skipped_reason_not_started">Dilangkau kerana masih belum membaca mana-mana bab</string>
+    <string name="channel_skipped">Dilangkau</string>
+    <string name="pref_library_update_manga_restriction">Langkau mengemaskini siri</string>
+    <string name="pref_update_only_completely_read">Dengan bab yang belum dibaca</string>
+    <string name="pref_update_only_non_completed">Dengan status \"Sudah selesai\"</string>
+    <string name="pref_update_only_started">Yang mana bacaan belum dimulakan</string>
+    <string name="pref_clear_webview_data">Hapus data WebView</string>
+    <string name="webview_data_deleted">Data WebView dihapuskan</string>
+    <string name="tap_to_see_details">Ketik untuk lihat butiran</string>
+    <string name="tap_to_learn_more">Ketik untuk ketahui selebihnya</string>
+    <string name="save_chapters_as_cbz">Simpan sebagai arkib CBZ</string>
+    <string name="clear_history">Padamkan sejarah</string>
+    <string name="clear_history_completed">Sejarah dipadamkan</string>
+    <string name="clear_history_confirmation">Anda pasti\? Semua sejarah akan hilang.</string>
+    <string name="backup_restore_invalid_uri">Ralat: tiada URI</string>
+    <string name="backup_info">Sandaran automatik sangat disyorkan. Anda patut simpan salinan di tempat lain juga.</string>
 </resources>

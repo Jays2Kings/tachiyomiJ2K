@@ -22,7 +22,6 @@
     <string name="alphabetically">Abecedne</string>
     <string name="total_chapters">Všetky kapitoly</string>
     <string name="last_read">Naposledy čítané</string>
-    <string name="last_updated">Naposledy aktualizované</string>
     <string name="search">Hľadať</string>
     <string name="select_all">Vybrať všetko</string>
     <string name="mark_as_read">Označiť ako prečítané</string>
@@ -74,13 +73,10 @@
     <string name="weekly">Každý týždeň</string>
     <string name="categories_to_include_in_global_update">Kategórie, ktoré sa majú zahrnúť do globálnej aktualizácie</string>
     <string name="all">Všetko</string>
-    <string name="library_update_order">Poradie aktualizácie knižnice</string>
     <string name="library_update_restriction">Obmedzenia aktualizácii knižnice</string>
     <string name="library_update_restriction_summary">Aktualizovať len vtedy, keď sú splnené podmienky</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Nabíjanie</string>
-    <string name="only_update_ongoing">Aktualizovať iba nedokončenú Mangu</string>
-    <string name="sync_chapters_after_reading">Synchronizovať kapitoly po prečítaní</string>
     <string name="app_theme">Motív aplikácie</string>
     <string name="dark">Tmavý motív</string>
     <string name="amoled_black">AMOLED téma</string>
@@ -120,7 +116,6 @@
     <string name="navigation">Navigácia</string>
     <string name="volume_keys">Tlačidlá hlasitosti</string>
     <string name="invert_volume_keys">Invertovať tlačidlá hlasitosti</string>
-    <string name="tapping">Ťukanie</string>
     <string name="background_color">Farba pozadia</string>
     <string name="white">Biela</string>
     <string name="black">Čierna</string>
@@ -333,4 +328,14 @@
     <string name="nsfw_sources">NSFW (18+) zdroje</string>
     <string name="show_in_sources_and_extensions">Zobraziť v zoznamoch zdrojov a rozšírení</string>
     <string name="always">Vždy</string>
+    <string name="manhwa">Manhwa</string>
+    <string name="comic">Komix</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K vyžaduje prístup ku všetkým súborom v Android 11 na sťahovanie mangy, vytváranie automatických záloh a čítania stiahnutej mangy.
+\n
+\nNa nasledujucej obrazovke, povoľte \"Povoliť prístup ku spravovaniu všetkych súborov\".</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K vyžaduje prístup ku všetkým súborom pre stiahnutie časti. Kliknite sem, a potom potvrďte \"Povoliť prístup na spravovanie všetkých súborov\"</string>
+    <string name="ascending">Vzostupne</string>
+    <string name="descending">Zostupne</string>
+    <string name="select_inverse">Vyberte inverzne</string>
+    <string name="cover_only_grid">Mriežka len s obalmi</string>
 </resources>

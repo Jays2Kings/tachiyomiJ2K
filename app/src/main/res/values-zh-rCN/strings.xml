@@ -19,7 +19,6 @@
     <string name="alphabetically">字母序</string>
     <string name="total_chapters">章节数</string>
     <string name="last_read">最近阅读</string>
-    <string name="last_updated">上次更新</string>
     <string name="search">搜索</string>
     <string name="select_all">选择所有</string>
     <string name="mark_as_read">标记已读</string>
@@ -72,12 +71,10 @@
     <string name="weekly">每周</string>
     <string name="categories_to_include_in_global_update">全局更新时包含的标签</string>
     <string name="all">全部</string>
-    <string name="library_update_restriction">书架更新条件</string>
+    <string name="library_update_restriction">设备限制</string>
     <string name="library_update_restriction_summary">仅在符合条件时更新</string>
     <string name="wifi">已连接 Wi-Fi</string>
     <string name="charging">正在充电</string>
-    <string name="only_update_ongoing">仅更新连载中的漫画</string>
-    <string name="sync_chapters_after_reading">阅读之后同步</string>
     <string name="app_theme">主题</string>
     <string name="dark">夜间模式</string>
     <string name="amoled_black">AMOLED模式</string>
@@ -109,7 +106,6 @@
     <string name="navigation">操作</string>
     <string name="volume_keys">音量键</string>
     <string name="invert_volume_keys">反转音量键</string>
-    <string name="tapping">点击</string>
     <string name="background_color">背景颜色</string>
     <string name="white">白色</string>
     <string name="black">黑色</string>
@@ -160,13 +156,13 @@
     <string name="backup_location">备份目录</string>
     <string name="backup_frequency">备份频率</string>
     <string name="max_auto_backups">最大自动备份数</string>
-    <string name="backup_created">备份已创建</string>
+    <string name="backup_created">已创建备份</string>
     <string name="restore_completed">还原完毕</string>
     <string name="what_should_backup">需要备份什么？</string>
     <string name="restoring_backup">正在还原备份</string>
     <string name="clear_chapter_cache">清除缓存数据</string>
     <string name="used_">已使用空间：%1$s</string>
-    <string name="cache_delete_error">清除缓存时出现错误</string>
+    <string name="cache_delete_error">清除时出现错误</string>
     <string name="clear_cookies">清除 Cookies</string>
     <string name="cookies_cleared">Cookies 已清除</string>
     <string name="clear_database">清除数据库</string>
@@ -270,7 +266,6 @@
     <string name="skip_read_chapters">跳过已读章节</string>
     <string name="color_filter_blend_mode">滤镜调和模式</string>
     <string name="help">帮助</string>
-    <string name="library_update_order">书架更新顺序</string>
     <string name="overlay">悬浮窗</string>
     <string name="multiply">正片叠底</string>
     <string name="screen">屏幕</string>
@@ -278,9 +273,6 @@
     <string name="burn_darken">颜色加深/变暗</string>
     <string name="lock_with_biometrics">用生物特征进行锁定</string>
     <string name="lock_when_idle">应用待机时锁定</string>
-    <plurals name="notification_update_failed">
-        <item quantity="other">%1$d 本漫画更新失败</item>
-    </plurals>
     <string name="no_results_found">未找到结果</string>
     <string name="local_source_help_guide">本地图源指南</string>
     <string name="check_site_in_web">在 WebView 中检查网站</string>
@@ -422,15 +414,10 @@
     <string name="_unread">%d 未读</string>
     <string name="reorder_filters">重新排序过滤</string>
     <string name="no_matches_for_filters">未找到匹配当前过滤的内容</string>
-    <string name="what_should_update">需要更新什么？</string>
     <string name="updating_">正在更新 %1$s</string>
     <string name="long_press_category">长按以编辑分类</string>
     <string name="already_in_category">漫画已在该分类</string>
     <string name="confirm_category_deletion_message">此分类的漫画将移至默认分类。</string>
-    <string name="categories_in_global_update">全局更新中的所有分类</string>
-    <string name="categories_on_manual">手动刷新时要更新的分类</string>
-    <string name="first_category">首个分类</string>
-    <string name="top_category">顶部分类（%1$s）</string>
     <plurals name="pages_left">
         <item quantity="other">剩余 %1$d 页</item>
     </plurals>
@@ -510,7 +497,6 @@
     <string name="smart_based_on_page">智能（基于页面）</string>
     <string name="smart_by_page">智能（跟随页面）</string>
     <string name="smart_by_theme">智能（跟随主题）</string>
-    <string name="view_all_errors">查看所有错误</string>
     <string name="use_default">使用默认</string>
     <string name="top">顶部</string>
     <string name="tag">标签</string>
@@ -897,7 +883,7 @@
     <string name="remove_from_">从 %1$s 删除</string>
     <string name="scanlators">扫译小组</string>
     <string name="channel_errors">错误</string>
-    <string name="notification_size_warning">大型更新可能会导致电池使用量增加和来源变慢</string>
+    <string name="notification_size_warning">大型更新可能会导致电池使用量增加和图源变慢。轻按了解更多。</string>
     <string name="show_in_sources_and_extensions">显示在图源和扩展列表中</string>
     <string name="show_outline_around_covers">显示封面图轮廓</string>
     <string name="use_shizuku_to_install">使用 Shizuku 安装扩展</string>
@@ -907,8 +893,8 @@
     <string name="lime_time">石灰时代</string>
     <string name="classic_blue">经典蓝</string>
     <string name="every_3_days">每 3 天</string>
-    <string name="download_queue_size_warning">警告：批量下载可能会导致图源变慢和/或图源封锁 Tachiyomi</string>
-    <string name="save_chapters_as_cbz">将章节保存为 CBZ 文件</string>
+    <string name="download_queue_size_warning">警告：批量下载可能会导致图源变慢和/或图源封锁 Tachiyomi。轻按了解更多。</string>
+    <string name="save_chapters_as_cbz">保存为 CBZ 存档</string>
     <string name="update_tracking_scoring_type">更新 %1$s 的评分类型</string>
     <string name="scoring_type_updated">已更新评分类型</string>
     <string name="could_not_update_scoring_">无法更新评分类型：%1$s</string>
@@ -918,4 +904,61 @@
     <string name="tracking_info">将章节进度单向同步到追踪服务。点击「追踪」按钮以设置漫画的追踪源。</string>
     <string name="enhanced_services">增强服务</string>
     <string name="enhanced_tracking_info">为特定图源提供增强功能的服务。漫画在添加到书架时会被自动追踪。</string>
+    <string name="language_badge">语言徽章</string>
+    <string name="check_for_beta_releases">检查测试版</string>
+    <string name="warning_enroll_into_beta">测试版本可能不稳定，且可能需要清除应用数据。</string>
+    <string name="new_beta_version_available">有新测试版可用！</string>
+    <string name="try_new_features">在正式发布之前尝试新功能。 测试版本可能不稳定，并提供给开发人员反馈。</string>
+    <string name="warning_unenroll_from_beta">回滚到以前的生产版本可能会导致问题，并可能需要清除应用数据。</string>
+    <string name="expanded_toolbar">扩展工具栏</string>
+    <string name="show_larger_toolbar">在大多数页面顶部显示更大的扩展工具栏（无论设置如何，都不在较小的设备上显示）</string>
+    <string name="order_by">排序依据</string>
+    <string name="pref_inverted_colors">反转</string>
+    <string name="empty_backup_error">没有要备份的库条目</string>
+    <string name="local_invalid_format">无效的章节格式</string>
+    <string name="navigate_pan">平移图片而非翻页</string>
+    <string name="grayscale">灰度</string>
+    <string name="move_series_to_top">将连载置顶</string>
+    <string name="ascending">升序</string>
+    <string name="date">日期</string>
+    <string name="descending">降序</string>
+    <string name="zoom_double_page_spreads">缩放至中心跨页</string>
+    <string name="database_clean">数据库清理</string>
+    <string name="clear_database_source_item_count">数据库有 %1$d 本漫画不在书架中</string>
+    <string name="select_inverse">反选</string>
+    <string name="confirm_manga_add_duplicate">库中有一个名称相同但图源不同（%1$s）的条目。
+\n
+\n你仍希望继续吗？</string>
+    <string name="select_uninstalled_sources">选择未卸载的图源</string>
+    <string name="show_">显示 %1$s</string>
+    <string name="must_view_details_before_migration">必须先查看此条目的详细信息页面，然后才能迁移</string>
+    <string name="downloads_swipe_tutorial">可以通过滑动下载项来取消下载
+\n滑动此提示以将其关闭</string>
+    <string name="most_entries">多数条目</string>
+    <string name="use_staggered_grid">使用交错网格</string>
+    <string name="pref_update_only_completely_read_summary">只在没有未读章节时才更新漫画（全读完）</string>
+    <string name="update_tracking_marked_read">标记为已读时更新追踪</string>
+    <string name="learn_more_at_">了解更多：%1$s</string>
+    <string name="view_all">查看全部</string>
+    <string name="update_tracking_after_reading">阅读后更新追踪</string>
+    <string name="cover_only_grid">封面网格</string>
+    <string name="notification_update_error">%1$d 个更新失败了</string>
+    <string name="notification_update_skipped">已跳过 %1$d 个更新</string>
+    <string name="skipped_reason_completed">跳过，因连载完结</string>
+    <string name="skipped_reason_not_caught_up">跳过，因有未读章节</string>
+    <string name="skipped_reason_not_started">跳过，因无已读章节</string>
+    <string name="channel_skipped">已跳过</string>
+    <string name="pref_library_update_manga_restriction">跳过更新标题</string>
+    <string name="pref_update_only_completely_read">有未读章节</string>
+    <string name="pref_update_only_non_completed">状态为“已完结”</string>
+    <string name="pref_update_only_started">尚未开始</string>
+    <string name="pref_clear_webview_data">清除 Webview 数据</string>
+    <string name="webview_data_deleted">已清除 Webview 数据</string>
+    <string name="tap_to_see_details">轻按查看详情</string>
+    <string name="tap_to_learn_more">轻按了解更多</string>
+    <string name="clear_history">清除历史</string>
+    <string name="clear_history_completed">历史已删除</string>
+    <string name="clear_history_confirmation">你确定吗？所有的历史都将丢失。</string>
+    <string name="backup_restore_invalid_uri">错误：空 URI</string>
+    <string name="backup_info">强烈建议启用自动备份，你也应该在其他地方保存副本。</string>
 </resources>

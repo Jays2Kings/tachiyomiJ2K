@@ -14,7 +14,6 @@
     <string name="read">Letti</string>
     <string name="alphabetically">Alfabeticamente</string>
     <string name="last_read">Ultimi letti</string>
-    <string name="last_updated">Ultimo aggiornamento</string>
     <string name="search">Ricerca</string>
     <string name="select_all">Seleziona tutto</string>
     <string name="mark_as_read">Segna come letto</string>
@@ -64,8 +63,6 @@
     <string name="library_update_restriction_summary">Aggiorna solo quando sono soddisfatte le condizioni</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">In carica</string>
-    <string name="only_update_ongoing">Aggiorna solo manga in corso</string>
-    <string name="sync_chapters_after_reading">Sincronizza capitoli dopo la lettura</string>
     <string name="app_theme">Tema dell\'applicazione</string>
     <string name="dark">Tema scuro</string>
     <string name="language">Lingua</string>
@@ -78,7 +75,6 @@
     <string name="keep_screen_on">Mantieni schermo acceso</string>
     <string name="navigation">Navigazione</string>
     <string name="volume_keys">Tasti volume</string>
-    <string name="tapping">Tocco singolo</string>
     <string name="background_color">Colore sfondo</string>
     <string name="white">Bianco</string>
     <string name="black">Nero</string>
@@ -122,7 +118,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Cancella cache capitoli</string>
     <string name="used_">Usati: %1$s</string>
-    <string name="cache_delete_error">Si è verificato un errore durante la cancellazione della cache</string>
+    <string name="cache_delete_error">Errore durante la cancellazione</string>
     <string name="clear_cookies">Cancella cookie</string>
     <string name="cookies_cleared">Cookie cancellati</string>
     <string name="clear_database">Pulisci database</string>
@@ -308,7 +304,6 @@
     <string name="dodge_lighten">Schiarisci</string>
     <string name="burn_darken">Scurisci</string>
     <string name="help">Aiuto</string>
-    <string name="library_update_order">Ordine di aggiornamento della libreria</string>
     <string name="no_results_found">Nessun risultato trovato</string>
     <string name="lock_with_biometrics">Blocca con biometria</string>
     <string name="lock_when_idle">Blocca quando inattivo</string>
@@ -327,10 +322,6 @@
     <string name="updating_library">Libreria in aggiornamento</string>
     <string name="date_added">Data di aggiunta</string>
     <string name="latest_chapter">Ultimo capitolo</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 aggiornamento fallito</item>
-        <item quantity="other">%1$d aggiornamenti falliti</item>
-    </plurals>
     <string name="local_source_help_guide">Guida alle fonti locali</string>
     <string name="check_site_in_web">Controlla il sito in WebView</string>
     <string name="obsolete">Obsoleta</string>
@@ -380,8 +371,6 @@
     <string name="unpin">Rimuovi</string>
     <string name="view_chapters">Vedi capitoli</string>
     <string name="last_read_chapter_">Ultimo capitolo letto %1$s</string>
-    <string name="categories_on_manual">Categorie da aggiornare con un refresh manuale</string>
-    <string name="first_category">Prima categoria</string>
     <string name="category_is_empty">La categoria è vuota</string>
     <string name="create_new_category">Crea una nuova categoria</string>
     <string name="_already_in_queue">%1$s è già nella coda</string>
@@ -425,7 +414,6 @@
     <string name="already_in_category">Manga già nella categoria</string>
     <string name="confirm_category_deletion_message">I manga di questa categoria verranno spostati nella categoria predefinita.</string>
     <string name="confirm_category_deletion">Eliminare la categoria\?</string>
-    <string name="categories_in_global_update">Tutte le categorie in aggiornamento globale</string>
     <string name="sort_and_filter">Ordina e filtra</string>
     <string name="tag">Etichetta</string>
     <string name="reset_tags">Reimposta le etichette</string>
@@ -438,7 +426,6 @@
     <string name="start_downloading_now">Inizia subito lo scaricamento</string>
     <string name="not_downloaded">Non scaricato</string>
     <string name="downloading_">Scaricando: %1$s</string>
-    <string name="top_category">Categoria sopra (%1$s)</string>
     <string name="uniform_covers">Rendi uniformi le copertine</string>
     <string name="hide_start_reading_button">Nascondi il bottone di inizio lettura</string>
     <string name="drag_and_drop">Trascina e rilascia</string>
@@ -455,7 +442,6 @@
     <string name="_unread">%d non letto</string>
     <string name="collapse_all_categories">Riduci tutte le categorie</string>
     <string name="updating_">Aggiornamento di %1$s</string>
-    <string name="what_should_update">Cosa deve essere aggiornato\?</string>
     <string name="this_will_remove_the_read_date_for_x_question">Questo rimuoverà la data di lettura di «%1$s». Sei sicuro/a\?</string>
     <string name="search_globally">Cerca «%1$s» globalmente</string>
     <string name="display_options">Opzioni di visualizzazione</string>
@@ -463,7 +449,6 @@
     <string name="reset_all_chapters_for_this_">Resetta tutti i capitoli per %1$s</string>
     <string name="hide_category_hopper">Nascondi l\'opzione per saltare categoria</string>
     <string name="comfortable_grid">Griglia confortevole</string>
-    <string name="view_all_errors">Visualizza tutti gli errori</string>
     <string name="use_default">Usa come predefinito</string>
     <string name="top">Sopra</string>
     <string name="select_none">Nessuno selezionato</string>
@@ -963,8 +948,8 @@
     <string name="classic_blue">Blu classico</string>
     <string name="lime_time">Tempo di lime</string>
     <string name="every_3_days">Ogni 3 giorni</string>
-    <string name="download_queue_size_warning">Attenzione: grossi download di massa possono rallentare le fonti e/o bloccare tachiyomi</string>
-    <string name="save_chapters_as_cbz">Salva i capitoli come CBZ</string>
+    <string name="download_queue_size_warning">Attenzione: grossi download di massa possono rallentare le fonti e/o bloccare tachiyomi. Tocca per saperne di più.</string>
+    <string name="save_chapters_as_cbz">Salva come archivio CBZ</string>
     <string name="publishing_finished">Pubblicazione terminata</string>
     <string name="enhanced_services">Servizi migliorati</string>
     <string name="cancelled">Cancellata</string>
@@ -974,4 +959,48 @@
     <string name="update_tracking_scoring_type">Aggiorna il sistema di voto di %1$s</string>
     <string name="scoring_type_updated">Tipo di voto aggiornato</string>
     <string name="could_not_update_scoring_">Impossibile aggiornare il sistema di voto: %1$s</string>
+    <string name="local_invalid_format">Formato capitolo non valido</string>
+    <string name="order_by">Ordina per</string>
+    <string name="navigate_pan">Naviga per scorrere</string>
+    <string name="grayscale">Scala di grigi</string>
+    <string name="pref_inverted_colors">Inversa</string>
+    <string name="empty_backup_error">Nessuna voce in libreria di cui eseguire il backup</string>
+    <string name="move_series_to_top">Sposta la serie in cima</string>
+    <string name="ascending">Crescente</string>
+    <string name="date">Data</string>
+    <string name="descending">Decrescente</string>
+    <string name="database_clean">Database pulito</string>
+    <string name="clear_database_source_item_count">%1$d manga non presenti in libreria nel database</string>
+    <string name="confirm_manga_add_duplicate">Hai un elemento nella libreria con lo stesso nome ma da un altra fonte (%1$s).
+\n
+\nVuoi comunque continuare\?</string>
+    <string name="select_inverse">Inverti selezione</string>
+    <string name="cover_only_grid">Griglia con solo copertine</string>
+    <string name="notification_update_error">%1$d aggiornamento(i) fallito(i)</string>
+    <string name="notification_update_skipped">%1$d aggiornamento(i) saltato(i)</string>
+    <string name="skipped_reason_completed">Saltato perché la serie è completa</string>
+    <string name="skipped_reason_not_caught_up">Saltato perché ci sono capitoli non letti</string>
+    <string name="skipped_reason_not_started">Saltato perché non ci sono capitoli letti</string>
+    <string name="channel_skipped">Saltato</string>
+    <string name="pref_library_update_manga_restriction">Salta l\'aggiornamento di serie</string>
+    <string name="pref_update_only_completely_read">Con capitoli non letti</string>
+    <string name="pref_update_only_non_completed">Con stato «Completata»</string>
+    <string name="pref_update_only_started">Che non sono state iniziate</string>
+    <string name="webview_data_deleted">Dati WebView cancellati</string>
+    <string name="pref_clear_webview_data">Cancella dati WebView</string>
+    <string name="tap_to_see_details">Tocca per vedere i dettagli</string>
+    <string name="tap_to_learn_more">Tocca per approfondire</string>
+    <string name="new_beta_version_available">Nuova versione beta disponibile!</string>
+    <string name="language_badge">Indicatori lingua</string>
+    <string name="view_all">Visualizza tutto</string>
+    <string name="expanded_toolbar">Barra degli strumenti ampliata</string>
+    <string name="check_for_beta_releases">Controlla le versioni beta</string>
+    <string name="downloads_swipe_tutorial">Gli scaricamenti possono essere annullati scorrendoli via
+\nScorri questo suggerimento per eliminarlo</string>
+    <string name="learn_more_at_">Per saperne di più: %1$s</string>
+    <string name="clear_history">Svuota cronologia</string>
+    <string name="clear_history_completed">Cronologia cancellata</string>
+    <string name="clear_history_confirmation">Sei sicuro\? Tutta la cronologia verrà persa.</string>
+    <string name="backup_restore_invalid_uri">Errore: URI vuoto</string>
+    <string name="backup_info">I backup automatici sono altamente consigliati. Dovresti tenere delle copie anche in altri posti.</string>
 </resources>

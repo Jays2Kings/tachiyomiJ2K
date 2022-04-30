@@ -21,7 +21,6 @@
     <string name="alphabetically">Alfabetik</string>
     <string name="total_chapters">Toplam bölüm</string>
     <string name="last_read">Son okunan</string>
-    <string name="last_updated">Son güncellenen</string>
     <string name="search">Ara</string>
     <string name="select_all">Tümünü seç</string>
     <string name="mark_as_read">Okundu olarak işaretle</string>
@@ -72,12 +71,10 @@
     <string name="weekly">Her hafta</string>
     <string name="categories_to_include_in_global_update">Genel güncellemeye eklenecek kategoriler</string>
     <string name="all">Tümü</string>
-    <string name="library_update_restriction">Kitaplık güncelleme kısıtlamaları</string>
+    <string name="library_update_restriction">Aygıt kısıtlamaları</string>
     <string name="library_update_restriction_summary">Yalnızca koşullar sağlandığında güncelle</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Şarj oluyor</string>
-    <string name="only_update_ongoing">Yalnızca devam eden mangaları güncelleme</string>
-    <string name="sync_chapters_after_reading">Okudukdan sonra bölümleri eşitle</string>
     <string name="app_theme">Uygulama teması</string>
     <string name="dark">Koyu tema</string>
     <string name="amoled_black">AMOLED Siyah</string>
@@ -109,7 +106,6 @@
     <string name="navigation">Gezinme</string>
     <string name="volume_keys">Ses tuşları</string>
     <string name="invert_volume_keys">Ters ses tuşları</string>
-    <string name="tapping">Dokunarak</string>
     <string name="background_color">Art alan rengi</string>
     <string name="white">Beyaz</string>
     <string name="black">Siyah</string>
@@ -166,7 +162,7 @@
     <string name="restoring_backup">Yedek geri yükleniyor</string>
     <string name="clear_chapter_cache">Bölüm önbelleğini temizle</string>
     <string name="used_">Kullanılan: %1$s</string>
-    <string name="cache_delete_error">Önbellek temizlenirken bir hata oluştu</string>
+    <string name="cache_delete_error">Temizlenirken hata oluştu</string>
     <string name="clear_cookies">Çerezleri temizle</string>
     <string name="cookies_cleared">Çerezler temizlendi</string>
     <string name="clear_database">Veritabanını temizle</string>
@@ -275,7 +271,6 @@
     <string name="dodge_lighten">Kaçınma / Aydınlatma</string>
     <string name="burn_darken">Yakma / Karartma</string>
     <string name="help">Yardım</string>
-    <string name="library_update_order">Kitaplık güncelleme sırası</string>
     <string name="no_results_found">Sonuç bulunmadı</string>
     <string name="lock_with_biometrics">Biyometriyle kilitle</string>
     <string name="lock_when_idle">Boştayken kilitle</string>
@@ -283,10 +278,6 @@
     <string name="updating_library">Kitaplık güncelleniyor</string>
     <string name="date_added">Eklendiği tarih</string>
     <string name="latest_chapter">Son bölüm</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 güncelleme başarısız</item>
-        <item quantity="other">%1$d güncelleme başarısız</item>
-    </plurals>
     <string name="local_source_help_guide">Yerel kaynak kılavuzu</string>
     <string name="check_site_in_web">Web sitesini WebView\'de görüntüle</string>
     <string name="obsolete">Eski</string>
@@ -352,7 +343,7 @@
     <string name="collapse_all_categories">Tüm kategorileri küçült</string>
     <string name="expand_all_categories">Tüm kategorileri genişlet</string>
     <string name="library_search_hint">Başlık, etiket, kaynak ara</string>
-    <string name="remove_from_library_question">Kütüphaneden silinsin mi\?</string>
+    <string name="remove_from_library_question">Kitaplıktan kaldırılsın mı\?</string>
     <string name="updating_">%1$s güncelleniyor</string>
     <string name="jump_to_category">Kategoriye atla</string>
     <string name="category_deleted">Kategori silindi</string>
@@ -361,9 +352,6 @@
     <string name="already_in_category">Manga zaten bu kategoride</string>
     <string name="confirm_category_deletion_message">Bu kategorideki mangalar varsayılan kategoriye taşınacak.</string>
     <string name="confirm_category_deletion">Kategoriyi sil\?</string>
-    <string name="categories_on_manual">Elle yenileyince güncellenecek kategoriler</string>
-    <string name="first_category">İlk kategori</string>
-    <string name="top_category">Üst kategori (%1$s)</string>
     <string name="category_is_empty">Kategori boş</string>
     <string name="create_new_category">Yeni kategori oluştur</string>
     <string name="_already_in_queue">%1$s zaten kuyrukta</string>
@@ -395,7 +383,7 @@
     <string name="long_press_category">Kategoriyi düzenlemek için basılı tut</string>
     <string name="adding_category_to_queue">%1$s güncelleme kuyruğuna eklendi</string>
     <string name="chapter_x_of_y">Bölüm %1$d / %2$d</string>
-    <string name="unlock_library">Kütüphaneye erişmek için kilidi aç</string>
+    <string name="unlock_library">Kitaplığa erişmek için kilidi aç</string>
     <string name="in_progress">Devam Ediyor</string>
     <string name="comic">Çizgi Roman</string>
     <string name="clear_cached_covers_non_library">Kitaplıkta olmayan önbelleklenmiş kapakları temizleyin</string>
@@ -442,10 +430,10 @@
     <string name="view_all_updates">Tüm güncellemeleri göster</string>
     <string name="view_history">Geçmişi göster</string>
     <string name="newly_added">Yeni eklenen</string>
-    <string name="auto_refresh_covers_summary">Kütüphaneyi yenilerken kütüphanedeki kapakları da yenileyin</string>
+    <string name="auto_refresh_covers_summary">Kitaplığı güncellerken kitaplıktaki kapakları da yenileyin</string>
     <string name="auto_refresh_covers">Kapakları otomatik yenile</string>
     <string name="no_matches_for_filters">Şu anki filtreleriniz için eşleşme bulunamadı</string>
-    <string name="tap_library_to_show_filters">Filtreleri göstermek için Kütüphanelerim simgesine dokun</string>
+    <string name="tap_library_to_show_filters">Filtreleri göstermek için Kitaplık simgesine dokunun</string>
     <string name="hide_start_reading_button">Okumaya başla düğmesini gizle</string>
     <string name="display_options">Görüntü seçenekleri</string>
     <string name="drag_and_drop">Sürükle &amp; Bırak</string>
@@ -454,7 +442,6 @@
     <string name="tracking_status">İzleme durumu</string>
     <string name="group_library_by">Kitaplığı gruplandır…</string>
     <string name="reorder_filters">Filtreleri sırala</string>
-    <string name="view_all_errors">Tüm hataları gör</string>
     <string name="tag">Etiket</string>
     <string name="mark_all_as_unread">Tümünü okunmadı olarak işaretle</string>
     <string name="mark_all_as_read">Tümünü okundu olarak işaretle</string>
@@ -644,10 +631,8 @@
     <string name="series_type">Seri türü</string>
     <string name="search_globally">\"%1$s\" genel arama</string>
     <string name="_unread">%d okunmayan</string>
-    <string name="what_should_update">Ne güncellensin\?</string>
     <string name="category_cannot_be_blank">Kategori ismi boş olamaz</string>
     <string name="add_edit_categories">Kategorileri ekle/düzenle</string>
-    <string name="categories_in_global_update">Genel güncellemedeki tüm kategoriler</string>
     <string name="new_category">Yeni kategori</string>
     <string name="category">Kategori</string>
     <plurals name="chapters_plural">
@@ -920,7 +905,7 @@
     <string name="keep_in_">%1$s içinde kal</string>
     <string name="scanlators">Tarayıcılar</string>
     <string name="channel_errors">Hatalar</string>
-    <string name="notification_size_warning">Büyük güncellemeler pil kullanımının artmasına ve kaynakların yavaşlamasına neden olabilir</string>
+    <string name="notification_size_warning">Büyük güncellemeler pil kullanımının artmasına ve kaynakların yavaşlamasına neden olabilir. Daha fazlasını öğrenmek için dokunun.</string>
     <string name="show_in_sources_and_extensions">Kaynaklar ve uzantılar listesinde göster</string>
     <string name="show_outline_around_covers">Kapakların etrafında anahattı göster</string>
     <string name="ext_installer_shizuku_stopped">Shizuku çalışmıyor</string>
@@ -928,9 +913,9 @@
     <string name="use_shizuku_to_install">Uzantıları kurmak için Shizuku\'yu kullan</string>
     <string name="use_shizuku_summary">Uzantıların kullanıcı istemleri olmadan kurulmasına izin verir ve Android 12\'nin altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="every_3_days">Her 3 günde</string>
-    <string name="download_queue_size_warning">Uyarı: büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir</string>
+    <string name="download_queue_size_warning">Uyarı: büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir. Daha fazlasını öğrenmek için dokunun.</string>
     <string name="lime_time">Limon Zamanı</string>
-    <string name="save_chapters_as_cbz">Bölümleri CBZ olarak kaydet</string>
+    <string name="save_chapters_as_cbz">CBZ arşivi olarak kaydet</string>
     <string name="classic_blue">Klasik Mavi</string>
     <string name="publishing_finished">Yayımı tamamlandı</string>
     <string name="cancelled">İptal edildi</string>
@@ -941,4 +926,61 @@
     <string name="update_tracking_scoring_type">%1$s puanlama türünü güncelle</string>
     <string name="scoring_type_updated">Puanlama türü güncellendi</string>
     <string name="could_not_update_scoring_">Puanlama türü güncellenemedi: %1$s</string>
+    <string name="language_badge">Dil rozetleri</string>
+    <string name="new_beta_version_available">Yeni beta sürümü var!</string>
+    <string name="check_for_beta_releases">Beta sürümlerini denetle</string>
+    <string name="try_new_features">Resmi olarak yayınlanmadan önce yeni özellikleri deneyin. Beta sürümleri kararsız olabilir ve geliştiriciye geri bildirim sağlamak için kullanılır.</string>
+    <string name="warning_unenroll_from_beta">Önceki üretim sürümüne geri dönmek sorunlara neden olabilir ve uygulama verilerinin temizlenmesini gerektirebilir.</string>
+    <string name="warning_enroll_into_beta">Beta sürümleri kararsız olabilir ve uygulama verilerinin temizlenmesini gerektirebilir.</string>
+    <string name="expanded_toolbar">Genişletilmiş araç çubuğu</string>
+    <string name="show_larger_toolbar">Çoğu sayfanın üst kısmında daha büyük, genişletilmiş bir araç çubuğu göster (ayardan bağımsız olarak daha küçük aygıtlarda gösterilmez)</string>
+    <string name="local_invalid_format">Geçersiz bölüm biçimi</string>
+    <string name="order_by">Sıralama ölçütü</string>
+    <string name="navigate_pan">Kaydırmak için gezin</string>
+    <string name="grayscale">Gri tonlama</string>
+    <string name="pref_inverted_colors">Ters Çevrilmiş</string>
+    <string name="empty_backup_error">Yedeklenecek kitaplık girdisi yok</string>
+    <string name="move_series_to_top">Seriyi en üste taşı</string>
+    <string name="ascending">Artan</string>
+    <string name="date">Tarih</string>
+    <string name="descending">Azalan</string>
+    <string name="zoom_double_page_spreads">İki sayfaya yayılanları yakınlaştır</string>
+    <string name="clear_database_source_item_count">Veri tabanında %1$d kitaplık dışı manga</string>
+    <string name="database_clean">Veri tabanı temiz</string>
+    <string name="confirm_manga_add_duplicate">Kitaplığınızda aynı ada sahip ama farklı bir kaynaktan olan bir öge var (%1$s).
+\n
+\nHâlâ devam etmek istiyor musunuz\?</string>
+    <string name="select_inverse">Tersini seç</string>
+    <string name="must_view_details_before_migration">Taşınmadan önce bu girdinin ayrıntılar sayfası görüntülenmelidir</string>
+    <string name="select_uninstalled_sources">Kaldırılan kaynakları seç</string>
+    <string name="downloads_swipe_tutorial">İndirmeler, kaydırılarak iptal edilebilir
+\nKapatmak için bu ipucunu kaydırın</string>
+    <string name="most_entries">Çoğu girdi</string>
+    <string name="show_">%1$s göster</string>
+    <string name="cover_only_grid">Sadece-kapak ızgara</string>
+    <string name="notification_update_error">%1$d güncelleme başarısız oldu</string>
+    <string name="notification_update_skipped">%1$d güncelleme atlandı</string>
+    <string name="skipped_reason_completed">Manga tamamlandığı için atlandı</string>
+    <string name="skipped_reason_not_caught_up">Okunmamış bölümler olduğu için atlandı</string>
+    <string name="skipped_reason_not_started">Hiçbir bölüm okunmadığı için atlandı</string>
+    <string name="channel_skipped">Atlandı</string>
+    <string name="pref_library_update_manga_restriction">Başlıkları güncellemeyi atla</string>
+    <string name="pref_update_only_completely_read">Okunmayan bölüm(ler)i olan</string>
+    <string name="pref_update_only_non_completed">\"Tamamlanan\" durumda olan</string>
+    <string name="pref_update_only_started">Bu başlamadı</string>
+    <string name="pref_clear_webview_data">WebView verilerini temizle</string>
+    <string name="webview_data_deleted">WebView verileri temizlendi</string>
+    <string name="tap_to_see_details">Ayrıntıları görmek için dokun</string>
+    <string name="tap_to_learn_more">Daha fazla bilgi edinmek için dokunun</string>
+    <string name="use_staggered_grid">Aşamalı ızgara kullan</string>
+    <string name="pref_update_only_completely_read_summary">Mangayı yalnızca okunmayan bölüm yoksa (tamamen okundu ise) güncelle</string>
+    <string name="update_tracking_marked_read">Okundu olarak işaretlendiğinde izlemeyi güncelle</string>
+    <string name="learn_more_at_">Daha fazla bilgi için: %1$s</string>
+    <string name="view_all">Tümünü görüntüle</string>
+    <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
+    <string name="clear_history">Geçmişi temizle</string>
+    <string name="clear_history_completed">Geçmiş silindi</string>
+    <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş kaybolacak.</string>
+    <string name="backup_restore_invalid_uri">Hata: boş URI</string>
+    <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız.</string>
 </resources>

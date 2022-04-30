@@ -47,7 +47,6 @@
     <string name="drag_and_drop">Перетаскивание</string>
     <string name="enabled">Включено</string>
     <string name="last_read">Последняя прочитанная глава</string>
-    <string name="last_updated">Последняя обновлённая серия</string>
     <string name="total_chapters">Количество глав</string>
     <string name="start">Старт</string>
     <string name="stop">Стоп</string>
@@ -63,7 +62,7 @@
     <string name="black">Чёрный</string>
     <string name="browse">Поисковик</string>
     <string name="build_time">Дата сборки</string>
-    <string name="cache_delete_error">Возникла ошибка при удалении кэша</string>
+    <string name="cache_delete_error">Возникла ошибка при очистке</string>
     <plurals name="cache_cleared">
         <item quantity="one">Кэш очищен. %d файл был удален</item>
         <item quantity="few">Кэш очищен. %d файла было удалено</item>
@@ -201,7 +200,6 @@
     <string name="next_chapter_not_found">Следующая глава не найдена</string>
     <string name="no_results_found">Нет результатов</string>
     <string name="not_logged_into_">Не выполнен вход в: %1$s</string>
-    <string name="view_all_errors">Просмотреть все ошибки</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">и ещё %1$d глава</item>
         <item quantity="few">и ещё %1$d главы</item>
@@ -226,7 +224,6 @@
     <string name="picture_saved">Картинка сохранена</string>
     <string name="plan_to_read">Запланировано</string>
     <string name="helps_fix_bugs">Помогает исправлять все возможные баги. Личные данные не передаются</string>
-    <string name="sync_chapters_after_reading">Синхронизировать главы после прочтения</string>
     <string name="backup_location">Папка резервной копии</string>
     <string name="backup_frequency">Частота резервной копии</string>
     <string name="max_auto_backups">Максимальное количество резервных копии</string>
@@ -262,10 +259,8 @@
     <string name="language">Язык</string>
     <string name="categories_to_include_in_global_update">Категории включённые в глобальный поиск</string>
     <string name="library_update_frequency">Частота обновления библиотеки</string>
-    <string name="library_update_order">Порядок обновления библиотеки</string>
     <string name="library_update_restriction">Ограничения обновления библиотеки</string>
     <string name="library_update_restriction_summary">Обновлять когда условия соблюдены</string>
-    <string name="tapping">Нажатие</string>
     <string name="volume_keys">Клавиши громкости</string>
     <string name="invert_volume_keys">Клавиши громкости наоборот</string>
     <string name="navigation">Навигация</string>
@@ -289,7 +284,6 @@
     <string name="skip_read_chapters">Пропускать главы, помеченные как «Прочитано»</string>
     <string name="app_theme">Тема приложения</string>
     <string name="true_32bit_color">32-битный цвет</string>
-    <string name="only_update_ongoing">Обновлять только онгоинг серии</string>
     <string name="zoom_start_position">Стартовая позиция увеличения</string>
     <string name="smart_based_on_page">Умный (по странице)</string>
     <string name="smart_based_on_page_and_theme">Умный (по странице и теме)</string>
@@ -421,10 +415,6 @@
     <string name="_already_in_queue">%1$s уже в очереди</string>
     <string name="create_new_category">Создать новую категорию</string>
     <string name="category_is_empty">Категория пуста</string>
-    <string name="top_category">Верхняя категория (%1$s)</string>
-    <string name="first_category">Первая категория</string>
-    <string name="categories_on_manual">Категории для обновления вручную</string>
-    <string name="categories_in_global_update">Все категории</string>
     <string name="confirm_category_deletion">Удалить категорию\?</string>
     <string name="confirm_category_deletion_message">Серия в этой категории будет перемещена в категорию по умолчанию.</string>
     <string name="already_in_category">Серия уже в категории</string>
@@ -441,7 +431,6 @@
     </plurals>
     <!-- Updates -->
     <string name="update">Обновить</string>
-    <string name="what_should_update">Что следует обновить\?</string>
     <string name="updating_">Обновление %1$s</string>
     <!-- Library -->
     <string name="remove_from_library_question">Удалить из библиотеки\?</string>
@@ -474,12 +463,6 @@
     <!-- Library update service notifications -->
     <!-- Library settings -->
     <string name="include_in_global_update">Включить в глобальное обновление</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">%1$d обновление не удалось</item>
-        <item quantity="few">%1$d обновления не удалось</item>
-        <item quantity="many">%1$d обновлений не удалось</item>
-        <item quantity="other">%1$d обновлений не удалось</item>
-    </plurals>
     <!-- Recents -->
     <string name="recents">Недавние</string>
     <string name="newly_added">Добавлено недавно</string>
@@ -1002,8 +985,8 @@
     <string name="use_shizuku_summary">Позволяет расширениям быть установленными без разрешений пользователя, а также включает автоматические обновления для устройств ниже Android 12</string>
     <string name="classic_blue">Классический Синий</string>
     <string name="lime_time">Время Лайма</string>
-    <string name="save_chapters_as_cbz">Сохранять главы как CBZ</string>
-    <string name="download_queue_size_warning">Предупреждение: большие объемы загрузок глав могут привести к замедлению работы источников и/или блокировке Tachiyomi</string>
+    <string name="save_chapters_as_cbz">Сохранить как архив CBZ</string>
+    <string name="download_queue_size_warning">Предупреждение: большие объемы загрузок глав могут привести к замедлению работы источников и/или блокировке Tachiyomi. Нажать, для подробностей.</string>
     <string name="every_3_days">Каждые 3 дня</string>
     <string name="publishing_finished">Публикация завершена</string>
     <string name="cancelled">Отменено</string>
@@ -1011,4 +994,41 @@
     <string name="tracking_info">Односторонняя синхронизация для обновления прогресса в сервисах отслеживания. Настройте отслеживание, при помощи кнопки «Отслеживание».</string>
     <string name="enhanced_services">Расширенные сервисы</string>
     <string name="enhanced_tracking_info">Сервисы, предоставляющие расширенные возможности для определённых источников. Серия будет автоматически отслеживаться, при добавлении в библиотеку.</string>
+    <string name="grayscale">Оттенки серого</string>
+    <string name="date">Дата</string>
+    <string name="local_invalid_format">Недопустимый формат глав</string>
+    <string name="order_by">Сортировать по</string>
+    <string name="navigate_pan">Перейти к панораме</string>
+    <string name="pref_inverted_colors">Цвета наоборот</string>
+    <string name="empty_backup_error">Нет элементов в библиотеке для резервирования</string>
+    <string name="move_series_to_top">Переместить серию в начало</string>
+    <string name="descending">По убыванию</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="clear_database_source_item_count">%1$d не-библиотечных серий в базе данных</string>
+    <string name="database_clean">Очистка базы данных</string>
+    <string name="confirm_manga_add_duplicate">В вашей библиотеке есть серия с таким же названием, но из другого источника (%1$s).
+\n
+\nВы по-прежнему хотите продолжить\?</string>
+    <string name="select_inverse">Выбрать наоборот</string>
+    <string name="new_beta_version_available">Доступна новая бета-версия!</string>
+    <string name="tap_to_learn_more">Нажать для подробностей</string>
+    <string name="pref_clear_webview_data">Очистить данные WebView</string>
+    <string name="webview_data_deleted">Данные WebView очищены</string>
+    <string name="tap_to_see_details">Нажмите, чтобы увидеть подробности</string>
+    <string name="cover_only_grid">Сетка без названия</string>
+    <string name="notification_update_skipped">%1$d обновление(ий) пропущено</string>
+    <string name="skipped_reason_completed">Пропущено, так как серия завершена</string>
+    <string name="skipped_reason_not_caught_up">Пропущено, потому что есть непрочитанные главы</string>
+    <string name="skipped_reason_not_started">Пропущено, потому что серия не начата</string>
+    <string name="pref_library_update_manga_restriction">Пропускать обновления</string>
+    <string name="pref_update_only_completely_read">Есть непрочитанные главы</string>
+    <string name="pref_update_only_non_completed">Серия завершена</string>
+    <string name="pref_update_only_started">Серия не начата</string>
+    <string name="notification_update_error">%1$d обновление(ий) не удалось</string>
+    <string name="channel_skipped">Пропущено</string>
+    <string name="clear_history">Очистить историю</string>
+    <string name="clear_history_completed">История удалена</string>
+    <string name="clear_history_confirmation">Вы уверены\? Вся история будет удалена.</string>
+    <string name="backup_restore_invalid_uri">Ошибка: Пустой URI</string>
+    <string name="backup_info">Настоятельно рекомендуется использовать автоматические резервные копии. Вы также должны хранить копии в разных папках.</string>
 </resources>

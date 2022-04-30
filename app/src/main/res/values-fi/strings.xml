@@ -14,7 +14,6 @@
     <string name="recent_updates">Kirjastopäivitykset</string>
     <string name="selected_">Valittu: %1$d</string>
     <string name="total_chapters">Lukuja yhteensä</string>
-    <string name="last_updated">Viimeksi päivitetty</string>
     <string name="mark_previous_as_read">Merkitse edelliset luvut luetuiksi</string>
     <string name="move_to_categories">Siirrä kategorioihin</string>
     <string name="options">Asetukset</string>
@@ -114,8 +113,6 @@
     <string name="library_update_restriction_summary">Päivitä vain kun vaatimukset täyttyvät</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Latauksessa</string>
-    <string name="only_update_ongoing">Päivitä vain jatkuvat sarjat</string>
-    <string name="sync_chapters_after_reading">Synkronoi luvut lukemisen jälkeen</string>
     <string name="app_theme">Sovelluksen teema</string>
     <string name="dark">Tumma teema</string>
     <string name="amoled_black">AMOLED teema</string>
@@ -149,7 +146,6 @@
     <string name="navigation">Navigointi</string>
     <string name="volume_keys">Äänenvoimakkuus näppäimet</string>
     <string name="invert_volume_keys">Käännä äänenvoimakkuus näppäimet</string>
-    <string name="tapping">Näpäyttäminen</string>
     <string name="background_color">Taustan väri</string>
     <string name="white">Valkoinen</string>
     <string name="black">Musta</string>
@@ -275,7 +271,6 @@
     <string name="dodge_lighten">Väitävä / Vaalentava</string>
     <string name="burn_darken">Polttava / Tummentava</string>
     <string name="help">Apu</string>
-    <string name="library_update_order">Kirjaston päivitys järjestys</string>
     <string name="no_results_found">Ei tuloksia</string>
     <string name="lock_with_biometrics">Lukitse biometrisillä tiedoilla</string>
     <string name="lock_when_idle">Lukitse käyttämättömänä</string>
@@ -293,10 +288,6 @@
     <string name="updating_library">Päivittää kirjastoa</string>
     <string name="date_added">Lisäyspäivämäärä</string>
     <string name="latest_chapter">Viimeisin luku</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 päivitys epäonnistui</item>
-        <item quantity="other">%1$d päivitystä epäonnistui</item>
-    </plurals>
     <string name="local_source_help_guide">Paikallinen lähdeopas</string>
     <string name="check_site_in_web">Katso sivu WebViewissä</string>
     <string name="obsolete">Vanhentunut</string>
@@ -399,7 +390,6 @@
     <string name="library_search_hint">Hae otsikosta, tunnisteista, lähteestä</string>
     <string name="remove_from_library_question">Poistetaanko kirjastosta\?</string>
     <string name="updating_">Päivitetään %1$s</string>
-    <string name="what_should_update">Mitä pitäisi päivittää\?</string>
     <string name="jump_to_category">Siirry kategoriaan</string>
     <string name="long_press_category">Muokkaa kategoriaa pitämällä sitä painettuna</string>
     <string name="category_deleted">Kategoria poistettu</string>
@@ -408,10 +398,6 @@
     <string name="already_in_category">Manga on jo kategoriassa</string>
     <string name="confirm_category_deletion_message">Tämän kategorian manga siirretään oletuskategoriaan.</string>
     <string name="confirm_category_deletion">Poistetaanko kategoria\?</string>
-    <string name="categories_in_global_update">Kaikki kategoriat globaalissa päivityksessä</string>
-    <string name="categories_on_manual">Päivitettävät kategoriat, kun ne päivitetään manuaalisesti</string>
-    <string name="first_category">Ensimmäinen kategoria</string>
-    <string name="top_category">Ylin kategoria (%1$s)</string>
     <string name="category_is_empty">Kategoria on tyhjä</string>
     <string name="create_new_category">Luo uusi kategoria</string>
     <string name="_already_in_queue">%1$s on jo jonossa</string>
@@ -657,7 +643,6 @@
     <string name="mark_all_chapters_as_unread">Merkitse kaikki luvut lukemattomiksi\?</string>
     <string name="cutout_area_behavior">Leikkausalueen käyttäytyminen</string>
     <string name="add_edit_categories">Lisää/Muokkaa kategorioita</string>
-    <string name="view_all_errors">Näytä kaikki virheet</string>
     <string name="use_default">Käytä oletusta</string>
     <string name="tag">Tunniste</string>
     <string name="sort_and_filter">Lajittele &amp; suodata</string>
@@ -840,4 +825,29 @@
     <string name="getting_started_guide">Aloitusopas</string>
     <string name="open_random_series">Avaa satunnainen sarja</string>
     <string name="tracking_info">Yksisuuntainen synkronointi lukujen seurantapalveluiden päivittämiseksi. Määritä yksittäisten mangamerkintöjen seuranta seurantapainikkeesta.</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku on pysähtynyt</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Asenna ja aja Shizuku käyttääksesi Shizukua laajennusten asentamiseen</string>
+    <string name="appearance">Ulkonäkö</string>
+    <string name="yotsuba">Yotsuba</string>
+    <string name="side_nav_icon_alignment">Sivunavigaation kuvakkeiden kohdistus</string>
+    <string name="pure_black_dark_mode">Täysin musta pimeätila</string>
+    <string name="show_in_sources_and_extensions">Näytä lähde- ja lisäosaluettelossa</string>
+    <string name="warning">Varoitus</string>
+    <string name="strawberry_daiquiri">Mansikka Daiquiri</string>
+    <string name="tako">Tako</string>
+    <string name="update_all">Päivitä kaikki</string>
+    <string name="every_3_days">Joka 3. Päivä</string>
+    <string name="local_invalid_format">Väärä lukuformaatti</string>
+    <string name="grayscale">Harmaasävy</string>
+    <string name="pref_inverted_colors">Käänteisväri</string>
+    <string name="move_series_to_top">Siirrä sarja päällimmäiseksi</string>
+    <string name="date">Päivämäärä</string>
+    <string name="descending">Laskeva</string>
+    <string name="ascending">Nouseva</string>
+    <string name="select_inverse">Valitse käänteinen</string>
+    <string name="cover_only_grid">Kansikuva ruudukko</string>
+    <string name="tap_to_see_details">Näytä lisätiedot</string>
+    <string name="clear_history">Tyhjennä historia</string>
+    <string name="clear_history_completed">Historia poistettu</string>
+    <string name="clear_history_confirmation">Oletko varma\? Koko historia menetetään.</string>
 </resources>

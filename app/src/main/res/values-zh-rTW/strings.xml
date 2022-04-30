@@ -21,7 +21,6 @@
     <string name="alphabetically">名稱</string>
     <string name="total_chapters">章節數</string>
     <string name="last_read">最近閱讀</string>
-    <string name="last_updated">最後更新</string>
     <string name="search">搜尋</string>
     <string name="select_all">全選</string>
     <string name="mark_as_read">標示為已讀</string>
@@ -73,11 +72,9 @@
     <string name="weekly">每週</string>
     <string name="categories_to_include_in_global_update">自動更新的分類</string>
     <string name="all">全部</string>
-    <string name="library_update_order">書櫃更新順序</string>
-    <string name="library_update_restriction">書櫃更新限制</string>
+    <string name="library_update_restriction">裝置限制</string>
     <string name="wifi">僅限 Wi-Fi</string>
     <string name="charging">充電時</string>
-    <string name="only_update_ongoing">僅更新連載中的漫畫</string>
     <string name="app_theme">佈景主題</string>
     <string name="dark">深色</string>
     <string name="amoled_black">全黑</string>
@@ -160,7 +157,6 @@
     <string name="navigation">導覽</string>
     <string name="volume_keys">音量按鈕</string>
     <string name="invert_volume_keys">反轉音量按鈕</string>
-    <string name="tapping">輕觸翻頁</string>
     <string name="background_color">背景顏色</string>
     <string name="white">白色</string>
     <string name="black">黑色</string>
@@ -182,7 +178,7 @@
     <string name="center">中間</string>
     <string name="restore_from_backup_file">由備份檔案還原書櫃內容</string>
     <string name="used_">已使用：%1$s</string>
-    <string name="cache_delete_error">清除快取時發生錯誤</string>
+    <string name="cache_delete_error">清除時發生錯誤</string>
     <string name="cookies_cleared">已清除 Cookies</string>
     <string name="refresh_library_metadata">重新整理書櫃資料</string>
     <string name="build_time">組建時間</string>
@@ -245,7 +241,6 @@
     <string name="failed_to_load_pages_">第 %1$s 頁載入失敗</string>
     <string name="no_recent_chapters">沒有新章節</string>
     <string name="tracking">歷程</string>
-    <string name="sync_chapters_after_reading">閱讀完後同步章節</string>
     <string name="trust">信任</string>
     <string name="untrusted">不信任</string>
     <string name="untrusted_extension">不信任的擴充套件</string>
@@ -288,9 +283,6 @@
     <string name="updating_library">正在更新書櫃</string>
     <string name="date_added">收藏日期</string>
     <string name="latest_chapter">最新章節</string>
-    <plurals name="notification_update_failed">
-        <item quantity="other">有 %1$d 項更新失敗</item>
-    </plurals>
     <string name="no_results_found">找不到結果</string>
     <string name="local_source_help_guide">本機來源入門指南</string>
     <string name="check_site_in_web">在 WebView 中檢查網站</string>
@@ -368,8 +360,8 @@
     <string name="invalid_backup_file">無效的備份檔</string>
     <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
 \n副檔名應為 .proto.gz 或 .json。</string>
-    <string name="file_is_missing_data">檔案遺失資料</string>
-    <string name="backup_has_no_manga">備份檔並未包含任何漫畫</string>
+    <string name="file_is_missing_data">檔案遺失資料。</string>
+    <string name="backup_has_no_manga">備份檔並未包含任何漫畫。</string>
     <string name="restore_missing_sources">遺失來源：</string>
     <string name="restore_missing_trackers">尚未登入至歷程平台：</string>
     <string name="restore_content">還原時需連線至來源以取得資料，可能要支付數據傳輸費用。
@@ -494,7 +486,7 @@
     <string name="getting_started_guide">入門指南</string>
     <string name="help_translate">協助翻譯</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">略過了 %d 章，也許是來源沒有這些章節，或其已被你的篩選規則排除</item>
+        <item quantity="other">略過了 %d 章，也許是來源沒有這些章節，或其已被篩選規則排除</item>
     </plurals>
     <string name="search_extensions">搜尋擴充套件…</string>
     <string name="restore_miui_warning">若停用 MIUI 最佳化，備份與還原可能無法正確執行。</string>
@@ -586,4 +578,89 @@
     <string name="tracking_info">將章節進度單向同步至閱讀歷程平台，請逕行前往個別作品的「歷程」專區以設置。</string>
     <string name="enhanced_services">增強服務</string>
     <string name="enhanced_tracking_info">為特定來源提供增強功能的服務。當漫畫被加入書櫃時，將自動登錄閱讀歷程。</string>
+    <plurals name="after_minutes">
+        <item quantity="other">%1$s 分鐘後</item>
+    </plurals>
+    <plurals name="for_n_titles">
+        <item quantity="other">共 %d 本漫畫</item>
+    </plurals>
+    <string name="ascending">遞增</string>
+    <string name="date">日期</string>
+    <string name="descending">遞減</string>
+    <string name="local_invalid_format">無效的章節格式</string>
+    <string name="order_by">排序</string>
+    <string name="navigate_pan">平移圖片而後翻頁</string>
+    <string name="grayscale">灰階</string>
+    <string name="pref_inverted_colors">反轉</string>
+    <string name="move_series_to_top">置頂此叢書</string>
+    <string name="empty_backup_error">書櫃中尚無項目可供備份</string>
+    <string name="clear_database_source_item_count">資料庫中有 %1$d 本漫畫不屬於藏書</string>
+    <string name="database_clean">資料庫一塵不染</string>
+    <string name="select_inverse">反向選擇</string>
+    <string name="confirm_manga_add_duplicate">書櫃中已有一個來自不同來源 (%1$s) 的同名項目。
+\n
+\n你仍欲繼續嗎？</string>
+    <string name="tap_to_see_details">輕觸以檢視詳細資訊</string>
+    <string name="tap_to_learn_more">瞭解詳情</string>
+    <string name="cover_only_grid">純封面格狀</string>
+    <string name="notification_update_error">%1$d 項更新失敗</string>
+    <string name="notification_update_skipped">已略過 %1$d 項更新</string>
+    <string name="skipped_reason_completed">由於叢書連載已完結，因此略過</string>
+    <string name="skipped_reason_not_caught_up">由於尚有未讀的章節，因此略過</string>
+    <string name="skipped_reason_not_started">由於尚無已讀的章節，因此略過</string>
+    <string name="channel_skipped">略過</string>
+    <string name="pref_library_update_manga_restriction">欲略過更新的作品</string>
+    <string name="pref_update_only_completely_read">有未讀的章節</string>
+    <string name="pref_update_only_non_completed">已完結的作品</string>
+    <string name="pref_update_only_started">無已讀的章節</string>
+    <string name="pref_clear_webview_data">清除 WebView 資料</string>
+    <string name="webview_data_deleted">已清除 WebView 資料</string>
+    <string name="save_chapters_as_cbz">以 CBZ 封存檔格式儲存</string>
+    <string name="clear_history">清除閱讀記錄</string>
+    <string name="clear_history_completed">已刪除記錄</string>
+    <string name="clear_history_confirmation">你確定嗎？所有的閱讀記錄將會遺失。</string>
+    <string name="all_sources">所有來源</string>
+    <string name="source_hidden">隱藏來源</string>
+    <string name="press_and_hold_to_also_reset">按住不放也可以重設章節歷史</string>
+    <string name="all_files_permission_required">需要檔案權限</string>
+    <string name="always_show_current_category">永遠顯示目前分類</string>
+    <string name="group_library_by">書櫃分組…</string>
+    <plurals name="notification_and_n_more">
+        <item quantity="other">還有 %1$d 章</item>
+    </plurals>
+    <string name="source_not_installed">來源未安裝</string>
+    <string name="turn_on_">打開%s</string>
+    <string name="turn_off_">關閉%s</string>
+    <string name="enabled">已啟用</string>
+    <string name="grid_size">格狀大小</string>
+    <string name="new_beta_version_available">有新測試版可用！</string>
+    <string name="category_hopper_long_press">分類漏斗長按動作</string>
+    <string name="expand_collapse_all_categories">展開/收合所有分類</string>
+    <string name="notification_size_warning">大量更新可能會導致電池用量增加、來源速度變緩慢</string>
+    <string name="reset_chapter_question">重設章節？</string>
+    <string name="a_while_ago">不久前</string>
+    <string name="show_updated_time">顯示更新時間</string>
+    <string name="uniform_covers">統一封面</string>
+    <string name="affects_library_grid">影響書櫃格狀封面</string>
+    <string name="show_all_categories">顯示所有分類</string>
+    <string name="open_random_series">打開一個隨機系列</string>
+    <string name="expand_all_categories">展開所有分類</string>
+    <string name="collapse_all_categories">收合所有分類</string>
+    <string name="uniform_grid_covers">統一格狀封面</string>
+    <string name="can_be_found_in_library_filters">也可以在展開書櫃篩選器找到</string>
+    <string name="use_staggered_grid">使用交錯格狀</string>
+    <string name="pref_update_only_completely_read_summary">只在沒有未讀章節（全讀完）時才更新漫画</string>
+    <string name="chapter_x_of_y">%1$d/%2$d</string>
+    <string name="release_page">發佈頁面</string>
+    <string name="your_library">你的書櫃</string>
+    <string name="when_grouping_by_sources_tags">對書櫃分組時，依照來源、狀態...等。</string>
+    <string name="no_chapters_to_delete">沒有要刪除的章節</string>
+    <plurals name="deleted_chapters">
+        <item quantity="other">第%1$s章已從來源中刪除：
+\n%2$s
+\n是否刪除其下載内容？</item>
+    </plurals>
+    <string name="auto_refresh_covers_summary">更新書櫃的同時更新封面</string>
+    <string name="backup_restore_invalid_uri">錯誤：URI 空白</string>
+    <string name="backup_info">強烈建議啟用自動備份，並在他處保留副本。</string>
 </resources>

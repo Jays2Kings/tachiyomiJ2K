@@ -20,7 +20,6 @@
     <string name="update_available">အပ်ဒိတ်ထွက်နေပါပြီ</string>
     <string name="new_version_available">ဗားရှင်းအသစ်ထွက်ပါပြီ</string>
     <string name="updating_">%1$s ကိုအပ်ဒိတ်လုပ်နေပါတယ်</string>
-    <string name="what_should_update">ဘာကိုအပ်ဒိတ်လုပ်သင့်သလဲ</string>
     <string name="update">အပ်ဒိတ်</string>
     <string name="jump_to_category">အမျိုးအစားကိုခုန်ကူးမယ်</string>
     <string name="long_press_category">အမျိုးအစားတစ်ခုကိုပြင်ဆင်ဖို့ ဖိထားပါ</string>
@@ -38,11 +37,7 @@
     <string name="already_in_category">အမျိုးအစားထဲမှာ ရှိပြီးသား Manga ဖြစ်ပါတယ်</string>
     <string name="confirm_category_deletion_message">ဒီအမျိုးအစားထဲက Manga တွေကို ပုံသေအမျိုးအစားထဲကိုရွှေ့လိုက်မှာပါ။</string>
     <string name="confirm_category_deletion">ဒီအမျိုးအစားကိုဖျက်မှာလား</string>
-    <string name="categories_in_global_update">Global update တွင်ပါဝင်သည့်အမျိုးအစားအားလုံး</string>
-    <string name="categories_on_manual">ကိုယ်တိုင်ကိုယ်ကျ refresh လုပ်ပါက အပ်ဒိတ်လုပ်မည့်အမျိုးအစားများ</string>
-    <string name="first_category">ပထမဆုံးအမျိုးအစား</string>
     <string name="default_category">ပုံသေအမျိုးအစား</string>
-    <string name="top_category">ထိပ်ဆုံးအမျိုးအစား (%1$s)</string>
     <string name="category_is_empty">ဤအမျိုးအစားတွင်ဘာမှမရှိသေးပါ</string>
     <string name="new_category">အမျိုးအစားအသစ်</string>
     <string name="create_new_category">အမျိုးအစားအသစ်ဖန်တီးမယ်</string>
@@ -167,4 +162,7 @@
     <string name="download">ဒေါင်းလုဒ်</string>
     <string name="edit">ပြင်ဆင်သည်</string>
     <string name="install">Install</string>
+    <string name="ascending">ငယ်စဉ်ကြီးလိုက်</string>
+    <string name="descending">ကြီးစဉ်ငယ်လိုက်</string>
+    <string name="select_inverse">ပြောင်းပြန်ရွေးချယ်ရန်</string>
 </resources>

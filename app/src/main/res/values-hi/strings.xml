@@ -18,7 +18,6 @@
     <string name="alphabetically">वर्णक्रमानुसार</string>
     <string name="total_chapters">कुल अध्याय</string>
     <string name="last_read">आखिर में पढ़ा हुआ</string>
-    <string name="last_updated">आखिरी अद्यतन</string>
     <string name="search">खोज</string>
     <string name="select_all">सभी का चयन करे</string>
     <string name="mark_as_read">पढ़ा हुआ चिह्न करे</string>
@@ -73,8 +72,6 @@
     <string name="library_update_restriction_summary">अद्यतन तभी जब परिस्थिति अनुकूल हो</string>
     <string name="wifi">वाई - फाई</string>
     <string name="charging">चार्ज होते समय</string>
-    <string name="only_update_ongoing">केवल चालू मंगा का अद्यतन करे</string>
-    <string name="sync_chapters_after_reading">अध्याय पढ़ने के बाद समकालीन करे</string>
     <string name="app_theme">एप्पलीकेशन थीम</string>
     <string name="dark">गहरी थीम</string>
     <string name="amoled_black">अलौकिक थीम</string>
@@ -91,7 +88,6 @@
     <string name="navigation">पथ प्रदर्शन</string>
     <string name="volume_keys">ध्वनि कुंजी</string>
     <string name="invert_volume_keys">ध्वनि कुंजी पलटे</string>
-    <string name="tapping">थपथपाना</string>
     <string name="background_color">पीछे का रंग</string>
     <string name="white">सफेद</string>
     <string name="black">काला</string>
@@ -275,7 +271,6 @@
     <string name="dodge_lighten">चकमा/हल्का</string>
     <string name="burn_darken">जल/गहरा</string>
     <string name="help">मदद</string>
-    <string name="library_update_order">लाइब्रेरी अद्यतन क्रम</string>
     <string name="no_results_found">कोई परिणाम नहीं मिला</string>
     <string name="lock_with_biometrics">बायोमेट्रिक्स के साथ लॉक करें</string>
     <string name="lock_when_idle">निष्क्रिय होने पर लॉक करें</string>
@@ -291,10 +286,6 @@
     <string name="updating_library">अद्यतन पुस्तकालय</string>
     <string name="date_added">तारीख को जोड़ा गया</string>
     <string name="latest_chapter">नवीनतम अध्याय</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 अद्यतन विफल हुआ%1$d अपडेट विफल रहे</item>
-        <item quantity="other"/>
-    </plurals>
     <string name="local_source_help_guide">स्थानीय स्रोत गाइड</string>
     <string name="check_site_in_web">वेबव्यू में वेबसाइट देखें</string>
     <string name="obsolete">अप्रचलित</string>
@@ -362,8 +353,8 @@
     <string name="may_contain_nsfw">इसमें NSFW (18+) सामग्री हो सकती है</string>
     <string name="next_page">अगला पृष्ठ</string>
     <string name="previous_page">पिछला पृष्ठ</string>
-    <string name="next_chapter">अगला पृष्ठ</string>
-    <string name="previous_chapter">पिछला पृष्ठ</string>
+    <string name="next_chapter">अगला अध्याय</string>
+    <string name="previous_chapter">पिछला अध्याय</string>
     <string name="animate_page_transitions">चेतन पृष्ठ संक्रमण</string>
     <string name="default_reading_mode">डिफ़ॉल्ट रीडिंग मोड</string>
     <string name="nav_layout">नेविगेशन लेआउट</string>
@@ -414,10 +405,10 @@
     <string name="label_global_search">विश्वीय खोज</string>
     <string name="cancel_all_for_series">इस श्रृंखला के लिए सभी रद्द करें</string>
     <string name="change">परिवर्तन</string>
-    <string name="bottom">सबसे नीचे</string>
+    <string name="bottom">नीचे</string>
     <string name="beta">बेटा</string>
     <plurals name="after_minutes">
-        <item quantity="one">%1$s मिनट बाद</item>
+        <item quantity="one">%1$s मिनट के बाद%1$s मिनट के बाद</item>
         <item quantity="other"/>
     </plurals>
     <string name="delete_downloaded_if_removed_online">डाउनलोड किए गए अध्यायों को हटा दें यदि स्रोत ने अध्याय को ऑनलाइन हटा दिया है</string>
@@ -521,7 +512,6 @@
     <string name="create_new_category">नई श्रेड़ी का निर्माण करें</string>
     <string name="new_category">नई श्रेणी</string>
     <string name="category_is_empty">श्रेणी खाली है</string>
-    <string name="first_category">पहली श्रेणी</string>
     <string name="confirm_category_deletion">क्या श्रेणी को नष्ट करना है\?</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">%1$d डाउनलोड अध्याय को निकालें\?</item>
@@ -535,4 +525,37 @@
     <string name="on_hiatus">अंतराल पर है</string>
     <string name="enhanced_services">उन्नत सेवाएं</string>
     <string name="enhanced_tracking_info">ऐसी सेवाएँ जो विशिष्ट स्रोतों के लिए उन्नत सुविधाएँ प्रदान करती हैं। आपकी पुस्तकालय में जोड़े जाने पर पुस्तकें स्वचालित रूप से ट्रैक की जाती हैं।</string>
+    <plurals name="for_n_titles">
+        <item quantity="one">%d शीर्षक के लिए%d शीर्षकों के लिए</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="move_series_to_top">श्रृंखला को शीर्ष पर ले जाएं</string>
+    <string name="local_invalid_format">अमान्य अध्याय प्रारूप</string>
+    <string name="order_by">के अनुसार ऑर्डर करें</string>
+    <string name="navigate_pan">पैन पर नेविगेट करें</string>
+    <string name="grayscale">काला और सफेद</string>
+    <string name="pref_inverted_colors">उल्टी</string>
+    <string name="ascending">आरोही</string>
+    <string name="date">दिनांक</string>
+    <string name="descending">अवरोही</string>
+    <string name="database_clean">डेटाबेस साफ़ करें</string>
+    <string name="clear_database_source_item_count">डेटाबेस में %1$d मंगा हैं जो पुस्तकालय में नहीं है</string>
+    <string name="confirm_manga_add_duplicate">आपकी लाइब्रेरी में एक ही नाम के साथ लेकिन एक अलग स्रोत (%1$s) से एक प्रविष्टि है।
+\n
+\nक्या आप अभी भी जारी रखना चाहते हैं\?</string>
+    <string name="select_inverse">विलोम का चयन करें</string>
+    <string name="cover_only_grid">केवल कवर ग्रिड</string>
+    <string name="notification_update_error">%1$d अपडेट विफल</string>
+    <string name="notification_update_skipped">%1$d अपडेट छोड़े गए</string>
+    <string name="skipped_reason_completed">छोड़े गए क्योंकि श्रृंखला पूरी हो गई है</string>
+    <string name="skipped_reason_not_caught_up">छोड़ दिया गया क्योंकि वहाँ अपठित अध्याय हैं</string>
+    <string name="skipped_reason_not_started">छोड़ दिया गया क्योंकि कोई अध्याय पढ़ा नहीं गया</string>
+    <string name="channel_skipped">छोड़े गए</string>
+    <string name="tap_to_see_details">विवरण देखने के लिए टैप करें</string>
+    <string name="save_chapters_as_cbz">CBZ आर्कैव के रूप में सहेजें</string>
+    <string name="clear_history">इतिहास मिटा दें</string>
+    <string name="clear_history_completed">इतिहास हटाया गया</string>
+    <string name="clear_history_confirmation">क्या आपको यकीन है\? सारा इतिहास खो जाएगा।</string>
+    <string name="backup_restore_invalid_uri">त्रुटि: खाली यू॰आर॰ऐ</string>
+    <string name="backup_info">स्वचालित बैकअप की अत्यधिक अनुशंसा की जाती है। आपको अन्य जगहों पर भी प्रतियां रखनी चाहिए।</string>
 </resources>

@@ -55,8 +55,6 @@
     <string name="library_update_restriction_summary">Atualizar apenas quando se cumprem as condições</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">A carregar</string>
-    <string name="only_update_ongoing">Atualizar apenas mangás a decorrer</string>
-    <string name="sync_chapters_after_reading">Sincronizar capítulos após leitura</string>
     <string name="app_theme">Tema da aplicação</string>
     <string name="dark">Tema escuro</string>
     <!-- Reader section -->
@@ -66,7 +64,6 @@
     <string name="keep_screen_on">Manter ecrã ligado</string>
     <string name="navigation">Navegação</string>
     <string name="volume_keys">Teclas de Volume</string>
-    <string name="tapping">Toque</string>
     <string name="background_color">Cor de fundo</string>
     <string name="white">Branco</string>
     <string name="black">Preto</string>
@@ -209,7 +206,6 @@
     <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Língua</string>
     <string name="system_default">Padrão do sistema</string>
-    <string name="last_updated">Ultima atualização</string>
     <string name="restore">Restaurar</string>
     <string name="default_category">Categoria padrão</string>
     <string name="always_ask">Sempre perguntar</string>
@@ -305,7 +301,6 @@
     <string name="color_filter_blend_mode">Modo de mistura do filtro de cores</string>
     <string name="dodge_lighten">Dodge / Clarear</string>
     <string name="help">Ajuda</string>
-    <string name="library_update_order">Ordem de atualização da biblioteca</string>
     <string name="lock_with_biometrics">Bloqueio com biometria</string>
     <string name="lock_when_idle">Bloquear quando inativo</string>
     <string name="copy_value">Copiar</string>
@@ -320,10 +315,6 @@
     <string name="updating_library">Atualizando biblioteca</string>
     <string name="date_added">Data de adição</string>
     <string name="latest_chapter">Último capítulo</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 atualização falhou</item>
-        <item quantity="other">%1$d atualizações falharam</item>
-    </plurals>
     <string name="no_results_found">Nenhum resultado encontrado</string>
     <string name="local_source_help_guide">Guia de fonte local</string>
     <string name="check_site_in_web">Verifique o site no WebView</string>
@@ -379,7 +370,6 @@
     <string name="library_search_hint">Pesquisar título, etiquetas, fonte</string>
     <string name="remove_from_library_question">Remover da biblioteca\?</string>
     <string name="updating_">Atualizando %1$s</string>
-    <string name="what_should_update">O que deve ser atualizado\?</string>
     <string name="jump_to_category">Ir para a categoria</string>
     <string name="long_press_category">Pressione e segure para editar uma categoria</string>
     <string name="category_deleted">Categoria eliminada</string>
@@ -388,10 +378,6 @@
     <string name="already_in_category">Mangá já está na categoria</string>
     <string name="confirm_category_deletion_message">Mangás nesta categoria serão movidas para a categoria padrão.</string>
     <string name="confirm_category_deletion">Eliminar categoria\?</string>
-    <string name="categories_in_global_update">Todas as categorias em atualização global</string>
-    <string name="categories_on_manual">Categorias para atualizar ao atualizar manualmente</string>
-    <string name="first_category">Primeira categoria</string>
-    <string name="top_category">Categoria principal (%1$s)</string>
     <string name="category_is_empty">Categoria está vazia</string>
     <string name="create_new_category">Criar nova categoria</string>
     <string name="_already_in_queue">%1$s já está na fila</string>
@@ -565,7 +551,6 @@
     <string name="portrait">Vertical</string>
     <string name="landscape">Horizontal</string>
     <string name="drag_handle">Alça de arrasto</string>
-    <string name="view_all_errors">Ver todos os erros</string>
     <string name="use_default">Usar padrão</string>
     <string name="top">Início</string>
     <string name="tag">Tag</string>
@@ -949,7 +934,7 @@
     <string name="show_outline_around_covers">Mostrar contorno ao redor das capas</string>
     <string name="notification_size_warning">Grandes atualizações podem aumentar o uso da bateria e as fontes se tornarem mais lentas</string>
     <string name="scanlators">Tradutores</string>
-    <string name="save_chapters_as_cbz">Salvar capítulos como CBZ</string>
+    <string name="save_chapters_as_cbz">Guardar como ficheiro CBZ</string>
     <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem avisos do usuário e ativa atualizações automáticas para dispositivos com Android 12</string>
     <string name="theme_buttons_based_on_cover">Tema dos botões com base na capa</string>
     <string name="helpful_translation_links">Links de tradução úteis</string>
@@ -968,4 +953,18 @@
     <string name="publishing_finished">Publicação concluída</string>
     <string name="cancelled">Cancelado</string>
     <string name="enhanced_tracking_info">Serviços que oferecem características melhoradas para fontes específicas. Mangás são automaticamente monitorizados quando adicionados à sua biblioteca.</string>
+    <string name="local_invalid_format">Formato de capítulo inválido</string>
+    <string name="order_by">Ordenar por</string>
+    <string name="grayscale">Tons de cinzento</string>
+    <string name="pref_inverted_colors">Invertido</string>
+    <string name="ascending">Ascendente</string>
+    <string name="date">Data</string>
+    <string name="descending">Descendente</string>
+    <string name="clear_database_source_item_count">%1$d mangás que não estão na biblioteca na base de dados</string>
+    <string name="database_clean">Base de dados limpa</string>
+    <string name="select_inverse">Seleção inversa</string>
+    <string name="clear_history">Eliminar histórico</string>
+    <string name="clear_history_completed">Histórico eliminado</string>
+    <string name="clear_history_confirmation">Tem a certeza\? Todo o histórico será perdido.</string>
+    <string name="backup_info">Cópias de segurança automáticas são altamente recomendadas. Também deve guardar cópias em outros locais.</string>
 </resources>

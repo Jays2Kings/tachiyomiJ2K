@@ -51,10 +51,8 @@
     <string name="list">Lista</string>
     <string name="download_badge">Descargar insignias</string>
     <string name="library_update_frequency">Frecuencia de actualización da biblioteca</string>
-    <string name="library_update_order">Orden de actualización da biblioteca</string>
     <string name="library_update_restriction">Restriccións de actualización da biblioteca</string>
     <string name="library_update_restriction_summary">Actualizar soamente cando as condicións se cumpren</string>
-    <string name="only_update_ongoing">Actualiza só o manga en curso</string>
     <string name="categories_to_include_in_global_update">Categorías a incluír na actualización global</string>
     <string name="updates">Actualizacións</string>
     <string name="sources">Fontes</string>
@@ -86,7 +84,6 @@
     <string name="navigation">Navegación</string>
     <string name="volume_keys">Teclas de volume</string>
     <string name="invert_volume_keys">Invertir teclas de volume</string>
-    <string name="tapping">Toques</string>
     <string name="background_color">Cor de fondo</string>
     <string name="white">Branco</string>
     <string name="black">Negro</string>
@@ -260,4 +257,5 @@
     <string name="external_storage_download_notice">TachiyomiJ2K require acceso a tódolos arquivos para descargar capítulos, Preme eiquí, e despóis marca \"Permitir acceso á xestión de tódolos arquivos.\"</string>
     <string name="author">Autor</string>
     <string name="move_x_to">Move %1$s a…</string>
+    <string name="select_inverse">Selección inversa</string>
 </resources>

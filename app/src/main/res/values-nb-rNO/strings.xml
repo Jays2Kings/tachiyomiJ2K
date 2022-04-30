@@ -20,7 +20,6 @@
     <string name="alphabetically">Alfabetisk</string>
     <string name="total_chapters">Totale kapittel</string>
     <string name="last_read">Sist lest</string>
-    <string name="last_updated">Sist oppdatert</string>
     <string name="search">Søk</string>
     <string name="select_all">Velg alt</string>
     <string name="mark_as_read">Marker som lest</string>
@@ -74,7 +73,7 @@
     <string name="amoled_black">AMOLED-drakt</string>
     <string name="language">Språk</string>
     <string name="system_default">Systemforvalg</string>
-    <string name="default_category">Forvalgt kategori</string>
+    <string name="default_category">Standard kategori</string>
     <string name="always_ask">Alltid spør</string>
     <string name="pending">Ventende</string>
     <string name="installing">Installerer</string>
@@ -95,8 +94,6 @@
     <string name="categories_to_include_in_global_update">Kategorier inkludert i global oppdatering</string>
     <string name="library_update_restriction">Restriksjoner for oppdatering av bibliotek</string>
     <string name="library_update_restriction_summary">Kun oppdater når disse vilkårene oppfylles</string>
-    <string name="only_update_ongoing">Kun oppdater pågående manga</string>
-    <string name="sync_chapters_after_reading">Synkroniser kapitler etter lesing</string>
     <string name="app_theme">Programdrakt</string>
     <string name="true_32bit_color">32-biters fargerom</string>
     <string name="crop_borders">Beskjær kanter</string>
@@ -105,7 +102,6 @@
     <string name="skip_read_chapters">Hopp over kapittel markert som leste</string>
     <string name="volume_keys">Lydstyrkejusteringstaster</string>
     <string name="invert_volume_keys">Inverter lydstyrketaster</string>
-    <string name="tapping">Trykking</string>
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="white">Hvit</string>
     <string name="black">Svart</string>
@@ -162,9 +158,9 @@
     <string name="restoring_backup">Gjenoppretter sikkerhetskopi</string>
     <string name="clear_chapter_cache">Tøm kapittelhurtiglager</string>
     <string name="used_">Brukt: %1$s</string>
-    <string name="cache_delete_error">Feil oppstod under tømming av hurtiglager</string>
+    <string name="cache_delete_error">Feil oppstod under opprensing</string>
     <string name="clear_cookies">Tøm kaker</string>
-    <string name="cookies_cleared">Kaker tømt</string>
+    <string name="cookies_cleared">Informasjonskapsler slettet</string>
     <string name="clear_database">Tøm database</string>
     <string name="clear_database_summary">Slett manga og kapittel som ikke finnes i biblioteket ditt</string>
     <string name="clear_database_confirmation">Er du sikker\? Leste kapitler og framdrift for manga som ikke er i biblioteket vil gå tapt</string>
@@ -275,7 +271,6 @@
     <string name="multiply">Multiplisere</string>
     <string name="dodge_lighten">Unngå / lysne</string>
     <string name="burn_darken">Brenn / mørkere</string>
-    <string name="library_update_order">Rekkefølge for biblioteksoppdatering</string>
     <string name="no_results_found">Resultatløst</string>
     <string name="lock_with_biometrics">Lås med biometri</string>
     <string name="lock_when_idle">Lås ved lediggang</string>
@@ -285,10 +280,6 @@
     <string name="updating_library">Oppdaterer bibliotek</string>
     <string name="date_added">Dato lagt til</string>
     <string name="latest_chapter">Siste kapittel</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 oppdatering mislyktes</item>
-        <item quantity="other">%1$d oppdateringer mislyktes</item>
-    </plurals>
     <string name="local_source_help_guide">Lokal kildeguide</string>
     <string name="check_site_in_web">Sjekk nettsted i nettvisning</string>
     <string name="obsolete">Foreldet</string>
@@ -459,7 +450,6 @@
     <string name="no_matches_for_filters">Ingen samsvar med dine nåværende filtre</string>
     <string name="show_all_categories">Vis alle kategorier</string>
     <string name="updating_">Oppdaterer %1$s</string>
-    <string name="what_should_update">Hva skal oppdateres\?</string>
     <string name="confirm_category_deletion">Slett kategori\?</string>
     <string name="category_is_empty">Kategorien er tom</string>
     <string name="new_category">Ny kategori</string>
@@ -537,8 +527,6 @@
     <string name="add_edit_categories">Legg til/rediger kategorier</string>
     <string name="add_categories">Legg til kategorier</string>
     <string name="already_in_category">Manga allerede i kategori</string>
-    <string name="first_category">Første kategori</string>
-    <string name="top_category">Toppkategori (%1$s)</string>
     <string name="no_matches_for_filters_short">Ingen samsvar med dine filtre</string>
     <string name="show_categories_while_filtering">Vis tomme kategorier under filtrering</string>
     <string name="category">Kategori</string>
@@ -552,10 +540,9 @@
     </plurals>
     <string name="pad_cutout_areas">Legg til luft rundt utklippsområder</string>
     <string name="confirm_category_deletion_message">Manga i denne kategorien vil bli flyttet inn i den forvalgte kategorien.</string>
-    <string name="categories_in_global_update">Alle kategorier i global oppdatering</string>
     <string name="series_opens_new_chapters">Seriesnarveier åpner nye kapitler</string>
     <string name="by_default_side_nav_info">Som forvalg brukes sidenavigasjon for noen telefoner og små nettbrett i vannrett modus, og vises alltid på større nettbrett</string>
-    <string name="side_nav_icon_alignment">Plassering av ikon i sidenavigasjon</string>
+    <string name="side_nav_icon_alignment">Justering av sidenavigeringsikon</string>
     <string name="use_side_navigation">Bruk sidenavigasjon</string>
     <string name="a_calmer_you">Et roligere deg (dynamisk)</string>
     <string name="when_sorting_ignore_articles">Ved alfabetisk sortering, sorter uten å ta hensyn til artikler (en, ei, et, de, osv) i starten av manga-titler</string>
@@ -563,7 +550,6 @@
     <string name="tracking_status">Oppsynsstatus</string>
     <string name="reorder_filters">Omorganiser filtre</string>
     <string name="release_page">Utgivelsesside</string>
-    <string name="categories_on_manual">Kategorier å oppdatere ved manuell gjenoppfrisking</string>
     <string name="comic">Tegneserie</string>
     <string name="all_chapters_read">Alle kapitler lest</string>
     <plurals name="deleted_chapters">
@@ -652,7 +638,6 @@
     <string name="amount_of_pages_to_preload">Mengden sider å forhåndsinnlaste under lesing. Høyere verdier gir glattere leseopplevelse, på bekostning av høyere hurtiglater- og nettverksbruk.</string>
     <string name="sort_and_filter">Sorter og filtrer</string>
     <string name="warning">Advarsel</string>
-    <string name="view_all_errors">Vis alle feil</string>
     <string name="use_default">Bruk forvalg</string>
     <string name="top">Toppen</string>
     <string name="tag">Etikett</string>
@@ -927,7 +912,7 @@
     <string name="ext_installer_shizuku_stopped">Shizuku kjører ikke</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installer og start Shizuku for å bruke det som utvidelsesinstallatør.</string>
     <string name="classic_blue">Klassisk blå</string>
-    <string name="save_chapters_as_cbz">Lagre kapitler som CBZ</string>
+    <string name="save_chapters_as_cbz">Lagre som CBZ-arkiv</string>
     <string name="every_3_days">Hver 3. dag</string>
     <string name="publishing_finished">Ferdig publisert</string>
     <string name="cancelled">Kansellert</string>
@@ -942,4 +927,38 @@
     <string name="scoring_type_updated">Poengtype oppdatert</string>
     <string name="could_not_update_scoring_">Kunne ikke oppdatere poengtype: %1$s</string>
     <string name="lime_time">Lime tid</string>
+    <string name="ascending">Stigende</string>
+    <string name="date">Dato</string>
+    <string name="descending">Synkende</string>
+    <string name="local_invalid_format">Ugyldig kapittelformat</string>
+    <string name="order_by">Sorter etter</string>
+    <string name="pref_inverted_colors">Invertert</string>
+    <string name="grayscale">Gråskala</string>
+    <string name="clear_database_source_item_count">%1$d ikke-bibliotek manga i databasen</string>
+    <string name="database_clean">Rengjør databasen</string>
+    <string name="confirm_manga_add_duplicate">Du har en oppføring i biblioteket ditt med samme navn, men fra en annen kilde (%1$s).
+\n
+\nVil du fortsette allikevel\?</string>
+    <string name="select_inverse">Velg motsatt</string>
+    <string name="notification_update_skipped">%1$d oppdatering(er) hoppet over</string>
+    <string name="skipped_reason_completed">Hoppet over fordi serien er fullført</string>
+    <string name="skipped_reason_not_caught_up">Hoppet over fordi det er uleste kapitler</string>
+    <string name="skipped_reason_not_started">Hoppet over fordi ingen kapitler er lest</string>
+    <string name="channel_skipped">Hoppet over</string>
+    <string name="tap_to_learn_more">Trykk for å finne ut mer</string>
+    <string name="notification_update_error">%1$d oppdatering(er) mislyktes</string>
+    <string name="tap_to_see_details">Trykk for å se detaljer</string>
+    <string name="clear_history">Slett historikk</string>
+    <string name="clear_history_completed">Historikken er slettet</string>
+    <string name="clear_history_confirmation">Er du sikker\? All historikk vil gå tapt.</string>
+    <string name="pref_library_update_manga_restriction">Hopp over oppdateringer av titler</string>
+    <string name="pref_update_only_started">Som ikke er påbegynt</string>
+    <string name="pref_update_only_completely_read">Med uleste kapitler</string>
+    <string name="pref_update_only_non_completed">Med \"Fullført\" status</string>
+    <string name="pref_clear_webview_data">Slett WebView data</string>
+    <string name="empty_backup_error">Ingen bibliotekoppføringer å sikkerhetskopiere</string>
+    <string name="webview_data_deleted">WebView data slettet</string>
+    <string name="move_series_to_top">Flytt serien til toppen</string>
+    <string name="backup_restore_invalid_uri">Feil: tom URI</string>
+    <string name="backup_info">Automatiske sikkerhetskopier anbefales sterkt. Du bør oppbevare flere kopier andre steder også.</string>
 </resources>

@@ -18,7 +18,6 @@
     <string name="alphabetically">বর্ণানুক্রমে</string>
     <string name="total_chapters">মোট অধ্যায়</string>
     <string name="last_read">শেষ পঠিত</string>
-    <string name="last_updated">সর্বশেষ আপডেট</string>
     <string name="search">খোঁজ</string>
     <string name="select_all">সব নির্বাচন</string>
     <string name="mark_as_read">পড়া হয়েছে</string>
@@ -73,8 +72,6 @@
     <string name="library_update_restriction_summary">তথ্য মিলেগেলে কেবল আপডেট করুন</string>
     <string name="wifi">ওয়াই-ফাই</string>
     <string name="charging">চার্জ হচ্ছে</string>
-    <string name="only_update_ongoing">কেবল চলমান মাংগা আপডেট করুন</string>
-    <string name="sync_chapters_after_reading">পড়ার পর অধ্যায়গুলো সুসংগত করুন</string>
     <string name="app_theme">এপ্লিকেশন থিম</string>
     <string name="dark">কালো থিম</string>
     <string name="amoled_black">এমোলেড থিম</string>
@@ -91,7 +88,6 @@
     <string name="navigation">দিক নির্দেশনা</string>
     <string name="volume_keys">ভলিউমের বোতামগুলো</string>
     <string name="invert_volume_keys">ভলিউম বোতামগুলো ওল্টান</string>
-    <string name="tapping">টোকা</string>
     <string name="background_color">পিছনের রঙ</string>
     <string name="white">সাদা</string>
     <string name="black">কালো</string>
@@ -275,7 +271,6 @@
     <string name="burn_darken">বার্ন/অন্ধকার</string>
     <string name="multiply">গুণ</string>
     <string name="help">সাহায্য</string>
-    <string name="library_update_order">মাঙ্গা লাইব্রেরী আপডেটের প্রক্রিয়া</string>
     <string name="lock_with_biometrics">বায়োমেট্রিক্স দিয়ে লক করুন</string>
     <string name="lock_when_idle">কর্মহীন হলে লক করুন</string>
     <string name="security">নিরাপত্তা</string>
@@ -290,10 +285,6 @@
     <string name="updating_library">সংগ্রহশালার হালনাগাদ হচ্ছে</string>
     <string name="date_added">তারিখে যোগকৃত</string>
     <string name="latest_chapter">সর্বশেষ অধ্যায়</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">১ টি হালনাগাদ ব্যর্থ হয়েছে</item>
-        <item quantity="other">%1$dটি হালনাগাদ ব্যর্থ হয়েছে</item>
-    </plurals>
     <string name="no_results_found">কোন ফলাফল পাওয়া যায়নি</string>
     <string name="local_source_help_guide">স্থানীয় উৎস নির্দেশিকা</string>
     <string name="check_site_in_web">ওয়েবসাইটটি ওয়েবভিউতে পরীক্ষা করুন</string>
@@ -346,8 +337,6 @@
     <string name="unpin">আলগা করুন</string>
     <string name="view_chapters">অধ্যায়গুলি দেখুন</string>
     <string name="confirm_category_deletion">বিভাগ মুছবো\?</string>
-    <string name="first_category">প্রথম বিভাগ</string>
-    <string name="top_category">শীর্ষ বিভাগ (%1$s)</string>
     <string name="category_is_empty">বিভাগটি খালি</string>
     <string name="create_new_category">নতুন বিভাগ তৈরি করুন</string>
     <string name="_already_in_queue">%1$s আগে থেকেই সারিতে আছে</string>
@@ -377,7 +366,6 @@
     <string name="library_search_hint">অনুসন্ধান করুন শিরোনাম, ট্যাগ, উৎস</string>
     <string name="remove_from_library_question">লাইব্রেরী থেকে মুছে ফেলুন\?</string>
     <string name="updating_">আপডেট করা হচ্ছে %1$s</string>
-    <string name="what_should_update">কি আপডেট হবে\?</string>
     <string name="jump_to_category">বিভাগে যান</string>
     <string name="long_press_category">একটি বিভাগ সম্পাদনা করতে টিপুন এবং ধরে রাখুন</string>
     <string name="category_deleted">বিভাগ মুছা হয়েছে</string>
@@ -500,7 +488,6 @@
     <string name="recents">নতুন</string>
     <string name="sort_by">সাজান</string>
     <string name="series_type">সিরিজের ধরণ</string>
-    <string name="categories_in_global_update">সর্বত্র আপডেটে সকল বিভাগ</string>
     <string name="auto_refresh_covers">কভারগুলো স্বয়ংক্রিয়ভাবে রিফ্রেশ করুন</string>
     <string name="include_in_global_update">সর্বত্র আপডেটে অন্তর্ভুক্ত করুন</string>
     <string name="more_library_settings">আরো লাইব্রেরি সেটিংস</string>
@@ -637,7 +624,6 @@
     <string name="ext_installer_shizuku_stopped">শিজুকু চলছে না</string>
     <string name="move_dynamic_to_bottom">সঙ্কুচিত ডায়নামিক বিভাগগুলিকে নীচে নিয়ে যাও</string>
     <string name="no_matches_for_filters_short">আপনার ফিল্টার জন্য কোন মিল</string>
-    <string name="categories_on_manual">ম্যানুয়ালি রিফ্রেশ করার সময় আপডেট করার জন্য বিভাগগুলি</string>
     <string name="could_not_install_update">আপডেট ইনস্টল করা যায়নি</string>
     <string name="when_grouping_by_sources_tags">উত্স, স্থিতি, ইত্যাদি দ্বারা লাইব্রেরি গ্রুপ করার সময়।</string>
     <plurals name="chapters_plural">
@@ -701,7 +687,6 @@
     <string name="_per_row">প্রতি সারি %d</string>
     <string name="hide_unread_badges">অপঠিত ব্যাজ লুকাও</string>
     <string name="show_unread_badges">অপঠিত ব্যাজ দেখাও</string>
-    <string name="view_all_errors">সমস্ত ত্রুটি দেখাও</string>
     <string name="warning">সতর্কতা</string>
     <string name="only_downloaded">শুধুমাত্র ডাউনলোড করা হয়েছে</string>
     <string name="couldnt_download_low_space">ডিস্কে জায়গা কম থাকার কারণে অধ্যায় ডাউনলোড করা যায়নি</string>
@@ -933,4 +918,18 @@
     <string name="tracking_info">ট্র্যাকিং সার্ভিসে অধ্যায়ের অগ্রগতি হালনাগাদের একমুখী পথ। স্বতন্ত্র মাঙ্গার ট্র্যকিং সেটাপের জন্য তাদের নিজস্ব ট্র্যাকিং বাটন ব্যবহার করুন।</string>
     <string name="enhanced_services">উন্নত সেবা</string>
     <string name="enhanced_tracking_info">নির্দিষ্ট উৎসের জন্য উন্নত বৈশিষ্ট্য প্রদান করে এমন পরিষেবা। আপনার লাইব্রেরিতে যোগ করা হলে মাঙ্গা স্বয়ংক্রিয়ভাবে ট্র্যাক করা হয়।</string>
+    <string name="local_invalid_format">দুর্বল অধ্যায় বিন্যাস</string>
+    <string name="order_by">ক্রমানুসার</string>
+    <string name="grayscale">ধূসর স্কেল</string>
+    <string name="pref_inverted_colors">উল্টানো</string>
+    <string name="date">তারিখ</string>
+    <string name="descending">অধোগামী</string>
+    <string name="ascending">ঊর্ধ্বগামী</string>
+    <string name="clear_database_source_item_count">তথ্যশালায় %1$d টি মাঙ্গা যেগুলি লাইব্রেরীতে নেই</string>
+    <string name="database_clean">তথ্যশালা পরিষ্কার</string>
+    <string name="select_inverse">উল্টো নির্বাচন করুন</string>
+    <string name="clear_history">ইতিহাস সাফ করুন</string>
+    <string name="clear_history_completed">ইতিহাস মুছে ফেলা হয়েছে</string>
+    <string name="clear_history_confirmation">আপনি নিশ্চিত\? সব ইতিহাস মুছে যাবে।</string>
+    <string name="backup_info">স্বয়ংক্রিয় ব্যাকআপ অত্যন্ত সুপারিশময়. আপনি অন্যান্য জায়গায়ও কপি রাখা উচিত।</string>
 </resources>

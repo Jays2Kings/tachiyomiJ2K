@@ -67,11 +67,7 @@
     <string name="_already_in_queue">%1$s jest już w kolejce</string>
     <string name="create_new_category">Stwórz nową kategorię</string>
     <string name="category_is_empty">Kategoria jest pusta</string>
-    <string name="top_category">Pierwsza kategoria (%1$s)</string>
     <string name="default_category">Domyślna kategoria</string>
-    <string name="first_category">Pierwsza kategoria</string>
-    <string name="categories_on_manual">Kategorie do aktualizacji podczas ręcznego odświeżania</string>
-    <string name="categories_in_global_update">Wszystkie kategorie w aktualizacji globalnej</string>
     <string name="confirm_category_deletion">Usunąć kategorię?</string>
     <string name="confirm_category_deletion_message">Mangi z tej kategorii będą przeniesione do domyślnej kategorii.</string>
     <string name="already_in_category">Manga jest już w kategorii</string>
@@ -91,7 +87,6 @@
     <string name="jump_to_category">Przejdź do kategorii</string>
     <!-- Updates -->
     <string name="update">Aktualizuj</string>
-    <string name="what_should_update">Co aktualizować?</string>
     <string name="updating_">Aktualizowanie %1$s</string>
     <string name="update_available">Aktualizacja dostępna</string>
     <string name="new_version_available">Nowa wersja dostępna!</string>
@@ -124,7 +119,6 @@
     <string name="total_chapters">Ilość rozdziałów</string>
     <string name="date_added">Data dodania</string>
     <string name="last_read">Ostatnio czytane</string>
-    <string name="last_updated">Ostatnio zaktualizowane</string>
     <string name="latest_chapter">Najnowszy rozdział</string>
     <string name="drag_and_drop">Przeciągnij i upuść</string>
     <!-- Library Display -->
@@ -153,18 +147,10 @@
         <item quantity="many">i %1$d rozdziałów więcej</item>
         <item quantity="other">i %1$d rozdziałów więcej</item>
     </plurals>
-    <plurals name="notification_update_failed">
-        <item quantity="one">1 aktualizacja nieudana</item>
-        <item quantity="few">%1$d aktualizacje nieudane</item>
-        <item quantity="many">%1$d aktualizacji nieudanych</item>
-        <item quantity="other">%1$d aktualizacji nieudanych</item>
-    </plurals>
     <!-- Library settings -->
     <string name="library_update_frequency">Częstotliwość aktualizowania biblioteki</string>
-    <string name="library_update_order">Kolejność aktualizacji biblioteki</string>
-    <string name="library_update_restriction">Ograniczenia aktualizacji biblioteki</string>
+    <string name="library_update_restriction">Ograniczenia urządzenia</string>
     <string name="library_update_restriction_summary">Aktualizuj tylko kiedy spełnione są te warunki</string>
-    <string name="only_update_ongoing">Aktualizuj tylko nieukończone mangi</string>
     <string name="sort_by_ignoring_articles">Sortuj ignorując przedimki</string>
     <string name="when_sorting_ignore_articles">Podczas alfabetycznego sortowania, sortuj ignorując angielskie przedimki (a, an, the) rozpoczynające tytuły mang</string>
     <string name="categories_to_include_in_global_update">Kategorie zawarte w globalnej aktualizacji</string>
@@ -276,7 +262,6 @@
     <string name="navigation">Nawigacja</string>
     <string name="volume_keys">Przyciski głośności</string>
     <string name="invert_volume_keys">Odwróć przyciski głośności</string>
-    <string name="tapping">Stukanie</string>
     <string name="background_color">Kolor tła</string>
     <string name="white">Biały</string>
     <string name="black">Czarny</string>
@@ -376,7 +361,6 @@
     <string name="tracked">Śledzone</string>
     <string name="not_tracked">Nieśledzone</string>
     <string name="services">Usługi śledzenia</string>
-    <string name="sync_chapters_after_reading">Aktualizuj postęp po przeczytaniu rozdziału</string>
     <string name="reading">Czytane</string>
     <string name="currently_reading">Teraz czytane</string>
     <string name="dropped">Porzucone</string>
@@ -619,7 +603,7 @@
     <string name="center">Od środka</string>
     <string name="charging">Ładowanie</string>
     <string name="clear">Wyczyść</string>
-    <string name="close">Wyjdź</string>
+    <string name="close">Zamknij</string>
     <string name="common">Zwykły</string>
     <string name="cover_of_image">Okładka mangi</string>
     <string name="create">Stwórz</string>
@@ -685,7 +669,6 @@
     <string name="unknown_error">Nieznany błąd</string>
     <string name="unpin">Odepnij</string>
     <string name="use_default">Użyj domyślnych</string>
-    <string name="view_all_errors">Wyświetl wszystkie błędy</string>
     <string name="view_chapters">Wyświetl rozdziały</string>
     <string name="wifi">Wi-Fi</string>
     <string name="mark_as_unread">Oznacz jako nieprzeczytane</string>
@@ -1008,7 +991,7 @@
     <string name="log_out_from_">Wylogować z %1$s\?</string>
     <string name="keep_in_">Zostaw w %1$s</string>
     <string name="show_in_sources_and_extensions">Pokazuj na liście źródeł i rozszerzeń</string>
-    <string name="notification_size_warning">Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł</string>
+    <string name="notification_size_warning">Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł.</string>
     <string name="show_outline_around_covers">Pokaż obrys wokół okładek</string>
     <string name="ext_installer_shizuku_stopped">Shizuku nie jest aktywne</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Zainstaluj i uruchom Shizuku, aby używać go jako instalatora rozszerzeń.</string>
@@ -1016,13 +999,54 @@
     <string name="use_shizuku_summary">Umożliwia instalowanie rozszerzeń bez wyświetlania monitów oraz pozwala na automatyczne aktualizacje dla urządzeń pracujących na systemie starszym niż Android 12</string>
     <string name="classic_blue">Klasyczny Niebieski</string>
     <string name="lime_time">Pora na Limonkę</string>
-    <string name="download_queue_size_warning">Ostrzeżenie: duża ilość zakolejkowanych pobrań może doprowadzić do spowolnienia źródeł i/lub zablokowania Tachiyomi</string>
+    <string name="download_queue_size_warning">Ostrzeżenie: Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł.</string>
     <string name="every_3_days">Co 3 dni</string>
-    <string name="save_chapters_as_cbz">Zapisz rozdziały jako CBZ</string>
+    <string name="save_chapters_as_cbz">Zapisz jako archiwum CBZ</string>
     <string name="cancelled">Anulowane</string>
     <string name="publishing_finished">Opublikowane w całości</string>
     <string name="on_hiatus">Przerwa wydawnicza</string>
     <string name="tracking_info">Przesyłanie postępu czytania do zewnętrznego serwisu. Ustaw śledzenie guzikiem \"Śledzenie\" w wybranych tytułach.</string>
     <string name="enhanced_services">Ulepszone usługi śledzenia</string>
     <string name="enhanced_tracking_info">Usługi dostarczania ulepszonych funkcji dla niektórych źródeł. Mangi po dodaniu do biblioteki są automatycznie śledzone.</string>
+    <string name="order_by">Sortowanie</string>
+    <string name="grayscale">Odcienie szarości</string>
+    <string name="local_invalid_format">Błędny format rozdziału</string>
+    <string name="navigate_pan">Dotknij aby przesunąć</string>
+    <string name="pref_inverted_colors">Odwrócone</string>
+    <string name="ascending">Rosnąco</string>
+    <string name="date">Data</string>
+    <string name="descending">Malejąco</string>
+    <string name="clear_database_source_item_count">%1$d mang spoza biblioteki w bazie danych</string>
+    <string name="database_clean">Baza danych wyczyszczona</string>
+    <string name="confirm_manga_add_duplicate">W swojej bibliotece posiadasz wpis o tej samej nazwie lecz z innego źródła(%1$s).
+\n
+\nCzy nadal chcesz kontynuować\?</string>
+    <string name="select_inverse">Odwróć zaznaczenie</string>
+    <string name="cover_only_grid">Siatka z samych okładek</string>
+    <string name="skipped_reason_completed">Pominięto ponieważ seria została ukończona</string>
+    <string name="skipped_reason_not_caught_up">Pominięto ponieważ istnieją nieprzeczytane rozdziały</string>
+    <string name="skipped_reason_not_started">Pominięto - brak przeczytanych rozdziałów</string>
+    <string name="channel_skipped">Pominięty</string>
+    <string name="tap_to_see_details">Kliknij, by wyświetlić detale</string>
+    <string name="clear_history">Wyczyść historię</string>
+    <string name="clear_history_completed">Historia usunięta</string>
+    <string name="clear_history_confirmation">Jesteś pewien\? CAŁA historia zostanie usunięta.</string>
+    <string name="backup_restore_invalid_uri">Błąd: pusty URI</string>
+    <string name="backup_info">Automatyczne kopie zapasowe są wysoce zalecane. Radzimy również przechowywać kopie w innych miejscach.</string>
+    <string name="new_beta_version_available">Dostępna jest nowa wersja beta!</string>
+    <string name="language_badge">Odznaki językowe</string>
+    <string name="show_">Pokaż %1$s</string>
+    <string name="must_view_details_before_migration">Aby móc migrować, należy wyświetlić stronę ze szczegółami tego wpisu</string>
+    <string name="use_staggered_grid">Użyj siatki z przesunięciem</string>
+    <string name="notification_update_error">%1$d aktualizacja (aktualizacje) nie powiodła się</string>
+    <string name="notification_update_skipped">%1$d pominięto aktualizację(-e)</string>
+    <string name="pref_library_update_manga_restriction">Pomiń aktualizowanie tytułów</string>
+    <string name="pref_update_only_completely_read">Posiada nieprzeczytane rozdziały</string>
+    <string name="pref_update_only_non_completed">Ukończone serie</string>
+    <string name="pref_update_only_started">Brak przeczytanych rozdziałów</string>
+    <string name="pref_update_only_completely_read_summary">Aktualizuj tytuł tylko wtedy, gdy nie ma żadnego nieprzeczytanego rozdziału (całkowicie przeczytany)</string>
+    <string name="scoring_type_updated">Zaktualizowano typ punktacji</string>
+    <string name="could_not_update_scoring_">Nie można zaktualizować typu punktacji: %1$s</string>
+    <string name="update_tracking_after_reading">Aktualizacja śledzenia po przeczytaniu</string>
+    <string name="update_tracking_marked_read">Aktualizuj śledzenie po oznaczeniu jako przeczytane</string>
 </resources>

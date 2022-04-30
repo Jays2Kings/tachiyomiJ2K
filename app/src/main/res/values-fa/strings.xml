@@ -24,7 +24,6 @@
     <string name="navigation">نوار ناوبری Navigation</string>
     <string name="volume_keys">دکمه‌های صدا</string>
     <string name="invert_volume_keys">معکوس کردن دکمه‌های صدا</string>
-    <string name="tapping">ضربه زدن</string>
     <string name="background_color">رنگ پس زمینه</string>
     <string name="white">سفید</string>
     <string name="black">سیاه</string>
@@ -108,15 +107,9 @@
     <string name="list">لیست</string>
     <string name="download_badge">تعداد دانلود شده</string>
     <string name="new_chapters_found">فصل‌های جدید پیدا شدند</string>
-    <plurals name="notification_update_failed">
-        <item quantity="one">۱ آپدیت با خطا مواجه شد%1$d آپدیت با خطا مواجه شد</item>
-        <item quantity="other"/>
-    </plurals>
     <string name="library_update_frequency">فرکانس آپدیت کتابخانه</string>
-    <string name="library_update_order">ترتیب آپدیت کتابخانه</string>
     <string name="library_update_restriction">محدودیت‌های آپدیت کتابخانه</string>
     <string name="library_update_restriction_summary">در چه شرایطی کتابخانه آپدیت شود</string>
-    <string name="only_update_ongoing">فقط مانگاهایی آپدیت شوند که تمام نشده</string>
     <string name="categories_to_include_in_global_update">دسته بندی هایی که در به آپدیت سراسری شامل می شوند</string>
     <string name="updates">آپدیت ها</string>
     <string name="this_will_remove_the_read_date_question">با این کار تاریخ خواندن این فصل حذف می شود. مطمئنید؟</string>
@@ -348,8 +341,8 @@
     <string name="previous_title">قبلی:</string>
     <string name="next_page">صفحه بعدی</string>
     <string name="previous_page">صفحه قبلی</string>
-    <string name="next_chapter">صفحه بعدی</string>
-    <string name="previous_chapter">صفحه قبلی</string>
+    <string name="next_chapter">قسمت بعد</string>
+    <string name="previous_chapter">قسمت قبل</string>
     <string name="animate_page_transitions">انمیشن‌های تغییر صفحه</string>
     <string name="default_reading_mode">حالت پیش فرض خواندن</string>
     <string name="invert_tapping">ضربه زدن معکوس</string>
@@ -393,7 +386,7 @@
     <string name="app_info">اطلاعات اپلیکیشن</string>
     <string name="may_contain_nsfw">ممکن است دارای صحنه های نامناسب برای کار(+18) باشد</string>
     <string name="filter_languages">فیلترکردن زبان ها</string>
-    <string name="extension_updates">بروزرسانی های افزونه</string>
+    <string name="extension_updates">آپدیت افزونه‌ها</string>
     <string name="source_hidden">منبع پنهان شده</string>
     <string name="all_sources">همه منابع</string>
     <string name="search_filters">فیلترهای جست و جو</string>
@@ -413,7 +406,6 @@
     <string name="hide_start_reading_button">دکمه شروع به خواندن را پنهان کن</string>
     <string name="display_options">گزینه های نمایش</string>
     <string name="drag_and_drop">بکشید و رها کنید</string>
-    <string name="last_updated">آخرین بروزرسانی شده ها</string>
     <string name="sort_by">مرتب سازی بر اساس</string>
     <string name="ungrouped">گروه بندی نشده</string>
     <string name="tracking_status">وضعیت پیگیری</string>
@@ -429,7 +421,6 @@
     <string name="library_is_empty_add_from_browse">کتابخانه شما خالی است، می توانید از صفحه مرور به کتابخانه خود اضافه کنید</string>
     <string name="remove_from_library_question">از کتابخانه حذف شود؟</string>
     <string name="update_available">بروزرسانی در دسترس است</string>
-    <string name="what_should_update">چه چیزی بروزرسانی شود؟</string>
     <string name="jump_to_category">پرش به دسته بندی</string>
     <string name="long_press_category">برای ویرایش یک دسته بندی بر روی آن ضربه بزنید و نگه دارید</string>
     <string name="category_deleted">این دسته بندی حذف شد</string>
@@ -441,9 +432,6 @@
     <string name="already_in_category">این مانگا قبلا در این دسته بندی است</string>
     <string name="confirm_category_deletion_message">مانگا این دسته بندی به دسته بندی پیشفرض منتقل خواهد شد</string>
     <string name="confirm_category_deletion">حذف دسته بندی؟</string>
-    <string name="categories_in_global_update">همه دسته بندی های آپدیت جهانی</string>
-    <string name="categories_on_manual">دسته بندی های که با به روزرسانی دستی آپدیت بشوند</string>
-    <string name="first_category">دسته بندی اول</string>
     <string name="category_is_empty">این دسته بندی خالی است</string>
     <string name="create_new_category">ساخت دسته بندی جدید</string>
     <string name="category">دسته بندی</string>
@@ -483,4 +471,12 @@
     <string name="create_folders_by_manga_title">ساخت پوشه بر اساس نام مانگا</string>
     <string name="tracked">دنبال شده</string>
     <string name="tracking_info">برای به روز رسانی وضعیت پیشرفت قسمت ها، در سایت های خدمات ردیابی، همگام سازی یک طرفه انجام دهید. برای ردیابی هر مانگا از تب ردیابی اقدام کنید.</string>
+    <string name="select_inverse">معکوس کردن انتخاب شده</string>
+    <string name="clear_history">پاک کردن سابقه</string>
+    <string name="clear_history_completed">سابقه پاک شد</string>
+    <string name="clear_history_confirmation">آیا مطمئن هستید؟ تمام سابقه از دست خواهد رفت.</string>
+    <string name="all_files_permission_required">اجازه دسترسی به فایل</string>
+    <string name="external_storage_permission_notice">تاچیومی J2K نیازمند دسترسی به همه فایل ها در اندوید 11 برای دانلود قسمت ها، ایجاد پشتیبان گیری خودکار، و خواندن مانگاهای محلی( مانگا های موجود در دستگاه شما) است.
+\n
+\nدر صفحه بعدی، اجازه \"مجاز بودن دسترسی به مدیریت همه پرونده‌ها\" را بدهید.</string>
 </resources>

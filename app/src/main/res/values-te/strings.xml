@@ -105,4 +105,7 @@
     <string name="view_chapters">అధ్యాయాములను చూడుము</string>
     <string name="warning">హెచ్చరిక</string>
     <string name="filter">శోధకము</string>
+    <string name="ascending">ఆరోహికము</string>
+    <string name="descending">అవరోహికము</string>
+    <string name="select_inverse">ఎంపికలను విపరీతమును చేయుము</string>
 </resources>
