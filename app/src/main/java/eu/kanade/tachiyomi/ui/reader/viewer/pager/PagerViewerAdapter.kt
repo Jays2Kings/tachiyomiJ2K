@@ -41,16 +41,13 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     var currentChapter: ReaderChapter? = null
     var forceTransition = false
 
-    /** Variables used to switch to download loader when download is finished while reading */
-    var shouldReloadChapter: Boolean? = null
-
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
      * next/previous chapter to allow seamless transitions and inverting the pages if the viewer
      * has R2L direction.
      */
     fun setChapters(chapters: ViewerChapters, forceTransition: Boolean) {
-        var newItems = mutableListOf<Any>()
+        val newItems = mutableListOf<Any>()
 
         // Force chapter transition page if there are missing chapters
         val prevHasMissingChapters = hasMissingChapters(chapters.currChapter, chapters.prevChapter)
@@ -98,11 +95,6 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             }
 
         if (chapters.nextChapter != null) {
-            if (shouldReloadChapter == true) {
-                newItems = subItems.toMutableList()
-                newItems.removeAll { it is ReaderPage && it.chapter == chapters.nextChapter }
-                shouldReloadChapter = false
-            }
             // Add at most two pages, because this chapter will be selected before the user can
             // swap more pages.
             val nextPages = chapters.nextChapter.pages
@@ -110,7 +102,9 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
                 newItems.addAll(nextPages.take(2))
             }
         }
+
         subItems = newItems.toMutableList()
+
         var useSecondPage = false
         if (shifted != viewer.config.shiftDoublePage || (doubledUp != viewer.config.doublePages && doubledUp)) {
             if (shifted && (doubledUp == viewer.config.doublePages)) {

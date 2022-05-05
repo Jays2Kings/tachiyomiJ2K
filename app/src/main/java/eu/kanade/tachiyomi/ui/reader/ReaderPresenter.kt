@@ -67,7 +67,7 @@ import java.util.concurrent.TimeUnit
 class ReaderPresenter(
     private val db: DatabaseHelper = Injekt.get(),
     private val sourceManager: SourceManager = Injekt.get(),
-    private val downloadManager: DownloadManager = Injekt.get(),
+    val downloadManager: DownloadManager = Injekt.get(),
     private val coverCache: CoverCache = Injekt.get(),
     private val preferences: PreferencesHelper = Injekt.get(),
     private val chapterFilter: ChapterFilter = Injekt.get(),
@@ -465,6 +465,21 @@ class ReaderPresenter(
         loader.loadChapter(chapter)
             .observeOn(AndroidSchedulers.mainThread())
             // Update current chapters whenever a chapter is preloaded
+            .doOnCompleted { viewerChaptersRelay.value?.let(viewerChaptersRelay::call) }
+            .onErrorComplete()
+            .subscribe()
+            .also(::add)
+    }
+
+    fun switchToDownloadLoader(chapter: ReaderChapter) {
+        Timber.d("Switch to download ${chapter.chapter.url}")
+
+        val loader = loader ?: return
+        chapter.pageLoader = null
+
+        loader.loadChapter(chapter)
+            .observeOn(AndroidSchedulers.mainThread())
+            // Update current chapters whenever a chapter is downloaded
             .doOnCompleted { viewerChaptersRelay.value?.let(viewerChaptersRelay::call) }
             .onErrorComplete()
             .subscribe()

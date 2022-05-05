@@ -1361,6 +1361,10 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
         presenter.preloadChapter(chapter)
     }
 
+    fun requestSwitchToDownloadLoader(chapter: ReaderChapter) {
+        presenter.switchToDownloadLoader(chapter)
+    }
+
     /**
      * Called from the viewer to toggle the visibility of the menu. It's implemented on the
      * viewer because each one implements its own touch and key events.

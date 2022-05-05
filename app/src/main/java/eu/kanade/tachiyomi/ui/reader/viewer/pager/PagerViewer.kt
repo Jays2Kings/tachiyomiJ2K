@@ -24,8 +24,6 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 
 /**
  * Implementation of a [BaseViewer] to display pages with a [ViewPager].
@@ -56,7 +54,7 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
     /**
      * Currently active item. It can be a chapter page or a chapter transition.
      */
-    var currentPage: Any? = null
+    private var currentPage: Any? = null
 
     /**
      * Viewer chapters to set when the pager enters idle mode. Otherwise, if the view was settling
@@ -227,9 +225,6 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
     private fun onReaderPageSelected(page: ReaderPage, allowPreload: Boolean, hasExtraPage: Boolean, forward: Boolean?) {
         activity.onPageSelected(page, hasExtraPage)
 
-        val currentReaderChapter = activity.presenter.getCurrentChapter() ?: return
-        verifyIfShouldSwitchToDownloadLoader(currentReaderChapter)
-
         // Notify holder of page change
         val holder = getPageHolder(page)
         if (holder == null && forward != null && heldForwardZoom == null) {
@@ -249,7 +244,8 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         if (inPreloadRange && allowPreload && page.chapter == adapter.currentChapter) {
             Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
             adapter.nextTransition?.to?.let {
-                activity.requestPreloadChapter(it)
+                val isDownloaded = verifyIfShouldSwitchToDownloadLoader(it)
+                if (!isDownloaded) activity.requestPreloadChapter(it)
             }
         }
     }
@@ -257,21 +253,19 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
     /**
      * Switch to DownloadPageLoader when the chapter is downloaded
      */
-    private fun verifyIfShouldSwitchToDownloadLoader(currentReaderChapter: ReaderChapter) {
-        val loader = currentReaderChapter.pageLoader ?: return
+    private fun verifyIfShouldSwitchToDownloadLoader(nextReaderChapter: ReaderChapter): Boolean {
+        val loader = nextReaderChapter.pageLoader ?: return false
+        Timber.d("loader is: ${loader.javaClass}")
         if (loader is HttpPageLoader) {
-            val downloadManager = Injekt.get<DownloadManager>()
-            val currentChapter = currentReaderChapter.chapter
-            val manga = activity.presenter.manga
-            val isDownloaded = downloadManager.isChapterDownloaded(currentChapter, manga!!)
+            val downloadManager = activity.presenter.downloadManager
+            val manga = activity.presenter.manga ?: return false
+            val isDownloaded = downloadManager.isChapterDownloaded(nextReaderChapter.chapter, manga)
             if (isDownloaded) {
-                val adapter = pager.adapter as PagerViewerAdapter
-                if (adapter.switchToDownloadLoaderStep == 1) {
-                    activity.presenter.loadChapter(currentChapter, false)
-                }
-                adapter.switchToDownloadLoaderStep = 1
+                activity.requestSwitchToDownloadLoader(nextReaderChapter)
+                return true
             }
         }
+        return false
     }
 
     /**
