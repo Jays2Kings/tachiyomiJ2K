@@ -12,7 +12,6 @@ import androidx.viewpager.widget.ViewPager
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.ui.reader.ReaderActivity
-import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ChapterTransition
 import eu.kanade.tachiyomi.ui.reader.model.InsertPage
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
@@ -244,28 +243,10 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         if (inPreloadRange && allowPreload && page.chapter == adapter.currentChapter) {
             Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
             adapter.nextTransition?.to?.let {
-                val isDownloaded = verifyIfShouldSwitchToDownloadLoader(it)
-                if (!isDownloaded) activity.requestPreloadChapter(it)
+                activity.requestSwitchToDownloadLoader(it)
+                activity.requestPreloadChapter(it)
             }
         }
-    }
-
-    /**
-     * Switch to DownloadPageLoader when the chapter is downloaded
-     */
-    private fun verifyIfShouldSwitchToDownloadLoader(nextReaderChapter: ReaderChapter): Boolean {
-        val loader = nextReaderChapter.pageLoader ?: return false
-        Timber.d("loader is: ${loader.javaClass}")
-        if (loader is HttpPageLoader) {
-            val downloadManager = activity.presenter.downloadManager
-            val manga = activity.presenter.manga ?: return false
-            val isDownloaded = downloadManager.isChapterDownloaded(nextReaderChapter.chapter, manga)
-            if (isDownloaded) {
-                activity.requestSwitchToDownloadLoader(nextReaderChapter)
-                return true
-            }
-        }
-        return false
     }
 
     /**

@@ -26,6 +26,7 @@ import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
+import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
@@ -417,7 +418,7 @@ class ReaderPresenter(
             .also(::add)
     }
 
-    fun loadChapter(chapter: Chapter, shouldRefresh: Boolean = true) {
+    fun loadChapter(chapter: Chapter) {
         val loader = loader ?: return
 
         viewerChaptersRelay.value?.currChapter?.let(::onChapterChanged)
@@ -431,12 +432,10 @@ class ReaderPresenter(
             .doOnUnsubscribe { isLoadingAdjacentChapterRelay.call(false) }
             .subscribeFirst(
                 { view, _ ->
-                    if (shouldRefresh) {
-                        scope.launchUI {
-                            view.moveToPageIndex(lastPage, false)
-                        }
-                        view.refreshChapters()
+                    scope.launchUI {
+                        view.moveToPageIndex(lastPage, false)
                     }
+                    view.refreshChapters()
                 },
                 { _, _ ->
                     // Ignore onError event, viewers handle that state
@@ -474,16 +473,24 @@ class ReaderPresenter(
     fun switchToDownloadLoader(chapter: ReaderChapter) {
         Timber.d("Switch to download ${chapter.chapter.url}")
 
-        val loader = loader ?: return
-        chapter.pageLoader = null
+        val pageloader = chapter.pageLoader ?: return
+        Timber.d("loader is: ${pageloader.javaClass}")
+        if (pageloader is HttpPageLoader) {
+            val manga = manga ?: return
+            val isDownloaded = downloadManager.isChapterDownloaded(chapter.chapter, manga)
+            if (isDownloaded) {
+                val loader = loader ?: return
+                chapter.pageLoader = null
 
-        loader.loadChapter(chapter)
-            .observeOn(AndroidSchedulers.mainThread())
-            // Update current chapters whenever a chapter is downloaded
-            .doOnCompleted { viewerChaptersRelay.value?.let(viewerChaptersRelay::call) }
-            .onErrorComplete()
-            .subscribe()
-            .also(::add)
+                loader.loadChapter(chapter)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    // Update current chapters whenever a chapter is downloaded
+                    .doOnCompleted { viewerChaptersRelay.value?.let(viewerChaptersRelay::call) }
+                    .onErrorComplete()
+                    .subscribe()
+                    .also(::add)
+            }
+        }
     }
 
     /**

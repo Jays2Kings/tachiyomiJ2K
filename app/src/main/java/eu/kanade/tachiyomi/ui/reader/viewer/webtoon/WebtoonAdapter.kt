@@ -10,7 +10,6 @@ import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
 import eu.kanade.tachiyomi.ui.reader.model.ViewerChapters
 import eu.kanade.tachiyomi.ui.reader.viewer.ReaderPageImageView
 import eu.kanade.tachiyomi.ui.reader.viewer.hasMissingChapters
-import eu.kanade.tachiyomi.util.system.launchUI
 
 /**
  * RecyclerView Adapter used by this [viewer] to where [ViewerChapters] updates are posted.
@@ -24,12 +23,6 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
         private set
 
     var currentChapter: ReaderChapter? = null
-
-    /** Variables used to switch to download loader when download is finished while reading */
-    private var itemsTemp: List<Any> = emptyList()
-    private var firstPageIndexTemp: Int = 0
-    private var lastPageIndexTemp: Int = 0
-    var switchToDownloadLoaderStep: Int = 0
 
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
@@ -79,19 +72,6 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
             }
         }
 
-        if (switchToDownloadLoaderStep == 1) {
-            itemsTemp = newItems.toMutableList()
-            firstPageIndexTemp = viewer.recycler.firstVisibleItemPosition.coerceAtLeast(0)
-            lastPageIndexTemp = viewer.recycler.lastVisibleItemPosition.coerceAtMost(itemCount - 1)
-
-            for (index in firstPageIndexTemp..lastPageIndexTemp) {
-                val item = items[index] as? ReaderPage ?: continue
-                val indexNewItems =
-                    newItems.indexOfFirst { it is ReaderPage && it.isFromSamePage(item) }
-                if (indexNewItems != -1) newItems[indexNewItems] = item
-            }
-            switchToDownloadLoaderStep = 2
-        }
         val result = DiffUtil.calculateDiff(Callback(items, newItems))
         items = newItems
         result.dispatchUpdatesTo(this)
@@ -136,17 +116,6 @@ class WebtoonAdapter(val viewer: WebtoonViewer) : RecyclerView.Adapter<RecyclerV
      * Binds an existing view [holder] with the item at the given [position].
      */
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (switchToDownloadLoaderStep == 2 && itemsTemp.isNotEmpty() &&
-            (viewer.recycler.firstVisibleItemPosition..viewer.recycler.lastVisibleItemPosition)
-                .none { it in firstPageIndexTemp..lastPageIndexTemp }
-        ) {
-            launchUI {
-                val result = DiffUtil.calculateDiff(Callback(items, itemsTemp))
-                items = itemsTemp
-                result.dispatchUpdatesTo(this@WebtoonAdapter)
-            }
-            switchToDownloadLoaderStep = 0
-        }
         val item = items[position]
         when (holder) {
             is WebtoonPageHolder -> holder.bind(item as ReaderPage)
