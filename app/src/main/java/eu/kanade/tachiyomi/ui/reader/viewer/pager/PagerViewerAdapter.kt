@@ -42,10 +42,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
     var forceTransition = false
 
     /** Variables used to switch to download loader when download is finished while reading */
-    private var firstPageIndexTemp: Int = 0
-    private var lastPageIndexTemp: Int = 0
-    private var itemsTemp: MutableList<Any> = mutableListOf()
-    var switchToDownloadLoaderStep: Int = 0
+    var shouldReloadChapter: Boolean? = null
 
     /**
      * Updates this adapter with the given [chapters]. It handles setting a few pages of the
@@ -53,7 +50,7 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
      * has R2L direction.
      */
     fun setChapters(chapters: ViewerChapters, forceTransition: Boolean) {
-        val newItems = mutableListOf<Any>()
+        var newItems = mutableListOf<Any>()
 
         // Force chapter transition page if there are missing chapters
         val prevHasMissingChapters = hasMissingChapters(chapters.currChapter, chapters.prevChapter)
@@ -101,6 +98,11 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
             }
 
         if (chapters.nextChapter != null) {
+            if (shouldReloadChapter == true) {
+                newItems = subItems.toMutableList()
+                newItems.removeAll { it is ReaderPage && it.chapter == chapters.nextChapter }
+                shouldReloadChapter = false
+            }
             // Add at most two pages, because this chapter will be selected before the user can
             // swap more pages.
             val nextPages = chapters.nextChapter.pages
@@ -108,24 +110,16 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
                 newItems.addAll(nextPages.take(2))
             }
         }
-
-        if (switchToDownloadLoaderStep == 1) {
-            itemsTemp = newItems.toMutableList()
-            val indexCurrPage = subItems.indexOf(viewer.currentPage)
-            val margin = if (shouldUseSecondPage()) 1 else 0
-            firstPageIndexTemp = (indexCurrPage - margin).coerceAtLeast(0)
-            lastPageIndexTemp = (indexCurrPage + margin).coerceAtMost(subItems.size - 1)
-
-            for (index in firstPageIndexTemp..lastPageIndexTemp) {
-                val item = subItems[index] as? ReaderPage ?: continue
-                val indexNewItems =
-                    newItems.indexOfFirst { it is ReaderPage && it.isFromSamePage(item) }
-                if (indexNewItems != -1) newItems[indexNewItems] = item
-            }
-            switchToDownloadLoaderStep = 2
-        }
         subItems = newItems.toMutableList()
-        setJoinedItems(shouldUseSecondPage())
+        var useSecondPage = false
+        if (shifted != viewer.config.shiftDoublePage || (doubledUp != viewer.config.doublePages && doubledUp)) {
+            if (shifted && (doubledUp == viewer.config.doublePages)) {
+                useSecondPage = true
+            }
+            shifted = viewer.config.shiftDoublePage
+        }
+        doubledUp = viewer.config.doublePages
+        setJoinedItems(useSecondPage)
     }
 
     /**
@@ -135,32 +129,10 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
         return joinedItems.size
     }
 
-    private fun shouldUseSecondPage(): Boolean {
-        var useSecondPage = false
-        if (shifted != viewer.config.shiftDoublePage || (doubledUp != viewer.config.doublePages && doubledUp)) {
-            if (shifted && (doubledUp == viewer.config.doublePages)) {
-                useSecondPage = true
-            }
-            shifted = viewer.config.shiftDoublePage
-        }
-        doubledUp = viewer.config.doublePages
-        return useSecondPage
-    }
-
     /**
      * Creates a new view for the item at the given [position].
      */
     override fun createView(container: ViewGroup, position: Int): View {
-        if (switchToDownloadLoaderStep == 2 && itemsTemp.isNotEmpty() &&
-            subItems.indexOf(viewer.currentPage) !in firstPageIndexTemp..lastPageIndexTemp
-        ) {
-            launchUI {
-                subItems = itemsTemp
-                notifyDataSetChanged()
-                setJoinedItems(shouldUseSecondPage())
-            }
-            switchToDownloadLoaderStep = 0
-        }
         val item = joinedItems[position].first
         val item2 = joinedItems[position].second
         return when (item) {
