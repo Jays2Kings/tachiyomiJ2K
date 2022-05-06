@@ -243,8 +243,8 @@ abstract class PagerViewer(val activity: ReaderActivity) : BaseViewer {
         if (inPreloadRange && allowPreload && page.chapter == adapter.currentChapter) {
             Timber.d("Request preload next chapter because we're at page ${page.number} of ${pages.size}")
             adapter.nextTransition?.to?.let {
-                activity.requestSwitchToDownloadLoader(it)
-                activity.requestPreloadChapter(it)
+                val isChapterDownloaded = activity.requestSwitchToDownloadLoader(it)
+                if (!isChapterDownloaded) activity.requestPreloadChapter(it)
             }
         }
     }

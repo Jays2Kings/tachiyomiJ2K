@@ -1361,8 +1361,8 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
         presenter.preloadChapter(chapter)
     }
 
-    fun requestSwitchToDownloadLoader(chapter: ReaderChapter) {
-        presenter.switchToDownloadLoader(chapter)
+    fun requestSwitchToDownloadLoader(chapter: ReaderChapter): Boolean {
+        return presenter.switchToDownloadLoader(chapter)
     }
 
     /**

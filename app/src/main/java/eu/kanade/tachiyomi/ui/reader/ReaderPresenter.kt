@@ -470,16 +470,19 @@ class ReaderPresenter(
             .also(::add)
     }
 
-    fun switchToDownloadLoader(chapter: ReaderChapter) {
+    /**
+     * Called when the viewers decide it's a good time to preload a [chapter] and switch to DownloadLoader if
+     * the chapter is downloaded
+     */
+    fun switchToDownloadLoader(chapter: ReaderChapter): Boolean {
         Timber.d("Switch to download ${chapter.chapter.url}")
 
-        val pageloader = chapter.pageLoader ?: return
-        Timber.d("loader is: ${pageloader.javaClass}")
+        val pageloader = chapter.pageLoader ?: return false
         if (pageloader is HttpPageLoader) {
-            val manga = manga ?: return
+            val manga = manga ?: return false
             val isDownloaded = downloadManager.isChapterDownloaded(chapter.chapter, manga)
             if (isDownloaded) {
-                val loader = loader ?: return
+                val loader = loader ?: return false
                 chapter.pageLoader = null
 
                 loader.loadChapter(chapter)
@@ -489,8 +492,11 @@ class ReaderPresenter(
                     .onErrorComplete()
                     .subscribe()
                     .also(::add)
+
+                return true
             }
         }
+        return false
     }
 
     /**

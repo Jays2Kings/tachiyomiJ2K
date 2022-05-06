@@ -191,9 +191,9 @@ class WebtoonViewer(val activity: ReaderActivity, val hasMargins: Boolean = fals
             val nextItem = adapter.items.getOrNull(adapter.items.size - 1)
             val transitionChapter = (nextItem as? ChapterTransition.Next)?.to ?: (nextItem as?ReaderPage)?.chapter
             if (transitionChapter != null) {
-                activity.requestSwitchToDownloadLoader(transitionChapter)
                 Timber.d("Requesting to preload chapter ${transitionChapter.chapter.chapter_number}")
-                activity.requestPreloadChapter(transitionChapter)
+                val isChapterDownloaded = activity.requestSwitchToDownloadLoader(transitionChapter)
+                if (!isChapterDownloaded) activity.requestPreloadChapter(transitionChapter)
             }
         }
     }
