@@ -1358,8 +1358,7 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
      * the viewer is reaching the beginning or end of a chapter or the transition page is active.
      */
     fun requestPreloadChapter(chapter: ReaderChapter) {
-        val isChapterDownloaded = presenter.switchToDownloadLoader(chapter)
-        if (!isChapterDownloaded) presenter.preloadChapter(chapter)
+        presenter.preloadChapter(chapter)
     }
 
     /**
