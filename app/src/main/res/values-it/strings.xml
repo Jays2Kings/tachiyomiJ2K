@@ -59,7 +59,7 @@
     <string name="every_2_days">Ogni 2 giorni</string>
     <string name="categories_to_include_in_global_update">Categorie da includere nell\'aggiornamento globale</string>
     <string name="all">Tutte</string>
-    <string name="library_update_restriction">Restrizioni dell\'aggiornamento della libreria</string>
+    <string name="library_update_restriction">Restrizioni del dispositivo</string>
     <string name="library_update_restriction_summary">Aggiorna solo quando sono soddisfatte le condizioni</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">In carica</string>
@@ -155,7 +155,6 @@
     <string name="chapter_">Capitolo %1$s</string>
     <string name="downloading">Scaricamento in corso</string>
     <string name="downloading_progress">Scaricamento (%1$d/%2$d)</string>
-    <string name="next_5_unread">Scarica i prossimi 5 capitoli</string>
     <string name="all_chapters">tutti i capitoli</string>
     <string name="all_unread_chapters">Capitoli non letti</string>
     <!-- MyAnimeList fragment -->
@@ -577,7 +576,6 @@
     <string name="add_x_to_library">Aggiungere %1$s alla Libreria\?</string>
     <string name="all_but_bookmarked_chapters">Tutti i capitoli senza segnalibro</string>
     <string name="all_read_chapters">Capitoli letti</string>
-    <string name="next_unread_chapter">Prossimo capitolo non letto</string>
     <string name="search_chapters">Cerca capitoli</string>
     <string name="select_ending_chapter">Seleziona il capitolo con cui finire</string>
     <string name="select_starting_chapter">Seleziona il capitolo da cui iniziare</string>
@@ -921,7 +919,7 @@
     <string name="use_side_navigation">Usa navigazione laterale</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Un capitolo saltato, la fonte non ce l\'ha o è stato filtrato</item>
-        <item quantity="other">%d capitoli saltati, la fonte non ce li ha o sono stati filtrati</item>
+        <item quantity="other">%d capitoli saltati, la fonte non li ha o sono stati filtrati</item>
     </plurals>
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
     <string name="helpful_translation_links">Collegamenti utili per la traduzione</string>
@@ -938,7 +936,7 @@
     <string name="keep_in_">Tieni in %1$s</string>
     <string name="scanlators">Scanlator</string>
     <string name="channel_errors">Errori</string>
-    <string name="notification_size_warning">Grossi aggiornamenti possono portare a un maggiore utilizzo della batteria e a un rallentamento delle fonti</string>
+    <string name="notification_size_warning">Grossi aggiornamenti possono portare a un maggiore utilizzo della batteria e a un rallentamento delle fonti. Tocca per saperne di più.</string>
     <string name="show_in_sources_and_extensions">Mostra nelle liste di fonti ed estensioni</string>
     <string name="show_outline_around_covers">Mostra il contorno delle coperture</string>
     <string name="ext_installer_shizuku_stopped">Shizuku non è in esecuzione</string>
@@ -997,10 +995,32 @@
     <string name="check_for_beta_releases">Controlla le versioni beta</string>
     <string name="downloads_swipe_tutorial">Gli scaricamenti possono essere annullati scorrendoli via
 \nScorri questo suggerimento per eliminarlo</string>
-    <string name="learn_more_at_">Per saperne di più: %1$s</string>
     <string name="clear_history">Svuota cronologia</string>
     <string name="clear_history_completed">Cronologia cancellata</string>
     <string name="clear_history_confirmation">Sei sicuro\? Tutta la cronologia verrà persa.</string>
     <string name="backup_restore_invalid_uri">Errore: URI vuoto</string>
     <string name="backup_info">I backup automatici sono altamente consigliati. Dovresti tenere delle copie anche in altri posti.</string>
+    <string name="battery_not_low">Batteria non scarica</string>
+    <string name="pref_manage_notifications">Gestisci le notifiche</string>
+    <string name="warning_enroll_into_beta">Le release beta potrebbero essere isntabili e richiedere la pulizia dei dati dell\'app.</string>
+    <string name="update_tracking_after_reading">Aggiorna il tracking dopo la lettura</string>
+    <string name="update_tracking_marked_read">Aggiorna il tracking dopo aver segnato come letto</string>
+    <string name="show_larger_toolbar">Mostra una barra degli strumenti più grande nella parte superiore della maggior parte delle pagine (non mostrata su dispositivi più piccoli a prescindere dalle impostazioni)</string>
+    <string name="warning_unenroll_from_beta">Tornare alla versione precedente potrebbe causare problemi e richiedere la pulizia dei dati dell\'applicazione.</string>
+    <string name="download_ahead">Scarica i prossimi</string>
+    <string name="auto_download_after_reading">Scarica i prossimi capitoli non letti dopo la lettura</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Prossimo capitolo non letto</item>
+        <item quantity="other">Prossimi %d capitoli non letti</item>
+    </plurals>
+    <string name="download_ahead_info">Scarica i prossimi si applica solo alle voci in libreria e se l\'ultimo capitolo letto era scaricato</string>
+    <string name="use_staggered_grid">Usa griglia scaglionata</string>
+    <string name="pref_update_only_completely_read_summary">Aggiorna i manga solo se non ci sono capitoli non letti (letto completamente)</string>
+    <string name="try_new_features">Prova nuove funzionalità prima del rilascio ufficiale. Le release beta potrebbero essere instabili e sono fornite per dare feedback allo sviluppatore.</string>
+    <string name="most_entries">Più entità</string>
+    <string name="select_uninstalled_sources">Seleziona fonti disinstallate</string>
+    <string name="zoom_double_page_spreads">Ingrandisci pagine orizzontali doppie</string>
+    <string name="show_">Mostra %1$s</string>
+    <string name="must_view_details_before_migration">La pagina di dettaglio di questa entità deve essere vista prima di poter migrare</string>
+    <string name="faq_and_guides">Domande frequenti e guide</string>
 </resources>

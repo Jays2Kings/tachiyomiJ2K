@@ -295,8 +295,6 @@
     <string name="select_starting_chapter">Anfang auswählen</string>
     <string name="select_ending_chapter">Ende auswählen</string>
     <string name="search_chapters">Kapitel suchen</string>
-    <string name="next_unread_chapter">Nächstes ungelesenes Kapitel</string>
-    <string name="next_5_unread">Die nächsten 5 ungelesenen Kapitel</string>
     <string name="custom_range">Benutzerdefinierter Bereich</string>
     <string name="all_chapters">Alle Kapitel</string>
     <string name="all_unread_chapters">Alle ungelesenen Kapitel</string>
@@ -999,7 +997,6 @@
     <string name="check_for_beta_releases">Nach Beta-Versionen suchen</string>
     <string name="view_all">Alle anzeigen</string>
     <string name="most_entries">Meiste Einträge</string>
-    <string name="learn_more_at_">Erfahren Sie mehr unter: %1$s</string>
     <string name="try_new_features">Testen Sie neue Funktionen, bevor sie offiziell veröffentlicht werden. Beta-Versionen können instabil sein und werden bereitgestellt, um den Entwicklern Rückmeldung zu geben.</string>
     <string name="warning_enroll_into_beta">Beta-Versionen können instabil sein und können das Entfernen der Anwendungsdaten erfordern.</string>
     <string name="select_uninstalled_sources">Deinstallierte Quellen auswählen</string>
@@ -1018,4 +1015,14 @@
     <string name="must_view_details_before_migration">Vor der Migration müssen die Details des Eintrags geprüft werden</string>
     <string name="update_tracking_after_reading">Nach dem Lesen den Tracker aktualisieren</string>
     <string name="update_tracking_marked_read">Markieren als gelesen aktualisiert den Tracker</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Nächstes ungelesenes Kapitel</item>
+        <item quantity="other">Nächsten %d ungelesenen</item>
+    </plurals>
+    <string name="download_ahead_info">Voraus herunterladen betrifft nur Bibliothekseinträge deren letztgelesenes Kapitel heruntergeladen war</string>
+    <string name="auto_download_after_reading">Nächstes ungelesenes Kapitel nach dem Lesen herunterladen</string>
+    <string name="download_ahead">Voraus herunterladen</string>
+    <string name="pref_manage_notifications">Benachrichtigungen verwalten</string>
+    <string name="battery_not_low">Akkuladung nicht niedrig</string>
+    <string name="faq_and_guides">Häufige Fragen und Leitfäden</string>
 </resources>

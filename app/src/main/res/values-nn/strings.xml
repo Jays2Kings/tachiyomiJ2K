@@ -72,7 +72,7 @@
     <string name="settings">Innstillingar</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategori%d kategoriar</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="order_by">Sorter etter</string>
     <string name="edit_categories">Rediger kategoriar</string>
@@ -167,7 +167,7 @@
     <string name="weekly">Kvar veke</string>
     <plurals name="after_minutes">
         <item quantity="one">Etter %1$s minuttEtter %1$s minuttar</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="add">Legg til</string>
     <string name="alphabetically">Alfabetisk</string>
@@ -219,4 +219,6 @@
     <string name="undo">Angra</string>
     <string name="view_chapters">Vis kapittel</string>
     <string name="warning">Åtvaring</string>
+    <string name="pref_manage_notifications">Handter varslingar</string>
+    <string name="faq_and_guides">FAQ og guidar</string>
 </resources>

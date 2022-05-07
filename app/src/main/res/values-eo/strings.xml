@@ -380,4 +380,5 @@
     <string name="clear_history">Viŝi historion</string>
     <string name="clear_history_completed">Historio viŝita</string>
     <string name="clear_history_confirmation">Ĉu vi certas\? La tuta historio forigos.</string>
+    <string name="pref_manage_notifications">Administri sciigojn</string>
 </resources>

@@ -297,9 +297,7 @@
     <string name="start_reading_chapter_">Hasi %1$s kapitulua irakurtzen</string>
     <string name="switch_to_single">Aldatu orrialde bakarrera</string>
     <string name="actions">Ekintzak</string>
-    <string name="next_unread_chapter">Irakurri gabeko hurrengo kapitulua</string>
     <string name="select_starting_chapter">Hautatu hasierako kapitulua</string>
-    <string name="next_5_unread">Hurrengo 5 irakurri gabeak</string>
     <string name="newest_first">Berrienetik zaharrenera</string>
     <string name="show_unread_chapters">Erakutsi irakurri gabeko kapituluak</string>
     <string name="services">Zerbitzuak</string>
@@ -945,4 +943,6 @@
     <string name="clear_history_confirmation">Ziur zaude\? Historia guztia galduko da.</string>
     <string name="backup_restore_invalid_uri">Errorea: URI-a hutsik</string>
     <string name="backup_info">Babeskopia automatikoak oso gomendagarriak dira. Kopiak beste leku batzuetan ere gorde beharko zenituzke.</string>
+    <string name="pref_manage_notifications">Kudeatu jakinarazpenak</string>
+    <string name="faq_and_guides">Ohiko galderak eta gidak</string>
 </resources>

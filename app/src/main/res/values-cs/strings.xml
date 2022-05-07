@@ -101,7 +101,6 @@
     <string name="downloading">Stahování</string>
     <string name="downloading_progress">Stahování (%1$d/%2$d)</string>
     <string name="paused">Pozastaveno</string>
-    <string name="next_5_unread">Stáhnout dalších 5 kapitol</string>
     <string name="custom_range">Stáhnout vlastní</string>
     <string name="all_chapters">Stáhnout vše</string>
     <string name="all_unread_chapters">Stáhnout nepřečtené</string>
@@ -203,7 +202,7 @@
     <string name="restoring_backup">Obnovování zálohy</string>
     <string name="clear_chapter_cache">Vymazat mezipaměť kapitol</string>
     <string name="used_">Využito: %1$s</string>
-    <string name="cache_delete_error">Během vymazávání mezipaměti došlo k chybě</string>
+    <string name="cache_delete_error">Během vymazávání došlo k chybě</string>
     <string name="clear_cookies">Vymazat cookies</string>
     <string name="cookies_cleared">Cookies vymazány</string>
     <string name="clear_database">Vyčistit databázi</string>
@@ -624,7 +623,6 @@
     <string name="add_x_to_library">Přidat %1$s do knihovny\?</string>
     <string name="all_but_bookmarked_chapters">Všechny kromě založených</string>
     <string name="all_read_chapters">Všechny přečtené kapitoly</string>
-    <string name="next_unread_chapter">Další nepřečtená kapitola</string>
     <string name="select_ending_chapter">Vybrat závěrečnou kapitolu</string>
     <string name="select_starting_chapter">Vybrat počáteční kapitolu</string>
     <string name="mark_all_chapters_as_unread">Označit všechny kapitoly jako nepřečtené\?</string>
@@ -700,7 +698,7 @@
     <string name="top">Nahoře</string>
     <string name="warning">Varování</string>
     <string name="channel_errors">Chyby</string>
-    <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi</string>
+    <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi. Klepnutím se dozvíte více.</string>
     <string name="every_3_days">Každé 3 dny</string>
     <string name="reduces_banding_impacts_performance">Snižuje proužkování, ale ovlivňuje výkon</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uloženou mangu.
@@ -775,4 +773,11 @@
     <string name="clear_history">Vymazat historii</string>
     <string name="backup_restore_invalid_uri">Chyba: prázdná URI</string>
     <string name="backup_info">Automatické zálohy jsou vřele doporučeny. Měli byste si uchovat kopii zálohy na více místech.</string>
+    <string name="empty_backup_error">Žádné záznamy v knihovně k zálohování</string>
+    <string name="pref_library_update_manga_restriction">Přeskočit aktualizaci titulů</string>
+    <string name="pref_clear_webview_data">Vyčistit data WebView</string>
+    <string name="webview_data_deleted">Data z WebView vymazána</string>
+    <string name="pref_manage_notifications">Spravovat oznámení</string>
+    <string name="tap_to_learn_more">Klepnutím se dozvíte více</string>
+    <string name="faq_and_guides">FAQ a Návody</string>
 </resources>

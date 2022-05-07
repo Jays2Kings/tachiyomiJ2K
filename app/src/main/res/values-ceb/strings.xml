@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Ngalan</string>
+    <string name="chapters">Mga kapitulo</string>
+    <string name="categories">Mga Kategoriya</string>
+    <string name="history">Kasaysayan</string>
+    <string name="manga">Manga</string>
+    <string name="all">Tanan</string>
+</resources>

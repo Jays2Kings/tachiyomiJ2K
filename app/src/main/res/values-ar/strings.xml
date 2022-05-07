@@ -120,7 +120,7 @@
     <string name="fourth_to_last">من الفصل الرابع إلى اﻷخير</string>
     <string name="fifth_to_last">من الفصل الخامس إلى اﻷخير</string>
     <string name="download_new_chapters">تنزيل الفصول الجديدة</string>
-    <string name="categories_to_include_in_download">الفئات المتضمنة فى التنزيل</string>
+    <string name="categories_to_include_in_download">الفئات المُتَضَمَّنَة في التنزيل</string>
     <string name="services">الخدمات</string>
     <string name="backup">النسخ الإحتياطي</string>
     <string name="create_backup">إنشاء نسخة احتياطية</string>
@@ -178,7 +178,6 @@
     <string name="downloading">جارى التنزيل</string>
     <string name="downloading_progress">جاري التنزيل (%1$d/%2$d)</string>
     <string name="paused">متوقّف</string>
-    <string name="next_5_unread">تحميل الفصول الخمسة التالية</string>
     <string name="all_chapters">تحميل الكل</string>
     <string name="all_unread_chapters">تحميل غير المقروءة</string>
     <string name="reading">أقرأها</string>
@@ -537,7 +536,6 @@
     <string name="add_x_to_library">إضافة %1$s إلى المكتبة؟</string>
     <string name="all_but_bookmarked_chapters">كافة الفصول بخلاف الفصول المرجعية</string>
     <string name="all_read_chapters">كافة الفصول المقروءة</string>
-    <string name="next_unread_chapter">الفصل التالي الغير مقروء</string>
     <string name="search_chapters">البحث عن الفصول</string>
     <string name="select_starting_chapter">تحديد فصل البداية</string>
     <string name="select_ending_chapter">تحديد فصل النهاية</string>
@@ -980,7 +978,7 @@
     </plurals>
     <string name="helpful_translation_links">روابط مساعدة للترجمة</string>
     <string name="help_translate">ساعد بالترجمة</string>
-    <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وقد تصبح المصادر أبطأ</string>
+    <string name="notification_size_warning">قد تؤدي التحديثات الكبيرة إلى زيادة استخدام البطارية وقد تصبح المصادر أبطأ.اضغط المزيد من المعلومات.</string>
     <string name="use_suggested_date">استعمل التاريخ المقترح</string>
     <string name="log_in">تسجيل الدخول</string>
     <string name="log_out">تسجيل الخروج</string>
@@ -1024,7 +1022,7 @@
     <string name="scoring_type_updated">تم تحديث نوع التقييم</string>
     <string name="could_not_update_scoring_">تعذر تحديث نوع التقييم %1$s</string>
     <string name="local_invalid_format">صيغة الفصل غير صالح</string>
-    <string name="navigate_pan">قود للتحرك</string>
+    <string name="navigate_pan">قُدْ للتحرك</string>
     <string name="grayscale">تدرج رمادي</string>
     <string name="ascending">تصاعدياً</string>
     <string name="order_by">ترتيب حسب</string>
@@ -1066,8 +1064,22 @@
     <string name="pref_update_only_completely_read_summary">تحديث المانجا فقط في حالة انه لايوجد بها اي فصول غير مقروءة</string>
     <string name="update_tracking_after_reading">تحديث التتبع بعد قراءة الفصول</string>
     <string name="update_tracking_marked_read">تحديث التتبع بعد وضع علامة مقروء على الفصل</string>
-    <string name="learn_more_at_">تعلم المزيد على: %1$s</string>
     <string name="view_all">عرض الكل</string>
     <string name="backup_restore_invalid_uri">خطأ: URI فارغ</string>
     <string name="backup_info">يوصى بشدة بالنسخ الاحتياطي التلقائي. يجب عليك الإحتفاظ بنُسخ في أماكن أخرى أيضًا.</string>
+    <string name="pref_manage_notifications">إدارة الإشعارات</string>
+    <string name="battery_not_low">البطارية ليست منخفضة</string>
+    <string name="faq_and_guides">الاسئله الشائعه والأدلة</string>
+    <string name="auto_download_after_reading">تحميل الفصول غير المقروءة بعد القراءة</string>
+    <string name="download_ahead_info">ينطبق التنزيل المسبق فقط على المانجات في المكتبة وإذا تم تنزيل الفصل الأخير الذي تمت قراءته</string>
+    <string name="download_ahead">التحميل المسبق</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="zero">كل الفصول غير مقروءة</item>
+        <item quantity="one">الفصل التالي غير المقروء</item>
+        <item quantity="two">الفصلين التاليين غير المقروؤين</item>
+        <item quantity="few">الفصول التالية غير المقروءة</item>
+        <item quantity="many">الفصول التالية غير المقروءة</item>
+        <item quantity="other">كل الفصول مقروءة</item>
+    </plurals>
+    <string name="learn_why">تَعَرَّفْ لماذا</string>
 </resources>

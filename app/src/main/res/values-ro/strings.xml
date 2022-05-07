@@ -206,7 +206,6 @@
     <string name="downloading">Se descarcă</string>
     <string name="downloading_progress">Se descarcă (%1$d/%2$d)</string>
     <string name="paused">Întrerupt</string>
-    <string name="next_5_unread">Descarcă următoarele 5 capitole</string>
     <string name="custom_range">Descarcare personalizată</string>
     <string name="all_chapters">Descarcă tot</string>
     <string name="all_unread_chapters">Descarcă necitite</string>
@@ -659,7 +658,6 @@
     <string name="add_x_to_library">Adăugați %1$s la bibliotecă\?</string>
     <string name="all_but_bookmarked_chapters">Toate, cu excepția capitolelor marcate</string>
     <string name="all_read_chapters">Toate capitolele citite</string>
-    <string name="next_unread_chapter">Următorul capitol necitit</string>
     <string name="search_chapters">Căutați capitole</string>
     <string name="select_ending_chapter">Selectați capitolul final</string>
     <string name="select_starting_chapter">Selectați capitolul de pornire</string>
@@ -739,4 +737,5 @@
     <string name="clear_history">Sterge istoricul</string>
     <string name="clear_history_completed">Istoric șters</string>
     <string name="clear_history_confirmation">Esti sigur\? Toată istoria se va pierde.</string>
+    <string name="pref_manage_notifications">Setări notificări</string>
 </resources>

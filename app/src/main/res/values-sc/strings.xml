@@ -206,7 +206,6 @@
     <string name="downloading">Iscarrighende</string>
     <string name="downloading_progress">Iscarrighende (%1$d/%2$d)</string>
     <string name="paused">In pàusa</string>
-    <string name="next_5_unread">Iscàrriga sos 5 capìtulos imbenientes</string>
     <string name="custom_range">Iscarrigamentu personalizadu</string>
     <string name="all_chapters">Iscàrriga totu</string>
     <string name="all_unread_chapters">Iscàrriga sos non lèghidos</string>
@@ -476,7 +475,6 @@
     <string name="add_x_to_library">Annànghere %1$s a sa biblioteca\?</string>
     <string name="all_but_bookmarked_chapters">Totu francu sos capìtulos in sos sinnalibros</string>
     <string name="all_read_chapters">Totu sos capìtulos lèghidos</string>
-    <string name="next_unread_chapter">Capìtulu non lèghidu imbeniente</string>
     <string name="search_chapters">Chirca capìtulos</string>
     <string name="select_ending_chapter">Ischerta su capìtulu de fine</string>
     <string name="select_starting_chapter">Ischerta su capìtulu de incumintzu</string>
@@ -912,7 +910,7 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Installa e avia Shizuku pro l\'impreare comente installadore de estensiones.</string>
     <string name="use_shizuku_to_install">Imprea Shizuku pro installare estensiones</string>
     <string name="use_shizuku_summary">Permitit s\'installatzione de estensiones chene interventu de s\'utente e abilitat sos agiornamentos automàticos pro sos dispositivos in suta de Android 12</string>
-    <string name="download_queue_size_warning">Dae cara: sos iscarrigamentos de massa mannos diant pòdere rallentare sas fontes e/o blocare Tachiyomi</string>
+    <string name="download_queue_size_warning">Dae cara: sos iscarrigamentos de massa mannos diant pòdere rallentare sas fontes e/o blocare Tachiyomi. Toca pro nde ischire de prus.</string>
     <string name="every_3_days">Cada 3 dies</string>
     <string name="classic_blue">Biaitu clàssicu</string>
     <string name="lime_time">Tempus de lime</string>
@@ -926,7 +924,7 @@
     <string name="update_tracking_scoring_type">Agiorna sa genia de votu de %1$s</string>
     <string name="scoring_type_updated">Genia de votu agiornada</string>
     <string name="could_not_update_scoring_">No at fatu a agiornare sa genia de votu: %1$s</string>
-    <string name="language_badge">Insignas de sas limbas</string>
+    <string name="language_badge">Indicadores de sas limbas</string>
     <string name="grayscale">Iscala de murros</string>
     <string name="local_invalid_format">Formadu de su capìtulu non vàlidu</string>
     <string name="order_by">Òrdina pro</string>
@@ -971,4 +969,7 @@
     <string name="backup_info">Sas còpias de seguresa automàticas sunt racumandadas meda. Dias dèpere tènnere còpias fintzas in àteros logos.</string>
     <string name="pref_clear_webview_data">Isbòida sos datos de WebView</string>
     <string name="webview_data_deleted">Datos de WebView isboidados</string>
+    <string name="pref_manage_notifications">Amministra sas notìficas</string>
+    <string name="battery_not_low">Bateria non bassa</string>
+    <string name="faq_and_guides">PF e ghias</string>
 </resources>

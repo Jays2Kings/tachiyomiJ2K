@@ -149,7 +149,6 @@
     <string name="chapter_">Chapitre %1$s</string>
     <string name="downloading">En téléchargement</string>
     <string name="downloading_progress">En téléchargement (%1$d/%2$d)</string>
-    <string name="next_5_unread">Télécharger les 5 prochains chapitres</string>
     <string name="all_chapters">Tout télécharger</string>
     <string name="all_unread_chapters">Télécharger non-lu</string>
     <!-- MyAnimeList fragment -->
@@ -484,7 +483,6 @@
     <string name="webtoon_style">style webtoon</string>
     <string name="reading_">Lecture de %1$s</string>
     <string name="set_as_default_for_all">Définir par défaut pour tous</string>
-    <string name="next_unread_chapter">Prochain chapitre non lu</string>
     <string name="search_chapters">Chercher dans les chapitres</string>
     <string name="select_starting_chapter">Sélectionner le chapitre de début</string>
     <string name="select_ending_chapter">Sélectionner le chapitre de fin</string>
@@ -939,7 +937,7 @@
     <string name="keep_in_">Conserver dans %1$s</string>
     <string name="scanlators">Scanlateurs</string>
     <string name="channel_errors">Erreurs</string>
-    <string name="notification_size_warning">Les mises à jour importantes peuvent entraîner une augmentation de la consommation de la batterie et un ralentissement des sources</string>
+    <string name="notification_size_warning">Les mises à jour importantes peuvent entraîner une augmentation de la consommation de la batterie et un ralentissement des sources. Appuyez pour en savoir plus.</string>
     <string name="show_in_sources_and_extensions">Afficher dans les listes de sources et d\'extensions</string>
     <string name="show_outline_around_covers">Afficher le contour des couvertures</string>
     <string name="ext_installer_shizuku_stopped">Shizuku n\'est pas en exécution</string>
@@ -949,7 +947,7 @@
     <string name="classic_blue">Bleu classique</string>
     <string name="lime_time">Temps citron vert</string>
     <string name="every_3_days">Tous les 3 jours</string>
-    <string name="download_queue_size_warning">Avertissement : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi</string>
+    <string name="download_queue_size_warning">Avertissement : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi. Appuyez pour en savoir plus.</string>
     <string name="save_chapters_as_cbz">Enregistrer comme archive CBZ</string>
     <string name="publishing_finished">Publication terminée</string>
     <string name="cancelled">Annulé</string>
@@ -1009,7 +1007,6 @@
     <string name="update_tracking_marked_read">Mettre à joure suivi quand marqué comme lu</string>
     <string name="downloads_swipe_tutorial">Les téléchargements peuvent être annulés en les faisant glisser.
 \nFaites glisser ce conseil pour l\'annuler</string>
-    <string name="learn_more_at_">Pour en savoir plus : %1$s</string>
     <string name="must_view_details_before_migration">La page de détails de cet article doit être consultée avant de pouvoir migrer</string>
     <string name="view_all">Tout voir</string>
     <string name="clear_history">Effacer l\'historique</string>
@@ -1017,4 +1014,15 @@
     <string name="clear_history_confirmation">Êtes-vous sûr(e) \? Tout l\'historique sera effacé.</string>
     <string name="backup_restore_invalid_uri">Erreur : URI vide</string>
     <string name="backup_info">Les sauvegardes automatiques sont fortement conseillées. Nous vous recommandons aussi de conserver des copies ailleurs.</string>
+    <string name="battery_not_low">Batterie non faible</string>
+    <string name="pref_manage_notifications">Notifications</string>
+    <string name="faq_and_guides">FAQ et guides</string>
+    <string name="download_ahead">Télécharger à l\'avance</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Chapitre suivant non lu</item>
+        <item quantity="other">Les %d suivants non lus</item>
+    </plurals>
+    <string name="learn_why">Apprendre pourquoi</string>
+    <string name="auto_download_after_reading">Télécharger les prochains chapitres non lus après la lecture</string>
+    <string name="download_ahead_info">Le téléchargement anticipé ne s\'applique qu\'aux entrées de la bibliothèque et si le dernier chapitre lu a été téléchargé</string>
 </resources>

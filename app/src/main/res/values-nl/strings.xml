@@ -136,7 +136,6 @@
     <string name="downloading">Aan het downloaden</string>
     <string name="downloading_progress">Aan het downloaden (%1$d/%2$d)</string>
     <string name="paused">Gepauzeerd</string>
-    <string name="next_5_unread">Volgende 5 ongelezen hoofdstukken</string>
     <string name="all_chapters">Alle hoofdstukken</string>
     <string name="all_unread_chapters">Alle ongelezen hoofdstukken</string>
     <string name="completed">Voltooid</string>
@@ -561,7 +560,6 @@
     <string name="add_x_to_library">%1$s aan bibliotheek toevoegen\?</string>
     <string name="all_but_bookmarked_chapters">Alle hoofdstukken, behalve bladwijzers</string>
     <string name="all_read_chapters">Alle gelezen hoofdstukken</string>
-    <string name="next_unread_chapter">Volgende ongelezen hoofdstuk</string>
     <string name="search_chapters">Hoofdstukken zoeken</string>
     <string name="select_ending_chapter">Selecteer het eindhoofdstuk</string>
     <string name="select_starting_chapter">Selecteer het beginhoofdstuk</string>
@@ -954,4 +952,6 @@
     <string name="clear_history_confirmation">Weet je dit zeker\? Alle geschiedenis zal verloren gaan.</string>
     <string name="backup_restore_invalid_uri">Fout: lege URI</string>
     <string name="backup_info">Het is erg aangeraden om automatische back-ups te gebruiken en deze op meerdere plekken te bewaren.</string>
+    <string name="pref_manage_notifications">Meldingen beheren</string>
+    <string name="faq_and_guides">Veelgestelde vragen en handleidingen</string>
 </resources>

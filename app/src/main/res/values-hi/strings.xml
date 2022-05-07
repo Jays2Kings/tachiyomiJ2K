@@ -180,7 +180,6 @@
     <string name="downloading">डाउनलोड कर रहा है</string>
     <string name="downloading_progress">डाउनलोड किया जा रहा है (%1$d/%2$d)</string>
     <string name="paused">रोका हुआ</string>
-    <string name="next_5_unread">अगले ५ अध्याय डाउनलोड करें</string>
     <string name="all_chapters">सभी डाउनलोड करे</string>
     <string name="all_unread_chapters">अपठित डाउनलोड करें</string>
     <string name="reading">पठन</string>
@@ -558,4 +557,6 @@
     <string name="clear_history_confirmation">क्या आपको यकीन है\? सारा इतिहास खो जाएगा।</string>
     <string name="backup_restore_invalid_uri">त्रुटि: खाली यू॰आर॰ऐ</string>
     <string name="backup_info">स्वचालित बैकअप की अत्यधिक अनुशंसा की जाती है। आपको अन्य जगहों पर भी प्रतियां रखनी चाहिए।</string>
+    <string name="pref_manage_notifications">सूचनाओं का प्रबंधन</string>
+    <string name="faq_and_guides">सामान्य प्रश्नोत्तर और मार्गदर्शन</string>
 </resources>

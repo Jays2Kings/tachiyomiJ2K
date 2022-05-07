@@ -139,4 +139,6 @@
     <string name="select_inverse">ជ្រើសរើសផ្ទុយ</string>
     <string name="cover_only_grid">ជ្រុងដែលមានតែគម្រប</string>
     <string name="tap_to_see_details">ប៉ះដើម្បីមើលលម្អិត</string>
+    <string name="pref_manage_notifications">កំណត់ការជូនដំណឹង</string>
+    <string name="faq_and_guides">FAQនិងមគ្គុទ្ទេសក៍</string>
 </resources>

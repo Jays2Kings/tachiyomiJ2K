@@ -160,7 +160,6 @@
     <string name="chapter_">Глава %1$s</string>
     <string name="downloading">Изтегляне</string>
     <string name="downloading_progress">Изтегляне (%1$d/%2$d)</string>
-    <string name="next_5_unread">Изтегли следващите 5 глави</string>
     <string name="all_chapters">Изтегли всички глави</string>
     <string name="all_unread_chapters">Изтегли непрочетени глави</string>
     <!-- MyAnimeList fragment -->
@@ -670,7 +669,6 @@
     <string name="no_description">няма описание</string>
     <string name="mark_all_chapters_as_read">Маркирате всички глави като прочетени\?</string>
     <string name="search_chapters">Търсене на глави</string>
-    <string name="next_unread_chapter">Следваща непрочетена глава</string>
     <string name="all_read_chapters">Всички прочетени глави</string>
     <string name="add_x_to_library">Добавяне на %1$s към библиотеката\?</string>
     <string name="all_but_bookmarked_chapters">Всички глави, освен тези с отметки</string>
@@ -969,4 +967,6 @@
     <string name="clear_history_completed">Историята изтрита</string>
     <string name="clear_history_confirmation">Напълно ли сте сигурен\? Всичката ви история ще бъде загубена.</string>
     <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места.</string>
+    <string name="pref_manage_notifications">Уведомления</string>
+    <string name="faq_and_guides">Често задавани въпроси и ръководства</string>
 </resources>

@@ -294,8 +294,6 @@
     <string name="select_starting_chapter">Selecione o início</string>
     <string name="select_ending_chapter">Selecione o final</string>
     <string name="search_chapters">Pesquisar capítulos</string>
-    <string name="next_unread_chapter">Próximo capítulo não lido</string>
-    <string name="next_5_unread">Próximos 5 capítulos não lidos</string>
     <string name="custom_range">Intervalo personalizado</string>
     <string name="all_chapters">Todos os capítulos</string>
     <string name="all_unread_chapters">Todos os capítulos não lidos</string>
@@ -948,7 +946,7 @@
     <string name="remove_from_">Remover de %1$s</string>
     <string name="filter_groups">Filtrar grupos de scanlators</string>
     <string name="cannot_remove_tracking_while_offline">Monitorador não pode ser removido do %1$s enquanto offline</string>
-    <string name="notification_size_warning">Grandes atualizações podem levar ao aumento do uso da bateria e as fontes a ficarem lentas</string>
+    <string name="notification_size_warning">Grandes atualizações podem levar ao aumento do uso da bateria e as fontes a ficarem lentas. Toque para saber mais.</string>
     <string name="channel_errors">Erros</string>
     <string name="show_outline_around_covers">Mostrar contorno ao redor da capa</string>
     <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
@@ -1015,7 +1013,6 @@
     <string name="update_tracking_marked_read">Atualizar monitoramento após marcar como lido</string>
     <string name="most_entries">Mostrar entradas</string>
     <string name="select_uninstalled_sources">Selecionar fontes desinstaladas</string>
-    <string name="learn_more_at_">Saiba mais em: %1$s</string>
     <string name="update_tracking_after_reading">Atualizar o monitoramento após a leitura</string>
     <string name="view_all">Mostrar tudo</string>
     <string name="downloads_swipe_tutorial">Downloads podem ser cancelados arrastando para os lados
@@ -1027,4 +1024,15 @@
     <string name="clear_history_confirmation">Você tem certeza\? Todo o histórico será perdido.</string>
     <string name="backup_restore_invalid_uri">Erro: URI vazia</string>
     <string name="backup_info">Backups automáticos são altamente recomendados. Você deve manter cópias em outros locais também.</string>
+    <string name="download_ahead">Download antecipado</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Próximo capítulo não lido</item>
+        <item quantity="other">Próximos %d capítulos não lidos</item>
+    </plurals>
+    <string name="auto_download_after_reading">Baixa os próximos capítulos não lidos enquanto se lê</string>
+    <string name="download_ahead_info">Essa opção se aplica apenas a títulos que estão na biblioteca e que tenha o último capítulo lido baixado</string>
+    <string name="pref_manage_notifications">Gerenciar notificações</string>
+    <string name="battery_not_low">Bateria não fraca</string>
+    <string name="faq_and_guides">FAQ e Guias</string>
+    <string name="learn_why">Saiba porque</string>
 </resources>

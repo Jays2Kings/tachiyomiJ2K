@@ -490,8 +490,6 @@
     <string name="all_unread_chapters">Sva nepročitana poglavlja</string>
     <string name="all_chapters">Sva poglavlja</string>
     <string name="custom_range">Prilagođeni raspon</string>
-    <string name="next_5_unread">Sljedećih 5 nepročitanih poglavlja</string>
-    <string name="next_unread_chapter">Sljedeće nepročitano poglavlje</string>
     <string name="search_chapters">Traži poglavlja</string>
     <string name="badges">Značke</string>
     <string name="unofficial_extension_message">Ovo proširenje nije sa službenog popisa Tachiyomi proširenja.</string>
@@ -974,4 +972,6 @@
     <string name="clear_history">Izbriši povijest</string>
     <string name="backup_restore_invalid_uri">Greška: prazan URL</string>
     <string name="backup_info">Preporučuje se izrada automatskih sigurnosnih kopija. Čuvaj kopije i na drugim mjestima.</string>
+    <string name="pref_manage_notifications">Upravljaj obavijestima</string>
+    <string name="faq_and_guides">ČPP i vodiči</string>
 </resources>

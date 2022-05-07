@@ -206,7 +206,6 @@
     <string name="downloading">S\'està baixant</string>
     <string name="downloading_progress">S\'està baixant (%1$d/%2$d)</string>
     <string name="paused">Pausat</string>
-    <string name="next_5_unread">Els 5 no llegits següents</string>
     <string name="custom_range">Rang personalitzat</string>
     <string name="all_chapters">Tots els capítols</string>
     <string name="all_unread_chapters">Tots els capítols no llegits</string>
@@ -514,7 +513,7 @@
     <string name="already_in_category">El manga ja és a la categoria</string>
     <string name="restore_miui_warning">És possible que la còpia de seguretat i la restauració no funcionin correctament si l\'Optimització del MIUI està desactivada.</string>
     <string name="about_dont_kill_my_app">Alguns fabricants tenen restriccions addicionals per a les aplicacions que finalitzen els serveis en segon pla. Aquest lloc web té més informació de com solucionar-ho.</string>
-    <string name="download_queue_size_warning">Advertència: Les baixades massa grosses poden fer que les fonts es tornin més lentes i/o bloquin el Tachiyomi</string>
+    <string name="download_queue_size_warning">Advertència: Les baixades massa grosses poden fer que les fonts es tornin més lentes i/o bloquin el Tachiyomi. Premeu per a obtenir-ne més informació.</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">S\'ha omès 1 capítol. És possible que manqui a la font o que hagi estat filtrat</item>
         <item quantity="other">S\'han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
@@ -602,4 +601,7 @@
     <string name="save_chapters_as_cbz">Desa com a arxiu CBZ</string>
     <string name="backup_restore_invalid_uri">Error: URI buida</string>
     <string name="backup_info">És molt recomanable activar les còpies de seguretat automàtiques. També n\'hauríeu de desar còpies en altres llocs.</string>
+    <string name="battery_not_low">Bateria no baixa</string>
+    <string name="pref_manage_notifications">Gestiona les notificacions</string>
+    <string name="faq_and_guides">PMF i guies</string>
 </resources>

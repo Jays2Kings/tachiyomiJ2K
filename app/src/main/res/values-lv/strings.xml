@@ -239,4 +239,5 @@
     <string name="ascending">Augoši</string>
     <string name="descending">Dilstoši</string>
     <string name="select_inverse">Atlasiet apgrieztu</string>
+    <string name="pref_manage_notifications">Pārvaldiet paziņojumus</string>
 </resources>

@@ -471,4 +471,5 @@
     <string name="clear_history">Кун-ҫул тасат</string>
     <string name="clear_history_completed">Кун-ҫула катертнӗ</string>
     <string name="clear_history_confirmation">Чӑнах катертесшӗн-и\? Веҫ кун-ҫулӗ ҫухалӗ.</string>
+    <string name="pref_manage_notifications">Систерӳсене ӗнерле</string>
 </resources>

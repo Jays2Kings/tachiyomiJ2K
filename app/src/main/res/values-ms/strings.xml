@@ -178,7 +178,6 @@
     <string name="downloading">Memuat turun</string>
     <string name="downloading_progress">Muat turun dalam progres (%1$d/%2$d)</string>
     <string name="paused">Ditangguh</string>
-    <string name="next_5_unread">5 belum dibaca seterusnya</string>
     <string name="all_chapters">Semua bab</string>
     <string name="all_unread_chapters">Semua yang belum dibaca</string>
     <string name="reading">Sedang baca</string>
@@ -542,7 +541,6 @@
     <string name="add_x_to_library">Tambah %1$s ke pustaka\?</string>
     <string name="all_but_bookmarked_chapters">Semua tetapi bab yang ditanda</string>
     <string name="all_read_chapters">Semua yang sudah dibaca</string>
-    <string name="next_unread_chapter">Bab belum dibaca seterusnya</string>
     <string name="search_chapters">Cari</string>
     <string name="select_ending_chapter">Pilih penamat</string>
     <string name="select_starting_chapter">Pilih permulaan bab</string>
@@ -857,4 +855,7 @@
     <string name="clear_history_confirmation">Anda pasti\? Semua sejarah akan hilang.</string>
     <string name="backup_restore_invalid_uri">Ralat: tiada URI</string>
     <string name="backup_info">Sandaran automatik sangat disyorkan. Anda patut simpan salinan di tempat lain juga.</string>
+    <string name="pref_manage_notifications">Uruskan pemberitahuan</string>
+    <string name="battery_not_low">Bateri tidak lemah</string>
+    <string name="faq_and_guides">Soalan Lazim dan Panduan</string>
 </resources>

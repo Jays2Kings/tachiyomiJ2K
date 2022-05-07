@@ -206,7 +206,6 @@
     <string name="downloading">下载中</string>
     <string name="downloading_progress">正在下载 (%1$d/%2$d)</string>
     <string name="paused">已暂停</string>
-    <string name="next_5_unread">下载后五章</string>
     <string name="custom_range">自定义下载</string>
     <string name="all_chapters">下载全部</string>
     <string name="all_unread_chapters">下载未读</string>
@@ -487,7 +486,6 @@
     <string name="show_all">显示所有</string>
     <string name="all_but_bookmarked_chapters">所有已收藏章节</string>
     <string name="all_read_chapters">所有读过章节</string>
-    <string name="next_unread_chapter">下个未读章节</string>
     <string name="select_ending_chapter">选择结束章节</string>
     <string name="select_starting_chapter">选择开始章节</string>
     <string name="season_">第 %1$d 季</string>
@@ -938,7 +936,6 @@
     <string name="use_staggered_grid">使用交错网格</string>
     <string name="pref_update_only_completely_read_summary">只在没有未读章节时才更新漫画（全读完）</string>
     <string name="update_tracking_marked_read">标记为已读时更新追踪</string>
-    <string name="learn_more_at_">了解更多：%1$s</string>
     <string name="view_all">查看全部</string>
     <string name="update_tracking_after_reading">阅读后更新追踪</string>
     <string name="cover_only_grid">封面网格</string>
@@ -961,4 +958,14 @@
     <string name="clear_history_confirmation">你确定吗？所有的历史都将丢失。</string>
     <string name="backup_restore_invalid_uri">错误：空 URI</string>
     <string name="backup_info">强烈建议启用自动备份，你也应该在其他地方保存副本。</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">下 %d 个未读章节</item>
+    </plurals>
+    <string name="download_ahead_info">“提前下载”仅适用于书架条目且已下载上一已读章节</string>
+    <string name="download_ahead">提前下载</string>
+    <string name="auto_download_after_reading">阅读后下载下一未读章节</string>
+    <string name="pref_manage_notifications">通知管理</string>
+    <string name="battery_not_low">非低电量</string>
+    <string name="faq_and_guides">常见问题和指南</string>
+    <string name="learn_why">了解原因</string>
 </resources>

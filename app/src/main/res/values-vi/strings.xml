@@ -62,7 +62,7 @@
     <string name="every_2_days">Mỗi 2 ngày</string>
     <string name="categories_to_include_in_global_update">Các danh mục được cập nhật toàn bộ</string>
     <string name="all">Tất cả</string>
-    <string name="library_update_restriction">Hạn chế cập nhật thư viện</string>
+    <string name="library_update_restriction">Hạn chế từ thiết bị</string>
     <string name="library_update_restriction_summary">Chỉ cập nhật khi có đủ các điều kiện</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Đang sạc</string>
@@ -121,7 +121,7 @@
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Dọn dẹp bộ nhớ đệm</string>
     <string name="used_">Đã sử dụng: %1$s</string>
-    <string name="cache_delete_error">Xảy ra lỗi khi xóa bộ nhớ đệm</string>
+    <string name="cache_delete_error">Lỗi xảy ra trong khi xóa</string>
     <string name="clear_cookies">Dọn dẹp thông tin lưu trữ</string>
     <string name="cookies_cleared">Thông tin lưu trữ đã được xóa</string>
     <string name="clear_database">Dọn dẹp cơ sở dữ liệu</string>
@@ -160,7 +160,6 @@
     <string name="downloading">Đang tải xuống</string>
     <string name="downloading_progress">Đang tải xuống (%1$d/%2$d)</string>
     <string name="paused">Đã tạm ngưng</string>
-    <string name="next_5_unread">Tải 5 chương kế tiếp</string>
     <string name="all_chapters">Tải về toàn bộ</string>
     <string name="all_unread_chapters">Tải các chương chưa đọc</string>
     <!-- MyAnimeList fragment -->
@@ -618,7 +617,6 @@
     <string name="show_all">Hiên tất cả</string>
     <string name="add_x_to_library">Thêm %1$s vào thư viện\?</string>
     <string name="all_read_chapters">Tất cả các chương đọc</string>
-    <string name="next_unread_chapter">Chương chưa đọc tiếp theo</string>
     <string name="search_chapters">Tìm kiếm chương</string>
     <string name="select_ending_chapter">Chọn chương kết thúc</string>
     <string name="select_starting_chapter">Chọn chương bắt đầu</string>
@@ -917,14 +915,14 @@
     <string name="remove_from_">Loại bỏ ra khỏi %1$s</string>
     <string name="orientation">Điều hướng</string>
     <string name="warning">Cảnh báo</string>
-    <string name="notification_size_warning">Các bản cập nhật lớn có thể làm tăng mức sử dụng pin và khiến các nguồn chậm hơn</string>
+    <string name="notification_size_warning">Các bản cập nhật lớn có thể làm tăng mức sử dụng pin và khiến các nguồn chậm hơn. Chạm vào để tìm hiểu thêm.</string>
     <string name="show_outline_around_covers">Hiện viền quanh các mặt bìa</string>
     <string name="show_in_sources_and_extensions">Hiển thị trong các danh sách nguồn và tiện ích mở rộng</string>
     <string name="ext_installer_shizuku_stopped">Shizuku đang không chạy</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Cài và chạy Shizuku để sử dụng Shizuku như một trình cài đặt tiện ích mở rộng.</string>
     <string name="use_shizuku_summary">Cho phép các tiện ích có thể được cài đặt mà không cần nhắc nhở người dùng và cho phép tự động cập nhật cho các thiết bị có phiên bản dưới Android 12</string>
     <string name="use_shizuku_to_install">Sử dụng Shizuku để cài đặt các tiện ích</string>
-    <string name="download_queue_size_warning">Cảnh báo: các tải xuống hàng loạt lớn có thể dẫn đến các nguồn trở nên chậm hơn và / hoặc chặn Tachiyomi</string>
+    <string name="download_queue_size_warning">Cảnh báo: các tải xuống hàng loạt lớn có thể dẫn đến các nguồn trở nên chậm hơn và / hoặc chặn Tachiyomi. Nhấn vào để tìm hiểu thêm.</string>
     <string name="every_3_days">3 ngày một lần</string>
     <string name="save_chapters_as_cbz">Lưu dưới dạng lưu trữ CBZ</string>
     <string name="lime_time">Tới Lúc Xanh Mạ</string>
@@ -971,4 +969,30 @@
     <string name="clear_history_confirmation">Bạn có chắc không\? Tất cả lịch sử sẽ bị xoá.</string>
     <string name="backup_restore_invalid_uri">Lỗi: trống URI</string>
     <string name="backup_info">Tự động sao lưu là phương án an toàn nhất. Bạn cũng nên giữ lại các bản sao chép ở những nơi khác nữa.</string>
+    <string name="new_beta_version_available">Phiên bản beta mới khả dụng!</string>
+    <string name="language_badge">Huy hiệu ngôn ngữ</string>
+    <string name="expanded_toolbar">Thanh công cụ mở rộng</string>
+    <string name="show_larger_toolbar">Hiện ra một thanh công cụ to và mở rộng hơn ở trên đầu trang (không hiện trên các thiết bị nhỏ hơn bất chấp cài đặt)</string>
+    <string name="try_new_features">Thử các tính năng mới trước cả khi chúng được phát hành chính thức. Phát hành beta có thể không ổn định và được cung cấp nhằm gửi phản hồi lại về cho nhà phát triển.</string>
+    <string name="warning_unenroll_from_beta">Quay trở về phiên bản trước đó có thể xảy ra lỗi và có thể cần phải xóa dữ liệu ứng dụng.</string>
+    <string name="warning_enroll_into_beta">Phát hành beta có thể không ổn định và có thể cần phải xóa dữ liệu ứng dụng.</string>
+    <string name="check_for_beta_releases">Kiểm tra phát hành beta</string>
+    <string name="update_tracking_marked_read">Cập nhật theo dõi khi được đánh dấu đã đọc</string>
+    <string name="most_entries">Các mục hơn cả</string>
+    <string name="downloads_swipe_tutorial">Tải xuống có thể được hủy bỏ bằng cách vuốt chúng sang bên
+\nVuốt mẹo này đi để thu hồi nó</string>
+    <string name="zoom_double_page_spreads">Phóng to thành trải trang đôi</string>
+    <string name="use_staggered_grid">Sử dụng lưới so le</string>
+    <string name="pref_update_only_completely_read_summary">Chỉ cập nhập truyện nếu không có bất kỳ trang truyện nào chưa đọc (đã được đọc hết)</string>
+    <string name="webview_data_deleted">Dữ liệu WebView đã được xóa</string>
+    <string name="pref_clear_webview_data">Xóa dữ liệu WebView</string>
+    <string name="select_uninstalled_sources">Chọn các nguồn được dỡ bỏ</string>
+    <string name="view_all">Xem toàn bộ</string>
+    <string name="empty_backup_error">Không có mục thư viện nào để sao lưu</string>
+    <string name="show_">Hiện %1$s</string>
+    <string name="must_view_details_before_migration">Chi tiết về mục này cần phải được xem xét trước khi có thể di nhập</string>
+    <string name="update_tracking_after_reading">Cập nhật theo dõi sau khi đọc</string>
+    <string name="pref_manage_notifications">Quản lý thông báo</string>
+    <string name="battery_not_low">Pin không quá ít</string>
+    <string name="faq_and_guides">Câu Hỏi Thờng Gặp và Hướng Dẫn</string>
 </resources>

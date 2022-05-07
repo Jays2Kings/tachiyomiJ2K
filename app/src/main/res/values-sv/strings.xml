@@ -206,7 +206,6 @@
     <string name="downloading">Laddar ner</string>
     <string name="downloading_progress">Laddar ner (%1$d/%2$d)</string>
     <string name="paused">Pausad</string>
-    <string name="next_5_unread">Ladda ner nästa 5 kapitel</string>
     <string name="custom_range">Ladda ner anpassade</string>
     <string name="all_chapters">Ladda ner alla</string>
     <string name="all_unread_chapters">Ladda ner olästa</string>
@@ -572,7 +571,6 @@
     <string name="add_x_to_library">Lägga till %1$s i biblioteket\?</string>
     <string name="all_but_bookmarked_chapters">Alla kapitel utom bokmärkta</string>
     <string name="all_read_chapters">Alla lästa kapitel</string>
-    <string name="next_unread_chapter">Nästa olästa kapitel</string>
     <string name="search_chapters">Sök kapitel</string>
     <string name="select_ending_chapter">Välj avslutande kapitel</string>
     <string name="select_starting_chapter">Välj startkapitel</string>
@@ -976,11 +974,21 @@
     <string name="downloads_swipe_tutorial">Nedladdningar kan avbrytas genom att svepa bort dem
 \nSvep det här tipset för att avlägsna det</string>
     <string name="pref_clear_webview_data">Rensa data från WebView</string>
-    <string name="learn_more_at_">Läs mer på: %1$s</string>
     <string name="must_view_details_before_migration">Den här posten\'s informationssida måste ses innan du kan migrera</string>
     <string name="view_all">Visa alla</string>
     <string name="webview_data_deleted">WebView-data rensas</string>
     <string name="update_tracking_marked_read">Uppdatera spårningen när den markeras som läst</string>
     <string name="backup_restore_invalid_uri">Fel: tom URI</string>
     <string name="backup_info">Automatisk säkerhetskopiering rekommenderas starkt. Du bör också förvara kopior på andra ställen.</string>
+    <string name="pref_manage_notifications">Hantera aviseringar</string>
+    <string name="battery_not_low">Batteriet är inte lågt</string>
+    <string name="faq_and_guides">Vanliga frågor och guider</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Nästa olästa kapitel</item>
+        <item quantity="other">Nästa %d olästa</item>
+    </plurals>
+    <string name="download_ahead">Ladda ner i förväg</string>
+    <string name="auto_download_after_reading">Ladda ner nästa olästa kapitel efter läsning</string>
+    <string name="download_ahead_info">Nedladdning framåt gäller endast för poster i biblioteket och om det senast lästa kapitlet har laddats ned</string>
+    <string name="learn_why">Lär dig varför</string>
 </resources>

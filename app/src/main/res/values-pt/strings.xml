@@ -136,7 +136,6 @@
     <string name="chapter_">Capítulo %1$s</string>
     <string name="downloading">A transferir</string>
     <string name="downloading_progress">A Transferir (%1$d/%2$d)</string>
-    <string name="next_5_unread">Transferir próximos 5 capítulos</string>
     <string name="all_chapters">Transferir tudo</string>
     <string name="all_unread_chapters">Transferir não lidos</string>
     <!-- MyAnimeList fragment -->
@@ -715,7 +714,6 @@
     <string name="add_x_to_library">Adicionar %1$s à biblioteca\?</string>
     <string name="all_but_bookmarked_chapters">Todos, exceto os capítulos favoritos</string>
     <string name="all_read_chapters">Todos os capítulos lidos</string>
-    <string name="next_unread_chapter">Próximo capítulo não lido</string>
     <string name="search_chapters">Pesquisar capítulos</string>
     <string name="select_ending_chapter">Selecionar capítulo final</string>
     <string name="select_starting_chapter">Selecione o capítulo inicial</string>
@@ -926,13 +924,13 @@
     <string name="log_out">Terminar sessão</string>
     <string name="log_out_from_">Terminar sessão em %1$s\?</string>
     <string name="every_3_days">A cada 3 dias</string>
-    <string name="download_queue_size_warning">Aviso: grandes transferências em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi</string>
+    <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
     <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="help_translate">Ajude a traduzir</string>
     <string name="use_shizuku_to_install">Use o Shizuku para instalar extensões</string>
     <string name="show_outline_around_covers">Mostrar contorno ao redor das capas</string>
-    <string name="notification_size_warning">Grandes atualizações podem aumentar o uso da bateria e as fontes se tornarem mais lentas</string>
+    <string name="notification_size_warning">Grandes atualizações podem aumentar o uso da bateria e as fontes de mangá se tornarem mais lentas. Aperte para ler mais</string>
     <string name="scanlators">Tradutores</string>
     <string name="save_chapters_as_cbz">Guardar como ficheiro CBZ</string>
     <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem avisos do usuário e ativa atualizações automáticas para dispositivos com Android 12</string>
@@ -967,4 +965,47 @@
     <string name="clear_history_completed">Histórico eliminado</string>
     <string name="clear_history_confirmation">Tem a certeza\? Todo o histórico será perdido.</string>
     <string name="backup_info">Cópias de segurança automáticas são altamente recomendadas. Também deve guardar cópias em outros locais.</string>
+    <string name="language_badge">Distintivo de linguagem</string>
+    <string name="expanded_toolbar">Barra de ferramentas expandida</string>
+    <string name="show_larger_toolbar">Mostrar uma barra de ferramenta maior, no topo da maioria das páginas (em aparelhos menores essa opção é desabiltiada independentemente da escolha)</string>
+    <string name="warning_enroll_into_beta">Versões Beta podem ser instáveis e pode ser necessário limpar os arquivos do app.</string>
+    <string name="confirm_manga_add_duplicate">Tem uma entrada na sua biblioteca com o mesmo nome mas de uma fonte diferente (%1$s)
+\n
+\nAinda deseja continuar\?</string>
+    <string name="update_tracking_after_reading">Atualizar monitoramento após leitura</string>
+    <string name="new_beta_version_available">Nova versão beta disponível!</string>
+    <string name="zoom_double_page_spreads">Fazer zoom em páginas duplas</string>
+    <string name="empty_backup_error">Sem entradas na biblioteca para fazer cópia de segurança</string>
+    <string name="try_new_features">Teste novas funcionalidades antes de serem lançadas oficialmente. Versões Beta podem ser instáveis e são feitas para criar feedback pros desenvolvedores.</string>
+    <string name="warning_unenroll_from_beta">Voltar a usar versões antigas pode causar falhas e pode ser necessário limpeza dos arquivos do app.</string>
+    <string name="check_for_beta_releases">Checar por versões beta</string>
+    <string name="cover_only_grid">Capas em grade</string>
+    <string name="use_staggered_grid">Usar grades escalonadas</string>
+    <string name="skipped_reason_completed">Ignorado porque a séria está completa</string>
+    <string name="skipped_reason_not_caught_up">Ignorado porque existem capítulos não lidos</string>
+    <string name="skipped_reason_not_started">Ignorado porque nenhum capítulo foi lido</string>
+    <string name="channel_skipped">Ignorado</string>
+    <string name="pref_library_update_manga_restriction">Ignorar títulos em atualização</string>
+    <string name="pref_update_only_completely_read">Com capítulo(s) não lidos</string>
+    <string name="pref_update_only_non_completed">Com estado \'\'Terminado\'\'</string>
+    <string name="pref_update_only_started">Que não começaram a ser lidos</string>
+    <string name="pref_update_only_completely_read_summary">Somente atualizar mangá se tiver nenhum capítulo não lido (terminado completamente)</string>
+    <string name="pref_clear_webview_data">Limpar dados do WebView</string>
+    <string name="webview_data_deleted">Dados do WebView limpos</string>
+    <string name="most_entries">Mais títulos</string>
+    <string name="select_uninstalled_sources">Selecionar fontes desinstaladas</string>
+    <string name="update_tracking_scoring_type">Atualizar tipo de pontuação de %1$s</string>
+    <string name="scoring_type_updated">Tipo de pontuação atualizado</string>
+    <string name="could_not_update_scoring_">Não foi possível atualizar tipo de pontuação: %1$s</string>
+    <string name="update_tracking_marked_read">Atualizar monitoramento quando marcado como lido</string>
+    <string name="backup_restore_invalid_uri">Erro: URI vazio</string>
+    <string name="notification_update_error">%1$d actualização(ões) falhada(s)</string>
+    <string name="notification_update_skipped">%1$d atualização(ões) ignorada(s)</string>
+    <string name="move_series_to_top">Mover séries para o topo</string>
+    <string name="tap_to_see_details">Toque para ver detalhes</string>
+    <string name="tap_to_learn_more">Toque para saber mais</string>
+    <string name="navigate_pan">Navegue para mover</string>
+    <string name="pref_manage_notifications">Gerir notificações</string>
+    <string name="battery_not_low">Bateria não fraca</string>
+    <string name="faq_and_guides">Perguntas frequentes e Guias</string>
 </resources>

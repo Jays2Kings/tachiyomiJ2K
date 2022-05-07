@@ -202,7 +202,6 @@
     <string name="downloading">Laster ned</string>
     <string name="downloading_progress">Laster ned (%1$d/%2$d)</string>
     <string name="paused">Pauset</string>
-    <string name="next_5_unread">Last ned de neste fem kapitelene</string>
     <string name="custom_range">Last ned egendefinert</string>
     <string name="all_chapters">Last ned alle</string>
     <string name="all_unread_chapters">Last ned uleste</string>
@@ -758,7 +757,6 @@
     <string name="add_x_to_library">Legg til %1$s i bibliotek\?</string>
     <string name="all_but_bookmarked_chapters">Alle unntatt bokmerkede kapitler</string>
     <string name="all_read_chapters">Alle leste kapitler</string>
-    <string name="next_unread_chapter">Neste uleste kapittel</string>
     <string name="search_chapters">Søk i kapitler</string>
     <string name="select_ending_chapter">Velg sluttkapittel</string>
     <string name="select_starting_chapter">Velg startkapittel</string>
@@ -961,4 +959,7 @@
     <string name="move_series_to_top">Flytt serien til toppen</string>
     <string name="backup_restore_invalid_uri">Feil: tom URI</string>
     <string name="backup_info">Automatiske sikkerhetskopier anbefales sterkt. Du bør oppbevare flere kopier andre steder også.</string>
+    <string name="pref_manage_notifications">Håndter merknader</string>
+    <string name="battery_not_low">Batteri er ikke lavt</string>
+    <string name="faq_and_guides">FAQ og guider</string>
 </resources>

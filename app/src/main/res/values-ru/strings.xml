@@ -259,7 +259,7 @@
     <string name="language">Язык</string>
     <string name="categories_to_include_in_global_update">Категории включённые в глобальный поиск</string>
     <string name="library_update_frequency">Частота обновления библиотеки</string>
-    <string name="library_update_restriction">Ограничения обновления библиотеки</string>
+    <string name="library_update_restriction">Ограничения устройства</string>
     <string name="library_update_restriction_summary">Обновлять когда условия соблюдены</string>
     <string name="volume_keys">Клавиши громкости</string>
     <string name="invert_volume_keys">Клавиши громкости наоборот</string>
@@ -518,8 +518,6 @@
     <string name="select_starting_chapter">Выберите первую главу</string>
     <string name="select_ending_chapter">Выберите последнюю главу</string>
     <string name="search_chapters">Поиск глав</string>
-    <string name="next_unread_chapter">Первая непрочитанная глава</string>
-    <string name="next_5_unread">Пять непрочитанных глав</string>
     <string name="all_chapters">Все главы</string>
     <string name="all_unread_chapters">Все непрочитанные главы</string>
     <string name="custom_range">Другое количество</string>
@@ -976,7 +974,7 @@
     <string name="log_out_from_">Выйти из %1$s\?</string>
     <string name="scanlators">Переводчики</string>
     <string name="channel_errors">Ошибки</string>
-    <string name="notification_size_warning">Большие обновления могут привести к повышенному расходу батареи и замедлению работы источников</string>
+    <string name="notification_size_warning">Большие обновления могут привести к повышенному расходу батареи и замедлению работы источников. Нажмите, чтобы узнать больше.</string>
     <string name="show_in_sources_and_extensions">Показать в списке источников и расширений</string>
     <string name="show_outline_around_covers">Показать контур вокруг обложек</string>
     <string name="ext_installer_shizuku_stopped">Shizuku не работает</string>
@@ -986,7 +984,7 @@
     <string name="classic_blue">Классический Синий</string>
     <string name="lime_time">Время Лайма</string>
     <string name="save_chapters_as_cbz">Сохранить как архив CBZ</string>
-    <string name="download_queue_size_warning">Предупреждение: большие объемы загрузок глав могут привести к замедлению работы источников и/или блокировке Tachiyomi. Нажать, для подробностей.</string>
+    <string name="download_queue_size_warning">Предупреждение: большие объемы загрузок глав могут привести к замедлению работы источников и/или блокировке Tachiyomi. Нажмите, для подробностей.</string>
     <string name="every_3_days">Каждые 3 дня</string>
     <string name="publishing_finished">Публикация завершена</string>
     <string name="cancelled">Отменено</string>
@@ -1031,4 +1029,29 @@
     <string name="clear_history_confirmation">Вы уверены\? Вся история будет удалена.</string>
     <string name="backup_restore_invalid_uri">Ошибка: Пустой URI</string>
     <string name="backup_info">Настоятельно рекомендуется использовать автоматические резервные копии. Вы также должны хранить копии в разных папках.</string>
+    <string name="zoom_double_page_spreads">Увеличивать масштаб для двухстраничных разворотов</string>
+    <string name="must_view_details_before_migration">Страницу сведений об этой записи необходимо просмотреть, прежде чем можно будет выполнять миграцию</string>
+    <string name="update_tracking_scoring_type">Обновить тип подсчета оценки %1$s</string>
+    <string name="update_tracking_after_reading">Обновить отслеживание после прочтения</string>
+    <string name="show_larger_toolbar">Показывать увеличенную, расширенную панель инструментов поверх большинства страниц (не показывается на меньших устройствах, вне зависимости от настройки)</string>
+    <string name="try_new_features">Попробуйте новые возможности до того, как они официально появятся. Бета-версии могут быть нестабильными и предоставляются для получения обратной связи разработчикам.</string>
+    <string name="warning_unenroll_from_beta">Откат до предыдущих стабильных версий может вызвать ошибки и потребовать очистки данных приложения.</string>
+    <string name="language_badge">Значки языков</string>
+    <string name="warning_enroll_into_beta">Бета-версии могут быть нестабильными и могут требовать очистки данных приложения.</string>
+    <string name="check_for_beta_releases">Проверять наличие бета-релизов</string>
+    <string name="expanded_toolbar">Расширенная панель инструментов</string>
+    <string name="most_entries">По большинству записей</string>
+    <string name="show_">Показать %1$s</string>
+    <string name="view_all">Просмотреть всё</string>
+    <string name="use_staggered_grid">Использовать сетку в виде шахматной доски</string>
+    <string name="pref_update_only_completely_read_summary">Обновлять мангу, только если нет непрочитанных глав (полностью прочитано)</string>
+    <string name="select_uninstalled_sources">Выбрать неустановленные источники</string>
+    <string name="downloads_swipe_tutorial">Загрузки можно отменить свайпом
+\nСвайпните, чтобы убрать эту подсказку</string>
+    <string name="scoring_type_updated">Обновлен тип подсчета оценки</string>
+    <string name="could_not_update_scoring_">Не удалось обновить тип подсчета оценки: %1$s</string>
+    <string name="update_tracking_marked_read">Обновлять отслеживание при пометке как прочитано</string>
+    <string name="pref_manage_notifications">Управление уведомлениями</string>
+    <string name="battery_not_low">Батарея заряжена</string>
+    <string name="faq_and_guides">Руководства и FAQ</string>
 </resources>

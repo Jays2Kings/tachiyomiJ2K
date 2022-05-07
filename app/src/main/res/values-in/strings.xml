@@ -174,7 +174,6 @@
     <string name="downloading">Mengunduh</string>
     <string name="downloading_progress">Mengunduh (%1$d/%2$d)</string>
     <string name="paused">Dijeda</string>
-    <string name="next_5_unread">5 yang belum dibaca selanjutnya</string>
     <string name="all_chapters">Semua bab</string>
     <string name="all_unread_chapters">Semua bab yang belum dibaca</string>
     <string name="reading">Membaca</string>
@@ -460,7 +459,6 @@
     <string name="show_bookmarked_chapters">Tampilkan bab yang dimarkahkan</string>
     <string name="show_all">Tampilkan semua</string>
     <string name="add_x_to_library">Tambah %1$s ke pustaka\?</string>
-    <string name="next_unread_chapter">Bab belum dibaca selanjutnya</string>
     <string name="search_chapters">Cari bab</string>
     <string name="mark_all_chapters_as_read">Tandai semua bab sebagai telah dibaca\?</string>
     <string name="no_description">Tidak ada deskripsi</string>
@@ -951,7 +949,6 @@
     <string name="must_view_details_before_migration">Detail halaman entri ini harus dilihat sebelum migrasi bisa dilakukan</string>
     <string name="pref_update_only_completely_read_summary">Hanya perbarui manga jika tidak ada bab yang belum dibaca(selesai dibaca)</string>
     <string name="view_all">Tampilkan semua</string>
-    <string name="learn_more_at_">Pelajari lebih lanjut di: %1$s</string>
     <string name="update_tracking_after_reading">Perbarui pelacakan setelah dibaca</string>
     <string name="update_tracking_marked_read">Perbarui pelacakan setelah tandai telah dibaca</string>
     <string name="select_uninstalled_sources">Pilih sumber yang tidak terpasang</string>
@@ -962,4 +959,14 @@
     <string name="backup_info">Pencadangan otomatis sangat disarankan. Anda juga harus menyimpan duplikat di tempat lain.</string>
     <string name="use_staggered_grid">Gunakan grid jatuh</string>
     <string name="zoom_double_page_spreads">Perbesar penyebaran halaman ganda</string>
+    <string name="auto_download_after_reading">Unduh bab yang belum dibaca berikutnya setelah membaca</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">%d belum dibaca</item>
+    </plurals>
+    <string name="download_ahead">Unduh kedepan</string>
+    <string name="download_ahead_info">Unduh ke depan hanya berlaku untuk entri di perpustakaan dan jika bab terakhir dibaca diunduh</string>
+    <string name="pref_manage_notifications">Kelola notifikasi</string>
+    <string name="battery_not_low">Baterai tidak lemah</string>
+    <string name="faq_and_guides">Tanya Jawab dan Panduan</string>
+    <string name="learn_why">Pelajarilah alasannya</string>
 </resources>

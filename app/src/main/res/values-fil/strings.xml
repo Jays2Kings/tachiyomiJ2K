@@ -413,7 +413,7 @@
     <string name="long_press_category">Pindutin ng matagal upang baguhin Ang kategorya</string>
     <string name="category_deleted">Nabura na ang kategorya</string>
     <string name="category_cannot_be_blank">Ang pangalan ng kategorya ay Hindi maaaring maging blanko</string>
-    <string name="category_with_name_exists">Mayroon nang kategorya na may pangalang iyon</string>
+    <string name="category_with_name_exists">Mayroon nang kategoryang may ganoong pangalan!</string>
     <string name="move_to_categories">Ilipat sa mga kategorya</string>
     <string name="manage_category">Ayusin Ang kategorya</string>
     <string name="add_edit_categories">Dagdag/mag-edit ng mga kategorya</string>
@@ -569,7 +569,7 @@
     <string name="set_first_page_as_cover">I-set ang unang pahina bilang pabalat</string>
     <string name="webtoon_style">Istilong webtoon</string>
     <string name="reading_">Binabasa: %1$s</string>
-    <string name="changing_will_reset_reading_mode">Ang pagbago dito ay magrereset ng paraan ng pagbasa para sa serye.</string>
+    <string name="changing_will_reset_reading_mode">Kapag binago ito, mare-reset ang reading mode para sa seryeng ito</string>
     <string name="reading_mode">Paraan ng pagbasa</string>
     <string name="decode_image_error">Hindi ma-decode ang larawan</string>
     <string name="pages_">Mga pahina: %1$s</string>
@@ -583,7 +583,7 @@
     <string name="update_all">I-update lahat</string>
     <string name="could_not_install_extension">Hindi ma-install ang extension</string>
     <string name="_must_be_enabled_first">Ang %1$s ay kailangang naka-enable muna</string>
-    <string name="app_info">App info</string>
+    <string name="app_info">Impormasyon ng app</string>
     <string name="extensions_miui_warning">Ang optimization ng MIUI ay kailangang naka-disable para makapag-install ng mga extension.</string>
     <string name="all_sources">Lahat ng pinagkukunan</string>
     <string name="search_extensions">Hanapin sa mga extension…</string>
@@ -614,10 +614,10 @@
     <string name="recents">Mga nakaraan</string>
     <string name="search_tips_show_periodically">Paminsan-minsan ay may mga mungkahi sa pag-search na lumilitaw. I-long press ang iminungkahi para mai-search ito.</string>
     <string name="search_suggestions">Mga mungkahi sa paghahanap</string>
-    <string name="certain_buttons_can_be_found">May mga button na makikita sa ibang pahina kung naka-disable dito.</string>
+    <string name="certain_buttons_can_be_found">Ang ilang mga pindutan ay matatagpuan sa ibang mga lugar kung hindi pinagana dito</string>
     <string name="global_updates">Pangkalahatang pag-update</string>
     <string name="auto_refresh_covers_summary">I-refresh din ang mga pabalat sa library kapag nag-aupdate</string>
-    <string name="auto_refresh_covers">Awtomatikong i-refresh ang mga cover.</string>
+    <string name="auto_refresh_covers">Awtomatikong i-refresh ang mga takip</string>
     <plurals name="for_n_titles">
         <item quantity="one">Para sa %d na titulo</item>
         <item quantity="other">Para sa %d na mga titulo</item>
@@ -627,7 +627,7 @@
 \n
 \nSa susunod na screen, pakibuksan po ang \"Allow access to manage all files.\"</string>
     <string name="all_files_permission_required">Kailangan ng pahintulot sa file</string>
-    <string name="when_sorting_ignore_articles">Kapag nagsusunod-sunod nang ayon sa alpabeto, magsunod-sunud nang bina-balewala ang mga pantukoy (si, sina, mga) sa simula ng mga pamagat.</string>
+    <string name="when_sorting_ignore_articles">Kapag nag-uuri ayon sa alpabeto, pag-uri-uriin ang hindi pinapansin ang mga artikulo (a, an, the) sa simula ng mga pamagat ng manga</string>
     <string name="sort_by_ignoring_articles">Pagsunod-sunurin nang bina-balewala ang mga pantukoy</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">at %1$d pang kabanata</item>
@@ -642,7 +642,7 @@
     <string name="uniform_grid_covers">Magkaka-anyong grid ng pabalat</string>
     <string name="uniform_covers">Magkaka-anyong pabalat</string>
     <string name="open_random_series">Magbukas ng random na serye</string>
-    <string name="show_number_of_items">Ipakita ang bilang ng items.</string>
+    <string name="show_number_of_items">Ipakita ang bilang ng mga item</string>
     <string name="update_completed">Tapos na ang pag-update</string>
     <string name="could_not_install_update">Hindi ma-install ang update</string>
     <string name="by_update_date">Gamit ang petsa ng pagkakalimbag</string>
@@ -684,8 +684,6 @@
     <string name="about_this_">Tungkol dito sa %1$s</string>
     <string name="start_reading">Simulang basahin</string>
     <string name="season_">Season %1$d</string>
-    <string name="next_5_unread">Susunod na 5 na babasahin</string>
-    <string name="next_unread_chapter">Susunod na babasahing kabanata</string>
     <string name="restrictions_">Restriksyon: %1$s</string>
     <string name="affects_library_grid">Nakakaapekto sa mga pabalat ng grid library</string>
     <string name="extensions_updated">Na-update ang mga extension</string>
@@ -731,7 +729,7 @@
     <string name="enhanced_tracking_info">Mga serbisyong nagbibigay ng pinahusay na tampok para sa mga piling source. Kusang ita-track ang manga kapag dinagdag ito sa Aklatan mo.</string>
     <string name="use_shizuku_to_install">Gamitin ang Shizuku para i-install</string>
     <string name="use_shizuku_summary">Payagan ang mga dugtong na mai-install ng walang prompt ng user at ipagbuksan ang kusang pag-update para sa mga device Android 12 pababa</string>
-    <string name="notification_size_warning">Nakasasama sa source at maaaring humantong sa mabagal na update at pagtaas ng paggamit sa baterya kung maraming ia-update nang sabay</string>
+    <string name="notification_size_warning">Ang malalaking pag-update ay maaaring humantong sa pagtaas ng paggamit ng baterya at nagiging mas mabagal ang mga mapagkukunan. I-tap para matuto pa.</string>
     <string name="local_invalid_format">Walang bisa ang ayos ng kabanata</string>
     <string name="order_by">Kaayusan ayon sa</string>
     <string name="navigate_pan">Gumalaw para mag-pan</string>
@@ -784,8 +782,8 @@
     <string name="migrate_now">Ilipat na</string>
     <string name="a_brighter_you">Ang Maliwanag na Ikaw (Dynamic)</string>
     <string name="series_opens_new_chapters">Buton para buksan ang mga bagong kabanata</string>
-    <string name="cutout_behavior_only_applies">Ang asal ng cutout area ay gagana lang sa portreyt mode sa piling laki lamang</string>
-    <string name="show_downloaded_chapters">Ipakita lamang ang mga na Download na Kabanata</string>
+    <string name="cutout_behavior_only_applies">Nalalapat lang ang pag-uugali ng cutout area sa portrait mode na may ilang partikular na uri ng sukat</string>
+    <string name="show_downloaded_chapters">Ipakita ang mga na-download na kabanata</string>
     <string name="add_x_to_library">Ilagay ang %1$s sa librarya\?</string>
     <string name="show_bookmarked_chapters">Ipakita lamang ang mga kabanatang may tanda</string>
     <plurals name="deleted_chapters">
@@ -812,7 +810,7 @@
     <string name="includes_recently_read_updated_added">Lahat kasama ang Kababsa lamang, Updated, at ang mga nakadagdag na serye</string>
     <string name="check_for_beta_releases">Tignan kung may bagong release na beta</string>
     <string name="split_double_pages_portrait">Hatiin sa dalawang pahina ang larawan</string>
-    <string name="pad_cutout_areas">I-pad ang mga cutout area</string>
+    <string name="pad_cutout_areas">Pad cutout na mga lugar</string>
     <string name="automatic_can_still_switch">Habang gumagamitn nang automatic na ityura ng pahina, pwede ka padin mag palit ng istayl ng ayos habang nag babasa ng hindi binabago ang settings</string>
     <string name="save_pages_separately">I-save ang larawan sa ibang folder</string>
     <string name="sort_by_chapter_number">I ayos batay sa dami ng kabanata</string>
@@ -839,8 +837,8 @@
     <string name="use_staggered_grid">Gumamit ng pasuray-suray na grid</string>
     <string name="pref_update_only_completely_read_summary">I update lamang ang manga kung natapos na basahin lahat ng kabanata (tapos na basahin)</string>
     <string name="both_axes">Sa parehong mga axis</string>
-    <string name="cutout_area_behavior">Asal ng cutout area</string>
-    <string name="ignore_cutout_areas">Lampasan ang mga cutout na area</string>
+    <string name="cutout_area_behavior">Gawi ng cutout area</string>
+    <string name="ignore_cutout_areas">Huwag pansinin ang cutout areas</string>
     <string name="all_but_bookmarked_chapters">Lahat lamang ng meron tandang kabanata</string>
     <string name="clear_tags">Tanggalin ang mga tag</string>
     <string name="reset_cover">Ibalik sa orihinal na cover</string>
@@ -859,8 +857,7 @@
     <string name="pref_clear_webview_data">Linisin ang WebView data</string>
     <string name="zoom_double_page_spreads">I-Zoom sa dalawang pahinang pagbasa</string>
     <string name="must_view_details_before_migration">Ang detalye ng entry na into ay dapat munang makita bago pwedeng ilipat sa ibang source</string>
-    <string name="show_">Meron kanang naka save sa libraya mo na kapareho ang pangalan pero galing sa ibang source (source)
-\nNais mo padin bang i dagdag ito</string>
+    <string name="show_">Ipakita ang %1$s</string>
     <string name="all_read_chapters">Lahat na kabanatang nabasa na</string>
     <string name="update_tracking_after_reading">I-Update ang pagsunod sa manga pagkatapos basahin</string>
     <string name="select_an_entry">Pumili ng Paglalagyan</string>
@@ -868,9 +865,9 @@
     <string name="skipping_">(laktawan %1$d)</string>
     <string name="a_calmer_you">Ang Kaladong ikaw (Dynamic)</string>
     <string name="no_new_chapters_open_details">Kapag walang bagong kabanata, ang mmga detalye ng serye ang bubuksan</string>
-    <string name="split_double_pages">Hatiin sa dalawang pahina</string>
+    <string name="split_double_pages">Hatiin ang dobleng pahina</string>
     <string name="if_disabled_transition_will_skip">Kapag wala, ang paglipat ng pahina ay lalaktawan kung ang sususnod na kabanata ay tapos na</string>
-    <string name="start_past_cutout">Magsimula pagkatapos ng cutout</string>
+    <string name="start_past_cutout">Simulan ang nakalipas na cutout</string>
     <string name="automatic_orientation">Kusa (base sa oryentasyon)</string>
     <string name="all_chapters">Lahat ng kabanata</string>
     <string name="all_unread_chapters">Lahat na hindi pa nababsang kabanata</string>
@@ -908,4 +905,90 @@
     <string name="save_chapters_as_cbz">I-save bilang CBZ archive</string>
     <string name="backup_restore_invalid_uri">Error: walang URI</string>
     <string name="backup_info">Rinerekomenda po namin ang kusang pag-backup. Kailangan mo ring magtabi ng mga kopya sa ibang lugar.</string>
+    <string name="pref_manage_notifications">Pamahalaan ang mga abiso</string>
+    <string name="battery_not_low">Di pa lowbat</string>
+    <string name="faq_and_guides">Mga Madalas Itanong at Gabay</string>
+    <plurals name="cleanup_done">
+        <item quantity="one">Tapos na ang paglilinis. Inalis ang %d folder</item>
+        <item quantity="other">Tapos na ang paglilinis. Inalis ang %d folder</item>
+    </plurals>
+    <string name="clear_filters">I-clear ang mga filter</string>
+    <string name="default_orientation">Default na oryentasyon</string>
+    <string name="orientation">Oryentasyon</string>
+    <string name="successfully_logged_in">Matagumpay na naka-log in</string>
+    <string name="username_must_not_be_blank">Hindi maaaring blangko ang username o password</string>
+    <string name="nothing_is_downloading">Walang dina-download sa kasalukuyan</string>
+    <string name="keep">Panatilihin</string>
+    <string name="move_to_">Ilipat sa %1$s</string>
+    <string name="preview">Silipin</string>
+    <string name="delete_all_covers__not_in_library_used_">Tanggalin ang lahat ng mga cover na naka-cache na wala sa iyong library
+\nKasalukuyang ginagamit ang: %1$s</string>
+    <string name="not_downloaded">Hindi na-download</string>
+    <string name="remove_after_read">Alisin pagkatapos basahin</string>
+    <string name="clean_orphaned_downloads">Malinis na ulila</string>
+    <string name="clear_cached_covers_non_library">I-clear ang mga naka-cache na pabalat na wala sa library</string>
+    <string name="select_uninstalled_sources">Piliin ang mga na-uninstall na mapagkukunan</string>
+    <string name="notify_extension_updated">Na-update ang extension ng Notify</string>
+    <string name="only_search_pinned_when">Maghanap lamang ng mga naka-pin na mapagkukunan</string>
+    <string name="auto_download_after_reading">I-download ang mga susunod na hindi pa nababasang kabanata pagkatapos basahin</string>
+    <string name="downloads_swipe_tutorial">Maaaring kanselahin ang mga pag-download sa pamamagitan ng pag-swipe sa kanila
+\nI-swipe ang tip na ito para i-dismiss ito</string>
+    <string name="remove_download">Alisin ang pag-download</string>
+    <string name="remove_downloads">Alisin ang mga download</string>
+    <string name="download_ahead">Mag-download nang maaga</string>
+    <string name="download_ahead_info">Ang pag-download nang maaga ay nalalapat lamang sa mga entry sa library at kung ang huling kabanata na binasa ay na-download</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Susunod na hindi pa nababasang kabanata</item>
+        <item quantity="other">Susunod na %d hindi pa nababasa</item>
+    </plurals>
+    <string name="add_to_">Idagdag sa %1$s</string>
+    <string name="added_to_">Idinagdag sa %1$s</string>
+    <string name="beta">BETA</string>
+    <string name="change">Baguhin</string>
+    <string name="clear">Malinis</string>
+    <string name="deleted_">Tinanggal: %1$s</string>
+    <string name="drag_handle">I-drag ang hawakan</string>
+    <string name="keep_in_">Panatilihin sa %1$s</string>
+    <string name="learn_why">Alamin kung bakit</string>
+    <string name="match_pinned_sources">Itugma ang mga naka-pin na mapagkukunan</string>
+    <string name="match_enabled_sources">Itugma ang pinaganang mga mapagkukunan</string>
+    <string name="only_enable_pinned_for_migration">I-enable lang ang iyong mga naka-pin na source para sa paglipat</string>
+    <string name="only_enable_enabled_for_migration">Paganahin lamang ang iyong kasalukuyang pinaganang mga mapagkukunan para sa paglipat</string>
+    <string name="migration_sources_changed">Nagbago ang mga pinagmulan ng paglilipat</string>
+    <string name="use_last_saved_migration_preferences">Gamitin ang huling na-save na mga kagustuhan at pinagmumulan bago ang paglipat upang maramihang paglipat</string>
+    <string name="you_can_migrate_in_library">Maaari ka ring mag-migrate sa pamamagitan ng pagpili ng manga sa iyong library</string>
+    <string name="downloading_">Dina-download: %1$s</string>
+    <string name="clean_read_downloads">Malinis na basahin</string>
+    <string name="selection">Pagpili</string>
+    <string name="remove_when_marked_as_read">Alisin kapag minarkahan bilang nabasa na</string>
+    <string name="delete_unused_chapters">Tanggalin ang hindi umiiral, bahagyang na-download, at basahin ang mga folder ng kabanata</string>
+    <string name="most_entries">Karamihan sa mga entry</string>
+    <string name="mark_range_as_read">Markahan ang isang hanay ng mga kabanata bilang nabasa na</string>
+    <string name="mark_range_as_unread">Markahan ang isang hanay ng mga kabanata bilang hindi pa nababasa</string>
+    <string name="search_">Maghanap sa %1$s</string>
+    <string name="select_none">Pumili ng wala</string>
+    <string name="view_all">Tingnan lahat</string>
+    <string name="clean_read_manga_not_in_library">Malinis na manga wala sa library</string>
+    <string name="starting_cleanup">Nagsisimula sa paglilinis</string>
+    <string name="no_folders_to_cleanup">Walang mga folder na lilinisin</string>
+    <string name="disable_if_issues_with_updating">I-disable ito kung nakakaranas ka ng mga isyu sa pag-update o pag-restore ng iyong library mo</string>
+    <string name="clean_up_cached_covers">Linisin ang mga naka-cache na takip</string>
+    <string name="auto_update_extensions">Awtomatikong i-update ang mga extension</string>
+    <string name="some_extensions_may_not_update">Maaaring hindi awtomatikong ma-update ang ilang extension kung na-install ang mga ito sa labas ng app na ito</string>
+    <string name="whats_new_this_release">Ano ang bago sa release na ito</string>
+    <string name="helpful_translation_links">Nakatutulong na mga link sa pagsasalin</string>
+    <string name="always_keep">Palaging panatilihin</string>
+    <string name="delete_removed_chapters">Tanggalin ang mga inalis na kabanata</string>
+    <string name="delete_downloaded_if_removed_online">Tanggalin ang mga na-download na kabanata kung inalis ng pinagmulan ang kabanata online</string>
+    <string name="mark_previous_as_unread">Markahan ang mga nakaraang kabanata bilang hindi pa nababasa</string>
+    <string name="menu">menu</string>
+    <string name="moved_to_">Inilipat sa %1$s</string>
+    <string name="recently_updated">Kamakailang na-update</string>
+    <string name="recently_installed">Kamakailang na-install</string>
+    <string name="remove_from_">Alisin sa %1$s</string>
+    <string name="sort_and_filter">Pagbukud-bukurin at Salain</string>
+    <string name="tag">Tag</string>
+    <string name="enable">Paganahin</string>
+    <string name="enabled">Pinagana</string>
+    <string name="log_in">Mag log in</string>
 </resources>

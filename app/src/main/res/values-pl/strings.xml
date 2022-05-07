@@ -314,8 +314,6 @@
     <string name="select_starting_chapter">Wybierz początkowy rozdział</string>
     <string name="select_ending_chapter">Wybierz końcowy rozdział</string>
     <string name="search_chapters">Przeszukaj rozdziały</string>
-    <string name="next_unread_chapter">Następny nieprzeczytany rozdział</string>
-    <string name="next_5_unread">Następne 5 nieprzeczytanych</string>
     <string name="custom_range">Własny zakres</string>
     <string name="all_chapters">Wszystkie rozdziały</string>
     <string name="all_unread_chapters">Wszystkie nieprzeczytane</string>
@@ -1049,4 +1047,7 @@
     <string name="could_not_update_scoring_">Nie można zaktualizować typu punktacji: %1$s</string>
     <string name="update_tracking_after_reading">Aktualizacja śledzenia po przeczytaniu</string>
     <string name="update_tracking_marked_read">Aktualizuj śledzenie po oznaczeniu jako przeczytane</string>
+    <string name="move_series_to_top">Przenieś serię na górę</string>
+    <string name="pref_manage_notifications">Zarządzaj powiadomieniami</string>
+    <string name="faq_and_guides">FAQ i poradniki</string>
 </resources>

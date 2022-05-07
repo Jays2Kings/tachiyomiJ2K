@@ -479,4 +479,7 @@
     <string name="external_storage_permission_notice">تاچیومی J2K نیازمند دسترسی به همه فایل ها در اندوید 11 برای دانلود قسمت ها، ایجاد پشتیبان گیری خودکار، و خواندن مانگاهای محلی( مانگا های موجود در دستگاه شما) است.
 \n
 \nدر صفحه بعدی، اجازه \"مجاز بودن دسترسی به مدیریت همه پرونده‌ها\" را بدهید.</string>
+    <string name="pref_manage_notifications">مدیریت اعلان‌ها</string>
+    <string name="channel_skipped">رد شده</string>
+    <string name="getting_started_guide">راهنمای شروع</string>
 </resources>

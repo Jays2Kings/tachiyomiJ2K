@@ -206,7 +206,6 @@
     <string name="downloading">Завантажується</string>
     <string name="downloading_progress">Завантажується (%1$d/%2$d)</string>
     <string name="paused">Призупинено</string>
-    <string name="next_5_unread">Завантажити 5 наступних глав</string>
     <string name="custom_range">Завантажити іншу кількість</string>
     <string name="all_chapters">Завантажити все</string>
     <string name="all_unread_chapters">Завантажити непрочитані</string>
@@ -482,7 +481,6 @@
     <string name="add_x_to_library">Додати %1$s до бібліотеки\?</string>
     <string name="all_but_bookmarked_chapters">Всі глави окрім закладок</string>
     <string name="all_read_chapters">Всі прочитані глави</string>
-    <string name="next_unread_chapter">Наступна непрочитана глава</string>
     <string name="search_chapters">Пошук глав</string>
     <string name="select_ending_chapter">Обрати главу закінчення</string>
     <string name="select_starting_chapter">Обрати початкову главу</string>
@@ -982,4 +980,6 @@
     <string name="clear_history_confirmation">Ви впевнені\? Всю історію буде втрачено.</string>
     <string name="backup_restore_invalid_uri">Помилка: порожній URI</string>
     <string name="backup_info">Наполегливо рекомендується використовувати автоматичне резервування. Також ви повинні зберігати копії в інших місцях.</string>
+    <string name="pref_manage_notifications">Керування сповіщеннями</string>
+    <string name="faq_and_guides">Довідка та FAQ</string>
 </resources>

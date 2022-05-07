@@ -338,4 +338,6 @@
     <string name="descending">Zostupne</string>
     <string name="select_inverse">Vyberte inverzne</string>
     <string name="cover_only_grid">Mriežka len s obalmi</string>
+    <string name="pref_manage_notifications">Spravovať oznámenia</string>
+    <string name="faq_and_guides">FAQ a návody</string>
 </resources>

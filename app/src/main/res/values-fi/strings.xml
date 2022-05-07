@@ -254,7 +254,6 @@
     <string name="removed_from_library">Poistettu kirjastosta</string>
     <string name="author">Kirjailija</string>
     <string name="artist">Artisti</string>
-    <string name="next_5_unread">Lataa seuraavat 5 lukua</string>
     <string name="custom_range">Lataa muokautetusti</string>
     <string name="all_chapters">Lataa kaikki</string>
     <string name="all_unread_chapters">Lataa lukemattomat</string>
@@ -549,7 +548,6 @@
     <string name="add_x_to_library">Lisää %1$s kirjastoon\?</string>
     <string name="all_but_bookmarked_chapters">Kaikki paitsi kirjanmerkkeihin merkityt luvut</string>
     <string name="all_read_chapters">Kaikki luetut luvut</string>
-    <string name="next_unread_chapter">Seuraava lukematon luku</string>
     <string name="search_chapters">Etsi lukuja</string>
     <string name="select_ending_chapter">Valitse päättyvä luku</string>
     <string name="select_starting_chapter">Valitse aloitusluku</string>
@@ -850,4 +848,6 @@
     <string name="clear_history">Tyhjennä historia</string>
     <string name="clear_history_completed">Historia poistettu</string>
     <string name="clear_history_confirmation">Oletko varma\? Koko historia menetetään.</string>
+    <string name="pref_manage_notifications">Hallitse ilmoituksia</string>
+    <string name="faq_and_guides">Usein kysytyt kysymykset ja oppaat</string>
 </resources>

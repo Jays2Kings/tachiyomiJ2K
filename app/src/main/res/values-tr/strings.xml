@@ -206,7 +206,6 @@
     <string name="downloading">İndiriliyor</string>
     <string name="downloading_progress">(%1$d/%2$d) indiriliyor</string>
     <string name="paused">Duraklatıldı</string>
-    <string name="next_5_unread">Sonraki 5 bölümü indir</string>
     <string name="custom_range">Özel indir</string>
     <string name="all_chapters">Tümünü indir</string>
     <string name="all_unread_chapters">Tüm okunmayan bölümler</string>
@@ -542,7 +541,6 @@
     <string name="error_sharing_cover">Kapak paylaşılamadı</string>
     <string name="add_x_to_library">%1$s kitaplığa eklensin mi\?</string>
     <string name="all_but_bookmarked_chapters">Yer imli bölümler hariç tümü</string>
-    <string name="next_unread_chapter">Sonraki okunmayan bölüm</string>
     <string name="search_chapters">Bölümleri ara</string>
     <string name="select_ending_chapter">Bitiş bölümünü seç</string>
     <string name="select_starting_chapter">Başlangıç bölümünü seç</string>
@@ -975,7 +973,6 @@
     <string name="use_staggered_grid">Aşamalı ızgara kullan</string>
     <string name="pref_update_only_completely_read_summary">Mangayı yalnızca okunmayan bölüm yoksa (tamamen okundu ise) güncelle</string>
     <string name="update_tracking_marked_read">Okundu olarak işaretlendiğinde izlemeyi güncelle</string>
-    <string name="learn_more_at_">Daha fazla bilgi için: %1$s</string>
     <string name="view_all">Tümünü görüntüle</string>
     <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
     <string name="clear_history">Geçmişi temizle</string>
@@ -983,4 +980,15 @@
     <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş kaybolacak.</string>
     <string name="backup_restore_invalid_uri">Hata: boş URI</string>
     <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız.</string>
+    <string name="download_ahead">Önceden indir</string>
+    <string name="auto_download_after_reading">Okuduktan sonra bir sonraki okunmayan bölümleri indir</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Sonraki okunmayan bölüm</item>
+        <item quantity="other">Sonraki %d okunmayan</item>
+    </plurals>
+    <string name="download_ahead_info">Önceden indir yalnızca kitaplıktaki girdiler için ve okunan son bölüm indirildiyse geçerlidir</string>
+    <string name="pref_manage_notifications">Bildirimleri yönet</string>
+    <string name="battery_not_low">Pil düşük değil</string>
+    <string name="faq_and_guides">SSS ve Kılavuzlar</string>
+    <string name="learn_why">Nedenini öğrenin</string>
 </resources>

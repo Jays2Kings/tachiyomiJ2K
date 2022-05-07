@@ -129,7 +129,6 @@
     <string name="chapter_">Capítulo %1$s</string>
     <string name="downloading">Descargando</string>
     <string name="downloading_progress">Descargando (%1$d/%2$d)</string>
-    <string name="next_5_unread">Descargar siguientes 5 capítulos</string>
     <string name="all_chapters">Todos</string>
     <string name="all_unread_chapters">Descargar no leídos</string>
     <!-- MyAnimeList fragment -->
@@ -228,7 +227,7 @@
     <string name="backup_location">Directorio de copia de seguridad</string>
     <string name="backup_frequency">Frecuencia de respaldo</string>
     <string name="max_auto_backups">Máximos respaldos automáticos</string>
-    <string name="backup_created">Se ha creado la copia de respaldo</string>
+    <string name="backup_created">Copia de seguridad creada</string>
     <string name="restore_completed">Restauración completada</string>
     <string name="what_should_backup">¿Qué deseas respaldar\?</string>
     <string name="restoring_backup">Restaurando copia de seguridad</string>
@@ -412,7 +411,6 @@
     <string name="add_x_to_library">¿Agregar %1$s a la biblioteca\?</string>
     <string name="all_but_bookmarked_chapters">Todos menos los capítulos marcados</string>
     <string name="all_read_chapters">Todos los leídos</string>
-    <string name="next_unread_chapter">Siguiente capítulo sin leer</string>
     <string name="search_chapters">Buscar capítulos</string>
     <string name="select_ending_chapter">Seleccionar capítulo final</string>
     <string name="select_starting_chapter">Seleccionar capítulo inicial</string>
@@ -888,7 +886,7 @@
     <string name="by_chapter_number">Por número de capítulo</string>
     <string name="by_source_order">Por orden de la fuente</string>
     <string name="not_bookmarked">Sin marcar</string>
-    <string name="name">Español</string>
+    <string name="name">Nombré</string>
     <string name="recently_installed">Instalado recientemente</string>
     <string name="recently_updated">Actualizado recientemente</string>
     <string name="some_extensions_may_not_update">Es posible que algunas extensiones no se actualicen automáticamente si fueron instaladas fuera de esta aplicación</string>
@@ -936,7 +934,7 @@
     <string name="keep_in_">Mantener en %1$s</string>
     <string name="channel_errors">Errores</string>
     <string name="scanlators">Sanlations</string>
-    <string name="notification_size_warning">Las actualizaciones grandes pueden implicar un mayor uso de la batería y a que las fuentes se vuelvan más lentas</string>
+    <string name="notification_size_warning">Las actualizaciones grandes pueden implicar un mayor uso de la batería y que las fuentes se vuelvan más lentas. Haz click para saber más.</string>
     <string name="show_in_sources_and_extensions">Mostrar en la lista de fuentes y extensiones</string>
     <string name="show_outline_around_covers">Portadas con borde grueso</string>
     <string name="ext_installer_shizuku_stopped">Shizuku no está activo</string>
@@ -1003,4 +1001,24 @@
     <string name="clear_history_confirmation">¿Estás seguro\? Perderás todo el historial.</string>
     <string name="backup_restore_invalid_uri">Error: dirección URI vacía</string>
     <string name="backup_info">Es una buena idea tener copias de respaldo automáticas, así como respaldarlas fuera de tu dispositivo.</string>
+    <string name="use_staggered_grid">Usar cuadrícula escalonada</string>
+    <string name="pref_update_only_completely_read_summary">Sólo actualizar el manga si no hay capítulos sin leer (leído completamente)</string>
+    <string name="view_all">Ver todo</string>
+    <string name="update_tracking_after_reading">Actualizar el seguimiento después de leer</string>
+    <string name="update_tracking_marked_read">Actualizar el seguimiento cuando se marque como leído</string>
+    <string name="must_view_details_before_migration">La página de detalles de esta entrada debe verse antes de poder migrar</string>
+    <string name="most_entries">Más entradas</string>
+    <string name="select_uninstalled_sources">Seleccionar fuentes desinstaladas</string>
+    <string name="downloads_swipe_tutorial">Las descargas pueden ser canceladas deslizándolas hacia fuera
+\nDesliza esto para descartarlo</string>
+    <string name="download_ahead">Descargar por delante</string>
+    <string name="auto_download_after_reading">Descargar los próximos capítulos no leídos después de leer</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Siguiente capítulo no leído</item>
+        <item quantity="other">Siguientes %d no leídos</item>
+    </plurals>
+    <string name="download_ahead_info">Descargar adelante solo se aplica a las entradas en la biblioteca y si se descargó el último capítulo</string>
+    <string name="pref_manage_notifications">Gestionar notificaciones</string>
+    <string name="battery_not_low">Batería cargada</string>
+    <string name="faq_and_guides">Guías y soluciones</string>
 </resources>

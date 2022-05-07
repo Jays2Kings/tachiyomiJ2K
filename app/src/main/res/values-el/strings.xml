@@ -206,7 +206,6 @@
     <string name="downloading">Γίνεται λήψη</string>
     <string name="downloading_progress">Λήψη (%1$d/%2$d)</string>
     <string name="paused">Σε παύση</string>
-    <string name="next_5_unread">Λήψη επόμενων 5 κεφαλαίων</string>
     <string name="custom_range">Προσαρμοσμένο εύρος</string>
     <string name="all_chapters">Λήψη όλων</string>
     <string name="all_unread_chapters">Λήψη μη αναγνωσμένων</string>
@@ -666,7 +665,6 @@
     <string name="add_x_to_library">Προσθήκη %1$s στη βιβλιοθήκη;</string>
     <string name="all_but_bookmarked_chapters">Όλα εκτός από τα κεφάλαια με σελιδοδείκτες</string>
     <string name="all_read_chapters">Όλα τα κεφάλαια που έχουν διαβαστεί</string>
-    <string name="next_unread_chapter">Επόμενο μη αναγνωσμένο κεφάλαιο</string>
     <string name="search_chapters">Αναζήτηση κεφαλαίων</string>
     <string name="select_ending_chapter">Επιλέξτε κεφάλαιο λήξης</string>
     <string name="select_starting_chapter">Επιλογή κεφαλαίου έναρξης</string>
@@ -906,7 +904,7 @@
     <string name="scanlators">Scanlators</string>
     <string name="channel_errors">Σφάλματα</string>
     <string name="show_in_sources_and_extensions">Εμφάνιση στις λίστες πηγών και επεκτάσεων</string>
-    <string name="notification_size_warning">Οι μεγάλες ενημερώσεις μπορεί να οδηγήσουν σε αυξημένη χρήση της μπαταρίας και οι πηγές να γίνουν πιο αργές</string>
+    <string name="notification_size_warning">Οι μεγάλες ενημερώσεις μπορεί να οδηγήσουν σε αυξημένη χρήση της μπαταρίας και οι πηγές να γίνουν πιο αργές. Πατήστε για να μάθετε περισσότερα.</string>
     <string name="show_outline_around_covers">Εμφάνιση περιγράμματος γύρω από τα εξώφυλλα</string>
     <string name="ext_installer_shizuku_stopped">Το Shizuku δεν τρέχει</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Εγκαταστήστε και ξεκινήστε το Shizuku για να χρησιμοποιήσετε το Shizuku ως πρόγραμμα εγκατάστασης επεκτάσεων.</string>
@@ -966,7 +964,6 @@
     <string name="use_staggered_grid">Χρήση κλιμακωτού πλέγματος</string>
     <string name="pref_update_only_completely_read_summary">Ενημερώστε το manga μόνο εάν δεν υπάρχει μη αναγνωσμένο κεφάλαιο (πλήρως διαβασμένο)</string>
     <string name="view_all">Προβολή όλων</string>
-    <string name="learn_more_at_">Μάθετε περισσότερα στο: %1$s</string>
     <string name="show_">Εμφάνιση %1$s</string>
     <string name="update_tracking_marked_read">Ενημέρωση παρακολούθησης όταν επισημανθεί ως αναγνωσμένη</string>
     <string name="zoom_double_page_spreads">Μεγέθυνση σε ανάπτυγμα διπλής σελίδας</string>
@@ -983,4 +980,15 @@
     <string name="clear_history_confirmation">Είστε σίγουροι\? Όλο το ιστορικό θα χαθεί.</string>
     <string name="backup_restore_invalid_uri">Σφάλμα: κενό URI</string>
     <string name="backup_info">Συνιστάται ιδιαίτερα η δημιουργία αυτόματων αντιγράφων ασφαλείας. Θα πρέπει να διατηρείτε αντίγραφα και σε άλλα μέρη.</string>
+    <string name="battery_not_low">Η μπαταρία δεν είναι χαμηλή</string>
+    <string name="pref_manage_notifications">Διαχείριση ειδοποιήσεων</string>
+    <string name="faq_and_guides">Συχνές ερωτήσεις και οδηγοί</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Επόμενο αδιάβαστο κεφάλαιο</item>
+        <item quantity="other">Επόμενο %d κεφάλαιο</item>
+    </plurals>
+    <string name="auto_download_after_reading">Λήψη των επόμενων αδιάβαστων κεφαλαίων μετά την ανάγνωση</string>
+    <string name="learn_why">Μάθετε γιατί</string>
+    <string name="download_ahead">Λήψη εκ των προτέρων</string>
+    <string name="download_ahead_info">Η λήψη εκ των προτέρων ισχύει μόνο για καταχωρήσεις στη βιβλιοθήκη και εάν έγινε λήψη του τελευταίου κεφαλαίου που διαβάστηκε</string>
 </resources>

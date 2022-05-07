@@ -206,7 +206,6 @@
     <string name="downloading">Preuzima se</string>
     <string name="downloading_progress">Preuzimam (%1$d/%2$d)</string>
     <string name="paused">Паузирано</string>
-    <string name="next_5_unread">Preuzmi 5 narednih poglavlja</string>
     <string name="custom_range">Preuzmi određeno</string>
     <string name="all_chapters">Preuzmi sve</string>
     <string name="all_unread_chapters">Preuzmi nepročitano</string>
@@ -498,7 +497,6 @@
     <string name="no_description">Nema opisa</string>
     <string name="mark_all_chapters_as_unread">Označi sva poglavlja kao nepročitane\?</string>
     <string name="select_starting_chapter">Izaberite početno poglavlje</string>
-    <string name="next_unread_chapter">Sledeće nepročitano poglavlje</string>
     <string name="show_downloaded_chapters">Pokaži preuzeta poglavlja</string>
     <string name="show_unread_chapters">Pokaži nepročitana poglavlja</string>
     <string name="hide_chapter_titles">Sakriti naslove poglavlja</string>
@@ -998,11 +996,13 @@
     <string name="clear_history">Избриши историју</string>
     <string name="clear_history_completed">Историја је избрисана</string>
     <string name="clear_history_confirmation">Да ли сте сигурни\? Цела историја ће бити изгубљена.</string>
-    <string name="learn_more_at_">Saznajte više na: %1$s</string>
     <string name="view_all">Pogledati sve</string>
     <string name="select_uninstalled_sources">Izaberite deinstalirane izvore</string>
     <string name="downloads_swipe_tutorial">Preuzimanja se mogu otkazati prevlačenjem
 \nPrevocite ovaj savet kako biste ga odbacili</string>
     <string name="backup_restore_invalid_uri">Greška: prazan URI</string>
     <string name="backup_info">Препоручује се аутоматско прављење резервне копије. Чувајте копије и на другим местима.</string>
+    <string name="pref_manage_notifications">Управљај обавештењима</string>
+    <string name="battery_not_low">Baterija nije prazna</string>
+    <string name="faq_and_guides">Pitanja i vodiči</string>
 </resources>

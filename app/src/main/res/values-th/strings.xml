@@ -207,7 +207,6 @@
     <string name="downloading">กำลังดาวน์โหลด</string>
     <string name="downloading_progress">กำลังดาวน์โหลด (%1$d/%2$d)</string>
     <string name="paused">หยุดชั่วคราว</string>
-    <string name="next_5_unread">5 ตอนที่ยังไม่ได้อ่านถัดไป</string>
     <string name="custom_range">กำหนดเอง</string>
     <string name="all_chapters">ทุกตอน</string>
     <string name="all_unread_chapters">ตอนที่ยังไม่ได้อ่านทั้งหมด</string>
@@ -592,7 +591,6 @@
     <string name="no_description">ไม่มีคำอธิบาย</string>
     <string name="mark_all_chapters_as_read">ทำเครื่องหมายทุกตอนว่าอ่านแล้ว\?</string>
     <string name="mark_all_chapters_as_unread">ทำเครื่องหมายทุกตอนว่ายังไม่ได้อ่าน\?</string>
-    <string name="next_unread_chapter">ตอนที่ยังไม่ได้อ่านถัดไป</string>
     <string name="all_but_bookmarked_chapters">ทั้งหมดยกเว้นตอนที่บุ๊กมาร์กไว้</string>
     <string name="add_x_to_library">เพิ่ม%1$sไปในคลัง\?</string>
     <string name="show_bookmarked_chapters">แสดงตอนที่บุ๊กมาร์กไว้</string>
@@ -949,7 +947,6 @@
     <string name="most_entries">รายการที่มากที่สุด</string>
     <string name="use_staggered_grid">ตารางแบบถมที่</string>
     <string name="pref_update_only_completely_read_summary">อัปเดตเฉพาะที่ไม่มีตอนที่ยังไม่ได้อ่าน (อ่านจนหมดแล้ว)</string>
-    <string name="learn_more_at_">เรียนรู้เพิ่มเติมที่: %1$s</string>
     <string name="update_tracking_after_reading">อัปเดตการติดตามหลังจากอ่าน</string>
     <string name="view_all">ดูทั้งหมด</string>
     <string name="show_">แสดง%1$s</string>
@@ -962,4 +959,14 @@
 \nปัดเพื่อปิดเคล็ดลับนี้</string>
     <string name="backup_restore_invalid_uri">เกิดข้อผิดพลาด: URI ว่างเปล่า</string>
     <string name="backup_info">ขอแนะนำให้สำรองข้อมูลอัตโนมัติ คุณควรเก็บสำเนาไว้ที่อื่นด้วยเช่นกัน</string>
+    <string name="download_ahead_info">ดาวน์โหลดล่วงหน้าจะใช้ได้เฉพาะกับรายการในคลังและเมื่อตอนที่อ่านตอนล่าสุดถูกดาวน์โหลดไว้</string>
+    <string name="download_ahead">ดาวน์โหลดล่วงหน้า</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">%d ตอนต่อไปที่ยังไม่ได้อ่าน</item>
+    </plurals>
+    <string name="auto_download_after_reading">ดาวน์โหลดตอนที่ยังไม่ได้อ่านถัดไปหลังจากอ่าน</string>
+    <string name="pref_manage_notifications">จัดการการแจ้งเตือน</string>
+    <string name="battery_not_low">แบตเตอรี่ยังไม่ต่ำ</string>
+    <string name="faq_and_guides">คำถามที่พบบ่อยและคู่มือ</string>
+    <string name="learn_why">เรียนรู้ว่าทำไม</string>
 </resources>

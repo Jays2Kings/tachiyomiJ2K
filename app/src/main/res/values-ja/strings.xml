@@ -168,7 +168,7 @@
     <string name="reading">読書中</string>
     <string name="dropped">放棄済み</string>
     <string name="on_hold">保留中</string>
-    <string name="plan_to_read">読むつもり</string>
+    <string name="plan_to_read">読む予定</string>
     <string name="paused">一時停止</string>
     <string name="rereading">読み直している</string>
     <string name="score">評価</string>
@@ -530,7 +530,6 @@
     <string name="reset_chapter_history">章の履歴をリセット</string>
     <string name="search_suggestions">検索候補</string>
     <string name="more_library_settings">ライブラリの詳細設定</string>
-    <string name="next_5_unread">次の5件の未読</string>
     <string name="search_extensions">拡張機能を検索…</string>
     <string name="show_updated_time">更新時間を表示</string>
     <string name="all_sources">全てのソース</string>
@@ -548,7 +547,6 @@
     <string name="all_unread_chapters">全ての未読の章</string>
     <string name="all_chapters">全ての章</string>
     <string name="custom_range">カスタム範囲</string>
-    <string name="next_unread_chapter">次の未読の章</string>
     <string name="page_">%1$dページ</string>
     <string name="sort_and_filter">ソート＆フィルター</string>
     <string name="mark_previous_as_unread">前の章を未読にする</string>
@@ -955,10 +953,12 @@
     <string name="webview_data_deleted">WebViewデータを消去しました</string>
     <string name="most_entries">項目数</string>
     <string name="select_uninstalled_sources">未インストールのソースを選択</string>
-    <string name="learn_more_at_">詳しくは：%1$s</string>
     <string name="pref_clear_webview_data">WebViewデータを消去</string>
     <string name="downloads_swipe_tutorial">外へスワイプしてダウンロードをキャンセルできます
 \nこのTipsをスワイプして消せます</string>
     <string name="backup_restore_invalid_uri">エラー：URIは空です</string>
     <string name="backup_info">バックアップの自動作成は強く推奨されます。ほかの場所にもコピーを保管してください。</string>
+    <string name="pref_manage_notifications">通知設定</string>
+    <string name="battery_not_low">バッテリー残量が低くない</string>
+    <string name="faq_and_guides">よくあるご質問とガイド</string>
 </resources>

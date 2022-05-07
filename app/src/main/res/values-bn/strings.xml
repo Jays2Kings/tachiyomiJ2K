@@ -180,7 +180,6 @@
     <string name="downloading">ডাউনলোড হচ্ছে</string>
     <string name="downloading_progress">ডাউনলোড হচ্ছে (%1$d/%2$d)</string>
     <string name="paused">বিরতি</string>
-    <string name="next_5_unread">পরবর্তী ৫ অধ্যায় ডাউনলোড করুন</string>
     <string name="all_chapters">সব ডাউনলোড করুন</string>
     <string name="all_unread_chapters">অপঠিতগুলো ডাউনলোড করুন</string>
     <string name="reading">পড়া হচ্ছে</string>
@@ -446,7 +445,6 @@
     <string name="add_x_to_library">%1$sকে লাইব্রেরিতে যুক্ত করুন\?</string>
     <string name="all_but_bookmarked_chapters">বুকমার্ক করা অধ্যায়গুলো ছাড়া সমস্ত</string>
     <string name="all_read_chapters">সকল পঠিত অধ্যায়</string>
-    <string name="next_unread_chapter">পরবর্তী অপঠিত অধ্যায়</string>
     <string name="search_chapters">অধ্যায়গুলো অনুসন্ধান করুন</string>
     <string name="select_ending_chapter">শেষ অধ্যায় নির্বাচন করুন</string>
     <string name="select_starting_chapter">শুরুর অধ্যায় নির্বাচন করুন</string>
@@ -932,4 +930,5 @@
     <string name="clear_history_completed">ইতিহাস মুছে ফেলা হয়েছে</string>
     <string name="clear_history_confirmation">আপনি নিশ্চিত\? সব ইতিহাস মুছে যাবে।</string>
     <string name="backup_info">স্বয়ংক্রিয় ব্যাকআপ অত্যন্ত সুপারিশময়. আপনি অন্যান্য জায়গায়ও কপি রাখা উচিত।</string>
+    <string name="pref_manage_notifications">বিজ্ঞপ্তিগুলি নিয়ন্ত্রণ করুন</string>
 </resources>
