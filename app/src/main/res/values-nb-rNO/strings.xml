@@ -402,7 +402,6 @@
     <string name="source_migration_guide">Veiledning for kildemigrering</string>
     <string name="nsfw_sources">Aldersgrense 18+ kilder</string>
     <string name="does_not_prevent_unofficial_nsfw">Dette forhindrer ikke uoffisielle eller potensielt feilaktig kategoriserte tillegg fra å vise innhold for 18+ i appen.</string>
-    <string name="hide_app_block_screenshots">Skjul programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
     <string name="label_global_search">Globalt søk</string>
     <string name="getting_started_guide">Oppstartsveiledning</string>
     <string name="source_unsupported">Kilde støttes ikke</string>
@@ -832,7 +831,6 @@
     <string name="remove_previous_tracker">Fjern forrige sporer\?</string>
     <string name="remove_tracking">Fjern sporing fra program</string>
     <string name="no_match_found">Resultatløst</string>
-    <string name="only_applies_silent_trackers">Har kun innvirkning på stille sporere, som Komga</string>
     <string name="track_when_adding_to_library">Hold oppsyn med når tillagt i bibliotek</string>
     <string name="not_tracked">Holdes ikke oppsyn med</string>
     <string name="filter_groups">Filtrer scanlator-grupper</string>
@@ -962,4 +960,5 @@
     <string name="pref_manage_notifications">Håndter merknader</string>
     <string name="battery_not_low">Batteri er ikke lavt</string>
     <string name="faq_and_guides">FAQ og guider</string>
+    <string name="secure_screen_summary">Sikker skjerm skjuler programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
 </resources>

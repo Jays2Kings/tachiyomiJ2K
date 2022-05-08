@@ -688,7 +688,6 @@
     <string name="restore_content_full">تم استيراد البيانات من ملف نسخ الاحتياطي.
 \n
 \nيتوجب تثبيت الإضافات المفقودة و تسجيل الدخول إلى منصات التعقب تالياً لاستعمالهم.</string>
-    <string name="hide_app_block_screenshots">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
     <string name="label_global_search">بحث شامل</string>
     <string name="disabled">معطل</string>
     <string name="landscape">افقي</string>
@@ -877,7 +876,6 @@
     <string name="no_match_found">لم يتم العثور على تطابق</string>
     <string name="source_unsupported">المصدر غير مدعوم</string>
     <string name="select_an_entry">إختر مانجا</string>
-    <string name="only_applies_silent_trackers">ينطبق فقط على خدمات التتبع الصامتة، مثل Komga</string>
     <string name="track_when_adding_to_library">تتبع عند الإضافة إلى المكتبة</string>
     <string name="set_as_default">تحديد كإفتراضي</string>
     <string name="add_tag">إضافة وسم</string>
@@ -1082,4 +1080,5 @@
         <item quantity="other">كل الفصول مقروءة</item>
     </plurals>
     <string name="learn_why">تَعَرَّفْ لماذا</string>
+    <string name="secure_screen_summary">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
 </resources>

@@ -726,7 +726,6 @@
     <string name="new_category">Neue Kategorie</string>
     <string name="add_x_to">Füge %1$s zu… hinzu</string>
     <string name="move_x_to">Verschiebe %1$s zu…</string>
-    <string name="hide_app_block_screenshots">App-Inhalte beim App-Wechseln verbergen und Screenshots blockieren</string>
     <string name="show_title_first">Zeige Titel zuerst</string>
     <string name="only_downloaded">Nur Heruntergeladene</string>
     <string name="only_unread">Nur Ungelesene</string>
@@ -829,7 +828,6 @@
     <string name="mark_range_as_read">Markiere einen Abschnitt von Kapiteln als gelesen</string>
     <string name="cancel_all_for_series">Alles für diese Serie abbrechen</string>
     <string name="app_shortcuts">App-Verknüpfungen</string>
-    <string name="only_applies_silent_trackers">Gilt nur für stille Tracker, wie z. B. Komga</string>
     <string name="include_">Einschließen: %s</string>
     <string name="exclude_">Ausschließen: %s</string>
     <string name="force_download_cache_refresh_summary">Dadurch wird der Herunterladen-Cache zur Neuberechnung gezwungen. Nützlich, wenn Sie Datenübertragungen außerhalb dieser Anwendungen geändert haben und möchten, dass die Anwendung sie aufhebt</string>
@@ -847,7 +845,6 @@
     <string name="dark_theme">Dunkelmodus</string>
     <string name="light_theme">Hellmodus</string>
     <string name="no_match_found">Keine Übereinstimmung gefunden</string>
-    <string name="track_when_adding_to_library">Nachverfolgen beim Hinzufügen zur Bibliothek</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d Aktualisierung ausstehend</item>
         <item quantity="other">%d Aktualisierungen ausstehend</item>
@@ -1025,4 +1022,5 @@
     <string name="pref_manage_notifications">Benachrichtigungen verwalten</string>
     <string name="battery_not_low">Akkuladung nicht niedrig</string>
     <string name="faq_and_guides">Häufige Fragen und Leitfäden</string>
+    <string name="secure_screen_summary">Sicherer Bildschirm verbirgt App-Inhalte beim Wechseln von Apps und blockiert Screenshots</string>
 </resources>

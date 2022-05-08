@@ -703,7 +703,6 @@
     <string name="crash_log_saved">Registros de travamento salvos</string>
     <string name="updated_to_">Atualizado para v%1$s</string>
     <string name="add_edit_categories">Adicionar/Editar categorias</string>
-    <string name="hide_app_block_screenshots">Oculta os conteúdos do aplicativo durante a troca de aplicativos e impede capturas de tela</string>
     <string name="add_x_to">Adicionar %1$s para…</string>
     <string name="move_x_to">Mover %1$s para…</string>
     <string name="category_cannot_be_blank">O nome da categoria não pode ficar vazio</string>
@@ -845,8 +844,6 @@
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">Não foi encontrado resultado similar</string>
     <string name="source_unsupported">Essa fonte não é suportada</string>
-    <string name="only_applies_silent_trackers">Aplicar apenas a rastreadores silenciosos, assim como o Komga</string>
-    <string name="track_when_adding_to_library">Rastrear ao adicionar a biblioteca</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d atualização pendente</item>
         <item quantity="other">%d atualizações pendentes</item>
@@ -1035,4 +1032,6 @@
     <string name="battery_not_low">Bateria não fraca</string>
     <string name="faq_and_guides">FAQ e Guias</string>
     <string name="learn_why">Saiba porque</string>
+    <string name="secure_screen_summary">A tela segura oculta os conteúdos do aplicativo durante a troca de aplicativos e impede capturas de tela</string>
+    <string name="open_in_app">Abrir no app</string>
 </resources>

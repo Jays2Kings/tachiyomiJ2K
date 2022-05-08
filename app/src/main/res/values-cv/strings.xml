@@ -428,7 +428,6 @@
     <string name="category_with_name_exists">Ҫакӑн пек ятлӑ пухмӑш пур-уш!</string>
     <string name="add_edit_categories">Пухмӑшсем хуш/тӳрлет</string>
     <string name="category">Пухмӑш</string>
-    <string name="hide_app_block_screenshots">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
     <string name="add_x_to">%1$s хуш…</string>
     <string name="move_x_to">%1$s куҫар…</string>
     <string name="long_press_category">Пухмӑша улӑштарма пус та тытса тӑр</string>

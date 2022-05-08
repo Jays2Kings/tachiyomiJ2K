@@ -397,7 +397,6 @@
     <string name="source_migration_guide">Hướng dẫn di chuyển nguồn</string>
     <string name="next_chapter">Chương kế tiếp</string>
     <string name="previous_chapter">Chương trước</string>
-    <string name="hide_app_block_screenshots">Ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp ảnh màn hình</string>
     <string name="label_global_search">Tìm kiếm toàn bộ</string>
     <string name="disabled">Vô hiệu hóa</string>
     <string name="requires_app_restart">Yêu cầu khởi động lại ứng dụng để có hiệu lực</string>
@@ -884,7 +883,6 @@
     <string name="show_recent_series">Hiện các loạt truyện gần đây</string>
     <string name="no_new_chapters_open_details">Khi không có các chương mới, thông tin chi tiết của loạt truyện sẽ mở lên thay</string>
     <string name="add_tag">Thêm nhãn</string>
-    <string name="only_applies_silent_trackers">Chỉ áp dụng cho các bộ theo dõi âm thầm, như Komga</string>
     <string name="strawberry_daiquiri">Chủ đề: Daiquiri Dâu Tây</string>
     <string name="a_brighter_you">Chủ đề: Một Con Người Bừng Sáng (Động)</string>
     <string name="by_default_side_nav_info">Mặc định, điều hướng bên cạnh sẽ dùng được cho các điện thoại và máy tính bảng nhất định khi nằm ngang, và luôn hiện lên ở các máy tính bảng to hơn</string>
@@ -892,7 +890,6 @@
     <string name="could_not_install_extension">Không thể cài đặt tiện ích mở rộng</string>
     <string name="force_download_cache_refresh_summary">Điều này sẽ bắt buộc phải tính toán lại bộ nhớ đệm phần tải xuống. Hữu dụng khi bạn thay đổi phần tải xuống ở ngoài ứng dụng và muốn ứng dụng biết được những thay đổi đó</string>
     <string name="extension_updates_pending">Cập nhật tiện ích mở rộng đang chờ</string>
-    <string name="track_when_adding_to_library">Theo dõi khi thêm vào thư viện</string>
     <string name="light_theme">Chủ đề sáng</string>
     <string name="dark_theme">Chủ đề tối</string>
     <string name="force_download_cache_refresh">Tính toán lại bộ nhớ đệm dùng để tải xuống</string>
@@ -995,4 +992,5 @@
     <string name="pref_manage_notifications">Quản lý thông báo</string>
     <string name="battery_not_low">Pin không quá ít</string>
     <string name="faq_and_guides">Câu Hỏi Thờng Gặp và Hướng Dẫn</string>
+    <string name="secure_screen_summary">Bảo vệ màn hình sẽ ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp ảnh màn hình</string>
 </resources>

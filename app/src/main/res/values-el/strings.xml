@@ -502,7 +502,6 @@
     <string name="saves_error_logs">Αποθηκεύει αρχεία καταγραφής σφαλμάτων σε ένα αρχείο για κοινή χρήση με τους προγραμματιστές</string>
     <string name="crash_log_saved">Τα αρχεία καταγραφής σφαλμάτων αποθηκεύτηκαν</string>
     <string name="updated_to_">Ενημερώθηκε σε v%1$s</string>
-    <string name="hide_app_block_screenshots">Απόκρυψη περιεχομένων εφαρμογής κατά την εναλλαγή εφαρμογών και τον αποκλεισμό στιγμιότυπων οθόνης</string>
     <string name="automatic_can_still_switch">Ενώ χρησιμοποιείτε την αυτόματη διάταξη σελίδας, μπορείτε να αλλάζετε διάταξη κατά την ανάγνωση χωρίς να παρακάμψετε αυτή τη ρύθμιση</string>
     <string name="use_default">Χρήση προεπιλογής</string>
     <string name="top">Κορυφή</string>
@@ -818,7 +817,6 @@
     <string name="strawberry_daiquiri">Strawberry Daiquiri</string>
     <string name="dark_theme">Σκοτεινό θέμα</string>
     <string name="light_theme">Φωτεινό θέμα</string>
-    <string name="only_applies_silent_trackers">Ισχύει μόνο για σιωπηλούς ιχνηλάτες, όπως η Komga</string>
     <string name="track_when_adding_to_library">Παρακολούθηση κατά την προσθήκη στη βιβλιοθήκη</string>
     <string name="set_as_default">Ορισμός ως προεπιλογή</string>
     <plurals name="_updates_pending">
@@ -991,4 +989,5 @@
     <string name="learn_why">Μάθετε γιατί</string>
     <string name="download_ahead">Λήψη εκ των προτέρων</string>
     <string name="download_ahead_info">Η λήψη εκ των προτέρων ισχύει μόνο για καταχωρήσεις στη βιβλιοθήκη και εάν έγινε λήψη του τελευταίου κεφαλαίου που διαβάστηκε</string>
+    <string name="secure_screen_summary">Η ασφαλής οθόνη αποκρύπτει τα περιεχόμενα εφαρμογών κατά την εναλλαγή εφαρμογών και εμποδίζει τα στιγμιότυπα οθόνης</string>
 </resources>

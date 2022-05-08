@@ -694,7 +694,6 @@
     </plurals>
     <string name="backup_in_progress">Il backup è già in corso</string>
     <string name="next">Successivo</string>
-    <string name="hide_app_block_screenshots">Nascondi i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
     <string name="disabled">Disabilitato</string>
     <string name="label_global_search">Ricerca globale</string>
     <string name="updates_and_history">Aggiornamenti e cronologia</string>
@@ -824,7 +823,6 @@
     <string name="light_theme">Tema chiaro</string>
     <string name="no_match_found">Nessun risultato trovato</string>
     <string name="source_unsupported">Fonte non supportata</string>
-    <string name="only_applies_silent_trackers">Si applica solo a tracker silenziosi, come Komga</string>
     <string name="track_when_adding_to_library">Track dopo aver aggiunto alla libreria</string>
     <string name="custom_manga_info">Informazioni manga personalizzate</string>
     <string name="ignore_cutout_areas">Ignora aree ritagliate</string>
@@ -1023,4 +1021,6 @@
     <string name="show_">Mostra %1$s</string>
     <string name="must_view_details_before_migration">La pagina di dettaglio di questa entità deve essere vista prima di poter migrare</string>
     <string name="faq_and_guides">Domande frequenti e guide</string>
+    <string name="learn_why">Scopri perché</string>
+    <string name="secure_screen_summary">Schermo sicuro nasconde i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
 </resources>

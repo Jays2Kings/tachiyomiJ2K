@@ -516,7 +516,6 @@
     <string name="crash_log_saved">Log kerusakan disimpan</string>
     <string name="updated_to_">Diperbaharui ke v%1$s</string>
     <string name="add_edit_categories">Tambah/Ubah Kategori</string>
-    <string name="hide_app_block_screenshots">Sembunyikan konten aplikasi saat berpindah aplikasi dan blokir tangkapan layar</string>
     <string name="show_unread_count">Tampilkan jumlah belum dibaca</string>
     <string name="show_unread_badges">Tampilkan penanda belum dibaca</string>
     <string name="hide_unread_badges">Sembunyikan tanda belum dibaca</string>
@@ -779,7 +778,6 @@
     <string name="all_files_permission_required">Perizinan berkas diperlukan</string>
     <string name="about_dont_kill_my_app">Beberapa pabrikan mempunyai batasan aplikasi tambahan yang mematikan layanan latar belakang. Website ini memiliki info lebih lanjut untuk memperbaikinya.</string>
     <string name="force_download_cache_refresh_summary">Hal ini akan memaksa cache unduhan untuk mengkalkulasi ulang. Berguna jika Anda memodifikasi unduhan di luar aplikasi ini dan ingin aplikasi ini untuk membacanya</string>
-    <string name="track_when_adding_to_library">Lacak ketika ditambahkan ke pustaka</string>
     <string name="some_extensions_may_prompt">Beberapa ekstensi masih mengingatkan untuk dipasang terlebih dulu.</string>
     <string name="could_not_install_extension">Tidak dapat memasang ekstensi</string>
     <string name="extensions_miui_warning">Optimisasi MIUI harus dinonaktifkan untuk memasang ekstensi.</string>
@@ -816,7 +814,6 @@
     <string name="light_theme">Tema terang</string>
     <string name="no_match_found">Tidak ditemukan</string>
     <string name="source_unsupported">Sumber tidak didukung</string>
-    <string name="only_applies_silent_trackers">Hanya berlaku pada pelacak senyap, seperti Komga</string>
     <string name="set_as_default">Setel sebagai default</string>
     <string name="add_tag">Tambahkan tag</string>
     <plurals name="_updates_pending">
@@ -958,7 +955,7 @@
     <string name="backup_restore_invalid_uri">Kesalahan: URI kosong</string>
     <string name="backup_info">Pencadangan otomatis sangat disarankan. Anda juga harus menyimpan duplikat di tempat lain.</string>
     <string name="use_staggered_grid">Gunakan grid jatuh</string>
-    <string name="zoom_double_page_spreads">Perbesar penyebaran halaman ganda</string>
+    <string name="zoom_double_page_spreads">Zoom pada halaman ganda</string>
     <string name="auto_download_after_reading">Unduh bab yang belum dibaca berikutnya setelah membaca</string>
     <plurals name="next_unread_chapters">
         <item quantity="other">%d belum dibaca</item>
@@ -969,4 +966,6 @@
     <string name="battery_not_low">Baterai tidak lemah</string>
     <string name="faq_and_guides">Tanya Jawab dan Panduan</string>
     <string name="learn_why">Pelajarilah alasannya</string>
+    <string name="secure_screen_summary">Sembunyikan konten aplikasi saat berpindah aplikasi dan blokir tangkapan layar</string>
+    <string name="open_in_app">Buka di Aplikasi</string>
 </resources>

@@ -400,7 +400,6 @@
     <string name="saves_error_logs">डेवलपर्स के साथ साझा करने के लिए फ़ाइल में त्रुटि लॉग सहेजता है</string>
     <string name="crash_log_saved">क्रैश लॉग सहेजे गए</string>
     <string name="updated_to_">v%1$s तक अद्यतन</string>
-    <string name="hide_app_block_screenshots">एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाएं और स्क्रीनशॉट ब्लॉक करें</string>
     <string name="label_global_search">विश्वीय खोज</string>
     <string name="cancel_all_for_series">इस श्रृंखला के लिए सभी रद्द करें</string>
     <string name="change">परिवर्तन</string>
@@ -559,4 +558,5 @@
     <string name="backup_info">स्वचालित बैकअप की अत्यधिक अनुशंसा की जाती है। आपको अन्य जगहों पर भी प्रतियां रखनी चाहिए।</string>
     <string name="pref_manage_notifications">सूचनाओं का प्रबंधन</string>
     <string name="faq_and_guides">सामान्य प्रश्नोत्तर और मार्गदर्शन</string>
+    <string name="secure_screen_summary">सुरक्षित स्क्रीन एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाता हैं और स्क्रीनशॉट ब्लॉक करता हैं</string>
 </resources>

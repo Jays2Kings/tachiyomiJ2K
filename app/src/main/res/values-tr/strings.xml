@@ -513,7 +513,6 @@
     <string name="restore_in_progress">Geri yükleme zaten devam ediyor</string>
     <string name="backup_in_progress">Yedekleme zaten devam ediyor</string>
     <string name="in_library">Kitaplıkta</string>
-    <string name="hide_app_block_screenshots">İçeriği uygulamaları değiştirirken gizle ve ekran görüntülerini engelle</string>
     <string name="flat_lime">Düz Kireç</string>
     <string name="hot_pink">Sıcak Pembe</string>
     <string name="spring_blossom">Bahar Çiçeği</string>
@@ -814,8 +813,6 @@
     <string name="light_theme">Aydınlık tema</string>
     <string name="no_match_found">Eşleşme bulunamadı</string>
     <string name="source_unsupported">Kaynak desteklenmiyor</string>
-    <string name="only_applies_silent_trackers">Yalnızca Komga gibi sessiz izleyiciler için geçerlidir</string>
-    <string name="track_when_adding_to_library">Kitaplığa eklerken izle</string>
     <plurals name="_updates_pending">
         <item quantity="one">1 güncelleme beklemede</item>
         <item quantity="other">%d güncelleme beklemede</item>
@@ -991,4 +988,6 @@
     <string name="battery_not_low">Pil düşük değil</string>
     <string name="faq_and_guides">SSS ve Kılavuzlar</string>
     <string name="learn_why">Nedenini öğrenin</string>
+    <string name="secure_screen_summary">Güvenli ekran, uygulamalar arasında geçiş yaparken uygulama içeriğini gizler ve ekran görüntüsü alınmasını engeller</string>
+    <string name="open_in_app">Uygulamada aç</string>
 </resources>

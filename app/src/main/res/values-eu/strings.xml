@@ -786,7 +786,6 @@
     <string name="failed_to_update_cover">Ezin izan da azala eguneratu</string>
     <string name="must_be_in_library_to_edit">Manga zure liburutegian egon behar da editatzeko</string>
     <string name="not_tracked">Jarraitu gabea</string>
-    <string name="track_when_adding_to_library">Jarraipena egin liburutegira gehitzean</string>
     <string name="only_applies_silent_trackers">Jarraitzaile isiletan soilik aplikatzen da, Komga-n adibidez</string>
     <string name="currently_reading">Une honetan irakurtzen</string>
     <string name="dropped">Alde batera utzia</string>
@@ -834,7 +833,6 @@
     <string name="hide_bottom_nav">Ezkutatu automatikoki beheko nabigazioa</string>
     <string name="pure_black_dark_mode">Beltz hutseko modu iluna</string>
     <string name="hides_on_scroll">Ezkutatu egiten da mugitzean</string>
-    <string name="hide_app_block_screenshots">Ezkutatu aplikazioaren edukia aplikazioak aldatzean eta blokeatu pantaila-argazkiak</string>
     <string name="check_for_updates">Bilatu eguneraketak</string>
     <string name="hide_notification_content">Ezkutatu jakinarazpenen edukia</string>
     <string name="starting_screen">Hasierako pantaila</string>
@@ -945,4 +943,5 @@
     <string name="backup_info">Babeskopia automatikoak oso gomendagarriak dira. Kopiak beste leku batzuetan ere gorde beharko zenituzke.</string>
     <string name="pref_manage_notifications">Kudeatu jakinarazpenak</string>
     <string name="faq_and_guides">Ohiko galderak eta gidak</string>
+    <string name="secure_screen_summary">Pantaila seguruak aplikazioaren edukia ezkutatzen du aplikazioak aldatzean, eta pantaila-argazkiak blokeatzen ditu</string>
 </resources>

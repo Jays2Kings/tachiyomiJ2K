@@ -188,7 +188,6 @@
     <string name="open_log">Atvērt žurnālfailu</string>
     <string name="next_chapter">Nākama nodaļa</string>
     <string name="previous_chapter">Iepriekšēja nodaļa</string>
-    <string name="hide_app_block_screenshots">Slēpt lietotnes saturu mainot lietotnes, un bloķēt ekrānuzņēmumus</string>
     <string name="label_global_search">Globālā meklēšana</string>
     <string name="invalid_backup_file_type">Nederīgs dublējuma faila tips: %1$s
 \nTam vajadzētu beigties ar .proto.gz vai .json.</string>

@@ -503,7 +503,6 @@
     <string name="file_picker_error">Nebyla nalezena žádná aplikace pro výběr souborů</string>
     <string name="pref_webtoon_side_padding">Boční odsazení</string>
     <string name="skip_filtered_chapters">Přeskočit filtrované kapitoly</string>
-    <string name="hide_app_block_screenshots">Skrýt obsah aplikace při přepínání aplikací a blokovat tvorbu snímků obrazovky</string>
     <string name="add_x_to">Přidat %1$s do…</string>
     <string name="move_x_to">Přesunout %1$s do…</string>
     <string name="category_cannot_be_blank">Název kategorie nemůže být prázdný</string>
@@ -780,4 +779,5 @@
     <string name="pref_manage_notifications">Spravovat oznámení</string>
     <string name="tap_to_learn_more">Klepnutím se dozvíte více</string>
     <string name="faq_and_guides">FAQ a Návody</string>
+    <string name="secure_screen_summary">Secure screen skryje obsah aplikace při přepínání aplikací a blokuje tvorbu snímků obrazovky</string>
 </resources>

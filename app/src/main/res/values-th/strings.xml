@@ -383,7 +383,6 @@
     <string name="invert_tapping">กลับด้านการแตะ</string>
     <string name="actions">การกระทำ</string>
     <string name="refresh_tracking">โหลดข้อมูลการติดตามใหม่</string>
-    <string name="hide_app_block_screenshots">ซ่อนเนื้อหาของแอปเมื่อสลับแอปและกันไม่ให้ถ่ายภาพหน้าจอ</string>
     <string name="hide_notification_content">ซ่อนเนื้อหาการแจ้งเตือน</string>
     <string name="security">ความปลอดภัย</string>
     <string name="backup_and_restore">สำรองข้อมูลและการเรียกคืน</string>
@@ -603,7 +602,6 @@
     <string name="reset_tags">รีเซ็ตแท็ก</string>
     <string name="reset_cover">รีเซ็ตปก</string>
     <string name="custom_manga_info">ข้อมูลมังงะกำหนดเอง</string>
-    <string name="track_when_adding_to_library">ติดตามเมื่อเพิ่มลงในคลัง</string>
     <string name="remove_tracking">ลบการติดตามออกจากแอพ</string>
     <string name="started_reading_date">วันที่เริ่มอ่าน</string>
     <string name="select_sources">เลื่อกแหล่งที่มา</string>
@@ -830,7 +828,6 @@
 \n
 \nต้องการลบการดาวน์โหลด\?</item>
     </plurals>
-    <string name="only_applies_silent_trackers">ใช้ได้เฉพาะกับตัวติดตามแบบพื้นหลังเท่านั้น เช่น Komga</string>
     <string name="currently_reading">กำลังอ่านขณะนี้</string>
     <string name="want_to_read">อยากอ่าน</string>
     <string name="last_used_library_recents">ใช้ล่าสุด (คลังและล่าสุด)</string>
@@ -969,4 +966,5 @@
     <string name="battery_not_low">แบตเตอรี่ยังไม่ต่ำ</string>
     <string name="faq_and_guides">คำถามที่พบบ่อยและคู่มือ</string>
     <string name="learn_why">เรียนรู้ว่าทำไม</string>
+    <string name="secure_screen_summary">หน้าจอปลอดภัยจะซ่อนเนื้อหาของแอปเมื่อสลับแอปและกันไม่ให้ถ่ายภาพหน้าจอ</string>
 </resources>

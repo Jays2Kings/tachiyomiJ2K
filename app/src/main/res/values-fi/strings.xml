@@ -727,7 +727,6 @@
     <string name="cutout_behavior_only_applies">Leikkausalueen toiminta pätee vain pystytilassa tietyissä skaalaustyypeissä</string>
     <string name="unread_or_downloaded">Lukematon tai ladattu</string>
     <string name="only_downloaded">Vain ladatut</string>
-    <string name="hide_app_block_screenshots">Piilota sovelluksen sisältö kun sovelluksia vaihdetaan ja estä kuvakaappauksien otto</string>
     <string name="follow_system_theme">Seuraa järjestelmän teemaa</string>
     <string name="midnight_dusk">Keskiyön hämärä</string>
     <string name="top">Ylin</string>
@@ -850,4 +849,5 @@
     <string name="clear_history_confirmation">Oletko varma\? Koko historia menetetään.</string>
     <string name="pref_manage_notifications">Hallitse ilmoituksia</string>
     <string name="faq_and_guides">Usein kysytyt kysymykset ja oppaat</string>
+    <string name="secure_screen_summary">Turvallinen ruutu piilottaa sovelluksen sisällön sovelluksia vaihdettaessa ja estää kuvakaappauksen ottamisen</string>
 </resources>

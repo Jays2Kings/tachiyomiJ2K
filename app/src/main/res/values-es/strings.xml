@@ -676,7 +676,6 @@
         <item quantity="one">%1$d capítulo</item>
         <item quantity="other">%1$d capítulos</item>
     </plurals>
-    <string name="hide_app_block_screenshots">Ocultar contenido de la aplicación al cambiar de aplicación y bloquear capturas de pantalla</string>
     <string name="add_x_to">Añadir %1$s a…</string>
     <string name="move_x_to">Mover %1$s a…</string>
     <string name="show_title_first">Mostrar el título primero</string>
@@ -844,7 +843,6 @@
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">No se han encontrado resultados iguales</string>
     <string name="source_unsupported">Fuente no soportada</string>
-    <string name="only_applies_silent_trackers">Solo aplicado en seguidores silenciosos tales como Komga</string>
     <string name="track_when_adding_to_library">Seguimiento al añadir a la biblioteca</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d actualización pendiente</item>
@@ -1021,4 +1019,5 @@
     <string name="pref_manage_notifications">Gestionar notificaciones</string>
     <string name="battery_not_low">Batería cargada</string>
     <string name="faq_and_guides">Guías y soluciones</string>
+    <string name="secure_screen_summary">Pantalla segura oculta el contenido al cambiar de aplicación y bloquea las capturas de pantalla</string>
 </resources>

@@ -439,7 +439,6 @@
     <string name="saves_error_logs">Desa els registres d\'errors en un fitxer perquè el pugueu compartir amb els desenvolupadors</string>
     <string name="crash_log_saved">S\'han desat els registres de fallades</string>
     <string name="updated_to_">S\'ha actualitzat a la v%1$s</string>
-    <string name="hide_app_block_screenshots">Amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
     <string name="label_global_search">Cerca global</string>
     <string name="cancel_all_for_series">Cancel·la-ho tot per a aquesta sèrie</string>
     <string name="portrait">Vertical</string>
@@ -604,4 +603,5 @@
     <string name="battery_not_low">Bateria no baixa</string>
     <string name="pref_manage_notifications">Gestiona les notificacions</string>
     <string name="faq_and_guides">PMF i guies</string>
+    <string name="secure_screen_summary">El mode discret amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
 </resources>

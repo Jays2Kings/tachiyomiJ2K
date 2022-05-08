@@ -729,7 +729,6 @@
     <string name="new_category">Nieuwe categorie</string>
     <string name="add_x_to">Voeg %1$s toe aan…</string>
     <string name="move_x_to">Verplaats %1$s naar…</string>
-    <string name="hide_app_block_screenshots">Verberg inhoud van app bij omschakelen tussen apps en blokkeer screenshots</string>
     <string name="follow_system_theme">Volg systeemthema</string>
     <string name="spring_blossom">Lentebloesem</string>
     <string name="midnight_dusk">Nachtschemering</string>
@@ -820,7 +819,6 @@
     <string name="light_theme">Licht thema</string>
     <string name="no_match_found">Geen overeenkomst gevonden</string>
     <string name="source_unsupported">Bron wordt niet ondersteund</string>
-    <string name="only_applies_silent_trackers">Alleen van toepassing op stille trackers, zoals Komga</string>
     <string name="track_when_adding_to_library">Tracken bij het toevoegen aan de bibliotheek</string>
     <string name="set_as_default">Instellen als standaard</string>
     <plurals name="_updates_pending">
@@ -954,4 +952,5 @@
     <string name="backup_info">Het is erg aangeraden om automatische back-ups te gebruiken en deze op meerdere plekken te bewaren.</string>
     <string name="pref_manage_notifications">Meldingen beheren</string>
     <string name="faq_and_guides">Veelgestelde vragen en handleidingen</string>
+    <string name="secure_screen_summary">Veilig scherm modus verbergt de inhoud van de app bij het wisselen en blokkeert schermafbeeldingen</string>
 </resources>

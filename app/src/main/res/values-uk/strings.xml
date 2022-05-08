@@ -678,7 +678,6 @@
     <string name="saves_error_logs">Зберігає логи помилок до файлу для надсилання розробникам</string>
     <string name="crash_log_saved">Логи падінь збережено</string>
     <string name="updated_to_">Оновлено до v%1$s</string>
-    <string name="hide_app_block_screenshots">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
     <string name="label_global_search">Глобальний пошук</string>
     <string name="cancel_all_for_series">Скасувати для усієї серії</string>
     <string name="about_dont_kill_my_app">У деяких виробників є додаткові обмеження, котрі вбивають фонові сервіси. На цьому сайті більше інформації з приводу того, як це виправити.</string>
@@ -787,7 +786,6 @@
     </plurals>
     <string name="share_first_page">Поділитися першою сторінкою</string>
     <string name="crop_borders_webtoon">Обрізати межі (Webtoon)</string>
-    <string name="track_when_adding_to_library">Відстежувати під час додавання до бібліотеки</string>
     <string name="remove_x_from_service_and_add_y">Вилучити %1$s з %2$s і додати %3$s</string>
     <string name="move_x_to">Перемістити %1$s до…</string>
     <string name="add_x_to">Додати %1$s до…</string>
@@ -807,7 +805,6 @@
     <string name="mark_all_chapters_as_unread">Позначити всі розділи як непрочитані\?</string>
     <string name="add_tag">Додати мітку</string>
     <string name="select_an_entry">Виберіть запис</string>
-    <string name="only_applies_silent_trackers">Використовується тільки до тихих відстежувачів, як-от Komga</string>
     <string name="remove_previous_tracker">Прибрати попереднє відстежування\?</string>
     <string name="keep_both_on_service">Зберегти обидва на %1$s і замінити тільки на пристрої</string>
     <string name="use_suggested_date">Використовувати запропоновану дату</string>
@@ -982,4 +979,5 @@
     <string name="backup_info">Наполегливо рекомендується використовувати автоматичне резервування. Також ви повинні зберігати копії в інших місцях.</string>
     <string name="pref_manage_notifications">Керування сповіщеннями</string>
     <string name="faq_and_guides">Довідка та FAQ</string>
+    <string name="secure_screen_summary">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
 </resources>

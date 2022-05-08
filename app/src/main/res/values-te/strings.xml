@@ -47,7 +47,6 @@
     <string name="secure_screen">తెరను సంరక్షించుము</string>
     <string name="side_nav_icon_alignment">ప్రక్క మార్గదర్శన చిహ్న యోజనము</string>
     <string name="pure_black_dark_mode">స్వచ్ఛమైన నలుపు వీక్షణ</string>
-    <string name="hide_app_block_screenshots">అనువర్తనములను మారునపుడు వర్తక విషయములను దాయుము మరియు తెర యొక్క చిత్రములను తీయుటను నిరోధించుము</string>
     <string name="hide_notification_content">సూచన విషయములను దాయుము</string>
     <string name="security">భద్రత</string>
     <string name="backup_and_restore">భద్రపరచడము మరియు పునరుద్ధారణ</string>

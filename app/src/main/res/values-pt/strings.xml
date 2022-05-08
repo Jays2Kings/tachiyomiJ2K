@@ -492,7 +492,6 @@
 \n
 \nPrecisas instalar as extensões em falta e iniciar sessão nos serviços de monitorização para usá-los depois.</string>
     <string name="next">Seguinte</string>
-    <string name="hide_app_block_screenshots">Esconder os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
     <string name="more_library_settings">Mais definições da biblioteca</string>
     <string name="hide_category_hopper">Esconder seletor de categorias</string>
     <string name="category_cannot_be_blank">O nome da categoria não pode ficar vazio</string>
@@ -853,7 +852,6 @@
     <string name="dark_theme">Tema escuro</string>
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">Não foi encontrado resultado similar</string>
-    <string name="only_applies_silent_trackers">Aplicar apenas a rastreadores silenciosos, assim como o Komga</string>
     <string name="track_when_adding_to_library">Rastrear ao adicionar a biblioteca</string>
     <string name="set_as_default">Definir como predefinição</string>
     <string name="add_tag">Adicionar tag</string>
@@ -1008,4 +1006,5 @@
     <string name="pref_manage_notifications">Gerir notificações</string>
     <string name="battery_not_low">Bateria não fraca</string>
     <string name="faq_and_guides">Perguntas frequentes e Guias</string>
+    <string name="secure_screen_summary">Ecrã seguro esconde os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
 </resources>

@@ -334,7 +334,6 @@
     <string name="next_chapter">Naredno poglavlje</string>
     <string name="previous_chapter">Prijašnje poglavlje</string>
     <string name="tracked">Praćeno</string>
-    <string name="hide_app_block_screenshots">Sakrij prikaz aplikacije kada mijenjate aplikaciju i blokiraj screenshot-ove</string>
     <string name="label_global_search">Pretraži globalno</string>
     <string name="cancel_all_for_series">Prekini sve za ovaj serijal</string>
     <plurals name="missing_chapters_warning">
@@ -683,7 +682,6 @@
     <string name="page_">Strana %1$d</string>
     <string name="filter_groups">Trazenje grupe prevodilaca</string>
     <string name="not_tracked">Nije praćeno</string>
-    <string name="track_when_adding_to_library">Pratite prilikom dodavanja u biblioteku</string>
     <string name="only_applies_silent_trackers">Odnosi se samo na nečujne tragače, kao što je Komga</string>
     <string name="show_unread_badges">Pokaži nepročitane serijale</string>
     <string name="last_read_">Zadnje pročitano %1$s</string>
@@ -1005,4 +1003,5 @@
     <string name="pref_manage_notifications">Управљај обавештењима</string>
     <string name="battery_not_low">Baterija nije prazna</string>
     <string name="faq_and_guides">Pitanja i vodiči</string>
+    <string name="secure_screen_summary">Сакриј приказ апликације приликом пребацивања између апликација и онемогући снимке екрана</string>
 </resources>

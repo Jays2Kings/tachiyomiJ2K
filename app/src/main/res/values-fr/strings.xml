@@ -719,7 +719,6 @@
         <item quantity="other">%1$d chapitres</item>
     </plurals>
     <string name="restore_in_progress">Restauration déjà en cours</string>
-    <string name="hide_app_block_screenshots">Cacher le contenu lors du changement d\'application et bloquer les captures d\'écran</string>
     <string name="selection">Sélection</string>
     <string name="move_to_">Déplacer vers %1$s</string>
     <string name="change">Changer</string>
@@ -838,8 +837,6 @@
     <string name="series_opens_new_chapters">Les raccourcis de la série ouvrent de nouveaux chapitres</string>
     <string name="yotsuba">Yotsuba</string>
     <string name="strawberry_daiquiri">Daiquiri fraise</string>
-    <string name="only_applies_silent_trackers">S\'applique uniquement aux trackers silencieux, comme Komga</string>
-    <string name="track_when_adding_to_library">Suivre lors de l\'ajout à la bibliothèque</string>
     <string name="global_updates">Mises à jour globales</string>
     <string name="open_random_series">Ouvrir une série aléatoire</string>
     <string name="show_number_of_items">Afficher le nombre d\'objets</string>
@@ -1025,4 +1022,6 @@
     <string name="learn_why">Apprendre pourquoi</string>
     <string name="auto_download_after_reading">Télécharger les prochains chapitres non lus après la lecture</string>
     <string name="download_ahead_info">Le téléchargement anticipé ne s\'applique qu\'aux entrées de la bibliothèque et si le dernier chapitre lu a été téléchargé</string>
+    <string name="secure_screen_summary">L\'écran sécurisé cache le contenu lors du changement d\'application et bloque les captures d\'écran</string>
+    <string name="open_in_app">Ouvrir dans l\'application</string>
 </resources>

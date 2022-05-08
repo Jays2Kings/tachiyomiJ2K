@@ -405,7 +405,6 @@
     <string name="saves_error_logs">產生錯誤記錄檔以便分享予開發人員</string>
     <string name="crash_log_saved">已產生當機記錄</string>
     <string name="updated_to_">已更新至 v%1$s</string>
-    <string name="hide_app_block_screenshots">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面</string>
     <string name="label_global_search">全域搜尋</string>
     <string name="portrait">直向</string>
     <string name="landscape">橫向</string>
@@ -664,4 +663,5 @@
     <string name="pref_manage_notifications">管理通知設定</string>
     <string name="battery_not_low">電量充足時</string>
     <string name="faq_and_guides">常見問題與指南</string>
+    <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面</string>
 </resources>

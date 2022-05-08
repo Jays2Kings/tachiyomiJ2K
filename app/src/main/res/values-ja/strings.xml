@@ -435,7 +435,6 @@
     <string name="saves_error_logs">開発者に渡すよう、エラーログを保存します</string>
     <string name="crash_log_saved">クラッシュログが保存されました</string>
     <string name="updated_to_">v%1$sに更新しました</string>
-    <string name="hide_app_block_screenshots">スクリーンショットを無効化し、「最近使ったアプリ」画面でアプリの内容を非表示にします</string>
     <string name="label_global_search">グローバル検索</string>
     <string name="not_downloaded">未ダウンロード</string>
     <string name="start_reading_chapter_">第%1$s章を読み始める</string>
@@ -819,7 +818,6 @@
     <string name="no_match_found">該当するものなし</string>
     <string name="source_unsupported">非対応ソースです</string>
     <string name="select_an_entry">項目を選択</string>
-    <string name="only_applies_silent_trackers">Komgaのようなサイレントトラッカーのみに適用します</string>
     <string name="track_when_adding_to_library">ライブラリに追加時に追跡をオン</string>
     <string name="set_as_default">既定として設定</string>
     <string name="add_tag">タグを追加</string>
@@ -961,4 +959,5 @@
     <string name="pref_manage_notifications">通知設定</string>
     <string name="battery_not_low">バッテリー残量が低くない</string>
     <string name="faq_and_guides">よくあるご質問とガイド</string>
+    <string name="secure_screen_summary">セキュア画面はアプリを切り替える時アプリの内容を非表示し、画面キャプチャを無効化します</string>
 </resources>

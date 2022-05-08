@@ -709,7 +709,6 @@
     <string name="unread_or_downloaded">未读或已下载</string>
     <string name="only_downloaded">仅已下载</string>
     <string name="cutout_behavior_only_applies">刘海屏区域行为仅适用于某些比例类型的竖屏模式</string>
-    <string name="hide_app_block_screenshots">在切换应用时隐藏此应用内容，并禁止截取屏幕截图</string>
     <string name="follow_system_theme">跟随系统主题</string>
     <string name="spring_blossom">春暖花开</string>
     <string name="midnight_dusk">午夜薄暮</string>
@@ -793,8 +792,6 @@
     <string name="light_theme">浅色主题</string>
     <string name="no_match_found">未找到匹配项</string>
     <string name="source_unsupported">图源不受支持</string>
-    <string name="only_applies_silent_trackers">仅适用于静默追踪器，例如 Komga</string>
-    <string name="track_when_adding_to_library">添加到书库时跟踪</string>
     <plurals name="_updates_pending">
         <item quantity="other">%d 个待处理更新</item>
     </plurals>
@@ -968,4 +965,6 @@
     <string name="battery_not_low">非低电量</string>
     <string name="faq_and_guides">常见问题和指南</string>
     <string name="learn_why">了解原因</string>
+    <string name="secure_screen_summary">切换应用程序时，安全屏幕隐藏应用程序内容，并阻止截屏</string>
+    <string name="open_in_app">在应用中打开</string>
 </resources>

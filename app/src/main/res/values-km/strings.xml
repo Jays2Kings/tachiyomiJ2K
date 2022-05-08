@@ -141,4 +141,5 @@
     <string name="tap_to_see_details">ប៉ះដើម្បីមើលលម្អិត</string>
     <string name="pref_manage_notifications">កំណត់ការជូនដំណឹង</string>
     <string name="faq_and_guides">FAQនិងមគ្គុទ្ទេសក៍</string>
+    <string name="secure_screen_summary">ការពារអេក្រង់លាក់contentរបស់កម្មវិធីនៅពេលswitchingកម្មីធីនិងប្លុកscreenshots</string>
 </resources>

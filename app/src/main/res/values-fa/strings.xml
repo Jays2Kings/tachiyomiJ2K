@@ -446,7 +446,6 @@
     <string name="unlock">قفل را باز کنید</string>
     <string name="unlock_library">برای دسترسی به کتابخانه قفل را باز کنید</string>
     <string name="manhua">مانهوا</string>
-    <string name="hide_app_block_screenshots">محتویات برنامه هنگام تعویض برنامه ها مخفی و از عکس گرفتن از صفحه برنامه جلوگیری شود</string>
     <string name="label_global_search">جست و جوی کامل</string>
     <string name="by_chapter_number">بر اساس شماره قسمت</string>
     <string name="by_update_date">بر اساس تاریخ آپلود</string>

@@ -669,7 +669,6 @@
     <string name="enable">Aktif</string>
     <string name="previous">Sebelumnya</string>
     <string name="menu">menu</string>
-    <string name="hide_app_block_screenshots">Sorok kandungan aplikasi apabila menukar aplikasi dan sekat tangkapan skrin</string>
     <string name="selection">Seleksi</string>
     <string name="preview">Pra tonton</string>
     <string name="move_to_">Pindah ke %1$s</string>
@@ -858,4 +857,5 @@
     <string name="pref_manage_notifications">Uruskan pemberitahuan</string>
     <string name="battery_not_low">Bateri tidak lemah</string>
     <string name="faq_and_guides">Soalan Lazim dan Panduan</string>
+    <string name="secure_screen_summary">Skrin selamat menyembunyikan kandungan aplikasi apabila menukar aplikasi dan sekat tangkapan skrin</string>
 </resources>

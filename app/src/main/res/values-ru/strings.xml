@@ -794,7 +794,6 @@
     <string name="unread_or_downloaded">Непрочитанные/Загруженные главы</string>
     <string name="only_downloaded">Загруженые главы</string>
     <string name="cutout_behavior_only_applies">Поведение области выреза применяется только в портретном режиме с определёнными типами масштабирования</string>
-    <string name="hide_app_block_screenshots">Скрыть содержимое приложения при переключении на «Недавние приложения», а также блокировать создание скриншотов</string>
     <string name="follow_system_theme">В соответствии с системной темой</string>
     <string name="spring_blossom">Весенний Цветок</string>
     <string name="midnight_dusk">Полночные Сумерки</string>
@@ -881,7 +880,6 @@
     <string name="light_theme">Светлая тема</string>
     <string name="no_match_found">Совпадений не найдено</string>
     <string name="source_unsupported">Источник не поддерживается</string>
-    <string name="only_applies_silent_trackers">Применимо только к бесшумным сервисам отслеживания, таким как Komga</string>
     <string name="track_when_adding_to_library">Отслеживать при добавлении в библиотеку</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d обновление ожидается</item>
@@ -1054,4 +1052,5 @@
     <string name="pref_manage_notifications">Управление уведомлениями</string>
     <string name="battery_not_low">Батарея заряжена</string>
     <string name="faq_and_guides">Руководства и FAQ</string>
+    <string name="secure_screen_summary">Защита экрана скрывает содержимое при переключении между приложениями, а также блокирует создание скриншотов</string>
 </resources>

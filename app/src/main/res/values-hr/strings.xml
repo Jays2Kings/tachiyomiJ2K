@@ -746,7 +746,6 @@
     <string name="cutout_behavior_only_applies">Ponašanje područja izreska primjenjuje se samo u uspravnom prikazu s određenim vrstama skaliranja</string>
     <string name="unread_or_downloaded">Nepročitane ili preuzete</string>
     <string name="only_downloaded">Samo preuzete</string>
-    <string name="hide_app_block_screenshots">Sakrij sadržaj programa prilikom prebacivanja između programa i blokiraj snimke ekrana</string>
     <string name="follow_system_theme">Slijedi temu sustava</string>
     <string name="spring_blossom">Proljetno cvjetanje</string>
     <string name="midnight_dusk">Ponoćni sumrak</string>
@@ -859,7 +858,6 @@
     <string name="light_theme">Svjetla tema</string>
     <string name="no_match_found">Ništa nije pronađeno</string>
     <string name="source_unsupported">Izvor nije podržan</string>
-    <string name="only_applies_silent_trackers">Primjenjuje se samo na usluge tihog praćenja kao što je Komga</string>
     <string name="track_when_adding_to_library">Prati prilikom dodavanja u biblioteku</string>
     <string name="set_as_default">Postavi kao standardno</string>
     <string name="add_tag">Dodaj oznaku</string>
@@ -974,4 +972,5 @@
     <string name="backup_info">Preporučuje se izrada automatskih sigurnosnih kopija. Čuvaj kopije i na drugim mjestima.</string>
     <string name="pref_manage_notifications">Upravljaj obavijestima</string>
     <string name="faq_and_guides">ČPP i vodiči</string>
+    <string name="secure_screen_summary">Siguran ekran skriva sadržaj programa prilikom prebacivanja između programa i blokira snimke ekrana</string>
 </resources>

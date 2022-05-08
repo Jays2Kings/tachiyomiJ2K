@@ -684,7 +684,6 @@
     <string name="ignore_cutout_areas">Ignora sas àreas segadas</string>
     <string name="cutout_area_behavior">Cumportamentu de s\'àrea de segadura</string>
     <string name="filter_languages">Filtra sas limbas</string>
-    <string name="hide_app_block_screenshots">Cua sos cuntenutos de s\'aplicatzione cando mudas de aplicatzione e bloca sas ischermadas</string>
     <string name="selection">Seletzione</string>
     <string name="preview">Antiprima</string>
     <string name="move_to_">Tràmuda cara a %1$s</string>
@@ -813,7 +812,6 @@
     <string name="light_theme">Tema craru</string>
     <string name="no_match_found">Perunu resurtadu agatadu</string>
     <string name="source_unsupported">Fonte non suportada</string>
-    <string name="only_applies_silent_trackers">S\'àplicat petzi a sos arrastadores a sa muda, che a Komga</string>
     <string name="track_when_adding_to_library">Arrastamentu a pustis de s\'annanghidura a sa biblioteca</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d agiornamentu in isetu</item>
@@ -972,4 +970,5 @@
     <string name="pref_manage_notifications">Amministra sas notìficas</string>
     <string name="battery_not_low">Bateria non bassa</string>
     <string name="faq_and_guides">PF e ghias</string>
+    <string name="secure_screen_summary">S\'ischermu seguru cuat sos cuntenutos de s\'aplicatzione cando mudas de aplicatzione e blocat sas ischermadas</string>
 </resources>

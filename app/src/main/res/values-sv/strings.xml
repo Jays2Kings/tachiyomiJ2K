@@ -626,7 +626,6 @@
     <string name="new_category">Ny kategori</string>
     <string name="add_x_to">Lägg till %1$s i…</string>
     <string name="move_x_to">Flytta %1$s till…</string>
-    <string name="hide_app_block_screenshots">Dölj app-innehåll när du byter appar, och blockera skärmdumpar</string>
     <string name="delete_all_covers__not_in_library_used_">Ta bort alla cachade omslag som inte finns i ditt bibliotek
 \nFör närvarande används: %1$s</string>
     <string name="clear_cached_covers_non_library">Rensa cachade omslag som inte finns i biblioteket</string>
@@ -813,7 +812,6 @@
     <string name="light_theme">Ljust tema</string>
     <string name="no_match_found">Inga träffar hittades</string>
     <string name="source_unsupported">Källan stöds inte</string>
-    <string name="only_applies_silent_trackers">Gäller endast för tysta spårare, t.ex. Komga</string>
     <string name="track_when_adding_to_library">Spåra när du lägger till i biblioteket</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d uppdatering väntar</item>
@@ -991,4 +989,5 @@
     <string name="auto_download_after_reading">Ladda ner nästa olästa kapitel efter läsning</string>
     <string name="download_ahead_info">Nedladdning framåt gäller endast för poster i biblioteket och om det senast lästa kapitlet har laddats ned</string>
     <string name="learn_why">Lär dig varför</string>
+    <string name="secure_screen_summary">Säker skärm döljer appinnehållet när du byter app och blockerar skärmdumpar</string>
 </resources>

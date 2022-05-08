@@ -443,7 +443,6 @@
     <string name="manhwa">Манхуа</string>
     <string name="next_chapter">Следваща глава</string>
     <string name="previous_chapter">Предишна глава</string>
-    <string name="hide_app_block_screenshots">Скрий съдържанието на приложението и блокирай скрийншотове</string>
     <string name="label_global_search">Глобално търсене</string>
     <string name="crash_log_saved">Записите са запазени</string>
     <string name="cover_saved">Корицата запазена</string>
@@ -842,7 +841,6 @@
 \nИзтриване на изтеглянето им\?</item>
     </plurals>
     <string name="not_tracked">Не се проследява</string>
-    <string name="track_when_adding_to_library">Проследяване при добавяне към библиотеката</string>
     <string name="only_applies_silent_trackers">Отнася се само за безшумни тракери, като Комга</string>
     <string name="light_theme">Светла тема</string>
     <string name="dark_theme">Тъмна тема</string>
@@ -969,4 +967,5 @@
     <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места.</string>
     <string name="pref_manage_notifications">Уведомления</string>
     <string name="faq_and_guides">Често задавани въпроси и ръководства</string>
+    <string name="secure_screen_summary">Скрий съдържанието на приложението и блокирай снимките на екрана</string>
 </resources>

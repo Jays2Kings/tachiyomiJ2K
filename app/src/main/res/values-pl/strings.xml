@@ -764,7 +764,6 @@
     <string name="hide_unread_badges">Ukryj plakietki nieprzeczytanych</string>
     <string name="enable">Włącz</string>
     <string name="add_edit_categories">Dodaj/Edytuj kategorie</string>
-    <string name="hide_app_block_screenshots">Ukryj zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
     <string name="label_global_search">Wyszukiwanie globalne</string>
     <string name="disabled">Wyłączone</string>
     <string name="cancel_all_for_series">Anuluj wszystko dla tego tytułu</string>
@@ -881,7 +880,6 @@
     <string name="incognito_mode">tryb Incognito</string>
     <string name="turn_off_">Wyłącz %s</string>
     <string name="turn_on_">Włącz %s</string>
-    <string name="only_applies_silent_trackers">Dotyczy tylko cichych trackerów, takich jak Komga</string>
     <string name="track_when_adding_to_library">Śledź w momencie dodawania do biblioteki</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d strona</item>
@@ -1050,4 +1048,5 @@
     <string name="move_series_to_top">Przenieś serię na górę</string>
     <string name="pref_manage_notifications">Zarządzaj powiadomieniami</string>
     <string name="faq_and_guides">FAQ i poradniki</string>
+    <string name="secure_screen_summary">Ukrywa zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
 </resources>

@@ -301,7 +301,6 @@
     <string name="tako">Tako</string>
     <string name="updated_to_">Ĝisdatigita al v%1$s</string>
     <string name="pure_black_dark_mode">Klara nigra</string>
-    <string name="hide_app_block_screenshots">Kaŝi aplikaĵan enhavon kiam ŝaltumas aplikaĵojn kaj malebligi ekrankopion</string>
     <string name="hide_notification_content">Kaŝi enhavon de sciigoj</string>
     <string name="backup_and_restore">Arkivi kaj restaŭri</string>
     <string name="restore_backup">Restaŭri savkopion</string>
