@@ -76,7 +76,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/title"
-            style="?textAppearanceTitleSmall"
+            style="?textAppearanceTitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -85,7 +85,6 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="?attr/colorOnBackground"
-            android:textSize="16sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@id/subtitle"
             app:layout_constraintVertical_chainStyle="packed"
@@ -99,7 +98,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/subtitle"
-            style="?textAppearanceBodySmall"
+            style="?textAppearanceBodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -107,7 +106,6 @@
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="?attr/colorOnBackground"
-            android:textSize="14sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -118,15 +116,13 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/body"
-            style="?textAppearanceBodySmall"
+            style="@style/TextAppearance.BodyMedium.ReducedSpace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
             android:ellipsize="end"
-            android:lineSpacingExtra="2dp"
             android:maxLines="2"
             android:textColor="?android:attr/textColorSecondary"
-            android:textSize="14sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@id/space"
             app:layout_constraintEnd_toStartOf="@id/button_layout"
@@ -134,7 +130,7 @@
             app:layout_constraintStart_toStartOf="@+id/title"
             app:layout_constraintTop_toBottomOf="@id/subtitle"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="3 Days ago" />
+            tools:text="Last Read Chapter 4\n3 Days ago" />
 
         <Space
             android:id="@+id/space"

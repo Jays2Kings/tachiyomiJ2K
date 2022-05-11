@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PointF
 import android.graphics.RectF
+import android.graphics.drawable.Animatable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.GestureDetector
@@ -23,8 +24,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
-import coil.load
+import coil.imageLoader
 import coil.request.CachePolicy
+import coil.request.ImageRequest
 import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.github.chrisbanes.photoview.PhotoView
@@ -47,7 +49,6 @@ import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.topCutoutInset
 import eu.kanade.tachiyomi.util.view.backgroundColor
 import eu.kanade.tachiyomi.util.view.isVisibleOnScreen
-import eu.kanade.tachiyomi.widget.GifViewTarget
 import eu.kanade.tachiyomi.widget.ViewPagerAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Default
@@ -62,6 +63,7 @@ import rx.schedulers.Schedulers
 import timber.log.Timber
 import uy.kohesive.injekt.injectLazy
 import java.io.InputStream
+import java.nio.ByteBuffer
 import java.util.concurrent.TimeUnit
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -554,7 +556,7 @@ class PagerPageHolder(
                     }
                 } else {
                     val imageView = initImageView()
-                    imageView.setImage(openStream!!)
+                    imageView.setAnimatedImage(openStream!!)
                     if (viewer.config.readerTheme >= 2 && page.bg != null) {
                         imageView.background = page.bg
                     }
@@ -705,7 +707,6 @@ class PagerPageHolder(
         if (imageView != null) return imageView!!
 
         imageView = PhotoView(context, null).apply {
-            layoutParams = LayoutParams(MATCH_PARENT, MATCH_PARENT)
             adjustViewBounds = true
             setZoomTransitionDuration(viewer.config.doubleTapAnimDuration)
             setScaleLevels(1f, 2f, 3f)
@@ -723,7 +724,7 @@ class PagerPageHolder(
                 },
             )
         }
-        addView(imageView)
+        addView(imageView, MATCH_PARENT, MATCH_PARENT)
         return imageView!!
     }
 
@@ -953,12 +954,30 @@ class PagerPageHolder(
     /**
      * Extension method to set a [stream] into this ImageView.
      */
-    private fun ImageView.setImage(stream: InputStream) {
-        this.load(stream.readBytes()) {
-            memoryCachePolicy(CachePolicy.DISABLED)
-            diskCachePolicy(CachePolicy.DISABLED)
-            target(GifViewTarget(this@setImage, progressBar, decodeErrorLayout))
+    fun ImageView.setAnimatedImage(image: Any) {
+        val data = when (image) {
+            is Drawable -> image
+            is InputStream -> ByteBuffer.wrap(image.readBytes())
+            else -> throw IllegalArgumentException("Not implemented for class ${image::class.simpleName}")
         }
+        val request = ImageRequest.Builder(context)
+            .data(data)
+            .memoryCachePolicy(CachePolicy.DISABLED)
+            .diskCachePolicy(CachePolicy.DISABLED)
+            .target(
+                onSuccess = { result ->
+                    setImageDrawable(result)
+                    (result as? Animatable)?.start()
+                    isVisible = true
+                    this@PagerPageHolder.onImageDecoded()
+                },
+                onError = {
+                    this@PagerPageHolder.onImageDecodeError()
+                },
+            )
+            .crossfade(false)
+            .build()
+        context.imageLoader.enqueue(request)
     }
 
     companion object {

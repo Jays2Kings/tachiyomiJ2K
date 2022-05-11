@@ -162,8 +162,9 @@ class SettingsLibraryController : SettingsController() {
             }
 
             triStateListPreference(activity) {
-                key = Keys.libraryUpdateCategories
-                excludeKey = Keys.libraryUpdateCategoriesExclude
+                preferences.apply {
+                    bindTo(libraryUpdateCategories(), libraryUpdateCategoriesExclude())
+                }
                 titleRes = R.string.categories
 
                 val categories = listOf(Category.createDefault(context)) + dbCategories

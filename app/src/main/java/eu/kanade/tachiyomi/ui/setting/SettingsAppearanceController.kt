@@ -136,11 +136,7 @@ class SettingsAppearanceController : SettingsController() {
             intListPreference(activity) {
                 key = Keys.sideNavIconAlignment
                 titleRes = R.string.side_nav_icon_alignment
-                entriesRes = arrayOf(
-                    R.string.top,
-                    R.string.center,
-                    R.string.bottom,
-                )
+                entriesRes = arrayOf(R.string.top, R.string.center, R.string.bottom)
                 entryRange = 0..2
                 defaultValue = 1
                 isVisible = max(

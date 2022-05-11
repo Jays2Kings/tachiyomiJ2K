@@ -99,18 +99,24 @@ fun Controller.setOnQueryTextChangeListener(
     )
 }
 
-fun Controller.removeQueryListener() {
-    val searchView = activityBinding?.searchToolbar?.menu?.findItem(R.id.action_search)?.actionView as? SearchView
-    val searchView2 = activityBinding?.toolbar?.menu?.findItem(R.id.action_search)?.actionView as? SearchView
-    searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-        override fun onQueryTextSubmit(query: String?) = true
-        override fun onQueryTextChange(newText: String?) = true
-    },
-    )
-    searchView2?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-        override fun onQueryTextSubmit(query: String?) = true
-        override fun onQueryTextChange(newText: String?) = true
-    },
+fun Controller.removeQueryListener(includeSearchTB: Boolean = true) {
+    val searchView =
+        activityBinding?.searchToolbar?.menu?.findItem(R.id.action_search)?.actionView as? SearchView
+    val searchView2 =
+        activityBinding?.toolbar?.menu?.findItem(R.id.action_search)?.actionView as? SearchView
+    if (includeSearchTB) {
+        searchView?.setOnQueryTextListener(
+            object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?) = true
+                override fun onQueryTextChange(newText: String?) = true
+            },
+        )
+    }
+    searchView2?.setOnQueryTextListener(
+        object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?) = true
+            override fun onQueryTextChange(newText: String?) = true
+        },
     )
 }
 
@@ -224,7 +230,7 @@ fun Controller.scrollViewWith(
     swipeRefreshLayout?.setDistanceToTriggerSync(150.dpToPx)
     val swipeCircle = swipeRefreshLayout?.findChild<ImageView>()
     activityBinding!!.appBar.doOnLayout {
-        if (fullAppBarHeight!! > 0) {
+        if (fullAppBarHeight!! > 0 && isControllerVisible) {
             appBarHeight = fullAppBarHeight!!
             recycler.requestApplyInsets()
         }
@@ -479,7 +485,7 @@ fun Controller.scrollViewWith(
                             if (activityBinding!!.bottomNav?.isVisible == true &&
                                 preferences.hideBottomNavOnScroll().get()
                             ) closerToBottom else closerToTop
-                        lastY = activityBinding!!.appBar.snapAppBarY(recycler) {
+                        lastY = activityBinding!!.appBar.snapAppBarY(this@scrollViewWith, recycler) {
                             val activityBinding = activityBinding ?: return@snapAppBarY
                             swipeCircle?.translationY = max(
                                 activityBinding.appBar.y,
@@ -525,7 +531,9 @@ fun Controller.setItemAnimatorForAppBar(recycler: RecyclerView) {
             val duration = (recycler.itemAnimator?.changeDuration ?: 250) * 2
             itemAppBarAnimator = ValueAnimator.ofFloat(0f, 1f).apply {
                 addUpdateListener {
-                    activityBinding?.appBar?.updateAppBarAfterY(recycler)
+                    if (isControllerVisible) {
+                        activityBinding?.appBar?.updateAppBarAfterY(recycler)
+                    }
                 }
             }
             itemAppBarAnimator?.duration = duration

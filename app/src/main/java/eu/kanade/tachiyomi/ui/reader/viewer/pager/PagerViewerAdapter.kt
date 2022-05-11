@@ -309,8 +309,16 @@ class PagerViewerAdapter(private val viewer: PagerViewer) : ViewPagerAdapter() {
                     )
                 }
                 otherItems.getOrNull(pagedIndex)?.let {
-                    subJoinedItems.add(Pair(it, null))
-                    pagedIndex++
+                    val lastPage = subJoinedItems.lastOrNull()?.first as? ReaderPage
+                    if (lastPage == null || (
+                        if (it is ChapterTransition.Next) {
+                            it.from.chapter.id == lastPage.chapter.chapter.id
+                        } else true
+                        )
+                    ) {
+                        subJoinedItems.add(Pair(it, null))
+                        pagedIndex++
+                    }
                 }
             }
             if (viewer is R2LPagerViewer) {

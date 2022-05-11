@@ -216,7 +216,6 @@
     <string name="downloading">Dina-download</string>
     <string name="downloading_progress">Dina-download (%1$d/%2$d)</string>
     <string name="paused">Naka-tigil</string>
-    <string name="next_5_unread">I-download ang susunod na 5 kabanata</string>
     <string name="custom_range">Mag-download ng custom</string>
     <string name="all_chapters">I-download lahat</string>
     <string name="all_unread_chapters">I-download ang hindi na nababasa</string>

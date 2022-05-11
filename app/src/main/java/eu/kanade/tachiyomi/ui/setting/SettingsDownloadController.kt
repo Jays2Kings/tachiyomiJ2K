@@ -86,8 +86,9 @@ class SettingsDownloadController : SettingsController() {
                 titleRes = R.string.download_new_chapters
             }
             triStateListPreference(activity) {
-                key = Keys.downloadNewCategories
-                excludeKey = Keys.downloadNewCategoriesExclude
+                preferences.apply {
+                    bindTo(downloadNewChaptersInCategories(), excludeCategoriesInDownloadNew())
+                }
                 titleRes = R.string.categories
                 entries = categories.map { it.name }
                 entryValues = categories.map { it.id.toString() }

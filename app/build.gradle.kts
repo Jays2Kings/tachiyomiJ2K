@@ -119,6 +119,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    namespace = "eu.kanade.tachiyomi"
 }
 
 dependencies {
@@ -177,7 +178,7 @@ dependencies {
     debugImplementation("com.github.ChuckerTeam.Chucker:library:$chuckerVersion")
     releaseImplementation("com.github.ChuckerTeam.Chucker:library-no-op:$chuckerVersion")
 
-    implementation(kotlin("reflect", version = Versions.kotlin))
+    implementation(kotlin("reflect", version = AndroidVersions.kotlin))
 
     // JSON
     val kotlinSerialization =  "1.3.2"
@@ -213,8 +214,9 @@ dependencies {
     implementation("com.github.inorichi.storio:storio-sqlite:8be19de@aar")
 
     // Model View Presenter
-    implementation("info.android15.nucleus:nucleus:${Versions.NUCLEUS}")
-    implementation("info.android15.nucleus:nucleus-support-v7:${Versions.NUCLEUS}")
+    val nucleusVersion = "3.0.0"
+    implementation("info.android15.nucleus:nucleus:$nucleusVersion")
+    implementation("info.android15.nucleus:nucleus-support-v7:$nucleusVersion")
 
     // Dependency injection
     implementation("com.github.inorichi.injekt:injekt-core:65b0440")
@@ -271,7 +273,7 @@ dependencies {
     // Text distance
     implementation("info.debatty:java-string-similarity:2.0.0")
 
-    implementation("com.google.android.gms:play-services-oss-licenses:${Versions.OSS_LICENSE}")
+    implementation("com.google.android.gms:play-services-oss-licenses:17.0.0")
 
     // TLS 1.3 support for Android < 10
     implementation("org.conscrypt:conscrypt-android:2.5.2")

@@ -32,6 +32,7 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Locale
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys as Keys
+import eu.kanade.tachiyomi.data.preference.PreferenceValues as Values
 
 fun <T> Preference<T>.asImmediateFlow(block: (value: T) -> Unit): Flow<T> {
     block(get())
@@ -259,8 +260,8 @@ class PreferencesHelper(val context: Context) {
 
     fun libraryUpdateMangaRestriction() = flowPrefs.getStringSet("library_update_manga_restriction", setOf(MANGA_HAS_UNREAD, MANGA_NON_COMPLETED, MANGA_NON_READ))
 
-    fun libraryUpdateCategories() = flowPrefs.getStringSet(Keys.libraryUpdateCategories, emptySet())
-    fun libraryUpdateCategoriesExclude() = flowPrefs.getStringSet(Keys.libraryUpdateCategoriesExclude, emptySet())
+    fun libraryUpdateCategories() = flowPrefs.getStringSet("library_update_categories", emptySet())
+    fun libraryUpdateCategoriesExclude() = flowPrefs.getStringSet("library_update_categories_exclude", emptySet())
 
     fun libraryLayout() = flowPrefs.getInt(Keys.libraryLayout, LibraryItem.LAYOUT_COMFORTABLE_GRID)
 
@@ -308,8 +309,8 @@ class PreferencesHelper(val context: Context) {
 
     fun downloadNewChapters() = flowPrefs.getBoolean(Keys.downloadNew, false)
 
-    fun downloadNewChaptersInCategories() = flowPrefs.getStringSet(Keys.downloadNewCategories, emptySet())
-    fun excludeCategoriesInDownloadNew() = flowPrefs.getStringSet(Keys.downloadNewCategoriesExclude, emptySet())
+    fun downloadNewChaptersInCategories() = flowPrefs.getStringSet("download_new_categories", emptySet())
+    fun excludeCategoriesInDownloadNew() = flowPrefs.getStringSet("download_new_categories_exclude", emptySet())
 
     fun autoDownloadAfterReading() = flowPrefs.getInt("auto_download_after_reading", 0)
 
@@ -325,7 +326,7 @@ class PreferencesHelper(val context: Context) {
 
     fun lastUnlock() = flowPrefs.getLong(Keys.lastUnlock, 0)
 
-    fun secureScreen() = flowPrefs.getBoolean(Keys.secureScreen, false)
+    fun secureScreen() = flowPrefs.getEnum("secure_screen_v2", Values.SecureScreenMode.INCOGNITO)
 
     fun hideNotificationContent() = prefs.getBoolean(Keys.hideNotificationContent, false)
 

@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceScreen
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys
+import eu.kanade.tachiyomi.data.preference.PreferenceValues
 import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
 import eu.kanade.tachiyomi.util.system.AuthenticatorUtil.isAuthenticationSupported
@@ -46,21 +47,24 @@ class SettingsSecurityController : SettingsController() {
         }
 
         switchPreference {
-            key = PreferenceKeys.secureScreen
-            titleRes = R.string.secure_screen
-            summaryRes = R.string.hide_app_block_screenshots
-            defaultValue = false
-
-            onChange {
-                it as Boolean
-                SecureActivityDelegate.setSecure(activity, it)
-                true
-            }
-        }
-        switchPreference {
             key = PreferenceKeys.hideNotificationContent
             titleRes = R.string.hide_notification_content
             defaultValue = false
         }
+
+        listPreference(activity) {
+            bindTo(preferences.secureScreen())
+            titleRes = R.string.secure_screen
+            entriesRes = PreferenceValues.SecureScreenMode.values().map { it.titleResId }.toTypedArray()
+            entryValues = PreferenceValues.SecureScreenMode.values().map { it.name }
+
+            onChange {
+                it as String
+                SecureActivityDelegate.setSecure(activity)
+                true
+            }
+        }
+
+        infoPreference(R.string.secure_screen_summary)
     }
 }

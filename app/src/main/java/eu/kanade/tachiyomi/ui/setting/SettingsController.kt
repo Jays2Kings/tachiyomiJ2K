@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.preference.Preference
 import androidx.preference.PreferenceController
 import androidx.preference.PreferenceGroup
@@ -25,6 +26,7 @@ import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.main.FloatingSearchInterface
 import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.util.system.getResourceColor
+import eu.kanade.tachiyomi.util.view.activityBinding
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 import eu.kanade.tachiyomi.widget.LinearLayoutManagerAccurateOffset
 import kotlinx.coroutines.MainScope
@@ -129,6 +131,7 @@ abstract class SettingsController : PreferenceController() {
 
         (activity as? AppCompatActivity)?.title = getTitle()
         (activity as? MainActivity)?.searchTitle = getSearchTitle()
+        activityBinding?.bigIconLayout?.isVisible = false
     }
 
     override fun onChangeStarted(handler: ControllerChangeHandler, type: ControllerChangeType) {

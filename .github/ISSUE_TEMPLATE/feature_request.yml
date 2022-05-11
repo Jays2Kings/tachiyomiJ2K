@@ -35,9 +35,10 @@ body:
           required: true
         - label: If this is an issue with an extension, or a request for an extension, I should be opening an issue in the [extensions repository](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/new/choose).
           required: true
-        - label: I have updated the app to version **[1.5.0](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
+        - label: I have updated the app to version **[1.5.2](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
           required: true
         - label: I have checked through the app settings for my feature.
           required: true
+        - label: I have admitted that I am a clown to be laughed at by having checked this box, as I have not read these acknowledgements.
         - label: I will fill out all of the requested information in this form.
           required: true

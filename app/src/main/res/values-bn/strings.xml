@@ -180,7 +180,6 @@
     <string name="downloading">ডাউনলোড হচ্ছে</string>
     <string name="downloading_progress">ডাউনলোড হচ্ছে (%1$d/%2$d)</string>
     <string name="paused">বিরতি</string>
-    <string name="next_5_unread">পরবর্তী ৫ অধ্যায় ডাউনলোড করুন</string>
     <string name="all_chapters">সব ডাউনলোড করুন</string>
     <string name="all_unread_chapters">অপঠিতগুলো ডাউনলোড করুন</string>
     <string name="reading">পড়া হচ্ছে</string>
@@ -446,7 +445,6 @@
     <string name="add_x_to_library">%1$sকে লাইব্রেরিতে যুক্ত করুন\?</string>
     <string name="all_but_bookmarked_chapters">বুকমার্ক করা অধ্যায়গুলো ছাড়া সমস্ত</string>
     <string name="all_read_chapters">সকল পঠিত অধ্যায়</string>
-    <string name="next_unread_chapter">পরবর্তী অপঠিত অধ্যায়</string>
     <string name="search_chapters">অধ্যায়গুলো অনুসন্ধান করুন</string>
     <string name="select_ending_chapter">শেষ অধ্যায় নির্বাচন করুন</string>
     <string name="select_starting_chapter">শুরুর অধ্যায় নির্বাচন করুন</string>
@@ -551,7 +549,6 @@
     <string name="saves_error_logs">বিকাশকারীদের সাথে সেয়ার করার জন্য এরর লগগুলো একটি ফাইলে সংরক্ষণ করে</string>
     <string name="crash_log_saved">ক্র্যাশ লগগুলো সংরক্ষিত হয়েছে</string>
     <string name="updated_to_">হালনাগাদ করা হয়েছে v%1$s তে</string>
-    <string name="hide_app_block_screenshots">অ্যাপ পাল্টানোর সময় অ্যাপের কন্টেন্ট লুকান ও স্ক্রিনসট ব্লক করুন</string>
     <string name="series">সিরিজ</string>
     <string name="category_cannot_be_blank">বিভাগের নাম ফাঁকা থাকতে পারবে না</string>
     <string name="new_category">নতুন বিভাগ</string>
@@ -673,7 +670,6 @@
     <string name="only_enable_enabled_for_migration">মাইগ্রেশনের জন্য শুধুমাত্র বর্তমানে সক্রিয় উত্স সক্ষম কর</string>
     <string name="search_">%1$s অনুসন্ধান করুন</string>
     <string name="press_and_hold_to_also_reset">টিপুন এবং ধরে রাখা অধ্যায়ের ইতিহাস পুনরায় রিসেট করতে পারে</string>
-    <string name="only_applies_silent_trackers">শুধুমাত্র নীরব ট্র্যাকারের ক্ষেত্রে প্রযোজ্য, যেমন কমগা</string>
     <string name="starting_screen">শুরু স্ক্রীন</string>
     <string name="search_parameter_eg">অনুসন্ধান প্যারামিটার (যেমন ভাষা: ইংরেজি)</string>
     <string name="search_globally">বিশ্বব্যাপী \"%1$s\" অনুসন্ধান কর</string>
@@ -905,7 +901,6 @@
     <string name="select_none">কোন টাই সিলেক্ট কোরনা</string>
     <string name="sort_and_filter">সর্ট এবং ফিল্টার</string>
     <string name="notification_size_warning">বড় আপডেটের ফলে ব্যাটারি ব্যবহার বৃদ্ধি পেতে পারে এবং উত্সগুলি ধীর হয়ে যেতে পারে</string>
-    <string name="track_when_adding_to_library">লাইব্রেরিতে যোগ করার সময় ট্র্যাক কর</string>
     <string name="shift_one_page_over">এক পাতা শিফট কর</string>
     <string name="sort_by_ignoring_articles">নিবন্ধ উপেক্ষা করে সাজাও</string>
     <string name="fetched_">%1$s আনা হয়েছে</string>
@@ -932,4 +927,5 @@
     <string name="clear_history_completed">ইতিহাস মুছে ফেলা হয়েছে</string>
     <string name="clear_history_confirmation">আপনি নিশ্চিত\? সব ইতিহাস মুছে যাবে।</string>
     <string name="backup_info">স্বয়ংক্রিয় ব্যাকআপ অত্যন্ত সুপারিশময়. আপনি অন্যান্য জায়গায়ও কপি রাখা উচিত।</string>
+    <string name="pref_manage_notifications">বিজ্ঞপ্তিগুলি নিয়ন্ত্রণ করুন</string>
 </resources>

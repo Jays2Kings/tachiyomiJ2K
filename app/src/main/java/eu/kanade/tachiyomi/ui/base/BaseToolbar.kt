@@ -16,7 +16,7 @@ open class BaseToolbar @JvmOverloads constructor(context: Context, attrs: Attrib
 
     var router: Router? = null
     val onRoot: Boolean
-        get() = router?.backstackSize ?: 1 <= 1 && context !is SearchActivity
+        get() = router?.backstackSize ?: 1 <= 1 && router?.activity !is SearchActivity
 
     val canShowIncogOnMain: Boolean
         get() = router?.backstack?.lastOrNull()?.controller !is FloatingSearchInterface ||

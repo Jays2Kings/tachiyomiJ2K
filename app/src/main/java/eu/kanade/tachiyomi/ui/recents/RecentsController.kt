@@ -11,7 +11,6 @@ import android.view.MenuItem
 import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
@@ -28,7 +27,6 @@ import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import eu.davidea.flexibleadapter.FlexibleAdapter
-import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.backup.BackupRestoreService
 import eu.kanade.tachiyomi.data.database.models.History
@@ -480,21 +478,6 @@ class RecentsController(bundle: Bundle? = null) :
         }
         setBottomPadding()
         binding.downloadBottomSheet.dlBottomSheet.update(!presenter.downloadManager.isPaused())
-
-        if (BuildConfig.DEBUG && query.isBlank() && isControllerVisible) {
-            val searchItem =
-                (activity as? MainActivity)?.binding?.searchToolbar?.menu?.findItem(R.id.action_search)
-            val searchView = searchItem?.actionView as? SearchView ?: return
-            if (!isControllerVisible) return
-            setOnQueryTextChangeListener(searchView) {
-                if (query != it) {
-                    query = it ?: return@setOnQueryTextChangeListener false
-                    resetProgressItem()
-                    refresh()
-                }
-                true
-            }
-        }
     }
 
     override fun onDestroy() {

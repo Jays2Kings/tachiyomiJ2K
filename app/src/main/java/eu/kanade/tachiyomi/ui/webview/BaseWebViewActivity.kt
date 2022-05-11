@@ -25,6 +25,7 @@ import androidx.core.view.isVisible
 import androidx.core.view.marginBottom
 import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
+import androidx.lifecycle.lifecycleScope
 import androidx.webkit.WebSettingsCompat.DARK_STRATEGY_WEB_THEME_DARKENING_ONLY
 import androidx.webkit.WebSettingsCompat.FORCE_DARK_OFF
 import androidx.webkit.WebSettingsCompat.FORCE_DARK_ON
@@ -32,8 +33,10 @@ import androidx.webkit.WebSettingsCompat.setForceDark
 import androidx.webkit.WebSettingsCompat.setForceDarkStrategy
 import androidx.webkit.WebViewFeature
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.preference.asImmediateFlowIn
 import eu.kanade.tachiyomi.databinding.WebviewActivityBinding
 import eu.kanade.tachiyomi.ui.base.activity.BaseActivity
+import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
 import eu.kanade.tachiyomi.util.system.ThemeUtil
 import eu.kanade.tachiyomi.util.system.getPrefTheme
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -149,6 +152,11 @@ open class BaseWebViewActivity : BaseActivity<WebviewActivityBinding>() {
                 binding.webview.restoreState(it)
             }
         }
+
+        preferences.incognitoMode()
+            .asImmediateFlowIn(lifecycleScope) {
+                SecureActivityDelegate.setSecure(this)
+            }
     }
 
     private fun setWebDarkMode() {

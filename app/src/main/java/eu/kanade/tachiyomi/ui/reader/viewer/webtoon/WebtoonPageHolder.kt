@@ -3,7 +3,6 @@ package eu.kanade.tachiyomi.ui.reader.viewer.webtoon
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.view.Gravity
 import android.view.ViewGroup
@@ -28,7 +27,7 @@ import rx.Observable
 import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
-import timber.log.Timber
+import java.io.BufferedInputStream
 import java.io.InputStream
 import java.util.concurrent.TimeUnit
 
@@ -131,10 +130,6 @@ class WebtoonPageHolder(
 
         removeDecodeErrorLayout()
         frame.recycle()
-//        subsamplingImageView?.recycle()
-//        subsamplingImageView?.isVisible = false
-//        imageView?.clear()
-//        imageView?.isVisible = false
         progressBar.setProgress(0)
     }
 
@@ -295,25 +290,17 @@ class WebtoonPageHolder(
         addSubscription(readImageHeaderSubscription)
     }
 
-    private fun process(imageStream: InputStream): InputStream {
+    private fun process(imageStream: BufferedInputStream): InputStream {
         if (!viewer.config.splitPages) {
             return imageStream
         }
 
-        val imageBytes = imageStream.readBytes()
-        val imageBitmap = try {
-            BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
-        } catch (e: Exception) {
-            Timber.e("Cannot split page ${e.message}")
-            return imageBytes.inputStream()
-        }
-        val height = imageBitmap.height
-        val width = imageBitmap.width
-        if (height >= width) {
-            return imageBytes.inputStream()
+        val isDoublePage = ImageUtil.isWideImage(imageStream)
+        if (!isDoublePage) {
+            return imageStream
         }
 
-        return ImageUtil.splitAndStackBitmap(imageBitmap, viewer.config.invertDoublePages, viewer.hasMargins)
+        return ImageUtil.splitAndStackBitmap(imageStream, viewer.config.invertDoublePages, viewer.hasMargins)
     }
 
     /**

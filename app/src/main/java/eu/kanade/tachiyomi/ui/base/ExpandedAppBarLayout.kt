@@ -26,6 +26,7 @@ import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isTablet
 import eu.kanade.tachiyomi.util.view.backgroundColor
+import eu.kanade.tachiyomi.util.view.isControllerVisible
 import eu.kanade.tachiyomi.util.view.setTextColorAlpha
 import uy.kohesive.injekt.injectLazy
 import kotlin.math.abs
@@ -88,6 +89,7 @@ class ExpandedAppBarLayout@JvmOverloads constructor(context: Context, attrs: Att
     /** A value used to determine the offset needed for a appbar's y to show only the smaller toolbar */
     val yNeededForSmallToolbar: Int
         get() {
+            if (toolbarMode != ToolbarState.EXPANDED) return 0
             val tabHeight = if (tabsFrameLayout?.isVisible == true) 48.dpToPx else 0
             return -preLayoutHeight + (mainToolbar?.height ?: 0) + tabHeight
         }
@@ -368,7 +370,7 @@ class ExpandedAppBarLayout@JvmOverloads constructor(context: Context, attrs: Att
      * @param callback closure updates along with snapping the appbar, use if something needs to
      * update alongside the appbar
      */
-    fun snapAppBarY(recyclerView: RecyclerView, callback: (() -> Unit)?): Float {
+    fun snapAppBarY(controller: Controller?, recyclerView: RecyclerView, callback: (() -> Unit)?): Float {
         yAnimator?.cancel()
         val halfWay = compactAppBarHeight / 2
         val shortAnimationDuration = resources?.getInteger(
@@ -392,8 +394,10 @@ class ExpandedAppBarLayout@JvmOverloads constructor(context: Context, attrs: Att
             yAnimator = animate().y(lastY)
                 .setDuration(shortAnimationDuration.toLong())
             yAnimator?.setUpdateListener {
-                updateAppBarAfterY(recyclerView, false)
-                callback?.invoke()
+                if (controller?.isControllerVisible == true) {
+                    updateAppBarAfterY(recyclerView, false)
+                    callback?.invoke()
+                }
             }
             yAnimator?.start()
             useSearchToolbarForMenu(true)

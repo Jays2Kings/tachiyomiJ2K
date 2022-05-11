@@ -27,6 +27,11 @@
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
+    <style name="TextAppearance.BodyMedium.ReducedSpace" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">19sp</item>
+    </style>
+
     <style name="TextAppearance.Tachiyomi.BodySecondary" parent="TextAppearance">
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>

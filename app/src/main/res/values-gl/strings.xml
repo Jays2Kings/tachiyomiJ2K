@@ -204,7 +204,6 @@
     </plurals>
     <string name="next_chapter">Capítulo seguinte</string>
     <string name="previous_chapter">Capítulo anterior</string>
-    <string name="hide_app_block_screenshots">Esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
     <string name="label_global_search">Procura global</string>
     <string name="name">Nome</string>
     <string name="portrait">Vertical</string>
@@ -258,4 +257,5 @@
     <string name="author">Autor</string>
     <string name="move_x_to">Move %1$s a…</string>
     <string name="select_inverse">Selección inversa</string>
+    <string name="pref_manage_notifications">Xestionar notificacións</string>
 </resources>

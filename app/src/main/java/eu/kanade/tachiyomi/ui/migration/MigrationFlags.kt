@@ -33,6 +33,6 @@ object MigrationFlags {
     }
 
     fun getFlagsFromPositions(positions: Array<Int>): Int {
-        return positions.fold(0, { accumulated, position -> accumulated or (1 shl position) })
+        return positions.fold(0) { accumulated, position -> accumulated or (1 shl position) }
     }
 }

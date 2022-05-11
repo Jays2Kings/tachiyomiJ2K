@@ -49,6 +49,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import rikka.sui.Sui
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
@@ -277,7 +278,7 @@ class SettingsAdvancedController : SettingsController() {
                 defaultValue = false
                 onChange {
                     it as Boolean
-                    if (it && !context.isPackageInstalled(ShizukuInstaller.shizukuPkgName)) {
+                    if (it && !context.isPackageInstalled(ShizukuInstaller.shizukuPkgName) && !Sui.isSui()) {
                         context.materialAlertDialog()
                             .setTitle(R.string.shizuku)
                             .setMessage(R.string.ext_installer_shizuku_unavailable_dialog)

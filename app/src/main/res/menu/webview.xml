@@ -8,6 +8,12 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_open_in_app"
+        android:icon="@drawable/ic_browse_24dp"
+        android:title="@string/open_in_app"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_web_forward"
         android:icon="@drawable/ic_arrow_forward_24dp"
         android:title="@string/forward"

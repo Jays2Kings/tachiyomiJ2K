@@ -17,6 +17,7 @@ import androidx.annotation.ColorInt
 import eu.kanade.tachiyomi.R
 import tachiyomi.decoder.Format
 import tachiyomi.decoder.ImageDecoder
+import java.io.BufferedInputStream
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
@@ -329,12 +330,26 @@ object ImageUtil {
         return ByteArrayInputStream(output.toByteArray())
     }
 
+    /**
+     * Check whether the image is wide (which we consider a double-page spread).
+     *
+     * @return true if the width is greater than the height
+     */
+    fun isWideImage(imageStream: BufferedInputStream): Boolean {
+        val options = extractImageOptions(imageStream)
+        imageStream.reset()
+        return options.outWidth > options.outHeight
+    }
+
     fun splitAndStackBitmap(
-        imageBitmap: Bitmap,
+        imageStream: InputStream,
         rightSideOnTop: Boolean,
         hasMargins: Boolean,
         progressCallback: ((Int) -> Unit)? = null,
     ): ByteArrayInputStream {
+        val imageBytes = imageStream.readBytes()
+        val imageBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+
         val height = imageBitmap.height
         val width = imageBitmap.width
         val gap = if (hasMargins) 15.dpToPx else 0
@@ -478,5 +493,17 @@ object ImageUtil {
             gPercent.takeIf { greens[2] != greens[1] },
             aPercent.takeIf { alphas[2] != alphas[1] },
         ).filterNotNull().average().toFloat().takeIf { it in 0f..1f } ?: 0f
+    }
+
+    /**
+     * Used to check an image's dimensions without loading it in the memory.
+     */
+    private fun extractImageOptions(imageStream: InputStream): BitmapFactory.Options {
+        imageStream.mark(imageStream.available() + 1)
+
+        val imageBytes = imageStream.readBytes()
+        val options = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+        BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size, options)
+        return options
     }
 }

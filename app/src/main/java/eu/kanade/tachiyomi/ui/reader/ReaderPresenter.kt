@@ -26,6 +26,7 @@ import eu.kanade.tachiyomi.ui.base.presenter.BasePresenter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterItem
 import eu.kanade.tachiyomi.ui.reader.loader.ChapterLoader
+import eu.kanade.tachiyomi.ui.reader.loader.DownloadPageLoader
 import eu.kanade.tachiyomi.ui.reader.loader.HttpPageLoader
 import eu.kanade.tachiyomi.ui.reader.model.ReaderChapter
 import eu.kanade.tachiyomi.ui.reader.model.ReaderPage
@@ -178,13 +179,14 @@ class ReaderPresenter(
         deletePendingChapters()
         val currentChapters = viewerChaptersRelay.value
         if (currentChapters != null) {
+            val isChapterDownloaded = currentChapters.currChapter.pageLoader is DownloadPageLoader
             currentChapters.unref()
             val currentChapter = currentChapters.currChapter
             saveChapterProgress(currentChapter)
             saveChapterHistory(currentChapter)
             val currentChapterPageCount = currentChapter.chapter.last_page_read + currentChapter.chapter.pages_left
             if ((currentChapter.chapter.last_page_read + 1.0) / currentChapterPageCount > 0.33 || isAnyPrevChapterDownloaded) {
-                downloadNextChapters()
+                downloadNextChapters(isChapterDownloaded)
             }
             isAnyPrevChapterDownloaded = false
         }
@@ -519,7 +521,7 @@ class ReaderPresenter(
                 )
         ) {
             if (!isAnyPrevChapterDownloaded) {
-                isAnyPrevChapterDownloaded = downloadManager.isChapterDownloaded(selectedChapter.chapter, manga!!)
+                isAnyPrevChapterDownloaded = selectedChapter.pageLoader is DownloadPageLoader
             }
             selectedChapter.chapter.read = true
             updateTrackChapterAfterReading(selectedChapter)
@@ -533,12 +535,11 @@ class ReaderPresenter(
         }
     }
 
-    private fun downloadNextChapters() {
+    private fun downloadNextChapters(isChapterDownloaded: Boolean) {
         val manga = manga ?: return
         val chaptersNumberToDownload = preferences.autoDownloadAfterReading().get()
         if (chaptersNumberToDownload == 0 || !manga.favorite) return
         val currentChapter = viewerChapters?.currChapter ?: return
-        val isChapterDownloaded = downloadManager.isChapterDownloaded(currentChapter.chapter, manga)
         if (isChapterDownloaded || isAnyPrevChapterDownloaded) {
             downloadAutoNextChapters(chaptersNumberToDownload, !isChapterDownloaded && !currentChapter.chapter.read)
         }

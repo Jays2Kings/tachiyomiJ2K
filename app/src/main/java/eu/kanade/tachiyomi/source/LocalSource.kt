@@ -206,7 +206,7 @@ class LocalSource(private val context: Context) : CatalogueSource, UnmeteredSour
                 title = obj.title ?: manga.title,
                 author = obj.author ?: manga.author,
                 artist = obj.artist ?: manga.artist,
-                description = obj.artist ?: manga.description,
+                description = obj.description ?: manga.description,
                 genres = obj.genre?.toList() ?: manga.genres,
                 status = obj.status ?: manga.status,
             )

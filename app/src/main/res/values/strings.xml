@@ -575,8 +575,6 @@
     <string name="enhanced_tracking_info">Services that provide enhanced features for specific sources. Manga are automatically tracked when added to your library.</string>
     <string name="update_tracking_after_reading">Update tracking after reading</string>
     <string name="update_tracking_marked_read">Update tracking when marked as read</string>
-    <string name="track_when_adding_to_library">Track when adding to library</string>
-    <string name="only_applies_silent_trackers">Only applies to silent trackers, such as Komga</string>
     <string name="reading">Reading</string>
     <string name="currently_reading">Currently Reading</string>
     <string name="dropped">Dropped</string>
@@ -702,6 +700,7 @@
     <string name="check_for_updates">Check for updates</string>
     <string name="updated_to_">Updated to v%1$s</string>
     <string name="secure_screen">Secure screen</string>
+    <string name="secure_screen_summary">Secure screen hides app contents when switching apps and block screenshots</string>
     <string name="hide_bottom_nav">Auto-hide bottom navigation</string>
     <string name="side_nav_icon_alignment">Side navigation icon alignment</string>
     <string name="use_side_navigation">Use side navigation</string>
@@ -714,7 +713,6 @@
     <string name="expanded_toolbar">Expanded toolbar</string>
     <string name="show_larger_toolbar">Show a larger, expanded toolbar at the top of most pages (does not show on smaller devices regardless of setting)</string>
     <string name="hides_on_scroll">Hides when scrolling</string>
-    <string name="hide_app_block_screenshots">Hide app contents when switching apps and block screenshots</string>
     <string name="hide_notification_content">Hide notification content</string>
     <string name="security">Security</string>
     <string name="starting_screen">Starting screen</string>
@@ -1049,6 +1047,7 @@
     <string name="no_animation">No animation</string>
     <string name="normal">Normal</string>
     <string name="oldest">Oldest</string>
+    <string name="open_in_app">Open in app</string>
     <string name="open_in_browser">Open in browser</string>
     <string name="open_log">Open log</string>
     <string name="open_in_webview">Open in WebView</string>

@@ -6,6 +6,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatCheckedTextView
+import androidx.core.content.edit
 import androidx.core.view.children
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import eu.kanade.tachiyomi.util.system.disableItems
@@ -43,7 +44,7 @@ class MultiListMatPreference @JvmOverloads constructor(
     }
 
     override var customSummaryProvider: SummaryProvider<MatPreference>? = SummaryProvider<MatPreference> {
-        var values = prefs.getStringSet(key, defValue).get().mapNotNull { value ->
+        var values = (sharedPreferences?.getStringSet(key, defValue) ?: defValue).mapNotNull { value ->
             entryValues.indexOf(value).takeUnless { it == -1 }
         }.toIntArray().sorted().map { entries[it] }
         allSelectionRes?.let { allRes ->
@@ -63,7 +64,7 @@ class MultiListMatPreference @JvmOverloads constructor(
 
     @SuppressLint("CheckResult")
     override fun MaterialAlertDialogBuilder.setListItems() {
-        val set = prefs.getStringSet(key, defValue).get()
+        val set = sharedPreferences?.getStringSet(key, defValue) ?: defValue
         val items = if (allSelectionRes != null) {
             if (showAllLast) entries + listOf(context.getString(allSelectionRes!!))
             else listOf(context.getString(allSelectionRes!!)) + entries
@@ -83,7 +84,7 @@ class MultiListMatPreference @JvmOverloads constructor(
                 entryValues.getOrNull(it - if (allSelectionRes != null && !showAllLast) 1 else 0)
             }.toSet()
             if (allSelectionRes != null && !allIsAlwaysSelected && selected[allPos]) value = emptySet()
-            prefs.getStringSet(key, emptySet()).set(value)
+            sharedPreferences?.edit { putStringSet(key, value) }
             callChangeListener(value)
             notifyChanged()
         }

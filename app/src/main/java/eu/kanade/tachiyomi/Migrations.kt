@@ -6,6 +6,7 @@ import eu.kanade.tachiyomi.data.backup.BackupCreatorJob
 import eu.kanade.tachiyomi.data.download.DownloadProvider
 import eu.kanade.tachiyomi.data.library.LibraryUpdateJob
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys
+import eu.kanade.tachiyomi.data.preference.PreferenceValues
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.plusAssign
 import eu.kanade.tachiyomi.data.track.TrackManager
@@ -193,6 +194,12 @@ object Migrations {
                 if (!oldReaderTap) {
                     preferences.navigationModePager().set(5)
                     preferences.navigationModeWebtoon().set(5)
+                }
+            }
+            if (oldVersion < 90) {
+                val oldSecureScreen = prefs.getBoolean("secure_screen", false)
+                if (oldSecureScreen) {
+                    preferences.secureScreen().set(PreferenceValues.SecureScreenMode.ALWAYS)
                 }
             }
 

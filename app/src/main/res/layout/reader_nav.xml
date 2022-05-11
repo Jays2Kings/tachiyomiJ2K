@@ -14,6 +14,7 @@
     android:clickable="true"
     android:focusable="true"
     android:gravity="center"
+    android:layoutDirection="ltr"
     android:orientation="horizontal">
 
     <ProgressBar

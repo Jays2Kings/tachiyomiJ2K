@@ -9,7 +9,6 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.toMangaInfo
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
-import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.Filter
@@ -64,6 +63,9 @@ open class BrowseSourcePresenter(
      */
     lateinit var source: CatalogueSource
 
+    val sourceIsInitialized
+        get() = this::source.isInitialized
+
     var filtersChanged = false
 
     /**
@@ -97,8 +99,6 @@ open class BrowseSourcePresenter(
      * Subscription for one request from the pager.
      */
     private var nextPageJob: Job? = null
-
-    private val loggedServices by lazy { Injekt.get<TrackManager>().services.filter { it.isLogged } }
 
     init {
         query = searchQuery ?: ""

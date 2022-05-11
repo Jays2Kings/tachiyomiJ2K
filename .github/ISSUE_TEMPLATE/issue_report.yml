@@ -53,7 +53,7 @@ body:
       label: TachiyomiJ2K version
       description: You can find your TachiyomiJ2K version in **More → About**.
       placeholder: |
-        Example: "1.5.0"
+        Example: "1.5.2"
     validations:
       required: true
 
@@ -100,9 +100,10 @@ body:
           required: true
         - label: I have tried the [troubleshooting guide](https://tachiyomi.org/help/guides/troubleshooting/).
           required: true
-        - label: I have updated the app to version **[1.5.0](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
+        - label: I have updated the app to version **[1.5.2](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
           required: true
         - label: I have updated all installed extensions.
           required: true
+        - label: I have admitted that I am a clown to be laughed at by having checked this box, as I have not read these acknowledgements.
         - label: I have filled out all of the requested information in this form.
           required: true

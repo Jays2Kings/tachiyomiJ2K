@@ -131,9 +131,6 @@ object PreferenceKeys {
 
     const val libraryUpdateInterval = "pref_library_update_interval_key"
 
-    const val libraryUpdateCategories = "library_update_categories"
-    const val libraryUpdateCategoriesExclude = "library_update_categories_exclude"
-
     const val filterDownloaded = "pref_filter_downloaded_key"
 
     const val filterUnread = "pref_filter_unread_key"
@@ -160,9 +157,6 @@ object PreferenceKeys {
 
     const val downloadNew = "download_new"
 
-    const val downloadNewCategories = "download_new_categories"
-    const val downloadNewCategoriesExclude = "download_new_categories_exclude"
-
     const val libraryLayout = "pref_display_library_layout"
 
     const val gridSize = "grid_size_float"
@@ -188,8 +182,6 @@ object PreferenceKeys {
     const val lockAfter = "lock_after"
 
     const val lastUnlock = "last_unlock"
-
-    const val secureScreen = "secure_screen"
 
     const val hideNotificationContent = "hide_notification_content"
 

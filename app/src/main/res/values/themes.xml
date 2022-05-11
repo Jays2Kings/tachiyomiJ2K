@@ -50,6 +50,10 @@
         <item name="navigationRailStyle">@style/Widget.Tachiyomi.NavigationRail</item>
         <item name="elevationOverlayEnabled">false</item>
 
+        <!-- Handles RTL Text -->
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:textDirection">locale</item>
+
         <!-- Themes -->
         <item name="windowActionModeOverlay">true</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>

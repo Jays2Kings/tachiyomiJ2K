@@ -28,6 +28,7 @@ import eu.kanade.tachiyomi.ui.reader.viewer.webtoon.WebtoonSubsamplingImageView
 import eu.kanade.tachiyomi.util.system.GLUtil
 import eu.kanade.tachiyomi.util.system.animatorDurationScale
 import java.io.InputStream
+import java.nio.ByteBuffer
 
 /**
  * A wrapper view for showing page image.
@@ -227,7 +228,7 @@ open class ReaderPageImageView @JvmOverloads constructor(
 
         val data = when (image) {
             is Drawable -> image
-            is InputStream -> image.readBytes()
+            is InputStream -> ByteBuffer.wrap(image.readBytes())
             else -> throw IllegalArgumentException("Not implemented for class ${image::class.simpleName}")
         }
         val request = ImageRequest.Builder(context)

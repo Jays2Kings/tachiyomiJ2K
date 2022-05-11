@@ -40,7 +40,10 @@ import eu.kanade.tachiyomi.util.system.launchUI
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.RecyclerWindowInsetsListener
+import eu.kanade.tachiyomi.util.view.activityBinding
+import eu.kanade.tachiyomi.util.view.isControllerVisible
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
+import eu.kanade.tachiyomi.util.view.setTextColorAlpha
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -86,16 +89,16 @@ class MigrationListController(bundle: Bundle? = null) :
     private var manaulMigrations = 0
 
     override fun createBinding(inflater: LayoutInflater) = MigrationListControllerBinding.inflate(inflater)
-    override fun getTitle(): String? {
-        return resources?.getString(R.string.migration) + " (${adapter?.items?.count {
-            it.manga.migrationStatus != MigrationStatus.RUNNUNG
-        }}/${adapter?.itemCount ?: 0})"
+    override fun getTitle(): String {
+        val progress = adapter?.items?.count { it.manga.migrationStatus != MigrationStatus.RUNNUNG }
+        return resources?.getString(R.string.migration) + " ($progress/${adapter?.itemCount})"
     }
 
     override fun onViewCreated(view: View) {
         super.onViewCreated(view)
         liftAppbarWith(binding.recycler)
-        setTitle()
+        val toolbarTextView = activityBinding?.toolbar?.toolbarTitle
+        toolbarTextView?.setTextColorAlpha(255)
         val config = this.config ?: return
 
         val newMigratingManga = migratingManga ?: run {
@@ -272,8 +275,8 @@ class MigrationListController(bundle: Bundle? = null) :
     }
 
     override fun updateCount() {
-        launchUI {
-            if (router.backstack.last().controller == this@MigrationListController) {
+        viewScope.launchUI {
+            if (isControllerVisible) {
                 setTitle()
             }
         }

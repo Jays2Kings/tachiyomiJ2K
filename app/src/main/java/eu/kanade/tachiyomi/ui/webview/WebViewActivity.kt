@@ -13,6 +13,7 @@ import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.util.system.WebViewClientCompat
+import eu.kanade.tachiyomi.util.system.extensionIntentForText
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.openInBrowser
 import eu.kanade.tachiyomi.util.system.toast
@@ -72,6 +73,17 @@ open class WebViewActivity : BaseWebViewActivity() {
                     super.onPageCommitVisible(view, url)
                     binding.webview.scrollTo(0, 0)
                 }
+
+                override fun doUpdateVisitedHistory(
+                    view: WebView?,
+                    url: String?,
+                    isReload: Boolean,
+                ) {
+                    super.doUpdateVisitedHistory(view, url, isReload)
+                    if (!isReload) {
+                        invalidateOptionsMenu()
+                    }
+                }
             }
 
             binding.webview.settings.userAgentString = source.headers["User-Agent"]
@@ -104,6 +116,9 @@ open class WebViewActivity : BaseWebViewActivity() {
         val translucentWhite = ColorUtils.setAlphaComponent(tintColor, 127)
         backItem.icon?.setTint(if (binding.webview.canGoBack()) tintColor else translucentWhite)
         forwardItem?.icon?.setTint(if (binding.webview.canGoForward()) tintColor else translucentWhite)
+        val extenstionCanOpenUrl = binding.webview.canGoBack() &&
+            binding.webview.url?.let { extensionIntentForText(it) != null } ?: false
+        binding.toolbar.menu.findItem(R.id.action_open_in_app)?.isVisible = extenstionCanOpenUrl
         return super.onPrepareOptionsMenu(menu)
     }
 
@@ -122,8 +137,14 @@ open class WebViewActivity : BaseWebViewActivity() {
             R.id.action_web_forward -> binding.webview.goForward()
             R.id.action_web_share -> shareWebpage()
             R.id.action_web_browser -> openInBrowser()
+            R.id.action_open_in_app -> openUrlInApp()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun openUrlInApp() {
+        val url = binding.webview.url ?: return
+        extensionIntentForText(url)?.let { startActivity(it) }
     }
 
     private fun shareWebpage() {

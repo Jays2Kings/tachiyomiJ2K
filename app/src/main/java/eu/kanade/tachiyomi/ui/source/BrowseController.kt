@@ -26,7 +26,6 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
-import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.BrowseControllerBinding
@@ -474,14 +473,6 @@ class BrowseController :
         setBottomPadding()
         if (showingExtensions) {
             updateSheetMenu()
-        }
-        if (BuildConfig.DEBUG && isControllerVisible) {
-            val searchView = activityBinding?.searchToolbar?.searchView
-
-            setOnQueryTextChangeListener(searchView, onlyOnSubmit = true) {
-                if (!it.isNullOrBlank()) performGlobalSearch(it)
-                true
-            }
         }
     }
 

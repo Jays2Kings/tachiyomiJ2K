@@ -446,7 +446,6 @@
     <string name="unlock">قفل را باز کنید</string>
     <string name="unlock_library">برای دسترسی به کتابخانه قفل را باز کنید</string>
     <string name="manhua">مانهوا</string>
-    <string name="hide_app_block_screenshots">محتویات برنامه هنگام تعویض برنامه ها مخفی و از عکس گرفتن از صفحه برنامه جلوگیری شود</string>
     <string name="label_global_search">جست و جوی کامل</string>
     <string name="by_chapter_number">بر اساس شماره قسمت</string>
     <string name="by_update_date">بر اساس تاریخ آپلود</string>
@@ -479,4 +478,7 @@
     <string name="external_storage_permission_notice">تاچیومی J2K نیازمند دسترسی به همه فایل ها در اندوید 11 برای دانلود قسمت ها، ایجاد پشتیبان گیری خودکار، و خواندن مانگاهای محلی( مانگا های موجود در دستگاه شما) است.
 \n
 \nدر صفحه بعدی، اجازه \"مجاز بودن دسترسی به مدیریت همه پرونده‌ها\" را بدهید.</string>
+    <string name="pref_manage_notifications">مدیریت اعلان‌ها</string>
+    <string name="channel_skipped">رد شده</string>
+    <string name="getting_started_guide">راهنمای شروع</string>
 </resources>

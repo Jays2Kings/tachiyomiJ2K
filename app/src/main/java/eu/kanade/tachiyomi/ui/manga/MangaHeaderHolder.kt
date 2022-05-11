@@ -295,7 +295,9 @@ class MangaHeaderHolder(
 
         setGenreTags(binding, manga)
 
-        if (manga.author == manga.artist || manga.artist.isNullOrBlank()) {
+        if (manga.author == manga.artist || manga.artist.isNullOrBlank() ||
+            manga.author?.contains(manga.artist ?: "", true) == true
+        ) {
             binding.mangaAuthor.text = manga.author?.trim()
         } else {
             binding.mangaAuthor.text = listOfNotNull(manga.author?.trim(), manga.artist?.trim()).joinToString(", ")

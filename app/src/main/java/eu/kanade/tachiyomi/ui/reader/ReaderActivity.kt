@@ -82,6 +82,7 @@ import eu.kanade.tachiyomi.ui.reader.viewer.pager.PagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.R2LPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.pager.VerticalPagerViewer
 import eu.kanade.tachiyomi.ui.reader.viewer.webtoon.WebtoonViewer
+import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
 import eu.kanade.tachiyomi.util.storage.getUriCompat
 import eu.kanade.tachiyomi.util.system.contextCompatColor
@@ -294,6 +295,11 @@ class ReaderActivity : BaseRxActivity<ReaderPresenter>() {
         binding.chaptersSheet.chaptersBottomSheet.setup(this)
         config = ReaderConfig()
         initializeMenu()
+
+        preferences.incognitoMode()
+            .asImmediateFlowIn(lifecycleScope) {
+                SecureActivityDelegate.setSecure(this)
+            }
     }
 
     /**

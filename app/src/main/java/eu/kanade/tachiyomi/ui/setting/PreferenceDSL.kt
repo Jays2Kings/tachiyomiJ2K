@@ -27,6 +27,7 @@ import eu.kanade.tachiyomi.widget.preference.IntListMatPreference
 import eu.kanade.tachiyomi.widget.preference.ListMatPreference
 import eu.kanade.tachiyomi.widget.preference.MultiListMatPreference
 import eu.kanade.tachiyomi.widget.preference.TriStateListPreference
+import com.fredporciuncula.flow.preferences.Preference as FlowPreference
 
 @DslMarker
 @Target(AnnotationTarget.TYPE)
@@ -72,10 +73,7 @@ inline fun PreferenceGroup.listPreference(
 
 inline fun PreferenceGroup.intListPreference(
     activity: Activity?,
-    block: (
-        @DSL
-        IntListMatPreference
-    ).() -> Unit,
+    block: (@DSL IntListMatPreference).() -> Unit,
 ):
     IntListMatPreference {
     return initThenAdd(IntListMatPreference(activity, context), block)
@@ -83,22 +81,14 @@ inline fun PreferenceGroup.intListPreference(
 
 inline fun PreferenceGroup.multiSelectListPreferenceMat(
     activity: Activity?,
-    block: (
-        @DSL
-        MultiListMatPreference
-    ).()
-    -> Unit,
+    block: (@DSL MultiListMatPreference).() -> Unit,
 ): MultiListMatPreference {
     return initThenAdd(MultiListMatPreference(activity, context), block)
 }
 
 inline fun PreferenceGroup.triStateListPreference(
     activity: Activity?,
-    block: (
-        @DSL
-        TriStateListPreference
-    ).()
-    -> Unit,
+    block: (@DSL TriStateListPreference).() -> Unit,
 ): TriStateListPreference {
     return initThenAdd(TriStateListPreference(activity, context), block)
 }
@@ -168,17 +158,39 @@ inline fun Preference.onChange(crossinline block: (Any?) -> Boolean) {
     setOnPreferenceChangeListener { _, newValue -> block(newValue) }
 }
 
-fun <T> Preference.bindTo(preference: com.fredporciuncula.flow.preferences.Preference<T>) {
+fun <T> Preference.bindTo(preference: FlowPreference<T>) {
     key = preference.key
     defaultValue = preference.defaultValue
 }
 
-fun <T> ListPreference.bindTo(preference: com.fredporciuncula.flow.preferences.Preference<T>) {
+fun <T> ListPreference.bindTo(preference: FlowPreference<T>) {
     key = preference.key
     defaultValue = preference.defaultValue.toString()
 }
 
-inline fun <T> IntListMatPreference.bindTo(preference: com.fredporciuncula.flow.preferences.Preference<T>) {
+fun <T> ListMatPreference.bindTo(preference: FlowPreference<T>) {
+    key = preference.key
+    val defValue = preference.defaultValue
+    defaultValue = if (defValue is Set<*>) defValue else defValue.toString()
+}
+
+@Deprecated(
+    "Do not bind tri-states prefs with a single preference",
+    ReplaceWith("bindTo(preference, excludePreference = )"),
+    DeprecationLevel.ERROR,
+)
+fun <T> TriStateListPreference.bindTo(preference: FlowPreference<T>) { key = preference.key }
+
+fun TriStateListPreference.bindTo(
+    includePreference: FlowPreference<Set<String>>,
+    excludePreference: FlowPreference<Set<String>>,
+) {
+    key = includePreference.key
+    excludeKey = excludePreference.key
+    defaultValue = includePreference.defaultValue to excludePreference.defaultValue
+}
+
+fun <T> IntListMatPreference.bindTo(preference: FlowPreference<T>) {
     key = preference.key
     defaultValue = preference.defaultValue
 }

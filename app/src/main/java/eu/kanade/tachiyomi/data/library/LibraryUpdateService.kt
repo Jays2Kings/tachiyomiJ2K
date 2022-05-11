@@ -433,7 +433,10 @@ class LibraryUpdateService(
                 }
                 if (deleteRemoved && newChapters.second.isNotEmpty()) {
                     val removedChapters = newChapters.second.filter {
-                        downloadManager.isChapterDownloaded(it, manga)
+                        downloadManager.isChapterDownloaded(it, manga) &&
+                            newChapters.first.none { newChapter ->
+                                newChapter.chapter_number == it.chapter_number && it.scanlator.isNullOrBlank()
+                            }
                     }
                     if (removedChapters.isNotEmpty()) {
                         downloadManager.deleteChapters(removedChapters, manga, source)
