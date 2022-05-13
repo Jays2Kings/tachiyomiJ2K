@@ -353,7 +353,7 @@ class FullBackupManager(context: Context) : AbstractBackupManager(context) {
             val dbChapter = dbChapters.find { it.url == chapter.url }
             if (dbChapter != null) {
                 chapter.id = dbChapter.id
-                chapter.copyFrom(dbChapter)
+                chapter.copyFrom(dbChapter, true)
                 if (dbChapter.read && !chapter.read) {
                     chapter.read = dbChapter.read
                     chapter.last_page_read = dbChapter.last_page_read
