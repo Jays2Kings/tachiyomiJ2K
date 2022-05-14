@@ -59,14 +59,12 @@ class ExtensionDetailsHeaderAdapter(private val presenter: ExtensionDetailsPrese
                 it.context.startActivity(intent)
             }
 
-            if (extension.isObsolete) {
-                binding.extensionWarningBanner.isVisible = true
-                binding.extensionWarningBanner.setText(R.string.obsolete_extension_message)
-            }
-
             if (extension.isUnofficial) {
                 binding.extensionWarningBanner.isVisible = true
                 binding.extensionWarningBanner.setText(R.string.unofficial_extension_message)
+            } else if (extension.isObsolete) {
+                binding.extensionWarningBanner.isVisible = true
+                binding.extensionWarningBanner.setText(R.string.obsolete_extension_message)
             }
         }
     }

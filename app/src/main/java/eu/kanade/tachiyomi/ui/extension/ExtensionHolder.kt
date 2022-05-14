@@ -22,7 +22,6 @@ import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.timeSpanFromNow
 import eu.kanade.tachiyomi.util.view.resetStrokeColor
-import uy.kohesive.injekt.api.get
 import java.util.Locale
 
 class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
@@ -90,8 +89,8 @@ class ExtensionHolder(view: View, val adapter: ExtensionAdapter) :
         binding.lang.text = LocaleHelper.getDisplayName(extension.lang)
         binding.warning.text = when {
             extension is Extension.Untrusted -> itemView.context.getString(R.string.untrusted)
-            extension is Extension.Installed && extension.isObsolete -> itemView.context.getString(R.string.obsolete)
             extension is Extension.Installed && extension.isUnofficial -> itemView.context.getString(R.string.unofficial)
+            extension is Extension.Installed && extension.isObsolete -> itemView.context.getString(R.string.obsolete)
             extension.isNsfw -> itemView.context.getString(R.string.nsfw_short)
             else -> ""
         }.uppercase(Locale.ROOT)
