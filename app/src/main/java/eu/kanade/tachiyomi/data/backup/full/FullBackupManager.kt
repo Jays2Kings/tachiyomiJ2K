@@ -29,6 +29,7 @@ import eu.kanade.tachiyomi.data.database.models.History
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
 import eu.kanade.tachiyomi.data.database.models.Track
+import eu.kanade.tachiyomi.source.model.SChapter
 import kotlinx.serialization.protobuf.ProtoBuf
 import okio.buffer
 import okio.gzip
