@@ -841,7 +841,6 @@
 \nИзтриване на изтеглянето им\?</item>
     </plurals>
     <string name="not_tracked">Не се проследява</string>
-    <string name="only_applies_silent_trackers">Отнася се само за безшумни тракери, като Комга</string>
     <string name="light_theme">Светла тема</string>
     <string name="dark_theme">Тъмна тема</string>
     <string name="notification_size_warning">Големите актуализации могат да доведат до повишено използване на батерията и забавяне на източниците</string>
@@ -968,4 +967,9 @@
     <string name="pref_manage_notifications">Уведомления</string>
     <string name="faq_and_guides">Често задавани въпроси и ръководства</string>
     <string name="secure_screen_summary">Скрий съдържанието на приложението и блокирай снимките на екрана</string>
+    <string name="pref_hide_threshold">Чувствителност за скриване на менюто при превъртане</string>
+    <string name="pref_highest">Най-висока</string>
+    <string name="pref_high">Висока</string>
+    <string name="pref_low">Ниска</string>
+    <string name="pref_lowest">Най-ниска</string>
 </resources>

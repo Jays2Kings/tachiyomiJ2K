@@ -823,7 +823,6 @@
     <string name="light_theme">Tema chiaro</string>
     <string name="no_match_found">Nessun risultato trovato</string>
     <string name="source_unsupported">Fonte non supportata</string>
-    <string name="track_when_adding_to_library">Track dopo aver aggiunto alla libreria</string>
     <string name="custom_manga_info">Informazioni manga personalizzate</string>
     <string name="ignore_cutout_areas">Ignora aree ritagliate</string>
     <string name="pad_cutout_areas">Riempi aree ritagliate</string>
@@ -845,7 +844,7 @@
     <string name="external_storage_permission_notice">TachiyomiJ2K richiede accesso ai file per scaricare capitoli, creare backup automatici e leggere manga in locale.
 \n
 \nAlla prossima schermata, fornisci l\'autorizzazione per \"Accesso a tutti i file.\"</string>
-    <string name="all_files_permission_required">Permessi per la gesione file richiesti</string>
+    <string name="all_files_permission_required">Permessi per la gestione dei file richiesti</string>
     <string name="turn_off_">Disattiva %s</string>
     <string name="turn_on_">Attiva %s</string>
     <string name="selection">Selezione</string>
@@ -1021,6 +1020,12 @@
     <string name="show_">Mostra %1$s</string>
     <string name="must_view_details_before_migration">La pagina di dettaglio di questa entità deve essere vista prima di poter migrare</string>
     <string name="faq_and_guides">Domande frequenti e guide</string>
-    <string name="learn_why">Scopri perché</string>
+    <string name="learn_why">Capisci perchè</string>
     <string name="secure_screen_summary">Schermo sicuro nasconde i contenuti dell\'app quando cambi applicazione e blocca gli screenshot</string>
+    <string name="open_in_app">Apri in un app</string>
+    <string name="pref_highest">Più alto</string>
+    <string name="pref_hide_threshold">Sensibilità per nascondere il menù allo scorrimento</string>
+    <string name="pref_high">Alto</string>
+    <string name="pref_low">Basso</string>
+    <string name="pref_lowest">Più basso</string>
 </resources>

@@ -221,4 +221,8 @@
     <string name="warning">Åtvaring</string>
     <string name="pref_manage_notifications">Handter varslingar</string>
     <string name="faq_and_guides">FAQ og guidar</string>
+    <string name="pref_highest">Høgaste</string>
+    <string name="pref_high">Høg</string>
+    <string name="pref_low">Låg</string>
+    <string name="pref_lowest">Lågaste</string>
 </resources>

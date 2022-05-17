@@ -604,4 +604,9 @@
     <string name="pref_manage_notifications">Gestiona les notificacions</string>
     <string name="faq_and_guides">PMF i guies</string>
     <string name="secure_screen_summary">El mode discret amaga el contingut de l\'aplicació en canviar entre aplicacions i bloca les captures de pantalla</string>
+    <string name="pref_hide_threshold">Sensibilitat a l\'hora d\'amagar el menú en desplaçar</string>
+    <string name="pref_highest">La més alta</string>
+    <string name="pref_high">Alta</string>
+    <string name="pref_low">Baixa</string>
+    <string name="pref_lowest">La més baixa</string>
 </resources>

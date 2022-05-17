@@ -819,7 +819,6 @@
     <string name="light_theme">Licht thema</string>
     <string name="no_match_found">Geen overeenkomst gevonden</string>
     <string name="source_unsupported">Bron wordt niet ondersteund</string>
-    <string name="track_when_adding_to_library">Tracken bij het toevoegen aan de bibliotheek</string>
     <string name="set_as_default">Instellen als standaard</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d wachtende update</item>
@@ -953,4 +952,9 @@
     <string name="pref_manage_notifications">Meldingen beheren</string>
     <string name="faq_and_guides">Veelgestelde vragen en handleidingen</string>
     <string name="secure_screen_summary">Veilig scherm modus verbergt de inhoud van de app bij het wisselen en blokkeert schermafbeeldingen</string>
+    <string name="pref_hide_threshold">Sensitiviteit voor het verbergen van het menu tijdens scrollen</string>
+    <string name="pref_highest">Hoogste</string>
+    <string name="pref_high">Hoog</string>
+    <string name="pref_low">Laag</string>
+    <string name="pref_lowest">Laagste</string>
 </resources>

@@ -574,4 +574,9 @@
     <string name="pref_clear_webview_data">웹뷰 데이터 지우기</string>
     <string name="webview_data_deleted">웹뷰 데이터 삭제됨</string>
     <string name="secure_screen_summary">스크린 보안이 활성화될 경우 스크린샷이 비활성화되며 화면 전환 시 내용이 숨겨집니다</string>
+    <string name="pref_hide_threshold">스크롤 시 메뉴 숨기기 민감도</string>
+    <string name="pref_highest">매우 높음</string>
+    <string name="pref_high">높음</string>
+    <string name="pref_low">낮음</string>
+    <string name="pref_lowest">매우 낮음</string>
 </resources>

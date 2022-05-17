@@ -87,7 +87,7 @@
     <string name="library_update_restriction">ข้อจำกัดของอุปกรณ์</string>
     <string name="library_update_restriction_summary">อัปเดตเฉพาะเมื่อตรงตามเงื่อนไข</string>
     <string name="wifi">Wi-Fi</string>
-    <string name="app_theme">ธีมแอพ</string>
+    <string name="app_theme">ธีมแอป</string>
     <string name="dark">มืด</string>
     <string name="amoled_black">มืด AMOLED</string>
     <string name="default_category">หมวดหมู่เริ่มต้น</string>
@@ -150,7 +150,7 @@
     <string name="categories_to_include_in_download">หมวดหมู่ที่จะรวมไว้ในการดาวน์โหลด</string>
     <string name="services">บริการ</string>
     <string name="backup">การสำรองข้อมูล</string>
-    <string name="create_backup">สำรองข้อมูล</string>
+    <string name="create_backup">สร้างการสำรองข้อมูล</string>
     <string name="can_be_used_to_restore">สามารถใช้เรียกคืนค่าคลังบัจจุบัน</string>
     <string name="restore_backup">เรียกคืนค่าการสำรองข้อมูล</string>
     <string name="restore_from_backup_file">เรียกคืนค่าคลังจากแฟ้มข้อมูลสำรอง</string>
@@ -284,7 +284,7 @@
     <string name="next_chapter">ตอนถัดไป</string>
     <string name="previous_chapter">ตอนก่อนหน้า</string>
     <string name="label_global_search">ค้นหาทั้งหมด</string>
-    <string name="file_picker_error">ไม่พบแอพเลือกแฟ้ม</string>
+    <string name="file_picker_error">ไม่พบแอปเลือกแฟ้ม</string>
     <string name="updating_library">กำลังอัปเดตคลัง</string>
     <string name="myanimelist_relogin">กรุณาเข้าสู่ระบบ MAL อีกครั้ง</string>
     <string name="add_tracking">เพิ่มการติดตาม</string>
@@ -295,7 +295,7 @@
     <string name="website">เว็บไซต์</string>
     <string name="battery_optimization_disabled">การเพิ่มประสิทธิภาพแบตเตอรี่ถูกปิดใช้งานอยู่แล้ว</string>
     <string name="crash_log_saved">บันทึกบันทึกข้อขัดข้องแล้ว</string>
-    <string name="requires_app_restart">ต้องรีสตาร์ทแอพจึงจะมีผล</string>
+    <string name="requires_app_restart">ต้องรีสตาร์ทแอปจึงจะมีผล</string>
     <string name="restoring_backup_canceled">ยกเลิกการคืนค่า</string>
     <plurals name="restore_completed_message">
         <item quantity="other">ใช้เวลาไป %1$s โดยมีข้อผิดพลาด %2$s รายการ</item>
@@ -352,7 +352,7 @@
     <string name="chapters_">ตอนที่ %1$s</string>
     <string name="search_settings">การตั้งค่าการค้นหา</string>
     <string name="pauses_reading_history">หยุดประวัติการอ่านชั่วคราว</string>
-    <string name="please_update_webview">โปรดอัปเดตแอพ WebView เพื่อความเข้ากันได้ที่ดีขึ้น</string>
+    <string name="please_update_webview">โปรดอัปเดตแอป WebView เพื่อความเข้ากันได้ที่ดีขึ้น</string>
     <string name="webview_is_required">Tachiyomi จำเป็นต้องใช้ WebView</string>
     <string name="name">ชื่อ</string>
     <string name="no_pages_found">ไม่พบหน้า</string>
@@ -411,8 +411,8 @@
     <string name="back">กลับ</string>
     <string name="forward">ไปข้างหน้า</string>
     <string name="more">เพิ่มเติม</string>
-    <string name="move_to_bottom">ย้ายไปด้านล่าง</string>
-    <string name="move_to_top">ย้ายไปด้านบน</string>
+    <string name="move_to_bottom">ย้ายไปล่างสุด</string>
+    <string name="move_to_top">ย้ายไปบนสุด</string>
     <string name="never">ไม่เลย</string>
     <string name="newest">ล่าสุด</string>
     <string name="next">ถัดไป</string>
@@ -427,7 +427,7 @@
     </plurals>
     <string name="chapter_not_found">ไม่พบตอน</string>
     <string name="source_unsupported">ไม่รองรับแหล่งที่มานี้</string>
-    <string name="about_dont_kill_my_app">ผู้ผลิตบางรายมีข้อจำกัดเพิ่มเติมของแอพที่ปิดบริการพื้นหลัง เว็บไซต์นี้มีข้อมูลเพิ่มเติมเกี่ยวกับวิธีการแก้ไข</string>
+    <string name="about_dont_kill_my_app">ผู้ผลิตบางรายมีข้อจำกัดเพิ่มเติมของแอปที่ปิดบริการพื้นหลัง เว็บไซต์นี้มีข้อมูลเพิ่มเติมเกี่ยวกับวิธีการแก้ไข</string>
     <string name="download_queue_size_warning">คำเตือน: การดาวน์โหลดจำนวนมากอาจทำให้แหล่งข้อมูลทำงานช้าลงและ/หรือปิดกั้น Tachiyomi แตะเพื่อเรียนรู้เพิ่มเติม</string>
     <string name="ext_installer_shizuku_unavailable_dialog">ติดตั้งและเริ่ม Shizuku เพื่อใช้ Shizuku เป็นตัวติดตั้งส่วนขยาย</string>
     <string name="help_translate">ช่วยแปล</string>
@@ -487,7 +487,7 @@
     </plurals>
     <string name="use_side_navigation">ใช้แถบนำทางด้านข้าง</string>
     <string name="by_default_side_nav_info">ตามค่าเริ่มต้น แถบการนำทางด้านข้างจะใช้สำหรับโทรศัพท์บางรุ่นและแท็บเล็ตขนาดเล็กเมื่ออยู่ในแนวนอน และจะแสดงบนแท็บเล็ตขนาดใหญ่เสมอ</string>
-    <string name="auto_update_app">อัปเดตแอพอัตโนมัติ</string>
+    <string name="auto_update_app">อัปเดตแอปอัตโนมัติ</string>
     <string name="show_recent_sources">แสดงแหล่งที่มาที่ใช้ล่าสุด</string>
     <string name="over_any_network">ผ่านทุกเครือข่าย</string>
     <string name="show_recent_series">แสดงเรื่องล่าสุด</string>
@@ -499,7 +499,7 @@
 \nกำลังใช้ไป: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">ล้างแคชภาพปกที่ไม่ได้อยู่ในคลังทั้งหมด
 \nกำลังใช้ไป: %1$s</string>
-    <string name="some_extensions_may_not_update">ส่วนขยายบางรายการอาจอัปเดตอัตโนมัติไม่ได้ หากติดตั้งจากภายนอกแอพ</string>
+    <string name="some_extensions_may_not_update">ส่วนขยายบางรายการอาจอัปเดตอัตโนมัติไม่ได้ หากติดตั้งจากภายนอกแอป</string>
     <string name="migration_sources_changed">แหล่งที่มาของการโยกย้ายมีการเปลี่ยนแปลง</string>
     <string name="only_enable_pinned_for_migration">โยกย้ายได้เฉพาะแหล่งที่มาที่ตรึงไว้อยู่เท่านั้น</string>
     <string name="use_last_saved_migration_preferences">ใช้เซฟการตั้งค่าและแหล่งที่มาจากโยกย้ายล่วงหน้าในการโยกย้ายใหญ่</string>
@@ -602,7 +602,7 @@
     <string name="reset_tags">รีเซ็ตแท็ก</string>
     <string name="reset_cover">รีเซ็ตปก</string>
     <string name="custom_manga_info">ข้อมูลมังงะกำหนดเอง</string>
-    <string name="remove_tracking">ลบการติดตามออกจากแอพ</string>
+    <string name="remove_tracking">ลบการติดตามออกจากแอป</string>
     <string name="started_reading_date">วันที่เริ่มอ่าน</string>
     <string name="select_sources">เลื่อกแหล่งที่มา</string>
     <string name="select_a_source_then_item_to_migrate">เลือกแหล่งที่มาหลังจากนั้นเลือกรายการที่จะโยกย้าย</string>
@@ -631,14 +631,14 @@
     <string name="pressing_back_to_start">กดกลับเพื่อไปที่หน้าจอเริ่มต้น</string>
     <string name="auto_updates">อัปเดตอัตโนมัติ</string>
     <string name="dont_auto_update">อย่าอัปเดตอัตโนมัติ</string>
-    <string name="app_shortcuts">ทางลัดแอพ</string>
+    <string name="app_shortcuts">ทางลัดแอป</string>
     <string name="includes_recently_read_updated_added">รวมทั้ง เรื่องที่อ่าน, อัปเดตและเพิ่มล่าสุด</string>
     <string name="no_new_chapters_open_details">เมื่อไม่มีตอนใหม่ รายละเอียดของเรื่องจะเปิดขึ้นแทน</string>
     <string name="restore_in_progress">การคืนค่ากําลังดําเนินการอยู่แล้ว</string>
     <string name="backup_in_progress">การสำรองข้อมูลกําลังดําเนินการอยู่แล้ว</string>
     <string name="not_logged_into_">ไม่ได้เข้าสู่ระบบ %1$s</string>
     <string name="force_download_cache_refresh">โหลดแคชดาวน์โหลดใหม่</string>
-    <string name="force_download_cache_refresh_summary">การดำเนินการนี้จะบังคับให้ดาวน์โหลดคำนวณแคชใหม่ มีประโยชน์หากทำการแก้ไขการดาวน์โหลดนอกแอพนี้และต้องการให้แอพใช้มัน</string>
+    <string name="force_download_cache_refresh_summary">การดำเนินการนี้จะบังคับให้ดาวน์โหลดคำนวณแคชใหม่ มีประโยชน์หากทำการแก้ไขการดาวน์โหลดนอกแอปนี้และต้องการให้แอปใช้มัน</string>
     <string name="data_management">การจัดการข้อมูล</string>
     <string name="clean_up_downloaded_chapters">ล้างตอนที่ดาวน์โหลดไว้</string>
     <string name="clean_orphaned_downloads">ล้างตอนที่ไม่มีอยู่</string>
@@ -674,7 +674,7 @@
     <string name="hide">ซ่อน</string>
     <string name="mark_range_as_read">ทำเครื่องหมายช่วงของตอนว่าอ่านแล้ว</string>
     <string name="mark_range_as_unread">ทำเครื่องหมายช่วงของตอนว่ายังไม่ได้อ่าน</string>
-    <string name="mark_previous_as_unread">ทำเครื่องหมายตอนก่อนหน้าว่ายังไม่ได่อ่าน</string>
+    <string name="mark_previous_as_unread">ทำเครื่องหมายตอนก่อนหน้าว่ายังไม่ได้อ่าน</string>
     <string name="menu">เมนู</string>
     <string name="remove_from_">นำออกจาก %1$s</string>
     <string name="selection">การเลือก</string>
@@ -693,7 +693,7 @@
     <string name="use_shizuku_summary">อนุญาตให้ติดตั้งส่วนขยายโดยไม่ต้องแจ้งให้ผู้ใช้ทราบ และเปิดใช้งานการอัปเดตอัตโนมัติสำหรับอุปกรณ์ที่ใช้ Android 12</string>
     <string name="installed_">ติดตั้ง %1$s แล้ว</string>
     <string name="extensions_miui_warning">ต้องปิดใช้การเพิ่มประสิทธิภาพ MIUI เพื่อติดตั้งส่วนขยาย</string>
-    <string name="app_info">ข้อมูลแอพ</string>
+    <string name="app_info">ข้อมูลแอป</string>
     <string name="could_not_install_extension">ไม่สามารถติดตั้งส่วนขยาย</string>
     <string name="update_all">อัปเดตทั้งหมด</string>
     <string name="some_extensions_may_prompt">ส่วนขยายบางรายการอาจยังแจ้งให้ติดตั้งก่อน</string>
@@ -967,4 +967,10 @@
     <string name="faq_and_guides">คำถามที่พบบ่อยและคู่มือ</string>
     <string name="learn_why">เรียนรู้ว่าทำไม</string>
     <string name="secure_screen_summary">หน้าจอปลอดภัยจะซ่อนเนื้อหาของแอปเมื่อสลับแอปและกันไม่ให้ถ่ายภาพหน้าจอ</string>
+    <string name="open_in_app">เปิดในแอป</string>
+    <string name="pref_highest">เร็วที่สุด</string>
+    <string name="pref_hide_threshold">ความเร็วในการซ่อนเมนูบนเมื่อเลื่อน</string>
+    <string name="pref_high">เร็ว</string>
+    <string name="pref_low">ช้า</string>
+    <string name="pref_lowest">ช้ามาก</string>
 </resources>

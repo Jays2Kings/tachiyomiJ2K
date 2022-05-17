@@ -117,7 +117,7 @@
     <string name="restore_backup">還原備份</string>
     <string name="backup_location">備份位置</string>
     <string name="backup_frequency">備份頻率</string>
-    <string name="backup_created">已創建備份</string>
+    <string name="backup_created">已建立備份</string>
     <string name="restore_completed">還原成功</string>
     <string name="what_should_backup">哪些項目需要備份？</string>
     <string name="restoring_backup">正在還原</string>
@@ -664,4 +664,9 @@
     <string name="battery_not_low">電量充足時</string>
     <string name="faq_and_guides">常見問題與指南</string>
     <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面</string>
+    <string name="pref_hide_threshold">捲動時隱藏選單的靈敏度</string>
+    <string name="pref_highest">最高</string>
+    <string name="pref_high">高</string>
+    <string name="pref_low">低</string>
+    <string name="pref_lowest">最低</string>
 </resources>

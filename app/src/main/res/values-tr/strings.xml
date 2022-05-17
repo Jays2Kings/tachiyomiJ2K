@@ -990,4 +990,9 @@
     <string name="learn_why">Nedenini öğrenin</string>
     <string name="secure_screen_summary">Güvenli ekran, uygulamalar arasında geçiş yaparken uygulama içeriğini gizler ve ekran görüntüsü alınmasını engeller</string>
     <string name="open_in_app">Uygulamada aç</string>
+    <string name="pref_hide_threshold">Kaydırmada menüyü gizleme hassasiyeti</string>
+    <string name="pref_highest">En yüksek</string>
+    <string name="pref_high">Yüksek</string>
+    <string name="pref_low">Düşük</string>
+    <string name="pref_lowest">En düşük</string>
 </resources>

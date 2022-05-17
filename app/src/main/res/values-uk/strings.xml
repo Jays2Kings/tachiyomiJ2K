@@ -980,4 +980,9 @@
     <string name="pref_manage_notifications">Керування сповіщеннями</string>
     <string name="faq_and_guides">Довідка та FAQ</string>
     <string name="secure_screen_summary">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
+    <string name="pref_hide_threshold">Чутливість приховування меню при прокручуванні</string>
+    <string name="pref_highest">Найвища</string>
+    <string name="pref_high">Висока</string>
+    <string name="pref_low">Низька</string>
+    <string name="pref_lowest">Найнижча</string>
 </resources>

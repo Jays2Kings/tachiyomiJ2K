@@ -47,7 +47,7 @@
     <string name="save">保存</string>
     <string name="reset">重置</string>
     <string name="undo">撤销</string>
-    <string name="tracking">同步中</string>
+    <string name="tracking">追踪</string>
     <string name="source_migration">来源迁移</string>
     <string name="mark_previous_as_read">标记之前章节为已读</string>
     <string name="create">创建</string>
@@ -171,7 +171,7 @@
     <string name="clear_database_completed">已删除条目</string>
     <string name="refresh_library_metadata">刷新书架数据</string>
     <string name="updates_covers_genres_desc">更新封面，类型，描述与漫画状态信息</string>
-    <string name="refresh_tracking_metadata">刷新同步数据</string>
+    <string name="refresh_tracking_metadata">刷新追踪数据</string>
     <string name="updates_tracking_details">更新同步服务的状态，评分以及已读章节</string>
     <string name="version">版本</string>
     <string name="build_time">构建时间</string>
@@ -306,7 +306,7 @@
     <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">第 %1$s 章</string>
     <string name="remove_from_library">移出书架</string>
-    <string name="refresh_tracking">刷新同步进度</string>
+    <string name="refresh_tracking">刷新追踪进度</string>
     <string name="add_tracking">添加追踪进度</string>
     <string name="copy_value">共存</string>
     <string name="date_format">日期格式</string>
@@ -406,7 +406,7 @@
     <string name="sort_by">排序方式</string>
     <string name="ungrouped">未分组</string>
     <string name="remove_tracking_from_">同时从 %1$s 移除</string>
-    <string name="remove_tracking">从应用程序中删除同步进度</string>
+    <string name="remove_tracking">从应用程序中删除追踪进度</string>
     <string name="tracking_status">同步状态</string>
     <string name="group_library_by">书架分组…</string>
     <string name="series_type">系列类型</string>
@@ -468,8 +468,8 @@
     <string name="select_a_source_then_item_to_migrate">选择图源，然后选择待迁移项目</string>
     <string name="skip_pre_migration">跳过迁移首选项</string>
     <string name="currently_reading">正在阅读</string>
-    <string name="not_tracked">未同步</string>
-    <string name="tracked">已同步</string>
+    <string name="not_tracked">未追踪</string>
+    <string name="tracked">已追踪</string>
     <string name="error_sharing_cover">分享封面时出错</string>
     <string name="error_saving_cover">保存封面时出错</string>
     <string name="source_not_installed">图源未安装</string>
@@ -610,7 +610,7 @@
     <string name="file_is_missing_data">文件是丢失数据。</string>
     <string name="backup_has_no_manga">备份不包含任何漫画。</string>
     <string name="restore_missing_sources">缺少图源：</string>
-    <string name="restore_missing_trackers">未登录的同步源：</string>
+    <string name="restore_missing_trackers">未登录的追踪源：</string>
     <string name="restore_content">还原使用图源获取数据，可能耗费联网费用。
 \n
 \n还原前，请确认你已安装了全部必需的扩展并已登录到图源和追踪服务。</string>
@@ -967,4 +967,9 @@
     <string name="learn_why">了解原因</string>
     <string name="secure_screen_summary">切换应用程序时，安全屏幕隐藏应用程序内容，并阻止截屏</string>
     <string name="open_in_app">在应用中打开</string>
+    <string name="pref_hide_threshold">滚动时隐藏菜单的灵敏度</string>
+    <string name="pref_highest">最高</string>
+    <string name="pref_high">高</string>
+    <string name="pref_low">低</string>
+    <string name="pref_lowest">最低</string>
 </resources>

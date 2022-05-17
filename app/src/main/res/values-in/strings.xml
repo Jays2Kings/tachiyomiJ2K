@@ -968,4 +968,9 @@
     <string name="learn_why">Pelajarilah alasannya</string>
     <string name="secure_screen_summary">Sembunyikan konten aplikasi saat berpindah aplikasi dan blokir tangkapan layar</string>
     <string name="open_in_app">Buka di Aplikasi</string>
+    <string name="pref_highest">Tertinggi</string>
+    <string name="pref_hide_threshold">Sensitivitas untuk menyembunyikan menu dalam gulir</string>
+    <string name="pref_high">Tinggi</string>
+    <string name="pref_low">Rendah</string>
+    <string name="pref_lowest">Terendah</string>
 </resources>

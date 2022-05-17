@@ -1023,4 +1023,11 @@
     <string name="battery_not_low">Akkuladung nicht niedrig</string>
     <string name="faq_and_guides">Häufige Fragen und Leitfäden</string>
     <string name="secure_screen_summary">Sicherer Bildschirm verbirgt App-Inhalte beim Wechseln von Apps und blockiert Screenshots</string>
+    <string name="pref_hide_threshold">Empfindlichkeit für das Ausblenden des Menüs beim Scrollen</string>
+    <string name="pref_highest">Höchste</string>
+    <string name="pref_high">Hoch</string>
+    <string name="pref_low">Niedrig</string>
+    <string name="pref_lowest">Niedrigste</string>
+    <string name="open_in_app">In der App öffnen</string>
+    <string name="learn_why">Erfahre weshalb</string>
 </resources>

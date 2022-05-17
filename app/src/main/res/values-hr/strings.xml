@@ -858,7 +858,6 @@
     <string name="light_theme">Svjetla tema</string>
     <string name="no_match_found">Ništa nije pronađeno</string>
     <string name="source_unsupported">Izvor nije podržan</string>
-    <string name="track_when_adding_to_library">Prati prilikom dodavanja u biblioteku</string>
     <string name="set_as_default">Postavi kao standardno</string>
     <string name="add_tag">Dodaj oznaku</string>
     <plurals name="_updates_pending">
@@ -973,4 +972,9 @@
     <string name="pref_manage_notifications">Upravljaj obavijestima</string>
     <string name="faq_and_guides">ČPP i vodiči</string>
     <string name="secure_screen_summary">Siguran ekran skriva sadržaj programa prilikom prebacivanja između programa i blokira snimke ekrana</string>
+    <string name="pref_hide_threshold">Osjetljivost za skrivanje izbornika pri pomicanju</string>
+    <string name="pref_highest">Najviša</string>
+    <string name="pref_high">Visoka</string>
+    <string name="pref_low">Niska</string>
+    <string name="pref_lowest">Najniža</string>
 </resources>

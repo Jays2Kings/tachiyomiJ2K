@@ -831,7 +831,6 @@
     <string name="remove_previous_tracker">Fjern forrige sporer\?</string>
     <string name="remove_tracking">Fjern sporing fra program</string>
     <string name="no_match_found">Resultatløst</string>
-    <string name="track_when_adding_to_library">Hold oppsyn med når tillagt i bibliotek</string>
     <string name="not_tracked">Holdes ikke oppsyn med</string>
     <string name="filter_groups">Filtrer scanlator-grupper</string>
     <string name="automatic_can_still_switch">Ved bruk av automatisk sideoppsett kan du fremdeles bytte mellom oppsett mens du leser, uten å overstyre denne innstillingen</string>
@@ -961,4 +960,9 @@
     <string name="battery_not_low">Batteri er ikke lavt</string>
     <string name="faq_and_guides">FAQ og guider</string>
     <string name="secure_screen_summary">Sikker skjerm skjuler programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
+    <string name="pref_hide_threshold">Følsomhet for å skjule menyen når du ruller</string>
+    <string name="pref_highest">Høyeste</string>
+    <string name="pref_high">Høy</string>
+    <string name="pref_low">Lav</string>
+    <string name="pref_lowest">Laveste</string>
 </resources>

@@ -993,4 +993,9 @@
     <string name="battery_not_low">Pin không quá ít</string>
     <string name="faq_and_guides">Câu Hỏi Thờng Gặp và Hướng Dẫn</string>
     <string name="secure_screen_summary">Bảo vệ màn hình sẽ ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp ảnh màn hình</string>
+    <string name="pref_hide_threshold">Độ nhạy cho phần tự ẩn mục chính khi kéo cuộn</string>
+    <string name="pref_highest">Cao nhất</string>
+    <string name="pref_high">Cao</string>
+    <string name="pref_low">Thấp</string>
+    <string name="pref_lowest">Thấp nhất</string>
 </resources>

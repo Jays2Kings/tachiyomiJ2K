@@ -818,7 +818,6 @@
     <string name="no_match_found">該当するものなし</string>
     <string name="source_unsupported">非対応ソースです</string>
     <string name="select_an_entry">項目を選択</string>
-    <string name="track_when_adding_to_library">ライブラリに追加時に追跡をオン</string>
     <string name="set_as_default">既定として設定</string>
     <string name="add_tag">タグを追加</string>
     <plurals name="missing_chapters_warning">
@@ -960,4 +959,17 @@
     <string name="battery_not_low">バッテリー残量が低くない</string>
     <string name="faq_and_guides">よくあるご質問とガイド</string>
     <string name="secure_screen_summary">セキュア画面はアプリを切り替える時アプリの内容を非表示し、画面キャプチャを無効化します</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">次の未読の%d章</item>
+    </plurals>
+    <string name="download_ahead">事前ダウンロード</string>
+    <string name="open_in_app">アプリで開く</string>
+    <string name="auto_download_after_reading">読了後に次の未読の章をダウンロード</string>
+    <string name="download_ahead_info">「事前ダウンロード」は読了した最後の章がダウンロード済みの場合のみ、そしてライブラリにある項目にのみ適用します</string>
+    <string name="learn_why">原因を表示</string>
+    <string name="pref_highest">最高</string>
+    <string name="pref_hide_threshold">メニューを自動で非表示する時のスクロール感度</string>
+    <string name="pref_high">高い</string>
+    <string name="pref_low">低い</string>
+    <string name="pref_lowest">最低</string>
 </resources>

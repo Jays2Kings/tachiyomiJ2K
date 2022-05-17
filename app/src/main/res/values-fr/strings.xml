@@ -630,7 +630,7 @@
     <string name="show_bookmarked_chapters">Afficher les signets</string>
     <string name="all_but_bookmarked_chapters">Tous les chapitres, sauf les signets</string>
     <string name="l_nav">En forme de L</string>
-    <string name="kindlish_nav">Plutôt provoquant</string>
+    <string name="kindlish_nav">Style Kindle</string>
     <string name="edge_nav">Bord</string>
     <string name="right_and_left_nav">Droite et gauche</string>
     <string name="invert_tapping">Inverser les touches</string>
@@ -1024,4 +1024,9 @@
     <string name="download_ahead_info">Le téléchargement anticipé ne s\'applique qu\'aux entrées de la bibliothèque et si le dernier chapitre lu a été téléchargé</string>
     <string name="secure_screen_summary">L\'écran sécurisé cache le contenu lors du changement d\'application et bloque les captures d\'écran</string>
     <string name="open_in_app">Ouvrir dans l\'application</string>
+    <string name="pref_hide_threshold">Sensibilité pour masquer le menu lors du défilement</string>
+    <string name="pref_highest">La plus élevée</string>
+    <string name="pref_high">Élevée</string>
+    <string name="pref_low">Basse</string>
+    <string name="pref_lowest">La plus basse</string>
 </resources>

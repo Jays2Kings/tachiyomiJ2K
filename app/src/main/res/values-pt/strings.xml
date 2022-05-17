@@ -852,7 +852,6 @@
     <string name="dark_theme">Tema escuro</string>
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">Não foi encontrado resultado similar</string>
-    <string name="track_when_adding_to_library">Rastrear ao adicionar a biblioteca</string>
     <string name="set_as_default">Definir como predefinição</string>
     <string name="add_tag">Adicionar tag</string>
     <string name="split_double_pages">Dividir em página dupla</string>
@@ -1007,4 +1006,9 @@
     <string name="battery_not_low">Bateria não fraca</string>
     <string name="faq_and_guides">Perguntas frequentes e Guias</string>
     <string name="secure_screen_summary">Ecrã seguro esconde os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
+    <string name="pref_hide_threshold">Sensibilidade para ocultar menu ao deslocar</string>
+    <string name="pref_highest">Mais alta</string>
+    <string name="pref_high">Alta</string>
+    <string name="pref_low">Baixa</string>
+    <string name="pref_lowest">Mais baixa</string>
 </resources>

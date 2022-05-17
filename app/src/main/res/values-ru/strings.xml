@@ -880,7 +880,6 @@
     <string name="light_theme">Светлая тема</string>
     <string name="no_match_found">Совпадений не найдено</string>
     <string name="source_unsupported">Источник не поддерживается</string>
-    <string name="track_when_adding_to_library">Отслеживать при добавлении в библиотеку</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d обновление ожидается</item>
         <item quantity="few">%d обновления ожидаются</item>
@@ -1053,4 +1052,9 @@
     <string name="battery_not_low">Батарея заряжена</string>
     <string name="faq_and_guides">Руководства и FAQ</string>
     <string name="secure_screen_summary">Защита экрана скрывает содержимое при переключении между приложениями, а также блокирует создание скриншотов</string>
+    <string name="pref_hide_threshold">Чувствительность скрытия меню при прокрутке</string>
+    <string name="pref_highest">Самая высокая</string>
+    <string name="pref_high">Высокая</string>
+    <string name="pref_low">Низкая</string>
+    <string name="pref_lowest">Самая низкая</string>
 </resources>

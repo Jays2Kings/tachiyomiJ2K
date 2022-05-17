@@ -817,7 +817,6 @@
     <string name="strawberry_daiquiri">Strawberry Daiquiri</string>
     <string name="dark_theme">Σκοτεινό θέμα</string>
     <string name="light_theme">Φωτεινό θέμα</string>
-    <string name="track_when_adding_to_library">Παρακολούθηση κατά την προσθήκη στη βιβλιοθήκη</string>
     <string name="set_as_default">Ορισμός ως προεπιλογή</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d εκκρεμεί ενημέρωση</item>
@@ -990,4 +989,10 @@
     <string name="download_ahead">Λήψη εκ των προτέρων</string>
     <string name="download_ahead_info">Η λήψη εκ των προτέρων ισχύει μόνο για καταχωρήσεις στη βιβλιοθήκη και εάν έγινε λήψη του τελευταίου κεφαλαίου που διαβάστηκε</string>
     <string name="secure_screen_summary">Η ασφαλής οθόνη αποκρύπτει τα περιεχόμενα εφαρμογών κατά την εναλλαγή εφαρμογών και εμποδίζει τα στιγμιότυπα οθόνης</string>
+    <string name="open_in_app">Άνοιγμα στην εφαρμογή</string>
+    <string name="pref_hide_threshold">Ευαισθησία για την απόκρυψη του μενού κατά την κύλιση</string>
+    <string name="pref_highest">Ύψιστη</string>
+    <string name="pref_high">Υψηλή</string>
+    <string name="pref_low">Χαμηλή</string>
+    <string name="pref_lowest">Χαμηλότερη</string>
 </resources>

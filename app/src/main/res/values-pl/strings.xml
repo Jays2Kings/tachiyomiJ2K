@@ -880,7 +880,6 @@
     <string name="incognito_mode">tryb Incognito</string>
     <string name="turn_off_">Wyłącz %s</string>
     <string name="turn_on_">Włącz %s</string>
-    <string name="track_when_adding_to_library">Śledź w momencie dodawania do biblioteki</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d strona</item>
         <item quantity="few">%1$d strony</item>
@@ -1049,4 +1048,9 @@
     <string name="pref_manage_notifications">Zarządzaj powiadomieniami</string>
     <string name="faq_and_guides">FAQ i poradniki</string>
     <string name="secure_screen_summary">Ukrywa zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
+    <string name="pref_highest">Najwyższy</string>
+    <string name="pref_hide_threshold">Czułość ukrywania dolnego paska podczas przewijania</string>
+    <string name="pref_high">Wysokie</string>
+    <string name="pref_low">Niskie</string>
+    <string name="pref_lowest">Najniższe</string>
 </resources>

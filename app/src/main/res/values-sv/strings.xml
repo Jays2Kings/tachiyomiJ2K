@@ -812,7 +812,6 @@
     <string name="light_theme">Ljust tema</string>
     <string name="no_match_found">Inga träffar hittades</string>
     <string name="source_unsupported">Källan stöds inte</string>
-    <string name="track_when_adding_to_library">Spåra när du lägger till i biblioteket</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d uppdatering väntar</item>
         <item quantity="other">%d uppdateringar väntar</item>
@@ -990,4 +989,10 @@
     <string name="download_ahead_info">Nedladdning framåt gäller endast för poster i biblioteket och om det senast lästa kapitlet har laddats ned</string>
     <string name="learn_why">Lär dig varför</string>
     <string name="secure_screen_summary">Säker skärm döljer appinnehållet när du byter app och blockerar skärmdumpar</string>
+    <string name="pref_hide_threshold">Känslighet för att dölja menyn vid rullning</string>
+    <string name="pref_highest">Högsta</string>
+    <string name="pref_high">Hög</string>
+    <string name="pref_low">Låg</string>
+    <string name="pref_lowest">Lägsta</string>
+    <string name="open_in_app">Öppna i appen</string>
 </resources>

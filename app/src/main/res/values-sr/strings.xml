@@ -682,7 +682,6 @@
     <string name="page_">Strana %1$d</string>
     <string name="filter_groups">Trazenje grupe prevodilaca</string>
     <string name="not_tracked">Nije praćeno</string>
-    <string name="only_applies_silent_trackers">Odnosi se samo na nečujne tragače, kao što je Komga</string>
     <string name="show_unread_badges">Pokaži nepročitane serijale</string>
     <string name="last_read_">Zadnje pročitano %1$s</string>
     <string name="set_as_default_for_all">Postavi kao uobičajeno za sve</string>
@@ -1004,4 +1003,9 @@
     <string name="battery_not_low">Baterija nije prazna</string>
     <string name="faq_and_guides">Pitanja i vodiči</string>
     <string name="secure_screen_summary">Сакриј приказ апликације приликом пребацивања између апликација и онемогући снимке екрана</string>
+    <string name="pref_hide_threshold">Осетљивост за сакривање менија при померању</string>
+    <string name="pref_highest">Највиша</string>
+    <string name="pref_high">Висока</string>
+    <string name="pref_low">Ниска</string>
+    <string name="pref_lowest">Најнижа</string>
 </resources>

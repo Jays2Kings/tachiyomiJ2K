@@ -928,4 +928,9 @@
     <string name="clear_history_confirmation">আপনি নিশ্চিত\? সব ইতিহাস মুছে যাবে।</string>
     <string name="backup_info">স্বয়ংক্রিয় ব্যাকআপ অত্যন্ত সুপারিশময়. আপনি অন্যান্য জায়গায়ও কপি রাখা উচিত।</string>
     <string name="pref_manage_notifications">বিজ্ঞপ্তিগুলি নিয়ন্ত্রণ করুন</string>
+    <string name="pref_hide_threshold">স্ক্রলে মেনু লুকানোর জন্য সংবেদনশীলতা</string>
+    <string name="pref_highest">সর্বোচ্চ</string>
+    <string name="pref_high">উচ্চ</string>
+    <string name="pref_low">নিম্ম</string>
+    <string name="pref_lowest">সর্বনিম্ন</string>
 </resources>

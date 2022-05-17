@@ -843,7 +843,6 @@
     <string name="light_theme">Tema claro</string>
     <string name="no_match_found">No se han encontrado resultados iguales</string>
     <string name="source_unsupported">Fuente no soportada</string>
-    <string name="track_when_adding_to_library">Seguimiento al añadir a la biblioteca</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d actualización pendiente</item>
         <item quantity="other">%d actualizaciones pendientes</item>
@@ -884,7 +883,7 @@
     <string name="by_chapter_number">Por número de capítulo</string>
     <string name="by_source_order">Por orden de la fuente</string>
     <string name="not_bookmarked">Sin marcar</string>
-    <string name="name">Nombré</string>
+    <string name="name">Nombre</string>
     <string name="recently_installed">Instalado recientemente</string>
     <string name="recently_updated">Actualizado recientemente</string>
     <string name="some_extensions_may_not_update">Es posible que algunas extensiones no se actualicen automáticamente si fueron instaladas fuera de esta aplicación</string>
@@ -1020,4 +1019,9 @@
     <string name="battery_not_low">Batería cargada</string>
     <string name="faq_and_guides">Guías y soluciones</string>
     <string name="secure_screen_summary">Pantalla segura oculta el contenido al cambiar de aplicación y bloquea las capturas de pantalla</string>
+    <string name="pref_high">Alta</string>
+    <string name="pref_hide_threshold">Sensibilidad para ocultar automáticamente el menú al desplazarse</string>
+    <string name="pref_highest">Más alta</string>
+    <string name="pref_low">Baja</string>
+    <string name="pref_lowest">Más baja</string>
 </resources>

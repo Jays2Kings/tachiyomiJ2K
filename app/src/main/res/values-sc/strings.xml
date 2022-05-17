@@ -71,7 +71,7 @@
     <string name="weekly">Cada chida</string>
     <string name="categories_to_include_in_global_update">Categorias de incluire in s\'agiornamentu globale</string>
     <string name="all">Totus</string>
-    <string name="library_update_restriction">Restritziones a s\'agiornamentu de sa biblioteca</string>
+    <string name="library_update_restriction">Restritziones de su dispositivu</string>
     <string name="library_update_restriction_summary">Agiorna petzi cando sas cunditziones benint rispetadas</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Carrighende</string>
@@ -812,7 +812,6 @@
     <string name="light_theme">Tema craru</string>
     <string name="no_match_found">Perunu resurtadu agatadu</string>
     <string name="source_unsupported">Fonte non suportada</string>
-    <string name="track_when_adding_to_library">Arrastamentu a pustis de s\'annanghidura a sa biblioteca</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d agiornamentu in isetu</item>
         <item quantity="other">%d agiornamentos in isetu</item>
@@ -901,7 +900,7 @@
     <string name="log_out_from_">Essire dae %1$s\?</string>
     <string name="keep_in_">Mantene in %1$s</string>
     <string name="remove_from_">Boga dae %1$s</string>
-    <string name="notification_size_warning">Sos agiornamentos mannos diant pòdere batire a un\'impreu de sa bateria prus mannu e a unu rallentamentu de sas fontes</string>
+    <string name="notification_size_warning">Sos agiornamentos mannos diant pòdere batire a un\'impreu de sa bateria prus mannu e a unu rallentamentu de sas fontes. Toca pro nde ischire de prus.</string>
     <string name="show_in_sources_and_extensions">Ammustra in sa lista de sas mitzas e de sas estensiones</string>
     <string name="show_outline_around_covers">Ammustra sos oros de sas coberteddas</string>
     <string name="ext_installer_shizuku_stopped">Shizuku no est in esecutzione</string>
@@ -971,4 +970,29 @@
     <string name="battery_not_low">Bateria non bassa</string>
     <string name="faq_and_guides">PF e ghias</string>
     <string name="secure_screen_summary">S\'ischermu seguru cuat sos cuntenutos de s\'aplicatzione cando mudas de aplicatzione e blocat sas ischermadas</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Su capìtulu non lèghidu imbeniente</item>
+        <item quantity="other">Sos %d capìtulos non lèghidos imbenientes</item>
+    </plurals>
+    <string name="update_tracking_after_reading">Agiorna s\'arrastamentu a pustis de sa leghidura</string>
+    <string name="update_tracking_marked_read">Agiorna s\'arrastamentu cando as marcadu comente lèghidu</string>
+    <string name="view_all">Pòmpia totu</string>
+    <string name="download_ahead">Iscàrriga sos imbenientes</string>
+    <string name="auto_download_after_reading">Iscàrriga sos capìtulos non lèghidos imbenientes a pustis de sa leghidura</string>
+    <string name="download_ahead_info">S\'iscarrigamentu de sos imbenientes s\'àplicat petzi a sos elementos in biblioteca e si s\'ùrtimu capìtulu lèghidu fiat iscarrigadu</string>
+    <string name="learn_why">Impara proite</string>
+    <string name="use_staggered_grid">Imprea una grìllia iscansada</string>
+    <string name="pref_update_only_completely_read_summary">Agiorna sos menga petzi si non bi sunt capìtulos non lèghidos (lèghidu de su totu)</string>
+    <string name="most_entries">Sa parte manna de sos elementos</string>
+    <string name="select_uninstalled_sources">Seletziona sas fontes disinstalladas</string>
+    <string name="downloads_swipe_tutorial">Sos iscarrigamentos si podent annullare traghende·los a foras
+\nFaghe iscùrrere custu impòsitu pro lu bogare</string>
+    <string name="open_in_app">Aberi in s\'aplicatzione</string>
+    <string name="show_">Ammustra su %1$s</string>
+    <string name="must_view_details_before_migration">Sa pàgina de sos detàllios de custu elementu si depet pompiare in antis de pòdere tramudare</string>
+    <string name="pref_hide_threshold">Sensibilidade pro cuare su menù cun s\'iscurrimentu</string>
+    <string name="pref_highest">Arta meda</string>
+    <string name="pref_high">Arta</string>
+    <string name="pref_low">Bassa</string>
+    <string name="pref_lowest">Bassa meda</string>
 </resources>
