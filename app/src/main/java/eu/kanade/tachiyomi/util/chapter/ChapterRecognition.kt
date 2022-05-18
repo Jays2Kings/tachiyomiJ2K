@@ -47,8 +47,8 @@ object ChapterRecognition {
         // Get chapter title with lower case
         var name = chapter.name.lowercase(Locale.getDefault())
 
-        // Remove comma's from chapter.
-        name = name.replace(',', '.')
+        // Remove comma's or hyphens.
+        name = name.replace(',', '.').replace('-', '.')
 
         // Remove unwanted white spaces.
         unwantedWhiteSpace.findAll(name).let {
@@ -133,11 +133,11 @@ object ChapterRecognition {
                 return .97f
             }
 
-            if (alpha[0] == '.') {
+            return if (alpha[0] == '.') {
                 // Take value after (.)
-                return parseAlphaPostFix(alpha[1])
+                parseAlphaPostFix(alpha[1])
             } else {
-                return parseAlphaPostFix(alpha[0])
+                parseAlphaPostFix(alpha[0])
             }
         }
 
