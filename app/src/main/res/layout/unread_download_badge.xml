@@ -8,6 +8,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent"
     android:layout_marginStart="2dp"
     android:layout_marginTop="5dp"
     android:visibility="gone"
@@ -51,15 +52,15 @@
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/bottom_text_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="download_text,unread_text" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/top_text_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:barrierDirection="top"
             app:constraint_referenced_ids="download_text,unread_text" />
 
@@ -67,7 +68,7 @@
             android:id="@+id/download_text"
             style="?textAppearanceCaption"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="?colorTertiary"
             android:gravity="center"
             android:maxLines="1"
@@ -76,6 +77,7 @@
             android:textColor="@color/download_badge_text"
             android:textSize="13sp"
             android:visibility="gone"
+            app:layout_constraintHeight_min="wrap"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/lang_image"
             app:layout_constraintTop_toTopOf="parent"
@@ -99,7 +101,7 @@
             android:id="@+id/unread_text"
             style="?textAppearanceCaption"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="?attr/colorSecondary"
             android:gravity="center"
             android:maxLines="1"
@@ -108,10 +110,11 @@
             android:textColor="?colorOnSecondary"
             android:textSize="13sp"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/download_text"
+            app:layout_constraintHeight_min="wrap"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/download_text"
-            app:layout_constraintTop_toTopOf="@+id/download_text"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="20"
             tools:visibility="visible"
             tools:paddingStart="2dp"/>
