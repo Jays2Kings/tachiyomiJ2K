@@ -49,7 +49,7 @@ class EditMangaDialog : DialogController {
     private var willResetCover = false
 
     lateinit var binding: EditMangaDialogBinding
-    val langauges = mutableListOf<String>()
+    private val languages = mutableListOf<String>()
 
     private val infoController
         get() = targetController as MangaDetailsController
@@ -107,8 +107,8 @@ class EditMangaDialog : DialogController {
             val extensionManager: ExtensionManager by injectLazy()
             val activeLangs = preferences.enabledLanguages().get()
 
-            langauges.add("")
-            langauges.addAll(
+            languages.add("")
+            languages.addAll(
                 extensionManager.availableExtensions.groupBy { it.lang }.keys
                     .sortedWith(
                         compareBy(
@@ -119,12 +119,12 @@ class EditMangaDialog : DialogController {
                     .filter { it != "all" },
             )
             binding.mangaLang.setEntries(
-                langauges.map {
+                languages.map {
                     LocaleHelper.getSourceDisplayName(it, binding.root.context)
                 },
             )
             binding.mangaLang.setSelection(
-                langauges.indexOf(LocalSource.getMangaLang(manga, binding.root.context))
+                languages.indexOf(LocalSource.getMangaLang(manga, binding.root.context))
                     .takeIf { it > -1 } ?: 0,
             )
         } else {
@@ -167,10 +167,10 @@ class EditMangaDialog : DialogController {
         }
         binding.mangaStatus.setSelection(manga.status.coerceIn(SManga.UNKNOWN, SManga.ON_HIATUS))
         val oldType = manga.seriesType()
-        binding.seriesType.setSelection(oldType - 1)
         binding.seriesType.onItemSelectedListener = {
             binding.resetsReadingMode.isVisible = it + 1 != oldType
         }
+        binding.seriesType.setSelection(oldType - 1)
         binding.mangaGenresTags.clearFocus()
         binding.coverLayout.setOnClickListener {
             infoController.changeCover()
@@ -331,7 +331,7 @@ class EditMangaDialog : DialogController {
             binding.mangaGenresTags.tags,
             binding.mangaStatus.selectedPosition,
             if (binding.resetsReadingMode.isVisible) binding.seriesType.selectedPosition + 1 else null,
-            langauges.getOrNull(binding.mangaLang.selectedPosition),
+            languages.getOrNull(binding.mangaLang.selectedPosition),
             willResetCover,
         )
     }
