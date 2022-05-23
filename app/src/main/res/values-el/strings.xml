@@ -995,4 +995,8 @@
     <string name="pref_high">Υψηλή</string>
     <string name="pref_low">Χαμηλή</string>
     <string name="pref_lowest">Χαμηλότερη</string>
+    <string name="download_notifier_split_page_not_found">Η σελίδα %d δε βρέθηκε κατά τη διάσπαση</string>
+    <string name="download_notifier_split_failed">Δεν ήταν δυνατή η διαίρεση της εικόνας που έχει ληφθεί</string>
+    <string name="split_tall_images">Αυτόματη διάσπαση ψηλών εικόνων</string>
+    <string name="split_tall_images_summary">Βελτιώνει την απόδοση του αναγνώστη με τη διάσπαση ψηλών εικόνων που έχουν ληφθεί.</string>
 </resources>

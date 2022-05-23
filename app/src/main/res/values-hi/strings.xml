@@ -571,4 +571,6 @@
     <string name="pref_update_only_started">जो शुरू नहीं हुए हैं</string>
     <string name="pref_update_only_completely_read">अपठित अध्याय हैं</string>
     <string name="pref_library_update_manga_restriction">किताब अद्यतन न करें</string>
+    <string name="split_tall_images_summary">लंबी डाउनलोड किए गए चित्रों के हिस्से करके पाठमाला के प्रदर्शन में सुधार लाता है</string>
+    <string name="tap_to_learn_more">अधिक जानकारी के लिए दबाए</string>
 </resources>

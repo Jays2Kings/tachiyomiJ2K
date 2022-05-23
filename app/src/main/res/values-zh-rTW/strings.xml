@@ -669,4 +669,8 @@
     <string name="pref_high">高</string>
     <string name="pref_low">低</string>
     <string name="pref_lowest">最低</string>
+    <string name="download_notifier_split_failed">無法分割下載的圖片</string>
+    <string name="split_tall_images">自動分割過高圖片</string>
+    <string name="split_tall_images_summary">將下載的圖片中尺寸較高者分割，以改善閱讀器效能。</string>
+    <string name="download_notifier_split_page_not_found">分割時找不到第 %d 頁</string>
 </resources>

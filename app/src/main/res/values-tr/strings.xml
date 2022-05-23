@@ -995,4 +995,8 @@
     <string name="pref_high">Yüksek</string>
     <string name="pref_low">Düşük</string>
     <string name="pref_lowest">En düşük</string>
+    <string name="split_tall_images">Uzun görselleri otomatik böl</string>
+    <string name="split_tall_images_summary">İndirilen uzun görselleri bölerek okuyucu performansını artırır.</string>
+    <string name="download_notifier_split_page_not_found">Bölünürken sayfa %d bulunamadı</string>
+    <string name="download_notifier_split_failed">İndirilen görsel bölünemedi</string>
 </resources>

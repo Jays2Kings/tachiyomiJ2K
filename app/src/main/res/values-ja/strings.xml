@@ -972,4 +972,8 @@
     <string name="pref_high">高い</string>
     <string name="pref_low">低い</string>
     <string name="pref_lowest">最低</string>
+    <string name="download_notifier_split_page_not_found">分割時にページ%dが見つかりませんでした</string>
+    <string name="download_notifier_split_failed">ダウンロードした画像を分割できませんでした</string>
+    <string name="split_tall_images">長い画像を自動で分割</string>
+    <string name="split_tall_images_summary">ダウンロードした長い画像を自動で分割してビューアのパフォーマンスを改善します。</string>
 </resources>

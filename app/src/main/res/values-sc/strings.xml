@@ -995,4 +995,7 @@
     <string name="pref_high">Arta</string>
     <string name="pref_low">Bassa</string>
     <string name="pref_lowest">Bassa meda</string>
+    <string name="download_notifier_split_page_not_found">Pàgina %d no agatada partzende</string>
+    <string name="split_tall_images">Partzi in automàticu sas immàgines artas</string>
+    <string name="split_tall_images_summary">Megiorat su rendimentu de su leghidore partzende sas immàgines artas iscarrigadas.</string>
 </resources>

@@ -863,4 +863,8 @@
     <string name="pref_high">Tinggi</string>
     <string name="pref_low">Rendah</string>
     <string name="pref_lowest">Terendah</string>
+    <string name="download_notifier_split_page_not_found">Muka surat %d tidak dijumpai ketika memisah</string>
+    <string name="download_notifier_split_failed">Tidak dapat memisahkan imej yang dimuat turun</string>
+    <string name="split_tall_images">Auto memisah imej yang tinggi</string>
+    <string name="split_tall_images_summary">Meninggkatkan prestasi pembaca dengan memisah imej yang tinggi yang telah dimuat turun.</string>
 </resources>

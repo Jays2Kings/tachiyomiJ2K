@@ -995,4 +995,7 @@
     <string name="pref_low">Låg</string>
     <string name="pref_lowest">Lägsta</string>
     <string name="open_in_app">Öppna i appen</string>
+    <string name="download_notifier_split_page_not_found">Sida %d hittades inte under delning</string>
+    <string name="split_tall_images">Automatisk delning av höga bilder</string>
+    <string name="split_tall_images_summary">Förbättrar läsarens prestanda genom att dela upp långa nedladdade bilder.</string>
 </resources>

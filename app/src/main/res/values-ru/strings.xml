@@ -1057,4 +1057,8 @@
     <string name="pref_high">Высокая</string>
     <string name="pref_low">Низкая</string>
     <string name="pref_lowest">Самая низкая</string>
+    <string name="download_notifier_split_page_not_found">Страница %d не найдена, при разделении</string>
+    <string name="download_notifier_split_failed">Не удалось разделить загруженное изображение</string>
+    <string name="split_tall_images">Разделять длинные изображения</string>
+    <string name="split_tall_images_summary">Улучшает производительность читалки, разделяя длинные загруженные изображения.</string>
 </resources>

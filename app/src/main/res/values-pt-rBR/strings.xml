@@ -1039,4 +1039,8 @@
     <string name="pref_high">Alta</string>
     <string name="pref_low">Baixa</string>
     <string name="pref_lowest">Mais baixa</string>
+    <string name="download_notifier_split_page_not_found">Página %d não encontrada durante a divisão</string>
+    <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
+    <string name="split_tall_images">Dividir automaticamente imagens compridas</string>
+    <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens compridas disponíveis offline.</string>
 </resources>

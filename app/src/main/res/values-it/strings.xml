@@ -1028,4 +1028,8 @@
     <string name="pref_high">Alto</string>
     <string name="pref_low">Basso</string>
     <string name="pref_lowest">Più basso</string>
+    <string name="download_notifier_split_page_not_found">Pagina %d non trovata durante la divisione</string>
+    <string name="download_notifier_split_failed">Impossibile separare le immagini scaricate</string>
+    <string name="split_tall_images">Dividi automaticamente le immagini troppo alte</string>
+    <string name="split_tall_images_summary">Migliora le prestazioni del lettore dividendo le immagini scaricate troppo alte.</string>
 </resources>

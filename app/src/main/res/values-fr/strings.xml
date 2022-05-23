@@ -1029,4 +1029,8 @@
     <string name="pref_high">Élevée</string>
     <string name="pref_low">Basse</string>
     <string name="pref_lowest">La plus basse</string>
+    <string name="download_notifier_split_page_not_found">Page %d introuvable lors du fractionnement</string>
+    <string name="download_notifier_split_failed">Impossible de diviser l\'image téléchargée</string>
+    <string name="split_tall_images">Division automatique des grandes images</string>
+    <string name="split_tall_images_summary">Améliore les performances du lecteur en fractionnant les grandes images téléchargées.</string>
 </resources>

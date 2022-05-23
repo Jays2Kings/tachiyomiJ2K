@@ -995,4 +995,8 @@
     <string name="pref_high">Mataas</string>
     <string name="pref_low">Mababa</string>
     <string name="pref_lowest">Pinakamababa</string>
+    <string name="download_notifier_split_page_not_found">Hindi nakita ang pahina %d habang naghahati</string>
+    <string name="download_notifier_split_failed">Di mahati ang na-download na larawan</string>
+    <string name="split_tall_images">Kusang hatiin ang mga matatangkad na larawan</string>
+    <string name="split_tall_images_summary">Pinapahusay ang performance ng reader sa pamamagitan ng paghati sa mga matatangkad na na-download na larawan.</string>
 </resources>

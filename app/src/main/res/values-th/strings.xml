@@ -417,7 +417,7 @@
     <string name="newest">ล่าสุด</string>
     <string name="next">ถัดไป</string>
     <string name="reorder">จัดเรียงใหม่</string>
-    <string name="view_chapters">ดูตอน</string>
+    <string name="view_chapters">ดูเรื่อง</string>
     <string name="channel_errors">ข้อผิดพลาด</string>
     <string name="progress">ความคืบหน้า</string>
     <string name="check_for_extension_updates">ตรวจสอบการอัปเดตส่วนขยาย</string>
@@ -973,4 +973,8 @@
     <string name="pref_high">เร็ว</string>
     <string name="pref_low">ช้า</string>
     <string name="pref_lowest">ช้ามาก</string>
+    <string name="download_notifier_split_page_not_found">ไม่พบหน้า %d ขณะกำลังแยกหน้า</string>
+    <string name="download_notifier_split_failed">ไม่สามารถแยกภาพที่ดาวน์โหลดไว้ได้</string>
+    <string name="split_tall_images">แยกรูปภาพที่สูงยาวออกโดยอัตโนมัติ</string>
+    <string name="split_tall_images_summary">เพิ่มประสิทธิภาพตัวอ่านด้วยการแยกรูปภาพที่สูงยาวที่ดาวน์โหลดไว้</string>
 </resources>

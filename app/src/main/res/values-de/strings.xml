@@ -1030,4 +1030,8 @@
     <string name="pref_lowest">Niedrigste</string>
     <string name="open_in_app">In der App öffnen</string>
     <string name="learn_why">Erfahre weshalb</string>
+    <string name="download_notifier_split_page_not_found">Seite %d während dem Aufteilen nicht gefunden</string>
+    <string name="download_notifier_split_failed">Heruntergeladenes Bild konnte nicht aufgeteilt werden</string>
+    <string name="split_tall_images">Hohe Bilder automatisch teilen</string>
+    <string name="split_tall_images_summary">Verbessert die Leseleistung durch Aufteilung hoher heruntergeladener Bilder.</string>
 </resources>

@@ -579,4 +579,6 @@
     <string name="pref_high">높음</string>
     <string name="pref_low">낮음</string>
     <string name="pref_lowest">매우 낮음</string>
+    <string name="split_tall_images">긴 이미지 자동 분할</string>
+    <string name="split_tall_images_summary">긴 다운로드 이미지를 분할하여 리더 성능을 향상시킵니다.</string>
 </resources>
