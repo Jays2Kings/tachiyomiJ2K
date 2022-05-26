@@ -36,6 +36,7 @@ import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
+import eu.kanade.tachiyomi.widget.TachiyomiTextInputEditText
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
@@ -140,6 +141,10 @@ class EditMangaDialog : DialogController {
             if (manga.description != manga.originalDescription) {
                 binding.mangaDescription.append(manga.description ?: "")
             }
+            binding.title.appendOriginalTextOnLongClick(manga.originalTitle)
+            binding.mangaAuthor.appendOriginalTextOnLongClick(manga.originalAuthor)
+            binding.mangaArtist.appendOriginalTextOnLongClick(manga.originalArtist)
+            binding.mangaDescription.appendOriginalTextOnLongClick(manga.originalDescription)
             binding.title.hint = "${resources?.getString(R.string.title)}: ${manga.originalTitle}"
             if (manga.originalAuthor != null) {
                 binding.mangaAuthor.hint = "${resources?.getString(R.string.author)}: ${manga.originalAuthor}"
@@ -213,6 +218,15 @@ class EditMangaDialog : DialogController {
             )
             customCoverUri = null
             willResetCover = true
+        }
+    }
+
+    private fun TachiyomiTextInputEditText.appendOriginalTextOnLongClick(originalText: String?) {
+        setOnLongClickListener {
+            if (this.text.isNullOrBlank()) {
+                this.append(originalText ?: "")
+                true
+            } else false
         }
     }
 
