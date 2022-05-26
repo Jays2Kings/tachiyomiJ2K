@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eu.kanade.tachiyomi.ui.recents.options.RecentsUpdatesView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/sort_layout"
@@ -17,9 +17,18 @@
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/show_updated_time"
             android:layout_width="match_parent"
-            android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/show_updated_time"
+            android:textColor="?attr/colorOnBackground"
+            app:layout_constraintBottom_toTopOf="@+id/sort_fetched_time" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sort_fetched_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/sort_fetched_time"
             android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toTopOf="@+id/show_read_in_all" />
 

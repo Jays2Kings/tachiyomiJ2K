@@ -26,7 +26,6 @@ import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.system.withUIContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -96,6 +95,7 @@ class RecentsPresenter(
             preferences.groupChaptersHistory(),
             preferences.showReadInAllRecents(),
             preferences.groupChaptersUpdates(),
+            preferences.sortFetchedTime(),
         ).forEach {
             it.asFlow()
                 .drop(1)
@@ -294,7 +294,9 @@ class RecentsPresenter(
                     val dateItem = DateItem(it.key, true)
                     it.value
                         .map { item -> RecentMangaItem(item.first, item.second, dateItem) }
-                        .sortedByDescending { item -> item.chapter.date_upload }
+                        .sortedByDescending { item ->
+                            if (preferences.sortFetchedTime().get()) item.date_fetch else item.date_upload
+                        }
                 }
             } else pairs.map { RecentMangaItem(it.first, it.second, null) }
         }

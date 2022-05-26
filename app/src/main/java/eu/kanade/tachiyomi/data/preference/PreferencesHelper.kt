@@ -364,6 +364,8 @@ class PreferencesHelper(val context: Context) {
 
     fun showUpdatedTime() = flowPrefs.getBoolean(Keys.showUpdatedTime, false)
 
+    fun sortFetchedTime() = flowPrefs.getBoolean("sort_fetched_time", false)
+
     fun groupChaptersUpdates() = flowPrefs.getBoolean(Keys.groupChaptersUpdates, false)
 
     fun groupChaptersHistory() = flowPrefs.getBoolean(Keys.groupChaptersHistory, true)
