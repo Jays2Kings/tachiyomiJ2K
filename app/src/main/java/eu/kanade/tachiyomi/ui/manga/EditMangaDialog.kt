@@ -167,10 +167,10 @@ class EditMangaDialog : DialogController {
         }
         binding.mangaStatus.setSelection(manga.status.coerceIn(SManga.UNKNOWN, SManga.ON_HIATUS))
         val oldType = manga.seriesType()
+        binding.seriesType.setSelection(oldType - 1)
         binding.seriesType.onItemSelectedListener = {
             binding.resetsReadingMode.isVisible = it + 1 != oldType
         }
-        binding.seriesType.setSelection(oldType - 1)
         binding.mangaGenresTags.clearFocus()
         binding.coverLayout.setOnClickListener {
             infoController.changeCover()
