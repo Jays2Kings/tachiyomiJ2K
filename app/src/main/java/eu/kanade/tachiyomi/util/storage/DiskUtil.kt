@@ -1,8 +1,7 @@
 package eu.kanade.tachiyomi.util.storage
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
+import android.media.MediaScannerConnection
 import android.os.Environment
 import android.os.StatFs
 import androidx.core.content.ContextCompat
@@ -69,7 +68,7 @@ object DiskUtil {
             val nomedia = dir.findFile(".nomedia")
             if (nomedia == null) {
                 dir.createFile(".nomedia")
-                context?.let { scanMedia(it, dir.uri) }
+                context?.let { scanMedia(it, dir.filePath) }
             }
         }
     }
@@ -78,17 +77,14 @@ object DiskUtil {
      * Scans the given file so that it can be shown in gallery apps, for example.
      */
     fun scanMedia(context: Context, file: File) {
-        scanMedia(context, Uri.fromFile(file))
+        scanMedia(context, file.path)
     }
 
     /**
      * Scans the given file so that it can be shown in gallery apps, for example.
      */
-    fun scanMedia(context: Context, uri: Uri) {
-        val action = Intent.ACTION_MEDIA_SCANNER_SCAN_FILE
-        val mediaScanIntent = Intent(action)
-        mediaScanIntent.data = uri
-        context.sendBroadcast(mediaScanIntent)
+    fun scanMedia(context: Context, filePath: String?) {
+        MediaScannerConnection.scanFile(context, arrayOf(filePath), null, null)
     }
 
     /**
