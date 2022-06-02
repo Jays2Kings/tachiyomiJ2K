@@ -837,7 +837,8 @@ class MangaDetailsPresenter(
                     File.separator + Environment.DIRECTORY_PICTURES +
                     File.separator + preferences.context.getString(R.string.app_name),
             )
-            saveCover(directory)
+            val file = saveCover(directory)
+            DiskUtil.scanMedia(preferences.context, file)
             true
         } catch (e: Exception) {
             false
