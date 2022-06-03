@@ -640,11 +640,11 @@ class ReaderPresenter(
     }
 
     fun getChapterUrl(): String? {
+        val manga = manga ?: return null
         val source = getSource() ?: return null
         val chapter = getCurrentChapter()?.chapter ?: return null
-        val chapterUrl = chapter.url.getUrlWithoutDomain()
 
-        val manga = manga ?: return null
+        val chapterUrl = chapter.url.getUrlWithoutDomain()
         val mangaUrl = source.mangaDetailsRequest(manga).url.toString()
         return if (chapterUrl.isBlank()) {
             mangaUrl
@@ -678,7 +678,7 @@ class ReaderPresenter(
         }
     }
 
-    fun getSource() = sourceManager.getOrStub(manga!!.source) as? HttpSource
+    fun getSource() = manga?.source?.let { sourceManager.getOrStub(it) } as? HttpSource
 
     /**
      * Returns the viewer position used by this manga or the default one.
