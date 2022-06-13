@@ -1443,14 +1443,10 @@ class MangaDetailsController :
 
     override fun favoriteManga(longPress: Boolean) {
         if (needsToBeUnlocked()) return
-        val manga = presenter.manga
-        val categories = presenter.getCategories()
-        if (!manga.favorite) {
-            toggleMangaFavorite()
+        if (longPress) {
+            showCategoriesSheet()
         } else {
-            val favButton = getHeader()?.binding?.favoriteButton ?: return
-            val popup = makeFavPopup(favButton, categories)
-            popup?.show()
+            toggleMangaFavorite()
         }
     }
 
@@ -1478,15 +1474,19 @@ class MangaDetailsController :
         // Set a listener so we are notified if a menu item is clicked
         popup.setOnMenuItemClickListener { menuItem ->
             if (menuItem.itemId == 0) {
-                presenter.manga.moveCategories(presenter.db, activity!!) {
-                    updateHeader()
-                }
+                showCategoriesSheet()
             } else {
                 toggleMangaFavorite()
             }
             true
         }
         return popup
+    }
+
+    private fun showCategoriesSheet() {
+        presenter.manga.moveCategories(presenter.db, activity!!) {
+            updateHeader()
+        }
     }
 
     private fun toggleMangaFavorite() {

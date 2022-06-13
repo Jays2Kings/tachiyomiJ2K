@@ -128,6 +128,10 @@ class MangaHeaderHolder(
             favoriteButton.setOnClickListener {
                 adapter.delegate.favoriteManga(false)
             }
+            favoriteButton.setOnLongClickListener {
+                adapter.delegate.favoriteManga(true)
+                true
+            }
             title.setOnClickListener { view ->
                 title.text?.toString()?.toNormalized()?.let {
                     adapter.delegate.showFloatingActionMode(view as TextView, it)
