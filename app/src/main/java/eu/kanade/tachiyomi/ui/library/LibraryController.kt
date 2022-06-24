@@ -167,6 +167,7 @@ class LibraryController(
      * Library search query.
      */
     private var query = ""
+    private var oldShowAllCategories = true
 
     /**
      * Currently selected mangas.
@@ -1265,6 +1266,15 @@ class LibraryController(
     }
 
     fun search(query: String?): Boolean {
+        if (!query.isNullOrBlank() && this.query.isBlank() && !presenter.showAllCategories) {
+            oldShowAllCategories = presenter.showAllCategories
+            preferences.showAllCategories().set(true)
+             presenter.getLibrary()
+        } else if (query.isNullOrBlank() && this.query.isNotBlank() && !oldShowAllCategories) {
+            preferences.showAllCategories().set(oldShowAllCategories)
+             presenter.getLibrary()
+        }
+
         if (query != this.query && !query.isNullOrBlank()) {
             binding.libraryGridRecycler.recycler.scrollToPosition(0)
         }
