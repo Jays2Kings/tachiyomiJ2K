@@ -180,7 +180,7 @@ fun String.addBetaTag(context: Context, useSuperScript: Boolean = true): Spanned
     }
 }
 
-fun String.toNormalized(): String = replace("’", "'")
+fun String.toNormalized(): String = replace("[`’]".toRegex(), "'")
 
 fun String.getUrlWithoutDomain(): String {
     return try {

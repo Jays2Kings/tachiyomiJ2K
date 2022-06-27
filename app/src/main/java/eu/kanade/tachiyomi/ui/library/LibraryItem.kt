@@ -19,6 +19,7 @@ import eu.kanade.tachiyomi.data.database.models.LibraryManga
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MangaGridItemBinding
 import eu.kanade.tachiyomi.source.SourceManager
+import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.view.compatToolTipText
 import eu.kanade.tachiyomi.widget.AutofitRecyclerView
@@ -160,10 +161,10 @@ class LibraryItem(
             return constraint.isEmpty()
         }
         val sourceName by lazy { sourceManager.getOrStub(manga.source).name }
-        return manga.title.contains(constraint, true) ||
-            (manga.author?.contains(constraint, true) ?: false) ||
-            (manga.artist?.contains(constraint, true) ?: false) ||
-            sourceName.contains(constraint, true) ||
+        return manga.title.toNormalized().contains(constraint, true) ||
+            (manga.author?.toNormalized()?.contains(constraint, true) ?: false) ||
+            (manga.artist?.toNormalized()?.contains(constraint, true) ?: false) ||
+            sourceName.toNormalized().contains(constraint, true) ||
             if (constraint.contains(",")) {
                 val genres = manga.genre?.split(", ")
                 constraint.split(",").all { containsGenre(it.trim(), genres) }

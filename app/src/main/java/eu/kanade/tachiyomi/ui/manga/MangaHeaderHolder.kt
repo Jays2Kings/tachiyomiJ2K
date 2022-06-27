@@ -37,7 +37,6 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.isLocal
-import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.system.isLTR
@@ -129,12 +128,12 @@ class MangaHeaderHolder(
                 adapter.delegate.favoriteManga(false)
             }
             title.setOnClickListener { view ->
-                title.text?.toString()?.toNormalized()?.let {
+                title.text?.toString()?.let {
                     adapter.delegate.showFloatingActionMode(view as TextView, it)
                 }
             }
             title.setOnLongClickListener {
-                title.text?.toString()?.toNormalized()?.let {
+                title.text?.toString()?.let {
                     adapter.delegate.copyToClipboard(it, R.string.title)
                 }
                 true
