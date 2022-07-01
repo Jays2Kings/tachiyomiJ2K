@@ -1269,10 +1269,10 @@ class LibraryController(
         if (!query.isNullOrBlank() && this.query.isBlank() && !presenter.showAllCategories) {
             oldShowAllCategories = presenter.showAllCategories
             preferences.showAllCategories().set(true)
-             presenter.getLibrary()
+            presenter.getLibrary()
         } else if (query.isNullOrBlank() && this.query.isNotBlank() && !oldShowAllCategories) {
             preferences.showAllCategories().set(oldShowAllCategories)
-             presenter.getLibrary()
+            presenter.getLibrary()
         }
 
         if (query != this.query && !query.isNullOrBlank()) {
