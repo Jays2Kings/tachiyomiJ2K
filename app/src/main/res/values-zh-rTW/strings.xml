@@ -198,7 +198,7 @@
     <string name="local_source">本機來源</string>
     <string name="other">其他</string>
     <string name="browse">探索</string>
-    <string name="description">詳細資訊</string>
+    <string name="description">簡介</string>
     <string name="ongoing">連載中</string>
     <string name="unknown">不明</string>
     <string name="licensed">已授權</string>
@@ -673,4 +673,9 @@
     <string name="split_tall_images">自動分割過高圖片</string>
     <string name="split_tall_images_summary">將下載的圖片中尺寸較高者分割，以改善閱讀器效能。</string>
     <string name="download_notifier_split_page_not_found">分割時找不到第 %d 頁</string>
+    <string name="reading_list">閱讀清單</string>
+    <string name="wish_list">願望清單</string>
+    <string name="complete_list">閱畢清單</string>
+    <string name="on_hold_list">擱置清單</string>
+    <string name="unfinished_list">未成清單</string>
 </resources>

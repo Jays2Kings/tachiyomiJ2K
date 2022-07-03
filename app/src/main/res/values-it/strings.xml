@@ -1032,4 +1032,10 @@
     <string name="download_notifier_split_failed">Impossibile separare le immagini scaricate</string>
     <string name="split_tall_images">Dividi automaticamente le immagini troppo alte</string>
     <string name="split_tall_images_summary">Migliora le prestazioni del lettore dividendo le immagini scaricate troppo alte.</string>
+    <string name="reading_list">In Lettura</string>
+    <string name="wish_list">Da Leggere</string>
+    <string name="complete_list">Completati</string>
+    <string name="on_hold_list">In Pausa</string>
+    <string name="unfinished_list">Non Completati</string>
+    <string name="sort_fetched_time">Ordina per data di recupero</string>
 </resources>

@@ -999,4 +999,10 @@
     <string name="split_tall_images_summary">İndirilen uzun görselleri bölerek okuyucu performansını artırır.</string>
     <string name="download_notifier_split_page_not_found">Bölünürken sayfa %d bulunamadı</string>
     <string name="download_notifier_split_failed">İndirilen görsel bölünemedi</string>
+    <string name="reading_list">Okuma Listesi</string>
+    <string name="wish_list">İstek Listesi</string>
+    <string name="complete_list">Tamamlanan Listesi</string>
+    <string name="on_hold_list">Beklemede Listesi</string>
+    <string name="unfinished_list">Tamamlanmayan Listesi</string>
+    <string name="sort_fetched_time">Alındığı zamana göre sırala</string>
 </resources>

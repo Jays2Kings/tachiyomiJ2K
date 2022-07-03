@@ -163,13 +163,13 @@
     <string name="trust">Tiwala</string>
     <string name="untrusted">Di tiwala</string>
     <string name="uninstall">I-uninstall</string>
-    <string name="untrusted_extension">Kaduda-dudang dugtong</string>
-    <string name="untrusted_extension_message">Pinirmahan ang dugtong na ito gamit ang isang kaduda-dudang certificate at hindi muna pinagana.
+    <string name="untrusted_extension">Kaduda-dudang extension</string>
+    <string name="untrusted_extension_message">Pinirmahan ang extension na ito gamit ang isang kaduda-dudang certificate at hindi muna pinagana.
 \n
-\nMaaaring mabasa ng isang kaduda-dudang dugtong ang kahit anong kredensiyales ng pag-login na nakatago sa Tachiyomi o di kaya nama\'y magsimula ng di-makatuwirang code.
+\nMaaaring mabasa ng isang kaduda-dudang extension ang kahit anong credentials sa pag-login na nakatago sa Tachiyomi o di kaya nama\'y magsimula ng delikadong code.
 \n
 \nTinatanggap mo ang mga bantang ito sa pagtiwala sa certificate na ito.</string>
-    <string name="obsolete_extension_message">Wala na\'ng ganitong dugtong.</string>
+    <string name="obsolete_extension_message">Wala na\'ng ganitong extension.</string>
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Wika: %1$s</string>
     <plurals name="extension_updates_available">
@@ -334,7 +334,7 @@
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhwa</string>
     <string name="last_used">Huling ginamit</string>
-    <string name="unofficial_extension_message">Wala sa opisyal na listahan ng mga dugtong ng Tachiyomi ang dugtong na ito.</string>
+    <string name="unofficial_extension_message">Wala sa opisyal na listahan ng mga extension ng Tachiyomi ang extension na ito.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Di-opisyal</string>
     <string name="may_contain_nsfw">Maaaring may NSFW (18+)</string>
@@ -700,7 +700,7 @@
     <string name="actions">Mga Gawain</string>
     <string name="set_as_default">Ipagpaubaya</string>
     <string name="ext_installer_shizuku_stopped">Di tumatakbo ang Shizuku</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">Paki-install at buksan ang Shizuku para magamit ito bilang taga-install ng dugtong.</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Paki-install at buksan ang Shizuku para magamit ito bilang taga-install ng extension.</string>
     <string name="no_match_found">Walang tumugmang nakita</string>
     <string name="appearance">Hitsura</string>
     <string name="incognito_mode">Nakatago</string>
@@ -999,4 +999,10 @@
     <string name="download_notifier_split_failed">Di mahati ang na-download na larawan</string>
     <string name="split_tall_images">Kusang hatiin ang mga matatangkad na larawan</string>
     <string name="split_tall_images_summary">Pinapahusay ang performance ng reader sa pamamagitan ng paghati sa mga matatangkad na na-download na larawan.</string>
+    <string name="complete_list">Listahan ng Kumpleto</string>
+    <string name="on_hold_list">Listahan ng Tinigil</string>
+    <string name="unfinished_list">Listahan ng Di pa Tapos</string>
+    <string name="reading_list">Listahan ng Binabasa</string>
+    <string name="wish_list">Listahan ng Hiling</string>
+    <string name="sort_fetched_time">Ayusin base sa oras kinuha</string>
 </resources>

@@ -217,7 +217,7 @@
     </plurals>
     <string name="obsolete_extension_message">Это расширение больше недоступно.</string>
     <string name="on_hold">Отложено</string>
-    <string name="ongoing">Онгоинг</string>
+    <string name="ongoing">Выпускается</string>
     <string name="options">Опции</string>
     <string name="other">Другие</string>
     <string name="password">Пароль</string>
@@ -985,7 +985,7 @@
     <string name="every_3_days">Каждые 3 дня</string>
     <string name="publishing_finished">Публикация завершена</string>
     <string name="cancelled">Отменено</string>
-    <string name="on_hiatus">На паузе</string>
+    <string name="on_hiatus">Перерыв</string>
     <string name="tracking_info">Односторонняя синхронизация для обновления прогресса в сервисах отслеживания. Настройте отслеживание, при помощи кнопки «Отслеживание».</string>
     <string name="enhanced_services">Расширенные сервисы</string>
     <string name="enhanced_tracking_info">Сервисы, предоставляющие расширенные возможности для определённых источников. Серия будет автоматически отслеживаться, при добавлении в библиотеку.</string>
@@ -1060,5 +1060,22 @@
     <string name="download_notifier_split_page_not_found">Страница %d не найдена, при разделении</string>
     <string name="download_notifier_split_failed">Не удалось разделить загруженное изображение</string>
     <string name="split_tall_images">Разделять длинные изображения</string>
-    <string name="split_tall_images_summary">Улучшает производительность читалки, разделяя длинные загруженные изображения.</string>
+    <string name="split_tall_images_summary">Улучшает производительность читалки разделяя длинные загруженные изображения.</string>
+    <string name="reading_list">Читаю</string>
+    <string name="on_hold_list">Отложено</string>
+    <string name="wish_list">Запланировано</string>
+    <string name="complete_list">Прочитано</string>
+    <string name="unfinished_list">Не закончено</string>
+    <string name="download_ahead">Предварительная загрузка</string>
+    <string name="auto_download_after_reading">Скачать следующие непрочитанные главы после прочтения</string>
+    <string name="download_ahead_info">Опережающее скачивание применяется только к записям в библиотеке и если была скачана последняя прочитанная глава</string>
+    <string name="sort_fetched_time">Сортировка по времени поиска</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Следующую непрочитанную главу</item>
+        <item quantity="few">Следующие %d непрочитанные главы</item>
+        <item quantity="many">Следующие %d непрочитанных глав</item>
+        <item quantity="other">Следующие %d непрочитанных глав</item>
+    </plurals>
+    <string name="learn_why">Узнайте, почему</string>
+    <string name="open_in_app">Открыть в приложении</string>
 </resources>

@@ -1043,4 +1043,10 @@
     <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
     <string name="split_tall_images">Dividir automaticamente imagens compridas</string>
     <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens compridas disponíveis offline.</string>
+    <string name="reading_list">Lista de Leitura</string>
+    <string name="wish_list">Lista de Desejos</string>
+    <string name="complete_list">Lista de Completos</string>
+    <string name="on_hold_list">Lista de Pausados</string>
+    <string name="unfinished_list">Lista de Inacabados</string>
+    <string name="sort_fetched_time">Ordenar por hora da atualização local</string>
 </resources>

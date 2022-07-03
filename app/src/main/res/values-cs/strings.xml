@@ -19,7 +19,7 @@
     <string name="search">Vyhledávání</string>
     <string name="select_all">Vybrat vše</string>
     <string name="mark_as_read">Označit jako přečtené</string>
-    <string name="mark_previous_as_read">Označit předchozí jako přečtené</string>
+    <string name="mark_previous_as_read">Označit předchozí kapitoly jako přečtené</string>
     <string name="download">Stáhnout</string>
     <string name="delete">Odstranit</string>
     <string name="edit">Upravit</string>
@@ -129,7 +129,7 @@
     <string name="new_version_available">Dostupná nová aktualizace!</string>
     <string name="ignore">Ignorovat</string>
     <string name="no_new_updates_available">Žádné nové aktualizace</string>
-    <string name="searching_for_updates">Hledání aktualizací</string>
+    <string name="searching_for_updates">Vyhledávání aktualizací…</string>
     <string name="download_complete">Stahování dokončeno</string>
     <string name="download_error">Chyba při stahování</string>
     <string name="update_available">Dostupná aktualizace</string>
@@ -234,7 +234,7 @@
     <string name="set_as_cover">Nastavit jako obal</string>
     <string name="cover_updated">Obal aktualizován</string>
     <string name="categories_to_include_in_global_update">Kategorie zahrnuté do globální aktualizace</string>
-    <string name="library_update_restriction">Omezení aktualizace knihovny</string>
+    <string name="library_update_restriction">Omezení zařízení</string>
     <string name="library_update_restriction_summary">Aktualizovat pouze pokud jsou splněny podmínky</string>
     <string name="keep_screen_on">Udržovat obrazovku zapnutou</string>
     <string name="navigation">Navigování</string>
@@ -333,7 +333,7 @@
     <string name="always_show_current_category">Vždy zobrazovat současnou kategorii</string>
     <string name="show_all_categories">Zobrazovat všechny kategorie</string>
     <string name="no_matches_for_filters">Pro vaše aktuální filtry nebyly nalezeny žádné shody</string>
-    <string name="library_search_hint">Prohledat názvy, značky, zdroje</string>
+    <string name="library_search_hint">Prohledat názvy, značky, zdroj</string>
     <string name="remove_from_library_question">Odstranit z knihovny\?</string>
     <string name="updating_">Aktualizuji %1$s</string>
     <string name="jump_to_category">Přejít na kategorii</string>
@@ -424,8 +424,8 @@
     <string name="hide_unread_badges">Skrýt odznáčky u nepřečtených</string>
     <string name="badges">Odznáčky</string>
     <string name="tag">Značky</string>
-    <string name="reset_tags">Resetovat Značky</string>
-    <string name="clear_tags">Vyčistit Značky</string>
+    <string name="reset_tags">Resetovat značky</string>
+    <string name="clear_tags">Vyčistit značky</string>
     <string name="group_library_by">Seskupit knihovnu podle…</string>
     <string name="download_unread">Stáhnout nepřečtené</string>
     <string name="sort_by_ignoring_articles">Seřadit s ohledem na ignorované členy</string>
@@ -447,9 +447,9 @@
     <string name="unofficial">Neoficiální</string>
     <string name="may_contain_nsfw">Může obsahovat obsah pro dospělé (18+)</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Je dostupná aktualizace rozšířeníJsou dostupné %d aktualizace rozšířeníJe dostupných %d aktualizací rozšíření</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Je dostupná aktualizace rozšíření</item>
+        <item quantity="few">Jsou dostupné %d aktualizace rozšíření</item>
+        <item quantity="other">Je dostupných %d aktualizací rozšíření</item>
     </plurals>
     <string name="please_update_webview">Prosím aktualizujte aplikaci WebView pro lepší kompatibilitu</string>
     <string name="less">Méně</string>
@@ -598,9 +598,11 @@
 \nChcete ji smazat\?</item>
         <item quantity="few">%1$s kapitoly byly z tohoto zdroje odstraněny:
 \n%2$s
+\n
 \nChcete je smazat\?</item>
         <item quantity="other">%1$s kapitol bylo z tohoto zdroje odstraněno:
 \n%2$s
+\n
 \nChcete je smazat\?</item>
     </plurals>
     <string name="set_as_default">Nastavit jako výchozí</string>
@@ -731,16 +733,16 @@
     <string name="smart_by_theme">Chytře (podle tématu)</string>
     <string name="affects_library_grid">Ovlivňuje mřížku obalů v knihovně</string>
     <plurals name="after_minutes">
-        <item quantity="one">Po %1$s minutěPo %1$s minutáchPo %1$s minutách</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Po %1$s minutě</item>
+        <item quantity="few">Po %1$s minutách</item>
+        <item quantity="other">Po %1$s minutách</item>
     </plurals>
     <string name="publishing_finished">Zveřejnění dokončeno</string>
     <string name="cancelled">Zrušeno</string>
     <string name="on_hiatus">Má pauzu</string>
     <string name="tracking_info">Jednosměrná synchronizace pro aktualizaci počtu přečtených kapitol ve sledovacích službách. Nastavení sledování pro každou mangu je možné z jejich tlačítka sledování.</string>
     <string name="enhanced_services">Rozšířené služby</string>
-    <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Mangy jsou po přidání do knihovny automaticky sledovány.</string>
+    <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Manga je po přidání do knihovny automaticky sledována.</string>
     <string name="local_invalid_format">Neplatný formát kapitoly</string>
     <string name="order_by">Seřadit podle</string>
     <string name="grayscale">Odstíny šedé</string>
@@ -785,4 +787,25 @@
     <string name="pref_high">Vysoké</string>
     <string name="pref_low">Nízké</string>
     <string name="pref_lowest">Nejnižší</string>
+    <string name="split_tall_images_summary">Zlepšuje výkon čtečky rozdělením vysokých stažených obrázků.</string>
+    <string name="split_tall_images">Automaticky rozdělit vysoké obrázky</string>
+    <string name="reading_list">Seznam četby</string>
+    <string name="wish_list">Seznam přání</string>
+    <string name="download_notifier_split_failed">Stažený obrázek se nepodařilo rozdělit</string>
+    <string name="scanlators">Scanlátoři</string>
+    <string name="new_beta_version_available">Nová beta verze k dispozici!</string>
+    <string name="language_badge">Jazykové odznaky</string>
+    <string name="complete_list">Seznam dokončených</string>
+    <string name="on_hold_list">Seznam pozastavených</string>
+    <string name="unfinished_list">Seznam nedokončených</string>
+    <string name="download_notifier_split_page_not_found">Stránka %d nebyla při rozdělení nalezena</string>
+    <string name="show_categories_while_filtering">Při filtrování zobrazovat prázdné kategorie</string>
+    <string name="no_matches_for_filters_short">Žádné shody pro vaše filtry</string>
+    <string name="automatic_orientation">Automaticky (na základě orientace)</string>
+    <string name="restrictions_">Omezení: %1$s</string>
+    <string name="save_pages_separately">Uložit stránky v samostatných složkách</string>
+    <string name="notification_size_warning">Velké aktualizace mohou vést ke zvýšené spotřebě baterie a zpomalení zdrojů. Klepnutím se dozvíte více.</string>
+    <string name="release_page">Stránka vydání</string>
+    <string name="search_chapters">Vyhledávání kapitol</string>
+    <string name="navigate_pan">Přejít na posun</string>
 </resources>

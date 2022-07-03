@@ -867,4 +867,9 @@
     <string name="download_notifier_split_failed">Tidak dapat memisahkan imej yang dimuat turun</string>
     <string name="split_tall_images">Auto memisah imej yang tinggi</string>
     <string name="split_tall_images_summary">Meninggkatkan prestasi pembaca dengan memisah imej yang tinggi yang telah dimuat turun.</string>
+    <string name="reading_list">Senarai Bacaan</string>
+    <string name="wish_list">Senarai Hajat</string>
+    <string name="complete_list">Senarai Selesai</string>
+    <string name="on_hold_list">Senarai Tangguh</string>
+    <string name="unfinished_list">Senarai Belum Selesai</string>
 </resources>

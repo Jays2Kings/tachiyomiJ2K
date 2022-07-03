@@ -613,4 +613,9 @@
     <string name="download_notifier_split_failed">No s\'ha pogut dividir la imatge baixada</string>
     <string name="split_tall_images">Divideix automàticament les imatges altes</string>
     <string name="split_tall_images_summary">Millora el rendiment del lector dividint les imatges baixades massa altes.</string>
+    <string name="reading_list">Llista de lectura</string>
+    <string name="wish_list">Llista de desitjos</string>
+    <string name="complete_list">Llista de completats</string>
+    <string name="on_hold_list">Llista de pausats</string>
+    <string name="unfinished_list">Llista d\'inacabats</string>
 </resources>

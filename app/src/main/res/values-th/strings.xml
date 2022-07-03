@@ -15,7 +15,7 @@
     <string name="recent_updates">อัปเดตล่าสุด</string>
     <string name="downloaded">ดาวน์โหลดแล้ว</string>
     <string name="unread">ยังไม่ได้อ่าน</string>
-    <string name="read">อ่าน</string>
+    <string name="read">อ่านหมดแล้ว</string>
     <string name="alphabetically">ตามตัวอักษร</string>
     <string name="total_chapters">จำนวนตอนทั้งหมด</string>
     <string name="last_read">อ่านล่าสุด</string>
@@ -106,7 +106,7 @@
     <string name="show_page_number">แสดงหมายเลขหน้า</string>
     <string name="crop_borders">ตัดขอบ</string>
     <string name="use_custom_brightness">ใช้ความสว่างแบบกำหนดเอง</string>
-    <string name="use_custom_color_filter">ใช้ตัวกรองสีแบบกำหนดเอง</string>
+    <string name="use_custom_color_filter">ใช้ตัวกรองสีกำหนดเอง</string>
     <string name="keep_screen_on">เปิดหน้าจอไว้ตลอด</string>
     <string name="volume_keys">ปุ่มปรับระดับเสียง</string>
     <string name="invert_volume_keys">สลับด้านปุ่มปรับระดับเสียง</string>
@@ -185,7 +185,7 @@
     <string name="successfully_logged_in">ลงชื่อเข้าใช้สำเร็จ</string>
     <string name="unknown_error">ข้อผิดพลาดที่ไม่รู้จัก</string>
     <string name="local">ภายในเครื่อง</string>
-    <string name="search_filters">ตัวกรองค้นหา</string>
+    <string name="search_filters">ตัวกรองการค้นหา</string>
     <string name="no_more_results">ไม่มีผลลัพธ์เพิ่มเติม</string>
     <string name="local_source">แหล่งที่มาภายในเครื่อง</string>
     <string name="other">อื่น ๆ</string>
@@ -221,9 +221,9 @@
     <string name="true_32bit_color">สี 32 บิต</string>
     <string name="skip_read_chapters">ข้ามตอนที่ทำเครื่องหมายว่าอ่านแล้ว</string>
     <string name="color_filter_blend_mode">โหมดผสมตัวกรองสี</string>
-    <string name="overlay">ซ้อนทับ</string>
-    <string name="screen">สกรีน</string>
-    <string name="dodge_lighten">ดอดจ์ / สว่างขึ้น</string>
+    <string name="overlay">ซ้อนทับสี</string>
+    <string name="screen">สกรีนสี</string>
+    <string name="dodge_lighten">ดอดจ์สี / สว่างขึ้น</string>
     <string name="no_results_found">ไม่พบผลลัพธ์</string>
     <string name="title">ชื่อเรื่อง</string>
     <string name="started">เริ่มอ่านแล้ว</string>
@@ -269,8 +269,8 @@
     <string name="no_network_connection">ไม่มีการเชื่อมต่อเครือข่าย</string>
     <string name="download_paused">หยุดดาวน์โหลดชั่วคราว</string>
     <string name="common">ทั่วไป</string>
-    <string name="multiply">หลากหลาย</string>
-    <string name="burn_darken">เบิร์น / มืดขึ้น</string>
+    <string name="multiply">คูณสี</string>
+    <string name="burn_darken">เบิร์นสี / มืดขึ้น</string>
     <string name="update">อัปเดต</string>
     <string name="mark_as_unread">ทำเครื่องหมายว่ายังไม่ได้อ่าน</string>
     <string name="remove_from_library">นำออกจากคลัง</string>
@@ -381,7 +381,7 @@
     <string name="locked_portrait">ล็อกแนวตั้ง</string>
     <string name="always_show_chapter_transition">แสดงการเปลี่ยนผ่านตอนเสมอ</string>
     <string name="invert_tapping">กลับด้านการแตะ</string>
-    <string name="actions">การกระทำ</string>
+    <string name="actions">เมื่อกระทำ</string>
     <string name="refresh_tracking">โหลดข้อมูลการติดตามใหม่</string>
     <string name="hide_notification_content">ซ่อนเนื้อหาการแจ้งเตือน</string>
     <string name="security">ความปลอดภัย</string>
@@ -430,7 +430,7 @@
     <string name="about_dont_kill_my_app">ผู้ผลิตบางรายมีข้อจำกัดเพิ่มเติมของแอปที่ปิดบริการพื้นหลัง เว็บไซต์นี้มีข้อมูลเพิ่มเติมเกี่ยวกับวิธีการแก้ไข</string>
     <string name="download_queue_size_warning">คำเตือน: การดาวน์โหลดจำนวนมากอาจทำให้แหล่งข้อมูลทำงานช้าลงและ/หรือปิดกั้น Tachiyomi แตะเพื่อเรียนรู้เพิ่มเติม</string>
     <string name="ext_installer_shizuku_unavailable_dialog">ติดตั้งและเริ่ม Shizuku เพื่อใช้ Shizuku เป็นตัวติดตั้งส่วนขยาย</string>
-    <string name="help_translate">ช่วยแปล</string>
+    <string name="help_translate">แปลเป็นภาษาไทยโดย altinat</string>
     <string name="cover_saved">บันทึกปกแล้ว</string>
     <string name="error_saving_cover">ผิดพลาดในการบันทึกปก</string>
     <string name="error_sharing_cover">ผิดพลาดในการแบ่งปันปก</string>
@@ -604,7 +604,7 @@
     <string name="custom_manga_info">ข้อมูลมังงะกำหนดเอง</string>
     <string name="remove_tracking">ลบการติดตามออกจากแอป</string>
     <string name="started_reading_date">วันที่เริ่มอ่าน</string>
-    <string name="select_sources">เลื่อกแหล่งที่มา</string>
+    <string name="select_sources">เลือกแหล่งที่มา</string>
     <string name="select_a_source_then_item_to_migrate">เลือกแหล่งที่มาหลังจากนั้นเลือกรายการที่จะโยกย้าย</string>
     <string name="data_to_include_in_migration">ข้อมูลที่จะรวมไว้ในการโยกย้าย</string>
     <string name="search_parameter_eg">พารามิเตอร์การค้นหา (เช่น language:english)</string>
@@ -617,12 +617,12 @@
     </plurals>
     <string name="midnight_dusk">มิดไนท์ดัสก์</string>
     <string name="flat_lime">ไลม์เรียบ</string>
-    <string name="white_theme">ขาวบริสุทธิ์</string>
+    <string name="white_theme">ขาวสนิท</string>
     <string name="locale">ภายในเครื่อง</string>
     <string name="side_nav_icon_alignment">ตำแหน่งไอคอนแถบนำทางด้านข้าง</string>
     <string name="default_behavior">ลักษณะการทำงานเริ่มต้น</string>
     <string name="follow_system_theme">ติดตามธีมของระบบ</string>
-    <string name="pure_black_dark_mode">โหมดมืดดำบริสุทธิ์</string>
+    <string name="pure_black_dark_mode">โหมดมืดดำสนิท</string>
     <string name="details_page">หน้ารายละเอียด</string>
     <string name="theme_buttons_based_on_cover">ธีมปุ่มตามภาพหน้าปก</string>
     <string name="hides_on_scroll">ซ่อนเมื่อเลื่อน</string>
@@ -637,8 +637,8 @@
     <string name="restore_in_progress">การคืนค่ากําลังดําเนินการอยู่แล้ว</string>
     <string name="backup_in_progress">การสำรองข้อมูลกําลังดําเนินการอยู่แล้ว</string>
     <string name="not_logged_into_">ไม่ได้เข้าสู่ระบบ %1$s</string>
-    <string name="force_download_cache_refresh">โหลดแคชดาวน์โหลดใหม่</string>
-    <string name="force_download_cache_refresh_summary">การดำเนินการนี้จะบังคับให้ดาวน์โหลดคำนวณแคชใหม่ มีประโยชน์หากทำการแก้ไขการดาวน์โหลดนอกแอปนี้และต้องการให้แอปใช้มัน</string>
+    <string name="force_download_cache_refresh">โหลดแคชการดาวน์โหลดใหม่</string>
+    <string name="force_download_cache_refresh_summary">ตัวเลือกนี้จะบังคับให้คำนวณแคชการดาวน์โหลดใหม่ มีประโยชน์หากทำการแก้ไขการดาวน์โหลดที่มาจากภายนอกแอป</string>
     <string name="data_management">การจัดการข้อมูล</string>
     <string name="clean_up_downloaded_chapters">ล้างตอนที่ดาวน์โหลดไว้</string>
     <string name="clean_orphaned_downloads">ล้างตอนที่ไม่มีอยู่</string>
@@ -727,8 +727,8 @@
     <string name="smart_based_on_page">อัตโนมัติ (ตามหน้า)</string>
     <string name="horizontally">แนวนอน</string>
     <string name="both_axes">ทั้งสองด้าน</string>
-    <string name="pad_cutout_areas">พื้นที่ช่องว่างที่ตัดออก</string>
-    <string name="start_past_cutout">เริ่มโดยข้ามส่วนที่ตัดออก</string>
+    <string name="pad_cutout_areas">ปิดช่องว่างที่ตัดออก</string>
+    <string name="start_past_cutout">ข้ามส่วนที่ตัดออก</string>
     <string name="cutout_area_behavior">ลักษณะการทำงานของพื้นที่ที่ตัดออก</string>
     <string name="page_layout">เค้าโครงหน้า</string>
     <string name="save_pages_separately">บันทึกหน้าในโฟลเดอร์แยกต่างหาก</string>
@@ -802,7 +802,7 @@
     <string name="reset_chapter_history">รีเซ็ตประวัติตอน</string>
     <string name="newly_added">เพิ่มล่าสุด</string>
     <string name="this_will_remove_the_read_date_for_x_question">การดำเนินการนี้จะลบวันที่อ่านของ \"%1$s\" แน่ใจไหม\?</string>
-    <string name="reset_all_chapters_for_this_">รีเซ็ตตอนทั้งหมดเพื่อ %1$s</string>
+    <string name="reset_all_chapters_for_this_">รีเซ็ตตอนทั้งหมดของ%1$sเรื่องนี้</string>
     <string name="view_history">ดูประวัติ</string>
     <string name="view_all_updates">ดูอัปเดตทั้งหมด</string>
     <string name="search_recents">ค้นหาล่าสุด…</string>
@@ -868,7 +868,7 @@
     <string name="crop_borders_webtoon">ตัดขอบ (เว็บตูน)</string>
     <string name="smart_by_theme">อัตโนมัติ (ตามธีม)</string>
     <string name="ignore_cutout_areas">ไม่สนใจพื้นที่ที่ตัดออก</string>
-    <string name="cutout_behavior_only_applies">ลักษณะการทำงานของพื้นที่ที่ตัดออกจะใช้ได้เฉพาะในโหมดแนวตั้งที่มีมาตราส่วนบางประเภท</string>
+    <string name="cutout_behavior_only_applies">ลักษณะการทำงานของพื้นที่ที่ตัดออกจะใช้ได้เฉพาะในโหมดแนวตั้งตามขนาดที่กำหนด</string>
     <string name="search_manually">ค้นหาด้วยตนเอง</string>
     <string name="include_extra_search_parameter">รวมพารามิเตอร์การค้นหาเพิ่มเติมเมื่อค้นหา</string>
     <string name="to_show_again_setting_sources">หากต้องการแสดงหน้าจอนี้อีกครั้ง ให้ไปที่ การตั้งค่า -&gt; แหล่งที่มา</string>
@@ -929,11 +929,11 @@
     <string name="notification_update_skipped">อัปเดตข้ามแล้ว %1$d รายการ</string>
     <string name="skipped_reason_completed">ถูกข้ามเนื่องจากเรื่องนี้จบแล้ว</string>
     <string name="skipped_reason_not_caught_up">ถูกข้ามเนื่องจากมีตอนที่ยังไม่ได้อ่าน</string>
-    <string name="skipped_reason_not_started">ถูกข้ามเนื่องจากไม่มีตอนใด ๆ ถูกอ่าน</string>
+    <string name="skipped_reason_not_started">ถูกข้ามเนื่องจากยังไม่มีตอนใด ๆ ถูกอ่าน</string>
     <string name="channel_skipped">ข้ามแล้ว</string>
-    <string name="pref_library_update_manga_restriction">ข้ามการอัปเดต</string>
+    <string name="pref_library_update_manga_restriction">เรื่องที่ข้ามการอัปเดต</string>
     <string name="pref_update_only_completely_read">มีตอนที่ยังไม่ได้อ่าน</string>
-    <string name="pref_update_only_non_completed">มีเรื่องที่มีสถานะ \"จบแล้ว\"</string>
+    <string name="pref_update_only_non_completed">ที่มีสถานะ \"จบแล้ว\"</string>
     <string name="pref_update_only_started">ที่ยังไม่ได้เริ่มอ่าน</string>
     <string name="tap_to_see_details">แตะเพื่อดูรายละเอียด</string>
     <string name="tap_to_learn_more">แตะเพื่อเรียนรู้เพิ่มเติม</string>
@@ -977,4 +977,10 @@
     <string name="download_notifier_split_failed">ไม่สามารถแยกภาพที่ดาวน์โหลดไว้ได้</string>
     <string name="split_tall_images">แยกรูปภาพที่สูงยาวออกโดยอัตโนมัติ</string>
     <string name="split_tall_images_summary">เพิ่มประสิทธิภาพตัวอ่านด้วยการแยกรูปภาพที่สูงยาวที่ดาวน์โหลดไว้</string>
+    <string name="reading_list">รายการที่กำลังอ่าน</string>
+    <string name="wish_list">รายการที่อยากอ่าน</string>
+    <string name="complete_list">รายการที่จบแล้ว</string>
+    <string name="on_hold_list">รายการที่พักอ่านไว้</string>
+    <string name="unfinished_list">รายการที่ยังไม่จบ</string>
+    <string name="sort_fetched_time">เรียงตามวันที่ดึงข้อมูล</string>
 </resources>

@@ -999,4 +999,10 @@
     <string name="download_notifier_split_failed">Δεν ήταν δυνατή η διαίρεση της εικόνας που έχει ληφθεί</string>
     <string name="split_tall_images">Αυτόματη διάσπαση ψηλών εικόνων</string>
     <string name="split_tall_images_summary">Βελτιώνει την απόδοση του αναγνώστη με τη διάσπαση ψηλών εικόνων που έχουν ληφθεί.</string>
+    <string name="reading_list">Λίστα ανάγνωσης</string>
+    <string name="wish_list">Λίστα επιθυμιών</string>
+    <string name="complete_list">Πλήρης Λίστα</string>
+    <string name="on_hold_list">Λίστα αναμονής</string>
+    <string name="unfinished_list">Ημιτελής λίστα</string>
+    <string name="sort_fetched_time">Ταξινόμηση κατά ώρα ανάκτησης</string>
 </resources>

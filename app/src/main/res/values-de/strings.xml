@@ -49,8 +49,8 @@
         <item quantity="other">%1$d Kapitel</item>
     </plurals>
     <plurals name="pages_left">
-        <item quantity="one">%1$d Seite über</item>
-        <item quantity="other">%1$d Seiten über</item>
+        <item quantity="one">%1$d Seite übrig</item>
+        <item quantity="other">%1$d Seiten übrig</item>
     </plurals>
     <!-- Category -->
     <string name="category">Kategorie</string>
@@ -546,7 +546,7 @@
     <string name="select_backup_file">Wähle eine Sicherungsdatei</string>
     <!-- Webview -->
     <string name="failed_to_bypass_cloudflare">Umgehen von Cloudflare fehlgeschlagen</string>
-    <string name="please_update_webview">Bitte für bessere Kompatibilität die Webansicht App aktualisieren</string>
+    <string name="please_update_webview">Bitte aktualisiere die WebView-App für eine bessere Kompatibilität</string>
     <!-- Miscellaneous -->
     <string name="add">Hinzufügen</string>
     <string name="all">Alle</string>
@@ -935,7 +935,7 @@
     <string name="keep_in_">In %1$s behalten</string>
     <string name="scanlators">Scanlatoren</string>
     <string name="channel_errors">Fehler</string>
-    <string name="notification_size_warning">Eine große Anzahl von Aktualisierungen könnte zu einem erhöhten Akkuverbrauch und langsameren Quellen führen</string>
+    <string name="notification_size_warning">Eine große Anzahl von Aktualisierungen könnte zu einem erhöhten Akkuverbrauch und langsameren Quellen führen.</string>
     <string name="show_in_sources_and_extensions">In Quellen- und Erweiterungslisten anzeigen</string>
     <string name="show_outline_around_covers">Rahmen um Cover anzeigen</string>
     <string name="ext_installer_shizuku_stopped">Shizuku läuft nicht</string>
@@ -1034,4 +1034,10 @@
     <string name="download_notifier_split_failed">Heruntergeladenes Bild konnte nicht aufgeteilt werden</string>
     <string name="split_tall_images">Hohe Bilder automatisch teilen</string>
     <string name="split_tall_images_summary">Verbessert die Leseleistung durch Aufteilung hoher heruntergeladener Bilder.</string>
+    <string name="reading_list">Leseliste</string>
+    <string name="wish_list">Wunschliste</string>
+    <string name="complete_list">Abgeschlossen-Liste</string>
+    <string name="on_hold_list">Warteliste</string>
+    <string name="unfinished_list">Unvollendet-Liste</string>
+    <string name="sort_fetched_time">Sortieren nach Aktualisierungszeitpunkt</string>
 </resources>

@@ -998,4 +998,11 @@
     <string name="download_notifier_split_page_not_found">Pàgina %d no agatada partzende</string>
     <string name="split_tall_images">Partzi in automàticu sas immàgines artas</string>
     <string name="split_tall_images_summary">Megiorat su rendimentu de su leghidore partzende sas immàgines artas iscarrigadas.</string>
+    <string name="wish_list">Lista de disìgios</string>
+    <string name="complete_list">Lista de acabados</string>
+    <string name="reading_list">Lista de leghidura</string>
+    <string name="on_hold_list">Lista de postos in pàusa</string>
+    <string name="unfinished_list">Lista de no acabados</string>
+    <string name="download_notifier_split_failed">No at fatu a partzire s\'immàgine iscarrigada</string>
+    <string name="sort_fetched_time">Òrdina pro tempus de recùperu</string>
 </resources>

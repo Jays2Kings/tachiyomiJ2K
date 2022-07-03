@@ -998,4 +998,11 @@
     <string name="download_notifier_split_page_not_found">Sida %d hittades inte under delning</string>
     <string name="split_tall_images">Automatisk delning av höga bilder</string>
     <string name="split_tall_images_summary">Förbättrar läsarens prestanda genom att dela upp långa nedladdade bilder.</string>
+    <string name="reading_list">Läslista</string>
+    <string name="wish_list">Önskelista</string>
+    <string name="download_notifier_split_failed">Kunde inte dela den nedladdade bilden</string>
+    <string name="complete_list">Klart lista</string>
+    <string name="on_hold_list">Väntelista</string>
+    <string name="unfinished_list">Oavslutad lista</string>
+    <string name="sort_fetched_time">Sortera efter hämtad tid</string>
 </resources>

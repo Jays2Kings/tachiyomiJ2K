@@ -1027,7 +1027,13 @@
     <string name="learn_why">Para más información</string>
     <string name="open_in_app">Abrir en la aplicación</string>
     <string name="download_notifier_split_failed">No se pudo dividir la imagen descargada</string>
-    <string name="split_tall_images">Partir imágenes demasiado altas</string>
+    <string name="split_tall_images">Dividir automáticamente imágenes demasiado altas</string>
     <string name="split_tall_images_summary">Mejora el rendimiento del lector dividiendo páginas descargadas mucho más altas que anchas.</string>
     <string name="download_notifier_split_page_not_found">No se ha encontrado la página %d al dividir</string>
+    <string name="reading_list">Leyendo</string>
+    <string name="wish_list">A leer en un futuro</string>
+    <string name="complete_list">Manga terminado</string>
+    <string name="on_hold_list">En pausa</string>
+    <string name="unfinished_list">Sin terminar</string>
+    <string name="sort_fetched_time">Ordenar por tiempo</string>
 </resources>

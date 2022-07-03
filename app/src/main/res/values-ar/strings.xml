@@ -1071,11 +1071,11 @@
     <string name="download_ahead_info">ينطبق التنزيل المسبق فقط على المانجات في المكتبة وإذا تم تنزيل الفصل الأخير الذي تمت قراءته</string>
     <string name="download_ahead">التحميل المسبق</string>
     <plurals name="next_unread_chapters">
-        <item quantity="zero">كل الفصول غير مقروءة</item>
-        <item quantity="one">الفصل التالي غير المقروء</item>
-        <item quantity="two">الفصلين التاليين غير المقروؤين</item>
-        <item quantity="few">الفصول التالية غير المقروءة</item>
-        <item quantity="many">الفصول التالية غير المقروءة</item>
+        <item quantity="zero">كل الفصول مقروءة</item>
+        <item quantity="one">الفصل التالي الغير مقروء</item>
+        <item quantity="two">الفصلين التاليين الغير مقروئين</item>
+        <item quantity="few">الفصول التالية الغير مقروءة</item>
+        <item quantity="many">الفصول التالية الغير مقروءة</item>
         <item quantity="other">كل الفصول مقروءة</item>
     </plurals>
     <string name="learn_why">تَعَرَّفْ لماذا</string>
@@ -1090,4 +1090,10 @@
     <string name="split_tall_images">تقسيم تلقائي للصور الطويلة</string>
     <string name="split_tall_images_summary">يحسن أداء القارئ عن طريق تقسيم الصور الطويلة التي تم تنزيلها.</string>
     <string name="download_notifier_split_failed">لم يمكن تقسيم الصورة المُنزلَة</string>
+    <string name="on_hold_list">قائمة المعلقة</string>
+    <string name="wish_list">قائمة الرغبات</string>
+    <string name="reading_list">قائمة القراءة</string>
+    <string name="complete_list">قائمة الكاملة</string>
+    <string name="unfinished_list">قائمة غير المنتهية</string>
+    <string name="sort_fetched_time">فرز حسب وقت اضافته بالتطبيق</string>
 </resources>

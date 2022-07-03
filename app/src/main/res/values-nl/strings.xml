@@ -194,7 +194,7 @@
     <string name="no_recently_read_manga">Geen recentelijk gelezen manga</string>
     <string name="could_not_download_unexpected_error">Er is een onverwachte fout opgetreden bij het downloaden van het hoofdstuk</string>
     <string name="clear">Legen</string>
-    <string name="library_update_restriction">Bibliotheek updatebeperkingen</string>
+    <string name="library_update_restriction">Apparaatbeperkingen</string>
     <string name="categories_to_include_in_global_update">Categorieën om op te nemen in globale update</string>
     <string name="keep_screen_on">Automatisch dimmen uitschakelen</string>
     <string name="categories_to_include_in_download">Categorieën om op te nemen in de download</string>
@@ -888,7 +888,7 @@
     <string name="getting_started_guide">Gids voor beginners</string>
     <string name="help_translate">Help met vertalen</string>
     <string name="no_matches_for_filters_short">Geen resultaten voor uw filters</string>
-    <string name="notification_size_warning">Grote updates kunnen leiden tot verhoogd batterijgebruik en vertraagde bronnen</string>
+    <string name="notification_size_warning">Grote updates kunnen leiden tot verhoogd batterijgebruik en langzamere bronnen. Tik hier voor meer informatie.</string>
     <string name="filter_groups">Filter scanlator groepen</string>
     <string name="use_suggested_date">Gebruik de voorgestelde datum</string>
     <string name="show_outline_around_covers">Geef rand rond omslagen weer</string>
@@ -907,7 +907,7 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Installeer en start Shizuku om deze als extensie-installatieprogramma te gebruiken.</string>
     <string name="use_shizuku_summary">Staat extensies toe om geïnstalleerd te worden zonder bevestigingsvenster en schakelt automatische updates voor apparaten onder Android 12 in</string>
     <string name="use_shizuku_to_install">Gebruik Shizuku om extensies te installeren</string>
-    <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
+    <string name="download_queue_size_warning">Waarschuwing: grote downloads kunnen ervoor zorgen dat bronnen trager werken en/of dat Tachiyomi vast gaat lopen. Tik hier voor meer informatie.</string>
     <string name="every_3_days">Iedere 3 dagen</string>
     <string name="classic_blue">Klassiek Blauw</string>
     <string name="lime_time">Limoen Groen</string>
@@ -957,4 +957,31 @@
     <string name="pref_high">Hoog</string>
     <string name="pref_low">Laag</string>
     <string name="pref_lowest">Laagste</string>
+    <string name="new_beta_version_available">Nieuwe bètaversie beschikbaar!</string>
+    <string name="expanded_toolbar">Uitgebreide werkbalk</string>
+    <string name="update_tracking_after_reading">Trackers bijwerken na het lezen</string>
+    <string name="language_badge">Taalbadges</string>
+    <string name="pref_update_only_completely_read_summary">Werk manga alleen bij als deze geen ongelezen hoofdstukken heeft (volledig gelezen)</string>
+    <string name="update_tracking_marked_read">Trackers bijwerken na het markeren als gelezen</string>
+    <string name="reading_list">Leeslijst</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Volgende ongelezen hoofdstuk</item>
+        <item quantity="other">Volgende %d ongelezen hoofdstukken</item>
+    </plurals>
+    <string name="sort_fetched_time">Sorteer op tijd opgehaald</string>
+    <string name="zoom_double_page_spreads">Dubbele pagina\'s inzoomen</string>
+    <string name="wish_list">Verlanglijst</string>
+    <string name="on_hold_list">Wachtlijst</string>
+    <string name="empty_backup_error">Er zijn geen items om te back-uppen in de bibliotheek</string>
+    <string name="use_staggered_grid">Gebruik oneven raster</string>
+    <string name="pref_library_update_manga_restriction">Titels bijwerken overslaan</string>
+    <string name="pref_update_only_completely_read">Met ongelezen hoofdstukken</string>
+    <string name="pref_update_only_non_completed">Met als status \"Compleet\"</string>
+    <string name="pref_update_only_started">Waar nog niet aan is begonnen</string>
+    <string name="check_for_beta_releases">Bètaversie controleren</string>
+    <string name="show_larger_toolbar">Op de meeste pagina\'s zal er zal een grotere uitgebreide werkbalk laten zien worden (werkt niet op kleinere schermen)</string>
+    <string name="try_new_features">Probeer nieuwe functies voor ze officieel uit zijn. Bètaversies zijn mogelijk instabiel en worden beschikbaar gesteld zodat er alvast feedback kan worden gegeven aan de ontwikkelaars.</string>
+    <string name="warning_unenroll_from_beta">Het teruggaan naar de stabiele versie kan tot problemen leiden en mogelijk moet de app-opslag worden gewist.</string>
+    <string name="show_">Laat %1$s zien</string>
+    <string name="must_view_details_before_migration">Voor dit item gemigreerd kan worden moet er eerst naar de details zijn gekeken</string>
 </resources>

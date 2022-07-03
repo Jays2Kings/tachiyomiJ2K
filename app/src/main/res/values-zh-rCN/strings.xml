@@ -194,7 +194,7 @@
     <string name="description">介绍</string>
     <string name="ongoing">连载中</string>
     <string name="unknown">未知</string>
-    <string name="licensed">已授权</string>
+    <string name="licensed">版权屏蔽</string>
     <string name="added_to_library">已添加至书架</string>
     <string name="removed_from_library">已从书架删除</string>
     <string name="author">作者</string>
@@ -237,7 +237,7 @@
     <string name="theres_no_next_chapter">下面没有啦</string>
     <string name="theres_no_previous_chapter">前面没有啦</string>
     <string name="loading_pages">页面加载中…</string>
-    <string name="failed_to_load_pages_">加载页面: %1$s失败</string>
+    <string name="failed_to_load_pages_">图片加载失败：%1$s</string>
     <string name="migrate">迁移</string>
     <string name="new_chapters_found">发现新章节</string>
     <string name="failed_to_update_cover">更新封面失败</string>
@@ -976,4 +976,10 @@
     <string name="download_notifier_split_failed">无法拆分下载的图像</string>
     <string name="split_tall_images">自动拆分高图像</string>
     <string name="split_tall_images_summary">通过拆分下载的高图像来提高阅读器的性能。</string>
+    <string name="reading_list">阅读列表</string>
+    <string name="wish_list">想读列表</string>
+    <string name="complete_list">读完列表</string>
+    <string name="on_hold_list">稍后读列表</string>
+    <string name="unfinished_list">未读完列表</string>
+    <string name="sort_fetched_time">按获取时间排序</string>
 </resources>

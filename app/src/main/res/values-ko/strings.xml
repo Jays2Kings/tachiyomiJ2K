@@ -581,4 +581,24 @@
     <string name="pref_lowest">매우 낮음</string>
     <string name="split_tall_images">긴 이미지 자동 분할</string>
     <string name="split_tall_images_summary">긴 다운로드 이미지를 분할하여 리더 성능을 향상시킵니다.</string>
+    <string name="wish_list">위시리스트</string>
+    <string name="reading_list">읽을 목록</string>
+    <string name="series_type">시리즈 종류</string>
+    <string name="drag_and_drop">드래그앤드롭</string>
+    <string name="display_options">디스플레이 설정</string>
+    <string name="tracking_status">추적 상태</string>
+    <string name="series">시리즈</string>
+    <string name="language_badge">언어 배지</string>
+    <string name="comfortable_grid">편함 그리드</string>
+    <string name="open_random_series">랜덤 시리즈을 열기</string>
+    <string name="expand_all_categories">모든 범주는 확대</string>
+    <string name="_unread">%d 읽지 않음</string>
+    <string name="collapse_all_categories">모든 범주는 축소되기</string>
+    <string name="sort_by">정렬 기준</string>
+    <string name="hide_start_reading_button">읽기 시작 버튼을 숨기기</string>
+    <string name="show_unread_count">읽지 않은 수 보기</string>
+    <string name="grid_size">모눈 크기</string>
+    <string name="show_unread_badges">읽지 않은 배지 보기</string>
+    <string name="hide_unread_badges">읽지 않은 배지 숨기기</string>
+    <string name="tap_library_to_show_filters">필터 보려면 서재 아이콘을 눌러주세요</string>
 </resources>

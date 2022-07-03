@@ -176,7 +176,7 @@
     <string name="started">開始済み</string>
     <string name="type">タイプ</string>
     <string name="refresh_tracking">追跡を更新</string>
-    <string name="add_tracking">追跡サービスを追加</string>
+    <string name="add_tracking">追跡を追加</string>
     <string name="migrate">移行</string>
     <string name="copy_value">コピー</string>
     <string name="reader">ビューア</string>
@@ -201,11 +201,11 @@
     <string name="local_source_help_guide">ローカルソースガイド</string>
     <string name="check_site_in_web">WebViewでサイトを開く</string>
     <string name="obsolete">廃止済み</string>
-    <string name="untrusted_extension_message">これは信頼できない証明書でサインされている拡張機能であるため、有効にされていません。
+    <string name="untrusted_extension_message">この拡張機能は信頼できない証明書でサインされているため、有効にされていません。
 \n
-\n悪意のある拡張機能はTachiyomiに保存されているすべてのログイン情報を読み取ること、または任意のコードを実行することができます。
+\n悪意のある拡張機能はTachiyomiに保存されているすべてのログイン情報を読み取ることや、任意コード実行をすることができます。
 \n
-\nこれらのリスクを受け入れ、この拡張機能を信頼してもよろしいですか？</string>
+\nこれらのリスクを受け入れ、この証明書を信頼しますか？</string>
     <string name="obsolete_extension_message">この拡張機能は利用不可になりました。</string>
     <plurals name="extension_updates_available">
         <item quantity="other">%d件の拡張機能の更新が利用可能</item>
@@ -766,7 +766,7 @@
     <string name="cancel_all_for_series">このシリーズの全項目をキャンセル</string>
     <string name="dark_theme">ダークテーマ</string>
     <string name="light_theme">ライトテーマ</string>
-    <string name="about_dont_kill_my_app">一部のスマホメーカーはバックアップグラウンドサービスを終了する追加のアプリ制限を施しています。修正する方法についてはこのWebサイトをご覧ください。</string>
+    <string name="about_dont_kill_my_app">一部のスマホメーカーはバックグラウンドサービスを終了する追加のアプリ制限を施しています。修正する方法についてはこのWebサイトをご覧ください。</string>
     <string name="force_download_cache_refresh_summary">ダウンロードキャッシュの再計算を強制的に行います。アプリ外にダウンロード内容に変更を行ってアプリに変更を反映してもらいたい場合は役に立ちます</string>
     <string name="warning">警告</string>
     <string name="orientation">画面向き</string>
@@ -878,7 +878,7 @@
     <string name="log_out_from_">%1$sからログアウトしますか？</string>
     <string name="keep_in_">%1$sにキープ</string>
     <string name="remove_from_">%1$sから削除</string>
-    <string name="notification_size_warning">大規模のアップデートは電池を急激に消耗し、ソースを遅くする可能性があります. タップして詳細をご覧ください</string>
+    <string name="notification_size_warning">大規模なアップデートは電池を急激に消耗し、ソースを遅くする可能性があります。タップして詳細をご確認ください。</string>
     <string name="show_in_sources_and_extensions">ソース・拡張機能リストに表示</string>
     <string name="ext_installer_shizuku_stopped">Shizukuは実行中ではありません</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Shizukuを拡張機能インストーラーとして使用するには、Shizukuをインストールして起動してください。</string>
@@ -909,9 +909,9 @@
     <string name="warning_unenroll_from_beta">従来のプロダクションバージョンに戻すとエラーを生じることがあり、アプリデータを全消去しなければならないかもしれません。</string>
     <string name="grayscale">グレースケール</string>
     <string name="local_invalid_format">章フォーマットが無効です</string>
-    <string name="order_by">並び替え</string>
+    <string name="order_by">並び順</string>
     <string name="navigate_pan">ページ内で移動</string>
-    <string name="pref_inverted_colors">反転</string>
+    <string name="pref_inverted_colors">反転配色</string>
     <string name="empty_backup_error">バックアップできるライブラリ項目はありません</string>
     <string name="move_series_to_top">シリーズをトップに移動</string>
     <string name="ascending">昇順</string>
@@ -937,7 +937,7 @@
     <string name="tap_to_learn_more">タップでもっと詳しく</string>
     <string name="channel_skipped">スキップ済み</string>
     <string name="clear_history">履歴を全消去</string>
-    <string name="clear_history_completed">履歴を削除しました</string>
+    <string name="clear_history_completed">履歴が削除されました</string>
     <string name="clear_history_confirmation">履歴がすべて失われます。続行しますか？</string>
     <string name="show_">%1$sを表示</string>
     <string name="use_staggered_grid">スタッガード格子を使用</string>
@@ -968,7 +968,7 @@
     <string name="download_ahead_info">「事前ダウンロード」は読了した最後の章がダウンロード済みの場合のみ、そしてライブラリにある項目にのみ適用します</string>
     <string name="learn_why">原因を表示</string>
     <string name="pref_highest">最高</string>
-    <string name="pref_hide_threshold">メニューを自動で非表示する時のスクロール感度</string>
+    <string name="pref_hide_threshold">メニューを自動非表示するスクロール量</string>
     <string name="pref_high">高い</string>
     <string name="pref_low">低い</string>
     <string name="pref_lowest">最低</string>
@@ -976,4 +976,10 @@
     <string name="download_notifier_split_failed">ダウンロードした画像を分割できませんでした</string>
     <string name="split_tall_images">長い画像を自動で分割</string>
     <string name="split_tall_images_summary">ダウンロードした長い画像を自動で分割してビューアのパフォーマンスを改善します。</string>
+    <string name="reading_list">読書中リスト</string>
+    <string name="wish_list">読みたいリスト</string>
+    <string name="complete_list">読了リスト</string>
+    <string name="on_hold_list">後で読むリスト</string>
+    <string name="unfinished_list">未読了リスト</string>
+    <string name="sort_fetched_time">取得時間に基づいて並べ替える</string>
 </resources>

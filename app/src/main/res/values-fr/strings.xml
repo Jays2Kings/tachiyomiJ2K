@@ -937,7 +937,7 @@
     <string name="notification_size_warning">Les mises à jour importantes peuvent entraîner une augmentation de la consommation de la batterie et un ralentissement des sources. Appuyez pour en savoir plus.</string>
     <string name="show_in_sources_and_extensions">Afficher dans les listes de sources et d\'extensions</string>
     <string name="show_outline_around_covers">Afficher le contour des couvertures</string>
-    <string name="ext_installer_shizuku_stopped">Shizuku n\'est pas en exécution</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku n\'est pas en cours d\'exécution</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installez et démarrez Shizuku pour utiliser Shizuku comme installateur d\'extensions.</string>
     <string name="use_shizuku_to_install">Utiliser Shizuku pour installer des extensions</string>
     <string name="use_shizuku_summary">Permet l\'installation d\'extensions sans l\'intervention de l\'utilisateur et active les mises à jour automatiques pour les appareils sous Android 12</string>
@@ -1033,4 +1033,10 @@
     <string name="download_notifier_split_failed">Impossible de diviser l\'image téléchargée</string>
     <string name="split_tall_images">Division automatique des grandes images</string>
     <string name="split_tall_images_summary">Améliore les performances du lecteur en fractionnant les grandes images téléchargées.</string>
+    <string name="reading_list">Liste de lecture</string>
+    <string name="wish_list">Liste de souhaits</string>
+    <string name="complete_list">Liste des lectures terminées</string>
+    <string name="on_hold_list">Liste d\'attente</string>
+    <string name="unfinished_list">Liste des non terminés</string>
+    <string name="sort_fetched_time">Trier par date de téléchargement</string>
 </resources>
