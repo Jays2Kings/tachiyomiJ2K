@@ -467,7 +467,7 @@
         <item quantity="many">Pamięć podręczna wyczyszczona. %d plików zostało usuniętych</item>
         <item quantity="other">Pamięć podręczna wyczyszczona. %d plików zostało usuniętych</item>
     </plurals>
-    <string name="cache_delete_error">Podczas czyszczenia pamięci podręcznej wystąpił błąd</string>
+    <string name="cache_delete_error">Podczas czyszczenia wystąpił błąd</string>
     <string name="clear_cookies">Usuń ciasteczka</string>
     <string name="cookies_cleared">Ciasteczka usunięte</string>
     <string name="clear_database">Wyczyść bazę danych</string>
@@ -1053,4 +1053,26 @@
     <string name="pref_high">Wysokie</string>
     <string name="pref_low">Niskie</string>
     <string name="pref_lowest">Najniższe</string>
+    <string name="check_for_beta_releases">Sprawdź wydania beta</string>
+    <string name="try_new_features">Wypróbuj nowe funkcje zanim będą oficjalnie wydane. Wydania beta mogą być niestabilne i są dostarczane by dać feedback developerowi.</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Następny nieprzeczytany rozdział</item>
+        <item quantity="few">Następne %d nieprzeczytane rozdziały</item>
+        <item quantity="many">Następne %d nieprzeczytanych rozdziałów</item>
+        <item quantity="other">Następne %d nieprzeczytanych rozdziałów</item>
+    </plurals>
+    <string name="sort_fetched_time">Sortuj przez czas pobrania</string>
+    <string name="reading_list">Lista czytanych</string>
+    <string name="wish_list">Lista życzeń</string>
+    <string name="empty_backup_error">Brak pozycji w bibliotece do utworzenia kopii zapasowej</string>
+    <string name="download_notifier_split_failed">Nie można rozdzielić pobranego obrazka</string>
+    <string name="show_larger_toolbar">Pokaż większy, rozszerzony pasek narzędzi na górze większości stron (nie pokaże się na małych urządzeniach niezależnie od ustawienia)</string>
+    <string name="pref_clear_webview_data">Wyczyść dane WebView</string>
+    <string name="webview_data_deleted">Dane WebView wyczyszczone</string>
+    <string name="complete_list">Lista zakończonych</string>
+    <string name="on_hold_list">Lista odłożonych na później</string>
+    <string name="expanded_toolbar">Rozszerzony pasek narzędzi</string>
+    <string name="split_tall_images_summary">Poprawia wydajność czytnika rozdzielając wysokie pobrane obrazy.</string>
+    <string name="split_tall_images">Automatycznie rozdzielaj wysokie obrazy</string>
+    <string name="unfinished_list">Lista niezakończonych</string>
 </resources>

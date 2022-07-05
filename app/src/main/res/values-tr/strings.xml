@@ -246,7 +246,7 @@
     <string name="cover_of_image">Manganın kapağı</string>
     <string name="no_recent_chapters">Yeni bölüm yok</string>
     <string name="no_recently_read_manga">Yakınlarda okunan manga yok</string>
-    <string name="library_is_empty_add_from_browse">Kitaplığınız boş, Kataloglardan kitaplığınıza serileri ekleyebilirsiniz.</string>
+    <string name="library_is_empty_add_from_browse">Kitaplığınız boş, kataloglardan kitaplığınıza serileri ekleyebilirsiniz.</string>
     <string name="could_not_download_unexpected_error">Bölüm, beklenmeyen hata sonucu indirilemedi</string>
     <string name="no_wifi_connection">Wi-Fi bağlantısı yok</string>
     <string name="no_network_connection">Ağ bağlantısı yok</string>
@@ -439,7 +439,7 @@
     <string name="sort_by">Sırala</string>
     <string name="ungrouped">Gruplanmamış</string>
     <string name="tracking_status">İzleme durumu</string>
-    <string name="group_library_by">Kitaplığı gruplandır…</string>
+    <string name="group_library_by">Kitaplığı şuna göre gruplandır…</string>
     <string name="reorder_filters">Filtreleri sırala</string>
     <string name="tag">Etiket</string>
     <string name="mark_all_as_unread">Tümünü okunmadı olarak işaretle</string>
@@ -606,7 +606,7 @@
     <string name="reset_chapter_history">Bölüm geçmişini sıfırla</string>
     <string name="recents">Yakındakiler</string>
     <string name="include_in_global_update">Genel güncelleştirmeye ekle</string>
-    <string name="when_sorting_ignore_articles">Alfabetik olarak sıralarken, manga başlıklarının başındaki makaleler yok sayarak sırala</string>
+    <string name="when_sorting_ignore_articles">Alfabetik olarak sıralarken, manga başlıklarının başındaki makaleleri yok sayarak sırala</string>
     <string name="sort_by_ignoring_articles">Makaleleri yok sayarak sırala</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">ve %1$d bölüm daha</item>

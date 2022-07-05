@@ -942,7 +942,7 @@
     <string name="skipped_reason_not_caught_up">跳过，因有未读章节</string>
     <string name="skipped_reason_not_started">跳过，因无已读章节</string>
     <string name="channel_skipped">已跳过</string>
-    <string name="pref_library_update_manga_restriction">跳过更新标题</string>
+    <string name="pref_library_update_manga_restriction">跳过更新以下作品</string>
     <string name="pref_update_only_completely_read">有未读章节</string>
     <string name="pref_update_only_non_completed">状态为“已完结”</string>
     <string name="pref_update_only_started">尚未开始</string>
