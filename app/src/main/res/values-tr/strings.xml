@@ -285,7 +285,7 @@
         <item quantity="one">Uzantı güncellemesi var</item>
         <item quantity="other">%d uzantı güncellemesi var</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Renk şeritlerini azaltır, ancak performansı etkiler</string>
+    <string name="reduces_banding_impacts_performance">Renk şeritlerini azaltır, ancak performansı etkileyebilir</string>
     <string name="skip_filtered_chapters">Filtrelenmiş bölümleri geç</string>
     <string name="continuous_vertical">Dikey sürekli</string>
     <string name="paged">Sayfalı</string>
@@ -493,12 +493,11 @@
     <string name="previous_chapter">Önceki bölüm</string>
     <string name="animate_page_transitions">Sayfa geçişlerini canladır</string>
     <string name="default_reading_mode">Varsayılan okuma modu</string>
-    <string name="nav_layout">Gezinme düzeni</string>
     <string name="l_nav">L şeklinde</string>
     <string name="kindlish_nav">Kindle gibi</string>
     <string name="edge_nav">Kenar</string>
     <string name="right_and_left_nav">Sağ ve Sol</string>
-    <string name="invert_tapping">Dokunmayı ters çevir</string>
+    <string name="invert_tapping">Dokunma bölgelerini ters çevir</string>
     <string name="none">Yok</string>
     <string name="next">Sonraki</string>
     <string name="open_log">Günlüğü aç</string>
@@ -1005,4 +1004,7 @@
     <string name="on_hold_list">Beklemede Listesi</string>
     <string name="unfinished_list">Tamamlanmayan Listesi</string>
     <string name="sort_fetched_time">Alındığı zamana göre sırala</string>
+    <string name="violet">Menekşe</string>
+    <string name="tap_zones">Dokunma bölgeleri</string>
+    <string name="lavender">Lavanta</string>
 </resources>

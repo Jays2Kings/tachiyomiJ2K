@@ -506,7 +506,6 @@
     <string name="previous_chapter">Prethodno poglavlje</string>
     <string name="animate_page_transitions">Animiraj prijelaze stranica</string>
     <string name="default_reading_mode">Standardni modus čitanja</string>
-    <string name="nav_layout">Način navigacije</string>
     <string name="l_nav">U obliku slova L</string>
     <string name="kindlish_nav">Kao Kindle</string>
     <string name="edge_nav">Rub</string>

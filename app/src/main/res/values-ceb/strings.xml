@@ -293,4 +293,7 @@
     <string name="backup_failed">Napakyas ang pag-backup</string>
     <string name="save_chapters_as_cbz">I-save ingon CBZ archive</string>
     <string name="no_animation">Walay animation</string>
+    <string name="tap_zones">Pag-tap sa mga zone</string>
+    <string name="reduces_banding_impacts_performance">Pagpakunhod sa banding, apan mahimong makaapekto sa performance</string>
+    <string name="invert_tapping">Balika ang mga tap zone</string>
 </resources>

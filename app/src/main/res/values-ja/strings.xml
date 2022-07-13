@@ -222,7 +222,7 @@
     <string name="failed_to_load_pages_">ページのロードに失敗：%1$s</string>
     <string name="show_page_number">ページ数を表示</string>
     <string name="true_32bit_color">32ビットカラー</string>
-    <string name="reduces_banding_impacts_performance">バンディングを軽減しますが、パフォーマンスに影響します</string>
+    <string name="reduces_banding_impacts_performance">バンディングを軽減しますが、パフォーマンスを影響するかもしれません</string>
     <string name="color_filter_blend_mode">ｶﾗｰﾌｨﾙﾀｰﾌﾞﾚﾝﾄﾞﾓｰﾄﾞ</string>
     <string name="overlay">オーバーレイ</string>
     <string name="multiply">乗算</string>
@@ -396,7 +396,6 @@
     <string name="animate_page_transitions">ページ遷移エフェクトを表示</string>
     <string name="open_log">ログを開く</string>
     <string name="default_reading_mode">既定のビューアモード</string>
-    <string name="nav_layout">ナビゲーションレイアウト</string>
     <string name="l_nav">L形</string>
     <string name="kindlish_nav">Kindleスタイル</string>
     <string name="edge_nav">角</string>
@@ -982,4 +981,6 @@
     <string name="on_hold_list">後で読むリスト</string>
     <string name="unfinished_list">未読了リスト</string>
     <string name="sort_fetched_time">取得時間に基づいて並べ替える</string>
+    <string name="tap_zones">タップ可能なゾーン</string>
+    <string name="lavender">ラベンダー色</string>
 </resources>

@@ -461,4 +461,5 @@
         <item quantity="other">%1$d דפים נותרו</item>
     </plurals>
     <string name="category">קטגוריה</string>
+    <string name="reduces_banding_impacts_performance">מפחית פסים, אך עשוי להשפיע על הביצועים</string>
 </resources>

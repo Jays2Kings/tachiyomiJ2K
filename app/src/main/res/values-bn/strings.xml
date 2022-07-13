@@ -499,7 +499,6 @@
     <string name="collapse_all_categories">সমস্ত বিভাগ সঙ্কুচিত করুন</string>
     <string name="expand_all_categories">সমস্ত বিভাগ প্রসারিত করুন</string>
     <string name="tracked">ট্র্যাকড</string>
-    <string name="nav_layout">ন্যাভিগেশন নকশা</string>
     <string name="l_nav">L আকারের</string>
     <string name="no_chapters_error">কোনও অধ্যায় পাওয়া যায় নি</string>
     <string name="badges">প্রতীক গুলি</string>

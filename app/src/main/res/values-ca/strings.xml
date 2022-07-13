@@ -286,7 +286,7 @@
         <item quantity="one">Hi ha una actualització d\'una extensió</item>
         <item quantity="other">Hi ha actualitzacions de %d extensions</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Redueix les bandes de colors, però afecta el rendiment</string>
+    <string name="reduces_banding_impacts_performance">Redueix les bandes de colors, però pot afectar el rendiment</string>
     <string name="skip_filtered_chapters">Omet els capítols filtrats</string>
     <string name="continuous_vertical">Continu en vertical</string>
     <string name="paged">Paginat</string>
@@ -399,12 +399,11 @@
     <string name="unofficial">No oficial</string>
     <string name="may_contain_nsfw">Pot contenir contingut NSFW (+18)</string>
     <string name="default_reading_mode">Mode de lectura per defecte</string>
-    <string name="nav_layout">Disseny de navegació</string>
     <string name="l_nav">En forma d\'L</string>
     <string name="kindlish_nav">Semblant al Kindle</string>
     <string name="edge_nav">Vora</string>
     <string name="right_and_left_nav">A la dreta i a l\'esquerra</string>
-    <string name="invert_tapping">Inverteix els tocs</string>
+    <string name="invert_tapping">Inverteix les zones de toc</string>
     <string name="none">Cap</string>
     <string name="started_reading_date">Data en què el vau començar a llegir</string>
     <string name="finished_reading_date">Data en què el vau acabar a llegir</string>
@@ -618,4 +617,5 @@
     <string name="complete_list">Llista de completats</string>
     <string name="on_hold_list">Llista de pausats</string>
     <string name="unfinished_list">Llista d\'inacabats</string>
+    <string name="tap_zones">Zones de toc</string>
 </resources>

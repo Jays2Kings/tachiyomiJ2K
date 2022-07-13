@@ -374,13 +374,12 @@
     </plurals>
     <string name="reading_mode">โหมดการอ่าน</string>
     <string name="previous_page">หน้าก่อนหน้า</string>
-    <string name="reduces_banding_impacts_performance">ลดปัญหาแถบสี แต่ส่งผลต่อประสิทธิภาพ</string>
+    <string name="reduces_banding_impacts_performance">ลดปัญหาแถบสี แต่อาจส่งผลต่อประสิทธิภาพ</string>
     <string name="skip_filtered_chapters">ข้ามตอนที่กรองไว้</string>
     <string name="paged">แสดงเป็นหน้า</string>
-    <string name="nav_layout">เค้าโครงการนําทาง</string>
     <string name="locked_portrait">ล็อกแนวตั้ง</string>
     <string name="always_show_chapter_transition">แสดงการเปลี่ยนผ่านตอนเสมอ</string>
-    <string name="invert_tapping">กลับด้านการแตะ</string>
+    <string name="invert_tapping">กลับด้านโซนการแตะ</string>
     <string name="actions">เมื่อกระทำ</string>
     <string name="refresh_tracking">โหลดข้อมูลการติดตามใหม่</string>
     <string name="hide_notification_content">ซ่อนเนื้อหาการแจ้งเตือน</string>
@@ -983,4 +982,7 @@
     <string name="on_hold_list">รายการที่พักอ่านไว้</string>
     <string name="unfinished_list">รายการที่ยังไม่จบ</string>
     <string name="sort_fetched_time">เรียงตามวันที่ดึงข้อมูล</string>
+    <string name="tap_zones">โซนการแตะ</string>
+    <string name="lavender">ลาเวนเดอร์</string>
+    <string name="violet">ไวโอเล็ต</string>
 </resources>

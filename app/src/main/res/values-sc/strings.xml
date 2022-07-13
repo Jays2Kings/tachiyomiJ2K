@@ -287,7 +287,7 @@
         <item quantity="one">B\'at un\'agiornamentu a disponimentu pro un\'estensione</item>
         <item quantity="other">B\'ant agiornamentos a disponimentu pro %d estensiones</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Mìnimat sa creatzione de bandas, ma impatat sas prestatziones</string>
+    <string name="reduces_banding_impacts_performance">Mìnimat sa creatzione de bandas, ma diat pòdere influentzare sas prestatziones</string>
     <string name="skip_filtered_chapters">Brinca sos capìtulos filtrados</string>
     <string name="continuous_vertical">Verticale sighidu</string>
     <string name="paged">Impaginadu</string>
@@ -599,7 +599,7 @@
     <string name="kindlish_nav">A tipu Kindle</string>
     <string name="edge_nav">Oru</string>
     <string name="right_and_left_nav">Destra e manca</string>
-    <string name="invert_tapping">Inverte su tocu</string>
+    <string name="invert_tapping">Fùrria sas zonas de tocu</string>
     <string name="none">Perunu</string>
     <string name="started_reading_date">Data de incumintzu de sa leghidura</string>
     <string name="finished_reading_date">Data de fine de sa leghidura</string>
@@ -641,7 +641,6 @@
     <string name="previous_chapter">Capìtulu antepostu</string>
     <string name="animate_page_transitions">Ànima sas transitziones de sas pàginas</string>
     <string name="default_reading_mode">Modalidade de leghidura predefinida</string>
-    <string name="nav_layout">Impaginatzione de su navigadore</string>
     <string name="file_picker_error">Peruna aplicatzione pro ischertare documentos agatada</string>
     <string name="next">Imbeniente</string>
     <string name="open_log">Aberi su registru</string>
@@ -1005,4 +1004,7 @@
     <string name="unfinished_list">Lista de no acabados</string>
     <string name="download_notifier_split_failed">No at fatu a partzire s\'immàgine iscarrigada</string>
     <string name="sort_fetched_time">Òrdina pro tempus de recùperu</string>
+    <string name="tap_zones">Zonas de tocu</string>
+    <string name="lavender">Archemissa</string>
+    <string name="violet">Tanadu</string>
 </resources>

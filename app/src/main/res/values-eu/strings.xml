@@ -767,7 +767,6 @@
     <string name="alpha_initial">A</string>
     <string name="smart_based_on_page">Smart (orrialdean oinarrituta)</string>
     <string name="if_disabled_transition_will_skip">Desgaitua badago, trantsizio orria saltatuko da hurrengo kapitulua kargatua badago</string>
-    <string name="nav_layout">Nabigazio-diseinua</string>
     <string name="remember_this_choice">Gogoratu aukera hau</string>
     <string name="source_not_installed">Iturria ez dago instalatua</string>
     <string name="filter_groups">Iragazi itzultzaileen taldeak</string>

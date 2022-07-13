@@ -246,7 +246,7 @@
     <string name="double_tap_anim_speed">Szybkość animacji podwójnego dotknięcia</string>
     <string name="show_page_number">Pokazuj numer strony</string>
     <string name="true_32bit_color">Kolor 32-bitowy</string>
-    <string name="reduces_banding_impacts_performance">Ogranicza banding, ale wpływa na wydajność</string>
+    <string name="reduces_banding_impacts_performance">Ogranicza banding, ale może mieć wpływ na wydajność</string>
     <string name="crop_borders">Przycinaj krawędzie</string>
     <string name="use_custom_brightness">Niestandardowa jasność</string>
     <string name="use_custom_color_filter">Niestandardowy filtr kolorów</string>
@@ -448,7 +448,7 @@
     <string name="backup_frequency">Częstotliwość tworzenia kopii</string>
     <string name="max_auto_backups">Maks. ilosć kopii automatycznych</string>
     <string name="backup_failed">Tworzenie kopii nie powiodło się</string>
-    <string name="backup_created">Kopia zapasowa utworzona</string>
+    <string name="backup_created">Utworzono kopię zapasową</string>
     <string name="restore_completed">Przywracanie ukończone</string>
     <string name="restore_error">Nieudane przywrócenie kopii zapasowej</string>
     <string name="creating_backup">Tworzenie kopii zapasowej</string>
@@ -693,12 +693,11 @@
     <string name="previous_chapter">Poprzedni rozdział</string>
     <string name="animate_page_transitions">Animacje przejścia stron</string>
     <string name="default_reading_mode">Domyślny styl czytania</string>
-    <string name="nav_layout">Styl nawigacji</string>
     <string name="l_nav">W kształcie litery \"L\"</string>
     <string name="kindlish_nav">Podobnie jak w czytniku Kindle</string>
     <string name="edge_nav">Przy krawędzi</string>
     <string name="right_and_left_nav">Prawa i Lewa</string>
-    <string name="invert_tapping">Odwróć stuknięcia</string>
+    <string name="invert_tapping">Odwróć strefy kliknięcia</string>
     <string name="none">Brak</string>
     <string name="automatic_backups">Automatyczna kopia zapasowa</string>
     <string name="invalid_backup_file">Nieprawidłowy plik kopii zapasowej</string>
@@ -1075,4 +1074,8 @@
     <string name="split_tall_images_summary">Poprawia wydajność czytnika rozdzielając wysokie pobrane obrazy.</string>
     <string name="split_tall_images">Automatycznie rozdzielaj wysokie obrazy</string>
     <string name="unfinished_list">Lista niezakończonych</string>
+    <string name="download_notifier_split_page_not_found">Strona %d nie została znaleziona podczas podziału</string>
+    <string name="tap_to_learn_more">Kliknij, by dowiedzieć się więcej</string>
+    <string name="tap_zones">Strefy kliknięcia</string>
+    <string name="lavender">Lawenda</string>
 </resources>

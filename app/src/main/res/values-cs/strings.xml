@@ -459,7 +459,6 @@
     <string name="previous_chapter">Předchozí kapitola</string>
     <string name="animate_page_transitions">Animovat přechody stránek</string>
     <string name="default_reading_mode">Výchozí režim čtení</string>
-    <string name="nav_layout">Rozvržení ovládání</string>
     <string name="always_show_chapter_transition">Vždy zobrazovat přechod mezi kapitolami</string>
     <string name="none">Žádné</string>
     <string name="chapters_">Kapitoly %1$s</string>
@@ -675,7 +674,7 @@
     <string name="date_fetched">Datum načtení</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Nainstalujte a spusťte Shizuku, abyste jej mohli používat jako instalátor rozšíření.</string>
     <string name="continuous_vertical">Průběžné vertikální</string>
-    <string name="invert_tapping">Převrátit klepnutí</string>
+    <string name="invert_tapping">Invertovat oblasti dotyku</string>
     <string name="source_unsupported">Zdroj není podporován</string>
     <string name="appearance">Vzhled</string>
     <string name="incognito_mode">Anonymní režim</string>
@@ -701,7 +700,7 @@
     <string name="channel_errors">Chyby</string>
     <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi. Klepnutím se dozvíte více.</string>
     <string name="every_3_days">Každé 3 dny</string>
-    <string name="reduces_banding_impacts_performance">Snižuje proužkování, ale ovlivňuje výkon</string>
+    <string name="reduces_banding_impacts_performance">Snižuje pruhování barev, ale může mít vliv na výkon</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uloženou mangu.
 \n
 \nNa obrazovce povolte \"Povolit aplikaci přístup ke všem souborům.\"</string>
@@ -808,4 +807,6 @@
     <string name="release_page">Stránka vydání</string>
     <string name="search_chapters">Vyhledávání kapitol</string>
     <string name="navigate_pan">Přejít na posun</string>
+    <string name="tap_zones">Oblasti dotyku</string>
+    <string name="lavender">Levandule</string>
 </resources>

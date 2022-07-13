@@ -282,7 +282,7 @@
         <item quantity="one">Διαθέσιμη ενημέρωση επέκτασης</item>
         <item quantity="other">%d διαθέσιμες ενημερώσεις επεκτάσεων</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Μειώνει το banding, αλλά επηρεάζει την απόδοση</string>
+    <string name="reduces_banding_impacts_performance">Μειώνει το banding, αλλά μπορεί να επηρεάσει την απόδοση</string>
     <string name="color_filter_blend_mode">Μέθοδος μίξης χρωματικού φίλτρου</string>
     <string name="dodge_lighten">Dodge / Φώτισε</string>
     <string name="burn_darken">Burn / Σκουραίωσε</string>
@@ -442,12 +442,11 @@
     <string name="username_must_not_be_blank">Το όνομα χρήστη ή ο κωδικός πρόσβασης δεν μπορούν να είναι κενά</string>
     <string name="whats_new">Τι νέο υπάρχει</string>
     <string name="default_reading_mode">Προεπιλεγμένη λειτουργία ανάγνωσης</string>
-    <string name="nav_layout">Διάταξη πλοήγησης</string>
     <string name="l_nav">Σχήματος L</string>
     <string name="kindlish_nav">Σαν Kindle</string>
     <string name="edge_nav">Άκρη</string>
     <string name="right_and_left_nav">Δεξιά και Aριστερά</string>
-    <string name="invert_tapping">Αντιστροφή πατήματος</string>
+    <string name="invert_tapping">Αντιστροφή ζωνών πατήματος</string>
     <string name="none">Κανένα</string>
     <string name="started_reading_date">Ημερομηνία έναρξης ανάγνωσης</string>
     <string name="finished_reading_date">Ημερομηνία ολοκλήρωσης ανάγνωσης</string>
@@ -1005,4 +1004,6 @@
     <string name="on_hold_list">Λίστα αναμονής</string>
     <string name="unfinished_list">Ημιτελής λίστα</string>
     <string name="sort_fetched_time">Ταξινόμηση κατά ώρα ανάκτησης</string>
+    <string name="tap_zones">Ζώνες πατήματος</string>
+    <string name="lavender">Λεβάντα</string>
 </resources>

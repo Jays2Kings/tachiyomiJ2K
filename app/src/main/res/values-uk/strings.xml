@@ -299,7 +299,7 @@
         <item quantity="many">%d оновлень для розширень доступні</item>
         <item quantity="other">%d оновлень для розширень доступні</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Зменшує смугастість, але впливає на продуктивність</string>
+    <string name="reduces_banding_impacts_performance">Зменшує смугастість, але може вплинути на продуктивність</string>
     <string name="skip_filtered_chapters">Пропускати відфільтровані глави</string>
     <string name="continuous_vertical">Безперервний вертикальний</string>
     <string name="paged">Посторінково</string>
@@ -640,12 +640,11 @@
     <string name="previous_chapter">Попередній розділ</string>
     <string name="animate_page_transitions">Анімація переходів сторінки</string>
     <string name="default_reading_mode">Напрямок читання за замовчуванням</string>
-    <string name="nav_layout">Розмітка навігації</string>
     <string name="l_nav">L-подібна</string>
     <string name="kindlish_nav">Kindle-подібна</string>
     <string name="edge_nav">Межа</string>
     <string name="right_and_left_nav">Праворуч та ліворуч</string>
-    <string name="invert_tapping">Інвертувати тицяння</string>
+    <string name="invert_tapping">Інвертувати зони тицяння</string>
     <string name="none">Ніхто</string>
     <string name="automatic_backups">Автоматичне резервування</string>
     <string name="invalid_backup_file">Невірний файл бекапу</string>
@@ -1051,4 +1050,7 @@
     <string name="scoring_type_updated">Оновлено тип підрахунку оцінки</string>
     <string name="could_not_update_scoring_">Не вдалося оновити тип оцінки: %1$s</string>
     <string name="sort_fetched_time">Сортування за часом отримання</string>
+    <string name="tap_zones">Зони тицяння</string>
+    <string name="lavender">Лаванда</string>
+    <string name="violet">Фіолетовий</string>
 </resources>

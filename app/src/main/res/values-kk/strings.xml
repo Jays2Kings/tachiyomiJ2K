@@ -32,7 +32,7 @@
     <string name="update">Жаңарту</string>
     <plurals name="category_plural">
         <item quantity="one">%d Санат%d Санаттар</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="library">Кітапхана</string>
     <string name="show_number_of_items">Заттардың санын көрсету</string>
@@ -136,7 +136,7 @@
     <string name="weekly">Апта сайын</string>
     <plurals name="after_minutes">
         <item quantity="one">%1$s минуттан кейін%1$s минуттан кейін</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="add">Қосу</string>
     <string name="all">Барлығы</string>
@@ -192,4 +192,5 @@
     <string name="external_storage_permission_notice">TachiyomiJ2K тарауларды жүктеп алу, автоматты сақтық көшірме жасау және жергілікті манга оқу үшін Android 11 жүйесіндегі барлық файлдарға кіруді қажет етеді.
 \n
 \nКелесі экранда «Барлық файлдарды басқаруға рұқсат беру» опциясын қосыңыз.</string>
+    <string name="reduces_banding_impacts_performance">Жолақты азайтады, бірақ өнімділікке әсер етуі мүмкін</string>
 </resources>

@@ -293,7 +293,7 @@
         <item quantity="one">एक्सटेंशन अपडेट उपलब्ध%d एक्सटेंशन अपडेट उपलब्ध</item>
         <item quantity="other"/>
     </plurals>
-    <string name="reduces_banding_impacts_performance">बैंडिंग को कम करता है, लेकिन प्रदर्शन को प्रभावित करता है</string>
+    <string name="reduces_banding_impacts_performance">बैंडिंग को कम करता है, लेकिन प्रदर्शन को प्रभावित कर सकता है</string>
     <string name="skip_filtered_chapters">फ़िल्टर किए गए अध्यायों को छोड़ें</string>
     <string name="continuous_vertical">लगातार लंबवत</string>
     <string name="paged">पृष्ठांकित</string>
@@ -356,7 +356,6 @@
     <string name="previous_chapter">पिछला अध्याय</string>
     <string name="animate_page_transitions">चेतन पृष्ठ संक्रमण</string>
     <string name="default_reading_mode">डिफ़ॉल्ट रीडिंग मोड</string>
-    <string name="nav_layout">नेविगेशन लेआउट</string>
     <string name="started_reading_date">पढ़ना शुरू करने की तारीख</string>
     <string name="finished_reading_date">पढ़ना समाप्त की तिथि</string>
     <string name="myanimelist_relogin">कृपया फिर से MAL पर लॉगिन करें</string>
@@ -575,4 +574,21 @@
     <string name="tap_to_learn_more">अधिक जानकारी के लिए दबाए</string>
     <string name="reading_list">पठन सूची</string>
     <string name="wish_list">विश-लिस्ट</string>
+    <string name="update_completed">अद्यतन पूर्ण हुआ</string>
+    <string name="new_beta_version_available">नया बीटा संस्करण उपलब्ध!</string>
+    <string name="your_library">आपकी लाइब्रेरी</string>
+    <string name="download_notifier_split_failed">डाउनलोड किया गया चित्र विभाजित नहीं हो सका</string>
+    <string name="complete_list">पूरी सूची</string>
+    <string name="unfinished_list">अधूरी सूची</string>
+    <string name="show_categories_while_filtering">फ़िल्टर करते समय रिक्त श्रेणियाँ दिखाएँ</string>
+    <string name="confirm_category_deletion_message">इस श्रेणी का मंगा डिफ़ॉल्ट श्रेणी में चला जाएगा।</string>
+    <string name="add_categories">श्रेणियाँ जोड़ें</string>
+    <string name="add_edit_categories">श्रेणियाँ जोड़ें/संपादित करें</string>
+    <string name="manage_category">श्रेणी प्रबंधित करें</string>
+    <string name="category_cannot_be_blank">श्रेणी नाम रिक्त नहीं हो सकता</string>
+    <string name="category_deleted">श्रेणी हटाई गई</string>
+    <string name="jump_to_category">श्रेणी में जाएँ</string>
+    <string name="release_page">रिलीज़ पृष्ठ</string>
+    <string name="remove_from_library_question">लाइब्रेरी से निकालें\?</string>
+    <string name="library_search_hint">शीर्षक, टैग, स्रोत खोजें</string>
 </resources>

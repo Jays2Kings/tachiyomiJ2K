@@ -2,7 +2,7 @@
 <resources>
     <string name="categories">分類</string>
     <string name="manga">漫畫</string>
-    <string name="chapters">章節</string>
+    <string name="chapters">章</string>
     <string name="history">記錄</string>
     <string name="settings">設定</string>
     <string name="download_queue">下載佇列</string>
@@ -290,7 +290,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d 個擴充套件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">減緩色調分離，但拖累效能</string>
+    <string name="reduces_banding_impacts_performance">減緩色調分離，但可能拖累效能</string>
     <string name="skip_filtered_chapters">略過已篩選的章節</string>
     <string name="continuous_vertical">垂直連貫</string>
     <string name="paged">單頁式</string>
@@ -384,12 +384,11 @@
     <string name="previous_chapter">上一章</string>
     <string name="animate_page_transitions">翻頁轉場動畫</string>
     <string name="default_reading_mode">預設閱讀模式</string>
-    <string name="nav_layout">輕觸翻頁模式</string>
     <string name="l_nav">L 式</string>
     <string name="kindlish_nav">Kindle 式</string>
     <string name="edge_nav">邊緣式</string>
     <string name="right_and_left_nav">左右式</string>
-    <string name="invert_tapping">反轉輕觸方向</string>
+    <string name="invert_tapping">反轉輕觸區域</string>
     <string name="none">無</string>
     <string name="source_migration_guide">來源遷移說明</string>
     <string name="nsfw_sources">未滿十八歲之人不宜瀏覽的來源</string>
@@ -678,4 +677,26 @@
     <string name="complete_list">閱畢清單</string>
     <string name="on_hold_list">擱置清單</string>
     <string name="unfinished_list">未成清單</string>
+    <string name="no_description">沒有簡介</string>
+    <string name="tap_zones">輕觸區域</string>
+    <string name="lavender">薰衣草</string>
+    <string name="sort_by">排序方式</string>
+    <string name="restrictions_">制限：%1$s</string>
+    <string name="series_type">系列類型</string>
+    <string name="series">叢刊</string>
+    <string name="shift_double_pages">移動雙頁</string>
+    <string name="shift_one_page_over">翻一頁</string>
+    <string name="show_outline_around_covers">顯示封面圖輪廓</string>
+    <string name="_per_row">%d 每行</string>
+    <string name="hide_category_hopper">隱藏分類漏斗</string>
+    <string name="read_progress">閱讀進益</string>
+    <string name="language_badge">語言徽章</string>
+    <string name="hide_start_reading_button">隱藏始讀按鈕</string>
+    <string name="tracking_status">追跡狀態</string>
+    <string name="ungrouped">未分組</string>
+    <string name="display_as">示為</string>
+    <string name="sort_by_ignoring_articles">以冠詞無視排序</string>
+    <string name="no_matches_for_filters">本篩選無配項</string>
+    <string name="move_dynamic_to_bottom">將折疊動態分類移至底部</string>
+    <string name="reorder_filters">重排篩選</string>
 </resources>

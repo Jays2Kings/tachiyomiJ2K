@@ -280,7 +280,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d 个扩展插件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">减少色带，但会降低性能</string>
+    <string name="reduces_banding_impacts_performance">减少色带，但也许会影响性能</string>
     <string name="skip_filtered_chapters">跳过已筛选章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已被禁用</string>
@@ -595,12 +595,11 @@
     <string name="previous_chapter">上一章</string>
     <string name="animate_page_transitions">页面过渡动画</string>
     <string name="default_reading_mode">默认阅读模式</string>
-    <string name="nav_layout">导航布局</string>
     <string name="l_nav">L 样式</string>
     <string name="kindlish_nav">Kindle 样式</string>
     <string name="edge_nav">边缘样式</string>
     <string name="right_and_left_nav">左右样式</string>
-    <string name="invert_tapping">反转轻触方向</string>
+    <string name="invert_tapping">反转点按区域</string>
     <string name="none">无</string>
     <string name="started_reading_date">开始阅读日期</string>
     <string name="finished_reading_date">完成阅读日期</string>
@@ -982,4 +981,7 @@
     <string name="on_hold_list">稍后读列表</string>
     <string name="unfinished_list">未读完列表</string>
     <string name="sort_fetched_time">按获取时间排序</string>
+    <string name="tap_zones">点按区域</string>
+    <string name="lavender">淡紫色</string>
+    <string name="violet">紫罗兰色</string>
 </resources>

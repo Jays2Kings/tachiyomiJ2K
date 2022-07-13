@@ -596,7 +596,6 @@
     <string name="updated_">Bijgewerkt %1$s</string>
     <string name="read_">Gelezen %1$s</string>
     <string name="default_reading_mode">Standaard leesmodus</string>
-    <string name="nav_layout">Navigatie-indeling</string>
     <string name="l_nav">L-vormig</string>
     <string name="kindlish_nav">Kindle-achtig</string>
     <string name="edge_nav">Rand</string>

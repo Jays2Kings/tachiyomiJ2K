@@ -290,7 +290,7 @@
         <item quantity="many">يتوفر تحديث ل%d إضافات</item>
         <item quantity="other">يتوفر تحديث ل%d إضافات‌</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">يقلل النطاقات ولكن يؤثر على الأداء</string>
+    <string name="reduces_banding_impacts_performance">يزيد من سلاسة تدرج الالوان بالصور، ولكن قد يؤثر على الأداء</string>
     <string name="skip_filtered_chapters">تخطي الفصول المُرشحة</string>
     <string name="continuous_vertical">عمودي مستمر</string>
     <string name="paged">عارض الصفحات</string>
@@ -632,12 +632,11 @@
     <string name="previous_chapter">الفصل السابق</string>
     <string name="animate_page_transitions">مؤثرات الانتقال بين الصفحات</string>
     <string name="default_reading_mode">وضع القراءة الافتراضي</string>
-    <string name="nav_layout">تخطيط التنقل</string>
     <string name="l_nav">على شكل حرف L</string>
     <string name="kindlish_nav">كيندل العش</string>
     <string name="edge_nav">حافة</string>
     <string name="right_and_left_nav">يميناً و يساراً</string>
-    <string name="invert_tapping">عكس جهة النقر</string>
+    <string name="invert_tapping">عكس مناطق اللمس</string>
     <string name="none">لا شيء</string>
     <string name="no_chapters_error">لم يتم العثور على الفصول</string>
     <string name="file_picker_error">لم يتم العثور على تطبيق منتقي الملفات</string>
@@ -1096,4 +1095,5 @@
     <string name="complete_list">قائمة الكاملة</string>
     <string name="unfinished_list">قائمة غير المنتهية</string>
     <string name="sort_fetched_time">فرز حسب وقت اضافته بالتطبيق</string>
+    <string name="tap_zones">مناطق اللمس</string>
 </resources>

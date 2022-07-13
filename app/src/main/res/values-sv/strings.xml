@@ -300,7 +300,7 @@
         <item quantity="one">Tilläggsuppdatering tillgänglig</item>
         <item quantity="other">%d tilläggsuppdateringar tillgängliga</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Minskar färgbandning men kräver mer prestanda</string>
+    <string name="reduces_banding_impacts_performance">Minskar bandning, men kan påverka prestandan</string>
     <string name="skip_filtered_chapters">Skippa filtrerade kapitel</string>
     <string name="continuous_vertical">Kontinuerlig vertikal</string>
     <string name="paged">Sidläsare</string>
@@ -385,12 +385,11 @@
     <string name="previous_chapter">Föregående kapitel</string>
     <string name="animate_page_transitions">Animera sidbyten</string>
     <string name="default_reading_mode">Standardläsläge</string>
-    <string name="nav_layout">Navigationslayout</string>
     <string name="l_nav">L-formad</string>
     <string name="kindlish_nav">Kindle-ish</string>
     <string name="edge_nav">Kant</string>
     <string name="right_and_left_nav">Höger och Vänster</string>
-    <string name="invert_tapping">Invertera tryck</string>
+    <string name="invert_tapping">Invertera tryckzoner</string>
     <string name="none">Ingen</string>
     <string name="started_reading_date">Påbörjat läsdatum</string>
     <string name="finished_reading_date">Avslutat läsdatum</string>
@@ -1005,4 +1004,7 @@
     <string name="on_hold_list">Väntelista</string>
     <string name="unfinished_list">Oavslutad lista</string>
     <string name="sort_fetched_time">Sortera efter hämtad tid</string>
+    <string name="tap_zones">Tryckzoner</string>
+    <string name="lavender">Lavendel</string>
+    <string name="violet">Violett</string>
 </resources>

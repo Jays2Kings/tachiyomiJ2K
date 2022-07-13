@@ -227,7 +227,7 @@
     <string name="double_tap_anim_speed">Doppeltipp Animationsgeschwindigkeit</string>
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
-    <string name="reduces_banding_impacts_performance">Reduziert die Streifenbildung, beeinträchtigt jedoch die Leistung</string>
+    <string name="reduces_banding_impacts_performance">Reduziert Streifenbildung, könnte aber die Leistung beeinflussen</string>
     <string name="crop_borders">Rand abschneiden</string>
     <string name="use_custom_brightness">Eigene Helligkeit festlegen</string>
     <string name="use_custom_color_filter">Eigenen Farbfilter nutzen</string>
@@ -670,12 +670,11 @@
     <string name="previous_chapter">Vorheriges Kapitel</string>
     <string name="animate_page_transitions">Animierte Seitenübergänge</string>
     <string name="default_reading_mode">Standard-Lesemodus</string>
-    <string name="nav_layout">Navigationslayout</string>
     <string name="l_nav">L-förmig</string>
     <string name="kindlish_nav">Kindle-Stil</string>
     <string name="edge_nav">Rand</string>
     <string name="right_and_left_nav">Rechts und Links</string>
-    <string name="invert_tapping">Tippen invertieren</string>
+    <string name="invert_tapping">Tippzonen invertieren</string>
     <string name="none">Nichts</string>
     <string name="started_reading_date">Datum des Lesebeginns</string>
     <string name="finished_reading_date">Datum des Leseabschlusses</string>
@@ -1040,4 +1039,6 @@
     <string name="on_hold_list">Warteliste</string>
     <string name="unfinished_list">Unvollendet-Liste</string>
     <string name="sort_fetched_time">Sortieren nach Aktualisierungszeitpunkt</string>
+    <string name="tap_zones">Tippzonen</string>
+    <string name="lavender">Lavendel</string>
 </resources>

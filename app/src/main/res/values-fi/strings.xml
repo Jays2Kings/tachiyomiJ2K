@@ -431,7 +431,6 @@
     </plurals>
     <string name="animate_page_transitions">Animoi sivusiirtymät</string>
     <string name="default_reading_mode">Oletuslukutila</string>
-    <string name="nav_layout">Navigointiasettelu</string>
     <string name="l_nav">L-muotoinen</string>
     <string name="kindlish_nav">Kindle tyylinen</string>
     <string name="edge_nav">Reuna</string>

@@ -287,7 +287,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">Terdapat %d perbaharuan ekstensi</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Mengurangi banding, namun mempengaruhi performa</string>
+    <string name="reduces_banding_impacts_performance">Mengurangi banding, namun berdampak pada performa</string>
     <string name="skip_filtered_chapters">Lewati bab yang terfilter</string>
     <string name="continuous_vertical">Vertikal terus-menerus</string>
     <string name="paged">Halaman</string>
@@ -468,7 +468,6 @@
     <string name="previous_chapter">Bab sebelumnya</string>
     <string name="animate_page_transitions">Animasikan transisi halaman</string>
     <string name="default_reading_mode">Mode baca default</string>
-    <string name="nav_layout">Tata letak navigasi</string>
     <string name="no_chapters_error">Tidak ada bab yang ditemukan</string>
     <string name="badges">Penanda</string>
     <string name="source_migration_guide">Petunjuk migrasi</string>
@@ -483,7 +482,7 @@
     <string name="l_nav">Bentuk L</string>
     <string name="edge_nav">Tepi</string>
     <string name="right_and_left_nav">Kanan dan Kiri</string>
-    <string name="invert_tapping">Ketukan arah sebaliknya</string>
+    <string name="invert_tapping">Balikkan zona ketuk</string>
     <string name="none">Kosong</string>
     <string name="started_reading_date">Tanggal mulai membaca</string>
     <string name="finished_reading_date">Tanggal selesai membaca</string>
@@ -983,4 +982,6 @@
     <string name="on_hold_list">Daftar Tertahan</string>
     <string name="unfinished_list">Daftar Yang Belum Selesai</string>
     <string name="sort_fetched_time">Urutkan berdasarkan waktu yang diambil</string>
+    <string name="tap_zones">Zona ketuk</string>
+    <string name="lavender">Lavender</string>
 </resources>

@@ -489,7 +489,7 @@
     <string name="reading_">Чтение %1$s</string>
     <string name="webtoon_style">Стиль веб-комикса</string>
     <!-- Reader settings -->
-    <string name="reduces_banding_impacts_performance">Уменьшает полосатость, но влияет на производительность</string>
+    <string name="reduces_banding_impacts_performance">Уменьшает полосатость, но может влиять на производительность</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Постранично</string>
     <string name="enable_zoom_out">Уменьшение масштаба</string>
@@ -671,7 +671,6 @@
     <string name="previous_chapter">Предыдущая глава</string>
     <string name="animate_page_transitions">Анимированные переходы страниц</string>
     <string name="default_reading_mode">Режим чтения по умолчанию</string>
-    <string name="nav_layout">Схема навигации</string>
     <string name="source_migration_guide">Руководство по миграции источников</string>
     <string name="nsfw_sources">Источники NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Это не предотвращает появление внутри приложения контента NSFW (18+) из неофициальных или потенциально неправильно помеченных расширений.</string>
@@ -681,7 +680,7 @@
     <string name="kindlish_nav">Kindle-подобная</string>
     <string name="edge_nav">По краям</string>
     <string name="right_and_left_nav">Справа и слева</string>
-    <string name="invert_tapping">Нажатие наоборот</string>
+    <string name="invert_tapping">Зоны касания наоборот</string>
     <string name="none">Нет</string>
     <string name="started_reading_date">Дата начала чтения</string>
     <string name="finished_reading_date">Дата окончания чтения</string>
@@ -1078,4 +1077,6 @@
     </plurals>
     <string name="learn_why">Узнайте, почему</string>
     <string name="open_in_app">Открыть в приложении</string>
+    <string name="tap_zones">Зоны касания</string>
+    <string name="lavender">Лаванда</string>
 </resources>

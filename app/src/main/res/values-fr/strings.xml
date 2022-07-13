@@ -326,7 +326,7 @@
         <item quantity="one">Mise à jour d\'extension disponible</item>
         <item quantity="other">%d mises à jour d\'extensions disponibles</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Réduit les bandes de couleur mais affecte les performances</string>
+    <string name="reduces_banding_impacts_performance">Réduit les bandes de couleur, mais peut impacter les performances</string>
     <string name="skip_filtered_chapters">Passer les chapitres filtrés</string>
     <string name="continuous_vertical">Vertical continu</string>
     <string name="paged">Pages</string>
@@ -633,7 +633,7 @@
     <string name="kindlish_nav">Style Kindle</string>
     <string name="edge_nav">Bord</string>
     <string name="right_and_left_nav">Droite et gauche</string>
-    <string name="invert_tapping">Inverser les touches</string>
+    <string name="invert_tapping">Inverser les zones tactiles</string>
     <string name="none">Aucun</string>
     <string name="no_chapters_error">Aucun chapitre trouvé</string>
     <string name="badges">Badges</string>
@@ -649,7 +649,6 @@
     <string name="previous_chapter">Chapitre précédent</string>
     <string name="animate_page_transitions">Activer les transitions</string>
     <string name="default_reading_mode">Mode de lecture par défaut</string>
-    <string name="nav_layout">Plan de navigation</string>
     <string name="started_reading_date">Date de début de lecture</string>
     <string name="finished_reading_date">Date de fin de lecture</string>
     <string name="myanimelist_relogin">Veuillez vous reconnecter à MAL</string>
@@ -1039,4 +1038,6 @@
     <string name="on_hold_list">Liste d\'attente</string>
     <string name="unfinished_list">Liste des non terminés</string>
     <string name="sort_fetched_time">Trier par date de téléchargement</string>
+    <string name="tap_zones">Zones tactiles</string>
+    <string name="lavender">Lavande</string>
 </resources>

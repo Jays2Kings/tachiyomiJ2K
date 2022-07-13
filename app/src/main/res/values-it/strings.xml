@@ -329,7 +329,7 @@
         <item quantity="one">Aggiornamento estensione disponibile</item>
         <item quantity="other">%d estensioni hanno aggiornamenti disponibili</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Riduce l\'uso della banda, ma influisce sulle prestazioni</string>
+    <string name="reduces_banding_impacts_performance">Riduce il banding, ma potrebbe influire sulle prestazioni</string>
     <string name="skip_filtered_chapters">Salta capitoli filtrati</string>
     <string name="continuous_vertical">Verticale continuo</string>
     <string name="paged">Pagina</string>
@@ -649,12 +649,11 @@
     <string name="unofficial">Non ufficiale</string>
     <string name="may_contain_nsfw">Potrebbe contenere materiale 18+</string>
     <string name="default_reading_mode">Modalità di lettura predefinita</string>
-    <string name="nav_layout">Layout della navigazione</string>
     <string name="l_nav">A forma di L</string>
     <string name="kindlish_nav">Stile Kindle</string>
     <string name="edge_nav">Bordo</string>
     <string name="right_and_left_nav">Destra e Sinistra</string>
-    <string name="invert_tapping">Inverti i tasti</string>
+    <string name="invert_tapping">Inverti le zone di tocco</string>
     <string name="none">Nessuna</string>
     <string name="started_reading_date">Data di inizio lettura</string>
     <string name="finished_reading_date">Data di fine lettura</string>
@@ -1038,4 +1037,6 @@
     <string name="on_hold_list">In Pausa</string>
     <string name="unfinished_list">Non Completati</string>
     <string name="sort_fetched_time">Ordina per data di recupero</string>
+    <string name="tap_zones">Zone di tocco</string>
+    <string name="lavender">Lavanda</string>
 </resources>

@@ -333,7 +333,7 @@
         <item quantity="one">Actualización de extensión disponible</item>
         <item quantity="other">%d actualizaciones de extensiones disponibles</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Reduce el anillado, pero afecta al rendimiento</string>
+    <string name="reduces_banding_impacts_performance">Reduce el efecto anillado en los degradados y mejora la calidad de los grises, algo más lento</string>
     <string name="skip_filtered_chapters">Saltar capítulos filtrados</string>
     <string name="continuous_vertical">Vertical continuo</string>
     <string name="paged">Paginado</string>
@@ -586,14 +586,13 @@
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar las transiciones de página</string>
     <string name="default_reading_mode">Modo de lectura predeterminado</string>
-    <string name="nav_layout">Estructura de navegación</string>
     <string name="no_chapters_error">No hay capítulos</string>
     <string name="badges">Insignias</string>
     <string name="unofficial_extension_message">Esta extensión no es de la lista oficial de extensiones de Tachiyomi.</string>
     <string name="l_nav">En forma de L</string>
     <string name="kindlish_nav">Estilo Kindle</string>
     <string name="edge_nav">Borde</string>
-    <string name="invert_tapping">Tapping invertido</string>
+    <string name="invert_tapping">Invertir zonas de toque</string>
     <string name="none">Ninguna</string>
     <string name="started_reading_date">Fecha de inicio de lectura</string>
     <string name="finished_reading_date">Fecha de lectura finalizada</string>
@@ -929,7 +928,7 @@
     <string name="log_in">Iniciar sesión</string>
     <string name="details_page">Detalles de página</string>
     <string name="keep_in_">Mantener en %1$s</string>
-    <string name="channel_errors">Errores</string>
+    <string name="channel_errors">Con errores</string>
     <string name="scanlators">Sanlations</string>
     <string name="notification_size_warning">Las actualizaciones grandes pueden implicar un mayor uso de la batería y que las fuentes se vuelvan más lentas. Haz click para saber más.</string>
     <string name="show_in_sources_and_extensions">Mostrar en la lista de fuentes y extensiones</string>
@@ -1036,4 +1035,7 @@
     <string name="on_hold_list">En pausa</string>
     <string name="unfinished_list">Sin terminar</string>
     <string name="sort_fetched_time">Ordenar por tiempo</string>
+    <string name="tap_zones">Zonas de toque</string>
+    <string name="lavender">Lavanda</string>
+    <string name="violet">Violeta</string>
 </resources>

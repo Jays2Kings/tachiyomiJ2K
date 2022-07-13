@@ -154,7 +154,7 @@
     <string name="last_read_">Última leitura %1$s</string>
     <string name="read_">%1$s lido</string>
     <string name="updated_">%1$s atualizado</string>
-    <string name="added_">Adicionado %1$s</string>
+    <string name="added_">%1$s adicionado</string>
     <string name="view_history">Ver histórico</string>
     <string name="view_all_updates">Ver todas as atualizações</string>
     <string name="search_recents">Pesquisar recentes…</string>
@@ -226,7 +226,7 @@
     <string name="double_tap_anim_speed">Velocidade da animação de toque duplo</string>
     <string name="show_page_number">Mostrar número da página</string>
     <string name="true_32bit_color">Cor de 32 bits</string>
-    <string name="reduces_banding_impacts_performance">Reduz a formação de faixas em cores gradientes, mas afeta o desempenho</string>
+    <string name="reduces_banding_impacts_performance">Reduz o efeito de anéis nos degradês, mas pode afetar o desempenho</string>
     <string name="crop_borders">Aparar bordas</string>
     <string name="use_custom_brightness">Usar brilho personalizado</string>
     <string name="use_custom_color_filter">Usar filtro de cores personalizado</string>
@@ -654,12 +654,11 @@
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar as transições de página</string>
     <string name="default_reading_mode">Modo de leitura padrão</string>
-    <string name="nav_layout">Layout de navegação</string>
     <string name="l_nav">Em forma de L</string>
     <string name="kindlish_nav">Kindle</string>
     <string name="edge_nav">Borda</string>
     <string name="right_and_left_nav">Direita e Esquerda</string>
-    <string name="invert_tapping">Inverter o toque</string>
+    <string name="invert_tapping">Inverter as zonas de toque</string>
     <string name="none">Nenhuma</string>
     <string name="started_reading_date">Data de início da leitura</string>
     <string name="finished_reading_date">Data de término da leitura</string>
@@ -812,7 +811,7 @@
     <string name="show_download_button">Mostrar botão de download</string>
     <string name="press_and_hold_to_also_reset">Pressionar e segurar também pode redefinir o histórico do capítulo</string>
     <string name="label_global_search">Pesquisa global</string>
-    <string name="fetched_">Buscado %1$s</string>
+    <string name="fetched_">%1$s atualizado localmente</string>
     <string name="search_">Pesquisar %1$s</string>
     <string name="group_chapters_together">Agrupar capítulos juntos</string>
     <string name="show_updated_time">Mostrar data da atualização</string>
@@ -820,7 +819,7 @@
     <string name="your_library">Sua biblioteca</string>
     <string name="no_chapters_to_delete">Sem capítulos para excluir</string>
     <string name="remove_all_downloads">Remover todos os downloads\?</string>
-    <string name="date_fetched">Data buscado</string>
+    <string name="date_fetched">Data da atualização local</string>
     <string name="locked_landscape">Paisagem bloqueado</string>
     <string name="locked_portrait">Retrato bloqueado</string>
     <string name="landscape">Paisagem</string>
@@ -1049,4 +1048,7 @@
     <string name="on_hold_list">Lista de Pausados</string>
     <string name="unfinished_list">Lista de Inacabados</string>
     <string name="sort_fetched_time">Ordenar por hora da atualização local</string>
+    <string name="tap_zones">Zonas de toque</string>
+    <string name="lavender">Lavanda</string>
+    <string name="violet">Violeta</string>
 </resources>

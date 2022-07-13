@@ -323,7 +323,7 @@
         <item quantity="one">Atualização de extensão disponível</item>
         <item quantity="other">%d atualizações de extensão disponíveis</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Reduz bandas de cor, mas impacta a performance</string>
+    <string name="reduces_banding_impacts_performance">Reduz bandas de cor, mas pode impactar a performance</string>
     <string name="skip_filtered_chapters">Saltar capítulos filtrados</string>
     <string name="continuous_vertical">Vertical contínuo</string>
     <string name="paged">Paginação</string>
@@ -448,12 +448,11 @@
     <string name="previous_chapter">Capítulo anterior</string>
     <string name="animate_page_transitions">Animar transições de página</string>
     <string name="default_reading_mode">Modo de leitura padrão</string>
-    <string name="nav_layout">Esquema de navegação</string>
     <string name="l_nav">Em forma de L</string>
     <string name="kindlish_nav">Estilo Kindle</string>
     <string name="edge_nav">Borda</string>
     <string name="right_and_left_nav">Direita e Esquerda</string>
-    <string name="invert_tapping">Inverter toque</string>
+    <string name="invert_tapping">Inverter zonas toque</string>
     <string name="none">Nenhum</string>
     <string name="search_settings">Definições de pesquisa</string>
     <string name="locale">Localidade</string>
@@ -1015,4 +1014,5 @@
     <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
     <string name="split_tall_images">Dividir automaticamente imagens altas</string>
     <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens altas transferidas.</string>
+    <string name="tap_zones">Zonas de toque</string>
 </resources>

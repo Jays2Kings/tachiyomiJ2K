@@ -348,12 +348,11 @@
     <string name="previous_chapter">Nakaraang kabanata</string>
     <string name="animate_page_transitions">I-animate ang paglipat-pahina</string>
     <string name="default_reading_mode">Default na paraan ng pagbasa</string>
-    <string name="nav_layout">Paraan ng nabigasyon</string>
     <string name="l_nav">Hugis-L</string>
     <string name="kindlish_nav">Mala-Kindle</string>
     <string name="edge_nav">Sulok</string>
     <string name="right_and_left_nav">Kaliwa at Kanan</string>
-    <string name="invert_tapping">Baliktad na pagpindot</string>
+    <string name="invert_tapping">Baligtarin ang mga tap zone</string>
     <string name="none">Wala</string>
     <string name="source_migration_guide">Gabay sa Paglipat</string>
     <string name="nsfw_sources">Mga source na NSFW (18+)</string>
@@ -1005,4 +1004,6 @@
     <string name="reading_list">Listahan ng Binabasa</string>
     <string name="wish_list">Listahan ng Hiling</string>
     <string name="sort_fetched_time">Ayusin base sa oras kinuha</string>
+    <string name="tap_zones">Mga tap zone</string>
+    <string name="lavender">Lila</string>
 </resources>

@@ -10,7 +10,7 @@
     <string name="double_tap_anim_speed">Double tap animation speed</string>
     <string name="show_page_number">نمایش شماره صفحه</string>
     <string name="true_32bit_color">رنگ ۳۲ بیتی</string>
-    <string name="reduces_banding_impacts_performance">Reduces banding, but impacts performance</string>
+    <string name="reduces_banding_impacts_performance">نوار نوار بودن صفحه را کاهش می‌دهد، ولی ممکن است در عملکرد تاثیر بگذارد</string>
     <string name="crop_borders">بریدن حاشیه‌ها</string>
     <string name="color_filter_blend_mode">حالت blend فیلتر رنگ</string>
     <string name="overlay">Overlay</string>
@@ -345,7 +345,7 @@
     <string name="previous_chapter">قسمت قبل</string>
     <string name="animate_page_transitions">انمیشن‌های تغییر صفحه</string>
     <string name="default_reading_mode">حالت پیش فرض خواندن</string>
-    <string name="invert_tapping">ضربه زدن معکوس</string>
+    <string name="invert_tapping">منطقه‌های لمس را معکوس کن</string>
     <string name="none">هیچ‌کدام</string>
     <string name="myanimelist_relogin">لطفا دوباره به MAL وارد شوید</string>
     <string name="search_settings">جست و جوی تنضیمات</string>
@@ -521,7 +521,7 @@
     <string name="save_chapters_as_cbz">ذخیره به عنوان فایل آرشیو CBZ</string>
     <plurals name="after_minutes">
         <item quantity="one">بعد از %1$s دقیقهبعد از %1$s دقیقه</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="exclude_">بدون: %s</string>
     <string name="tap_to_see_details">برای دیدن جزئیات لمس کنید</string>
@@ -533,4 +533,5 @@
     <string name="tako">تاکو</string>
     <string name="faq_and_guides">پرسش و پاسخ‌های متداول و راهنمایی‌ها</string>
     <string name="split_tall_images">نصف کردن خودکار عکس های بلند</string>
+    <string name="tap_zones">مناطق قابل لمس</string>
 </resources>

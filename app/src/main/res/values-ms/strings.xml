@@ -38,7 +38,7 @@
     <string name="resume">Sambung</string>
     <string name="open_in_browser">Buka di pelayar</string>
     <string name="display">Paparan</string>
-    <string name="compact_grid">Grid</string>
+    <string name="compact_grid">Grid Padat</string>
     <string name="list">Senarai</string>
     <string name="cancel">Batal</string>
     <string name="sort">Susun mengikut</string>
@@ -341,17 +341,17 @@
     <plurals name="for_n_titles">
         <item quantity="other">Untuk %d</item>
     </plurals>
-    <string name="more_library_settings">Lagi tetapan</string>
-    <string name="hide_category_hopper">Sembunyi lompatan</string>
-    <string name="display_as">Paparkan</string>
-    <string name="tap_library_to_show_filters">Tekan gambar pustaka untuk tunjukkan tapisan</string>
+    <string name="more_library_settings">Lagi tetapan pustaka</string>
+    <string name="hide_category_hopper">Sembunyikan corong kategori</string>
+    <string name="display_as">Paparkan sebagai</string>
+    <string name="tap_library_to_show_filters">Tekan gambar pustaka untuk papar tapisan</string>
     <string name="uniform_covers">Lapis</string>
-    <string name="hide_start_reading_button">Sembunyi butang mula</string>
-    <string name="comfortable_grid">Grid</string>
-    <string name="display_options">Pilihan</string>
-    <string name="drag_and_drop">Heret dan</string>
+    <string name="hide_start_reading_button">Sembunyi butang mula membaca</string>
+    <string name="comfortable_grid">Grid Selesa</string>
+    <string name="display_options">Papar pilihan</string>
+    <string name="drag_and_drop">Heret dan Letak</string>
     <string name="sort_by">Di susun</string>
-    <string name="ungrouped">Nyah</string>
+    <string name="ungrouped">Nyahkumpulan</string>
     <string name="tracking_status">Status</string>
     <string name="group_library_by">Kumpulkan pustaka dengan…</string>
     <string name="series_type">Jenis</string>
@@ -589,17 +589,16 @@
     <string name="previous_chapter">Bab terdahulu</string>
     <string name="animate_page_transitions">Menggerakkan peralihan muka surat</string>
     <string name="default_reading_mode">Mod membaca lalai</string>
-    <string name="nav_layout">Tataletak navigasi</string>
     <string name="no_chapters_error">Tiada bab dijumpai</string>
     <string name="source_migration_guide">Panduan memindahkan sumber</string>
     <string name="nsfw_sources">Sumber NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Ini tidak menghalang sambungan yang tidak rasmi atau berpotensi tidak menggunakan tetapan yang betul daripada menayangkan kandungan 18+ tahun keatas dalam aplikasi.</string>
-    <string name="badges">Penanda</string>
+    <string name="badges">Lambang</string>
     <string name="l_nav">Bentuk L</string>
     <string name="kindlish_nav">Serupa Kindle</string>
     <string name="edge_nav">Sisi</string>
     <string name="right_and_left_nav">Kanan dan kiri</string>
-    <string name="invert_tapping">Songsangkan tekan skrin</string>
+    <string name="invert_tapping">Songsangkan zon ketik</string>
     <string name="none">Tiada</string>
     <string name="started_reading_date">Tarikh mula membaca</string>
     <string name="finished_reading_date">Tarikh selesai membaca</string>
@@ -628,9 +627,9 @@
     <string name="file_picker_error">Tiada aplikasi memilih fail</string>
     <string name="next">Seterusnya</string>
     <string name="open_log">Buka log</string>
-    <string name="show_unread_count">Tunjuk bilangan belum dibaca</string>
-    <string name="show_unread_badges">Tunjuk petanda belum dibaca</string>
-    <string name="hide_unread_badges">Sembunyi petanda belum dibaca</string>
+    <string name="show_unread_count">Papar bilangan belum dibaca</string>
+    <string name="show_unread_badges">Papar lambang belum dibaca</string>
+    <string name="hide_unread_badges">Sembunyi Lambang belum dibaca</string>
     <string name="category">Kategori</string>
     <plurals name="chapters_plural">
         <item quantity="other">%1$d bab</item>
@@ -734,7 +733,7 @@
     <string name="shift_one_page_over">Tukar satu halaman seterusnya</string>
     <string name="_per_row">%d setiap baris</string>
     <string name="grid_size">Saiz grid</string>
-    <string name="uniform_grid_covers">Lapis grid uniform</string>
+    <string name="uniform_grid_covers">Grid Cover Sekata</string>
     <string name="can_be_found_in_library_filters">Boleh juga dijumpai dengan membuka tapis pustaka</string>
     <string name="series">Siri</string>
     <string name="expand_collapse_all_categories">Buka/tutup semua kategori</string>
@@ -833,7 +832,7 @@
 \n
 \nAdakah anda masih ingin meneruskan\?</string>
     <string name="select_inverse">Pilih songsang</string>
-    <string name="cover_only_grid">Cuma grid muka hadapan</string>
+    <string name="cover_only_grid">Grid Muka Hadapan Sahaja</string>
     <string name="notification_update_error">%1$d kemas kini gagal</string>
     <string name="notification_update_skipped">%1$d kemas kini dilangkau</string>
     <string name="skipped_reason_completed">Dilangkau kerana siri sudah lengkap</string>
@@ -872,4 +871,17 @@
     <string name="complete_list">Senarai Selesai</string>
     <string name="on_hold_list">Senarai Tangguh</string>
     <string name="unfinished_list">Senarai Belum Selesai</string>
+    <string name="lavender">Lavender</string>
+    <string name="tap_zones">Zon ketik</string>
+    <string name="by_source_order">Mengikut urutan sumber</string>
+    <string name="language_badge">Lambang bahasa</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K memerlukan akses kepada semua fail untuk memuat turun bab. Tap sini, kemudian hidupkan \"benarkan akses untuk mengurus semua fail.\"</string>
+    <string name="show_outline_around_covers">Papar garisan luar sekeliling muka hadapan</string>
+    <string name="new_beta_version_available">Versi beta baharu tersedia!</string>
+    <string name="scanlators">scanlator</string>
+    <string name="no_matches_for_filters_short">Tiada padanan untuk tapisan</string>
+    <string name="open_random_series">Buka siri rawak</string>
+    <string name="show_categories_while_filtering">Tunjuk kategori kosong semasa menapis</string>
+    <string name="could_not_install_update">Tidak dapat memasang kemas kini</string>
+    <string name="update_completed">kemas kini siap</string>
 </resources>
