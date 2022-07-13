@@ -109,7 +109,7 @@ class SourcePresenter(
             val pinnedCatalogues = preferences.pinnedCatalogues().get()
             val isPinned = source.id.toString() in pinnedCatalogues
             if (isPinned) null
-            else SourceItem(source, null, isPinned)
+            else SourceItem(source, LangItem(LAST_USED_KEY), isPinned)
         }
     }
 

@@ -26,10 +26,7 @@ class SourceHolder(view: View, val adapter: SourceAdapter) :
         val source = item.source
 
         // Set source name
-        val sourceName =
-            if (adapter.isMultiLanguage) source.toString() else source.name.replaceFirstChar {
-                it.titlecase(Locale.getDefault())
-            } + " (${item.numberOfItems})"
+        val sourceName = source.name.replaceFirstChar { it.titlecase(Locale.getDefault()) } + " (${item.numberOfItems})"
         binding.title.text = sourceName
         binding.lang.text = when {
             item.isUninstalled -> itemView.context.getString(R.string.source_not_installed)
