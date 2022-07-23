@@ -14,6 +14,7 @@ import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.marginTop
 import androidx.core.view.updateLayoutParams
+import androidx.core.widget.NestedScrollView
 import androidx.core.widget.TextViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bluelinelabs.conductor.Controller
@@ -268,11 +269,12 @@ class ExpandedAppBarLayout@JvmOverloads constructor(context: Context, attrs: Att
     /**
      * Update the views in appbar based on its current Y position
      *
-     * @param recyclerView used to determine how far it has scrolled down, if it has not scrolled
+     * @param recyclerOrNested used to determine how far it has scrolled down, if it has not scrolled
      * past the app bar's height, match the Y to the recyclerView's offset
      * @param cancelAnim if true, cancel the current snap animation
      */
-    fun updateAppBarAfterY(recyclerView: RecyclerView?, cancelAnim: Boolean = true) {
+    fun <T> updateAppBarAfterY(recyclerOrNested: T?, cancelAnim: Boolean = true) {
+        val recyclerView = recyclerOrNested as? RecyclerView ?: recyclerOrNested as? NestedScrollView
         if (cancelAnim) {
             yAnimator?.cancel()
         }
@@ -356,7 +358,7 @@ class ExpandedAppBarLayout@JvmOverloads constructor(context: Context, attrs: Att
         val mainActivity = mainActivity ?: return
         val useSearchToolbar = mainToolbar.alpha <= 0.025f
         val idle = RecyclerView.SCROLL_STATE_IDLE
-        if (if (useSearchToolbar) -y >= height || recyclerView?.scrollState ?: idle <= idle || context.isTablet()
+        if (if (useSearchToolbar) -y >= height || (recyclerView is RecyclerView && recyclerView?.scrollState ?: idle <= idle) || context.isTablet()
             else mainActivity.currentToolbar == searchToolbar
         ) {
             useSearchToolbarForMenu(useSearchToolbar)

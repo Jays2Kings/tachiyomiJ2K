@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.util
 
 import android.app.Activity
+import android.content.Context
 import android.content.DialogInterface
 import android.view.View
 import android.widget.Toast
@@ -19,6 +20,7 @@ import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackService
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.source.SourceManager
+import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.category.addtolibrary.SetCategoriesSheet
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.migration.MigrationFlags
@@ -364,4 +366,31 @@ fun Manga.autoAddTrack(db: DatabaseHelper, onMangaMoved: () -> Unit) {
                 }
             }
         }
+}
+
+fun Context.mapStatus(status: Int): String {
+    return getString(
+        when (status) {
+            SManga.ONGOING -> R.string.ongoing
+            SManga.COMPLETED -> R.string.completed
+            SManga.LICENSED -> R.string.licensed
+            SManga.PUBLISHING_FINISHED -> R.string.publishing_finished
+            SManga.CANCELLED -> R.string.cancelled
+            SManga.ON_HIATUS -> R.string.on_hiatus
+            else -> R.string.unknown
+        },
+    )
+}
+
+fun Context.mapSerieType(serieType: Int): String {
+    return getString(
+        when (serieType) {
+            Manga.TYPE_MANGA -> R.string.manga
+            Manga.TYPE_MANHWA -> R.string.manhwa
+            Manga.TYPE_MANHUA -> R.string.manhua
+            Manga.TYPE_COMIC -> R.string.comic
+            Manga.TYPE_WEBTOON -> R.string.webtoon
+            else -> R.string.unknown
+        },
+    )
 }

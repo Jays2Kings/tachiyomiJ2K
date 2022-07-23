@@ -268,6 +268,9 @@ dependencies {
 
     // TLS 1.3 support for Android < 10
     implementation("org.conscrypt:conscrypt-android:2.5.2")
+
+    // Android Chart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }
 
 

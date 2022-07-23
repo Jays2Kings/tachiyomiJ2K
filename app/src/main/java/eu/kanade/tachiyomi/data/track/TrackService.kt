@@ -51,6 +51,10 @@ abstract class TrackService(val id: Int) {
         return index.toFloat()
     }
 
+    open fun get10PointScore(score: Float): Float {
+        return score
+    }
+
     abstract fun displayScore(track: Track): String
 
     abstract suspend fun add(track: Track): Track

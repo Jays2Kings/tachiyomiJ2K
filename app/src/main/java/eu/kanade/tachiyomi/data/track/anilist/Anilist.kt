@@ -130,6 +130,8 @@ class Anilist(private val context: Context, id: Int) : TrackService(id) {
         }
     }
 
+    override fun get10PointScore(score: Float) = score / 10
+
     override fun displayScore(track: Track): String {
         val score = track.score
 

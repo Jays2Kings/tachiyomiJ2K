@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marginNormal"
+    android:layout_marginTop="@dimen/marginClose"
+    android:layout_marginEnd="@dimen/marginNormal"
+    android:layout_marginBottom="@dimen/marginSmall"
+    app:cardBackgroundColor="?colorSurface"
+    app:contentPaddingBottom="@dimen/marginNormal"
+    app:contentPaddingTop="@dimen/marginNormal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/stats_label_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginNormal"
+            android:layout_marginEnd="@dimen/marginNormal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stats_rank_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_rank_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/oval"
+                    android:backgroundTint="#E5C07B"
+                    android:gravity="center"
+                    android:padding="@dimen/marginSmall"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="100." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stats_label_text"
+                style="?textAppearanceLabelLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="MANGA" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stats_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginNormal"
+            android:layout_marginTop="@dimen/marginNormal"
+            android:layout_marginEnd="@dimen/marginNormal"
+            android:baselineAligned="false"
+            app:layout_constraintTop_toBottomOf="@id/stats_label_layout">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="?textAppearanceLabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/count" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginClose"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_count_percentage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginClose"
+                    tools:text="(10%)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="?textAppearanceLabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chapters_read" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginClose"
+                    tools:text="12054 / 54987" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_progress_percentage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginClose"
+                    tools:text="(10%)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stats_mean_score_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="?textAppearanceLabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mean_score" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_score_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:drawablePadding="3dp"
+                    app:drawableEndCompat="@drawable/ic_star_12dp"
+                    app:drawableTint="?attr/colorOnBackground"
+                    tools:text="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

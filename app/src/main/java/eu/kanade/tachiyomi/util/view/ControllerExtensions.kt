@@ -32,6 +32,7 @@ import androidx.core.view.doOnLayout
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.updatePaddingRelative
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -122,7 +123,8 @@ fun Controller.removeQueryListener(includeSearchTB: Boolean = true) {
     )
 }
 
-fun Controller.liftAppbarWith(recycler: RecyclerView, padView: Boolean = false) {
+fun <T> Controller.liftAppbarWith(recyclerOrNested: T, padView: Boolean = false) {
+    val recycler = recyclerOrNested as? RecyclerView ?: recyclerOrNested as? NestedScrollView ?: return
     if (padView) {
         var appBarHeight = (
             if (fullAppBarHeight ?: 0 > 0) fullAppBarHeight!!
@@ -192,7 +194,7 @@ fun Controller.liftAppbarWith(recycler: RecyclerView, padView: Boolean = false) 
     activityBinding?.appBar?.updateAppBarAfterY(recycler)
 
     setAppBarBG(0f)
-    recycler.addOnScrollListener(
+    (recycler as? RecyclerView)?.addOnScrollListener(
         object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)

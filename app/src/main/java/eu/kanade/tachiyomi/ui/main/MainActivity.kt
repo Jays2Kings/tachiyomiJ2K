@@ -81,6 +81,7 @@ import eu.kanade.tachiyomi.ui.library.LibraryController
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.more.AboutController
 import eu.kanade.tachiyomi.ui.more.OverflowDialog
+import eu.kanade.tachiyomi.ui.more.stats.StatsController
 import eu.kanade.tachiyomi.ui.recents.RecentsController
 import eu.kanade.tachiyomi.ui.recents.RecentsPresenter
 import eu.kanade.tachiyomi.ui.security.SecureActivityDelegate
@@ -1109,6 +1110,10 @@ open class MainActivity : BaseActivity<MainActivityBinding>(), DownloadServiceLi
 
     fun showAbout() {
         router.pushController(AboutController().withFadeTransaction())
+    }
+
+    fun showStats() {
+        router.pushController(StatsController().withFadeTransaction())
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {

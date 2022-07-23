@@ -43,11 +43,13 @@
     </declare-styleable>
 
     <declare-styleable name="MenuSheetItemView">
-        <attr name="android:text"/>
-        <attr name="android:maxLines"/>
-        <attr name="icon" format="reference"/>
-        <attr name="endIcon" format="reference"/>
+        <attr name="android:text" />
+        <attr name="android:maxLines" />
+        <attr name="icon" format="reference" />
+        <attr name="endIcon" format="reference" />
     </declare-styleable>
 
     <bool name="isLightMode">true</bool>
+
+    <fraction name="chartRatio">1</fraction>
 </resources>

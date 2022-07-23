@@ -38,6 +38,7 @@ import eu.kanade.tachiyomi.util.lang.capitalizeWords
 import eu.kanade.tachiyomi.util.lang.chopByWords
 import eu.kanade.tachiyomi.util.lang.removeArticles
 import eu.kanade.tachiyomi.util.manga.MangaCoverMetadata
+import eu.kanade.tachiyomi.util.mapStatus
 import eu.kanade.tachiyomi.util.system.executeOnIO
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -729,7 +730,7 @@ class LibraryPresenter(
                         }
                     }
                 }
-                else -> listOf(LibraryItem(manga, makeOrGetHeader(mapStatus(manga.status)), viewContext))
+                else -> listOf(LibraryItem(manga, makeOrGetHeader(context.mapStatus(manga.status)), viewContext))
             }
         }.flatten().toMutableList()
 
@@ -783,20 +784,6 @@ class LibraryPresenter(
 
         headers.forEachIndexed { index, category -> category.order = index }
         return items to headers
-    }
-
-    private fun mapStatus(status: Int): String {
-        return context.getString(
-            when (status) {
-                SManga.LICENSED -> R.string.licensed
-                SManga.ONGOING -> R.string.ongoing
-                SManga.COMPLETED -> R.string.completed
-                SManga.PUBLISHING_FINISHED -> R.string.publishing_finished
-                SManga.CANCELLED -> R.string.cancelled
-                SManga.ON_HIATUS -> R.string.on_hiatus
-                else -> R.string.unknown
-            },
-        )
     }
 
     private fun mapTrackingOrder(status: String): String {

@@ -73,18 +73,31 @@
                 app:layout_constraintWidth_min="wrap"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/divider"
-                app:layout_constraintBottom_toTopOf="@id/about_item"
+                app:layout_constraintBottom_toTopOf="@id/stats_item"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/settings"
                 app:icon="@drawable/ic_outline_settings_24dp" />
 
             <eu.kanade.tachiyomi.widget.MenuSheetItemView
-                android:id="@+id/about_item"
+                android:id="@+id/stats_item"
                 android:layout_width="0dp"
                 app:layout_constraintWidth_min="wrap"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/settings_item"
+                app:layout_constraintBottom_toTopOf="@+id/about_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/stats"
+                app:icon="@drawable/ic_query_stats_24dp" />
+
+
+            <eu.kanade.tachiyomi.widget.MenuSheetItemView
+                android:id="@+id/about_item"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_min="wrap"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/stats_item"
                 app:layout_constraintBottom_toTopOf="@+id/help_item"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
