@@ -48,5 +48,6 @@ class HistoryUpsertResolver : HistoryPutResolver() {
     private fun mapToUpdateContentValues(history: History) =
         contentValuesOf(
             HistoryTable.COL_LAST_READ to history.last_read,
+            HistoryTable.COL_TIME_READ to history.time_read,
         )
 }

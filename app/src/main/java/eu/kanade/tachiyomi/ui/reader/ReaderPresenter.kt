@@ -95,6 +95,11 @@ class ReaderPresenter(
     private var loader: ChapterLoader? = null
 
     /**
+     * The time the chapter was started reading
+     */
+    private var chapterReadStartTime: Long? = null
+
+    /**
      * Subscription to prevent setting chapters as active from multiple threads.
      */
     private var activeChapterSubscription: Subscription? = null
@@ -184,8 +189,7 @@ class ReaderPresenter(
             val isChapterDownloaded = currentChapters.currChapter.pageLoader is DownloadPageLoader
             currentChapters.unref()
             val currentChapter = currentChapters.currChapter
-            saveChapterProgress(currentChapter)
-            saveChapterHistory(currentChapter)
+            saveReadingProgress(currentChapter)
             val currentChapterPageCount = currentChapter.chapter.last_page_read + currentChapter.chapter.pages_left
             if ((currentChapter.chapter.last_page_read + 1.0) / currentChapterPageCount > 0.33 || isAnyPrevChapterDownloaded) {
                 downloadNextChapters(isChapterDownloaded)
@@ -425,7 +429,7 @@ class ReaderPresenter(
     fun loadChapter(chapter: Chapter) {
         val loader = loader ?: return
 
-        viewerChaptersRelay.value?.currChapter?.let(::onChapterChanged)
+        viewerChaptersRelay.value?.currChapter?.let(::saveReadingProgress)
 
         Timber.d("Loading ${chapter.url}")
 
@@ -532,7 +536,7 @@ class ReaderPresenter(
 
         if (selectedChapter != currentChapters.currChapter) {
             Timber.d("Setting ${selectedChapter.chapter.url} as active")
-            onChapterChanged(currentChapters.currChapter)
+            saveReadingProgress(currentChapters.currChapter)
             loadNewChapter(selectedChapter)
         }
     }
@@ -592,37 +596,47 @@ class ReaderPresenter(
     }
 
     /**
-     * Called when a chapter changed from [fromChapter] to [toChapter]. It updates [fromChapter]
-     * on the database.
+     * Called when reader chapter is changed in reader or when activity is paused.
      */
-    private fun onChapterChanged(fromChapter: ReaderChapter) {
-        saveChapterProgress(fromChapter)
-        saveChapterHistory(fromChapter)
+    private fun saveReadingProgress(readerChapter: ReaderChapter) {
+        saveChapterProgress(readerChapter)
+        saveChapterHistory(readerChapter)
     }
 
-    fun saveProgress() = getCurrentChapter()?.let { onChapterChanged(it) }
+    fun saveCurrentChapterReadingProgress() = getCurrentChapter()?.let { saveReadingProgress(it) }
 
     /**
-     * Saves this [chapter] progress (last read page and whether it's read).
+     * Saves this [readerChapter] progress (last read page and whether it's read).
      * If incognito mode isn't on or has at least 1 tracker
      */
-    private fun saveChapterProgress(chapter: ReaderChapter) {
-        db.getChapter(chapter.chapter.id!!).executeAsBlocking()?.let { dbChapter ->
-            chapter.chapter.bookmark = dbChapter.bookmark
+    private fun saveChapterProgress(readerChapter: ReaderChapter) {
+        db.getChapter(readerChapter.chapter.id!!).executeAsBlocking()?.let { dbChapter ->
+            readerChapter.chapter.bookmark = dbChapter.bookmark
         }
         if (!preferences.incognitoMode().get() || hasTrackers) {
-            db.updateChapterProgress(chapter.chapter).executeAsBlocking()
+            db.updateChapterProgress(readerChapter.chapter).executeAsBlocking()
         }
     }
 
     /**
-     * Saves this [chapter] last read history.
+     * Saves this [readerChapter] last read history.
      */
-    private fun saveChapterHistory(chapter: ReaderChapter) {
+    private fun saveChapterHistory(readerChapter: ReaderChapter) {
         if (!preferences.incognitoMode().get()) {
-            val history = History.create(chapter.chapter).apply { last_read = Date().time }
-            db.updateHistoryLastRead(history).executeAsBlocking()
+            val readAt = Date().time
+            val sessionReadDuration = chapterReadStartTime?.let { readAt - it } ?: 0
+            val oldTimeRead = db.getHistoryByChapterUrl(readerChapter.chapter.url).executeAsBlocking()?.time_read ?: 0
+            val history = History.create(readerChapter.chapter).apply {
+                last_read = readAt
+                time_read = sessionReadDuration + oldTimeRead
+            }
+            db.upsertHistoryLastRead(history).executeAsBlocking()
+            chapterReadStartTime = null
         }
+    }
+
+    fun setReadStartTime() {
+        chapterReadStartTime = Date().time
     }
 
     /**

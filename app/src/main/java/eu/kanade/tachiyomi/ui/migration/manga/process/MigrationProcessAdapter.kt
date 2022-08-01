@@ -164,7 +164,10 @@ class MigrationProcessAdapter(
                             prevHistoryList.find { it.chapter_id == prevChapter.id }
                                 ?.let { prevHistory ->
                                     val history = History.create(chapter)
-                                        .apply { last_read = prevHistory.last_read }
+                                        .apply {
+                                            last_read = prevHistory.last_read
+                                            time_read = prevHistory.time_read
+                                        }
                                     historyList.add(history)
                                 }
                         } else if (chapter.chapter_number <= maxChapterRead) {
@@ -173,7 +176,7 @@ class MigrationProcessAdapter(
                     }
                 }
                 db.insertChapters(dbChapters).executeAsBlocking()
-                db.updateHistoryLastRead(historyList).executeAsBlocking()
+                db.upsertHistoryLastRead(historyList).executeAsBlocking()
             }
             // Update categories
             if (MigrationFlags.hasCategories(flags)) {

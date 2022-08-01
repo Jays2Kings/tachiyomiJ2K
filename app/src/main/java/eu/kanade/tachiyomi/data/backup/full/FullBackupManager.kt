@@ -184,7 +184,7 @@ class FullBackupManager(context: Context) : AbstractBackupManager(context) {
             if (historyForManga.isNotEmpty()) {
                 val history = historyForManga.mapNotNull { history ->
                     val url = databaseHelper.getChapter(history.chapter_id).executeAsBlocking()?.url
-                    url?.let { BackupHistory(url, history.last_read) }
+                    url?.let { BackupHistory(url, history.last_read, history.time_read) }
                 }
                 if (history.isNotEmpty()) {
                     mangaObject.history = history
@@ -283,12 +283,13 @@ class FullBackupManager(context: Context) : AbstractBackupManager(context) {
     internal fun restoreHistoryForManga(history: List<BackupHistory>) {
         // List containing history to be updated
         val historyToBeUpdated = ArrayList<History>(history.size)
-        for ((url, lastRead) in history) {
+        for ((url, lastRead, readDuration) in history) {
             val dbHistory = databaseHelper.getHistoryByChapterUrl(url).executeAsBlocking()
             // Check if history already in database and update
             if (dbHistory != null) {
                 dbHistory.apply {
                     last_read = max(lastRead, dbHistory.last_read)
+                    time_read = max(readDuration, dbHistory.time_read)
                 }
                 historyToBeUpdated.add(dbHistory)
             } else {
@@ -296,6 +297,7 @@ class FullBackupManager(context: Context) : AbstractBackupManager(context) {
                 databaseHelper.getChapter(url).executeAsBlocking()?.let {
                     val historyToAdd = History.create(it).apply {
                         last_read = lastRead
+                        time_read = readDuration
                     }
                     historyToBeUpdated.add(historyToAdd)
                 }

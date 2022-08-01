@@ -488,7 +488,8 @@ class RecentsPresenter(
      */
     fun removeFromHistory(history: History) {
         history.last_read = 0L
-        db.updateHistoryLastRead(history).executeAsBlocking()
+        history.time_read = 0L
+        db.upsertHistoryLastRead(history).executeAsBlocking()
         getRecents()
     }
 
@@ -498,8 +499,11 @@ class RecentsPresenter(
      */
     fun removeAllFromHistory(mangaId: Long) {
         val history = db.getHistoryByMangaId(mangaId).executeAsBlocking()
-        history.forEach { it.last_read = 0L }
-        db.updateHistoryLastRead(history).executeAsBlocking()
+        history.forEach {
+            it.last_read = 0L
+            it.time_read = 0L
+        }
+        db.upsertHistoryLastRead(history).executeAsBlocking()
         getRecents()
     }
 
