@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.ui.more.stats.details
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.Menu
@@ -8,9 +9,12 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.github.mikephil.charting.components.MarkerView
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
@@ -22,23 +26,32 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.github.mikephil.charting.highlight.Highlight
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener
+import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.chip.Chip
+import com.google.android.material.datepicker.MaterialDatePicker
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.databinding.StatsDetailsControllerBinding
 import eu.kanade.tachiyomi.ui.base.SmallToolbarInterface
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.more.stats.StatsHelper
+import eu.kanade.tachiyomi.ui.more.stats.StatsHelper.getReadDuration
 import eu.kanade.tachiyomi.ui.more.stats.details.StatsDetailsPresenter.Stats
 import eu.kanade.tachiyomi.ui.more.stats.details.StatsDetailsPresenter.StatsSort
 import eu.kanade.tachiyomi.util.system.contextCompatDrawable
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.toInt
+import eu.kanade.tachiyomi.util.system.toUtcCalendar
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
 import eu.kanade.tachiyomi.util.view.setStyle
 import timber.log.Timber
+import java.util.Calendar
+import java.util.concurrent.TimeUnit
+import kotlin.math.ceil
 
 class StatsDetailsController :
     BaseController<StatsDetailsControllerBinding>(),
@@ -52,6 +65,11 @@ class StatsDetailsController :
 
     private val defaultStat = Stats.SERIE_TYPE
     private val defaultSort = StatsSort.COUNT_DESC
+
+    /**
+     * Selected day in the read duration stat
+     */
+    private var highlightedDay: Calendar? = null
 
     /**
      * Returns the toolbar title to show when this controller is attached.
@@ -76,14 +94,16 @@ class StatsDetailsController :
             statsDetailsRefreshLayout.setOnRefreshListener {
                 statsDetailsRefreshLayout.isRefreshing = false
                 searchView.clearFocus()
+                searchItem.collapseActionView()
                 presenter.libraryMangas = presenter.getLibrary()
-                collapseAndReset()
+                resetAndSetup()
             }
 
             statsClearButton.setOnClickListener {
                 resetFilters()
                 searchView.clearFocus()
-                collapseAndReset()
+                searchItem.collapseActionView()
+                resetAndSetup()
             }
 
             statsHorizontalScroll.setOnTouchListener { _, motionEvent ->
@@ -107,13 +127,15 @@ class StatsDetailsController :
                     presenter.selectedStat = newSelection
 
                     dialog.dismiss()
-                    collapseAndReset()
+                    searchItem.collapseActionView()
+                    resetAndSetup()
                 }
                     ?.show()
             }
             chipStat.setOnCloseIconClickListener {
                 if (presenter.selectedStat != defaultStat) {
                     presenter.selectedStat = defaultStat
+                    searchItem.collapseActionView()
                     chipStat.text = resetTextChip(R.string.stat_, defaultStat.resourceId)
                 } else chipStat.callOnClick()
             }
@@ -200,7 +222,7 @@ class StatsDetailsController :
                     presenter.selectedStatsSort = newSelection
                     dialog.dismiss()
                     presenter.sortCurrentStats()
-                    collapseAndReset(false)
+                    resetAndSetup(false)
                 }
                     .show()
             }
@@ -210,9 +232,79 @@ class StatsDetailsController :
                     chipSort.text = resetTextChip(R.string.sort_, defaultSort.resourceId)
                 } else chipSort.callOnClick()
             }
+            statsDateText.setOnClickListener {
+                val dialog = MaterialDatePicker.Builder.datePicker()
+                    .setTitleText("Select a week")
+                    .setSelection(presenter.startDate.timeInMillis.toUtcCalendar()?.timeInMillis)
+                    .build()
+
+                dialog.addOnPositiveButtonClickListener { utcMillis ->
+                    presenter.updateReadDurationPeriod(utcMillis)
+                    statsDateText.text = presenter.getPeriodString()
+                    statsBarChart.highlightValues(null)
+                    highlightedDay = null
+                    resetAndSetup()
+                    totalDurationStatsText.text = adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
+                }
+                dialog.show((activity as AppCompatActivity).supportFragmentManager, "Read duration date")
+            }
+            statsDateStartArrow.setOnClickListener {
+                changeDatesReadDurationWithArrow(presenter.startDate, -1)
+            }
+            statsDateEndArrow.setOnClickListener {
+                changeDatesReadDurationWithArrow(presenter.endDate, 1)
+            }
         }
 
         setupStatistic(presenter.currentStats == null)
+    }
+
+    /**
+     * Changes dates of the read duration stat with the arrows
+     * @param referenceDate date used to determine if should change week
+     * @param weeksToAdd number of weeks to add or remove
+     */
+    private fun changeDatesReadDurationWithArrow(referenceDate: Calendar, weeksToAdd: Int) {
+        with(binding) {
+            if (highlightedDay == null) {
+                changeWeekReadDuration(weeksToAdd)
+                statsDateText.text = presenter.getPeriodString()
+            } else {
+                val newDaySelected = highlightedDay?.get(Calendar.DAY_OF_MONTH)
+                val endDay = referenceDate.get(Calendar.DAY_OF_MONTH)
+                statsBarChart.highlightValues(null)
+                if (newDaySelected == endDay) {
+                    changeWeekReadDuration(weeksToAdd)
+                    if (!statsBarChart.isVisible) {
+                        highlightedDay = null
+                        statsDateText.text = presenter.getPeriodString()
+                        return
+                    }
+                }
+                highlightedDay = Calendar.getInstance().apply {
+                    timeInMillis = highlightedDay!!.timeInMillis
+                    add(Calendar.DAY_OF_WEEK, weeksToAdd)
+                }
+                val highlightValue = presenter.historyByDayAndManga.keys.toTypedArray()
+                    .indexOfFirst { it.get(Calendar.DAY_OF_MONTH) == highlightedDay?.get(Calendar.DAY_OF_MONTH) }
+                statsBarChart.highlightValue(highlightValue.toFloat(), 0)
+                statsBarChart.marker.refreshContent(
+                    statsBarChart.data.dataSets[0].getEntryForXValue(highlightValue.toFloat(), 0f),
+                    statsBarChart.getHighlightByTouchPoint(highlightValue.toFloat(), 0f),
+                )
+            }
+        }
+    }
+
+    /**
+     * Changes week of the read duration stat
+     * @param weeksToAdd number of weeks to add or remove
+     */
+    private fun changeWeekReadDuration(weeksToAdd: Int) {
+        presenter.startDate.apply { add(Calendar.WEEK_OF_YEAR, weeksToAdd) }
+        presenter.endDate.apply { add(Calendar.WEEK_OF_YEAR, weeksToAdd) }
+        presenter.history = presenter.getMangaHistoryGroupedByDay()
+        resetAndSetup(resetChips = false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -232,6 +324,9 @@ class StatsDetailsController :
         searchItem.fixExpand(onExpand = { invalidateMenuOnExpand() })
     }
 
+    /**
+     * Listener to update adapter when searchView text changes
+     */
     private fun setSearchViewListener(searchView: SearchView?) {
         setOnQueryTextChangeListener(searchView) {
             query = it ?: ""
@@ -240,6 +335,13 @@ class StatsDetailsController :
         }
     }
 
+    /**
+     * Displays a multi choice dialog according to the chip selected
+     * @param statsList list of values depending of the stat chip
+     * @param selectedStats list of already selected values
+     * @param resourceId default string resource when no values are selected
+     * @param resourceIdWithParam string resource when more than 2 values are selected
+     */
     private fun <T> Chip.setMultiChoiceItemsDialog(
         statsList: Array<T>,
         selectedStats: MutableSet<T>,
@@ -267,24 +369,37 @@ class StatsDetailsController :
             resetChips()
         }.setOnDismissListener {
             binding.progress.isVisible = true
-            collapseAndReset(resetChips = false)
+            resetAndSetup(resetChips = false)
         }
             .show()
     }
 
-    private fun collapseAndReset(updateStats: Boolean = true, resetChips: Boolean = true) {
-        searchItem.collapseActionView()
+    /**
+     * Reset the layout and setup the chart to display
+     * @param updateStats whether to recalculate the displayed stats
+     * @param resetChips whether to reset the chips filter
+     */
+    private fun resetAndSetup(updateStats: Boolean = true, resetChips: Boolean = true) {
         resetLayout(resetChips)
         setupStatistic(updateStats)
     }
 
-    private fun resetTextChip(resourceId: Int, resourceIdArg: Int? = null): String? {
-        collapseAndReset()
-        return if (resourceIdArg == null) activity?.getString(resourceId) else {
-            activity?.getString(resourceId, activity?.getString(resourceIdArg))
+    /**
+     * Reset the text of the chip selected and reset layout
+     * @param resourceId string resource of the stat name
+     * @param defaultResourceId string resource of the default stat value
+     */
+    private fun resetTextChip(resourceId: Int, defaultResourceId: Int? = null): String? {
+        resetAndSetup()
+        return if (defaultResourceId == null) activity?.getString(resourceId) else {
+            activity?.getString(resourceId, activity?.getString(defaultResourceId))
         }
     }
 
+    /**
+     * Reset the layout to the default state
+     * @param resetChips whether to reset the chips filter
+     */
     private fun resetLayout(resetChips: Boolean = true) {
         with(binding) {
             progress.isVisible = true
@@ -294,33 +409,67 @@ class StatsDetailsController :
             statsBarChart.visibility = View.GONE
             statsLineChart.visibility = View.GONE
 
-            if (resetChips) resetChips()
+            if (resetChips) {
+                highlightedDay = null
+                statsDateLayout.isVisible = presenter.selectedStat == Stats.READ_DURATION
+                totalDurationStatsText.isVisible = presenter.selectedStat == Stats.READ_DURATION
+                statsDateText.text = presenter.getPeriodString()
+                resetChips()
+            }
         }
     }
 
+    /**
+     * Reset the layout to the default state
+     * @param updateStats whether to recalculate the displayed stats
+     */
+    private fun setupStatistic(updateStats: Boolean = true) {
+        if (updateStats) presenter.getStatisticData()
+        with(binding) {
+            if (presenter.currentStats.isNullOrEmpty() || presenter.currentStats!!.all { it.count == 0 }) {
+                binding.noChartData.show(R.drawable.ic_heart_off_24dp, R.string.no_data_for_filters)
+                presenter.currentStats?.removeAll { it.count == 0 }
+                handleNoChartLayout()
+            } else {
+                binding.noChartData.hide()
+                handleLayout()
+            }
+            statsDetailsScrollView.isVisible = true
+            progress.isVisible = false
+            totalDurationStatsText.text = adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
+        }
+    }
+
+    /**
+     * Reset the chips state according to the selected stat
+     */
     private fun resetChips() {
         with(binding) {
             statsClearButton.isVisible = hasActiveFilters()
             chipStat.setColors((presenter.selectedStat != defaultStat).toInt())
-            chipSerieType.isVisible = presenter.selectedStat != Stats.SERIE_TYPE
+            chipSerieType.isVisible = presenter.selectedStat !in listOf(Stats.SERIE_TYPE, Stats.READ_DURATION)
             chipSerieType.setColors(presenter.selectedSerieType.size)
-            chipSource.isVisible = presenter.selectedStat !in listOf(Stats.LANGUAGE, Stats.SOURCE) &&
+            chipSource.isVisible =
+                presenter.selectedStat !in listOf(Stats.LANGUAGE, Stats.SOURCE, Stats.READ_DURATION) &&
                 presenter.selectedLanguage.isEmpty()
             chipSource.setColors(presenter.selectedSource.size)
-            chipStatus.isVisible = presenter.selectedStat != Stats.STATUS
+            chipStatus.isVisible = presenter.selectedStat !in listOf(Stats.STATUS, Stats.READ_DURATION)
             chipStatus.setColors(presenter.selectedStatus.size)
-            chipLanguage.isVisible = presenter.selectedStat != Stats.LANGUAGE &&
+            chipLanguage.isVisible = presenter.selectedStat !in listOf(Stats.LANGUAGE, Stats.READ_DURATION) &&
                 (presenter.selectedStat == Stats.SOURCE || presenter.selectedSource.isEmpty())
             chipLanguage.setColors(presenter.selectedLanguage.size)
-            chipCategory.isVisible = presenter.selectedStat != Stats.CATEGORY
+            chipCategory.isVisible = presenter.selectedStat !in listOf(Stats.CATEGORY, Stats.READ_DURATION)
             chipCategory.setColors(presenter.selectedCategory.size)
             chipSort.isVisible = presenter.selectedStat !in listOf(
-                Stats.SCORE, Stats.LENGTH, Stats.START_YEAR,
+                Stats.SCORE, Stats.LENGTH, Stats.START_YEAR, Stats.READ_DURATION,
             )
             chipSort.setColors((presenter.selectedStatsSort != defaultSort).toInt())
         }
     }
 
+    /**
+     * Reset all the filters selected
+     */
     private fun resetFilters() {
         with(binding) {
             presenter.selectedStat = defaultStat
@@ -359,22 +508,9 @@ class StatsDetailsController :
         closeIconTint = ColorStateList.valueOf(if (sizeStat == 0) emptyTextColor else emptyBackColor)
     }
 
-    private fun setupStatistic(updateStats: Boolean = true) {
-        if (updateStats) presenter.getStatisticData()
-        with(binding) {
-            if (presenter.currentStats.isNullOrEmpty() || presenter.currentStats!!.all { it.count == 0 }) {
-                binding.noChartData.show(R.drawable.ic_heart_off_24dp, R.string.no_data_for_filters)
-                presenter.currentStats?.removeAll { it.count == 0 }
-                handleNoChartLayout()
-            } else {
-                binding.noChartData.hide()
-                handleLayout()
-            }
-            statsDetailsScrollView.isVisible = true
-            progress.isVisible = false
-        }
-    }
-
+    /**
+     * Handle which layout should be displayed according to the selected stat
+     */
     private fun handleLayout() {
         when (presenter.selectedStat) {
             Stats.SERIE_TYPE, Stats.STATUS, Stats.LANGUAGE, Stats.TRACKER, Stats.CATEGORY -> handlePieChart()
@@ -382,6 +518,7 @@ class StatsDetailsController :
             Stats.LENGTH -> handleLengthLayout()
             Stats.SOURCE, Stats.TAG -> handleNoChartLayout()
             Stats.START_YEAR -> handleStartYearLayout()
+            Stats.READ_DURATION -> handleReadDurationLayout()
             else -> {}
         }
     }
@@ -437,6 +574,29 @@ class StatsDetailsController :
         assignAdapter()
     }
 
+    private fun handleReadDurationLayout() {
+        val barEntries = ArrayList<BarEntry>()
+
+        presenter.historyByDayAndManga.entries.forEachIndexed { index, entry ->
+            barEntries.add(
+                BarEntry(
+                    index.toFloat(),
+                    entry.value.values.sumOf { it.sumOf { h -> h.time_read } }.toFloat(),
+                ),
+            )
+        }
+
+        assignAdapter()
+        if (barEntries.all { it.y == 0f }) return
+        val barDataSet = BarDataSet(barEntries, "Read Duration Distribution")
+        barDataSet.color = StatsHelper.PIE_CHART_COLOR_LIST[1]
+        setupBarChart(
+            barDataSet,
+            presenter.historyByDayAndManga.keys.map { presenter.getCalendarShortDay(it) }.toList(),
+            true,
+        )
+    }
+
     private fun handleNoChartLayout() {
         assignAdapter()
     }
@@ -463,6 +623,7 @@ class StatsDetailsController :
             presenter.currentStats ?: ArrayList(),
             presenter.selectedStat!!,
         ).also { adapter = it }
+        if (query.isNotBlank()) adapter?.filter(query)
     }
 
     private fun setupPieChart(pieDataSet: PieDataSet) {
@@ -493,13 +654,15 @@ class StatsDetailsController :
         }
     }
 
-    private fun setupBarChart(barDataSet: BarDataSet, xAxisLabel: List<String>? = null) {
+    private fun setupBarChart(barDataSet: BarDataSet, xAxisLabel: List<String>? = null, touchEnabled: Boolean = false) {
         with(binding) {
             statsBarChart.data?.clearValues()
             statsBarChart.xAxis.valueFormatter = null
             statsBarChart.notifyDataSetChanged()
             statsBarChart.clear()
             statsBarChart.invalidate()
+            statsBarChart.axisLeft.resetAxisMinimum()
+            statsBarChart.axisLeft.resetAxisMaximum()
 
             statsPieChart.visibility = View.GONE
             statsBarChart.visibility = View.VISIBLE
@@ -507,7 +670,8 @@ class StatsDetailsController :
 
             try {
                 val newValueFormatter = object : ValueFormatter() {
-                    override fun getFormattedValue(value: Float) = value.toInt().toString()
+                    override fun getFormattedValue(value: Float) =
+                        if (touchEnabled) value.toLong().getReadDuration() else value.toInt().toString()
                 }
 
                 val barData = BarData(barDataSet)
@@ -515,7 +679,8 @@ class StatsDetailsController :
                 barData.barWidth = 0.6F
                 barData.setValueFormatter(newValueFormatter)
                 barData.setValueTextSize(10f)
-                statsBarChart.axisLeft.isEnabled = false
+                barData.setDrawValues(!touchEnabled)
+                statsBarChart.axisLeft.isEnabled = touchEnabled
                 statsBarChart.axisRight.isEnabled = false
 
                 statsBarChart.xAxis.apply {
@@ -534,9 +699,49 @@ class StatsDetailsController :
                 }
 
                 statsBarChart.apply {
-                    setTouchEnabled(false)
+                    setTouchEnabled(touchEnabled)
+                    isDoubleTapToZoomEnabled = false
                     description.isEnabled = false
                     legend.isEnabled = false
+
+                    if (touchEnabled) {
+                        val mv = MyMarkerView(activity, R.layout.custom_marker_view)
+                        mv.chartView = this
+                        marker = mv
+
+                        axisLeft.apply {
+                            textColor = activity!!.getResourceColor(R.attr.colorOnBackground)
+                            axisLineColor = activity!!.getResourceColor(R.attr.colorOnBackground)
+                            valueFormatter = newValueFormatter
+                            val topValue = barData.yMax.getRoundedMaxLabel()
+                            axisMaximum = topValue
+                            axisMinimum = 0f
+                            setLabelCount(4, true)
+                        }
+
+                        setOnChartValueSelectedListener(
+                            object : OnChartValueSelectedListener {
+                                override fun onValueSelected(e: Entry, h: Highlight) {
+                                    highlightValue(h)
+                                    highlightedDay = presenter.historyByDayAndManga.keys.toTypedArray()[e.x.toInt()]
+                                    statsDateText.text = presenter.convertCalendarToString(highlightedDay!!)
+                                    presenter.setupReadDuration(highlightedDay)
+                                    assignAdapter()
+                                    totalDurationStatsText.text =
+                                        adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
+                                }
+
+                                override fun onNothingSelected() {
+                                    presenter.setupReadDuration()
+                                    highlightedDay = null
+                                    statsDateText.text = presenter.getPeriodString()
+                                    assignAdapter()
+                                    totalDurationStatsText.text =
+                                        adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
+                                }
+                            },
+                        )
+                    }
                     data = barData
                     invalidate()
                 }
@@ -544,6 +749,22 @@ class StatsDetailsController :
                 Timber.e(e)
             }
         }
+    }
+
+    /**
+     * Round the rounded max label of the bar chart to avoid weird values
+     */
+    private fun Float.getRoundedMaxLabel(): Float {
+        val longValue = toLong()
+        val hours = TimeUnit.MILLISECONDS.toHours(longValue) % 24
+        val minutes = TimeUnit.MILLISECONDS.toMinutes(longValue) % 60
+
+        val multiple = when {
+            hours > 1L -> 3600 / 2 // 30min
+            minutes >= 15L || hours == 1L -> 300 * 3 // 15min
+            else -> 60 * 3 // 3min
+        } * 1000
+        return ceil(this / multiple) * multiple
     }
 
     private fun setupLineChart(lineDataSet: LineDataSet) {
@@ -592,6 +813,23 @@ class StatsDetailsController :
             } catch (e: Exception) {
                 Timber.e(e)
             }
+        }
+    }
+
+    /**
+     * Custom MarkerView displayed when a bar is selected in the bar chart
+     */
+    inner class MyMarkerView(context: Context?, layoutResource: Int) : MarkerView(context, layoutResource) {
+
+        private val markerText: TextView = findViewById(R.id.marker_text)
+
+        override fun refreshContent(e: Entry, highlight: Highlight) {
+            markerText.text = e.y.toLong().getReadDuration()
+            super.refreshContent(e, highlight)
+        }
+
+        override fun getOffset(): MPPointF {
+            return MPPointF((-(width / 2)).toFloat(), (-height).toFloat())
         }
     }
 }

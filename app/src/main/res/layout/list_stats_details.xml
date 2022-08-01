@@ -23,7 +23,7 @@
             android:layout_marginStart="@dimen/marginNormal"
             android:layout_marginEnd="@dimen/marginNormal"
             android:gravity="center_vertical"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/stats_mean_score_layout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -53,12 +53,61 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_label_text"
-                style="?textAppearanceLabelLarge"
+            <LinearLayout
+                android:id="@+id/stats_label_sublayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="MANGA" />
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_label_text"
+                    style="?textAppearanceLabelLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="MANGA" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_sublabel_text"
+                    style="?textAppearanceLabelMedium"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Mangadex (FR)" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stats_mean_score_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/marginNormal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/stats_label_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/stats_label_layout"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stats_score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textSize="16sp"
+                tools:text="0" />
+
+            <ImageView
+                android:id="@+id/stats_score_star_image"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/mean_score"
+                android:src="@drawable/ic_star_12dp"
+                app:tint="?attr/colorOnBackground" />
 
         </LinearLayout>
 
@@ -130,29 +179,24 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/stats_mean_score_layout"
+                android:id="@+id/stats_read_duration_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginNormal"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:visibility="gone"
-                tools:visibility="visible">
+                android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
                     style="?textAppearanceLabelMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mean_score" />
+                    android:text="@string/read_duration" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/stats_score_text"
+                    android:id="@+id/stats_read_duration_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginClose"
-                    android:drawablePadding="3dp"
-                    app:drawableEndCompat="@drawable/ic_star_12dp"
-                    app:drawableTint="?attr/colorOnBackground"
                     tools:text="0" />
 
             </LinearLayout>

@@ -1,7 +1,7 @@
 package eu.kanade.tachiyomi.ui.more.stats
 
+import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
-import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.database.models.LibraryManga
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.Track
@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.data.track.TrackService
 import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SManga
+import eu.kanade.tachiyomi.ui.more.stats.StatsHelper.getReadDuration
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
@@ -29,7 +30,8 @@ class StatsPresenter(
     private val sourceManager: SourceManager = Injekt.get(),
 ) {
 
-    var libraryMangas = getLibrary()
+    private val libraryMangas = getLibrary()
+    val mangaDistinct = libraryMangas.distinct()
 
     private fun getLibrary(): MutableList<LibraryManga> {
         return db.getLibraryMangas().executeAsBlocking()
@@ -75,10 +77,10 @@ class StatsPresenter(
         return service?.get10PointScore(track.score)
     }
 
-    fun getCategories(): List<Category> {
-        val defaultCategory = if (libraryMangas.any { it.category == 0 }) {
-            listOf(Category.createDefault(prefs.context))
-        } else listOf()
-        return db.getCategories().executeAsBlocking() + defaultCategory
+    fun getReadDuration(): String {
+        val chaptersTime = mangaDistinct.sumOf { manga ->
+            db.getHistoryByMangaId(manga.id!!).executeAsBlocking().sumOf { it.time_read }
+        }
+        return chaptersTime.getReadDuration(prefs.context.getString(R.string.none))
     }
 }

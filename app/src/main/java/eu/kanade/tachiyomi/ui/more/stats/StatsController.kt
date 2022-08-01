@@ -34,7 +34,7 @@ class StatsController : BaseController<StatsControllerBinding>(), SmallToolbarIn
 
     val presenter = StatsPresenter()
 
-    private var mangaDistinct = presenter.libraryMangas.distinct()
+    private val mangaDistinct = presenter.mangaDistinct
     private var scoresList = emptyList<Double>()
 
     /**
@@ -77,7 +77,7 @@ class StatsController : BaseController<StatsControllerBinding>(), SmallToolbarIn
             statsGlobalUpdateMangaText.text = presenter.getGlobalUpdateManga().count().toString()
             statsSourcesText.text = presenter.getSources().count().toString()
             statsTrackersText.text = presenter.getLoggedTrackers().count().toString()
-            statsCategoriesText.text = presenter.getCategories().count().toString()
+            statsReadDurationText.text = presenter.getReadDuration()
         }
     }
 

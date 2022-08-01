@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.text.bold
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.ListStatsDetailsBinding
+import eu.kanade.tachiyomi.ui.more.stats.StatsHelper.getReadDuration
 import eu.kanade.tachiyomi.ui.more.stats.details.StatsDetailsPresenter.Stats
 import eu.kanade.tachiyomi.ui.more.stats.details.StatsDetailsPresenter.StatsData
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -16,7 +18,7 @@ import eu.kanade.tachiyomi.util.system.roundToTwoDecimal
 
 class StatsDetailsAdapter(
     private val context: Context,
-    private var list: MutableList<StatsData>,
+    var list: MutableList<StatsData>,
     private val stat: Stats,
     private val listCopy: MutableList<StatsData> = list,
 ) : RecyclerView.Adapter<StatsDetailsAdapter.StatsDetailsHolder>() {
@@ -30,6 +32,7 @@ class StatsDetailsAdapter(
         when (stat) {
             Stats.SCORE -> handleScoreLayout(holder, position)
             Stats.TAG, Stats.SOURCE -> handleRankedLayout(holder, position)
+            Stats.READ_DURATION -> handleDurationLayout(holder, position)
             else -> handleLayout(holder, position)
         }
     }
@@ -40,8 +43,10 @@ class StatsDetailsAdapter(
 
     private fun handleLayout(holder: StatsDetailsHolder, position: Int) {
         val item = list[position]
-        holder.statsRankLayout.visibility = View.GONE
-        holder.statsMeanScoreLayout.visibility = View.VISIBLE
+        holder.statsRankLayout.isVisible = false
+        holder.statsDataLayout.isVisible = true
+        holder.statsScoreStarImage.isVisible = true
+        holder.statsSublabelText.isVisible = false
 
         holder.statsLabelText.setTextColor(
             item.color ?: context.getResourceColor(R.attr.colorOnBackground),
@@ -51,15 +56,19 @@ class StatsDetailsAdapter(
         holder.statsCountPercentageText.text = getCountPercentageText(item)
         holder.statsProgressText.text = getProgressText(item)
         holder.statsProgressPercentageText.text = getProgressPercentageString(item)
-        val score = item.meanScore?.roundToTwoDecimal()?.toString()
-        if (score.isNullOrBlank()) holder.statsScoreText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-        holder.statsScoreText.text = score ?: context.getString(R.string.none)
+        val score = item.meanScore?.roundToTwoDecimal()?.toString() ?: ""
+        holder.statsMeanScoreLayout.isVisible = score.isNotBlank()
+        holder.statsScoreText.text = score
+        holder.statsReadDurationText.text = item.readDuration.getReadDuration(context.getString(R.string.none))
     }
 
     private fun handleScoreLayout(holder: StatsDetailsHolder, position: Int) {
         val item = list[position]
-        holder.statsRankLayout.visibility = View.GONE
-        holder.statsMeanScoreLayout.visibility = View.GONE
+        holder.statsRankLayout.isVisible = false
+        holder.statsMeanScoreLayout.isVisible = false
+        holder.statsDataLayout.isVisible = true
+        holder.statsScoreStarImage.isVisible = true
+        holder.statsSublabelText.isVisible = false
 
         holder.statsLabelText.setTextColor(
             item.color ?: context.getResourceColor(R.attr.colorOnBackground),
@@ -69,12 +78,15 @@ class StatsDetailsAdapter(
         holder.statsCountPercentageText.text = getCountPercentageText(item)
         holder.statsProgressText.text = getProgressText(item)
         holder.statsProgressPercentageText.text = getProgressPercentageString(item)
+        holder.statsReadDurationText.text = item.readDuration.getReadDuration(context.getString(R.string.none))
     }
 
     private fun handleRankedLayout(holder: StatsDetailsHolder, position: Int) {
         val item = list[position]
-        holder.statsRankLayout.visibility = View.VISIBLE
-        holder.statsMeanScoreLayout.visibility = View.VISIBLE
+        holder.statsRankLayout.isVisible = true
+        holder.statsDataLayout.isVisible = true
+        holder.statsScoreStarImage.isVisible = true
+        holder.statsSublabelText.isVisible = false
 
         holder.statsRankText.text = String.format("%02d.", position + 1)
         holder.statsLabelText.setTextColor(
@@ -85,9 +97,27 @@ class StatsDetailsAdapter(
         holder.statsCountPercentageText.text = getCountPercentageText(item)
         holder.statsProgressText.text = getProgressText(item)
         holder.statsProgressPercentageText.text = getProgressPercentageString(item)
-        val score = item.meanScore?.roundToTwoDecimal()?.toString()
-        if (score.isNullOrBlank()) holder.statsScoreText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-        holder.statsScoreText.text = score ?: context.getString(R.string.none)
+        val score = item.meanScore?.roundToTwoDecimal()?.toString() ?: ""
+        holder.statsMeanScoreLayout.isVisible = score.isNotBlank()
+        holder.statsScoreText.text = score
+        holder.statsReadDurationText.text = item.readDuration.getReadDuration(context.getString(R.string.none))
+    }
+
+    private fun handleDurationLayout(holder: StatsDetailsHolder, position: Int) {
+        val item = list[position]
+        holder.statsRankLayout.isVisible = true
+        holder.statsMeanScoreLayout.isVisible = true
+        holder.statsDataLayout.isVisible = false
+        holder.statsScoreStarImage.isVisible = false
+
+        holder.statsRankText.text = String.format("%02d.", position + 1)
+        holder.statsLabelText.setTextColor(
+            item.color ?: context.getResourceColor(R.attr.colorOnBackground),
+        )
+        holder.statsLabelText.text = item.label
+        holder.statsScoreText.text = item.readDuration.getReadDuration(context.getString(R.string.none))
+        holder.statsSublabelText.isVisible = !item.subLabel.isNullOrBlank()
+        holder.statsSublabelText.text = item.subLabel
     }
 
     private fun getCountText(item: StatsData): SpannableStringBuilder {
@@ -134,5 +164,9 @@ class StatsDetailsAdapter(
         val statsProgressPercentageText = binding.statsProgressPercentageText
         val statsMeanScoreLayout = binding.statsMeanScoreLayout
         val statsScoreText = binding.statsScoreText
+        val statsReadDurationText = binding.statsReadDurationText
+        val statsDataLayout = binding.statsDataLayout
+        val statsScoreStarImage = binding.statsScoreStarImage
+        val statsSublabelText = binding.statsSublabelText
     }
 }

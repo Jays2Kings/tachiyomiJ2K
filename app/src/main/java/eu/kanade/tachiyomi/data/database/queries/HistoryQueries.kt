@@ -70,11 +70,34 @@ interface HistoryQueries : DbProvider {
         .prepare()
 
     /**
+     * Returns history of manga read during period
+     * @param startDate start date of the period
+     * @param endDate end date of the period
+     * @offset offset the db by
+     */
+    fun getHistoryPerPeriod(startDate: Long, endDate: Long) = db.get()
+        .listOfObjects(MangaChapterHistory::class.java)
+        .withQuery(
+            RawQuery.builder()
+                .query(getHistoryPerPeriodQuery(startDate, endDate))
+                .observesTables(HistoryTable.TABLE)
+                .build(),
+        )
+        .withGetResolver(MangaChapterHistoryGetResolver.INSTANCE)
+        .prepare()
+
+    /**
      * Returns history of recent manga containing last read chapter in 25s
      * @param date recent date range
      * @offset offset the db by
      */
-    fun getAllRecentsTypes(search: String = "", includeRead: Boolean, endless: Boolean, offset: Int, isResuming: Boolean) = db.get()
+    fun getAllRecentsTypes(
+        search: String = "",
+        includeRead: Boolean,
+        endless: Boolean,
+        offset: Int,
+        isResuming: Boolean,
+    ) = db.get()
         .listOfObjects(MangaChapterHistory::class.java)
         .withQuery(
             RawQuery.builder()

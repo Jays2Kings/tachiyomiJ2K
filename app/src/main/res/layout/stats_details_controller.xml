@@ -179,6 +179,64 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <RelativeLayout
+                        android:id="@+id/stats_date_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/stats_date_start_arrow"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/mean_score"
+                            android:src="@drawable/ic_arrow_start_24dp"
+                            app:tint="?attr/colorOnBackground" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/stats_date_text"
+                            style="?textAppearanceLabelLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toStartOf="@id/stats_date_end_arrow"
+                            android:layout_toEndOf="@id/stats_date_start_arrow"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:textSize="16sp"
+                            tools:text="August 6" />
+
+                        <ImageView
+                            android:id="@+id/stats_date_end_arrow"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:contentDescription="@string/mean_score"
+                            android:src="@drawable/ic_arrow_end_24dp"
+                            app:tint="?attr/colorOnBackground" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/total_duration_stats_text"
+                        style="?textAppearanceLabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        tools:text="15h27"
+                        tools:visibility="visible" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/stats_chart_layout"
                         android:layout_width="match_parent"

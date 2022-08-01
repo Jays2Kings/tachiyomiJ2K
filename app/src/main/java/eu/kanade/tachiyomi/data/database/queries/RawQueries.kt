@@ -153,6 +153,25 @@ fun getRecentHistoryUngrouped(
 """
 
 /**
+ * Query to get the read chapters of manga from the library during the period.
+ * The max_last_read table contains the most recent chapters grouped by manga
+ * The select statement returns all information of chapters that have the same id as the chapter in max_last_read
+ * and are read after the given time period
+ */
+fun getHistoryPerPeriodQuery(startDate: Long, endDate: Long) =
+    """
+    SELECT ${Manga.TABLE}.${Manga.COL_URL} as mangaUrl, ${Manga.TABLE}.*, ${Chapter.TABLE}.*, ${History.TABLE}.*
+    FROM ${Manga.TABLE}
+    JOIN ${Chapter.TABLE}
+    ON ${Manga.TABLE}.${Manga.COL_ID} = ${Chapter.TABLE}.${Chapter.COL_MANGA_ID}
+    JOIN ${History.TABLE}
+    ON ${Chapter.TABLE}.${Chapter.COL_ID} = ${History.TABLE}.${History.COL_CHAPTER_ID}
+    AND ${History.TABLE}.${History.COL_LAST_READ} >= $startDate
+    AND ${History.TABLE}.${History.COL_LAST_READ} <= $endDate
+    ORDER BY ${History.TABLE}.${History.COL_LAST_READ} DESC
+"""
+
+/**
  * Query to get the recently read manga that has more chapters to read
  * The first from checks that there's an unread chapter
  * The max_last_read table contains the most recent chapters grouped by manga

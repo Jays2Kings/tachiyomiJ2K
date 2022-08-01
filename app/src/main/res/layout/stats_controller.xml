@@ -412,7 +412,7 @@
                 android:paddingEnd="@dimen/marginClose">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/stats_categories_text"
+                    android:id="@+id/stats_read_duration_text"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_gravity="center"
@@ -428,7 +428,7 @@
                     android:layout_marginTop="@dimen/marginClose"
                     android:gravity="center"
                     android:lines="2"
-                    android:text="@string/categories" />
+                    android:text="@string/read_duration" />
 
             </LinearLayout>
 
