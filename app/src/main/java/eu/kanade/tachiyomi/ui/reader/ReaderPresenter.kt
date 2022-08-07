@@ -537,6 +537,7 @@ class ReaderPresenter(
         if (selectedChapter != currentChapters.currChapter) {
             Timber.d("Setting ${selectedChapter.chapter.url} as active")
             saveReadingProgress(currentChapters.currChapter)
+            setReadStartTime()
             loadNewChapter(selectedChapter)
         }
     }
