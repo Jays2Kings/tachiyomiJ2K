@@ -3,7 +3,7 @@
     <string name="categories">Категорії</string>
     <string name="manga">Манґа</string>
     <string name="chapters">Глави</string>
-    <string name="tracking">Відстеження</string>
+    <string name="tracking">Стеження</string>
     <string name="history">Історія</string>
     <string name="settings">Налаштування</string>
     <string name="download_queue">Черга завантаження</string>
@@ -43,7 +43,7 @@
     <string name="display">Відобразити</string>
     <string name="compact_grid">Сітка</string>
     <string name="list">Список</string>
-    <string name="download_badge">Значок завантажених</string>
+    <string name="download_badge">Значки завантажених</string>
     <string name="cancel">Скасувати</string>
     <string name="sort">Сортувати</string>
     <string name="install">Встановити</string>
@@ -169,10 +169,10 @@
     <string name="clear_database_summary">Видаляти мангу і глави котрі не знаходяться у бібліотеці</string>
     <string name="clear_database_confirmation">Ви впевнені\? Прочитані глави і прогрес не бібліотечної манги будуть втрачені</string>
     <string name="clear_database_completed">Дані видалено</string>
-    <string name="refresh_library_metadata">Оновлювати бібліотечні метадані</string>
+    <string name="refresh_library_metadata">Оновити метадані</string>
     <string name="updates_covers_genres_desc">Оновити обкладинки, жанри, описи та інформацію про манґу</string>
-    <string name="refresh_tracking_metadata">Оновити метадату що відстежується</string>
-    <string name="updates_tracking_details">Оновити стан, рахунок і останню главу з каталогів що відстежуються</string>
+    <string name="refresh_tracking_metadata">Оновити метадані стеження</string>
+    <string name="updates_tracking_details">Оновити стан, рахунок і останню главу з каталогів що стежуться</string>
     <string name="version">Версія</string>
     <string name="build_time">Дата збирання</string>
     <string name="check_for_updates">Перевірити оновлення</string>
@@ -190,7 +190,7 @@
     <string name="other">Інші</string>
     <string name="global_search">Глобальний пошук…</string>
     <string name="latest">Остання</string>
-    <string name="browse">Переглянути</string>
+    <string name="browse">Огляд</string>
     <string name="description">Опис</string>
     <string name="ongoing">Онгоінг</string>
     <string name="unknown">Невідомо</string>
@@ -312,12 +312,12 @@
     <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Глави %1$s</string>
     <string name="remove_from_library">Видалити з бібліотеки</string>
-    <string name="refresh_tracking">Оновити відстеження</string>
-    <string name="add_tracking">Додати відстеження</string>
+    <string name="refresh_tracking">Оновити стеження</string>
+    <string name="add_tracking">Додати стеження</string>
     <string name="copy_value">Копіювати</string>
     <string name="date_format">Формат дати</string>
     <string name="secure_screen">Екран безпеки</string>
-    <string name="security">Безпека</string>
+    <string name="security">Конфіденційність</string>
     <string name="backup_failed">Помилка резервування</string>
     <string name="failed_to_bypass_cloudflare">Не вдалось обійти Cloudflare</string>
     <string name="please_update_webview">Будь ласка, оновіть WebView для кращої сумісності</string>
@@ -369,7 +369,7 @@
     <string name="comic">Комікс</string>
     <string name="unknown_status">Невідомий стан</string>
     <string name="in_progress">Читаю</string>
-    <string name="not_started">Не розпочато</string>
+    <string name="not_started">Не читаю</string>
     <string name="manhua">Маньхуа</string>
     <string name="manhwa">Манхва</string>
     <string name="requires_app_restart">Потрібен перезапуск додатку, щоб зміни вступили в дію</string>
@@ -428,7 +428,7 @@
     <string name="drag_and_drop">Перетягування</string>
     <string name="sort_by">Сортувати за</string>
     <string name="ungrouped">Незгруповані</string>
-    <string name="tracking_status">Стан відслідковування</string>
+    <string name="tracking_status">Стан стеження</string>
     <string name="group_library_by">Групувати бібліотеку за…</string>
     <string name="series_type">Тип серій</string>
     <string name="read_progress">Читання в процесі</string>
@@ -455,11 +455,11 @@
     <string name="migration">Міграція</string>
     <string name="select_sources">Обрати джерела</string>
     <string name="remove_tracking_from_">Також видалити з %1$s</string>
-    <string name="remove_tracking">Видалити відстеження з застосунку</string>
+    <string name="remove_tracking">Видалити стеження з застосунку</string>
     <string name="want_to_read">Хочу почитати</string>
     <string name="currently_reading">Зараз читається</string>
-    <string name="not_tracked">Не відстежується</string>
-    <string name="tracked">Відстежується</string>
+    <string name="not_tracked">Не стежиться</string>
+    <string name="tracked">Стежиться</string>
     <string name="error_sharing_cover">Помилка відправлення обкладинки</string>
     <string name="error_saving_cover">Помилка при збереженні обкладинки</string>
     <string name="cover_saved">Обкладинку збережено</string>
@@ -647,19 +647,15 @@
     <string name="invert_tapping">Інвертувати зони тицяння</string>
     <string name="none">Ніхто</string>
     <string name="automatic_backups">Автоматичне резервування</string>
-    <string name="invalid_backup_file">Невірний файл бекапу</string>
+    <string name="invalid_backup_file">Невірний файл резервної копії</string>
     <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
 \nЙого розширення повинне бути .proto.gz or .json.</string>
-    <string name="file_is_missing_data">У файлі відсутні дані.</string>
-    <string name="backup_has_no_manga">Бекап не містить жодної манґи.</string>
+    <string name="backup_has_no_manga">Резервна копія не містить жодної манґи.</string>
     <string name="restore_missing_sources">Відсутні джерела:</string>
     <string name="restore_missing_trackers">Трекери не авторизовано:</string>
-    <string name="restore_content">Відновлення використовує джерела для отримання даних, можуть застосовуватися витрати оператора.
-\n
-\nПереконайтеся, що ви встановили всі необхідні розширення та ввійшли до джерел та служб відстеження перед відновленням.</string>
     <string name="restore_content_full">Дані з файлу резервної копії буде відновлено.
 \n
-\nВам потрібно встановити розширення яких бракує та увійти в сервіси відстежування для їх використання.</string>
+\nВам потрібно встановити розширення яких бракує та увійти в сервіси стеження для їх використання.</string>
     <string name="restoring_backup_canceled">Відновлення відмінено</string>
     <string name="restore_duration">%02d хв, %02d сек</string>
     <plurals name="restore_completed_message">
@@ -672,7 +668,7 @@
     <string name="nsfw_sources">NSFW (18+) джерела</string>
     <string name="does_not_prevent_unofficial_nsfw">Це не заважає неофіційним або потенційно невірним розширенням розміщувати вміст NSFW (18+) у додатку.</string>
     <string name="file_picker_error">Додаток вибору файлів не знайдено</string>
-    <string name="backup_and_restore">Бекап та відновлення</string>
+    <string name="backup_and_restore">Резервне копіювання</string>
     <string name="progress">Прогрес</string>
     <string name="complete">Завершено</string>
     <string name="crash_logs">Логи падінь</string>
@@ -706,7 +702,7 @@
     <string name="by_update_date">За датою завантаження</string>
     <string name="show_number_of_items">Показати кількість об\'єктів</string>
     <string name="pure_black_dark_mode">Чистий чорний темний режим</string>
-    <string name="date_fetched">Дата отримання</string>
+    <string name="date_fetched">Дата завантаження</string>
     <string name="ext_installer_shizuku_stopped">Shizuku не запущений</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Встановіть і запустіть Shizuku, щоб використовувати Shizuku як інсталятор розширення.</string>
     <string name="app_info">Про додаток</string>
@@ -723,7 +719,7 @@
     <string name="midnight_dusk">Опівнічні Сутінки</string>
     <string name="strawberry_daiquiri">Полуничний Дайкірі</string>
     <string name="tako">Тако</string>
-    <string name="side_nav_icon_alignment">Вирівнювання значків бокової навігації</string>
+    <string name="side_nav_icon_alignment">Вирівнювати значки бокової панелі навігації</string>
     <string name="doh">DNS поверх HTTPS</string>
     <string name="show_in_sources_and_extensions">Показувати в списку джерел та розширень</string>
     <string name="log_out">Вихід</string>
@@ -762,11 +758,11 @@
     <string name="switch_to_single">Перейти до одинарної сторінки</string>
     <string name="split_double_pages_portrait">Розділити подвійні сторінки у портреті</string>
     <string name="automatic_can_still_switch">Під час використання автоматичного макета сторінки все одно можна перемикатися між макетами під час читання, не перевизначуючи цей параметр</string>
-    <string name="cannot_remove_tracking_while_offline">Відстежування не можна видалити з %1$s під час автономного режиму</string>
+    <string name="cannot_remove_tracking_while_offline">Стеження не можна видалити з %1$s під час автономного режиму</string>
     <string name="includes_recently_read_updated_added">Включає нещодавно прочитані, оновлені та додані серії</string>
     <string name="flat_lime">Плоский лайм</string>
     <string name="turn_off_">Вимкнути %s</string>
-    <string name="hide_bottom_nav">Автоматичне приховування нижньої навігації</string>
+    <string name="hide_bottom_nav">Приховувати панель навігації</string>
     <string name="by_default_side_nav_info">Як усталено, бічна навігація використовується в ландшафтному режимі на деяких мобільних телефонах і невеликих планшетах і завжди відображається на великих планшетах</string>
     <string name="force_download_cache_refresh_summary">Це змусить кеш завантажень переобчислити. Корисно, якщо ви змінили завантаження за межами цієї програми і хочете, щоб додаток підібрав їх</string>
     <string name="some_extensions_may_not_update">Деякі розширення можуть не оновлюватися автоматично, якщо їх встановлено за межами цієї програми</string>
@@ -807,7 +803,7 @@
     <string name="mark_all_chapters_as_unread">Позначити всі розділи як непрочитані\?</string>
     <string name="add_tag">Додати мітку</string>
     <string name="select_an_entry">Виберіть запис</string>
-    <string name="remove_previous_tracker">Прибрати попереднє відстежування\?</string>
+    <string name="remove_previous_tracker">Прибрати попереднє стеження\?</string>
     <string name="keep_both_on_service">Зберегти обидва на %1$s і замінити тільки на пристрої</string>
     <string name="use_suggested_date">Використовувати запропоновану дату</string>
     <string name="classic_blue">Класичний синій</string>
@@ -816,7 +812,7 @@
     <string name="hot_pink">Гарячий рожевий</string>
     <string name="lime_time">Лаймовий час</string>
     <string name="last_used_library_recents">Нещодавно використані (Бібліотека або Останні)</string>
-    <string name="use_side_navigation">Використання бічної навігації</string>
+    <string name="use_side_navigation">Використовувати бокову панель навігації</string>
     <string name="theme_buttons_based_on_cover">Тло кнопок на основі обкладинки</string>
     <string name="hides_on_scroll">Ховати під час прокручування</string>
     <string name="starting_screen">Домашній екран</string>
@@ -841,7 +837,7 @@
     <string name="fetched_">Отримано %1$s</string>
     <string name="grouped">Згруповані</string>
     <string name="only_downloaded">Тільки завантажені</string>
-    <string name="show_reset_history_button">Показати кнопку скидання історії</string>
+    <string name="show_reset_history_button">Показати кнопку скиду історії</string>
     <string name="group_chapters_together">Згрупувати розділи разом</string>
     <string name="extension_updates_pending">Очікуються оновлення розширення</string>
     <string name="_must_be_enabled_first">%1$s спершу повинне бути ввімкненим</string>
@@ -881,7 +877,7 @@
     <string name="whats_new_this_release">Що нового в цьому випуску</string>
     <string name="yang">Янґ</string>
     <string name="chocolate_strawberries">Шоколадна полуниця</string>
-    <string name="force_download_cache_refresh">Оновлення кеша завантажень</string>
+    <string name="force_download_cache_refresh">Оновити кеш завантажень</string>
     <string name="installed_">Встановлено %1$s</string>
     <string name="extensions_miui_warning">Для встановлення розширень потрібно вимкнути оптимізацію MIUI.</string>
     <string name="some_extensions_may_prompt">Деякі розширення все одно можуть вимагати встановлення спочатку.</string>
@@ -913,11 +909,11 @@
     <string name="expand_collapse_all_categories">Розгорнути/згорнути всі категорії</string>
     <string name="open_random_series">Відкрити будь-яку серію</string>
     <string name="series">Серія</string>
-    <string name="uniform_grid_covers">Рівномірні сітки</string>
+    <string name="uniform_grid_covers">Уніфікований розмір обкладинок</string>
     <string name="grid_size">Розмір сітки</string>
     <string name="use_shizuku_to_install">Використовувати Shizuku для встановлення розширень</string>
     <string name="use_shizuku_summary">Дозволяти встановлювати розширення без перепитування користувача та ввімкнути автоматичне оновлення для пристроїв під керуванням Android 12</string>
-    <string name="changing_will_reset_reading_mode">Зміна цього призведе до скидання режиму читання для цієї серії</string>
+    <string name="changing_will_reset_reading_mode">Зміна цього призведе до скиду режиму читання для цієї серії</string>
     <string name="horizontally">Горизонтально</string>
     <string name="both_axes">Обидві осі</string>
     <string name="page_layout">Макет сторінки</string>
@@ -926,8 +922,8 @@
     <string name="default_behavior">Усталена поведінка</string>
     <string name="show_recent_series">Показати останні серії</string>
     <string name="show_outline_around_covers">Показувати контур навколо обкладинок</string>
-    <string name="hide_unread_badges">Приховати непрочитані значки</string>
-    <string name="show_unread_badges">Показати непрочитані значки</string>
+    <string name="hide_unread_badges">Приховати значки непрочитанного</string>
+    <string name="show_unread_badges">Показати значки непрочитанного</string>
     <string name="show_unread_count">Показати кількість непрочитаних</string>
     <string name="shift_one_page_over">Пересунути на одну сторінку далі</string>
     <string name="shift_double_pages">Пересунути подвійні сторінки</string>
@@ -958,9 +954,9 @@
     <string name="publishing_finished">Публікація завершена</string>
     <string name="cancelled">Відмінено</string>
     <string name="on_hiatus">На хіатусі</string>
-    <string name="tracking_info">Одностороння синхронізація для оновлення прогресу глави в службах відстеження. Налаштуйте відстеження для окремих записів манги з їх кнопками відстеження.</string>
+    <string name="tracking_info">Одностороння синхронізація для оновлення прогресу глави в службах стеження. Налаштуйте для окремих записів манги з допомогою кнопки \"Стеження\".</string>
     <string name="enhanced_services">Розширені сервіси</string>
-    <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Манга буде автоматично відслідковуватись при додаванні до бібліотеки.</string>
+    <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Манга буде автоматично відстежуватись при додаванні до бібліотеки.</string>
     <string name="local_invalid_format">Невірний формат глав</string>
     <string name="order_by">Сортувати за</string>
     <string name="grayscale">Відтінки сірого</string>
@@ -972,7 +968,7 @@
     <string name="clear_database_source_item_count">%1$d небібліотечний комікс у базі даних</string>
     <string name="database_clean">Очищення бази даних</string>
     <string name="select_inverse">Інвертувати вибір</string>
-    <string name="cover_only_grid">Сітка тільки з обкладинками</string>
+    <string name="cover_only_grid">Тільки обкладинки</string>
     <string name="tap_to_see_details">Тицьніть для перегляду подробиць</string>
     <string name="clear_history">Очистити історію</string>
     <string name="clear_history_completed">Історію видалено</string>
@@ -1023,8 +1019,8 @@
 \n
 \nВи хочете продовжити\?</string>
     <string name="pref_update_only_completely_read_summary">Оновлювати манґу, лише якщо немає непрочитаних глав (повністю прочитано)</string>
-    <string name="update_tracking_marked_read">Оновити відстеження, якщо позначено як прочитане</string>
-    <string name="update_tracking_after_reading">Оновить відстеження після прочитання</string>
+    <string name="update_tracking_marked_read">Оновлювати стеження, якщо позначено як прочитане</string>
+    <string name="update_tracking_after_reading">Оновлювати стеження після прочитання</string>
     <string name="check_for_beta_releases">Перевіряти наявність бета-релізів</string>
     <string name="try_new_features">Спробуйте нові можливості перед тим, як вони офіційно з\'являться. Бета-версії можуть бути нестабільними та надаються для отримання зворотного зв\'язку розробникам.</string>
     <string name="pref_clear_webview_data">Очистити дані WebView</string>
@@ -1049,8 +1045,11 @@
     <string name="update_tracking_scoring_type">Оновити тип підрахунку оцінки %1$s</string>
     <string name="scoring_type_updated">Оновлено тип підрахунку оцінки</string>
     <string name="could_not_update_scoring_">Не вдалося оновити тип оцінки: %1$s</string>
-    <string name="sort_fetched_time">Сортування за часом отримання</string>
+    <string name="sort_fetched_time">Сортування за часом завантаження</string>
     <string name="tap_zones">Зони тицяння</string>
     <string name="lavender">Лаванда</string>
     <string name="violet">Фіолетовий</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">User agent за замовчуванням</string>
+    <string name="loader_rar5_error">Формат RARv5 не підтримується</string>
 </resources>

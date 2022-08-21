@@ -460,13 +460,9 @@
     <string name="invalid_backup_file">Ficheiro de cópia de segurança invalido</string>
     <string name="invalid_backup_file_type">Tipo de ficheiro da cópia de segurança inválido: %1$s
 \nDeve terminar com .proto.gz ou .json.</string>
-    <string name="file_is_missing_data">Faltam dados no ficheiro.</string>
     <string name="backup_has_no_manga">Cópia de segurança não contém qualquer mangá.</string>
     <string name="restore_missing_sources">Fontes em falta:</string>
     <string name="restore_missing_trackers">Monitorizadores sem sessão iniciada:</string>
-    <string name="restore_content">A restauração usa as fontes para obter dados, cobranças adicionais podem ser efetuadas pelo operador.
-\n
-\nVerifique se instalou todas as extensões necessárias e tem sessão iniciada nas fontes e serviços de monitorização antes de restaurar.</string>
     <string name="restoring_backup_canceled">Restauro cancelado</string>
     <string name="restore_duration">%02d min, %02d seg</string>
     <plurals name="restore_completed_message">
@@ -1015,4 +1011,5 @@
     <string name="split_tall_images">Dividir automaticamente imagens altas</string>
     <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens altas transferidas.</string>
     <string name="tap_zones">Zonas de toque</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

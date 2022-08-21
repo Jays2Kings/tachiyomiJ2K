@@ -369,13 +369,9 @@
     <string name="invalid_backup_file">Тӗрӗс мар янтӑв файлӗ</string>
     <string name="invalid_backup_file_type">Тӗрӗс мар янтӑв файлӗ: %1$s
 \nФайлӗ .proto.gz е .json сӑмахсемпе вӗҫленмелле.</string>
-    <string name="file_is_missing_data">Файлра пӗлӗмсем ҫук.</string>
     <string name="backup_has_no_manga">Янтӑвра манкӑсем ҫук.</string>
     <string name="restore_missing_sources">Ҫук ҫӑл куҫсем:</string>
     <string name="restore_missing_trackers">Кӗмен сӑнанусем:</string>
-    <string name="restore_content">Пӗлӗмсене тавӑрнӑ чух ҫӑл куҫсем усӑ курӑнаҫҫӗ, ҫакӑ вара пысӑк траффик тӑкакӗсене кӳме пултарать.
-\n
-\nТавӑрас умӗн кирлӗ хушмасене тата сӑнану сервиссене лартнине, тата вӗсене кӗнине тӗрӗсле.</string>
     <string name="restoring_backup_canceled">Тавӑрнине пӑрахӑҫланӑ</string>
     <string name="restore_duration">%02d минут та %02d ҫеккунт</string>
     <plurals name="restore_completed_message">

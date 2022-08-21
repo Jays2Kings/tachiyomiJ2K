@@ -315,9 +315,6 @@
     <string name="incognito_mode">시크릿 모드</string>
     <string name="pure_black_dark_mode">검은색 다크모드</string>
     <string name="backup_and_restore">백업 및 복원</string>
-    <string name="restore_content">복원시 소스에서 데이터를 가져오며, 통신 비용이 청구 될 수 있습니다.
-\n
-\n또한 복원 전에 필요한 소스에 제대로 로그인이 되어있는지 확인하십시오.</string>
     <string name="complete">완료</string>
     <string name="network">네트워크</string>
     <string name="doh">HTTPS를 통한 DNS</string>
@@ -444,7 +441,6 @@
     <string name="strawberry_daiquiri">딸기 칵테일</string>
     <string name="tako">문어</string>
     <string name="automatic_backups">자동 백업</string>
-    <string name="file_is_missing_data">파일에 필요한 데이터가 포함되어있지 않습니다.</string>
     <string name="backup_has_no_manga">백업에 만화가 포함되어있지 않습니다.</string>
     <string name="cancel_all">모두 취소</string>
     <string name="unpin">핀 해제</string>
@@ -579,7 +575,7 @@
     <string name="pref_low">낮음</string>
     <string name="pref_lowest">매우 낮음</string>
     <string name="split_tall_images">긴 이미지 자동 분할</string>
-    <string name="split_tall_images_summary">긴 다운로드 이미지를 분할하여 리더 성능을 향상시킵니다.</string>
+    <string name="split_tall_images_summary">긴 다운로드 이미지를 분할하여 뷰어 성능을 향상시킵니다.</string>
     <string name="wish_list">위시리스트</string>
     <string name="reading_list">읽을 목록</string>
     <string name="series_type">시리즈 종류</string>
@@ -625,4 +621,37 @@
     <string name="when_sorting_ignore_articles">알파벳으로 정렬 할 땐, 만화 제목 첫머리에 관사 (a, an, the) 무시하기 정렬함</string>
     <string name="uniform_grid_covers">균등 그리드 표지</string>
     <string name="use_staggered_grid">스태거드그리드를 사용함</string>
+    <string name="complete_list">완결 목록</string>
+    <string name="on_hold_list">보류 목록</string>
+    <string name="download_notifier_split_failed">다운로드한 사진을 나눌 수 없습니다</string>
+    <string name="download_notifier_split_page_not_found">나누어 짐 중에 %d페이지 안 찾습니다</string>
+    <string name="reset_all_chapters_for_this_">이 %1$s의 모든 장 재설정</string>
+    <string name="last_read_">마지막으로 읽은 %1$s</string>
+    <string name="read_">%1$s 읽기</string>
+    <string name="updated_">%1$s 업데이트됨</string>
+    <string name="newly_added">새로 추가됨</string>
+    <string name="this_will_remove_the_read_date_for_x_question">\"%1$s\"의 읽은 날짜가 제거됩니다. 확실합니까\?</string>
+    <string name="read_progress">진행 상황 읽기</string>
+    <string name="can_be_found_in_library_filters">library 라이브러리 필터를 확장하여 찾을 수도 있습니다.</string>
+    <string name="recents">최근</string>
+    <string name="updates_and_history">업데이트 및 기록</string>
+    <string name="view_history">기록 보기</string>
+    <string name="view_all_updates">모든 업데이트 보기</string>
+    <string name="search_recents">최근 검색…</string>
+    <string name="expand_collapse_all_categories">모든 카테고리 펼치기/접기</string>
+    <string name="reorder_filters">필터 재정렬</string>
+    <string name="shift_one_page_over">한 페이지 위로 이동</string>
+    <string name="search_suggestions">추천 검색어</string>
+    <string name="display_as">다음으로 표시</string>
+    <string name="shift_double_pages">이중 페이지 이동</string>
+    <string name="category_hopper_long_press">Category 카테고리 호퍼 길게 누르기 동작</string>
+    <string name="certain_buttons_can_be_found">여기에서 비활성화된 경우 특정 버튼은 다른 위치에서 찾을 수 있습니다</string>
+    <string name="search_globally">전 세계적으로 \"%1$s\" 검색</string>
+    <string name="no_recent_read_updated_manga">최근에 읽거나 업데이트된 만화가 없습니다</string>
+    <string name="grouped">그룹화</string>
+    <string name="added_">%1$s 추가됨</string>
+    <string name="search_tips_show_periodically">검색 팁이 주기적으로 표시됩니다. 추천 검색어를 길게 눌러 검색하세요.</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">부전승으로 사용자 수</string>
+    <string name="loader_rar5_error">RARv5 포맷은 지원되지 않습니다</string>
 </resources>

@@ -603,13 +603,9 @@
     <string name="invalid_backup_file">El archivo de copia de respaldo no es correcto</string>
     <string name="invalid_backup_file_type">El tipo de archivo de respaldo no es correcto: %1$s
 \nDebería terminar en «.proto.gz» o «.json».</string>
-    <string name="file_is_missing_data">En archivo faltan datos.</string>
     <string name="backup_has_no_manga">Copia de seguridad no contiene manga.</string>
     <string name="restore_missing_sources">Fuentes que faltan:</string>
     <string name="restore_missing_trackers">Rastreadores no conectados:</string>
-    <string name="restore_content">Restaurar utiliza la fuente para obtener datos, es posible que se apliquen los costos de la operadora.
-\n
-\nAsegúrese de haber instalado todas las extensiones necesarias y de haber iniciado sesión en las fuentes y los servicios de seguimiento antes de la restauración.</string>
     <string name="restoring_backup_canceled">Se ha cancelado la restauración</string>
     <string name="restore_duration">%02d min, %02d seg</string>
     <plurals name="restore_completed_message">
@@ -1038,4 +1034,7 @@
     <string name="tap_zones">Zonas de toque</string>
     <string name="lavender">Lavanda</string>
     <string name="violet">Violeta</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Nombre del navegador a usar («user agent»)</string>
+    <string name="loader_rar5_error">El formato RARv5 no se entiende</string>
 </resources>

@@ -34,7 +34,7 @@
     <string name="clear">清除</string>
     <string name="close">关闭</string>
     <string name="retry">重试</string>
-    <string name="remove">移除</string>
+    <string name="remove">删除</string>
     <string name="resume">继续阅读</string>
     <string name="open_in_browser">在浏览器中打开</string>
     <string name="display">显示</string>
@@ -246,7 +246,7 @@
     <string name="select_backup_file">选择备份文件</string>
     <string name="new_version_available">有可用的更新！</string>
     <string name="ignore">忽略</string>
-    <string name="no_new_updates_available">没有可用的更新</string>
+    <string name="no_new_updates_available">没有新版本</string>
     <string name="searching_for_updates">正在检查更新…</string>
     <string name="download_complete">下载完成</string>
     <string name="download_error">下载时发生错误</string>
@@ -349,13 +349,13 @@
     <string name="clear_tags">清除标签</string>
     <string name="search_chapters">搜索章节</string>
     <string name="mark_all_chapters_as_read">是否标记所有章节为已读？</string>
-    <string name="no_description">没有描述</string>
+    <string name="no_description">无简介</string>
     <string name="add_to_library">添加至书架</string>
     <string name="continue_reading">继续阅读</string>
     <string name="continue_reading_chapter_">继续阅读第 %1$s 章</string>
     <string name="start_reading_chapter_">开始阅读第 %1$s 章</string>
     <string name="start_reading">开始阅读</string>
-    <string name="about_this_">关于此 %1$s</string>
+    <string name="about_this_">%1$s简介</string>
     <string name="auto_refresh_covers">自动刷新封面</string>
     <string name="read_progress">阅读进度</string>
     <string name="search_globally">全局搜索「%1$s」</string>
@@ -606,13 +606,9 @@
     <string name="myanimelist_relogin">请重新登录 MyAnimeList</string>
     <string name="invalid_backup_file_type">无效的备份文件类型：%1$s
 \n文件扩展名应为 .proto.gz 或 .json。</string>
-    <string name="file_is_missing_data">文件是丢失数据。</string>
     <string name="backup_has_no_manga">备份不包含任何漫画。</string>
     <string name="restore_missing_sources">缺少图源：</string>
     <string name="restore_missing_trackers">未登录的追踪源：</string>
-    <string name="restore_content">还原使用图源获取数据，可能耗费联网费用。
-\n
-\n还原前，请确认你已安装了全部必需的扩展并已登录到图源和追踪服务。</string>
     <string name="restore_content_full">来自备份文件的数据将被还原。
 \n
 \n你需要安装所有缺少的扩展，之后登录到跟踪服务以使用它们。</string>
@@ -892,9 +888,9 @@
     <string name="update_tracking_scoring_type">更新 %1$s 的评分类型</string>
     <string name="scoring_type_updated">已更新评分类型</string>
     <string name="could_not_update_scoring_">无法更新评分类型：%1$s</string>
-    <string name="publishing_finished">发布完成</string>
-    <string name="cancelled">已取消</string>
-    <string name="on_hiatus">中断</string>
+    <string name="publishing_finished">出版完毕</string>
+    <string name="cancelled">已中止</string>
+    <string name="on_hiatus">休刊中</string>
     <string name="tracking_info">将章节进度单向同步到追踪服务。点击「追踪」按钮以设置漫画的追踪源。</string>
     <string name="enhanced_services">增强服务</string>
     <string name="enhanced_tracking_info">为特定图源提供增强功能的服务。漫画在添加到书架时会被自动追踪。</string>
@@ -973,8 +969,8 @@
     <string name="pref_lowest">最低</string>
     <string name="download_notifier_split_page_not_found">拆分时未找到页 %d</string>
     <string name="download_notifier_split_failed">无法拆分下载的图像</string>
-    <string name="split_tall_images">自动拆分高图像</string>
-    <string name="split_tall_images_summary">通过拆分下载的高图像来提高阅读器的性能。</string>
+    <string name="split_tall_images">自动拆分长图</string>
+    <string name="split_tall_images_summary">提高阅读器的性能</string>
     <string name="reading_list">阅读列表</string>
     <string name="wish_list">想读列表</string>
     <string name="complete_list">读完列表</string>
@@ -984,4 +980,8 @@
     <string name="tap_zones">点按区域</string>
     <string name="lavender">淡紫色</string>
     <string name="violet">紫罗兰色</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="language_requires_app_restart">某些语言可能需要重启应用才能正确显示</string>
+    <string name="user_agent_string">默认用户代理字符串</string>
+    <string name="loader_rar5_error">不支持 RARv5 格式</string>
 </resources>

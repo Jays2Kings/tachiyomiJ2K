@@ -391,9 +391,6 @@
     <string name="automatic_backups">Tự động sao lưu</string>
     <string name="invalid_backup_file">Tệp sao lưu không hợp lệ</string>
     <string name="backup_has_no_manga">Tệp sao lưu không chứa truyện nào.</string>
-    <string name="restore_content">Khôi phục yêu cầu sử dụng mạng để truy cập các nguồn truyện và nguồn theo dõi để lấy dữ liệu.
-\n
-\nHãy đảm bảo rằng bạn đã cài đặt các tiện ích mở rộng và đăng nhập vào các nguồn theo dõi trước khi khôi phục.</string>
     <string name="source_migration_guide">Hướng dẫn di chuyển nguồn</string>
     <string name="next_chapter">Chương kế tiếp</string>
     <string name="previous_chapter">Chương trước</string>
@@ -527,7 +524,6 @@
 \nBạn sẽ cần cài đặt bất kỳ tiện ích mở rộng nào bị thiếu và sau đó đăng nhập vào các dịch vụ theo dõi để sử dụng chúng.</string>
     <string name="restore_missing_sources">Thiếu các nguồn:</string>
     <string name="restore_error">Thất bại khi khôi phục lại</string>
-    <string name="file_is_missing_data">Tệp thiếu dữ liệu.</string>
     <string name="backup_failed">Sao lưu thất bại</string>
     <string name="restore_in_progress">Đang khôi phục</string>
     <string name="backup_in_progress">Sao lưu đã đang trong quá trình thực hiện</string>
@@ -647,7 +643,7 @@
     <string name="both_axes">Cả hai trục</string>
     <string name="vertically">Dọc</string>
     <string name="horizontally">Ngang</string>
-    <string name="invert_tapping">Nhấn ngược</string>
+    <string name="invert_tapping">Đảo ngược khu vực nhấn</string>
     <string name="all_sources">Tất cả nguồn</string>
     <string name="in_library">Trong thư viện</string>
     <string name="group_chapters_together">Nhóm tất cả các chương với nhau</string>
@@ -779,7 +775,7 @@
     <string name="remove_crop">Xoá bỏ phần cắt</string>
     <string name="crop_borders_webtoon">Cắt đường viền (Webtoon)</string>
     <string name="crop_borders_paged">Cắt đường viền ( Trang)</string>
-    <string name="reduces_banding_impacts_performance">Giảm lỗi hiển thị sai dải màu, nhưng ảnh hưởng đến hiệu suất</string>
+    <string name="reduces_banding_impacts_performance">Giảm lỗi hiển thị sai dải màu, nhưng có thể ảnh hưởng đến hiệu suất</string>
     <string name="page_preload_amount">Số lượng trang tải trước</string>
     <string name="amount_of_pages_to_preload">Số lượng trang cần tải trước khi đọc. Giá trị cao hơn sẽ mang lại trải nghiệm đọc mượt mà hơn, với chi phí sử dụng bộ nhớ đệm và mạng cao hơn.</string>
     <string name="reading_">Đang đọc %1$s</string>
@@ -997,4 +993,28 @@
     <string name="pref_high">Cao</string>
     <string name="pref_low">Thấp</string>
     <string name="pref_lowest">Thấp nhất</string>
+    <string name="tap_zones">Khu vực nhấn</string>
+    <string name="lavender">Oải Hương</string>
+    <string name="violet">Cực Tím</string>
+    <string name="open_in_app">Mở trong ứng dụng</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">%d chương chưa đọc tiếp</item>
+    </plurals>
+    <string name="download_notifier_split_failed">Không thể chia cắt ảnh đã tải xuống</string>
+    <string name="learn_why">Tìm hiểu lý do</string>
+    <string name="download_notifier_split_page_not_found">Trang %d không thể được tìm thấy khi chia cắt</string>
+    <string name="download_ahead">Tải Trước</string>
+    <string name="auto_download_after_reading">Tải các chương chưa đọc tiếp theo sau khi đọc</string>
+    <string name="split_tall_images">Tự động chia cắt những ảnh quá cao</string>
+    <string name="split_tall_images_summary">Cải thiện khả năng đọc bằng việc chia cắt các ảnh quá cao.</string>
+    <string name="reading_list">Danh sách đang đọc</string>
+    <string name="download_ahead_info">Tải trước chỉ áp dụng cho các mục ở trong thư viện và nếu chương cuối cùng đã được tải rồi</string>
+    <string name="on_hold_list">Danh sách đang chờ</string>
+    <string name="wish_list">Danh sách muốn đọc</string>
+    <string name="complete_list">Danh sách hoàn thành</string>
+    <string name="unfinished_list">Danh sách chưa hoàn thành</string>
+    <string name="sort_fetched_time">Sắp xếp bằng thời gian được nhập về</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Chuỗi đại diện người dùng mặc định</string>
+    <string name="loader_rar5_error">Định dạng RARv5 không được hỗ trợ</string>
 </resources>

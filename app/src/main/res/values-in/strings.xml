@@ -493,13 +493,9 @@
     <string name="invalid_backup_file">Berkas cadangan tidak valid</string>
     <string name="invalid_backup_file_type">Tipe berkas cadangan tidak valid: %1$s
 \nHarusnya nama berkas berakhir dengan .proto.gz atau .json.</string>
-    <string name="file_is_missing_data">Berkas tidak memiliki data.</string>
     <string name="backup_has_no_manga">Cadangan tidak berisi manga apapun.</string>
     <string name="restore_missing_sources">Kehilangan sumber:</string>
     <string name="restore_missing_trackers">Pelacakan tidak tersinkronisasi di:</string>
-    <string name="restore_content">Proses pemulihan menggunakan koneksi internet untuk mengambil data, biaya operator mungkin berlaku.
-\n
-\nPastikan Anda telah memasang ekstensi yg dibutuhkan dan sudah login ke sumber sebelum proses pemulihan.</string>
     <string name="restoring_backup_canceled">Pemulihan dibatalkan</string>
     <string name="restore_duration">%02d menit, %02d detik</string>
     <plurals name="restore_completed_message">
@@ -984,4 +980,9 @@
     <string name="sort_fetched_time">Urutkan berdasarkan waktu yang diambil</string>
     <string name="tap_zones">Zona ketuk</string>
     <string name="lavender">Lavender</string>
+    <string name="violet">Ungu</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">String agen pengguna default</string>
+    <string name="language_requires_app_restart">Beberapa bahasa mungkin memerlukan peluncuran ulang aplikasi untuk ditampilkan dengan benar</string>
+    <string name="loader_rar5_error">Format RARv5 tidak didukung</string>
 </resources>

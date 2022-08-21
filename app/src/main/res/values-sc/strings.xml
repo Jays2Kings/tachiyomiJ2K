@@ -610,13 +610,9 @@
     <string name="invalid_backup_file">Documentu de sa còpia de seguresa non vàlidu</string>
     <string name="invalid_backup_file_type">Casta de documentu de còpia de seguresa non vàlidu: %1$s
 \nDiat dèpere acabbare cun .proto.gz o .json.</string>
-    <string name="file_is_missing_data">In su documentu bi mancant datos.</string>
     <string name="backup_has_no_manga">Sa còpia de seguresa non tenet perunu manga.</string>
     <string name="restore_missing_sources">Mitzas chi mancant:</string>
     <string name="restore_missing_trackers">Arrastadores a sos cales no as fatu atzessu:</string>
-    <string name="restore_content">Su riprìstinu impreat sas mitzas pro otènnere sos datos, bi diant pòdere èssere costos de s\'operadore.
-\n
-\nAssegura·ti de àere installadu totu sas estensiones netzessàrias e de àere fatu s\'atzessu a sas mitzas e a sos servìtzios de arrastamentu in antis de ripristinare.</string>
     <string name="restore_content_full">Sos datos dae su documentu de sa còpia de seguresa s\'ant a ripristinare.
 \n
 \nA pustis as a dèpere installare sas estensiones chi mancant e atzèdere a sos servìtzios de arrastamentu pro los pòdere impreare.</string>
@@ -1007,4 +1003,8 @@
     <string name="tap_zones">Zonas de tocu</string>
     <string name="lavender">Archemissa</string>
     <string name="violet">Tanadu</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Istringa de agente de utente predefinida</string>
+    <string name="language_requires_app_restart">Unas cantas limbas diant pòdere bisongiare chi torres a allùghere s\'aplicatzione pro las ammustrare comente si tocat</string>
+    <string name="loader_rar5_error">Su formadu RARv5 no est suportadu</string>
 </resources>

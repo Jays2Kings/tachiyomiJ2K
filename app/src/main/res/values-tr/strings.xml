@@ -464,13 +464,9 @@
     <string name="invalid_backup_file">Geçersiz yedekleme dosyası</string>
     <string name="invalid_backup_file_type">Geçersiz yedekleme dosyası türü: %1$s
 \n.proto.gz veya .json ile bitmelidir.</string>
-    <string name="file_is_missing_data">Dosyada veri eksik.</string>
     <string name="backup_has_no_manga">Yedek bir manga içermiyor.</string>
     <string name="restore_missing_sources">Eksik kaynaklar:</string>
     <string name="restore_missing_trackers">İzleyiciler giriş yapmadı:</string>
-    <string name="restore_content">Geri yükleme veriyi almak için kaynakları kullanır, taşıyıcı ücreti uygulanabilir.
-\n
-\nGeri yüklemeden önce, giriş gerektiren kaynaklara ve izleme hizmetlerine giriş yaptığınızdan, ve gerekli tüm uzantıları kurduğunuzdan emin olun.</string>
     <string name="restore_content_full">Yedek dosyadaki veriler geri yüklenecek.
 \n
 \nEksik uzantıları yüklemeniz ve daha sonra bunları kullanmak için izleme hizmetlerinde oturum açmanız gerekecektir.</string>
@@ -995,7 +991,7 @@
     <string name="pref_low">Düşük</string>
     <string name="pref_lowest">En düşük</string>
     <string name="split_tall_images">Uzun görselleri otomatik böl</string>
-    <string name="split_tall_images_summary">İndirilen uzun görselleri bölerek okuyucu performansını artırır.</string>
+    <string name="split_tall_images_summary">Okuyucu performansını iyileştirir</string>
     <string name="download_notifier_split_page_not_found">Bölünürken sayfa %d bulunamadı</string>
     <string name="download_notifier_split_failed">İndirilen görsel bölünemedi</string>
     <string name="reading_list">Okuma Listesi</string>
@@ -1007,4 +1003,8 @@
     <string name="violet">Menekşe</string>
     <string name="tap_zones">Dokunma bölgeleri</string>
     <string name="lavender">Lavanta</string>
+    <string name="webtoon_side_padding_5">%5</string>
+    <string name="language_requires_app_restart">Bazı dillerin doğru görüntülenmesi için uygulamanın yeniden başlatılması gerekebilir</string>
+    <string name="user_agent_string">Öntanımlı kullanıcı aracısı dizgesi</string>
+    <string name="loader_rar5_error">RARv5 biçimi desteklenmiyor</string>
 </resources>

@@ -623,13 +623,9 @@
     <string name="invalid_backup_file">Ongeldig backupbestand</string>
     <string name="invalid_backup_file_type">Ongeldig type back-upbestand: %1$s
 \nDe bestandsnaam moet eindigen op .proto.gz of .json.</string>
-    <string name="file_is_missing_data">Bestand mist data.</string>
     <string name="backup_has_no_manga">Back-up bevat geen manga.</string>
     <string name="restore_missing_sources">Missende bronnen:</string>
     <string name="restore_missing_trackers">Niet-ingelogde trackers:</string>
-    <string name="restore_content">Herstellen gebruikt bronnen om data op te halen, mogelijk zijn extra mobiele-abonnementskosten van toepassing.
-\n
-\nZorg ervoor dat je de nodige extensies hebt geinstalleerd en bent ingelogd voor bronnen en trackingdiensten voordat je het herstellen start.</string>
     <string name="restoring_backup_canceled">Herstellen geannuleerd</string>
     <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
@@ -983,4 +979,5 @@
     <string name="warning_unenroll_from_beta">Het teruggaan naar de stabiele versie kan tot problemen leiden en mogelijk moet de app-opslag worden gewist.</string>
     <string name="show_">Laat %1$s zien</string>
     <string name="must_view_details_before_migration">Voor dit item gemigreerd kan worden moet er eerst naar de details zijn gekeken</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

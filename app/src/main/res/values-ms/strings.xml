@@ -609,13 +609,9 @@
     <string name="invalid_backup_file">Fail sandaran tidak sah</string>
     <string name="invalid_backup_file_type">Jenis fail sandaran tidak sah: %1$s\t
 \nIa sepatutnya berakhir dengan .proto.gz atau .json.</string>
-    <string name="file_is_missing_data">Fail hilang data.</string>
     <string name="backup_has_no_manga">Sandaran tidak mengandungi apa-apa siri.</string>
     <string name="restore_missing_sources">Tiada sumber:</string>
     <string name="restore_missing_trackers">Penjejak yang tidak dilog masuk:</string>
-    <string name="restore_content">Pemulihan menggunakan Sambungan untuk memperolehi data, caj telco mungkin dikenakan.
-\n
-\nPastikan anda telah memasang semua Sambungan yang perlu dan telah log masuk ke dalam sumber dan Penjejakan sebelum memulakan pemulihan.</string>
     <string name="restore_content_full">Data dari fail sandaran akan dipulihkan.
 \n
 \nAnda perlu memasang sambungan yang hilang dan log masuk ke penjejakan untuk menggunakannya.</string>
@@ -884,4 +880,7 @@
     <string name="show_categories_while_filtering">Tunjuk kategori kosong semasa menapis</string>
     <string name="could_not_install_update">Tidak dapat memasang kemas kini</string>
     <string name="update_completed">kemas kini siap</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Untaian ejen pengguna lalai</string>
+    <string name="loader_rar5_error">Format RARv5 tidak disokong</string>
 </resources>

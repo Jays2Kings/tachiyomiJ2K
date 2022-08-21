@@ -277,9 +277,6 @@
     <string name="copy_value">คัดลอก</string>
     <string name="creating_backup">กำลังสร้างการสำรองข้อมูล</string>
     <string name="pref_global_search">ค้นหาทั้งหมด</string>
-    <string name="restore_content">การคืนค่าใช้แหล่งที่มาเพื่อดึงข้อมูล อาจมีค่าบริการของผู้ให้บริการ
-\n
-\nตรวจสอบให้แน่ใจว่าคุณได้ติดตั้งส่วนขยายที่จำเป็นทั้งหมดและลงชื่อเข้าใช้แหล่งที่มาและบริการติดตามก่อนที่จะคืนค่า</string>
     <string name="open_log">เปิดบันทึก</string>
     <string name="next_chapter">ตอนถัดไป</string>
     <string name="previous_chapter">ตอนก่อนหน้า</string>
@@ -385,7 +382,6 @@
     <string name="hide_notification_content">ซ่อนเนื้อหาการแจ้งเตือน</string>
     <string name="security">ความปลอดภัย</string>
     <string name="backup_and_restore">สำรองข้อมูลและการเรียกคืน</string>
-    <string name="file_is_missing_data">ข้อมูลแฟ้มไม่ครบ</string>
     <string name="backup_has_no_manga">แฟ้มข้อมูลสํารองไม่มีมังงะใด ๆ</string>
     <string name="restore_missing_sources">แหล่งที่มาที่หายไป:</string>
     <string name="restore_missing_trackers">ตัวติดตามไม่ได้เข้าสู่ระบบ:</string>
@@ -974,8 +970,8 @@
     <string name="pref_lowest">ช้ามาก</string>
     <string name="download_notifier_split_page_not_found">ไม่พบหน้า %d ขณะกำลังแยกหน้า</string>
     <string name="download_notifier_split_failed">ไม่สามารถแยกภาพที่ดาวน์โหลดไว้ได้</string>
-    <string name="split_tall_images">แยกรูปภาพที่สูงยาวออกโดยอัตโนมัติ</string>
-    <string name="split_tall_images_summary">เพิ่มประสิทธิภาพตัวอ่านด้วยการแยกรูปภาพที่สูงยาวที่ดาวน์โหลดไว้</string>
+    <string name="split_tall_images">แยกรูปภาพสูงยาว</string>
+    <string name="split_tall_images_summary">เพิ่มประสิทธิภาพตัวอ่าน</string>
     <string name="reading_list">รายการที่กำลังอ่าน</string>
     <string name="wish_list">รายการที่อยากอ่าน</string>
     <string name="complete_list">รายการที่จบแล้ว</string>
@@ -985,4 +981,8 @@
     <string name="tap_zones">โซนการแตะ</string>
     <string name="lavender">ลาเวนเดอร์</string>
     <string name="violet">ไวโอเล็ต</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">ตัวแทนผู้ใช้เริ่มต้น</string>
+    <string name="language_requires_app_restart">บางภาษาอาจจำเป็นต้องปิดเปิดแอปใหม่ เพื่อให้แสดงได้อย่างถูกต้อง</string>
+    <string name="loader_rar5_error">ไม่รับรองรูปแบบ RARv5</string>
 </resources>

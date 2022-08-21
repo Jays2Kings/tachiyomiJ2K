@@ -232,7 +232,7 @@
     <string name="untrusted_extension">अविश्वस्त एक्सटेंशन</string>
     <string name="untrusted_extension_message">यह एक्सटेंशन एक अविश्वस्त प्रमाणपत्र के साथ हस्ताक्षरित हुआ था और सक्रिय नहीं हुआ था।
 \n
-\nदुर्भावनापूर्ण विस्तार, किसी भी लॉगिन क्रेडेंशियल्स को तचीयोमी में संग्रहीत या मनमाना कोड निष्पादित कर सकता है
+\nदुर्भावनापूर्ण विस्तार, किसी भी लॉगिन क्रेडेंशियल्स को ताचियोमी में संग्रहीत या मनमाना कोड निष्पादित कर सकता है
 \n
 \nइस प्रमाणपत्र पर विश्वास करके आप इन जोखिमों को स्वीकार करते हैं।</string>
     <string name="version_">संस्करण: %1$s</string>
@@ -346,7 +346,7 @@
     <string name="no_chapters_error">कोई अध्याय नहीं मिला</string>
     <string name="badges">बैज</string>
     <string name="last_used">आखरी इस्त्तमाल किया गया</string>
-    <string name="unofficial_extension_message">यह एक्सटेंशन आधिकारिक तचियोमी एक्सटेंशन सूची से नहीं है।</string>
+    <string name="unofficial_extension_message">यह एक्सटेंशन आधिकारिक ताचियोमी एक्सटेंशन सूची से नहीं है।</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">अनौपचारिक</string>
     <string name="may_contain_nsfw">इसमें NSFW (18+) सामग्री हो सकती है</string>
@@ -365,13 +365,9 @@
     <string name="invalid_backup_file">अमान्य बैकअप फ़ाइल</string>
     <string name="invalid_backup_file_type">अमान्य बैकअप फ़ाइल प्रकार: %1$s
 \nयह .proto.gz या .json के साथ समाप्त होना चाहिए।</string>
-    <string name="file_is_missing_data">फाइल में डेटा गायब है।</string>
     <string name="backup_has_no_manga">बैकअप में कोई मंगा नहीं होता है।</string>
     <string name="restore_missing_sources">अनुपलब्ध स्रोत:</string>
     <string name="restore_missing_trackers">ट्रैकर्स में लॉग इन नहीं किया गया:</string>
-    <string name="restore_content">डेटा लाने के लिए स्रोतों का उपयोग करें, वाहक लागत लागू हो सकती है।
-\n
-\nसुनिश्चित करें कि आपने सभी आवश्यक एक्सटेंशन स्थापित किए हैं और बहाल करने से पहले स्रोतों और ट्रैकिंग सेवाओं में लॉग इन किया है।</string>
     <string name="restore_content_full">बैकअप फ़ाइल से डेटा बहाल किया जाएगा।
 \n
 \nआपको किसी भी लापता एक्सटेंशन को इंस्टॉल करना होगा और बाद में सेवाओं को ट्रैक करने के लिए लॉग इन करना होगा ताकि उनका उपयोग किया जा सके।</string>
@@ -487,13 +483,13 @@
     <string name="last_read_chapter_">अंतिम पढ़ा अध्याय %1$s</string>
     <string name="chapter_x_of_y">%2$d का %1$d अध्याय</string>
     <string name="all_chapters_read">सरे अध्याय पढ़े जा चुके हैं</string>
-    <string name="download_queue_size_warning">चेतावनी: बड़े बल्क डाउनलोड के कारण स्रोत धीमे हो सकते हैं और/या टैचियोमी को अवरुद्ध कर सकते हैं। अधिक जानने के लिए टैप करें</string>
+    <string name="download_queue_size_warning">चेतावनी: बड़े बल्क डाउनलोड के कारण स्रोत धीमे हो सकते हैं और/या ताचियोमी को अवरुद्ध कर सकते हैं। अधिक जानने के लिए टैप करें</string>
     <string name="every_3_days">हर 3 दिन</string>
     <string name="by_source_order">स्त्रोत के क्रम के अनुसार</string>
     <string name="category">श्रेणी</string>
     <plurals name="chapters_plural">
         <item quantity="one">अध्याय %1$d</item>
-        <item quantity="other"/>
+        <item quantity="other">अध्यायों %1$d</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d पृष्ठ बाकि</item>
@@ -569,7 +565,7 @@
     <string name="empty_backup_error">बैकअप करने के लिए कोई पुस्तकालय प्रविष्टि नहीं</string>
     <string name="pref_update_only_started">जो शुरू नहीं हुए हैं</string>
     <string name="pref_update_only_completely_read">अपठित अध्याय हैं</string>
-    <string name="pref_library_update_manga_restriction">किताब अद्यतन न करें</string>
+    <string name="pref_library_update_manga_restriction">शीर्षक अद्यतन न करें</string>
     <string name="split_tall_images_summary">लंबी डाउनलोड किए गए चित्रों के हिस्से करके पाठमाला के प्रदर्शन में सुधार लाता है</string>
     <string name="tap_to_learn_more">अधिक जानकारी के लिए दबाए</string>
     <string name="reading_list">पठन सूची</string>
@@ -591,4 +587,6 @@
     <string name="release_page">रिलीज़ पृष्ठ</string>
     <string name="remove_from_library_question">लाइब्रेरी से निकालें\?</string>
     <string name="library_search_hint">शीर्षक, टैग, स्रोत खोजें</string>
+    <string name="no_description">कोई विवरण नहीं</string>
+    <string name="webtoon_side_padding_5">५%</string>
 </resources>

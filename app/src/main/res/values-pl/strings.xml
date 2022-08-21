@@ -703,13 +703,9 @@
     <string name="invalid_backup_file">Nieprawidłowy plik kopii zapasowej</string>
     <string name="invalid_backup_file_type">Nieprawidłowe rozszczerzenie pliku kopii zapasowej: %1$s
 \nPowinno być .proto.gz albo .json.</string>
-    <string name="file_is_missing_data">W pliku brakuje danych.</string>
     <string name="backup_has_no_manga">Kopia zapasowa nie zawiera żadnych mang.</string>
     <string name="restore_missing_sources">Brakujące źródła:</string>
     <string name="restore_missing_trackers">Serwisy, do których nie zalogowono:</string>
-    <string name="restore_content">Przywracanie używa źródeł do pobierania danych, operator może naliczać dodatkowe opłaty.
-\n
-\nPrzed przywróceniem upewnij się, że zainstalowane są odpowiednie rozszerzenia i że zalogowano się do źródeł i usług śledzenia.</string>
     <string name="restoring_backup_canceled">Anulowano przywracanie</string>
     <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
@@ -1078,4 +1074,9 @@
     <string name="tap_to_learn_more">Kliknij, by dowiedzieć się więcej</string>
     <string name="tap_zones">Strefy kliknięcia</string>
     <string name="lavender">Lawenda</string>
+    <string name="view_all">Pokaż wszystko</string>
+    <string name="open_in_app">Otwórz w aplikacji</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Domyślny user agent string</string>
+    <string name="loader_rar5_error">Format RARv5 jest nieobsługiwany</string>
 </resources>

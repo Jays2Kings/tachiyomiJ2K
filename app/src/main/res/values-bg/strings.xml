@@ -383,13 +383,9 @@
     <string name="locale">Език</string>
     <string name="automatic_backups">Автоматично запазване</string>
     <string name="invalid_backup_file">Невалиден резервен файл</string>
-    <string name="file_is_missing_data">Във файла липсват данни.</string>
     <string name="backup_has_no_manga">Резервното копие не съдържа манга.</string>
     <string name="restore_missing_sources">Липсващи източници:</string>
     <string name="restore_missing_trackers">Не сте влезли като потребител в:</string>
-    <string name="restore_content">За възстановяването се изтеглят данни от източника, за които може да бъде отчетен разход на данни.
-\n
-\nСъщо проверете дали сте изтеглили всички необходими разширения и сте влезли коректно в източниците и услугите за проследяване преди възстановяването.</string>
     <string name="restoring_backup_canceled">Отменено възстановяване</string>
     <string name="restore_duration">%02d мин, %02d сек</string>
     <plurals name="restore_completed_message">

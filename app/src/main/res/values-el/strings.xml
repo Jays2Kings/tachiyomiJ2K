@@ -470,13 +470,9 @@
     <string name="invalid_backup_file">Μη έγκυρο αρχείο αντιγράφου ασφαλείας</string>
     <string name="invalid_backup_file_type">Μη έγκυρος τύπος αρχείου αντιγράφου ασφαλείας: %1$s
 \nΘα πρέπει να τελειώνει με .proto.gz ή .json.</string>
-    <string name="file_is_missing_data">Λείπουν δεδομένα από το αρχείο.</string>
     <string name="backup_has_no_manga">Το αντίγραφο ασφαλείας δεν περιέχει manga.</string>
     <string name="restore_missing_sources">Πηγές που λείπουν:</string>
     <string name="restore_missing_trackers">Ιχνηλάτες που δεν έχουν συνδεθεί:</string>
-    <string name="restore_content">Η επαναφορά χρησιμοποιεί τις πηγές για τη λήψη δεδομένων, ενδέχεται να ισχύουν χρεώσεις φορέα.
-\n
-\nΒεβαιωθείτε ότι έχετε εγκαταστήσει όλες τις απαραίτητες επεκτάσεις και είστε συνδεδεμένοι σε πηγές και σε υπηρεσίες παρακολούθησης πριν κάνετε επαναφορά.</string>
     <string name="restore_content_full">Τα δεδομένα από το αντίγραφο ασφαλείας θα αποκατασταθούν
 \n
 \nΘα χρειαστεί να εγκαταστήσετε τυχόν επεκτάσεις που λείπουν και στη συνέχεια να συνδεθείτε στις υπηρεσίες παρακολούθησης για να τις χρησιμοποιήσετε.</string>
@@ -1006,4 +1002,8 @@
     <string name="sort_fetched_time">Ταξινόμηση κατά ώρα ανάκτησης</string>
     <string name="tap_zones">Ζώνες πατήματος</string>
     <string name="lavender">Λεβάντα</string>
+    <string name="violet">Βιολετί</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Προεπιλεγμένη συμβολοσειρά πράκτορα χρήστη</string>
+    <string name="loader_rar5_error">Η μορφή RARv5 δεν υποστηρίζεται</string>
 </resources>

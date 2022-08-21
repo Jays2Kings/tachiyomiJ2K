@@ -527,13 +527,9 @@
     <string name="invalid_backup_file">ব্যাকআপ ফাইল গ্রহণযোগ্য নয়</string>
     <string name="invalid_backup_file_type">অকার্যকর ব্যাকআপ ফাইল ধরণ: %1$s
 \nএটা .proto.gz বা .json দিয়ে শেষ হওয়া উচিত।</string>
-    <string name="file_is_missing_data">ফাইলে তথ্য অনুপস্থিত।</string>
     <string name="backup_has_no_manga">ব্যাকআপে কোনো মাংগা নেই।</string>
     <string name="restore_missing_sources">উৎস অনুপলব্ধ:</string>
     <string name="restore_missing_trackers">ট্র্যাকারগুলিতে প্রবেশ হয়নি:</string>
-    <string name="restore_content">পুনরুদ্ধার উপাত্ত আনতে উৎস ব্যবহার করে, ক্যারিয়ারের খরচগুলি প্রযোজ্য হতে পারে।
-\n
-\nনিশ্চিত করুন যে আপনি পুনরুদ্ধারের আগে প্রয়োজনীয় এক্সটেনশনগুলো ইন্সটল করেছেন আর উৎসগুলো ও ট্র্যাকিং পরিসেবায় লগ-ইন করেছেন।</string>
     <string name="restoring_backup_canceled">পুনরুদ্ধার বাতিল করা হয়েছে</string>
     <string name="restore_duration">%02d মিনিট, %02d সেকেন্ড</string>
     <plurals name="restore_completed_message">
@@ -899,14 +895,14 @@
     <string name="remove_from_">%1$s থেকে সরাও</string>
     <string name="select_none">কোন টাই সিলেক্ট কোরনা</string>
     <string name="sort_and_filter">সর্ট এবং ফিল্টার</string>
-    <string name="notification_size_warning">বড় আপডেটের ফলে ব্যাটারি ব্যবহার বৃদ্ধি পেতে পারে এবং উত্সগুলি ধীর হয়ে যেতে পারে</string>
+    <string name="notification_size_warning">বড়ো আপডেটসমূহ ব্যাটারী ব্যবহার বাড়াতে এবং উৎসগুলিকে মন্থর করে দিতে পারে। আরও জানতে এখানে ট্যাপ করুন।</string>
     <string name="shift_one_page_over">এক পাতা শিফট কর</string>
     <string name="sort_by_ignoring_articles">নিবন্ধ উপেক্ষা করে সাজাও</string>
     <string name="fetched_">%1$s আনা হয়েছে</string>
     <string name="a_while_ago">কিছুক্ষণ আগে</string>
     <string name="show_updated_time">আপডেট করা সময় দেখাও</string>
     <string name="extension_updates_pending">এক্সটেনশন আপডেট মুলতুবি আছে</string>
-    <string name="download_queue_size_warning">সতর্কতা: বৃহৎ বাল্ক ডাউনলোডের ফলে উৎসগুলি ধীর হয়ে যেতে পারে এবং/অথবা ব্লক হতে পারে তাছিয়মি</string>
+    <string name="download_queue_size_warning">সতর্কতা: বড় আকারের ডাউনলোডের ফলে উৎসগুলি মন্থর হয়ে যেতে পারে এবং/অথবা তাচিওমি ব্লক হয়ে যেতে পারে। আরও জানতে এখানে ট্যাপ করুন।</string>
     <string name="every_3_days">প্রতি ৩ দিন</string>
     <string name="classic_blue">ক্লাসিক নীল</string>
     <string name="tracking_info">ট্র্যাকিং সার্ভিসে অধ্যায়ের অগ্রগতি হালনাগাদের একমুখী পথ। স্বতন্ত্র মাঙ্গার ট্র্যকিং সেটাপের জন্য তাদের নিজস্ব ট্র্যাকিং বাটন ব্যবহার করুন।</string>
@@ -932,4 +928,14 @@
     <string name="pref_high">উচ্চ</string>
     <string name="pref_low">নিম্ম</string>
     <string name="pref_lowest">সর্বনিম্ন</string>
+    <string name="new_beta_version_available">নতুন বিটা সংস্করণ উপলব্ধ!</string>
+    <string name="language_badge">ভাষার তকমাগুলি</string>
+    <string name="cover_only_grid">শুধু প্রচ্ছদসহ গ্রিড</string>
+    <string name="use_staggered_grid">স্ট্যাগার্ড গ্রিড ব্যবহার করুন</string>
+    <string name="notification_update_skipped">%1$d আপডেট(গুলি) এড়িয়ে গেছে</string>
+    <string name="skipped_reason_completed">এড়িয়ে যাওয়া হয়েছে কারণ সিরিজটি সম্পূর্ণ</string>
+    <string name="notification_update_error">%1$d আপডেট(গুলি) ব্যর্থ হয়েছে</string>
+    <string name="publishing_finished">সম্পূর্ণ প্রকাশিত</string>
+    <string name="cancelled">বাতিল করা হয়েছে</string>
+    <string name="on_hiatus">বিরতিতে রয়েছে</string>
 </resources>

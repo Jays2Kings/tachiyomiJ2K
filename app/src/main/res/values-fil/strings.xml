@@ -369,13 +369,9 @@
     <string name="invalid_backup_file">Invalid na backup</string>
     <string name="invalid_backup_file_type">Invalid na backup: %1$s
 \nDapat nagtatapos ito sa .proto.gz o .json.</string>
-    <string name="file_is_missing_data">May nawawalang data ang file.</string>
     <string name="backup_has_no_manga">Walang manga ang backup.</string>
     <string name="restore_missing_sources">Nawawalang source:</string>
     <string name="restore_missing_trackers">Di naka-login sa mga tracker:</string>
-    <string name="restore_content">Ginagamit ng Pag-restore ang mga source para kunin ang data, maaaring makagastos ka dahil dito.
-\n
-\nSiguraduhing na-install mo na ang lahat ng mga kinakailangang dugtong at naka-login ka na sa mga source at tracking service bago mag-restore.</string>
     <string name="restore_content_full">Ire-restore ang data mula sa file ng backup.
 \n
 \nKakailanganin mo na ma-install ang mga nawawalang dugtong at mag-login sa mga tracking service pagkatapos para magamit mo sila.</string>
@@ -1006,4 +1002,8 @@
     <string name="sort_fetched_time">Ayusin base sa oras kinuha</string>
     <string name="tap_zones">Mga tap zone</string>
     <string name="lavender">Lila</string>
+    <string name="violet">Lila</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Default na string ng user agent</string>
+    <string name="loader_rar5_error">Di suportado ang format na RARv5</string>
 </resources>

@@ -20,7 +20,7 @@
     <string name="chapter_">Poglavlje %1$s</string>
     <string name="bookmarked">Zabilježeno</string>
     <string name="categories">Kategorije</string>
-    <string name="cookies_cleared">Kolačići su uklonjeni</string>
+    <string name="cookies_cleared">Kolačići su izbrisani</string>
     <string name="clear_database">Isprazni bazu podataka</string>
     <string name="clear_database_confirmation">Sigurno\? Izgubit ćeš pročitana poglavlja i napredak manga koji nisu u biblioteci</string>
     <string name="clear_database_completed">Unosi su izbrisani</string>
@@ -60,7 +60,7 @@
     <string name="download_badge">Značke preuzimanja</string>
     <string name="new_chapters_found">Pronađena su nova poglavlja</string>
     <string name="library_update_frequency">Učestalost ažuriranja biblioteke</string>
-    <string name="library_update_restriction">Ograničenja za ažuriranje biblioteke</string>
+    <string name="library_update_restriction">Ograničenja uređaja</string>
     <string name="library_update_restriction_summary">Ažuriraj samo kad su ispunjeni uvjeti</string>
     <string name="categories_to_include_in_global_update">Kategorije koje treba uključiti u globalno ažuriranje</string>
     <string name="updates">Ažuriranja</string>
@@ -113,7 +113,7 @@
     <string name="double_tap_anim_speed">Brzina animacije dvostrukog dodira</string>
     <string name="show_page_number">Pokaži broj stranice</string>
     <string name="true_32bit_color">32-bitna boja</string>
-    <string name="reduces_banding_impacts_performance">Smanjuje trakasto iscrtavanje, ali utječe na performansu</string>
+    <string name="reduces_banding_impacts_performance">Smanjuje oštre prijelaze između nijansi, ali utječe na performansu</string>
     <string name="crop_borders">Odreži rubove</string>
     <string name="color_filter_blend_mode">Način stapanja filtra boja</string>
     <string name="overlay">Prekrij</string>
@@ -197,7 +197,7 @@
     <string name="backup_frequency">Učestalost spremanja sigurnosnih kopija</string>
     <string name="backup_failed">Sigurnosna kopija neuspjela</string>
     <string name="backup_created">Sigurnosna kopija je stvorena</string>
-    <string name="restore_completed">Obnavljanje je dovršeno</string>
+    <string name="restore_completed">Obnavljanje je završeno</string>
     <string name="creating_backup">Stvaranje sigurnosne kopije</string>
     <string name="what_should_backup">Što želiš spremiti kao sigurnosnu kopiju\?</string>
     <string name="restoring_backup">Obnavljanje sigurnosnom kopijom</string>
@@ -205,8 +205,8 @@
     <string name="network">Mreža</string>
     <string name="requires_app_restart">Zahtijeva ponovno pokretanje programa</string>
     <string name="used_">Korišteno: %1$s</string>
-    <string name="cache_delete_error">Došlo je do greške prilikom pražnjenja predmemorije</string>
-    <string name="clear_cookies">Ukloni kolačiće</string>
+    <string name="cache_delete_error">Došlo je do greške prilikom brisanja</string>
+    <string name="clear_cookies">Izbriši kolačiće</string>
     <string name="downloaded">Preuzeto</string>
     <string name="downloading">Preuzimanje</string>
     <string name="download">Preuzmi</string>
@@ -510,7 +510,7 @@
     <string name="kindlish_nav">Kao Kindle</string>
     <string name="edge_nav">Rub</string>
     <string name="right_and_left_nav">Desno i lijevo</string>
-    <string name="invert_tapping">Preokreni dodirivanje</string>
+    <string name="invert_tapping">Preokreni područja za dodirivanje</string>
     <string name="none">Ništa</string>
     <string name="no_chapters_error">Nema poglavlja</string>
     <string name="started_reading_date">Datum početka čitanja</string>
@@ -522,22 +522,18 @@
     <string name="invalid_backup_file">Neispravna datoteka sigurnosne kopije</string>
     <string name="invalid_backup_file_type">Neispravna datoteka sigurnosne kopije: %1$s
 \nTrebala bi završiti s .proto.gz ili .json.</string>
-    <string name="file_is_missing_data">Datoteci nedostaju podaci.</string>
     <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan manga.</string>
     <string name="restore_missing_sources">Nedostaju izvori:</string>
     <string name="restore_missing_trackers">Neprijavljene usluge praćenja:</string>
-    <string name="restore_content">Obnavljanje koristi izvore za dohvaćanje podataka, može prouzročiti troškove.
-\n
-\nPrije obnavljanja, provjeri jesu li instalirana sva potrebna proširenja i da si prijavljen/a u izvorima i uslugama za praćenje.</string>
     <string name="restore_content_full">Podaci datoteke sigurnosne kopije će se obnoviti.
 \n
 \nZa upotrebu podataka, morat ćeš instalirati nedostajuća proširenja i nakon toga se prijaviti na usluge praćenja.</string>
     <string name="restoring_backup_canceled">Obnavljanje prekinuto</string>
     <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Dovršeno u %1$s s %2$s greškom</item>
-        <item quantity="few">Dovršeno u %1$s s %2$s greške</item>
-        <item quantity="other">Dovršeno u %1$s s %2$s grešaka</item>
+        <item quantity="one">Obavljeno u %1$s s %2$s greškom</item>
+        <item quantity="few">Obavljeno u %1$s s %2$s greške</item>
+        <item quantity="other">Obavljeno u %1$s s %2$s grešaka</item>
     </plurals>
     <string name="source_migration_guide">Vodič za migraciju izvora</string>
     <string name="nsfw_sources">Izvori neprikladnog sadržaja (18+)</string>
@@ -592,9 +588,9 @@
     <string name="hide_unread_badges">Sakrij značke nepročitanih</string>
     <string name="add_edit_categories">Dodaj/Uredi kategorije</string>
     <plurals name="cache_cleared">
-        <item quantity="one">Predmemorija je ispražnjena. %d datoteka je izbrisana</item>
-        <item quantity="few">Predmemorija je ispražnjena. %d datoteke su izbrisane</item>
-        <item quantity="other">Predmemorija je ispražnjena. %d datoteka je izbrisano</item>
+        <item quantity="one">Predmemorija je izbrisana. %d datoteka je izbrisana</item>
+        <item quantity="few">Predmemorija je izbrisana. %d datoteke su izbrisane</item>
+        <item quantity="other">Predmemorija je izbrisana. %d datoteka je izbrisano</item>
     </plurals>
     <string name="data_management">Upravljanje podacima</string>
     <string name="not_logged_into_">Neprijavljeno na %1$s</string>
@@ -608,9 +604,9 @@
     </plurals>
     <string name="skipping_">(%1$d se preskače)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Kopirati %1$d%2$s manga\?</item>
-        <item quantity="few">Kopirati %1$d%2$s manga\?</item>
-        <item quantity="other">Kopirati %1$d%2$s manga\?</item>
+        <item quantity="one">Kopirati manga %1$d%2$s\?</item>
+        <item quantity="few">Kopirati manga %1$d%2$s\?</item>
+        <item quantity="other">Kopirati manga %1$d%2$s\?</item>
     </plurals>
     <plurals name="migrate_manga">
         <item quantity="one">Migrati %1$d%2$s manga\?</item>
@@ -811,12 +807,12 @@
     <string name="cancel_all_for_series">Prekini sve za ovu seriju</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K zahtijeva pristup svim datotekama u Androidu 11 za preuzimanje poglavlja, za stvaranje automatskih sigurnosnih kopija i za čitanje lokalne mange.
 \n
-\nNa sljedećem prozoru aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
+\nU sljedećem prozoru aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
     <string name="all_files_permission_required">Potrebna su dopuštenja za pristup datotekama</string>
     <string name="global_updates">Globalna ažuriranja</string>
     <string name="open_random_series">Otvaranje slučajne serije</string>
     <string name="show_number_of_items">Prikaži broj elemenata</string>
-    <string name="update_completed">Aktualiziranje je dovršeno</string>
+    <string name="update_completed">Aktualiziranje je završeno</string>
     <string name="could_not_install_update">Nije moguće instalirati ažuriranje</string>
     <string name="by_update_date">Po datumu prijenosa</string>
     <string name="by_source_order">Po imenu izvora</string>
@@ -921,7 +917,7 @@
     <string name="use_shizuku_summary">Omogućuje instalaciju proširenja bez korisničkih upita i omogućuje automatska aktualiziranja za uređaje pod Androidom 12</string>
     <string name="use_suggested_date">Koristi predloženi datum</string>
     <string name="details_page">Stranica s detaljima</string>
-    <string name="notification_size_warning">Velika aktualiziranja mogu dovesti do povećane potrošnje baterije i usporavanja izvora</string>
+    <string name="notification_size_warning">Velika aktualiziranja mogu dovesti do povećane potrošnje baterije i usporavanja izvora. Za daljnje informacije dodirni.</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instaliraj i pokreni Shizuku za korištenje Shizukua kao instalacijskog programa za proširenja.</string>
     <string name="filter_groups">Filtriraj grupe scanlatora</string>
     <string name="theme_buttons_based_on_cover">Gumbi tema na osnovi naslovnice</string>
@@ -929,7 +925,7 @@
     <string name="classic_blue">Klasična plava</string>
     <string name="lime_time">Limetasta</string>
     <string name="every_3_days">Svaka 3 dana</string>
-    <string name="download_queue_size_warning">Upozorenje: velika skupna preuzimanja mogu dovesti do usporavanja izvora i/ili blokiranja Tachiyomija</string>
+    <string name="download_queue_size_warning">Upozorenje: velika skupna preuzimanja mogu dovesti do usporavanja izvora i/ili blokiranja Tachiyomija. Za daljnje informacije dodirni.</string>
     <string name="save_chapters_as_cbz">Spremi kao CBZ arhivu</string>
     <string name="publishing_finished">Objavljivanje završeno</string>
     <string name="cancelled">Prekinuto</string>
@@ -976,4 +972,57 @@
     <string name="pref_high">Visoka</string>
     <string name="pref_low">Niska</string>
     <string name="pref_lowest">Najniža</string>
+    <string name="new_beta_version_available">Dostupna je nova beta verzija!</string>
+    <string name="language_badge">Jezične značke</string>
+    <string name="use_staggered_grid">Koristite raspoređenu mrežu</string>
+    <string name="pref_library_update_manga_restriction">Preskoči aktuliziranje naslova</string>
+    <string name="pref_update_only_completely_read">S nepročitanim poglavljima</string>
+    <string name="pref_update_only_non_completed">Sa stanjem „Završeno“</string>
+    <string name="lavender">Lavanda</string>
+    <string name="violet">Ljubičasta</string>
+    <string name="view_all">Pogledaj sve</string>
+    <string name="warning_unenroll_from_beta">Vraćanje na prethodnu produkcijsku verziju može prouzročiti probleme i može zahtijevati brisanje podataka aplikacije.</string>
+    <string name="tap_zones">Područja dodira</string>
+    <string name="downloads_swipe_tutorial">Preuzimanja se mogu prekinuti povlačenjem
+\nZa odbacivanje ovog savjeta povuci ga</string>
+    <string name="download_ahead_info">Preuzimanje unaprijed se odnosi samo na unose u biblioteci i ako je zadnje pročitano poglavlje preuzeto</string>
+    <string name="tap_to_learn_more">Dodirni za daljnje informacije</string>
+    <string name="warning_enroll_into_beta">Beta izdanja mogu biti nestabilna i mogu zahtijevati brisanje podataka aplikacije.</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Sljedeće nepročitano poglavlje</item>
+        <item quantity="few">Sljedeća %d nepročitana poglavlja</item>
+        <item quantity="other">Sljedećih %d nepročitanih poglavlja</item>
+    </plurals>
+    <string name="download_ahead">Preuzmi unaprijed</string>
+    <string name="auto_download_after_reading">Preuzmi sljedeća nepročitana poglavlja nakon čitanja</string>
+    <string name="webview_data_deleted">WebView podaci su izbrisani</string>
+    <string name="download_notifier_split_page_not_found">Stranica %d nije pronađena tijekom razdvajanja</string>
+    <string name="split_tall_images">Automatski podijeli visoke slike</string>
+    <string name="learn_why">Saznaj zašto</string>
+    <string name="sort_fetched_time">Razvrstaj po vremenu dohvaćanja</string>
+    <string name="update_tracking_after_reading">Aktualiziraj praćenje nakon čitanja</string>
+    <string name="update_tracking_marked_read">Aktualiziraj praćenje kad je označeno kao pročitano</string>
+    <string name="unfinished_list">Popis nedovršenih</string>
+    <string name="split_tall_images_summary">Poboljšava performanse čitača dijeljenjem preuzetih visokih slika.</string>
+    <string name="expanded_toolbar">Proširena traka alata</string>
+    <string name="show_larger_toolbar">Prikaži veću, proširenu traku alata na vrhu većine stranica (ne prikazuje se na manjim uređajima bez obzira na postavku)</string>
+    <string name="empty_backup_error">Nema unosa u biblioteci za spremanje u sigurnosnu kopiju</string>
+    <string name="try_new_features">Isprobaj nove značajke prije nego što se službeno objave. Beta izdanja mogu biti nestabilna i pružaju se za davanje povratnih informacija programeru.</string>
+    <string name="check_for_beta_releases">Traži beta izdanja</string>
+    <string name="show_">Prikaži %1$s</string>
+    <string name="must_view_details_before_migration">Stranica s detaljima ovog unosa mora se pregledati prije nego što se može migrirati</string>
+    <string name="zoom_double_page_spreads">Zumiraj duplerice</string>
+    <string name="pref_clear_webview_data">Izbriši WebView podatke</string>
+    <string name="reading_list">Popis čitanja</string>
+    <string name="wish_list">Popis želja</string>
+    <string name="complete_list">Potpun popis</string>
+    <string name="on_hold_list">Na popisu čekanja</string>
+    <string name="download_notifier_split_failed">Nije bilo moguće podijeliti preuzetu sliku</string>
+    <string name="battery_not_low">Baterija nije slaba</string>
+    <string name="pref_update_only_started">Koja još nisu pokrenuta</string>
+    <string name="pref_update_only_completely_read_summary">Aktualiziraj manga samo ako nema nepročitanog poglavlja (potpuno pročitano)</string>
+    <string name="most_entries">Najveći broj unosa</string>
+    <string name="select_uninstalled_sources">Odaberi deinstalirane izvore</string>
+    <string name="open_in_app">Otvori u programu</string>
+    <string name="webtoon_side_padding_5">5 %</string>
 </resources>

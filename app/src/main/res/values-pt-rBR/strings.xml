@@ -671,13 +671,9 @@
     <string name="invalid_backup_file">Arquivo de backup inválido</string>
     <string name="invalid_backup_file_type">Tipo de arquivo de backup inválido: %1$s
 \nO arquivo deve terminar com .proto.gz ou .json.</string>
-    <string name="file_is_missing_data">Faltam dados no arquivo.</string>
     <string name="backup_has_no_manga">O backup não possui nenhum mangá.</string>
     <string name="restore_missing_sources">Fontes faltando:</string>
     <string name="restore_missing_trackers">Monitoradores sem login realizado:</string>
-    <string name="restore_content">A restauração usa as fontes para obter dados, cobranças podem ser efetuadas pela sua operadora.
-\n
-\nVerifique se instalou todas as extensões necessárias e se realizou o login nas fontes e serviços de monitoramento antes de restaurar.</string>
     <string name="restore_content_full">Os dados do arquivo de backup serão restaurados.
 \n
 \nVocê precisará instalar quaisquer extensões que estejam faltando e depois realizar o login nos serviços de monitoramento para utilizá-los.</string>
@@ -697,7 +693,7 @@
     <string name="progress">Andamento</string>
     <string name="complete">Concluído</string>
     <string name="crash_logs">Registros de travamentos</string>
-    <string name="dump_crash_logs">Limpar os registros de travamentos</string>
+    <string name="dump_crash_logs">Exportar os registros de travamentos</string>
     <string name="saves_error_logs">Salva os registros de erro em um arquivo para o compartilhamento com os desenvolvedores</string>
     <string name="crash_log_saved">Registros de travamento salvos</string>
     <string name="updated_to_">Atualizado para v%1$s</string>
@@ -1040,8 +1036,8 @@
     <string name="pref_lowest">Mais baixa</string>
     <string name="download_notifier_split_page_not_found">Página %d não encontrada durante a divisão</string>
     <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
-    <string name="split_tall_images">Dividir automaticamente imagens compridas</string>
-    <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens compridas disponíveis offline.</string>
+    <string name="split_tall_images">Dividir imagens compridas</string>
+    <string name="split_tall_images_summary">Melhora o desempenho do leitor</string>
     <string name="reading_list">Lista de Leitura</string>
     <string name="wish_list">Lista de Desejos</string>
     <string name="complete_list">Lista de Completos</string>
@@ -1051,4 +1047,7 @@
     <string name="tap_zones">Zonas de toque</string>
     <string name="lavender">Lavanda</string>
     <string name="violet">Violeta</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">User Agent padrão</string>
+    <string name="loader_rar5_error">O formato RARv5 não é suportado</string>
 </resources>

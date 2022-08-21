@@ -462,4 +462,10 @@
     </plurals>
     <string name="category">קטגוריה</string>
     <string name="reduces_banding_impacts_performance">מפחית פסים, אך עשוי להשפיע על הביצועים</string>
+    <string name="kindlish_nav">כמו ספר אלקטרוני</string>
+    <string name="split_tall_images">פיצול תמונות ארוכות אוטומטי</string>
+    <string name="tap_zones">איזורי נגיעה</string>
+    <string name="color_filter_blend_mode">פילטר צבע משתלב</string>
+    <string name="multiply">להכפיל</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

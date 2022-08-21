@@ -413,13 +413,9 @@
     <string name="invalid_backup_file">Virheellinen varmuuskopio</string>
     <string name="invalid_backup_file_type">Virheellinen varmuuskopiotiedosto: %1$s
 \nSen pitäisi päättyä .proto.gz or .json.</string>
-    <string name="file_is_missing_data">Tiedostosta puuttuu tietoja.</string>
     <string name="backup_has_no_manga">Varmuuskopio ei sisällä mangaa.</string>
     <string name="restore_missing_sources">Puuttuvat lähteet:</string>
     <string name="restore_missing_trackers">Seurantapalvelimet joihin et ole kirjautunut sisään:</string>
-    <string name="restore_content">Palautus käyttää lähdettä noutaakseen tietoja, tämä voi aiheuttaa kustannuksia.
-\n
-\nVarmista myös että sinulla on kaikki tarvittavat laajennukset ja olet kirjautunut lähteisiin ja seuranta palveluihin ennen palauttamista.</string>
     <string name="restore_content_full">Varmuuskopiotiedoston tiedot palautetaan.
 \n
 \nSinun on asennattava puuttuvat laajennukset ja kirjauduttava seurantapalveluihin jälkeenpäin käyttääksesi niitä.</string>
@@ -849,4 +845,6 @@
     <string name="pref_manage_notifications">Hallitse ilmoituksia</string>
     <string name="faq_and_guides">Usein kysytyt kysymykset ja oppaat</string>
     <string name="secure_screen_summary">Turvallinen ruutu piilottaa sovelluksen sisällön sovelluksia vaihdettaessa ja estää kuvakaappauksen ottamisen</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="backup_restore_invalid_uri">Virhe: tyhjä URI</string>
 </resources>

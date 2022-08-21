@@ -664,13 +664,9 @@
     <string name="invalid_backup_file">File di backup invalido</string>
     <string name="invalid_backup_file_type">File di backup invalido: %1$s
 \nDovrebbe terminare con .proto.gz oppure .json.</string>
-    <string name="file_is_missing_data">Il file risulta corrotto o in mancanza di dati.</string>
     <string name="backup_has_no_manga">Il backup non contiene nessun manga.</string>
     <string name="restore_missing_sources">Fonti mancanti:</string>
     <string name="restore_missing_trackers">Trackers non collegati:</string>
-    <string name="restore_content">Il ripristino utilizza delle fonti per recuperare i dati, potrebbero essere applicati costi del gestore telefonico.
-\n
-\nAssicurati di aver installato tutte le estensioni necessarie e di aver effettuato l\'accesso a fonti e servizi di tracciamento prima di ripristinare.</string>
     <string name="restore_content_full">I dati dal file di backup verranno recuperati.
 \n
 \nAvrai bisogno di installare le estensioni mancanti ed effettuare il login nei trackers per utilizzarli.</string>
@@ -1039,4 +1035,9 @@
     <string name="sort_fetched_time">Ordina per data di recupero</string>
     <string name="tap_zones">Zone di tocco</string>
     <string name="lavender">Lavanda</string>
+    <string name="violet">Viola</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Stringa user agent predefinita del browser</string>
+    <string name="language_requires_app_restart">alcune lingue potrebbero richiedere un restart dell\'app per esserve visualizzate in maniera corretta</string>
+    <string name="loader_rar5_error">Il formato RARv5 non è supportato</string>
 </resources>

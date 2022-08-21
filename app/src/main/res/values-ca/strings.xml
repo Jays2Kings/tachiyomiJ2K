@@ -414,13 +414,9 @@
     <string name="invalid_backup_file">Fitxer de còpia de seguretat invàlid</string>
     <string name="invalid_backup_file_type">Tipus de fitxer de còpia de seguretat invàlid: %1$s
 \nHauria d\'acabar en .proto.gz o .json.</string>
-    <string name="file_is_missing_data">Manquen dades al fitxer.</string>
     <string name="backup_has_no_manga">La còpia de seguretat no conté cap manga.</string>
     <string name="restore_missing_sources">Manquen fonts:</string>
     <string name="restore_missing_trackers">Seguidors sense sessió iniciada:</string>
-    <string name="restore_content">La restauració obté dades de les fonts, poden haver-hi despeses de l\'operador.
-\n
-\nAssegureu-vos que heu instal·lat totes les extensions necessàries i que heu iniciat la sessió a les fonts i serveis de seguiment abans de restaurar.</string>
     <string name="restore_content_full">Es restauraran les dades del fitxer de còpia de seguretat.
 \n
 \nCaldrà que instal·leu les extensions que manquin i que després inicieu la sessió als serveis de seguiment per a utilitzar-los.</string>
@@ -618,4 +614,9 @@
     <string name="on_hold_list">Llista de pausats</string>
     <string name="unfinished_list">Llista d\'inacabats</string>
     <string name="tap_zones">Zones de toc</string>
+    <string name="lavender">Lavanda</string>
+    <string name="no_description">Sense descripció</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Cadena d\'agent d\'usuari per defecte</string>
+    <string name="loader_rar5_error">El format RARv5 no està suportat</string>
 </resources>

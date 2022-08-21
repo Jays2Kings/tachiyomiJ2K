@@ -351,13 +351,9 @@
     <string name="invalid_backup_file">Ogiltig säkerhetskopia</string>
     <string name="invalid_backup_file_type">Ogiltig säkerhetskopia: %1$s
 \nDet bör sluta med .proto.gz eller .json.</string>
-    <string name="file_is_missing_data">Filen saknar data.</string>
     <string name="backup_has_no_manga">Säkerhetskopian innehåller ingen manga.</string>
     <string name="restore_missing_sources">Saknade källor:</string>
     <string name="restore_missing_trackers">Spårare som inte har loggats in:</string>
-    <string name="restore_content">Återställning använder källor för att hämta data, kostnader kan tillkomma.
-\n
-\nSe till att du har installerat de nödvändiga tilläggen och är inloggad på de källor och spårningstjänsterna som kräver detta innan du återställer.</string>
     <string name="restore_content_full">Data från säkerhetskopian återställs.
 \n
 \nDu måste installera eventuella tillägg som saknas och logga in på spårningstjänster efteråt för att kunna använda dem.</string>
@@ -1007,4 +1003,7 @@
     <string name="tap_zones">Tryckzoner</string>
     <string name="lavender">Lavendel</string>
     <string name="violet">Violett</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">Standardsträng för användaragent</string>
+    <string name="loader_rar5_error">RARv5 formatet stöds inte</string>
 </resources>

@@ -655,13 +655,9 @@
     <string name="invalid_backup_file">ملف النسخ الاحتياطي غير صالح</string>
     <string name="invalid_backup_file_type">ملف النسخ الاحتياطي غير صالح: %1$s
 \nيجب أن ينتهي ب.proto.gz أو .json.</string>
-    <string name="file_is_missing_data">هناك بيانات مفقودة في الملف.</string>
     <string name="backup_has_no_manga">النسخة الإحتياطية لا تحتوي على أيّة مانجا.</string>
     <string name="restore_missing_sources">المصادر المفقودة:</string>
     <string name="restore_missing_trackers">أجهزة التتبع التي لم يتم تسجيل الدخول إليها:</string>
-    <string name="restore_content">عملية الاستعادة تستخدم المصادر لجلب البيانات؛ قد يتم تطبيق تكاليف مزود الخدمة.
-\n
-\nتأكّد من تثبيت كافة اﻹضافات الضرورية وتسجيل الدخول لخدمات التتبع المطلوبة قبل عملية الاستعادة.</string>
     <string name="restoring_backup_canceled">تم الغاء الاستعادة</string>
     <string name="restore_duration">%02d دقيقة و %02d ثانية</string>
     <plurals name="restore_completed_message">
@@ -836,7 +832,7 @@
     <string name="show_title_first">أظهر العنوان أولاً</string>
     <string name="show_reset_history_button">أظهر زر مسح السجل</string>
     <string name="about_dont_kill_my_app">تقوم بعض الشركات المصنعة بوضع قيود إضافية على التطبيقات التي قد تقضي على الخدمات التي تعمل في الخلفية. يحتوي هذا الموقع على مزيد من المعلومات حول كيفية إصلاحه.</string>
-    <string name="name">الإسم</string>
+    <string name="name">الاسم</string>
     <string name="auto_update_extensions">التحديث التلقائي للإضافات</string>
     <string name="doh">إستخدام DNS بدلا من HTTPS</string>
     <string name="force_download_cache_refresh_summary">سيؤدي هذا إلى إجبار ذاكرة التخزين المؤقت للتنزيل على إعادة الحساب. مفيد إذا قمت بتعديل التنزيلات خارج هذا التطبيق وتريد أن يلتقطها التطبيق</string>
@@ -1096,4 +1092,9 @@
     <string name="unfinished_list">قائمة غير المنتهية</string>
     <string name="sort_fetched_time">فرز حسب وقت اضافته بالتطبيق</string>
     <string name="tap_zones">مناطق اللمس</string>
+    <string name="lavender">أُرجواني</string>
+    <string name="violet">بنفسجي</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">وتر وكيل المستخدم الافتراضي</string>
+    <string name="loader_rar5_error">الصيغه RARv5 غير مدعومه</string>
 </resources>

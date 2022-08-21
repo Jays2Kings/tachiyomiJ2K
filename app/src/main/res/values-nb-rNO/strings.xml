@@ -329,9 +329,6 @@
     <string name="open_log">Åpne logg</string>
     <string name="no_chapters_error">Fant ingen kapitler</string>
     <string name="restore_missing_sources">Manglende kilder:</string>
-    <string name="restore_content">Gjenoppretting bruker kilde for å hente data, mobilkostnader kan tilkomme.
-\n
-\nForsikre deg om at du har installert alle nødvendige utvidelser og er logget inn i kilder og sporingstjenester før du gjenoppretter.</string>
     <string name="restoring_backup_canceled">Avbrutt gjenoppretting</string>
     <string name="restore_duration">%02d min, %02d sek</string>
     <plurals name="restore_completed_message">
@@ -351,7 +348,6 @@
     <string name="search_settings">Søkeinnstillinger</string>
     <string name="locale">Språk</string>
     <string name="invalid_backup_file">Ugyldig sikkerhetskopieringsfil</string>
-    <string name="file_is_missing_data">Filen mangler data.</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategori</item>
         <item quantity="other">%d kateogrier</item>
@@ -964,4 +960,5 @@
     <string name="pref_high">Høy</string>
     <string name="pref_low">Lav</string>
     <string name="pref_lowest">Laveste</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

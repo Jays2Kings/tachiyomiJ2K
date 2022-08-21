@@ -149,7 +149,7 @@
     <string name="chapter_">Chapitre %1$s</string>
     <string name="downloading">En téléchargement</string>
     <string name="downloading_progress">En téléchargement (%1$d/%2$d)</string>
-    <string name="all_chapters">Tout télécharger</string>
+    <string name="all_chapters">Tous les chapitres</string>
     <string name="all_unread_chapters">Télécharger non-lu</string>
     <!-- MyAnimeList fragment -->
     <string name="reading">En cours</string>
@@ -658,13 +658,9 @@
     <string name="invalid_backup_file">Fichier de sauvegarde invalide</string>
     <string name="invalid_backup_file_type">Fichier de sauvegarde invalide : %1$s
 \nIl devrait se terminer par .proto.gz ou .json.</string>
-    <string name="file_is_missing_data">Données manquante dans le fichier.</string>
     <string name="backup_has_no_manga">La sauvegarde ne contient aucune série.</string>
     <string name="restore_missing_sources">Sources manquantes :</string>
     <string name="restore_missing_trackers">Traceurs non connectés :</string>
-    <string name="restore_content">La restauration utilise des sources pour obtenir les données, des frais d\'opérateur peuvent s\'appliquer.
-\n
-\nAssurez-vous d\'avoir installé toutes les extensions nécessaires et d\'être connecté aux sources et services de suivi avant de commencer la restauration.</string>
     <string name="restore_content_full">Les données du fichier de sauvegarde seront restaurées.
 \n
 \nVous devrez installer les extensions manquantes et vous connecter ensuite aux services de suivi pour les utiliser.</string>
@@ -827,7 +823,7 @@
     <string name="category_hopper_long_press">Action d\'un appui long sur le filtre par Catégorie</string>
     <string name="cancel_all_for_series">Tout annuler pour cette série</string>
     <string name="external_storage_download_notice">Pour télécharger des chapitres, TachiyomiJ2K nécessite l\'accès à tous les fichiers. Appuyez ici, puis activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
-    <string name="external_storage_permission_notice">Pour télécharger des chapitres, créer des sauvegardes automatiques et lire des mangas locaux, TachiyomiJ2K nécessite l\'accès à tous les fichiers d\'Android 11.
+    <string name="external_storage_permission_notice">Sous Android 11, TachiyomiJ2K nécessite l\'accès à tous les fichiers pour pouvoir télécharger des chapitres, créer des sauvegardes automatiques et lire des manga locaux.
 \n
 \nSur l\'écran suivant, activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
     <string name="include_">Inclure : %s</string>
@@ -943,11 +939,11 @@
     <string name="classic_blue">Bleu classique</string>
     <string name="lime_time">Temps citron vert</string>
     <string name="every_3_days">Tous les 3 jours</string>
-    <string name="download_queue_size_warning">Avertissement : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi. Appuyez pour en savoir plus.</string>
+    <string name="download_queue_size_warning">Attention : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi. Appuyez pour en savoir plus.</string>
     <string name="save_chapters_as_cbz">Enregistrer comme archive CBZ</string>
     <string name="publishing_finished">Publication terminée</string>
     <string name="cancelled">Annulé</string>
-    <string name="on_hiatus">En attente</string>
+    <string name="on_hiatus">En pause</string>
     <string name="tracking_info">Permet de synchroniser automatiquement les chapitres lus avec les services externes proposés. Allez dans le bouton « Suivi » d\'une série pour activer son suivi.</string>
     <string name="enhanced_services">Services avancés</string>
     <string name="enhanced_tracking_info">Services qui fournissent des fonctionnalités améliorées pour des sources spécifiques. Les mangas sont automatiquement suivis quand ils sont ajoutés à votre bibliothèque.</string>
@@ -980,14 +976,14 @@
     <string name="select_inverse">Inverser la sélection</string>
     <string name="cover_only_grid">Grille avec seulement la couverture</string>
     <string name="notification_update_error">Échec de %1$d mise(s) à jour</string>
-    <string name="notification_update_skipped">%1$d mise à jour(s) ignorée(s)</string>
-    <string name="skipped_reason_completed">Sauté car la série est complète</string>
+    <string name="notification_update_skipped">%1$d mise(s) à jour ignorée(s)</string>
+    <string name="skipped_reason_completed">Sauté car la série est terminée</string>
     <string name="skipped_reason_not_caught_up">Sauté car il y a des chapitres non lus</string>
     <string name="skipped_reason_not_started">Sauté car aucun chapitre n\'est lu</string>
     <string name="channel_skipped">Ignoré</string>
     <string name="pref_library_update_manga_restriction">Ignorer la mise à jour</string>
     <string name="pref_update_only_completely_read">Avec des chapitres non lus</string>
-    <string name="pref_update_only_non_completed">Avec le statut « achevé »</string>
+    <string name="pref_update_only_non_completed">Ayant comme statut « Terminé »</string>
     <string name="pref_update_only_started">Qui n\'ont pas encore commencé</string>
     <string name="pref_clear_webview_data">Effacer les données WebView</string>
     <string name="webview_data_deleted">Données WebView effacées</string>
@@ -1030,8 +1026,8 @@
     <string name="pref_lowest">La plus basse</string>
     <string name="download_notifier_split_page_not_found">Page %d introuvable lors du fractionnement</string>
     <string name="download_notifier_split_failed">Impossible de diviser l\'image téléchargée</string>
-    <string name="split_tall_images">Division automatique des grandes images</string>
-    <string name="split_tall_images_summary">Améliore les performances du lecteur en fractionnant les grandes images téléchargées.</string>
+    <string name="split_tall_images">Fractionner les images trop grandes</string>
+    <string name="split_tall_images_summary">Améliore les performances du lecteur en fractionnant les images téléchargées de grande taille.</string>
     <string name="reading_list">Liste de lecture</string>
     <string name="wish_list">Liste de souhaits</string>
     <string name="complete_list">Liste des lectures terminées</string>
@@ -1040,4 +1036,9 @@
     <string name="sort_fetched_time">Trier par date de téléchargement</string>
     <string name="tap_zones">Zones tactiles</string>
     <string name="lavender">Lavande</string>
+    <string name="violet">Violet</string>
+    <string name="webtoon_side_padding_5">5 %</string>
+    <string name="user_agent_string">Agents utilisateurs par défaut</string>
+    <string name="language_requires_app_restart">Certains langages peuvent nécessiter un redémarrage de l\'application pour s\'afficher correctement</string>
+    <string name="loader_rar5_error">Le format RARv5 n\'est pas supporté</string>
 </resources>

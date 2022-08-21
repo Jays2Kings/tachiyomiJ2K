@@ -645,13 +645,9 @@
     <string name="invalid_backup_file">Ungültige Sicherungsdatei</string>
     <string name="invalid_backup_file_type">Ungültiger Sicherungsdateientyp: %1$s
 \nDie Datei sollte mit .proto.gz oder .json enden.</string>
-    <string name="file_is_missing_data">Der Datei fehlen Daten.</string>
     <string name="backup_has_no_manga">Sicherung beinhaltet keinerlei Manga.</string>
     <string name="restore_missing_sources">Fehlende Quellen:</string>
     <string name="restore_missing_trackers">Nicht-angemeldete Tracker:</string>
-    <string name="restore_content">Beim Wiederherstellen einer Datensicherung werden Daten von den Quellen abgerufen, wodurch Mobilfunkkosten entstehen können.
-\n
-\nVergewissere dich zudem, dass du alle benötigten Seitenanmeldungsdaten bereitgestellt hast, bevor du mit dem Wiederherstellen beginnst.</string>
     <string name="restore_content_full">Die Daten der Sicherungsdatei werden wiederhergestellt.
 \n
 \nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
@@ -1031,8 +1027,8 @@
     <string name="learn_why">Erfahre weshalb</string>
     <string name="download_notifier_split_page_not_found">Seite %d während dem Aufteilen nicht gefunden</string>
     <string name="download_notifier_split_failed">Heruntergeladenes Bild konnte nicht aufgeteilt werden</string>
-    <string name="split_tall_images">Hohe Bilder automatisch teilen</string>
-    <string name="split_tall_images_summary">Verbessert die Leseleistung durch Aufteilung hoher heruntergeladener Bilder.</string>
+    <string name="split_tall_images">Hohe Bilder teilen</string>
+    <string name="split_tall_images_summary">Verbessert die Leserleistung</string>
     <string name="reading_list">Leseliste</string>
     <string name="wish_list">Wunschliste</string>
     <string name="complete_list">Abgeschlossen-Liste</string>
@@ -1041,4 +1037,9 @@
     <string name="sort_fetched_time">Sortieren nach Aktualisierungszeitpunkt</string>
     <string name="tap_zones">Tippzonen</string>
     <string name="lavender">Lavendel</string>
+    <string name="violet">Violett</string>
+    <string name="webtoon_side_padding_5">5 %</string>
+    <string name="user_agent_string">Standard-User-Agent-Text</string>
+    <string name="language_requires_app_restart">Manche Sprachen benötigen möglicherweise einen Neustart der App zur korrekten Anzeige</string>
+    <string name="loader_rar5_error">Das RARv5-Format wird nicht unterstützt</string>
 </resources>

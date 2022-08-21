@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">分類</string>
+    <string name="categories">類別</string>
     <string name="manga">漫畫</string>
-    <string name="chapters">章</string>
+    <string name="chapters">章節</string>
     <string name="history">記錄</string>
     <string name="settings">設定</string>
     <string name="download_queue">下載佇列</string>
@@ -80,7 +80,7 @@
     <string name="amoled_black">全黑</string>
     <string name="language">語言</string>
     <string name="system_default">系統預設</string>
-    <string name="default_category">預設分類</string>
+    <string name="default_category">預設類別</string>
     <string name="always_ask">總是詢問</string>
     <string name="pending">等待中</string>
     <string name="installing">安裝中</string>
@@ -359,13 +359,9 @@
     <string name="invalid_backup_file">無效的備份檔</string>
     <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
 \n副檔名應為 .proto.gz 或 .json。</string>
-    <string name="file_is_missing_data">檔案遺失資料。</string>
     <string name="backup_has_no_manga">備份檔並未包含任何漫畫。</string>
     <string name="restore_missing_sources">遺失來源：</string>
     <string name="restore_missing_trackers">尚未登入至歷程平台：</string>
-    <string name="restore_content">還原時需連線至來源以取得資料，可能要支付數據傳輸費用。
-\n
-\n在進行還原前，請確認你已安裝所需的擴充套件，並已登入至歷程平台及要求身分認證的來源。</string>
     <string name="restoring_backup_canceled">已取消還原</string>
     <string name="restore_duration">%02d 分 %02d 秒</string>
     <plurals name="restore_completed_message">
@@ -423,7 +419,7 @@
     <string name="restore_in_progress">還原已在進行</string>
     <string name="backup_in_progress">備份已在進行</string>
     <string name="hide_notification_content">隱藏通知內容</string>
-    <string name="source_unsupported">未支援的來源</string>
+    <string name="source_unsupported">不支援的來源</string>
     <string name="_already_in_queue">%1$s已經在佇列</string>
     <string name="adding_category_to_queue">新增%1$s到佇列</string>
     <string name="no_pages_found">沒有找到頁面</string>
@@ -632,7 +628,7 @@
     <string name="new_beta_version_available">有新測試版可用！</string>
     <string name="category_hopper_long_press">分類漏斗長按動作</string>
     <string name="expand_collapse_all_categories">展開/收合所有分類</string>
-    <string name="notification_size_warning">大量更新可能會導致電池用量增加、來源速度變緩慢</string>
+    <string name="notification_size_warning">大量更新可能會導致電池用量增加、來源速度變緩慢，點擊了解更多。</string>
     <string name="reset_chapter_question">重設章節？</string>
     <string name="a_while_ago">不久前</string>
     <string name="show_updated_time">顯示更新時間</string>
@@ -699,4 +695,32 @@
     <string name="no_matches_for_filters">本篩選無配項</string>
     <string name="move_dynamic_to_bottom">將折疊動態分類移至底部</string>
     <string name="reorder_filters">重排篩選</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">預設使用者代理字串</string>
+    <string name="no_recent_read_updated_manga">沒有近期閱讀或更新的漫畫</string>
+    <string name="show_read_chapters_all">在分組和全部中顯示閱讀章節</string>
+    <string name="search_tips_show_periodically">搜尋提示會定期出現。長按建議進行搜尋。</string>
+    <string name="unread_or_downloaded">未讀或已下載</string>
+    <string name="show_title_first">優先顯示標題</string>
+    <string name="display_buttons_bottom_reader">閱讀器底部的按鈕</string>
+    <string name="search_recents">最近的搜尋……</string>
+    <string name="only_downloaded">只顯示已下載</string>
+    <string name="reset_all_chapters_for_this_">重置此 %1$s 的所有章節</string>
+    <string name="read_">閱讀 %1$s</string>
+    <string name="updated_">已更新 %1$s</string>
+    <string name="view_history">查看歷史記錄</string>
+    <string name="view_all_updates">查看所有更新</string>
+    <string name="only_unread">只顯示未讀</string>
+    <string name="show_reset_history_button">顯示重置歷史按鈕</string>
+    <string name="group_chapters_together">將章節組合在一起</string>
+    <string name="sort_fetched_time">依照獲取時間排序</string>
+    <string name="scanlators">掃描和翻譯者</string>
+    <string name="show_download_button">顯示下載按鈕</string>
+    <string name="this_will_remove_the_read_date_for_x_question">這將刪除 「%1$s」 的讀取日期。你確定嗎？</string>
+    <string name="last_read_">最新閱讀 %1$s</string>
+    <string name="when_sorting_ignore_articles">當按字母排序時，排序忽略漫畫標題開頭的（a、an、the）</string>
+    <string name="include_in_global_update">包含在全域性更新中</string>
+    <string name="global_updates">全域性更新</string>
+    <string name="certain_buttons_can_be_found">如果在這裡禁用某些按鈕，可以在其他地方找到</string>
+    <string name="loader_rar5_error">不支援 RARv5 格式</string>
 </resources>

@@ -446,9 +446,6 @@
     <string name="restore_missing_trackers">Saioa hasi gabeko jarraitzaileak:</string>
     <string name="restoring_backup_canceled">Berreskuratzea bertan behera utzi da</string>
     <string name="series_opens_new_chapters">Argitalpenen lasterbideek kapitulu berriak irekitzen dituzte</string>
-    <string name="restore_content">Berrezartzeak iturriak erabiltzen ditu datuak lortzeko, baliteke operadoreak kostuak aplikatzea.
-\n
-\nZiurtatu beharrezko luzapen guztiak instalatu dituzula eta iturrietan eta jarraipen-zerbitzuetan saioa hasi duzula berreskuratu aurretik.</string>
     <string name="disabled">Desgaitua</string>
     <plurals name="cleanup_done">
         <item quantity="one">Garbiketa egina. Karpeta %d kendu da</item>
@@ -639,7 +636,6 @@
     <string name="invalid_backup_file">Babeskopia fitxategi baliogabea</string>
     <string name="invalid_backup_file_type">Babeskopia-fitxategi mota baliogabea: %1$s
 \n.proto.gz edo .json-ekin amaitu behar da.</string>
-    <string name="file_is_missing_data">Fitxategiari datuak falta zaizkio.</string>
     <string name="backup_created">Babeskopia sortu da</string>
     <string name="nsfw_sources">NSFW (18+) iturriak</string>
     <string name="add">Gehitu</string>
@@ -947,4 +943,5 @@
     <string name="pref_high">Altua</string>
     <string name="pref_low">Baxua</string>
     <string name="pref_lowest">Baxuena</string>
+    <string name="webtoon_side_padding_5">%5</string>
 </resources>

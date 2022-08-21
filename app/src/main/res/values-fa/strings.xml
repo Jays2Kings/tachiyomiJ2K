@@ -111,7 +111,7 @@
     <string name="library_update_restriction">محدودیت‌های آپدیت کتابخانه</string>
     <string name="library_update_restriction_summary">در چه شرایطی کتابخانه آپدیت شود</string>
     <string name="categories_to_include_in_global_update">دسته بندی هایی که در به آپدیت سراسری شامل می شوند</string>
-    <string name="updates">آپدیت ها</string>
+    <string name="updates">آپدیت‌ها</string>
     <string name="this_will_remove_the_read_date_question">با این کار تاریخ خواندن این فصل حذف می شود. مطمئنید؟</string>
     <string name="other">دیگر</string>
     <string name="global_search">جست و جو در تمام منابع…</string>
@@ -299,8 +299,8 @@
     <string name="default_category">دسته بندی پیشفرض</string>
     <string name="categories">دسته بندی ها</string>
     <plurals name="chapters_plural">
-        <item quantity="one">قسمت ها</item>
-        <item quantity="other"/>
+        <item quantity="one">قسمت%1$d</item>
+        <item quantity="other">قسمت ها%1$d</item>
     </plurals>
     <string name="lock_when_idle">قفل صفحه هنگام بیکاری</string>
     <string name="lock_with_biometrics">با بیومتریک قفل کنید</string>
@@ -322,13 +322,9 @@
     <string name="locale">محلی</string>
     <string name="automatic_backups">پشتیبان گیری خودکار</string>
     <string name="invalid_backup_file">فایل پشتیبان نامعتبر است</string>
-    <string name="file_is_missing_data">فایل شامل اطلاعات ناموجود است.</string>
     <string name="backup_has_no_manga">فایل پشتیبان شامل هیچ مانگا ای نیست.</string>
     <string name="restore_missing_sources">منابع ناموجود:</string>
     <string name="restore_missing_trackers">ردیابی هایی که به سیستم وارد نشده اند:</string>
-    <string name="restore_content">بازیابی برای واکشی داده ها از منابع نصب شده استفاده می‌کند، ممکن است از حجم اینتنرت مصرف شود.
-\n
-\nاطمینان حاصل کنید که تمام افزونه‌های لازم را نصب کرده اید و قبل از بازگردانی به منابع نصب شده و خدمات ردیابی وارد شده اید.</string>
     <string name="no_chapters_error">هیچ قسمتی پیدا نشد</string>
     <string name="badges">تعداد</string>
     <string name="last_used">آخرین استفاده</string>
@@ -397,7 +393,7 @@
     <string name="view_history">تاریخچه را نشان دهید</string>
     <string name="recent_updates">بروزرسانی های اخیر</string>
     <string name="newly_added">جدید اضافه شده</string>
-    <string name="recents">تازه های</string>
+    <string name="recents">تازه‌ها</string>
     <string name="auto_refresh_covers_summary">با بروزرسانی کتابخانه، کاورهایی که در کتابخانه هستند را نیز بروزرسانی کنید</string>
     <string name="auto_refresh_covers">کاورها را به صورت خودکار بروزرسانی کنید</string>
     <string name="include_in_global_update">این را در بروزرسانی جهانی قرار دهید</string>
@@ -534,4 +530,24 @@
     <string name="faq_and_guides">پرسش و پاسخ‌های متداول و راهنمایی‌ها</string>
     <string name="split_tall_images">نصف کردن خودکار عکس های بلند</string>
     <string name="tap_zones">مناطق قابل لمس</string>
+    <string name="category_cannot_be_blank">نام دسته نمی تواند خالی باشد</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K برای دانلود فصل ها نیاز به دسترسی به همه فایل ها دارد. روی اینجا ضربه بزنید، سپس «Allow access to management all files» را فعال کنید.</string>
+    <string name="updating_">در حال بروز رسانی %1$s</string>
+    <string name="update_completed">به روز رسانی تکمیل شد</string>
+    <string name="search_tips_show_periodically">نکات جستجو به صورت دوره ای نمایش داده می شود. برای جستجوی، پیشنهاد را به مدت طولانی فشار دهید.</string>
+    <string name="updates_and_history">به روز رسانی و تاریخچه</string>
+    <string name="scanlators">اسکنرها</string>
+    <string name="local_invalid_format">قالب فصل نامعتبر است</string>
+    <string name="order_by">سفارش بر اساس</string>
+    <string name="release_page">صفحه انتشار</string>
+    <string name="could_not_install_update">به روز رسانی نصب نشد</string>
+    <string name="when_sorting_ignore_articles">هنگام مرتب‌سازی بر اساس حروف الفبا، مقالات نادیده گرفته شده (a, an, the) را در ابتدای عناوین مانگا مرتب کنید.</string>
+    <string name="publishing_finished">انتشار به پایان رسید</string>
+    <string name="no_matches_for_filters_short">هیچ منطبقی برای فیلترهای شما وجود ندارد</string>
+    <string name="cancelled">لغو شد</string>
+    <string name="not_bookmarked">نشانک گذاری نشده است</string>
+    <string name="remove_all_downloads">همه دانلودها حذف شوند؟</string>
+    <string name="no_chapters_to_delete">هیچ فصلی برای حذف وجود ندارد</string>
+    <string name="no_recent_read_updated_manga">مانگای اخیرا خوانده یا به‌روزرسانی نشده است</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

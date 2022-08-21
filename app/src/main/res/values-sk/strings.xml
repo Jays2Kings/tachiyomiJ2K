@@ -271,9 +271,6 @@
     <string name="current_chapter">Aktuálna:</string>
     <string name="next_title">Ďalšia:</string>
     <string name="previous_title">Predchádzajúcí:</string>
-    <string name="restore_content">Obnovenie využíva zdroje na načítanie údajov, môžu sa účtovať poplatky operátora.
-\n
-\nPred obnovením skontrolujte, či máte nainštalované všetky potrebné rozšírenia a či ste prihlásení do zdrojov a služieb sledovania.</string>
     <string name="next_chapter">Nasledujúca kapitola</string>
     <string name="previous_chapter">Predošlá kapitola</string>
     <string name="label_global_search">Hľadať všade</string>

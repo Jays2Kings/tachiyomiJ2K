@@ -33,9 +33,6 @@
     <string name="search_settings">პარამეტრების ძიება</string>
     <string name="updated_to_">განახლებულია v%1$s-მდე</string>
     <string name="backup_has_no_manga">რეზერვი არ შეიცავს არცერთ მანგას.</string>
-    <string name="restore_content">აღდგენა იყენებს წყაროებს მონაცემების გადმოსაწერად.
-\n
-\nდარწმუნდი რომ გაქვს დაინსტალირებული ყველა საჭირო დამატება და ხარ დალოგინებული წყაროებში და თვალყურის სადევნებელ სერვისებში ააღდგენამდე.</string>
     <string name="what_should_backup">რას გსურს რომ შეუქმნა რეზერვი\?</string>
     <plurals name="restore_completed_message">
         <item quantity="one">გაკეთებულია %1$s %2$s შეცდომითგაკეთებულია %1$s %2$s შეცდომებით</item>

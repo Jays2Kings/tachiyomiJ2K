@@ -406,13 +406,9 @@
     <string name="invalid_backup_file">バックアップファイルは無効です</string>
     <string name="invalid_backup_file_type">無効なバックアップ ファイル：%1$s
 \nファイル拡張子は.proto.gzもしくは.jsonであるよう確認してください。</string>
-    <string name="file_is_missing_data">ファイルは必要なデータを含んでいません。</string>
     <string name="backup_has_no_manga">バックアップにはマンガが含まれていません。</string>
     <string name="restore_missing_sources">ソースがありません：</string>
     <string name="restore_missing_trackers">ログインしていないトラッカー：</string>
-    <string name="restore_content">復元するにはソースを用いてデータをダウンロードします。追加の通信料が発生する場合はあります。
-\n
-\n復元する前に、必要な拡張をインストールし、追跡サービスとソースにログインするようにしてください。</string>
     <string name="restore_content_full">バックアップファイルからデータを復旧します。
 \n
 \n後で手動で必要な拡張機能をインストールし、使用したい追跡サービスにログインしてください。</string>
@@ -983,4 +979,9 @@
     <string name="sort_fetched_time">取得時間に基づいて並べ替える</string>
     <string name="tap_zones">タップ可能なゾーン</string>
     <string name="lavender">ラベンダー色</string>
+    <string name="violet">バイオレット</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="user_agent_string">デフォルトのユーザーエージェント文字列</string>
+    <string name="language_requires_app_restart">一部の言語はアプリが再起動される前、正しく表示されないことがあります</string>
+    <string name="loader_rar5_error">フォーマットRARv5は未対応です</string>
 </resources>

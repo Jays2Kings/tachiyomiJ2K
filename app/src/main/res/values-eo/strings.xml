@@ -307,7 +307,6 @@
     <string name="backup_location">Savkopiejo</string>
     <string name="automatic_backups">Aŭtomataj savkopioj</string>
     <string name="backup_frequency">Savkopia ofteco</string>
-    <string name="file_is_missing_data">Dosiero mankas datumon.</string>
     <string name="backup_has_no_manga">Savkopio enhavas neniun mangaon.</string>
     <string name="backup_failed">Kreado de savkopio fiaskis</string>
     <string name="restore_missing_sources">Mankantaj fontoj:</string>

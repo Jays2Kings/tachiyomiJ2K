@@ -320,9 +320,6 @@
     <string name="last_used">Zadnje korišćeno</string>
     <string name="search_settings">Podešavanja pretrage</string>
     <string name="locale">Jezik</string>
-    <string name="restore_content">Vraćanja koriste izvore da preuzima podatke, troškovi prenošenja se mogu primeniti.
-\n
-\nProvjerite jeste li instalirali sva potrebna proširenja i prijavljeni ste u izvore i usluge praćenja prije vraćanja.</string>
     <string name="restoring_backup_canceled">Враћање је отказано</string>
     <string name="restore_duration">%02d мин, %02d сек</string>
     <string name="open_log">Otvori zapisnik</string>
@@ -426,7 +423,6 @@
     <string name="pure_black_dark_mode">Potpuno crna tamna tema</string>
     <string name="backup_and_restore">Rezervna kopija i oporavak</string>
     <string name="automatic_backups">Automatsko pravljenje rezervne kopije</string>
-    <string name="file_is_missing_data">Nedostaju podaci u fajlu.</string>
     <string name="backup_has_no_manga">Rezervna kopija ne sadrži nijednu mangu.</string>
     <string name="restore_content_full">Podaci iz fajla rezervne kopije će se koristiti za oporavak.
 \n
@@ -1007,4 +1003,5 @@
     <string name="pref_high">Висока</string>
     <string name="pref_low">Ниска</string>
     <string name="pref_lowest">Најнижа</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

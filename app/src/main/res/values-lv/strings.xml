@@ -176,9 +176,6 @@
     <string name="search_settings">Meklēt Uzstādījumos</string>
     <string name="backup_has_no_manga">Dublējums nesatur nekādu mangu.</string>
     <string name="restore_missing_sources">Trūkst avotu:</string>
-    <string name="restore_content">Atjaunojot, datu iegūšanai tiek izmantoti avoti, var tikt piemērota maksa par mobilā tīkla operatoru.
-\n
-\nPirms atjaunošanas pārliecinieties, vai esat instalējis visus nepieciešamos paplašinājumus un esat pieteicies avotos un izsekošanas pakalpojumos.</string>
     <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
         <item quantity="zero">Pabeigts %1$s ar %2$s kļūdām</item>
@@ -554,4 +551,5 @@
     <string name="lavender">Lavanda</string>
     <string name="tap_zones">Skāriena zonas</string>
     <string name="reduces_banding_impacts_performance">Samazina grupēšanu, bet var ietekmēt veiktspēju</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>

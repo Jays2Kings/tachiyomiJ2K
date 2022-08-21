@@ -144,7 +144,6 @@
     <string name="backup_location">Reservekopifil-mappe</string>
     <string name="automatic_backups">Automatisk reservekopiar</string>
     <string name="backup_frequency">Reservekopifrekvens</string>
-    <string name="file_is_missing_data">Fila manglar data.</string>
     <string name="backup_has_no_manga">Reservekopi inneheld ingen manga.</string>
     <string name="restore_missing_sources">Manglande kjelder:</string>
     <string name="restore_missing_trackers">Sporingstenester ikkje logga inn i:</string>
@@ -225,4 +224,5 @@
     <string name="pref_high">Høg</string>
     <string name="pref_low">Låg</string>
     <string name="pref_lowest">Lågaste</string>
+    <string name="webtoon_side_padding_5">5%</string>
 </resources>
