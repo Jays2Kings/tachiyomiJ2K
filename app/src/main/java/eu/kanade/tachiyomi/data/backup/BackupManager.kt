@@ -12,6 +12,8 @@ import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_CUSTOM_INFO
 import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_CUSTOM_INFO_MASK
 import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_HISTORY
 import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_HISTORY_MASK
+import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_READ_MANGA
+import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_READ_MANGA_MASK
 import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_TRACK
 import eu.kanade.tachiyomi.data.backup.BackupConst.BACKUP_TRACK_MASK
 import eu.kanade.tachiyomi.data.backup.models.Backup
@@ -51,7 +53,11 @@ class BackupManager(context: Context) : AbstractBackupManager(context) {
         var backup: Backup? = null
 
         db.inTransaction {
-            val databaseManga = getFavoriteManga()
+            val databaseManga = getFavoriteManga() + if (flags and BACKUP_READ_MANGA_MASK == BACKUP_READ_MANGA) {
+                getReadManga()
+            } else {
+                emptyList()
+            }
 
             backup = Backup(
                 backupMangas(databaseManga, flags),

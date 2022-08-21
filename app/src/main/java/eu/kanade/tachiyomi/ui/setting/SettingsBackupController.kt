@@ -218,6 +218,7 @@ class SettingsBackupController : SettingsController() {
                 R.string.tracking,
                 R.string.history,
                 R.string.custom_manga_info,
+                R.string.all_read_manga,
             )
                 .map { activity.getString(it) }
 
@@ -225,7 +226,7 @@ class SettingsBackupController : SettingsController() {
                 .setTitle(R.string.what_should_backup)
                 .setMultiChoiceItems(
                     options.toTypedArray(),
-                    booleanArrayOf(true, true, true, true, true, true),
+                    options.map { true }.toBooleanArray(),
                 ) { dialog, position, _ ->
                     if (position == 0) {
                         val listView = (dialog as AlertDialog).listView
@@ -243,6 +244,7 @@ class SettingsBackupController : SettingsController() {
                                 3 -> flags = flags or BackupConst.BACKUP_TRACK
                                 4 -> flags = flags or BackupConst.BACKUP_HISTORY
                                 5 -> flags = flags or BackupConst.BACKUP_CUSTOM_INFO
+                                6 -> flags = flags or BackupConst.BACKUP_READ_MANGA
                             }
                         }
                     }

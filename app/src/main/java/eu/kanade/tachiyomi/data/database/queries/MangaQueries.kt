@@ -175,6 +175,15 @@ interface MangaQueries : DbProvider {
         )
         .prepare()
 
+    fun getReadNotInLibraryMangas() = db.get()
+        .listOfObjects(Manga::class.java)
+        .withQuery(
+            RawQuery.builder()
+                .query(getReadMangaNotInLibraryQuery())
+                .build(),
+        )
+        .prepare()
+
     fun getLastReadManga() = db.get()
         .listOfObjects(Manga::class.java)
         .withQuery(

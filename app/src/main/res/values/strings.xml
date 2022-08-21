@@ -564,6 +564,7 @@
     <string name="error_saving_cover">Error saving cover</string>
     <string name="error_sharing_cover">Error sharing cover</string>
     <string name="custom_manga_info">Custom manga info</string>
+    <string name="all_read_manga">All read manga</string>
     <string name="set_as_default">Set as default</string>
     <string name="filter_groups">Filter scanlator groups</string>
     <plurals name="deleted_chapters">
