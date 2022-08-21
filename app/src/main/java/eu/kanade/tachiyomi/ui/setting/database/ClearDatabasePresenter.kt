@@ -29,8 +29,12 @@ class ClearDatabasePresenter : BaseCoroutinePresenter<ClearDatabaseController>()
         getDatabaseSources()
     }
 
-    fun clearDatabaseForSourceIds(sources: List<Long>) {
-        db.deleteMangasNotInLibraryBySourceIds(sources).executeAsBlocking()
+    fun clearDatabaseForSourceIds(sources: List<Long>, keepReadManga: Boolean) {
+        if (keepReadManga) {
+            db.deleteMangasNotInLibraryAndNotReadBySourceIds(sources).executeAsBlocking()
+        } else {
+            db.deleteMangasNotInLibraryBySourceIds(sources).executeAsBlocking()
+        }
         db.deleteHistoryNoLastRead().executeAsBlocking()
         getDatabaseSources()
     }

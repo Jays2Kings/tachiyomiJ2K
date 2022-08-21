@@ -27,6 +27,7 @@ import eu.kanade.tachiyomi.ui.base.controller.BaseCoroutineController
 import eu.kanade.tachiyomi.ui.base.controller.DialogController
 import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.rootWindowInsetsCompat
+import eu.kanade.tachiyomi.util.system.setCustomTitleAndMessage
 import eu.kanade.tachiyomi.util.view.activityBinding
 import eu.kanade.tachiyomi.util.view.fullAppBarHeight
 import eu.kanade.tachiyomi.util.view.scrollViewWith
@@ -229,10 +230,15 @@ class ClearDatabaseController :
 
     class ClearDatabaseSourcesDialog : DialogController() {
         override fun onCreateDialog(savedViewState: Bundle?): Dialog {
+            val item = arrayOf(activity!!.getString(R.string.clear_db_exclude_read))
+            val selected = booleanArrayOf(true)
             return activity!!.materialAlertDialog()
-                .setMessage(R.string.clear_database_confirmation)
+                .setCustomTitleAndMessage(0, activity!!.getString(R.string.clear_database_confirmation))
+                .setMultiChoiceItems(item, selected) { _, which, checked ->
+                    selected[which] = checked
+                }
                 .setPositiveButton(android.R.string.ok) { _, _ ->
-                    (targetController as? ClearDatabaseController)?.clearDatabaseForSelectedSources()
+                    (targetController as? ClearDatabaseController)?.clearDatabaseForSelectedSources(selected.last())
                 }
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()
@@ -240,12 +246,12 @@ class ClearDatabaseController :
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun clearDatabaseForSelectedSources() {
+    private fun clearDatabaseForSelectedSources(keepReadManga: Boolean) {
         val adapter = adapter ?: return
         val selectedSourceIds = adapter.selectedPositions.mapNotNull { position ->
             adapter.getItem(position)?.source?.id
         }
-        presenter.clearDatabaseForSourceIds(selectedSourceIds)
+        presenter.clearDatabaseForSourceIds(selectedSourceIds, keepReadManga)
         binding.fab.isVisible = false
         adapter.clearSelection()
         adapter.notifyDataSetChanged()
