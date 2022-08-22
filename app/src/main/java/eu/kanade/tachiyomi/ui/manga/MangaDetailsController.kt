@@ -798,7 +798,10 @@ class MangaDetailsController :
                 }
                 when (rangeMode) {
                     RangeMode.Download -> downloadChapters(chapterList)
-                    RangeMode.RemoveDownload -> massDeleteChapters(chapterList.filter { it.isDownloaded }, false)
+                    RangeMode.RemoveDownload -> massDeleteChapters(
+                        chapterList.filter { it.status != Download.State.NOT_DOWNLOADED },
+                        false,
+                    )
                     RangeMode.Read -> markAsRead(chapterList)
                     RangeMode.Unread -> markAsUnread(chapterList)
                 }
@@ -1320,7 +1323,10 @@ class MangaDetailsController :
 
     override fun startDownloadRange(position: Int) {
         createActionModeIfNeeded()
-        rangeMode = RangeMode.Download
+        val chapterItem = (adapter?.getItem(position) as? ChapterItem) ?: return
+        rangeMode = if (chapterItem.status in listOf(Download.State.NOT_DOWNLOADED, Download.State.ERROR)) {
+            RangeMode.Download
+        } else RangeMode.RemoveDownload
         onItemClick(null, position)
     }
 
