@@ -150,7 +150,7 @@
     <string name="downloading">En téléchargement</string>
     <string name="downloading_progress">En téléchargement (%1$d/%2$d)</string>
     <string name="all_chapters">Tous les chapitres</string>
-    <string name="all_unread_chapters">Télécharger non-lu</string>
+    <string name="all_unread_chapters">Tous les chapitres non-lus</string>
     <!-- MyAnimeList fragment -->
     <string name="reading">En cours</string>
     <string name="completed">Terminé</string>

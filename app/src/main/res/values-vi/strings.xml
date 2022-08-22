@@ -1005,8 +1005,8 @@
     <string name="download_notifier_split_page_not_found">Trang %d không thể được tìm thấy khi chia cắt</string>
     <string name="download_ahead">Tải Trước</string>
     <string name="auto_download_after_reading">Tải các chương chưa đọc tiếp theo sau khi đọc</string>
-    <string name="split_tall_images">Tự động chia cắt những ảnh quá cao</string>
-    <string name="split_tall_images_summary">Cải thiện khả năng đọc bằng việc chia cắt các ảnh quá cao.</string>
+    <string name="split_tall_images">Tự động chia cắt những ảnh quá dài</string>
+    <string name="split_tall_images_summary">Cải thiện khả năng đọc bằng việc cắt nhỏ các ảnh quá dài</string>
     <string name="reading_list">Danh sách đang đọc</string>
     <string name="download_ahead_info">Tải trước chỉ áp dụng cho các mục ở trong thư viện và nếu chương cuối cùng đã được tải rồi</string>
     <string name="on_hold_list">Danh sách đang chờ</string>
@@ -1017,4 +1017,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Chuỗi đại diện người dùng mặc định</string>
     <string name="loader_rar5_error">Định dạng RARv5 không được hỗ trợ</string>
+    <string name="language_requires_app_restart">Một số ngôn ngữ cần khởi động lại app để hiện thị tốt nhất</string>
 </resources>
