@@ -108,16 +108,16 @@ class SettingsDownloadController : SettingsController() {
             titleRes = R.string.download_ahead
 
             intListPreference(activity) {
-                bindTo(preferences.autoDownloadAfterReading())
-                titleRes = R.string.auto_download_after_reading
+                bindTo(preferences.autoDownloadWhileReading())
+                titleRes = R.string.auto_download_while_reading
                 entries = listOf(
                     context.getString(R.string.never),
-                    context.resources.getQuantityString(R.plurals.next_unread_chapters, 1, 1),
                     context.resources.getQuantityString(R.plurals.next_unread_chapters, 2, 2),
                     context.resources.getQuantityString(R.plurals.next_unread_chapters, 3, 3),
                     context.resources.getQuantityString(R.plurals.next_unread_chapters, 5, 5),
+                    context.resources.getQuantityString(R.plurals.next_unread_chapters, 10, 10),
                 )
-                entryValues = listOf(0, 1, 2, 3, 5)
+                entryValues = listOf(0, 2, 3, 5, 10)
             }
             infoPreference(R.string.download_ahead_info)
         }

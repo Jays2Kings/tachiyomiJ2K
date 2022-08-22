@@ -320,7 +320,7 @@ class PreferencesHelper(val context: Context) {
     fun downloadNewChaptersInCategories() = flowPrefs.getStringSet("download_new_categories", emptySet())
     fun excludeCategoriesInDownloadNew() = flowPrefs.getStringSet("download_new_categories_exclude", emptySet())
 
-    fun autoDownloadAfterReading() = flowPrefs.getInt("auto_download_after_reading", 0)
+    fun autoDownloadWhileReading() = flowPrefs.getInt("auto_download_while_reading", 0)
 
     fun defaultCategory() = prefs.getInt(Keys.defaultCategory, -1)
 

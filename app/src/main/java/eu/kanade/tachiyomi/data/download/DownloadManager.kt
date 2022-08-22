@@ -158,6 +158,20 @@ class DownloadManager(val context: Context) {
     }
 
     /**
+     * Tells the downloader to enqueue the given list of downloads at the start of the queue.
+     *
+     * @param downloads the list of downloads to enqueue.
+     */
+    fun addDownloadsToStartOfQueue(downloads: List<Download>) {
+        if (downloads.isEmpty()) return
+        queue.toMutableList().apply {
+            addAll(0, downloads)
+            reorderQueue(this)
+        }
+        if (!DownloadService.isRunning(context)) DownloadService.start(context)
+    }
+
+    /**
      * Builds the page list of a downloaded chapter.
      *
      * @param source the source of the chapter.
@@ -200,6 +214,17 @@ class DownloadManager(val context: Context) {
      */
     fun isChapterDownloaded(chapter: Chapter, manga: Manga, skipCache: Boolean = false): Boolean {
         return cache.isChapterDownloaded(chapter, manga, skipCache)
+    }
+
+    /**
+     * Returns the download from queue if the chapter is queued for download
+     * else it will return null which means that the chapter is not queued for download
+     *
+     * @param chapter the chapter to check.
+     */
+    fun getChapterDownloadOrNull(chapter: Chapter): Download? {
+        return downloader.queue
+            .firstOrNull { it.chapter.id == chapter.id && it.chapter.manga_id == chapter.manga_id }
     }
 
     /**
