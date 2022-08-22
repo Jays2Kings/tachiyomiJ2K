@@ -798,6 +798,7 @@ class MangaDetailsController :
                 }
                 when (rangeMode) {
                     RangeMode.Download -> downloadChapters(chapterList)
+                    RangeMode.RemoveDownload -> massDeleteChapters(chapterList.filter { it.isDownloaded }, false)
                     RangeMode.Read -> markAsRead(chapterList)
                     RangeMode.Unread -> markAsUnread(chapterList)
                 }
@@ -1082,7 +1083,7 @@ class MangaDetailsController :
                     .setNegativeButton(android.R.string.cancel, null)
                     .show()
             }
-            R.id.remove_all, R.id.remove_read, R.id.remove_non_bookmarked -> massDeleteChapters(item.itemId)
+            R.id.remove_all, R.id.remove_read, R.id.remove_non_bookmarked, R.id.remove_custom -> massDeleteChapters(item.itemId)
             R.id.action_mark_all_as_unread -> {
                 activity!!.materialAlertDialog()
                     .setMessage(R.string.mark_all_chapters_as_unread)
@@ -1180,6 +1181,11 @@ class MangaDetailsController :
             R.id.remove_all -> presenter.allChapters
             R.id.remove_non_bookmarked -> presenter.allChapters.filter { !it.bookmark }
             R.id.remove_read -> presenter.allChapters.filter { it.read }
+            R.id.remove_custom -> {
+                createActionModeIfNeeded()
+                rangeMode = RangeMode.RemoveDownload
+                return
+            }
             else -> emptyList()
         }.filter { it.isDownloaded }
         if (chaptersToDelete.isNotEmpty() || choice == R.id.remove_all) {
@@ -1722,6 +1728,7 @@ class MangaDetailsController :
 
         private enum class RangeMode {
             Download,
+            RemoveDownload,
             Read,
             Unread
         }

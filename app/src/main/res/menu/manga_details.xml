@@ -64,6 +64,9 @@
             <item
                 android:id="@+id/remove_read"
                 android:title="@string/all_read_chapters" />
+            <item
+                android:id="@+id/remove_custom"
+                android:title="@string/custom_range" />
         </menu>
     </item>
     <item
