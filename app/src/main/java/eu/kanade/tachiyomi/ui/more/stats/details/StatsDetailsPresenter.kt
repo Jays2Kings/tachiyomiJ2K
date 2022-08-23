@@ -15,7 +15,7 @@ import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.more.stats.StatsHelper
 import eu.kanade.tachiyomi.util.isLocal
-import eu.kanade.tachiyomi.util.mapSerieType
+import eu.kanade.tachiyomi.util.mapSeriesType
 import eu.kanade.tachiyomi.util.mapStatus
 import eu.kanade.tachiyomi.util.system.LocaleHelper
 import eu.kanade.tachiyomi.util.system.roundToTwoDecimal
@@ -43,7 +43,7 @@ class StatsDetailsPresenter(
     val sources = getEnabledSources()
 
     var selectedStat: Stats? = null
-    var selectedSerieType = mutableSetOf<String>()
+    var selectedSeriesType = mutableSetOf<String>()
     var selectedSource = mutableSetOf<Source>()
     var selectedStatus = mutableSetOf<String>()
     var selectedLanguage = mutableSetOf<String>()
@@ -65,7 +65,7 @@ class StatsDetailsPresenter(
     var historyByDayAndManga = emptyMap<Calendar, Map<Manga, List<History>>>()
 
     var currentStats: ArrayList<StatsData>? = null
-    val serieTypeStats = arrayOf(
+    val seriesTypeStats = arrayOf(
         context.getString(R.string.manga),
         context.getString(R.string.manhwa),
         context.getString(R.string.manhua),
@@ -97,7 +97,7 @@ class StatsDetailsPresenter(
         }
 
         when (selectedStat) {
-            Stats.SERIE_TYPE -> setupSeriesType()
+            Stats.SERIES_TYPE -> setupSeriesType()
             Stats.STATUS -> setupStatus()
             Stats.SCORE -> setupScores()
             Stats.LANGUAGE -> setupLanguages()
@@ -124,7 +124,7 @@ class StatsDetailsPresenter(
                     meanScore = mangaList.getMeanScoreRounded(),
                     chaptersRead = mangaList.sumOf { it.read },
                     totalChapters = mangaList.sumOf { it.totalChapters },
-                    label = context.mapSerieType(seriesType).uppercase(),
+                    label = context.mapSeriesType(seriesType).uppercase(),
                     readDuration = mangaList.getReadDuration(),
                 ),
             )
@@ -357,16 +357,16 @@ class StatsDetailsPresenter(
      * Filter the stat data according to the chips selected
      */
     private fun List<LibraryManga>.filterByChip(): List<LibraryManga> {
-        return this.filterBySerieType(selectedStat == Stats.SERIE_TYPE)
+        return this.filterBySeriesType(selectedStat == Stats.SERIES_TYPE)
             .filterByStatus(selectedStat == Stats.STATUS)
             .filterByLanguage(selectedStat == Stats.LANGUAGE || (selectedStat != Stats.SOURCE && selectedSource.isNotEmpty()))
             .filterBySource(selectedStat in listOf(Stats.SOURCE, Stats.LANGUAGE) || selectedLanguage.isNotEmpty())
             .filterByCategory(selectedStat == Stats.CATEGORY)
     }
 
-    private fun List<LibraryManga>.filterBySerieType(noFilter: Boolean = false): List<LibraryManga> {
-        return if (noFilter || selectedSerieType.isEmpty()) this else filter { manga ->
-            context.mapSerieType(manga.seriesType()) in selectedSerieType
+    private fun List<LibraryManga>.filterBySeriesType(noFilter: Boolean = false): List<LibraryManga> {
+        return if (noFilter || selectedSeriesType.isEmpty()) this else filter { manga ->
+            context.mapSeriesType(manga.seriesType()) in selectedSeriesType
         }
     }
 
@@ -556,7 +556,7 @@ class StatsDetailsPresenter(
     }
 
     enum class Stats(val resourceId: Int) {
-        SERIE_TYPE(R.string.serie_type),
+        SERIES_TYPE(R.string.series_type),
         STATUS(R.string.status),
         SCORE(R.string.score),
         LANGUAGE(R.string.language),

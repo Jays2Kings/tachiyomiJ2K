@@ -63,7 +63,7 @@ class StatsDetailsController :
     lateinit var searchView: SearchView
     lateinit var searchItem: MenuItem
 
-    private val defaultStat = Stats.SERIE_TYPE
+    private val defaultStat = Stats.SERIES_TYPE
     private val defaultSort = StatsSort.COUNT_DESC
 
     /**
@@ -122,8 +122,7 @@ class StatsDetailsController :
                 ) { dialog, which ->
                     val newSelection = Stats.values()[which]
                     if (newSelection == presenter.selectedStat) return@setSingleChoiceItems
-                    chipStat.text =
-                        activity?.getString(R.string.stat_, activity?.getString(newSelection.resourceId))
+                    chipStat.text = activity?.getString(newSelection.resourceId)
                     presenter.selectedStat = newSelection
 
                     dialog.dismiss()
@@ -136,29 +135,29 @@ class StatsDetailsController :
                 if (presenter.selectedStat != defaultStat) {
                     presenter.selectedStat = defaultStat
                     searchItem.collapseActionView()
-                    chipStat.text = resetTextChip(R.string.stat_, defaultStat.resourceId)
+                    chipStat.text = resetTextChip(defaultStat.resourceId)
                 } else chipStat.callOnClick()
             }
-            chipSerieType.setOnClickListener {
+            chipSeriesType.setOnClickListener {
                 (it as Chip).setMultiChoiceItemsDialog(
-                    presenter.serieTypeStats,
-                    presenter.selectedSerieType,
-                    R.string.serie_type,
-                    R.string.serie_types_,
+                    presenter.seriesTypeStats,
+                    presenter.selectedSeriesType,
+                    R.string.series_type,
+                    R.string.series_types,
                 )
             }
-            chipSerieType.setOnCloseIconClickListener {
-                if (presenter.selectedSerieType.isNotEmpty()) {
-                    presenter.selectedSerieType = mutableSetOf()
-                    chipSerieType.text = resetTextChip(R.string.serie_type)
-                } else chipSerieType.callOnClick()
+            chipSeriesType.setOnCloseIconClickListener {
+                if (presenter.selectedSeriesType.isNotEmpty()) {
+                    presenter.selectedSeriesType = mutableSetOf()
+                    chipSeriesType.text = resetTextChip(R.string.series_type)
+                } else chipSeriesType.callOnClick()
             }
             chipSource.setOnClickListener {
                 (it as Chip).setMultiChoiceItemsDialog(
                     presenter.sources.toTypedArray(),
                     presenter.selectedSource,
                     R.string.source,
-                    R.string.sources_,
+                    R.string.sources,
                 )
             }
             chipSource.setOnCloseIconClickListener {
@@ -172,7 +171,7 @@ class StatsDetailsController :
                     presenter.statusStats,
                     presenter.selectedStatus,
                     R.string.status,
-                    R.string.status_,
+                    R.string.status,
                 )
             }
             chipStatus.setOnCloseIconClickListener {
@@ -186,7 +185,7 @@ class StatsDetailsController :
                     presenter.languagesStats,
                     presenter.selectedLanguage,
                     R.string.language,
-                    R.string.languages_,
+                    R.string.languages,
                 )
             }
             chipLanguage.setOnCloseIconClickListener {
@@ -200,7 +199,7 @@ class StatsDetailsController :
                     presenter.categoriesStats,
                     presenter.selectedCategory,
                     R.string.category,
-                    R.string.categories_,
+                    R.string.categories,
                 )
             }
             chipCategory.setOnCloseIconClickListener {
@@ -217,8 +216,7 @@ class StatsDetailsController :
                 ) { dialog, which ->
                     val newSelection = StatsSort.values()[which]
                     if (newSelection == presenter.selectedStatsSort) return@setSingleChoiceItems
-                    chipSort.text =
-                        activity?.getString(R.string.sort_, activity?.getString(newSelection.resourceId))
+                    chipSort.text = activity?.getString(newSelection.resourceId)
                     presenter.selectedStatsSort = newSelection
                     dialog.dismiss()
                     presenter.sortCurrentStats()
@@ -229,7 +227,7 @@ class StatsDetailsController :
             chipSort.setOnCloseIconClickListener {
                 if (presenter.selectedStatsSort != defaultSort) {
                     presenter.selectedStatsSort = defaultSort
-                    chipSort.text = resetTextChip(R.string.sort_, defaultSort.resourceId)
+                    chipSort.text = resetTextChip(defaultSort.resourceId)
                 } else chipSort.callOnClick()
             }
             statsDateText.setOnClickListener {
@@ -340,13 +338,13 @@ class StatsDetailsController :
      * @param statsList list of values depending of the stat chip
      * @param selectedStats list of already selected values
      * @param resourceId default string resource when no values are selected
-     * @param resourceIdWithParam string resource when more than 2 values are selected
+     * @param resourceIdPlural string resource when more than 2 values are selected
      */
     private fun <T> Chip.setMultiChoiceItemsDialog(
         statsList: Array<T>,
         selectedStats: MutableSet<T>,
         resourceId: Int,
-        resourceIdWithParam: Int,
+        resourceIdPlural: Int,
     ) {
         val isCategory = statsList.isArrayOf<Category>()
         val items = statsList.map { if (isCategory) (it as Category).name else it.toString() }.toTypedArray()
@@ -364,7 +362,7 @@ class StatsDetailsController :
             this.text = when (selectedStats.size) {
                 0 -> activity?.getString(resourceId)
                 1 -> if (isCategory) (selectedStats.first() as Category).name else selectedStats.first().toString()
-                else -> activity?.getString(resourceIdWithParam, selectedStats.size)
+                else -> "${selectedStats.size} ${activity?.getString(resourceIdPlural)}"
             }
             resetChips()
         }.setOnDismissListener {
@@ -387,13 +385,10 @@ class StatsDetailsController :
     /**
      * Reset the text of the chip selected and reset layout
      * @param resourceId string resource of the stat name
-     * @param defaultResourceId string resource of the default stat value
      */
-    private fun resetTextChip(resourceId: Int, defaultResourceId: Int? = null): String? {
+    private fun resetTextChip(resourceId: Int): String? {
         resetAndSetup()
-        return if (defaultResourceId == null) activity?.getString(resourceId) else {
-            activity?.getString(resourceId, activity?.getString(defaultResourceId))
-        }
+        return activity?.getString(resourceId)
     }
 
     /**
@@ -447,8 +442,8 @@ class StatsDetailsController :
         with(binding) {
             statsClearButton.isVisible = hasActiveFilters()
             chipStat.setColors((presenter.selectedStat != defaultStat).toInt())
-            chipSerieType.isVisible = presenter.selectedStat !in listOf(Stats.SERIE_TYPE, Stats.READ_DURATION)
-            chipSerieType.setColors(presenter.selectedSerieType.size)
+            chipSeriesType.isVisible = presenter.selectedStat !in listOf(Stats.SERIES_TYPE, Stats.READ_DURATION)
+            chipSeriesType.setColors(presenter.selectedSeriesType.size)
             chipSource.isVisible =
                 presenter.selectedStat !in listOf(Stats.LANGUAGE, Stats.SOURCE, Stats.READ_DURATION) &&
                 presenter.selectedLanguage.isEmpty()
@@ -473,9 +468,9 @@ class StatsDetailsController :
     private fun resetFilters() {
         with(binding) {
             presenter.selectedStat = defaultStat
-            chipStat.text = activity?.getString(R.string.stat_, activity?.getString(defaultStat.resourceId))
-            presenter.selectedSerieType = mutableSetOf()
-            chipSerieType.text = activity?.getString(R.string.serie_type)
+            chipStat.text = activity?.getString(defaultStat.resourceId)
+            presenter.selectedSeriesType = mutableSetOf()
+            chipSeriesType.text = activity?.getString(R.string.series_type)
             presenter.selectedSource = mutableSetOf()
             chipSource.text = activity?.getString(R.string.source)
             presenter.selectedStatus = mutableSetOf()
@@ -485,18 +480,18 @@ class StatsDetailsController :
             presenter.selectedCategory = mutableSetOf()
             chipCategory.text = activity?.getString(R.string.category)
             presenter.selectedStatsSort = defaultSort
-            chipSort.text = activity?.getString(R.string.sort_, activity?.getString(defaultSort.resourceId))
+            chipSort.text = activity?.getString(defaultSort.resourceId)
         }
     }
 
     private fun hasActiveFilters() = with(presenter) {
         listOf(selectedStat, selectedStatsSort).any { it !in listOf(null, defaultStat, defaultSort) } ||
-            listOf(selectedSerieType, selectedSource, selectedStatus, selectedLanguage, selectedCategory).any {
+            listOf(selectedSeriesType, selectedSource, selectedStatus, selectedLanguage, selectedCategory).any {
                 it.isNotEmpty()
             }
     }
 
-    fun Chip.setColors(sizeStat: Int?) {
+    fun Chip.setColors(sizeStat: Int) {
         val emptyTextColor = activity!!.getResourceColor(R.attr.colorOnBackground)
         val filteredBackColor = activity!!.getResourceColor(R.attr.colorSecondary)
         val emptyBackColor = activity!!.getResourceColor(R.attr.colorSurface)
@@ -506,6 +501,8 @@ class StatsDetailsController :
             context.contextCompatDrawable(R.drawable.ic_close_24dp)
         }
         closeIconTint = ColorStateList.valueOf(if (sizeStat == 0) emptyTextColor else emptyBackColor)
+        isChipIconVisible = this in listOf(binding.chipStat, binding.chipSort) || sizeStat == 1
+        chipIconTint = ColorStateList.valueOf(if (sizeStat == 0) emptyTextColor else emptyBackColor)
     }
 
     /**
@@ -513,7 +510,7 @@ class StatsDetailsController :
      */
     private fun handleLayout() {
         when (presenter.selectedStat) {
-            Stats.SERIE_TYPE, Stats.STATUS, Stats.LANGUAGE, Stats.TRACKER, Stats.CATEGORY -> handlePieChart()
+            Stats.SERIES_TYPE, Stats.STATUS, Stats.LANGUAGE, Stats.TRACKER, Stats.CATEGORY -> handlePieChart()
             Stats.SCORE -> handleScoreLayout()
             Stats.LENGTH -> handleLengthLayout()
             Stats.SOURCE, Stats.TAG -> handleNoChartLayout()

@@ -155,6 +155,7 @@
 
     <string name="read_progress">Read progress</string>
     <string name="series_type">Series type</string>
+    <string name="series_types">Series types</string>
     <string name="series">Series</string>
     <string name="group_library_by">Group library by…</string>
     <string name="tracking_status">Tracking status</string>
@@ -977,36 +978,28 @@
     <!-- Stats -->
     <string name="stats">Stats</string>
     <string name="statistics">Statistics</string>
-    <string name="statistics_details">Statistics Details</string>
+    <string name="statistics_details">Statistics details</string>
     <string name="search_statistics">Search statistics</string>
-    <string name="stat_">Stat: %1$s</string>
-    <string name="total_manga">Total Manga</string>
-    <string name="chapters_read">Chapters Read</string>
-    <string name="mean_score">Mean Score</string>
-    <string name="manga_tracked">Manga Tracked</string>
-    <string name="chapters_downloaded">Chapters Downloaded</string>
+    <string name="total_manga">Total manga</string>
+    <string name="chapters_read">Read chapters</string>
+    <string name="mean_score">Mean score</string>
+    <string name="manga_tracked">Tracked manga</string>
+    <string name="chapters_downloaded">Downloaded chapters</string>
     <string name="tags">Tags</string>
-    <string name="manga_local">Manga Local</string>
-    <string name="global_update_manga">Global Update Manga</string>
+    <string name="manga_local">Local manga</string>
+    <string name="global_update_manga">Global update manga</string>
     <string name="trackers">Trackers</string>
-    <string name="read_duration">Read Duration</string>
-    <string name="manga_status_distribution">Status Distribution</string>
-    <string name="manga_score_distribution">Score Distribution</string>
-    <string name="view_detailed_statistics">View Detailed Statistics</string>
+    <string name="read_duration">Read duration</string>
+    <string name="manga_status_distribution">Status distribution</string>
+    <string name="manga_score_distribution">Score distribution</string>
+    <string name="view_detailed_statistics">View detailed statistics</string>
     <string name="count">Count</string>
-    <string name="not_rated">Not Rated</string>
+    <string name="not_rated">Not rated</string>
     <string name="source">Source</string>
-    <string name="serie_type">Serie Type</string>
     <string name="tracker">Tracker</string>
     <string name="length">Length</string>
-    <string name="start_year">Start Year</string>
-    <string name="serie_types_">Serie Types: %1$d</string>
-    <string name="sources_">Sources: %1$d</string>
-    <string name="status_">Status: %1$d</string>
-    <string name="languages_">Languages: %1$d</string>
-    <string name="categories_">Categories: %1$d</string>
-    <string name="sort_">Sort: %1$s</string>
-    <string name="title_count">Title Count</string>
+    <string name="start_year">Start year</string>
+    <string name="title_count">Title count</string>
     <string name="no_data_for_filters">No data found for your current filters</string>
 
     <!-- Time -->
@@ -1102,6 +1095,7 @@
     <string name="recently_updated">Recently updated</string>
     <string name="recently_installed">Recently installed</string>
     <string name="language">Language</string>
+    <string name="languages">Languages</string>
     <string name="never">Never</string>
     <string name="newest">Newest</string>
     <string name="next">Next</string>

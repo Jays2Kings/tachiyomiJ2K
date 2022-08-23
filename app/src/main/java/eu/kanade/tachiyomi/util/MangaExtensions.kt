@@ -382,9 +382,9 @@ fun Context.mapStatus(status: Int): String {
     )
 }
 
-fun Context.mapSerieType(serieType: Int): String {
+fun Context.mapSeriesType(seriesType: Int): String {
     return getString(
-        when (serieType) {
+        when (seriesType) {
             Manga.TYPE_MANGA -> R.string.manga
             Manga.TYPE_MANHWA -> R.string.manhwa
             Manga.TYPE_MANHUA -> R.string.manhua
