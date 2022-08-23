@@ -20,12 +20,12 @@ import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.extension.ExtensionUpdateJob
 import eu.kanade.tachiyomi.util.lang.plusAssign
+import eu.kanade.tachiyomi.util.system.acquireWakeLock
 import eu.kanade.tachiyomi.util.system.connectivityManager
 import eu.kanade.tachiyomi.util.system.isConnectedToWifi
 import eu.kanade.tachiyomi.util.system.isOnline
 import eu.kanade.tachiyomi.util.system.isServiceRunning
 import eu.kanade.tachiyomi.util.system.localeContext
-import eu.kanade.tachiyomi.util.system.powerManager
 import rx.subscriptions.CompositeSubscription
 import uy.kohesive.injekt.injectLazy
 
@@ -111,9 +111,7 @@ class DownloadService : Service() {
     /**
      * Wake lock to prevent the device to enter sleep mode.
      */
-    private val wakeLock by lazy {
-        powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "DownloadService:WakeLock")
-    }
+    private lateinit var wakeLock: PowerManager.WakeLock
 
     /**
      * Subscriptions to store while the service is running.
@@ -149,6 +147,7 @@ class DownloadService : Service() {
     override fun onCreate() {
         super.onCreate()
         startForeground(Notifications.ID_DOWNLOAD_CHAPTER, getPlaceholderNotification())
+        wakeLock = acquireWakeLock(javaClass.name)
         downloadManager.setPlaceholder()
         runningRelay.call(true)
         subscriptions = CompositeSubscription()
@@ -231,13 +230,15 @@ class DownloadService : Service() {
      * Listens to downloader status. Enables or disables the wake lock depending on the status.
      */
     private fun listenDownloaderState() {
-        subscriptions += downloadManager.runningRelay.subscribe { running ->
-            if (running) {
-                wakeLock.acquireIfNeeded()
-            } else {
-                wakeLock.releaseIfNeeded()
+        subscriptions += downloadManager.runningRelay
+            .doOnError { /* Swallow wakelock error */ }
+            .subscribe { running ->
+                if (running) {
+                    wakeLock.acquireIfNeeded()
+                } else {
+                    wakeLock.releaseIfNeeded()
+                }
             }
-        }
     }
 
     /**
