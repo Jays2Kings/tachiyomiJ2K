@@ -453,7 +453,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/manga_stats_status_chart_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:maxWidth="600dp">
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/manga_stats_status_pie_chart"
@@ -462,16 +464,17 @@
                     app:layout_constraintDimensionRatio="@fraction/chartRatio"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/manga_stats_status_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginNormal"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/manga_stats_status_pie_chart"
+                    app:layout_constraintTop_toBottomOf="@id/manga_stats_status_pie_chart" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/manga_stats_status_recycler_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginNormal"
-                android:nestedScrollingEnabled="false"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -493,7 +496,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/manga_stats_score_chart_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:maxWidth="600dp">
 
                 <com.github.mikephil.charting.charts.BarChart
                     android:id="@+id/manga_stats_score_bar_chart"

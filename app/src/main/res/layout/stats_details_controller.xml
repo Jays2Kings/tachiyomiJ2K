@@ -262,9 +262,11 @@
                         android:id="@+id/stats_chart_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginStart="@dimen/marginNormal"
                         android:layout_marginTop="@dimen/marginNormal"
-                        android:layout_marginEnd="@dimen/marginNormal">
+                        android:layout_marginEnd="@dimen/marginNormal"
+                        android:maxWidth="600dp">
 
                         <com.github.mikephil.charting.charts.PieChart
                             android:id="@+id/stats_pie_chart"
