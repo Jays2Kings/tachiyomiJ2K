@@ -1001,6 +1001,7 @@
     <string name="start_year">Start year</string>
     <string name="title_count">Title count</string>
     <string name="no_data_for_filters">No data found for your current filters</string>
+    <string name="read_duration_week">Read duration week</string>
 
     <!-- Time -->
     <string name="manual">Manual</string>
