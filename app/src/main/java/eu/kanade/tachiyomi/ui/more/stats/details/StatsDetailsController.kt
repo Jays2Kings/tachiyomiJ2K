@@ -725,6 +725,7 @@ class StatsDetailsController :
 
                 statsBarChart.apply {
                     setTouchEnabled(touchEnabled)
+                    isDragEnabled = false
                     isDoubleTapToZoomEnabled = false
                     description.isEnabled = false
                     legend.isEnabled = false
@@ -795,6 +796,7 @@ class StatsDetailsController :
     private fun setupLineChart(lineDataSet: LineDataSet) {
         with(binding) {
             statsLineChart.data?.clearValues()
+            statsLineChart.fitScreen()
             statsLineChart.notifyDataSetChanged()
             statsLineChart.clear()
             statsLineChart.invalidate()
@@ -813,6 +815,7 @@ class StatsDetailsController :
                 val lineData = LineData(lineDataSet)
                 lineData.setValueTextColor(activity!!.getResourceColor(R.attr.colorOnBackground))
                 lineData.setValueFormatter(newValueFormatter)
+                lineData.setValueTextSize(10f)
                 statsLineChart.axisLeft.isEnabled = false
                 statsLineChart.axisRight.isEnabled = false
 
