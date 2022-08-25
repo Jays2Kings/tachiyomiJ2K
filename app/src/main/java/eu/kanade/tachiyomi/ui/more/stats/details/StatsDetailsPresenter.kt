@@ -82,7 +82,7 @@ class StatsDetailsPresenter(
     )
     private val defaultCategory =
         if (libraryMangas.any { it.category == 0 }) arrayOf(Category.createDefault(context)) else emptyArray()
-    val categoriesStats = defaultCategory + getCategories().sortedBy { it.name }.toTypedArray()
+    val categoriesStats = defaultCategory + getCategories().toTypedArray()
     val languagesStats = prefs.enabledLanguages().get().map { lang -> LocaleHelper.getSourceDisplayName(lang, context) }
         .sorted().toTypedArray()
 
