@@ -51,6 +51,7 @@ import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.toInt
 import eu.kanade.tachiyomi.util.system.toUtcCalendar
 import eu.kanade.tachiyomi.util.view.backgroundColor
+import eu.kanade.tachiyomi.util.view.compatToolTipText
 import eu.kanade.tachiyomi.util.view.isControllerVisible
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
@@ -95,7 +96,7 @@ class StatsDetailsController :
         setHasOptionsMenu(true)
 
         if (presenter.selectedStat == null) {
-            resetFilters()
+            resetFilters(true)
         }
 
         resetAndSetup()
@@ -111,6 +112,7 @@ class StatsDetailsController :
                 initializeChips()
             }
 
+            statsClearButton.compatToolTipText = activity?.getString(R.string.clear_filters)
             statsClearButton.setOnClickListener {
                 resetFilters()
                 searchView.clearFocus()
@@ -147,9 +149,6 @@ class StatsDetailsController :
                     }
                     ?.setNegativeButton(android.R.string.cancel, null)
                     ?.show()
-            }
-            chipStat.setOnCloseIconClickListener {
-                chipStat.callOnClick()
             }
             chipSeriesType.setOnClickListener {
                 (it as Chip).setMultiChoiceItemsDialog(
@@ -249,10 +248,8 @@ class StatsDetailsController :
 
                 dialog.addOnPositiveButtonClickListener { utcMillis ->
                     presenter.updateReadDurationPeriod(utcMillis)
-                    statsDateText.text = presenter.getPeriodString()
                     statsBarChart.highlightValues(null)
-                    highlightedDay = null
-                    resetAndSetup()
+                    resetAndSetup(updateChipsVisibility = false, resetReadDuration = true)
                     totalDurationStatsText.text = adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
                 }
                 dialog.show((activity as AppCompatActivity).supportFragmentManager, activity?.getString(R.string.read_duration_week))
@@ -403,7 +400,7 @@ class StatsDetailsController :
         @PluralsRes
         resourceIdPlural: Int,
     ) {
-        val initialStateValues = selectedValues.toSet()
+        val tempValues = selectedValues.toMutableSet()
         val isCategory = statsList.isArrayOf<Category>()
         val items = statsList.map { if (isCategory) (it as Category).name else it.toString() }
             .toTypedArray()
@@ -416,24 +413,18 @@ class StatsDetailsController :
             ) { _, which, checked ->
                 val newSelection = statsList[which]
                 if (checked) {
-                    selectedValues.add(newSelection)
+                    tempValues.add(newSelection)
                 } else {
-                    selectedValues.remove(newSelection)
+                    tempValues.remove(newSelection)
                 }
             }
-            .setNegativeButton(android.R.string.cancel) { _, _ ->
-                selectedValues.clear()
-                selectedValues.addAll(initialStateValues)
-            }
+            .setNegativeButton(android.R.string.cancel, null)
             .setPositiveButton(android.R.string.ok) { _, _ ->
-                setState(selectedValues, resourceId, resourceIdPlural, isCategory)
-                updateChipsVisibility()
-                binding.progress.isVisible = true
-                resetAndSetup(updateChipsVisibility = false)
-            }
-            .setOnCancelListener {
                 selectedValues.clear()
-                selectedValues.addAll(initialStateValues)
+                selectedValues.addAll(tempValues)
+                setState(selectedValues, resourceId, resourceIdPlural, isCategory)
+                binding.progress.isVisible = true
+                resetAndSetup(resetReadDuration = false)
             }
             .show()
     }
@@ -442,9 +433,10 @@ class StatsDetailsController :
      * Reset the layout and setup the chart to display
      * @param updateStats whether to recalculate the displayed stats
      * @param updateChipsVisibility whether to update the chips visibility
+     * @param resetReadDuration whether to reset the read duration values
      */
-    private fun resetAndSetup(updateStats: Boolean = true, updateChipsVisibility: Boolean = true) {
-        resetLayout(updateChipsVisibility)
+    private fun resetAndSetup(updateStats: Boolean = true, updateChipsVisibility: Boolean = true, resetReadDuration: Boolean = updateChipsVisibility) {
+        resetLayout(updateChipsVisibility, resetReadDuration)
         setupStatistic(updateStats)
     }
 
@@ -453,7 +445,7 @@ class StatsDetailsController :
      * @param resourceId string resource of the stat name
      */
     private fun Chip.reset(resourceId: Int) {
-        resetAndSetup()
+        resetAndSetup(resetReadDuration = false)
         this.setColors(0)
         this.text = activity?.getString(resourceId)
     }
@@ -461,8 +453,9 @@ class StatsDetailsController :
     /**
      * Reset the layout to the default state
      * @param updateChipsVisibility whether to update the chips visibility
+     * @param resetReadDuration whether to reset the read duration values
      */
-    private fun resetLayout(updateChipsVisibility: Boolean = false) {
+    private fun resetLayout(updateChipsVisibility: Boolean = false, resetReadDuration: Boolean = updateChipsVisibility) {
         with(binding) {
             progress.isVisible = true
             statsDetailsScrollView.isVisible = false
@@ -471,13 +464,13 @@ class StatsDetailsController :
             statsBarChart.visibility = View.GONE
             statsLineChart.visibility = View.GONE
 
-            if (updateChipsVisibility) {
+            if (resetReadDuration) {
                 highlightedDay = null
                 statsDateLayout.isVisible = presenter.selectedStat == Stats.READ_DURATION
                 totalDurationStatsText.isVisible = presenter.selectedStat == Stats.READ_DURATION
                 statsDateText.text = presenter.getPeriodString()
-                updateChipsVisibility()
             }
+            if (updateChipsVisibility) updateChipsVisibility()
         }
     }
 
@@ -543,10 +536,14 @@ class StatsDetailsController :
     /**
      * Reset all the filters selected
      */
-    private fun resetFilters() {
+    private fun resetFilters(init: Boolean = false) {
         with(binding) {
-            presenter.selectedStat = defaultStat
-            chipStat.text = activity?.getString(defaultStat.resourceId)
+            if (init) {
+                presenter.selectedStat = defaultStat
+                chipStat.text = activity?.getString(defaultStat.resourceId)
+                presenter.selectedStatsSort = defaultSort
+                statSort.text = activity?.getString(defaultSort.resourceId)
+            }
             presenter.selectedSeriesType = mutableSetOf()
             chipSeriesType.text = activity?.getString(R.string.series_type)
             presenter.selectedSource = mutableSetOf()
@@ -557,8 +554,6 @@ class StatsDetailsController :
             chipLanguage.text = activity?.getString(R.string.language)
             presenter.selectedCategory = mutableSetOf()
             chipCategory.text = activity?.getString(R.string.category)
-            presenter.selectedStatsSort = defaultSort
-            statSort.text = activity?.getString(defaultSort.resourceId)
         }
     }
 
