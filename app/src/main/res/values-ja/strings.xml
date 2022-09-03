@@ -356,7 +356,6 @@
     <string name="chapters_removed">章が消去されました。</string>
     <string name="removed_bookmark">お気に入りを削除しました</string>
     <string name="library_search_hint">タイトル、タグまたはソースを検索</string>
-    <string name="remove_from_library_question">ライブラリから削除しますか？</string>
     <string name="update_available">更新可能</string>
     <string name="updating_">%1$sを更新</string>
     <string name="tracking_status">ステータスの追跡</string>
@@ -461,7 +460,7 @@
     <string name="spring_blossom">スプリングブロッサム</string>
     <string name="hides_on_scroll">スクロール中に隠す</string>
     <string name="hide_bottom_nav">ナビゲーションバーを自動的に隠す</string>
-    <string name="last_used_library_recents">最後に使用（ライブラリまたは最近）</string>
+    <string name="last_used_library_recents">最後に使用したもの（「ライブラリ」または「最近」）</string>
     <string name="starting_screen">スタート画面</string>
     <string name="data_management">データ管理</string>
     <string name="continue_reading_chapter_">第%1$s章の続きを読む</string>
@@ -780,12 +779,12 @@
     <string name="force_download_cache_refresh">ダウンロードキャッシュをリフレッシュ</string>
     <string name="restore_miui_warning">MIUI最適化が有効な場合はバックアップ・復元が正常に機能しない恐れがあります。</string>
     <string name="no_new_chapters_open_details">新章がない時、かわりにシリーズの詳細を開きます</string>
-    <string name="series_opens_new_chapters">シリーズショートカットが新章を開きます</string>
+    <string name="series_opens_new_chapters">シリーズショートカットが新章を開くようにする</string>
     <string name="includes_recently_read_updated_added">最近に閲覧、更新及び追加されたシリーズを含みます</string>
     <string name="show_recent_series">最近のシリーズを表示</string>
     <string name="show_recent_sources">最近に使ったソースを表示</string>
     <string name="dont_auto_update">自動でアップデートしない</string>
-    <string name="over_any_network">全てのネットワークでも行う</string>
+    <string name="over_any_network">どんなネットワークでも行う</string>
     <string name="over_wifi_only">Wi-Fiを利用中のみ</string>
     <string name="auto_update_app">アプリを自動でアップデート</string>
     <string name="auto_updates">自動アップデート</string>
@@ -959,8 +958,7 @@
     </plurals>
     <string name="download_ahead">事前ダウンロード</string>
     <string name="open_in_app">アプリで開く</string>
-    <string name="auto_download_after_reading">読了後に次の未読の章をダウンロード</string>
-    <string name="download_ahead_info">「事前ダウンロード」は読了した最後の章がダウンロード済みの場合のみ、そしてライブラリにある項目にのみ適用します</string>
+    <string name="download_ahead_info">現在のと次の章は既にダウンロード済みの場合のみ、そしてライブラリの項目にのみ有効です</string>
     <string name="learn_why">原因を表示</string>
     <string name="pref_highest">最高</string>
     <string name="pref_hide_threshold">メニューを自動非表示するスクロール量</string>
@@ -984,4 +982,8 @@
     <string name="user_agent_string">デフォルトのユーザーエージェント文字列</string>
     <string name="language_requires_app_restart">一部の言語はアプリが再起動される前、正しく表示されないことがあります</string>
     <string name="loader_rar5_error">フォーマットRARv5は未対応です</string>
+    <string name="clear_db_exclude_read">既読の章があるマンガを保留</string>
+    <string name="all_read_manga">全ての既読マンガ</string>
+    <string name="auto_download_while_reading">読書中に自動でダウンロード</string>
+    <string name="downloaded_chapters">ダウンロードした章の数</string>
 </resources>

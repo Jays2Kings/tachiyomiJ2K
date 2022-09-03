@@ -98,7 +98,6 @@
     <string name="updating_library">Aktualizowanie biblioteki</string>
     <string name="selected_">Wybrano: %1$d</string>
     <string name="local">Lokalne</string>
-    <string name="remove_from_library_question">Usunąć z biblioteki?</string>
     <string name="library_search_hint">Wyszukaj tytuł, tagi, źródła</string>
     <string name="library_is_empty_add_from_browse">Twoja biblioteka jest pusta, dodaj coś do swojej biblioteki z zakładki Przeglądaj.</string>
     <string name="no_matches_for_filters">Nie znaleziono wyników dla aktualnie wybranych filtrów</string>
@@ -1051,10 +1050,10 @@
     <string name="check_for_beta_releases">Sprawdź wydania beta</string>
     <string name="try_new_features">Wypróbuj nowe funkcje zanim będą oficjalnie wydane. Wydania beta mogą być niestabilne i są dostarczane by dać feedback developerowi.</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Następny nieprzeczytany rozdział</item>
-        <item quantity="few">Następne %d nieprzeczytane rozdziały</item>
-        <item quantity="many">Następne %d nieprzeczytanych rozdziałów</item>
-        <item quantity="other">Następne %d nieprzeczytanych rozdziałów</item>
+        <item quantity="one">Następny nieprzeczytany rozdział%d następnych nieprzeczytanych rozdziałów%d następnych nieprzeczytanych rozdziałów</item>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
     </plurals>
     <string name="sort_fetched_time">Sortuj przez czas pobrania</string>
     <string name="reading_list">Lista czytanych</string>
@@ -1067,8 +1066,8 @@
     <string name="complete_list">Lista zakończonych</string>
     <string name="on_hold_list">Lista odłożonych na później</string>
     <string name="expanded_toolbar">Rozszerzony pasek narzędzi</string>
-    <string name="split_tall_images_summary">Poprawia wydajność czytnika rozdzielając wysokie pobrane obrazy.</string>
-    <string name="split_tall_images">Automatycznie rozdzielaj wysokie obrazy</string>
+    <string name="split_tall_images_summary">Poprawia wydajność czytnika</string>
+    <string name="split_tall_images">Rozdzielaj wysokie obrazy</string>
     <string name="unfinished_list">Lista niezakończonych</string>
     <string name="download_notifier_split_page_not_found">Strona %d nie została znaleziona podczas podziału</string>
     <string name="tap_to_learn_more">Kliknij, by dowiedzieć się więcej</string>
@@ -1079,4 +1078,22 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Domyślny user agent string</string>
     <string name="loader_rar5_error">Format RARv5 jest nieobsługiwany</string>
+    <string name="battery_not_low">Poziom baterii nie jest niski</string>
+    <string name="warning_enroll_into_beta">Wersje beta mogą być niestabilne i mogą wymagać wyczyszczenia danych aplikacji.</string>
+    <string name="violet">Fiołkowy</string>
+    <string name="clear_db_exclude_read">Zachowaj mangi z przeczytanymi rozdziałami</string>
+    <string name="downloads_swipe_tutorial">Pobieranie można anulować, przesuwając je w bok
+\nPrzesuń tę wskazówkę, aby ją odrzucić</string>
+    <string name="download_ahead_info">Działa tylko na wpisach w bibliotece oraz jeśli aktualny rozdział i następny są już pobrane</string>
+    <string name="select_uninstalled_sources">Wybierz niezainstalowane źródła</string>
+    <string name="most_entries">Najwięcej wpisów</string>
+    <string name="download_ahead">Pobierz z wyprzedzeniem</string>
+    <string name="learn_why">Dowiedz się dlaczego</string>
+    <string name="zoom_double_page_spreads">Przybliż na szerszych stronach</string>
+    <string name="update_tracking_scoring_type">Aktualizuj typ punktowania %1$s</string>
+    <string name="all_read_manga">Wszystkie przeczytane mangi</string>
+    <string name="language_requires_app_restart">Niektóre języki mogą wymagać ponownego uruchomienia aplikacji aby wyświetlać się poprawnie</string>
+    <string name="warning_unenroll_from_beta">Przywrócenie poprzedniej wersji produkcyjnej może spowodować problemy i wymagać wyczyszczenia danych aplikacji.</string>
+    <string name="auto_download_while_reading">Pobieraj podczas czytania</string>
+    <string name="downloaded_chapters">Pobrane rozdziały</string>
 </resources>

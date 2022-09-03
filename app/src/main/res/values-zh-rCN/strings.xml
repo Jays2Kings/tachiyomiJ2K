@@ -244,7 +244,7 @@
     <string name="must_be_in_library_to_edit">请先收藏漫画到书架再进行更新</string>
     <string name="select_cover_image">选择封面图片</string>
     <string name="select_backup_file">选择备份文件</string>
-    <string name="new_version_available">有可用的更新！</string>
+    <string name="new_version_available">有新版本！</string>
     <string name="ignore">忽略</string>
     <string name="no_new_updates_available">没有新版本</string>
     <string name="searching_for_updates">正在检查更新…</string>
@@ -280,7 +280,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d 个扩展插件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">减少色带，但也许会影响性能</string>
+    <string name="reduces_banding_impacts_performance">减少色带，但可能会影响性能</string>
     <string name="skip_filtered_chapters">跳过已筛选章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已被禁用</string>
@@ -364,7 +364,6 @@
     <string name="always_show_current_category">始终显示当前分类</string>
     <string name="show_all_categories">显示所有分类</string>
     <string name="library_search_hint">搜索标题、标签、图源</string>
-    <string name="remove_from_library_question">从书架中移除？</string>
     <string name="jump_to_category">分类跳转</string>
     <string name="category_deleted">分类已删除</string>
     <string name="manage_category">管理分类</string>
@@ -953,9 +952,8 @@
     <plurals name="next_unread_chapters">
         <item quantity="other">下 %d 个未读章节</item>
     </plurals>
-    <string name="download_ahead_info">“提前下载”仅适用于书架条目且已下载上一已读章节</string>
-    <string name="download_ahead">提前下载</string>
-    <string name="auto_download_after_reading">阅读后下载下一未读章节</string>
+    <string name="download_ahead_info">“提前下载”仅适用于书架条目且当前章节和下一章都已下载</string>
+    <string name="download_ahead">预先下载</string>
     <string name="pref_manage_notifications">通知管理</string>
     <string name="battery_not_low">非低电量</string>
     <string name="faq_and_guides">常见问题和指南</string>
@@ -969,8 +967,8 @@
     <string name="pref_lowest">最低</string>
     <string name="download_notifier_split_page_not_found">拆分时未找到页 %d</string>
     <string name="download_notifier_split_failed">无法拆分下载的图像</string>
-    <string name="split_tall_images">自动拆分长图</string>
-    <string name="split_tall_images_summary">提高阅读器的性能</string>
+    <string name="split_tall_images">分割长图</string>
+    <string name="split_tall_images_summary">可以改善阅读器的性能</string>
     <string name="reading_list">阅读列表</string>
     <string name="wish_list">想读列表</string>
     <string name="complete_list">读完列表</string>
@@ -978,10 +976,49 @@
     <string name="unfinished_list">未读完列表</string>
     <string name="sort_fetched_time">按获取时间排序</string>
     <string name="tap_zones">点按区域</string>
-    <string name="lavender">淡紫色</string>
+    <string name="lavender">薰衣草</string>
     <string name="violet">紫罗兰色</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="language_requires_app_restart">某些语言可能需要重启应用才能正确显示</string>
-    <string name="user_agent_string">默认用户代理字符串</string>
+    <string name="user_agent_string">默认 User Agent 字符串</string>
     <string name="loader_rar5_error">不支持 RARv5 格式</string>
+    <string name="all_read_manga">所有已读漫画</string>
+    <string name="clear_db_exclude_read">保留带已读章节的漫画</string>
+    <string name="statistics_details">统计详情</string>
+    <string name="titles_in_library">书架上作品</string>
+    <string name="chapters_read">已读章节</string>
+    <string name="tracked_titles">追踪的作品</string>
+    <string name="stats">统计</string>
+    <string name="statistics">统计</string>
+    <string name="stat">统计</string>
+    <string name="auto_download_while_reading">阅读时自动下载</string>
+    <string name="downloaded_chapters">已下载的章节</string>
+    <string name="tags">标签</string>
+    <string name="titles_in_global_update">全局更新作品</string>
+    <string name="manga_status_distribution">状态分布</string>
+    <string name="manga_score_distribution">评分分布</string>
+    <string name="view_detailed_statistics">查看详细统计数字</string>
+    <string name="count">计数</string>
+    <string name="source">图源</string>
+    <string name="tracker">追踪源</string>
+    <string name="length">长度</string>
+    <string name="trackers">追踪源</string>
+    <string name="no_data_for_filters">没有找到当前筛选器的数据</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d 种连载类型</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="other">%d 个图源</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d 种状态</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="other">%d 种语言</item>
+    </plurals>
+    <string name="local_titles">本地作品</string>
+    <string name="read_duration">阅读时长</string>
+    <string name="not_rated">未评分</string>
+    <string name="start_year">开始年份</string>
+    <string name="mean_score">平均分</string>
 </resources>

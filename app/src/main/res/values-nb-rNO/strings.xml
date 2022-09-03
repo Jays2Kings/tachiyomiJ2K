@@ -509,7 +509,6 @@
     <string name="always_show_current_category">Alltid vis nåværende kategori</string>
     <string name="when_grouping_by_sources_tags">Ved gruppering av bibliotek etter kilder, status, osv.</string>
     <string name="library_search_hint">Søk i tittel, etiketter, kilde</string>
-    <string name="remove_from_library_question">Fjern fra bibliotek\?</string>
     <string name="your_library">Ditt bibliotek</string>
     <string name="update_completed">Oppdatering fullført</string>
     <string name="jump_to_category">Hopp til kategori</string>
@@ -961,4 +960,5 @@
     <string name="pref_low">Lav</string>
     <string name="pref_lowest">Laveste</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="downloaded_chapters">Last ned kapitler</string>
 </resources>

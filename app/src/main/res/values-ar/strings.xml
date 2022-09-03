@@ -376,7 +376,6 @@
     <string name="show_all_categories">عرض كل الفئات</string>
     <string name="no_matches_for_filters">لم يتم العثور على تطابقات لعوامل التصفية الحالية</string>
     <string name="library_search_hint">بحث العنوان، العلامات، المصدر</string>
-    <string name="remove_from_library_question">إزالة من المكتبة؟</string>
     <string name="updating_">تحديث %1$s</string>
     <string name="jump_to_category">الانتقال السريع إلى الفئة</string>
     <string name="long_press_category">اضغط باستمرار لتحرير الفئة</string>
@@ -1062,7 +1061,6 @@
     <string name="pref_manage_notifications">إدارة الإشعارات</string>
     <string name="battery_not_low">البطارية ليست منخفضة</string>
     <string name="faq_and_guides">الاسئله الشائعه والأدلة</string>
-    <string name="auto_download_after_reading">تحميل الفصول غير المقروءة بعد القراءة</string>
     <string name="download_ahead_info">ينطبق التنزيل المسبق فقط على المانجات في المكتبة وإذا تم تنزيل الفصل الأخير الذي تمت قراءته</string>
     <string name="download_ahead">التحميل المسبق</string>
     <plurals name="next_unread_chapters">
@@ -1097,4 +1095,6 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">وتر وكيل المستخدم الافتراضي</string>
     <string name="loader_rar5_error">الصيغه RARv5 غير مدعومه</string>
+    <string name="language_requires_app_restart">بعض اللغات تتطلب ربما اعادة تشغيل التطبيق لكي تظهر صحيحة</string>
+    <string name="downloaded_chapters">الفصول المحملة</string>
 </resources>

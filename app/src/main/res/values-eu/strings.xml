@@ -191,7 +191,6 @@
     <string name="your_library">Zure liburutegia</string>
     <string name="updating_library">Liburutegia eguneratzen</string>
     <string name="selected_">Aukeratua: %1$d</string>
-    <string name="remove_from_library_question">Liburutegitik kendu\?</string>
     <string name="library_search_hint">Bilatu titulua, etiketak, iturria</string>
     <string name="library_is_empty_add_from_browse">Zure liburutegia hutsik dago, gehitu argitalpenen bat nabigatzaile leihotik.</string>
     <string name="no_matches_for_filters">Ez dira emaitzarik aurkitu aukeraturiko iragazkiekin</string>
@@ -944,4 +943,5 @@
     <string name="pref_low">Baxua</string>
     <string name="pref_lowest">Baxuena</string>
     <string name="webtoon_side_padding_5">%5</string>
+    <string name="downloaded_chapters">Deskargatutako kapituluak</string>
 </resources>

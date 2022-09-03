@@ -363,7 +363,6 @@
     <string name="show_all_categories">সব বিভাগ প্রদর্শন করুন</string>
     <string name="no_matches_for_filters">আপনার বর্তমান ফিল্টারগুলির জন্য কোনও মিল খুঁজে পাওয়া যায় নি</string>
     <string name="library_search_hint">অনুসন্ধান করুন শিরোনাম, ট্যাগ, উৎস</string>
-    <string name="remove_from_library_question">লাইব্রেরী থেকে মুছে ফেলুন\?</string>
     <string name="updating_">আপডেট করা হচ্ছে %1$s</string>
     <string name="jump_to_category">বিভাগে যান</string>
     <string name="long_press_category">একটি বিভাগ সম্পাদনা করতে টিপুন এবং ধরে রাখুন</string>
@@ -938,4 +937,5 @@
     <string name="publishing_finished">সম্পূর্ণ প্রকাশিত</string>
     <string name="cancelled">বাতিল করা হয়েছে</string>
     <string name="on_hiatus">বিরতিতে রয়েছে</string>
+    <string name="downloaded_chapters">ডাউনলোড করা অধ্যায়</string>
 </resources>

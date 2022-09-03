@@ -387,7 +387,6 @@
     <string name="always_show_current_category">Näytä aina nykyinen kategoria</string>
     <string name="show_all_categories">Näytä kaikki kategoriat</string>
     <string name="library_search_hint">Hae otsikosta, tunnisteista, lähteestä</string>
-    <string name="remove_from_library_question">Poistetaanko kirjastosta\?</string>
     <string name="updating_">Päivitetään %1$s</string>
     <string name="jump_to_category">Siirry kategoriaan</string>
     <string name="long_press_category">Muokkaa kategoriaa pitämällä sitä painettuna</string>
@@ -847,4 +846,5 @@
     <string name="secure_screen_summary">Turvallinen ruutu piilottaa sovelluksen sisällön sovelluksia vaihdettaessa ja estää kuvakaappauksen ottamisen</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="backup_restore_invalid_uri">Virhe: tyhjä URI</string>
+    <string name="downloaded_chapters">Ladatut luvut</string>
 </resources>

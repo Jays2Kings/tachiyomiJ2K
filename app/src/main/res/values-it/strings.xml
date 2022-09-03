@@ -406,7 +406,6 @@
     <string name="expand_all_categories">Espandi tutte le categorie</string>
     <string name="always_show_current_category">Mostra sempre la categoria corrente</string>
     <string name="show_all_categories">Mostra tutte le categorie</string>
-    <string name="remove_from_library_question">Eliminare dalla libreria\?</string>
     <string name="category_deleted">Categoria eliminata</string>
     <string name="manage_category">Gestisci categoria</string>
     <string name="add_categories">Aggiungi categorie</string>
@@ -637,6 +636,7 @@
     <string name="restore_duration">%02d min, %02d sec</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Completato in %1$s con %2$s errore</item>
+        <item quantity="many">Completato in %1$s con %2$s errori</item>
         <item quantity="other">Completato in %1$s con %2$s errori</item>
     </plurals>
     <string name="source_migration_guide">Guida alla migrazione di origine</string>
@@ -1000,12 +1000,12 @@
     <string name="show_larger_toolbar">Mostra una barra degli strumenti più grande nella parte superiore della maggior parte delle pagine (non mostrata su dispositivi più piccoli a prescindere dalle impostazioni)</string>
     <string name="warning_unenroll_from_beta">Tornare alla versione precedente potrebbe causare problemi e richiedere la pulizia dei dati dell\'applicazione.</string>
     <string name="download_ahead">Scarica i prossimi</string>
-    <string name="auto_download_after_reading">Scarica i prossimi capitoli non letti dopo la lettura</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Prossimo capitolo non letto</item>
-        <item quantity="other">Prossimi %d capitoli non letti</item>
+        <item quantity="one">Il prossimo capitolo non letto</item>
+        <item quantity="many">I prossimi %d capitoli non letti</item>
+        <item quantity="other">I prossimi %d capitoli non letti</item>
     </plurals>
-    <string name="download_ahead_info">Scarica i prossimi si applica solo alle voci in libreria e se l\'ultimo capitolo letto era scaricato</string>
+    <string name="download_ahead_info">Funziona solo sui manga nella libreria e se il capitolo corrente e quello successivo sono già stati scaricati</string>
     <string name="use_staggered_grid">Usa griglia scaglionata</string>
     <string name="pref_update_only_completely_read_summary">Aggiorna i manga solo se non ci sono capitoli non letti (letto completamente)</string>
     <string name="try_new_features">Prova nuove funzionalità prima del rilascio ufficiale. Le release beta potrebbero essere instabili e sono fornite per dare feedback allo sviluppatore.</string>
@@ -1026,7 +1026,7 @@
     <string name="download_notifier_split_page_not_found">Pagina %d non trovata durante la divisione</string>
     <string name="download_notifier_split_failed">Impossibile separare le immagini scaricate</string>
     <string name="split_tall_images">Dividi automaticamente le immagini troppo alte</string>
-    <string name="split_tall_images_summary">Migliora le prestazioni del lettore dividendo le immagini scaricate troppo alte.</string>
+    <string name="split_tall_images_summary">Migliora le prestazioni del lettore</string>
     <string name="reading_list">In Lettura</string>
     <string name="wish_list">Da Leggere</string>
     <string name="complete_list">Completati</string>
@@ -1038,6 +1038,12 @@
     <string name="violet">Viola</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Stringa user agent predefinita del browser</string>
-    <string name="language_requires_app_restart">alcune lingue potrebbero richiedere un restart dell\'app per esserve visualizzate in maniera corretta</string>
+    <string name="language_requires_app_restart">Alcune lingue potrebbero richiedere un riavvio dell\'app per esserve visualizzate in maniera corretta</string>
     <string name="loader_rar5_error">Il formato RARv5 non è supportato</string>
+    <string name="clear_db_exclude_read">Tieni i manga con capitoli letti</string>
+    <string name="all_read_manga">Tutti i manga letti</string>
+    <string name="downloaded_chapters">Capitoli scaricati</string>
+    <string name="auto_download_while_reading">Download automatico durante la lettura</string>
+    <string name="stats">Statistiche</string>
+    <string name="statistics">Statistiche</string>
 </resources>

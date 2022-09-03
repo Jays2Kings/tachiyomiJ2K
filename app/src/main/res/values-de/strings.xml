@@ -88,7 +88,6 @@
     <string name="updating_library">Bibliothek wird aktualisiert</string>
     <string name="selected_">Ausgewählt: %1$d</string>
     <string name="local">Lokal</string>
-    <string name="remove_from_library_question">Aus Bibliothek entfernen?</string>
     <string name="library_search_hint">Suche nach Titel, Markierung, Quelle</string>
     <string name="library_is_empty_add_from_browse">Ihre Bibliothek ist leer, Sie können neue Serien über den Katalog hinzufügen.</string>
     <string name="no_matches_for_filters">Keine Ergebnisse für die ausgewählten Filtereinstellungen</string>
@@ -1008,12 +1007,11 @@
     <string name="update_tracking_after_reading">Nach dem Lesen den Tracker aktualisieren</string>
     <string name="update_tracking_marked_read">Markieren als gelesen aktualisiert den Tracker</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Nächstes ungelesenes Kapitel</item>
-        <item quantity="other">Nächsten %d ungelesenen</item>
+        <item quantity="one">Nächstes ungelesenes KapitelNächste %d ungelesene Kapitel</item>
+        <item quantity="other"/>
     </plurals>
-    <string name="download_ahead_info">Voraus herunterladen betrifft nur Bibliothekseinträge deren letztgelesenes Kapitel heruntergeladen war</string>
-    <string name="auto_download_after_reading">Nächstes ungelesenes Kapitel nach dem Lesen herunterladen</string>
-    <string name="download_ahead">Voraus herunterladen</string>
+    <string name="download_ahead_info">Funktioniert nur bei Werken in der Bibliothek und wenn das aktuelle Kapitel sowie das darauf folgende bereits heruntergeladen sind</string>
+    <string name="download_ahead">Im Voraus herunterladen</string>
     <string name="pref_manage_notifications">Benachrichtigungen verwalten</string>
     <string name="battery_not_low">Akkuladung nicht niedrig</string>
     <string name="faq_and_guides">Häufige Fragen und Leitfäden</string>
@@ -1042,4 +1040,8 @@
     <string name="user_agent_string">Standard-User-Agent-Text</string>
     <string name="language_requires_app_restart">Manche Sprachen benötigen möglicherweise einen Neustart der App zur korrekten Anzeige</string>
     <string name="loader_rar5_error">Das RARv5-Format wird nicht unterstützt</string>
+    <string name="all_read_manga">Alle gelesenen Manga</string>
+    <string name="clear_db_exclude_read">Manga mit gelesenen Kapiteln behalten</string>
+    <string name="auto_download_while_reading">Automatisch während dem Lesen herunterladen</string>
+    <string name="downloaded_chapters">Heruntergeladene Kapitel</string>
 </resources>

@@ -415,7 +415,6 @@
     <string name="show_all_categories">همه دسته بندی ها را نشان بده</string>
     <string name="no_matches_for_filters">هیچ نمونه مشابهی برای فیلترهای فعلی شما پیدا نشد</string>
     <string name="library_is_empty_add_from_browse">کتابخانه شما خالی است، می توانید از صفحه مرور به کتابخانه خود اضافه کنید</string>
-    <string name="remove_from_library_question">از کتابخانه حذف شود؟</string>
     <string name="update_available">بروزرسانی در دسترس است</string>
     <string name="jump_to_category">پرش به دسته بندی</string>
     <string name="long_press_category">برای ویرایش یک دسته بندی بر روی آن ضربه بزنید و نگه دارید</string>
@@ -550,4 +549,5 @@
     <string name="no_chapters_to_delete">هیچ فصلی برای حذف وجود ندارد</string>
     <string name="no_recent_read_updated_manga">مانگای اخیرا خوانده یا به‌روزرسانی نشده است</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="downloaded_chapters">قسمت‌های دانلود شده</string>
 </resources>

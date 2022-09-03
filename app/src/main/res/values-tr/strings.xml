@@ -342,7 +342,6 @@
     <string name="collapse_all_categories">Tüm kategorileri küçült</string>
     <string name="expand_all_categories">Tüm kategorileri genişlet</string>
     <string name="library_search_hint">Başlık, etiket, kaynak ara</string>
-    <string name="remove_from_library_question">Kitaplıktan kaldırılsın mı\?</string>
     <string name="updating_">%1$s güncelleniyor</string>
     <string name="jump_to_category">Kategoriye atla</string>
     <string name="category_deleted">Kategori silindi</string>
@@ -973,12 +972,11 @@
     <string name="backup_restore_invalid_uri">Hata: boş URI</string>
     <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız.</string>
     <string name="download_ahead">Önceden indir</string>
-    <string name="auto_download_after_reading">Okuduktan sonra bir sonraki okunmayan bölümleri indir</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Sonraki okunmayan bölüm</item>
-        <item quantity="other">Sonraki %d okunmayan</item>
+        <item quantity="other">Sonraki %d okunmayan bölüm</item>
     </plurals>
-    <string name="download_ahead_info">Önceden indir yalnızca kitaplıktaki girdiler için ve okunan son bölüm indirildiyse geçerlidir</string>
+    <string name="download_ahead_info">Yalnızca kitaplıktaki girdilerde ve geçerli bölüm ile bir sonraki bölüm zaten indirildiyse çalışır</string>
     <string name="pref_manage_notifications">Bildirimleri yönet</string>
     <string name="battery_not_low">Pil düşük değil</string>
     <string name="faq_and_guides">SSS ve Kılavuzlar</string>
@@ -1007,4 +1005,47 @@
     <string name="language_requires_app_restart">Bazı dillerin doğru görüntülenmesi için uygulamanın yeniden başlatılması gerekebilir</string>
     <string name="user_agent_string">Öntanımlı kullanıcı aracısı dizgesi</string>
     <string name="loader_rar5_error">RARv5 biçimi desteklenmiyor</string>
+    <string name="all_read_manga">Tüm okunan manga</string>
+    <string name="clear_db_exclude_read">Okunan bölümleri olan mangaları tut</string>
+    <string name="stat">Durum</string>
+    <string name="stats">İstatistikler</string>
+    <string name="local_titles">Yerel başlıklar</string>
+    <string name="titles_in_global_update">Genel güncellemedeki başlıklar</string>
+    <string name="trackers">İzleyiciler</string>
+    <string name="read_duration">Okuma süresi</string>
+    <string name="manga_status_distribution">Durum dağılımı</string>
+    <string name="manga_score_distribution">Puan dağılımı</string>
+    <string name="view_detailed_statistics">Ayrıntılı istatistikleri görüntüle</string>
+    <string name="count">Sayı</string>
+    <string name="not_rated">Derecelendirilmedi</string>
+    <string name="source">Kaynak</string>
+    <string name="tracker">İzleyici</string>
+    <string name="length">Uzunluk</string>
+    <string name="start_year">Başlangıç yılı</string>
+    <plurals name="_sources">
+        <item quantity="one">%d kaynak</item>
+        <item quantity="other">%d kaynak</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d durum</item>
+        <item quantity="other">%d durum</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d dil</item>
+        <item quantity="other">%d dil</item>
+    </plurals>
+    <plurals name="_series_types">
+        <item quantity="one">%d seri türü</item>
+        <item quantity="other">%d seri türü</item>
+    </plurals>
+    <string name="titles_in_library">Kitaplıktaki başlıklar</string>
+    <string name="chapters_read">Okunan bölümler</string>
+    <string name="mean_score">Ortalama puan</string>
+    <string name="tracked_titles">İzlenen başlıklar</string>
+    <string name="no_data_for_filters">Geçerli filtreleriniz için veri bulunamadı</string>
+    <string name="statistics">İstatistikler</string>
+    <string name="statistics_details">İstatistik ayrıntıları</string>
+    <string name="tags">Etiketler</string>
+    <string name="auto_download_while_reading">Okurken otomatik indir</string>
+    <string name="downloaded_chapters">İndirilen bölümler</string>
 </resources>

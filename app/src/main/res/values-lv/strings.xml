@@ -124,7 +124,6 @@
     <string name="show_all_categories">Parādīt visas kategorijas</string>
     <string name="library_is_empty_add_from_browse">Tava bibliotēka ir tukša, pievieno sērijas bibliotēkai no pārlūkojamās cilnes.</string>
     <string name="library_search_hint">Meklē nosaukumu, birkas, avotu</string>
-    <string name="remove_from_library_question">Noņemt no bibliotēkas\?</string>
     <string name="local">Lokāls</string>
     <string name="updating_library">Atjauninās bibliotēka</string>
     <string name="new_version_available">Pieejama jauna versija!</string>
@@ -552,4 +551,5 @@
     <string name="tap_zones">Skāriena zonas</string>
     <string name="reduces_banding_impacts_performance">Samazina grupēšanu, bet var ietekmēt veiktspēju</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="downloaded_chapters">Lejupielādētās nodaļas</string>
 </resources>

@@ -376,7 +376,6 @@
     <string name="comfortable_grid">Graella confortable</string>
     <string name="always_show_current_category">Mostra sempre la categoria actual</string>
     <string name="show_all_categories">Mostra totes les categories</string>
-    <string name="remove_from_library_question">Voleu eliminar-lo de la biblioteca\?</string>
     <string name="add_categories">Afegeix categories</string>
     <string name="confirm_category_deletion_message">El manga d\'aquesta categoria es mourà a la categoria per defecte.</string>
     <string name="confirm_category_deletion">Voleu suprimir la categoria\?</string>
@@ -619,4 +618,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Cadena d\'agent d\'usuari per defecte</string>
     <string name="loader_rar5_error">El format RARv5 no està suportat</string>
+    <string name="downloaded_chapters">Capítols baixats</string>
 </resources>

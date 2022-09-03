@@ -440,7 +440,6 @@
     <string name="show_all_categories">Показати усі категорії</string>
     <string name="no_matches_for_filters">Не знайдено співпадінь за вашими поточними фільтрами</string>
     <string name="library_search_hint">Пошук за заголовком, тегами чи джерелом</string>
-    <string name="remove_from_library_question">Видалити з бібліотеки\?</string>
     <string name="updating_">Оновлюється %1$s</string>
     <string name="jump_to_category">Перейти до категорії</string>
     <string name="long_press_category">Натисніть та утримуйте для редагування категорії</string>
@@ -1007,7 +1006,6 @@
     <string name="most_entries">За більшістю записів</string>
     <string name="select_uninstalled_sources">Вибрати невстановлені джерела</string>
     <string name="download_ahead">Передзавантаження</string>
-    <string name="auto_download_after_reading">Завантажити наступну непрочитану главу після прочитання</string>
     <string name="download_ahead_info">Передзавантаження застосовується лише до записів у бібліотеці та якщо остання прочитана глава була завантажена</string>
     <string name="split_tall_images">Розділяти довгі зображення</string>
     <string name="split_tall_images_summary">Покращує продуктивність читалки, поділяючи довгі завантажені зображення.</string>
@@ -1052,4 +1050,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">User agent за замовчуванням</string>
     <string name="loader_rar5_error">Формат RARv5 не підтримується</string>
+    <string name="downloaded_chapters">Завантажені глави</string>
 </resources>

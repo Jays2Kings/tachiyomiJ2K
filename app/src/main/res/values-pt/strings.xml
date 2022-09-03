@@ -51,7 +51,7 @@
     <string name="every_2_days">A cada 2 dias</string>
     <string name="categories_to_include_in_global_update">Categorias a incluir na atualização global</string>
     <string name="all">Tudo</string>
-    <string name="library_update_restriction">Restrições sobre a atualização da biblioteca</string>
+    <string name="library_update_restriction">Restrições do dispositivo</string>
     <string name="library_update_restriction_summary">Atualizar apenas quando se cumprem as condições</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">A carregar</string>
@@ -182,7 +182,7 @@
     <string name="could_not_download_unexpected_error">Erro inesperado ao transferir capítulo</string>
     <string name="no_wifi_connection">Sem ligação de Wi-Fi disponível</string>
     <string name="categories">Categorias</string>
-    <string name="manga">Mangá</string>
+    <string name="manga">Manga</string>
     <string name="tracking">Manutenção</string>
     <string name="history">Histórico</string>
     <string name="extensions">Extensões</string>
@@ -273,7 +273,7 @@
     <string name="rereading">Relendo</string>
     <string name="started">Começado</string>
     <string name="type">Tipo</string>
-    <string name="url_not_set_click_again">URL do mangá não definida, por favor clique no título e selecione novamente</string>
+    <string name="url_not_set_click_again">URL da manga não definida, por favor clique no título e selecione a manga novamente</string>
     <string name="category_with_name_exists">Já existe uma categoria com este nome!</string>
     <string name="picture_saved">Imagem guardada</string>
     <string name="options">Opções</string>
@@ -321,6 +321,7 @@
     <string name="obsolete_extension_message">Esta extensão já não está disponível.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Atualização de extensão disponível</item>
+        <item quantity="many">%d atualizações de extensão disponíveis</item>
         <item quantity="other">%d atualizações de extensão disponíveis</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Reduz bandas de cor, mas pode impactar a performance</string>
@@ -367,15 +368,14 @@
     <string name="unpin">Desafixar</string>
     <string name="view_chapters">Ver capítulos</string>
     <string name="library_search_hint">Pesquisar título, etiquetas, fonte</string>
-    <string name="remove_from_library_question">Remover da biblioteca\?</string>
     <string name="updating_">Atualizando %1$s</string>
     <string name="jump_to_category">Ir para a categoria</string>
     <string name="long_press_category">Pressione e segure para editar uma categoria</string>
     <string name="category_deleted">Categoria eliminada</string>
     <string name="manage_category">Gerir categoria</string>
     <string name="add_categories">Adicionar categorias</string>
-    <string name="already_in_category">Mangá já está na categoria</string>
-    <string name="confirm_category_deletion_message">Mangás nesta categoria serão movidas para a categoria padrão.</string>
+    <string name="already_in_category">Manga já está na categoria</string>
+    <string name="confirm_category_deletion_message">Manga nesta categoria serão movidas para a categoria padrão.</string>
     <string name="confirm_category_deletion">Eliminar categoria\?</string>
     <string name="category_is_empty">Categoria está vazia</string>
     <string name="create_new_category">Criar nova categoria</string>
@@ -383,14 +383,17 @@
     <string name="adding_category_to_queue">Adicionando %1$s para a fila de atualizações</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categorias</item>
         <item quantity="other">%d categorias</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d página restante</item>
+        <item quantity="many">%1$d páginas restantes</item>
         <item quantity="other">%1$d páginas restantes</item>
     </plurals>
     <plurals name="remove_n_chapters">
         <item quantity="one">Remover %1$d capítulo transferido\?</item>
+        <item quantity="many">Remover %1$d capítulos transferidos\?</item>
         <item quantity="other">Remover %1$d capítulos transferidos\?</item>
     </plurals>
     <string name="chapter_not_found">Capítulo não encontrado</string>
@@ -407,7 +410,7 @@
     <string name="unknown_status">Estado Desconhecido</string>
     <string name="in_progress">Em progresso</string>
     <string name="not_started">Não iniciado</string>
-    <string name="comic">Comic</string>
+    <string name="comic">Banda desenhada</string>
     <string name="manhua">Manhua</string>
     <string name="manhwa">Manhwa</string>
     <string name="tracked">Monitorizado</string>
@@ -467,6 +470,7 @@
     <string name="restore_duration">%02d min, %02d seg</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Concluído em %1$s com %2$s erro</item>
+        <item quantity="many">Concluído em %1$s com %2$s erros</item>
         <item quantity="other">Concluído em %1$s com %2$s erros</item>
     </plurals>
     <string name="source_migration_guide">Guia de migração de fonte</string>
@@ -492,6 +496,7 @@
     <string name="category_cannot_be_blank">O nome da categoria não pode ficar vazio</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$d capítulo</item>
+        <item quantity="many">%1$d capítulos</item>
         <item quantity="other">%1$d capítulos</item>
     </plurals>
     <string name="add_x_to">Adicionar %1$s a…</string>
@@ -510,10 +515,12 @@
     <string name="sort_by_ignoring_articles">Ordenar ignorando artigos</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">e mais %1$d capítulo</item>
+        <item quantity="many">e mais %1$d capítulos</item>
         <item quantity="other">e mais %1$d capítulos</item>
     </plurals>
     <plurals name="for_n_titles">
         <item quantity="one">Para %d título</item>
+        <item quantity="many">Para %d títulos</item>
         <item quantity="other">Para %d títulos</item>
     </plurals>
     <string name="show_unread_count">Mostrar contagem de não lidos</string>
@@ -574,6 +581,7 @@
     <string name="webview_is_required">A WebView é necessária para o Tachiyomi</string>
     <plurals name="after_minutes">
         <item quantity="one">Após %1$s minuto</item>
+        <item quantity="many">Após %1$s minutos</item>
         <item quantity="other">Após %1$s minutos</item>
     </plurals>
     <string name="automatic_removal">Remoção automática</string>
@@ -609,6 +617,7 @@
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Limpeza realizada. %d pasta removida</item>
+        <item quantity="many">Limpeza realizada. %d pastas removidas</item>
         <item quantity="other">Limpeza realizada. %d pastas removidas</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Desative isso se estiver com problemas para atualizar ou restaurar a sua biblioteca</string>
@@ -620,8 +629,9 @@
     <string name="delete_unused_chapters">Apagar ficheiros inexistentes, parcialmente descarregados e lê as pastas dos capítulos</string>
     <string name="clean_up_downloaded_chapters">Limpar capítulos descarregados</string>
     <plurals name="cache_cleared">
-        <item quantity="one">Cache limpo. %d ficheiro foi apagado</item>
-        <item quantity="other">Cache limpo. %d ficheiros foram apagados</item>
+        <item quantity="one">Cache limpa. %d ficheiro foi apagado</item>
+        <item quantity="many">Cache limpa. %d ficheiros foram apagados</item>
+        <item quantity="other">Cache limpa. %d ficheiros foram apagados</item>
     </plurals>
     <string name="doh">DNS sobre HTTPS</string>
     <string name="data_management">Gestão de dados</string>
@@ -642,21 +652,24 @@
     <string name="turn_off_">Desativar %s</string>
     <string name="turn_on_">Ativar %s</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d mangá migrado</item>
-        <item quantity="other">%d mangás migrado</item>
+        <item quantity="one">%d manga migrada</item>
+        <item quantity="many">%d mangas migradas</item>
+        <item quantity="other">%d mangas migradas</item>
     </plurals>
     <string name="skipping_">(a pular %1$d)</string>
     <plurals name="copy_manga">
         <item quantity="one">Copiar %1$d%2$s manga\?</item>
+        <item quantity="many">Copiar %1$d%2$s mangas\?</item>
         <item quantity="other">Copiar %1$d%2$s mangas\?</item>
     </plurals>
     <plurals name="migrate_manga">
         <item quantity="one">Migrar %1$d%2$s manga\?</item>
+        <item quantity="many">Migrar %1$d%2$s mangas\?</item>
         <item quantity="other">Migrar %1$d%2$s mangas\?</item>
     </plurals>
     <string name="stop_migrating">Parar de migrar\?</string>
     <string name="no_alternatives_found">Nenhuma alternativa encontrada</string>
-    <string name="no_chapters_found_for_migration">Nenhum capítulo encontrado, este mangá não pode ser usado para migração</string>
+    <string name="no_chapters_found_for_migration">Nenhum capítulo encontrado, esta manga não pode ser usada para migração</string>
     <string name="migrate_">Migrar %1$s</string>
     <string name="copy_now">Copiar agora</string>
     <string name="migrate_now">Migrar agora</string>
@@ -681,13 +694,15 @@
     <plurals name="deleted_chapters">
         <item quantity="one">Um capítulo foi removido da fonte:
 \n%2$s
-\nApagar a sua descarrega\?</item>
+\nApagar a sua transferência\?</item>
+        <item quantity="many">%1$s capítulos foram removidos da fonte:
+\n%2$s
+\nApagar as suas transferências\?</item>
         <item quantity="other">%1$s capítulos foram removidos da fonte:
 \n%2$s
-\n
-\nApagar as suas descarregas\?</item>
+\nApagar as suas transferências\?</item>
     </plurals>
-    <string name="custom_manga_info">Informações de mangá personalizada</string>
+    <string name="custom_manga_info">Informações de manga personalizada</string>
     <string name="error_sharing_cover">Erro ao partilhar capa</string>
     <string name="error_saving_cover">Erro ao guardar capa</string>
     <string name="cover_saved">Capa guardada</string>
@@ -723,9 +738,10 @@
     <string name="about_this_">Sobre isto %1$s</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d página</item>
+        <item quantity="many">%1$d páginas</item>
         <item quantity="other">%1$d páginas</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Cria pastas de acordo com o título do mangá</string>
+    <string name="create_folders_by_manga_title">Cria pastas de acordo com o título do manga</string>
     <string name="save_pages_separately">Salvar páginas em pastas separadas</string>
     <string name="show_on_long_press">Mostrar no toque longo</string>
     <string name="actions">Ações</string>
@@ -853,11 +869,13 @@
     <string name="split_double_pages_portrait">Dividir página dupla em retrato</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">Extensão atualizada</item>
+        <item quantity="many">%d extensões atualizadas</item>
         <item quantity="other">%d extensões atualizadas</item>
     </plurals>
     <string name="extensions_updated">Extensões atualizadas</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d atualização pendente</item>
+        <item quantity="many">%d atualizações pendentes</item>
         <item quantity="other">%d atualizações pendentes</item>
     </plurals>
     <string name="updating_extensions">Atualizando extensões</string>
@@ -878,11 +896,11 @@
     <string name="by_source_order">Pela ordem da fonte</string>
     <string name="not_bookmarked">Não foi marcado</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos ficheiros para descarregar os capítulos. Clique aqui, então ative \"Permitir o acesso para gerir todos os ficheiros\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K requer o acesso ao armazenamento de ficheiros no Android 11 para descarregar capítulos, criar backups automáticos e ler mangás locais.
+    <string name="external_storage_permission_notice">TachiyomiJ2K requer acesso a todos os ficheiros no Android 11 para transferir capítulos, criar backups automáticos, e ler mangas locais.
 \n
-\nNo próximo ecrã ative \"Permitir acesso de gestão de todos ficheiros.\"</string>
+\nNo próximo ecrã, ative \"Permitir acesso de gestão de todos os ficheiros.\"</string>
     <string name="all_files_permission_required">Permissões de ficheiro necessárias</string>
-    <string name="force_download_cache_refresh_summary">Isto forçará um recálculo do cache baixado. Auxilia em caso de modificação em arquivos baixados fora do aplicativo e que serão adicionados a ele.</string>
+    <string name="force_download_cache_refresh_summary">Isto forçará a cache transferida a recalcular. Útil se modificou transferências fora desta app e quer que a app as apanhe</string>
     <string name="use_side_navigation">Usar navegação lateral</string>
     <string name="sapphire_dusk">Safira sombreado</string>
     <string name="teal_ocean">Verde azulado oceânico</string>
@@ -900,8 +918,9 @@
     <string name="remove_previous_tracker">Remover o rastreador anterior\?</string>
     <string name="select_an_entry">Selecione uma entrada</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">A saltar 1 capítulo, ou está em falta na fonte ou foi filtrado</item>
-        <item quantity="other">A saltar %d capítulos, ou está em falta na fonte ou foi filtrado</item>
+        <item quantity="one">A saltar 1 capítulo, ou a fonte está em falta ou foi filtrado</item>
+        <item quantity="many">A saltar %d capítulos, ou a fonte está em falta ou foi filtrado</item>
+        <item quantity="other">A saltar %d capítulos, ou a fonte está em falta ou foi filtrado</item>
     </plurals>
     <string name="affects_library_grid">Afeta as grades de cobertura da biblioteca</string>
     <string name="getting_started_guide">Guia de introdução</string>
@@ -922,7 +941,7 @@
     <string name="help_translate">Ajude a traduzir</string>
     <string name="use_shizuku_to_install">Use o Shizuku para instalar extensões</string>
     <string name="show_outline_around_covers">Mostrar contorno ao redor das capas</string>
-    <string name="notification_size_warning">Grandes atualizações podem aumentar o uso da bateria e as fontes de mangá se tornarem mais lentas. Aperte para ler mais</string>
+    <string name="notification_size_warning">Atualizações grandes podem levar ao aumento do uso da bateria e abrandamento das fontes. Toque para aprender mais.</string>
     <string name="scanlators">Tradutores</string>
     <string name="save_chapters_as_cbz">Guardar como ficheiro CBZ</string>
     <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem avisos do usuário e ativa atualizações automáticas para dispositivos com Android 12</string>
@@ -939,10 +958,10 @@
     <string name="classic_blue">Azul clássico</string>
     <string name="on_hiatus">Em hiato</string>
     <string name="enhanced_services">Serviços melhorados</string>
-    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitorização. Defina a monitorização para entradas individuais das mangás no seu botão de monitorização.</string>
+    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de rastreamento. Defina o rastreamento para entradas individuais de manga no seu botão de rastreamento.</string>
     <string name="publishing_finished">Publicação concluída</string>
     <string name="cancelled">Cancelado</string>
-    <string name="enhanced_tracking_info">Serviços que oferecem características melhoradas para fontes específicas. Mangás são automaticamente monitorizados quando adicionados à sua biblioteca.</string>
+    <string name="enhanced_tracking_info">Serviços que oferecem características melhoradas para fontes específicas. Manga são automaticamente rastreadas quando adicionadas à sua biblioteca.</string>
     <string name="local_invalid_format">Formato de capítulo inválido</string>
     <string name="order_by">Ordenar por</string>
     <string name="grayscale">Tons de cinzento</string>
@@ -981,7 +1000,7 @@
     <string name="pref_update_only_completely_read">Com capítulo(s) não lidos</string>
     <string name="pref_update_only_non_completed">Com estado \'\'Terminado\'\'</string>
     <string name="pref_update_only_started">Que não começaram a ser lidos</string>
-    <string name="pref_update_only_completely_read_summary">Somente atualizar mangá se tiver nenhum capítulo não lido (terminado completamente)</string>
+    <string name="pref_update_only_completely_read_summary">Apenas atualizar manga se não houver capítulo não lido (lido completamente)</string>
     <string name="pref_clear_webview_data">Limpar dados do WebView</string>
     <string name="webview_data_deleted">Dados do WebView limpos</string>
     <string name="most_entries">Mais títulos</string>
@@ -1008,8 +1027,80 @@
     <string name="pref_lowest">Mais baixa</string>
     <string name="download_notifier_split_page_not_found">Página %d não encontrada durante a divisão</string>
     <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
-    <string name="split_tall_images">Dividir automaticamente imagens altas</string>
-    <string name="split_tall_images_summary">Melhora o desempenho do leitor através da divisão de imagens altas transferidas.</string>
+    <string name="split_tall_images">Dividir imagens altas</string>
+    <string name="split_tall_images_summary">Melhora o desempenho do leitor</string>
     <string name="tap_zones">Zonas de toque</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="loader_rar5_error">O formato RARv5 não é suportado</string>
+    <string name="downloaded_chapters">Capítulos transferidos</string>
+    <string name="auto_download_while_reading">Transferência automática durante leitura</string>
+    <string name="download_ahead_info">Apenas funciona em entradas na biblioteca e se o capítulo atual, mais o próximo, já estiverem transferidos</string>
+    <string name="stat">Estatística</string>
+    <string name="tracker">Rastreador</string>
+    <string name="length">Comprimento</string>
+    <string name="start_year">Ano de início</string>
+    <string name="source">Fonte</string>
+    <string name="no_data_for_filters">Não foram encontrados dados para os seus filtros atuais</string>
+    <plurals name="_series_types">
+        <item quantity="one">1 tipo de série</item>
+        <item quantity="many">%d tipos de séries</item>
+        <item quantity="other">%d tipos de séries</item>
+    </plurals>
+    <string name="violet">Violeta</string>
+    <string name="count">Conta</string>
+    <plurals name="_sources">
+        <item quantity="one">1 fonte</item>
+        <item quantity="many">%d fontes</item>
+        <item quantity="other">%d fontes</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">1 estado</item>
+        <item quantity="many">%d estados</item>
+        <item quantity="other">%d estados</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">1 idioma</item>
+        <item quantity="many">%d idiomas</item>
+        <item quantity="other">%d idiomas</item>
+    </plurals>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Próximo capítulo não lido</item>
+        <item quantity="many">Próximos %d capítulos não lidos</item>
+        <item quantity="other">Próximos %d capítulos não lidos</item>
+    </plurals>
+    <string name="chapters_read">Capítulos lidos</string>
+    <string name="stats">Estatísticas</string>
+    <string name="download_ahead">Transferência em antecedência</string>
+    <string name="statistics_details">Detalhes de estatísticas</string>
+    <string name="mean_score">Avaliação média</string>
+    <string name="tags">Etiquetas</string>
+    <string name="read_duration">Duração de leitura</string>
+    <string name="manga_status_distribution">Distribuição das estatísticas</string>
+    <string name="open_in_app">Abrir na app</string>
+    <string name="manga_score_distribution">Distribuição das avaliações</string>
+    <string name="view_detailed_statistics">Ver estatísticas detalhadas</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="titles_in_library">Títulos na biblioteca</string>
+    <string name="local_titles">Títulos locais</string>
+    <string name="tracked_titles">Títulos rastreados</string>
+    <string name="titles_in_global_update">Títulos na atualização global</string>
+    <string name="trackers">Rastreadores</string>
+    <string name="all_read_manga">Todas as manga lidas</string>
+    <string name="lavender">Lavanda</string>
+    <string name="language_requires_app_restart">Alguns idiomas poderão necessitar de reinício da app para mostrar corretamente</string>
+    <string name="user_agent_string">String de agente de usuário padrão</string>
+    <string name="clear_db_exclude_read">Manter mangás com capítulos lidos</string>
+    <string name="sort_fetched_time">Classificar por tempo de busca</string>
+    <string name="complete_list">Lista de Completos</string>
+    <string name="wish_list">Lista de Desejos</string>
+    <string name="reading_list">Lista dos Em Leitura</string>
+    <string name="on_hold_list">Lista dos Em Espera</string>
+    <string name="unfinished_list">Lista de Inacabados</string>
+    <string name="downloads_swipe_tutorial">Transferências podem ser canceladas ao deslizá-las 
+\nDeslize esta dica para dispensá-la</string>
+    <string name="show_">Mostrar %1$s</string>
+    <string name="learn_why">Aprenda porquê</string>
+    <string name="must_view_details_before_migration">Os detalhes desta entrada devem ser vistos antes de ser capaz de migrar</string>
+    <string name="not_rated">Não avaliados</string>
+    <string name="view_all">Veja todos</string>
 </resources>

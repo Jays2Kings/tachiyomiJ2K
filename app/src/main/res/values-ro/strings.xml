@@ -471,7 +471,6 @@
     <string name="always_show_current_category">Afișează întotdeauna categoria curentă</string>
     <string name="show_all_categories">Afișați toate categoriile</string>
     <string name="no_matches_for_filters">Nu s-au găsit rezultate pentru filtrele dvs. curente</string>
-    <string name="remove_from_library_question">Scoateți din bibliotecă\?</string>
     <string name="updating_">Se actualizează %1$s</string>
     <string name="jump_to_category">Salt la categorie</string>
     <string name="long_press_category">Țineți apăsat pentru a edita o categorie</string>
@@ -688,7 +687,7 @@
     <string name="by_chapter_number">După numărul capitolului</string>
     <string name="by_update_date">După data postării</string>
     <string name="crash_logs">Jurnale de erori fatale</string>
-    <string name="name">Titlu</string>
+    <string name="name">Nume</string>
     <string name="show_number_of_items">Afișare număr de elemente</string>
     <string name="date_fetched">Data preluată</string>
     <string name="set_as_default">Setați ca implicit</string>
@@ -741,9 +740,9 @@
     <string name="local_invalid_format">Format de capitol invalid</string>
     <string name="order_by">Sorteaza prin</string>
     <string name="new_beta_version_available">O noua versiune beta este valabila!</string>
-    <string name="language_badge">Insigne Limbilor</string>
-    <string name="cover_only_grid">Acoperire tip grilaj</string>
-    <string name="use_staggered_grid">Grilaj tip cascade</string>
+    <string name="language_badge">Insigne pentru limbi</string>
+    <string name="cover_only_grid">Grilaj doar cu coperți</string>
+    <string name="use_staggered_grid">Grilaj în serie</string>
     <string name="notification_update_error">%1$d actualizari esuate</string>
     <string name="notification_update_skipped">%1$d actualizari sarite</string>
     <string name="skipped_reason_completed">Ignorata deoarece seria este completa</string>
@@ -758,7 +757,7 @@
     <string name="your_library">Libraria personala</string>
     <string name="category_hopper_long_press">Apasarea continua actioneaza Saritorul de categorie</string>
     <string name="open_random_series">Deschide o serie la intamplare</string>
-    <string name="hide_category_hopper">Ascunde saritorul de categorie</string>
+    <string name="hide_category_hopper">Ascunde săritorul de categorii</string>
     <plurals name="cleanup_done">
         <item quantity="one">Curățenie făcută. A fost eliminat %d dosar</item>
         <item quantity="few">Curățenie făcută. Au fost eliminate %d dosare</item>
@@ -884,15 +883,15 @@
     <string name="battery_not_low">Bateria nu este scăzută</string>
     <string name="download_ahead_info">Descărcarea în avans se aplică numai pentru intrările din bibliotecă și dacă ultimul capitol citit a fost descărcat</string>
     <string name="always_keep">Păstrați întotdeauna</string>
-    <string name="split_tall_images">Divizarea automată a imaginilor înalte</string>
-    <string name="split_tall_images_summary">Îmbunătățește performanța cititorului prin divizarea imaginilor înalte descărcate.</string>
+    <string name="split_tall_images">Împărțiți imagini înalte</string>
+    <string name="split_tall_images_summary">Îmbunătățește performanța cititorului</string>
     <string name="orientation">Orientare</string>
     <string name="hide">Ascundeți</string>
     <string name="tap_to_learn_more">Atingeți pentru a afla mai multe</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Următorul capitol necitit</item>
-        <item quantity="few">Următoarele %d capitole necitite</item>
-        <item quantity="other">Următoarele %d capitole necitite</item>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <string name="faq_and_guides">Întrebări frecvente și ghiduri</string>
     <string name="every_3_days">La fiecare 3 zile</string>
@@ -963,7 +962,6 @@
     <string name="open_in_app">Deschideți în aplicație</string>
     <string name="turn_on_">Porniți %s</string>
     <string name="download_ahead">Descărcați în avans</string>
-    <string name="auto_download_after_reading">Descărcați următoarele capitole necitite după citire</string>
     <string name="restrictions_">Restricții: %1$s</string>
     <string name="some_extensions_may_prompt">Este posibil ca unele extensii să ceară să fie instalate mai întâi.</string>
     <string name="updating_extensions">Extensiile se actualizează</string>
@@ -1026,4 +1024,11 @@
     <string name="select_uninstalled_sources">Selectați sursele dezinstalate</string>
     <string name="helpful_translation_links">Link-uri utile de traducere</string>
     <string name="download_notifier_split_failed">Nu s-a putut diviza imaginea descărcată</string>
+    <string name="loader_rar5_error">Formatul RARv5 nu este acceptat</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="language_requires_app_restart">Unele limbi pot necesita o relansare a aplicației pentru a fi afișate corect</string>
+    <string name="clear_db_exclude_read">Păstrează manga cu capitole citite</string>
+    <string name="user_agent_string">Șir de agent utilizator implicit</string>
+    <string name="auto_download_while_reading">Descărcă automat în timp ce citiți</string>
+    <string name="downloaded_chapters">Capitole descărcate</string>
 </resources>

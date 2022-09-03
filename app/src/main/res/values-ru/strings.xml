@@ -215,7 +215,7 @@
         <item quantity="many">Для %d серий</item>
         <item quantity="other">Для %d серий</item>
     </plurals>
-    <string name="obsolete_extension_message">Это расширение больше недоступно</string>
+    <string name="obsolete_extension_message">Это расширение больше недоступно.</string>
     <string name="on_hold">Отложено</string>
     <string name="ongoing">Выпускается</string>
     <string name="options">Опции</string>
@@ -337,7 +337,7 @@
 \n
 \nВредоносное расширение может считывать любые учетные данные для входа, хранящиеся в Tachiyomi, или выполнять произвольный код.
 \n
-\nДоверяя этому сертификату, вы принимаете эти риски</string>
+\nДоверяя этому сертификату, вы принимаете эти риски.</string>
     <string name="every_12_hours">Каждые 12 часов</string>
     <string name="daily">Ежедневно</string>
     <string name="every_2_days">Каждые 2 дня</string>
@@ -433,7 +433,6 @@
     <string name="update">Обновить</string>
     <string name="updating_">Обновление %1$s</string>
     <!-- Library -->
-    <string name="remove_from_library_question">Удалить из библиотеки\?</string>
     <string name="no_matches_for_filters">Не найдено совпадений для ваших фильтров</string>
     <string name="show_all_categories">Показать все категории</string>
     <string name="always_show_current_category">Всегда показывать текущую категорию</string>
@@ -661,7 +660,7 @@
     <string name="error_sharing_cover">Ошибка отправки обложки</string>
     <string name="error_saving_cover">Ошибка сохранения обложки</string>
     <string name="cover_saved">Обложка сохранена</string>
-    <string name="unofficial_extension_message">Это расширение не входит в официальный список расширений Tachiyomi</string>
+    <string name="unofficial_extension_message">Это расширение не входит в официальный список расширений Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Неофициальное</string>
     <string name="may_contain_nsfw">Может содержать контент NSFW (18+)</string>
@@ -825,7 +824,7 @@
     <string name="can_be_found_in_library_filters">Также может быть найдено, расширив библиотечные фильтры</string>
     <string name="series">Серии</string>
     <string name="expand_collapse_all_categories">Развернуть/Свернуть все категории</string>
-    <string name="category_hopper_long_press">Поведение переключателя категорий при долгом нажатии</string>
+    <string name="category_hopper_long_press">Удерживание переключателя категорий</string>
     <string name="no_pages_found">Страницы не найдены</string>
     <string name="search_">Поиск %1$s</string>
     <string name="group_chapters_together">Группировать главы вместе</string>
@@ -889,10 +888,10 @@
     <string name="all_files_permission_required">Требуются права доступа к файлам</string>
     <string name="orientation">Ориентация</string>
     <string name="default_orientation">Ориентация по умолчанию</string>
-    <string name="restore_miui_warning">Резервная копия/Восстановление может не работать должным образом, если отключена «Оптимизация MIUI»</string>
+    <string name="restore_miui_warning">Резервная копия/Восстановление может не работать должным образом, если отключена «Оптимизация MIUI».</string>
     <string name="yang">Янь</string>
     <string name="yin">Инь</string>
-    <string name="set_as_default">Установить по умолчанию</string>
+    <string name="set_as_default">По умолчанию</string>
     <string name="extensions_miui_warning">«Оптимизация MIUI» должна быть отключена для установки расширений.</string>
     <string name="by_update_date">Дата загрузки</string>
     <string name="by_chapter_number">Номер главы</string>
@@ -910,7 +909,7 @@
     <string name="update_all">Обновить все</string>
     <string name="update_completed">Обновление завершено</string>
     <string name="could_not_install_update">Не удалось установить обновление</string>
-    <string name="about_dont_kill_my_app">У некоторых производителей есть дополнительные ограничения для приложений, которые убивают фоновые службы. На этом сайте есть более подробная информация о том, как это исправить</string>
+    <string name="about_dont_kill_my_app">У некоторых производителей есть дополнительные ограничения для приложений, которые убивают фоновые службы. На этом сайте есть более подробная информация о том, как это исправить.</string>
     <string name="tako">Тако</string>
     <string name="a_calmer_you">Спокойный ты (Динамичная)</string>
     <string name="a_brighter_you">Яркий ты (Динамичная)</string>
@@ -970,20 +969,20 @@
     <string name="show_in_sources_and_extensions">Показать в списке источников и расширений</string>
     <string name="show_outline_around_covers">Показать контур вокруг обложек</string>
     <string name="ext_installer_shizuku_stopped">Shizuku не работает</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">Установите и запустите Shizuku, чтобы использовать его как установщик расширений</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Установите и запустите Shizuku, чтобы использовать его как установщик расширений.</string>
     <string name="use_shizuku_to_install">Использовать Shizuku для установки расширений</string>
     <string name="use_shizuku_summary">Позволяет расширениям быть установленными без разрешений пользователя, а также включает автоматические обновления для устройств ниже Android 12</string>
     <string name="classic_blue">Классический Синий</string>
     <string name="lime_time">Время Лайма</string>
     <string name="save_chapters_as_cbz">Сохранить как архив CBZ</string>
-    <string name="download_queue_size_warning">Предупреждение: Большое количество загрузок глав могут привести к замедлению работы источников и/или блокировке Tachiyomi. Нажмите для подробностей</string>
+    <string name="download_queue_size_warning">Предупреждение: Большое количество загрузок может привести к замедлению работы источников и/или блокировке Tachiyomi. Нажмите для подробностей.</string>
     <string name="every_3_days">Каждые 3 дня</string>
     <string name="publishing_finished">Публикация завершена</string>
     <string name="cancelled">Отменено</string>
     <string name="on_hiatus">Перерыв</string>
-    <string name="tracking_info">Односторонняя синхронизация для обновления прогресса в сервисах отслеживания. Настройте отслеживание при помощи кнопки «Отслеживание»</string>
+    <string name="tracking_info">Односторонняя синхронизация для обновления прогресса в сервисах отслеживания. Настройте отслеживание при помощи кнопки «Отслеживание».</string>
     <string name="enhanced_services">Расширенные сервисы</string>
-    <string name="enhanced_tracking_info">Сервисы, предоставляющие расширенные возможности для определённых источников. Серия будет автоматически отслеживаться при добавлении в библиотеку</string>
+    <string name="enhanced_tracking_info">Сервисы, предоставляющие расширенные возможности для определённых источников. Серия будет автоматически отслеживаться при добавлении в библиотеку.</string>
     <string name="grayscale">Оттенки серого</string>
     <string name="date">Дата</string>
     <string name="local_invalid_format">Недопустимый формат глав</string>
@@ -1018,9 +1017,9 @@
     <string name="channel_skipped">Пропущено</string>
     <string name="clear_history">Очистить историю</string>
     <string name="clear_history_completed">История удалена</string>
-    <string name="clear_history_confirmation">Вы уверены\? Вся история будет удалена</string>
+    <string name="clear_history_confirmation">Вы уверены\? Вся история будет удалена.</string>
     <string name="backup_restore_invalid_uri">Ошибка: Пустой URI</string>
-    <string name="backup_info">Настоятельно рекомендуется использовать автоматические резервные копии. Вы также должны хранить копии в разных папках</string>
+    <string name="backup_info">Настоятельно рекомендуется использовать автоматические резервные копии. Вы также должны хранить копии в разных папках.</string>
     <string name="zoom_double_page_spreads">Увеличивать масштаб для двухстраничных разворотов</string>
     <string name="must_view_details_before_migration">Страницу сведений об этой записи необходимо просмотреть, прежде чем можно будет выполнять миграцию</string>
     <string name="update_tracking_scoring_type">Обновить тип подсчета оценки %1$s</string>
@@ -1061,15 +1060,14 @@
     <string name="wish_list">Запланировано</string>
     <string name="complete_list">Прочитано</string>
     <string name="unfinished_list">Не закончено</string>
-    <string name="download_ahead">Предварительная загрузка</string>
-    <string name="auto_download_after_reading">Скачать следующие непрочитанные главы после прочтения</string>
-    <string name="download_ahead_info">Опережающее скачивание применяется только к записям в библиотеке и если была скачана последняя прочитанная глава</string>
+    <string name="download_ahead">Загрузить наперёд</string>
+    <string name="download_ahead_info">Работает только с элементами в библиотеке, а также если текущая и следующая главы уже загружены</string>
     <string name="sort_fetched_time">Сортировка по времени поиска</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Следующую непрочитанную главу</item>
-        <item quantity="few">Следующие %d непрочитанные главы</item>
-        <item quantity="many">Следующие %d непрочитанных глав</item>
-        <item quantity="other">Следующие %d непрочитанных глав</item>
+        <item quantity="one">Следующая непрочитанная главаСледующие %d непрочитанные главыСледующие %d непрочитанных глав</item>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
     </plurals>
     <string name="learn_why">Узнайте, почему</string>
     <string name="open_in_app">Открыть в приложении</string>
@@ -1080,4 +1078,6 @@
     <string name="user_agent_string">User agent по умолчанию</string>
     <string name="language_requires_app_restart">Некоторым языкам требуется перезапуск приложения для корректного отображения</string>
     <string name="loader_rar5_error">Формат RARv5 не поддерживается</string>
+    <string name="auto_download_while_reading">При чтении</string>
+    <string name="downloaded_chapters">Загруженные главы</string>
 </resources>

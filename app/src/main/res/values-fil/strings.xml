@@ -40,7 +40,7 @@
     <string name="backup_location">Lugar ng pag-backup</string>
     <string name="backup_frequency">Dalas ng pag-backup</string>
     <string name="backup_failed">Bigong ma-backup</string>
-    <string name="backup_created">Backup created</string>
+    <string name="backup_created">Nai-backup na</string>
     <string name="restore_completed">Na-restore na</string>
     <string name="creating_backup">Bina-backup</string>
     <string name="what_should_backup">Anong iba-backup mo\?</string>
@@ -173,8 +173,8 @@
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Wika: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">May update sa dugtong</item>
-        <item quantity="other">May update sa %d na dugtong</item>
+        <item quantity="one">Extension update available</item>
+        <item quantity="other">%d extension updates available</item>
     </plurals>
     <string name="set_as_cover">Gawing cover</string>
     <string name="cover_updated">Napalitan na ang cover</string>
@@ -398,7 +398,6 @@
     <string name="no_matches_for_filters">Walang tumugma para sa mga filter mo</string>
     <string name="library_is_empty_add_from_browse">Bakante ang Aklatan mo. Magdagdag ng serye dito mula sa Maghanap.</string>
     <string name="library_search_hint">Hanapin ang pamagat, tag, source</string>
-    <string name="remove_from_library_question">Tanggalin sa Aklatan\?</string>
     <string name="selected_">Pinili: %1$d</string>
     <string name="your_library">Aklatan mo</string>
     <string name="update_available">May bagong update</string>
@@ -660,8 +659,8 @@
     <string name="search_chapters">Maghanap ng mga kabanata</string>
     <string name="channel_errors">Mga error</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">Na-update ang dugtong</item>
-        <item quantity="other">%d na-update ang dugtong</item>
+        <item quantity="one">Extension updated</item>
+        <item quantity="other">%d extensions updated</item>
     </plurals>
     <string name="installed_">Na-install na ang %1$s</string>
     <string name="vertically">Patayo</string>
@@ -922,16 +921,15 @@
     <string name="select_uninstalled_sources">Piliin ang mga na-uninstall na source</string>
     <string name="notify_extension_updated">Na-update na ang dugtong na Notify</string>
     <string name="only_search_pinned_when">Maghanap lang sa mga naka-pin na source</string>
-    <string name="auto_download_after_reading">I-download ang susunod na di pa nabasang kabanata pagkabasa</string>
     <string name="downloads_swipe_tutorial">Maaaring kanselahin ang pag-download sa pamamagitan ng pag-swipe sa kanila
 \nI-swipe ang tip na ito para mawala ito</string>
     <string name="remove_download">Tanggalin ang download</string>
     <string name="remove_downloads">Tanggalin ang mga download</string>
-    <string name="download_ahead">Mag-download agad</string>
-    <string name="download_ahead_info">Gagana lang ang pag-download agad para sa mga entry ng Aklatan at kung na-download na ang huling nabasang kabanata</string>
+    <string name="download_ahead">I-download agad</string>
+    <string name="download_ahead_info">Gagana lang sa mga entry sa aklatan at kung naka-download na ang kasalukuyang kabanata pati ang susunod</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Susunod na di pa nabasa</item>
-        <item quantity="other">Susunod na %d (na) di pa nabasa</item>
+        <item quantity="one">Susunod na kabanatang di pa nabasaSusunod na %d (na) kabanatang di pa nabasa</item>
+        <item quantity="other"/>
     </plurals>
     <string name="add_to_">Idagdag sa %1$s</string>
     <string name="added_to_">Idinagdag sa %1$s</string>
@@ -993,7 +991,7 @@
     <string name="download_notifier_split_page_not_found">Hindi nakita ang pahina %d habang naghahati</string>
     <string name="download_notifier_split_failed">Di mahati ang na-download na larawan</string>
     <string name="split_tall_images">Kusang hatiin ang mga matatangkad na larawan</string>
-    <string name="split_tall_images_summary">Pinahusay ang pagganap ng mambabasa</string>
+    <string name="split_tall_images_summary">Pinapahusay ang performance ng reader</string>
     <string name="complete_list">Listahan ng Kumpleto</string>
     <string name="on_hold_list">Listahan ng Tinigil</string>
     <string name="unfinished_list">Listahan ng Di pa Tapos</string>
@@ -1007,4 +1005,8 @@
     <string name="user_agent_string">Default na string ng user agent</string>
     <string name="loader_rar5_error">Di suportado ang format na RARv5</string>
     <string name="language_requires_app_restart">Maaaring kailanganin ng ilang wika na muling magdispley ng app para magdispley nang tama</string>
+    <string name="clear_db_exclude_read">Patuloy na magbasa ng mga kabanata</string>
+    <string name="all_read_manga">Mga nabasang manga</string>
+    <string name="auto_download_while_reading">Kusang mag-download habang nagbabasa</string>
+    <string name="downloaded_chapters">Bilang ng na-download</string>
 </resources>

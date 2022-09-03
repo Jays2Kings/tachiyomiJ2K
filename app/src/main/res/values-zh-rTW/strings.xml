@@ -237,7 +237,7 @@
     <string name="remove_after_read">閱畢後刪除</string>
     <string name="theres_no_next_chapter">以下空白</string>
     <string name="theres_no_previous_chapter">已達盡頭</string>
-    <string name="failed_to_load_pages_">第 %1$s 頁載入失敗</string>
+    <string name="failed_to_load_pages_">頁面載入失敗：%1$s</string>
     <string name="no_recent_chapters">沒有新章節</string>
     <string name="tracking">歷程</string>
     <string name="trust">信任</string>
@@ -459,7 +459,6 @@
     <string name="hide_unread_badges">隱藏未讀章節</string>
     <string name="_unread">%d 未讀</string>
     <string name="library_search_hint">搜尋標題，標籤，來源</string>
-    <string name="remove_from_library_question">從書櫃移除\?</string>
     <string name="update_completed">更新完成</string>
     <string name="could_not_install_update">無法安裝更新</string>
     <string name="by_update_date">依照上傳時間排序</string>
@@ -723,4 +722,11 @@
     <string name="global_updates">全域性更新</string>
     <string name="certain_buttons_can_be_found">如果在這裡禁用某些按鈕，可以在其他地方找到</string>
     <string name="loader_rar5_error">不支援 RARv5 格式</string>
+    <string name="download_ahead">預先下載</string>
+    <string name="auto_download_while_reading">閱讀時自動下載</string>
+    <string name="downloaded_chapters">已下載章數</string>
+    <string name="download_ahead_info">僅適用於書櫃中的漫畫，並且目前章節及下一章節皆已下載</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="other">接下來未讀的 %d 章</item>
+    </plurals>
 </resources>

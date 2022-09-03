@@ -357,7 +357,6 @@
     <string name="no_matches_for_filters">Nema podudaranja za tvoje trenutačne filtre</string>
     <string name="library_is_empty_add_from_browse">Tvoja biblioteka je prazna, dodaj seriju u tvoju biblioteku s kartice pregledavanja.</string>
     <string name="library_search_hint">Traži naslov, oznake, izvor</string>
-    <string name="remove_from_library_question">Ukloniti iz biblioteke\?</string>
     <string name="selected_">Odabrano: %1$d</string>
     <string name="update_available">Dostupna je nova verzija</string>
     <string name="updating_">Aktualizira se %1$s</string>
@@ -575,7 +574,7 @@
 \nŽeliš li izbrisati njihova preuzimanja\?</item>
         <item quantity="other">Iz izvora je uklonjeno %1$s poglavlja:
 \n%2$s
-\nŽeliš li izbrisati njihovo preuzimanje\?</item>
+\nŽeliš li izbrisati njihova preuzimanja\?</item>
     </plurals>
     <string name="not_tracked">Ne prati se</string>
     <string name="custom_manga_info">Prilagođeni manga podaci</string>
@@ -807,7 +806,7 @@
     <string name="cancel_all_for_series">Prekini sve za ovu seriju</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K zahtijeva pristup svim datotekama u Androidu 11 za preuzimanje poglavlja, za stvaranje automatskih sigurnosnih kopija i za čitanje lokalne mange.
 \n
-\nU sljedećem prozoru aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
+\nU sljedećem ekranu aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
     <string name="all_files_permission_required">Potrebna su dopuštenja za pristup datotekama</string>
     <string name="global_updates">Globalna ažuriranja</string>
     <string name="open_random_series">Otvaranje slučajne serije</string>
@@ -985,7 +984,7 @@
     <string name="tap_zones">Područja dodira</string>
     <string name="downloads_swipe_tutorial">Preuzimanja se mogu prekinuti povlačenjem
 \nZa odbacivanje ovog savjeta povuci ga</string>
-    <string name="download_ahead_info">Preuzimanje unaprijed se odnosi samo na unose u biblioteci i ako je zadnje pročitano poglavlje preuzeto</string>
+    <string name="download_ahead_info">Radi samo na unosima u biblioteci i ako je trenutačno poglavlje plus sljedeće već preuzeto</string>
     <string name="tap_to_learn_more">Dodirni za daljnje informacije</string>
     <string name="warning_enroll_into_beta">Beta izdanja mogu biti nestabilna i mogu zahtijevati brisanje podataka aplikacije.</string>
     <plurals name="next_unread_chapters">
@@ -994,16 +993,15 @@
         <item quantity="other">Sljedećih %d nepročitanih poglavlja</item>
     </plurals>
     <string name="download_ahead">Preuzmi unaprijed</string>
-    <string name="auto_download_after_reading">Preuzmi sljedeća nepročitana poglavlja nakon čitanja</string>
     <string name="webview_data_deleted">WebView podaci su izbrisani</string>
     <string name="download_notifier_split_page_not_found">Stranica %d nije pronađena tijekom razdvajanja</string>
-    <string name="split_tall_images">Automatski podijeli visoke slike</string>
+    <string name="split_tall_images">Rastavi visoke slike</string>
     <string name="learn_why">Saznaj zašto</string>
     <string name="sort_fetched_time">Razvrstaj po vremenu dohvaćanja</string>
     <string name="update_tracking_after_reading">Aktualiziraj praćenje nakon čitanja</string>
     <string name="update_tracking_marked_read">Aktualiziraj praćenje kad je označeno kao pročitano</string>
     <string name="unfinished_list">Popis nedovršenih</string>
-    <string name="split_tall_images_summary">Poboljšava performanse čitača dijeljenjem preuzetih visokih slika.</string>
+    <string name="split_tall_images_summary">Poboljšava performanse čitača</string>
     <string name="expanded_toolbar">Proširena traka alata</string>
     <string name="show_larger_toolbar">Prikaži veću, proširenu traku alata na vrhu većine stranica (ne prikazuje se na manjim uređajima bez obzira na postavku)</string>
     <string name="empty_backup_error">Nema unosa u biblioteci za spremanje u sigurnosnu kopiju</string>
@@ -1025,4 +1023,54 @@
     <string name="select_uninstalled_sources">Odaberi deinstalirane izvore</string>
     <string name="open_in_app">Otvori u programu</string>
     <string name="webtoon_side_padding_5">5 %</string>
+    <string name="language_requires_app_restart">Neki jezici mogu zahtijevati ponovno pokretanje aplikacije za ispravan prikaz</string>
+    <string name="loader_rar5_error">RARv5 format nije podržan</string>
+    <string name="all_read_manga">Sva pročitana manga</string>
+    <string name="user_agent_string">Standardni izraz korisničkog agenta</string>
+    <string name="clear_db_exclude_read">Čuvaj manga s pročitanim poglavljima</string>
+    <string name="downloaded_chapters">Preuzeta poglavlja</string>
+    <string name="auto_download_while_reading">Automatski preuzmi tijekom čitanja</string>
+    <string name="stat">Statistika</string>
+    <string name="statistics">Statistika</string>
+    <string name="titles_in_library">Naslovi u biblioteci</string>
+    <string name="chapters_read">Pročitana poglavlja</string>
+    <string name="mean_score">Prosjek</string>
+    <string name="tracked_titles">Praćeni naslovi</string>
+    <string name="tags">Oznake</string>
+    <string name="trackers">Tragači</string>
+    <string name="read_duration">Trajanje čitanja</string>
+    <string name="manga_status_distribution">Raspodjela stanja</string>
+    <string name="count">Zbroj</string>
+    <string name="not_rated">Neocijenjeno</string>
+    <string name="source">Izvor</string>
+    <string name="tracker">Tragač</string>
+    <string name="length">Duljina</string>
+    <string name="start_year">Početna godina</string>
+    <string name="no_data_for_filters">Nema podataka za trenutačni filtar</string>
+    <string name="stats">Statistike</string>
+    <string name="titles_in_global_update">Naslovi u globalnom aktualiziranju</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d vrsta serije</item>
+        <item quantity="few">%d vrste serije</item>
+        <item quantity="other">%d vrsta serije</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d stanje</item>
+        <item quantity="few">%d stanja</item>
+        <item quantity="other">%d stanja</item>
+    </plurals>
+    <string name="statistics_details">Detalji statistike</string>
+    <string name="local_titles">Lokalni naslovi</string>
+    <string name="manga_score_distribution">Raspodjela rezultata</string>
+    <string name="view_detailed_statistics">Pogledaj detaljnju statistiku</string>
+    <plurals name="_sources">
+        <item quantity="one">%d izvor</item>
+        <item quantity="few">%d izvora</item>
+        <item quantity="other">%d izvora</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d jezik</item>
+        <item quantity="few">%d jezika</item>
+        <item quantity="other">%d jezika</item>
+    </plurals>
 </resources>

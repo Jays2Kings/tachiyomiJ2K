@@ -795,7 +795,6 @@
     <string name="new_category">Нова категория</string>
     <string name="show_categories_while_filtering">Показване на празни категории при филтриране</string>
     <string name="no_matches_for_filters_short">Няма съвпадения за филтрите ви</string>
-    <string name="remove_from_library_question">Премахване от библиотеката\?</string>
     <string name="move_dynamic_to_bottom">Преместете свитите динамични категории до дъното</string>
     <string name="when_grouping_by_sources_tags">При групиране на библиотеката по източници, състояние и др.</string>
     <string name="category_hopper_long_press">Категория бункер за дълго натискане</string>
@@ -967,4 +966,5 @@
     <string name="pref_high">Висока</string>
     <string name="pref_low">Ниска</string>
     <string name="pref_lowest">Най-ниска</string>
+    <string name="downloaded_chapters">Изтеглени глави</string>
 </resources>

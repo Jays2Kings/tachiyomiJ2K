@@ -384,8 +384,8 @@
     <string name="file_picker_error">कोई फ़ाइल पिकर ऐप नहीं मिला</string>
     <string name="open_log">लॉग खोले</string>
     <plurals name="category_plural">
-        <item quantity="one">%d श्रेणी%d श्रेणियाँ</item>
-        <item quantity="other"/>
+        <item quantity="one">%d श्रेणी</item>
+        <item quantity="other">%d श्रेणियाँ</item>
     </plurals>
     <string name="backup_and_restore">बैकअप और पुनर्स्थापना</string>
     <string name="progress">प्रगती</string>
@@ -519,8 +519,8 @@
     <string name="enhanced_services">उन्नत सेवाएं</string>
     <string name="enhanced_tracking_info">ऐसी सेवाएँ जो विशिष्ट स्रोतों के लिए उन्नत सुविधाएँ प्रदान करती हैं। आपकी पुस्तकालय में जोड़े जाने पर पुस्तकें स्वचालित रूप से ट्रैक की जाती हैं।</string>
     <plurals name="for_n_titles">
-        <item quantity="one">%d शीर्षक के लिए%d शीर्षकों के लिए</item>
-        <item quantity="other"/>
+        <item quantity="one">%d शीर्षक के लिए</item>
+        <item quantity="other">%d शीर्षकों के लिए</item>
     </plurals>
     <string name="move_series_to_top">श्रृंखला को शीर्ष पर ले जाएं</string>
     <string name="local_invalid_format">अमान्य अध्याय प्रारूप</string>
@@ -585,8 +585,10 @@
     <string name="category_deleted">श्रेणी हटाई गई</string>
     <string name="jump_to_category">श्रेणी में जाएँ</string>
     <string name="release_page">रिलीज़ पृष्ठ</string>
-    <string name="remove_from_library_question">लाइब्रेरी से निकालें\?</string>
     <string name="library_search_hint">शीर्षक, टैग, स्रोत खोजें</string>
     <string name="no_description">कोई विवरण नहीं</string>
     <string name="webtoon_side_padding_5">५%</string>
+    <string name="downloaded_chapters">डाउनलोड किए गए अध्याय</string>
+    <string name="no_matches_for_filters_short">आपके फ़िल्टर के लिए कोई मिलान नहीं</string>
+    <string name="loader_rar5_error">RARv5 प्रारूप समर्थित नहीं है</string>
 </resources>

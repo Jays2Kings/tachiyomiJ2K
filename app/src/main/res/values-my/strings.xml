@@ -10,7 +10,6 @@
     <string name="no_matches_for_filters">လက်ရှိ filter အတွက် ကိုက်ညီသောရလဒ်မရှိပါ</string>
     <string name="library_is_empty_add_from_browse">သင့် Library ကဗလာဖြစ်နေပါတယ်။ Browse tab ကတဆင့် Manga တွေကို Library ထဲသို့ထည့်ပါ။</string>
     <string name="library_search_hint">နာမည်၊ Tags၊ ရင်းမြစ်နဲ့ရှာဖွေပါ</string>
-    <string name="remove_from_library_question">Library ထဲကထုတ်မှာလား</string>
     <string name="local">Local</string>
     <string name="selected_">%1$d ခုရွေးချယ်ထားသည်</string>
     <string name="updating_library">Library ကိုအပ်ဒိတ်လုပ်နေပါတယ်</string>

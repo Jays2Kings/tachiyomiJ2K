@@ -220,7 +220,6 @@
     <string name="_unread">%d elolvasatlan</string>
     <string name="show_all_categories">Összes kategória mutatása</string>
     <string name="library_search_hint">Cím, tagek, forrás keresése</string>
-    <string name="remove_from_library_question">Eltávolítod a könyvtárból\?</string>
     <string name="local">Helyi</string>
     <string name="updating_library">Könyvtár frissítése</string>
     <string name="searching_for_updates">Frissítések keresése…</string>
@@ -577,4 +576,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Alap hálózati kliens szöveg</string>
     <string name="loader_rar5_error">RARv5 formátum nem támogatót</string>
+    <string name="downloaded_chapters">Letölzozz fejezetek</string>
 </resources>

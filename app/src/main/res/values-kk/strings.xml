@@ -252,4 +252,5 @@
     <string name="always_show_chapter_transition">Әрқашан бөлімнің өтуін көрсету</string>
     <string name="actions">Әрекеттер</string>
     <string name="normal">Қалыпты</string>
+    <string name="downloaded_chapters">Жүктелінген бөлімдер</string>
 </resources>

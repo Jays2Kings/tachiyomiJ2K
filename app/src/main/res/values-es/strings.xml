@@ -488,7 +488,6 @@
     <string name="show_all_categories">Mostrar todas las categorías</string>
     <string name="no_matches_for_filters">Sin coincidencias para tus filtros actuales</string>
     <string name="library_search_hint">Buscar título, autor, fuente</string>
-    <string name="remove_from_library_question">¿Eliminar de la biblioteca\?</string>
     <string name="updating_">Actualizando %1$s</string>
     <string name="jump_to_category">Saltar a la categoría</string>
     <string name="long_press_category">Mantén presionado para editar una categoría</string>
@@ -1003,13 +1002,12 @@
     <string name="select_uninstalled_sources">Seleccionar fuentes desinstaladas</string>
     <string name="downloads_swipe_tutorial">Las descargas pueden ser canceladas deslizándolas hacia fuera
 \nDesliza esto para descartarlo</string>
-    <string name="download_ahead">Descargar por delante</string>
-    <string name="auto_download_after_reading">Descargar los próximos capítulos no leídos después de leer</string>
+    <string name="download_ahead">Descargar por adelantado</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Siguiente capítulo no leído</item>
         <item quantity="other">Siguientes %d no leídos</item>
     </plurals>
-    <string name="download_ahead_info">Descargar adelante solo se aplica a las entradas en la biblioteca y si se descargó el último capítulo</string>
+    <string name="download_ahead_info">Solo funciona en manga que ya esté en tu biblioteca y cuando el capítulo actual y el que va después ya estén descargados</string>
     <string name="pref_manage_notifications">Gestionar notificaciones</string>
     <string name="battery_not_low">Batería cargada</string>
     <string name="faq_and_guides">Guías y soluciones</string>
@@ -1037,4 +1035,9 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Nombre del navegador a usar («user agent»)</string>
     <string name="loader_rar5_error">El formato RARv5 no se entiende</string>
+    <string name="language_requires_app_restart">Algunos idiomas pueden requerir un reinicio de la aplicación para mostrarse correctamente</string>
+    <string name="clear_db_exclude_read">Mantener el manga con capítulos leídos</string>
+    <string name="all_read_manga">Todos los mangas leídos</string>
+    <string name="auto_download_while_reading">Descarga los capítulos siguientes mientras lees</string>
+    <string name="downloaded_chapters">Capítulos descargados</string>
 </resources>

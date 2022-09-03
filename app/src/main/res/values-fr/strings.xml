@@ -425,7 +425,6 @@
     <string name="show_all_categories">Afficher toutes les catégories</string>
     <string name="no_matches_for_filters">Aucune correspondance trouvée pour vos filtres actuels</string>
     <string name="library_search_hint">Recherche par titre, étiquettes, source</string>
-    <string name="remove_from_library_question">Retirer de la bibliothèque \?</string>
     <string name="updating_">Mise à jour %1$s</string>
     <string name="jump_to_category">Aller à la catégorie</string>
     <string name="long_press_category">Maintenez la touche enfoncée pour modifier une catégorie</string>
@@ -991,12 +990,12 @@
     <string name="tap_to_learn_more">Appuyez pour en savoir plus</string>
     <string name="zoom_double_page_spreads">Zoom sur les doubles pages</string>
     <string name="show_">Afficher %1$s</string>
-    <string name="most_entries">La plupart des entrées</string>
+    <string name="most_entries">Le plus d\'entrées</string>
     <string name="select_uninstalled_sources">Sélectionner les sources désinstallées</string>
     <string name="use_staggered_grid">Utiliser une grille échelonnée</string>
     <string name="pref_update_only_completely_read_summary">Ne mettre à jour le manga que s\'il n\'y a pas de chapitre non lu (complètement lu)</string>
     <string name="update_tracking_after_reading">Mettre à jour le suivi après lecture</string>
-    <string name="update_tracking_marked_read">Mettre à joure suivi quand marqué comme lu</string>
+    <string name="update_tracking_marked_read">Mettre à jour le suivi quand marqué comme lu</string>
     <string name="downloads_swipe_tutorial">Les téléchargements peuvent être annulés en les faisant glisser.
 \nFaites glisser ce conseil pour l\'annuler</string>
     <string name="must_view_details_before_migration">La page de détails de cet article doit être consultée avant de pouvoir migrer</string>
@@ -1015,8 +1014,7 @@
         <item quantity="other">Les %d suivants non lus</item>
     </plurals>
     <string name="learn_why">Apprendre pourquoi</string>
-    <string name="auto_download_after_reading">Télécharger les prochains chapitres non lus après la lecture</string>
-    <string name="download_ahead_info">Le téléchargement anticipé ne s\'applique qu\'aux entrées de la bibliothèque et si le dernier chapitre lu a été téléchargé</string>
+    <string name="download_ahead_info">Fonctionne seulement sur les entrées de la bibliothèque et si le chapitre actuel et le suivant sont déjà téléchargés</string>
     <string name="secure_screen_summary">L\'écran sécurisé cache le contenu lors du changement d\'application et bloque les captures d\'écran</string>
     <string name="open_in_app">Ouvrir dans l\'application</string>
     <string name="pref_hide_threshold">Sensibilité pour masquer le menu lors du défilement</string>
@@ -1041,4 +1039,30 @@
     <string name="user_agent_string">Agents utilisateurs par défaut</string>
     <string name="language_requires_app_restart">Certains langages peuvent nécessiter un redémarrage de l\'application pour s\'afficher correctement</string>
     <string name="loader_rar5_error">Le format RARv5 n\'est pas supporté</string>
+    <string name="auto_download_while_reading">Téléchargement automatique pendant la lecture</string>
+    <string name="downloaded_chapters">Chapitres téléchargés</string>
+    <string name="stat">Stat</string>
+    <string name="statistics_details">Détails des statistiques</string>
+    <string name="titles_in_library">Titres dans la bibliothèque</string>
+    <string name="chapters_read">Chapitres lus</string>
+    <string name="tracked_titles">Titres suivis</string>
+    <string name="tags">Étiquettes</string>
+    <string name="titles_in_global_update">Titres dans la mise à jour globale</string>
+    <string name="trackers">Traceurs</string>
+    <string name="read_duration">Durée de lecture</string>
+    <string name="manga_status_distribution">Répartition des statuts</string>
+    <string name="manga_score_distribution">Répartition des notes</string>
+    <string name="view_detailed_statistics">Afficher les statistiques détaillées</string>
+    <string name="count">Compte</string>
+    <string name="not_rated">Non évalué</string>
+    <string name="source">Source</string>
+    <string name="length">Longueur</string>
+    <string name="start_year">Année de début</string>
+    <string name="stats">Stats</string>
+    <string name="statistics">Statistiques</string>
+    <string name="mean_score">Note moyenne</string>
+    <string name="local_titles">Titres locaux</string>
+    <string name="no_data_for_filters">Aucune donnée trouvée pour vos filtres actuels</string>
+    <string name="all_read_manga">Tous les mangas lus</string>
+    <string name="clear_db_exclude_read">Conserver les mangas avec des chapitres lus</string>
 </resources>

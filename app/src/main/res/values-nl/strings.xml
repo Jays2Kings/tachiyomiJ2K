@@ -182,7 +182,7 @@
     <string name="fourth_to_last">Drie-na-laatste hoofdstuk</string>
     <string name="fifth_to_last">Vier-na-laatste hoofdstuk</string>
     <string name="clear_chapter_cache">Leeg hoofdstuk cache</string>
-    <string name="cache_delete_error">Er is een fout opgetreden bij het legen van de cache</string>
+    <string name="cache_delete_error">Fout opgetreden tijdens het wissen</string>
     <string name="clear_database">Database legen</string>
     <string name="clear_database_summary">Verwijder manga en hoofdstukken die niet in je bibliotheek staan</string>
     <string name="refresh_library_metadata">Bijwerken van bibliotheek metadata</string>
@@ -287,7 +287,7 @@
         <item quantity="one">Extensie-update beschikbaar</item>
         <item quantity="other">%d extensie-updates beschikbaar</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Vermindert kleurstrepen, maar beïnvloedt de prestaties</string>
+    <string name="reduces_banding_impacts_performance">Vermindert banderolleren, maar kan de prestaties beïnvloeden</string>
     <string name="color_filter_blend_mode">Mengmodus kleurfilter</string>
     <string name="dodge_lighten">Tegenhouden / Lichter</string>
     <string name="burn_darken">Doordrukken / Donkerder</string>
@@ -401,7 +401,6 @@
     <string name="show_all_categories">Alle categorieën weergeven</string>
     <string name="no_matches_for_filters">Geen overeenkomsten gevonden voor je huidige filters</string>
     <string name="library_search_hint">Zoeken op titel, tags, bron</string>
-    <string name="remove_from_library_question">Uit de bibliotheek verwijderen\?</string>
     <string name="updating_">Bijwerken van %1$s</string>
     <string name="jump_to_category">Ga naar categorie</string>
     <string name="long_press_category">Ingedrukt houden om een categorie aan te passen</string>
@@ -600,7 +599,7 @@
     <string name="kindlish_nav">Kindle-achtig</string>
     <string name="edge_nav">Rand</string>
     <string name="right_and_left_nav">Rechts en links</string>
-    <string name="invert_tapping">Tikken omkeren</string>
+    <string name="invert_tapping">Tapzones omkeren</string>
     <string name="none">Geen</string>
     <string name="started_reading_date">Datum begonnen met lezen</string>
     <string name="finished_reading_date">Datum klaar met lezen</string>
@@ -980,4 +979,33 @@
     <string name="show_">Laat %1$s zien</string>
     <string name="must_view_details_before_migration">Voor dit item gemigreerd kan worden moet er eerst naar de details zijn gekeken</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="lavender">Lavender</string>
+    <string name="language_requires_app_restart">Voor sommige talen moet de app opnieuw worden gestart om correct weer te geven</string>
+    <string name="download_ahead">Download vooruit</string>
+    <string name="loader_rar5_error">RARv5-indeling wordt niet ondersteund</string>
+    <string name="tap_zones">Tik op zones</string>
+    <string name="violet">Violet</string>
+    <string name="user_agent_string">Standaard user agent string</string>
+    <string name="webview_data_deleted">WebView-gegevens gewist</string>
+    <string name="all_read_manga">Allemaal gelezen manga</string>
+    <string name="complete_list">Volledige lijst</string>
+    <string name="unfinished_list">Onvoltooide lijst</string>
+    <string name="most_entries">De meeste inzendingen</string>
+    <string name="tap_to_learn_more">Tik voor meer informatie</string>
+    <string name="learn_why">Ontdek waarom</string>
+    <string name="warning_enroll_into_beta">Bètaversies kunnen onstabiel zijn en vereisen mogelijk het wissen van app-gegevens.</string>
+    <string name="split_tall_images_summary">Verbetert de prestaties van de lezer</string>
+    <string name="view_all">Alles weergeven</string>
+    <string name="pref_clear_webview_data">WebView-gegevens wissen</string>
+    <string name="select_uninstalled_sources">Selecteer verwijderde bronnen</string>
+    <string name="download_notifier_split_page_not_found">Pagina %d niet gevonden tijdens het splitsen</string>
+    <string name="download_notifier_split_failed">Kan gedownloade afbeelding niet splitsen</string>
+    <string name="download_ahead_info">Download ahead is alleen van toepassing op vermeldingen in de bibliotheek en als het laatste gelezen hoofdstuk is gedownload</string>
+    <string name="split_tall_images">Split tall afbeeldingen</string>
+    <string name="open_in_app">Openen in app</string>
+    <string name="battery_not_low">Batterij niet bijna leeg</string>
+    <string name="downloads_swipe_tutorial">Downloads kunnen worden geannuleerd door ze weg te vegen
+\nVeeg over deze tip om deze te negeren</string>
+    <string name="clear_db_exclude_read">Houd manga bij met gelezen hoofdstukken</string>
+    <string name="downloaded_chapters">Gedownloade hoofdstukken</string>
 </resources>

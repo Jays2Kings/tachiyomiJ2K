@@ -411,7 +411,6 @@
     <string name="show_all_categories">Tampilkan semua kategori</string>
     <string name="no_matches_for_filters">Tidak ada yang cocok untuk filter Anda saat ini</string>
     <string name="library_search_hint">Cari judul, tag, sumber</string>
-    <string name="remove_from_library_question">Hapus dari pustaka\?</string>
     <string name="updating_">Memperbaharui %1$s</string>
     <string name="jump_to_category">Lompat ke kategori</string>
     <string name="long_press_category">Tekan dan tahan untuk mengubah kategori</string>
@@ -951,12 +950,11 @@
     <string name="backup_info">Pencadangan otomatis sangat disarankan. Anda juga harus menyimpan duplikat di tempat lain.</string>
     <string name="use_staggered_grid">Gunakan grid jatuh</string>
     <string name="zoom_double_page_spreads">Zoom pada halaman ganda</string>
-    <string name="auto_download_after_reading">Unduh bab yang belum dibaca berikutnya setelah membaca</string>
     <plurals name="next_unread_chapters">
-        <item quantity="other">%d belum dibaca</item>
+        <item quantity="other">Selanjutnya chapter %d yang belum dibaca</item>
     </plurals>
-    <string name="download_ahead">Unduh kedepan</string>
-    <string name="download_ahead_info">Unduh ke depan hanya berlaku untuk entri di perpustakaan dan jika bab terakhir dibaca diunduh</string>
+    <string name="download_ahead">Unduh di depan</string>
+    <string name="download_ahead_info">Hanya berfungsi pada entri di perpustakaan dan jika bab saat ini ditambah yang berikutnya sudah diunduh</string>
     <string name="pref_manage_notifications">Kelola notifikasi</string>
     <string name="battery_not_low">Baterai tidak lemah</string>
     <string name="faq_and_guides">Tanya Jawab dan Panduan</string>
@@ -985,4 +983,8 @@
     <string name="user_agent_string">String agen pengguna default</string>
     <string name="language_requires_app_restart">Beberapa bahasa mungkin memerlukan peluncuran ulang aplikasi untuk ditampilkan dengan benar</string>
     <string name="loader_rar5_error">Format RARv5 tidak didukung</string>
+    <string name="all_read_manga">Semua manga yang dibaca</string>
+    <string name="clear_db_exclude_read">Simpan manga dengan membaca chapter</string>
+    <string name="auto_download_while_reading">Unduh otomatis ketika sedang membaca</string>
+    <string name="downloaded_chapters">Diunduh</string>
 </resources>

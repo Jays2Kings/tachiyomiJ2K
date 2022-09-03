@@ -398,7 +398,6 @@
     <string name="always_show_current_category">Να εμφανίζεται πάντα η τρέχουσα κατηγορία</string>
     <string name="show_all_categories">Εμφάνιση όλων των κατηγοριών</string>
     <string name="no_matches_for_filters">Δεν βρέθηκαν αντιστοιχίες για τα τρέχοντα φίλτρα σας</string>
-    <string name="remove_from_library_question">Διαγραφή από τη βιβλιοθήκη;</string>
     <string name="updating_">Ενημέρωση %1$s</string>
     <string name="jump_to_category">Μετάβαση στην κατηγορία</string>
     <string name="long_press_category">Πατήστε παρατεταμένα για να επεξεργαστείτε μια κατηγορία</string>
@@ -977,12 +976,11 @@
     <string name="faq_and_guides">Συχνές ερωτήσεις και οδηγοί</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Επόμενο αδιάβαστο κεφάλαιο</item>
-        <item quantity="other">Επόμενο %d κεφάλαιο</item>
+        <item quantity="other">Επόμενα %d αδιάβαστα κεφάλαια</item>
     </plurals>
-    <string name="auto_download_after_reading">Λήψη των επόμενων αδιάβαστων κεφαλαίων μετά την ανάγνωση</string>
     <string name="learn_why">Μάθετε γιατί</string>
     <string name="download_ahead">Λήψη εκ των προτέρων</string>
-    <string name="download_ahead_info">Η λήψη εκ των προτέρων ισχύει μόνο για καταχωρήσεις στη βιβλιοθήκη και εάν έγινε λήψη του τελευταίου κεφαλαίου που διαβάστηκε</string>
+    <string name="download_ahead_info">Λειτουργεί μόνο σε καταχωρήσεις στη βιβλιοθήκη και αν το τρέχον κεφάλαιο και το επόμενο έχουν ήδη ληφθεί</string>
     <string name="secure_screen_summary">Η ασφαλής οθόνη αποκρύπτει τα περιεχόμενα εφαρμογών κατά την εναλλαγή εφαρμογών και εμποδίζει τα στιγμιότυπα οθόνης</string>
     <string name="open_in_app">Άνοιγμα στην εφαρμογή</string>
     <string name="pref_hide_threshold">Ευαισθησία για την απόκρυψη του μενού κατά την κύλιση</string>
@@ -993,7 +991,7 @@
     <string name="download_notifier_split_page_not_found">Η σελίδα %d δε βρέθηκε κατά τη διάσπαση</string>
     <string name="download_notifier_split_failed">Δεν ήταν δυνατή η διαίρεση της εικόνας που έχει ληφθεί</string>
     <string name="split_tall_images">Αυτόματη διάσπαση ψηλών εικόνων</string>
-    <string name="split_tall_images_summary">Βελτιώνει την απόδοση του αναγνώστη με τη διάσπαση ψηλών εικόνων που έχουν ληφθεί.</string>
+    <string name="split_tall_images_summary">Βελτιώνει την απόδοση του αναγνώστη</string>
     <string name="reading_list">Λίστα ανάγνωσης</string>
     <string name="wish_list">Λίστα επιθυμιών</string>
     <string name="complete_list">Πλήρης Λίστα</string>
@@ -1006,4 +1004,48 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Προεπιλεγμένη συμβολοσειρά πράκτορα χρήστη</string>
     <string name="loader_rar5_error">Η μορφή RARv5 δεν υποστηρίζεται</string>
+    <string name="language_requires_app_restart">Ορισμένες γλώσσες ενδέχεται να απαιτούν επανεκκίνηση της εφαρμογής για να εμφανιστούν σωστά</string>
+    <string name="clear_db_exclude_read">Διατήρηση manga με αναγνωσμένα κεφάλαια</string>
+    <string name="all_read_manga">Όλα τα manga που διαβάστηκαν</string>
+    <string name="auto_download_while_reading">Αυτόματη λήψη κατά την ανάγνωση</string>
+    <string name="downloaded_chapters">Κεφάλαια που έχουν ληφθεί</string>
+    <string name="stats">Στατιστικά</string>
+    <string name="statistics">Στατιστικά</string>
+    <string name="statistics_details">Λεπτομέρειες στατιστικών</string>
+    <string name="stat">Στατ.</string>
+    <string name="tags">Ετικέτες</string>
+    <string name="no_data_for_filters">Δε βρέθηκαν δεδομένα για τα τρέχοντα φίλτρα σας</string>
+    <string name="titles_in_library">Τίτλοι στη βιβλιοθήκη</string>
+    <string name="chapters_read">Διαβασμένα κεφάλαια</string>
+    <string name="mean_score">Μέση βαθμολογία</string>
+    <string name="tracked_titles">Παρακολουθούμενοι τίτλοι</string>
+    <string name="trackers">Ιχνηλάτες</string>
+    <string name="read_duration">Διάρκεια ανάγνωσης</string>
+    <string name="manga_status_distribution">Κατανομή κατάστασης</string>
+    <string name="manga_score_distribution">Κατανομή βαθμολογίας</string>
+    <string name="view_detailed_statistics">Δείτε αναλυτικά στατιστικά</string>
+    <string name="count">Πλήθος</string>
+    <string name="source">Πηγή</string>
+    <string name="length">Διάρκεια</string>
+    <string name="not_rated">Δεν έχει βαθμολογηθεί</string>
+    <string name="tracker">Ιχνηλάτης</string>
+    <string name="start_year">Έτος έναρξης</string>
+    <plurals name="_series_types">
+        <item quantity="one">Τύπος σειράς</item>
+        <item quantity="other">%d τύποι σειρών</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">Πηγή</item>
+        <item quantity="other">%d Πηγές</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">Κατάσταση</item>
+        <item quantity="other">%d καταστάσεις</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">Γλώσσα</item>
+        <item quantity="other">%d γλώσσες</item>
+    </plurals>
+    <string name="titles_in_global_update">Τίτλοι σε καθολική ενημέρωση</string>
+    <string name="local_titles">Τοπικοί τίτλοι</string>
 </resources>

@@ -665,7 +665,6 @@
     <string name="search_globally">Pretraži \"%1$s\" globalno</string>
     <string name="read_progress">Pročitajte napredak</string>
     <string name="update_completed">Ažuriranje je završeno</string>
-    <string name="remove_from_library_question">Izbriši iz biblioteke\?</string>
     <string name="library_search_hint">Pretraži naslov,oznake,izvor</string>
     <string name="no_matches_for_filters">Nema pronadjenih rezultata za vaše trenutne filtere</string>
     <string name="tracking_status">Status praćenja</string>
@@ -1004,4 +1003,5 @@
     <string name="pref_low">Ниска</string>
     <string name="pref_lowest">Најнижа</string>
     <string name="webtoon_side_padding_5">5%</string>
+    <string name="downloaded_chapters">Preuzeta poglavlja</string>
 </resources>

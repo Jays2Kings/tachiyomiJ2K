@@ -844,7 +844,6 @@
     <string name="category_is_empty">หมวดหมู่ว่างเปล่า</string>
     <string name="manage_category">จัดการหมวดหมู่</string>
     <string name="jump_to_category">ไปที่หมวดหมู่</string>
-    <string name="remove_from_library_question">นำออกจากคลัง\?</string>
     <string name="show_all_categories">แสดงหมวดหมู่ทั้งหมด</string>
     <string name="always_show_current_category">แสดงหมวดหมู่ปัจจุบันเสมอ</string>
     <string name="expand_all_categories">ขยายหมวดหมู่ทั้งหมด</string>
@@ -951,12 +950,11 @@
 \nปัดเพื่อปิดเคล็ดลับนี้</string>
     <string name="backup_restore_invalid_uri">เกิดข้อผิดพลาด: URI ว่างเปล่า</string>
     <string name="backup_info">ขอแนะนำให้สำรองข้อมูลอัตโนมัติ คุณควรเก็บสำเนาไว้ที่อื่นด้วยเช่นกัน</string>
-    <string name="download_ahead_info">ดาวน์โหลดล่วงหน้าจะใช้ได้เฉพาะกับรายการในคลังและเมื่อตอนที่อ่านตอนล่าสุดถูกดาวน์โหลดไว้</string>
+    <string name="download_ahead_info">ใช้ได้เฉพาะกับรายการที่อยู่ในคลังและตอนปัจจุบันกับตอนถัด ๆ ไปดาวน์โหลดไว้อยู่แล้ว</string>
     <string name="download_ahead">ดาวน์โหลดล่วงหน้า</string>
     <plurals name="next_unread_chapters">
-        <item quantity="other">%d ตอนต่อไปที่ยังไม่ได้อ่าน</item>
+        <item quantity="other">%d ตอนที่ยังไม่ได้อ่านถัดไป</item>
     </plurals>
-    <string name="auto_download_after_reading">ดาวน์โหลดตอนที่ยังไม่ได้อ่านถัดไปหลังจากอ่าน</string>
     <string name="pref_manage_notifications">จัดการการแจ้งเตือน</string>
     <string name="battery_not_low">แบตเตอรี่ยังไม่ต่ำ</string>
     <string name="faq_and_guides">คำถามที่พบบ่อยและคู่มือ</string>
@@ -985,4 +983,43 @@
     <string name="user_agent_string">ตัวแทนผู้ใช้เริ่มต้น</string>
     <string name="language_requires_app_restart">บางภาษาอาจจำเป็นต้องปิดเปิดแอปใหม่ เพื่อให้แสดงได้อย่างถูกต้อง</string>
     <string name="loader_rar5_error">ไม่รับรองรูปแบบ RARv5</string>
+    <string name="all_read_manga">มังงะที่อ่านหมดแล้ว</string>
+    <string name="clear_db_exclude_read">ละเว้นมังงะที่มีตอนที่อ่านไว้</string>
+    <string name="auto_download_while_reading">ดาวน์โหลดอัตโนมัติขณะกำลังอ่าน</string>
+    <string name="downloaded_chapters">ตอนที่ดาวน์โหลดแล้ว</string>
+    <string name="stat">สถิติ</string>
+    <string name="statistics_details">รายละเอียดสถิติ</string>
+    <string name="chapters_read">ตอนที่อ่าน</string>
+    <string name="mean_score">คะแนนสุทธิ</string>
+    <string name="tracked_titles">เรื่องที่ติดตาม</string>
+    <string name="tags">แท็ก</string>
+    <string name="local_titles">เรื่องในเครื่อง</string>
+    <string name="trackers">ตัวติดตาม</string>
+    <string name="read_duration">ระยะเวลาที่อ่าน</string>
+    <string name="manga_status_distribution">ความกระจายของสถานะ</string>
+    <string name="view_detailed_statistics">ดูสถิติแบบละเอียด</string>
+    <string name="count">นับ</string>
+    <string name="not_rated">ไม่ได้ให้คะแนน</string>
+    <string name="source">แหล่งที่มา</string>
+    <string name="tracker">ตัวติดตาม</string>
+    <string name="length">ความยาว</string>
+    <string name="no_data_for_filters">ไม่พบข้อมูลสำหรับการกรองนี้</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d ประเภทเรื่อง</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d สถานะ</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="other">%d ภาษา</item>
+    </plurals>
+    <string name="stats">สถิติ</string>
+    <string name="statistics">สถิติ</string>
+    <string name="titles_in_library">เรื่องในคลัง</string>
+    <string name="titles_in_global_update">เรื่องในการอัปเดตทั้งหมด</string>
+    <string name="manga_score_distribution">ความกระจายของคะแนน</string>
+    <string name="start_year">ปีที่เริ่ม</string>
+    <plurals name="_sources">
+        <item quantity="other">%d แหล่งที่มา</item>
+    </plurals>
 </resources>

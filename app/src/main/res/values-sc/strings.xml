@@ -552,7 +552,6 @@
     <string name="show_all_categories">Ammustra totu sas categorias</string>
     <string name="no_matches_for_filters">Perunu resurtadu agatadu pro sos filtros atuales tuos</string>
     <string name="library_search_hint">Chirca tìtulos, etichetas, mitza</string>
-    <string name="remove_from_library_question">Bogare dae sa biblioteca\?</string>
     <string name="updating_">Agiornende %1$s</string>
     <string name="jump_to_category">Brinca a sa categoria</string>
     <string name="long_press_category">Incarca a longu pro modificare una categoria</string>
@@ -973,8 +972,7 @@
     <string name="update_tracking_marked_read">Agiorna s\'arrastamentu cando as marcadu comente lèghidu</string>
     <string name="view_all">Pòmpia totu</string>
     <string name="download_ahead">Iscàrriga sos imbenientes</string>
-    <string name="auto_download_after_reading">Iscàrriga sos capìtulos non lèghidos imbenientes a pustis de sa leghidura</string>
-    <string name="download_ahead_info">S\'iscarrigamentu de sos imbenientes s\'àplicat petzi a sos elementos in biblioteca e si s\'ùrtimu capìtulu lèghidu fiat iscarrigadu</string>
+    <string name="download_ahead_info">Funtzionat petzi cun sos elementos in biblioteca e si su capìtulu atuale e cussu imbeniente sunt giai iscarrigados</string>
     <string name="learn_why">Impara proite</string>
     <string name="use_staggered_grid">Imprea una grìllia iscansada</string>
     <string name="pref_update_only_completely_read_summary">Agiorna sos menga petzi si non bi sunt capìtulos non lèghidos (lèghidu de su totu)</string>
@@ -1007,4 +1005,16 @@
     <string name="user_agent_string">Istringa de agente de utente predefinida</string>
     <string name="language_requires_app_restart">Unas cantas limbas diant pòdere bisongiare chi torres a allùghere s\'aplicatzione pro las ammustrare comente si tocat</string>
     <string name="loader_rar5_error">Su formadu RARv5 no est suportadu</string>
+    <string name="clear_db_exclude_read">Mantene sos manga cun capìtulos lèghidos</string>
+    <string name="all_read_manga">Totu sos manga lèghidos</string>
+    <string name="auto_download_while_reading">Iscàrriga in automàticu durante sa letura</string>
+    <string name="downloaded_chapters">Capìtulos iscarrigados</string>
+    <string name="stat">Istatìstica</string>
+    <string name="stats">Istatìsticas</string>
+    <string name="statistics_details">Detàllios de sas istatìsticas</string>
+    <string name="titles_in_library">Tìtulos in biblioteca</string>
+    <string name="local_titles">Tìtulos locales</string>
+    <string name="statistics">Istatìsticas</string>
+    <string name="tracked_titles">Tìtulos arrastados</string>
+    <string name="tags">Etichetas</string>
 </resources>

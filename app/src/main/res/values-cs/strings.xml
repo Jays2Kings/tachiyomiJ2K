@@ -330,8 +330,7 @@
     <string name="always_show_current_category">Vždy zobrazovat současnou kategorii</string>
     <string name="show_all_categories">Zobrazovat všechny kategorie</string>
     <string name="no_matches_for_filters">Pro vaše aktuální filtry nebyly nalezeny žádné shody</string>
-    <string name="library_search_hint">Prohledat názvy, značky, zdroj</string>
-    <string name="remove_from_library_question">Odstranit z knihovny\?</string>
+    <string name="library_search_hint">Hledat název, štítky, zdroj</string>
     <string name="updating_">Aktualizuji %1$s</string>
     <string name="jump_to_category">Přejít na kategorii</string>
     <string name="long_press_category">Stiskněte a podržte pro upravení kategorie</string>
@@ -420,9 +419,9 @@
     <string name="show_unread_badges">Ukazovat odznáčky u nepřečtených</string>
     <string name="hide_unread_badges">Skrýt odznáčky u nepřečtených</string>
     <string name="badges">Odznaky</string>
-    <string name="tag">Značky</string>
-    <string name="reset_tags">Resetovat značky</string>
-    <string name="clear_tags">Vyčistit značky</string>
+    <string name="tag">Štítek</string>
+    <string name="reset_tags">Resetovat štítky</string>
+    <string name="clear_tags">Vyčistit štítky</string>
     <string name="group_library_by">Seskupit knihovnu podle…</string>
     <string name="download_unread">Stáhnout nepřečtené</string>
     <string name="sort_by_ignoring_articles">Seřadit s ohledem na ignorované členy</string>
@@ -605,7 +604,7 @@
     <string name="source_not_installed">Zdroj není nainstalován</string>
     <string name="remember_this_choice">Zapamatovat si tuto volbu</string>
     <string name="reset_cover">Obnovit přebal</string>
-    <string name="add_tag">Přidat značku</string>
+    <string name="add_tag">Přidat štítek</string>
     <string name="oldest_first">Od nejstaršího po nejnovější</string>
     <string name="newest_first">Od nejnovějšího po nejstarší</string>
     <string name="sort_by_chapter_number">Seřadit podle čísla kapitoly</string>
@@ -952,8 +951,8 @@
     <string name="deleted_">Odstraněno: %1$s</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Další nepřečtená kapitola</item>
-        <item quantity="few">Další %d nepřečtené</item>
-        <item quantity="other">Dalších %d nepřečtených</item>
+        <item quantity="few">Další %d nepřečtené kapitoly</item>
+        <item quantity="other">Dalších %d nepřečtených kapitol</item>
     </plurals>
     <string name="over_any_network">Přes jakoukoli síť</string>
     <string name="app_shortcuts">Zástupci aplikace</string>
@@ -981,8 +980,7 @@
     <string name="use_last_saved_migration_preferences">Použití posledních uložených předvoleb a zdrojů před migrací pro hromadnou migraci</string>
     <string name="whats_new_this_release">Co je nového v této verzi</string>
     <string name="visit_recents_for_download_queue">Přístup k frontě stahování získáte na kartě Nedávné. Pro rychlejší přístup můžete také dvakrát klepnout nebo stisknout a podržet</string>
-    <string name="auto_download_after_reading">Stáhnout další nepřečtené kapitoly po přečtení</string>
-    <string name="download_ahead_info">Stahování dopředu se vztahuje pouze na záznamy v knihovně a pokud byla stažena poslední přečtená kapitola</string>
+    <string name="download_ahead_info">Funguje pouze na položky v knihovně a pokud je již stažena aktuální kapitola a následující kapitola</string>
     <string name="battery_not_low">Baterie není vybitá</string>
     <string name="clear_filters">Vymazat filtry</string>
     <string name="keep">Ponechat</string>
@@ -1030,4 +1028,51 @@
     <string name="user_agent_string">Výchozí řetězec uživatelského agenta</string>
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
+    <string name="all_read_manga">Všechna přečtená manga</string>
+    <string name="clear_db_exclude_read">Ponechejte mangu s přečtenými kapitolami</string>
+    <string name="auto_download_while_reading">Automatické stahování při čtení</string>
+    <string name="downloaded_chapters">Stažené kapitoly</string>
+    <string name="statistics">Statistiky</string>
+    <string name="statistics_details">Podrobnosti o statistikách</string>
+    <string name="titles_in_library">Tituly v knihovně</string>
+    <string name="chapters_read">Přečtené kapitoly</string>
+    <string name="mean_score">Průměrné skóre</string>
+    <string name="tracked_titles">Sledované tituly</string>
+    <string name="tags">Štítky</string>
+    <string name="local_titles">Místní tituly</string>
+    <string name="read_duration">Doba čtení</string>
+    <string name="manga_status_distribution">Rozdělení stavu</string>
+    <string name="manga_score_distribution">Rozdělení skóre</string>
+    <string name="count">Počet</string>
+    <string name="not_rated">Nehodnoceno</string>
+    <string name="source">Zdroj</string>
+    <string name="tracker">Sledovač</string>
+    <string name="no_data_for_filters">Pro aktuální filtry nebyla nalezena žádná data</string>
+    <plurals name="_sources">
+        <item quantity="one">%d zdroj</item>
+        <item quantity="few">%d zdroje</item>
+        <item quantity="other">%d zdrojů</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d jazyk</item>
+        <item quantity="few">%d jazyky</item>
+        <item quantity="other">%d jazyků</item>
+    </plurals>
+    <string name="titles_in_global_update">Tituly v globální aktualizaci</string>
+    <string name="trackers">Sledovače</string>
+    <string name="length">Délka</string>
+    <string name="start_year">Počáteční rok</string>
+    <string name="view_detailed_statistics">Zobrazit podrobné statistiky</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d druh sérií</item>
+        <item quantity="few">%d druhy sérií</item>
+        <item quantity="other">%d druhů sérií</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d status</item>
+        <item quantity="few">%d statusy</item>
+        <item quantity="other">%d statusů</item>
+    </plurals>
+    <string name="stat">Statistika</string>
+    <string name="stats">Statistiky</string>
 </resources>

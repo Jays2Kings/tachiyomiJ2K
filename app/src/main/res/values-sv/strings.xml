@@ -411,7 +411,6 @@
     <string name="show_all_categories">Visa alla kategorier</string>
     <string name="no_matches_for_filters">Inga resultat hittade i ditt nuvarande filter</string>
     <string name="library_search_hint">Sök titel, taggar, källa</string>
-    <string name="remove_from_library_question">Ta bort från bibliotek\?</string>
     <string name="updating_">Uppdaterar %1$s</string>
     <string name="jump_to_category">Hoppa till kategori</string>
     <string name="long_press_category">Tryck och håll ned för att redigera en kategori</string>
@@ -980,7 +979,6 @@
         <item quantity="other">Nästa %d olästa</item>
     </plurals>
     <string name="download_ahead">Ladda ner i förväg</string>
-    <string name="auto_download_after_reading">Ladda ner nästa olästa kapitel efter läsning</string>
     <string name="download_ahead_info">Nedladdning framåt gäller endast för poster i biblioteket och om det senast lästa kapitlet har laddats ned</string>
     <string name="learn_why">Lär dig varför</string>
     <string name="secure_screen_summary">Säker skärm döljer appinnehållet när du byter app och blockerar skärmdumpar</string>
@@ -1006,4 +1004,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Standardsträng för användaragent</string>
     <string name="loader_rar5_error">RARv5 formatet stöds inte</string>
+    <string name="downloaded_chapters">Nedladdade kapitel</string>
 </resources>
