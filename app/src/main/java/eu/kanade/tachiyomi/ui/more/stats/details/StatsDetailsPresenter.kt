@@ -557,7 +557,7 @@ class StatsDetailsPresenter(
     /**
      * Update the start date and end date according to time selected and fetch the history of the period
      */
-    fun updateReadDurationPeriod(millis: Long) {
+    fun updateReadDurationPeriod(millis: Long, days: Int) {
         startDate = Calendar.getInstance().apply {
             timeInMillis = millis
             set(Calendar.HOUR_OF_DAY, 0)
@@ -567,7 +567,7 @@ class StatsDetailsPresenter(
         }
         endDate = Calendar.getInstance().apply {
             timeInMillis = startDate.timeInMillis - 1
-            add(Calendar.WEEK_OF_YEAR, 1)
+            add(Calendar.DAY_OF_YEAR, days)
         }
         history = getMangaHistoryGroupedByDay()
     }

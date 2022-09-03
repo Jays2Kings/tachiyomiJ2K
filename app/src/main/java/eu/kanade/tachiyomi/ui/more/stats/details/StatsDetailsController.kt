@@ -57,13 +57,13 @@ import eu.kanade.tachiyomi.util.system.toInt
 import eu.kanade.tachiyomi.util.system.toLocalCalendar
 import eu.kanade.tachiyomi.util.system.toUtcCalendar
 import eu.kanade.tachiyomi.util.system.withIOContext
-import eu.kanade.tachiyomi.util.system.withUIContext
 import eu.kanade.tachiyomi.util.view.backgroundColor
 import eu.kanade.tachiyomi.util.view.compatToolTipText
 import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsetsCompat
 import eu.kanade.tachiyomi.util.view.isControllerVisible
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.util.Calendar
@@ -90,6 +90,7 @@ class StatsDetailsController :
      * Selected day in the read duration stat
      */
     private var highlightedDay: Calendar? = null
+    private var jobReadDuration: Job? = null
 
     /**
      * Returns the toolbar title to show when this controller is attached.
@@ -234,7 +235,7 @@ class StatsDetailsController :
 
                         dialog.dismiss()
                         presenter.sortCurrentStats()
-                        resetLayout(updateChipsVisibility = false, resetReadDuration = false)
+                        resetLayout()
                         updateStats()
                     }
                     .setNegativeButton(android.R.string.cancel, null)
@@ -263,6 +264,7 @@ class StatsDetailsController :
                         }
                         binding.statsDateText.text = presenter.getPeriodString()
                         statsBarChart.highlightValues(null)
+                        highlightedDay = null
                         presenter.getStatisticData()
                     }
                 }
@@ -328,63 +330,53 @@ class StatsDetailsController :
     /**
      * Changes dates of the read duration stat with the arrows
      * @param referenceDate date used to determine if should change week
-     * @param weeksToAdd number of weeks to add or remove
+     * @param toAdd whether to add or remove
      */
-    private fun changeDatesReadDurationWithArrow(referenceDate: Calendar, weeksToAdd: Int) {
+    private fun changeDatesReadDurationWithArrow(referenceDate: Calendar, toAdd: Int) {
+        jobReadDuration?.cancel()
         with(binding) {
             if (highlightedDay == null) {
-                changeWeekReadDuration(weeksToAdd)
+                changeReadDurationPeriod(toAdd)
             } else {
-                val newDaySelected = highlightedDay?.get(Calendar.DAY_OF_MONTH)
-                val endDay = referenceDate.get(Calendar.DAY_OF_MONTH)
+                val daySelected = highlightedDay?.get(Calendar.DAY_OF_YEAR)
+                val endDay = referenceDate.get(Calendar.DAY_OF_YEAR)
                 statsBarChart.highlightValues(null)
-                if (newDaySelected == endDay) {
-                    changeWeekReadDuration(weeksToAdd)
-                    if (!statsBarChart.isVisible) {
-                        highlightedDay = null
-                        return
-                    }
-                }
                 highlightedDay = Calendar.getInstance().apply {
                     timeInMillis = highlightedDay!!.timeInMillis
-                    add(Calendar.DAY_OF_WEEK, weeksToAdd)
+                    add(Calendar.DAY_OF_YEAR, toAdd)
                 }
-                val highlightValue = presenter.historyByDayAndManga.keys.toTypedArray()
-                    .indexOfFirst { it.get(Calendar.DAY_OF_MONTH) == highlightedDay?.get(Calendar.DAY_OF_MONTH) }
-                if (highlightValue == -1) {
-                    highlightedDay = null
-                    changeDatesReadDurationWithArrow(referenceDate, weeksToAdd)
-                    return
-                }
-                statsBarChart.highlightValue(highlightValue.toFloat(), 0)
-                statsBarChart.marker.refreshContent(
-                    statsBarChart.data.dataSets[0].getEntryForXValue(highlightValue.toFloat(), 0f),
-                    statsBarChart.getHighlightByTouchPoint(highlightValue.toFloat(), 0f),
-                )
+                if (daySelected == endDay) {
+                    changeReadDurationPeriod(toAdd)
+                } else updateHighlightedValue()
             }
         }
     }
 
     /**
      * Changes week of the read duration stat
-     * @param weeksToAdd number of weeks to add or remove
+     * @param toAdd whether to add or remove
      */
-    private fun changeWeekReadDuration(weeksToAdd: Int) {
-        if (weeksToAdd > 0) {
-            presenter.startDate.apply {
-                time = presenter.endDate.time
-                add(Calendar.DAY_OF_YEAR, 1)
-            }
-        } else {
-            presenter.startDate.apply {
-                add(Calendar.WEEK_OF_YEAR, -1)
-            }
-        }
+    private fun changeReadDurationPeriod(toAdd: Int) {
+        val millionSeconds = presenter.endDate.timeInMillis - presenter.startDate.timeInMillis
+        val days = TimeUnit.MILLISECONDS.toDays(millionSeconds) + 1
+        presenter.startDate.add(Calendar.DAY_OF_YEAR, toAdd * days.toInt())
         binding.progress.isVisible = true
-        viewScope.launchIO {
-            presenter.updateReadDurationPeriod(presenter.startDate.timeInMillis)
-            withUIContext { binding.statsDateText.text = presenter.getPeriodString() }
+        jobReadDuration = viewScope.launchIO {
+            presenter.updateReadDurationPeriod(presenter.startDate.timeInMillis, days.toInt())
             presenter.getStatisticData()
+        }
+    }
+
+    private fun updateHighlightedValue() {
+        with(binding) {
+            val highlightValue = presenter.historyByDayAndManga.keys.toTypedArray()
+                .indexOfFirst { it.get(Calendar.DAY_OF_YEAR) == highlightedDay?.get(Calendar.DAY_OF_YEAR) }
+            if (highlightValue == -1) return
+            statsBarChart.highlightValue(highlightValue.toFloat(), 0)
+            statsBarChart.marker.refreshContent(
+                statsBarChart.data.dataSets[0].getEntryForXValue(highlightValue.toFloat(), 0f),
+                statsBarChart.getHighlightByTouchPoint(highlightValue.toFloat(), 0f),
+            )
         }
     }
 
@@ -466,7 +458,7 @@ class StatsDetailsController :
      */
     private fun resetAndSetup(
         updateChipsVisibility: Boolean = true,
-        resetReadDuration: Boolean = updateChipsVisibility,
+        resetReadDuration: Boolean = true,
     ) {
         resetLayout(updateChipsVisibility, resetReadDuration)
         presenter.getStatisticData()
@@ -487,7 +479,7 @@ class StatsDetailsController :
      * @param updateChipsVisibility whether to update the chips visibility
      * @param resetReadDuration whether to reset the read duration values
      */
-    private fun resetLayout(updateChipsVisibility: Boolean = false, resetReadDuration: Boolean = updateChipsVisibility) {
+    private fun resetLayout(updateChipsVisibility: Boolean = false, resetReadDuration: Boolean = false) {
         with(binding) {
             progress.isVisible = true
             scrollView.isInvisible = true
@@ -519,6 +511,7 @@ class StatsDetailsController :
                 statsPieChart.isVisible = false
                 statsBarChart.isVisible = false
                 statsLineChart.isVisible = false
+                highlightedDay = null
             } else {
                 binding.noChartData.hide()
                 handleLayout()
@@ -526,6 +519,7 @@ class StatsDetailsController :
             scrollView.isVisible = true
             progress.isVisible = false
             totalDurationStatsText.text = adapter?.list?.sumOf { it.readDuration }?.getReadDuration()
+            if (highlightedDay != null) updateHighlightedValue() else statsDateText.text = presenter.getPeriodString()
         }
     }
 

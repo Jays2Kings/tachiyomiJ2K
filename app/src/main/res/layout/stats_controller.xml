@@ -463,7 +463,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHeight_max="300dp"
+                    app:layout_constraintHeight_max="600dp"
                     app:layout_constraintDimensionRatio="@fraction/chartRatio"
                     app:layout_constraintEnd_toStartOf="@id/manga_stats_status_recycler_view"
                     app:layout_constraintHorizontal_bias="0.0"
