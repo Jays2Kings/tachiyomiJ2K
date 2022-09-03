@@ -569,6 +569,9 @@ class StatsDetailsPresenter(
             timeInMillis = startDate.timeInMillis - 1
             add(Calendar.DAY_OF_YEAR, days)
         }
+    }
+
+    fun updateMangaHistory() {
         history = getMangaHistoryGroupedByDay()
     }
 
@@ -589,7 +592,6 @@ class StatsDetailsPresenter(
             add(Calendar.DAY_OF_YEAR, 1)
             timeInMillis -= 1
         }
-        history = getMangaHistoryGroupedByDay()
     }
 
     fun convertCalendarToLongString(calendar: Calendar): String {

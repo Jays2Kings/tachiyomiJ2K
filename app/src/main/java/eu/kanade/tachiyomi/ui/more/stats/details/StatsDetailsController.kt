@@ -63,6 +63,7 @@ import eu.kanade.tachiyomi.util.view.doOnApplyWindowInsetsCompat
 import eu.kanade.tachiyomi.util.view.isControllerVisible
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
 import eu.kanade.tachiyomi.util.view.setOnQueryTextChangeListener
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.util.Calendar
@@ -89,6 +90,7 @@ class StatsDetailsController :
      * Selected day in the read duration stat
      */
     private var highlightedDay: Calendar? = null
+    private var jobReadDuration: Job? = null
 
     /**
      * Returns the toolbar title to show when this controller is attached.
@@ -253,13 +255,12 @@ class StatsDetailsController :
                 dialog.addOnPositiveButtonClickListener { utcMillis ->
                     binding.progress.isVisible = true
                     viewScope.launch {
-                        withIOContext {
-                            presenter.updateReadDurationPeriod(
-                                utcMillis.first.toLocalCalendar()?.timeInMillis ?: utcMillis.first,
-                                utcMillis.second.toLocalCalendar()?.timeInMillis
-                                    ?: utcMillis.second,
-                            )
-                        }
+                        presenter.updateReadDurationPeriod(
+                            utcMillis.first.toLocalCalendar()?.timeInMillis ?: utcMillis.first,
+                            utcMillis.second.toLocalCalendar()?.timeInMillis
+                                ?: utcMillis.second,
+                        )
+                        withIOContext { presenter.updateMangaHistory() }
                         binding.statsDateText.text = presenter.getPeriodString()
                         statsBarChart.highlightValues(null)
                         highlightedDay = null
@@ -331,6 +332,7 @@ class StatsDetailsController :
      * @param toAdd whether to add or remove
      */
     private fun changeDatesReadDurationWithArrow(referenceDate: Calendar, toAdd: Int) {
+        jobReadDuration?.cancel()
         with(binding) {
             if (highlightedDay == null) {
                 changeReadDurationPeriod(toAdd)
@@ -357,9 +359,10 @@ class StatsDetailsController :
         val millionSeconds = presenter.endDate.timeInMillis - presenter.startDate.timeInMillis
         val days = TimeUnit.MILLISECONDS.toDays(millionSeconds) + 1
         presenter.startDate.add(Calendar.DAY_OF_YEAR, toAdd * days.toInt())
+        presenter.updateReadDurationPeriod(presenter.startDate.timeInMillis, days.toInt())
         binding.progress.isVisible = true
-        viewScope.launchIO {
-            presenter.updateReadDurationPeriod(presenter.startDate.timeInMillis, days.toInt())
+        jobReadDuration = viewScope.launchIO {
+            presenter.updateMangaHistory()
             presenter.getStatisticData()
         }
     }
