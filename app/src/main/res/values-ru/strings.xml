@@ -1064,10 +1064,10 @@
     <string name="download_ahead_info">Работает только с элементами в библиотеке, а также если текущая и следующая главы уже загружены</string>
     <string name="sort_fetched_time">Сортировка по времени поиска</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Следующая непрочитанная главаСледующие %d непрочитанные главыСледующие %d непрочитанных глав</item>
-        <item quantity="few"/>
-        <item quantity="many"/>
-        <item quantity="other"/>
+        <item quantity="one">Следующая непрочитанная глава</item>
+        <item quantity="few">Следующие %d непрочитанные главы</item>
+        <item quantity="many">Следующие %d непрочитанных глав</item>
+        <item quantity="other">Следующие %d непрочитанных глав</item>
     </plurals>
     <string name="learn_why">Узнайте, почему</string>
     <string name="open_in_app">Открыть в приложении</string>

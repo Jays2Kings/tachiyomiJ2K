@@ -1040,4 +1040,42 @@
     <string name="all_read_manga">Todos los mangas leídos</string>
     <string name="auto_download_while_reading">Descarga los capítulos siguientes mientras lees</string>
     <string name="downloaded_chapters">Capítulos descargados</string>
+    <string name="stat">Estadística</string>
+    <string name="chapters_read">Capítulos leídos</string>
+    <string name="mean_score">Puntuación media</string>
+    <string name="start_year">Año de comienzo</string>
+    <string name="no_data_for_filters">No se han encontrado datos para sus filtros actuales</string>
+    <string name="length">Longitud</string>
+    <string name="stats">Estadísticas</string>
+    <string name="statistics">Estadísticas</string>
+    <string name="titles_in_library">Títulos en biblioteca</string>
+    <string name="tracked_titles">Títulos rastreados</string>
+    <string name="tags">Etiquetas</string>
+    <string name="local_titles">Títulos locales</string>
+    <string name="titles_in_global_update">Títulos en la actualización global</string>
+    <string name="trackers">Rastreadores</string>
+    <string name="read_duration">Tiempo de lectura</string>
+    <string name="manga_status_distribution">Distribución de estado</string>
+    <string name="manga_score_distribution">Distribución de puntuación</string>
+    <string name="not_rated">Sin clasificar</string>
+    <plurals name="_sources">
+        <item quantity="one">Fuente</item>
+        <item quantity="many">%d Fuentes</item>
+        <item quantity="other">Otras fuentes</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d Lenguaje</item>
+        <item quantity="many">%d lenguajes</item>
+        <item quantity="other">%d Otros lenguajes</item>
+    </plurals>
+    <string name="statistics_details">Detalles de estadísticas</string>
+    <string name="view_detailed_statistics">Ver estadísticas detalladas</string>
+    <string name="source">Fuente</string>
+    <string name="count">Cuenta</string>
+    <string name="tracker">Rastreador</string>
+    <plurals name="_statuses">
+        <item quantity="one">Estado</item>
+        <item quantity="many">%d Estados</item>
+        <item quantity="other">Otros estados</item>
+    </plurals>
 </resources>

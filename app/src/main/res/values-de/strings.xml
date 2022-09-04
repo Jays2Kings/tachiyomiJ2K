@@ -223,7 +223,7 @@
     <string name="webtoon_style">Webtoonstil</string>
     <!-- Reader settings -->
     <string name="fullscreen">Vollbild</string>
-    <string name="double_tap_anim_speed">Doppeltipp Animationsgeschwindigkeit</string>
+    <string name="double_tap_anim_speed">Doppeltipp-Animationsgeschwindigkeit</string>
     <string name="show_page_number">Seitennummer zeigen</string>
     <string name="true_32bit_color">32-bit Farbe</string>
     <string name="reduces_banding_impacts_performance">Reduziert Streifenbildung, könnte aber die Leistung beeinflussen</string>
@@ -477,7 +477,7 @@
     <string name="send_crash_report">Fehlerberichte senden</string>
     <string name="helps_fix_bugs">Hilft Fehler zu beheben. Keine sensiblen Daten werden gesendet</string>
     <string name="whats_new">Was ist neu</string>
-    <string name="website">Website</string>
+    <string name="website">Webseite</string>
     <string name="open_source_licenses">Quelloffene Lizenzen</string>
     <!-- Login/Logout dialog -->
     <string name="log_in_to_">Bei %1$s anmelden</string>
@@ -651,7 +651,7 @@
 \n
 \nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
     <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
-    <string name="restore_duration">%02d Min., %02d Sek.</string>
+    <string name="restore_duration">%02d Min., %02d Sek.</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Erledigt in %1$s mit %2$s Fehler</item>
         <item quantity="other">Erledigt in %1$s mit %2$s Fehlern</item>
@@ -879,7 +879,7 @@
     <string name="update_all">Alle aktualisieren</string>
     <string name="could_not_install_update">Aktualisierung konnte nicht installiert werden</string>
     <string name="update_completed">Aktualisierung abgeschlossen</string>
-    <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche Anwendungsbeschränkungen, die Hintergrunddienste stoppen. Diese Website hat mehr Informationen darüber, wie man dies beheben kann.</string>
+    <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche Anwendungsbeschränkungen, die Hintergrunddienste stoppen. Diese Webseite hat mehr Informationen darüber, wie man dies beheben kann.</string>
     <string name="tako">Tako</string>
     <string name="recently_installed">Kürzlich installiert</string>
     <string name="recently_updated">Kürzlich aktualisiert</string>
@@ -1007,8 +1007,8 @@
     <string name="update_tracking_after_reading">Nach dem Lesen den Tracker aktualisieren</string>
     <string name="update_tracking_marked_read">Markieren als gelesen aktualisiert den Tracker</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Nächstes ungelesenes KapitelNächste %d ungelesene Kapitel</item>
-        <item quantity="other"/>
+        <item quantity="one">Nächstes ungelesenes Kapitel</item>
+        <item quantity="other">Nächste %d ungelesene Kapitel</item>
     </plurals>
     <string name="download_ahead_info">Funktioniert nur bei Werken in der Bibliothek und wenn das aktuelle Kapitel sowie das darauf folgende bereits heruntergeladen sind</string>
     <string name="download_ahead">Im Voraus herunterladen</string>

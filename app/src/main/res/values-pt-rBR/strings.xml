@@ -848,7 +848,7 @@
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
-    <string name="all_files_permission_required">Permissão para acessar arquivos é necessária</string>
+    <string name="all_files_permission_required">Permissão para acessar arquivos necessária</string>
     <string name="restore_miui_warning">Backup/restauração pode não funcionar adequadamente se a Otimização MIUI estiver desabilitada.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="add_tag">Adicionar tag</string>
@@ -1052,4 +1052,35 @@
     <string name="loader_rar5_error">O formato RARv5 não é suportado</string>
     <string name="auto_download_while_reading">Download automático durante a leitura</string>
     <string name="downloaded_chapters">Capítulos disponíveis offline</string>
+    <string name="stat">Status</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d Tipo de série</item>
+        <item quantity="many">%d Tipos de séries</item>
+        <item quantity="other">%d Outras séries</item>
+    </plurals>
+    <string name="length">Comprimento</string>
+    <string name="start_year">Ano de início</string>
+    <string name="no_data_for_filters">Nenhum dado encontrado para seus filtros atuais</string>
+    <string name="language_requires_app_restart">Alguns idiomas precisam de app específico para que possam funcionar corretamente</string>
+    <string name="titles_in_library">Títulos na Biblioteca</string>
+    <string name="mean_score">Pontuação média</string>
+    <string name="tags">Marcação</string>
+    <string name="trackers">Rastreadores</string>
+    <string name="read_duration">Duração da leitura</string>
+    <string name="manga_status_distribution">Distribuição de Status</string>
+    <string name="count">Contar</string>
+    <string name="tracker">Rastreador</string>
+    <string name="clear_db_exclude_read">Manter mangá com capítulos lidos</string>
+    <string name="statistics_details">Detalhes dos Status</string>
+    <string name="all_read_manga">Todos os mangás Lidos</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="tracked_titles">Títulos Monitorados</string>
+    <string name="chapters_read">Capítulos lidos</string>
+    <string name="stats">Status</string>
+    <string name="local_titles">Títulos locais</string>
+    <string name="titles_in_global_update">Títulos em atualização global</string>
+    <string name="manga_score_distribution">Distribuição de pontuação</string>
+    <string name="view_detailed_statistics">Ver estatísticas detalhadas</string>
+    <string name="not_rated">Não avaliado</string>
+    <string name="source">Fonte</string>
 </resources>
