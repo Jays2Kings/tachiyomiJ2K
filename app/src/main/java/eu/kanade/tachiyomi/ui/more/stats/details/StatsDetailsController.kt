@@ -369,8 +369,10 @@ class StatsDetailsController :
 
     private fun updateHighlightedValue() {
         with(binding) {
-            val highlightValue = presenter.historyByDayAndManga.keys.toTypedArray()
-                .indexOfFirst { it.get(Calendar.DAY_OF_YEAR) == highlightedDay?.get(Calendar.DAY_OF_YEAR) }
+            val highlightValue = presenter.historyByDayAndManga.keys.toTypedArray().indexOfFirst {
+                it.get(Calendar.DAY_OF_YEAR) == highlightedDay?.get(Calendar.DAY_OF_YEAR) &&
+                    it.get(Calendar.YEAR) == highlightedDay?.get(Calendar.YEAR)
+            }
             if (highlightValue == -1) return
             statsBarChart.highlightValue(highlightValue.toFloat(), 0)
             statsBarChart.marker.refreshContent(
