@@ -611,15 +611,15 @@ class StatsDetailsPresenter(
     enum class Stats(val resourceId: Int) {
         SERIES_TYPE(R.string.series_type),
         STATUS(R.string.status),
+        READ_DURATION(R.string.read_duration),
         SCORE(R.string.score),
-        LANGUAGE(R.string.language),
         LENGTH(R.string.length),
-        TRACKER(R.string.tracker),
+        LANGUAGE(R.string.language),
         SOURCE(R.string.source),
+        TRACKER(R.string.tracker),
         CATEGORY(R.string.category),
         TAG(R.string.tag),
         START_YEAR(R.string.start_year),
-        READ_DURATION(R.string.read_duration),
     }
 
     enum class StatsSort(val resourceId: Int) {

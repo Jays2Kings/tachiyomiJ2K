@@ -128,6 +128,18 @@ interface HistoryQueries : DbProvider {
         )
         .prepare()
 
+    fun getTotalReadDuration(): Long {
+        val cursor = db.lowLevel()
+            .rawQuery(
+                RawQuery.builder()
+                    .query("SELECT SUM(${HistoryTable.COL_TIME_READ}) FROM ${HistoryTable.TABLE}")
+                    .observesTables(HistoryTable.TABLE)
+                    .build(),
+            )
+        cursor.moveToFirst()
+        return cursor.getLong(0)
+    }
+
     fun getHistoryByChapterUrl(chapterUrl: String) = db.get()
         .`object`(History::class.java)
         .withQuery(
