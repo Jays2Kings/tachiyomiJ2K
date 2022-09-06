@@ -18,30 +18,12 @@
         android:paddingTop="@dimen/marginSmall"
         android:paddingBottom="@dimen/marginSmall">
 
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/view_detail_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.Tachiyomi.Button.OutlinedButton.Icon"
             android:layout_gravity="end"
-            android:layout_marginBottom="@dimen/marginNormal"
-            android:foreground="?selectableItemBackground"
-            android:gravity="center"
-            android:padding="@dimen/marginClose">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_marginEnd="@dimen/marginClose"
-                app:srcCompat="@drawable/ic_brief"
-                app:tint="?attr/colorSecondary" />
-
-            <com.google.android.material.textview.MaterialTextView
-                style="?textAppearanceLabelLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/view_detailed_statistics" />
-
-        </LinearLayout>
+            android:text="@string/view_detailed_statistics"
+            app:icon="@drawable/ic_brief" />
 
         <com.google.android.material.textview.MaterialTextView
             style="?textAppearanceLabelLarge"
