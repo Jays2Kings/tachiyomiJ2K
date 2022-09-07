@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:layout_marginVertical="1dp"
     android:orientation="horizontal">
 
@@ -11,19 +11,34 @@
         android:id="@+id/legend_color_icon"
         android:layout_width="18dp"
         android:layout_height="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/filled_circle" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/legend_description_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginClose" />
+        android:layout_marginStart="@dimen/marginClose"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/legend_value_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/legend_color_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="Publishing finished" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/legend_value_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginNormal" />
+        android:layout_marginStart="@dimen/marginNormal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/legend_description_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1205" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
