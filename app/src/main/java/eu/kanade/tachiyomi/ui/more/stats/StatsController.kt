@@ -24,6 +24,7 @@ import eu.kanade.tachiyomi.util.isLocal
 import eu.kanade.tachiyomi.util.mapStatus
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.roundToTwoDecimal
+import eu.kanade.tachiyomi.util.view.compatToolTipText
 import eu.kanade.tachiyomi.util.view.scrollViewWith
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import timber.log.Timber
@@ -68,6 +69,7 @@ class StatsController : BaseController<StatsControllerBinding>() {
                 statsMangaMeanScoreText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
                 activity?.getString(R.string.none)
             } else scoresList.average().roundToTwoDecimal().toString()
+            statsMangaMeanScoreLayout.compatToolTipText = activity?.getString(R.string.mean_score_info)
             statsTrackedMangaText.text = mangaTracks.count { it.second.isNotEmpty() }.toString()
             statsChaptersDownloadedText.text = mangaDistinct.sumOf { presenter.getDownloadCount(it) }.toString()
             statsTotalTagsText.text = mangaDistinct.flatMap { it.getTags() }.distinct().count().toString()
@@ -76,6 +78,7 @@ class StatsController : BaseController<StatsControllerBinding>() {
             statsSourcesText.text = presenter.getSources().count().toString()
             statsTrackersText.text = presenter.getLoggedTrackers().count().toString()
             statsReadDurationText.text = presenter.getReadDuration()
+            statsReadDurationLayout.compatToolTipText = activity?.getString(R.string.read_duration_info)
         }
     }
 

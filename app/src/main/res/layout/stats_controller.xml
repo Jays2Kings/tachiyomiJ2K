@@ -36,51 +36,104 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_total_manga_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_total_chapters_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_chapters_read_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
+            android:layout_marginBottom="20dp"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose">
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_total_manga_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/titles_in_library" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_total_chapters_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/total_chapters" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_chapters_read_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/chapters_read" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stats_manga_mean_score_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/stats_manga_mean_score_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:drawablePadding="3dp"
                     android:gravity="center"
                     android:textColor="?attr/colorSecondary"
@@ -88,239 +141,247 @@
                     app:drawableTint="?attr/colorSecondary"
                     tools:text="0" />
 
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/mean_score" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_tracked_manga_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/tracked_titles" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_global_update_manga_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/titles_in_global_update" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_chapters_downloaded_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/downloaded_chapters" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stats_read_duration_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_read_duration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/read_duration" />
+
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/titles_in_library" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/total_chapters" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/chapters_read" />
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/mean_score" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_tracked_manga_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_global_update_manga_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_chapters_downloaded_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_read_duration_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/tracked_titles" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/titles_in_global_update" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/downloaded_chapters" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/read_duration" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_manga_local_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_total_tags_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_sources_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/stats_trackers_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="?attr/colorSecondary"
-                tools:text="0" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/marginPage"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:baselineAligned="false">
 
-            <com.google.android.material.textview.MaterialTextView
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/local_titles" />
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/tags" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_manga_local_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/sources" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/local_titles" />
 
-            <com.google.android.material.textview.MaterialTextView
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginClose"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/marginClose"
-                android:text="@string/trackers" />
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_total_tags_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/tags" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_sources_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/sources" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginClose"
+                android:paddingEnd="@dimen/marginClose">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats_trackers_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="?attr/colorSecondary"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/marginClose"
+                    android:gravity="center"
+                    android:text="@string/trackers" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
