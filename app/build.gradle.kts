@@ -39,7 +39,7 @@ android {
         multiDexEnabled = true
 
         buildConfigField("String", "COMMIT_COUNT", "\"${getCommitCount()}\"")
-        buildConfigField("String", "BETA_COMMIT_COUNT", "\"${getCommitCountSinceLastRelease()}\"")
+//        buildConfigField("String", "BETA_COMMIT_COUNT", "\"${getCommitCountSinceLastRelease()}\"")
         buildConfigField("String", "COMMIT_SHA", "\"${getGitSha()}\"")
         buildConfigField("String", "BUILD_TIME", "\"${getBuildTime()}\"")
         buildConfigField("Boolean", "INCLUDE_UPDATER", "false")
@@ -79,7 +79,7 @@ android {
             initWith(getByName("release"))
             buildConfigField("boolean", "BETA", "true")
 
-            versionNameSuffix = "-b${getCommitCountSinceLastRelease()}"
+//            versionNameSuffix = "-b${getCommitCountSinceLastRelease()}"
         }
     }
 
