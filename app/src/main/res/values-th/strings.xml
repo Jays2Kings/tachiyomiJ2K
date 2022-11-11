@@ -367,7 +367,7 @@
     <string name="badges">เครื่องหมาย</string>
     <string name="may_contain_nsfw">อาจมีเนื้อหา NSFW (18+)</string>
     <plurals name="extension_updates_available">
-        <item quantity="other">ส่วนขยาย %d มีการอัปเดตพร้อมใช้งาน</item>
+        <item quantity="other">มีการอัปเดตส่วนขยาย %d รายการพร้อมใช้งาน</item>
     </plurals>
     <string name="reading_mode">โหมดการอ่าน</string>
     <string name="previous_page">หน้าก่อนหน้า</string>
@@ -698,7 +698,7 @@
     </plurals>
     <string name="extensions_updated">อัปเดตส่วนขยายแล้ว</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="other">ส่วนขยาย %d อัปเดตแล้ว</item>
+        <item quantity="other">อัปเดตแล้ว %d ส่วนขยาย</item>
     </plurals>
     <string name="set_as_default_for_all">ตั้งเป็นค่าเริ่มต้นสำหรับทั้งหมด</string>
     <string name="pages_">หน้า %1$s</string>
@@ -766,7 +766,7 @@
     <string name="added_to_">เพิ่มไปยัง %1$s แล้ว</string>
     <string name="_per_row">%d ต่อแถว</string>
     <string name="display_as">แสดงเป็น</string>
-    <string name="read_">อ่านแล้วเมื่อ %1$s</string>
+    <string name="read_">อ่านเมื่อ %1$s</string>
     <string name="no_chapters_found_for_migration">ไม่พบตอน มังงะนี้ไม่สามารถใช้ทำการโยกย้ายได้</string>
     <string name="turn_off_">ปิด%s</string>
     <string name="starting_cleanup">กำลังเริ่มการล้าง</string>

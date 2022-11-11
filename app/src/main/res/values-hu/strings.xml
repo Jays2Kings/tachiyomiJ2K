@@ -577,4 +577,17 @@
     <string name="user_agent_string">Alap hálózati kliens szöveg</string>
     <string name="loader_rar5_error">RARv5 formátum nem támogatót</string>
     <string name="downloaded_chapters">Letölzozz fejezetek</string>
+    <string name="hide_start_reading_button">Kezdése gomb elrejtése</string>
+    <string name="more_library_settings">Több könyvtár beállítás</string>
+    <string name="when_sorting_ignore_articles">Amikor abc-be rendez figyelmen kívül hagyja az (a, an, the) kezdetű manga címeket</string>
+    <string name="pref_update_only_completely_read_summary">Csak akkor frissítse ha nincs olvasatlan fejezet</string>
+    <string name="display_as">Kijelzés mint</string>
+    <string name="library_is_empty_add_from_browse">A könyvtárad üres, adj hozzá mangát a böngészés fülön</string>
+    <string name="updates_and_history">Frissítések és Előzmények</string>
+    <string name="newly_added">Újonnan hozzáadva</string>
+    <plurals name="notification_and_n_more">
+        <item quantity="one">és még %1$d fejezet</item>
+        <item quantity="other">és még %1$d fejezet</item>
+    </plurals>
+    <string name="notification_size_warning">A nagy frissítés növelheti az akumulátor használatot és a források lassabbak lesznek.Nyomj ide további információkért.</string>
 </resources>

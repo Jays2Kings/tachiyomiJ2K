@@ -33,19 +33,19 @@
     <string name="pause">Hentikan sementara</string>
     <string name="clear">Hapus</string>
     <string name="close">Tutup</string>
-    <string name="retry">Lanjut</string>
+    <string name="retry">Coba lagi</string>
     <string name="remove">Hapus</string>
     <string name="resume">Lanjut</string>
     <string name="open_in_browser">Buka di browser</string>
     <string name="display">Tampilan</string>
     <string name="list">Daftar</string>
     <string name="cancel">Batal</string>
-    <string name="sort">Sortir</string>
+    <string name="sort">Urutkan</string>
     <string name="install">Pasang</string>
     <string name="share">Bagikan</string>
     <string name="save">Simpan</string>
     <string name="reset">Atur ulang</string>
-    <string name="undo">Kembalikan</string>
+    <string name="undo">Kembali</string>
     <string name="create">Buat</string>
     <string name="compact_grid">Grid Rapat</string>
     <string name="restore">Pulihkan</string>
@@ -160,7 +160,7 @@
     <string name="username">Nama pengguna</string>
     <string name="password">Kata sandi</string>
     <string name="successfully_logged_in">Login berhasil</string>
-    <string name="unknown_error">Terdapat suatu kesalahan</string>
+    <string name="unknown_error">Kesalahan tidak diketahui</string>
     <string name="no_more_results">Tidak ada hasil lainnya</string>
     <string name="local_source">Sumber lokal</string>
     <string name="description">Deskripsi</string>
@@ -559,7 +559,7 @@
     <string name="migrate_">Migrasi %1$s</string>
     <string name="menu">menu</string>
     <string name="stop_migrating">Hentikan migrasi\?</string>
-    <string name="sort_and_filter">Sortir &amp; Saring</string>
+    <string name="sort_and_filter">Urutkan &amp; Saring</string>
     <string name="select_sources">Pilih sumber</string>
     <string name="selection">Pilihan</string>
     <plurals name="manga_migrated">
@@ -587,7 +587,7 @@
     <string name="kindlish_nav">semacam Kindle</string>
     <string name="select_none">Pilih tidak ada</string>
     <string name="search_suggestions">Saran pencarian</string>
-    <string name="search_">Mencari %1$s</string>
+    <string name="search_">Cari %1$s</string>
     <string name="group_chapters_together">Kelompokkan bab bersama</string>
     <string name="show_updated_time">Tampilkan waktu pembaruan</string>
     <string name="actions">Tindakan</string>
@@ -987,4 +987,39 @@
     <string name="clear_db_exclude_read">Simpan manga dengan membaca chapter</string>
     <string name="auto_download_while_reading">Unduh otomatis ketika sedang membaca</string>
     <string name="downloaded_chapters">Diunduh</string>
+    <string name="titles_in_library">Judul-judul di perpustakaan</string>
+    <string name="chapters_read">Bab yang sudah terbaca</string>
+    <string name="mean_score">Nilai rata-rata</string>
+    <string name="statistics">Statistik</string>
+    <string name="tracked_titles">Judul yang dilacak</string>
+    <string name="tags">Tag</string>
+    <string name="length">Panjang</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d jenis seri</item>
+    </plurals>
+    <string name="statistics_details">Detail statistik</string>
+    <string name="stat">Status</string>
+    <string name="stats">Statusnya</string>
+    <string name="no_data_for_filters">Tidak ada data yang ditemukan untuk filter Anda saat ini</string>
+    <string name="start_year">Mulai tahun</string>
+    <string name="local_titles">Judul lokal</string>
+    <string name="titles_in_global_update">Judul dalam pembaruan global</string>
+    <string name="trackers">Pelacak</string>
+    <string name="read_duration">Durasi membaca</string>
+    <string name="manga_status_distribution">Distribusi status</string>
+    <string name="count">Hitungan</string>
+    <string name="manga_score_distribution">Distribusi skor</string>
+    <string name="view_detailed_statistics">Lihat statistik terperinci</string>
+    <string name="not_rated">Tidak dinilai</string>
+    <string name="source">Sumber</string>
+    <string name="tracker">Pelacak</string>
+    <plurals name="_sources">
+        <item quantity="other">%d sumber</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d status</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="other">%d bahasa</item>
+    </plurals>
 </resources>

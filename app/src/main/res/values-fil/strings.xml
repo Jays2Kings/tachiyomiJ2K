@@ -928,8 +928,8 @@
     <string name="download_ahead">I-download agad</string>
     <string name="download_ahead_info">Gagana lang sa mga entry sa aklatan at kung naka-download na ang kasalukuyang kabanata pati ang susunod</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Susunod na kabanatang di pa nabasa</item>
-        <item quantity="other">Susunod na %d (na) kabanatang di pa nabasa</item>
+        <item quantity="one">Susunod ang hindi pa nababasa na chapter</item>
+        <item quantity="other">Susunod ang mga %d na hindi pa nababasa na mga chapter</item>
     </plurals>
     <string name="add_to_">Idagdag sa %1$s</string>
     <string name="added_to_">Idinagdag sa %1$s</string>
@@ -1009,4 +1009,43 @@
     <string name="all_read_manga">Mga nabasang manga</string>
     <string name="auto_download_while_reading">Kusang mag-download habang nagbabasa</string>
     <string name="downloaded_chapters">Bilang ng na-download</string>
+    <string name="statistics">Istatistika</string>
+    <string name="stat">Stat</string>
+    <string name="statistics_details">Mga detalye ng istatistika</string>
+    <string name="titles_in_library">Mga pamagat sa aklatan</string>
+    <string name="chapters_read">Nabasang kabanata</string>
+    <string name="no_data_for_filters">Walang nahanap na data sa iyong kasalukyang filter</string>
+    <string name="tags">Mga Tag</string>
+    <string name="local_titles">Local titles</string>
+    <string name="titles_in_global_update">Titles in global update</string>
+    <string name="trackers">Mga Tracker</string>
+    <string name="read_duration">Tagal ng pagbabasa</string>
+    <string name="view_detailed_statistics">Ipakita ang detalyadong istatisika</string>
+    <string name="count">Bilang</string>
+    <string name="not_rated">Hindi na-rate</string>
+    <string name="stats">Stats</string>
+    <string name="mean_score">Mean score</string>
+    <string name="tracked_titles">Na-track na mga pamagat</string>
+    <string name="manga_score_distribution">Skor ng distribution</string>
+    <string name="manga_status_distribution">Status ng distribution</string>
+    <string name="source">Pinanggalingan</string>
+    <string name="tracker">Tracker</string>
+    <string name="length">Haba</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d uri ng serye</item>
+        <item quantity="other">%d mga uri ng serye</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">%d na pinagkukunan</item>
+        <item quantity="other">%d na mga pinagmumulan</item>
+    </plurals>
+    <string name="start_year">Sinimulang taon</string>
+    <plurals name="_statuses">
+        <item quantity="one">%d na katayuan</item>
+        <item quantity="other">%d mga katayuan</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d wika</item>
+        <item quantity="other">%d na mga wika</item>
+    </plurals>
 </resources>

@@ -88,10 +88,10 @@
     <string name="trust">信任</string>
     <string name="untrusted">不可信</string>
     <string name="uninstall">卸载</string>
-    <string name="untrusted_extension">不可信的扩展插件</string>
-    <string name="untrusted_extension_message">此扩展插件的证书并不可信，且尚未被启用。
+    <string name="untrusted_extension">不可信的插件</string>
+    <string name="untrusted_extension_message">此插件的证书并不可信，且尚未被启用。
 \n
-\n恶意的扩展插件可能会读取储存在 Tachiyomi 中的任何登录凭据或执行任意代码。
+\n恶意的插件可能会读取储存在 Tachiyomi 中的任何登录凭据或执行任意代码。
 \n
 \n信任这个证书，即代表你愿意承担上述风险。</string>
     <string name="version_">版本: %1$s</string>
@@ -165,10 +165,10 @@
     <string name="cache_delete_error">清除时出现错误</string>
     <string name="clear_cookies">清除 Cookies</string>
     <string name="cookies_cleared">Cookies 已清除</string>
-    <string name="clear_database">清除数据库</string>
+    <string name="clear_database">清理数据库</string>
     <string name="clear_database_summary">删除未在书架的漫画与章节</string>
     <string name="clear_database_confirmation">你确定吗？不在书架中的漫画的已读章节和进度将会丢失</string>
-    <string name="clear_database_completed">已删除条目</string>
+    <string name="clear_database_completed">数据已删除</string>
     <string name="refresh_library_metadata">刷新书架数据</string>
     <string name="updates_covers_genres_desc">更新封面，类型，描述与漫画状态信息</string>
     <string name="refresh_tracking_metadata">刷新追踪数据</string>
@@ -195,7 +195,7 @@
     <string name="ongoing">连载中</string>
     <string name="unknown">未知</string>
     <string name="licensed">版权屏蔽</string>
-    <string name="added_to_library">已添加至书架</string>
+    <string name="added_to_library">已添加到书架</string>
     <string name="removed_from_library">已从书架删除</string>
     <string name="author">作者</string>
     <string name="artist">画师</string>
@@ -270,13 +270,13 @@
     <string name="screen">屏幕</string>
     <string name="dodge_lighten">减淡/变亮</string>
     <string name="burn_darken">颜色加深/变暗</string>
-    <string name="lock_with_biometrics">用生物特征进行锁定</string>
-    <string name="lock_when_idle">应用待机时锁定</string>
+    <string name="lock_with_biometrics">应用锁</string>
+    <string name="lock_when_idle">切后台时锁定</string>
     <string name="no_results_found">未找到结果</string>
     <string name="local_source_help_guide">本地图源指南</string>
     <string name="check_site_in_web">在 WebView 中检查网站</string>
     <string name="obsolete">失效</string>
-    <string name="obsolete_extension_message">此扩展插件不再可用。</string>
+    <string name="obsolete_extension_message">此插件不再可用。</string>
     <plurals name="extension_updates_available">
         <item quantity="other">%d 个扩展插件可更新</item>
     </plurals>
@@ -307,10 +307,10 @@
     <string name="chapters_">第 %1$s 章</string>
     <string name="remove_from_library">移出书架</string>
     <string name="refresh_tracking">刷新追踪进度</string>
-    <string name="add_tracking">添加追踪进度</string>
+    <string name="add_tracking">添加进度记录</string>
     <string name="copy_value">共存</string>
     <string name="date_format">日期格式</string>
-    <string name="secure_screen">防窥页面</string>
+    <string name="secure_screen">隐私界面</string>
     <string name="security">安全</string>
     <string name="backup_failed">备份失败</string>
     <string name="creating_backup">正在创建备份</string>
@@ -350,12 +350,12 @@
     <string name="search_chapters">搜索章节</string>
     <string name="mark_all_chapters_as_read">是否标记所有章节为已读？</string>
     <string name="no_description">无简介</string>
-    <string name="add_to_library">添加至书架</string>
+    <string name="add_to_library">添加到书架</string>
     <string name="continue_reading">继续阅读</string>
     <string name="continue_reading_chapter_">继续阅读第 %1$s 章</string>
     <string name="start_reading_chapter_">开始阅读第 %1$s 章</string>
     <string name="start_reading">开始阅读</string>
-    <string name="about_this_">%1$s简介</string>
+    <string name="about_this_">简介</string>
     <string name="auto_refresh_covers">自动刷新封面</string>
     <string name="read_progress">阅读进度</string>
     <string name="search_globally">全局搜索「%1$s」</string>
@@ -426,9 +426,9 @@
     <string name="all_chapters_read">已看完</string>
     <string name="chapter_x_of_y">%1$d/%2$d</string>
     <string name="last_read_chapter_">最后阅读的章节 %1$s</string>
-    <string name="comic">漫画</string>
-    <string name="manhua">漫画</string>
-    <string name="manhwa">韩国漫画</string>
+    <string name="comic">美漫</string>
+    <string name="manhua">国漫</string>
+    <string name="manhwa">韩漫</string>
     <string name="restore_error">还原备份失败</string>
     <string name="add_x_to_library">添加 %1$s 至书架？</string>
     <string name="recents">最近</string>
@@ -584,7 +584,7 @@
     <string name="locale">语言</string>
     <string name="automatic_backups">自动备份</string>
     <string name="invalid_backup_file">无效的备份文件</string>
-    <string name="unofficial_extension_message">此扩展插件不是由官方 Tachiyomi 所提供。</string>
+    <string name="unofficial_extension_message">此插件不是 Tachiyomi 官方插件</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">非官方</string>
     <string name="may_contain_nsfw">可能包含 NSFW (18+) 内容</string>
@@ -715,7 +715,7 @@
     <string name="remove_crop">移除裁剪</string>
     <string name="clear_filters">清除过滤器</string>
     <string name="webview_is_required">Tachiyomi 需要 WebView才能正常工作</string>
-    <string name="disabled">已禁用</string>
+    <string name="disabled">关闭</string>
     <string name="doh">DNS over HTTPS</string>
     <string name="pauses_reading_history">暂停阅读历史记录</string>
     <string name="incognito_mode">无痕模式</string>
@@ -765,7 +765,7 @@
     <string name="automatic_removal">自动移除</string>
     <string name="mark_range_as_unread">将一些章节标记为未读</string>
     <string name="mark_range_as_read">将一些章节标记为已读</string>
-    <string name="cancel_all_for_series">取消此丛书</string>
+    <string name="cancel_all_for_series">取消此作品</string>
     <string name="app_shortcuts">应用快捷方式</string>
     <string name="include_">包含：%s</string>
     <string name="exclude_">排除：%s</string>
@@ -856,7 +856,7 @@
     <string name="default_behavior">默认行为</string>
     <string name="use_side_navigation">使用侧导航</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">跳过 %d 个章节，这可能是因为图源没有这些章节，或者你把它们过滤掉了</item>
+        <item quantity="other">跳过了 %d 章，可能是图源没有这些章节，或者被筛选规则排除了</item>
     </plurals>
     <string name="helpful_translation_links">有帮助的翻译链接</string>
     <string name="help_translate">协助翻译</string>
@@ -878,11 +878,11 @@
     <string name="use_shizuku_to_install">使用 Shizuku 安装扩展</string>
     <string name="use_shizuku_summary">允许不提示用户安装扩展，并对运行 Android 12 以下系统的设备启用自动更新</string>
     <string name="ext_installer_shizuku_stopped">Shizuku 未在运行</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">安装并启动 Shizuku 以将 Shizuku 用作扩展插件安装程序。</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">安装并启动 Shizuku 以将 Shizuku 用作插件安装程序。</string>
     <string name="lime_time">石灰时代</string>
     <string name="classic_blue">经典蓝</string>
     <string name="every_3_days">每 3 天</string>
-    <string name="download_queue_size_warning">警告：批量下载可能会导致图源变慢和/或图源封锁 Tachiyomi。轻按了解更多。</string>
+    <string name="download_queue_size_warning">警告：批量下载可能导致图源变慢，甚至会使得它们屏蔽 Tachiyomi。点击了解详情。</string>
     <string name="save_chapters_as_cbz">保存为 CBZ 存档</string>
     <string name="update_tracking_scoring_type">更新 %1$s 的评分类型</string>
     <string name="scoring_type_updated">已更新评分类型</string>
@@ -890,9 +890,9 @@
     <string name="publishing_finished">出版完毕</string>
     <string name="cancelled">已中止</string>
     <string name="on_hiatus">休刊中</string>
-    <string name="tracking_info">将章节进度单向同步到追踪服务。点击「追踪」按钮以设置漫画的追踪源。</string>
+    <string name="tracking_info">将阅读进度上传到进度记录平台。在漫画页点击“进度记录”按钮即可设置。</string>
     <string name="enhanced_services">增强服务</string>
-    <string name="enhanced_tracking_info">为特定图源提供增强功能的服务。漫画在添加到书架时会被自动追踪。</string>
+    <string name="enhanced_tracking_info">为特定图源提供增强功能。漫画在添加到书架时会自动同步进度。</string>
     <string name="language_badge">语言徽章</string>
     <string name="check_for_beta_releases">检查测试版</string>
     <string name="warning_enroll_into_beta">测试版本可能不稳定，且可能需要清除应用数据。</string>
@@ -902,7 +902,7 @@
     <string name="expanded_toolbar">扩展工具栏</string>
     <string name="show_larger_toolbar">在大多数页面顶部显示更大的扩展工具栏（无论设置如何，都不在较小的设备上显示）</string>
     <string name="order_by">排序依据</string>
-    <string name="pref_inverted_colors">反转</string>
+    <string name="pref_inverted_colors">反色</string>
     <string name="empty_backup_error">没有要备份的库条目</string>
     <string name="local_invalid_format">无效的章节格式</string>
     <string name="navigate_pan">平移图片而非翻页</string>
@@ -912,8 +912,8 @@
     <string name="date">日期</string>
     <string name="descending">降序</string>
     <string name="zoom_double_page_spreads">缩放至中心跨页</string>
-    <string name="database_clean">数据库清理</string>
-    <string name="clear_database_source_item_count">数据库有 %1$d 本漫画不在书架中</string>
+    <string name="database_clean">无需清理</string>
+    <string name="clear_database_source_item_count">数据库中有 %1$d 本漫画未添加到书架</string>
     <string name="select_inverse">反选</string>
     <string name="confirm_manga_add_duplicate">库中有一个名称相同但图源不同（%1$s）的条目。
 \n
@@ -932,17 +932,17 @@
     <string name="cover_only_grid">封面网格</string>
     <string name="notification_update_error">%1$d 个更新失败了</string>
     <string name="notification_update_skipped">已跳过 %1$d 个更新</string>
-    <string name="skipped_reason_completed">跳过，因连载完结</string>
-    <string name="skipped_reason_not_caught_up">跳过，因有未读章节</string>
-    <string name="skipped_reason_not_started">跳过，因无已读章节</string>
+    <string name="skipped_reason_completed">已跳过，因为作品已完结</string>
+    <string name="skipped_reason_not_caught_up">已跳过，因为有未读章节</string>
+    <string name="skipped_reason_not_started">已跳过，因为尚未开始阅读</string>
     <string name="channel_skipped">已跳过</string>
     <string name="pref_library_update_manga_restriction">跳过更新以下作品</string>
     <string name="pref_update_only_completely_read">有未读章节</string>
-    <string name="pref_update_only_non_completed">状态为“已完结”</string>
-    <string name="pref_update_only_started">尚未开始</string>
-    <string name="pref_clear_webview_data">清除 Webview 数据</string>
-    <string name="webview_data_deleted">已清除 Webview 数据</string>
-    <string name="tap_to_see_details">轻按查看详情</string>
+    <string name="pref_update_only_non_completed">已完结</string>
+    <string name="pref_update_only_started">尚未开始阅读</string>
+    <string name="pref_clear_webview_data">清除 WebView 数据</string>
+    <string name="webview_data_deleted">已清除 WebView 数据</string>
+    <string name="tap_to_see_details">点击查看详情</string>
     <string name="tap_to_learn_more">轻按了解更多</string>
     <string name="clear_history">清除历史</string>
     <string name="clear_history_completed">历史已删除</string>
@@ -952,15 +952,15 @@
     <plurals name="next_unread_chapters">
         <item quantity="other">下 %d 个未读章节</item>
     </plurals>
-    <string name="download_ahead_info">“提前下载”仅适用于书架条目且当前章节和下一章都已下载</string>
+    <string name="download_ahead_info">仅对书架中的作品有效，并且要求当前章节和下一章节都已下载</string>
     <string name="download_ahead">预先下载</string>
     <string name="pref_manage_notifications">通知管理</string>
     <string name="battery_not_low">非低电量</string>
     <string name="faq_and_guides">常见问题和指南</string>
     <string name="learn_why">了解原因</string>
-    <string name="secure_screen_summary">切换应用程序时，安全屏幕隐藏应用程序内容，并阻止截屏</string>
+    <string name="secure_screen_summary">阻止截屏，并在切换后台时隐藏预览图</string>
     <string name="open_in_app">在应用中打开</string>
-    <string name="pref_hide_threshold">滚动时隐藏菜单的灵敏度</string>
+    <string name="pref_hide_threshold">滑动时隐藏菜单的灵敏度</string>
     <string name="pref_highest">最高</string>
     <string name="pref_high">高</string>
     <string name="pref_low">低</string>

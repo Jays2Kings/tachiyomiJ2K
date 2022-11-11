@@ -909,7 +909,7 @@
     <string name="tracking_info">Enveissynkronisering for å oppdatere kapittelfremdrift i sporingstjenester. Sett opp sporing for individuelle mangaer med sporingsknappen på sidene til mangaene.</string>
     <string name="enhanced_services">Forbedrede tjenester</string>
     <string name="enhanced_tracking_info">Tjenester som gir forbedrede funksjoner for spesifikke ressurser. Det holdes automatisk øye med manga når den legges til i biblioteket ditt.</string>
-    <string name="download_queue_size_warning">Advarsel: store bulknedlastinger kan føre til at kilder blir tregere og/eller blokkerer Tachiyomi</string>
+    <string name="download_queue_size_warning">Advarsel: store bulknedlastinger kan føre til at kilder blir tregere og/eller blokkerer Tachiyomi. Trykk for å lære mer.</string>
     <string name="use_shizuku_to_install">Bruk Shizuku for å installere utvidelser</string>
     <string name="use_shizuku_summary">Lar utvidelser installeres uten manuell bekreftelse og aktiverer automatiske oppdateringer for Android 12 enheter</string>
     <string name="update_tracking_scoring_type">Oppdater %1$s sin poengtype</string>
@@ -961,4 +961,26 @@
     <string name="pref_lowest">Laveste</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Last ned kapitler</string>
+    <string name="tap_zones">Navigasjonsoppsett</string>
+    <string name="navigate_pan">Naviger til panorering</string>
+    <string name="cover_only_grid">Kun omslags-rutenett</string>
+    <string name="auto_download_while_reading">Last ned automatisk mens du leser</string>
+    <string name="download_notifier_split_failed">Kunne ikke dele det nedlastede bildet</string>
+    <string name="download_notifier_split_page_not_found">Side %d ble ikke funnet under deling</string>
+    <string name="loader_rar5_error">RARv5-formatet støttes ikke</string>
+    <string name="download_ahead">Last ned i forkant</string>
+    <string name="download_ahead_info">Fungerer kun på oppføringer i biblioteket, og hvis det nåværende kapittelet samt det neste allerede er lastet ned</string>
+    <string name="split_tall_images">Del høye bilder</string>
+    <string name="on_hold_list">På vent liste</string>
+    <string name="unfinished_list">Uferdig liste</string>
+    <string name="split_tall_images_summary">Forbedrer leserytelsen</string>
+    <string name="reading_list">Leseliste</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Neste uleste kapittel</item>
+        <item quantity="other">Neste %d uleste kapitler</item>
+    </plurals>
+    <string name="wish_list">Ønskeliste</string>
+    <string name="complete_list">Komplett liste</string>
+    <string name="user_agent_string">Standard streng for brukeragent</string>
+    <string name="lavender">Lavendel</string>
 </resources>

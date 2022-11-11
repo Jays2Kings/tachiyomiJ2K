@@ -4,7 +4,7 @@
     <string name="manga">Manga</string>
     <string name="chapters">Κεφάλαια</string>
     <string name="tracking">Παρακολούθηση</string>
-    <string name="history">Ιστορία</string>
+    <string name="history">Ιστορικό</string>
     <string name="settings">Ρυθμίσεις</string>
     <string name="download_queue">Ουρά λήψεων</string>
     <string name="library">Η βιβλιοθήκη μου</string>
@@ -968,7 +968,7 @@
     <string name="could_not_update_scoring_">Δεν ήταν δυνατή η ενημέρωση του τύπου βαθμολόγησης: %1$s</string>
     <string name="clear_history">Διαγραφή ιστορικού</string>
     <string name="clear_history_completed">Το ιστορικό διαγράφηκε</string>
-    <string name="clear_history_confirmation">Είστε σίγουροι\? Όλο το ιστορικό θα χαθεί.</string>
+    <string name="clear_history_confirmation">Είστε σίγουροι; Όλο το ιστορικό θα χαθεί.</string>
     <string name="backup_restore_invalid_uri">Σφάλμα: κενό URI</string>
     <string name="backup_info">Συνιστάται ιδιαίτερα η δημιουργία αυτόματων αντιγράφων ασφαλείας. Θα πρέπει να διατηρείτε αντίγραφα και σε άλλα μέρη.</string>
     <string name="battery_not_low">Η μπαταρία δεν είναι χαμηλή</string>

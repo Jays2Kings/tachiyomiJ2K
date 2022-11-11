@@ -968,7 +968,7 @@
     <string name="download_notifier_split_page_not_found">分割時にページ%dが見つかりませんでした</string>
     <string name="download_notifier_split_failed">ダウンロードした画像を分割できませんでした</string>
     <string name="split_tall_images">長い画像を自動で分割</string>
-    <string name="split_tall_images_summary">ダウンロードした長い画像を自動で分割してビューアのパフォーマンスを改善します。</string>
+    <string name="split_tall_images_summary">ビューアのパフォーマンスを向上させます</string>
     <string name="reading_list">読書中リスト</string>
     <string name="wish_list">読みたいリスト</string>
     <string name="complete_list">読了リスト</string>
@@ -986,4 +986,39 @@
     <string name="all_read_manga">全ての既読マンガ</string>
     <string name="auto_download_while_reading">読書中に自動でダウンロード</string>
     <string name="downloaded_chapters">ダウンロードした章の数</string>
+    <string name="statistics">統計情報</string>
+    <string name="statistics_details">統計情報詳細</string>
+    <string name="titles_in_library">書籍タイトル</string>
+    <string name="chapters_read">章を読む</string>
+    <string name="mean_score">平均値</string>
+    <string name="tracked_titles">追跡されたタイトル</string>
+    <string name="tags">タグ</string>
+    <string name="titles_in_global_update">グローバルアップデート対象タイトル</string>
+    <string name="local_titles">ローカルタイトル</string>
+    <string name="stats">統計</string>
+    <string name="stat">統計</string>
+    <string name="not_rated">未評価</string>
+    <string name="source">ソース</string>
+    <string name="trackers">トラッカー</string>
+    <string name="read_duration">読書時間</string>
+    <string name="manga_status_distribution">ステータス配布</string>
+    <string name="manga_score_distribution">得点分布</string>
+    <string name="view_detailed_statistics">詳細な統計を表示</string>
+    <string name="count">カウント</string>
+    <string name="length">長さ</string>
+    <string name="tracker">トラッカー</string>
+    <string name="start_year">開始年</string>
+    <string name="no_data_for_filters">現在のフィルターのデータが見つかりません</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d件のシリーズ タイプ</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="other">%d件のソース</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d件のステータス</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="other">%d件の言語</item>
+    </plurals>
 </resources>

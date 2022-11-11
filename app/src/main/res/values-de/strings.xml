@@ -335,7 +335,7 @@
     <string name="currently_reading">Am Lesen</string>
     <string name="dropped">Abgebrochen</string>
     <string name="on_hold">Pausiert</string>
-    <string name="plan_to_read">Plane ich zu lesen</string>
+    <string name="plan_to_read">Plane ich zu Lesen</string>
     <string name="want_to_read">Möchte ich lesen</string>
     <string name="paused">Pausiert</string>
     <string name="rereading">Erneutes Lesen</string>
@@ -651,7 +651,7 @@
 \n
 \nDu musst jegliche fehlende Erweiterungen installieren und dich anschließend bei den Tracking-Anbietern einloggen, um sie zu benutzen.</string>
     <string name="restoring_backup_canceled">Wiederherstellung abgebrochen</string>
-    <string name="restore_duration">%02d Min., %02d Sek.</string>
+    <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Erledigt in %1$s mit %2$s Fehler</item>
         <item quantity="other">Erledigt in %1$s mit %2$s Fehlern</item>
@@ -718,7 +718,7 @@
     <string name="pressing_back_to_start">Zurück drücken zum Startbildschirm</string>
     <string name="category_cannot_be_blank">Kategorienname darf nicht leer sein</string>
     <string name="new_category">Neue Kategorie</string>
-    <string name="add_x_to">Füge %1$s zu… hinzu</string>
+    <string name="add_x_to">%1$s hinzufügen zu…</string>
     <string name="move_x_to">Verschiebe %1$s zu…</string>
     <string name="show_title_first">Zeige Titel zuerst</string>
     <string name="only_downloaded">Nur Heruntergeladene</string>
@@ -912,8 +912,8 @@
     <string name="default_behavior">Standardverhalten</string>
     <string name="use_side_navigation">Seitennavigation verwenden</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 Kapitel wird übersprungen, da die Quelle dieses entweder nicht besitzt, oder, weil es rausgefiltert wurde</item>
-        <item quantity="other">%d Kapitel werden übersprungen, da die Quelle diese entweder nicht besitzt, oder, weil sie rausgefiltert wurden</item>
+        <item quantity="one">1 Kapitel wird übersprungen, da entweder die Quelle fehlt oder es herausgefiltert wurde</item>
+        <item quantity="other">%d Kapitel werden übersprungen, da entweder die Quelle fehlt oder sie herausgefiltert wurden</item>
     </plurals>
     <string name="helpful_translation_links">Hilfreiche Übersetzungslinks</string>
     <string name="help_translate">Beim Übersetzen mithelfen</string>
@@ -946,7 +946,7 @@
     <string name="publishing_finished">Veröffentlichung abgeschlossen</string>
     <string name="on_hiatus">Unterbrochen</string>
     <string name="tracking_info">Einweg-Synchronisation zum Aktualisieren der Kapitelfortschritte in den Trackingdiensten. Richte Tracking für einzelne Manga über deren jeweiligen Tracking-Button ein.</string>
-    <string name="enhanced_tracking_info">Anbieter, die für bestimmte Quellen erweiterte Features anbieten. Manga werden automatisch getrackt, wenn sie deiner Bibliothek hinzugefügt werden.</string>
+    <string name="enhanced_tracking_info">Anbieter, die für bestimmte Quellen erweiterte Funktionen anbieten. Manga werden automatisch getrackt, wenn sie deiner Bibliothek hinzugefügt werden.</string>
     <string name="update_tracking_scoring_type">Bewertungsart von %1$s aktualisieren</string>
     <string name="scoring_type_updated">Bewertungsart aktualisiert</string>
     <string name="could_not_update_scoring_">Bewertungsart konnte nicht aktualisiert werden: %1$s</string>
@@ -1044,4 +1044,43 @@
     <string name="clear_db_exclude_read">Manga mit gelesenen Kapiteln behalten</string>
     <string name="auto_download_while_reading">Automatisch während dem Lesen herunterladen</string>
     <string name="downloaded_chapters">Heruntergeladene Kapitel</string>
+    <string name="stat">Stat</string>
+    <string name="stats">Stats</string>
+    <string name="statistics">Statistiken</string>
+    <string name="statistics_details">Statistik-Details</string>
+    <string name="source">Quelle</string>
+    <string name="tracker">Tracker</string>
+    <string name="length">Länge</string>
+    <string name="no_data_for_filters">Keine Daten für den aktuellen Filter gefunden</string>
+    <string name="titles_in_library">Titel in der Bibliothek</string>
+    <string name="chapters_read">Gelesene Kapitel</string>
+    <string name="tracked_titles">Getrackte Titel</string>
+    <string name="tags">Tags</string>
+    <string name="trackers">Tracker</string>
+    <string name="read_duration">Lesedauer</string>
+    <string name="view_detailed_statistics">Detaillierte Statistiken ansehen</string>
+    <string name="count">Anzahl</string>
+    <string name="not_rated">Nicht bewertet</string>
+    <plurals name="_languages">
+        <item quantity="one"/>
+        <item quantity="other">%d Sprachen</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one"/>
+        <item quantity="other">%d Quellen</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one"/>
+        <item quantity="other">%d Status</item>
+    </plurals>
+    <string name="start_year">Startjahr</string>
+    <string name="local_titles">Lokale Titel</string>
+    <string name="titles_in_global_update">Titel im globalen Update</string>
+    <string name="mean_score">Durchschnittswert</string>
+    <string name="manga_status_distribution">Statusverteilung</string>
+    <string name="manga_score_distribution">Punkteverteilung</string>
+    <plurals name="_series_types">
+        <item quantity="one"/>
+        <item quantity="other">%d Serientypen</item>
+    </plurals>
 </resources>

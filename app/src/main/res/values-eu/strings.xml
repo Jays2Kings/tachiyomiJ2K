@@ -944,4 +944,9 @@
     <string name="pref_lowest">Baxuena</string>
     <string name="webtoon_side_padding_5">%5</string>
     <string name="downloaded_chapters">Deskargatutako kapituluak</string>
+    <string name="tap_zones">Nabigazio-diseinua</string>
+    <string name="pref_update_only_non_completed">Argitalpen bukatua al da</string>
+    <string name="pref_update_only_started">Kapitulurik irakurri gabe</string>
+    <string name="pref_library_update_manga_restriction">Saltatu eguneraketak</string>
+    <string name="pref_update_only_completely_read">Irakurri gabeko kapituluak ditu</string>
 </resources>

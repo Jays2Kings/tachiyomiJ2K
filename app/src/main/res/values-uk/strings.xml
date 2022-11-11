@@ -1005,10 +1005,10 @@
     <string name="empty_backup_error">Немає елементів у бібліотеці для резервування</string>
     <string name="most_entries">За більшістю записів</string>
     <string name="select_uninstalled_sources">Вибрати невстановлені джерела</string>
-    <string name="download_ahead">Передзавантаження</string>
-    <string name="download_ahead_info">Передзавантаження застосовується лише до записів у бібліотеці та якщо остання прочитана глава була завантажена</string>
+    <string name="download_ahead">Завантажувати наперед</string>
+    <string name="download_ahead_info">Працює тільки на мангу збережену в бібліотеці, якщо поточна глава, та наступна за нею вже завантажені</string>
     <string name="split_tall_images">Розділяти довгі зображення</string>
-    <string name="split_tall_images_summary">Покращує продуктивність читалки, поділяючи довгі завантажені зображення.</string>
+    <string name="split_tall_images_summary">Покращує продуктивність читалки</string>
     <string name="battery_not_low">Батарея заряджена</string>
     <string name="learn_why">Дізнайтеся чому</string>
     <string name="show_">Показати %1$s</string>
@@ -1051,4 +1051,55 @@
     <string name="user_agent_string">User agent за замовчуванням</string>
     <string name="loader_rar5_error">Формат RARv5 не підтримується</string>
     <string name="downloaded_chapters">Завантажені глави</string>
+    <string name="auto_download_while_reading">Автоматичне завантаження під час читання</string>
+    <string name="stats">Статистика</string>
+    <string name="statistics">Статистика</string>
+    <string name="statistics_details">Детальна статистика</string>
+    <string name="stat">Статистика</string>
+    <string name="chapters_read">Прочитані глави</string>
+    <string name="titles_in_library">Тайтли в бібліотеці</string>
+    <string name="tags">Теги</string>
+    <string name="not_rated">Без рейтингу</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d тип серії</item>
+        <item quantity="few">%d типи серій</item>
+        <item quantity="many">%d типів серій</item>
+        <item quantity="other">%d типів серій</item>
+    </plurals>
+    <string name="language_requires_app_restart">Деяким мовам необхідний перезапуск додатку для вірного відображення</string>
+    <string name="clear_db_exclude_read">Зберегти мангу з прочитаними главами</string>
+    <string name="tracked_titles">Тайтли що відслідковуються</string>
+    <string name="local_titles">Локальні тайтли</string>
+    <string name="titles_in_global_update">Тайтли в глобальному оновленні</string>
+    <string name="trackers">Трекери</string>
+    <string name="read_duration">Тривалість читання</string>
+    <string name="manga_status_distribution">Розповсюдження статусів</string>
+    <string name="manga_score_distribution">Розповсюдження оцінок</string>
+    <string name="view_detailed_statistics">Перегляд детальної статистики</string>
+    <string name="count">Кількість</string>
+    <string name="source">Джерело</string>
+    <string name="tracker">Трекер</string>
+    <string name="length">Довжина</string>
+    <string name="start_year">Рік початку</string>
+    <string name="no_data_for_filters">Для ваших поточних фільтрів даних не знайдено</string>
+    <plurals name="_sources">
+        <item quantity="one">%d серія</item>
+        <item quantity="few">%d серій</item>
+        <item quantity="many">%d серій</item>
+        <item quantity="other">%d серій</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d статус</item>
+        <item quantity="few">%d статусів</item>
+        <item quantity="many">%d статусів</item>
+        <item quantity="other">%d статусів</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d мова</item>
+        <item quantity="few">%d мов</item>
+        <item quantity="many">%d мов</item>
+        <item quantity="other">%d мов</item>
+    </plurals>
+    <string name="all_read_manga">Уся прочитана манґа</string>
+    <string name="mean_score">Середня оцінка</string>
 </resources>

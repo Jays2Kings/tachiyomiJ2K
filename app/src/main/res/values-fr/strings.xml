@@ -324,6 +324,7 @@
     <string name="obsolete_extension_message">Cette extension n’est plus disponible.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Mise à jour d\'extension disponible</item>
+        <item quantity="many">%d mises à jour d\'extensions disponibles</item>
         <item quantity="other">%d mises à jour d\'extensions disponibles</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Réduit les bandes de couleur, mais peut impacter les performances</string>
@@ -395,10 +396,12 @@
     <string name="sort_by_ignoring_articles">Trier en ignorant les déterminants</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">et %1$d autre chapitre</item>
+        <item quantity="many">et %1$d autres chapitres</item>
         <item quantity="other">et %1$d autres chapitres</item>
     </plurals>
     <plurals name="for_n_titles">
         <item quantity="one">Pour le titre du %d</item>
+        <item quantity="many">Pour les titres des %d</item>
         <item quantity="other">Pour les titres des %d</item>
     </plurals>
     <string name="more_library_settings">Autres paramètres de la bibliothèque</string>
@@ -436,6 +439,7 @@
     <string name="confirm_category_deletion">Supprimer la catégorie \?</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Supprimer %1$d chapitre téléchargé \?</item>
+        <item quantity="many">Supprimer %1$d chapitres téléchargés \?</item>
         <item quantity="other">Supprimer %1$d chapitres téléchargés \?</item>
     </plurals>
     <string name="category_is_empty">La catégorie est vide</string>
@@ -444,10 +448,12 @@
     <string name="adding_category_to_queue">Ajout de %1$s à la file d\'attente de mise à jour</string>
     <plurals name="category_plural">
         <item quantity="one">%d catégorie</item>
+        <item quantity="many">%d catégories</item>
         <item quantity="other">%d catégories</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d page restante</item>
+        <item quantity="many">%1$d pages restantes</item>
         <item quantity="other">%1$d pages restantes</item>
     </plurals>
     <string name="chapter_not_found">Chapitre non trouvé</string>
@@ -518,6 +524,7 @@
     <string name="bottom">Bas</string>
     <plurals name="after_minutes">
         <item quantity="one">Après %1$s minute</item>
+        <item quantity="many">Après %1$s minutes</item>
         <item quantity="other">Après %1$s minutes</item>
     </plurals>
     <string name="always_delete">Toujours supprimer</string>
@@ -549,6 +556,7 @@
     <string name="clean_up_cached_covers">Nettoyer les couvertures mises en cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Nettoyage terminé. %d dossier supprimé</item>
+        <item quantity="many">Nettoyage terminé. %d dossiers supprimés</item>
         <item quantity="other">Nettoyage terminé. %d dossiers supprimés</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Désactivez cette option si vous rencontrez des problèmes de mise à jour ou de restauration de votre bibliothèque</string>
@@ -560,6 +568,7 @@
     <string name="delete_unused_chapters">Supprimer les catégories de chapitres inexistants, partiellement téléchargés et lus</string>
     <plurals name="cache_cleared">
         <item quantity="one">Cache effacé. %d fichier a été supprimé</item>
+        <item quantity="many">Cache effacé. %d fichiers ont été supprimés</item>
         <item quantity="other">Cache effacé. %d fichiers ont été supprimés</item>
     </plurals>
     <string name="data_management">Gestion des données</string>
@@ -568,15 +577,18 @@
     <string name="white_theme">Blanc pur</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga migré</item>
+        <item quantity="many">%d mangas migrés</item>
         <item quantity="other">%d mangas migrés</item>
     </plurals>
     <string name="skipping_">(sauter %1$d)</string>
     <plurals name="copy_manga">
         <item quantity="one">Copier le manga %1$d%2$s \?</item>
+        <item quantity="many">Copier les mangas %1$d%2$s \?</item>
         <item quantity="other">Copier les mangas %1$d%2$s \?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrer le manga %1$d%2$s \?</item>
+        <item quantity="one">Migrer le manga %1$d%2$s \?</item>
+        <item quantity="many">Migrer les mangas %1$d%2$s \?</item>
         <item quantity="other">Migrer les mangas %1$d%2$s \?</item>
     </plurals>
     <string name="stop_migrating">Arrêter de migrer \?</string>
@@ -606,13 +618,17 @@
     <string name="not_tracked">Non suivi</string>
     <string name="tracked">Suivi</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Un chapitre a été retiré de la source :
+        <item quantity="one">Un chapitre a été retiré de la source :
 \n%2$s
-\nSupprimer le téléchargement \?</item>
-        <item quantity="other">%1$s chapitres ont été retirés de la source :
+\nSupprimer le téléchargement \?</item>
+        <item quantity="many">%1$s chapitres ont été retirés de la source :
 \n%2$s
 \n
-\nSupprimer les téléchargements \?</item>
+\nSupprimer les téléchargements \?</item>
+        <item quantity="other">%1$s chapitres ont été retirés de la source :
+\n%2$s
+\n
+\nSupprimer les téléchargements \?</item>
     </plurals>
     <string name="error_sharing_cover">Erreur de partage de couverture</string>
     <string name="error_saving_cover">Erreur lors de l\'enregistrement de la couverture</string>
@@ -667,6 +683,7 @@
     <string name="restore_duration">%02d min, %02d s</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Effectuée en %1$s avec %2$s erreur</item>
+        <item quantity="many">Effectuée en %1$s avec %2$s erreurs</item>
         <item quantity="other">Effectuée en %1$s avec %2$s erreurs</item>
     </plurals>
     <string name="source_migration_guide">Guide de migration des sources</string>
@@ -710,6 +727,7 @@
     <string name="category">Catégorie</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$d chapitre</item>
+        <item quantity="many">%1$d chapitres</item>
         <item quantity="other">%1$d chapitres</item>
     </plurals>
     <string name="restore_in_progress">Restauration déjà en cours</string>
@@ -742,6 +760,7 @@
     <string name="added_to_">Ajouté à %1$s</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d page</item>
+        <item quantity="many">%1$d pages</item>
         <item quantity="other">%1$d pages</item>
     </plurals>
     <string name="automatic_orientation">Automatique (basé sur l\'orientation)</string>
@@ -766,7 +785,7 @@
     <string name="clear_filters">Effacer les filtres</string>
     <string name="webview_is_required">Webview est requis pour Tachiyomi</string>
     <string name="disabled">Désactivé</string>
-    <string name="doh">DNS à la place de HTTPS</string>
+    <string name="doh">DNS via HTTPS</string>
     <string name="pauses_reading_history">Met en pause l\'historique de lecture</string>
     <string name="incognito_mode">Mode de navigation privée</string>
     <string name="turn_off_">Désactiver %s</string>
@@ -846,6 +865,7 @@
     <string name="source_unsupported">La source n\'est pas prise en charge</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d mise à jour en attente</item>
+        <item quantity="many">%d mises à jour en attente</item>
         <item quantity="other">%d mises à jour en attente</item>
     </plurals>
     <string name="could_not_install_extension">Échec de l\'installation de l\'extension</string>
@@ -889,6 +909,7 @@
     <string name="split_double_pages_portrait">Double page fractionnée en portrait</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">Extension mise à jour</item>
+        <item quantity="many">%d extensions mises à jour</item>
         <item quantity="other">%d extensions mises à jour</item>
     </plurals>
     <string name="extensions_updated">Extensions mises à jour</string>
@@ -912,6 +933,7 @@
     <string name="use_side_navigation">Utiliser la navigation latérale</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Un chapitre a été sauté, soit la source ne l\'a pas, soit il a été filtré</item>
+        <item quantity="many">%d chapitres ont été sautés, soit la source ne l\'a pas, soit il ont été filtrés</item>
         <item quantity="other">%d chapitres ont été sautés, soit la source ne l\'a pas, soit il ont été filtrés</item>
     </plurals>
     <string name="helpful_translation_links">Liens utiles pour la traduction</string>
@@ -1011,6 +1033,7 @@
     <string name="download_ahead">Télécharger à l\'avance</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Chapitre suivant non lu</item>
+        <item quantity="many">Les %d suivants non lus</item>
         <item quantity="other">Les %d suivants non lus</item>
     </plurals>
     <string name="learn_why">Apprendre pourquoi</string>
@@ -1025,7 +1048,7 @@
     <string name="download_notifier_split_page_not_found">Page %d introuvable lors du fractionnement</string>
     <string name="download_notifier_split_failed">Impossible de diviser l\'image téléchargée</string>
     <string name="split_tall_images">Fractionner les images trop grandes</string>
-    <string name="split_tall_images_summary">Améliore les performances du lecteur en fractionnant les images téléchargées de grande taille.</string>
+    <string name="split_tall_images_summary">Améliore les performances du lecteur</string>
     <string name="reading_list">Liste de lecture</string>
     <string name="wish_list">Liste de souhaits</string>
     <string name="complete_list">Liste des lectures terminées</string>
@@ -1065,4 +1088,25 @@
     <string name="no_data_for_filters">Aucune donnée trouvée pour vos filtres actuels</string>
     <string name="all_read_manga">Tous les mangas lus</string>
     <string name="clear_db_exclude_read">Conserver les mangas avec des chapitres lus</string>
+    <string name="tracker">Traqueur</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d type de série</item>
+        <item quantity="many">%d types de série</item>
+        <item quantity="other">%d types de série</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">%d source</item>
+        <item quantity="many">%d sources</item>
+        <item quantity="other">%d sources</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d état</item>
+        <item quantity="many">%d états</item>
+        <item quantity="other">%d états</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d langue</item>
+        <item quantity="many">%d langues</item>
+        <item quantity="other">%d langues</item>
+    </plurals>
 </resources>

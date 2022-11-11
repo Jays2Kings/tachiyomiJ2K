@@ -39,18 +39,21 @@
     <string name="bookmarked">Favorito</string>
     <string name="marked_as_read">Marcado como lido</string>
     <string name="marked_as_unread">Marcado como não lido</string>
-    <string name="removed_bookmark">Favorito removido</string>
+    <string name="removed_bookmark">Removido da Biblioteca</string>
     <string name="chapters_removed">Capítulos removidos.</string>
     <plurals name="remove_n_chapters">
-        <item quantity="one">Remover %1$d capítulo baixado?</item>
-        <item quantity="other">Remover %1$d capítulos baixados?</item>
+        <item quantity="one">Remover %1$d capítulo baixado\?</item>
+        <item quantity="many">Remover %1$d capítulos baixados\?</item>
+        <item quantity="other">Remover %1$d capítulos baixados\?</item>
     </plurals>
     <plurals name="chapters_plural">
         <item quantity="one">%1$d capítulo</item>
+        <item quantity="many">%1$d capítulos</item>
         <item quantity="other">%1$d capítulos</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d página restante</item>
+        <item quantity="many">%1$d páginas restantes</item>
         <item quantity="other">%1$d páginas restantes</item>
     </plurals>
     <!-- Category -->
@@ -69,6 +72,7 @@
     <string name="move_to_categories">Mover para categorias</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categorias</item>
         <item quantity="other">%d categorias</item>
     </plurals>
     <string name="category_with_name_exists">Já existe uma categoria com este nome!</string>
@@ -125,10 +129,12 @@
     <string name="new_chapters_found">Novos capítulos encontrados</string>
     <plurals name="for_n_titles">
         <item quantity="one">Para %d título</item>
+        <item quantity="many">Para %d títulos</item>
         <item quantity="other">Para %d títulos</item>
     </plurals>
     <plurals name="notification_and_n_more">
         <item quantity="one">e mais %1$d capítulo</item>
+        <item quantity="many">e mais %1$d capítulos</item>
         <item quantity="other">e mais %1$d capítulos</item>
     </plurals>
     <!-- Library settings -->
@@ -200,6 +206,7 @@
     <string name="language_">Idioma: %1$s</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Atualização de extensão disponível</item>
+        <item quantity="many">%d atualizações de extensão disponíveis</item>
         <item quantity="other">%d atualizações de extensão disponíveis</item>
     </plurals>
     <!-- Reader -->
@@ -316,10 +323,17 @@
     <string name="remember_this_choice">Lembrar esta opção</string>
     <string name="source_not_installed">Fonte não instalada</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Um capítulo foi removido da fonte:\n%2$s\nExcluir
-            seu download?</item>
-        <item quantity="other">%1$s capítulos foram removidos da fonte:\n%2$s\n\nExcluir
-            seus downloads?</item>
+        <item quantity="one">Um capítulo foi removido da fonte:
+\n%2$s
+\nExcluir seu download\?</item>
+        <item quantity="many">%1$s capítulos foram removidos da fonte:
+\n%2$s
+\n
+\nExcluir seus downloads\?</item>
+        <item quantity="other">%1$s capítulos foram removidos da fonte:
+\n%2$s
+\n
+\nExcluir seus downloads\?</item>
     </plurals>
     <!-- Tracking -->
     <string name="tracking">Monitoramento</string>
@@ -369,16 +383,19 @@
     <string name="stop_migrating">Parar de migrar?</string>
     <plurals name="migrate_manga">
         <item quantity="one">Migrar %1$d%2$s mangá\?</item>
+        <item quantity="many">Migrar %1$d%2$s mangás\?</item>
         <item quantity="other">Migrar %1$d%2$s mangás\?</item>
     </plurals>
     <plurals name="copy_manga">
-        <item quantity="one">Copiar %1$d%2$s manga\?</item>
-        <item quantity="other">Copiar %1$d%2$s mangas\?</item>
+        <item quantity="one">Copiar %1$d%2$s mangá\?</item>
+        <item quantity="many">Copiar %1$d%2$s mangás\?</item>
+        <item quantity="other">Copiar %1$d%2$s mangás\?</item>
     </plurals>
     <string name="skipping_">(pulando %1$d)</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d mangá migrado</item>
-        <item quantity="other">%d mangás migrado</item>
+        <item quantity="many">%d mangás migrados</item>
+        <item quantity="other">%d mangás migrados</item>
     </plurals>
     <!-- Settings -->
     <string name="settings">Configurações</string>
@@ -419,6 +436,7 @@
     <string name="used_">Total usado: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Cache limpo. %d arquivo foi excluído</item>
+        <item quantity="many">Cache limpo. %d arquivos foram excluídos</item>
         <item quantity="other">Cache limpo. %d arquivos foram excluídos</item>
     </plurals>
     <string name="cache_delete_error">Ocorreu um erro ao limpar</string>
@@ -443,6 +461,7 @@
     <string name="battery_optimization_disabled">A otimização de bateria já está desativada</string>
     <plurals name="cleanup_done">
         <item quantity="one">Limpeza realizada. %d pasta removida</item>
+        <item quantity="many">Limpeza realizada. %d pastas removidas</item>
         <item quantity="other">Limpeza realizada. %d pastas removidas</item>
     </plurals>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
@@ -527,6 +546,7 @@
     <string name="weekly">Semanalmente</string>
     <plurals name="after_minutes">
         <item quantity="one">Após %1$s minuto</item>
+        <item quantity="many">Após %1$s minutos</item>
         <item quantity="other">Após %1$s minutos</item>
     </plurals>
     <!-- File Picker Titles -->
@@ -766,6 +786,7 @@
     <string name="pad_cutout_areas">Preencher as áreas de corte da tela</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d página</item>
+        <item quantity="many">%1$d páginas</item>
         <item quantity="other">%1$d páginas</item>
     </plurals>
     <string name="cutout_area_behavior">Comportamento da área de corte da tela</string>
@@ -841,6 +862,7 @@
     <string name="source_unsupported">Essa fonte não é suportada</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d atualização pendente</item>
+        <item quantity="many">%d atualizações pendentes</item>
         <item quantity="other">%d atualizações pendentes</item>
     </plurals>
     <string name="could_not_install_extension">Não foi possível instalar a extensão</string>
@@ -848,7 +870,7 @@
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar o número de itens</string>
     <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
-    <string name="all_files_permission_required">Permissão para acessar arquivos necessária</string>
+    <string name="all_files_permission_required">Permissão para acessar arquivos</string>
     <string name="restore_miui_warning">Backup/restauração pode não funcionar adequadamente se a Otimização MIUI estiver desabilitada.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="add_tag">Adicionar tag</string>
@@ -888,6 +910,7 @@
     <string name="split_double_pages_portrait">Dividir página dupla em retrato</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">Extensão atualizada</item>
+        <item quantity="many">%d extensões atualizadas</item>
         <item quantity="other">%d extensões atualizadas</item>
     </plurals>
     <string name="extensions_updated">Extensões atualizadas</string>
@@ -909,6 +932,7 @@
     <string name="show_categories_while_filtering">Mostrar categorias vazias enquanto filtra</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Pulando %d capítulo, ou ele está faltando na fonte, ou ele foi filtrado</item>
+        <item quantity="many">Pulando %d capítulos, ou eles estão faltando na fonte, ou eles foram filtrados</item>
         <item quantity="other">Pulando %d capítulos, ou eles estão faltando na fonte, ou eles foram filtrados</item>
     </plurals>
     <string name="force_download_cache_refresh_summary">Isso irá forçar o cache de download á recalcular. Útil se você modificou downloads fora do aplicativo e quer que ele seja selecionado novamente pelo aplicativo</string>
@@ -1061,7 +1085,7 @@
     <string name="length">Comprimento</string>
     <string name="start_year">Ano de início</string>
     <string name="no_data_for_filters">Nenhum dado encontrado para seus filtros atuais</string>
-    <string name="language_requires_app_restart">Alguns idiomas precisam de app específico para que possam funcionar corretamente</string>
+    <string name="language_requires_app_restart">Algumas línguas podem necessitar que o aplicativo seja reiniciado para serem visualizadas corretamente</string>
     <string name="titles_in_library">Títulos na Biblioteca</string>
     <string name="mean_score">Pontuação média</string>
     <string name="tags">Marcação</string>
@@ -1070,7 +1094,7 @@
     <string name="manga_status_distribution">Distribuição de Status</string>
     <string name="count">Contar</string>
     <string name="tracker">Rastreador</string>
-    <string name="clear_db_exclude_read">Manter mangá com capítulos lidos</string>
+    <string name="clear_db_exclude_read">Mantenha mangás como capítulos lidos</string>
     <string name="statistics_details">Detalhes dos Status</string>
     <string name="all_read_manga">Todos os mangás Lidos</string>
     <string name="statistics">Estatísticas</string>
@@ -1083,4 +1107,19 @@
     <string name="view_detailed_statistics">Ver estatísticas detalhadas</string>
     <string name="not_rated">Não avaliado</string>
     <string name="source">Fonte</string>
+    <plurals name="_languages">
+        <item quantity="one">%d Idioma</item>
+        <item quantity="many">%d Idiomas</item>
+        <item quantity="other">%d Outros Idiomas</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">%d Fonte</item>
+        <item quantity="many">%d Fontes</item>
+        <item quantity="other">%d Outras Fontes</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d estado</item>
+        <item quantity="many">%d estados</item>
+        <item quantity="other">%d outros estados</item>
+    </plurals>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">Categories</string>
-    <string name="manga">Manga</string>
+    <string name="manga">Mangues</string>
     <string name="chapters">Capítols</string>
     <string name="tracking">En seguiment</string>
     <string name="history">Historial</string>
@@ -561,7 +561,7 @@
     <string name="channel_skipped">Omesa</string>
     <string name="pref_library_update_manga_restriction">Omet les actualitzacions dels títols</string>
     <string name="pref_update_only_completely_read">Amb capítols no llegits</string>
-    <string name="pref_update_only_non_completed">Amb l\'estat «Completada»</string>
+    <string name="pref_update_only_non_completed">Amb l\'estat «Completat»</string>
     <string name="pref_update_only_started">Que no s\'hagin començat</string>
     <string name="pref_clear_webview_data">Neteja les dades del WebView</string>
     <string name="webview_data_deleted">S\'han netejat les dades del WebView</string>
@@ -605,8 +605,8 @@
     <string name="pref_lowest">La més baixa</string>
     <string name="download_notifier_split_page_not_found">No s\'ha trobat la pàgina %d en dividir</string>
     <string name="download_notifier_split_failed">No s\'ha pogut dividir la imatge baixada</string>
-    <string name="split_tall_images">Divideix automàticament les imatges altes</string>
-    <string name="split_tall_images_summary">Millora el rendiment del lector dividint les imatges baixades massa altes.</string>
+    <string name="split_tall_images">Divideix les imatges altes</string>
+    <string name="split_tall_images_summary">Millora el rendiment del lector</string>
     <string name="reading_list">Llista de lectura</string>
     <string name="wish_list">Llista de desitjos</string>
     <string name="complete_list">Llista de completats</string>
@@ -619,4 +619,11 @@
     <string name="user_agent_string">Cadena d\'agent d\'usuari per defecte</string>
     <string name="loader_rar5_error">El format RARv5 no està suportat</string>
     <string name="downloaded_chapters">Capítols baixats</string>
+    <string name="auto_download_while_reading">Baixa automàticament mentre es llegeix</string>
+    <string name="download_ahead">Baixa per avançat</string>
+    <string name="download_ahead_info">Només funciona en elements de la biblioteca i si el capítol actual i el següent ja estan baixats</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">El següent capítol no llegit</item>
+        <item quantity="other">Els següents %d capítols no llegits</item>
+    </plurals>
 </resources>

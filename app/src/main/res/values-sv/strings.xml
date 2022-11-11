@@ -976,10 +976,10 @@
     <string name="faq_and_guides">Vanliga frågor och guider</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Nästa olästa kapitel</item>
-        <item quantity="other">Nästa %d olästa</item>
+        <item quantity="other">Nästa %d olästa kapitel</item>
     </plurals>
     <string name="download_ahead">Ladda ner i förväg</string>
-    <string name="download_ahead_info">Nedladdning framåt gäller endast för poster i biblioteket och om det senast lästa kapitlet har laddats ned</string>
+    <string name="download_ahead_info">Fungerar endast för poster i biblioteket och om det aktuella kapitlet och nästa kapitel redan har laddats ner</string>
     <string name="learn_why">Lär dig varför</string>
     <string name="secure_screen_summary">Säker skärm döljer appinnehållet när du byter app och blockerar skärmdumpar</string>
     <string name="pref_hide_threshold">Känslighet för att dölja menyn vid rullning</string>
@@ -989,8 +989,8 @@
     <string name="pref_lowest">Lägsta</string>
     <string name="open_in_app">Öppna i appen</string>
     <string name="download_notifier_split_page_not_found">Sida %d hittades inte under delning</string>
-    <string name="split_tall_images">Automatisk delning av höga bilder</string>
-    <string name="split_tall_images_summary">Förbättrar läsarens prestanda genom att dela upp långa nedladdade bilder.</string>
+    <string name="split_tall_images">Dela upp höga bilder</string>
+    <string name="split_tall_images_summary">Förbättrar läsarens prestanda</string>
     <string name="reading_list">Läslista</string>
     <string name="wish_list">Önskelista</string>
     <string name="download_notifier_split_failed">Kunde inte dela den nedladdade bilden</string>
@@ -1005,4 +1005,47 @@
     <string name="user_agent_string">Standardsträng för användaragent</string>
     <string name="loader_rar5_error">RARv5 formatet stöds inte</string>
     <string name="downloaded_chapters">Nedladdade kapitel</string>
+    <string name="auto_download_while_reading">Automatisk nedladdning under läsning</string>
+    <string name="stat">Statistik</string>
+    <string name="stats">Statistik</string>
+    <string name="statistics">Statistik</string>
+    <string name="statistics_details">Statistikuppgifter</string>
+    <string name="titles_in_library">Titlar i biblioteket</string>
+    <string name="chapters_read">Lästa kapitel</string>
+    <string name="mean_score">Medelvärde</string>
+    <string name="tracked_titles">Spårade titlar</string>
+    <string name="tags">Taggar</string>
+    <string name="not_rated">Inte betygsatt</string>
+    <string name="source">Källa</string>
+    <string name="tracker">Spårare</string>
+    <string name="length">Längd</string>
+    <string name="start_year">Startår</string>
+    <string name="no_data_for_filters">Ingen data hittades för dina aktuella filter</string>
+    <string name="language_requires_app_restart">Vissa språk kan kräva att appen startas om för att visas korrekt</string>
+    <string name="local_titles">Lokala titlar</string>
+    <string name="titles_in_global_update">Titlar i den globala uppdateringen</string>
+    <string name="trackers">Spårare</string>
+    <string name="read_duration">Lästid</string>
+    <string name="view_detailed_statistics">Se detaljerad statistik</string>
+    <plurals name="_series_types">
+        <item quantity="one"></item>
+        <item quantity="other">%d serietyper</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one"></item>
+        <item quantity="other">%d källor</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one"></item>
+        <item quantity="other">%d statusar</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one"></item>
+        <item quantity="other">%d språk</item>
+    </plurals>
+    <string name="all_read_manga">Alla lästa manga</string>
+    <string name="clear_db_exclude_read">Behåll manga med lästa kapitel</string>
+    <string name="manga_score_distribution">Poängfördelning</string>
+    <string name="manga_status_distribution">Statusfördelning</string>
+    <string name="count">Antal</string>
 </resources>

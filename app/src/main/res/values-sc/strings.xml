@@ -1017,4 +1017,35 @@
     <string name="statistics">Istatìsticas</string>
     <string name="tracked_titles">Tìtulos arrastados</string>
     <string name="tags">Etichetas</string>
+    <string name="chapters_read">Capìtulos lèghidos</string>
+    <string name="mean_score">Votu mèdiu</string>
+    <string name="not_rated">Chene votu</string>
+    <string name="no_data_for_filters">Perunu datu agatadu pro sos filtros atuales tuos</string>
+    <string name="titles_in_global_update">Tìtulos in s\'agiornamentu globale</string>
+    <string name="trackers">Arrastadores</string>
+    <string name="read_duration">Tempus de leghidura</string>
+    <string name="manga_status_distribution">Distributzione de sos istados</string>
+    <string name="manga_score_distribution">Distributzione de sos votos</string>
+    <string name="view_detailed_statistics">Pòmpia sas istatìsticas a sa minuda</string>
+    <string name="count">Contu</string>
+    <string name="source">Fonte</string>
+    <string name="tracker">Arrastadore</string>
+    <string name="length">Longària</string>
+    <plurals name="_sources">
+        <item quantity="one">%d fonte</item>
+        <item quantity="other">%d fontes</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="one">%d istadu</item>
+        <item quantity="other">%d istados</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d limba</item>
+        <item quantity="other">%d limbas</item>
+    </plurals>
+    <string name="start_year">Annu de incumintzu</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d casta de sèrie</item>
+        <item quantity="other">%d castas de sèrie</item>
+    </plurals>
 </resources>

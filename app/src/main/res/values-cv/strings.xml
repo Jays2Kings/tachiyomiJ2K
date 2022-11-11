@@ -454,7 +454,7 @@
     <string name="reading_mode">Вулав тытӑмӗ</string>
     <string name="actions">Тӑвӑмсем</string>
     <string name="create_folders_by_manga_title">Папкӑсене манкӑ ячӗпе тумалла</string>
-    <string name="name">Ят</string>
+    <string name="name">Йачӗ</string>
     <string name="disabled">Сӳнтернӗ</string>
     <string name="channel_errors">Йӑнӑшсем</string>
     <string name="tracking_info">Сӑнану сервиссенче сыпӑкӑн ӳсӗмне ҫӗнетме пӗр енлӗ пӗрлӗхлени. Манкӑн уйрӑм ҫыравӗсемпе вӗсен сӑнану пускӑчсем валли сӑнану ӗнерле.</string>
@@ -466,4 +466,23 @@
     <string name="clear_history_confirmation">Чӑнах катертесшӗн-и\? Веҫ кун-ҫулӗ ҫухалӗ.</string>
     <string name="pref_manage_notifications">Систерӳсене ӗнерле</string>
     <string name="downloaded_chapters">Тиесе илнӗ сыпӑксем</string>
+    <plurals name="after_minutes">
+        <item quantity="one">1 минут хыҫҫӑн%1$s минут хыҫҫӑн</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="tap_zones">Куҫӑм палли</string>
+    <string name="show_in_sources_and_extensions">Ҫӑл куҫсен ят-йышӗнче кӑтарт</string>
+    <plurals name="for_n_titles">
+        <item quantity="one">Ҫӗнӗ сыпӑксем 1 хайлав валли тупӑннӑҪӗнӗ сыпӑксем %d хайлав валли тупӑннӑ</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="secure_screen_summary">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
+    <string name="tap_to_see_details">Йӑнӑшсене кӑтарт</string>
+    <string name="pref_update_only_non_completed">Тухакан манкка ҫеҫ ҫӗнетмелле</string>
+    <string name="faq_and_guides">Кӑтартусем тата ыйту-хурав</string>
+    <string name="start_downloading_now">Тиеве халь пуҫла</string>
+    <string name="move_series_to_top">Серие пуҫламӑша куҫар</string>
+    <string name="appearance">Кӑтартӑнни</string>
+    <string name="warning">Асӑрхаттару</string>
+    <string name="cover_only_grid">Ятсӑр сетке</string>
 </resources>

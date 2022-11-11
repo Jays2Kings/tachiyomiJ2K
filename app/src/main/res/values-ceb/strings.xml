@@ -338,4 +338,7 @@
     <string name="log_in_to_">Login sa %1$s</string>
     <string name="user_agent_string">Default nga user agent string</string>
     <string name="downloaded_chapters">Gi-download nga mga kapitulo</string>
+    <string name="paged">Paged</string>
+    <string name="scale_type">Uri sa sukdanan sa hulagway</string>
+    <string name="log_out">Log out</string>
 </resources>

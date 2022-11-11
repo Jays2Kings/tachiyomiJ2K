@@ -945,11 +945,11 @@
         <item quantity="other">تم تحديث %d ملحق</item>
     </plurals>
     <plurals name="missing_chapters_warning">
-        <item quantity="zero">لا يوجد فصول مفقودة</item>
-        <item quantity="one">تخطي فصل واحد ، إما أن المصدر مفقود أو تمت تصفيته</item>
-        <item quantity="two">تخطي فصلان، إما أن المصدر مفقود أو تمت تصفيته</item>
-        <item quantity="few">تخطي بعض الفصول، إما أن المصدر مفقود أو تمت تصفيته</item>
-        <item quantity="many">تخطي الكثير من الفصول ، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="zero">%d فصل مفقود، لا يوجد فصول مفقودة</item>
+        <item quantity="one">تخطي %d فصل، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="two">تخطي فصلان %d، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="few">تخطي %d فصول، إما أن المصدر مفقود أو تمت تصفيته</item>
+        <item quantity="many">تخطي %d من الفصول ، إما أن المصدر مفقود أو تمت تصفيته</item>
         <item quantity="other">تخطي %d فصل، إما أن المصدر مفقود أو تمت تصفيته</item>
     </plurals>
     <string name="getting_started_guide">دليل البدء</string>
@@ -1038,9 +1038,9 @@
     <string name="skipped_reason_not_started">تم التخطي لعدم وجود فصول مقروءه</string>
     <string name="channel_skipped">متجاوز</string>
     <string name="pref_library_update_manga_restriction">تخطي تحديث العناوين</string>
-    <string name="pref_update_only_completely_read">مع الفصل (الفصول) الغيرالمقروءة</string>
-    <string name="pref_update_only_non_completed">سلسلة منتهية</string>
-    <string name="pref_update_only_started">لم تقرأ أي فصول</string>
+    <string name="pref_update_only_completely_read">مع فصل (فصول) غير مقروءة</string>
+    <string name="pref_update_only_non_completed">مع حالة \"مكتمل\"</string>
+    <string name="pref_update_only_started">هذا لم يبدأ بعد</string>
     <string name="tap_to_see_details">اضغط لإظهار التفاصيل</string>
     <string name="tap_to_learn_more">أنقر للمزيد</string>
     <string name="cover_only_grid">شبكة بالاغلفة</string>
@@ -1052,7 +1052,7 @@
     <string name="clear_history_completed">تم حذف السجل</string>
     <string name="clear_history_confirmation">هل أنت متأكد؟ سيتم حذف السجل.</string>
     <string name="use_staggered_grid">استخدام الشبكة المتداخلة</string>
-    <string name="pref_update_only_completely_read_summary">تحديث المانجا فقط في حالة انه لايوجد بها اي فصول غير مقروءة</string>
+    <string name="pref_update_only_completely_read_summary">تحديث المانجا فقط في حالة انه لايوجد بها اي فصول غير مقروءة (تم قراءته بالكامل)</string>
     <string name="update_tracking_after_reading">تحديث التتبع بعد قراءة الفصول</string>
     <string name="update_tracking_marked_read">تحديث التتبع بعد وضع علامة مقروء على الفصل</string>
     <string name="view_all">عرض الكل</string>
@@ -1061,15 +1061,15 @@
     <string name="pref_manage_notifications">إدارة الإشعارات</string>
     <string name="battery_not_low">البطارية ليست منخفضة</string>
     <string name="faq_and_guides">الاسئله الشائعه والأدلة</string>
-    <string name="download_ahead_info">ينطبق التنزيل المسبق فقط على المانجات في المكتبة وإذا تم تنزيل الفصل الأخير الذي تمت قراءته</string>
-    <string name="download_ahead">التحميل المسبق</string>
+    <string name="download_ahead_info">يعمل فقط على الإدخالات في المكتبة وإذا كان الفصل الحالي بالإضافة إلى الفصل التالي قد تم تنزيلهم بالفعل</string>
+    <string name="download_ahead">التنزيل المسبق</string>
     <plurals name="next_unread_chapters">
-        <item quantity="zero">كل الفصول مقروءة</item>
-        <item quantity="one">الفصل التالي الغير مقروء</item>
-        <item quantity="two">الفصلين التاليين الغير مقروئين</item>
-        <item quantity="few">الفصول التالية الغير مقروءة</item>
-        <item quantity="many">الفصول التالية الغير مقروءة</item>
-        <item quantity="other">كل الفصول مقروءة</item>
+        <item quantity="zero">الفصل التالي غير المقروء</item>
+        <item quantity="one">الفصل التالي غير المقروء</item>
+        <item quantity="two">الفصلان غير المقروءان التاليان</item>
+        <item quantity="few">بضعة ال %d فصول غير المقروءة التالية</item>
+        <item quantity="many">عدة ال %d فصول غير المقروءة التالية</item>
+        <item quantity="other">الفصول %d غير المقروءة التالية</item>
     </plurals>
     <string name="learn_why">تَعَرَّفْ لماذا</string>
     <string name="secure_screen_summary">إخفاء محتوى الشاشة عند تغير التطبيقات و منع لقط الشاشة</string>
@@ -1080,8 +1080,8 @@
     <string name="pref_low">أدنى</string>
     <string name="pref_lowest">أَدان</string>
     <string name="download_notifier_split_page_not_found">لم يتم العثور على الصفحة %d أثناء التقسيم</string>
-    <string name="split_tall_images">تقسيم تلقائي للصور الطويلة</string>
-    <string name="split_tall_images_summary">يحسن أداء القارئ عن طريق تقسيم الصور الطويلة التي تم تنزيلها.</string>
+    <string name="split_tall_images">تقسيم للصور الطويلة</string>
+    <string name="split_tall_images_summary">يحسن أداء القارئ</string>
     <string name="download_notifier_split_failed">لم يمكن تقسيم الصورة المُنزلَة</string>
     <string name="on_hold_list">قائمة المعلقة</string>
     <string name="wish_list">قائمة الرغبات</string>
@@ -1097,4 +1097,62 @@
     <string name="loader_rar5_error">الصيغه RARv5 غير مدعومه</string>
     <string name="language_requires_app_restart">بعض اللغات تتطلب ربما اعادة تشغيل التطبيق لكي تظهر صحيحة</string>
     <string name="downloaded_chapters">الفصول المحملة</string>
+    <string name="auto_download_while_reading">التحميل تلقائيا أثناء القراءة</string>
+    <string name="stat">احصائيات</string>
+    <string name="stats">إحصائيات</string>
+    <string name="statistics">إحصائيات</string>
+    <string name="tags">العلامات</string>
+    <string name="manga_score_distribution">توزيع النتيجة</string>
+    <string name="view_detailed_statistics">عرض إحصائيات مفصلة</string>
+    <string name="count">العدد</string>
+    <string name="not_rated">غير مصنف</string>
+    <string name="source">مصدر</string>
+    <string name="mean_score">النتيجة المتوسطة</string>
+    <string name="tracked_titles">العناوين المتعقبة</string>
+    <string name="local_titles">العناوين المحلية</string>
+    <string name="trackers">المتعقبين</string>
+    <string name="read_duration">مدة القراءة</string>
+    <string name="manga_status_distribution">توزيع الحالة</string>
+    <string name="start_year">سنة البدء</string>
+    <string name="no_data_for_filters">لا توجد بيانات لفلاترك الحالية</string>
+    <string name="titles_in_global_update">العناوين في التحديث العالمي</string>
+    <string name="tracker">متعقب</string>
+    <string name="length">الطول</string>
+    <plurals name="_series_types">
+        <item quantity="zero">%d انواع المسلسلات</item>
+        <item quantity="one">%d انواع المسلسلات</item>
+        <item quantity="two">%d نوعين من المسلسلات</item>
+        <item quantity="few">%d انواع قليلة من السلسلات</item>
+        <item quantity="many">%d عدة انواع من المسلسلات</item>
+        <item quantity="other">%d انواع من المسلسلات</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="zero">%d مصدر</item>
+        <item quantity="one">%d مصدر</item>
+        <item quantity="two">%d مصدران</item>
+        <item quantity="few">%d مصادر</item>
+        <item quantity="many">%d مصادر</item>
+        <item quantity="other">%d مصادر</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="zero">%d لغة</item>
+        <item quantity="one">%d لغة</item>
+        <item quantity="two">%d لغتان</item>
+        <item quantity="few">%d لغات</item>
+        <item quantity="many">%d لغات</item>
+        <item quantity="other">%d لغات</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="zero">%d وضع</item>
+        <item quantity="one">%d وضع</item>
+        <item quantity="two">%d وضعان</item>
+        <item quantity="few">%d اوضاع</item>
+        <item quantity="many">%d اوضاع</item>
+        <item quantity="other">%d اوضاع</item>
+    </plurals>
+    <string name="statistics_details">إحصائيات مفصله</string>
+    <string name="titles_in_library">عناوين في المكتبه</string>
+    <string name="chapters_read">الفصول المقروء</string>
+    <string name="all_read_manga">جميع المانجا المقرؤة</string>
+    <string name="clear_db_exclude_read">ابقي المانجا التي تحتوي على فصل مقروء</string>
 </resources>
