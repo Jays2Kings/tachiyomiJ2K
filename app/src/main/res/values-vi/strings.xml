@@ -1033,4 +1033,26 @@
     <string name="not_rated">Chưa được xếp hạng</string>
     <string name="source">Nguồn</string>
     <string name="length">Độ dài</string>
+    <string name="trackers">Bộ theo dõi</string>
+    <string name="stats">Số Liệu</string>
+    <string name="mean_score">Điểm trung bình</string>
+    <string name="titles_in_global_update">Tiêu đề ở cập nhật tổng bộ</string>
+    <string name="manga_status_distribution">Phân phối trạng thái</string>
+    <string name="manga_score_distribution">Phân phối điểm</string>
+    <string name="count">Tổng Đếm</string>
+    <string name="tracker">Bộ Theo Dõi</string>
+    <string name="start_year">Năm bắt đầu</string>
+    <string name="no_data_for_filters">Không có dữ liệu được tìm thấy đáp ứng bộ lọc của bạn</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d loại loạt truyện</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="other">%d ngôn ngữ</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d trạng thái</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="other">%d nguồn</item>
+    </plurals>
 </resources>

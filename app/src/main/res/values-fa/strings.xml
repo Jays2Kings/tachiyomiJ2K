@@ -550,4 +550,12 @@
     <string name="no_recent_read_updated_manga">مانگای اخیرا خوانده یا به‌روزرسانی نشده است</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">قسمت‌های دانلود شده</string>
+    <string name="navigate_pan">هدایت به پن</string>
+    <plurals name="for_n_titles">
+        <item quantity="one">برای ۱ مانگابرای %d مانگا</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="auto_download_while_reading">دانلود خودکار در حین خواندن</string>
+    <string name="download_ahead">بارگیری شود</string>
+    <string name="lavender">ارغوانی</string>
 </resources>

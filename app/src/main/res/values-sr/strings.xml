@@ -402,12 +402,12 @@
     <string name="next_page">Sledeća stranica</string>
     <string name="previous_page">Prethodna stranica</string>
     <string name="animate_page_transitions">Animacije pri promeni stranice</string>
-    <string name="reduces_banding_impacts_performance">Smanjuje oštre prelaske između nijansi, ali usporava performanse</string>
+    <string name="reduces_banding_impacts_performance">Смањује оштре прелазе међу нијансама, али утиче на перформансе</string>
     <string name="color_filter_blend_mode">Mod stapanja filtera boja</string>
     <string name="overlay">Prekrivanje</string>
     <string name="dodge_lighten">Izbegni / Posvetli</string>
     <string name="burn_darken">Zapali / Potamni</string>
-    <string name="invert_tapping">Invertuj dodire</string>
+    <string name="invert_tapping">Обрни додире</string>
     <string name="actions">Akcije</string>
     <string name="create_folders_by_manga_title">Pravi foldere po naslovu mange</string>
     <string name="set_as_default">Postavi kao podrazumevano</string>
@@ -1004,4 +1004,5 @@
     <string name="pref_lowest">Најнижа</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Preuzeta poglavlja</string>
+    <string name="tap_zones">Начин навигације</string>
 </resources>

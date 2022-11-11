@@ -164,4 +164,6 @@
     <string name="ascending">ငယ်စဉ်ကြီးလိုက်</string>
     <string name="descending">ကြီးစဉ်ငယ်လိုက်</string>
     <string name="select_inverse">ပြောင်းပြန်ရွေးချယ်ရန်</string>
+    <string name="backup_and_restore">အရံ</string>
+    <string name="downloaded_chapters">ဒေါင်းလုဒ်အမှတ်အသားများ</string>
 </resources>

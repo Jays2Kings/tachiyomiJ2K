@@ -622,7 +622,7 @@
     <string name="yin">Ин</string>
     <string name="by_default_side_nav_info">По подразбиране страничната навигация се използва за някои телефони и малки таблети, когато са в хоризонтално положение, и винаги се показва на по-големи таблети</string>
     <string name="app_shortcuts">Преки пътища за приложения</string>
-    <string name="download_queue_size_warning">Предупреждение: големите масови изтегляния могат да доведат до забавяне на източниците и/или блокиране на Tachiyomi</string>
+    <string name="download_queue_size_warning">Предупреждение: големите масови изтегляния могат да доведат до забавяне на източниците и/или блокиране на Tachiyomi. Натиснете тук, за да научите повече.</string>
     <string name="restrictions_">Ограничения: %1$s</string>
     <string name="include_in_global_update">Включване в глобалното актуализиране</string>
     <string name="certain_buttons_can_be_found">Някои бутони могат да бъдат намерени на други места, ако са деактивирани тук</string>
@@ -874,7 +874,7 @@
     <string name="manage_whats_downloading">Управление на това, което се изтегля</string>
     <string name="ask_on_chapters_page">Изтриване по време на глобални актуализации, питане на страницата с глави</string>
     <string name="always_delete">Винаги изтривайте</string>
-    <string name="save_chapters_as_cbz">Запазване на глави като CBZ</string>
+    <string name="save_chapters_as_cbz">Запази като CBZ архив</string>
     <string name="add_to_">Добавяне към %1$s</string>
     <string name="added_to_">Добавено към %1$s</string>
     <string name="beta">БЕТА</string>
@@ -967,4 +967,48 @@
     <string name="pref_low">Ниска</string>
     <string name="pref_lowest">Най-ниска</string>
     <string name="downloaded_chapters">Изтеглени глави</string>
+    <string name="pref_update_only_non_completed">Със статус \"Завършена\"</string>
+    <string name="tap_zones">Схема на навигацията</string>
+    <string name="pref_library_update_manga_restriction">Ограничения за актуализиране на библиотеката</string>
+    <string name="pref_update_only_completely_read">С непрочетени глави</string>
+    <string name="tap_to_see_details">Вижте пълните подробности за грешката</string>
+    <string name="webtoon_side_padding_5">5%</string>
+    <string name="auto_download_while_reading">Автоматично изтегляне при четене</string>
+    <string name="on_hiatus">В хиатус</string>
+    <string name="cancelled">Отменена</string>
+    <string name="reading_list">Списък за четене</string>
+    <string name="skipped_reason_not_caught_up">Пропусната, понеже има непрочетени глави</string>
+    <string name="notification_update_error">%1$d провалени обновление/я</string>
+    <string name="skipped_reason_completed">Пропусната, понеже поредицата е завършена</string>
+    <string name="notification_update_skipped">%1$d пропуснати обновление/я</string>
+    <string name="skipped_reason_not_started">Пропусната, понеже не е започната</string>
+    <string name="pref_clear_webview_data">Изчисти данните на WebView</string>
+    <string name="loader_rar5_error">Форматът RARv5 не се поддържа</string>
+    <string name="backup_restore_invalid_uri">Грешка: празен URI</string>
+    <string name="split_tall_images_summary">Подобрява производителността на четеца</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Следващата непрочетена глава</item>
+        <item quantity="other">Следващите %d непрочетени глави</item>
+    </plurals>
+    <string name="webview_data_deleted">Данните на WebView изчистени</string>
+    <string name="empty_backup_error">Няма заглавия в библиотеката за резервно копие</string>
+    <string name="channel_skipped">Пропуснати</string>
+    <string name="pref_update_only_started">Незапочнати</string>
+    <string name="confirm_manga_add_duplicate">Имате заглавие в библиотеката със същото име, но от различен източник (%1$s).
+\n
+\nИскате ли да продължите\?</string>
+    <string name="wish_list">Списък с желания</string>
+    <string name="complete_list">Списък със завършени</string>
+    <string name="on_hold_list">Списък със спрени</string>
+    <string name="unfinished_list">Списък с незавършени</string>
+    <string name="download_notifier_split_page_not_found">Страница %d не беше намерена при разделяне</string>
+    <string name="download_notifier_split_failed">Изтегленото изображение не можа да бъде разделено</string>
+    <string name="split_tall_images">Разделяй високите изображения</string>
+    <string name="download_ahead">Предстоящо изтегляне</string>
+    <string name="download_ahead_info">Работи само със заглавия в библиотеката и ако текущата и следващата глава са вече изтеглени</string>
+    <string name="publishing_finished">Приключено издаване</string>
+    <string name="user_agent_string">User agent string по подразбиране</string>
+    <string name="lavender">Лавандула</string>
+    <string name="move_series_to_top">Премести поредицата най-горе</string>
+    <string name="tap_to_learn_more">Натисни, за да научиш повече</string>
 </resources>

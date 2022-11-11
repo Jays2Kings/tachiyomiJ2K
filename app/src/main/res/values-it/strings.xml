@@ -327,6 +327,7 @@
     <string name="obsolete_extension_message">Questa estensione non è più disponibile.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Aggiornamento estensione disponibile</item>
+        <item quantity="many">%d estensioni hanno aggiornamenti disponibili</item>
         <item quantity="other">%d estensioni hanno aggiornamenti disponibili</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Riduce il banding, ma potrebbe influire sulle prestazioni</string>
@@ -376,10 +377,12 @@
     <string name="adding_category_to_queue">Aggiungendo %1$s alla coda di aggiornamento</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categorie</item>
         <item quantity="other">%d categorie</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pagina rimasta</item>
+        <item quantity="many">%1$d pagine rimaste</item>
         <item quantity="other">%1$d pagine rimaste</item>
     </plurals>
     <string name="chapter_not_found">Capitolo non trovato</string>
@@ -400,6 +403,7 @@
     <string name="manhwa">Manhwa</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Rimuovere %1$d capitolo scaricato\?</item>
+        <item quantity="many">Rimuovere %1$d capitoli scaricati\?</item>
         <item quantity="other">Rimuovere %1$d capitoli scaricati\?</item>
     </plurals>
     <string name="sort_by">Ordina per</string>
@@ -463,6 +467,7 @@
     <string name="bottom">Fondo</string>
     <plurals name="after_minutes">
         <item quantity="one">Dopo un minuto</item>
+        <item quantity="many">Dopo %1$s minuti</item>
         <item quantity="other">Dopo %1$s minuti</item>
     </plurals>
     <string name="always_delete">Elimina sempre</string>
@@ -489,6 +494,7 @@
     <string name="clean_up_cached_covers">Elimina le copertine in cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Eliminazione completata. Rimossa la cartella %d</item>
+        <item quantity="many">Eliminazione completata. Rimosse le cartelle %d</item>
         <item quantity="other">Eliminazione completata. Rimosse le cartelle %d</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Disabilita questo se hai problemi ad aggiornare o recuperare la tua libreria</string>
@@ -501,6 +507,7 @@
     <string name="clean_up_downloaded_chapters">Elimina i capitoli scaricati</string>
     <plurals name="cache_cleared">
         <item quantity="one">Cache libera. Il file %d è stato rimosso</item>
+        <item quantity="many">Cache libera. I file %d sono stati rimossi</item>
         <item quantity="other">Cache libera. I file %d sono stati rimossi</item>
     </plurals>
     <string name="data_management">Gestione dei dati</string>
@@ -508,16 +515,19 @@
     <string name="restore_error">Impossibile ripristinare il backup</string>
     <string name="white_theme">Bianco puro</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga migrato</item>
+        <item quantity="one">Un manga migrato</item>
+        <item quantity="many">%d manga migrati</item>
         <item quantity="other">%d manga migrati</item>
     </plurals>
     <string name="skipping_">(saltare %1$d)</string>
     <plurals name="copy_manga">
         <item quantity="one">Copiare il manga %1$d%2$s\?</item>
+        <item quantity="many">Copiare i manga %1$d%2$s\?</item>
         <item quantity="other">Copiare i manga %1$d%2$s\?</item>
     </plurals>
     <plurals name="migrate_manga">
         <item quantity="one">Migrare il manga %2$s\?</item>
+        <item quantity="many">Migrare i manga %1$d%2$s\?</item>
         <item quantity="other">Migrare i manga %1$d%2$s\?</item>
     </plurals>
     <string name="stop_migrating">Interrompere la migrazione\?</string>
@@ -552,6 +562,10 @@
         <item quantity="one">Un capitolo è stato rimosso dalla sorgente:
 \n%2$s
 \nEliminare il suo download\?</item>
+        <item quantity="many">%1$s capitoli sono stati rimossi dalla sorgente:
+\n%2$s
+\n
+\nEliminare i loro download\?</item>
         <item quantity="other">%1$s capitoli sono stati rimossi dalla sorgente:
 \n%2$s
 \n
@@ -617,11 +631,13 @@
     <string name="when_sorting_ignore_articles">Per ordinamento alfabetico, ordina ignorando gli articoli (a, an, the) posti all\'inizio dei nomi dei manga</string>
     <string name="sort_by_ignoring_articles">Ordina ignorando gli articoli</string>
     <plurals name="notification_and_n_more">
-        <item quantity="one">e un capitolo in più</item>
-        <item quantity="other">e %1$d capitoli in più</item>
+        <item quantity="one">e un altro capitolo</item>
+        <item quantity="many">e %1$d altri capitoli</item>
+        <item quantity="other">e %1$d altri capitoli</item>
     </plurals>
     <plurals name="for_n_titles">
         <item quantity="one">Per un titolo</item>
+        <item quantity="many">Per %d titoli</item>
         <item quantity="other">Per %d titoli</item>
     </plurals>
     <string name="more_library_settings">Impostazioni libreria aggiuntive</string>
@@ -685,6 +701,7 @@
     <string name="category">Categoria</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$d capitolo</item>
+        <item quantity="many">%1$d capitoli</item>
         <item quantity="other">%1$d capitoli</item>
     </plurals>
     <string name="backup_in_progress">Il backup è già in corso</string>
@@ -754,6 +771,7 @@
     <string name="mark_all_chapters_as_unread">Segna tutti i capitoli come non letti\?</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d pagina</item>
+        <item quantity="many">%1$d pagine</item>
         <item quantity="other">%1$d pagine</item>
     </plurals>
     <string name="create_folders_by_manga_title">Crea cartelle relative al titolo del manga</string>
@@ -823,6 +841,7 @@
     <string name="pad_cutout_areas">Riempi aree ritagliate</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d aggiornamento in attesa</item>
+        <item quantity="many">%d aggiornamenti in attesa</item>
         <item quantity="other">%d aggiornamenti in attesa</item>
     </plurals>
     <string name="hide_notification_content">Nascondi contenuto notifiche</string>
@@ -890,6 +909,7 @@
     <string name="split_double_pages_portrait">Dividi doppie pagine in modalità ritratto</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">Estensione aggiornata</item>
+        <item quantity="many">%d estensioni aggiornate</item>
         <item quantity="other">%d estensioni aggiornate</item>
     </plurals>
     <string name="extensions_updated">Estensioni aggiornate</string>
@@ -911,6 +931,7 @@
     <string name="use_side_navigation">Usa navigazione laterale</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Un capitolo saltato, la fonte non ce l\'ha o è stato filtrato</item>
+        <item quantity="many">%d capitoli saltati, la fonte non li ha o sono stati filtrati</item>
         <item quantity="other">%d capitoli saltati, la fonte non li ha o sono stati filtrati</item>
     </plurals>
     <string name="by_default_side_nav_info">Per impostazione predefinita, la navigazione laterale viene utilizzata per alcuni telefoni e piccoli tablet quando sono in orizzontale, e viene sempre mostrata sui tablet più grandi</string>
@@ -1046,4 +1067,45 @@
     <string name="auto_download_while_reading">Download automatico durante la lettura</string>
     <string name="stats">Statistiche</string>
     <string name="statistics">Statistiche</string>
+    <string name="stat">Statistiche</string>
+    <string name="chapters_read">Capitoli letti</string>
+    <string name="tags">Etichette</string>
+    <string name="read_duration">Durata lettura</string>
+    <string name="not_rated">Non valutato</string>
+    <string name="source">Fonte</string>
+    <plurals name="_series_types">
+        <item quantity="one">Un tipo di serie</item>
+        <item quantity="many">%d tipi di serie</item>
+        <item quantity="other">%d tipi di serie</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">Fonte</item>
+        <item quantity="many">%d fonti</item>
+        <item quantity="other">%d fonti</item>
+    </plurals>
+    <string name="statistics_details">Dettaglio statistiche</string>
+    <string name="titles_in_library">Titoli nella libreria</string>
+    <string name="mean_score">Punteggio medio</string>
+    <string name="tracked_titles">Titoli tracciati</string>
+    <string name="local_titles">Titoli locali</string>
+    <string name="titles_in_global_update">Titoli nell\'aggiornamento globale</string>
+    <string name="trackers">Trackers</string>
+    <string name="manga_status_distribution">Distribuzione degli status</string>
+    <string name="manga_score_distribution">Distruzione dei punteggi</string>
+    <string name="view_detailed_statistics">Vedi statistiche dettagliate</string>
+    <string name="count">Conteggio</string>
+    <string name="tracker">Tracker</string>
+    <string name="length">Lunghezza</string>
+    <string name="start_year">Anno di inizio</string>
+    <plurals name="_statuses">
+        <item quantity="one">Status</item>
+        <item quantity="many">%d stati</item>
+        <item quantity="other">%d stati</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">Una lingua</item>
+        <item quantity="many">%d lingue</item>
+        <item quantity="other">%d lingue</item>
+    </plurals>
+    <string name="no_data_for_filters">Nessun dato trovato con il filtro corrente</string>
 </resources>

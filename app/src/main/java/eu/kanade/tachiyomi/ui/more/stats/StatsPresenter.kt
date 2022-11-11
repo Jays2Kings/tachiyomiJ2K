@@ -78,9 +78,7 @@ class StatsPresenter(
     }
 
     fun getReadDuration(): String {
-        val chaptersTime = mangaDistinct.sumOf { manga ->
-            db.getHistoryByMangaId(manga.id!!).executeAsBlocking().sumOf { it.time_read }
-        }
+        val chaptersTime = db.getTotalReadDuration()
         return chaptersTime.getReadDuration(prefs.context.getString(R.string.none))
     }
 }

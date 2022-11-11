@@ -14,7 +14,7 @@ Features of Tachiyomi include:
 * Online reading from a variety of sources
 * Local reading of downloaded content
 * A configurable reader with multiple viewers, reading directions and other settings.
-* [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.io/explore/anime), and [Shikimori](https://shikimori.one) support
+* [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.io/explore/anime), [Shikimori](https://shikimori.one), and [Manga Updates](https://www.mangaupdates.com/) support
 * Categories to organize your library
 * Automatic light and dark themes
 * Schedule updating your library for new chapters
@@ -22,7 +22,7 @@ Features of Tachiyomi include:
 
 Plus some new features in this fork such as:
 * New Manga details screens, themed by their manga covers
-* Combine 2 pages while reading into a single one for a better tablet experince
+* Combine 2 pages while reading into a single one for a better tablet experience
 * An expanded toolbar for easier one handed use (with the option to reduce the size back down)
 * Floating searchbar to easily start a search in your library or while browsing
 * Library redesigned as a single list view: See categories listed in a vertical view, that can be collasped or expanded with a tap

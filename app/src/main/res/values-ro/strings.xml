@@ -270,7 +270,7 @@
     <string name="burn_darken">Întunecă</string>
     <string name="skip_read_chapters">Treci peste capitolele marcate citit</string>
     <string name="help">Ajutor</string>
-    <string name="lock_with_biometrics">Blocare cu amprentă</string>
+    <string name="lock_with_biometrics">Blocare cu ajutorul biometriei</string>
     <string name="lock_when_idle">Blocați când este inactiv</string>
     <string name="update">Actualizează</string>
     <string name="updating_library">Se actualizează biblioteca</string>
@@ -715,11 +715,11 @@
     <string name="appearance">Aspect</string>
     <string name="tracking_info">Sincronizare unidirecțională pentru actualizarea progresului capitolului în cadrul serviciilor de urmărire. Configurați urmărirea pentru intrările manga individuale din butonul de urmărire al acestora.</string>
     <string name="no_chapters_to_delete">Niciun capitol de șters</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K necesită accesul la fișiere pentru a descărca capitole. Apasă aici, apoi apasă \"Permite accesul la toate fișierele.\"</string>
-    <string name="all_files_permission_required">Permisiune accesare fișiere</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K necesită accesul la fișiere pentru a descărca capitole, a crea copii de rezervă și accesa manga descărcată local.
+    <string name="external_storage_download_notice">TachiyomiJ2K are nevoie de acces la toate fișierele pentru a descărca capitole. Atingeți aici, apoi activați \"Permiteți accesul pentru a gestiona toate fișierele\".</string>
+    <string name="all_files_permission_required">Permisiuni necesare pentru a accesa fișierele</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K necesită acces la toate fișierele din Android 11 pentru a descărca capitole, pentru a crea copii de rezervă automate și pentru a citi manga locală.
 \n
-\nPe ecranul următor, selectați \"Permiteți accesul la toate fișierele.\"</string>
+\nÎn ecranul următor, activați \"Allow access to manage all files\" (Permiteți accesul pentru a gestiona toate fișierele).</string>
     <string name="remove_all_downloads">Înlăturați toate descărcările\?</string>
     <string name="publishing_finished">Editare finalizată</string>
     <string name="cancelled">Anulat</string>
@@ -881,7 +881,7 @@
     <string name="auto_updates">Actualizări automate</string>
     <string name="auto_update_app">Actualizați automat aplicația</string>
     <string name="battery_not_low">Bateria nu este scăzută</string>
-    <string name="download_ahead_info">Descărcarea în avans se aplică numai pentru intrările din bibliotecă și dacă ultimul capitol citit a fost descărcat</string>
+    <string name="download_ahead_info">Funcționează numai pentru intrările din bibliotecă și dacă capitolul curent și următorul sunt deja descărcate</string>
     <string name="always_keep">Păstrați întotdeauna</string>
     <string name="split_tall_images">Împărțiți imagini înalte</string>
     <string name="split_tall_images_summary">Îmbunătățește performanța cititorului</string>
@@ -890,8 +890,8 @@
     <string name="tap_to_learn_more">Atingeți pentru a afla mai multe</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Următorul capitol necitit</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="few">Următoarele %d capitole necitite</item>
+        <item quantity="other">Următoarele %d capitole necitite</item>
     </plurals>
     <string name="faq_and_guides">Întrebări frecvente și ghiduri</string>
     <string name="every_3_days">La fiecare 3 zile</string>
@@ -961,7 +961,7 @@
     <string name="default_behavior">Comportament implicit</string>
     <string name="open_in_app">Deschideți în aplicație</string>
     <string name="turn_on_">Porniți %s</string>
-    <string name="download_ahead">Descărcați în avans</string>
+    <string name="download_ahead">Descarcă înainte</string>
     <string name="restrictions_">Restricții: %1$s</string>
     <string name="some_extensions_may_prompt">Este posibil ca unele extensii să ceară să fie instalate mai întâi.</string>
     <string name="updating_extensions">Extensiile se actualizează</string>
@@ -1012,9 +1012,9 @@
     <string name="show_larger_toolbar">Afișați o bară de instrumente mai mare, extinsă, în partea de sus a majorității paginilor (nu se afișează pe dispozitivele mai mici, indiferent de setare)</string>
     <string name="save_pages_separately">Salvați paginile în dosare separate</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Sărind peste 1 capitol, fie că sursa lipsește, fie că a fost filtrată</item>
-        <item quantity="few">Sărind peste %d capitole, fie că sursa lipsește, fie că a fost filtrată</item>
-        <item quantity="other">Sărind peste %d capitole, fie că sursa lipsește, fie că a fost filtrată</item>
+        <item quantity="one">Omiterea unui capitol, fie că sursa lipsește, fie că a fost filtrată</item>
+        <item quantity="few">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
+        <item quantity="other">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
     </plurals>
     <string name="enhanced_tracking_info">Servicii care oferă caracteristici îmbunătățite pentru anumite surse. Manga sunt urmărite în mod automat atunci când sunt adăugate la biblioteca dumneavoastră.</string>
     <string name="update_tracking_marked_read">Actualizați urmărirea când este marcată ca fiind citită</string>
@@ -1031,4 +1031,48 @@
     <string name="user_agent_string">Șir de agent utilizator implicit</string>
     <string name="auto_download_while_reading">Descărcă automat în timp ce citiți</string>
     <string name="downloaded_chapters">Capitole descărcate</string>
+    <string name="stats">Statistici</string>
+    <string name="read_duration">Durata citirii</string>
+    <string name="stat">Statistică</string>
+    <string name="statistics">Statistici</string>
+    <string name="statistics_details">Detaliile statisticilor</string>
+    <string name="titles_in_library">Titluri în bibliotecă</string>
+    <string name="chapters_read">Capitole citite</string>
+    <string name="mean_score">Scor mediu</string>
+    <string name="tracked_titles">Titluri urmărite</string>
+    <string name="tags">Taguri</string>
+    <string name="local_titles">Titluri locale</string>
+    <string name="titles_in_global_update">Titluri în actualizare globală</string>
+    <string name="trackers">Urmăritori</string>
+    <string name="manga_status_distribution">Distribuția stărilor</string>
+    <string name="manga_score_distribution">Distribuția scorului</string>
+    <string name="view_detailed_statistics">Vizualizați statisticile detaliate</string>
+    <string name="count">Numărate</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d Tip de serii</item>
+        <item quantity="few">%d Tipuri de serii</item>
+        <item quantity="other">%d Tipuri de serii</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">%d sursă</item>
+        <item quantity="few">%d surse</item>
+        <item quantity="other">%d surse</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">%d Limbă</item>
+        <item quantity="few">%d Limbi</item>
+        <item quantity="other">%d Limbi</item>
+    </plurals>
+    <string name="all_read_manga">Tot manga citit</string>
+    <string name="length">Lungime</string>
+    <string name="start_year">Anul începerii</string>
+    <string name="not_rated">Neevaluat</string>
+    <string name="source">Sursă</string>
+    <string name="tracker">Tracker</string>
+    <string name="no_data_for_filters">Nu s-au găsit date pentru filtrele curente</string>
+    <plurals name="_statuses">
+        <item quantity="one">%d status</item>
+        <item quantity="few">%d statusuri</item>
+        <item quantity="other">%d statusuri</item>
+    </plurals>
 </resources>

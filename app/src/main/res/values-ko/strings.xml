@@ -33,7 +33,7 @@
     <string name="install">설치</string>
     <string name="settings">세팅</string>
     <string name="display">디스플레이</string>
-    <string name="history">역사</string>
+    <string name="history">기록</string>
     <string name="download_queue">다운로드 대기열</string>
     <string name="library">내 서재</string>
     <string name="recent_updates">서재 업데이트</string>
@@ -48,7 +48,7 @@
     <string name="undo">되돌리기</string>
     <string name="create">만들기</string>
     <string name="restore">복구하기</string>
-    <string name="loading">로딩 중.…</string>
+    <string name="loading">로딩 중…</string>
     <string name="updates">업데이트</string>
     <string name="general">일반</string>
     <string name="reader">리더</string>
@@ -134,7 +134,7 @@
     <string name="backup_location">백업 폴더</string>
     <string name="backup_frequency">백업 주기</string>
     <string name="max_auto_backups">최대 자동 백업</string>
-    <string name="backup_created">백업</string>
+    <string name="backup_created">백업 생성됨</string>
     <string name="restore_completed">복원 완료</string>
     <string name="restoring_backup">백업 복원중</string>
     <string name="clear_chapter_cache">챕터 캐시 삭제</string>
@@ -245,7 +245,7 @@
     <string name="_copied_to_clipboard">클립보드에 %1$s 복사됨</string>
     <string name="custom_range">사용자 정의 다운로드</string>
     <string name="reading">읽는 중</string>
-    <string name="completed">완료</string>
+    <string name="completed">완결</string>
     <string name="dropped">포기함</string>
     <string name="on_hold">일시중지중</string>
     <string name="plan_to_read">계획중</string>
@@ -290,7 +290,7 @@
     <string name="restore_duration">%02d분 %02d초</string>
     <string name="invalid_backup_file_type">부적합한 백업 파일 타입: %1$s
 \n백업파일은 .photo .gz 또는 .json으로 끝나야 합니다.</string>
-    <string name="invalid_backup_file">부적합한 백업 파일</string>
+    <string name="invalid_backup_file">잘못된 백업 파일</string>
     <string name="disabled">끄기</string>
     <string name="right_and_left_nav">좌우 이동</string>
     <string name="restore_miui_warning">MIUI 최적화가 꺼져 있을 경우 백업/복원 기능이 정상 작동하지 않을 수 있습니다.</string>
@@ -558,15 +558,15 @@
     <string name="clear_history">내역 삭제</string>
     <string name="clear_history_completed">기록이 삭제되었습니다</string>
     <string name="clear_history_confirmation">계속하시겠습니까\? 모든 기록이 삭제됩니다.</string>
-    <string name="backup_restore_invalid_uri">에러: 빈 URI</string>
+    <string name="backup_restore_invalid_uri">오류: 빈 URI</string>
     <string name="backup_info">자동 백업이 매우 권장됩니다. 백업 파일은 다른 장소에 나눠 보관하세요.</string>
     <string name="fetched_">%1$s 가져옴</string>
     <string name="reset_chapter_history">장 기록 다시 설정</string>
     <string name="pref_manage_notifications">알림 설정</string>
     <string name="faq_and_guides">FAQ와 설명서</string>
     <string name="battery_not_low">배터리가 부족하지 않음</string>
-    <string name="pref_clear_webview_data">웹뷰 데이터 지우기</string>
-    <string name="webview_data_deleted">웹뷰 데이터 삭제됨</string>
+    <string name="pref_clear_webview_data">WebView 데이터 지우기</string>
+    <string name="webview_data_deleted">WebView 데이터 삭제됨</string>
     <string name="secure_screen_summary">스크린 보안이 활성화될 경우 스크린샷이 비활성화되며 화면 전환 시 내용이 숨겨집니다</string>
     <string name="pref_hide_threshold">스크롤 시 메뉴 숨기기 민감도</string>
     <string name="pref_highest">매우 높음</string>
@@ -722,7 +722,7 @@
     <string name="smart_based_on_page">스마트(페이지 기반)</string>
     <string name="mark_all_chapters_as_read">모든 챕터를 읽은 것으로 표시하시겠습니까\?</string>
     <plurals name="next_unread_chapters">
-        <item quantity="other">다음 %d 읽지 않음</item>
+        <item quantity="other">읽지 않은 다음 %d 회차</item>
     </plurals>
     <string name="all_read_chapters">모든 읽기 챕터</string>
     <string name="add_x_to_library">라이브러리에 %1$s를 추가하시겠습니까\?</string>
@@ -742,7 +742,7 @@
     <string name="cutout_area_behavior">컷아웃 영역 동작</string>
     <string name="pad_cutout_areas">패드 컷아웃 영역</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">%d 장을 건너뛸 때 소스에 해당 장이 없거나 필터링되었습니다</item>
+        <item quantity="other">소스에 존재하지 않거나 필터링되어 있는 %d개의 회차를 건너뛰었습니다</item>
     </plurals>
     <string name="about_this_">%1$s 정보</string>
     <string name="start_reading">읽기 시작</string>
@@ -930,7 +930,7 @@
     <string name="tag">태그</string>
     <string name="match_enabled_sources">사용 가능한 소스 일치</string>
     <string name="remove_downloads">다운로드 제거</string>
-    <string name="download_ahead_info">미리 다운로드는 라이브러리의 항목에만 적용되며 마지막 챕터 읽기가 다운로드된 경우에만 적용됩니다</string>
+    <string name="download_ahead_info">만화가 내 서재에 추가되어 있고, 현재 회차와 다음 회차가 이미 다운로드된 경우에만 작동됩니다</string>
     <string name="ask_on_chapters_page">글로벌 업데이트 중에 삭제, 챕터 페이지에서 질문하기</string>
     <string name="always_keep">항상 유지</string>
     <string name="mark_all_as_read">모두 읽은 것으로 표시</string>
@@ -986,4 +986,27 @@
     <string name="deleted_">삭제됨: %1$s</string>
     <string name="migration_sources_changed">마이그레이션 원본이 변경됨</string>
     <string name="downloaded_chapters">다운로드된 회차</string>
+    <string name="auto_download_while_reading">읽을 때 자동 다운로드</string>
+    <string name="stats">통계</string>
+    <string name="statistics_details">통계 세부정보</string>
+    <string name="chapters_read">읽은 만화</string>
+    <string name="mean_score">평균 점수</string>
+    <string name="titles_in_library">서재에 있는 만화</string>
+    <string name="stat">통계</string>
+    <string name="statistics">통계 정보</string>
+    <string name="tracked_titles">동기화된 만화</string>
+    <string name="tags">태그</string>
+    <string name="manga_status_distribution">상태 분포</string>
+    <string name="manga_score_distribution">점수 분포</string>
+    <string name="view_detailed_statistics">자세한 통계 표시하기</string>
+    <string name="local_titles">로컬 만화</string>
+    <string name="trackers">트래커</string>
+    <string name="titles_in_global_update">전역 업데이트된 만화</string>
+    <string name="count">총계</string>
+    <string name="not_rated">평가되지 않음</string>
+    <string name="source">소스</string>
+    <string name="tracker">동기화</string>
+    <string name="length">길이</string>
+    <string name="start_year">시작 연도</string>
+    <string name="read_duration">읽은 시간</string>
 </resources>

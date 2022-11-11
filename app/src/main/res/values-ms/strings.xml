@@ -146,7 +146,7 @@
     <string name="clear_database">Hapus pangkalan data</string>
     <string name="clear_database_summary">Hapus manga dan bab yang tidak ada di dalam koleksi</string>
     <string name="clear_database_confirmation">Adakah anda pasti\? Bab dibaca dan kemajuan manga bukan-pustaka akan hilang</string>
-    <string name="clear_database_completed">Pangkalan data dihapuskan</string>
+    <string name="clear_database_completed">Entri dihapuskan</string>
     <string name="refresh_library_metadata">Muat semula metadata koleksi</string>
     <string name="updates_covers_genres_desc">Kemas kini muka hadapan, genre, keterangan dan maklumat status manga</string>
     <string name="refresh_tracking_metadata">Muat semula metadata penjejakan</string>
@@ -292,7 +292,7 @@
     <string name="backup_failed">Sandaran gagal</string>
     <string name="creating_backup">Dalam proses membuat sandaran</string>
     <string name="network">Rangkaian</string>
-    <string name="requires_app_restart">Mula semula diperlukan untuk berkesan</string>
+    <string name="requires_app_restart">Mulakan semula aplikasi diperlukan untuk berkesan</string>
     <string name="disable_battery_optimization">Nyahdaya pengoptimuman bateri</string>
     <string name="battery_optimization_disabled">Pengoptimuman bateri sudah dinyahdayakan</string>
     <string name="pref_global_search">Carian keseluruhan</string>
@@ -834,7 +834,7 @@
     <string name="skipped_reason_not_caught_up">Dilangkau kerana ada bab yang belum dibaca</string>
     <string name="skipped_reason_not_started">Dilangkau kerana tiada bab yang dibaca</string>
     <string name="channel_skipped">Dilangkau</string>
-    <string name="pref_library_update_manga_restriction">Langkau mengemas kini judul</string>
+    <string name="pref_library_update_manga_restriction">Langkau mengemas kini tajuk</string>
     <string name="pref_update_only_completely_read">Dengan bab yang belum dibaca</string>
     <string name="pref_update_only_non_completed">Dengan status \"Sudah selesai\"</string>
     <string name="pref_update_only_started">Yang mana bacaan belum dimulakan</string>
@@ -922,7 +922,7 @@
     <string name="yin">Yin</string>
     <string name="violet">Violet</string>
     <string name="download_ahead">Muat turun maju</string>
-    <string name="pref_update_only_completely_read_summary">Hanya kemaskini manga sekiranya tiada bab yang tidak dibaca (dibaca sepenuhnya)</string>
+    <string name="pref_update_only_completely_read_summary">Hanya kemaskini manga sekiranya tiada bab yang tidak terbaca (dibaca sepenuhnya)</string>
     <string name="affects_library_grid">Mempengaruhi penutup grid pustaka</string>
     <string name="split_double_pages_portrait">Pisah dwihalaman dalam potret</string>
     <string name="dark_theme">Tema gelap</string>
@@ -986,4 +986,39 @@
     <string name="keep_in_">Simpan dalam %1$s</string>
     <string name="auto_download_while_reading">Muat turun automatik semasa membaca</string>
     <string name="downloaded_chapters">Bab dimuat turun</string>
+    <string name="statistics">Statistik</string>
+    <string name="stat">Stat</string>
+    <string name="stats">Stat</string>
+    <string name="statistics_details">Perincian statistik</string>
+    <string name="manga_status_distribution">Taburan status</string>
+    <string name="manga_score_distribution">Taburan skor</string>
+    <string name="view_detailed_statistics">Lihat statistik terperinci</string>
+    <string name="count">Bilangan</string>
+    <string name="not_rated">Tidak dinilai</string>
+    <string name="source">Sumber</string>
+    <string name="tracker">Penjejak</string>
+    <string name="length">Panjang</string>
+    <string name="start_year">Tahun mula</string>
+    <string name="no_data_for_filters">Tiada data dijumpai untuk tapisan semasa anda</string>
+    <plurals name="_series_types">
+        <item quantity="other">%d jenis siri</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="other">%d sumber</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d status</item>
+    </plurals>
+    <string name="mean_score">Skor purata</string>
+    <string name="local_titles">Judul tempatan</string>
+    <plurals name="_languages">
+        <item quantity="other">%d bahasa</item>
+    </plurals>
+    <string name="tags">Tag</string>
+    <string name="titles_in_library">Judul dalam pustaka</string>
+    <string name="tracked_titles">Judul dijejak</string>
+    <string name="chapters_read">Bab dibaca</string>
+    <string name="titles_in_global_update">Judul dalam kemaskini global</string>
+    <string name="trackers">Penjejak</string>
+    <string name="read_duration">Durasi dibaca</string>
 </resources>

@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.ui.more.stats.details
 
 import android.graphics.drawable.Drawable
+import android.text.format.DateUtils
 import androidx.annotation.DrawableRes
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
@@ -27,7 +28,6 @@ import eu.kanade.tachiyomi.util.system.roundToTwoDecimal
 import eu.kanade.tachiyomi.util.system.withUIContext
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 import java.util.concurrent.TimeUnit
@@ -595,33 +595,39 @@ class StatsDetailsPresenter(
     }
 
     fun convertCalendarToLongString(calendar: Calendar): String {
-        val formatter = SimpleDateFormat("EEEE, MMMM dd", Locale.getDefault())
-        return formatter.format(calendar.time)
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+        val showYear = calendar.get(Calendar.YEAR) != currentYear
+        val flagYear = if (showYear) DateUtils.FORMAT_ABBREV_MONTH else 0
+        val flags = DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_SHOW_WEEKDAY or flagYear
+        return DateUtils.formatDateTime(context, calendar.timeInMillis, flags)
     }
 
-    fun convertCalendarToString(calendar: Calendar): String {
-        val formatter = SimpleDateFormat("MMMM dd", Locale.getDefault())
-        return formatter.format(calendar.time)
+    fun convertCalendarToString(calendar: Calendar, showYear: Boolean): String {
+        val flagYear = if (showYear) DateUtils.FORMAT_ABBREV_MONTH or DateUtils.FORMAT_SHOW_YEAR else 0
+        val flags = DateUtils.FORMAT_SHOW_DATE or flagYear
+        return DateUtils.formatDateTime(context, calendar.timeInMillis, flags)
     }
 
     fun getPeriodString(): String {
-        val startDateString = convertCalendarToString(startDate)
-        val endDateString = convertCalendarToString(endDate)
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+        val showYear = listOf(startDate, endDate).any { it.get(Calendar.YEAR) != currentYear }
+        val startDateString = convertCalendarToString(startDate, showYear)
+        val endDateString = convertCalendarToString(endDate, showYear)
         return "$startDateString - $endDateString"
     }
 
     enum class Stats(val resourceId: Int) {
         SERIES_TYPE(R.string.series_type),
         STATUS(R.string.status),
+        READ_DURATION(R.string.read_duration),
         SCORE(R.string.score),
-        LANGUAGE(R.string.language),
         LENGTH(R.string.length),
-        TRACKER(R.string.tracker),
+        LANGUAGE(R.string.language),
         SOURCE(R.string.source),
+        TRACKER(R.string.tracker),
         CATEGORY(R.string.category),
         TAG(R.string.tag),
         START_YEAR(R.string.start_year),
-        READ_DURATION(R.string.read_duration),
     }
 
     enum class StatsSort(val resourceId: Int) {

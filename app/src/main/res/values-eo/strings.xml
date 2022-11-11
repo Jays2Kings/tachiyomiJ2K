@@ -379,4 +379,16 @@
     <string name="clear_history_confirmation">Ĉu vi certas\? La tuta historio forigos.</string>
     <string name="pref_manage_notifications">Administri sciigojn</string>
     <string name="downloaded_chapters">Elŝutitaj ĉapitroj</string>
+    <string name="pref_update_only_non_completed">Nur ĝisdatigi okazantaj mangaojn</string>
+    <plurals name="after_minutes">
+        <item quantity="one">Post 1 minutoPost %1$s minutoj</item>
+        <item quantity="other"></item>
+    </plurals>
+    <plurals name="for_n_titles">
+        <item quantity="one">Por 1 titoloPor %d titoloj</item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="tap_zones">Navigaranĝo</string>
+    <string name="tap_to_see_details">Montri erarojn</string>
+    <string name="secure_screen_summary">Kaŝi aplikaĵan enhavon kiam ŝaltumas aplikaĵojn kaj malebligi ekrankopion</string>
 </resources>
