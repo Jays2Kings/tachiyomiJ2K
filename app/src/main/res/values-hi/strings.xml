@@ -605,4 +605,12 @@
     <string name="user_agent_string">चूक यूजर एजेंट स्ट्रिंग (User agent string)</string>
     <string name="split_tall_images">लंबे चित्रों की ऑटो हिस्से</string>
     <string name="download_notifier_split_page_not_found">पेज %d हिस्से करते वक्त नहीं मिला</string>
+    <string name="already_in_category">मंगा पहले से ही श्रेणी में है</string>
+    <string name="long_press_category">किसी श्रेणी को बदल ने के लिए दबाकर रखें</string>
+    <string name="could_not_install_update">अपडेट इंस्टॉल नहीं किया जा सका</string>
+    <string name="show_all_categories">सभी श्रेणियां दिखाएं</string>
+    <string name="when_grouping_by_sources_tags">स्रोतों, स्थिति, आदि द्वारा पुस्तकालय को समूहित करते समय।</string>
+    <string name="no_matches_for_filters">आपके वर्तमान फ़िल्टर के लिए कोई मिलान नहीं मिला</string>
+    <string name="always_show_current_category">हमेशा वर्तमान श्रेणी दिखाएं</string>
+    <string name="expand_collapse_all_categories">सभी श्रेणियों का विस्तार/संक्षिप्त करें</string>
 </resources>

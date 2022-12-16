@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">Categories</string>
-    <string name="manga">Mangues</string>
+    <string name="manga">Manga</string>
     <string name="chapters">Capítols</string>
     <string name="tracking">En seguiment</string>
     <string name="history">Historial</string>
@@ -626,4 +626,15 @@
         <item quantity="one">El següent capítol no llegit</item>
         <item quantity="other">Els següents %d capítols no llegits</item>
     </plurals>
+    <string name="external_storage_download_notice">TachiyomiJ2K requereix l\'accés a tots els fitxers per tal de descarregar capítols. Toqueu aquí i habiliteu \"Permet l\'accés per gestionar tots els fitxers.\"</string>
+    <string name="could_not_install_update">No s\'ha pogut instal·lar l\'actualització</string>
+    <string name="release_page">Pàgina de llançament</string>
+    <string name="your_library">La teva biblioteca</string>
+    <string name="new_beta_version_available">Nova versió beta disponible!</string>
+    <string name="update_completed">Actualització completada</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K requereix l\'accés a tots els fitxers d\'Android 11 per tal de descarregar capítols, crear còpies de seguretat automàtiques i llegir manga localment.
+\n
+\nA la següent pantalla habiliteu \"Permet l\'accés per gestionar tots els fitxers.\"</string>
+    <string name="skipped_reason_not_always_update">S\'ha omès perquè no cal actualitzar la sèrie</string>
+    <string name="error_user_agent_string_invalid">La cadena d\'agent d\'usuari no és vàlida</string>
 </resources>

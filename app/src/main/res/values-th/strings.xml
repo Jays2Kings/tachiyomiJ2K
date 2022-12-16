@@ -590,7 +590,7 @@
     <string name="show_bookmarked_chapters">แสดงตอนที่บุ๊กมาร์กไว้</string>
     <string name="show_downloaded_chapters">แสดงตอนที่ดาวน์โหลดไว้</string>
     <string name="show_unread_chapters">แสดงตอนที่ยังไม่ได้อ่าน</string>
-    <string name="hide_chapter_titles">ซ่อนชื่อเรื่อง</string>
+    <string name="hide_chapter_titles">ซ่อนชื่อตอน</string>
     <string name="sort_by_chapter_number">เรียงตามหมายเลขตอน</string>
     <string name="newest_first">ใหม่ที่สุดก่อน</string>
     <string name="oldest_first">เก่าที่สุดก่อน</string>
@@ -748,7 +748,7 @@
     <string name="unknown_status">ไม่ระบุสถานะ</string>
     <string name="unlock_library">ปลดล็อกเพื่อเข้าถึงคลัง</string>
     <string name="lock_with_biometrics">ล็อกด้วยข้อมูลทางชีวภาพ</string>
-    <string name="last_read_chapter_">ตอนที่ %1$s ที่อ่านล่าสุด</string>
+    <string name="last_read_chapter_">ตอนที่อ่านล่าสุด %1$s</string>
     <string name="chapter_x_of_y">ตอนที่ %1$d จาก %2$d</string>
     <string name="all_chapters_read">อ่านทุกตอนแล้ว</string>
     <string name="series_opens_new_chapters">ทางลัดเรื่องเปิดตอนใหม่</string>
@@ -803,7 +803,7 @@
     <string name="search_recents">ค้นหาล่าสุด…</string>
     <string name="only_unread">เฉพาะยังไม่ได้อ่าน</string>
     <string name="unread_or_downloaded">ยังไม่ได้อ่านหรือดาวน์โหลดไว้</string>
-    <string name="show_read_chapters_all">แสดงตันที่อ่านแล้วเป็นกลุ่มและทั้งหมด</string>
+    <string name="show_read_chapters_all">แสดงตอนที่อ่านแล้วเป็นกลุ่มและทั้งหมด</string>
     <string name="group_chapters_together">จัดกลุ่มตอนด้วยกัน</string>
     <string name="affects_library_grid">ส่งผลต่อปกในตารางคลัง</string>
     <string name="in_library">อยู่ในคลัง</string>
@@ -990,7 +990,6 @@
     <string name="stat">สถิติ</string>
     <string name="statistics_details">รายละเอียดสถิติ</string>
     <string name="chapters_read">ตอนที่อ่าน</string>
-    <string name="mean_score">คะแนนสุทธิ</string>
     <string name="tracked_titles">เรื่องที่ติดตาม</string>
     <string name="tags">แท็ก</string>
     <string name="local_titles">เรื่องในเครื่อง</string>
@@ -998,7 +997,7 @@
     <string name="read_duration">ระยะเวลาที่อ่าน</string>
     <string name="manga_status_distribution">ความกระจายของสถานะ</string>
     <string name="view_detailed_statistics">ดูสถิติแบบละเอียด</string>
-    <string name="count">นับ</string>
+    <string name="count">จำนวน</string>
     <string name="not_rated">ไม่ได้ให้คะแนน</string>
     <string name="source">แหล่งที่มา</string>
     <string name="tracker">ตัวติดตาม</string>
@@ -1022,4 +1021,8 @@
     <plurals name="_sources">
         <item quantity="other">%d แหล่งที่มา</item>
     </plurals>
+    <string name="read_duration_info">เวลาที่ใช้ไปในตัวอ่านตามประวัติของการอ่าน</string>
+    <string name="skipped_reason_not_always_update">ถูกข้ามเนื่องจากเรื่องไม่จำเป็นต้องถูกอัปเดต</string>
+    <string name="error_user_agent_string_invalid">สตริงตัวแทนผู้ใช้ไม่ถูกต้อง</string>
+    <string name="mean_tracking_score">คะแนนเฉลี่ย</string>
 </resources>

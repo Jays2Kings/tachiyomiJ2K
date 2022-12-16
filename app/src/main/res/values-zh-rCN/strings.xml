@@ -283,7 +283,7 @@
     <string name="reduces_banding_impacts_performance">减少色带，但可能会影响性能</string>
     <string name="skip_filtered_chapters">跳过已筛选章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
-    <string name="battery_optimization_disabled">电池优化已被禁用</string>
+    <string name="battery_optimization_disabled">电池优化已被关闭</string>
     <string name="pref_global_search">全局搜索</string>
     <string name="check_for_extension_updates">自动检查扩展插件更新</string>
     <string name="website">官网</string>
@@ -800,7 +800,7 @@
     <string name="all_files_permission_required">需要文件权限</string>
     <string name="orientation">方向</string>
     <string name="default_orientation">默认方向</string>
-    <string name="restore_miui_warning">如果 MIUI 优化被禁用，备份/还原可能无法正常工作。</string>
+    <string name="restore_miui_warning">如果 MIUI 优化被关闭，备份/还原可能无法正常工作。</string>
     <string name="yang">阳</string>
     <string name="yin">阴</string>
     <string name="set_as_default">设为默认</string>
@@ -1020,5 +1020,7 @@
     <string name="read_duration">阅读时长</string>
     <string name="not_rated">未评分</string>
     <string name="start_year">开始年份</string>
-    <string name="mean_score">平均分</string>
+    <string name="read_duration_info">在阅读器中花费的时间(基于章节历史统计)</string>
+    <string name="skipped_reason_not_always_update">已跳过，因为作品无需更新</string>
+    <string name="error_user_agent_string_invalid">User Agent 字符串无效</string>
 </resources>

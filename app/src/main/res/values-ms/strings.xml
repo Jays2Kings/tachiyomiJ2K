@@ -1009,7 +1009,6 @@
     <plurals name="_statuses">
         <item quantity="other">%d status</item>
     </plurals>
-    <string name="mean_score">Skor purata</string>
     <string name="local_titles">Judul tempatan</string>
     <plurals name="_languages">
         <item quantity="other">%d bahasa</item>
@@ -1021,4 +1020,6 @@
     <string name="titles_in_global_update">Judul dalam kemaskini global</string>
     <string name="trackers">Penjejak</string>
     <string name="read_duration">Durasi dibaca</string>
+    <string name="skipped_reason_not_always_update">Dilangkau kerana siri tidak memerlukan kemas kini</string>
+    <string name="error_user_agent_string_invalid">Rentetan ejen pengguna tidak sah</string>
 </resources>

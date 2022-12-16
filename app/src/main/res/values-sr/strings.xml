@@ -88,12 +88,12 @@
     <string name="trust">Veruj</string>
     <string name="untrusted">Ne veruj</string>
     <string name="uninstall">Izbriši</string>
-    <string name="untrusted_extension">Непоуздан додатак</string>
-    <string name="untrusted_extension_message">Овај додатак је потписан неповерљивим сертификатом и због тога није активиран.
+    <string name="untrusted_extension">Ненадійне розширення</string>
+    <string name="untrusted_extension_message">Це розширення було підписано ненадійним сертифікатом і не було активовано.
 \n
-\nЗлонамерни додаци могу читати податке о пријави које чува Tachiyomi или извршити произвољни ко̂д.
+\nШкідливе розширення може зчитувати будь-які облікові дані для входу, що зберігаються в Tachiyomi, або виконувати довільний код.
 \n
-\nВерујући овом сертификату прихватате наведене ризике.</string>
+\nДовіряючи цьому сертифікату, ви приймаєте ці ризики.</string>
     <string name="version_">Verzija: %1$s</string>
     <string name="language_">Jezik: %1$s</string>
     <string name="fullscreen">Ceo ekran</string>
@@ -270,7 +270,7 @@
     <string name="score">Оцена</string>
     <string name="started">Započeo</string>
     <string name="type">Tip</string>
-    <string name="add_tracking">Додај пратиоца</string>
+    <string name="add_tracking">Додати стеження</string>
     <string name="migrate">Мигрирај</string>
     <string name="copy_value">Kopiraj</string>
     <string name="help">Pomoć</string>
@@ -309,7 +309,7 @@
     <string name="pin">Označi</string>
     <string name="pinned">Zakačeno</string>
     <string name="reorder">Presloži</string>
-    <string name="unofficial_extension_message">Овај додатак није са званичне листе Tachiyomi додатака.</string>
+    <string name="unofficial_extension_message">Це розширення не входить до офіційного списку розширень Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Neoficijalno</string>
     <string name="finished_chapter">Gotovo:</string>
@@ -395,7 +395,7 @@
     <string name="badges">Oznake</string>
     <string name="by_update_date">Po datumu postavljanja</string>
     <string name="ext_installer_shizuku_stopped">Shizuku није укључен</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">Инсталирајте и покрените Shizuku како бисте га користили као инсталатора додатака.</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Встановіть і запустіть Shizuku, щоб використовувати Shizuku як інсталятор розширення.</string>
     <string name="may_contain_nsfw">Može sadržati sadržaj za odrasle (18+)</string>
     <string name="app_info">Informacije o aplikaciji</string>
     <string name="reading_mode">Mod čitanja</string>

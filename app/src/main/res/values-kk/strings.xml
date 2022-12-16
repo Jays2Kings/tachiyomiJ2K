@@ -20,7 +20,7 @@
     <string name="manga">Маңга</string>
     <string name="title">Атауы</string>
     <string name="completed">Аяқталған</string>
-    <string name="lock_when_idle">Бос режимде блоктау</string>
+    <string name="lock_when_idle">Әрекетсіз болғанда бұғаттау</string>
     <string name="chapters">Тараулар</string>
     <string name="unread">Оқылмаған</string>
     <string name="bookmarked">Сақталған</string>
@@ -252,7 +252,7 @@
     <string name="always_show_chapter_transition">Әрқашан бөлімнің өтуін көрсету</string>
     <string name="actions">Әрекеттер</string>
     <string name="normal">Қалыпты</string>
-    <string name="downloaded_chapters">Жүктелген тараулар</string>
+    <string name="downloaded_chapters">Жүктелген тарауларды</string>
     <string name="webtoon">Webtoon</string>
     <string name="appearance">Сыртқы көрініс</string>
     <string name="select_inverse">Кері таңдау</string>
@@ -497,7 +497,7 @@
     <string name="common">Ортақ</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Кеңейту үшін жаңарту бар%d кеңейту үшін жаңарту бар</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="no_match_found">Ұқсастық табылмады</string>
     <string name="use_image_as_cover">Осы суретті мұқаба ретінде қолданайық па\?</string>
@@ -507,4 +507,9 @@
     <string name="type">Түрі</string>
     <string name="download_paused">Жүктеп алу тоқтатылды</string>
     <string name="copy_value">Көшіру</string>
+    <string name="statistics">Статистика</string>
+    <string name="trackers">Бақылау қызметтері</string>
+    <string name="read_duration">Оқу ұзақтығы</string>
+    <string name="skipped_reason_not_always_update">Туындыға жаңарту керек жоқ болғандықтан өткізіп жіберіледі</string>
+    <string name="error_user_agent_string_invalid">User agent жолы жарамсыз</string>
 </resources>

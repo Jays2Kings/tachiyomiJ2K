@@ -1012,7 +1012,6 @@
     <string name="statistics_details">Statistikuppgifter</string>
     <string name="titles_in_library">Titlar i biblioteket</string>
     <string name="chapters_read">Lästa kapitel</string>
-    <string name="mean_score">Medelvärde</string>
     <string name="tracked_titles">Spårade titlar</string>
     <string name="tags">Taggar</string>
     <string name="not_rated">Inte betygsatt</string>
@@ -1028,19 +1027,19 @@
     <string name="read_duration">Lästid</string>
     <string name="view_detailed_statistics">Se detaljerad statistik</string>
     <plurals name="_series_types">
-        <item quantity="one"></item>
+        <item quantity="one"/>
         <item quantity="other">%d serietyper</item>
     </plurals>
     <plurals name="_sources">
-        <item quantity="one"></item>
+        <item quantity="one"/>
         <item quantity="other">%d källor</item>
     </plurals>
     <plurals name="_statuses">
-        <item quantity="one"></item>
+        <item quantity="one"/>
         <item quantity="other">%d statusar</item>
     </plurals>
     <plurals name="_languages">
-        <item quantity="one"></item>
+        <item quantity="one"/>
         <item quantity="other">%d språk</item>
     </plurals>
     <string name="all_read_manga">Alla lästa manga</string>
@@ -1048,4 +1047,7 @@
     <string name="manga_score_distribution">Poängfördelning</string>
     <string name="manga_status_distribution">Statusfördelning</string>
     <string name="count">Antal</string>
+    <string name="read_duration_info">Tid som spenderas i läsaren, baserat på kapitelhistorik</string>
+    <string name="skipped_reason_not_always_update">Hoppat över för att serien inte behöver uppdateras</string>
+    <string name="error_user_agent_string_invalid">Ogiltig sträng för användaragent</string>
 </resources>

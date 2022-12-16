@@ -12,7 +12,7 @@
     <string name="selected_">حدّدت: %1$d</string>
     <string name="filter">المُرشح</string>
     <string name="downloaded">تم التنزيل</string>
-    <string name="bookmarked">تم وضع علامة مرجعية</string>
+    <string name="bookmarked">وُضعت علامة مرجعية</string>
     <string name="unread">غير مقروء</string>
     <string name="read">المقروءة</string>
     <string name="alphabetically">أبجديا</string>
@@ -93,7 +93,7 @@
     <string name="left_to_right_viewer">من اليسار لليمين</string>
     <string name="right_to_left_viewer">من اليمين لليسار</string>
     <string name="vertical_viewer">عموديا</string>
-    <string name="webtoon">ويبتون</string>
+    <string name="webtoon">وِبتون</string>
     <string name="scale_type">كيفية ضبط الأبعاد</string>
     <string name="fit_screen">ملائمة الشاشة</string>
     <string name="stretch">التمدد</string>
@@ -270,8 +270,8 @@
     <string name="color_filter_blend_mode">مُرشح الألوان ”وضع الألوان الممزوجة“</string>
     <string name="dodge_lighten">مراوغة / تفتيح</string>
     <string name="burn_darken">حرق / تغميق</string>
-    <string name="lock_with_biometrics">قفل باستخدام المقاييس الحيوية</string>
-    <string name="lock_when_idle">قفل في حالة السكون</string>
+    <string name="lock_with_biometrics">اقفل باستخدام المقاييس الحيوية</string>
+    <string name="lock_when_idle">اقفل في حالة السكون</string>
     <string name="copy_value">نسخ</string>
     <string name="update">تحديث</string>
     <string name="updating_library">يجري تحديث المكتبة</string>
@@ -352,17 +352,17 @@
         <item quantity="many">%d فئات</item>
         <item quantity="other">%d فئات</item>
     </plurals>
-    <string name="chapter_not_found">لم يتم العثور على الفصل</string>
-    <string name="chapters_removed">تم إزالةُ الفصول.</string>
+    <string name="chapter_not_found">لم يُعثر على الفصل</string>
+    <string name="chapters_removed">أٌزيلت الفصول.</string>
     <string name="removed_bookmark">إزالة الإشارة المرجعية</string>
-    <string name="marked_as_unread">تحديد كغير مقروء</string>
-    <string name="marked_as_read">تحديد كمقروء</string>
+    <string name="marked_as_unread">حُدّد ليس مقروءًا</string>
+    <string name="marked_as_read">حُدّد مقروءًا</string>
     <string name="all_chapters_read">كل الفصول مقروءة</string>
     <string name="chapter_x_of_y">الفصل %1$d من %2$d</string>
     <string name="last_read_chapter_">أخر فصل مقروء %1$s</string>
     <string name="new_chapters">فصول جديدة</string>
-    <string name="unlock">إلغاء القفل</string>
-    <string name="unlock_library">الغي القفل للوصول إلى المكتبة</string>
+    <string name="unlock">ألغِ القفل</string>
+    <string name="unlock_library">ألغِ القفل لتصل إلى المكتبة</string>
     <string name="unknown_status">حالة غير معروفة</string>
     <string name="in_progress">قيد التقدم</string>
     <string name="not_started">لم يبدأ</string>
@@ -637,7 +637,7 @@
     <string name="right_and_left_nav">يميناً و يساراً</string>
     <string name="invert_tapping">عكس مناطق اللمس</string>
     <string name="none">لا شيء</string>
-    <string name="no_chapters_error">لم يتم العثور على الفصول</string>
+    <string name="no_chapters_error">لم يُعثر على فصول</string>
     <string name="file_picker_error">لم يتم العثور على تطبيق منتقي الملفات</string>
     <string name="open_log">فتح السجل</string>
     <string name="badges">شارات</string>
@@ -699,8 +699,8 @@
     <string name="no_chapters_to_delete">لا توجد اية فصول للحذف</string>
     <string name="remove_all_downloads">حذف جميع التحميلات؟</string>
     <string name="no_pages_found">لا توجد اي صفحات</string>
-    <string name="add_x_to">اضف %1$s الى…</string>
-    <string name="move_x_to">انقل %1$s الى…</string>
+    <string name="add_x_to">أضِف %1$s إلى…</string>
+    <string name="move_x_to">انقل %1$s إلى…</string>
     <string name="unread_or_downloaded">غير المقروءة و المنزّلة</string>
     <string name="only_downloaded">فقط المنزلّة</string>
     <string name="only_unread">فقط غير المقروءة</string>
@@ -908,11 +908,11 @@
     <string name="by_update_date">حسب تاريخ الرفع</string>
     <string name="by_chapter_number">حسب رقم الفصل</string>
     <string name="by_source_order">حسب ترتيب المصدر</string>
-    <string name="not_bookmarked">لم يتم وضع علامة مرجعية</string>
+    <string name="not_bookmarked">لم تُوضع علامة مرجعية</string>
     <string name="external_storage_download_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات لتنزيل الفصول. انقر هنا ، ثم مكّن \"السماح بالوصول لإدارة جميع الملفات.\"</string>
-    <string name="external_storage_permission_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات في Android 11 لتنزيل الفصول وإنشاء نسخ احتياطية تلقائية وقراءة المانجا المحلية.
+    <string name="external_storage_permission_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات في أندرويد 11 لتنزيل الفصول وإنشاء نسخ احتياطية تلقائية وقراءة المانجا المحلية.
 \n
-\nفي الشاشة التالية ، قم بتمكين \"السماح بالوصول لإدارة جميع الملفات.\"</string>
+\nقم بتمكين \"السماح بالوصول لإدارة جميع الملفات.\" في الشاشة التالية</string>
     <string name="all_files_permission_required">إذن الوصول إلى الملفات مطلوب</string>
     <string name="warning">تحذير</string>
     <string name="search_">بحث %1$s</string>
@@ -993,8 +993,8 @@
     <string name="filter_groups">تصفية مجموعات المترجمين</string>
     <string name="classic_blue">ازرق كلاسيكي</string>
     <string name="save_chapters_as_cbz">احفظ كأرشيف CBZ</string>
-    <string name="publishing_finished">تم النشر</string>
-    <string name="cancelled">ملغي</string>
+    <string name="publishing_finished">انتهى النّشر</string>
+    <string name="cancelled">ملغيّة</string>
     <string name="on_hiatus">في فترة راحة</string>
     <string name="tracking_info">مزامنة أحاديّة لتحديث تقدم الفصول في خدمات التتبع. قم بإعداد التتبع الخاص بمانجا محدّدة من زر التتبع الخاص بها.</string>
     <string name="enhanced_services">خدمات محسنة</string>
@@ -1012,11 +1012,11 @@
     <string name="update_tracking_scoring_type">تحديث نوع التقييم %1$s</string>
     <string name="scoring_type_updated">تم تحديث نوع التقييم</string>
     <string name="could_not_update_scoring_">تعذر تحديث نوع التقييم %1$s</string>
-    <string name="local_invalid_format">صيغة الفصل غير صالح</string>
+    <string name="local_invalid_format">تنسيق الفصل غير صالح</string>
     <string name="navigate_pan">قُدْ للتحرك</string>
     <string name="grayscale">تدرج رمادي</string>
     <string name="ascending">تصاعدياً</string>
-    <string name="order_by">ترتيب حسب</string>
+    <string name="order_by">رتّب حسب</string>
     <string name="pref_inverted_colors">معكوس</string>
     <string name="move_series_to_top">حرك السلسلة للأعلى</string>
     <string name="date">التاريخ</string>
@@ -1107,7 +1107,6 @@
     <string name="count">العدد</string>
     <string name="not_rated">غير مصنف</string>
     <string name="source">مصدر</string>
-    <string name="mean_score">النتيجة المتوسطة</string>
     <string name="tracked_titles">العناوين المتعقبة</string>
     <string name="local_titles">العناوين المحلية</string>
     <string name="trackers">المتعقبين</string>
@@ -1155,4 +1154,7 @@
     <string name="chapters_read">الفصول المقروء</string>
     <string name="all_read_manga">جميع المانجا المقرؤة</string>
     <string name="clear_db_exclude_read">ابقي المانجا التي تحتوي على فصل مقروء</string>
+    <string name="read_duration_info">الوقت المنفق في القارئ, بناء على تاريخ الفصل</string>
+    <string name="skipped_reason_not_always_update">تم التخطي لأن السلسلة لا تتطلب تحديثات</string>
+    <string name="error_user_agent_string_invalid">سلسلة عوامل الاستخدام غير المستقرة</string>
 </resources>

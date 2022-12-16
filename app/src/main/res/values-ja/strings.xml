@@ -990,7 +990,6 @@
     <string name="statistics_details">統計情報詳細</string>
     <string name="titles_in_library">書籍タイトル</string>
     <string name="chapters_read">章を読む</string>
-    <string name="mean_score">平均値</string>
     <string name="tracked_titles">追跡されたタイトル</string>
     <string name="tags">タグ</string>
     <string name="titles_in_global_update">グローバルアップデート対象タイトル</string>
@@ -1021,4 +1020,7 @@
     <plurals name="_languages">
         <item quantity="other">%d件の言語</item>
     </plurals>
+    <string name="read_duration_info">章の履歴に基づいた、ビューアで滞在した時間</string>
+    <string name="skipped_reason_not_always_update">シリーズは更新を必要としないため、スキップされました</string>
+    <string name="error_user_agent_string_invalid">ユーザー エージェント文字列が無効です</string>
 </resources>

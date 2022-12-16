@@ -962,7 +962,6 @@
     <string name="statistics_details">বিশদ পরিসংখ্যান</string>
     <string name="titles_in_library">লাইব্রেরীতে শিরোনামসমুহ</string>
     <string name="chapters_read">পঠিত অধ্যায়সমুহ</string>
-    <string name="mean_score">সর্বনিম্ন স্কোর</string>
     <string name="tracked_titles">ট্র্যাক করা শিরোনামসমূহ</string>
     <string name="titles_in_global_update">সর্বজনীন হালনাগাদে শিরোনামসমুহ</string>
     <string name="trackers">ট্র্যাকারগুলো</string>

@@ -303,7 +303,7 @@
     <string name="help">Trợ giúp</string>
     <string name="no_results_found">Không tìm thấy kết quả nào</string>
     <string name="lock_with_biometrics">Bảo mật sinh trắc học</string>
-    <string name="lock_when_idle">Khóa khi hoạt động nền</string>
+    <string name="lock_when_idle">Khóa khi chạy nền</string>
     <string name="refresh_tracking">Làm mới theo dõi</string>
     <string name="copy_value">Sao chép</string>
     <string name="date_format">Định dạng ngày</string>
@@ -1035,7 +1035,6 @@
     <string name="length">Độ dài</string>
     <string name="trackers">Bộ theo dõi</string>
     <string name="stats">Số Liệu</string>
-    <string name="mean_score">Điểm trung bình</string>
     <string name="titles_in_global_update">Tiêu đề ở cập nhật tổng bộ</string>
     <string name="manga_status_distribution">Phân phối trạng thái</string>
     <string name="manga_score_distribution">Phân phối điểm</string>
@@ -1055,4 +1054,6 @@
     <plurals name="_sources">
         <item quantity="other">%d nguồn</item>
     </plurals>
+    <string name="skipped_reason_not_always_update">Bỏ qua vì loạt truyện không cần cập nhật</string>
+    <string name="error_user_agent_string_invalid">Chuỗi tác nhân người dùng không hợp lệ</string>
 </resources>

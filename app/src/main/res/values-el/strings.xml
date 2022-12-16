@@ -1017,7 +1017,6 @@
     <string name="no_data_for_filters">Δε βρέθηκαν δεδομένα για τα τρέχοντα φίλτρα σας</string>
     <string name="titles_in_library">Τίτλοι στη βιβλιοθήκη</string>
     <string name="chapters_read">Διαβασμένα κεφάλαια</string>
-    <string name="mean_score">Μέση βαθμολογία</string>
     <string name="tracked_titles">Παρακολουθούμενοι τίτλοι</string>
     <string name="trackers">Ιχνηλάτες</string>
     <string name="read_duration">Διάρκεια ανάγνωσης</string>
@@ -1048,4 +1047,7 @@
     </plurals>
     <string name="titles_in_global_update">Τίτλοι σε καθολική ενημέρωση</string>
     <string name="local_titles">Τοπικοί τίτλοι</string>
+    <string name="read_duration_info">Χρόνος παραμονής στον αναγνώστη, με βάση το ιστορικό του κεφαλαίου</string>
+    <string name="skipped_reason_not_always_update">Παραλείφθηκε επειδή η σειρά δεν απαιτεί ενημερώσεις</string>
+    <string name="error_user_agent_string_invalid">Μη έγκυρη συμβολοσειρά πράκτορα χρήστη</string>
 </resources>

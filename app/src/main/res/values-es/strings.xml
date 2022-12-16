@@ -331,6 +331,7 @@
     <string name="obsolete_extension_message">Esta extensión ya no está disponible.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Actualización de extensión disponible</item>
+        <item quantity="many">%d actualizaciones de extensiónes disponibles</item>
         <item quantity="other">%d actualizaciones de extensiones disponibles</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Reduce el efecto anillado en los degradados y mejora la calidad de los grises, algo más lento</string>
@@ -371,6 +372,7 @@
     <string name="manhwa">Manhwa</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoría</item>
+        <item quantity="many">%d categorías</item>
         <item quantity="other">%d categorías</item>
     </plurals>
     <plurals name="pages_left">
@@ -380,6 +382,7 @@
     </plurals>
     <plurals name="remove_n_chapters">
         <item quantity="one">¿Eliminar %1$d capítulo descargado\?</item>
+        <item quantity="many">¿Eliminar %1$d capítulos descargados\?</item>
         <item quantity="other">¿Eliminar %1$d capítulos descargados\?</item>
     </plurals>
     <string name="chapter_not_found">No se ha encontrado el capítulo</string>
@@ -459,10 +462,12 @@
     <string name="sort_by_ignoring_articles">Ordenar ignorando artículos</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">y %1$d capítulo más</item>
+        <item quantity="many">y %1$d capítulos más</item>
         <item quantity="other">y %1$d capítulos más</item>
     </plurals>
     <plurals name="for_n_titles">
         <item quantity="one">Para %d título</item>
+        <item quantity="many">Para %d títulos</item>
         <item quantity="other">Para %d títulos</item>
     </plurals>
     <string name="more_library_settings">Más configuraciones de biblioteca</string>
@@ -503,10 +508,14 @@
     <string name="_already_in_queue">%1$s ya está en la cola</string>
     <string name="adding_category_to_queue">Agregando %1$s a la cola de actualización</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Un capítulo ha sido eliminado de la fuente: 
+        <item quantity="one">Un capítulo ha sido eliminado de la fuente:
 \n%2$s
 \n¿Eliminar capítulo descargado\?</item>
-        <item quantity="other">%1$s capítulos han sido eliminados de la fuente: 
+        <item quantity="many">Se han eliminado %1$s capítulos de la fuente:
+\n%2$s
+\n
+\n¿Borrar sus descargas\?</item>
+        <item quantity="other">%1$s capítulos han sido eliminados de la fuente:
 \n%2$s
 \n
 \n¿Eliminar capítulos descargados\?</item>
@@ -529,6 +538,7 @@
     <string name="deleted_">Removido: %1$s</string>
     <plurals name="after_minutes">
         <item quantity="one">Después de %1$s minuto</item>
+        <item quantity="many">Después de %1$s minutos</item>
         <item quantity="other">Después de %1$s minutos</item>
     </plurals>
     <string name="always_delete">Remover siempre</string>
@@ -547,8 +557,9 @@
 \nEn uso: %1$s</string>
     <string name="clean_up_cached_covers">Borrar portadas en caché</string>
     <plurals name="cleanup_done">
-        <item quantity="one">Borrado completo. %d carpeta removida</item>
-        <item quantity="other">Borrado completo. %d carpetas removidas</item>
+        <item quantity="one">Limpieza realizada. Carpeta %d eliminada</item>
+        <item quantity="many">Limpieza realizada. Carpetas %d eliminadas</item>
+        <item quantity="other">Limpieza realizada. Carpetas %d eliminadas</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Desactivar si presentas problemas al actualizar o restaurar la biblioteca</string>
     <string name="no_folders_to_cleanup">No hay carpetas para borrar</string>
@@ -635,15 +646,18 @@
     <string name="white_theme">Blanco puro</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga migrado</item>
+        <item quantity="many">%d mangas migrados</item>
         <item quantity="other">%d mangas migrados</item>
     </plurals>
     <string name="skipping_">(omitiendo %1$d)</string>
     <plurals name="copy_manga">
         <item quantity="one">¿Copiar %1$d%2$s manga\?</item>
+        <item quantity="many">¿Copiar %1$d%2$s mangas\?</item>
         <item quantity="other">¿Copiar %1$d%2$s mangas\?</item>
     </plurals>
     <plurals name="migrate_manga">
         <item quantity="one">¿Migrar %1$d%2$s manga\?</item>
+        <item quantity="many">¿Migrar %1$d%2$s mangas\?</item>
         <item quantity="other">¿Migrar %1$d%2$s mangas\?</item>
     </plurals>
     <string name="no_alternatives_found">No se encontraron alternativas</string>
@@ -670,6 +684,7 @@
     <string name="category">Categoría</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$d capítulo</item>
+        <item quantity="many">%1$d capítulos</item>
         <item quantity="other">%1$d capítulos</item>
     </plurals>
     <string name="add_x_to">Añadir %1$s a…</string>
@@ -691,8 +706,9 @@
     <string name="delete_old_covers_in_library_used_">Eliminar portadas antiguas y sin usarse de mangas guardados en la caché de la biblioteca que han sido actualizados.
 \nActualmente usando: %1$s</string>
     <plurals name="cache_cleared">
-        <item quantity="one">Caché limpiado. %d archivo a sido eliminado</item>
-        <item quantity="other">Caché limpiado. %d archivos han sido eliminados</item>
+        <item quantity="one">Caché borrada. Se ha eliminado el archivo %d</item>
+        <item quantity="many">Caché borrada. Se han eliminado archivos %d</item>
+        <item quantity="other">Caché borrada. Se han eliminado archivos %d</item>
     </plurals>
     <string name="not_logged_into_">Sin iniciar sesion en %1$s</string>
     <string name="hot_pink">Rosa chicle</string>
@@ -702,6 +718,7 @@
     <string name="turn_on_">Activar %s</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d página</item>
+        <item quantity="many">%1$d páginas</item>
         <item quantity="other">%1$d páginas</item>
     </plurals>
     <string name="remove_crop">Eliminar recorte</string>
@@ -841,6 +858,7 @@
     <string name="source_unsupported">Fuente no soportada</string>
     <plurals name="_updates_pending">
         <item quantity="one">%d actualización pendiente</item>
+        <item quantity="many">%d actualizaciones pendientes</item>
         <item quantity="other">%d actualizaciones pendientes</item>
     </plurals>
     <string name="could_not_install_extension">No se pudo instalar la extensión correctamente</string>
@@ -896,6 +914,7 @@
     <string name="split_double_pages_portrait">Separar páginas dobles en formato vertical</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">Extensión actualizada</item>
+        <item quantity="many">%d extensiones actualizadas</item>
         <item quantity="other">%d extensiones actualizadas</item>
     </plurals>
     <string name="extensions_updated">Extensiones actualizadas</string>
@@ -910,8 +929,9 @@
     <string name="default_behavior">Comportamiento predeterminado</string>
     <string name="use_side_navigation">Usar la navegación lateral</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Se ha omitido un capítulo, esto podría deberse a que la fuente no lo tenga o a que tus ajustes lo estén filtrando</item>
-        <item quantity="other">Se han omitido %d capítulos, esto podría deberse a que la fuente no los tenga o a que tus ajustes los estén filtrando</item>
+        <item quantity="one">Saltándose 1 capítulo, o la fuente no lo tiene o se ha filtrado</item>
+        <item quantity="many">Saltándose %d capítulos, faltan las fuentes o se ha filtrado</item>
+        <item quantity="other">Saltándose %d capítulos, faltan las fuentes o se ha filtrado</item>
     </plurals>
     <string name="helpful_translation_links">Enlaces útiles para la traducción</string>
     <string name="help_translate">Ayudar a traducir</string>
@@ -1045,7 +1065,6 @@
     <string name="downloaded_chapters">Capítulos descargados</string>
     <string name="stat">Estadística</string>
     <string name="chapters_read">Capítulos leídos</string>
-    <string name="mean_score">Puntuación media</string>
     <string name="start_year">Año de comienzo</string>
     <string name="no_data_for_filters">No se han encontrado datos para sus filtros actuales</string>
     <string name="length">Longitud</string>
@@ -1062,9 +1081,9 @@
     <string name="manga_score_distribution">Distribución de puntuación</string>
     <string name="not_rated">Sin clasificar</string>
     <plurals name="_sources">
-        <item quantity="one">Fuente</item>
-        <item quantity="many">%d Fuentes</item>
-        <item quantity="other">Otras fuentes</item>
+        <item quantity="one">%d fuente</item>
+        <item quantity="many">%d fuentes</item>
+        <item quantity="other">%d fuentes</item>
     </plurals>
     <plurals name="_languages">
         <item quantity="one">%d Lenguaje</item>
@@ -1077,13 +1096,17 @@
     <string name="count">Cuenta</string>
     <string name="tracker">Rastreador</string>
     <plurals name="_statuses">
-        <item quantity="one">Estado</item>
-        <item quantity="many">%d Estados</item>
-        <item quantity="other">Otros estados</item>
+        <item quantity="one">%d estado</item>
+        <item quantity="many">%d estados</item>
+        <item quantity="other">%d estados</item>
     </plurals>
     <plurals name="_series_types">
         <item quantity="one">%d tipos de serie</item>
         <item quantity="many">%d tipos de series</item>
         <item quantity="other">%d tipos de series</item>
     </plurals>
+    <string name="read_duration_info">Tiempo usado por el lector, basado en el historial del capítulo</string>
+    <string name="skipped_reason_not_always_update">Saltando, porque este manga no necesita actualizarse</string>
+    <string name="mean_tracking_score">Puntuación media de seguimiento</string>
+    <string name="error_user_agent_string_invalid">El nombre de agente de usuario no vale</string>
 </resources>

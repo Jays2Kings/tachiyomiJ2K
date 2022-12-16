@@ -832,8 +832,8 @@
     <string name="search_tips_show_periodically">Des suggestions de recherche apparaîtront périodiquement. Appuyez longuement sur la suggestion pour la rechercher.</string>
     <string name="search_suggestions">Suggestions de recherche</string>
     <string name="date_fetched">Date récupérée</string>
-    <string name="mark_range_as_unread">Marquer une partie des chapitres comme non-lue</string>
-    <string name="mark_range_as_read">Marquer une partie des chapitres comme lue</string>
+    <string name="mark_range_as_unread">Marquer un intervalle de chapitres comme lu</string>
+    <string name="mark_range_as_read">Marquer un intervalle de chapitres comme lu</string>
     <string name="automatic_removal">Suppression automatique</string>
     <string name="flat_lime">Citron vert plat</string>
     <string name="cutout_behavior_only_applies">Les zones de découpe s\'appliquent uniquement en mode portrait avec certains types d\'échelles</string>
@@ -1083,7 +1083,6 @@
     <string name="start_year">Année de début</string>
     <string name="stats">Stats</string>
     <string name="statistics">Statistiques</string>
-    <string name="mean_score">Note moyenne</string>
     <string name="local_titles">Titres locaux</string>
     <string name="no_data_for_filters">Aucune donnée trouvée pour vos filtres actuels</string>
     <string name="all_read_manga">Tous les mangas lus</string>
@@ -1109,4 +1108,8 @@
         <item quantity="many">%d langues</item>
         <item quantity="other">%d langues</item>
     </plurals>
+    <string name="read_duration_info">Temps passé dans le lecteur, basé sur l\'historique des chapitres</string>
+    <string name="skipped_reason_not_always_update">Passées car la série ne nécessite pas de mise à jour</string>
+    <string name="mean_tracking_score">Note moyenne de suivi</string>
+    <string name="error_user_agent_string_invalid">Chaîne d\'agent utilisateur invalide</string>
 </resources>

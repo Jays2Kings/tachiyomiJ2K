@@ -1036,7 +1036,6 @@
     <string name="statistics_details">Podrobnosti o statistikách</string>
     <string name="titles_in_library">Tituly v knihovně</string>
     <string name="chapters_read">Přečtené kapitoly</string>
-    <string name="mean_score">Průměrné skóre</string>
     <string name="tracked_titles">Sledované tituly</string>
     <string name="tags">Štítky</string>
     <string name="local_titles">Místní tituly</string>
@@ -1075,4 +1074,8 @@
     </plurals>
     <string name="stat">Statistika</string>
     <string name="stats">Statistiky</string>
+    <string name="read_duration_info">Čas strávený ve čtečce na základě historie kapitol</string>
+    <string name="skipped_reason_not_always_update">Přeskočeno, protože série nevyžaduje aktualizace</string>
+    <string name="mean_tracking_score">Průměrné skóre sledování</string>
+    <string name="error_user_agent_string_invalid">Neplatný řetězec uživatelského agenta</string>
 </resources>

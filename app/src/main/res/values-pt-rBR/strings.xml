@@ -1087,7 +1087,6 @@
     <string name="no_data_for_filters">Nenhum dado encontrado para seus filtros atuais</string>
     <string name="language_requires_app_restart">Algumas línguas podem necessitar que o aplicativo seja reiniciado para serem visualizadas corretamente</string>
     <string name="titles_in_library">Títulos na Biblioteca</string>
-    <string name="mean_score">Pontuação média</string>
     <string name="tags">Marcação</string>
     <string name="trackers">Rastreadores</string>
     <string name="read_duration">Duração da leitura</string>
@@ -1122,4 +1121,7 @@
         <item quantity="many">%d estados</item>
         <item quantity="other">%d outros estados</item>
     </plurals>
+    <string name="read_duration_info">Tempo gasto no leitor, com base no histórico do capítulo</string>
+    <string name="skipped_reason_not_always_update">Pulado porque a série não requer atualizações</string>
+    <string name="error_user_agent_string_invalid">Valor de user agent inválido</string>
 </resources>

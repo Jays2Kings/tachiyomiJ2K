@@ -894,4 +894,5 @@
     <string name="tap_to_learn_more">Napauta saadaksesi lisätietoja</string>
     <string name="order_by">Järjestä</string>
     <string name="save_chapters_as_cbz">Tallenna CBZ-arkistona</string>
+    <string name="skipped_reason_not_always_update">Ohitettu, koska sarja ei vaadi päivityksiä</string>
 </resources>

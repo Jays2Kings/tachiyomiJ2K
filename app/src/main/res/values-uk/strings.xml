@@ -2,7 +2,7 @@
 <resources>
     <string name="categories">Категорії</string>
     <string name="manga">Манґа</string>
-    <string name="chapters">Глави</string>
+    <string name="chapters">Розділи</string>
     <string name="tracking">Стеження</string>
     <string name="history">Історія</string>
     <string name="settings">Налаштування</string>
@@ -644,7 +644,7 @@
     <string name="edge_nav">Межа</string>
     <string name="right_and_left_nav">Праворуч та ліворуч</string>
     <string name="invert_tapping">Інвертувати зони тицяння</string>
-    <string name="none">Ніхто</string>
+    <string name="none">Немає</string>
     <string name="automatic_backups">Автоматичне резервування</string>
     <string name="invalid_backup_file">Невірний файл резервної копії</string>
     <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
@@ -707,10 +707,10 @@
     <string name="app_info">Про додаток</string>
     <string name="create_folders_by_manga_title">Створювати теки в відповідності до назви манги</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Пропускається %d глава, тому що джерело не має її, або вона була відфільтрована</item>
-        <item quantity="few">Пропускається %d глав, тому що джерело не має їх, або вони була відфільтровані</item>
-        <item quantity="many">Пропускається %d глав, тому що джерело не має їх, або вони була відфільтровані</item>
-        <item quantity="other">Пропускається %d глав, тому що джерело не має їх, або вони була відфільтровані</item>
+        <item quantity="one">Пропускається %d розділ, тому що джерело не має його, або він був відфільтрований</item>
+        <item quantity="few">Пропускаються %d розділи, тому що джерело не має їх, або вони були відфільтровані</item>
+        <item quantity="many">Пропускання %d розділів, тому що джерело не має їх, або вони були відфільтровані</item>
+        <item quantity="other">Пропускання %d розділів, тому що джерело не має їх, або вони були відфільтровані</item>
     </plurals>
     <string name="no_match_found">Збігів не знайдено</string>
     <string name="incognito_mode">Режим інкогніто</string>
@@ -952,7 +952,7 @@
     <string name="category_hopper_long_press">Поведінка перемикача категорій при довгому натисненні</string>
     <string name="publishing_finished">Публікація завершена</string>
     <string name="cancelled">Відмінено</string>
-    <string name="on_hiatus">На хіатусі</string>
+    <string name="on_hiatus">Заморожено</string>
     <string name="tracking_info">Одностороння синхронізація для оновлення прогресу глави в службах стеження. Налаштуйте для окремих записів манги з допомогою кнопки \"Стеження\".</string>
     <string name="enhanced_services">Розширені сервіси</string>
     <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Манга буде автоматично відстежуватись при додаванні до бібліотеки.</string>
@@ -1033,10 +1033,10 @@
     <string name="download_notifier_split_failed">Неможливо розділити завантажене зображення</string>
     <string name="open_in_app">Відкрити в додатку</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Наступна непрочитана глава</item>
-        <item quantity="few">Наступні %d непрочитані глави</item>
-        <item quantity="many">Наступні %d непрочитані глави</item>
-        <item quantity="other">Наступні %d непрочитані глави</item>
+        <item quantity="one">Наступний непрочитаний розділ</item>
+        <item quantity="few">Наступні %d непрочитані розділи</item>
+        <item quantity="many">Наступні %d непрочитані розділи</item>
+        <item quantity="other">Наступні %d непрочитані розділи</item>
     </plurals>
     <string name="zoom_double_page_spreads">Збільшувати масштаб для двосторінкових розворотів</string>
     <string name="navigate_pan">Перейти до панорами</string>
@@ -1101,5 +1101,8 @@
         <item quantity="other">%d мов</item>
     </plurals>
     <string name="all_read_manga">Уся прочитана манґа</string>
-    <string name="mean_score">Середня оцінка</string>
+    <string name="read_duration_info">Час витрачений в читалці, базуючись на історії глав</string>
+    <string name="skipped_reason_not_always_update">Пропущено, оскільки серія не потребує оновлень</string>
+    <string name="mean_tracking_score">Середній бал відстеження</string>
+    <string name="error_user_agent_string_invalid">Невірне значення user agent</string>
 </resources>

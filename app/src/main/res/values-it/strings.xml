@@ -1085,7 +1085,6 @@
     </plurals>
     <string name="statistics_details">Dettaglio statistiche</string>
     <string name="titles_in_library">Titoli nella libreria</string>
-    <string name="mean_score">Punteggio medio</string>
     <string name="tracked_titles">Titoli tracciati</string>
     <string name="local_titles">Titoli locali</string>
     <string name="titles_in_global_update">Titoli nell\'aggiornamento globale</string>
@@ -1108,4 +1107,6 @@
         <item quantity="other">%d lingue</item>
     </plurals>
     <string name="no_data_for_filters">Nessun dato trovato con il filtro corrente</string>
+    <string name="skipped_reason_not_always_update">Saltato perché la serie non richiede aggiornamenti</string>
+    <string name="error_user_agent_string_invalid">Stringa «user agent» non valida</string>
 </resources>

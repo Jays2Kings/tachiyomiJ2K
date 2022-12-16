@@ -1018,7 +1018,6 @@
     <string name="tracked_titles">Tìtulos arrastados</string>
     <string name="tags">Etichetas</string>
     <string name="chapters_read">Capìtulos lèghidos</string>
-    <string name="mean_score">Votu mèdiu</string>
     <string name="not_rated">Chene votu</string>
     <string name="no_data_for_filters">Perunu datu agatadu pro sos filtros atuales tuos</string>
     <string name="titles_in_global_update">Tìtulos in s\'agiornamentu globale</string>
@@ -1048,4 +1047,7 @@
         <item quantity="one">%d casta de sèrie</item>
         <item quantity="other">%d castas de sèrie</item>
     </plurals>
+    <string name="read_duration_info">Tempus coladu in su leghidore, basadu subra de sa cronologia de sos capìtulos</string>
+    <string name="skipped_reason_not_always_update">Brincadu ca sa sèrie non tenet bisòngiu de agiornamentos</string>
+    <string name="error_user_agent_string_invalid">Istringa de agente de utente non vàlida</string>
 </resources>

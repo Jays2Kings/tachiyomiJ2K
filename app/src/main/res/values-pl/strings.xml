@@ -1096,4 +1096,8 @@
     <string name="warning_unenroll_from_beta">Przywrócenie poprzedniej wersji produkcyjnej może spowodować problemy i wymagać wyczyszczenia danych aplikacji.</string>
     <string name="auto_download_while_reading">Pobieraj podczas czytania</string>
     <string name="downloaded_chapters">Pobrane rozdziały</string>
+    <string name="read_duration">Czas odczytu</string>
+    <string name="statistics">Statystyki</string>
+    <string name="trackers">Trackers</string>
+    <string name="error_user_agent_string_invalid">Nieprawidłowy ciąg agenta użytkownika</string>
 </resources>

@@ -1072,7 +1072,6 @@
     <string name="stats">Estatísticas</string>
     <string name="download_ahead">Transferência em antecedência</string>
     <string name="statistics_details">Detalhes de estatísticas</string>
-    <string name="mean_score">Avaliação média</string>
     <string name="tags">Etiquetas</string>
     <string name="read_duration">Duração de leitura</string>
     <string name="manga_status_distribution">Distribuição das estatísticas</string>
@@ -1103,4 +1102,5 @@
     <string name="must_view_details_before_migration">Os detalhes desta entrada devem ser vistos antes de ser capaz de migrar</string>
     <string name="not_rated">Não avaliados</string>
     <string name="view_all">Veja todos</string>
+    <string name="skipped_reason_not_always_update">Ignorado porque a série não requer atualizações</string>
 </resources>

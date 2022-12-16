@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Kategoriler</string>
+    <string name="categories">Ulamlar</string>
     <string name="manga">Manga</string>
     <string name="chapters">Bölümler</string>
     <string name="tracking">İzleme</string>
@@ -80,7 +80,7 @@
     <string name="amoled_black">AMOLED Siyah</string>
     <string name="language">Dil</string>
     <string name="system_default">Sistem öntanımlı</string>
-    <string name="default_category">Varsayılan kategori</string>
+    <string name="default_category">Varsayılan ulam</string>
     <string name="always_ask">Her zaman sor</string>
     <string name="pending">Beklemede</string>
     <string name="installing">Kuruluyor</string>
@@ -162,7 +162,7 @@
     <string name="restoring_backup">Yedek geri yükleniyor</string>
     <string name="clear_chapter_cache">Bölüm önbelleğini temizle</string>
     <string name="used_">Kullanılan: %1$s</string>
-    <string name="cache_delete_error">Temizlenirken hata oluştu</string>
+    <string name="cache_delete_error">Temizlenirken sorun oluştu</string>
     <string name="clear_cookies">Çerezleri temizle</string>
     <string name="cookies_cleared">Çerezler temizlendi</string>
     <string name="clear_database">Veritabanını temizle</string>
@@ -182,7 +182,7 @@
     <string name="username">Kullanıcı adı</string>
     <string name="password">Parola</string>
     <string name="successfully_logged_in">Giriş başarılı</string>
-    <string name="unknown_error">Bilinmeyen hata</string>
+    <string name="unknown_error">Bilinmeyen sorun</string>
     <string name="local">Yerel</string>
     <string name="search_filters">Arama süzgeçleri</string>
     <string name="no_more_results">Başka sonuç yok</string>
@@ -316,7 +316,7 @@
     <string name="check_for_extension_updates">Uzantı güncellemelerini denetle</string>
     <string name="website">Web sitesi</string>
     <string name="open_source_licenses">Açık kaynak lisansları</string>
-    <string name="email">Eposta adresi</string>
+    <string name="email">E-posta adresi</string>
     <string name="successfully_logged_out">Şimdi çıktınız</string>
     <string name="cancel_all">Hepsini iptal et</string>
     <string name="invalid_download_location">Geçersiz indirme konumu</string>
@@ -478,7 +478,7 @@
     <string name="no_chapters_error">Bölüm bulunamadı</string>
     <string name="badges">Rozetler</string>
     <string name="last_used">Son kullanılan</string>
-    <string name="unofficial_extension_message">Bu uzantı resmi Tachiyomi uzantıları listesinden değil.</string>
+    <string name="unofficial_extension_message">Bu uzantı resmi Tachiyomi uzantıları dizelgesinden değil.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Resmi olmayan</string>
     <string name="may_contain_nsfw">Yetişkin (18+) içerik içerebilir</string>
@@ -821,7 +821,7 @@
     <string name="all_files_permission_required">Dosya izinleri gerekli</string>
     <string name="default_orientation">Varsayılan yön</string>
     <string name="orientation">Yön</string>
-    <string name="restore_miui_warning">Yedekleme/geri yükleme, MIUI Optimizasyonu devre dışıysa düzgün çalışmayabilir.</string>
+    <string name="restore_miui_warning">Yedekleme/geri yükleme, MIUI optimizasyonu devre dışıysa düzgün çalışmayabilir.</string>
     <string name="yang">Yang</string>
     <string name="yin">Yin</string>
     <string name="set_as_default">Varsayılan yap</string>
@@ -902,7 +902,7 @@
     <string name="use_shizuku_to_install">Uzantıları kurmak için Shizuku\'yu kullan</string>
     <string name="use_shizuku_summary">Uzantıların kullanıcı istemleri olmadan kurulmasına izin verir ve Android 12\'nin altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="every_3_days">Her 3 günde</string>
-    <string name="download_queue_size_warning">Uyarı: büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir. Daha fazlasını öğrenmek için dokunun.</string>
+    <string name="download_queue_size_warning">Uyarı: Büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir. Daha çok öğrenmek için dokunun.</string>
     <string name="lime_time">Limon Zamanı</string>
     <string name="save_chapters_as_cbz">CBZ arşivi olarak kaydet</string>
     <string name="classic_blue">Klasik Mavi</string>
@@ -949,13 +949,13 @@
     <string name="cover_only_grid">Sadece-kapak ızgara</string>
     <string name="notification_update_error">%1$d güncelleme başarısız oldu</string>
     <string name="notification_update_skipped">%1$d güncelleme atlandı</string>
-    <string name="skipped_reason_completed">Manga tamamlandığı için atlandı</string>
+    <string name="skipped_reason_completed">Manga bitirildiği için atlandı</string>
     <string name="skipped_reason_not_caught_up">Okunmamış bölümler olduğu için atlandı</string>
     <string name="skipped_reason_not_started">Hiçbir bölüm okunmadığı için atlandı</string>
     <string name="channel_skipped">Atlandı</string>
     <string name="pref_library_update_manga_restriction">Başlıkları güncellemeyi atla</string>
     <string name="pref_update_only_completely_read">Okunmayan bölüm(ler)i olan</string>
-    <string name="pref_update_only_non_completed">\"Tamamlanan\" durumda olan</string>
+    <string name="pref_update_only_non_completed">\"Bitirilmiş\" durumda olan</string>
     <string name="pref_update_only_started">Bu başlamadı</string>
     <string name="pref_clear_webview_data">WebView verilerini temizle</string>
     <string name="webview_data_deleted">WebView verileri temizlendi</string>
@@ -968,7 +968,7 @@
     <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
     <string name="clear_history">Geçmişi temizle</string>
     <string name="clear_history_completed">Geçmiş silindi</string>
-    <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş kaybolacak.</string>
+    <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş silinecek.</string>
     <string name="backup_restore_invalid_uri">Hata: boş URI</string>
     <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız.</string>
     <string name="download_ahead">Önceden indir</string>
@@ -983,20 +983,20 @@
     <string name="learn_why">Nedenini öğrenin</string>
     <string name="secure_screen_summary">Güvenli ekran, uygulamalar arasında geçiş yaparken uygulama içeriğini gizler ve ekran görüntüsü alınmasını engeller</string>
     <string name="open_in_app">Uygulamada aç</string>
-    <string name="pref_hide_threshold">Kaydırmada menüyü gizleme hassasiyeti</string>
+    <string name="pref_hide_threshold">Kaydırmada komut-seçenek dizelgesini gizleme hassasiyeti</string>
     <string name="pref_highest">En yüksek</string>
     <string name="pref_high">Yüksek</string>
     <string name="pref_low">Düşük</string>
     <string name="pref_lowest">En düşük</string>
     <string name="split_tall_images">Uzun görselleri otomatik böl</string>
-    <string name="split_tall_images_summary">Okuyucu performansını iyileştirir</string>
+    <string name="split_tall_images_summary">Okuyucu başarımını iyileştirir</string>
     <string name="download_notifier_split_page_not_found">Bölünürken sayfa %d bulunamadı</string>
     <string name="download_notifier_split_failed">İndirilen görsel bölünemedi</string>
-    <string name="reading_list">Okuma Listesi</string>
-    <string name="wish_list">İstek Listesi</string>
-    <string name="complete_list">Tamamlanan Listesi</string>
-    <string name="on_hold_list">Beklemede Listesi</string>
-    <string name="unfinished_list">Tamamlanmayan Listesi</string>
+    <string name="reading_list">Okuma dizelgesi</string>
+    <string name="wish_list">İstek dizelgesi</string>
+    <string name="complete_list">Bitirilmiş dizelgesi</string>
+    <string name="on_hold_list">Beklemede dizelgesi</string>
+    <string name="unfinished_list">Bitirilmemiş dizelgesi</string>
     <string name="sort_fetched_time">Alındığı zamana göre sırala</string>
     <string name="violet">Menekşe</string>
     <string name="tap_zones">Dokunma bölgeleri</string>
@@ -1040,12 +1040,15 @@
     </plurals>
     <string name="titles_in_library">Kitaplıktaki başlıklar</string>
     <string name="chapters_read">Okunan bölümler</string>
-    <string name="mean_score">Ortalama puan</string>
     <string name="tracked_titles">İzlenen başlıklar</string>
     <string name="no_data_for_filters">Geçerli filtreleriniz için veri bulunamadı</string>
     <string name="statistics">İstatistikler</string>
     <string name="statistics_details">İstatistik ayrıntıları</string>
     <string name="tags">Etiketler</string>
-    <string name="auto_download_while_reading">Okurken otomatik indir</string>
+    <string name="auto_download_while_reading">Okurken kendiliğinden indir</string>
     <string name="downloaded_chapters">İndirilen bölümler</string>
+    <string name="read_duration_info">Bölüm geçmişine bağlı olarak okuyucuda geçirilen süre</string>
+    <string name="skipped_reason_not_always_update">Dizi güncelleme gerektirmediği için atlandı</string>
+    <string name="mean_tracking_score">Ortalama izleme puanı</string>
+    <string name="error_user_agent_string_invalid">Geçersiz kullanıcı aracısı dizgesi</string>
 </resources>

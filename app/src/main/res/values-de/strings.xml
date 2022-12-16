@@ -1062,25 +1062,27 @@
     <string name="count">Anzahl</string>
     <string name="not_rated">Nicht bewertet</string>
     <plurals name="_languages">
-        <item quantity="one"/>
+        <item quantity="one">%d Sprache</item>
         <item quantity="other">%d Sprachen</item>
     </plurals>
     <plurals name="_sources">
-        <item quantity="one"/>
+        <item quantity="one">%d Quelle</item>
         <item quantity="other">%d Quellen</item>
     </plurals>
     <plurals name="_statuses">
-        <item quantity="one"/>
+        <item quantity="one">%d Status</item>
         <item quantity="other">%d Status</item>
     </plurals>
     <string name="start_year">Startjahr</string>
     <string name="local_titles">Lokale Titel</string>
     <string name="titles_in_global_update">Titel im globalen Update</string>
-    <string name="mean_score">Durchschnittswert</string>
     <string name="manga_status_distribution">Statusverteilung</string>
     <string name="manga_score_distribution">Punkteverteilung</string>
     <plurals name="_series_types">
-        <item quantity="one"/>
+        <item quantity="one">%d Serientyp</item>
         <item quantity="other">%d Serientypen</item>
     </plurals>
+    <string name="read_duration_info">Mit Lesen verbrachte Zeit, basiert auf Kapitel-Verlauf</string>
+    <string name="skipped_reason_not_always_update">Übersprungen, da die Serie keine Aktualisierung benötigt</string>
+    <string name="error_user_agent_string_invalid">Ungültiger User-Agent-Text</string>
 </resources>

@@ -493,4 +493,9 @@
     <string name="marked_as_unread">Pažymėta kaip neskaityta</string>
     <string name="chapters_removed">Skyriai pašalinti.</string>
     <string name="remove_all_downloads">Pašalinti visus atsisiuntimus\?</string>
+    <string name="statistics">Statistika</string>
+    <string name="trackers">Sekliai</string>
+    <string name="read_duration">Skaitymo trukmė</string>
+    <string name="skipped_reason_not_always_update">Praleista, nes serijai nereikia atnaujinimų</string>
+    <string name="error_user_agent_string_invalid">Netinkama naudotojo agento eilutė</string>
 </resources>

@@ -1011,4 +1011,5 @@
     <string name="lavender">Лавандула</string>
     <string name="move_series_to_top">Премести поредицата най-горе</string>
     <string name="tap_to_learn_more">Натисни, за да научиш повече</string>
+    <string name="skipped_reason_not_always_update">Пропусната, понеже поредицата не изисква обновления</string>
 </resources>

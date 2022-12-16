@@ -990,7 +990,6 @@
     <string name="stats">통계</string>
     <string name="statistics_details">통계 세부정보</string>
     <string name="chapters_read">읽은 만화</string>
-    <string name="mean_score">평균 점수</string>
     <string name="titles_in_library">서재에 있는 만화</string>
     <string name="stat">통계</string>
     <string name="statistics">통계 정보</string>
@@ -1009,4 +1008,6 @@
     <string name="length">길이</string>
     <string name="start_year">시작 연도</string>
     <string name="read_duration">읽은 시간</string>
+    <string name="skipped_reason_not_always_update">만화에 업데이트가 필요하지 않음으로 건너뜀</string>
+    <string name="error_user_agent_string_invalid">잘못된 사용자 에이전트 문자열</string>
 </resources>

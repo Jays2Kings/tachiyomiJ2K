@@ -590,4 +590,5 @@
         <item quantity="other">és még %1$d fejezet</item>
     </plurals>
     <string name="notification_size_warning">A nagy frissítés növelheti az akumulátor használatot és a források lassabbak lesznek.Nyomj ide további információkért.</string>
+    <string name="auto_download_while_reading">Automatikus letöltés olvasás közben</string>
 </resources>

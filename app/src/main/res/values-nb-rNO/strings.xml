@@ -983,4 +983,9 @@
     <string name="complete_list">Komplett liste</string>
     <string name="user_agent_string">Standard streng for brukeragent</string>
     <string name="lavender">Lavendel</string>
+    <string name="trackers">Trackere</string>
+    <string name="read_duration">Tid brukt</string>
+    <string name="statistics">Statistikk</string>
+    <string name="skipped_reason_not_always_update">Hoppet over fordi seriene ikke krever oppdateringer</string>
+    <string name="error_user_agent_string_invalid">Ugyldig streng for brukeragent</string>
 </resources>

@@ -1038,7 +1038,6 @@
     <string name="statistics_details">Detaliile statisticilor</string>
     <string name="titles_in_library">Titluri în bibliotecă</string>
     <string name="chapters_read">Capitole citite</string>
-    <string name="mean_score">Scor mediu</string>
     <string name="tracked_titles">Titluri urmărite</string>
     <string name="tags">Taguri</string>
     <string name="local_titles">Titluri locale</string>
@@ -1075,4 +1074,7 @@
         <item quantity="few">%d statusuri</item>
         <item quantity="other">%d statusuri</item>
     </plurals>
+    <string name="read_duration_info">Timpul petrecut în cititor, bazat pe istoricul capitolelor</string>
+    <string name="skipped_reason_not_always_update">Ignorat deoarece seria nu necesită actualizări</string>
+    <string name="error_user_agent_string_invalid">Șir de caractere invalid pentru agentul de utilizator</string>
 </resources>

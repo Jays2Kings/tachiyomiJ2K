@@ -731,4 +731,17 @@
     </plurals>
     <string name="filter_languages">過濾語言</string>
     <string name="extension_updates_pending">擴充套件更新擱置中</string>
+    <plurals name="_sources">
+        <item quantity="other">%d 個來源</item>
+    </plurals>
+    <string name="read_duration">閱讀歷時</string>
+    <plurals name="_languages">
+        <item quantity="other">%d 種語言</item>
+    </plurals>
+    <string name="light_theme">淺色主題</string>
+    <string name="dark_theme">深色主題</string>
+    <string name="trackers">歷程平台</string>
+    <string name="statistics">統計資料</string>
+    <string name="skipped_reason_not_always_update">由於叢書無須更新，因此略過</string>
+    <string name="error_user_agent_string_invalid">無效的使用者代理字串</string>
 </resources>
