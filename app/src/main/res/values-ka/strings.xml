@@ -342,4 +342,8 @@
     <string name="removed_from_library">წაშლილია ბიბლიოთეკიდან</string>
     <string name="source_not_installed_">წყარო არ არის დაინსტალირებული: %1$s</string>
     <string name="by_chapter_number">თავის ნომრის მიხედვით</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">1 თავი</item>
+        <item quantity="other">%1$s თავი</item>
+    </plurals>
 </resources>

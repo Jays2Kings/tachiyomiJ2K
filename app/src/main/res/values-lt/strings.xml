@@ -498,4 +498,9 @@
     <string name="read_duration">Skaitymo trukmė</string>
     <string name="skipped_reason_not_always_update">Praleista, nes serijai nereikia atnaujinimų</string>
     <string name="error_user_agent_string_invalid">Netinkama naudotojo agento eilutė</string>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$s skyrius</item>
+        <item quantity="few">%1$s skyriai</item>
+        <item quantity="other">%1$s skyriai</item>
+    </plurals>
 </resources>

@@ -20,8 +20,8 @@
     <string name="unread">Nelegita</string>
     <string name="new_chapters">Novaj ĉapitroj</string>
     <plurals name="chapters_plural">
-        <item quantity="one">Ĉapitroj</item>
-        <item quantity="other"/>
+        <item quantity="one">1 ĉapitro</item>
+        <item quantity="other">%1$s ĉapitroj</item>
     </plurals>
     <string name="description">Priskribo</string>
     <string name="artist">Desegnisto</string>

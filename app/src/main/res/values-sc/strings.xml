@@ -1050,4 +1050,5 @@
     <string name="read_duration_info">Tempus coladu in su leghidore, basadu subra de sa cronologia de sos capìtulos</string>
     <string name="skipped_reason_not_always_update">Brincadu ca sa sèrie non tenet bisòngiu de agiornamentos</string>
     <string name="error_user_agent_string_invalid">Istringa de agente de utente non vàlida</string>
+    <string name="mean_tracking_score">Votu mèdiu de arrastamentu</string>
 </resources>

@@ -988,4 +988,12 @@
     <string name="statistics">Statistikk</string>
     <string name="skipped_reason_not_always_update">Hoppet over fordi seriene ikke krever oppdateringer</string>
     <string name="error_user_agent_string_invalid">Ugyldig streng for brukeragent</string>
+    <string name="show_">Vis %1$s</string>
+    <string name="must_view_details_before_migration">Denne oppføringens detaljside må vises før du kan migrere</string>
+    <string name="new_beta_version_available">Ny beta-versjon tilgjengelig!</string>
+    <string name="check_for_beta_releases">Se etter beta-utgivelser</string>
+    <string name="violet">Lilla</string>
+    <string name="expanded_toolbar">Utvidet verktøylinje</string>
+    <string name="most_entries">Mest oppføringer</string>
+    <string name="select_uninstalled_sources">Velg avinstallerte kilder</string>
 </resources>
