@@ -221,7 +221,8 @@ interface Manga : SManga {
             sourceName.contains("xkcd", true) ||
             sourceName.contains("tapas", true) ||
             sourceName.contains("ComicExtra", true) ||
-            sourceName.contains("Read Comics Online", true)
+            sourceName.contains("Read Comics Online", true) ||
+            sourceName.contains("ReadComicOnline", true)
     }
 
     fun isOneShotOrCompleted(db: DatabaseHelper): Boolean {
