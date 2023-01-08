@@ -530,4 +530,5 @@
     <string name="library_is_empty_add_from_browse">הסיפרייה ריקה, הוסף סדרה לסיפרייה דרך לשונית הגלישה.</string>
     <string name="always_show_current_category">תמיד הראה את הקטגוריה הנוכחית</string>
     <string name="no_matches_for_filters">לא נמצאו פריטים התואמים את הסינון</string>
+    <string name="statistics">סטטיסטיקות</string>
 </resources>

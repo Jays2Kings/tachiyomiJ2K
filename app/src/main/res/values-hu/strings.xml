@@ -591,4 +591,10 @@
     </plurals>
     <string name="notification_size_warning">A nagy frissítés növelheti az akumulátor használatot és a források lassabbak lesznek.Nyomj ide további információkért.</string>
     <string name="auto_download_while_reading">Automatikus letöltés olvasás közben</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Következő olvasatlan fejezet</item>
+        <item quantity="other">Következő %d olvasatlan fejezet</item>
+    </plurals>
+    <string name="download_ahead_info">Csak a könyvtár bejegyzéseinél működik, és ha az aktuális és a következő fejezet már letöltött</string>
+    <string name="download_ahead">Letöltés előre</string>
 </resources>

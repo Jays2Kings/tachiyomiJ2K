@@ -1100,4 +1100,5 @@
     <string name="statistics">Statystyki</string>
     <string name="trackers">Trackers</string>
     <string name="error_user_agent_string_invalid">Nieprawidłowy ciąg agenta użytkownika</string>
+    <string name="skipped_reason_not_always_update">Pominięto, ponieważ aktualizacja nie jest wymagana</string>
 </resources>
