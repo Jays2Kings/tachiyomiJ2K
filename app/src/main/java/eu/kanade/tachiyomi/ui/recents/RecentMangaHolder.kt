@@ -142,10 +142,10 @@ class RecentMangaHolder(
                 if (notValidNum) item.mch.chapter.name else adapter.decimalFormat.format(item.mch.chapter.chapter_number),
             )
             item.chapter.pages_left > 0 && !item.chapter.read -> context.timeSpanFromNow(R.string.read_, item.mch.history.last_read) +
-                "\n" + itemView.resources.getQuantityString(
-                R.plurals.pages_left,
-                item.chapter.pages_left,
-                item.chapter.pages_left,
+                "\n" + itemView.context.getString(
+                R.string.page_x_of_y,
+                item.last_page_read + 1,
+                item.pages_left + item.last_page_read,
             )
             else -> context.timeSpanFromNow(R.string.read_, item.mch.history.last_read)
         }
