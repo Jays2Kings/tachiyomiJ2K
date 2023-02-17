@@ -1121,4 +1121,10 @@
     <string name="read_duration_info">Tempo gasto no leitor, com base no histórico do capítulo</string>
     <string name="skipped_reason_not_always_update">Pulado porque a série não requer atualizações</string>
     <string name="error_user_agent_string_invalid">Valor de user agent inválido</string>
+    <string name="popular">Popular</string>
+    <string name="skip_dupe_chapters">Pular capítulos duplicados</string>
+    <string name="hide_in_library_items">Ocultar títulos que já estão na biblioteca</string>
+    <string name="allow_deleting_bookmarked_chapters">Permitir a exclusão de capítulos favoritos</string>
+    <string name="appwidget_updates_description">Veja seus itens da biblioteca atualizados recentemente</string>
+    <string name="appwidget_unavailable_locked">Widget não disponível quando o bloqueio do aplicativo está habilitado</string>
 </resources>

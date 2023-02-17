@@ -341,4 +341,8 @@
     <string name="paged">Paged</string>
     <string name="scale_type">Uri sa sukdanan sa hulagway</string>
     <string name="log_out">Log out</string>
+    <string name="local">Lokal</string>
+    <string name="local_source">Lokal nga tinubdan</string>
+    <string name="allow_deleting_bookmarked_chapters">Tugoti ang pagtangtang sa gimarkahan nga mga kapitulo</string>
+    <string name="statistics">Istatistika</string>
 </resources>

@@ -1025,4 +1025,11 @@
     <string name="skipped_reason_not_always_update">ถูกข้ามเนื่องจากเรื่องไม่จำเป็นต้องถูกอัปเดต</string>
     <string name="error_user_agent_string_invalid">สตริงตัวแทนผู้ใช้ไม่ถูกต้อง</string>
     <string name="mean_tracking_score">คะแนนเฉลี่ย</string>
+    <string name="popular">ยอดนิยม</string>
+    <string name="skip_dupe_chapters">ข้ามตอนที่ซ้ำกัน</string>
+    <string name="allow_deleting_bookmarked_chapters">อนุญาตให้ลบตอนที่บุ๊คมาร์คไว้</string>
+    <string name="appwidget_updates_description">แสดงรายการในคลังที่อัปเดตล่าสุดของคุณ</string>
+    <string name="appwidget_unavailable_locked">วิดเจ็ตไม่พร้อมใช้งานขณะการล็อกแอปเปิดไว้</string>
+    <string name="failed_to_update_">อัปเดต %1$s ล้มเหลว</string>
+    <string name="hide_in_library_items">ซ่อนรายการที่มีอยู่ในคลังอยู่แล้ว</string>
 </resources>

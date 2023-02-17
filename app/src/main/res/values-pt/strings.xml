@@ -1102,4 +1102,10 @@
     <string name="not_rated">Não avaliados</string>
     <string name="view_all">Veja todos</string>
     <string name="skipped_reason_not_always_update">Ignorado porque a série não requer atualizações</string>
+    <string name="error_user_agent_string_invalid">Valor de user agent inválido</string>
+    <string name="allow_deleting_bookmarked_chapters">Permitir a eliminação de capítulos marcados</string>
+    <string name="popular">Famoso</string>
+    <string name="skip_dupe_chapters">Pular capítulos duplicados</string>
+    <string name="appwidget_updates_description">Veja os seus itens da biblioteca atualizados recentemente</string>
+    <string name="appwidget_unavailable_locked">Widget não disponível quando o bloqueio de aplicações está ativo</string>
 </resources>

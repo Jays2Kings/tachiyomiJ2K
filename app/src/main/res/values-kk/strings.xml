@@ -512,4 +512,9 @@
     <string name="read_duration">Оқу ұзақтығы</string>
     <string name="skipped_reason_not_always_update">Туындыға жаңарту керек жоқ болғандықтан өткізіп жіберіледі</string>
     <string name="error_user_agent_string_invalid">User agent жолы жарамсыз</string>
+    <string name="popular">Танымал</string>
+    <string name="skip_dupe_chapters">Қайталанған бөлімдерді өткізіп жіберу</string>
+    <string name="allow_deleting_bookmarked_chapters">Бетбелгіленген тарауларды жоюға рұқсат беру</string>
+    <string name="appwidget_updates_description">Жақында кітапханада жаңартылған жазбаларды қарау</string>
+    <string name="appwidget_unavailable_locked">Биометриялық бұғаттау қосылып тұрғанда виджет қолжетімді емес</string>
 </resources>

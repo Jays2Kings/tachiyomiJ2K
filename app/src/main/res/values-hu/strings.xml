@@ -597,4 +597,6 @@
     </plurals>
     <string name="download_ahead_info">Csak a könyvtár bejegyzéseinél működik, és ha az aktuális és a következő fejezet már letöltött</string>
     <string name="download_ahead">Letöltés előre</string>
+    <string name="allow_deleting_bookmarked_chapters">Könyvjelzőzött fejezetek törlésének engedélyezése</string>
+    <string name="appwidget_unavailable_locked">Widget nem elérhető amikor az alkalmazás zárolva van</string>
 </resources>

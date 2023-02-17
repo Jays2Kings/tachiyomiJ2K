@@ -1075,4 +1075,11 @@
     <string name="read_duration_info">Provedeno vrijeme u čitaču, na temelju povijesti poglavlja</string>
     <string name="skipped_reason_not_always_update">Preskočeno jer serija ne zahtijeva ažuriranje</string>
     <string name="error_user_agent_string_invalid">Nevažeći niz korisničkog agenta</string>
+    <string name="popular">Popularni</string>
+    <string name="skip_dupe_chapters">Preskoči dupla poglavlja</string>
+    <string name="allow_deleting_bookmarked_chapters">Dozvoli brisanje označenih poglavlja</string>
+    <string name="appwidget_updates_description">Pogledajte nedavno ažurirane unose u biblioteci</string>
+    <string name="appwidget_unavailable_locked">Widget nije dostupan kada je omogućeno zaključavanje aplikacije</string>
+    <string name="mean_tracking_score">Prosječna ocjena praćenja</string>
+    <string name="hide_in_library_items">Sakrij unose koji se već nalaze u biblioteci</string>
 </resources>

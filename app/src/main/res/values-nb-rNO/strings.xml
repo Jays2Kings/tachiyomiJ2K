@@ -996,4 +996,10 @@
     <string name="expanded_toolbar">Utvidet verktøylinje</string>
     <string name="most_entries">Mest oppføringer</string>
     <string name="select_uninstalled_sources">Velg avinstallerte kilder</string>
+    <string name="popular">Populært</string>
+    <string name="skip_dupe_chapters">Hopp over dupliserte kapitler</string>
+    <string name="allow_deleting_bookmarked_chapters">Tillat sletting av bokmerkede kapitler</string>
+    <string name="appwidget_updates_description">Se de nylig oppdaterte biblotekoppføringene dine</string>
+    <string name="appwidget_unavailable_locked">Moduler er ikke tilgjengelig når applås er aktivert</string>
+    <string name="hide_in_library_items">Skjul oppføringer som allerede er i biblioteket</string>
 </resources>

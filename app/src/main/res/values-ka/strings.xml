@@ -346,4 +346,5 @@
         <item quantity="one">1 თავი</item>
         <item quantity="other">%1$s თავი</item>
     </plurals>
+    <string name="allow_deleting_bookmarked_chapters">მონიშნული თავების წაშლა</string>
 </resources>

@@ -1050,4 +1050,9 @@
     <string name="read_duration_info">Oras na ginugol sa pambasa, base sa nakaraang binasa</string>
     <string name="skipped_reason_not_always_update">Nilaktawan dahil hindi kailangan ang pag-update sa serye</string>
     <string name="error_user_agent_string_invalid">Invalid na string ng user agent</string>
+    <string name="allow_deleting_bookmarked_chapters">Burahin din ang may pananda</string>
+    <string name="popular">Sikat</string>
+    <string name="skip_dupe_chapters">Laktawan ang mga magkakarehas na kabanata</string>
+    <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa Aklatan mo</string>
+    <string name="appwidget_unavailable_locked">Di available ang widget kapag nakabukas ang lock</string>
 </resources>

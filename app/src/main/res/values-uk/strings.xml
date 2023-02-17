@@ -1105,4 +1105,10 @@
     <string name="skipped_reason_not_always_update">Пропущено, оскільки серія не потребує оновлень</string>
     <string name="mean_tracking_score">Середній бал відстеження</string>
     <string name="error_user_agent_string_invalid">Невірне значення user agent</string>
+    <string name="popular">Популярне</string>
+    <string name="allow_deleting_bookmarked_chapters">Дозволити видалення розділів з закладок</string>
+    <string name="skip_dupe_chapters">Пропуск повторюваних розділів</string>
+    <string name="hide_in_library_items">Приховати записи, які вже є в бібліотеці</string>
+    <string name="appwidget_updates_description">Переглянути нещодавно оновлені записи бібліотеки</string>
+    <string name="appwidget_unavailable_locked">Віджет не доступний при ввімкненому блокуванні застосунку</string>
 </resources>

@@ -1085,4 +1085,12 @@
     <string name="read_duration_info">Mit Lesen verbrachte Zeit, basiert auf Kapitel-Verlauf</string>
     <string name="skipped_reason_not_always_update">Übersprungen, da die Serie keine Aktualisierung benötigt</string>
     <string name="error_user_agent_string_invalid">Ungültiger User-Agent-Text</string>
+    <string name="popular">Beliebt</string>
+    <string name="skip_dupe_chapters">Doppelte Kapitel überspringen</string>
+    <string name="hide_in_library_items">Einträge verbergen, die bereits in der Bibliothek sind</string>
+    <string name="allow_deleting_bookmarked_chapters">Erlauben, mit Lesezeichen versehene Kapitel zu löschen</string>
+    <string name="appwidget_updates_description">Deine kürzlich aktualisierten Bibliothekseinträge ansehen</string>
+    <string name="appwidget_unavailable_locked">Widget nicht verfügbar, wenn die App-Sperre aktiviert ist</string>
+    <string name="mean_tracking_score">Mittlerer Tracking-Score</string>
+    <string name="failed_to_update_">Fehler beim Aktualisieren von %1$s</string>
 </resources>

@@ -1050,4 +1050,8 @@
     <string name="read_duration_info">Tid som spenderas i läsaren, baserat på kapitelhistorik</string>
     <string name="skipped_reason_not_always_update">Hoppat över för att serien inte behöver uppdateras</string>
     <string name="error_user_agent_string_invalid">Ogiltig sträng för användaragent</string>
+    <string name="allow_deleting_bookmarked_chapters">Tillåt att radera bokmärkta kapitel</string>
+    <string name="appwidget_unavailable_locked">Widget är inte tillgänglig när applåset är aktiverat</string>
+    <string name="popular">Populära</string>
+    <string name="skip_dupe_chapters">Hoppa över duplicerade kapitel</string>
 </resources>

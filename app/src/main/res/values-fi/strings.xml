@@ -895,4 +895,6 @@
     <string name="order_by">Järjestä</string>
     <string name="save_chapters_as_cbz">Tallenna CBZ-arkistona</string>
     <string name="skipped_reason_not_always_update">Ohitettu, koska sarja ei vaadi päivityksiä</string>
+    <string name="allow_deleting_bookmarked_chapters">Poista kirjanmerkityt luvut</string>
+    <string name="popular">Suositut</string>
 </resources>

@@ -949,4 +949,5 @@
     <string name="pref_update_only_started">Kapitulurik irakurri gabe</string>
     <string name="pref_library_update_manga_restriction">Saltatu eguneraketak</string>
     <string name="pref_update_only_completely_read">Irakurri gabeko kapituluak ditu</string>
+    <string name="allow_deleting_bookmarked_chapters">Baimendu laster-markadun kapituluak ezabatzea</string>
 </resources>

@@ -1009,4 +1009,11 @@
     <string name="clear_db_exclude_read">Houd manga bij met gelezen hoofdstukken</string>
     <string name="downloaded_chapters">Gedownloade hoofdstukken</string>
     <string name="auto_download_while_reading">Automatisch downloaden tijdens het lezen</string>
+    <string name="statistics">Statistieken</string>
+    <string name="popular">Populair</string>
+    <string name="skip_dupe_chapters">Dubbele hoofdstukken overslaan</string>
+    <string name="error_user_agent_string_invalid">Ongeldige user agent</string>
+    <string name="allow_deleting_bookmarked_chapters">Verwijderen van hoofdstukken met bladwijzers toestaan</string>
+    <string name="appwidget_updates_description">Recentelijk bijgewerkte items in de bibliotheek bekijken</string>
+    <string name="appwidget_unavailable_locked">Widget niet beschikbaar wanneer app-vergrendeling aan staat</string>
 </resources>

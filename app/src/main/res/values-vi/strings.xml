@@ -1056,4 +1056,8 @@
     </plurals>
     <string name="skipped_reason_not_always_update">Bỏ qua vì loạt truyện không cần cập nhật</string>
     <string name="error_user_agent_string_invalid">Chuỗi tác nhân người dùng không hợp lệ</string>
+    <string name="popular">Nổi Tiếng</string>
+    <string name="skip_dupe_chapters">Bỏ qua chương đúp</string>
+    <string name="allow_deleting_bookmarked_chapters">Cho phép xóa các chương đã đánh dấu</string>
+    <string name="appwidget_unavailable_locked">Tiện ích không còn khả dụng khi khóa ứng dụng đang bật</string>
 </resources>

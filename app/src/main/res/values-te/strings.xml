@@ -116,9 +116,13 @@
     <string name="cancel_all_for_series">ఈ ధారావాహిక కొరకు అన్నిటిని రద్దు చెయ్యుము</string>
     <plurals name="after_minutes">
         <item quantity="one">ఒక నిమిషము తరువాత%1$s నిమిషముల తరువాత</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="pin">పిన్</string>
     <string name="tap_to_see_details">తప్పిద వివరములను చూచుటకై నొక్కుము</string>
     <string name="secure_screen_summary">అనువర్తనములను మారునపుడు వర్తక విషయములను దాయుము మరియు తెర యొక్క చిత్రములను తీయుటను నిరోధించుము</string>
+    <string name="started">ప్రారంభించారు</string>
+    <string name="close">బంజేయండి</string>
+    <string name="move_series_to_top">సిరీస్ పైన పెట్టండి</string>
+    <string name="statistics">గణాంకాలు</string>
 </resources>

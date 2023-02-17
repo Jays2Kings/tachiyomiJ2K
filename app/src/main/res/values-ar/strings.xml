@@ -1157,4 +1157,9 @@
     <string name="read_duration_info">الوقت المنفق في القارئ, بناء على تاريخ الفصل</string>
     <string name="skipped_reason_not_always_update">تم التخطي لأن السلسلة لا تتطلب تحديثات</string>
     <string name="error_user_agent_string_invalid">سلسلة عوامل الاستخدام غير المستقرة</string>
+    <string name="popular">شائع</string>
+    <string name="skip_dupe_chapters">تجاوز الفصول المكررة</string>
+    <string name="allow_deleting_bookmarked_chapters">حذف الفصول ذات العلامة المرجعية</string>
+    <string name="appwidget_updates_description">الاطلاع على إدخالات المكتبة التي تم تحديثها مؤخرا</string>
+    <string name="appwidget_unavailable_locked">القطعة غير متاحة عند تمكين قفل التطبيق</string>
 </resources>

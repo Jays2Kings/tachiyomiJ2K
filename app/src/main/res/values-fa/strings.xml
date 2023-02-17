@@ -558,4 +558,18 @@
     <string name="auto_download_while_reading">دانلود خودکار در حین خواندن</string>
     <string name="download_ahead">بارگیری شود</string>
     <string name="lavender">ارغوانی</string>
+    <string name="split_tall_images_summary">بهبود کارکرد ابزار خواندن</string>
+    <string name="allow_deleting_bookmarked_chapters">اجازه‌ی پاک‌کردن قسمت‌های نشانک‌گذاری شده را بده</string>
+    <string name="skip_dupe_chapters">چپتر های تکراری را رد کن</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">قسمت خوانده نشده بعدی</item>
+        <item quantity="other">%d قسمت خوانده نشده بعدی</item>
+    </plurals>
+    <string name="empty_backup_error">هیچ داده کتابخانه ای نیست که پشتیبانی شود</string>
+    <string name="restore_content_full">داده ها از فایل پشتیبان برگردانده میشوند.
+\n
+\nلازم است که افزونه های جا مانده را دستی نصب کنید و وارد یک سرویس دنبال کننده شوید تا بتوانید پیشرفت هر کار را ذخیره کنید.</string>
+    <string name="restore_miui_warning">پشتیبانی/بازگردانی ممکن است کار نکند اگر بهینه‌سازی MIUI غیر فعال باشد</string>
+    <string name="download_ahead_info">اگر قسمت فعلی و بعدی دانلود شده باشند، تنها برای ورودی‌های کتابخانه کار می‌کند</string>
+    <string name="statistics">آمار</string>
 </resources>

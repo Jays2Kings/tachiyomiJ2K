@@ -1050,4 +1050,10 @@
     <string name="read_duration_info">Χρόνος παραμονής στον αναγνώστη, με βάση το ιστορικό του κεφαλαίου</string>
     <string name="skipped_reason_not_always_update">Παραλείφθηκε επειδή η σειρά δεν απαιτεί ενημερώσεις</string>
     <string name="error_user_agent_string_invalid">Μη έγκυρη συμβολοσειρά πράκτορα χρήστη</string>
+    <string name="popular">Δημοφιλή</string>
+    <string name="allow_deleting_bookmarked_chapters">Να επιτρέπεται η διαγραφή κεφαλαίων με σελιδοδείκτη</string>
+    <string name="skip_dupe_chapters">Παράλειψη διπλότυπων κεφαλαίων</string>
+    <string name="hide_in_library_items">Απόκρυψη καταχωρήσεων που βρίσκονται ήδη στη βιβλιοθήκη</string>
+    <string name="appwidget_updates_description">Δείτε τις πρόσφατα ενημερωμένες καταχωρήσεις της βιβλιοθήκης σας</string>
+    <string name="appwidget_unavailable_locked">Το widget δεν είναι διαθέσιμο όταν είναι ενεργοποιημένο το κλείδωμα εφαρμογών</string>
 </resources>

@@ -485,4 +485,15 @@
     <string name="appearance">Кӑтартӑнни</string>
     <string name="warning">Асӑрхаттару</string>
     <string name="cover_only_grid">Ятсӑр сетке</string>
+    <string name="app_theme">Хушӑм темми</string>
+    <string name="strawberry_daiquiri">Ҫӗр ҫырли тайккирийӗ</string>
+    <string name="yotsuba">Йутсупа</string>
+    <string name="midnight_dusk">Ҫур ҫӗр ӗнтрӗкӗ</string>
+    <string name="tako">Таккӑ</string>
+    <string name="lavender">Лавантӑ</string>
+    <string name="allow_deleting_bookmarked_chapters">Картнӑ сыпӑксене катерт</string>
+    <string name="every_3_days">Кашни 3 кун</string>
+    <string name="pure_black_dark_mode">Хуп-хура темӑ</string>
+    <string name="pref_update_only_completely_read">Вуламан сыпӑк(сем) пур</string>
+    <string name="pref_update_only_started">Серилӗхе пуҫламан</string>
 </resources>

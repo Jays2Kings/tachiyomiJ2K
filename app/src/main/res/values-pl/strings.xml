@@ -1101,4 +1101,9 @@
     <string name="trackers">Trackers</string>
     <string name="error_user_agent_string_invalid">Nieprawidłowy ciąg agenta użytkownika</string>
     <string name="skipped_reason_not_always_update">Pominięto, ponieważ aktualizacja nie jest wymagana</string>
+    <string name="skip_dupe_chapters">Pomiń zduplikowane rozdziały</string>
+    <string name="allow_deleting_bookmarked_chapters">Usuwaj rozdziały dodane do zakładek</string>
+    <string name="popular">Popularne</string>
+    <string name="appwidget_updates_description">Zobacz ostatnio zaktualizowane wpisy</string>
+    <string name="appwidget_unavailable_locked">Widżet nie jest dostępny kiedy blokada aplikacji jest włączona</string>
 </resources>

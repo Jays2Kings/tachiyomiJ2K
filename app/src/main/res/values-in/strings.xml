@@ -1024,4 +1024,12 @@
     <string name="read_duration_info">Waktu yang dihabiskan di pembaca, berdasarkan sejarah bab</string>
     <string name="skipped_reason_not_always_update">Dilewati karena seri ini tidak memerlukan pembaruan</string>
     <string name="error_user_agent_string_invalid">String agen pengguna tidak valid</string>
+    <string name="popular">Populer</string>
+    <string name="skip_dupe_chapters">Melewati bab terduplikasi</string>
+    <string name="allow_deleting_bookmarked_chapters">Hapus bab yang ditandai</string>
+    <string name="appwidget_updates_description">Lihat entri pustaka Anda yang baru saja diperbarui</string>
+    <string name="appwidget_unavailable_locked">Widget tidak tersedia saat kunci aplikasi diaktifkan</string>
+    <string name="mean_tracking_score">Rata-rata skor pelacakan</string>
+    <string name="failed_to_update_">Gagal memperbarui %1$s</string>
+    <string name="hide_in_library_items">semua yang di sembunyikan sudah ada di pustaka</string>
 </resources>

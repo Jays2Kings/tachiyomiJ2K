@@ -220,7 +220,7 @@
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
     <string name="url_not_set_click_again">Manga URL\'si ayarlı değil, lütfen başlığa dokunun ve mangayı yeniden seçin</string>
-    <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
+    <string name="category_with_name_exists">Bu adla bir ulam zaten var!</string>
     <string name="this_will_remove_the_read_date_question">Bu, bu bölümün okunma tarihini kaldıracak. Emin misiniz?</string>
     <string name="picture_saved">Resim kaydedildi</string>
     <string name="options">Seçenekler</string>
@@ -344,7 +344,7 @@
     <string name="library_search_hint">Başlık, etiket, kaynak ara</string>
     <string name="updating_">%1$s güncelleniyor</string>
     <string name="jump_to_category">Kategoriye atla</string>
-    <string name="category_deleted">Kategori silindi</string>
+    <string name="category_deleted">Ulam silindi</string>
     <string name="manage_category">Katedorileri yönet</string>
     <string name="add_categories">Kategori ekle</string>
     <string name="already_in_category">Manga zaten bu kategoride</string>
@@ -354,8 +354,8 @@
     <string name="create_new_category">Yeni kategori oluştur</string>
     <string name="_already_in_queue">%1$s zaten kuyrukta</string>
     <plurals name="category_plural">
-        <item quantity="one">%d kategori</item>
-        <item quantity="other">%d kategori</item>
+        <item quantity="one">%d ulam</item>
+        <item quantity="other">%d ulam</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d sayfa kaldı</item>
@@ -378,7 +378,7 @@
     <string name="not_started">Başlamadı</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
-    <string name="long_press_category">Kategoriyi düzenlemek için basılı tut</string>
+    <string name="long_press_category">Ulamı düzenlemek için basılı tut</string>
     <string name="adding_category_to_queue">%1$s güncelleme kuyruğuna eklendi</string>
     <string name="chapter_x_of_y">Bölüm %1$d / %2$d</string>
     <string name="unlock_library">Kitaplığa erişmek için kilidi aç</string>
@@ -622,7 +622,7 @@
     <string name="series_type">Seri türü</string>
     <string name="search_globally">\"%1$s\" genel arama</string>
     <string name="_unread">%d okunmayan</string>
-    <string name="category_cannot_be_blank">Kategori ismi boş olamaz</string>
+    <string name="category_cannot_be_blank">Ulam adı boş olamaz</string>
     <string name="add_edit_categories">Kategorileri ekle/düzenle</string>
     <string name="new_category">Yeni kategori</string>
     <string name="category">Kategori</string>
@@ -1051,4 +1051,11 @@
     <string name="skipped_reason_not_always_update">Dizi güncelleme gerektirmediği için atlandı</string>
     <string name="mean_tracking_score">Ortalama izleme puanı</string>
     <string name="error_user_agent_string_invalid">Geçersiz kullanıcı aracısı dizgesi</string>
+    <string name="popular">Popüler</string>
+    <string name="appwidget_updates_description">Son güncellenen kitaplık girdilerinizi görün</string>
+    <string name="skip_dupe_chapters">Yinelenen bölümleri atla</string>
+    <string name="hide_in_library_items">Zaten kitaplıkta bulunan girdileri gizle</string>
+    <string name="allow_deleting_bookmarked_chapters">İşaretli bölümleri silmeye izin ver</string>
+    <string name="appwidget_unavailable_locked">Uygulama kilidi etkinleştirildiğinde widget kullanılamıyor</string>
+    <string name="failed_to_update_">%1$s güncellenemedi</string>
 </resources>

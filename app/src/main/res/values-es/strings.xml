@@ -302,7 +302,7 @@
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
     <string name="no_results_found">No se han encontrado resultados</string>
-    <string name="lock_with_biometrics">Bloquear con huella dactilar</string>
+    <string name="lock_with_biometrics">Bloqueo con biometría</string>
     <string name="lock_when_idle">Bloquear por inactividad</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
@@ -684,6 +684,7 @@
     <string name="category">Categoría</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s capítulo</item>
+        <item quantity="many">%1$s capítulos</item>
         <item quantity="other">%1$s capítulos</item>
     </plurals>
     <string name="add_x_to">Añadir %1$s a…</string>
@@ -1056,7 +1057,7 @@
     <string name="violet">Violeta</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Nombre del navegador a usar («user agent»)</string>
-    <string name="loader_rar5_error">El formato RARv5 no se entiende</string>
+    <string name="loader_rar5_error">La app no soporta el formato RARv5</string>
     <string name="language_requires_app_restart">Algunos idiomas pueden requerir un reinicio de la aplicación para mostrarse correctamente</string>
     <string name="clear_db_exclude_read">Mantener el manga con capítulos leídos</string>
     <string name="all_read_manga">Todos los mangas leídos</string>
@@ -1108,4 +1109,11 @@
     <string name="skipped_reason_not_always_update">Saltando, porque este manga no necesita actualizarse</string>
     <string name="mean_tracking_score">Puntuación media de seguimiento</string>
     <string name="error_user_agent_string_invalid">El nombre de agente de usuario no vale</string>
+    <string name="popular">Popular</string>
+    <string name="skip_dupe_chapters">Saltarse los capítulos repetidos</string>
+    <string name="hide_in_library_items">Saltar elementos que ya estén en la biblioteca</string>
+    <string name="allow_deleting_bookmarked_chapters">Permitir el borrado de capítulos marcados como favoritos</string>
+    <string name="appwidget_updates_description">Ver el manga actualizado de forma reciente</string>
+    <string name="appwidget_unavailable_locked">El widget no está disponible cuando el bloqueo de aplicación está activo</string>
+    <string name="failed_to_update_">Error al actualizar %1$s</string>
 </resources>

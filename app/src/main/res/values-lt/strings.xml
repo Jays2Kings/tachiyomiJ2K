@@ -503,4 +503,9 @@
         <item quantity="few">%1$s skyriai</item>
         <item quantity="other">%1$s skyriai</item>
     </plurals>
+    <string name="popular">Populiaru</string>
+    <string name="skip_dupe_chapters">Praleisti pasikartojančius skyrius</string>
+    <string name="allow_deleting_bookmarked_chapters">Leisti naikinti žymėtus skyrius</string>
+    <string name="appwidget_updates_description">Peržiūrėkite neseniai atnaujintus bibliotekos įrašus</string>
+    <string name="appwidget_unavailable_locked">Valdiklis nepasiekiamas, kai įjungtas programėlės užraktas</string>
 </resources>

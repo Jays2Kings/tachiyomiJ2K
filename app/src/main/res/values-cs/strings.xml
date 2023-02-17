@@ -1078,4 +1078,11 @@
     <string name="skipped_reason_not_always_update">Přeskočeno, protože série nevyžaduje aktualizace</string>
     <string name="mean_tracking_score">Průměrné skóre sledování</string>
     <string name="error_user_agent_string_invalid">Neplatný řetězec uživatelského agenta</string>
+    <string name="allow_deleting_bookmarked_chapters">Povolit mazání kapitol se záložkami</string>
+    <string name="popular">Populární</string>
+    <string name="skip_dupe_chapters">Přeskakovat duplicitní kapitoly</string>
+    <string name="hide_in_library_items">Skrýt položky, které jsou již v knihovně</string>
+    <string name="appwidget_updates_description">Podívejte se na své nedávno aktualizované záznamy v knihovně</string>
+    <string name="appwidget_unavailable_locked">Widget není k dispozici, když je povolen zámek aplikace</string>
+    <string name="failed_to_update_">Nepodařilo se aktualizovat %1$s</string>
 </resources>

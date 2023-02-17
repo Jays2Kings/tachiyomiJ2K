@@ -1023,4 +1023,10 @@
     <string name="read_duration_info">在阅读器中花费的时间(基于章节历史统计)</string>
     <string name="skipped_reason_not_always_update">已跳过，因为作品无需更新</string>
     <string name="error_user_agent_string_invalid">User Agent 字符串无效</string>
+    <string name="skip_dupe_chapters">跳过重复章节</string>
+    <string name="hide_in_library_items">隐藏已添加到书架的作品</string>
+    <string name="allow_deleting_bookmarked_chapters">允许删除已添加书签的章节</string>
+    <string name="popular">热门</string>
+    <string name="appwidget_updates_description">查看最近更新的作品</string>
+    <string name="appwidget_unavailable_locked">应用锁开启时，小部件不能使用</string>
 </resources>

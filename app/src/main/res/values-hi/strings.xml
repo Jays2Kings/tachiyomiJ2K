@@ -613,4 +613,8 @@
     <string name="no_matches_for_filters">आपके वर्तमान फ़िल्टर के लिए कोई मिलान नहीं मिला</string>
     <string name="always_show_current_category">हमेशा वर्तमान श्रेणी दिखाएं</string>
     <string name="expand_collapse_all_categories">सभी श्रेणियों का विस्तार/संक्षिप्त करें</string>
+    <string name="popular">लोकप्रिय</string>
+    <string name="allow_deleting_bookmarked_chapters">बुकमार्क किए गए अध्यायों को हटाने की अनुमति दें</string>
+    <string name="statistics">आंकड़े</string>
+    <string name="appwidget_unavailable_locked">ऐप लॉक लागू होने पर विजेट उपलब्ध नहीं होता</string>
 </resources>

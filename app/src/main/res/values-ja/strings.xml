@@ -1023,4 +1023,10 @@
     <string name="read_duration_info">章の履歴に基づいた、ビューアで滞在した時間</string>
     <string name="skipped_reason_not_always_update">シリーズは更新を必要としないため、スキップされました</string>
     <string name="error_user_agent_string_invalid">ユーザー エージェント文字列が無効です</string>
+    <string name="popular">人気</string>
+    <string name="skip_dupe_chapters">重複の章をスキップ</string>
+    <string name="hide_in_library_items">ライブラリにある項目を非表示</string>
+    <string name="allow_deleting_bookmarked_chapters">ブックマークした章の削除を許可</string>
+    <string name="appwidget_updates_description">最近更新されたライブラリの項目を見る</string>
+    <string name="appwidget_unavailable_locked">アプリロックがONの時、ウィジェットは利用できません</string>
 </resources>

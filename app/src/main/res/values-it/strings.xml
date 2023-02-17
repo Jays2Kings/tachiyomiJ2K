@@ -1108,4 +1108,10 @@
     <string name="no_data_for_filters">Nessun dato trovato con il filtro corrente</string>
     <string name="skipped_reason_not_always_update">Saltato perché la serie non richiede aggiornamenti</string>
     <string name="error_user_agent_string_invalid">Stringa «user agent» non valida</string>
+    <string name="hide_in_library_items">Nascondi le voci già in libreria</string>
+    <string name="popular">Popolare</string>
+    <string name="skip_dupe_chapters">Salta i capitoli duplicati</string>
+    <string name="allow_deleting_bookmarked_chapters">Consenti eliminazione capitoli con segnalibro</string>
+    <string name="appwidget_updates_description">Vedi le voci aggiornate di recente</string>
+    <string name="appwidget_unavailable_locked">Widget non disponibile quando il blocco app è attivo</string>
 </resources>

@@ -335,7 +335,7 @@
         <item quantity="other">소요 시간: %1$s, 발생한 오류: %2$s</item>
     </plurals>
     <string name="lock_when_idle">자동 잠금</string>
-    <string name="secure_screen">스크린 보안</string>
+    <string name="secure_screen">화면 보안</string>
     <string name="hide_notification_content">알림 내용 숨기기</string>
     <string name="updating_library">서재 업데이트 중</string>
     <string name="channel_errors">오류</string>
@@ -567,7 +567,7 @@
     <string name="battery_not_low">배터리가 부족하지 않음</string>
     <string name="pref_clear_webview_data">WebView 데이터 지우기</string>
     <string name="webview_data_deleted">WebView 데이터 삭제됨</string>
-    <string name="secure_screen_summary">스크린 보안이 활성화될 경우 스크린샷이 비활성화되며 화면 전환 시 내용이 숨겨집니다</string>
+    <string name="secure_screen_summary">화면 보안을 켜면 앱을 전환할 때 내용이 숨겨지며 스크린샷을 찍을 수 없습니다</string>
     <string name="pref_hide_threshold">스크롤 시 메뉴 숨기기 민감도</string>
     <string name="pref_highest">매우 높음</string>
     <string name="pref_high">높음</string>
@@ -651,7 +651,7 @@
     <string name="added_">%1$s 추가됨</string>
     <string name="search_tips_show_periodically">검색 팁이 주기적으로 표시됩니다. 추천 검색어를 길게 눌러 검색하세요.</string>
     <string name="webtoon_side_padding_5">5%</string>
-    <string name="user_agent_string">부전승으로 사용자 수</string>
+    <string name="user_agent_string">기본 사용자 에이전트 문자열</string>
     <string name="loader_rar5_error">RARv5 포맷은 지원되지 않습니다</string>
     <string name="double_pages">더블 페이지</string>
     <string name="page_preload_amount">페이지 미리 로드 크기</string>
@@ -1010,4 +1010,10 @@
     <string name="read_duration">읽은 시간</string>
     <string name="skipped_reason_not_always_update">만화에 업데이트가 필요하지 않음으로 건너뜀</string>
     <string name="error_user_agent_string_invalid">잘못된 사용자 에이전트 문자열</string>
+    <string name="allow_deleting_bookmarked_chapters">북마크 표시된 회차 삭제 허용</string>
+    <string name="popular">인기</string>
+    <string name="skip_dupe_chapters">중복 회차 건너뛰기</string>
+    <string name="appwidget_updates_description">최근에 업데이트된 항목 보기</string>
+    <string name="appwidget_unavailable_locked">앱 잠금 사용 중에는 위젯을 이용할 수 없습니다</string>
+    <string name="hide_in_library_items">이미 서재에 있는 항목 숨기기</string>
 </resources>

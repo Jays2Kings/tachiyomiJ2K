@@ -531,4 +531,5 @@
     <string name="always_show_current_category">תמיד הראה את הקטגוריה הנוכחית</string>
     <string name="no_matches_for_filters">לא נמצאו פריטים התואמים את הסינון</string>
     <string name="statistics">סטטיסטיקות</string>
+    <string name="allow_deleting_bookmarked_chapters">אפשר מחיקת פרקים שסומנו</string>
 </resources>

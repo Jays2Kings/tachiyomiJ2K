@@ -1130,4 +1130,10 @@
     <string name="local_titles">Локальные тайтлы</string>
     <string name="skipped_reason_not_always_update">Пропущено, т.к серия не нуждается в обновлении</string>
     <string name="error_user_agent_string_invalid">Недопустимый параметр user agent</string>
+    <string name="popular">Популярное</string>
+    <string name="skip_dupe_chapters">Пропускать повторяющиеся главы</string>
+    <string name="hide_in_library_items">Скрывать серии, уже находящиеся в библиотеке</string>
+    <string name="allow_deleting_bookmarked_chapters">Удалять главы с закладками</string>
+    <string name="appwidget_updates_description">Посмотреть недавно обновлённые серии в библиотеке</string>
+    <string name="appwidget_unavailable_locked">Виджет недоступен при включённой блокировке биометрией</string>
 </resources>

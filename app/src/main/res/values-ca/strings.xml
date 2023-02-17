@@ -637,4 +637,13 @@
 \nA la següent pantalla habiliteu \"Permet l\'accés per gestionar tots els fitxers.\"</string>
     <string name="skipped_reason_not_always_update">S\'ha omès perquè no cal actualitzar la sèrie</string>
     <string name="error_user_agent_string_invalid">La cadena d\'agent d\'usuari no és vàlida</string>
+    <string name="read_duration">Temps de lectura</string>
+    <string name="statistics">Estadístiques</string>
+    <string name="skip_dupe_chapters">Omet els capítols duplicats</string>
+    <string name="appwidget_updates_description">Vegeu els elements de la biblioteca actualitzats recentment</string>
+    <string name="appwidget_unavailable_locked">El widget no està disponible quan hi ha activat el blocatge de l\'aplicació</string>
+    <string name="popular">Populars</string>
+    <string name="hide_in_library_items">Amaga els elements que ja són a la biblioteca</string>
+    <string name="allow_deleting_bookmarked_chapters">Permet la supressió dels capítols marcats</string>
+    <string name="trackers">Seguidors</string>
 </resources>

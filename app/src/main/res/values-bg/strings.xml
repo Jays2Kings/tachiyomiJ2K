@@ -1012,4 +1012,7 @@
     <string name="move_series_to_top">Премести поредицата най-горе</string>
     <string name="tap_to_learn_more">Натисни, за да научиш повече</string>
     <string name="skipped_reason_not_always_update">Пропусната, понеже поредицата не изисква обновления</string>
+    <string name="popular">Популярни</string>
+    <string name="allow_deleting_bookmarked_chapters">Позволи изтриване на отметнати глави</string>
+    <string name="appwidget_unavailable_locked">Приставката не е достъпна, когато е активирано заключване на приложението</string>
 </resources>

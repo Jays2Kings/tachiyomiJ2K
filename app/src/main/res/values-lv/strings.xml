@@ -552,4 +552,5 @@
     <string name="reduces_banding_impacts_performance">Samazina grupēšanu, bet var ietekmēt veiktspēju</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Lejupielādētās nodaļas</string>
+    <string name="allow_deleting_bookmarked_chapters">Atļaut dzēst ar grāmatzīmēm atzīmētās nodaļas</string>
 </resources>

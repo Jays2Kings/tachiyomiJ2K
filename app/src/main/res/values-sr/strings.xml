@@ -1005,4 +1005,34 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Preuzeta poglavlja</string>
     <string name="tap_zones">Начин навигације</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Следеће непрочитано поглавље</item>
+        <item quantity="few">Следећа %d непрочитана поглавља</item>
+        <item quantity="other">Следећих %d непрочитаних поглавља</item>
+    </plurals>
+    <string name="lavender">Лаванда</string>
+    <string name="user_agent_string">Подразумеван низ корисничког агента</string>
+    <string name="download_notifier_split_page_not_found">Страница %d није пронађена током раздвајања</string>
+    <string name="skipped_reason_not_always_update">Прескочено јер наслов не захтева ажурирање</string>
+    <string name="download_ahead">Преузми унапред</string>
+    <string name="download_ahead_info">Ради само на уносима у колекцији и ако су последње плус следеће поглавље већ преузети</string>
+    <string name="split_tall_images">Раздели високе слике</string>
+    <string name="split_tall_images_summary">Побољшава перформансе читача</string>
+    <string name="reading_list">Листа за читање</string>
+    <string name="wish_list">Листа жеља</string>
+    <string name="unfinished_list">Незавршени наслови</string>
+    <string name="popular">Популарно</string>
+    <string name="skip_dupe_chapters">Прескочи дупликатска поглавља</string>
+    <string name="allow_deleting_bookmarked_chapters">Дозволи брисање забележених поглавља</string>
+    <string name="trackers">Трекери</string>
+    <string name="loader_rar5_error">RARv5 формат није подржан</string>
+    <string name="download_notifier_split_failed">Није могуће разделити преузету слику</string>
+    <string name="complete_list">Завршена листа</string>
+    <string name="on_hold_list">Наслови на чекању</string>
+    <string name="error_user_agent_string_invalid">Неважећи низ корисничког агента</string>
+    <string name="auto_download_while_reading">Преузми аутоматски током читања</string>
+    <string name="statistics">Статистике</string>
+    <string name="read_duration">Трајање читања</string>
+    <string name="appwidget_updates_description">Погледај твоје недавно ажуриране наслове у колекцији</string>
+    <string name="appwidget_unavailable_locked">Widget није доступан када је омогућено закључавање апликације</string>
 </resources>

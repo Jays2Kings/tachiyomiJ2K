@@ -1022,4 +1022,12 @@
     <string name="read_duration">Durasi dibaca</string>
     <string name="skipped_reason_not_always_update">Dilangkau kerana siri tidak memerlukan kemas kini</string>
     <string name="error_user_agent_string_invalid">Rentetan ejen pengguna tidak sah</string>
+    <string name="popular">Popular</string>
+    <string name="skip_dupe_chapters">Langkau bab pendua</string>
+    <string name="allow_deleting_bookmarked_chapters">Benarkan memadam bab yang ditanda</string>
+    <string name="hide_in_library_items">Sembunyikan entri yang sudah ada di dalam pustaka</string>
+    <string name="appwidget_updates_description">Lihat kemas kini entri pustaka terkini anda</string>
+    <string name="appwidget_unavailable_locked">Widget tidak tersedia apabila kekunci aplikasi digunakan</string>
+    <string name="mean_tracking_score">Purata skor penjejak</string>
+    <string name="read_duration_info">Masa yang dihabiskan dalam membaca, berdasarkan sejarah bab</string>
 </resources>

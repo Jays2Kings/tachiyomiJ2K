@@ -1051,4 +1051,10 @@
     <string name="skipped_reason_not_always_update">Brincadu ca sa sèrie non tenet bisòngiu de agiornamentos</string>
     <string name="error_user_agent_string_invalid">Istringa de agente de utente non vàlida</string>
     <string name="mean_tracking_score">Votu mèdiu de arrastamentu</string>
+    <string name="skip_dupe_chapters">Brinca sos capìtulos duplicados</string>
+    <string name="hide_in_library_items">Cua sos elementos giai in sa biblioteca</string>
+    <string name="allow_deleting_bookmarked_chapters">Permite s\'iscantzelladura de sos capìtulos cun sinnalibros</string>
+    <string name="appwidget_updates_description">Pòmpia sos elementos de biblioteca tuos agiornados dae pagu</string>
+    <string name="popular">Populare</string>
+    <string name="appwidget_unavailable_locked">Su widget no est a disponimentu cando su blocu de s\'aplicatzione est abilitadu</string>
 </resources>
