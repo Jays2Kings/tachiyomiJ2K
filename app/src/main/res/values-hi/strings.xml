@@ -240,7 +240,7 @@
     <string name="double_tap_anim_speed">डबल टैप एनीमेशन गति</string>
     <string name="no_animation">कोई एनीमेशन नहीं</string>
     <string name="normal">साधारण</string>
-    <string name="fast">उपवास</string>
+    <string name="fast">तेज</string>
     <string name="search_filters">खोज फ़िल्टर</string>
     <string name="added_to_library">पुस्तकालय में जोड़ा गया</string>
     <string name="removed_from_library">लाइब्रेरी से निकाला गया</string>
@@ -617,4 +617,5 @@
     <string name="allow_deleting_bookmarked_chapters">बुकमार्क किए गए अध्यायों को हटाने की अनुमति दें</string>
     <string name="statistics">आंकड़े</string>
     <string name="appwidget_unavailable_locked">ऐप लॉक लागू होने पर विजेट उपलब्ध नहीं होता</string>
+    <string name="updating_">%1$s अपडेट किया जा रहा</string>
 </resources>

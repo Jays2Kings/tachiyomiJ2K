@@ -302,7 +302,7 @@
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
     <string name="no_results_found">No se han encontrado resultados</string>
-    <string name="lock_with_biometrics">Bloqueo con biometría</string>
+    <string name="lock_with_biometrics">Bloqueado mediante biometría</string>
     <string name="lock_when_idle">Bloquear por inactividad</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
@@ -1116,4 +1116,6 @@
     <string name="appwidget_updates_description">Ver el manga actualizado de forma reciente</string>
     <string name="appwidget_unavailable_locked">El widget no está disponible cuando el bloqueo de aplicación está activo</string>
     <string name="failed_to_update_">Error al actualizar %1$s</string>
+    <string name="show_more_chapters">Mostrar más capítulos</string>
+    <string name="collapse_grouped_chapters">Contraer los capítulos agrupados</string>
 </resources>

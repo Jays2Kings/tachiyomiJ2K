@@ -599,4 +599,5 @@
     <string name="download_ahead">Letöltés előre</string>
     <string name="allow_deleting_bookmarked_chapters">Könyvjelzőzött fejezetek törlésének engedélyezése</string>
     <string name="appwidget_unavailable_locked">Widget nem elérhető amikor az alkalmazás zárolva van</string>
+    <string name="statistics">Statisztika</string>
 </resources>

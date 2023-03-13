@@ -1082,4 +1082,5 @@
     <string name="appwidget_unavailable_locked">Widget nije dostupan kada je omogućeno zaključavanje aplikacije</string>
     <string name="mean_tracking_score">Prosječna ocjena praćenja</string>
     <string name="hide_in_library_items">Sakrij unose koji se već nalaze u biblioteci</string>
+    <string name="failed_to_update_">Neuspjelo aktualiziranje %1$s</string>
 </resources>

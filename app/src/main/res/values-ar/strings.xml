@@ -1162,4 +1162,9 @@
     <string name="allow_deleting_bookmarked_chapters">حذف الفصول ذات العلامة المرجعية</string>
     <string name="appwidget_updates_description">الاطلاع على إدخالات المكتبة التي تم تحديثها مؤخرا</string>
     <string name="appwidget_unavailable_locked">القطعة غير متاحة عند تمكين قفل التطبيق</string>
+    <string name="failed_to_update_">فشل تحديث %1$s</string>
+    <string name="mean_tracking_score">متوسط نقاط التتبع</string>
+    <string name="hide_in_library_items">إخفاء الإدخالات الموجودة بالفعل في المكتبة</string>
+    <string name="show_more_chapters">إظهار فصول أكثر</string>
+    <string name="collapse_grouped_chapters">ضم الفصول المُجمعة</string>
 </resources>

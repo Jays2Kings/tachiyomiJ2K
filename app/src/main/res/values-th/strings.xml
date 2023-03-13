@@ -1032,4 +1032,6 @@
     <string name="appwidget_unavailable_locked">วิดเจ็ตไม่พร้อมใช้งานขณะการล็อกแอปเปิดไว้</string>
     <string name="failed_to_update_">อัปเดต %1$s ล้มเหลว</string>
     <string name="hide_in_library_items">ซ่อนรายการที่มีอยู่ในคลังอยู่แล้ว</string>
+    <string name="show_more_chapters">แสดงตอนเพิ่มเติม</string>
+    <string name="collapse_grouped_chapters">ยุบตอนที่จัดกลุ่มไว้</string>
 </resources>

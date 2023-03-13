@@ -1127,4 +1127,8 @@
     <string name="allow_deleting_bookmarked_chapters">Permitir a exclusão de capítulos favoritos</string>
     <string name="appwidget_updates_description">Veja seus itens da biblioteca atualizados recentemente</string>
     <string name="appwidget_unavailable_locked">Widget não disponível quando o bloqueio do aplicativo está habilitado</string>
+    <string name="mean_tracking_score">Significa pontuação de rastreamento</string>
+    <string name="failed_to_update_">Falha na atualização de %1$s</string>
+    <string name="show_more_chapters">Mostrar mais capítulos</string>
+    <string name="collapse_grouped_chapters">Recolher capítulos agrupados</string>
 </resources>

@@ -316,4 +316,5 @@
     <string name="label_global_search">Pangkalahatang Paghahanap</string>
     <string name="name">Pangalan</string>
     <string name="all_files_permission_required">Kailangan ng pahintulot sa file</string>
+    <string name="tako">Tako</string>
 </resources>

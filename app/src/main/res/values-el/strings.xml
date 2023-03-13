@@ -1056,4 +1056,6 @@
     <string name="hide_in_library_items">Απόκρυψη καταχωρήσεων που βρίσκονται ήδη στη βιβλιοθήκη</string>
     <string name="appwidget_updates_description">Δείτε τις πρόσφατα ενημερωμένες καταχωρήσεις της βιβλιοθήκης σας</string>
     <string name="appwidget_unavailable_locked">Το widget δεν είναι διαθέσιμο όταν είναι ενεργοποιημένο το κλείδωμα εφαρμογών</string>
+    <string name="mean_tracking_score">Μέση βαθμολογία παρακολούθησης</string>
+    <string name="failed_to_update_">Αποτυχία ενημέρωσης %1$s</string>
 </resources>

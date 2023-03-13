@@ -1029,4 +1029,8 @@
     <string name="allow_deleting_bookmarked_chapters">ブックマークした章の削除を許可</string>
     <string name="appwidget_updates_description">最近更新されたライブラリの項目を見る</string>
     <string name="appwidget_unavailable_locked">アプリロックがONの時、ウィジェットは利用できません</string>
+    <string name="failed_to_update_">%1$s を更新できませんでした</string>
+    <string name="mean_tracking_score">平均追跡スコア</string>
+    <string name="show_more_chapters">章をもっと表示</string>
+    <string name="collapse_grouped_chapters">グループ化した章を折り畳む</string>
 </resources>

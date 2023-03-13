@@ -1085,4 +1085,6 @@
     <string name="appwidget_updates_description">Podívejte se na své nedávno aktualizované záznamy v knihovně</string>
     <string name="appwidget_unavailable_locked">Widget není k dispozici, když je povolen zámek aplikace</string>
     <string name="failed_to_update_">Nepodařilo se aktualizovat %1$s</string>
+    <string name="show_more_chapters">Zobrazit další kapitoly</string>
+    <string name="collapse_grouped_chapters">Sbalit seskupené kapitoly</string>
 </resources>

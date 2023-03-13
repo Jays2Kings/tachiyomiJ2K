@@ -173,8 +173,8 @@
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Wika: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Extension update available</item>
-        <item quantity="other">%d extension updates available</item>
+        <item quantity="one">Available ang update ng extension</item>
+        <item quantity="other">Available ang mga update sa %d extension</item>
     </plurals>
     <string name="set_as_cover">Gawing cover</string>
     <string name="cover_updated">Napalitan na ang cover</string>
@@ -470,7 +470,7 @@
     <string name="compact_grid">Siksik</string>
     <string name="comfortable_grid">Komportable</string>
     <string name="can_be_found_in_library_filters">Makikita rin kapag binuksan ang mga filter sa Aklatan</string>
-    <string name="drag_and_drop">Drag &amp; Drop</string>
+    <string name="drag_and_drop">I-drag at Drop</string>
     <string name="sort_by">Ayusin base sa</string>
     <string name="ungrouped">Walang grupo</string>
     <string name="tracking_status">Estado ng pag-track</string>
@@ -659,8 +659,8 @@
     <string name="search_chapters">Maghanap ng mga kabanata</string>
     <string name="channel_errors">Mga error</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">Extension updated</item>
-        <item quantity="other">%d extensions updated</item>
+        <item quantity="one">Na-update ang extension</item>
+        <item quantity="other">Na-update ang %d (na) extension</item>
     </plurals>
     <string name="installed_">Na-install na ang %1$s</string>
     <string name="vertically">Patayo</string>
@@ -671,8 +671,8 @@
         <item quantity="other">%1$d (na) pahina</item>
     </plurals>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Lalaktawan ang isang kabanata, siguro baka wala sa source ito, o baka na-filter ito</item>
-        <item quantity="other">Lalaktawan ang %d (na) kabanata, siguro baka wala sa source sila, o baka na-filter sila</item>
+        <item quantity="one">Nilaktawan ang isang kabanata, maaaring wala ang source o na-filter na ito</item>
+        <item quantity="other">Nilaktawan ang %d na (mga) kabanata, maaaring wala ang source o na-filter ang mga ito</item>
     </plurals>
     <string name="about_this_">Tungkol sa %1$s na ito</string>
     <string name="start_reading">Simulang basahin</string>
@@ -1055,4 +1055,9 @@
     <string name="skip_dupe_chapters">Laktawan ang mga magkakarehas na kabanata</string>
     <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa Aklatan mo</string>
     <string name="appwidget_unavailable_locked">Di available ang widget kapag nakabukas ang lock</string>
+    <string name="hide_in_library_items">Itago ang mga entry na nasa aklatan na</string>
+    <string name="failed_to_update_">Nabigong i-update ang %1$s</string>
+    <string name="mean_tracking_score">Mean tracking score</string>
+    <string name="show_more_chapters">Magpakita ng iba pang mga kabanata</string>
+    <string name="collapse_grouped_chapters">I-collapse ang mga nakagrupong kabanata</string>
 </resources>

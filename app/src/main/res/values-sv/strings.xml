@@ -1027,19 +1027,19 @@
     <string name="read_duration">Lästid</string>
     <string name="view_detailed_statistics">Se detaljerad statistik</string>
     <plurals name="_series_types">
-        <item quantity="one"/>
-        <item quantity="other">%d serietyper</item>
+        <item quantity="one">%d typ av serie</item>
+        <item quantity="other">%d typer av serier</item>
     </plurals>
     <plurals name="_sources">
-        <item quantity="one"/>
+        <item quantity="one">%d källa</item>
         <item quantity="other">%d källor</item>
     </plurals>
     <plurals name="_statuses">
-        <item quantity="one"/>
+        <item quantity="one">%d status</item>
         <item quantity="other">%d statusar</item>
     </plurals>
     <plurals name="_languages">
-        <item quantity="one"/>
+        <item quantity="one">%d språk</item>
         <item quantity="other">%d språk</item>
     </plurals>
     <string name="all_read_manga">Alla lästa manga</string>
@@ -1054,4 +1054,10 @@
     <string name="appwidget_unavailable_locked">Widget är inte tillgänglig när applåset är aktiverat</string>
     <string name="popular">Populära</string>
     <string name="skip_dupe_chapters">Hoppa över duplicerade kapitel</string>
+    <string name="show_more_chapters">Visa fler kapitel</string>
+    <string name="collapse_grouped_chapters">Kollapsa grupperade kapitel</string>
+    <string name="failed_to_update_">Uppdateringen misslyckades %1$s</string>
+    <string name="mean_tracking_score">Medelvärde för spårning</string>
+    <string name="appwidget_updates_description">Se dina nyligen uppdaterade biblioteket inlägg</string>
+    <string name="hide_in_library_items">Dölja poster som redan finns i biblioteket</string>
 </resources>

@@ -1106,4 +1106,41 @@
     <string name="popular">Popularne</string>
     <string name="appwidget_updates_description">Zobacz ostatnio zaktualizowane wpisy</string>
     <string name="appwidget_unavailable_locked">Widżet nie jest dostępny kiedy blokada aplikacji jest włączona</string>
+    <plurals name="_sources">
+        <item quantity="one">%d źródło</item>
+        <item quantity="few">%d źródła</item>
+        <item quantity="many">%d źródeł</item>
+        <item quantity="other">%d źródeł</item>
+    </plurals>
+    <string name="stat">Statystyka</string>
+    <string name="stats">Statystyki</string>
+    <string name="manga_status_distribution">Status dystrybucji</string>
+    <string name="view_detailed_statistics">Zobacz szczegółowe statystyki</string>
+    <plurals name="_statuses">
+        <item quantity="one">%d status</item>
+        <item quantity="few">%d statusy</item>
+        <item quantity="many">%d statusów</item>
+        <item quantity="other">%d statusów</item>
+    </plurals>
+    <string name="statistics_details">Szczegółowe statystyki</string>
+    <string name="tracked_titles">Śledzone tytuły</string>
+    <string name="source">Źródło</string>
+    <string name="not_rated">Nie ocenione</string>
+    <string name="length">Długość</string>
+    <plurals name="_languages">
+        <item quantity="one">%d język</item>
+        <item quantity="few">%d języki</item>
+        <item quantity="many">%d języków</item>
+        <item quantity="other">%d języków</item>
+    </plurals>
+    <string name="hide_in_library_items">Ukryj pozycje znajdujące się już w bibliotece</string>
+    <string name="read_duration_info">Czas spędzony w czytniku, na podstawie historii rozdziałów</string>
+    <string name="failed_to_update_">Nie udało się zaktualizować %1$s</string>
+    <string name="tags">Tagi</string>
+    <string name="chapters_read">Przeczytane rozdziały</string>
+    <string name="titles_in_library">Tytuły w bibliotece</string>
+    <string name="count">Liczba</string>
+    <string name="local_titles">Lokalne tytuły</string>
+    <string name="start_year">Rok rozpoczęcia</string>
+    <string name="no_data_for_filters">Nie znaleziono danych dla bieżących filtrów</string>
 </resources>

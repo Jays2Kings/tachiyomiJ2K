@@ -1058,4 +1058,6 @@
     <string name="allow_deleting_bookmarked_chapters">İşaretli bölümleri silmeye izin ver</string>
     <string name="appwidget_unavailable_locked">Uygulama kilidi etkinleştirildiğinde widget kullanılamıyor</string>
     <string name="failed_to_update_">%1$s güncellenemedi</string>
+    <string name="show_more_chapters">Daha fazla bölüm göster</string>
+    <string name="collapse_grouped_chapters">Gruplanan bölümleri daralt</string>
 </resources>

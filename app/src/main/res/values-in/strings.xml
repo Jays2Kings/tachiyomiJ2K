@@ -442,7 +442,7 @@
     <string name="unlock">Buka kunci</string>
     <string name="unlock_library">Buka kunci untuk mengakses pustaka</string>
     <string name="in_progress">Sedang dibaca</string>
-    <string name="not_started">Belum dibaca</string>
+    <string name="not_started">Belum dimulai</string>
     <string name="comic">Komik</string>
     <string name="tracked">Dilacak</string>
     <string name="select_ending_chapter">Pilih bab pengakhir</string>
@@ -824,7 +824,7 @@
     <string name="update_completed">Pembaruan selesai</string>
     <string name="not_bookmarked">Tak ditandai</string>
     <string name="external_storage_download_notice">TachiyomiJ2K membutuhkan akses semua berkas untuk mengunduh bab. Ketuk di sini, lalu izinkan \"Izinkan akses untuk mengatur semua berkas.\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses pada semua berkas di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan membaca manga lokal.
+    <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses ke semua berkas di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan membaca manga lokal.
 \n
 \nPada layar selanjutnya, izinkan \"Izinkan akses untuk mengatur semua berkas\"</string>
     <string name="restrictions_">Pembatasan: %1$s</string>
@@ -1032,4 +1032,6 @@
     <string name="mean_tracking_score">Rata-rata skor pelacakan</string>
     <string name="failed_to_update_">Gagal memperbarui %1$s</string>
     <string name="hide_in_library_items">semua yang di sembunyikan sudah ada di pustaka</string>
+    <string name="show_more_chapters">Tampilkan lebih banyak</string>
+    <string name="collapse_grouped_chapters">Hilangkan chapter yang digabung</string>
 </resources>

@@ -832,7 +832,7 @@
     <string name="search_tips_show_periodically">Des suggestions de recherche apparaîtront périodiquement. Appuyez longuement sur la suggestion pour la rechercher.</string>
     <string name="search_suggestions">Suggestions de recherche</string>
     <string name="date_fetched">Date récupérée</string>
-    <string name="mark_range_as_unread">Marquer un intervalle de chapitres comme lu</string>
+    <string name="mark_range_as_unread">Marquer un intervalle de chapitres comme non lu</string>
     <string name="mark_range_as_read">Marquer un intervalle de chapitres comme lu</string>
     <string name="automatic_removal">Suppression automatique</string>
     <string name="flat_lime">Citron vert plat</string>
@@ -1118,4 +1118,7 @@
     <string name="hide_in_library_items">Masquer les entrées déjà présentes dans la bibliothèque</string>
     <string name="appwidget_updates_description">Voir les entrées de votre bibliothèque récemment mises à jour</string>
     <string name="appwidget_unavailable_locked">Le Widget n\'est pas disponible lorsque l\'application est verrouillée</string>
+    <string name="failed_to_update_">Échec de la mise à jour %1$s</string>
+    <string name="show_more_chapters">Afficher plus de chapitres</string>
+    <string name="collapse_grouped_chapters">Réduire les chapitres groupés</string>
 </resources>

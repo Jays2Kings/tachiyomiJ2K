@@ -1111,4 +1111,7 @@
     <string name="hide_in_library_items">Приховати записи, які вже є в бібліотеці</string>
     <string name="appwidget_updates_description">Переглянути нещодавно оновлені записи бібліотеки</string>
     <string name="appwidget_unavailable_locked">Віджет не доступний при ввімкненому блокуванні застосунку</string>
+    <string name="failed_to_update_">Не вдалося оновити %1$s</string>
+    <string name="show_more_chapters">Показати більше розділів</string>
+    <string name="collapse_grouped_chapters">Згорнути згруповані розділи</string>
 </resources>

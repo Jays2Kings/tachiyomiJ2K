@@ -23,7 +23,7 @@
     <string name="search">Søk</string>
     <string name="select_all">Velg alt</string>
     <string name="mark_as_read">Marker som lest</string>
-    <string name="mark_previous_as_read">Merk forrige som lest</string>
+    <string name="mark_previous_as_read">Marker tidligere kapitler som lest</string>
     <string name="download">Last ned</string>
     <string name="delete">Slett</string>
     <string name="edit">Rediger</string>
@@ -233,7 +233,7 @@
     <string name="theres_no_previous_chapter">Det er ikke noe tidligere kapittel</string>
     <string name="loading_pages">Laster inn sider…</string>
     <string name="failed_to_load_pages_">Klarte ikke å laste inn sider: %1$s</string>
-    <string name="migrate">Migrer</string>
+    <string name="migrate">Flytt</string>
     <string name="new_chapters_found">Nye kapitler funnet</string>
     <string name="failed_to_update_cover">Klarte ikke å oppdatere omslag</string>
     <string name="ignore">Ignorer</string>
@@ -359,7 +359,7 @@
     <string name="automatic_backups">Automatisk sikkerhetskopi</string>
     <string name="backup_in_progress">Sikkerhetskopiering allerede underveis</string>
     <string name="file_picker_error">Ingen app for filvelging funnet</string>
-    <string name="myanimelist_relogin">Vennligst logg på MAL igjen</string>
+    <string name="myanimelist_relogin">Vennligst logg inn på MAL igjen</string>
     <string name="crash_log_saved">Feillogger lagret</string>
     <string name="invalid_backup_file_type">Ugyldig backup filtype: %1$s
 \nDen burde ende med .proto.gz eller .json.</string>
@@ -569,14 +569,14 @@
         <item quantity="other">Opprenskning ferdig. Fjernet %d mapper</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Skru av dette hvis du har problemer med oppdatering eller gjenoppretting av biblioteket ditt</string>
-    <string name="no_folders_to_cleanup">Ingen mapper å rense</string>
+    <string name="no_folders_to_cleanup">Ingen mapper krever opprydding</string>
     <string name="starting_cleanup">Starter opprenskning</string>
     <string name="clean_read_manga_not_in_library">Tøm manga som ikke er i bibliotek</string>
     <string name="clean_read_downloads">Tøm leste</string>
     <string name="delete_unused_chapters">Slett ikke-eksisterende, delvis nedlastede, og leste kapittelmapper</string>
     <string name="clean_up_downloaded_chapters">Tøm nedlastede kapitler</string>
     <string name="data_management">Datahåndtering</string>
-    <string name="no_new_chapters_open_details">Når det ikke er noen nye kapitler vil seriedetaljene åpnes istedenfor.</string>
+    <string name="no_new_chapters_open_details">Når det ikke finnes nye kapitler, vil seriens detaljside åpnes i stedet</string>
     <string name="restore_error">Klarte ikke å gjenopprette sikkerhetskopi</string>
     <string name="hides_on_scroll">Skjules ved rulling</string>
     <string name="pure_black_dark_mode">Rent svart mørkt modus</string>
@@ -618,7 +618,7 @@
     <string name="delete_all_covers__not_in_library_used_">Slett alle omslag i hurtiglager som ikke er i biblioteket.
 \nBruker nå: %1$s</string>
     <string name="clear_cached_covers_non_library">Tøm hurtiglagrede omslag som ikke er i biblioteket</string>
-    <string name="delete_old_covers_in_library_used_">Slett gamle og ubrukte omslag av din manga i ditt bibliotek som har blitt oppdatert.
+    <string name="delete_old_covers_in_library_used_">Rydd opp i hurtigbufferede omslag som ikke er i bruk for oppdaterte manga i biblioteket ditt.
 \nBruker nå: %1$s</string>
     <string name="clean_up_cached_covers">Tøm hurtiglagrede omslag</string>
     <plurals name="cache_cleared">
@@ -712,7 +712,7 @@
     </plurals>
     <string name="stop_migrating">Stopp flytting\?</string>
     <string name="no_alternatives_found">Fant ingen alternativer</string>
-    <string name="no_chapters_found_for_migration">Fant ingen kapitler. Denne mangaen kan ikke flyttes.</string>
+    <string name="no_chapters_found_for_migration">Ingen kapitler funnet, denne mangaen kan ikke flyttes over</string>
     <string name="both_axes">Begge akser</string>
     <string name="migrate_">Flytt %1$s</string>
     <string name="copy_now">Kopier nå</string>
@@ -722,7 +722,7 @@
     <string name="migrating_to">flytter til</string>
     <string name="latest_">Siste: %1$s</string>
     <string name="skip_this_step_next_time">Hopp over dette steget neste gang</string>
-    <string name="search_parameter_eg">Søkeparameter (f.eks. language:english)</string>
+    <string name="search_parameter_eg">Søkeparameter (f.eks. language:norwegian)</string>
     <string name="data_to_include_in_migration">Data å inkludere i flyttingen</string>
     <string name="select_a_source_then_item_to_migrate">Velg en kilde, og velg så et element å flytte</string>
     <string name="skip_pre_migration">Hopp over forhåndsflytting</string>
@@ -814,7 +814,7 @@
 \n
 \nPå neste skjerm skrur du på «Innvilg tilgang til håndtering av alle filer.»</string>
     <string name="sapphire_dusk">Safirskumring</string>
-    <string name="ask_on_chapters_page">Slett under oppdatering av alt. Spør på kapittelside.</string>
+    <string name="ask_on_chapters_page">Slett under global oppdatering, spør på kapittelsiden</string>
     <string name="clean_orphaned_downloads">Fjern foreldreløse</string>
     <string name="includes_recently_read_updated_added">Inkluderer nylig leste, oppdaterte, og tillagte serier</string>
     <string name="pressing_back_to_start">Trykk tilbake til startskjermen</string>
@@ -877,7 +877,7 @@
     <string name="add_to_">Legg til i %1$s</string>
     <string name="webview_is_required">WebView kreves for Tachiyomi</string>
     <string name="delete_downloaded_if_removed_online">Slett nedlastede kapitler hvis kilden har fjernet kapitlet på nett</string>
-    <string name="couldnt_download_low_space">Kunne ikke laste ned kapitler som følge av lite lagringsplass</string>
+    <string name="couldnt_download_low_space">Kapitlene kunne ikke lastes ned grunnet begrenset diskplass</string>
     <string name="visit_recents_for_download_queue">Besøk fanen for nylige for å få tilgang til nedlastingskøen. Du kan også dobbelttrykke eller trykke og holde for raskere tilgang.</string>
     <string name="helpful_translation_links">Nyttige oversettelseslenker</string>
     <string name="whats_new_this_release">Hva er nytt i denne utgivelsen</string>
@@ -1002,4 +1002,50 @@
     <string name="appwidget_updates_description">Se de nylig oppdaterte biblotekoppføringene dine</string>
     <string name="appwidget_unavailable_locked">Moduler er ikke tilgjengelig når applås er aktivert</string>
     <string name="hide_in_library_items">Skjul oppføringer som allerede er i biblioteket</string>
+    <plurals name="_languages">
+        <item quantity="one"/>
+        <item quantity="other">%d språk</item>
+    </plurals>
+    <string name="tags">Etiketter</string>
+    <string name="language_requires_app_restart">Visse språk kan kreve at appen startes på nytt for å vises riktig</string>
+    <string name="titles_in_library">Titler i biblioteket</string>
+    <string name="tracked_titles">Sporede titler</string>
+    <string name="chapters_read">Leste kapitler</string>
+    <string name="not_rated">Ikke vurdert</string>
+    <string name="learn_why">Lær hvorfor</string>
+    <string name="view_all">Vis alle</string>
+    <string name="downloads_swipe_tutorial">Nedlastinger kan avbrytes ved å sveipe dem bort
+\nSveip for å fjerne dette tipset</string>
+    <string name="length">Lengde</string>
+    <string name="clear_db_exclude_read">Behold manga med leste kapitler</string>
+    <string name="open_in_app">Åpne i app</string>
+    <string name="zoom_double_page_spreads">Zoom inn på dobbeltsideoppsett</string>
+    <string name="warning_unenroll_from_beta">Å gå tilbake til forrige produksjonsversjon kan føre til problemer og kreve sletting av appdata.</string>
+    <plurals name="_series_types">
+        <item quantity="one"></item>
+        <item quantity="other">%d serietyper</item>
+    </plurals>
+    <string name="collapse_grouped_chapters">Skjul grupperte kapitler</string>
+    <string name="show_more_chapters">Vis flere kapitler</string>
+    <string name="failed_to_update_">Kunne ikke oppdatere %1$s</string>
+    <string name="show_larger_toolbar">Vis en større, utvidet verktøylinje øverst på de fleste sider (vises ikke på mindre enheter uansett innstilling)</string>
+    <string name="warning_enroll_into_beta">Betaversjoner kan være ustabile og kreve at appdata slettes.</string>
+    <string name="try_new_features">Test nye funksjoner før de lanseres offisielt. Betaversjoner kan være ustabile og brukes for å gi tilbakemeldinger til utvikleren.</string>
+    <plurals name="_statuses">
+        <item quantity="one"></item>
+        <item quantity="other">%d statuser</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one"></item>
+        <item quantity="other">%d kilder</item>
+    </plurals>
+    <string name="start_year">Startår</string>
+    <string name="source">Kilde</string>
+    <string name="count">Antall</string>
+    <string name="manga_score_distribution">Poengfordeling</string>
+    <string name="manga_status_distribution">Statusfordeling</string>
+    <string name="read_duration_info">Tidsbruk i leseren, basert på kapittelhistorikk</string>
+    <string name="titles_in_global_update">Titler i global oppdatering</string>
+    <string name="local_titles">Lokale titler</string>
+    <string name="mean_tracking_score">Gjennomsnittlig sporingspoengsum</string>
 </resources>

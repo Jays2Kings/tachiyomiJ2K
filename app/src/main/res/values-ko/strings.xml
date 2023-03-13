@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">카테고리</string>
-    <string name="manga">만화</string>
+    <string name="manga">일본만화</string>
     <string name="chapters">회차</string>
     <string name="tracking">동기화</string>
     <string name="selected_">%1$d 선택됨</string>
@@ -21,7 +21,7 @@
     <string name="edit">편집</string>
     <string name="add">추가</string>
     <string name="edit_categories">카테고리 편집</string>
-    <string name="move_to_categories">카테고리로 이동</string>
+    <string name="move_to_categories">범주로 이동</string>
     <string name="stop">정지</string>
     <string name="remove">제거</string>
     <string name="resume">계속 읽기</string>
@@ -121,7 +121,7 @@
     <string name="rotation">회전</string>
     <string name="free">자유</string>
     <string name="lock">잠금</string>
-    <string name="only_download_over_wifi">Wi-Fi만 사용해서 다운로드</string>
+    <string name="only_download_over_wifi">Wi-Fi일 때만 다운로드</string>
     <string name="remove_when_marked_as_read">읽음 표시 후에 자동으로 삭제</string>
     <string name="remove_after_read">읽은 후에 자동으로 삭제</string>
     <string name="last_read_chapter">마지막 회차</string>
@@ -155,7 +155,7 @@
     <string name="send_crash_report">충돌 보고서 전송</string>
     <string name="helps_fix_bugs">버그들을 수정하는데 도움이 됩니다. 민감한 정보는 전송되지 않습니다</string>
     <string name="log_in_to_">%1$s 으로 로그인</string>
-    <string name="username">유저네임</string>
+    <string name="username">사용자명</string>
     <string name="password">비밀번호</string>
     <string name="successfully_logged_in">로그인 성공</string>
     <string name="unknown_error">알 수 없는 오류</string>
@@ -164,17 +164,17 @@
     <string name="global_search">전역 검색…</string>
     <string name="latest">최신</string>
     <string name="description">설명</string>
-    <string name="ongoing">연재중</string>
+    <string name="ongoing">연재</string>
     <string name="unknown">알 수 없음</string>
     <string name="added_to_library">서제에 추가됨</string>
     <string name="removed_from_library">서재에서 제거됨</string>
-    <string name="author">저자</string>
-    <string name="artist">그림</string>
+    <string name="author">작자</string>
+    <string name="artist">그림작가</string>
     <string name="status">상태</string>
     <string name="source_not_installed_">소스 미설치: %1$s</string>
     <string name="chapter_">챕터 %1$s</string>
     <string name="downloading">다운로드 중</string>
-    <string name="downloading_progress">다운로드중 (%1$d/%2$d)</string>
+    <string name="downloading_progress">다운로드 중 (%1$d/%2$d)</string>
     <string name="paused">일시정지</string>
     <string name="all_chapters">전부 다운로드</string>
     <string name="all_unread_chapters">읽지 않은 챕터 다운로드</string>
@@ -254,7 +254,7 @@
     <string name="type">종류</string>
     <string name="url_not_set_click_again">만화 URL이 설정 되지 않았습니다. 제목을 클릭하고 만화를 다시 선택해주세요</string>
     <string name="category_with_name_exists">같은 이름을 가진 카테고리가 이미 존재합니다!</string>
-    <string name="migrate">이동</string>
+    <string name="migrate">데이터 이전</string>
     <string name="must_be_in_library_to_edit">이 행동을 하기 전 서재에 만화를 추가해주세요</string>
     <string name="library_is_empty_add_from_browse">서재가 비어있습니다. 카탈로그에서 만화 시리즈를 서재에 추가 할 수 있습니다.</string>
     <string name="no_wifi_connection">Wifi 연결 사용 불가능</string>
@@ -354,7 +354,7 @@
     <string name="view_chapters">회차 목록 보기</string>
     <string name="warning">경고</string>
     <plurals name="category_plural">
-        <item quantity="other">항목 %d개</item>
+        <item quantity="other">%d 카테고리</item>
     </plurals>
     <string name="extension_updates">확장기능 업데이트</string>
     <string name="app_info">앱 정보</string>
@@ -387,9 +387,9 @@
     <string name="add_tracking">트래커 추가</string>
     <string name="backup_in_progress">백업이 이미 진행중입니다</string>
     <string name="publishing_finished">완결됨</string>
-    <string name="on_hiatus">휴재중</string>
+    <string name="on_hiatus">휴재</string>
     <string name="cancelled">취소됨</string>
-    <string name="lock_with_biometrics">잠금 해제 필요</string>
+    <string name="lock_with_biometrics">생체잠금 해제 필요</string>
     <string name="source_unsupported">지원되지 않는 소스입니다</string>
     <string name="chapter_not_found">회차를 찾을 수 없습니다</string>
     <string name="no_results_found">검색 결과가 없습니다</string>
@@ -417,12 +417,12 @@
     <string name="less">상세정보 숨김</string>
     <string name="pin">핀</string>
     <string name="reorder">재정렬</string>
-    <string name="date_fetched">정보가 갱신된 시간 순</string>
+    <string name="date_fetched">최신 날짜</string>
     <string name="no_pages_found">페이지를 찾을 수 없습니다</string>
     <string name="restore_missing_sources">없어진 소스:</string>
     <string name="failed_to_bypass_cloudflare">Cloudflare를 통과하지 못했습니다</string>
     <plurals name="for_n_titles">
-        <item quantity="other">%d개의 만화</item>
+        <item quantity="other">%d개의 제목</item>
     </plurals>
     <string name="create_folders_by_manga_title">만화 제목에 따라 폴더 생성</string>
     <string name="chapters_">%1$s화</string>
@@ -444,7 +444,7 @@
     <string name="backup_has_no_manga">백업에 만화가 포함되어있지 않습니다.</string>
     <string name="cancel_all">모두 취소</string>
     <string name="unpin">핀 해제</string>
-    <string name="show_number_of_items">항목 수 보이기</string>
+    <string name="show_number_of_items">항목 개수 보이기</string>
     <string name="badges">배지</string>
     <string name="obsolete">지원 종료</string>
     <string name="nsfw_short">19금</string>
@@ -459,8 +459,8 @@
     <string name="oldest">오래된 순</string>
     <string name="top">위</string>
     <string name="move_series_to_top">만화 전체를 맨 위로 이동</string>
-    <string name="local_invalid_format">잘못된 회차 포맷</string>
-    <string name="order_by">정렬</string>
+    <string name="local_invalid_format">잘못된 챕터형식</string>
+    <string name="order_by">정렬기준</string>
     <string name="navigate_pan">페이지 내 이동</string>
     <string name="grayscale">그레이스케일</string>
     <string name="pref_inverted_colors">색 반전</string>
@@ -492,31 +492,32 @@
     <plurals name="chapters_plural">
         <item quantity="other">%1$s장</item>
     </plurals>
-    <string name="comic">코믹</string>
-    <string name="not_started">시작되지 않음</string>
+    <string name="comic">개그</string>
+    <string name="not_started">읽지 않은 작품</string>
     <string name="in_progress">진행 중</string>
     <string name="new_chapters">새 장</string>
-    <string name="all_files_permission_required">파일 사용 권한 필요</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K는 Android 11의 모든 파일에 액세스하여 장을 다운로드하고, 자동 백업을 만들고, 로컬 만가를 읽어야 합니다.
+    <string name="all_files_permission_required">안드로이드의 파일 사용권한이 필요합니다.</string>
+    <string name="external_storage_permission_notice">안드로이드 정책 변화에 따라 앱은 사용자에게 파일 접근권한을 요청합니다.
+\nTachiyomiJ2K는 안드로이드11의 모든 파일에 접근하여, 챕터를 다운로드하고, 자동백업을 만들며, 휴대전화 저장소에 저장된 오프라인 만화를 읽을 수 있습니다.
 \n
-\n다음 화면에서 \"Allow access to manage all files.\"</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K는 챕터를 다운로드하기 위해 모든 파일에 액세스해야합니다. 여기를 탭한 다음 “모든 파일을 관리하기 위한 액세스 허용\'을 활성화합니다.”</string>
-    <string name="manhwa">만화</string>
-    <string name="manhua">만화</string>
+\n이에, 다음 화면에서 TachiyomiJ2K에 대한 \"모든 파일에 대한 접근권한\"을 허용해 주십시오.</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K는 챕터를 다운로드하기 위해 모든 파일에 액세스해야 합니다. 여기를 탭한 다음에 “모든 파일을 관리하기 위한 액세스 허용\"을 활성화해주십시오.</string>
+    <string name="manhwa">한국만화</string>
+    <string name="manhua">중국만화</string>
     <string name="unlock">잠금 해제</string>
     <string name="unknown_status">알 수 없는 상태</string>
-    <string name="unlock_library">잠금 해제하여 라이브러리 액세스</string>
+    <string name="unlock_library">잠금해제하여 라이브러리에 접근하십시오.</string>
     <string name="scanlators">번역자</string>
-    <string name="no_chapters_to_delete">삭제할 장 없음삭제할 장 없음</string>
+    <string name="no_chapters_to_delete">삭제할 챕터가 없음</string>
     <string name="last_read_chapter_">%1$s 장을 마지막으로 읽었습니다</string>
     <string name="chapter_x_of_y">장%1$d of %2$d</string>
-    <string name="all_chapters_read">모든 챕터가 읽음</string>
+    <string name="all_chapters_read">완독</string>
     <string name="not_bookmarked">책갈피가 지정되지 않음</string>
     <string name="marked_as_read">읽은 상태로 표시</string>
     <string name="marked_as_unread">읽은 상태로 표시</string>
     <string name="removed_bookmark">책갈피 제거됨</string>
     <string name="chapters_removed">챕터가 제거되었습니다.</string>
-    <string name="remove_all_downloads">모든 다운로드를 제거하시겠습니까\?</string>
+    <string name="remove_all_downloads">다운로드된 모든 챕터를 제거할까요\?</string>
     <string name="by_source_order">출처 순서별</string>
     <plurals name="remove_n_chapters">
         <item quantity="other">다운로드한 챕터 %1$d개를 제거하시겠습니까\?</item>
@@ -527,10 +528,10 @@
     <string name="could_not_install_update">업데이트를 설치할 수 없음</string>
     <string name="update_completed">업데이트 완료</string>
     <string name="no_matches_for_filters">현재 필터와 일치하는 항목이 없습니다</string>
-    <string name="library_search_hint">검색 제목, 태그, 소스</string>
+    <string name="library_search_hint">제목, 태그, 소스 검색하기</string>
     <string name="show_all_categories">모든 범주 표시</string>
     <string name="category">범주</string>
-    <string name="adding_category_to_queue">업데이트 큐에 %1$s 추가</string>
+    <string name="adding_category_to_queue">업데이트 대기열에 %1$s 추가</string>
     <plurals name="pages_left">
         <item quantity="other">%1$d페이지 남음</item>
     </plurals>
@@ -587,7 +588,7 @@
     <string name="open_random_series">랜덤 시리즈을 열기</string>
     <string name="expand_all_categories">모든 범주는 확대</string>
     <string name="_unread">%d 읽지 않음</string>
-    <string name="collapse_all_categories">모든 범주는 축소되기</string>
+    <string name="collapse_all_categories">모든 범주를 축소시키기</string>
     <string name="sort_by">정렬 기준</string>
     <string name="hide_start_reading_button">읽기 시작 버튼을 숨기기</string>
     <string name="show_unread_count">읽지 않은 수 보기</string>
@@ -752,12 +753,12 @@
     <string name="add_tag">태그 추가</string>
     <string name="remove_tracking">앱에서 추적 제거</string>
     <string name="remove_tracking_from_">%1$s에서도 제거합니다</string>
-    <string name="finished_reading_date">읽기 완료 날짜</string>
+    <string name="finished_reading_date">다 읽은 날짜</string>
     <string name="myanimelist_relogin">MAL에 다시 로그인하십시오</string>
     <string name="could_not_update_scoring_">점수 매기기 유형을 업데이트할 수 없음: %1$s</string>
-    <string name="started_reading_date">읽기 시작 날짜</string>
+    <string name="started_reading_date">읽기 시작한 날짜</string>
     <string name="use_first_source">대안으로 첫 번째 소스 사용</string>
-    <string name="skip_this_step_next_time">다음에 이 단계를 건너뜁니다</string>
+    <string name="skip_this_step_next_time">다음에는 이 절차를 건너뜁니다</string>
     <string name="use_most_chapters">가장 많은 챕터가있는 소스 사용 (느린)</string>
     <string name="no_alternatives_found">대안을 찾을 수 없음</string>
     <string name="default_behavior">기본 동작</string>
@@ -935,7 +936,7 @@
     <string name="always_keep">항상 유지</string>
     <string name="mark_all_as_read">모두 읽은 것으로 표시</string>
     <string name="hide">숨기다</string>
-    <string name="learn_why">이유 알아보기</string>
+    <string name="learn_why">업데이트를 건너뛰는 이유에 대해 Tachiyomi 웹 페이지에 연결하는 데 사용됩니다. \"Learn why\"는 \"라이브러리 업데이트를 건너뛰는 이유 알아보기\"의 컨텍스트에서만 사용됩니다 생성된 건너뛰기 txt 파일에서 \"이유 알아보기 - 웹 페이지 링크\"와 같이 사용됩니다.</string>
     <string name="mark_all_as_unread">모두 읽지 않은 것으로 표시</string>
     <string name="mark_previous_as_unread">이전 챕터를 읽지 않은 것으로 표시</string>
     <string name="menu">메뉴</string>
@@ -945,11 +946,11 @@
     <string name="username_must_not_be_blank">사용자 이름 또는 암호는 비워 둘 수 없습니다</string>
     <string name="automatic_removal">자동 제거</string>
     <string name="beta">Beta</string>
-    <string name="delete_removed_chapters">제거된 장 삭제</string>
+    <string name="delete_removed_chapters">제거된 챕터 삭제</string>
     <string name="delete_downloaded_if_removed_online">소스가 온라인으로 챕터를 제거한 경우 다운로드한 챕터 삭제</string>
     <string name="always_delete">항상 삭제</string>
-    <string name="downloads_swipe_tutorial">다운로드는 멀리 스 와이프하여 취소 할 수 있습니다
-\n이 팁을 살짝 밀어 해제합니다</string>
+    <string name="downloads_swipe_tutorial">다운로드는 옆으로 밀어서 취소할 수 있습니다
+\n이 정보를 살짝 밀어 숨길 수 있습니다</string>
     <string name="add_to_">%1$s에 추가</string>
     <string name="change">잔돈</string>
     <string name="download_unread">읽지 않은 다운로드</string>
@@ -1016,4 +1017,20 @@
     <string name="appwidget_updates_description">최근에 업데이트된 항목 보기</string>
     <string name="appwidget_unavailable_locked">앱 잠금 사용 중에는 위젯을 이용할 수 없습니다</string>
     <string name="hide_in_library_items">이미 서재에 있는 항목 숨기기</string>
+    <plurals name="_languages">
+        <item quantity="other">%d 언어</item>
+    </plurals>
+    <string name="mean_tracking_score">평균 추적 점수</string>
+    <string name="read_duration_info">챕터 기록을 기준으로 한 로딩에 걸린 시간</string>
+    <plurals name="_series_types">
+        <item quantity="other">"%d  시리즈 형식"</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="other">%d 소스</item>
+    </plurals>
+    <plurals name="_statuses">
+        <item quantity="other">%d 상태</item>
+    </plurals>
+    <string name="failed_to_update_">%1$s의 업데이트에 실패했습니다.</string>
+    <string name="no_data_for_filters">현재 필터 상태에서 아무런 정보를 찾지 못 함.</string>
 </resources>

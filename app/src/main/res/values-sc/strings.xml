@@ -765,7 +765,7 @@
     <string name="expand_collapse_all_categories">Ismànnia/mìnima totu sas categorias</string>
     <string name="category_hopper_long_press">Atzione cun un\'incarcu longu in su brincadore de categoria</string>
     <string name="when_grouping_by_sources_tags">Cando agrupas sa biblioteca pro fonte, istadu, etz.</string>
-    <string name="move_dynamic_to_bottom">Move sas categorias dinàmicas cara a giosso</string>
+    <string name="move_dynamic_to_bottom">Move sas categorias dinàmicas minimadas cara a giosso</string>
     <string name="your_library">Sa biblioteca tua</string>
     <string name="no_chapters_to_delete">Perunu capìtulu de iscantzellare</string>
     <string name="remove_all_downloads">Bogare totu sos iscarrigamentos\?</string>
@@ -1057,4 +1057,7 @@
     <string name="appwidget_updates_description">Pòmpia sos elementos de biblioteca tuos agiornados dae pagu</string>
     <string name="popular">Populare</string>
     <string name="appwidget_unavailable_locked">Su widget no est a disponimentu cando su blocu de s\'aplicatzione est abilitadu</string>
+    <string name="failed_to_update_">Agiornamentu de %1$s fallidu</string>
+    <string name="show_more_chapters">Mustra prus capìtulos</string>
+    <string name="collapse_grouped_chapters">Mìnima sos capìtulos agrupados</string>
 </resources>
