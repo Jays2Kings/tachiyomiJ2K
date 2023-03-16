@@ -878,7 +878,7 @@
     <string name="extensions_updated">Ekstenzije ažurirane</string>
     <string name="installed_">Instalirano %1$s</string>
     <string name="extension_updates_pending">Ažuriranja proširenja na čekanju</string>
-    <string name="affects_library_grid">Utječe na omote mreže knjižnice</string>
+    <string name="affects_library_grid">Utječe na raspored naslovnica knjižnice</string>
     <string name="restrictions_">Restrikcije: %1$s</string>
     <string name="getting_started_guide">Početni vodič</string>
     <string name="no_matches_for_filters_short">Nema podudaranja za vaše filtre</string>
@@ -1083,4 +1083,9 @@
     <string name="mean_tracking_score">Prosječna ocjena praćenja</string>
     <string name="hide_in_library_items">Sakrij unose koji se već nalaze u biblioteci</string>
     <string name="failed_to_update_">Neuspjelo aktualiziranje %1$s</string>
+    <string name="by_series">Po serijama</string>
+    <string name="by_week">Po tjednu</string>
+    <string name="by_day">Po danu</string>
+    <string name="show_more_chapters">Pokaži još poglavlja</string>
+    <string name="collapse_grouped_chapters">Sklopi grupirana poglavlja</string>
 </resources>

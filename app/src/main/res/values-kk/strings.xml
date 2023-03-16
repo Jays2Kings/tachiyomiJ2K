@@ -517,4 +517,5 @@
     <string name="allow_deleting_bookmarked_chapters">Бетбелгіленген тарауларды жоюға рұқсат беру</string>
     <string name="appwidget_updates_description">Жақында кітапханада жаңартылған жазбаларды қарау</string>
     <string name="appwidget_unavailable_locked">Биометриялық бұғаттау қосылып тұрғанда виджет қолжетімді емес</string>
+    <string name="hide_in_library_items">Кітапханада бар туындыларды жасыру</string>
 </resources>

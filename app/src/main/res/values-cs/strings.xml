@@ -1087,4 +1087,7 @@
     <string name="failed_to_update_">Nepodařilo se aktualizovat %1$s</string>
     <string name="show_more_chapters">Zobrazit další kapitoly</string>
     <string name="collapse_grouped_chapters">Sbalit seskupené kapitoly</string>
+    <string name="by_week">Podle týdne</string>
+    <string name="by_day">Podle dne</string>
+    <string name="by_series">Podle série</string>
 </resources>

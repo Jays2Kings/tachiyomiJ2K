@@ -1060,4 +1060,7 @@
     <string name="failed_to_update_">%1$s güncellenemedi</string>
     <string name="show_more_chapters">Daha fazla bölüm göster</string>
     <string name="collapse_grouped_chapters">Gruplanan bölümleri daralt</string>
+    <string name="by_series">Seriye göre</string>
+    <string name="by_week">Haftaya göre</string>
+    <string name="by_day">Güne göre</string>
 </resources>

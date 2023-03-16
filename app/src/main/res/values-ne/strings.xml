@@ -20,7 +20,7 @@
     <string name="history">इतिहास</string>
     <string name="clear_history">इतिहास हटाउनुहोस्</string>
     <string name="sources">स्रोतहरू</string>
-    <string name="cover_updated">कभर अपडेट भयो</string>
+    <string name="cover_updated">आवरण अपडेट भयो</string>
     <string name="next_chapter_not_found">अर्को अध्याय भेटिएन</string>
     <string name="use_image_as_cover">यो छवि कभरको रूपमा राख्न चाहनुहुन्छ\?</string>
     <string name="reading_mode">पढ्ने मोड</string>
@@ -30,7 +30,7 @@
     <string name="actions">कार्यहरू</string>
     <string name="pref_highest">उच्चतम</string>
     <string name="failed_to_update_cover">कभर अपडेट गर्न असफल</string>
-    <string name="cover_saved">कभर बचत भयो</string>
+    <string name="cover_saved">आवरण बचत भयो</string>
     <string name="rereading">फेरी पढ्दै</string>
     <string name="reading_list">पढ्ने सूची</string>
     <string name="migrate">स्थानान्तरण</string>
@@ -136,8 +136,8 @@
     <string name="trust">भरोसा</string>
     <string name="untrusted">अविश्वसनीय</string>
     <string name="uninstall">स्थापना रद्द गर्नुहोस्</string>
-    <string name="ext_installer_shizuku_stopped">शीजुकु चलिरहेको छैन</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">शीजुकुलाई एक्सटेनशन इंस्टलरको रूपमा प्रयोग गर्न शीजुकु स्थापना गर्नुहोस् र सुरु गर्नुहोस्।</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku चलिरहेको छैन</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Shizuku लाई एक्सटेनशन इंस्टलरको रूपमा प्रयोग गर्न Shizuku स्थापना गर्नुहोस् र सुरु गर्नुहोस्।</string>
     <string name="untrusted_extension">अविश्वसनीय एक्सटेनशन</string>
     <string name="untrusted_extension_message">यो एक्सटेनशन एक अविश्वसनीय प्रमाणपत्र संग हस्ताक्षर गरिएको थियो र सक्रिय गरिएको थिएन।
 \n
@@ -153,7 +153,7 @@
         <item quantity="one">एक्सटेनशन अपडेट उपलब्ध छ</item>
         <item quantity="other">%d एक्सटेनशन अपडेटहरु उपलब्ध छन्</item>
     </plurals>
-    <string name="set_as_cover">कभरको रूपमा सेट गर्नुहोस्</string>
+    <string name="set_as_cover">आवरणको रूपमा सेट गर्नुहोस्</string>
     <string name="finished_chapter">सकिएको:</string>
     <string name="current_chapter">वर्तमान:</string>
     <string name="next_title">अर्को:</string>
@@ -239,8 +239,8 @@
         <item quantity="one">अर्को नपढिएको अध्याय</item>
         <item quantity="other">अर्को %d नपढिएका अध्यायहरु</item>
     </plurals>
-    <string name="error_saving_cover">कभर बचत गर्न असफल</string>
-    <string name="error_sharing_cover">कभर साझा गर्न असफल</string>
+    <string name="error_saving_cover">आवरण बचत गर्दा त्रुटि भयो</string>
+    <string name="error_sharing_cover">आवरण साझा गर्दा त्रुटि भयो</string>
     <string name="set_as_default">पूर्वनिर्धारित रूपमा सेट गर्नुहोस्</string>
     <string name="tracking">ट्र्याकिङ</string>
     <string name="tracked">ट्र्याक गरिएको</string>

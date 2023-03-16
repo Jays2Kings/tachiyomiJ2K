@@ -207,7 +207,7 @@
     <string name="new_version_available">नया अद्यतन उपलब्ध है!</string>
     <string name="ignore">नज़रअंदाज़ करे</string>
     <string name="no_new_updates_available">कोई नया अद्यतन उपलब्ध नहीं है</string>
-    <string name="searching_for_updates">अद्यतन ढूंढ रहे हैं</string>
+    <string name="searching_for_updates">अपडेट्स ढूंढ रहे हैं…</string>
     <string name="download_complete">डाउनलोड सम्पन्न हुआ</string>
     <string name="download_error">डाउनलोड त्रुटि</string>
     <string name="update_available">अद्यतन उपलब्ध है</string>
@@ -472,9 +472,9 @@
     <string name="comic">कॉमिक</string>
     <string name="new_chapters">नए अध्याय</string>
     <string name="all_files_permission_required">फाइल की अनुमति चाहिए</string>
-    <string name="external_storage_permission_notice">ताचियोमी को एंड्राइड ११ में फाइल अनुमति चाहिए ताकि वो चैप्टर डाउनलोड कर सके, आटोमेटिक बैकअप बना सके और लोकल माँगा पढ़ सके 
+    <string name="external_storage_permission_notice">ताचियोमी को एंड्राइड ११ में फाइल अनुमति चाहिए ताकि वो चैप्टर डाउनलोड कर सके, आटोमेटिक बैकअप बना सके और लोकल माँगा पढ़ सके
 \n
-\nअगले स्क्रीन में, सारे फाइल को एक्सेस करने की अनुमति को सेलेक्ट करे</string>
+\nअगले स्क्रीन पर, सारे फाइल को एक्सेस करने की अनुमति को सेलेक्ट करे</string>
     <string name="manhwa">माणःवा</string>
     <string name="not_started">शुरू नहीं हुआ हैं</string>
     <string name="external_storage_download_notice">ताचियोमी ज २ क को सारे फाइल को एक्सेस करने की अनुमति चाहिए ताकि वो नए चैप्टर डाउनलोड कर सके. यहाँ पे क्लिक करके \" सारे फाइल को एक्सेस करने की अनुमति दे \"</string>
@@ -577,14 +577,14 @@
     <string name="complete_list">पूरी सूची</string>
     <string name="unfinished_list">अधूरी सूची</string>
     <string name="show_categories_while_filtering">फ़िल्टर करते समय रिक्त श्रेणियाँ दिखाएँ</string>
-    <string name="confirm_category_deletion_message">इस श्रेणी का मंगा डिफ़ॉल्ट श्रेणी में चला जाएगा।</string>
+    <string name="confirm_category_deletion_message">इस श्रेणी के मांगा, डिफ़ॉल्ट श्रेणी में चले जायेंगे।</string>
     <string name="add_categories">श्रेणियाँ जोड़ें</string>
     <string name="add_edit_categories">श्रेणियाँ जोड़ें/संपादित करें</string>
     <string name="manage_category">श्रेणी प्रबंधित करें</string>
     <string name="category_cannot_be_blank">श्रेणी नाम रिक्त नहीं हो सकता</string>
     <string name="category_deleted">श्रेणी हटाई गई</string>
     <string name="jump_to_category">श्रेणी में जाएँ</string>
-    <string name="release_page">रिलीज़ पृष्ठ</string>
+    <string name="release_page">रिलीज़ पेज</string>
     <string name="library_search_hint">शीर्षक, टैग, स्रोत खोजें</string>
     <string name="no_description">कोई विवरण नहीं</string>
     <string name="webtoon_side_padding_5">५%</string>
@@ -609,7 +609,7 @@
     <string name="long_press_category">किसी श्रेणी को बदल ने के लिए दबाकर रखें</string>
     <string name="could_not_install_update">अपडेट इंस्टॉल नहीं किया जा सका</string>
     <string name="show_all_categories">सभी श्रेणियां दिखाएं</string>
-    <string name="when_grouping_by_sources_tags">स्रोतों, स्थिति, आदि द्वारा पुस्तकालय को समूहित करते समय।</string>
+    <string name="when_grouping_by_sources_tags">स्रोतों, स्थिति, आदि द्वारा लाइब्रेरी को ग्रुप करते समय।</string>
     <string name="no_matches_for_filters">आपके वर्तमान फ़िल्टर के लिए कोई मिलान नहीं मिला</string>
     <string name="always_show_current_category">हमेशा वर्तमान श्रेणी दिखाएं</string>
     <string name="expand_collapse_all_categories">सभी श्रेणियों का विस्तार/संक्षिप्त करें</string>
@@ -618,4 +618,10 @@
     <string name="statistics">आंकड़े</string>
     <string name="appwidget_unavailable_locked">ऐप लॉक लागू होने पर विजेट उपलब्ध नहीं होता</string>
     <string name="updating_">%1$s अपडेट किया जा रहा</string>
+    <string name="move_dynamic_to_bottom">बंद डायनेमिक कैटेगरी को नीचे भेजे</string>
+    <string name="expand_all_categories">सारे कैटेगरी को खोले</string>
+    <string name="collapse_all_categories">सारे कैटेगरी को बंद करे</string>
+    <string name="search_globally">ग्लोबल पर %1$s खोजें</string>
+    <string name="view_all">सारा देखे</string>
+    <string name="series">सीरीज</string>
 </resources>

@@ -745,7 +745,7 @@
     <string name="search_">搜索 %1$s</string>
     <string name="group_chapters_together">将章节分组在一起</string>
     <string name="show_updated_time">显示更新时间</string>
-    <string name="fetched_">已取得 %1$s</string>
+    <string name="fetched_">%1$s获取</string>
     <string name="updates_and_history">更新和历史</string>
     <string name="your_library">你的书架</string>
     <string name="no_chapters_to_delete">没有要删除的章节</string>

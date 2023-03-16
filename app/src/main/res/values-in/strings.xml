@@ -1034,4 +1034,7 @@
     <string name="hide_in_library_items">semua yang di sembunyikan sudah ada di pustaka</string>
     <string name="show_more_chapters">Tampilkan lebih banyak</string>
     <string name="collapse_grouped_chapters">Hilangkan chapter yang digabung</string>
+    <string name="by_week">Berrdasarkan minggu</string>
+    <string name="by_series">Berdasarkan seri</string>
+    <string name="by_day">Berdasarkan hari</string>
 </resources>

@@ -264,7 +264,7 @@
     <string name="current_chapter">目前章節：</string>
     <string name="previous_title">上一章：</string>
     <string name="could_not_download_unexpected_error">下載時發生不可預期的錯誤</string>
-    <string name="lock_with_biometrics">生物特徵辨識鎖定</string>
+    <string name="lock_with_biometrics">需要生物辨識解鎖</string>
     <string name="lock_when_idle">閒置時鎖定</string>
     <string name="creating_backup">正在建立備份</string>
     <string name="network">網路</string>
@@ -513,7 +513,7 @@
     <string name="no_match_found">未找到匹配項</string>
     <string name="name">名稱</string>
     <string name="top">頂端</string>
-    <string name="create_folders_by_manga_title">根據漫畫標題建立資料夾</string>
+    <string name="create_folders_by_manga_title">根據漫畫名稱建立資料夾</string>
     <string name="yotsuba">四葉</string>
     <string name="tako">章魚</string>
     <string name="locked_portrait">鎖定直向</string>
