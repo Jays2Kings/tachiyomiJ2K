@@ -1016,4 +1016,6 @@
     <string name="allow_deleting_bookmarked_chapters">Verwijderen van hoofdstukken met bladwijzers toestaan</string>
     <string name="appwidget_updates_description">Recentelijk bijgewerkte items in de bibliotheek bekijken</string>
     <string name="appwidget_unavailable_locked">Widget niet beschikbaar wanneer app-vergrendeling aan staat</string>
+    <string name="updates_last_update_info">Laatste update bibliotheek: %s</string>
+    <string name="hide_in_library_items">Verberg manga die al in de bibliotheek staat</string>
 </resources>

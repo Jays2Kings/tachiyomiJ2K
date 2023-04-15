@@ -237,7 +237,7 @@
     <string name="cover_updated">อัปเดตปกแล้ว</string>
     <string name="page_">หน้า %1$d</string>
     <string name="next_chapter_not_found">ไม่พบตอนต่อไป</string>
-    <string name="decode_image_error">ไม่สามารถถอดรหัสภาพนี้ได้</string>
+    <string name="decode_image_error">ไม่สามารถโหลดภาพนี้ได้</string>
     <string name="use_image_as_cover">ใช้ภาพนี้เป็นภาพหน้าปก\?</string>
     <string name="finished_chapter">อ่านจบแล้ว:</string>
     <string name="current_chapter">ปัจจุบัน:</string>
@@ -747,7 +747,7 @@
     <string name="not_started">ยังไม่เริ่ม</string>
     <string name="unknown_status">ไม่ระบุสถานะ</string>
     <string name="unlock_library">ปลดล็อกเพื่อเข้าถึงคลัง</string>
-    <string name="lock_with_biometrics">ล็อกด้วยข้อมูลทางชีวภาพ</string>
+    <string name="lock_with_biometrics">จำเป็นต้องปลดล็อก</string>
     <string name="last_read_chapter_">ตอนที่อ่านล่าสุด %1$s</string>
     <string name="chapter_x_of_y">ตอนที่ %1$d จาก %2$d</string>
     <string name="all_chapters_read">อ่านทุกตอนแล้ว</string>
@@ -968,7 +968,7 @@
     <string name="pref_lowest">ช้ามาก</string>
     <string name="download_notifier_split_page_not_found">ไม่พบหน้า %d ขณะกำลังแยกหน้า</string>
     <string name="download_notifier_split_failed">ไม่สามารถแยกภาพที่ดาวน์โหลดไว้ได้</string>
-    <string name="split_tall_images">แยกรูปภาพสูงยาว</string>
+    <string name="split_tall_images">แยกภาพสูงยาว</string>
     <string name="split_tall_images_summary">เพิ่มประสิทธิภาพตัวอ่าน</string>
     <string name="reading_list">รายการที่กำลังอ่าน</string>
     <string name="wish_list">รายการที่อยากอ่าน</string>
@@ -1034,4 +1034,8 @@
     <string name="hide_in_library_items">ซ่อนรายการที่มีอยู่ในคลังอยู่แล้ว</string>
     <string name="show_more_chapters">แสดงตอนเพิ่มเติม</string>
     <string name="collapse_grouped_chapters">ยุบตอนที่จัดกลุ่มไว้</string>
+    <string name="by_series">ตามเรื่อง</string>
+    <string name="by_week">ตามสัปดาห์</string>
+    <string name="by_day">ตามวัน</string>
+    <string name="updates_last_update_info">อัปเดตคลังล่าสุด: %s</string>
 </resources>

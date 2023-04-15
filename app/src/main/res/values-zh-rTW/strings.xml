@@ -212,7 +212,7 @@
     <string name="score">評分</string>
     <string name="title">標題</string>
     <string name="options">選項</string>
-    <string name="decode_image_error">無法解碼該圖片</string>
+    <string name="decode_image_error">圖片無法載入</string>
     <string name="must_be_in_library_to_edit">請先將漫畫收藏至書櫃再進行更新</string>
     <string name="select_backup_file">選擇備份檔案</string>
     <string name="cover_of_image">漫畫封面</string>
@@ -264,7 +264,7 @@
     <string name="current_chapter">目前章節：</string>
     <string name="previous_title">上一章：</string>
     <string name="could_not_download_unexpected_error">下載時發生不可預期的錯誤</string>
-    <string name="lock_with_biometrics">需要生物辨識解鎖</string>
+    <string name="lock_with_biometrics">上鎖應用程式</string>
     <string name="lock_when_idle">閒置時鎖定</string>
     <string name="creating_backup">正在建立備份</string>
     <string name="network">網路</string>
@@ -664,7 +664,7 @@
     <string name="pref_low">低</string>
     <string name="pref_lowest">最低</string>
     <string name="download_notifier_split_failed">無法分割下載的圖片</string>
-    <string name="split_tall_images">自動分割過高圖片</string>
+    <string name="split_tall_images">分割過高的圖片</string>
     <string name="split_tall_images_summary">用以改善閱讀器效能</string>
     <string name="download_notifier_split_page_not_found">分割時找不到第 %d 頁</string>
     <string name="reading_list">閱讀清單</string>
@@ -1033,4 +1033,8 @@
     <string name="tag">標籤</string>
     <string name="use_default">使用默認</string>
     <string name="view_all">查看全部</string>
+    <string name="by_series">依系列</string>
+    <string name="by_week">依週別</string>
+    <string name="by_day">依天</string>
+    <string name="updates_last_update_info">書櫃更新於：%s</string>
 </resources>

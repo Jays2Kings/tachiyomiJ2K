@@ -271,7 +271,7 @@
     <string name="burn_darken">Burn / Gelapkan</string>
     <string name="help">Bantuan</string>
     <string name="no_results_found">Hasil tidak ditemukan</string>
-    <string name="lock_with_biometrics">Kunci dengan biometrik</string>
+    <string name="lock_with_biometrics">Memerlukan buka kunci</string>
     <string name="lock_when_idle">Kunci saat diam</string>
     <string name="copy_value">Salin</string>
     <string name="date_format">Format tanggal</string>
@@ -824,7 +824,7 @@
     <string name="update_completed">Pembaruan selesai</string>
     <string name="not_bookmarked">Tak ditandai</string>
     <string name="external_storage_download_notice">TachiyomiJ2K membutuhkan akses semua berkas untuk mengunduh bab. Ketuk di sini, lalu izinkan \"Izinkan akses untuk mengatur semua berkas.\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses ke semua berkas di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan membaca manga lokal.
+    <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses ke semua berkas di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan memuat manga lokal.
 \n
 \nPada layar selanjutnya, izinkan \"Izinkan akses untuk mengatur semua berkas\"</string>
     <string name="restrictions_">Pembatasan: %1$s</string>
@@ -854,7 +854,7 @@
     <string name="name">Nama</string>
     <string name="getting_started_guide">Panduan awal mulai</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">Melewati %d bab, entah mungkin sumber kehilangan bab tersebut atau karena sudah difilter</item>
+        <item quantity="other">Melewati %d bab, entah sumbernya hilang atau telah difilter</item>
     </plurals>
     <string name="help_translate">Bantu terjemahkan</string>
     <string name="helpful_translation_links">Tautan terjemahan yang membantu</string>
@@ -968,7 +968,7 @@
     <string name="pref_lowest">Terendah</string>
     <string name="download_notifier_split_page_not_found">Halaman %d tidak ditemukan saat dipisah</string>
     <string name="download_notifier_split_failed">Tidak bisa memisah gambar yang telah diunduh</string>
-    <string name="split_tall_images">Membagi gambar panjang secara otomatis</string>
+    <string name="split_tall_images">Potong gambar tinggi</string>
     <string name="split_tall_images_summary">Meningkatkan kinerja pembaca</string>
     <string name="reading_list">Daftar Bacaan</string>
     <string name="wish_list">Daftar Keinginan</string>
@@ -1037,4 +1037,6 @@
     <string name="by_week">Berrdasarkan minggu</string>
     <string name="by_series">Berdasarkan seri</string>
     <string name="by_day">Berdasarkan hari</string>
+    <string name="updates_last_update_info">Pustaka terakhir diperbarui: %s</string>
+    <string name="gray_background">Abu-abu</string>
 </resources>

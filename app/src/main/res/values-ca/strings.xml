@@ -646,4 +646,5 @@
     <string name="hide_in_library_items">Amaga els elements que ja són a la biblioteca</string>
     <string name="allow_deleting_bookmarked_chapters">Permet la supressió dels capítols marcats</string>
     <string name="trackers">Seguidors</string>
+    <string name="updates_last_update_info">Biblioteca actualitzada per darrera vegada: %s</string>
 </resources>

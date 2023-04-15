@@ -187,7 +187,7 @@
     <string name="cover_updated">표지 업데이트됨</string>
     <string name="page_">페이지: %1$d</string>
     <string name="next_chapter_not_found">다음 챕터가 없습니다</string>
-    <string name="decode_image_error">이미지를 디코드 할 수 없습니다</string>
+    <string name="decode_image_error">이미지를 로드할 수 없습니다</string>
     <string name="use_image_as_cover">이 이미지를 표지로 설정하시겠습니까\?</string>
     <string name="finished_chapter">완료:</string>
     <string name="current_chapter">현재:</string>
@@ -389,7 +389,7 @@
     <string name="publishing_finished">완결됨</string>
     <string name="on_hiatus">휴재</string>
     <string name="cancelled">취소됨</string>
-    <string name="lock_with_biometrics">생체잠금 해제 필요</string>
+    <string name="lock_with_biometrics">잠금 해제 필요</string>
     <string name="source_unsupported">지원되지 않는 소스입니다</string>
     <string name="chapter_not_found">회차를 찾을 수 없습니다</string>
     <string name="no_results_found">검색 결과가 없습니다</string>
@@ -574,7 +574,7 @@
     <string name="pref_high">높음</string>
     <string name="pref_low">낮음</string>
     <string name="pref_lowest">매우 낮음</string>
-    <string name="split_tall_images">큰 이미지 분할</string>
+    <string name="split_tall_images">긴 이미지 분할</string>
     <string name="split_tall_images_summary">리더 성능 향상</string>
     <string name="wish_list">위시리스트</string>
     <string name="reading_list">읽을 목록</string>
@@ -1033,4 +1033,6 @@
     </plurals>
     <string name="failed_to_update_">%1$s의 업데이트에 실패했습니다.</string>
     <string name="no_data_for_filters">현재 필터 상태에서 아무런 정보를 찾지 못 함.</string>
+    <string name="updates_last_update_info">마지막 서재 업데이트: %s</string>
+    <string name="gray_background">회색</string>
 </resources>

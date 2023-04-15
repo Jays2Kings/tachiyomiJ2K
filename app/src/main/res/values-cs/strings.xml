@@ -115,7 +115,7 @@
     <string name="options">Možnosti</string>
     <string name="page_">Stránka: %1$d</string>
     <string name="next_chapter_not_found">Další kapitola nenalezena</string>
-    <string name="decode_image_error">Obrázek nemohl být dekódován</string>
+    <string name="decode_image_error">Obrázek se nepodařilo načíst</string>
     <string name="finished_chapter">Dokončeno:</string>
     <string name="current_chapter">Aktuální:</string>
     <string name="next_title">Následující:</string>
@@ -319,7 +319,7 @@
     <string name="l_nav">Ve tvaru písmene L</string>
     <string name="unofficial_extension_message">Toto rozšíření není z oficiálního seznamu rozšíření pro Tachiyomi.</string>
     <string name="secure_screen">Chráněná obrazovka</string>
-    <string name="lock_with_biometrics">Uzamknout pomocí biometrie</string>
+    <string name="lock_with_biometrics">Vyžadovat odemknutí</string>
     <string name="updating_library">Aktualizuji knihovnu</string>
     <string name="myanimelist_relogin">Prosím přihlašte se do MAL znovu</string>
     <string name="kindlish_nav">Podobné Kindlu</string>
@@ -655,7 +655,7 @@
     <string name="getting_started_guide">Příručka Začínáme</string>
     <string name="help_translate">Pomozte s překladem</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Přeskočena 1 kapitola, buď chybí ve zdroji nebo byla vyfiltrována</item>
+        <item quantity="one">Přeskočena %d kapitola, buď chybí ve zdroji nebo byla vyfiltrována</item>
         <item quantity="few">Přeskočeny %d kapitoly, buď chybí ve zdroji nebo byly vyfiltrovány</item>
         <item quantity="other">Přeskočeno %d kapitol, buď chybí ve zdroji nebo byly vyfiltrovány</item>
     </plurals>
@@ -1090,4 +1090,6 @@
     <string name="by_week">Podle týdne</string>
     <string name="by_day">Podle dne</string>
     <string name="by_series">Podle série</string>
+    <string name="updates_last_update_info">Poslední aktualizace knihovny: %s</string>
+    <string name="gray_background">Šedá</string>
 </resources>

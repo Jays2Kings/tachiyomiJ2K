@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Ulamlar</string>
+    <string name="categories">Kategoriler</string>
     <string name="manga">Manga</string>
     <string name="chapters">Bölümler</string>
     <string name="tracking">İzleme</string>
@@ -228,7 +228,7 @@
     <string name="cover_updated">Kapak güncellendi</string>
     <string name="page_">Sayfa: %1$d</string>
     <string name="next_chapter_not_found">Sonraki bölüm bulunamadı</string>
-    <string name="decode_image_error">Görsel kodu çözülemedi</string>
+    <string name="decode_image_error">Görsel yüklenemedi</string>
     <string name="use_image_as_cover">Bu görseli kapak olarak ayarlamak istiyor musunuz?</string>
     <string name="migrate">Geçiş yap</string>
     <string name="new_chapters_found">Yeni bölümler bulundu</string>
@@ -271,7 +271,7 @@
     <string name="burn_darken">Yakma / Karartma</string>
     <string name="help">Yardım</string>
     <string name="no_results_found">Sonuç bulunmadı</string>
-    <string name="lock_with_biometrics">Biyometriyle kilitle</string>
+    <string name="lock_with_biometrics">Kilit açma gerektirir</string>
     <string name="lock_when_idle">Boştayken kilitle</string>
     <string name="update">Güncelle</string>
     <string name="updating_library">Kitaplık güncelleniyor</string>
@@ -877,8 +877,8 @@
     <string name="teal_ocean">Mavi Okyanus</string>
     <string name="appearance">Görünüm</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 bölüm atlanıyor, ya kaynakta yok ya da filtrelenmiş</item>
-        <item quantity="other">%d bölüm atlanıyor, ya kaynakta yok ya da filtrelenmiş</item>
+        <item quantity="one">%d bölüm atlanıyor, ya kaynakta yok ya da süzgeçlenmiş</item>
+        <item quantity="other">%d bölüm atlanıyor, ya kaynakta yok ya da süzgeçlenmiş</item>
     </plurals>
     <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
     <string name="help_translate">Çeviriye yardım edin</string>
@@ -1063,4 +1063,5 @@
     <string name="by_series">Seriye göre</string>
     <string name="by_week">Haftaya göre</string>
     <string name="by_day">Güne göre</string>
+    <string name="updates_last_update_info">Kitaplık son güncelleme zamanı: %s</string>
 </resources>

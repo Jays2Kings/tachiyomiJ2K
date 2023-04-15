@@ -184,7 +184,7 @@
     <string name="cover_updated">Đã cập nhật ảnh bìa</string>
     <string name="page_">Trang: %1$d</string>
     <string name="next_chapter_not_found">Không tìm thấy chương kế tiếp</string>
-    <string name="decode_image_error">Không thể giải mã ảnh</string>
+    <string name="decode_image_error">Hình ảnh không thể hiển thị được</string>
     <string name="use_image_as_cover">Bạn có chắc muốn đặt ảnh này làm ảnh bìa?</string>
     <!-- Backup fragment -->
     <string name="backup">Sao lưu</string>
@@ -302,7 +302,7 @@
     <string name="multiply">Nhân</string>
     <string name="help">Trợ giúp</string>
     <string name="no_results_found">Không tìm thấy kết quả nào</string>
-    <string name="lock_with_biometrics">Bảo mật sinh trắc học</string>
+    <string name="lock_with_biometrics">Khóa ứng dụng</string>
     <string name="lock_when_idle">Khóa khi chạy nền</string>
     <string name="refresh_tracking">Làm mới theo dõi</string>
     <string name="copy_value">Sao chép</string>
@@ -1003,7 +1003,7 @@
     <string name="learn_why">Tìm hiểu lý do</string>
     <string name="download_notifier_split_page_not_found">Trang %d không thể được tìm thấy khi chia cắt</string>
     <string name="download_ahead">Tải Trước</string>
-    <string name="split_tall_images">Tự động chia cắt những ảnh quá dài</string>
+    <string name="split_tall_images">Tách ra những hình ảnh dài</string>
     <string name="split_tall_images_summary">Cải thiện khả năng đọc bằng việc cắt nhỏ các ảnh quá dài</string>
     <string name="reading_list">Danh sách đang đọc</string>
     <string name="download_ahead_info">Tải trước chỉ áp dụng cho các mục ở trong thư viện và nếu chương cuối cùng đã được tải rồi</string>
@@ -1060,4 +1060,6 @@
     <string name="skip_dupe_chapters">Bỏ qua chương đúp</string>
     <string name="allow_deleting_bookmarked_chapters">Cho phép xóa các chương đã đánh dấu</string>
     <string name="appwidget_unavailable_locked">Tiện ích không còn khả dụng khi khóa ứng dụng đang bật</string>
+    <string name="updates_last_update_info">Thư viện lần cuối được cập nhật:%s</string>
+    <string name="appwidget_updates_description">Xem các bộ truyện được cập nhật gần đây</string>
 </resources>

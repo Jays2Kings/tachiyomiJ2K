@@ -223,7 +223,7 @@
     <string name="unknown_error">Паллӑ мар йӑнӑш</string>
     <string name="picture_saved">Ӳкерчӗке упранӑ</string>
     <string name="options">Виҫесем</string>
-    <string name="loading">Тиени…</string>
+    <string name="loading">Тийени…</string>
     <string name="download_unread">Вуламаннине</string>
     <string name="charging">Тулать</string>
     <string name="fifth_to_last">Вуланӑ сыпӑкран пиллӗкмӗшӗ</string>
@@ -247,7 +247,7 @@
     <string name="creating_backup">Янтӑв тӑвӑнать</string>
     <string name="backup_created">Янтӑв тӑвӑннӑ</string>
     <string name="backup">Янтӑв</string>
-    <string name="secure_screen">Сыхлав ыкранӗ</string>
+    <string name="secure_screen">Ыкран сыхлавӗ</string>
     <string name="check_for_updates">Ҫӗнетӳсем пуррине тӗрӗсле</string>
     <string name="system_default">Системри пекех</string>
     <string name="migrate">Куҫар</string>
@@ -301,8 +301,8 @@
         <item quantity="one">%1$s сыпӑк</item>
         <item quantity="other">%1$s сыпӑк</item>
     </plurals>
-    <string name="lock_when_idle">Кӗтмелли тытӑмра ҫаклатса лартмалла</string>
-    <string name="lock_with_biometrics">Алӑ йӗрпе ҫаклатса ларт</string>
+    <string name="lock_when_idle">Ним туман чух ҫаклатни</string>
+    <string name="lock_with_biometrics">Ҫаклатӑва уҫма пӳрне йӗрӗ ыйтни</string>
     <string name="completed">Вӗҫленӗ</string>
     <string name="licensed">Лиссенсиленӗ</string>
     <string name="unknown_status">Паллӑ мар хал</string>
@@ -430,7 +430,7 @@
     <string name="no_pages_found">Элсем тупӑнман</string>
     <string name="label_global_search">Пур ҫӗрте шыра</string>
     <string name="remove_all_downloads">Пур тиеве катертмелле-и\?</string>
-    <string name="cancel_all_for_series">Ҫак серилӗх валли веҫ пӑрахӑҫла</string>
+    <string name="cancel_all_for_series">Ҫак серилӗх валли пурне те пӑрахӑҫла</string>
     <string name="all_files_permission_required">Файлсене курма ирӗк памалла</string>
     <string name="by_chapter_number">Сыпӑк шучӗпе</string>
     <string name="by_update_date">Тиесе илни вӑхӑчӗпе</string>
@@ -448,7 +448,7 @@
     <string name="incognito_mode">Вӑрттӑнлӑх тытӑмӗ</string>
     <string name="log_out">Тух</string>
     <string name="log_out_from_">“%1$s тухмалла-и\?</string>
-    <string name="hide_notification_content">Систерӳсен мӗн ҫырнине пытар</string>
+    <string name="hide_notification_content">Систерӳсенче мӗн ҫырнине пытарни</string>
     <string name="webview_is_required">Tachiyomi валли WebView кирлӗ</string>
     <string name="include_">Ҫут: %s</string>
     <string name="reading_mode">Вулав тытӑмӗ</string>
@@ -464,7 +464,7 @@
     <string name="clear_history">Кун-ҫул тасат</string>
     <string name="clear_history_completed">Кун-ҫула катертнӗ</string>
     <string name="clear_history_confirmation">Чӑнах катертесшӗн-и\? Веҫ кун-ҫулӗ ҫухалӗ.</string>
-    <string name="pref_manage_notifications">Систерӳсене ӗнерле</string>
+    <string name="pref_manage_notifications">Систерӳсене ӗнер</string>
     <string name="downloaded_chapters">Тиесе илнӗ сыпӑксем</string>
     <plurals name="after_minutes">
         <item quantity="one">1 минут хыҫҫӑн%1$s минут хыҫҫӑн</item>
@@ -476,9 +476,9 @@
         <item quantity="one">Ҫӗнӗ сыпӑксем 1 хайлав валли тупӑннӑҪӗнӗ сыпӑксем %d хайлав валли тупӑннӑ</item>
         <item quantity="other"/>
     </plurals>
-    <string name="secure_screen_summary">Тепӗр хушӑмсем ҫине куҫнӑ чух ку хушӑмӑн мӗн пуррине пытар тата скриншот тума чар</string>
+    <string name="secure_screen_summary">Ыкран сыхлавӗ тепӗр апсем ҫине куҫнӑ чух ку апӑн мӗн пуррине пытарать тата ыкрана сӑн ҫапма чарать</string>
     <string name="tap_to_see_details">Йӑнӑшсене кӑтарт</string>
-    <string name="pref_update_only_non_completed">Тухакан манкка ҫеҫ ҫӗнетмелле</string>
+    <string name="pref_update_only_non_completed">Серилӗх вӗҫленнӗ</string>
     <string name="faq_and_guides">Кӑтартусем тата ыйту-хурав</string>
     <string name="start_downloading_now">Тиеве халь пуҫла</string>
     <string name="move_series_to_top">Серие пуҫламӑша куҫар</string>

@@ -15,7 +15,7 @@
     <string name="extension_info">Πληροφορίες επέκτασης</string>
     <string name="filter">Φίλτρο</string>
     <string name="downloaded">Λήψεις</string>
-    <string name="bookmarked">Σελιδοδείκτες</string>
+    <string name="bookmarked">Με σελιδοδείκτη</string>
     <string name="unread">Αδιάβαστα</string>
     <string name="read">Διαβασμένα</string>
     <string name="alphabetically">Αλφαβητικά</string>
@@ -228,7 +228,7 @@
     <string name="cover_updated">Το εξώφυλλο ενημερώθηκε</string>
     <string name="page_">Σελίδα: %1$d</string>
     <string name="next_chapter_not_found">Το επόμενο κεφάλαιο δεν βρέθηκε</string>
-    <string name="decode_image_error">Δεν ήταν δυνατή η αποκωδικοποίηση της εικόνας</string>
+    <string name="decode_image_error">Δεν ήταν δυνατή η φόρτωση της εικόνας</string>
     <string name="use_image_as_cover">Θέλετε να ορίσετε αυτήν την εικόνα ως εξώφυλλο;</string>
     <string name="finished_chapter">Διαβασμένο:</string>
     <string name="current_chapter">Τρέχον:</string>
@@ -267,7 +267,7 @@
     <string name="multiply">Πολλαπλασιαζμός</string>
     <string name="screen">Οθόνη</string>
     <string name="help">Βοήθεια</string>
-    <string name="lock_with_biometrics">Κλείδωμα με βιομετρικά στοιχεία</string>
+    <string name="lock_with_biometrics">Απαιτείται ξεκλείδωμα</string>
     <string name="lock_when_idle">Κλείδωμα όταν είναι αδρανής</string>
     <string name="update">Ενημέρωση</string>
     <string name="updating_library">Ενημέρωση βιβλιοθήκης</string>
@@ -424,7 +424,7 @@
         <item quantity="other">Διαγραφή %1$d κατεβασμένων κεφαλαίων;</item>
     </plurals>
     <string name="chapter_not_found">Το κεφάλαιο δε βρέθηκε</string>
-    <string name="chapters_removed">Κεφάλαια που αφαιρέθηκαν.</string>
+    <string name="chapters_removed">Κεφάλαια αφαιρέθηκαν.</string>
     <string name="removed_bookmark">Καταργήθηκε ο σελιδοδείκτης</string>
     <string name="marked_as_unread">Σημειώθηκε ως αδιάβαστο</string>
     <string name="marked_as_read">Σημειώθηκε ως διαβασμένο</string>
@@ -829,7 +829,7 @@
     <string name="external_storage_permission_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία στο Android 11 για να κατεβάζει κεφάλαια, να δημιουργεί αυτόματα αντίγραφα ασφαλείας και να διαβάζει τοπικά manga.
 \n
 \nΣτην επόμενη οθόνη, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
-    <string name="all_files_permission_required">Απαιτούνται δικαιώματα αρχείου</string>
+    <string name="all_files_permission_required">Απαιτείται άδεια πρόσβασης αρχείων</string>
     <string name="tako">Tako</string>
     <string name="a_calmer_you">A Calmer You (Δυναμικό)</string>
     <string name="warning">Προειδοποίηση</string>
@@ -877,7 +877,7 @@
     <string name="show_categories_while_filtering">Εμφάνιση κενών κατηγοριών κατά το φιλτράρισμα</string>
     <string name="getting_started_guide">Οδηγός για τα πρώτα βήματα</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Παραλείπεται 1 κεφάλαιο, είτε λείπει από την πηγή είτε έχει φιλτραριστεί</item>
+        <item quantity="one">Παραλείπεται %d κεφάλαιο, είτε λείπει από την πηγή είτε έχει φιλτραριστεί</item>
         <item quantity="other">Παραλείπονται %d κεφάλαια, είτε λείπουν από την πηγή είτε έχουν φιλτραριστεί</item>
     </plurals>
     <string name="helpful_translation_links">Χρήσιμοι σύνδεσμοι μετάφρασης</string>
@@ -907,7 +907,7 @@
     <string name="classic_blue">Κλασικό Μπλε</string>
     <string name="lime_time">Lime Time</string>
     <string name="enhanced_services">Βελτιωμένες υπηρεσίες</string>
-    <string name="publishing_finished">Η έκδοσή ολοκληρώθηκε</string>
+    <string name="publishing_finished">Η έκδοση ολοκληρώθηκε</string>
     <string name="cancelled">Ακυρώθηκε</string>
     <string name="on_hiatus">Σε αναστολή</string>
     <string name="tracking_info">Μονόδρομος συγχρονισμός για ενημέρωση των υπηρεσιών παρακολούθησης προόδου κεφαλαίων. Ρυθμίστε την παρακολούθηση για μεμονωμένες καταχωρήσεις manga από το κουμπί παρακολούθησης τους.</string>
@@ -990,7 +990,7 @@
     <string name="pref_lowest">Χαμηλότερη</string>
     <string name="download_notifier_split_page_not_found">Η σελίδα %d δε βρέθηκε κατά τη διάσπαση</string>
     <string name="download_notifier_split_failed">Δεν ήταν δυνατή η διαίρεση της εικόνας που έχει ληφθεί</string>
-    <string name="split_tall_images">Αυτόματη διάσπαση ψηλών εικόνων</string>
+    <string name="split_tall_images">Διαχωρισμός ψηλών εικόνων</string>
     <string name="split_tall_images_summary">Βελτιώνει την απόδοση του αναγνώστη</string>
     <string name="reading_list">Λίστα ανάγνωσης</string>
     <string name="wish_list">Λίστα επιθυμιών</string>
@@ -1058,4 +1058,11 @@
     <string name="appwidget_unavailable_locked">Το widget δεν είναι διαθέσιμο όταν είναι ενεργοποιημένο το κλείδωμα εφαρμογών</string>
     <string name="mean_tracking_score">Μέση βαθμολογία παρακολούθησης</string>
     <string name="failed_to_update_">Αποτυχία ενημέρωσης %1$s</string>
+    <string name="collapse_grouped_chapters">Σύμτυξε ομαδοποιημένα κεφάλαια</string>
+    <string name="show_more_chapters">Εμφάνισε περισσότερα κεφάλαια</string>
+    <string name="by_series">Κατά σειρά</string>
+    <string name="by_week">Κατά εβδομάδα</string>
+    <string name="by_day">Κατά ημέρα</string>
+    <string name="updates_last_update_info">Τελευταία ενημέρωση βιβλιοθήκης: %s</string>
+    <string name="gray_background">Γκρι</string>
 </resources>

@@ -57,7 +57,7 @@
     <string name="sources">Avoti</string>
     <string name="advanced">Papildu iestatījumi</string>
     <string name="about">Par programmu</string>
-    <string name="lock_with_biometrics">Bloķēt ar biometriju</string>
+    <string name="lock_with_biometrics">Vajadzīgs atbloķēt</string>
     <string name="lock_when_idle">Bloķēt, ja dīkstāvē</string>
     <string name="security">Drošība</string>
     <string name="backup">Rezerves kopija</string>
@@ -270,7 +270,7 @@
     <string name="invalid_backup_file">Nederīgs dublējuma fails</string>
     <string name="website">Tīmekļa vietne</string>
     <string name="whats_new">Jaunumi</string>
-    <string name="split_tall_images">Automātiski sadalīt garus attēlus</string>
+    <string name="split_tall_images">Sadalīt augstus attēlus</string>
     <string name="pref_inverted_colors">Invertēts</string>
     <string name="pref_webtoon_side_padding">Sānu platums</string>
     <string name="l_nav">L formas</string>
@@ -293,7 +293,7 @@
     <string name="pref_clear_webview_data">Notīrīt WebView datus</string>
     <string name="webview_data_deleted">WebView dati notīrīti</string>
     <string name="database_clean">Datu bāze tīra</string>
-    <string name="split_tall_images_summary">Uzlabo lasītāja veiktspēju, sadalot garus lejupielādētus attēlus.</string>
+    <string name="split_tall_images_summary">Uzlabo lasītāja veiktspēju, sadalot garus lejupielādētus attēlus</string>
     <string name="pref_hide_threshold">Jutīgums, lai ritinājumā paslēptu izvēlni</string>
     <string name="pref_highest">Augstākais</string>
     <string name="pref_high">Augsts</string>
@@ -553,4 +553,24 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Lejupielādētās nodaļas</string>
     <string name="allow_deleting_bookmarked_chapters">Atļaut dzēst ar grāmatzīmēm atzīmētās nodaļas</string>
+    <string name="updates_last_update_info">Bibliotēka pēdējo reizi atjaunināta: %s</string>
+    <string name="download_ahead">Lejupielādēt uz priekšu</string>
+    <string name="appwidget_unavailable_locked">Logrīks nav pieejams, ja ir iespējota lietotņu bloķēšana</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="zero">Izlaisti %d nodaļu, vai nu to nav avotā, vai arī tie ir izfiltrēti</item>
+        <item quantity="one">Izlaists %d nodaļa, vai nu tā nav avotā, vai arī tā ir izfiltrēta</item>
+        <item quantity="other">Izlaistas %d nodaļas, vai nu tās nav avotā, vai arī tās ir izfiltrētas</item>
+    </plurals>
+    <string name="loader_rar5_error">RARv5 formāts netiek atbalstīts</string>
+    <string name="popular">Populārs</string>
+    <string name="appwidget_updates_description">Skatiet savus nesen atjauninātos bibliotēkas ierakstus</string>
+    <string name="error_user_agent_string_invalid">Nederīga lietotāja agent virkne</string>
+    <string name="auto_download_while_reading">Automātiska lejupielāde lasīšanas laikā</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="zero">Nākamā nelasītā nodaļa</item>
+        <item quantity="one">Nākamā nelasītā nodaļa</item>
+        <item quantity="other">Nākamās %d nelasītas nodaļas</item>
+    </plurals>
+    <string name="download_ahead_info">Darbojas tikai ar ierakstiem bibliotēkā un tad, ja pašreizējā un nākamā nodaļa jau ir lejupielādēta</string>
+    <string name="skipped_reason_not_always_update">Izlaists, jo sērijai nav nepieciešami atjauninājumi</string>
 </resources>

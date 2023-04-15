@@ -1143,4 +1143,5 @@
     <string name="local_titles">Lokalne tytuły</string>
     <string name="start_year">Rok rozpoczęcia</string>
     <string name="no_data_for_filters">Nie znaleziono danych dla bieżących filtrów</string>
+    <string name="updates_last_update_info">Biblioteka ostatnio aktualizowana: %s</string>
 </resources>

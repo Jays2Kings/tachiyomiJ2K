@@ -26,7 +26,7 @@
     <!-- Security -->
     <string name="unlock_library">Desbloqueie para acessar a Biblioteca</string>
     <string name="unlock">Desbloquear</string>
-    <string name="lock_with_biometrics">Bloqueio com impressão digital</string>
+    <string name="lock_with_biometrics">Exige desbloqueio</string>
     <string name="lock_when_idle">Bloquear quando ocioso</string>
     <!-- Chapters -->
     <string name="chapters">Capítulos</string>
@@ -43,14 +43,17 @@
     <string name="chapters_removed">Capítulos removidos.</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Remover %1$d capítulo baixado\?</item>
+        <item quantity="many">Remover %1$d capítulos baixados\?</item>
         <item quantity="other">Remover %1$d capítulos baixados\?</item>
     </plurals>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s capítulo</item>
+        <item quantity="many">%1$s capítulos</item>
         <item quantity="other">%1$s capítulos</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d página restante</item>
+        <item quantity="many">%1$d páginas restantes</item>
         <item quantity="other">%1$d páginas restantes</item>
     </plurals>
     <!-- Category -->
@@ -212,7 +215,7 @@
     <string name="cover_updated">Capa atualizada</string>
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Próximo capítulo não encontrado</string>
-    <string name="decode_image_error">A imagem não pôde ser decodificada</string>
+    <string name="decode_image_error">A imagem não pôde ser carregada</string>
     <string name="use_image_as_cover">Deseja usar esta imagem como capa?</string>
     <string name="finished_chapter">Concluído:</string>
     <string name="current_chapter">Atual:</string>
@@ -1131,4 +1134,8 @@
     <string name="failed_to_update_">Falha na atualização de %1$s</string>
     <string name="show_more_chapters">Mostrar mais capítulos</string>
     <string name="collapse_grouped_chapters">Recolher capítulos agrupados</string>
+    <string name="by_day">Por dia</string>
+    <string name="by_week">Por semana</string>
+    <string name="by_series">Por séries</string>
+    <string name="updates_last_update_info">Última atualização da biblioteca: %s</string>
 </resources>

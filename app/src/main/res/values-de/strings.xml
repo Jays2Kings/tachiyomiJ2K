@@ -231,7 +231,7 @@
     <string name="use_custom_brightness">Eigene Helligkeit festlegen</string>
     <string name="use_custom_color_filter">Eigenen Farbfilter nutzen</string>
     <string name="color_filter_blend_mode">Farbfilter Mischmodus</string>
-    <string name="overlay">Überlagerung</string>
+    <string name="overlay">Overlay</string>
     <string name="multiply">Multiplizieren</string>
     <string name="screen">Bildschirm</string>
     <string name="dodge_lighten">Abwedeln / Aufhellen</string>
@@ -912,8 +912,8 @@
     <string name="default_behavior">Standardverhalten</string>
     <string name="use_side_navigation">Seitennavigation verwenden</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 Kapitel wird übersprungen, da entweder die Quelle fehlt oder es herausgefiltert wurde</item>
-        <item quantity="other">%d Kapitel werden übersprungen, da entweder die Quelle fehlt oder sie herausgefiltert wurden</item>
+        <item quantity="one">%d Kapitel wird übersprungen, da die Quelle dieses entweder nicht besitzt, oder, weil es rausgefiltert wurde</item>
+        <item quantity="other">%d Kapitel werden übersprungen, da die Quelle diese entweder nicht besitzt, oder, weil sie rausgefiltert wurden</item>
     </plurals>
     <string name="helpful_translation_links">Hilfreiche Übersetzungslinks</string>
     <string name="help_translate">Beim Übersetzen mithelfen</string>
@@ -1098,4 +1098,5 @@
     <string name="by_week">Nach Woche</string>
     <string name="show_more_chapters">Weitere Kapitel anzeigen</string>
     <string name="collapse_grouped_chapters">Gruppierte Kapitel einklappen</string>
+    <string name="updates_last_update_info">Bibliothek zuletzt aktualisiert: %s</string>
 </resources>

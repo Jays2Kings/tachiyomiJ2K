@@ -9,7 +9,7 @@
     <string name="unknown">Nepoznat</string>
     <string name="licensed">Licencirano</string>
     <string name="completed">Završeno</string>
-    <string name="lock_with_biometrics">Zaključaj pomoću biometrije</string>
+    <string name="lock_with_biometrics">Zahtijevaj otključavanje</string>
     <string name="lock_when_idle">Zaključaj prilikom mirovanja</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s poglavlje</item>
@@ -428,7 +428,7 @@
     <string name="enable_zoom_out">Aktiviraj zumiranje</string>
     <string name="webtoon_style">Stil digitalnog stripa</string>
     <string name="reading_">Čita se %1$s</string>
-    <string name="decode_image_error">Nije bilo moguće dekodirati sliku</string>
+    <string name="decode_image_error">Nije bilo moguće učitati sliku</string>
     <string name="page_">Stranica %1$d</string>
     <string name="set_as_default_for_all">Postavi kao standardno za sve</string>
     <string name="added_">Dodano %1$s</string>
@@ -708,9 +708,9 @@
     <string name="automatic_can_still_switch">Prilikom korištenja automatskog prijeloma stranica, i dalje možeš mijenjati prijelome tijekom čitanja bez nadjačavanja ove postavke</string>
     <string name="page_layout">Prijelom stranice</string>
     <string name="switch_to_single">Prebaci na jednostranično</string>
-    <string name="switch_to_double">Prebaci na dvostranično</string>
+    <string name="switch_to_double">Prebaci na duplerice</string>
     <string name="single_page">Jednostranično</string>
-    <string name="double_pages">Dvostranično</string>
+    <string name="double_pages">Duplerice</string>
     <string name="amount_of_pages_to_preload">Količina stranica koju se unaprijed učitavaju za čitanje. Veće vrijednosti omogućuju ugodnije čitanje, ali se troši veća količina predmemorije i mrežnog prometa.</string>
     <string name="page_preload_amount">Količina predučitanih stranica</string>
     <string name="save_second_page">Spremi drugu stranicu</string>
@@ -757,7 +757,7 @@
     <string name="remove_crop">Ukloni odrezivanje</string>
     <string name="crop_borders_webtoon">Odreži rubove (digitalni strip)</string>
     <string name="crop_borders_paged">Odreži rubove (stranice)</string>
-    <string name="invert_double_pages">Obrni duplerice</string>
+    <string name="invert_double_pages">Invertiraj duplerice</string>
     <string name="save_combined_pages">Spremi spojene stranice</string>
     <string name="share_combined_pages">Dijeli spojene stranice</string>
     <string name="changing_will_reset_reading_mode">Mijenjanjem ove opcije obnovit će se modus čitanja za ovu seriju</string>
@@ -868,8 +868,8 @@
     <string name="remove_x_from_service_and_add_y">Ukloni %1$s iz %2$s i dodaj %3$s</string>
     <string name="remove_previous_tracker">Ukloniti prethodnu uslugu praćenja\?</string>
     <string name="select_an_entry">Odaberite unos</string>
-    <string name="split_double_pages">Podijelite dvostruke stranice</string>
-    <string name="split_double_pages_portrait">Podijelite dvostruke stranice u portretu</string>
+    <string name="split_double_pages">Podijeli duplerice</string>
+    <string name="split_double_pages_portrait">Podijeli duplerice uspravno</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">%d proširenje aktualizirano</item>
         <item quantity="few">%d proširenja aktualizirana</item>
@@ -898,9 +898,9 @@
     <string name="teal_ocean">Tirkizni ocean</string>
     <string name="appearance">Izgled</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Preskače se %d poglavlje. Izvor ga nema ili je izdvojen filtrom</item>
-        <item quantity="few">Preskaču se %d poglavlja. Izvor ih nema ili su izdvojeni filtrom</item>
-        <item quantity="other">Preskaču se %d poglavlja. Izvor ih nema ili su izdvojeni filtrom</item>
+        <item quantity="one">Preskače se %d poglavlje. Ne postoji u izvoru ili je filtrirano</item>
+        <item quantity="few">Preskaču se %d poglavlja. Ne postoje u izvoru ili su filtrirana</item>
+        <item quantity="other">Preskače se %d poglavlja. Ne postoje u izvoru ili su filtrirana</item>
     </plurals>
     <string name="log_out">Odjava</string>
     <string name="log_out_from_">Odjaviti se iz %1$s\?</string>
@@ -928,7 +928,7 @@
     <string name="save_chapters_as_cbz">Spremi kao CBZ arhivu</string>
     <string name="publishing_finished">Objavljivanje završeno</string>
     <string name="cancelled">Prekinuto</string>
-    <string name="on_hiatus">Prekid</string>
+    <string name="on_hiatus">Zaustavljeno</string>
     <string name="tracking_info">Jednosmjerna sinkronizacija za aktualiziranje napretka poglavlja u usluzi praćenja. Postavi praćenje pojedinačnih unosa manga putem gumba za praćenje.</string>
     <string name="enhanced_services">Poboljšane usluge</string>
     <string name="enhanced_tracking_info">Usluge koje pružaju poboljšane funkcije za određene izvore. Manga se automatski prati kad se doda u tvoju biblioteku.</string>
@@ -994,7 +994,7 @@
     </plurals>
     <string name="download_ahead">Preuzmi unaprijed</string>
     <string name="webview_data_deleted">WebView podaci su izbrisani</string>
-    <string name="download_notifier_split_page_not_found">Stranica %d nije pronađena tijekom razdvajanja</string>
+    <string name="download_notifier_split_page_not_found">Stranica %d nije pronađena tijekom rastavljanja</string>
     <string name="split_tall_images">Rastavi visoke slike</string>
     <string name="learn_why">Saznaj zašto</string>
     <string name="sort_fetched_time">Razvrstaj po vremenu dohvaćanja</string>
@@ -1088,4 +1088,6 @@
     <string name="by_day">Po danu</string>
     <string name="show_more_chapters">Pokaži još poglavlja</string>
     <string name="collapse_grouped_chapters">Sklopi grupirana poglavlja</string>
+    <string name="updates_last_update_info">Zadnje ažuriranje biblioteke bilo je: %s</string>
+    <string name="gray_background">Siva</string>
 </resources>

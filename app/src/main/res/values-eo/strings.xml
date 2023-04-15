@@ -393,4 +393,6 @@
     <string name="secure_screen_summary">Kaŝi aplikaĵan enhavon kiam ŝaltumas aplikaĵojn kaj malebligi ekrankopion</string>
     <string name="statistics">Statistiko</string>
     <string name="warning">Averto</string>
+    <string name="lock_with_biometrics">Devigi malŝlosi</string>
+    <string name="gray_background">Griza</string>
 </resources>

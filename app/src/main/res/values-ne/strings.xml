@@ -2,7 +2,7 @@
 <resources>
     <string name="webtoon">वेबटून</string>
     <string name="read">पढेको</string>
-    <string name="no_pages_found">कुनै पृष्ठहरू फेला परेनन्</string>
+    <string name="no_pages_found">कुनै पृष्ठहरू फेला परेन</string>
     <string name="edit_categories">वर्गहरू सम्पादन गर्नुहोस्</string>
     <plurals name="category_plural">
         <item quantity="one">%d वर्ग</item>
@@ -22,7 +22,7 @@
     <string name="sources">स्रोतहरू</string>
     <string name="cover_updated">आवरण अपडेट भयो</string>
     <string name="next_chapter_not_found">अर्को अध्याय भेटिएन</string>
-    <string name="use_image_as_cover">यो छवि कभरको रूपमा राख्न चाहनुहुन्छ\?</string>
+    <string name="use_image_as_cover">यो छवि आवरण को रूपमा राख्न चाहनुहुन्छ\?</string>
     <string name="reading_mode">पढ्ने मोड</string>
     <string name="grayscale">ग्रेस्केल</string>
     <string name="pref_inverted_colors">उल्टो</string>
@@ -75,13 +75,13 @@
     <string name="chapters">अध्याय</string>
     <string name="unread">नपढिएको</string>
     <string name="chapter_">अध्याय %1$s</string>
-    <string name="bookmarked">बुकमार्क गरिएको</string>
+    <string name="bookmarked">पुस्तकचिनो लगाइएको</string>
     <string name="chapter_not_found">अध्याय फेला परेन</string>
     <string name="local_invalid_format">अवैध अध्याय ढाँचा</string>
     <string name="order_by">द्वारा अर्डर गर्नुहोस्</string>
     <string name="no_chapters_error">अध्यायहरू भेटिएन</string>
     <string name="loader_rar5_error">RARv5 समर्थित छैन</string>
-    <string name="by_chapter_number">अध्याय संख्या द्वारा</string>
+    <string name="by_chapter_number">अध्याय नम्बर द्वारा</string>
     <string name="by_update_date">अपलोड मिति द्वारा</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s अध्याय</item>
@@ -92,34 +92,34 @@
     <string name="default_category">पूर्वनिर्धारित वर्ग</string>
     <string name="searching_for_updates">अपडेटहरू खोज्दै…</string>
     <string name="library">पुस्तकालय</string>
-    <string name="updating_library">पुस्तकालय अपडेट हुँदै</string>
+    <string name="updating_library">पुस्तकालय अपडेट गर्दै</string>
     <string name="local">लोकल</string>
     <string name="date_added">राखिएको मिती</string>
     <string name="last_read">अन्तिम पढिएको</string>
     <string name="latest_chapter">सबैभन्दा नयाँ अध्याय</string>
     <string name="list">सूची</string>
-    <string name="cover_only_grid">कभर-मात्र ग्रिड</string>
-    <string name="new_chapters_found">नयाँ अध्यायहरु पायो</string>
-    <string name="download_queue_size_warning">सावधान: ठूलो हिस्सामा डाउनलोड गर्नाले स्रोत ढिलो चल्न अनि/वा ताचियोमीलाई अवरुद्घ गर्न सक्नेछ।</string>
+    <string name="cover_only_grid">आवरण मात्र ग्रिड</string>
+    <string name="new_chapters_found">नयाँ अध्यायहरु फेला पर्यो</string>
+    <string name="download_queue_size_warning">सावधान: ठूलो हिस्सामा डाउनलोड गर्नाले स्रोत ढिलो चल्न अनि/वा ताचियोमीलाई अवरुद्घ गर्न सक्नेछ। थप जान्न ट्याप गर्नुहोस्।</string>
     <string name="notification_update_error">%1$d अपडेट(हरू) असफल भयो</string>
     <string name="notification_update_skipped">%1$d अपडेट(हरू) छोडियो</string>
     <string name="skipped_reason_completed">श्रृङ्खला पूरा भएकोले छोडियो</string>
     <string name="skipped_reason_not_caught_up">नपढिएका अध्यायहरू भएकाले छोडियो</string>
-    <string name="skipped_reason_not_started">छाडियो किनभने कुनै अध्याय पढिएको छैन</string>
-    <string name="skipped_reason_not_always_update">छाडियो किनभने शृङ्खलालाई अपडेटहरू आवश्यक छैन</string>
+    <string name="skipped_reason_not_started">कुनै अध्याय नपढेकाले छोडियो</string>
+    <string name="skipped_reason_not_always_update">शृङ्खलालाई अपडेट आवश्यक नपर्ने भएकोले छोडियो</string>
     <string name="channel_skipped">छोडियो</string>
     <string name="pref_update_only_completely_read">नपढिएको अध्याय(हरू) संग</string>
     <string name="pref_update_only_non_completed">\"समाप्त\" स्थिति भएको</string>
     <string name="pref_update_only_started">जो सुरु भएको छैन</string>
     <string name="this_will_remove_the_read_date_question">यसले यस अध्यायको पढ्ने मिति हटाउनेछ। के तपाईँ निश्चित हुनुहुन्छ\?</string>
     <string name="clear_history_completed">इतिहास हटाइयो</string>
-    <string name="clear_history_confirmation">तपाइँ पक्का हुनुहुन्छ\? सबै इतिहासहरू मेटिनेछन्।</string>
+    <string name="clear_history_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? सबै इतिहास हराउनेछ।</string>
     <string name="no_more_results">थप परिणामहरू छैनन्</string>
     <string name="no_results_found">कुनै परिणाम फेला परेन</string>
     <string name="local_source">लोकल स्रोत</string>
     <string name="other">अन्य</string>
     <string name="global_search">ग्लोबल खोज…</string>
-    <string name="label_global_search">ग्लोबल खोजी</string>
+    <string name="label_global_search">ग्लोबल खोज</string>
     <string name="latest">पछिल्लो</string>
     <string name="popular">लोकप्रिय</string>
     <string name="browse">ब्राउज</string>
@@ -130,10 +130,10 @@
     <string name="extension_updates">एक्सटेनशन अपडेटहरु</string>
     <string name="extension_info">एक्सटेनशनको जानकारी</string>
     <string name="obsolete">अप्रचलित</string>
-    <string name="pending">पेंडिंग</string>
+    <string name="pending">विचाराधीन</string>
     <string name="installing">स्थापना गर्दै</string>
     <string name="installed">स्थापना गरियो</string>
-    <string name="trust">भरोसा</string>
+    <string name="trust">विश्वास</string>
     <string name="untrusted">अविश्वसनीय</string>
     <string name="uninstall">स्थापना रद्द गर्नुहोस्</string>
     <string name="ext_installer_shizuku_stopped">Shizuku चलिरहेको छैन</string>
@@ -144,7 +144,7 @@
 \nएउटा खराब एक्सटेनशनले ताचियोमीमा भण्डारण गरिएका कुनै पनि लगइन प्रमाणहरू पढ्न वा स्वेच्छाचारी कोड कार्यान्वयन गर्न सक्छ।
 \n
 \nयस प्रमाणपत्रमा विश्वास गरेर तपाईंले यी जोखिमहरू स्वीकार गर्नुहुन्छ।</string>
-    <string name="unofficial_extension_message">यो एक्सटेनशन आधिकारिक ताचियोमीको विस्तार सूचीबाट होइन।</string>
+    <string name="unofficial_extension_message">यो एक्सटेनशन आधिकारिक ताचियोमीको एक्सटेनशन सूचीबाट होइन।</string>
     <string name="nsfw_short">१८+</string>
     <string name="unofficial">अनौपचारिक</string>
     <string name="app_info">एप जानकारी</string>
@@ -257,7 +257,7 @@
     <string name="unfinished_list">अधूरो सूची</string>
     <string name="score">मूल्याङ्कन</string>
     <string name="status">स्थिति</string>
-    <string name="started">सुरु गरेको</string>
+    <string name="started">सुरु भएको</string>
     <string name="type">प्रकार</string>
     <string name="refresh_tracking">ट्र्याकिङ ताजा गर्नुहोस्</string>
     <string name="add_tracking">ट्र्याक गर्नुहोस्</string>
@@ -299,7 +299,7 @@
     <string name="empty_backup_error">ब्याकअप गर्न कुनै पुस्तकालय इन्ट्रीहरू छैनन्</string>
     <string name="backup_created">ब्याकअप सिर्जना गरियो</string>
     <string name="restore_completed">पुनर्स्थापना सम्पन्न भयो</string>
-    <string name="restore_missing_sources">हराएको स्रोतहरु:</string>
+    <string name="restore_missing_sources">छुटेको स्रोतहरु:</string>
     <string name="restore_missing_trackers">ट्र्याकरहरूमा लगइन छैनन्:</string>
     <string name="restore_content_full">ब्याकअप फाइलबाट डाटा पुनर्स्थापित हुनेछ।
 \n
@@ -312,19 +312,19 @@
     <string name="restore_miui_warning">यदि MIUI अप्टिमाइजेसन असक्षम छ भने ब्याकअप/रिस्टोरले राम्ररी काम नगर्न सक्छ।</string>
     <string name="complete">पूरा</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">%2$s एररको साथ %1$s मा सम्पन्न भयो</item>
-        <item quantity="other">%2$s एररहरूसँग %1$s मा सम्पन्न भयो</item>
+        <item quantity="one">%2$s त्रुटिको साथ %1$s मा सम्पन्न भयो</item>
+        <item quantity="other">%2$s त्रुटिहरूसँग %1$s मा सम्पन्न भयो</item>
     </plurals>
     <string name="clear_chapter_cache">अध्याय क्यास खाली गर्नुहोस्</string>
     <string name="crash_logs">क्र्यास लगहरू</string>
     <string name="dump_crash_logs">क्र्यास लगहरू डम्प गर्नुहोस्</string>
     <string name="saves_error_logs">विकासकर्ताहरूसँग साझेदारी गर्नको लागि फाइलमा एरर लगहरू बचत गर्दछ</string>
     <string name="about_dont_kill_my_app">केही निर्माताहरूसँग अतिरिक्त एप प्रतिबन्धहरू छन् जसले ब्याकग्राउण्ड सेवाहरूलाई मार्छ। यो वेबसाइटमा यसलाई कसरी ठीक गर्ने बारे थप जानकारी छ।</string>
-    <string name="crash_log_saved">क्र्यास लगहरू सुरक्षित गरियो</string>
+    <string name="crash_log_saved">क्र्यास लगहरू बचत गरियो</string>
     <string name="network">नेटवर्क</string>
     <string name="user_agent_string">पूर्वनिर्धारित युजर एजेन्ट स्ट्रिङ</string>
     <string name="requires_app_restart">प्रभाव पार्न एप पुन: सुरु गर्न आवश्यक छ</string>
-    <string name="cache_delete_error">क्यास खाली गर्दा एरर भयो</string>
+    <string name="cache_delete_error">खाली गर्दा त्रुटि भयो</string>
     <string name="clear_cookies">कुकीहरू खाली गर्नुहोस्</string>
     <string name="cookies_cleared">कुकीहरू खाली गरियो</string>
     <string name="pref_clear_webview_data">WebView डेटा खाली गर्नुहोस्</string>
@@ -376,7 +376,7 @@
     <string name="split_tall_images_summary">पाठकको सम्पादनमा सुधार गर्छ</string>
     <string name="statistics">तथ्याङ्क</string>
     <string name="downloaded_chapters">डाउनलोड गरिएका अध्यायहरू</string>
-    <string name="trackers">ट्रयाकर</string>
+    <string name="trackers">ट्र्याकर</string>
     <string name="read_duration">पढेको अवधि</string>
     <string name="every_6_hours">प्रत्येक ६ घण्टा</string>
     <string name="every_12_hours">प्रत्येक १२ घण्टा</string>
@@ -448,10 +448,10 @@
     <string name="tap_to_see_details">विवरणहरू हेर्न ट्याप गर्नुहोस्</string>
     <string name="tap_to_learn_more">अधिक जानकारी</string>
     <string name="undo">पूर्ववत गर्नुहोस्</string>
-    <string name="unknown_error">अज्ञात एरर</string>
+    <string name="unknown_error">अज्ञात त्रुटि</string>
     <string name="unpin">अनपिन</string>
     <string name="view_chapters">अध्यायहरू हेर्नुहोस्</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न सबै फाइलहरूमा पहुँच चाहिन्छ। यहाँ ट्याप गर्नुहोस्, त्यसपछि \"सबै फाइलहरू व्यवस्थापन गर्न पहुँच अनुमति दिनुहोस्\" सक्षम गर्नुहोस्।</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न सबै फाइलहरू माथि पहुँच चाहिन्छ। यहाँ ट्याप गर्नुहोस्, त्यसपछि \"सबै फाइलहरू व्यवस्थापन गर्न पहुँच अनुमति दिनुहोस्\" सक्षम गर्नुहोस्।</string>
     <string name="all_files_permission_required">फाइल अनुमतिहरू आवश्यक छ</string>
     <string name="manga">माङ्गा</string>
     <string name="manhwa">मानह्वा</string>
@@ -476,14 +476,49 @@
     <string name="marked_as_read">\"पढिएको\" चिनो लगाइयो</string>
     <string name="marked_as_unread">\"नपढीएको\" चिनो लगाइयो</string>
     <string name="chapters_removed">अध्यायहरू हटाइयो।</string>
-    <string name="lock_with_biometrics">बायोमेट्रिक्स ले लक गर्नुहोस्</string>
+    <string name="lock_with_biometrics">अनलक गर्न आवश्यक छ</string>
     <string name="remove_all_downloads">सबै डाउनलोडहरू हटाउने हो\?</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 अध्याय छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
+        <item quantity="one">%d अध्याय छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
         <item quantity="other">%d अध्यायहरु छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
     </plurals>
     <string name="backup_in_progress">ब्याकअप पहिले नै प्रगतिमा छ</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न, स्वचालित ब्याकअपहरू सिर्जना गर्न र लोकल माङ्गा पढ्नको लागि Android 11 मा सबै फाइलहरू माथि पहुँच चाहिन्छ।
 \n
 \nअर्को स्क्रिनमा, \"सबै फाइलहरू व्यवस्थापन गर्न पहुँच अनुमति दिनुहोस्\" सक्षम गर्नुहोस्।</string>
+    <string name="tracker">ट्र्याकर</string>
+    <string name="titles_in_library">पुस्तकालयमा शीर्षकहरू</string>
+    <string name="tracked_titles">ट्र्याक गरिएका शीर्षकहरू</string>
+    <string name="source">स्रोत</string>
+    <string name="manga_score_distribution">स्कोर वितरण</string>
+    <string name="length">लम्बाइ</string>
+    <string name="not_rated">मूल्याङ्कन गरिएको छैन</string>
+    <string name="chapters_read">पढिएका अध्यायहरू</string>
+    <string name="local_titles">लोकल शीर्षकहरू</string>
+    <string name="titles_in_global_update">ग्लोबल अपडेटमा शीर्षकहरू</string>
+    <string name="manga_status_distribution">स्थिति वितरण</string>
+    <string name="view_detailed_statistics">तथ्याङ्क विवरण हेर्नुहोस्</string>
+    <string name="start_year">सुरु गरेको वर्ष</string>
+    <string name="no_data_for_filters">तपाईंको हालको फिल्टरहरूको लागि कुनै डाटा फेला परेन</string>
+    <plurals name="_series_types">
+        <item quantity="one">श्रृंखला प्रकार</item>
+        <item quantity="other">%d श्रृंखला प्रकारहरू</item>
+    </plurals>
+    <plurals name="_sources">
+        <item quantity="one">स्रोत</item>
+        <item quantity="other">%d स्रोतहरू</item>
+    </plurals>
+    <plurals name="_languages">
+        <item quantity="one">भाषा</item>
+        <item quantity="other">%d भाषाहरू</item>
+    </plurals>
+    <string name="drag_and_drop">तान्ने र छोड्ने</string>
+    <string name="stat">तथ्याङ्क</string>
+    <string name="stats">तथ्याङ्क</string>
+    <string name="statistics_details">तथ्याङ्क विवरण</string>
+    <string name="tags">ट्यागहरू</string>
+    <string name="learn_why">जान्नुहोस् किन</string>
+    <string name="updates_last_update_info">पुस्तकालय पछिल्लो पटक अपडेट गरिएको: %s</string>
+    <string name="add_to_library">पुस्तकालयमा राख्नुहोस्</string>
+    <string name="decode_image_error">छवि लोड गर्न सकिएन</string>
 </resources>

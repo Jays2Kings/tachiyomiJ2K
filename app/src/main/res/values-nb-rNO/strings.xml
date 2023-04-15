@@ -108,7 +108,7 @@
     <string name="left_to_right_viewer">Venstre til høyre</string>
     <string name="right_to_left_viewer">Høyre til venstre</string>
     <string name="vertical_viewer">Loddrett</string>
-    <string name="webtoon">Webtoon</string>
+    <string name="webtoon">Nett-tegneserie</string>
     <string name="scale_type">Skalatype</string>
     <string name="fit_screen">Tilpass skjerm</string>
     <string name="stretch">Strekk</string>
@@ -216,7 +216,7 @@
     <string name="started">Startet</string>
     <string name="type">Type</string>
     <string name="url_not_set_click_again">Manga-nettadresse ikke satt, klikk tittel og velg manga igjen</string>
-    <string name="category_with_name_exists">En kategori ved dette navnet finnes allerede.</string>
+    <string name="category_with_name_exists">En kategori ved dette navnet finnes allerede!</string>
     <string name="this_will_remove_the_read_date_question">Lesningsdato for dette kapittelet vil bli fjernet. Er du sikker\?</string>
     <string name="picture_saved">Bilde lagret</string>
     <string name="options">Valg</string>
@@ -545,7 +545,7 @@
     <string name="comic">Tegneserie</string>
     <string name="all_chapters_read">Alle kapitler lest</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Ett kapittel har blitt fjernet fra denne kilden
+        <item quantity="one">kapittel har blitt fjernet fra denne kilden
 \n%2$s
 \n
 \nSlett nedlastningen av det\?</item>
@@ -730,7 +730,7 @@
     <string name="select_sources">Velg kilder</string>
     <string name="keep_both_on_service">Behold begge på %1$s og kun erstatt lokalt</string>
     <string name="remove_x_from_service_and_add_y">Fjern %1$s fra %2$s og legg til %3$s</string>
-    <string name="set_as_default">Sett som forvalg</string>
+    <string name="set_as_default">Sett som standard</string>
     <string name="custom_manga_info">Egendefinert mangainfo</string>
     <string name="remember_this_choice">Husk dette valget</string>
     <string name="reset_cover">Tilbakestill omslag</string>
@@ -825,8 +825,8 @@
     <string name="remove_previous_tracker">Fjern forrige sporer\?</string>
     <string name="remove_tracking">Fjern sporing fra program</string>
     <string name="no_match_found">Resultatløst</string>
-    <string name="not_tracked">Holdes ikke oppsyn med</string>
-    <string name="filter_groups">Filtrer scanlator-grupper</string>
+    <string name="not_tracked">Blir ikke sport</string>
+    <string name="filter_groups">Filtrer etter valg</string>
     <string name="automatic_can_still_switch">Ved bruk av automatisk sideoppsett kan du fremdeles bytte mellom oppsett mens du leser, uten å overstyre denne innstillingen</string>
     <string name="page_layout">Sideoppsett</string>
     <string name="cutout_behavior_only_applies">Oppførsel for utklippsområde har kun innvirkning i stående sideretning med noen skaleringstyper</string>
@@ -970,7 +970,7 @@
     <string name="loader_rar5_error">RARv5-formatet støttes ikke</string>
     <string name="download_ahead">Last ned i forkant</string>
     <string name="download_ahead_info">Fungerer kun på oppføringer i biblioteket, og hvis det nåværende kapittelet samt det neste allerede er lastet ned</string>
-    <string name="split_tall_images">Del høye bilder</string>
+    <string name="split_tall_images">Del opp høye bilder</string>
     <string name="on_hold_list">På vent liste</string>
     <string name="unfinished_list">Uferdig liste</string>
     <string name="split_tall_images_summary">Forbedrer leserytelsen</string>
@@ -1003,7 +1003,7 @@
     <string name="appwidget_unavailable_locked">Moduler er ikke tilgjengelig når applås er aktivert</string>
     <string name="hide_in_library_items">Skjul oppføringer som allerede er i biblioteket</string>
     <plurals name="_languages">
-        <item quantity="one"/>
+        <item quantity="one">%d språk</item>
         <item quantity="other">%d språk</item>
     </plurals>
     <string name="tags">Etiketter</string>
@@ -1022,7 +1022,7 @@
     <string name="zoom_double_page_spreads">Zoom inn på dobbeltsideoppsett</string>
     <string name="warning_unenroll_from_beta">Å gå tilbake til forrige produksjonsversjon kan føre til problemer og kreve sletting av appdata.</string>
     <plurals name="_series_types">
-        <item quantity="one"></item>
+        <item quantity="one">%d serietype</item>
         <item quantity="other">%d serietyper</item>
     </plurals>
     <string name="collapse_grouped_chapters">Skjul grupperte kapitler</string>
@@ -1032,11 +1032,11 @@
     <string name="warning_enroll_into_beta">Betaversjoner kan være ustabile og kreve at appdata slettes.</string>
     <string name="try_new_features">Test nye funksjoner før de lanseres offisielt. Betaversjoner kan være ustabile og brukes for å gi tilbakemeldinger til utvikleren.</string>
     <plurals name="_statuses">
-        <item quantity="one"></item>
+        <item quantity="one">%d status</item>
         <item quantity="other">%d statuser</item>
     </plurals>
     <plurals name="_sources">
-        <item quantity="one"></item>
+        <item quantity="one">%d kilde</item>
         <item quantity="other">%d kilder</item>
     </plurals>
     <string name="start_year">Startår</string>
@@ -1048,4 +1048,21 @@
     <string name="titles_in_global_update">Titler i global oppdatering</string>
     <string name="local_titles">Lokale titler</string>
     <string name="mean_tracking_score">Gjennomsnittlig sporingspoengsum</string>
+    <string name="updates_last_update_info">Bibliotek sist oppdatert: %s</string>
+    <string name="by_week">Ukentlig</string>
+    <string name="by_day">Hver dag</string>
+    <string name="all_read_manga">Alle leste manga</string>
+    <string name="statistics_details">Statistikkdetaljer</string>
+    <string name="pref_update_only_completely_read_summary">Kun oppdater manga hvis det ikke er noen uleste kapitler igjen (helt gjennomlest)</string>
+    <string name="language_badge">Språkskilt</string>
+    <string name="no_data_for_filters">Fant ingen data for nåværende filtre</string>
+    <string name="by_series">Etter årgang</string>
+    <string name="update_tracking_after_reading">Oppdater sporing etter lesing</string>
+    <string name="view_detailed_statistics">Vis detaljert statistikk</string>
+    <string name="update_tracking_marked_read">Oppdater sporing når markert som lest</string>
+    <string name="tracker">Sporer</string>
+    <string name="sort_fetched_time">Sorter etter innhenting</string>
+    <string name="stats">Statistikk</string>
+    <string name="stat">Statistikk</string>
+    <string name="use_staggered_grid">Bruk flytende rutenett</string>
 </resources>

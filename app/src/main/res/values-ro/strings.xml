@@ -1082,4 +1082,5 @@
     <string name="allow_deleting_bookmarked_chapters">Permite ștergerea capitolelor marcate</string>
     <string name="appwidget_updates_description">Vizualizați intrările recent actualizate din bibliotecă</string>
     <string name="appwidget_unavailable_locked">Widgetul nu este disponibil atunci când este activată blocarea aplicației</string>
+    <string name="updates_last_update_info">Ultima actualizare a bibliotecii: %s</string>
 </resources>

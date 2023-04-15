@@ -228,7 +228,7 @@
     <string name="cover_updated">Cobertedda agiornada</string>
     <string name="page_">Pàgina: %1$d</string>
     <string name="next_chapter_not_found">Capìtulu imbeniente no agatadu</string>
-    <string name="decode_image_error">No est istadu possìbile decodificare s\'immàgine</string>
+    <string name="decode_image_error">No est istadu possìbile carrigare s\'immàgine</string>
     <string name="use_image_as_cover">Cheres impostare custa immàgine comente cobertedda\?</string>
     <string name="finished_chapter">Acabadu:</string>
     <string name="current_chapter">Atuale:</string>
@@ -271,7 +271,7 @@
     <string name="burn_darken">Brùsia / Iscuri</string>
     <string name="help">Agiudu</string>
     <string name="no_results_found">Perunu resultadu agadadu</string>
-    <string name="lock_with_biometrics">Bloca cun sa biometria</string>
+    <string name="lock_with_biometrics">Tocat a l\'isblocare</string>
     <string name="lock_when_idle">Bloca cando no est ativu</string>
     <string name="security">Seguresa</string>
     <string name="backup_failed">Còpia de seguresa fallida</string>
@@ -877,7 +877,7 @@
     <string name="teal_ocean">Otzèanu birde abba (teal - fògia de tè)</string>
     <string name="appearance">Aparèntzia</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Brinchende 1 capìtulu, sa fonte non lu tenet o est istadu bogadu cun unu filtru</item>
+        <item quantity="one">Brinchende %d capìtulu, sa fonte non lu tenet o est istadu bogadu cun unu filtru</item>
         <item quantity="other">Brinchende %d capìtulos, sa fonte non los tenet o sunt istados bogados cun unu filtru</item>
     </plurals>
     <string name="helpful_translation_links">Ligàmenes ùtiles pro sa tradutzione</string>
@@ -1060,4 +1060,8 @@
     <string name="failed_to_update_">Agiornamentu de %1$s fallidu</string>
     <string name="show_more_chapters">Mustra prus capìtulos</string>
     <string name="collapse_grouped_chapters">Mìnima sos capìtulos agrupados</string>
+    <string name="updates_last_update_info">Ùrtimu agiornamentu de sa biblioteca: %s</string>
+    <string name="by_day">Pro die</string>
+    <string name="by_series">Pro sèrie</string>
+    <string name="by_week">Pro chida</string>
 </resources>

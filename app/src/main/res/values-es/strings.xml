@@ -145,7 +145,7 @@
     <!-- Reader activity -->
     <string name="page_">Pág: %1$d</string>
     <string name="next_chapter_not_found">Siguiente capítulo no encontrado</string>
-    <string name="decode_image_error">La imagen no se pudo decodificar</string>
+    <string name="decode_image_error">No se pudo cargar la imagen</string>
     <!-- Backup fragment -->
     <string name="backup">Copia de seguridad</string>
     <!-- Recent manga fragment -->
@@ -302,7 +302,7 @@
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
     <string name="no_results_found">No se han encontrado resultados</string>
-    <string name="lock_with_biometrics">Bloqueado con biometría</string>
+    <string name="lock_with_biometrics">Requiere desbloqueo</string>
     <string name="lock_when_idle">Bloquear por inactividad</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
@@ -929,9 +929,9 @@
     <string name="default_behavior">Comportamiento predeterminado</string>
     <string name="use_side_navigation">Usar la navegación lateral</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Saltándose 1 capítulo, o la fuente no lo tiene o se ha filtrado</item>
-        <item quantity="many">Saltándose %d capítulos, faltan las fuentes o se ha filtrado</item>
-        <item quantity="other">Saltándose %d capítulos, faltan las fuentes o se ha filtrado</item>
+        <item quantity="one">Se omite %d capítulo, o bien falta en la fuente o ha sido filtrado</item>
+        <item quantity="many">Se omiten %d capítulos, o bien faltan en la fuente o han sido filtrados</item>
+        <item quantity="other">Se omiten %d capítulos, o bien faltan en la fuente o han sido filtrados</item>
     </plurals>
     <string name="helpful_translation_links">Enlaces útiles para la traducción</string>
     <string name="help_translate">Ayudar a traducir</string>
@@ -1043,7 +1043,7 @@
     <string name="learn_why">Para más información</string>
     <string name="open_in_app">Abrir en la aplicación</string>
     <string name="download_notifier_split_failed">No se pudo dividir la imagen descargada</string>
-    <string name="split_tall_images">Dividir automáticamente imágenes demasiado altas</string>
+    <string name="split_tall_images">Dividir las imágenes altas</string>
     <string name="split_tall_images_summary">Mejora el rendimiento del lector dividiendo páginas descargadas mucho más altas que anchas</string>
     <string name="download_notifier_split_page_not_found">No se ha encontrado la página %d al dividir</string>
     <string name="reading_list">Leyendo</string>
@@ -1121,4 +1121,5 @@
     <string name="by_series">Por series</string>
     <string name="by_week">Por semanas</string>
     <string name="by_day">Por días</string>
+    <string name="updates_last_update_info">La biblioteca se actualizó: %s</string>
 </resources>

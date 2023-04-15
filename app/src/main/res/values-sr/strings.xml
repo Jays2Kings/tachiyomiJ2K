@@ -1035,4 +1035,5 @@
     <string name="read_duration">Трајање читања</string>
     <string name="appwidget_updates_description">Погледај твоје недавно ажуриране наслове у колекцији</string>
     <string name="appwidget_unavailable_locked">Widget није доступан када је омогућено закључавање апликације</string>
+    <string name="updates_last_update_info">Последње ажурирање колекције било је: %s</string>
 </resources>

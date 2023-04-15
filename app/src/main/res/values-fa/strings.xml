@@ -303,7 +303,7 @@
         <item quantity="other">قسمت ها%1$s</item>
     </plurals>
     <string name="lock_when_idle">قفل صفحه هنگام بیکاری</string>
-    <string name="lock_with_biometrics">با بیومتریک قفل کنید</string>
+    <string name="lock_with_biometrics">نیاز به باز کردن قفل</string>
     <string name="completed">تکمیل شده(Completed)</string>
     <string name="licensed">مجوزدار</string>
     <string name="unknown_status">وضعیت ناشناخته</string>
@@ -572,4 +572,9 @@
     <string name="restore_miui_warning">پشتیبانی/بازگردانی ممکن است کار نکند اگر بهینه‌سازی MIUI غیر فعال باشد</string>
     <string name="download_ahead_info">اگر قسمت فعلی و بعدی دانلود شده باشند، تنها برای ورودی‌های کتابخانه کار می‌کند</string>
     <string name="statistics">آمار</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">1 قسمت جا افتاده است</item>
+        <item quantity="other">%d قسمت جا افتاده است</item>
+    </plurals>
+    <string name="gray_background">خاکستری</string>
 </resources>

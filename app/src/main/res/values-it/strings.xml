@@ -1045,7 +1045,7 @@
     <string name="pref_lowest">Più basso</string>
     <string name="download_notifier_split_page_not_found">Pagina %d non trovata durante la divisione</string>
     <string name="download_notifier_split_failed">Impossibile separare le immagini scaricate</string>
-    <string name="split_tall_images">Dividi automaticamente le immagini troppo alte</string>
+    <string name="split_tall_images">Dividi immagini alte</string>
     <string name="split_tall_images_summary">Migliora le prestazioni del lettore</string>
     <string name="reading_list">In Lettura</string>
     <string name="wish_list">Da Leggere</string>
@@ -1114,4 +1114,13 @@
     <string name="allow_deleting_bookmarked_chapters">Consenti eliminazione capitoli con segnalibro</string>
     <string name="appwidget_updates_description">Vedi le voci aggiornate di recente</string>
     <string name="appwidget_unavailable_locked">Widget non disponibile quando il blocco app è attivo</string>
+    <string name="updates_last_update_info">Ultimo aggiornamento libreria: %s</string>
+    <string name="by_series">Per serie</string>
+    <string name="by_week">Per settimana</string>
+    <string name="by_day">Per giorno</string>
+    <string name="failed_to_update_">Impossibile aggiornare %1$s</string>
+    <string name="mean_tracking_score">Punteggio medio di monitoraggio</string>
+    <string name="read_duration_info">Tempo trascorso nel lettore, basato sulla cronologia capitoli</string>
+    <string name="show_more_chapters">Mostra più capitoli</string>
+    <string name="collapse_grouped_chapters">Comprimi i capitoli raggruppati</string>
 </resources>

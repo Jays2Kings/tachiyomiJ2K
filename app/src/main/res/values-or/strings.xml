@@ -114,4 +114,12 @@
     <string name="tap_to_learn_more">ଅଧିକ ଜାଣିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
     <string name="tap_to_see_details">ବିବରଣୀ ଦେଖିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
     <string name="webtoon_side_padding_5">୫%</string>
+    <string name="stats">ପରିସଂଖ୍ୟାନ</string>
+    <string name="backup_and_restore">ବ୍ୟାକଅପ୍ ଓ ପୁନରୁଦ୍ଧାର</string>
+    <string name="backup">ବ୍ୟାକଅପ୍</string>
+    <string name="automatic">ସ୍ୱଚାଳିତ</string>
+    <string name="statistics_details">ପରିସଂଖ୍ୟାନ ବିବରଣୀ</string>
+    <string name="auto_refresh_covers">ମଲାଟଗୁଡ଼ିକୁ ସ୍ୱଚାଳିତ ଭାବେ ସତେଜ କରାଯାଉ</string>
+    <string name="more">ଅଧିକ</string>
+    <string name="statistics">ପରିସଂଖ୍ୟାନ</string>
 </resources>

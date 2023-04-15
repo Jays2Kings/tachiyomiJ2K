@@ -186,7 +186,7 @@
     <string name="local">Lokal</string>
     <string name="search_filters">Sök filter</string>
     <string name="no_more_results">Inga mer resultat</string>
-    <string name="local_source">Lokal manga</string>
+    <string name="local_source">Lokal källa</string>
     <string name="other">Andra</string>
     <string name="global_search">Global sökning…</string>
     <string name="latest">Senaste</string>
@@ -228,7 +228,7 @@
     <string name="cover_updated">Omslag uppdaterad</string>
     <string name="page_">Sida: %1$d</string>
     <string name="next_chapter_not_found">Nästa kapitel kunde inte hittas</string>
-    <string name="decode_image_error">Bilden kunde inte avkodas</string>
+    <string name="decode_image_error">Bilden kunde inte laddas</string>
     <string name="use_image_as_cover">Vill du ställa in denna bilden som omslaget\?</string>
     <string name="finished_chapter">Färdig:</string>
     <string name="current_chapter">Nuvarande:</string>
@@ -270,7 +270,7 @@
     <string name="dodge_lighten">Ljusna</string>
     <string name="burn_darken">Mörkna</string>
     <string name="help">Hjälp</string>
-    <string name="lock_with_biometrics">Lås med biometri</string>
+    <string name="lock_with_biometrics">Kräver upplåsning</string>
     <string name="lock_when_idle">Lås vid inaktivitet</string>
     <string name="security">Säkerhet</string>
     <string name="backup_failed">Säkerhetskopiering misslyckades</string>
@@ -861,8 +861,8 @@
     <string name="show_categories_while_filtering">Visa tomma kategorier vid filtrering</string>
     <string name="help_translate">Hjälp till med översättning</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Hoppar över ett kapitel, antingen saknar källan det eller så har det filtrerats bort</item>
-        <item quantity="other">Hoppar över %d kapitel, antingen saknar källan det eller så har det filtrerats bort</item>
+        <item quantity="one">Hoppar över %d kapitel, antingen saknar källan det eller så har det filtrerats bort</item>
+        <item quantity="other">Hoppar över %d kapitel, antingen saknar källan dem eller så har de filtrerats bort</item>
     </plurals>
     <string name="split_double_pages">Dela på dubbel sidor</string>
     <string name="recently_installed">Nyligen installerad</string>
@@ -989,7 +989,7 @@
     <string name="pref_lowest">Lägsta</string>
     <string name="open_in_app">Öppna i appen</string>
     <string name="download_notifier_split_page_not_found">Sida %d hittades inte under delning</string>
-    <string name="split_tall_images">Dela upp höga bilder</string>
+    <string name="split_tall_images">Dela höga bilder</string>
     <string name="split_tall_images_summary">Förbättrar läsarens prestanda</string>
     <string name="reading_list">Läslista</string>
     <string name="wish_list">Önskelista</string>
@@ -1060,4 +1060,9 @@
     <string name="mean_tracking_score">Medelvärde för spårning</string>
     <string name="appwidget_updates_description">Se dina nyligen uppdaterade biblioteket inlägg</string>
     <string name="hide_in_library_items">Dölja poster som redan finns i biblioteket</string>
+    <string name="updates_last_update_info">Biblioteket uppdaterades senast: %s</string>
+    <string name="by_week">Efter vecka</string>
+    <string name="by_day">Efter dagen</string>
+    <string name="by_series">Efter serie</string>
+    <string name="gray_background">Grå</string>
 </resources>

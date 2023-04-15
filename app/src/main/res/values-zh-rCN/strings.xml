@@ -228,7 +228,7 @@
     <string name="cover_updated">封面已更新</string>
     <string name="page_">第 %1$d 页</string>
     <string name="next_chapter_not_found">后面没有啦</string>
-    <string name="decode_image_error">无法解码该图片</string>
+    <string name="decode_image_error">无法加载该图片</string>
     <string name="use_image_as_cover">要将此页设为封面吗？</string>
     <string name="current_chapter">本章：</string>
     <string name="finished_chapter">已读完:</string>
@@ -1033,4 +1033,9 @@
     <string name="collapse_grouped_chapters">收起分组的章节</string>
     <string name="failed_to_update_">%1$s 更新失败</string>
     <string name="mean_tracking_score">综合关注度</string>
+    <string name="updates_last_update_info">书架更新于：%s</string>
+    <string name="by_day">按天</string>
+    <string name="by_series">按系列</string>
+    <string name="by_week">按周</string>
+    <string name="gray_background">灰色</string>
 </resources>

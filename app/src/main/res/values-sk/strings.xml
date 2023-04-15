@@ -299,7 +299,7 @@
     <string name="lock_when_idle">Uzamknúť pri nečinnosti</string>
     <string name="cancel_all_for_series">Zrušiť všetko pre túto sériu</string>
     <string name="secure_screen">Zabezpečená obrazovka</string>
-    <string name="decode_image_error">Obrázok sa nepodarilo dekódovať</string>
+    <string name="decode_image_error">Obrázok sa nepodarilo načítať</string>
     <string name="all_files_permission_required">Požadované povolenia súborov</string>
     <string name="by_update_date">Podľa dátumu nahratia</string>
     <string name="warning">Upozornenie</string>
@@ -350,7 +350,7 @@
     <string name="auto_download_while_reading">Automatické sťahovanie počas čítania</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="remove_all_downloads">Odstrániť všetky stiahnuté súbory\?</string>
-    <string name="lock_with_biometrics">Uzamknúť pomocou biometrie</string>
+    <string name="lock_with_biometrics">Vyžaduje odomknutie</string>
     <string name="unlock">Odomknúť</string>
     <string name="new_chapters">Nové kapitoly</string>
     <string name="last_read_chapter_">Naposledy prečítaná kapitola %1$s</string>
@@ -613,4 +613,11 @@
     <string name="popular">Populárne</string>
     <string name="statistics">Štatistiky</string>
     <string name="appwidget_unavailable_locked">Widget nie je k dispozícii, keď je povolený zámok aplikácie</string>
+    <string name="updates_last_update_info">Posledná aktualizácia knižnice: %s</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Preskočenie %d kapitoly, buď zdroj chýba, alebo bol odfiltrovaný</item>
+        <item quantity="few">Preskočenie %d kapitol, buď zdroj chýba, alebo bol odfiltrovaný</item>
+        <item quantity="other">Preskočenie %d kapitol, buď zdroj chýba, alebo bol odfiltrovaný</item>
+    </plurals>
+    <string name="gray_background">Sivá</string>
 </resources>

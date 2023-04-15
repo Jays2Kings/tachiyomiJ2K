@@ -859,7 +859,7 @@
     <string name="pref_lowest">Terendah</string>
     <string name="download_notifier_split_page_not_found">Muka surat %d tidak dijumpai ketika memisah</string>
     <string name="download_notifier_split_failed">Tidak dapat memisahkan imej yang dimuat turun</string>
-    <string name="split_tall_images">Auto memisah imej yang tinggi</string>
+    <string name="split_tall_images">Memisah imej yang tinggi</string>
     <string name="split_tall_images_summary">Meningkatkan prestasi pembaca</string>
     <string name="reading_list">Senarai Bacaan</string>
     <string name="wish_list">Senarai Hajat</string>
@@ -1030,4 +1030,5 @@
     <string name="appwidget_unavailable_locked">Widget tidak tersedia apabila kekunci aplikasi digunakan</string>
     <string name="mean_tracking_score">Purata skor penjejak</string>
     <string name="read_duration_info">Masa yang dihabiskan dalam membaca, berdasarkan sejarah bab</string>
+    <string name="updates_last_update_info">Terakhir pustaka dikemas kini: %s</string>
 </resources>

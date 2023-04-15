@@ -7,8 +7,8 @@
     <string name="invert_tapping">დაჭერის ინვერსია</string>
     <string name="network">ქსელი</string>
     <plurals name="category_plural">
-        <item quantity="one">%d კატეგორია%d კატეგორიები</item>
-        <item quantity="other"/>
+        <item quantity="one">%d კატეგორია</item>
+        <item quantity="other">%d კატეგორია</item>
     </plurals>
     <string name="searching_for_updates">განახლების ძებნა…</string>
     <string name="show_number_of_items">საგნების რაოდენობის ჩვენება</string>
@@ -24,8 +24,8 @@
     <string name="nsfw_short">18+</string>
     <string name="may_contain_nsfw">შეიძლება შეიჩაცდეს უცენზურო(18+) კონტენტს</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">ნაპოვნია გაფართოების განახლებანაპოვნია %d გაფართოების განახლება</item>
-        <item quantity="other"/>
+        <item quantity="one">ხელმისაწვდომია გაფართოების განახლება</item>
+        <item quantity="other">ხელმისაწვდომია %d გაფართოების განახლება</item>
     </plurals>
     <string name="vertical_viewer">ვერტიკალური</string>
     <string name="webtoon_side_padding_0">არცერთი</string>
@@ -35,8 +35,8 @@
     <string name="backup_has_no_manga">რეზერვი არ შეიცავს არცერთ მანგას.</string>
     <string name="what_should_backup">რას გსურს რომ შეუქმნა რეზერვი\?</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">გაკეთებულია %1$s %2$s შეცდომითგაკეთებულია %1$s %2$s შეცდომებით</item>
-        <item quantity="other"/>
+        <item quantity="one">დასრულების დრო %1$s. %2$s შეცდომა</item>
+        <item quantity="other">დასრულების დრო %1$s. %2$s შეცდომა</item>
     </plurals>
     <string name="does_not_prevent_unofficial_nsfw">ეს არ აღმოფხვრავს პროგრამაში NSFW (18+) შიგთავსის არაოფიციალურ, ან შესაძლო არასწორად მონიშნული გაფართოებებოიდან გამოჩენას.</string>
     <string name="whats_new">რა არის ახალი</string>
@@ -102,7 +102,7 @@
     <string name="badges">ნიშნაკები</string>
     <string name="reduces_banding_impacts_performance">აუმჯობესებს ხარისხს, თუმცა ამცირებს წარმადობას</string>
     <string name="webtoon_side_padding_25">25%</string>
-    <string name="tracking_info">ცალმხრივი სინქრონიზაცია თვალყურის სადევნებელ სერვისებში თავების პროგრესის განსაახლებლად. მიადევნე თვალყური ინდივიდუალურ მანგებს მათი ჩანართებიდან</string>
+    <string name="tracking_info">ცალმხრივი სინქრონიზაცია თვალყურის სადევნებელ სერვისებში თავების პროგრესის განსაახლებლად. მიადევნე თვალყური ინდივიდუალურ მანგებს მათი ჩანართებიდან.</string>
     <string name="restore_backup">რეზერვის აღდგენა</string>
     <string name="restore_missing_sources">დაკარგული წყაროები:</string>
     <string name="username">მომხმარებლის სახელი</string>
@@ -156,8 +156,8 @@
     <string name="picture_saved">სურათი შენახულია</string>
     <string name="latest_chapter">ბოლო თავი</string>
     <plurals name="for_n_titles">
-        <item quantity="one">ნაპოვნია ახალი თავები ნაწარმოებისთვისნაპოვნია ახალი თავები %d ნაწარმოებისთვის</item>
-        <item quantity="other"/>
+        <item quantity="one">%d ნაწარმოებისთვის</item>
+        <item quantity="other">%d ნაწარმოებისთვის</item>
     </plurals>
     <string name="updates">განახლებები</string>
     <string name="label_global_search">გლობალური ძებნა</string>
@@ -278,8 +278,8 @@
     <string name="every_2_days">ყოველ 2 დღეში ერთხელ</string>
     <string name="weekly">ყოველ კვირა</string>
     <plurals name="after_minutes">
-        <item quantity="one">1 წუთის შემდეგ%1$s წუთის შემდეგ</item>
-        <item quantity="other"/>
+        <item quantity="one">%1$s წუთის შემდეგ</item>
+        <item quantity="other">%1$s წუთის შემდეგ</item>
     </plurals>
     <string name="move_to_top">თავში ატანა</string>
     <string name="oldest">უძველესი</string>
@@ -347,4 +347,10 @@
         <item quantity="other">%1$s თავი</item>
     </plurals>
     <string name="allow_deleting_bookmarked_chapters">მონიშნული თავების წაშლა</string>
+    <string name="lock_with_biometrics">განბლოკვის მოთხოვნა</string>
+    <string name="decode_image_error">გამოსახულებსი ჩატვირთვის შეცდომა</string>
+    <string name="backup_in_progress">მარქაფი უკვე მიმდინარეობს</string>
+    <string name="learn_why">გაიგეთ, რატომ</string>
+    <string name="all_files_permission_required">ფაილის აუცილებელი წვდომები</string>
+    <string name="gray_background">ნაცრისფერი</string>
 </resources>

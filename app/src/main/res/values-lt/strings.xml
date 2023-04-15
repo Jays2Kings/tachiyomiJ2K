@@ -508,4 +508,5 @@
     <string name="allow_deleting_bookmarked_chapters">Leisti naikinti žymėtus skyrius</string>
     <string name="appwidget_updates_description">Peržiūrėkite neseniai atnaujintus bibliotekos įrašus</string>
     <string name="appwidget_unavailable_locked">Valdiklis nepasiekiamas, kai įjungtas programėlės užraktas</string>
+    <string name="updates_last_update_info">Biblioteka paskutinį kartą atnaujinta: %s</string>
 </resources>

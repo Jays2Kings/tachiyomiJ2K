@@ -934,7 +934,7 @@
     <string name="log_out">Terminar sessão</string>
     <string name="log_out_from_">Terminar sessão em %1$s\?</string>
     <string name="every_3_days">A cada 3 dias</string>
-    <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
+    <string name="download_queue_size_warning">Aviso: descargas grandes em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
     <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="help_translate">Ajude a traduzir</string>
@@ -1026,7 +1026,7 @@
     <string name="pref_lowest">Mais baixa</string>
     <string name="download_notifier_split_page_not_found">Página %d não encontrada durante a divisão</string>
     <string name="download_notifier_split_failed">Não foi possível dividir a imagem transferida</string>
-    <string name="split_tall_images">Dividir imagens altas</string>
+    <string name="split_tall_images">Dividir Imagens altas</string>
     <string name="split_tall_images_summary">Melhora o desempenho do leitor</string>
     <string name="tap_zones">Zonas de toque</string>
     <string name="webtoon_side_padding_5">5%</string>
@@ -1114,4 +1114,5 @@
     <string name="mean_tracking_score">Pontuação média de rastreamento</string>
     <string name="collapse_grouped_chapters">Recolher capítulos agrupados</string>
     <string name="show_more_chapters">Mostrar mais capítulos</string>
+    <string name="updates_last_update_info">Última atualização da biblioteca: %s</string>
 </resources>

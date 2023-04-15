@@ -9,7 +9,7 @@
     <string name="unknown">Di alam</string>
     <string name="licensed">Lisensiyado</string>
     <string name="completed">Kumpleto</string>
-    <string name="lock_with_biometrics">I-lock gamit ang biometrics</string>
+    <string name="lock_with_biometrics">Nangangailangang i-unlock</string>
     <string name="lock_when_idle">Isara kung nakatambay</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s kabanata</item>
@@ -173,8 +173,8 @@
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Wika: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Available ang update ng extension</item>
-        <item quantity="other">Available ang mga update sa %d extension</item>
+        <item quantity="one">Available ang pag-update ng extension</item>
+        <item quantity="other">Available ang %d na mga update sa extension</item>
     </plurals>
     <string name="set_as_cover">Gawing cover</string>
     <string name="cover_updated">Napalitan na ang cover</string>
@@ -182,7 +182,7 @@
     <string name="use_image_as_cover">Gamitin ang larawang ito bilang pabalat\?</string>
     <string name="next">Susunod</string>
     <string name="previous">Nakaraan</string>
-    <string name="theres_no_next_chapter">Wala na\'ng kasunod</string>
+    <string name="theres_no_next_chapter">Wala nang susunod na kabanata</string>
     <string name="theres_no_previous_chapter">Walang kabanata bago ito</string>
     <string name="loading_pages">Nilo-load ang mga pahina…</string>
     <string name="failed_to_load_pages_">Bigong ma-load ang (mga) pahina: %1$s</string>
@@ -190,7 +190,7 @@
     <string name="double_tap_anim_speed">Bilis ng animasyon sa pagdoble-pindot</string>
     <string name="show_page_number">Ipakita ang bilang ng pahina</string>
     <string name="true_32bit_color">Totoong kulay (32-bit)</string>
-    <string name="reduces_banding_impacts_performance">Nababawasan ang pagkakaroon ng linya, pero dagdag-pasanin ito sa app</string>
+    <string name="reduces_banding_impacts_performance">Binabawasan ang banding, ngunit maaaring makaapekto ito sa performance</string>
     <string name="crop_borders">Gupitin ang gilid</string>
     <string name="color_filter_blend_mode">Blend mode ng filter ng kulay</string>
     <string name="overlay">Nakapatong (Overlay)</string>
@@ -564,7 +564,7 @@
     <string name="reading_">Binabasa: %1$s</string>
     <string name="changing_will_reset_reading_mode">Mari-reset ang paraan ng pagbasa para sa seryeng ito kung babaguhin ito</string>
     <string name="reading_mode">Paraan ng pagbasa</string>
-    <string name="decode_image_error">Hindi ma-decode ang larawan</string>
+    <string name="decode_image_error">Di mai-load ang larawan</string>
     <string name="pages_">Mga pahina: %1$s</string>
     <string name="page_">Pahina: %1$d</string>
     <plurals name="_updates_pending">
@@ -616,9 +616,9 @@
         <item quantity="other">Para sa %d (na) serye</item>
     </plurals>
     <string name="external_storage_download_notice">Kailangan ng TachiyomiJ2K ng access sa lahat po ng mga file para maka-download ng mga kabanata. Pakipindot po ito, tapos pakibuksan po ang \"Payagan ang pamamahala ng lahat ng file.\"</string>
-    <string name="external_storage_permission_notice">Kailangan ng TachiyomiJ2K ng access sa lahat po ng mga file sa Android 11 para maka-download ng mga kabanata, makagawa ng mga kusang pag-backup, at makapagbasa ng mga lokal na manga.
+    <string name="external_storage_permission_notice">Ang TachiyomiJ2K ay nangangailangan ng access sa lahat ng mga file sa Android 11 upang mag-download ng mga kabanata, gumawa ng mga awtomatikong pag-backup, at magbasa ng lokal na manga.
 \n
-\nSa susunod na screen, pakibuksan po ang \"Payagan ang pamamahala ng lahat ng file.\"</string>
+\nSa susunod na screen, paganahin ang \"Payagan ang pag-access upang pamahalaan ang lahat ng mga file.\"</string>
     <string name="all_files_permission_required">Kailangan ng permiso sa file</string>
     <string name="when_sorting_ignore_articles">Kapag paalpabetong mag-aayos, ayusin nang binabalewala ang mga article (a, an, the) sa simula ng mga pamagat</string>
     <string name="sort_by_ignoring_articles">Ayusin nang binabalewala ang mga article</string>
@@ -671,8 +671,8 @@
         <item quantity="other">%1$d (na) pahina</item>
     </plurals>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Nilaktawan ang isang kabanata, maaaring wala ang source o na-filter na ito</item>
-        <item quantity="other">Nilaktawan ang %d na (mga) kabanata, maaaring wala ang source o na-filter ang mga ito</item>
+        <item quantity="one">Nilaktawan ang %d na kabanata, maaaring ito ay wala sa source o na-filter ang mga ito</item>
+        <item quantity="other">Nilaktawan ang %d na (mga) kabanata, maaaring wala sa source o na-filter ang mga ito</item>
     </plurals>
     <string name="about_this_">Tungkol sa %1$s na ito</string>
     <string name="start_reading">Simulang basahin</string>
@@ -742,11 +742,11 @@
     <string name="cover_only_grid">Pabalat lang</string>
     <string name="notification_update_error">Nabigo ang %1$d (na) update</string>
     <string name="notification_update_skipped">Nilaktawan ang %1$d (na) update</string>
-    <string name="skipped_reason_completed">Nilaktawan dahil tapos na ang serye</string>
-    <string name="skipped_reason_not_caught_up">Nilaktawan dahil may di pa nababasang kabanata</string>
-    <string name="skipped_reason_not_started">Nilaktawan dahil wala pang nababasang kabanata</string>
+    <string name="skipped_reason_completed">Nilaktawan dahil kumpleto na ang serye</string>
+    <string name="skipped_reason_not_caught_up">Nilaktawan dahil may di pa nabasang (mga) kabanata</string>
+    <string name="skipped_reason_not_started">Nilaktawan dahil wala pang nabasang (mga) kabanata</string>
     <string name="channel_skipped">Nilaktawan</string>
-    <string name="pref_library_update_manga_restriction">Laktawan ang pag-update</string>
+    <string name="pref_library_update_manga_restriction">Laktawan ang pag-update sa mga titulo</string>
     <string name="pref_update_only_completely_read">May di pa nababasang kabanata</string>
     <string name="pref_update_only_non_completed">May \"Kumpleto\" na estado</string>
     <string name="pref_update_only_started">Hindi pa nasisimulan</string>
@@ -894,7 +894,7 @@
     <string name="clear_history_completed">Nalinis na ang nakaraan</string>
     <string name="clear_history_confirmation">Sigurado ka ba talaga\? Mawawala ang buong nakaraan.</string>
     <string name="save_chapters_as_cbz">I-save bilang CBZ archive</string>
-    <string name="backup_restore_invalid_uri">Error: bakanteng URI</string>
+    <string name="backup_restore_invalid_uri">Error: walang URI</string>
     <string name="backup_info">Rinerekomenda po namin ang kusang pag-backup. Kailangan mo ring magtabi ng mga kopya sa ibang lugar.</string>
     <string name="pref_manage_notifications">Pamahalaan ang mga abiso</string>
     <string name="battery_not_low">Di pa lowbat</string>
@@ -926,7 +926,7 @@
     <string name="remove_download">Tanggalin ang download</string>
     <string name="remove_downloads">Tanggalin ang mga download</string>
     <string name="download_ahead">I-download agad</string>
-    <string name="download_ahead_info">Gagana lang sa mga entry sa aklatan at kung naka-download na ang kasalukuyang kabanata pati ang susunod</string>
+    <string name="download_ahead_info">Gumagana lamang sa mga entry sa aklatan at kung ang kasalukuyang kabanata at ang susunod na kabanata ay na-download na</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Susunod na hindi pa nababasang kabanata</item>
         <item quantity="other">Susunod na %d hindi pa nababasang (mga) kabanata</item>
@@ -984,13 +984,13 @@
     <string name="secure_screen_summary">Tinatago ng seguridad sa screen ang laman ng app habang nagpapalit ng app at hinaharangan din nito ang mga screenshot</string>
     <string name="open_in_app">Buksan sa app</string>
     <string name="pref_highest">Pinakamataas</string>
-    <string name="pref_hide_threshold">Sensitivity ng pagtago sa menu pagka-scroll</string>
+    <string name="pref_hide_threshold">Sensitivity para sa pagtatago ng menu sa scroll</string>
     <string name="pref_high">Mataas</string>
     <string name="pref_low">Mababa</string>
     <string name="pref_lowest">Pinakamababa</string>
     <string name="download_notifier_split_page_not_found">Hindi nakita ang pahina %d habang naghahati</string>
     <string name="download_notifier_split_failed">Di mahati ang na-download na larawan</string>
-    <string name="split_tall_images">Kusang hatiin ang mga matatangkad na larawan</string>
+    <string name="split_tall_images">Hatiin ang mga matatangkad na (mga) larawan</string>
     <string name="split_tall_images_summary">Pinapahusay ang performance ng reader</string>
     <string name="complete_list">Listahan ng Kumpleto</string>
     <string name="on_hold_list">Listahan ng Tinigil</string>
@@ -1052,7 +1052,7 @@
     <string name="error_user_agent_string_invalid">Invalid na string ng user agent</string>
     <string name="allow_deleting_bookmarked_chapters">Burahin din ang may pananda</string>
     <string name="popular">Sikat</string>
-    <string name="skip_dupe_chapters">Laktawan ang mga magkakarehas na kabanata</string>
+    <string name="skip_dupe_chapters">Laktawan ang (mga) magkaparehong kabanata</string>
     <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa Aklatan mo</string>
     <string name="appwidget_unavailable_locked">Di available ang widget kapag nakabukas ang lock</string>
     <string name="hide_in_library_items">Itago ang mga entry na nasa aklatan na</string>
@@ -1060,4 +1060,9 @@
     <string name="mean_tracking_score">Mean tracking score</string>
     <string name="show_more_chapters">Magpakita ng iba pang mga kabanata</string>
     <string name="collapse_grouped_chapters">I-collapse ang mga nakagrupong kabanata</string>
+    <string name="updates_last_update_info">Huling update sa aklatan: %s</string>
+    <string name="by_series">Sa pamamagitan ng serye</string>
+    <string name="by_day">Sa pamamagitan ng araw</string>
+    <string name="by_week">Sa pamamagitan ng linggo</string>
+    <string name="gray_background">Abo</string>
 </resources>

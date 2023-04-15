@@ -160,7 +160,7 @@
     <string name="unknown">不明</string>
     <string name="licensed">ライセンス済み</string>
     <string name="completed">完結済み</string>
-    <string name="lock_with_biometrics">生体認証</string>
+    <string name="lock_with_biometrics">アンロックを必要とする</string>
     <string name="lock_when_idle">タイムアウトロック</string>
     <string name="chapter_">第%1$s章</string>
     <string name="failed_to_update_cover">カバーの更新に失敗しました</string>
@@ -595,7 +595,7 @@
     <string name="category_hopper_long_press">カテゴリーホッパーの長押しアクション</string>
     <string name="set_as_default_for_all">全てのデフォルトとして設定</string>
     <string name="filter_languages">言語フィルター</string>
-    <string name="decode_image_error">この画像をデコードできませんでした</string>
+    <string name="decode_image_error">画像をロードできませんでした</string>
     <string name="clear_cached_covers_non_library">ライブラリにないキャッシュされたカバーをクリア</string>
     <string name="not_logged_into_">%1$sにログインしていません</string>
     <string name="search_recents">最近を検索…</string>
@@ -815,7 +815,7 @@
     <string name="set_as_default">既定として設定</string>
     <string name="add_tag">タグを追加</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">ソースに存在しないか、フィルターによって排除されたため、%d章がスキップされました</item>
+        <item quantity="other">ソースには存在しないか、フィルターによって排除されたため、%d章がスキップされました</item>
     </plurals>
     <string name="split_double_pages">ダブルページを分割</string>
     <string name="remove_crop">クロップを除去</string>
@@ -967,7 +967,7 @@
     <string name="pref_lowest">最低</string>
     <string name="download_notifier_split_page_not_found">分割時にページ%dが見つかりませんでした</string>
     <string name="download_notifier_split_failed">ダウンロードした画像を分割できませんでした</string>
-    <string name="split_tall_images">長い画像を自動で分割</string>
+    <string name="split_tall_images">長い画像を分割</string>
     <string name="split_tall_images_summary">ビューアのパフォーマンスを向上させます</string>
     <string name="reading_list">読書中リスト</string>
     <string name="wish_list">読みたいリスト</string>
@@ -1033,4 +1033,9 @@
     <string name="mean_tracking_score">平均追跡スコア</string>
     <string name="show_more_chapters">章をもっと表示</string>
     <string name="collapse_grouped_chapters">グループ化した章を折り畳む</string>
+    <string name="updates_last_update_info">前回のライブラリ更新：%s</string>
+    <string name="by_series">シリーズ</string>
+    <string name="by_week">週</string>
+    <string name="by_day">日</string>
+    <string name="gray_background">灰色</string>
 </resources>

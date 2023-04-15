@@ -11,9 +11,9 @@
     <string name="default_category">Categoría por defecto</string>
     <string name="charging">Cargando</string>
     <string name="wifi">Wi-Fi</string>
-    <string name="secure_screen">Asegurar pantalla</string>
-    <string name="lock_when_idle">Bloquear con inactividade</string>
-    <string name="lock_with_biometrics">Bloquear cos datos biométricos</string>
+    <string name="secure_screen">Modo discreto</string>
+    <string name="lock_when_idle">Bloquear por inactividade</string>
+    <string name="lock_with_biometrics">Requerir desbloqueo</string>
     <string name="requires_app_restart">Require reiniciar a aplicación para que surxa efecto</string>
     <string name="loading">Cargando…</string>
     <string name="history">Historial</string>
@@ -28,7 +28,7 @@
     <string name="app_short_name" translatable="false">TachiJ2K</string>
     <string name="app_name" translatable="false">TachiyomiJ2K</string>
     <string name="webtoon">Webtoon</string>
-    <string name="unread">Sen ler</string>
+    <string name="unread">Non lidos</string>
     <string name="bookmarked">Gardado nos marcadores</string>
     <string name="reading">Lendo</string>
     <string name="migrate">Migrar</string>
@@ -258,7 +258,7 @@
     <string name="move_x_to">Move %1$s a…</string>
     <string name="select_inverse">Selección inversa</string>
     <string name="pref_manage_notifications">Xestionar notificacións</string>
-    <string name="secure_screen_summary">Esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
+    <string name="secure_screen_summary">O modo discreto esconde os contidos da app ao cambiar de app e bloquea as capturas de pantalla</string>
     <string name="downloaded_chapters">Descargar insignias</string>
     <string name="does_not_prevent_unofficial_nsfw">Isto non evita que as extensións non oficiais ou potencialmente marcadas incorrectamente mostren contido para maiores de 18 anos dentro da aplicación.</string>
     <string name="reduces_banding_impacts_performance">Reduce o anelado pero afecta ao rendemento</string>
@@ -339,7 +339,7 @@
     <string name="check_site_in_web">Abrir o sitio web no WebView</string>
     <string name="status">Estado</string>
     <string name="yotsuba">Yotsuba</string>
-    <string name="split_tall_images">Separar imaxes altas</string>
+    <string name="split_tall_images">Dividir as imaxes altas</string>
     <string name="exclude_">Excluír: %s</string>
     <string name="tap_to_see_details">Preme para ver os detalles do erro</string>
     <string name="tap_to_learn_more">Preme para saber máis</string>
@@ -509,4 +509,12 @@
     <string name="log_out">Pechar sesión</string>
     <string name="log_out_from_">Pechar a sesión en %1$s\?</string>
     <string name="next">Seguinte</string>
+    <string name="updates_last_update_info">Última actualización da biblioteca: %s</string>
+    <string name="use_side_navigation">Usar a navegación lateral</string>
+    <string name="side_nav_icon_alignment">Aliñamento da icona de navegación lateral</string>
+    <string name="details_page">Detalles de páxina</string>
+    <string name="default_behavior">Comportamento por defecto</string>
+    <string name="hide_bottom_nav">Ocultar automaticamente a barra de navegación</string>
+    <string name="follow_system_theme">Seguir o tema do sistema</string>
+    <string name="by_default_side_nav_info">Por defecto, a navegación lateral utilízase en certos teléfonos e tabletas pequenas cando están en horizontal e sempre se mostra en tabletas máis grandes</string>
 </resources>

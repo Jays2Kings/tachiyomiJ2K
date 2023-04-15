@@ -563,7 +563,7 @@
     <string name="your_library">Könyvtárad</string>
     <string name="always_show_current_category">Aktuális kategória folyamatos mutatása</string>
     <string name="group_library_by">Könyvtár csoportosítása…</string>
-    <string name="lock_with_biometrics">Biometricus zárolás</string>
+    <string name="lock_with_biometrics">Biometrikus zár</string>
     <string name="no_chapters_to_delete">Nincs törölhető fejezet</string>
     <string name="by_source_order">Forrás szerinti csoportositás</string>
     <string name="no_matches_for_filters_short">Nincs találat a filterre</string>
@@ -600,4 +600,9 @@
     <string name="allow_deleting_bookmarked_chapters">Könyvjelzőzött fejezetek törlésének engedélyezése</string>
     <string name="appwidget_unavailable_locked">Widget nem elérhető amikor az alkalmazás zárolva van</string>
     <string name="statistics">Statisztika</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">%d fejezet kihagyása, hiányzik a forrás, vagy ki lett szűrve</item>
+        <item quantity="other">%d fejezet kihagyása, hiányoznak a források, vagy ki lettek szűrve</item>
+    </plurals>
+    <string name="decode_image_error">A képet nem lehetett betölteni</string>
 </resources>

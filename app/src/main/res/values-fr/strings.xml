@@ -173,7 +173,7 @@
     <string name="cover_updated">Couverture mise à jour</string>
     <string name="page_">Page %1$d</string>
     <string name="next_chapter_not_found">Chapitre suivant non trouvé</string>
-    <string name="decode_image_error">L\'image n\'a pas pu être décodée</string>
+    <string name="decode_image_error">L\'image n\'a pas pu être chargée</string>
     <string name="use_image_as_cover">Voulez-vous mettre cette image comme couverture ?</string>
     <!-- Backup fragment -->
     <string name="backup">Sauvegarder</string>
@@ -306,7 +306,7 @@
     <string name="burn_darken">Brûlé / Assombri</string>
     <string name="forward">Suivant</string>
     <string name="no_results_found">Aucun résultat trouvé</string>
-    <string name="lock_with_biometrics">Imposer un déverrouillage à l\'ouverture</string>
+    <string name="lock_with_biometrics">Nécessite un déverrouillage</string>
     <string name="lock_when_idle">Verrouiller en cas d\'inactivité</string>
     <string name="refresh_tracking">Actualiser les métadonnées de suivi</string>
     <string name="add_tracking">Ajouter le suivi</string>
@@ -649,7 +649,7 @@
     <string name="edge_nav">Bord</string>
     <string name="right_and_left_nav">Droite et gauche</string>
     <string name="invert_tapping">Inverser les zones tactiles</string>
-    <string name="none">Aucun</string>
+    <string name="none">Aucun(e)</string>
     <string name="no_chapters_error">Aucun chapitre trouvé</string>
     <string name="badges">Badges</string>
     <string name="file_picker_error">L’application de sélection de fichier est introuvable</string>
@@ -695,7 +695,7 @@
     <string name="crash_logs">Journaux de plantage</string>
     <string name="dump_crash_logs">Copie des journaux endommagés</string>
     <string name="saves_error_logs">Enregistre les journaux d\'erreur dans un fichier pour le partager avec les développeurs</string>
-    <string name="crash_log_saved">Registre d\'incident sauvegardé</string>
+    <string name="crash_log_saved">Rapports de plantage sauvegardés</string>
     <string name="updated_to_">Mise à jour de v%1$s</string>
     <string name="pressing_back_to_start">Revenir à l\'écran de démarrage en appuyant sur retour</string>
     <string name="ignore_cutout_areas">Ignorer les zones de découpe</string>
@@ -932,9 +932,9 @@
     <string name="default_behavior">Comportement par défaut</string>
     <string name="use_side_navigation">Utiliser la navigation latérale</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Un chapitre a été sauté, soit la source ne l\'a pas, soit il a été filtré</item>
-        <item quantity="many">%d chapitres ont été sautés, soit la source ne l\'a pas, soit il ont été filtrés</item>
-        <item quantity="other">%d chapitres ont été sautés, soit la source ne l\'a pas, soit il ont été filtrés</item>
+        <item quantity="one">%d chapitre a été sauté, soit la source ne l\'a pas, soit il a été filtré</item>
+        <item quantity="many">%d chapitres ont été sautés, soit la source ne les a pas, soit ils ont été filtrés</item>
+        <item quantity="other">%d chapitres ont été sautés, soit la source ne les a pas, soit il ont été filtrés</item>
     </plurals>
     <string name="helpful_translation_links">Liens utiles pour la traduction</string>
     <string name="help_translate">Aider à traduire</string>
@@ -1030,7 +1030,7 @@
     <string name="battery_not_low">Batterie non faible</string>
     <string name="pref_manage_notifications">Notifications</string>
     <string name="faq_and_guides">FAQ et guides</string>
-    <string name="download_ahead">Télécharger à l\'avance</string>
+    <string name="download_ahead">Téléchargement anticipé</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Chapitre suivant non lu</item>
         <item quantity="many">Les %d suivants non lus</item>
@@ -1041,13 +1041,13 @@
     <string name="secure_screen_summary">L\'écran sécurisé cache le contenu lors du changement d\'application et bloque les captures d\'écran</string>
     <string name="open_in_app">Ouvrir dans l\'application</string>
     <string name="pref_hide_threshold">Sensibilité pour masquer le menu lors du défilement</string>
-    <string name="pref_highest">La plus élevée</string>
+    <string name="pref_highest">Maximale</string>
     <string name="pref_high">Élevée</string>
     <string name="pref_low">Basse</string>
-    <string name="pref_lowest">La plus basse</string>
+    <string name="pref_lowest">Minimale</string>
     <string name="download_notifier_split_page_not_found">Page %d introuvable lors du fractionnement</string>
     <string name="download_notifier_split_failed">Impossible de diviser l\'image téléchargée</string>
-    <string name="split_tall_images">Fractionner les images trop grandes</string>
+    <string name="split_tall_images">Diviser les grandes images</string>
     <string name="split_tall_images_summary">Améliore les performances du lecteur</string>
     <string name="reading_list">Liste de lecture</string>
     <string name="wish_list">Liste de souhaits</string>
@@ -1062,7 +1062,7 @@
     <string name="user_agent_string">Agents utilisateurs par défaut</string>
     <string name="language_requires_app_restart">Certains langages peuvent nécessiter un redémarrage de l\'application pour s\'afficher correctement</string>
     <string name="loader_rar5_error">Le format RARv5 n\'est pas supporté</string>
-    <string name="auto_download_while_reading">Téléchargement automatique pendant la lecture</string>
+    <string name="auto_download_while_reading">Téléchargement anticipé pendant la lecture</string>
     <string name="downloaded_chapters">Chapitres téléchargés</string>
     <string name="stat">Stat</string>
     <string name="statistics_details">Détails des statistiques</string>
@@ -1121,4 +1121,8 @@
     <string name="failed_to_update_">Échec de la mise à jour %1$s</string>
     <string name="show_more_chapters">Afficher plus de chapitres</string>
     <string name="collapse_grouped_chapters">Réduire les chapitres groupés</string>
+    <string name="by_series">Par série</string>
+    <string name="by_week">Par semaine</string>
+    <string name="by_day">Par jour</string>
+    <string name="updates_last_update_info">Dernière mise à jour de la bibliothèque le : %s</string>
 </resources>
