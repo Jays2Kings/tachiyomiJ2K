@@ -4,6 +4,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.isActive
 import java.lang.ref.WeakReference
 
 open class BaseCoroutinePresenter<T> {
@@ -19,6 +20,9 @@ open class BaseCoroutinePresenter<T> {
      */
     open fun attachView(view: T?) {
         weakView = WeakReference(view)
+         if (!presenterScope.isActive) {
+            presenterScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        }
     }
 
     open fun onCreate() {
