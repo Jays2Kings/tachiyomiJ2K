@@ -605,4 +605,5 @@
         <item quantity="other">%d fejezet kihagyása, hiányoznak a források, vagy ki lettek szűrve</item>
     </plurals>
     <string name="decode_image_error">A képet nem lehetett betölteni</string>
+    <string name="popular">Felkapott</string>
 </resources>

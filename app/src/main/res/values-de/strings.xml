@@ -1099,4 +1099,7 @@
     <string name="show_more_chapters">Weitere Kapitel anzeigen</string>
     <string name="collapse_grouped_chapters">Gruppierte Kapitel einklappen</string>
     <string name="updates_last_update_info">Bibliothek zuletzt aktualisiert: %s</string>
+    <string name="gray_background">Grau</string>
+    <string name="app_updates">Anwendungsaktualisierungen</string>
+    <string name="open">Öffnen</string>
 </resources>

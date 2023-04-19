@@ -1035,4 +1035,5 @@
     <string name="no_data_for_filters">현재 필터 상태에서 아무런 정보를 찾지 못 함.</string>
     <string name="updates_last_update_info">마지막 서재 업데이트: %s</string>
     <string name="gray_background">회색</string>
+    <string name="app_updates">앱 업데이트</string>
 </resources>

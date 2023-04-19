@@ -1167,4 +1167,7 @@
     <string name="by_series">حسب السلسلة</string>
     <string name="by_week">حسب الأسبوع</string>
     <string name="by_day">حسب اليوم</string>
+    <string name="gray_background">رمادي</string>
+    <string name="app_updates">تحديثات التطبيق</string>
+    <string name="open">افتح</string>
 </resources>

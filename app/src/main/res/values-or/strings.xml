@@ -122,4 +122,9 @@
     <string name="auto_refresh_covers">ମଲାଟଗୁଡ଼ିକୁ ସ୍ୱଚାଳିତ ଭାବେ ସତେଜ କରାଯାଉ</string>
     <string name="more">ଅଧିକ</string>
     <string name="statistics">ପରିସଂଖ୍ୟାନ</string>
+    <string name="help_translate">ଅନୁଵାଦ କରିବାରେ ସାହାଯ୍ୟ କରନ୍ତୁ</string>
+    <string name="view_detailed_statistics">ଵିସ୍ତୃତ ପରିସଂଖ୍ୟାନ ଦେଖନ୍ତୁ</string>
+    <string name="searching_for_updates">ଅଦ୍ୟତନ ପାଇଁ ସନ୍ଧାନ କରୁଛି…</string>
+    <string name="helpful_translation_links">ଉପଯୋଗୀ ଅନୁଵାଦ ଲିଙ୍କ୍</string>
+    <string name="no_new_updates_available">କୌଣସି ନୂତନ ଅଦ୍ୟତନ ଉପଲବ୍ଧ ନାହିଁ</string>
 </resources>

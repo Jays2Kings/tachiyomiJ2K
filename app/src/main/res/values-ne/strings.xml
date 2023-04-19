@@ -40,7 +40,7 @@
     <string name="error_user_agent_string_invalid">अवैध युजर एजेन्ट स्ट्रिङ</string>
     <string name="disabled">असक्षम</string>
     <string name="used_">प्रयोग गरिएको: %1$s</string>
-    <string name="clear_database_completed">इन्ट्रीहरु हटाइयो</string>
+    <string name="clear_database_completed">इन्ट्रीहरू हटाइयो</string>
     <string name="updates_tracking_details">ट्र्याकिङ सेवाहरूबाट स्थिति, स्कोर र अन्तिम पढिएको अध्याय अपडेट गर्दछ</string>
     <string name="pref_global_search">ग्लोबल खोजी</string>
     <string name="nsfw_sources">NSFW (18+) स्रोत</string>
@@ -237,7 +237,7 @@
     <string name="remove_from_library">पुस्तकालयबाट हटाउनुहोस्</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">अर्को नपढिएको अध्याय</item>
-        <item quantity="other">अर्को %d नपढिएका अध्यायहरु</item>
+        <item quantity="other">अर्को %d नपढिएका अध्यायहरू</item>
     </plurals>
     <string name="error_saving_cover">आवरण बचत गर्दा त्रुटि भयो</string>
     <string name="error_sharing_cover">आवरण साझा गर्दा त्रुटि भयो</string>
@@ -480,7 +480,7 @@
     <string name="remove_all_downloads">सबै डाउनलोडहरू हटाउने हो\?</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">%d अध्याय छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
-        <item quantity="other">%d अध्यायहरु छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
+        <item quantity="other">%d अध्यायहरू छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
     </plurals>
     <string name="backup_in_progress">ब्याकअप पहिले नै प्रगतिमा छ</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न, स्वचालित ब्याकअपहरू सिर्जना गर्न र लोकल माङ्गा पढ्नको लागि Android 11 मा सबै फाइलहरू माथि पहुँच चाहिन्छ।

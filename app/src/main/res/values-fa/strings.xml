@@ -577,4 +577,5 @@
         <item quantity="other">%d قسمت جا افتاده است</item>
     </plurals>
     <string name="gray_background">خاکستری</string>
+    <string name="app_updates">بروزرسانی برنامه</string>
 </resources>

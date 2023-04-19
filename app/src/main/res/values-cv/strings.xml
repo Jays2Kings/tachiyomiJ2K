@@ -275,15 +275,15 @@
     <string name="vertical_viewer">Урлӑ</string>
     <string name="right_to_left_viewer">Сылтӑмран сулахаялла</string>
     <string name="left_to_right_viewer">Сулахайран сылтӑмалла</string>
-    <string name="decode_image_error"/>
+    <string name="decode_image_error">Сӑн тийенмерӗ</string>
     <string name="cover_updated">Хуплашкана ҫӗнетнӗ</string>
     <string name="set_as_cover">Хуплашка пек ларт</string>
     <string name="obsolete_extension_message">Ҫак хушмана урӑх кӗме май ҫук.</string>
-    <string name="untrusted_extension_message">Ку хушмана шанчӑклӑ мар сертификатпа алӑ пуснӑ тата ӑна активламан.
+    <string name="untrusted_extension_message">Ку хушмана шанчӑклӑ мар ӗнентерӳ хучӗпе алӑ пуснӑ тата ӑна пуҫарман.
 \n
-\nСиенлӗ хушма Tachiyomi-ри упранакан кирек мӗнле шут пӗлӗмсене шута илме е хӑй ирӗклӗ юма пурнӑҫлама пултарать.
+\nСийенлӗ хушма Tachiyomi-ри упранакан кирек мӗнле шут пӗлӗмӗсене шута илме йе хӑй ирӗклӗ йума пурнӑҫлама пултарать.
 \n
-\nҪак сертификата шаннипе эсӗ ҫав теветкеле йышӑнатӑн.</string>
+\nҪак ӗнентерӳ хутне шаннипе есӗ ҫав теветкеле йышӑнатӑн.</string>
     <string name="untrusted_extension">Шанчӑклӑ мар хушма</string>
     <string name="local_source_help_guide">Вырӑнти ҫӑл куҫ ертӳлӗхӗ</string>
     <string name="in_library">Вулавăшра</string>
@@ -361,7 +361,7 @@
     <string name="unlock_library">Вулавӑша уҫма ҫаклату салт</string>
     <string name="tracked">Сӑнавланакан</string>
     <string name="last_used">Юлашки усӑ курни</string>
-    <string name="unofficial_extension_message">Ҫак хушма Tachiyomi-н официаллӑ хушмасен ят-йыша кӗмест.</string>
+    <string name="unofficial_extension_message">Ҫак хушма Tachiyomi-н ӗҫ йӗркиллӗ хушмасен йат-йышне кӗмест.</string>
     <string name="nsfw_short">18+</string>
     <string name="unofficial">Официаллӑ мар</string>
     <string name="may_contain_nsfw">NSFW (18+) шалаш пулма пултарать</string>
@@ -496,4 +496,6 @@
     <string name="pure_black_dark_mode">Хуп-хура темӑ</string>
     <string name="pref_update_only_completely_read">Вуламан сыпӑк(сем) пур</string>
     <string name="pref_update_only_started">Серилӗхе пуҫламан</string>
+    <string name="split_tall_images">Вӑрӑм сӑнсене пайлани</string>
+    <string name="split_tall_images_summary">Вулӑшӑн тухӑҫа лайӑхлатать</string>
 </resources>

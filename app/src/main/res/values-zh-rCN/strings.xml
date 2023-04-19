@@ -1038,4 +1038,6 @@
     <string name="by_series">按系列</string>
     <string name="by_week">按周</string>
     <string name="gray_background">灰色</string>
+    <string name="open">打开</string>
+    <string name="app_updates">应用更新</string>
 </resources>

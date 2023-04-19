@@ -1039,4 +1039,6 @@
     <string name="by_day">Berdasarkan hari</string>
     <string name="updates_last_update_info">Pustaka terakhir diperbarui: %s</string>
     <string name="gray_background">Abu-abu</string>
+    <string name="app_updates">Pembaruan aplikasi</string>
+    <string name="open">Buka</string>
 </resources>

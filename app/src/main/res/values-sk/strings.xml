@@ -620,4 +620,5 @@
         <item quantity="other">Preskočenie %d kapitol, buď zdroj chýba, alebo bol odfiltrovaný</item>
     </plurals>
     <string name="gray_background">Sivá</string>
+    <string name="app_updates">Aktualizácie aplikácie</string>
 </resources>

@@ -178,7 +178,7 @@
     <string name="cover_updated">Copertina aggiornata</string>
     <string name="page_">Pagina: %1$d</string>
     <string name="next_chapter_not_found">Capitolo successivo non trovato</string>
-    <string name="decode_image_error">L\'immagine non può essere decodificata</string>
+    <string name="decode_image_error">Non è stato possibile caricare l\'immagine</string>
     <string name="use_image_as_cover">Vuoi impostare questa immagine come copertina?</string>
     <!-- Backup fragment -->
     <string name="backup">Backup</string>
@@ -304,7 +304,7 @@
     <string name="burn_darken">Scurisci</string>
     <string name="help">Aiuto</string>
     <string name="no_results_found">Nessun risultato trovato</string>
-    <string name="lock_with_biometrics">Blocca con biometria</string>
+    <string name="lock_with_biometrics">Richiedi sblocco</string>
     <string name="lock_when_idle">Blocca quando inattivo</string>
     <string name="date_format">Formato della data</string>
     <string name="secure_screen">Schermo sicuro</string>
@@ -929,7 +929,7 @@
     <string name="default_behavior">Comportamento predefinito</string>
     <string name="use_side_navigation">Usa navigazione laterale</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Un capitolo saltato, la fonte non ce l\'ha o è stato filtrato</item>
+        <item quantity="one">%d capitolo saltato, la fonte non ce l\'ha o è stato filtrato</item>
         <item quantity="many">%d capitoli saltati, la fonte non li ha o sono stati filtrati</item>
         <item quantity="other">%d capitoli saltati, la fonte non li ha o sono stati filtrati</item>
     </plurals>
@@ -1123,4 +1123,5 @@
     <string name="read_duration_info">Tempo trascorso nel lettore, basato sulla cronologia capitoli</string>
     <string name="show_more_chapters">Mostra più capitoli</string>
     <string name="collapse_grouped_chapters">Comprimi i capitoli raggruppati</string>
+    <string name="gray_background">Grigio</string>
 </resources>

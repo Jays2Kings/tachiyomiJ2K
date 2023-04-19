@@ -1092,4 +1092,6 @@
     <string name="by_series">Podle série</string>
     <string name="updates_last_update_info">Poslední aktualizace knihovny: %s</string>
     <string name="gray_background">Šedá</string>
+    <string name="app_updates">Aktualizace aplikace</string>
+    <string name="open">Otevřít</string>
 </resources>

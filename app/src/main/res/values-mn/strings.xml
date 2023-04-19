@@ -11,7 +11,7 @@
     <string name="manhua">Манхуа</string>
     <string name="unlock_library">Ашиглахын тулд онгойлгоно уу</string>
     <string name="webtoon">Вебтүүн</string>
-    <string name="lock_with_biometrics">Биометрик-ээр цоожлох</string>
+    <string name="lock_with_biometrics">Биометрикээр түгжээ тайлах</string>
     <string name="completed">Дууссан</string>
     <string name="unknown">Үл мэдэгдэх</string>
     <string name="unknown_status">Байдал үл мэдэгднэ</string>
@@ -38,7 +38,7 @@
     <string name="chapter_">Бүлэг %1$s</string>
     <string name="chapter_x_of_y">%2$d-ы бүлэг %1$d</string>
     <string name="all_chapters_read">Бүх бүлгийг уншсан</string>
-    <string name="bookmarked">Тэмдгэлсэн</string>
+    <string name="bookmarked">Хавчуургад нэмсэн</string>
     <string name="not_bookmarked">Тэмдгэлээгүй</string>
     <string name="marked_as_read">Уншсан гэж тэмдгэлсэн</string>
     <string name="marked_as_unread">Уншаагүй гэж тэмдгэлсэн</string>
@@ -46,4 +46,13 @@
     <string name="chapters_removed">Бүлгийг устгалаа.</string>
     <string name="chapter_not_found">Бүлэг олдсонгүй</string>
     <string name="no_chapters_error">Ямар ч бүлэг олдсонгүй</string>
+    <string name="loader_rar5_error">\"RARv5\" формат дэмжихгүй</string>
+    <string name="local_invalid_format">Бүлгийн бичиглэл буруу</string>
+    <string name="order_by">Эрэмбэлэх</string>
+    <string name="no_pages_found">Хуудас олдсонгүй</string>
+    <string name="remove_all_downloads">Бүх таталтыг устгах уу\?</string>
+    <string name="no_chapters_to_delete">Устгах бүлэг байхгүй</string>
+    <string name="by_source_order">Эх үүсвэрээр эрэмбэлэх</string>
+    <string name="by_chapter_number">Бүлгийн дугаараар</string>
+    <string name="by_update_date">Оруулсан огноогоор</string>
 </resources>

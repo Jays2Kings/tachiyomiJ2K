@@ -110,7 +110,7 @@
     <string name="custom_location">Пользовательская папка</string>
     <string name="dark">Тёмная</string>
     <string name="data_to_include_in_migration">Данные которые нужно мигрировать</string>
-    <string name="decode_image_error">Не удалось декодировать изображение</string>
+    <string name="decode_image_error">Не удалось загрузить изображение</string>
     <string name="default_category">Основная категория</string>
     <string name="always_ask">Всегда спрашивать</string>
     <string name="default_value">По умолчанию</string>
@@ -177,7 +177,7 @@
     <string name="always">Всегда</string>
     <string name="never">Никогда</string>
     <string name="lock_when_idle">Блокировать при бездействии</string>
-    <string name="lock_with_biometrics">Блокировка биометрией</string>
+    <string name="lock_with_biometrics">Требует разблокировку</string>
     <string name="successfully_logged_in">Успешный вход</string>
     <string name="log_in_to_">Войти в %1$s</string>
     <string name="successfully_logged_out">Успешный выход</string>
@@ -1137,4 +1137,13 @@
     <string name="appwidget_updates_description">Посмотреть недавно обновлённые серии в библиотеке</string>
     <string name="appwidget_unavailable_locked">Виджет недоступен при включённой блокировке биометрией</string>
     <string name="updates_last_update_info">Последнее обновление библиотеки: %s</string>
+    <string name="by_series">По сериям</string>
+    <string name="by_week">По неделям</string>
+    <string name="by_day">По дням</string>
+    <string name="failed_to_update_">Не удалось обновить %1$s</string>
+    <string name="mean_tracking_score">Средний балл отслеживания</string>
+    <string name="gray_background">Серый</string>
+    <string name="read_duration_info">Время, проведенное в читалке, на основе истории глав</string>
+    <string name="show_more_chapters">Показать больше глав</string>
+    <string name="collapse_grouped_chapters">Свернуть сгруппированные главы</string>
 </resources>

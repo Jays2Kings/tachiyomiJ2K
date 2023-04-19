@@ -991,7 +991,7 @@
     <string name="skipped_reason_not_started">Пропущено, оскільки серія не почата</string>
     <string name="channel_skipped">Пропущено</string>
     <string name="pref_library_update_manga_restriction">Пропускати оновлення</string>
-    <string name="pref_update_only_completely_read">Є непрочитані глави</string>
+    <string name="pref_update_only_completely_read">Є непрочитана(ні) глава(и)</string>
     <string name="pref_update_only_non_completed">З статусом \"Завершено\"</string>
     <string name="pref_update_only_started">Серія не почата</string>
     <string name="view_all">Переглянути все</string>
@@ -1118,4 +1118,7 @@
     <string name="by_week">По тижнях</string>
     <string name="by_day">По днях</string>
     <string name="updates_last_update_info">Останнє оновлення бібліотеки: %s</string>
+    <string name="gray_background">Сірий</string>
+    <string name="app_updates">Оновлення застосунку</string>
+    <string name="open">Відкрито</string>
 </resources>

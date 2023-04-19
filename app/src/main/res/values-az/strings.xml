@@ -2,4 +2,74 @@
 <resources>
     <string name="name">Ad</string>
     <string name="more">Daha çox</string>
+    <plurals name="remove_n_chapters">
+        <item quantity="one">Endirilmiş %1$d bölüm silinsin\?</item>
+        <item quantity="other">Endirilmiş %1$d bölüm silinsin\?</item>
+    </plurals>
+    <plurals name="chapters_plural">
+        <item quantity="one">%1$s bölüm</item>
+        <item quantity="other">%1$s bölüm</item>
+    </plurals>
+    <string name="external_storage_download_notice">TachiyomiJ2K bölümləri yükləmək üçün bütün fayllara giriş tələb edir. Bura klikləyin, sonra \"Bütün faylları idarə etmək üçün girişə icazə verin\" funksiyasını aktivləşdirin.</string>
+    <string name="manga">Manga</string>
+    <string name="comic">Komiks</string>
+    <string name="webtoon">Webtoon</string>
+    <string name="in_progress">Davam edir</string>
+    <string name="not_started">Başlamadı</string>
+    <string name="read">Oxunub</string>
+    <string name="title">Başlıq</string>
+    <string name="author">Müəllif</string>
+    <string name="artist">Rəssam</string>
+    <string name="description">Açıqlama</string>
+    <string name="move_x_to">%1$s daşı…</string>
+    <string name="add_x_to">%1$s əlavə et…</string>
+    <string name="ongoing">Davam edir</string>
+    <string name="unknown">Bilinmir</string>
+    <string name="unknown_status">Bilinməyən Vəziyyət</string>
+    <string name="licensed">Lisenziyalı</string>
+    <string name="completed">Tamamlandı</string>
+    <string name="publishing_finished">Nəşri başa çatıb</string>
+    <string name="cancelled">Ləğv edildi</string>
+    <string name="on_hiatus">Fasilədə</string>
+    <string name="unlock_library">Kitabxanaya daxil olmaq üçün kilidi açın</string>
+    <string name="unlock">Kilidi açın</string>
+    <string name="lock_with_biometrics">Kilidin açılmasını tələb edir</string>
+    <string name="new_chapters">Yeni bölümlər</string>
+    <string name="unread">Oxunmamış</string>
+    <string name="last_read_chapter_">Son oxunan bölüm %1$s</string>
+    <string name="chapter_">Bölüm %1$s</string>
+    <string name="chapter_x_of_y">Bölüm %1$d / %2$d</string>
+    <string name="all_chapters_read">Bütün bölümlər oxundu</string>
+    <string name="bookmarked">İşarələnmişdir</string>
+    <string name="not_bookmarked">İşarələnməyib</string>
+    <string name="marked_as_unread">Oxunmamış olaraq işarələndi</string>
+    <string name="removed_bookmark">İşarə silindi</string>
+    <string name="chapter_not_found">Bölüm tapılmadı</string>
+    <string name="local_invalid_format">Səhv bölüm formatı</string>
+    <string name="order_by">Sırala</string>
+    <string name="no_chapters_error">Bölümlər tapılmadı</string>
+    <string name="no_pages_found">Səhifələr tapılmadı</string>
+    <plurals name="pages_left">
+        <item quantity="one">%1$d səhifə qaldı</item>
+        <item quantity="other">%1$d səhifə qaldı</item>
+    </plurals>
+    <string name="all_files_permission_required">Fayl icazələri tələb olunur</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K bölümləri yükləmək, avtomatik ehtiyat nüsxələri yaratmaq və lokal manqa oxumaq üçün Android 11-də bütün fayllara giriş icazəsi olmalıdır.
+\n
+\nNövbəti ekranda \"Bütün faylları idarə etmək üçün girişə icazə verin\" seçimini aktivləşdirin.</string>
+    <string name="manhwa">Manhwa</string>
+    <string name="manhua">Manhua</string>
+    <string name="lock_when_idle">Boş olduqda kilidlə</string>
+    <string name="chapters">Bölümlər</string>
+    <string name="marked_as_read">Oxundu olaraq işarələndi</string>
+    <string name="chapters_removed">Bölümlər silindi.</string>
+    <string name="loader_rar5_error">RARv5 formatı dəstəklənmir</string>
+    <string name="remove_all_downloads">Bütün endirilənlər silinsin\?</string>
+    <string name="no_chapters_to_delete">Silmək üçün bölüm yoxdur</string>
+    <string name="by_source_order">Mənbə sırasıyla</string>
+    <string name="by_chapter_number">Bölüm nömrəsi ilə</string>
+    <string name="by_update_date">Yüklənmə tarixinə görə</string>
+    <string name="scanlators">Skanlyatorlar</string>
+    <string name="category">Kateqoriya</string>
+    <string name="categories">Kateqoriyalar</string>
 </resources>

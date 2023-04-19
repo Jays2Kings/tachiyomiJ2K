@@ -1037,4 +1037,7 @@
     <string name="by_week">依週別</string>
     <string name="by_day">依天</string>
     <string name="updates_last_update_info">書櫃更新於：%s</string>
+    <string name="gray_background">灰色</string>
+    <string name="app_updates">應用程式更新</string>
+    <string name="open">開啟</string>
 </resources>

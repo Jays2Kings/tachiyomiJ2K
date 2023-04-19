@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Kategoriler</string>
+    <string name="categories">Ulamlar</string>
     <string name="manga">Manga</string>
     <string name="chapters">Bölümler</string>
     <string name="tracking">İzleme</string>
@@ -168,7 +168,7 @@
     <string name="clear_database">Veritabanını temizle</string>
     <string name="clear_database_summary">Kitaplığınızda olmayan manga ve bölümleri silin</string>
     <string name="clear_database_confirmation">Emin misiniz\? Kitaplıkta olmayan mangaların okunan bölümleri ve ilerlemesi kaybolacak</string>
-    <string name="clear_database_completed">Girdileri silindi</string>
+    <string name="clear_database_completed">Girdiler silindi</string>
     <string name="refresh_library_metadata">Kitaplık üst verilerini yenile</string>
     <string name="updates_covers_genres_desc">Kapakları, türleri, açıklamayı ve manga durum bilgisini günceller</string>
     <string name="refresh_tracking_metadata">İzleme üst verisini yenile</string>
@@ -220,7 +220,7 @@
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
     <string name="url_not_set_click_again">Manga URL\'si ayarlı değil, lütfen başlığa dokunun ve mangayı yeniden seçin</string>
-    <string name="category_with_name_exists">Bu adla bir ulam zaten var!</string>
+    <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
     <string name="this_will_remove_the_read_date_question">Bu, bu bölümün okunma tarihini kaldıracak. Emin misiniz?</string>
     <string name="picture_saved">Resim kaydedildi</string>
     <string name="options">Seçenekler</string>
@@ -344,7 +344,7 @@
     <string name="library_search_hint">Başlık, etiket, kaynak ara</string>
     <string name="updating_">%1$s güncelleniyor</string>
     <string name="jump_to_category">Kategoriye atla</string>
-    <string name="category_deleted">Ulam silindi</string>
+    <string name="category_deleted">Kategori silindi</string>
     <string name="manage_category">Katedorileri yönet</string>
     <string name="add_categories">Kategori ekle</string>
     <string name="already_in_category">Manga zaten bu kategoride</string>
@@ -354,8 +354,8 @@
     <string name="create_new_category">Yeni kategori oluştur</string>
     <string name="_already_in_queue">%1$s zaten kuyrukta</string>
     <plurals name="category_plural">
-        <item quantity="one">%d ulam</item>
-        <item quantity="other">%d ulam</item>
+        <item quantity="one">%d kategori</item>
+        <item quantity="other">%d kategoriler</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d sayfa kaldı</item>
@@ -378,7 +378,7 @@
     <string name="not_started">Başlamadı</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
-    <string name="long_press_category">Ulamı düzenlemek için basılı tut</string>
+    <string name="long_press_category">Kategoriyi düzenlemek için basılı tut</string>
     <string name="adding_category_to_queue">%1$s güncelleme kuyruğuna eklendi</string>
     <string name="chapter_x_of_y">Bölüm %1$d / %2$d</string>
     <string name="unlock_library">Kitaplığa erişmek için kilidi aç</string>
@@ -622,7 +622,7 @@
     <string name="series_type">Seri türü</string>
     <string name="search_globally">\"%1$s\" genel arama</string>
     <string name="_unread">%d okunmayan</string>
-    <string name="category_cannot_be_blank">Ulam adı boş olamaz</string>
+    <string name="category_cannot_be_blank">Kategori adı boş olamaz</string>
     <string name="add_edit_categories">Kategorileri ekle/düzenle</string>
     <string name="new_category">Yeni kategori</string>
     <string name="category">Kategori</string>
@@ -785,7 +785,7 @@
     <string name="release_page">Yayın sayfası</string>
     <string name="mark_range_as_unread">Bir bölüm aralığını okunmadı olarak işaretle</string>
     <string name="mark_range_as_read">Bir bölüm aralığını okundu olarak işaretle</string>
-    <string name="cancel_all_for_series">Bu seri için tümünü iptal et</string>
+    <string name="cancel_all_for_series">Bu dizi için tümünü iptal et</string>
     <string name="app_shortcuts">Uygulama kısayolları</string>
     <string name="open_random_series">Rastgele bir seri aç</string>
     <string name="include_">Dahil Et: %s</string>
@@ -835,7 +835,7 @@
     <string name="update_completed">Güncelleme tamamlandı</string>
     <string name="could_not_install_update">Güncelleme yüklenemedi</string>
     <string name="warning">Uyarı</string>
-    <string name="about_dont_kill_my_app">Bazı üreticilerin arka plan hizmetlerini öldüren ek uygulama kısıtlamaları vardır. Bu web sitesinde nasıl düzeltileceği hakkında daha fazla bilgi al.</string>
+    <string name="about_dont_kill_my_app">Bazı üreticilerin arka plan hizmetlerini durduran ek uygulama kısıtlamaları vardır. Bu web sitesinde durumun nasıl düzeltileceği hakkında daha fazla bilgi var.</string>
     <string name="dont_auto_update">Otomatik güncelleme</string>
     <string name="over_any_network">Herhangi bir ağ</string>
     <string name="over_wifi_only">Yalnızca Wi-fi</string>
@@ -954,7 +954,7 @@
     <string name="skipped_reason_not_started">Hiçbir bölüm okunmadığı için atlandı</string>
     <string name="channel_skipped">Atlandı</string>
     <string name="pref_library_update_manga_restriction">Başlıkları güncellemeyi atla</string>
-    <string name="pref_update_only_completely_read">Okunmayan bölüm(ler)i olan</string>
+    <string name="pref_update_only_completely_read">Okunmayan bölümü olan</string>
     <string name="pref_update_only_non_completed">\"Bitirilmiş\" durumda olan</string>
     <string name="pref_update_only_started">Bu başlamadı</string>
     <string name="pref_clear_webview_data">WebView verilerini temizle</string>
@@ -983,7 +983,7 @@
     <string name="learn_why">Nedenini öğrenin</string>
     <string name="secure_screen_summary">Güvenli ekran, uygulamalar arasında geçiş yaparken uygulama içeriğini gizler ve ekran görüntüsü alınmasını engeller</string>
     <string name="open_in_app">Uygulamada aç</string>
-    <string name="pref_hide_threshold">Kaydırmada komut-seçenek dizelgesini gizleme hassasiyeti</string>
+    <string name="pref_hide_threshold">Kaydırmada komut-seçenek dizelgesini gizleme duyarlılığı</string>
     <string name="pref_highest">En yüksek</string>
     <string name="pref_high">Yüksek</string>
     <string name="pref_low">Düşük</string>
@@ -992,9 +992,9 @@
     <string name="split_tall_images_summary">Okuyucu başarımını iyileştirir</string>
     <string name="download_notifier_split_page_not_found">Bölünürken sayfa %d bulunamadı</string>
     <string name="download_notifier_split_failed">İndirilen görsel bölünemedi</string>
-    <string name="reading_list">Okuma dizelgesi</string>
-    <string name="wish_list">İstek dizelgesi</string>
-    <string name="complete_list">Bitirilmiş dizelgesi</string>
+    <string name="reading_list">Okuma Dizelgesi</string>
+    <string name="wish_list">İstek Dizelgesi</string>
+    <string name="complete_list">Bitirilmiş Dizelgesi</string>
     <string name="on_hold_list">Beklemede dizelgesi</string>
     <string name="unfinished_list">Bitirilmemiş dizelgesi</string>
     <string name="sort_fetched_time">Alındığı zamana göre sırala</string>
@@ -1064,4 +1064,7 @@
     <string name="by_week">Haftaya göre</string>
     <string name="by_day">Güne göre</string>
     <string name="updates_last_update_info">Kitaplık son güncelleme zamanı: %s</string>
+    <string name="gray_background">Gri</string>
+    <string name="app_updates">Uygulama güncellemeleri</string>
+    <string name="open">Aç</string>
 </resources>

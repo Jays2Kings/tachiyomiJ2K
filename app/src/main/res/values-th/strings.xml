@@ -1038,4 +1038,7 @@
     <string name="by_week">ตามสัปดาห์</string>
     <string name="by_day">ตามวัน</string>
     <string name="updates_last_update_info">อัปเดตคลังล่าสุด: %s</string>
+    <string name="gray_background">เทา</string>
+    <string name="app_updates">การอัปเดตแอป</string>
+    <string name="open">เปิด</string>
 </resources>

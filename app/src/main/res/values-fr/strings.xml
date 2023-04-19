@@ -1125,4 +1125,7 @@
     <string name="by_week">Par semaine</string>
     <string name="by_day">Par jour</string>
     <string name="updates_last_update_info">Dernière mise à jour de la bibliothèque le : %s</string>
+    <string name="gray_background">Gris</string>
+    <string name="app_updates">Mises à jour de l\'application</string>
+    <string name="open">Ouvrir</string>
 </resources>
