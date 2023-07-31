@@ -198,7 +198,7 @@ class ExtensionManager(
             val pkgName = installedExt.pkgName
             val availableExt = availableExtensions.find { it.pkgName == pkgName }
 
-            if (availableExt == null != installedExt.isObsolete) {
+            if (!installedExt.isUnofficial && availableExt == null != installedExt.isObsolete) {
                 mutInstalledExtensions[index] = installedExt.copy(isObsolete = true)
                 changed = true
             }
@@ -385,6 +385,7 @@ class ExtensionManager(
         if (untrustedExtension != null) {
             _untrustedExtensionsFlow.value -= untrustedExtension
         }
+        installer.emitToFlow("Uninstalled/$pkgName", ExtensionIntallInfo(InstallStep.Done, null))
     }
 
     /**

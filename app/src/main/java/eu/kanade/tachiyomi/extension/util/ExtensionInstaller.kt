@@ -12,6 +12,7 @@ import android.os.Environment
 import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
 import eu.kanade.tachiyomi.data.preference.PreferenceKeys
+import eu.kanade.tachiyomi.extension.ExtensionInstallerJob
 import eu.kanade.tachiyomi.extension.ExtensionManager
 import eu.kanade.tachiyomi.extension.ShizukuInstaller
 import eu.kanade.tachiyomi.extension.model.InstallStep
@@ -244,6 +245,7 @@ internal class ExtensionInstaller(private val context: Context) {
                 Timber.e(it)
             }
             .onCompletion {
+                deleteDownload(pkgName)
                 emit(InstallStep.Done to null)
             }
     }
@@ -331,6 +333,9 @@ internal class ExtensionInstaller(private val context: Context) {
      * @param result Whether the extension was installed or not.
      */
     fun setInstallationResult(pkgName: String, result: Boolean) {
+        if (result) {
+            deleteDownload(pkgName)
+        }
         val step = if (result) InstallStep.Installed else InstallStep.Error
         downloadInstallerMap.remove(pkgName)
         emitToFlow(pkgName, ExtensionIntallInfo(step, null))
@@ -346,6 +351,7 @@ internal class ExtensionInstaller(private val context: Context) {
         if (downloadId != null) {
             downloadManager.remove(downloadId)
         }
+        ExtensionInstallerJob.removeActiveInstall(pkgName)
         if (activeDownloads.isEmpty()) {
             downloadReceiver.unregister()
         }

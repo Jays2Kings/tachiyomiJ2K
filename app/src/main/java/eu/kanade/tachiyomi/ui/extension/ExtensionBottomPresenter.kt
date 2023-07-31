@@ -13,7 +13,7 @@ import eu.kanade.tachiyomi.util.system.withUIContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -52,9 +52,11 @@ class ExtensionBottomPresenter : BaseMigrationPresenter<ExtensionBottomSheet>() 
         presenterScope.launch {
             extensionManager.downloadSharedFlow
                 .collect {
-                    if (it.first.startsWith("Finished")) {
-                        firstLoad = true
-                        currentDownloads.clear()
+                    if (it.first.startsWith("Finished") || it.first.startsWith("Uninstalled")) {
+                        if (it.first.startsWith("Finished")) {
+                            firstLoad = true
+                            currentDownloads.clear()
+                        }
                         extensions = toItems(
                             Triple(
                                 extensionManager.installedExtensionsFlow.value,
@@ -240,7 +242,20 @@ class ExtensionBottomPresenter : BaseMigrationPresenter<ExtensionBottomSheet>() 
                 ExtensionManager.ExtensionInfo(extension),
                 presenterScope,
             )
-                .launchIn(this)
+                .collect {
+                    when (it.first) {
+                        InstallStep.Installed, InstallStep.Error -> {
+                            currentDownloads.remove(extension.pkgName)
+                        }
+                        else -> {
+                            currentDownloads[extension.pkgName] = it
+                        }
+                    }
+                    val item = updateInstallStep(extension, it.first, it.second)
+                    if (item != null) {
+                        withUIContext { view?.downloadUpdate(item) }
+                    }
+                }
         }
     }
 

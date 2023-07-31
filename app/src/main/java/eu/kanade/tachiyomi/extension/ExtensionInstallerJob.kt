@@ -176,6 +176,7 @@ class ExtensionInstallerJob(val context: Context, workerParams: WorkerParameters
         }
 
         fun activeInstalls(): List<String>? = instance?.get()?.activeInstalls
+        fun removeActiveInstall(pkgName: String) = instance?.get()?.activeInstalls?.remove(pkgName)
 
         fun stop(context: Context) {
             instance?.get()?.job?.cancel()
