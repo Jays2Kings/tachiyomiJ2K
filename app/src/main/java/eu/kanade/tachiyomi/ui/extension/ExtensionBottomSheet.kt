@@ -22,6 +22,7 @@ import eu.kanade.tachiyomi.extension.model.Extension
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.extension.model.InstalledExtensionsOrder
 import eu.kanade.tachiyomi.ui.extension.details.ExtensionDetailsController
+import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.migration.BaseMigrationInterface
 import eu.kanade.tachiyomi.ui.migration.MangaAdapter
 import eu.kanade.tachiyomi.ui.migration.MangaItem
@@ -218,6 +219,7 @@ class ExtensionBottomSheet @JvmOverloads constructor(context: Context, attrs: At
     }
 
     override fun onUpdateAllClicked(position: Int) {
+        (controller.activity as? MainActivity)?.showNotificationPermissionPrompt()
         if (!presenter.preferences.useShizukuForExtensions() &&
             !presenter.preferences.hasPromptedBeforeUpdateAll().get()
         ) {
