@@ -9,6 +9,7 @@ import androidx.work.ForegroundInfo
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.OutOfQuotaPolicy
+import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
@@ -33,6 +34,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -136,11 +138,20 @@ class ExtensionInstallerJob(val context: Context, workerParams: WorkerParameters
 
         activeInstalls.forEach { extensionManager.cleanUpInstallation(it) }
         activeInstalls.clear()
-        extensionManager.emitToInstaller("Finished", (InstallStep.Installed to null))
+        val hasChain = withContext(Dispatchers.IO) {
+            WorkManager.getInstance(context).getWorkInfosByTag(TAG).get().any {
+                it.state == WorkInfo.State.BLOCKED
+            }
+        }
+        if (!hasChain) {
+            extensionManager.emitToInstaller("Finished", (InstallStep.Installed to null))
+        }
         if (instance?.get() == this) {
             instance = null
         }
-        context.notificationManager.cancel(Notifications.ID_EXTENSION_PROGRESS)
+        if (!hasChain) {
+            context.notificationManager.cancel(Notifications.ID_EXTENSION_PROGRESS)
+        }
         return Result.success()
     }
 
@@ -160,19 +171,25 @@ class ExtensionInstallerJob(val context: Context, workerParams: WorkerParameters
         }
 
         fun startJob(context: Context, info: List<ExtensionManager.ExtensionInfo>, showUpdatedExtension: Int = -1) {
-            val json = Json.encodeToString(info.toTypedArray())
-            val request = OneTimeWorkRequestBuilder<ExtensionInstallerJob>()
-                .addTag(TAG)
-                .setInputData(
-                    workDataOf(
-                        KEY_EXTENSION to json,
-                        KEY_SHOW_UPDATED to showUpdatedExtension,
-                    ),
-                )
-                .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
-                .build()
-            WorkManager.getInstance(context)
-                .enqueueUniqueWork(TAG, ExistingWorkPolicy.REPLACE, request)
+            // chunked to satisfy input limits
+            val requests = info.chunked(32).map {
+                OneTimeWorkRequestBuilder<ExtensionInstallerJob>()
+                    .addTag(TAG)
+                    .setInputData(
+                        workDataOf(
+                            KEY_EXTENSION to Json.encodeToString(it.toTypedArray()),
+                            KEY_SHOW_UPDATED to showUpdatedExtension,
+                        ),
+                    )
+                    .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
+                    .build()
+            }
+            var workContinuation = WorkManager.getInstance(context)
+                .beginUniqueWork(TAG, ExistingWorkPolicy.REPLACE, requests.first())
+            for (i in 1 until requests.size) {
+                workContinuation = workContinuation.then(requests[i])
+            }
+            workContinuation.enqueue()
         }
 
         fun activeInstalls(): List<String>? = instance?.get()?.activeInstalls
@@ -180,7 +197,7 @@ class ExtensionInstallerJob(val context: Context, workerParams: WorkerParameters
 
         fun stop(context: Context) {
             instance?.get()?.job?.cancel()
-            WorkManager.getInstance(context).cancelUniqueWork(TAG)
+            WorkManager.getInstance(context).cancelAllWorkByTag(TAG)
         }
 
         fun isRunning(context: Context) = WorkManager.getInstance(context).jobIsRunning(TAG)
