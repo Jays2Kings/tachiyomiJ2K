@@ -756,6 +756,7 @@
     <string name="over_any_network">Over any network</string>
     <string name="dont_auto_update">Don\'t auto-update</string>
     <string name="language_requires_app_restart">Some languages may require an app relaunch to display correctly</string>
+    <string name="disable_notification_size_warning">Disable warnings for large updates</string>
 
     <string name="app_shortcuts">App shortcuts</string>
     <string name="show_recent_sources">Show recently used sources</string>

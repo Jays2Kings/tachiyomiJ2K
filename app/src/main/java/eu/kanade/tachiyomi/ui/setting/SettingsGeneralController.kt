@@ -85,6 +85,11 @@ class SettingsGeneralController : SettingsController() {
                 }
             }
         }
+        switchPreference {
+            key = Keys.disableNotificationSizeWarning
+            titleRes = R.string.disable_notification_size_warning
+            defaultValue = false
+        }
 
         preferenceCategory {
             titleRes = R.string.app_shortcuts
