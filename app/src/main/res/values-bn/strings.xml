@@ -991,4 +991,7 @@
     <string name="faq_and_guides">FAQ এবং নির্দেশনা</string>
     <string name="move_series_to_top">সিরিজ কে উপরে তুলুন</string>
     <string name="allow_deleting_bookmarked_chapters">বুকমার্ক করা অধ্যায়গুলি মুছে ফেলার অনুমতি দিন</string>
+    <string name="appwidget_unavailable_locked">অ্যাপ লক চালু থাকলে Widget পাওয়া যায় না</string>
+    <string name="show_more_chapters">আরো অধ্যায় দেখান</string>
+    <string name="skipped_reason_not_always_update">বাদ দেওয়া হয়েছে কারণ সিরিজের আপডেটের প্রয়োজন নেই৷</string>
 </resources>

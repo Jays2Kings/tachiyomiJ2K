@@ -486,7 +486,7 @@
     <string name="send_crash_report">Enviar relatórios de erro</string>
     <string name="helps_fix_bugs">Ajuda a corrigir eventuais erros. Não serão enviados dados sensíveis</string>
     <string name="whats_new">O que há de novo</string>
-    <string name="website">Website</string>
+    <string name="website">Site</string>
     <string name="open_source_licenses">Licenças de código aberto</string>
     <!-- Login dialog -->
     <string name="log_in_to_">Fazer login em %1$s</string>
@@ -1138,4 +1138,7 @@
     <string name="by_week">Por semana</string>
     <string name="by_series">Por séries</string>
     <string name="updates_last_update_info">Última atualização da biblioteca: %s</string>
+    <string name="gray_background">Cinza</string>
+    <string name="app_updates">atualizações do app</string>
+    <string name="open">Abrir</string>
 </resources>

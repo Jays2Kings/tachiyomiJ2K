@@ -5,10 +5,10 @@
     <!--Models-->
     <!-- Manga Type -->
     <string name="manga">Manga</string>
-    <string name="manhwa">Manhwa</string>
+    <string name="manhwa">Manhwa •</string>
     <string name="manhua">Manhua</string>
     <string name="comic">Komiks</string>
-    <string name="webtoon">Webtoon</string>
+    <string name="webtoon">Web-komiks</string>
     <!-- Manga -->
     <string name="not_started">Nierozpoczęte</string>
     <string name="in_progress">Rozpoczęte</string>
@@ -26,7 +26,7 @@
     <!-- Security -->
     <string name="unlock_library">Odblokuj aby uzyskać dostęp do biblioteki</string>
     <string name="unlock">Odblokuj</string>
-    <string name="lock_with_biometrics">Zablokuj za pomocą biometrii</string>
+    <string name="lock_with_biometrics">Wymagaj odblokowania</string>
     <string name="lock_when_idle">Zablokuj podczas bezczynności</string>
     <!-- Chapters -->
     <string name="chapters">Rozdziały</string>
@@ -415,7 +415,7 @@
     <string name="skipping_">(pomijanie %1$d)</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d manga zmigrowana</item>
-        <item quantity="few">%d mangi zmigrowana</item>
+        <item quantity="few">%d mangi zmigrowane</item>
         <item quantity="many">%d mang zmigrowanych</item>
         <item quantity="other">%d mang zmigrowanych</item>
     </plurals>
@@ -445,7 +445,7 @@
     <string name="restore_from_backup_file">Przywraca bibliotekę z pliku kopii zapasowej</string>
     <string name="backup_location">Lokalizacja kopii zapasowych</string>
     <string name="backup_frequency">Częstotliwość tworzenia kopii</string>
-    <string name="max_auto_backups">Maks. ilosć kopii automatycznych</string>
+    <string name="max_auto_backups">Maks. ilość kopii automatycznych</string>
     <string name="backup_failed">Tworzenie kopii nie powiodło się</string>
     <string name="backup_created">Utworzono kopię zapasową</string>
     <string name="restore_completed">Przywracanie ukończone</string>
@@ -916,7 +916,7 @@
     <string name="global_updates">Globalne aktualizacje</string>
     <string name="show_number_of_items">Pokaż liczbę elementów</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Jeden brakujący rozdział</item>
+        <item quantity="one">%d brakujący rozdział</item>
         <item quantity="few">%d brakujące rozdziały</item>
         <item quantity="many">%d brakujących rozdziałów</item>
         <item quantity="other">%d brakujących rozdziałów</item>
@@ -962,7 +962,7 @@
     <string name="some_extensions_may_prompt">Niektóre rozszerzenia mogą nadal prosić o zainstalowanie.</string>
     <string name="getting_started_guide">Wprowadzenie - poradnik</string>
     <string name="restrictions_">Ograniczenia: %1$s</string>
-    <string name="doh">DNS over HTTPS</string>
+    <string name="doh">DNS przez HTTPS</string>
     <string name="a_calmer_you">Spokój Ducha (Dynamiczny)</string>
     <string name="a_brighter_you">Pogoda Ducha (Dynamiczny)</string>
     <string name="flat_lime">Zwykła Limonka</string>
@@ -1012,9 +1012,9 @@
 \nCzy nadal chcesz kontynuować\?</string>
     <string name="select_inverse">Odwróć zaznaczenie</string>
     <string name="cover_only_grid">Siatka z samych okładek</string>
-    <string name="skipped_reason_completed">Pominięto ponieważ seria została ukończona</string>
-    <string name="skipped_reason_not_caught_up">Pominięto ponieważ istnieją nieprzeczytane rozdziały</string>
-    <string name="skipped_reason_not_started">Pominięto - brak przeczytanych rozdziałów</string>
+    <string name="skipped_reason_completed">Pominięto, ponieważ seria została ukończona</string>
+    <string name="skipped_reason_not_caught_up">Pominięto, ponieważ istnieją nieprzeczytane rozdziały</string>
+    <string name="skipped_reason_not_started">Pominięto, ponieważ brak przeczytanych rozdziałów</string>
     <string name="channel_skipped">Pominięty</string>
     <string name="tap_to_see_details">Kliknij, by wyświetlić detale</string>
     <string name="clear_history">Wyczyść historię</string>
@@ -1067,7 +1067,7 @@
     <string name="on_hold_list">Lista odłożonych na później</string>
     <string name="expanded_toolbar">Rozszerzony pasek narzędzi</string>
     <string name="split_tall_images_summary">Poprawia wydajność czytnika</string>
-    <string name="split_tall_images">Rozdzielaj wysokie obrazy</string>
+    <string name="split_tall_images">Dziel długie obrazy</string>
     <string name="unfinished_list">Lista niezakończonych</string>
     <string name="download_notifier_split_page_not_found">Strona %d nie została znaleziona podczas podziału</string>
     <string name="tap_to_learn_more">Kliknij, by dowiedzieć się więcej</string>
@@ -1098,7 +1098,7 @@
     <string name="downloaded_chapters">Pobrane rozdziały</string>
     <string name="read_duration">Czas odczytu</string>
     <string name="statistics">Statystyki</string>
-    <string name="trackers">Trackers</string>
+    <string name="trackers">Elementy śledzące</string>
     <string name="error_user_agent_string_invalid">Nieprawidłowy ciąg agenta użytkownika</string>
     <string name="skipped_reason_not_always_update">Pominięto, ponieważ aktualizacja nie jest wymagana</string>
     <string name="skip_dupe_chapters">Pomiń zduplikowane rozdziały</string>
@@ -1144,4 +1144,22 @@
     <string name="start_year">Rok rozpoczęcia</string>
     <string name="no_data_for_filters">Nie znaleziono danych dla bieżących filtrów</string>
     <string name="updates_last_update_info">Biblioteka ostatnio aktualizowana: %s</string>
+    <string name="show_more_chapters">Pokaż więcej rozdziałów</string>
+    <string name="gray_background">Szary</string>
+    <string name="open">Otwórz</string>
+    <string name="app_updates">Aktualizacje aplikacji</string>
+    <string name="collapse_grouped_chapters">Zwiń pogrupowane rozdziały</string>
+    <string name="by_day">Według dnia</string>
+    <string name="by_week">Według tygodnia</string>
+    <string name="by_series">Według serii</string>
+    <string name="titles_in_global_update">Tytuły globalnie</string>
+    <string name="mean_tracking_score">Średni wynik śledzenia</string>
+    <string name="manga_score_distribution">Status wyniku</string>
+    <string name="tracker">Element śledzący</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d typ serii</item>
+        <item quantity="few">%d typów serii</item>
+        <item quantity="many">%d typów serii</item>
+        <item quantity="other">%d typów serii</item>
+    </plurals>
 </resources>

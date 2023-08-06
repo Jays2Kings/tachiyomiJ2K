@@ -1047,7 +1047,7 @@
     <string name="download_notifier_split_failed">Impossibile separare le immagini scaricate</string>
     <string name="split_tall_images">Dividi immagini alte</string>
     <string name="split_tall_images_summary">Migliora le prestazioni del lettore</string>
-    <string name="reading_list">In Lettura</string>
+    <string name="reading_list">Lista di lettura</string>
     <string name="wish_list">Da Leggere</string>
     <string name="complete_list">Completati</string>
     <string name="on_hold_list">In Pausa</string>
@@ -1124,4 +1124,6 @@
     <string name="show_more_chapters">Mostra più capitoli</string>
     <string name="collapse_grouped_chapters">Comprimi i capitoli raggruppati</string>
     <string name="gray_background">Grigio</string>
+    <string name="app_updates">Aggiornamenti dell\'app</string>
+    <string name="open">Aprire</string>
 </resources>

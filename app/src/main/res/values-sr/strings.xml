@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Kategorije</string>
+    <string name="categories">Категорије</string>
     <string name="manga">Manga</string>
     <string name="chapters">Poglavlja</string>
     <string name="tracking">Praćenje</string>
@@ -16,7 +16,7 @@
     <string name="filter">Filter</string>
     <string name="downloaded">Preuzeto</string>
     <string name="bookmarked">Zabeleženo</string>
-    <string name="unread">Nepročitano</string>
+    <string name="unread">Непрочитано</string>
     <string name="read">Pročitano</string>
     <string name="alphabetically">Alfabetno</string>
     <string name="total_chapters">Ukupno poglavlja</string>
@@ -168,7 +168,7 @@
     <string name="clear_database">Izbriši baze podataka</string>
     <string name="clear_database_summary">Izbriši mange i poglavlja koji nisu u vašoj biblioteci</string>
     <string name="clear_database_confirmation">Да ли сте сигурни\? Изгубићете прочитана поглавља и статус манги које нису у колекцији</string>
-    <string name="clear_database_completed">Unosi izbrisani</string>
+    <string name="clear_database_completed">Уноси избрисани</string>
     <string name="refresh_library_metadata">Osvježi metada biblioteke</string>
     <string name="updates_covers_genres_desc">Ažuriraj naslovnice, žanrove, deskripcije i status informacije o mangama</string>
     <string name="refresh_tracking_metadata">Osvježi metadatu praćenja</string>
@@ -180,7 +180,7 @@
     <string name="helps_fix_bugs">Pomozi u popravljanju bugova. Nijedan sensitivan podatak neće biti poslat</string>
     <string name="log_in_to_">Prijavi se za %1$s</string>
     <string name="username">Korisničko ime</string>
-    <string name="password">Lozinka</string>
+    <string name="password">Лозинка</string>
     <string name="successfully_logged_in">Prijava uspješna</string>
     <string name="unknown_error">Nepoznata greška</string>
     <string name="local">Lokalno</string>
@@ -211,8 +211,8 @@
     <string name="all_unread_chapters">Preuzmi nepročitano</string>
     <string name="title">Наслов</string>
     <string name="completed">Završeno</string>
-    <string name="lock_with_biometrics">Закључавање биометријом</string>
-    <string name="lock_when_idle">Zaključaj prilikom mirovanja</string>
+    <string name="lock_with_biometrics">Захтевај закључавање</string>
+    <string name="lock_when_idle">Закључај приликом мировања</string>
     <string name="date_format">Format datuma</string>
     <string name="secure_screen">Безбедносни екран</string>
     <string name="security">Bezbednost</string>
@@ -225,15 +225,15 @@
     <string name="latest_chapter">Poslednje poglavlje</string>
     <string name="new_chapters_found">Pronađena su nova poglavlja</string>
     <string name="this_will_remove_the_read_date_question">Ovo će ukloniti datum čitanja ovog poglavlja. Da li ste sigurni\?</string>
-    <string name="no_results_found">Nema pronadjenih rezultata</string>
+    <string name="no_results_found">Нема пронађених резултата</string>
     <string name="local_source_help_guide">Vodič za lokalni izvor</string>
     <string name="check_site_in_web">Proveri vebsajt u WebView</string>
     <string name="obsolete">Zastarjelo</string>
     <string name="obsolete_extension_message">Овај додатак није више доступан.</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Ažuriranje proširenja je dostupno</item>
-        <item quantity="few">%d ažuriranja proširenja su dostupna</item>
-        <item quantity="other">%d ažuriranje proširenja je dostupno</item>
+        <item quantity="one">Доступна је нова верзија екстензије</item>
+        <item quantity="few">%d нове верзије екстензије су доступне</item>
+        <item quantity="other">%d нових верзија екстензија су доступна</item>
     </plurals>
     <string name="set_as_cover">Постави као омот</string>
     <string name="next_chapter_not_found">Sledeće poglavlje nije pronađeno</string>
@@ -366,8 +366,8 @@
     <string name="channel_errors">Грешке</string>
     <string name="invalid_backup_file_type">Neispravan fajl rezervne kopije: %1$s
 \nTreba da se završava sa .proto.gz ili .json.</string>
-    <string name="backup_in_progress">Pravljenje rezervne kopije je već u toku</string>
-    <string name="decode_image_error">Slika se nije mogla dekodirati</string>
+    <string name="backup_in_progress">Прављење резервне копије је већ у току</string>
+    <string name="decode_image_error">Није могуће учитати слику</string>
     <string name="by_chapter_number">Prema broju poglavlja</string>
     <string name="updated_to_">Ažurirano na v%1$s</string>
     <string name="dump_crash_logs">Dampuj logove krešova</string>
@@ -384,7 +384,7 @@
     <string name="update_all">Ažuriraj sve</string>
     <string name="default_reading_mode">Podrazumevani mod čitanja</string>
     <string name="paged">Stranično</string>
-    <string name="portrait">Vertikalno</string>
+    <string name="portrait">Усправно</string>
     <string name="source_migration_guide">Vodič za migraciju izvora</string>
     <string name="nsfw_sources">Izvori za odrasle (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Ovo ne sprečava nezvanične ili potencijalno pogrešno označene dodatke da prikažu sadržaj za odrasle (18+) unutar aplikacije.</string>
@@ -449,7 +449,7 @@
     <string name="locked_landscape">Položeno zaključano</string>
     <string name="extension_updates">Ažuriranja dodataka</string>
     <string name="hide_notification_content">Сакриј обавештења</string>
-    <string name="download_queue_size_warning">Упозорење: велики број преузимања може довести до успоравања извора и/или блокирања Tachiyomi-ја</string>
+    <string name="download_queue_size_warning">Упозорење: велики број преузимања може довести до успоравања извора и/или блокирања Tachiyomi-ја. Додирни да сазнаш више.</string>
     <string name="every_3_days">Svaka 3 dana</string>
     <string name="manhua">Kineska manga</string>
     <string name="update_available">Ažuriranje je moguće</string>
@@ -724,7 +724,7 @@
     <string name="show_outline_around_covers">Pokažite obris oko korica</string>
     <string name="hide_category_hopper">Sakrij prelaz kategorija</string>
     <string name="shift_double_pages">Pomerajte duple stranice</string>
-    <string name="notification_size_warning">Velika ažuriranja mogu dovesti do povećanja potrosnje baterije i usporavanje izvora</string>
+    <string name="notification_size_warning">Велика ажурирања могу довести до повећане потрошње батерије и успоравања извора. Додирни да сазнаш више.</string>
     <string name="already_in_category">Manga je već u kategoriji</string>
     <string name="unlock">Otključati</string>
     <string name="add_edit_categories">Dodati/Urediti kategoriju</string>
@@ -920,9 +920,9 @@
     <string name="mark_all_as_read">Označi sve kao pročitano</string>
     <string name="mark_all_as_unread">Označi sve kao nepročitano</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">Proširenje ažurirano</item>
-        <item quantity="few">%d proširenja su ažurirana</item>
-        <item quantity="other">%d proširenja je ažurirano</item>
+        <item quantity="one">Екстензија ажурирана</item>
+        <item quantity="few">%d екстензије су ажуриране</item>
+        <item quantity="other">%d екстензија је ажурирано</item>
     </plurals>
     <string name="when_sorting_ignore_articles">Kada sortirate prema abecedi, sortirajte ignorišući članke (a,an, the) na početku naslova mangi</string>
     <string name="starting_screen">Početni ekran</string>
@@ -953,7 +953,7 @@
 \nDa li i dalje želite da nastavite\?</string>
     <string name="select_inverse">Izaberi obrnuto</string>
     <string name="skipped_reason_not_caught_up">Preskočeno jer ima nepročitanih poglavlja</string>
-    <string name="channel_skipped">Preskočeno</string>
+    <string name="channel_skipped">Прескочено</string>
     <string name="tap_to_see_details">Prikaži detalje</string>
     <string name="tap_to_learn_more">Pritisnite za više</string>
     <string name="cover_only_grid">Мрежа насловница</string>
@@ -1016,7 +1016,7 @@
     <string name="skipped_reason_not_always_update">Прескочено јер наслов не захтева ажурирање</string>
     <string name="download_ahead">Преузми унапред</string>
     <string name="download_ahead_info">Ради само на уносима у колекцији и ако су последње плус следеће поглавље већ преузети</string>
-    <string name="split_tall_images">Раздели високе слике</string>
+    <string name="split_tall_images">Растави високе слике</string>
     <string name="split_tall_images_summary">Побољшава перформансе читача</string>
     <string name="reading_list">Листа за читање</string>
     <string name="wish_list">Листа жеља</string>
@@ -1036,4 +1036,62 @@
     <string name="appwidget_updates_description">Погледај твоје недавно ажуриране наслове у колекцији</string>
     <string name="appwidget_unavailable_locked">Widget није доступан када је омогућено закључавање апликације</string>
     <string name="updates_last_update_info">Последње ажурирање колекције било је: %s</string>
+    <string name="start_year">Почетна година</string>
+    <string name="length">Дужина</string>
+    <string name="tags">Ознаке</string>
+    <string name="source">Извор</string>
+    <string name="count">Број</string>
+    <string name="not_rated">Неоцењено</string>
+    <string name="gray_background">Сива</string>
+    <plurals name="_series_types">
+        <item quantity="one">%d врста серије</item>
+        <item quantity="few">%d врсте серије</item>
+        <item quantity="other">%d врста серија</item>
+    </plurals>
+    <string name="sort_fetched_time">Сортирај према времену преузимања</string>
+    <string name="by_series">По серијама</string>
+    <string name="by_week">По недељи</string>
+    <string name="by_day">По дану</string>
+    <string name="all_read_manga">Сва прочитана манга</string>
+    <string name="failed_to_update_">Неуспешно ажурирање %1$s</string>
+    <string name="language_requires_app_restart">Неки језици могу захтевати поновно покретање апликације да би се исправно приказали</string>
+    <string name="hide_in_library_items">Сакри уносе који су већ у колекцији</string>
+    <string name="mean_tracking_score">Просечна оцена праћења</string>
+    <string name="tracked_titles">Праћени наслови</string>
+    <string name="local_titles">Локални наслови</string>
+    <string name="titles_in_global_update">Наслови у глобалном ажурирању</string>
+    <string name="titles_in_library">Наслови у колекцији</string>
+    <string name="manga_status_distribution">Расподела статуса</string>
+    <string name="read_duration_info">Време проведено у читачу, на основу историје поглавља</string>
+    <plurals name="_statuses">
+        <item quantity="one">%d статус</item>
+        <item quantity="few">%d статуса</item>
+        <item quantity="other">%d статуса</item>
+    </plurals>
+    <string name="no_data_for_filters">Нема пронађених података за тренутни филтер</string>
+    <string name="manga_score_distribution">Расподела оцене</string>
+    <string name="view_detailed_statistics">Погледај детаљну статистику</string>
+    <string name="tracker">Трекер</string>
+    <plurals name="_sources">
+        <item quantity="one">%d извор</item>
+        <item quantity="few">%d извора</item>
+        <item quantity="other">%d извора</item>
+    </plurals>
+    <string name="violet">Љубичаста</string>
+    <string name="stat">Статистика</string>
+    <string name="app_updates">Ажурирања апликације</string>
+    <string name="stats">Статистике</string>
+    <string name="statistics_details">Детаљи статистика</string>
+    <string name="chapters_read">Прочитаним поглављима</string>
+    <plurals name="_languages">
+        <item quantity="one">%d језик</item>
+        <item quantity="few">%d језика</item>
+        <item quantity="other">%d језика</item>
+    </plurals>
+    <string name="learn_why">Сазнај зашто</string>
+    <string name="open">Отвори</string>
+    <string name="show_more_chapters">Прикажи више поглавља</string>
+    <string name="collapse_grouped_chapters">Сруши груписана поглавља</string>
+    <string name="clear_db_exclude_read">Чувај мангу са прочитаним поглављима</string>
+    <string name="open_in_app">Отвори у апликацији</string>
 </resources>

@@ -78,7 +78,7 @@
     <string name="move_x_to">ဒီ %1$s ကိုရွှေ့မယ်…</string>
     <string name="artist">ရေးဆွဲသူ</string>
     <string name="author">ဖန်တီးသူ</string>
-    <string name="title">နာမည်</string>
+    <string name="title">ခေါင်းစဉ်</string>
     <string name="read">ဖတ်ပြီး</string>
     <string name="in_progress">ဖတ်လက်စ</string>
     <string name="not_started">စမဖတ်ရသေးသော</string>
@@ -138,7 +138,7 @@
     <string name="by_chapter_number">အခန်းနံပါတ်အလိုက်</string>
     <string name="by_update_date">တင်သည့်နေ့စွဲအလိုက်</string>
     <string name="bookmarked">စာညှပ်ထားသော</string>
-    <string name="updates">အပ်ဒိတ်များ</string>
+    <string name="updates">နောက်ဆုံးရများ</string>
     <string name="label_global_search">နေရာအနှံ့ရှာဖွေခြင်း</string>
     <string name="sources">ပင်မနေရာများ</string>
     <string name="extensions">ထပ်တိုးများ</string>
@@ -166,4 +166,6 @@
     <string name="select_inverse">ပြောင်းပြန်ရွေးချယ်ရန်</string>
     <string name="backup_and_restore">အရံ</string>
     <string name="downloaded_chapters">ဒေါင်းလုဒ်အမှတ်အသားများ</string>
+    <string name="all_files_permission_required">ဖိုင်ခွင့်ပြုချက်လိုအပ်သည်</string>
+    <string name="newly_added">အသစ်ထည့်ထားသော</string>
 </resources>

@@ -197,7 +197,7 @@
     <string name="cover_updated">कवर अपडेट किया गया</string>
     <string name="page_">पृष्ठ: %1$d</string>
     <string name="next_chapter_not_found">अगले अध्याय नहीं मिला</string>
-    <string name="decode_image_error">छवि को डीकोड नहीं किया जा सका</string>
+    <string name="decode_image_error">छवि को लोड नहीं किया जा सका</string>
     <string name="use_image_as_cover">क्या आप इस छवि को कवर के रूप में सेट करना चाहते हैं?</string>
     <string name="new_chapters_found">नए अध्याय पाए गए</string>
     <string name="failed_to_update_cover">कवर को अपडेट करने में विफल</string>
@@ -271,7 +271,7 @@
     <string name="burn_darken">जल/गहरा</string>
     <string name="help">मदद</string>
     <string name="no_results_found">कोई परिणाम नहीं मिला</string>
-    <string name="lock_with_biometrics">बायोमेट्रिक्स के साथ लॉक करें</string>
+    <string name="lock_with_biometrics">खोलने की आवश्यकता है</string>
     <string name="lock_when_idle">निष्क्रिय होने पर लॉक करें</string>
     <string name="refresh_tracking">रिफ्रेश ट्रैकिंग</string>
     <string name="add_tracking">ट्रैकिंग जोड़ें</string>
@@ -310,7 +310,7 @@
     <string name="requires_app_restart">प्रभावी होने के लिए एप्लिकेशन पुनरारंभ की आवश्यकता होती है</string>
     <string name="disable_battery_optimization">बैटरी अनुकूलन को अक्षम करना</string>
     <string name="battery_optimization_disabled">बैटरी अनुकूलन पहले से ही अक्षम है</string>
-    <string name="pref_global_search">विश्वीय खोज</string>
+    <string name="pref_global_search">वैश्विक खोज</string>
     <string name="check_for_extension_updates">एक्सटेंशन अपडेट की जांच करें</string>
     <string name="website">वेबसाइट</string>
     <string name="open_source_licenses">ओपन सोर्स लाइसेंस</string>
@@ -395,7 +395,7 @@
     <string name="saves_error_logs">डेवलपर्स के साथ साझा करने के लिए फ़ाइल में त्रुटि लॉग सहेजता है</string>
     <string name="crash_log_saved">क्रैश लॉग सहेजे गए</string>
     <string name="updated_to_">v%1$s तक अद्यतन</string>
-    <string name="label_global_search">विश्वीय खोज</string>
+    <string name="label_global_search">वैश्विक खोज</string>
     <string name="cancel_all_for_series">इस श्रृंखला के लिए सभी रद्द करें</string>
     <string name="change">परिवर्तन</string>
     <string name="bottom">नीचे</string>
@@ -417,8 +417,8 @@
     <string name="error_saving_cover">कवर पेज सहेजने में त्रुटि</string>
     <string name="getting_started_guide">प्रारंभिक मार्गदर्शन</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 अध्याय छोड़ा जा रहा है, या तो स्रोत में यह अनुपलब्ध है या इसे फ़िल्टर कर दिया गया है</item>
-        <item quantity="other">%d अध्याय छोड़े जा रहा है, या तो स्रोत में यह अनुपलब्ध है या इसे फ़िल्टर कर दिया गया है</item>
+        <item quantity="one">%d अध्याय को छोड़ा जा रहा है, या तो स्रोत में यह नहीं है या इसे फ़िल्टर कर दिया गया है</item>
+        <item quantity="other">%d अध्यायों को छोड़ा जा रहा है, या तो स्रोत उन्हें याद कर रहा है या उन्हें फ़िल्टर कर दिया गया है</item>
     </plurals>
     <string name="no_pages_found">कोई पृष्ठ नहीं मिला</string>
     <string name="tako">टाको</string>
@@ -475,7 +475,7 @@
     <string name="external_storage_permission_notice">ताचियोमी को एंड्राइड ११ में फाइल अनुमति चाहिए ताकि वो चैप्टर डाउनलोड कर सके, आटोमेटिक बैकअप बना सके और लोकल माँगा पढ़ सके
 \n
 \nअगले स्क्रीन पर, सारे फाइल को एक्सेस करने की अनुमति को सेलेक्ट करे</string>
-    <string name="manhwa">माणःवा</string>
+    <string name="manhwa">मानह्वा</string>
     <string name="not_started">शुरू नहीं हुआ हैं</string>
     <string name="external_storage_download_notice">ताचियोमी ज २ क को सारे फाइल को एक्सेस करने की अनुमति चाहिए ताकि वो नए चैप्टर डाउनलोड कर सके. यहाँ पे क्लिक करके \" सारे फाइल को एक्सेस करने की अनुमति दे \"</string>
     <string name="in_progress">चालु हैं</string>
@@ -595,7 +595,7 @@
     <string name="auto_download_while_reading">पढ़ते समय ऑटो डाउनलोड करे</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">अगला अपठित अध्याय</item>
-        <item quantity="other">अगले अपठित अध्याय %d</item>
+        <item quantity="other">अगले %d अपठित अध्याय</item>
     </plurals>
     <string name="on_hold_list">होल्ड लिस्ट में</string>
     <string name="download_ahead_info">केवल लाइब्रेरी में प्रविष्टियों पर काम करता है। और यदि वर्तमान अध्याय और अगला अध्याय पहले ही डाउनलोड हो चुका है</string>
@@ -625,4 +625,10 @@
     <string name="view_all">सारा देखे</string>
     <string name="series">सीरीज</string>
     <string name="updates_last_update_info">पुस्तकालय पिछली बार अपडेट किया गया: %s</string>
+    <string name="appwidget_updates_description">अपनी हाल ही में अपडेट की गई पुस्तकालय एन्ट्री देखें</string>
+    <string name="grid_size">ग्रिड आकार</string>
+    <string name="hide_in_library_items">पुस्तकालय में पहले से ही रही आइटम को छिपाएँ</string>
+    <string name="gray_background">ग्रे</string>
+    <string name="skip_dupe_chapters">डुप्लिकेट अध्याय छोड़ें</string>
+    <string name="app_updates">ऐप अपडेट</string>
 </resources>

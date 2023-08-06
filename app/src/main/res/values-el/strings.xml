@@ -1066,4 +1066,5 @@
     <string name="updates_last_update_info">Τελευταία ενημέρωση βιβλιοθήκης: %s</string>
     <string name="gray_background">Γκρι</string>
     <string name="app_updates">Ενημερώσεις εφαρμογής</string>
+    <string name="open">Άνοιγμα</string>
 </resources>

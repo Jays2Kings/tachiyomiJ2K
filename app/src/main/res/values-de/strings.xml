@@ -22,7 +22,7 @@
     <string name="licensed">Lizenziert</string>
     <string name="completed">Abgeschlossen</string>
     <!-- Security -->
-    <string name="unlock_library">Entsperre den Bibliothekszugriff</string>
+    <string name="unlock_library">Entsperren für Bibliothekszugriff</string>
     <string name="unlock">Entsperren</string>
     <string name="lock_with_biometrics">Entsperren erforderlich</string>
     <string name="lock_when_idle">Während Inaktivität sperren</string>
@@ -35,8 +35,8 @@
     <string name="chapter_x_of_y">Kapitel %1$d von %2$d</string>
     <string name="all_chapters_read">Alle Kapitel gelesen</string>
     <string name="bookmarked">Lesezeichen</string>
-    <string name="marked_as_read">Als gelesen markieren</string>
-    <string name="marked_as_unread">Als ungelesen markieren</string>
+    <string name="marked_as_read">Als gelesen markiert</string>
+    <string name="marked_as_unread">Als ungelesen markiert</string>
     <string name="removed_bookmark">Lesezeichen entfernt</string>
     <string name="chapters_removed">Kapitel entfernt.</string>
     <string name="chapter_not_found">Kapitel nicht gefunden</string>
@@ -270,10 +270,10 @@
     <string name="if_disabled_transition_will_skip">Wenn deaktiviert wird die Kapitelübergangsseite, sollte das nächste Kapitel geladen sein, übersprungen</string>
     <string name="pref_webtoon_side_padding">Seitenränder</string>
     <string name="webtoon_side_padding_0">Keine</string>
-    <string name="webtoon_side_padding_10">10 %</string>
-    <string name="webtoon_side_padding_15">15 %</string>
-    <string name="webtoon_side_padding_20">20 %</string>
-    <string name="webtoon_side_padding_25">25 %</string>
+    <string name="webtoon_side_padding_10">10%</string>
+    <string name="webtoon_side_padding_15">15%</string>
+    <string name="webtoon_side_padding_20">20%</string>
+    <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
     <string name="about_this_">Über diesen %1$s</string>
     <string name="start_reading">Anfangen zu lesen</string>
@@ -290,7 +290,7 @@
     <string name="source_not_installed_">Quelle nicht installiert: %1$s</string>
     <string name="no_description">Keine Beschreibung</string>
     <string name="mark_all_chapters_as_read">Alle Kapitel als gelesen markieren?</string>
-    <string name="remove_from_library">Aus Bibliothek entfernen</string>
+    <string name="remove_from_library">Aus der Bibliothek entfernen</string>
     <string name="select_starting_chapter">Anfang auswählen</string>
     <string name="select_ending_chapter">Ende auswählen</string>
     <string name="search_chapters">Kapitel suchen</string>
@@ -478,7 +478,7 @@
     <string name="helps_fix_bugs">Hilft Fehler zu beheben. Keine sensiblen Daten werden gesendet</string>
     <string name="whats_new">Was ist neu</string>
     <string name="website">Webseite</string>
-    <string name="open_source_licenses">Quelloffene Lizenzen</string>
+    <string name="open_source_licenses">Open-Source-Lizenzen</string>
     <!-- Login/Logout dialog -->
     <string name="log_in_to_">Bei %1$s anmelden</string>
     <string name="username">Benutzername</string>
@@ -848,7 +848,7 @@
     <string name="open_random_series">Eine beliebige Serie öffnen</string>
     <string name="show_number_of_items">Anzahl der Elemente anzeigen</string>
     <string name="external_storage_download_notice">TachiyomiJ2K benötigt zum Herunterladen von Kapiteln Zugriff auf alle Dateien. Tippen Sie hier und aktivieren Sie dann „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11/12, um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Manga zu lesen.
+    <string name="external_storage_permission_notice">TachiyomiJ2K benötigt Zugriff auf alle Dateien in Android 11 um Kapitel herunterzuladen, automatische Backups zu erstellen und lokale Manga zu lesen.
 \n
 \nAktivieren Sie im nächsten Bildschirm „Zugriff auf die Verwaltung aller Dateien zulassen.“</string>
     <string name="all_files_permission_required">Dateiberechtigungen erforderlich</string>
@@ -912,8 +912,8 @@
     <string name="default_behavior">Standardverhalten</string>
     <string name="use_side_navigation">Seitennavigation verwenden</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">%d Kapitel wird übersprungen, da die Quelle dieses entweder nicht besitzt, oder, weil es rausgefiltert wurde</item>
-        <item quantity="other">%d Kapitel werden übersprungen, da die Quelle diese entweder nicht besitzt, oder, weil sie rausgefiltert wurden</item>
+        <item quantity="one">%d Kapitel wird übersprungen, da die Quelle dieses entweder nicht besitzt, oder weil es rausgefiltert wurde</item>
+        <item quantity="other">%d Kapitel werden übersprungen, da die Quelle diese entweder nicht besitzt, oder weil sie rausgefiltert wurden</item>
     </plurals>
     <string name="helpful_translation_links">Hilfreiche Übersetzungslinks</string>
     <string name="help_translate">Beim Übersetzen mithelfen</string>
@@ -951,7 +951,7 @@
     <string name="scoring_type_updated">Bewertungsart aktualisiert</string>
     <string name="could_not_update_scoring_">Bewertungsart konnte nicht aktualisiert werden: %1$s</string>
     <string name="new_beta_version_available">Neue Beta-Version verfügbar!</string>
-    <string name="empty_backup_error">Keine zu sichernden Bibliothekseinträge</string>
+    <string name="empty_backup_error">Keine zu sichernden Bibliothekseinträge verfügbar</string>
     <string name="date">Datum</string>
     <string name="local_invalid_format">Ungültiges Kapitelformat</string>
     <string name="order_by">Sortiere nach</string>
@@ -980,7 +980,7 @@
     <string name="pref_clear_webview_data">WebView-Daten löschen</string>
     <string name="webview_data_deleted">WebView-Daten gelöscht</string>
     <string name="tap_to_see_details">Tippe, um Details anzuzeigen</string>
-    <string name="tap_to_learn_more">Antippen, um mehr zu erfahren</string>
+    <string name="tap_to_learn_more">Tippe, um mehr zu erfahren</string>
     <string name="channel_skipped">Übersprungen</string>
     <string name="warning_unenroll_from_beta">Auf die letzte stabile Version zurückzusetzen kann Probleme verursachen und kann das Entfernen der Anwendungsdaten erfordern.</string>
     <string name="expanded_toolbar">Erweiterte Symbolleiste</string>
@@ -996,7 +996,7 @@
 \nDieser Hinweis kann auf die gleiche Weise entfernt werden</string>
     <string name="clear_history">Verlauf löschen</string>
     <string name="clear_history_completed">Verlauf gelöscht</string>
-    <string name="clear_history_confirmation">Bist du sicher\? Der gesamte Verlauf wird verloren sein.</string>
+    <string name="clear_history_confirmation">Bist du sicher\? Der gesamte Verlauf wird gelöscht.</string>
     <string name="backup_restore_invalid_uri">Fehler: leerer URI</string>
     <string name="backup_info">Automatische Sicherungen sind sehr zu empfehlen. Du solltest auch Kopien an anderen Orten aufbewahren.</string>
     <string name="language_badge">Sprachlabels</string>
@@ -1036,7 +1036,7 @@
     <string name="tap_zones">Tippzonen</string>
     <string name="lavender">Lavendel</string>
     <string name="violet">Violett</string>
-    <string name="webtoon_side_padding_5">5 %</string>
+    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Standard-User-Agent-Text</string>
     <string name="language_requires_app_restart">Manche Sprachen benötigen möglicherweise einen Neustart der App zur korrekten Anzeige</string>
     <string name="loader_rar5_error">Das RARv5-Format wird nicht unterstützt</string>
@@ -1102,4 +1102,5 @@
     <string name="gray_background">Grau</string>
     <string name="app_updates">Anwendungsaktualisierungen</string>
     <string name="open">Öffnen</string>
+    <string name="allow_notifications_recommended">Es wird empfohlen, Benachrichtigungen zuzulassen, um deine Bibliothek und die App auf dem neuesten Stand zu halten.</string>
 </resources>

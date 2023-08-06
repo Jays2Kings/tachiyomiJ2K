@@ -1109,7 +1109,7 @@
     <string name="skipped_reason_not_always_update">Saltando, porque este manga no necesita actualizarse</string>
     <string name="mean_tracking_score">Puntuación media de seguimiento</string>
     <string name="error_user_agent_string_invalid">El nombre de agente de usuario no vale</string>
-    <string name="popular">Popular</string>
+    <string name="popular">Populares</string>
     <string name="skip_dupe_chapters">Saltarse los capítulos repetidos</string>
     <string name="hide_in_library_items">Saltar elementos que ya estén en la biblioteca</string>
     <string name="allow_deleting_bookmarked_chapters">Permitir el borrado de capítulos marcados como favoritos</string>
@@ -1123,4 +1123,7 @@
     <string name="by_day">Por días</string>
     <string name="updates_last_update_info">La biblioteca se actualizó: %s</string>
     <string name="gray_background">Gris</string>
+    <string name="app_updates">Actualizaciones de la aplicación</string>
+    <string name="open">Abrir</string>
+    <string name="allow_notifications_recommended">Se recomienda permitir las notificaciones para mantener la biblioteca y la aplicación actualizadas.</string>
 </resources>

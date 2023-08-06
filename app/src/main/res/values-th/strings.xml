@@ -423,7 +423,7 @@
     <string name="chapter_not_found">ไม่พบตอน</string>
     <string name="source_unsupported">ไม่รองรับแหล่งที่มานี้</string>
     <string name="about_dont_kill_my_app">ผู้ผลิตบางรายมีข้อจำกัดเพิ่มเติมของแอปที่ปิดบริการพื้นหลัง เว็บไซต์นี้มีข้อมูลเพิ่มเติมเกี่ยวกับวิธีการแก้ไข</string>
-    <string name="download_queue_size_warning">คำเตือน: การดาวน์โหลดจำนวนมากอาจทำให้แหล่งข้อมูลทำงานช้าลงและ/หรือปิดกั้น Tachiyomi แตะเพื่อเรียนรู้เพิ่มเติม</string>
+    <string name="download_queue_size_warning">คำเตือน: การดาวน์โหลดจำนวนมากอาจทำให้แหล่งที่มาทำงานช้าลงและ/หรือปิดกั้น Tachiyomi แตะเพื่อเรียนรู้เพิ่มเติม</string>
     <string name="ext_installer_shizuku_unavailable_dialog">ติดตั้งและเริ่ม Shizuku เพื่อใช้ Shizuku เป็นตัวติดตั้งส่วนขยาย</string>
     <string name="help_translate">แปลเป็นภาษาไทยโดย altinat</string>
     <string name="cover_saved">บันทึกปกแล้ว</string>
@@ -1041,4 +1041,5 @@
     <string name="gray_background">เทา</string>
     <string name="app_updates">การอัปเดตแอป</string>
     <string name="open">เปิด</string>
+    <string name="allow_notifications_recommended">ขอแนะนำให้อนุญาตการแจ้งเตือนเพื่อให้คลังและแอปทันสมัยอยู่เสมอ</string>
 </resources>

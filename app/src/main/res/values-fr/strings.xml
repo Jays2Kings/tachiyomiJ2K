@@ -3,7 +3,7 @@
     <!-- Activities and fragments labels (toolbar title) -->
     <string name="settings">Paramètres</string>
     <string name="download_queue">File de téléchargement</string>
-    <string name="library">Ma bibliothèque</string>
+    <string name="library">Bibliothèque</string>
     <string name="recent_updates">Nouveautés bibliothèque</string>
     <string name="selected_">Sélectionné : %1$d</string>
     <!-- Actions -->

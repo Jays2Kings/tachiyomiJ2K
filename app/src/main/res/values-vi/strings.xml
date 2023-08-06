@@ -804,7 +804,7 @@
     <string name="source_hidden">Nguồn ẩn</string>
     <string name="about_dont_kill_my_app">Một vài nhà sản xuất có các hạn chế về việc chạy ngầm của ứng dụng có thể gây dừng hiện thị dịch vụ nền. Xem thêm ở địa chỉ này để sửa chữa chúng.</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">Đã bỏ qua %d chương, vì nguồn đang bị thiếu hoặc chúng đã bị lọc ra</item>
+        <item quantity="other">Đã bỏ qua %d chương, vì nguồn đang bị thiếu hoặc đã bị lọc ra</item>
     </plurals>
     <string name="getting_started_guide">Hướng dẫn sử dụng khởi đầu</string>
     <string name="restore_miui_warning">Tính năng tối ưu hóa của MIUI phải được bật lên để việc sao lưu/khôi phục hoạt động tốt.</string>
@@ -1062,4 +1062,16 @@
     <string name="appwidget_unavailable_locked">Tiện ích không còn khả dụng khi khóa ứng dụng đang bật</string>
     <string name="updates_last_update_info">Thư viện lần cuối được cập nhật:%s</string>
     <string name="appwidget_updates_description">Xem các bộ truyện được cập nhật gần đây</string>
+    <string name="by_series">Theo truyện</string>
+    <string name="by_week">Theo tuần</string>
+    <string name="by_day">Theo ngày</string>
+    <string name="read_duration_info">Thời gian đọc bỏ ra, dựa theo lịch sử các chương</string>
+    <string name="gray_background">Xám</string>
+    <string name="failed_to_update_">Thất bại khi cập nhật %1$s</string>
+    <string name="show_more_chapters">Hiện thêm chương</string>
+    <string name="open">Mở</string>
+    <string name="collapse_grouped_chapters">Dỡ bỏ các chương đã gộp nhóm</string>
+    <string name="app_updates">Cập nhật ứng dụng</string>
+    <string name="mean_tracking_score">Điểm theo dõi trung bình</string>
+    <string name="hide_in_library_items">Giấu các mục đã có trong thư viện</string>
 </resources>

@@ -80,7 +80,7 @@
     <string name="amoled_black">AMOLED Siyah</string>
     <string name="language">Dil</string>
     <string name="system_default">Sistem öntanımlı</string>
-    <string name="default_category">Varsayılan ulam</string>
+    <string name="default_category">Varsayılan kategori</string>
     <string name="always_ask">Her zaman sor</string>
     <string name="pending">Beklemede</string>
     <string name="installing">Kuruluyor</string>
@@ -1067,4 +1067,5 @@
     <string name="gray_background">Gri</string>
     <string name="app_updates">Uygulama güncellemeleri</string>
     <string name="open">Aç</string>
+    <string name="allow_notifications_recommended">Kitaplığınızı ve uygulamanızı güncel tutmak için bildirimlere izin vermeniz tavsiye edilir.</string>
 </resources>

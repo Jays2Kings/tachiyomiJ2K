@@ -1037,6 +1037,7 @@
     <string name="by_series">シリーズ</string>
     <string name="by_week">週</string>
     <string name="by_day">日</string>
-    <string name="gray_background">灰色</string>
-    <string name="app_updates">アプリ更新</string>
+    <string name="gray_background">グレー</string>
+    <string name="app_updates">アプリのアップデート</string>
+    <string name="open">開く</string>
 </resources>

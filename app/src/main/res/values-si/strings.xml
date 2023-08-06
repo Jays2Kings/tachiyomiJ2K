@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_chapters_read">සියලුම පරිච්ඡේද කියවා අවසන්</string>
+    <string name="chapter_">පරිච්ඡේදය %1$s</string>
+    <string name="chapter_x_of_y">පරිච්ඡේද %2$d හි %1$d වන පරිච්ඡේදය</string>
+    <string name="title">නම</string>
+    <string name="all_files_permission_required">ෆයිල් සඳහා අවසරය අවශ්‍යයි</string>
+    <string name="manhwa">මන්හ්වා (කොරියන්)</string>
+    <string name="manhua">මන්හුවා (චීන)</string>
+    <string name="comic">කොමික්</string>
+    <string name="move_x_to">%1$s එක යවන්න…</string>
+    <string name="add_x_to">මේ එකකට %1$sඑක ඇතුලත් කරන්න…</string>
+    <string name="unknown_status">නොදන්නා තත්ත්වයකි</string>
+    <string name="publishing_finished">ප්‍රකාශනය අවසන්</string>
+    <string name="cancelled">නවතා ඇත</string>
+    <string name="unlock_library">ප්‍රවේශ වීමට අගුලු හරින්න</string>
+    <string name="unlock">අන්ලොක්</string>
+    <string name="external_storage_permission_notice">තචියොමිJ2K සියලුම ෆයිල් සඳහා ප්‍රවේශ වීමට ඉඩ ඉල්ලයි. මෙය ස්වයංක්‍රීය බැකප් සෑදීමටත්, පරිච්ඡේද බාගැනීම් සඳහාත්, දුරකථනයේ ඇති මංගා කියවීම සඳහාත් වේ.
+\n
+\nඊළග තීරයේ දැක්වෙන \"allow access to manage all files\" සක්‍රීය කරන්න</string>
+    <string name="manga">මංගා</string>
+    <string name="webtoon">වෙබ් ටූන්</string>
+    <string name="external_storage_download_notice">තචියොමිJ2K සියලුම ෆයිල් සඳහා ප්‍රවේශ වීමට ඉඩ ඉල්ලයි. මෙය පරිච්ඡේද බාගැනීම් සඳහා වේ. මෙතන ඔබා, \"Allow access to manage all files.\" සක්‍රීය කරන්න</string>
+    <string name="not_started">කියවීමට පටන් අරන් නෑ</string>
+    <string name="artist">චිත්‍ර ශිල්පියා</string>
+    <string name="in_progress">කියවමින් පවතී</string>
+    <string name="read">කියවා අවසන්</string>
+    <string name="author">කතෘ</string>
+    <string name="description">විස්තරය</string>
+    <string name="ongoing">දැනට නිකුත් වෙමින් පවතී</string>
+    <string name="unknown">නොදනී</string>
+    <string name="licensed">ලයිසන් කර ඇත</string>
+    <string name="completed">සම්පූර්ණයි</string>
+    <string name="on_hiatus">තාවකාලිකව අතහිටුවා ඇත</string>
+    <string name="chapters">පරිච්ඡේද</string>
+    <string name="unread">කියවා නැති</string>
+    <string name="last_read_chapter_">%1$s, අවසානයට කියැවූ පරිච්ඡේදයයි</string>
+    <string name="lock_with_biometrics">අගුළු ඇරීමට අවශ්‍යයි</string>
+    <string name="lock_when_idle">අක්‍රිය විට අගුලු දමන්න</string>
+    <string name="new_chapters">නව පරිච්ඡේද</string>
+</resources>

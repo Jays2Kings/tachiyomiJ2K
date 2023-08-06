@@ -44,7 +44,7 @@
     <string name="display">檢視</string>
     <string name="compact_grid">密集格狀</string>
     <string name="list">清單</string>
-    <string name="download_badge">已下載標記</string>
+    <string name="download_badge">已下載標籤</string>
     <string name="cancel">取消</string>
     <string name="sort">排序</string>
     <string name="install">安裝</string>
@@ -160,9 +160,9 @@
     <string name="background_color">背景顏色</string>
     <string name="white">白色</string>
     <string name="black">黑色</string>
-    <string name="left_to_right_viewer">由左至右</string>
-    <string name="right_to_left_viewer">由右至左</string>
-    <string name="vertical_viewer">由上至下</string>
+    <string name="left_to_right_viewer">單頁式 (由左至右)</string>
+    <string name="right_to_left_viewer">單頁式 (由右至左)</string>
+    <string name="vertical_viewer">單頁式 (由上至下)</string>
     <string name="webtoon">條漫</string>
     <string name="scale_type">縮放模式</string>
     <string name="fit_screen">符合螢幕</string>
@@ -179,7 +179,7 @@
     <string name="restore_from_backup_file">由備份檔案還原書櫃內容</string>
     <string name="used_">已使用：%1$s</string>
     <string name="cache_delete_error">清除時發生錯誤</string>
-    <string name="cookies_cleared">已清除 Cookies</string>
+    <string name="cookies_cleared">已清除 Cookie</string>
     <string name="refresh_library_metadata">重新整理書櫃資料</string>
     <string name="build_time">組建時間</string>
     <string name="helps_fix_bugs">協助我們修復錯誤，傳送的資料將不包含個人敏感訊息</string>
@@ -225,7 +225,7 @@
     <string name="library_is_empty_add_from_browse">尚未收藏任何作品，探索來源以挖掘你的愛書。</string>
     <string name="updates_covers_genres_desc">更新書封、類型、描述和連載狀態等漫畫簡介</string>
     <string name="migrate">遷移</string>
-    <string name="failed_to_update_cover">書封更新失敗</string>
+    <string name="failed_to_update_cover">封面更新失敗</string>
     <string name="library_update_restriction_summary">僅在符合條件時更新</string>
     <string name="category_with_name_exists">已有名稱相同的分類！</string>
     <string name="page_">第 %1$d 頁</string>
@@ -336,7 +336,7 @@
     <string name="unpin">取消釘選</string>
     <string name="view_chapters">檢視章節</string>
     <string name="tracked">已紀錄歷程</string>
-    <string name="auto_refresh_covers">自動重新整理書封</string>
+    <string name="auto_refresh_covers">自動重新整理封面</string>
     <string name="tap_library_to_show_filters">輕觸「書櫃」圖示即可顯示篩選器</string>
     <string name="display_options">檢視選項</string>
     <string name="drag_and_drop">拖曳</string>
@@ -368,7 +368,7 @@
         <item quantity="other">歷時 %1$s，出現 %2$s 個錯誤</item>
     </plurals>
     <string name="no_chapters_error">沒有章節</string>
-    <string name="badges">標記</string>
+    <string name="badges">標籤</string>
     <string name="last_used">最近使用</string>
     <string name="unofficial_extension_message">這個擴充套件不是由 Tachiyomi 所提供。</string>
     <string name="nsfw_short">18+</string>
@@ -420,12 +420,12 @@
     <string name="backup_in_progress">備份已在進行</string>
     <string name="hide_notification_content">隱藏通知內容</string>
     <string name="source_unsupported">不支援的來源</string>
-    <string name="_already_in_queue">%1$s已經在佇列</string>
-    <string name="adding_category_to_queue">新增%1$s到佇列</string>
+    <string name="_already_in_queue">%1$s已經在行列</string>
+    <string name="adding_category_to_queue">新增%1$s到更新行列</string>
     <string name="no_pages_found">沒有找到頁面</string>
     <string name="chapters_removed">章節已刪除。</string>
     <string name="unlock">解鎖</string>
-    <string name="unlock_library">解鎖已存取書櫃</string>
+    <string name="unlock_library">解鎖以存取書櫃</string>
     <string name="add_x_to">新增%1$s到…</string>
     <string name="move_x_to">移動%1$s到…</string>
     <string name="in_progress">進行中</string>
@@ -470,7 +470,7 @@
     <string name="all_chapters_read">以下章節已讀</string>
     <string name="last_read_chapter_">最後閱讀的章節%1$s</string>
     <string name="new_chapters">新章節</string>
-    <string name="external_storage_permission_notice">Tachiyomi 需要有在Android 11上的儲存空間存取權限才能下載漫畫，備份設定，開啟本機漫畫。
+    <string name="external_storage_permission_notice">Tachiyomi 需要有在Android 11上的儲存空間存取權限才能下載漫畫、備份設定、開啟本機漫畫。
 \n
 \n請在下一個畫面開啟\"允許存取儲存空間\"</string>
     <string name="external_storage_download_notice">Tachiyomi 需要有儲存空間存取權限才能下載漫畫。請允許\"管理儲存空間\"</string>
@@ -536,7 +536,7 @@
     <string name="show_in_sources_and_extensions">在來源和擴充套件清單中顯示</string>
     <string name="exclude_">排除：%s</string>
     <string name="include_">包含：%s</string>
-    <string name="extension_updates">擴充套件可供更新</string>
+    <string name="extension_updates">擴充套件的更新內容</string>
     <string name="next">下一頁</string>
     <string name="every_3_days">每 3 日</string>
     <string name="download_queue_size_warning">警告：大量批次下載可能壅塞來源並 (或) 使其封鎖 Tachiyomi。輕觸以瞭解詳情。</string>
@@ -549,7 +549,7 @@
     <string name="recents">最新</string>
     <string name="updates_and_history">更新與閱讀記錄</string>
     <string name="newly_added">最新入櫃</string>
-    <string name="added_">於 %1$s 加入</string>
+    <string name="added_">已加入 %1$s</string>
     <string name="search_manually">手動搜尋</string>
     <string name="show_categories_while_filtering">篩選時顯示空白分類</string>
     <string name="no_matches_for_filters_short">沒有符合條件的結果</string>
@@ -558,8 +558,8 @@
     <string name="jump_to_category">跳至分類</string>
     <string name="search_globally">全域搜尋「%1$s」</string>
     <string name="category_is_empty">分類為空</string>
-    <string name="fetched_">於 %1$s 擷取</string>
-    <string name="grouped">分組</string>
+    <string name="fetched_">截取了 %1$s</string>
+    <string name="grouped">已分組</string>
     <string name="about_this_">關於此%1$s</string>
     <string name="reset_chapter_history">重設章節閱讀記錄</string>
     <string name="search_suggestions">搜尋建議</string>
@@ -657,7 +657,7 @@
     <string name="pref_manage_notifications">管理通知設定</string>
     <string name="battery_not_low">電量充足時</string>
     <string name="faq_and_guides">常見問題與指南</string>
-    <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面</string>
+    <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面。</string>
     <string name="pref_hide_threshold">捲動時隱藏選單的靈敏度</string>
     <string name="pref_highest">最高</string>
     <string name="pref_high">高</string>
@@ -676,7 +676,7 @@
     <string name="tap_zones">輕觸區域</string>
     <string name="lavender">薰衣草</string>
     <string name="sort_by">排序方式</string>
-    <string name="restrictions_">制限：%1$s</string>
+    <string name="restrictions_">限制：%1$s</string>
     <string name="series_type">系列類型</string>
     <string name="series">叢刊</string>
     <string name="shift_double_pages">移動雙頁</string>
@@ -685,13 +685,13 @@
     <string name="_per_row">%d 每行</string>
     <string name="hide_category_hopper">隱藏分類漏斗</string>
     <string name="read_progress">閱讀進益</string>
-    <string name="language_badge">語言徽章</string>
-    <string name="hide_start_reading_button">隱藏始讀按鈕</string>
+    <string name="language_badge">語言標籤</string>
+    <string name="hide_start_reading_button">隱藏開始閱讀按鈕</string>
     <string name="tracking_status">追跡狀態</string>
     <string name="ungrouped">未分組</string>
     <string name="display_as">示為</string>
     <string name="sort_by_ignoring_articles">以冠詞無視排序</string>
-    <string name="no_matches_for_filters">本篩選無配項</string>
+    <string name="no_matches_for_filters">找不到與您當前的過濾器匹配的結果</string>
     <string name="move_dynamic_to_bottom">將折疊動態分類移至底部</string>
     <string name="reorder_filters">重排篩選</string>
     <string name="webtoon_side_padding_5">5%</string>
@@ -712,7 +712,7 @@
     <string name="only_unread">只顯示未讀</string>
     <string name="show_reset_history_button">顯示重置歷史按鈕</string>
     <string name="group_chapters_together">將章節組合在一起</string>
-    <string name="sort_fetched_time">依照獲取時間排序</string>
+    <string name="sort_fetched_time">依照截取時間排序</string>
     <string name="scanlators">掃描和翻譯者</string>
     <string name="show_download_button">顯示下載按鈕</string>
     <string name="this_will_remove_the_read_date_for_x_question">這將刪除 「%1$s」 的讀取日期。你確定嗎？</string>
@@ -753,7 +753,7 @@
     <string name="changing_will_reset_reading_mode">更改此項目將會重置本系列的閱讀模式</string>
     <string name="webtoon_style">webtoon風格</string>
     <string name="save_combined_pages">儲存合併頁面</string>
-    <string name="page_preload_amount">預先載入頁面量</string>
+    <string name="page_preload_amount">預先載入的頁數</string>
     <string name="set_second_page_as_cover">將第二頁設置為封面</string>
     <string name="amount_of_pages_to_preload">在閱讀時預加載的頁面數量。較高的值可以提供更流暢的閱讀體驗，但會增加快取和網路使用的成本。</string>
     <string name="single_page">單頁</string>
@@ -785,7 +785,7 @@
     <string name="automatic_can_still_switch">使用自動頁面佈局時，您仍然可以在閱讀時在佈局之間切換，而不會覆蓋此設置</string>
     <string name="some_extensions_may_prompt">一些擴充套件可能仍然需要先安裝。</string>
     <plurals name="_updates_pending">
-        <item quantity="other">有%d的更新正在等待</item>
+        <item quantity="other">有%d個更新正在等待</item>
     </plurals>
     <string name="extensions_updated">擴充套件已更新</string>
     <plurals name="extensions_updated_plural">
@@ -970,15 +970,15 @@
     <string name="try_new_features">嘗試尚未正式發布的新功能，Beta 版本可能不穩定，僅供使用者提供開發者回饋意見。</string>
     <string name="warning_unenroll_from_beta">回到之前的正式版本可能會造成問題，需要清除應用程式資料。</string>
     <string name="clear_db_exclude_read">保留有已讀章節的漫畫</string>
-    <string name="some_extensions_may_not_update">如果擴展是在此應用程式之外安裝的，則某些擴展可能不會自動更新</string>
+    <string name="some_extensions_may_not_update">如果擴充套件是在此應用程式之外安裝的，則某些擴充套件可能不會自動更新</string>
     <string name="add_to_">新增至%1$s</string>
     <string name="open_in_app">在應用程式中打開</string>
     <string name="nothing_is_downloading">目前沒有任何下載</string>
     <string name="hide">隱藏</string>
     <string name="select_uninstalled_sources">選擇未安裝的來源</string>
-    <string name="auto_update_extensions">自動更新擴展</string>
+    <string name="auto_update_extensions">自動更新擴充套件</string>
     <string name="match_enabled_sources">匹配啟用的來源</string>
-    <string name="notify_extension_updated">通知擴展已更新</string>
+    <string name="notify_extension_updated">通知擴充套件已更新</string>
     <string name="only_enable_enabled_for_migration">僅為遷移啟用當前已啟用的來源</string>
     <string name="migration_sources_changed">遷移來源已更改</string>
     <string name="downloads_swipe_tutorial">您可以通過滑動來取消下載
@@ -1040,4 +1040,5 @@
     <string name="gray_background">灰色</string>
     <string name="app_updates">應用程式更新</string>
     <string name="open">開啟</string>
+    <string name="allow_notifications_recommended">推薦開啟通知功能，以便保持您的書庫和應用程式更新至最新狀態。</string>
 </resources>

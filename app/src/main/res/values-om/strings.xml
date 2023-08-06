@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_files_permission_required">Hayyama faayilii barbaachisa</string>
+    <string name="manga">Mangaa</string>
+    <string name="not_started">Hin jalqabne</string>
+    <string name="in_progress">Adeemsa irra jira</string>
+    <string name="read">Dubbisi</string>
+    <string name="title">Mata-duree</string>
+    <string name="artist">Aartistii</string>
+    <string name="description">Ibsa</string>
+    <string name="move_x_to">%1$s gara …</string>
+    <string name="add_x_to">%1$s itti dabali…</string>
+    <string name="ongoing">Itti fufa jira</string>
+    <string name="unknown">Hinbeekamu</string>
+    <string name="unknown_status">Haala Hinbeekamne</string>
+    <string name="licensed">Eyyama kan qabu</string>
+    <string name="completed">Xumurameera</string>
+    <string name="cancelled">Haqameera</string>
+    <string name="unlock_library">Mana Kitaabaa argachuuf furtuu banaa</string>
+    <string name="unlock">Furtuu banaa</string>
+    <string name="lock_with_biometrics">furtuu banachuu barbaachisa</string>
+    <string name="lock_when_idle">Yeroo hojiin ala ta\'u cufi</string>
+    <string name="chapters">Boqonnaawwan</string>
+    <string name="unread">Hin dubbisin</string>
+    <string name="last_read_chapter_">Boqonnaa yeroo darbee dubbifame %1$s</string>
+    <string name="chapter_">Boqonnaa %1$s</string>
+    <string name="chapter_x_of_y">Boqonnaa %1$d kan %2$d</string>
+    <string name="all_chapters_read">Boqonnaawwan hundi dubbifamaniiru</string>
+    <string name="marked_as_unread">Akka hin dubbifamneetti mallattaa\'eera</string>
+    <string name="chapters_removed">Boqonnaawoni haqamaniiru.</string>
+    <string name="chapter_not_found">Boqonnaan hin argamne</string>
+    <string name="local_invalid_format">Akkaataa boqonnaa sirrii hin taane</string>
+    <string name="no_chapters_error">Boqonnaawwan hin argamne</string>
+    <string name="no_pages_found">Fuulli hin argamne</string>
+    <string name="remove_all_downloads">Kan bu\'aan hunda balleessuu\?</string>
+    <string name="by_chapter_number">Lakkoofsa boqonnaatiin</string>
+    <string name="by_update_date">Guyyaa olkaa\'ameen</string>
+    <plurals name="remove_n_chapters">
+        <item quantity="one">Boqonnaa %1$d buufame haquu\?</item>
+        <item quantity="other">Boqonnaawwan %1$d buufaman haquu\?</item>
+    </plurals>
+    <plurals name="chapters_plural">
+        <item quantity="one">Boqonnaa %1$s</item>
+        <item quantity="other">Boqonnaawwan %1$s</item>
+    </plurals>
+    <plurals name="pages_left">
+        <item quantity="one">fuula %1$d hafe</item>
+        <item quantity="other">fuulootaa %1$d hafe</item>
+    </plurals>
+    <string name="category">Ramaddii</string>
+    <string name="categories">Ramaddiiwwan</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K boqonnaawwan buusuuf, ofumaan dilbeessa uumuu fi mangaa naannoo dubbisuuf, faayiloota Android 11 keessa jiran hunda argachuu barbaachisa.
+\n
+\n Foddaa itti aanu irratti, \"Allow access to manage all files.\" Kan jedhuuf eeyyami .</string>
+    <string name="comic">Baacoo</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K boqonnaawwan buusuuf faayiloota hunda argachuu barbaada. As tuqi, sana booda \"Allow access to manage all files\" kan jedhuuf eeyyami.</string>
+    <string name="author">Barreessaa</string>
+    <string name="new_chapters">Boqonnaawwan haaraa</string>
+    <string name="publishing_finished">Maxxansi xumurame</string>
+    <string name="marked_as_read">Akka dubbifameetti mallattaa\'eera</string>
+    <string name="no_chapters_to_delete">Haquuf boqonnaan hin jiru</string>
+    <string name="order_by">Tartiiba akka</string>
+    <string name="adding_category_to_queue">Tarree fooyyessuuf %1$s dabaluu</string>
+    <string name="_already_in_queue">%1$s duraanu tarree keessa jira</string>
+    <string name="create_new_category">Ramaddii haaraa uumi</string>
+    <string name="new_category">Ramaddii haaraa</string>
+    <string name="category_is_empty">Ramaddiin duwwaa dha</string>
+    <string name="default_category">Gosa durtii</string>
+    <string name="confirm_category_deletion">Ramaddichaa haquu\?</string>
+    <string name="confirm_category_deletion_message">Mangaan ramaddii kana keessa jiru gara ramaddii durtiitti ni ce\'a.</string>
+    <string name="already_in_category">Manga duraanuu ramaddii keessa jira</string>
+    <string name="add_edit_categories">Ramaddiiwwan Dabaluu/Gulaaluu</string>
+    <plurals name="category_plural">
+        <item quantity="one">Ramaddi %d</item>
+        <item quantity="other">Ramaddiiwwan %d</item>
+    </plurals>
+    <string name="category_with_name_exists">Ramaddiin maqaa sana qabu duruu jira!</string>
+    <string name="category_cannot_be_blank">Maqaan ramaddii duwwaa ta\'uu hin danda\'u</string>
+    <string name="sort">Secca\'uu</string>
+    <string name="start">Eegali</string>
+    <string name="stop">Dhaabi</string>
+    <string name="tap_to_see_details">Bal\'ina isaa ilaaluuf tuqi</string>
+    <string name="tap_to_learn_more">Caalaatti baruuf tuqi</string>
+    <string name="top">Gubbaa</string>
+    <string name="undo">Deebisii</string>
+    <string name="use_default">Durtii fayyadami</string>
+    <string name="view_all">Hundaa ilaali</string>
+    <string name="view_chapters">Boqonnaawwan ilaali</string>
+    <string name="add_categories">Ramaddiiwwan itti dabali</string>
+    <string name="warning">Akeekkachiisa</string>
+    <string name="unknown_error">Dogoggora hin beekamne</string>
+    <string name="edit_categories">Ramaddiiwwan gulaali</string>
+    <string name="manage_category">Ramaddii bulchuu</string>
+</resources>

@@ -478,7 +478,7 @@
     <string name="uniform_covers">Enhetliga omslag</string>
     <string name="hide_start_reading_button">Dölj knappen för \"Börja läsa\"</string>
     <string name="comfortable_grid">Bekvämt rutnät</string>
-    <string name="display_options">Visnisalternativ</string>
+    <string name="display_options">Visningsalternativ</string>
     <string name="drag_and_drop">Dra och släpp</string>
     <string name="sort_by">Sortera efter</string>
     <string name="ungrouped">Ogrupperad</string>
@@ -1066,4 +1066,6 @@
     <string name="by_series">Efter serie</string>
     <string name="gray_background">Grå</string>
     <string name="app_updates">Appuppdateringar</string>
+    <string name="open">Öppna</string>
+    <string name="allow_notifications_recommended">Tillåta meddelanden rekommenderas för att hålla ditt bibliotek och app uppdaterad.</string>
 </resources>

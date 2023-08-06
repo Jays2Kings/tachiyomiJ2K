@@ -224,7 +224,7 @@
     <string name="cover_updated">Omslag oppdatert</string>
     <string name="page_">Side: %1$d</string>
     <string name="next_chapter_not_found">Fant ikke neste kapittel</string>
-    <string name="decode_image_error">Kunne ikke dekode bildet</string>
+    <string name="decode_image_error">Bildet kunne ikke lastes inn</string>
     <string name="finished_chapter">Fullført:</string>
     <string name="current_chapter">Nåværende:</string>
     <string name="next_title">Neste:</string>
@@ -271,7 +271,7 @@
     <string name="dodge_lighten">Unngå / lysne</string>
     <string name="burn_darken">Brenn / mørkere</string>
     <string name="no_results_found">Resultatløst</string>
-    <string name="lock_with_biometrics">Lås med biometri</string>
+    <string name="lock_with_biometrics">Krev opplåsning</string>
     <string name="lock_when_idle">Lås ved lediggang</string>
     <string name="creating_backup">Oppretter sikkerhetskopi</string>
     <string name="network">Nettverk</string>
@@ -480,7 +480,7 @@
     <string name="source_not_installed">Kilde ikke installert</string>
     <string name="add_to_library">Legg til i bibliotek</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Hopper over 1 kapittel, enten så mangler kilden den eller så har den blitt filtrert ut</item>
+        <item quantity="one">Hopper over %d kapittel, enten så mangler kilden den eller så har den blitt filtrert ut</item>
         <item quantity="other">Hopper over %d kapitler, enten så mangler kilden de eller så har de blitt filtrert ut</item>
     </plurals>
     <string name="landscape">Liggende</string>
@@ -1065,4 +1065,6 @@
     <string name="stats">Statistikk</string>
     <string name="stat">Statistikk</string>
     <string name="use_staggered_grid">Bruk flytende rutenett</string>
+    <string name="gray_background">Grå</string>
+    <string name="app_updates">Appoppdateringer</string>
 </resources>

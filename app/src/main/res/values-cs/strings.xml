@@ -1094,4 +1094,5 @@
     <string name="gray_background">Šedá</string>
     <string name="app_updates">Aktualizace aplikace</string>
     <string name="open">Otevřít</string>
+    <string name="allow_notifications_recommended">Doporučujeme povolit oznámení, aby byla knihovna a aplikace stále aktuální.</string>
 </resources>

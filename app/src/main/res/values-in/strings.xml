@@ -99,7 +99,7 @@
     <string name="stretch">Rentangkan</string>
     <string name="fit_width">Pas lebar</string>
     <string name="fit_height">Pas tinggi</string>
-    <string name="original_size">Ukuran sebenarnya</string>
+    <string name="original_size">Ukuran asli</string>
     <string name="smart_fit">Pas pintar</string>
     <string name="zoom_start_position">Posisi awal zoom</string>
     <string name="automatic">Otomatis</string>
@@ -348,7 +348,7 @@
     <string name="continue_reading_chapter_">Melanjutkan membaca Bab %1$s</string>
     <string name="start_reading_chapter_">Mulai membaca Bab %1$s</string>
     <string name="start_reading">Mulai membaca</string>
-    <string name="about_this_">Tentang ini %1$s</string>
+    <string name="about_this_">Tentang %1$s ini</string>
     <string name="if_disabled_transition_will_skip">Jika dimatikan, transisi halaman akan dilewatkan ketika bab selanjutnya dimuat</string>
     <string name="smart_based_on_page_and_theme">Pintar (Berdasarkan halaman dan tema)</string>
     <string name="smart_based_on_page">Pintar (Berdasarkan yang ada pada halaman)</string>
@@ -1041,4 +1041,5 @@
     <string name="gray_background">Abu-abu</string>
     <string name="app_updates">Pembaruan aplikasi</string>
     <string name="open">Buka</string>
+    <string name="allow_notifications_recommended">Disarankan untuk mengizinkan notifikasi agar perpustakaan dan aplikasi Anda tetap terbarui.</string>
 </resources>

@@ -67,7 +67,7 @@
     <string name="website">Website</string>
     <string name="open_source_licenses">Mga lisensiyang open-source</string>
     <string name="log_in_to_">Mag-login sa %1$s</string>
-    <string name="username">Username</string>
+    <string name="username">Username (pangalan)</string>
     <string name="email">Email address</string>
     <string name="password">Password</string>
     <string name="successfully_logged_out">Naka-logout ka na</string>
@@ -173,8 +173,8 @@
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Wika: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">Available ang pag-update ng extension</item>
-        <item quantity="other">Available ang %d na mga update sa extension</item>
+        <item quantity="one">Available na ang pag-update ng extension</item>
+        <item quantity="other">Available na ang %d na mga update sa extension</item>
     </plurals>
     <string name="set_as_cover">Gawing cover</string>
     <string name="cover_updated">Napalitan na ang cover</string>
@@ -642,7 +642,7 @@
     <string name="by_chapter_number">Bilang ng kabanata</string>
     <string name="by_source_order">Ayos ayon sa source</string>
     <string name="not_bookmarked">Walang pananda</string>
-    <string name="about_dont_kill_my_app">May dagdag na mga restriksyon sa app ang ilang mga modelo ng phone na pumapatay sa mga serbisyong nasa likuran. May impormasyon sa site na ito para maayos ang naturang problema.</string>
+    <string name="about_dont_kill_my_app">May dagdag na mga restriksyon sa app ang ilang mga modelo ng phone na pumapatay sa mga serbisyo sa background. May impormasyon sa site na ito para maayos ang naturang problema.</string>
     <string name="getting_started_guide">Gabay sa Pagsisimula</string>
     <string name="no_matches_for_filters_short">Walang tumugma sa mga filter</string>
     <string name="show_categories_while_filtering">Ipakita ang bakanteng kategorya kung na-filter</string>
@@ -659,8 +659,8 @@
     <string name="search_chapters">Maghanap ng mga kabanata</string>
     <string name="channel_errors">Mga error</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">Na-update ang extension</item>
-        <item quantity="other">Na-update ang %d (na) extension</item>
+        <item quantity="one">Na-update na ang extension</item>
+        <item quantity="other">Na-update na ang %d na mga extension</item>
     </plurals>
     <string name="installed_">Na-install na ang %1$s</string>
     <string name="vertically">Patayo</string>
@@ -672,7 +672,7 @@
     </plurals>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Nilaktawan ang %d na kabanata, maaaring ito ay wala sa source o na-filter ang mga ito</item>
-        <item quantity="other">Nilaktawan ang %d na (mga) kabanata, maaaring wala sa source o na-filter ang mga ito</item>
+        <item quantity="other">Nilaktawan ang %d na mga kabanata, maaaring wala sa source o na-filter ang mga ito</item>
     </plurals>
     <string name="about_this_">Tungkol sa %1$s na ito</string>
     <string name="start_reading">Simulang basahin</string>
@@ -708,7 +708,7 @@
     <string name="exclude_">Di-kasama: %s</string>
     <string name="top">Taas</string>
     <string name="show_outline_around_covers">Ipakita ang outline sa paligid ng pabalat</string>
-    <string name="download_queue_size_warning">Babala: maaari pong humantong sa pagbagal at/o pagharang ng mga source sa Tachiyomi ang mga malalaking maramihang pag-download. Pakipindot po ito para matuto pa.</string>
+    <string name="download_queue_size_warning">Babala: maaaring humantong sa pagbagal at/o pagharang ng mga source sa Tachiyomi ang mga malalaking maramihang pag-download. I-tap para matuto pa.</string>
     <string name="every_3_days">Kada 3 araw</string>
     <plurals name="after_minutes">
         <item quantity="one">Pagkatapos ng %1$s minuto</item>
@@ -743,8 +743,8 @@
     <string name="notification_update_error">Nabigo ang %1$d (na) update</string>
     <string name="notification_update_skipped">Nilaktawan ang %1$d (na) update</string>
     <string name="skipped_reason_completed">Nilaktawan dahil kumpleto na ang serye</string>
-    <string name="skipped_reason_not_caught_up">Nilaktawan dahil may di pa nabasang (mga) kabanata</string>
-    <string name="skipped_reason_not_started">Nilaktawan dahil wala pang nabasang (mga) kabanata</string>
+    <string name="skipped_reason_not_caught_up">Nilaktawan dahil may di pa nabasang mga kabanata</string>
+    <string name="skipped_reason_not_started">Nilaktawan dahil wala pang nabasang mga kabanata</string>
     <string name="channel_skipped">Nilaktawan</string>
     <string name="pref_library_update_manga_restriction">Laktawan ang pag-update sa mga titulo</string>
     <string name="pref_update_only_completely_read">May di pa nababasang kabanata</string>
@@ -928,8 +928,8 @@
     <string name="download_ahead">I-download agad</string>
     <string name="download_ahead_info">Gumagana lamang sa mga entry sa aklatan at kung ang kasalukuyang kabanata at ang susunod na kabanata ay na-download na</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Susunod na hindi pa nababasang kabanata</item>
-        <item quantity="other">Susunod na %d hindi pa nababasang (mga) kabanata</item>
+        <item quantity="one">Susunod na hindi pa nababasa na kabanata</item>
+        <item quantity="other">Susunod na ang %d na hindi pa nababasa na kabanata</item>
     </plurals>
     <string name="add_to_">Idagdag sa %1$s</string>
     <string name="added_to_">Idinagdag sa %1$s</string>
@@ -990,7 +990,7 @@
     <string name="pref_lowest">Pinakamababa</string>
     <string name="download_notifier_split_page_not_found">Hindi nakita ang pahina %d habang naghahati</string>
     <string name="download_notifier_split_failed">Di mahati ang na-download na larawan</string>
-    <string name="split_tall_images">Hatiin ang mga matatangkad na (mga) larawan</string>
+    <string name="split_tall_images">Hatiin ang mga matatangkad na larawan</string>
     <string name="split_tall_images_summary">Pinapahusay ang performance ng reader</string>
     <string name="complete_list">Listahan ng Kumpleto</string>
     <string name="on_hold_list">Listahan ng Tinigil</string>
@@ -1053,7 +1053,7 @@
     <string name="allow_deleting_bookmarked_chapters">Burahin din ang may pananda</string>
     <string name="popular">Sikat</string>
     <string name="skip_dupe_chapters">Laktawan ang (mga) magkaparehong kabanata</string>
-    <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa Aklatan mo</string>
+    <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa iyong aklatan</string>
     <string name="appwidget_unavailable_locked">Di available ang widget kapag nakabukas ang lock</string>
     <string name="hide_in_library_items">Itago ang mga entry na nasa aklatan na</string>
     <string name="failed_to_update_">Nabigong i-update ang %1$s</string>
@@ -1066,4 +1066,5 @@
     <string name="by_week">Sa pamamagitan ng linggo</string>
     <string name="gray_background">Abo</string>
     <string name="app_updates">Mga update sa app</string>
+    <string name="open">Buksan</string>
 </resources>

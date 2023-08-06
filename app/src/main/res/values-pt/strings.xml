@@ -152,7 +152,7 @@
     <!-- Reader activity -->
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Capítulo seguinte não encontrado</string>
-    <string name="decode_image_error">A imagem não pôde ser decodificada</string>
+    <string name="decode_image_error">A imagem não pôde ser carregada</string>
     <!-- Backup fragment -->
     <string name="backup">Cópia de segurança</string>
     <!-- Recent manga fragment -->
@@ -300,7 +300,7 @@
     <string name="color_filter_blend_mode">Modo de mistura do filtro de cores</string>
     <string name="dodge_lighten">Dodge / Clarear</string>
     <string name="help">Ajuda</string>
-    <string name="lock_with_biometrics">Bloqueio com biometria</string>
+    <string name="lock_with_biometrics">Exigir desbloqueio</string>
     <string name="lock_when_idle">Bloquear quando inativo</string>
     <string name="copy_value">Copiar</string>
     <string name="date_format">Formato da data</string>
@@ -477,7 +477,7 @@
     <string name="nsfw_sources">Conteúdo 18+ (NSFW)</string>
     <string name="does_not_prevent_unofficial_nsfw">Isto não impede que extensões não oficiais ou potencialmente marcadas de forma incorreta surjam com conteúdos de NSFW (18+) dentro da aplicação.</string>
     <string name="whats_new">Novidades</string>
-    <string name="file_picker_error">Não foi encontrada app de selecção de ficheiros</string>
+    <string name="file_picker_error">Não foi encontrada nenhuma app de seleção de ficheiros</string>
     <string name="open_log">Abrir registo</string>
     <string name="backup_and_restore">Cópia de segurança e restauração</string>
     <string name="progress">Progresso</string>
@@ -1115,4 +1115,10 @@
     <string name="collapse_grouped_chapters">Recolher capítulos agrupados</string>
     <string name="show_more_chapters">Mostrar mais capítulos</string>
     <string name="updates_last_update_info">Última atualização da biblioteca: %s</string>
+    <string name="by_series">Por séries</string>
+    <string name="by_week">Por semana</string>
+    <string name="by_day">Por dia</string>
+    <string name="gray_background">Cinza</string>
+    <string name="app_updates">Atualizações do aplicativo</string>
+    <string name="open">Abrir</string>
 </resources>

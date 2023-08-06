@@ -89,7 +89,7 @@
     <string name="untrusted">不可信</string>
     <string name="uninstall">卸载</string>
     <string name="untrusted_extension">不可信的插件</string>
-    <string name="untrusted_extension_message">此插件的证书并不可信，且尚未被启用。
+    <string name="untrusted_extension_message">此插件的证书并不可信，且尚未被开启。
 \n
 \n恶意的插件可能会读取储存在 Tachiyomi 中的任何登录凭据或执行任意代码。
 \n
@@ -147,7 +147,7 @@
     <string name="fifth_to_last">倒数第五章</string>
     <string name="download_new_chapters">自动下载新章节</string>
     <string name="categories_to_include_in_download">自动下载标签</string>
-    <string name="services">服务</string>
+    <string name="services">平台</string>
     <string name="backup">备份</string>
     <string name="create_backup">创建备份</string>
     <string name="can_be_used_to_restore">可用于恢复当前数据</string>
@@ -164,7 +164,7 @@
     <string name="used_">已使用空间：%1$s</string>
     <string name="cache_delete_error">清除时出现错误</string>
     <string name="clear_cookies">清除 Cookies</string>
-    <string name="cookies_cleared">Cookies 已清除</string>
+    <string name="cookies_cleared">Cookie 已清除</string>
     <string name="clear_database">清理数据库</string>
     <string name="clear_database_summary">删除未在书架的漫画与章节</string>
     <string name="clear_database_confirmation">你确定吗？不在书架中的漫画的已读章节和进度将会丢失</string>
@@ -280,7 +280,7 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d 个扩展插件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">减少色带，但可能会影响性能</string>
+    <string name="reduces_banding_impacts_performance">缓解色带问题，但可能会影响性能</string>
     <string name="skip_filtered_chapters">跳过已筛选章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已被关闭</string>
@@ -891,7 +891,7 @@
     <string name="cancelled">已中止</string>
     <string name="on_hiatus">休刊中</string>
     <string name="tracking_info">将阅读进度上传到进度记录平台。在漫画页点击“进度记录”按钮即可设置。</string>
-    <string name="enhanced_services">增强服务</string>
+    <string name="enhanced_services">增强平台</string>
     <string name="enhanced_tracking_info">为特定图源提供增强功能。漫画在添加到书架时会自动同步进度。</string>
     <string name="language_badge">语言徽章</string>
     <string name="check_for_beta_releases">检查测试版</string>
