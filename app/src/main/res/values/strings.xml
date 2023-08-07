@@ -969,6 +969,7 @@
     <string name="remove_when_marked_as_read">Remove when marked as read</string>
     <string name="allow_deleting_bookmarked_chapters">Allow deleting bookmarked chapters</string>
     <string name="remove_after_read">Remove after read</string>
+    <string name="pref_remove_exclude_categories">Excluded categories</string>
     <string name="custom_location">Custom location</string>
     <string name="last_read_chapter">Last read chapter</string>
     <string name="second_to_last">Second to last chapter</string>

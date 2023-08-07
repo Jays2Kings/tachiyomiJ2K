@@ -571,16 +571,13 @@ class ReaderViewModel(
         }
         // Check if deleting option is enabled and chapter exists
         if (removeAfterReadSlots != -1 && chapterToDelete != null) {
-            val includedCategories = preferences.removeReadChaptersInCategories().get().map(String::toInt)
-            val excludedCategories = preferences.excludeCategoriesInRemoveRead().get().map(String::toInt)
-            if (includedCategories.any() || excludedCategories.any()) {
+            val excludedCategories = preferences.removeExcludeCategories().get().map(String::toInt)
+            if (excludedCategories.any()) {
                 val categories = db.getCategoriesForManga(manga!!).executeAsBlocking()
                     .mapNotNull { it.id }
-                    .takeUnless { it.isEmpty() } ?: listOf(0)
+                    .ifEmpty { listOf(0) }
 
                 if (categories.any { it in excludedCategories }) return
-
-                if (includedCategories.any() && categories.none { it in includedCategories }) return
             }
 
             enqueueDeleteReadChapters(chapterToDelete)

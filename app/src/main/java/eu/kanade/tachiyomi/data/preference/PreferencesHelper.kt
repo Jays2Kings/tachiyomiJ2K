@@ -411,9 +411,7 @@ class PreferencesHelper(val context: Context) {
 
     fun removeBookmarkedChapters() = flowPrefs.getBoolean("pref_remove_bookmarked", false)
 
-    fun removeReadChaptersInCategories() = flowPrefs.getStringSet("remove_read_categories", emptySet())
-
-    fun excludeCategoriesInRemoveRead() = flowPrefs.getStringSet("remove_read_categories_exclude", emptySet())
+    fun removeExcludeCategories() = flowPrefs.getStringSet("remove_exclude_categories", emptySet())
 
     fun showAllCategories() = flowPrefs.getBoolean("show_all_categories", true)
 

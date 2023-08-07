@@ -80,15 +80,12 @@ class SettingsDownloadController : SettingsController() {
                 entryRange = -1..4
                 defaultValue = -1
             }
-            triStateListPreference(activity) {
-                preferences.apply {
-                    bindTo(removeReadChaptersInCategories(), excludeCategoriesInRemoveRead())
-                }
-                titleRes = R.string.categories
+            multiSelectListPreferenceMat(activity) {
+                bindTo(preferences.removeExcludeCategories())
+                titleRes = R.string.pref_remove_exclude_categories
                 entries = categories.map { it.name }
                 entryValues = categories.map { it.id.toString() }
-                allSelectionRes = R.string.all
-
+                noSelectionRes = R.string.none
                 preferences.removeAfterReadSlots().asImmediateFlowIn(viewScope) { isVisible = it != -1 }
             }
             switchPreference {
