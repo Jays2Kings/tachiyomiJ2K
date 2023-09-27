@@ -1141,4 +1141,6 @@
     <string name="gray_background">Cinza</string>
     <string name="app_updates">atualizações do app</string>
     <string name="open">Abrir</string>
+    <string name="allow_notifications_recommended">Ativando notificações é recomendado para guardar sua biblioteca e manter o aplicativo atualizado em dia.</string>
+    <string name="pref_remove_exclude_categories">Categorias ignoradas</string>
 </resources>

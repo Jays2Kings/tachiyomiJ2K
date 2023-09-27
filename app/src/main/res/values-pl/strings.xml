@@ -8,7 +8,7 @@
     <string name="manhwa">Manhwa •</string>
     <string name="manhua">Manhua</string>
     <string name="comic">Komiks</string>
-    <string name="webtoon">Web-komiks</string>
+    <string name="webtoon">Webtoon</string>
     <!-- Manga -->
     <string name="not_started">Nierozpoczęte</string>
     <string name="in_progress">Rozpoczęte</string>
@@ -1162,4 +1162,6 @@
         <item quantity="many">%d typów serii</item>
         <item quantity="other">%d typów serii</item>
     </plurals>
+    <string name="allow_notifications_recommended">Zezwalanie na powiadomienia jest zalecane, aby zapewnić aktualność twojej biblioteki.</string>
+    <string name="pref_remove_exclude_categories">Wykluczone kategorie</string>
 </resources>

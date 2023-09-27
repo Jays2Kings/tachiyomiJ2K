@@ -17,7 +17,7 @@
     <string name="unofficial_extension_message">Ekstensi iki ora saka dhaptar ekstensi Tachiyomi resmi.</string>
     <string name="tracking">Ngelacak</string>
     <string name="type">Jinis</string>
-    <string name="migrate">Migrasi</string>
+    <string name="migrate">Pindah</string>
     <string name="help">Nulungi</string>
     <string name="search_settings">Golek setting</string>
     <string name="app_theme">Tema aplikasi</string>
@@ -35,7 +35,7 @@
     <string name="fast">Cepet</string>
     <string name="filter">Saringan</string>
     <string name="forward">Maju</string>
-    <string name="install">pasang</string>
+    <string name="install">Pasang</string>
     <string name="left">Ngiwa</string>
     <string name="loading">Ngemot…</string>
     <string name="lock_with_biometrics">Mbutuhake mbukak kunci</string>

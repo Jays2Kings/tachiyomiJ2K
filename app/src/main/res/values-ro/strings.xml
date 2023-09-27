@@ -129,7 +129,7 @@
     <string name="normal">Normal</string>
     <string name="fast">Rapid</string>
     <string name="rotation">Rotație</string>
-    <string name="free">Liber</string>
+    <string name="free">Liberă</string>
     <string name="lock">Blocare</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
@@ -210,7 +210,7 @@
     <string name="all_chapters">Descarcă tot</string>
     <string name="all_unread_chapters">Descarcă necitite</string>
     <string name="reading">Citind</string>
-    <string name="completed">Terminată</string>
+    <string name="completed">Completată</string>
     <string name="dropped">Abandonată</string>
     <string name="on_hold">În așteptare</string>
     <string name="plan_to_read">Planificat pentru citit</string>
@@ -228,7 +228,7 @@
     <string name="cover_updated">Copertă actualizată</string>
     <string name="page_">Pagina: %1$d</string>
     <string name="next_chapter_not_found">Capitolul următor nu a fost găsit</string>
-    <string name="decode_image_error">Imaginea nu a putut să fie decodată</string>
+    <string name="decode_image_error">Imaginea nu a putut să se încarce</string>
     <string name="use_image_as_cover">Doriți să setați această imagine drept copertă\?</string>
     <string name="finished_chapter">Terminat:</string>
     <string name="current_chapter">Actual:</string>
@@ -270,7 +270,7 @@
     <string name="burn_darken">Întunecă</string>
     <string name="skip_read_chapters">Treci peste capitolele marcate citit</string>
     <string name="help">Ajutor</string>
-    <string name="lock_with_biometrics">Blocare cu ajutorul biometriei</string>
+    <string name="lock_with_biometrics">Necesită deblocare</string>
     <string name="lock_when_idle">Blocați când este inactiv</string>
     <string name="update">Actualizează</string>
     <string name="updating_library">Se actualizează biblioteca</string>
@@ -500,8 +500,8 @@
     <string name="vertically">Pe verticală</string>
     <string name="horizontally">Pe orizontală</string>
     <string name="if_disabled_transition_will_skip">Dacă este dezactivată, pagina de tranziție va fi sărită dacă este încărcat capitolul următor</string>
-    <string name="smart_based_on_page_and_theme">Inteligent (bazat pe pagină și temă)</string>
-    <string name="smart_based_on_page">Inteligent (pe baza paginii)</string>
+    <string name="smart_based_on_page_and_theme">Inteligentă (bazată pe pagină și temă)</string>
+    <string name="smart_based_on_page">Inteligentă (pe baza paginii)</string>
     <string name="switch_to_single">Treceți la o singură pagină</string>
     <string name="switch_to_double">Treceți la pagini duble</string>
     <string name="single_page">Pagina singură</string>
@@ -709,7 +709,7 @@
     <string name="cancel_all_for_series">Anulează totul pentru această serie</string>
     <string name="midnight_dusk">Amurg de Miazănoapte</string>
     <string name="strawberry_daiquiri">Daiquiri de căpșuni</string>
-    <string name="yotsuba">Yotsuba</string>
+    <string name="yotsuba">Yoțuba</string>
     <string name="tako">Tako</string>
     <string name="warning">Avertizare</string>
     <string name="appearance">Aspect</string>
@@ -723,7 +723,7 @@
     <string name="remove_all_downloads">Înlăturați toate descărcările\?</string>
     <string name="publishing_finished">Editare finalizată</string>
     <string name="cancelled">Anulat</string>
-    <string name="on_hiatus">În pauză</string>
+    <string name="on_hiatus">În hiatus</string>
     <string name="ascending">Crescător</string>
     <string name="descending">Descrescător</string>
     <string name="select_inverse">Selectați inversul</string>
@@ -1012,7 +1012,7 @@
     <string name="show_larger_toolbar">Afișați o bară de instrumente mai mare, extinsă, în partea de sus a majorității paginilor (nu se afișează pe dispozitivele mai mici, indiferent de setare)</string>
     <string name="save_pages_separately">Salvați paginile în dosare separate</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Omiterea unui capitol, fie că sursa lipsește, fie că a fost filtrată</item>
+        <item quantity="one">Omiterea %d capitol, fie că sursa lipsește, fie că a fost filtrată</item>
         <item quantity="few">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
         <item quantity="other">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
     </plurals>
@@ -1083,4 +1083,13 @@
     <string name="appwidget_updates_description">Vizualizați intrările recent actualizate din bibliotecă</string>
     <string name="appwidget_unavailable_locked">Widgetul nu este disponibil atunci când este activată blocarea aplicației</string>
     <string name="updates_last_update_info">Ultima actualizare a bibliotecii: %s</string>
+    <string name="mean_tracking_score">Scorul mediu al trackingului</string>
+    <string name="hide_in_library_items">Ascunde intrări deja aflate în bibliotecă</string>
+    <string name="by_series">După serie</string>
+    <string name="by_week">După săptămână</string>
+    <string name="by_day">După zi</string>
+    <string name="failed_to_update_">Actualizarea a eșuat pentru %1$s</string>
+    <string name="gray_background">Gri</string>
+    <string name="app_updates">Actualizări de aplicație</string>
+    <string name="pref_remove_exclude_categories">Categorii excluse</string>
 </resources>

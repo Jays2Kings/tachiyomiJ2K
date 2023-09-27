@@ -57,8 +57,8 @@
     <string name="advanced">고급 설정</string>
     <string name="about">정보</string>
     <string name="source_migration">소스 이동</string>
-    <string name="extensions">확장기능</string>
-    <string name="extension_info">확장기능 정보</string>
+    <string name="extensions">확장 앱</string>
+    <string name="extension_info">확장 앱 정보</string>
     <string name="pause">일시중지</string>
     <string name="default_value">기본값</string>
     <string name="library_update_frequency">서재 업데이트 주기</string>
@@ -73,7 +73,7 @@
     <string name="library_update_restriction">디바이스 제한 사항</string>
     <string name="library_update_restriction_summary">조건들이 충족 될 때에만 업데이트</string>
     <string name="charging">충전중</string>
-    <string name="app_theme">어플리케이션 테마</string>
+    <string name="app_theme">앱 테마</string>
     <string name="dark">어두운 테마</string>
     <string name="amoled_black">AMOLED 테마</string>
     <string name="language">언어</string>
@@ -85,8 +85,8 @@
     <string name="trust">신뢰</string>
     <string name="untrusted">신뢰되지않음</string>
     <string name="uninstall">삭제</string>
-    <string name="untrusted_extension">신뢰할 수 없는 확장기능</string>
-    <string name="untrusted_extension_message">이 확장기능은 신뢰할 수 없는 인증서로 서명되어 활성화되지 않았습니다.
+    <string name="untrusted_extension">신뢰할 수 없는 확장 앱</string>
+    <string name="untrusted_extension_message">이 확장 앱은 신뢰할 수 없는 인증서로 서명되어 활성화되지 않았습니다.
 \n
 \n일부 악의적인 확장기능은 Tachiyomi에 저장된 로그인 정보를 읽거나 임의의 코드를 실행할 수도 있습니다.
 \n
@@ -313,12 +313,12 @@
     <string name="animate_page_transitions">페이지 전환 효과 표시</string>
     <string name="search_settings">검색 설정</string>
     <string name="incognito_mode">시크릿 모드</string>
-    <string name="pure_black_dark_mode">검은색 다크모드</string>
+    <string name="pure_black_dark_mode">다크 모드에 검정색 사용</string>
     <string name="backup_and_restore">백업 및 복원</string>
     <string name="complete">완료</string>
     <string name="network">네트워크</string>
     <string name="doh">HTTPS를 통한 DNS</string>
-    <string name="check_for_extension_updates">확장 프로그램 업데이트 확인</string>
+    <string name="check_for_extension_updates">확장 앱 업데이트 확인</string>
     <string name="open_source_licenses">오픈 소스 라이센스</string>
     <string name="successfully_logged_out">로그아웃 되었습니다</string>
     <string name="more">더보기</string>
@@ -356,7 +356,7 @@
     <plurals name="category_plural">
         <item quantity="other">%d 카테고리</item>
     </plurals>
-    <string name="extension_updates">확장기능 업데이트</string>
+    <string name="extension_updates">확장 앱 업데이트</string>
     <string name="app_info">앱 정보</string>
     <string name="reading_mode">읽기 모드</string>
     <string name="skip_filtered_chapters">필터링된 회차 건너뛰기</string>
@@ -374,12 +374,12 @@
     <string name="enhanced_services">향상된 서비스</string>
     <string name="enhanced_tracking_info">특정 소스에 향상된 서비스를 제공합니다. 서재에 만화가 추가될 시 자동으로 트래킹 됩니다.</string>
     <string name="ext_installer_shizuku_stopped">Shizuku가 실행 중이 아닙니다</string>
-    <string name="obsolete_extension_message">이 확장기능은 더이상 이용이 불가능합니다.</string>
-    <string name="unofficial_extension_message">이 확장기능은 공식 확장기능이 아닙니다.</string>
+    <string name="obsolete_extension_message">이 확장 앱은 더이상 이용이 불가능합니다.</string>
+    <string name="unofficial_extension_message">이 확장 앱은 Tachiyomi 공식 앱이 아닙니다.</string>
     <string name="crash_log_saved">오류 로그가 저장되었습니다</string>
     <string name="about_dont_kill_my_app">일부 제조사는 백그라운드 서비스를 종료하는 추가적인 제한 사항이 있습니다. 자세한 사항은 웹사이트를 참조하세요.</string>
     <string name="battery_optimization_disabled">배터리 최적화가 이미 꺼져 있습니다</string>
-    <string name="ext_installer_shizuku_unavailable_dialog">Shizuku를 확장기능 인스톨러로 사용하려면 Shizuku를 먼저 설치해 주세요.</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Shizuku를 확장 앱 인스톨러로 사용하려면 Shizuku를 먼저 설치해 주세요.</string>
     <string name="webtoon_side_padding_25">25%</string>
     <string name="cancel_all_for_series">이 만화의 항목을 모두 취소</string>
     <string name="no_chapters_error">검색된 회차가 없습니다</string>
@@ -398,7 +398,7 @@
     <string name="start_downloading_now">지금 다운로드 시작</string>
     <string name="back">뒤로가기</string>
     <plurals name="extension_updates_available">
-        <item quantity="other">%d개의 확장기능 업데이트가 있습니다</item>
+        <item quantity="other">%d개의 확장 앱 업데이트가 있습니다</item>
     </plurals>
     <string name="locked_portrait">세로로 고정</string>
     <string name="locked_landscape">가로로 고정</string>
@@ -407,9 +407,9 @@
     <string name="crash_logs">오류 로그</string>
     <string name="dump_crash_logs">오류 로그 덤프</string>
     <string name="saves_error_logs">개발자와 공유할 수 있는 오류 로그 파일을 생성합니다</string>
-    <string name="nsfw_sources">19금 소스</string>
-    <string name="show_in_sources_and_extensions">소스 또는 확장기능 목록에 보이기</string>
-    <string name="does_not_prevent_unofficial_nsfw">오류 또는 잘못된 분류로 인하여 19금 콘텐츠가 표시될 가능성이 있습니다.</string>
+    <string name="nsfw_sources">성인 컨텐츠 소스</string>
+    <string name="show_in_sources_and_extensions">소스 또는 확장 앱 목록에 보이기</string>
+    <string name="does_not_prevent_unofficial_nsfw">오류 또는 잘못된 분류로 인하여 성인 컨텐츠가 표시될 가능성이 있습니다.</string>
     <string name="please_update_webview">호환성을 위해 WebView 어플리케이션을 업데이트 해 주세요</string>
     <string name="webview_is_required">Tachiyomi를 사용하려면 WebView가 필요합니다</string>
     <string name="bottom">아래</string>
@@ -447,8 +447,8 @@
     <string name="show_number_of_items">항목 개수 보이기</string>
     <string name="badges">배지</string>
     <string name="obsolete">지원 종료</string>
-    <string name="nsfw_short">19금</string>
-    <string name="may_contain_nsfw">19금 콘텐츠가 포함될 수 있습니다</string>
+    <string name="nsfw_short">18+</string>
+    <string name="may_contain_nsfw">성인 콘텐츠 (18+)가 포함될 수 있습니다</string>
     <string name="update_all">전부 업데이트</string>
     <string name="previous_page">이전 페이지</string>
     <string name="exclude_">제외: %s</string>
@@ -496,7 +496,7 @@
     <string name="not_started">읽지 않은 작품</string>
     <string name="in_progress">진행 중</string>
     <string name="new_chapters">새 장</string>
-    <string name="all_files_permission_required">안드로이드의 파일 사용권한이 필요합니다.</string>
+    <string name="all_files_permission_required">안드로이드의 파일 사용권한이 필요합니다</string>
     <string name="external_storage_permission_notice">안드로이드 정책 변화에 따라 앱은 사용자에게 파일 접근권한을 요청합니다.
 \nTachiyomiJ2K는 안드로이드11의 모든 파일에 접근하여, 챕터를 다운로드하고, 자동백업을 만들며, 휴대전화 저장소에 저장된 오프라인 만화를 읽을 수 있습니다.
 \n
@@ -661,7 +661,7 @@
     <string name="reader_settings">리더 설정</string>
     <string name="set_as_default_for_all">모두에 대해 기본값으로 설정</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="other">%d 확장이 업데이트됨</item>
+        <item quantity="other">%d 확장 앱이 업데이트됨</item>
     </plurals>
     <string name="split_double_pages_portrait">세로로 두 페이지 분할</string>
     <string name="split_double_pages">두 페이지 분할</string>
@@ -669,11 +669,11 @@
     <string name="switch_to_double">이중 페이지로 전환</string>
     <string name="all_sources">모든 출처</string>
     <string name="filter_languages">언어 필터링</string>
-    <string name="use_shizuku_summary">사용자 프롬프트없이 확장 프로그램을 설치할 수 있으며 Android 12에서 장치에 대한 자동 업데이트를 활성화합니다</string>
+    <string name="use_shizuku_summary">사용자 요청없이 확장 앱을 설치할 수 있으며 안드로이드 12에서 장치에 대한 자동 업데이트를 활성화합니다</string>
     <string name="installed_">설치됨 %1$s</string>
-    <string name="extensions_miui_warning">MIUI 최적화를 사용하지 않도록 설정해야 확장을 설치할 수 있습니다.</string>
+    <string name="extensions_miui_warning">MIUI 최적화를 비활성화한 후 확장 기능을 설치하십시오.</string>
     <string name="_must_be_enabled_first">%1$s를 먼저 사용하도록 설정해야 합니다</string>
-    <string name="could_not_install_extension">확장 프로그램을 설치할 수 없습니다</string>
+    <string name="could_not_install_extension">확장 앱을 설치할 수 없습니다</string>
     <string name="reading_">읽기 %1$s</string>
     <string name="webtoon_style">웹툰 스타일</string>
     <string name="save_second_page">두 번째 페이지 저장</string>
@@ -681,7 +681,7 @@
     <string name="save_combined_pages">결합된 페이지 저장</string>
     <string name="enable_zoom_out">축소 사용</string>
     <string name="zoom_double_page_spreads">이중 페이지 스프레드로 확대</string>
-    <string name="extension_updates_pending">확장 업데이트 보류 중</string>
+    <string name="extension_updates_pending">확장 앱 업데이트 대기 중</string>
     <string name="show_title_first">제목 먼저 표시</string>
     <string name="in_library">도서관에서</string>
     <string name="show_download_button">다운로드 단추 표시</string>
@@ -690,16 +690,16 @@
     <string name="unread_or_downloaded">읽지 않거나 다운로드됨</string>
     <string name="a_while_ago">얼마 전</string>
     <string name="show_updated_time">업데이트된 시간 표시</string>
-    <string name="search_extensions">검색 확장 프로그램…</string>
-    <string name="some_extensions_may_prompt">일부 확장은 여전히 먼저 설치하라는 메시지가 표시될 수 있습니다.</string>
-    <string name="updating_extensions">확장 업데이트</string>
+    <string name="search_extensions">확장 앱 검색…</string>
+    <string name="some_extensions_may_prompt">일부 확장 앱은 여전히 먼저 설치하라는 메시지가 표시될 수 있습니다.</string>
+    <string name="updating_extensions">확장 앱 업데이트</string>
     <string name="amount_of_pages_to_preload">읽을 때 미리 로드할 페이지의 양입니다. 값이 높을수록 더 부드러운 읽기 환경이 만들어지며 캐시 및 네트워크 사용량이 높아집니다.</string>
     <string name="invert_double_pages">이중 페이지 반전</string>
     <string name="sort_fetched_time">가져온 시간별로 정렬</string>
     <plurals name="_updates_pending">
         <item quantity="other">%d 업데이트 보류 중</item>
     </plurals>
-    <string name="extensions_updated">확장 기능 업데이트됨</string>
+    <string name="extensions_updated">확장 앱 업데이트됨</string>
     <string name="set_first_page_as_cover">첫 번째 페이지를 표지로 설정</string>
     <string name="share_first_page">첫 페이지 공유</string>
     <string name="save_first_page">첫 페이지 저장</string>
@@ -717,7 +717,7 @@
     <string name="only_downloaded">다운로드만</string>
     <string name="show_reset_history_button">재설정 기록 표시 단추</string>
     <string name="show_read_chapters_all">그룹화된 챕터와 모두 읽기 챕터 표시</string>
-    <string name="use_shizuku_to_install">시즈쿠를 사용하여 확장 프로그램 설치</string>
+    <string name="use_shizuku_to_install">Shizuku를 사용하여 확장 앱 설치</string>
     <string name="changing_will_reset_reading_mode">이를 변경하면 이 시리즈의 읽기 모드가 재설정됩니다</string>
     <string name="switch_to_single">단일 페이지로 전환</string>
     <string name="smart_based_on_page">스마트(페이지 기반)</string>
@@ -906,7 +906,7 @@
     <string name="recently_installed">최근에 설치됨</string>
     <string name="use_default">기본값 사용</string>
     <string name="log_in">로그인</string>
-    <string name="notify_extension_updated">확장 프로그램에 알리기 업데이트되었습니다</string>
+    <string name="notify_extension_updated">알림 확장 앱이 업데이트되었습니다</string>
     <string name="whats_new_this_release">이 릴리스의 새로운 기능</string>
     <string name="you_can_migrate_in_library">라이브러리에서 만화를 선택하여 마이그레이션할 수도 있습니다</string>
     <string name="downloading_">다운로드 중: %1$s</string>
@@ -960,7 +960,7 @@
     <string name="moved_to_">%1$s로 이동했습니다</string>
     <string name="open_in_app">앱에서 열기</string>
     <string name="remove_from_">%1$s에서 제거</string>
-    <string name="auto_update_extensions">확장 프로그램 자동 업데이트</string>
+    <string name="auto_update_extensions">확장 앱 자동 업데이트</string>
     <string name="delete_all_covers__not_in_library_used_">라이브러리에없는 캐시 된 모든 커버 삭제
 \n현재 사용 중: %1$s</string>
     <string name="select_uninstalled_sources">제거된 소스 선택</string>
@@ -981,7 +981,7 @@
     <plurals name="cleanup_done">
         <item quantity="other">정리가 완료되었습니다. 제거된 %d 폴더</item>
     </plurals>
-    <string name="some_extensions_may_not_update">일부 확장은이 앱 외부에 설치된 경우 자동으로 업데이트되지 않을 수 있습니다</string>
+    <string name="some_extensions_may_not_update">일부 확장 앱은 외부에서 설치된 경우 자동으로 업데이트되지 않을 수 있습니다</string>
     <string name="only_enable_enabled_for_migration">현재 사용 가능한 원본만 마이그레이션에 사용하도록 설정합니다</string>
     <string name="couldnt_download_low_space">디스크 공간 부족으로 인해 챕터를 다운로드할 수 없습니다</string>
     <string name="deleted_">삭제됨: %1$s</string>
@@ -1005,7 +1005,7 @@
     <string name="count">총계</string>
     <string name="not_rated">평가되지 않음</string>
     <string name="source">소스</string>
-    <string name="tracker">동기화</string>
+    <string name="tracker">트래커</string>
     <string name="length">길이</string>
     <string name="start_year">시작 연도</string>
     <string name="read_duration">읽은 시간</string>
@@ -1036,4 +1036,13 @@
     <string name="updates_last_update_info">마지막 서재 업데이트: %s</string>
     <string name="gray_background">회색</string>
     <string name="app_updates">앱 업데이트</string>
+    <string name="show_more_chapters">더 많은 회차를 보기</string>
+    <string name="collapse_grouped_chapters">그룹화된 회차 접기</string>
+    <string name="by_series">시리즈 기준</string>
+    <string name="by_day">일별 기준</string>
+    <string name="open">열기</string>
+    <string name="by_week">주간 기준</string>
+    <string name="allow_notifications_recommended">서재와 앱을 최신 상태로 유지하려면 알림을 허용하는 것이 좋습니다.</string>
+    <string name="apply">적용하기</string>
+    <string name="pref_remove_exclude_categories">제외된 카테고리</string>
 </resources>

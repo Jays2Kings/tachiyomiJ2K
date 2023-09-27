@@ -267,7 +267,7 @@
     <string name="multiply">Vermenigvuldigen</string>
     <string name="screen">Bleken</string>
     <string name="help">Help</string>
-    <string name="lock_with_biometrics">Biometrisch vergrendelen</string>
+    <string name="lock_with_biometrics">Vereis ontgrendeling</string>
     <string name="lock_when_idle">Vergrendelen indien niet in gebruik</string>
     <string name="date_format">Datumformaat</string>
     <string name="secure_screen">Scherm beveiligen</string>
@@ -876,7 +876,7 @@
     <string name="restrictions_">Restricties: %1$s</string>
     <string name="show_categories_while_filtering">Laat lege categoriën zien tijdens het filteren</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 hoofdstuk is overgeslagen, of de bron mist 1 hoofdstuk of het is uitgefilterd</item>
+        <item quantity="one">1 hoofdstuk is overgeslagen, de bron mist 1 hoofdstuk of het is uitgefilterd</item>
         <item quantity="other">%d hoofdstukken zijn overgeslagen, de bron mist ze of ze zijn uitgefilterd</item>
     </plurals>
     <string name="getting_started_guide">Gids voor beginners</string>
@@ -901,7 +901,7 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Installeer en start Shizuku om deze als extensie-installatieprogramma te gebruiken.</string>
     <string name="use_shizuku_summary">Staat extensies toe om geïnstalleerd te worden zonder bevestigingsvenster en schakelt automatische updates voor apparaten onder Android 12 in</string>
     <string name="use_shizuku_to_install">Gebruik Shizuku om extensies te installeren</string>
-    <string name="download_queue_size_warning">Waarschuwing: grote downloads kunnen ervoor zorgen dat bronnen trager werken en/of dat Tachiyomi vast gaat lopen. Tik hier voor meer informatie.</string>
+    <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
     <string name="every_3_days">Iedere 3 dagen</string>
     <string name="classic_blue">Klassiek Blauw</string>
     <string name="lime_time">Limoen Groen</string>
@@ -969,7 +969,7 @@
     <string name="empty_backup_error">Geen bibliotheek inzendingen om te backuppen</string>
     <string name="use_staggered_grid">Gebruik oneven raster</string>
     <string name="pref_library_update_manga_restriction">Titels bijwerken overslaan</string>
-    <string name="pref_update_only_completely_read">Met ongelezen hoofdstukken</string>
+    <string name="pref_update_only_completely_read">Heeft ongelezen hoofdstukken</string>
     <string name="pref_update_only_non_completed">Met als status \"Compleet\"</string>
     <string name="pref_update_only_started">Waar nog niet aan is begonnen</string>
     <string name="check_for_beta_releases">Bètaversie controleren</string>
@@ -1001,7 +1001,7 @@
     <string name="download_notifier_split_page_not_found">Pagina %d niet gevonden tijdens het splitsen</string>
     <string name="download_notifier_split_failed">Kan gedownloade afbeelding niet splitsen</string>
     <string name="download_ahead_info">Werkt alleen bij vermeldingen in de bibliotheek en als het huidige hoofdstuk en het volgende alreeds gedownload zijn</string>
-    <string name="split_tall_images">Split tall afbeeldingen</string>
+    <string name="split_tall_images">Splits hoge afbeeldingen</string>
     <string name="open_in_app">Openen in app</string>
     <string name="battery_not_low">Batterij niet bijna leeg</string>
     <string name="downloads_swipe_tutorial">Downloads kunnen worden geannuleerd door ze weg te vegen
@@ -1018,4 +1018,55 @@
     <string name="appwidget_unavailable_locked">Widget niet beschikbaar wanneer app-vergrendeling aan staat</string>
     <string name="updates_last_update_info">Laatste update bibliotheek: %s</string>
     <string name="hide_in_library_items">Verberg manga die al in de bibliotheek staat</string>
+    <string name="chapters_read">Lees hoofdstukken</string>
+    <string name="stat">Statistiek</string>
+    <string name="stats">Statistieken</string>
+    <string name="statistics_details">Statistiek details</string>
+    <string name="titles_in_library">Titels in bibliotheek</string>
+    <string name="tracked_titles">Gevolgde titles</string>
+    <string name="tags">Labels</string>
+    <string name="titles_in_global_update">Titles in globale update</string>
+    <string name="trackers">Trackers</string>
+    <string name="read_duration">Leesduur</string>
+    <string name="manga_score_distribution">Distributie van scores</string>
+    <string name="view_detailed_statistics">Zie gedetailleerde statistieken</string>
+    <string name="count">Aantal</string>
+    <string name="source">Bron</string>
+    <string name="show_more_chapters">Laat meer hoofdstukken zien</string>
+    <string name="by_week">Bij week</string>
+    <string name="read_duration_info">Tijd besteed in de lezer, gebaseerd op hoofdstuk geschiedenis</string>
+    <string name="skipped_reason_not_always_update">Overgeslagen omdat serie geen updates vereist.</string>
+    <string name="gray_background">Grijs</string>
+    <string name="failed_to_update_">Niet gelukt om %1$s te updaten</string>
+    <string name="mean_tracking_score">Gemiddelde volgscore</string>
+    <string name="allow_notifications_recommended">Notificaties toestaan is aanbevolen om je bibliotheek en app actueel te houden.</string>
+    <string name="collapse_grouped_chapters">Gegroepeerde hoofdstukken samenvouwen</string>
+    <string name="by_series">Bij serie</string>
+    <string name="app_updates">App updates</string>
+    <string name="by_day">Bij dag</string>
+    <string name="local_titles">Lokale titels</string>
+    <string name="manga_status_distribution">Statusverdeling</string>
+    <string name="tracker">Tracker</string>
+    <plurals name="_series_types">
+        <item quantity="one"/>
+        <item quantity="other">%d serie types</item>
+    </plurals>
+    <string name="not_rated">Niet beoordeeld</string>
+    <plurals name="_sources">
+        <item quantity="one"/>
+        <item quantity="other">%d bronnen</item>
+    </plurals>
+    <string name="length">Lengte</string>
+    <string name="start_year">Begin jaar</string>
+    <string name="no_data_for_filters">Geen data gevonden voor jouw huidige filters</string>
+    <plurals name="_statuses">
+        <item quantity="one"/>
+        <item quantity="other">%d statussen</item>
+    </plurals>
+    <string name="open">Open</string>
+    <plurals name="_languages">
+        <item quantity="one"/>
+        <item quantity="other">%d talen</item>
+    </plurals>
+    <string name="pref_remove_exclude_categories">Uitgesloten categoriën</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">類別</string>
-    <string name="manga">漫畫</string>
+    <string name="manga">日漫</string>
     <string name="chapters">章節</string>
     <string name="history">記錄</string>
     <string name="settings">設定</string>
@@ -347,9 +347,9 @@
     </plurals>
     <string name="marked_as_unread">標示為未讀</string>
     <string name="marked_as_read">標示為已讀</string>
-    <string name="comic">漫畫</string>
-    <string name="manhua">漫畫</string>
-    <string name="manhwa">漫畫</string>
+    <string name="comic">美漫</string>
+    <string name="manhua">陸漫</string>
+    <string name="manhwa">韓漫</string>
     <string name="started_reading_date">開始閱讀日期</string>
     <string name="finished_reading_date">閱讀完畢日期</string>
     <string name="myanimelist_relogin">請重新登入 MAL</string>
@@ -403,7 +403,7 @@
     <string name="label_global_search">全域搜尋</string>
     <string name="portrait">直向</string>
     <string name="landscape">橫向</string>
-    <string name="cancel_all_for_series">取消此叢書</string>
+    <string name="cancel_all_for_series">取消此作品</string>
     <string name="chapter_not_found">未找到章節</string>
     <string name="add_categories">新增分類</string>
     <string name="error_sharing_cover">分享封面時發生錯誤</string>
@@ -596,14 +596,14 @@
     <string name="cover_only_grid">純封面格狀</string>
     <string name="notification_update_error">%1$d 項更新失敗</string>
     <string name="notification_update_skipped">已略過 %1$d 項更新</string>
-    <string name="skipped_reason_completed">由於叢書連載已完結，因此略過</string>
-    <string name="skipped_reason_not_caught_up">由於尚有未讀的章節，因此略過</string>
-    <string name="skipped_reason_not_started">由於尚無已讀的章節，因此略過</string>
+    <string name="skipped_reason_completed">由於連載已完結，因此略過</string>
+    <string name="skipped_reason_not_caught_up">由於有未讀章節，因此略過</string>
+    <string name="skipped_reason_not_started">由於無已讀章節，因此略過</string>
     <string name="channel_skipped">略過</string>
     <string name="pref_library_update_manga_restriction">欲略過更新的作品</string>
-    <string name="pref_update_only_completely_read">有未讀的章節</string>
-    <string name="pref_update_only_non_completed">已完結的作品</string>
-    <string name="pref_update_only_started">無已讀的章節</string>
+    <string name="pref_update_only_completely_read">有未讀章節</string>
+    <string name="pref_update_only_non_completed">連載已完結</string>
+    <string name="pref_update_only_started">無已讀章節</string>
     <string name="pref_clear_webview_data">清除 WebView 資料</string>
     <string name="webview_data_deleted">已清除 WebView 資料</string>
     <string name="save_chapters_as_cbz">以 CBZ 封存檔格式儲存</string>
@@ -742,7 +742,7 @@
     <string name="dark_theme">深色主題</string>
     <string name="trackers">歷程平台</string>
     <string name="statistics">統計資料</string>
-    <string name="skipped_reason_not_always_update">由於叢書無須更新，因此略過</string>
+    <string name="skipped_reason_not_always_update">由於作品無須更新，因此略過</string>
     <string name="error_user_agent_string_invalid">無效的使用者代理字串</string>
     <string name="popular">熱門</string>
     <string name="skip_dupe_chapters">略過重複的章節</string>
@@ -1041,4 +1041,6 @@
     <string name="app_updates">應用程式更新</string>
     <string name="open">開啟</string>
     <string name="allow_notifications_recommended">推薦開啟通知功能，以便保持您的書庫和應用程式更新至最新狀態。</string>
+    <string name="pref_remove_exclude_categories">不包括的漫畫類別</string>
+    <string name="apply">立即套用設定</string>
 </resources>

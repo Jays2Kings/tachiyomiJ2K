@@ -295,7 +295,7 @@
     <string name="history">Кун-ҫул</string>
     <string name="library_search_hint">Ят, тегсем, ҫӑл куҫ</string>
     <string name="updating_library">Вулавӑша ҫӗнетни</string>
-    <string name="default_category">Яланхилле пухмӑш</string>
+    <string name="default_category">Йаланхилле пухмӑш</string>
     <string name="categories">Пухмӑшсем</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s сыпӑк</item>
@@ -310,7 +310,7 @@
     <string name="ongoing">Тухакан</string>
     <string name="description">Сӑнлав</string>
     <string name="title">Ят</string>
-    <string name="all">Веҫех</string>
+    <string name="all">Пурне те</string>
     <string name="clear_database_completed">Ҫыравсене катертнӗ</string>
     <string name="cookies_cleared">Куккисем катертнӗ</string>
     <string name="restore_completed">Тавӑрни вӗҫленнӗ</string>
@@ -454,7 +454,7 @@
     <string name="reading_mode">Вулав тытӑмӗ</string>
     <string name="actions">Тӑвӑмсем</string>
     <string name="create_folders_by_manga_title">Папкӑсене манкӑ ячӗпе тумалла</string>
-    <string name="name">Йачӗ</string>
+    <string name="name">Йат</string>
     <string name="disabled">Сӳнтернӗ</string>
     <string name="channel_errors">Йӑнӑшсем</string>
     <string name="tracking_info">Сӑнану сервиссенче сыпӑкӑн ӳсӗмне ҫӗнетме пӗр енлӗ пӗрлӗхлени. Манкӑн уйрӑм ҫыравӗсемпе вӗсен сӑнану пускӑчсем валли сӑнану ӗнерле.</string>
@@ -498,4 +498,16 @@
     <string name="pref_update_only_started">Серилӗхе пуҫламан</string>
     <string name="split_tall_images">Вӑрӑм сӑнсене пайлани</string>
     <string name="split_tall_images_summary">Вулӑшӑн тухӑҫа лайӑхлатать</string>
+    <string name="ext_installer_shizuku_stopped">Shizuku ӗҫлемест</string>
+    <string name="ext_installer_shizuku_unavailable_dialog">Shizuku-н хушма ларткӑча усӑ курма Shizuku ларт тата ҫут.</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">1 сыпӑк ҫук</item>
+        <item quantity="other">%d сыпӑк ҫук</item>
+    </plurals>
+    <string name="update_all">Пурне те ҫӗнет</string>
+    <string name="_per_row">Ретре %d</string>
+    <string name="app_info">Ап ҫинчен</string>
+    <string name="statistics">Шутлавсем</string>
+    <string name="grid_size">Сетке пысӑкӑшӗ</string>
+    <string name="gray_background">Сӑрӑ</string>
 </resources>

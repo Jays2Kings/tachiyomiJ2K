@@ -621,4 +621,5 @@
     </plurals>
     <string name="gray_background">Sivá</string>
     <string name="app_updates">Aktualizácie aplikácie</string>
+    <string name="pref_remove_exclude_categories">Vylúčené kategórie</string>
 </resources>

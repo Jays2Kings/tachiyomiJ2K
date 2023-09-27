@@ -563,8 +563,8 @@
     <string name="pref_update_only_completely_read">Amb capítols no llegits</string>
     <string name="pref_update_only_non_completed">Amb l’estat «Completat»</string>
     <string name="pref_update_only_started">Que no s’hagin començat</string>
-    <string name="pref_clear_webview_data">Neteja les dades del WebView</string>
-    <string name="webview_data_deleted">S’han netejat les dades del WebView</string>
+    <string name="pref_clear_webview_data">Neteja les dades de la WebView</string>
+    <string name="webview_data_deleted">S’han netejat les dades de la WebView</string>
     <string name="tap_to_see_details">Premeu per a veure’n els detalls</string>
     <string name="tap_to_learn_more">Premeu per a obtenir més informació</string>
     <string name="display_options">Opcions de visualització</string>
@@ -796,4 +796,6 @@
     <string name="search_suggestions">Cerca suggeriments</string>
     <string name="enable_zoom_out">Activa l’allunyament</string>
     <string name="cutout_area_behavior">Comportament de l’àrea de retall</string>
+    <string name="app_updates">Actualitzacions de l’aplicació</string>
+    <string name="pref_remove_exclude_categories">Categories excloses</string>
 </resources>

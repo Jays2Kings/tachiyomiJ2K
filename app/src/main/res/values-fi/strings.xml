@@ -21,7 +21,7 @@
     <string name="cover_updated">Kansikuva päivitetty</string>
     <string name="page_">Sivu: %1$d</string>
     <string name="next_chapter_not_found">Seuraavaa lukua ei löydy</string>
-    <string name="decode_image_error">Kuvaa ei voitu purkaa</string>
+    <string name="decode_image_error">Kuvaa ei voitu ladata</string>
     <string name="use_image_as_cover">Haluatko asettaa tämän kuvan kansikuvaksi\?</string>
     <string name="finished_chapter">Valmistunut:</string>
     <string name="current_chapter">Nykyinen:</string>
@@ -271,7 +271,7 @@
     <string name="burn_darken">Polttava / Tummentava</string>
     <string name="help">Apu</string>
     <string name="no_results_found">Ei tuloksia</string>
-    <string name="lock_with_biometrics">Lukitse biometrisillä tiedoilla</string>
+    <string name="lock_with_biometrics">Vaadi lukituksen avaaminen</string>
     <string name="lock_when_idle">Lukitse käyttämättömänä</string>
     <string name="always_show_chapter_transition">Näytä aina luvun vaihdos</string>
     <string name="pref_webtoon_side_padding">Sivuntäyttö</string>
@@ -897,4 +897,11 @@
     <string name="skipped_reason_not_always_update">Ohitettu, koska sarja ei vaadi päivityksiä</string>
     <string name="allow_deleting_bookmarked_chapters">Poista kirjanmerkityt luvut</string>
     <string name="popular">Suositut</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">1 puuttuva luku</item>
+        <item quantity="other">%d puuttuvaa lukua</item>
+    </plurals>
+    <string name="app_updates">Sovelluspäivitykset</string>
+    <string name="gray_background">Harmaa</string>
+    <string name="pref_remove_exclude_categories">Poissuljetut kategoriat</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="comic">ବ୍ୟଙ୍ଗ</string>
-    <string name="manga">ମାଙ୍ଗା</string>
+    <string name="manga">ମଙ୍ଗା</string>
     <string name="description">ବର୍ଣ୍ଣନା</string>
     <string name="unread">ପଢ଼ି ନାହାଁନ୍ତି</string>
     <string name="bookmarked">ବୁକମାର୍କ ହୋଇଅଛି</string>
@@ -107,7 +107,7 @@
     <string name="undo">ପୂର୍ବବତ୍</string>
     <string name="use_image_as_cover">ଏଇ ପ୍ରତିଛବିଟିକୁ ମଲାଟ ଚିତ୍ରକଳା ଭାବରେ ବ୍ୟବହାର କରିବେ କି\?</string>
     <string name="general">ସାଧାରଣ</string>
-    <string name="cover_of_image">ମାଙ୍ଗାର ମଲାଟ</string>
+    <string name="cover_of_image">ମଙ୍ଗାର ମଲାଟ</string>
     <string name="ascending">ଆରୋହଣ</string>
     <string name="date">ତାରିଖ</string>
     <string name="descending">ଅବରୋହଣ</string>

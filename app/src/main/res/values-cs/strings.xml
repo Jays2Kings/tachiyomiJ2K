@@ -1095,4 +1095,6 @@
     <string name="app_updates">Aktualizace aplikace</string>
     <string name="open">Otevřít</string>
     <string name="allow_notifications_recommended">Doporučujeme povolit oznámení, aby byla knihovna a aplikace stále aktuální.</string>
+    <string name="apply">Použít</string>
+    <string name="pref_remove_exclude_categories">Vyloučené kategorie</string>
 </resources>

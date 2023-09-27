@@ -39,9 +39,9 @@
     <string name="default_category">קטגוריית ברירת המחדל</string>
     <string name="edit_categories">ערוך קטגוריות</string>
     <plurals name="category_plural">
-        <item quantity="one">קטגורייה אחתשתי קטגוריות%d קטגוריות%d קטגוריות</item>
-        <item quantity="two"/>
-        <item quantity="many"/>
+        <item quantity="one">קטגורייה אחת</item>
+        <item quantity="two">שתי קטגוריות</item>
+        <item quantity="many">%d קטגוריות</item>
         <item quantity="other"/>
     </plurals>
     <string name="update">עדכון</string>
@@ -112,9 +112,9 @@
     <string name="app_info">פרטי האפליקצייה</string>
     <string name="update_all">עדכן הכל</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">עדכון לתוסף זמיןעדכונים ל-%d תוספים זמיניםעדכונים ל-%d תוספים זמיניםעדכונים ל-%d תוספים זמינים</item>
-        <item quantity="two"/>
-        <item quantity="many"/>
+        <item quantity="one">זמין עדכון לתוסף</item>
+        <item quantity="two">זמינים עדכונים ל-%d תוספים</item>
+        <item quantity="many">זמינים עדכונים ל-%d תוספים</item>
         <item quantity="other"/>
     </plurals>
     <string name="set_as_cover">הגדר ככריכה</string>
@@ -270,9 +270,9 @@
     <string name="progress">התקדמות</string>
     <string name="complete">הושלם</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">הושלם ב %1$s עם שגיאה אחתהושלם ב %1$s עם שתי שגיאותהושלם ב %1$s עם %2$s שגיאותהושלם ב %1$s עם %2$s שגיאות</item>
-        <item quantity="two"/>
-        <item quantity="many"/>
+        <item quantity="one">הושלם ב %1$s עם שגיאה אחת</item>
+        <item quantity="two">הושלם ב %1$s עם שתי שגיאות</item>
+        <item quantity="many">הושלם ב %1$s עם %2$s שגיאות</item>
         <item quantity="other"/>
     </plurals>
     <string name="clear_chapter_cache">נקה את זיכרון המטמון של הפרקים</string>
@@ -331,7 +331,7 @@
     <string name="last_read_chapter">פרק שנקרא בפעם האחרונה</string>
     <string name="download_new_chapters">הורד פרקים חדשים</string>
     <string name="save_chapters_as_cbz">שמור כארכיון CBZ</string>
-    <string name="split_tall_images_summary">משפר את ביצועי מצב הקריאה ע\"י חיתוך תמונות גבוהות שירדו.</string>
+    <string name="split_tall_images_summary">משפר את ביצועי מצב הקריאה</string>
     <string name="every_6_hours">כל 6 שעות</string>
     <string name="every_12_hours">כל 12 שעות</string>
     <string name="daily">פעם ביום</string>
@@ -339,9 +339,9 @@
     <string name="every_3_days">כל 3 ימים</string>
     <string name="weekly">פעם בשבוע</string>
     <plurals name="after_minutes">
-        <item quantity="one">לאחר דקה אחתלאחר שתי דקותלאחר %1$s דקותלאחר %1$s דקות</item>
-        <item quantity="two"/>
-        <item quantity="many"/>
+        <item quantity="one">לאחר דקה אחת</item>
+        <item quantity="two">לאחר שתי דקות</item>
+        <item quantity="many">לאחר %1$s דקות</item>
         <item quantity="other"/>
     </plurals>
     <string name="select_cover_image">בחר תמונת כריכה</string>
@@ -426,7 +426,7 @@
     <string name="on_hiatus">בהפסקה</string>
     <string name="unlock_library">פתח נעילה כדי לגשת לסיפרייה</string>
     <string name="unlock">פתח נעילה</string>
-    <string name="lock_with_biometrics">פתח נעילה ביומטרית</string>
+    <string name="lock_with_biometrics">ביטול נעילה דרוש</string>
     <string name="new_chapters">פרקים חדשים</string>
     <string name="last_read_chapter_">פרק שנקרא לאחרונה %1$s</string>
     <string name="chapter_x_of_y">פרק %1$d מתוך %2$d</string>
@@ -463,7 +463,7 @@
     <string name="category">קטגוריה</string>
     <string name="reduces_banding_impacts_performance">מפחית פסים, אך עשוי להשפיע על הביצועים</string>
     <string name="kindlish_nav">כמו ספר אלקטרוני</string>
-    <string name="split_tall_images">פיצול תמונות ארוכות אוטומטי</string>
+    <string name="split_tall_images">פצל תמונה מוארכת</string>
     <string name="tap_zones">איזורי נגיעה</string>
     <string name="color_filter_blend_mode">פילטר צבע משתלב</string>
     <string name="multiply">להכפיל</string>
@@ -476,9 +476,9 @@
     <string name="source_migration_guide">מדריך נדידת מקורות</string>
     <string name="exclude_">החרגה: %s</string>
     <plurals name="for_n_titles">
-        <item quantity="one">עבור כותר אחדעבור %d כותריםעבור %d כותריםעבור %d כותרים</item>
-        <item quantity="two"/>
-        <item quantity="many"/>
+        <item quantity="one">עבור כותר אחד</item>
+        <item quantity="two">עבור שני כותרים</item>
+        <item quantity="many">עבור %d כותרים</item>
         <item quantity="other"/>
     </plurals>
     <string name="notification_update_error">%1$d עדכונים נכשלו</string>
@@ -532,4 +532,60 @@
     <string name="no_matches_for_filters">לא נמצאו פריטים התואמים את הסינון</string>
     <string name="statistics">סטטיסטיקות</string>
     <string name="allow_deleting_bookmarked_chapters">אפשר מחיקת פרקים שסומנו</string>
+    <string name="appwidget_updates_description">צפה בפריטי הספריה העדכניים ביותר</string>
+    <string name="decode_image_error">לא ניתן היה לפענח את התמונה</string>
+    <string name="download_notifier_split_page_not_found">עמוד %d לא נמצא בעת פיצול</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">דולג פרק אחד, המקור חסר או שהוא סונן החוצה</item>
+        <item quantity="two">דולגו שני פרקים, המקור חסר או שהם סוננו החוצה</item>
+        <item quantity="many">דולגו %d פרקים, המקור חסר או שהם סוננו החוצה</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="webview_data_deleted">מידע של WebView נוקה בהצלחה</string>
+    <string name="auto_download_while_reading">הורד אוטומטית בזמן קריאה</string>
+    <string name="updates_last_update_info">ספריה עודכנה לאחרונה ב: %s</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">הפרק הבא שלא נקרא</item>
+        <item quantity="two">שני הפרקים הבאים שלא נקראו</item>
+        <item quantity="many">%d הפרקים הבאים שלא נקראו</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="complete_list">רשימת פריטים שהושלמו</string>
+    <string name="wish_list">רשימת תכנונים</string>
+    <string name="source_unsupported">המקור לא נתמך</string>
+    <string name="backup_in_progress">כבר נמצא בתהליך גיבוי</string>
+    <string name="empty_backup_error">אין פרטי ספרייה לגיבוי</string>
+    <string name="pref_clear_webview_data">נקה מידע של WebView</string>
+    <string name="appwidget_unavailable_locked">יישומון לא זמין כשנעילת האפליקציה מופעלת</string>
+    <string name="add_tracking">הוסף מעקב</string>
+    <string name="popular">פופולרי</string>
+    <string name="reading_list">רשימת קריאה</string>
+    <string name="file_picker_error">לא נמצאה אפליקציה לאסוף קבצים</string>
+    <string name="download_ahead">הורד הלאה</string>
+    <string name="skipped_reason_not_always_update">דולג בגלל שהספריה לא דורשת עדכונים</string>
+    <string name="pref_webtoon_side_padding">רפד בצדדים</string>
+    <string name="error_user_agent_string_invalid">מחרוזת משתמש לא תקינה</string>
+    <string name="about_dont_kill_my_app">לחלק מהיצרנים יש הגבלות אפליקציה שהורגות תהליכים ברקע. באתר הזה יש עוד מידע לגבי איך לתקן את זה.</string>
+    <string name="on_hold_list">רשימת פריטים בעצירה זמנית</string>
+    <string name="unfinished_list">רשימת פריטים שלא הושלמו</string>
+    <string name="no_match_found">לא נמצאה התאמה</string>
+    <string name="no_description">אין תיאור</string>
+    <string name="lavender">לבנדר</string>
+    <string name="last_used">שומש לאחרונה</string>
+    <string name="user_agent_string">מחרוזת משתמש דיפולטית</string>
+    <string name="refresh_tracking">רענן מעקבים</string>
+    <string name="_per_row">%d בכל שורה</string>
+    <string name="saves_error_logs">שומר דוח שגיאות לקובץ עבור שיתוף עם המפתחים</string>
+    <string name="updated_to_">עודכן לגרסה %1$s</string>
+    <string name="restore_missing_trackers">מעקבים שדורשים התחברות:</string>
+    <string name="hide_in_library_items">הסתר פריטים שכבר בספרייה</string>
+    <string name="open_source_licenses">רישיונות מקורות פתוחים</string>
+    <string name="grid_size">גודל רשת</string>
+    <string name="app_updates">עדכוני אפליקציה</string>
+    <string name="read_duration">משך קריאה</string>
+    <string name="trackers">מעקבים</string>
+    <string name="gray_background">אפור</string>
+    <string name="skip_dupe_chapters">דלג על פרקים כפולים</string>
+    <string name="dodge_lighten">להתחמק / להאיר</string>
+    <string name="pref_remove_exclude_categories">קטגוריות מוחרגות</string>
 </resources>

@@ -150,7 +150,7 @@
     <string name="unknown">មិនច្បាស់</string>
     <string name="unknown_status">មិនច្បាស់</string>
     <string name="licensed">មានឡាយសិន</string>
-    <string name="lock_with_biometrics">ចាក់សោរជាមួយBiometrics (​​ម្រាមដៃ)</string>
+    <string name="lock_with_biometrics">ត្រូវការការបើកសោ</string>
     <string name="new_chapters">ភាគថ្មី</string>
     <string name="unlock">បើក</string>
     <string name="marked_as_read">បានអាន</string>
@@ -253,4 +253,6 @@
     <plurals name="next_unread_chapters">
         <item quantity="other">%d ភាគបន្ទាប់ដែលមិនទាន់អាន</item>
     </plurals>
+    <string name="statistics">ស្ថិតិ</string>
+    <string name="failed_to_bypass_cloudflare">បរាជ័យក្នុងការឆ្លងកាត់Cloudflare</string>
 </resources>

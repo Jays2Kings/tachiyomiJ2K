@@ -1103,4 +1103,6 @@
     <string name="app_updates">Anwendungsaktualisierungen</string>
     <string name="open">Öffnen</string>
     <string name="allow_notifications_recommended">Es wird empfohlen, Benachrichtigungen zuzulassen, um deine Bibliothek und die App auf dem neuesten Stand zu halten.</string>
+    <string name="apply">Anwenden</string>
+    <string name="pref_remove_exclude_categories">Ausgeschlossene Kategorien</string>
 </resources>

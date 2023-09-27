@@ -1067,4 +1067,7 @@
     <string name="gray_background">Murru</string>
     <string name="app_updates">Agiornamentos de s\'aplicatzione</string>
     <string name="open">Aberi</string>
+    <string name="pref_remove_exclude_categories">Categorias esclùdidas</string>
+    <string name="apply">Àplica</string>
+    <string name="allow_notifications_recommended">Est racumandadu a permìtere sas notìficas pro mantènnere sa biblioteca e s\'aplicatzione tua atualizadas.</string>
 </resources>

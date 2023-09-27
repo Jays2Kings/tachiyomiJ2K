@@ -255,7 +255,7 @@
     <string name="normal">Bình thường</string>
     <string name="fast">Nhanh</string>
     <string name="categories_to_include_in_download">Danh mục để đưa vào tải xuống</string>
-    <string name="create_backup">Tạo bản sao lưu</string>
+    <string name="create_backup">Tạo sao lưu</string>
     <string name="can_be_used_to_restore">Có thể sử dụng để khôi phục thư viện hiện tại</string>
     <string name="restore_backup">Khôi phục sao lưu</string>
     <string name="restore_from_backup_file">Khôi phục thư viện từ tập tin sao lưu</string>
@@ -410,7 +410,7 @@
     <string name="local_source_help_guide">Hướng dẫn nguồn cục bộ</string>
     <string name="whats_new">Có gì mới</string>
     <string name="website">Trang chủ</string>
-    <string name="restoring_backup_canceled">Quá trình phục hồi bị huỷ bỏ</string>
+    <string name="restoring_backup_canceled">Quá trình khôi phục đã bị ngắt</string>
     <plurals name="restore_completed_message">
         <item quantity="other">Hoàn tất trong %1$s với %2$s lỗi</item>
     </plurals>
@@ -523,10 +523,10 @@
 \n
 \nBạn sẽ cần cài đặt bất kỳ tiện ích mở rộng nào bị thiếu và sau đó đăng nhập vào các dịch vụ theo dõi để sử dụng chúng.</string>
     <string name="restore_missing_sources">Thiếu các nguồn:</string>
-    <string name="restore_error">Thất bại khi khôi phục lại</string>
+    <string name="restore_error">Khôi phục sao lưu thất bại</string>
     <string name="backup_failed">Sao lưu thất bại</string>
-    <string name="restore_in_progress">Đang khôi phục</string>
-    <string name="backup_in_progress">Sao lưu đã đang trong quá trình thực hiện</string>
+    <string name="restore_in_progress">Quá trình khôi phục đang diễn ra rồi</string>
+    <string name="backup_in_progress">Sao lưu thành công</string>
     <string name="backup_and_restore">Sao lưu và khôi phục</string>
     <string name="pressing_back_to_start">Nhấn nút trở lại để quay về màn hình bắt đầu</string>
     <string name="back_to_start">Trở về mục bắt đầu</string>
@@ -663,7 +663,7 @@
     <string name="search_recents">Tìm kiếm gần đây…</string>
     <string name="view_all_updates">Xem tất cả các bản cập nhật</string>
     <string name="view_history">Lịch sử xem</string>
-    <string name="fetched_">Dẫn đến %1$s</string>
+    <string name="fetched_">Truy xuất %1$s</string>
     <string name="added_">Đã thêm %1$s</string>
     <string name="updated_">Đã cập nhật %1$s</string>
     <string name="read_">Đọc %1$s</string>
@@ -671,7 +671,7 @@
     <string name="reset_all_chapters_for_this_">Làm mới lại tất cả chương cho %1$s</string>
     <string name="this_will_remove_the_read_date_for_x_question">Điều này sẽ xóa đi ngày đọc của \"%1$s\". Bạn có chắc không\?</string>
     <string name="reset_chapter_history">Cài đặt lại lịch sử chương</string>
-    <string name="newly_added">Mới được thên vào</string>
+    <string name="newly_added">Mới được thêm vào</string>
     <string name="updates_and_history">Cập nhật &amp; lịch sử</string>
     <string name="recents">Gần đây</string>
     <string name="search_tips_show_periodically">Mẹo tìm kiếm sẽ được hiển thị thường xuyên. Để tìm kiếm, hãy nhấn và giữ một gợi ý tìm kiếm.</string>
@@ -841,8 +841,8 @@
     <string name="select_an_entry">Chọn một nội dung</string>
     <string name="source_unsupported">Nguồn không còn được hỗ trợ</string>
     <string name="no_match_found">Không tìm thấy kết quả phù hợp</string>
-    <string name="over_any_network">Dùng trong mọi mạng lưới</string>
-    <string name="over_wifi_only">Chỉ dùng khi có Wi-Fi</string>
+    <string name="over_any_network">Mọi loại mạng</string>
+    <string name="over_wifi_only">Chỉ khi có Wi-Fi</string>
     <string name="split_double_pages">Tách các trang đôi</string>
     <string name="series_opens_new_chapters">Lối tắt của loạt truyện sẽ mở lên các chương mới</string>
     <string name="cannot_remove_tracking_while_offline">Bộ theo dõi không thể bị loại bỏ khỏi %1$s khi ngoại tuyến</string>
@@ -871,7 +871,7 @@
     <string name="details_page">Trang thông tin chi tiết</string>
     <string name="theme_buttons_based_on_cover">Chủ đề nút bấm sẽ theo bìa truyện</string>
     <string name="auto_updates">Tự động cập nhật</string>
-    <string name="auto_update_app">Ứng đụng tự động cập nhật</string>
+    <string name="auto_update_app">Tự động cập nhật ứng dụng</string>
     <string name="hide_notification_content">Ẩn nội dung thông báo</string>
     <string name="dont_auto_update">Không tự động cập nhật</string>
     <string name="show_recent_series">Hiện các loạt truyện gần đây</string>
@@ -1015,7 +1015,7 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Chuỗi đại diện người dùng mặc định</string>
     <string name="loader_rar5_error">Định dạng RARv5 không được hỗ trợ</string>
-    <string name="language_requires_app_restart">Một số ngôn ngữ cần khởi động lại app để hiện thị tốt nhất</string>
+    <string name="language_requires_app_restart">Một số ngôn ngữ sẽ cần khởi động lại ứng dụng để hiển thị chính xác</string>
     <string name="all_read_manga">Tất cả truyện đã đọc</string>
     <string name="clear_db_exclude_read">Lưu truyện đang đọc</string>
     <string name="downloaded_chapters">Tải các chương</string>
@@ -1074,4 +1074,6 @@
     <string name="app_updates">Cập nhật ứng dụng</string>
     <string name="mean_tracking_score">Điểm theo dõi trung bình</string>
     <string name="hide_in_library_items">Giấu các mục đã có trong thư viện</string>
+    <string name="allow_notifications_recommended">Bạn nên cho phép thông báo để luôn cập nhật ứng dụng và thư viện của mình.</string>
+    <string name="pref_remove_exclude_categories">Các thể loại bị loại trừ</string>
 </resources>

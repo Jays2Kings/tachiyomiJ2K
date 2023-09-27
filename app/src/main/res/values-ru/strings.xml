@@ -946,10 +946,10 @@
     <string name="default_behavior">По умолчанию</string>
     <string name="use_side_navigation">Использовать боковую панель навигации</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Отсутствует %d глава</item>
-        <item quantity="few">Отсутствуют %d главы</item>
-        <item quantity="many">Отсутствуют %d глав</item>
-        <item quantity="other">Отсутствуют %d глав</item>
+        <item quantity="one">Пропущена %d глава, так как она либо отсутствует в источнике, либо была отфильтрована</item>
+        <item quantity="few">Пропущено %d главы, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
+        <item quantity="many">Пропущено %d глав, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
+        <item quantity="other">Пропущено %d глав, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
     </plurals>
     <string name="helpful_translation_links">Полезные ссылки на перевод</string>
     <string name="help_translate">Помочь с переводом</string>
@@ -1146,4 +1146,8 @@
     <string name="read_duration_info">Время, проведенное в читалке, на основе истории глав</string>
     <string name="show_more_chapters">Показать больше глав</string>
     <string name="collapse_grouped_chapters">Свернуть сгруппированные главы</string>
+    <string name="app_updates">Обновление приложения</string>
+    <string name="open">Открыть</string>
+    <string name="allow_notifications_recommended">Рекомендуется разрешить уведомления для автоматического обновления Вашей библиотеки и приложения.</string>
+    <string name="pref_remove_exclude_categories">Исключённые категории</string>
 </resources>

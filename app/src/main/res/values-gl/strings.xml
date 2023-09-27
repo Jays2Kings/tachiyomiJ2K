@@ -522,4 +522,10 @@
         <item quantity="one">Saltouse %d capítulo: falta na fonte ou ignorouse</item>
         <item quantity="other">Saltáronse %d capítulos: faltan na fonte ou ignoráronse</item>
     </plurals>
+    <string name="_per_row">%d por fila</string>
+    <string name="hide_in_library_items">Ocultar elementos que xa estén na biblioteca</string>
+    <string name="grid_size">Tamaño da reixa</string>
+    <string name="app_updates">Actualizacións da aplicación</string>
+    <string name="gray_background">Gris</string>
+    <string name="pref_remove_exclude_categories">Categorías excluídas</string>
 </resources>

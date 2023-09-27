@@ -92,7 +92,7 @@
     <string name="last_read_chapter_">Azken kapitulu irakurria: %1$s</string>
     <string name="chapter_">%1$s Kapitulua</string>
     <string name="chapter_x_of_y">%2$d-tik %1$d Kapitulua</string>
-    <string name="lock_with_biometrics">Blokeatu biometriarekin</string>
+    <string name="lock_with_biometrics">Desblokeatzea eskatu</string>
     <string name="lock_when_idle">Blokeatu geldi geratzean</string>
     <string name="chapters">Kapituluak</string>
     <string name="new_chapters">Kapitulu berriak</string>
@@ -713,7 +713,7 @@
     <string name="extensions_miui_warning">MIUI Optimizazioa desgaitu egin behar da luzapenak instalatzeko.</string>
     <string name="cover_updated">Azala eguneratu da</string>
     <string name="_must_be_enabled_first">Lehenik %1$s gaitu behar da</string>
-    <string name="decode_image_error">Irudia ezin izan da deskodetu</string>
+    <string name="decode_image_error">Irudia ezin izan da kargatu</string>
     <string name="reading_mode">Irakurketa modua</string>
     <string name="changing_will_reset_reading_mode">Hau aldatzen baduzu, serie honen irakurketa modua berrezarri egingo da</string>
     <string name="may_contain_nsfw">NSFW (18+) edukia izan dezake</string>
@@ -950,4 +950,8 @@
     <string name="pref_library_update_manga_restriction">Saltatu eguneraketak</string>
     <string name="pref_update_only_completely_read">Irakurri gabeko kapituluak ditu</string>
     <string name="allow_deleting_bookmarked_chapters">Baimendu laster-markadun kapituluak ezabatzea</string>
+    <string name="statistics">Estatistikak</string>
+    <string name="app_updates">Aplikazioen eguneraketak</string>
+    <string name="gray_background">Grisa</string>
+    <string name="pref_remove_exclude_categories">Baztertutako kategoriak</string>
 </resources>

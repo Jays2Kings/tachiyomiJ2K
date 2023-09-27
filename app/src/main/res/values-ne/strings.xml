@@ -55,7 +55,7 @@
     <string name="oldest">सबैभन्दा पुरानो</string>
     <string name="open_in_browser">ब्राउजरमा खाेल्नुहाेस्</string>
     <string name="open_log">लग खोल्नुहोस्</string>
-    <string name="open_in_webview">WebViewमा खोल्नुहोस्</string>
+    <string name="open_in_webview">WebView मा खोल्नुहोस्</string>
     <string name="pause">रोक्नुहोस्</string>
     <string name="picture_saved">फोटो सेभ गरियो</string>
     <string name="pin">पिन</string>
@@ -180,7 +180,7 @@
     <string name="dodge_lighten">डज / चम्किलो</string>
     <string name="burn_darken">जलाउनु / अँध्यारो गर्नु</string>
     <string name="keep_screen_on">स्क्रिन अन राख्नुहोस्</string>
-    <string name="skip_read_chapters">\"पढिएको\" चिनो लगाइएका अध्यायहरू छोड्नुहोस्</string>
+    <string name="skip_read_chapters">पढिएको चिन्ह लगाइएका अध्यायहरू छोड्नुहोस्</string>
     <string name="skip_filtered_chapters">फिल्टर गरिएका अध्यायहरू छोड्नुहोस्</string>
     <string name="skip_dupe_chapters">डुप्लिकेट अध्यायहरू छोड्नुहोस्</string>
     <string name="navigation">नेभिगेसन</string>
@@ -273,7 +273,7 @@
     <string name="search_settings">सेटिङमा खोज्नुहोस्</string>
     <string name="incognito_mode">गुप्त मोड</string>
     <string name="pauses_reading_history">पढिएको इतिहास रोक्छ</string>
-    <string name="app_theme">एपको थिम</string>
+    <string name="app_theme">एपको थीम</string>
     <string name="midnight_dusk">मिडनाइट डस्क</string>
     <string name="strawberry_daiquiri">स्ट्रबेरी दाइक्वरी</string>
     <string name="yotsuba">योत्सुबा</string>
@@ -422,8 +422,8 @@
     <string name="left">बायाँ</string>
     <string name="less">थोरै</string>
     <string name="loading">लोड हुँदैछ …</string>
-    <string name="mark_as_read">पढिसकेको चिनो लगाउनुहोस्</string>
-    <string name="mark_as_unread">\"नपढिएकाे\" चिनो लगाउनुहोस्</string>
+    <string name="mark_as_read">पढिसकेको चिन्ह लगाउनुहोस्</string>
+    <string name="mark_as_unread">नपढिएकाे चिन्ह लगाउनुहोस्</string>
     <string name="more">थप</string>
     <string name="move_to_bottom">तल सार्नुहोस्</string>
     <string name="move_to_top">शीर्षमा सार्नुहोस्</string>
@@ -462,19 +462,19 @@
     <string name="author">लेखक</string>
     <string name="artist">चित्रकार</string>
     <string name="description">वर्णन</string>
-    <string name="move_x_to">%1$s लाई यसमा सार्नुहोस्…</string>
-    <string name="add_x_to">%1$s लाई यसमा थप्नुहोस्…</string>
+    <string name="move_x_to">%1$sलाई यसमा सार्नुहोस्…</string>
+    <string name="add_x_to">%1$sलाई यसमा थप्नुहोस्…</string>
     <string name="unknown_status">अज्ञात स्थिति</string>
     <string name="unlock_library">पुस्तकालय पहुँच गर्न अनलक गर्नुहोस्</string>
     <string name="unlock">अनलक गर्नुहोस्</string>
     <string name="new_chapters">नयाँ अध्यायहरू</string>
     <string name="last_read_chapter_">पछिल्लो पटक पढिएको अध्याय %1$s</string>
-    <string name="chapter_x_of_y">%2$d को %1$d अध्याय</string>
+    <string name="chapter_x_of_y">अध्याय %1$d / %2$d</string>
     <string name="all_chapters_read">सबै अध्याय पढिसकेको छ</string>
     <string name="not_bookmarked">पुस्तकचिनो नलगाइएको</string>
     <string name="removed_bookmark">पुस्तकचिनो हटाइयो</string>
-    <string name="marked_as_read">पढिएको चिनो लगाइयो</string>
-    <string name="marked_as_unread">नपढिएको चिनो लगाइयो</string>
+    <string name="marked_as_read">पढिएको चिन्ह लगाइयो</string>
+    <string name="marked_as_unread">नपढिएको चिन्ह लगाइयो</string>
     <string name="chapters_removed">अध्यायहरू हटाइयो।</string>
     <string name="lock_with_biometrics">अनलक गर्न आवश्यक छ</string>
     <string name="remove_all_downloads">सबै डाउनलोडहरू हटाउने हो\?</string>
@@ -526,7 +526,7 @@
         <item quantity="one">%1$d पृष्ठ बाँकी छ</item>
         <item quantity="other">%1$d पृष्ठहरू बाँकी छन्</item>
     </plurals>
-    <string name="adding_category_to_queue">%1$s लाई अपडेट लाममा थप्दै</string>
+    <string name="adding_category_to_queue">%1$sलाई अपडेट लाममा थप्दै</string>
     <string name="category">वर्ग</string>
     <string name="_already_in_queue">%1$s पहिले नै लाममा छ</string>
     <string name="no_matches_for_filters_short">तपाईँको फिल्टरका लागि कुनै मेल खाँदैन</string>
@@ -735,7 +735,7 @@
 \n
 \nतिनीहरूका डाउनलोडहरू हटाउने हो\?</item>
     </plurals>
-    <string name="update_tracking_marked_read">पढिएको चिनो लगाउँदा ट्रयाकिङ अपडेट गर्नुहोस्</string>
+    <string name="update_tracking_marked_read">पढिएको चिन्ह लगाउँदा ट्र्याकिङ अपडेट गर्नुहोस्</string>
     <string name="enhanced_tracking_info">सेवाहरू जसले विशिष्ट स्रोतहरूको लागि परिष्कृत सुविधाहरू प्रदान गर्दछ। तपाईंको पुस्तकालयमा माङ्गा थप्दा स्वतः ट्र्याक गरिन्छ।</string>
     <string name="update_tracking_after_reading">पढिसकेपछि ट्र्याकिङ अपडेट गर्नुहोस्</string>
     <string name="currently_reading">हाल पढ्दै</string>
@@ -770,7 +770,7 @@
     <string name="last_used_library_recents">अन्तिम पटक प्रयोग गरिएको (पुस्तकालय वा हालैका)</string>
     <string name="hide_bottom_nav">तलको नेभिगेसन स्वतः लुकाउनुहोस्</string>
     <string name="use_side_navigation">साइड नेभिगेसन प्रयोग गर्नुहोस्</string>
-    <string name="follow_system_theme">सिस्टम थिम पछ्याउनुहोस्</string>
+    <string name="follow_system_theme">सिस्टम थीम पछ्याउनुहोस्</string>
     <string name="details_page">विवरण पृष्ठ</string>
     <string name="expanded_toolbar">विस्तारित टूलबार</string>
     <string name="show_larger_toolbar">धेरैजसो पृष्ठहरूको शीर्षमा ठूलो, विस्तारित टूलबार देखाउनुहोस् (सेटिङलाई ध्यान नदिई साना यन्त्रहरूमा देखाउँदैन)</string>
@@ -801,7 +801,7 @@
     <string name="season_">सिजन %1$d</string>
     <string name="show_">%1$s देखाउनुहोस्</string>
     <string name="must_view_details_before_migration">स्थानान्तरण गर्न सक्षम हुनु अघि यो इन्ट्रीको विवरण पृष्ठ हेर्नुपर्छ</string>
-    <string name="mark_all_chapters_as_read">सबै अध्यायहरू पढिएको रूपमा चिनो लगाउने हो\?</string>
+    <string name="mark_all_chapters_as_read">सबै अध्यायहरू पढिएको रूपमा चिन्ह लगाउने हो\?</string>
     <string name="select_starting_chapter">प्रारम्भिक अध्याय चयन गर्नुहोस्</string>
     <string name="custom_range">कस्टम रेन्ज</string>
     <string name="all_chapters">सबै अध्यायहरू</string>
@@ -834,8 +834,8 @@
     <string name="stop_migrating">स्थानान्तरण रोक्ने हो\?</string>
     <string name="turn_on_">%s अन गर्नुहोस्</string>
     <string name="turn_off_">%s अफ गर्नुहोस्</string>
-    <string name="light_theme">उज्यालो थिम</string>
-    <string name="dark_theme">अँध्यारो थिम</string>
+    <string name="light_theme">उज्यालो थीम</string>
+    <string name="dark_theme">अँध्यारो थीम</string>
     <string name="spring_blossom">वसन्त फूल</string>
     <string name="yin">यिन</string>
     <string name="yang">याङ</string>
@@ -848,7 +848,7 @@
         <item quantity="other">%1$d%2$s माङ्गा स्थानान्तरण गर्ने हो\?</item>
     </plurals>
     <string name="app_updates">एप अपडेटहरू</string>
-    <string name="theme_buttons_based_on_cover">आवरणमा आधारित थिम बटनहरू</string>
+    <string name="theme_buttons_based_on_cover">आवरणमा आधारित थीम बटनहरू</string>
     <string name="show_recent_series">हालको श्रृङ्खला देखाउनुहोस्</string>
     <string name="want_to_read">पढ्न मन छ</string>
     <string name="skipping_">( %1$d छोड्दै)</string>
@@ -858,11 +858,11 @@
     <string name="pages_">पृष्ठहरू %1$s</string>
     <string name="reading_">%1$s पढ्दै</string>
     <string name="share_second_page">दोस्रो पृष्ठ साझा गर्नुहोस्</string>
-    <string name="smart_based_on_page_and_theme">स्मार्ट (पृष्ठ र थिममा आधारित)</string>
+    <string name="smart_based_on_page_and_theme">स्मार्ट (पृष्ठ र थीममा आधारित)</string>
     <string name="single_page">एकल पृष्ठ</string>
     <string name="switch_to_double">डबल पृष्ठमा स्विच गर्नुहोस्</string>
     <string name="smart_by_page">स्मार्ट (पृष्ठ अनुसार)</string>
-    <string name="smart_by_theme">स्मार्ट (थिम अनुसार)</string>
+    <string name="smart_by_theme">स्मार्ट (थीम अनुसार)</string>
     <string name="page_layout">पृष्ठ लेआउट</string>
     <string name="show_on_long_press">लामो प्रेसमा देखाउनुहोस्</string>
     <string name="show_downloaded_chapters">डाउनलोड गरिएका अध्यायहरू देखाउनुहोस्</string>
@@ -884,7 +884,7 @@
     <string name="ignore_cutout_areas">कटआउट क्षेत्रहरू बेवास्ता गर्नुहोस्</string>
     <string name="cutout_behavior_only_applies">कटआउट क्षेत्र व्यवहार निश्चित स्केल प्रकारहरूसँग पोर्ट्रेट मोडमा मात्र लागू हुन्छ</string>
     <string name="search_chapters">अध्यायहरू खोज्नुहोस्</string>
-    <string name="mark_all_chapters_as_unread">सबै अध्यायहरू नपढिएको रूपमा चिनो लगाउने हो\?</string>
+    <string name="mark_all_chapters_as_unread">सबै अध्यायहरू नपढिएको रूपमा चिन्ह लगाउने हो\?</string>
     <string name="select_ending_chapter">अन्तिम अध्याय चयन गर्नुहोस्</string>
     <string name="not_tracked">ट्र्याक नगरिएको</string>
     <string name="flat_lime">फ्लैट लाइम</string>
@@ -933,11 +933,11 @@
     <string name="ignore">बेवास्ता गर्नुहोस्</string>
     <string name="keep">राख्नुहोस्</string>
     <string name="lock">लक गर्नुहोस्</string>
-    <string name="mark_range_as_unread">नपढिएको अध्यायहरूको रेन्जमा चिनो लगाउनुहोस्</string>
-    <string name="mark_previous_as_read">अघिल्लो अध्यायहरू पढिएको चिनो लगाउनुहोस्</string>
-    <string name="mark_previous_as_unread">अघिल्लो अध्यायहरू नपढिएको चिनो लगाउनुहोस्</string>
+    <string name="mark_range_as_unread">नपढिएको अध्यायहरूको रेन्जमा चिन्ह लगाउनुहोस्</string>
+    <string name="mark_previous_as_read">अघिल्लो अध्यायहरू पढिएको चिन्ह लगाउनुहोस्</string>
+    <string name="mark_previous_as_unread">अघिल्लो अध्यायहरू नपढिएको चिन्ह लगाउनुहोस्</string>
     <string name="menu">मेनु</string>
-    <string name="mark_range_as_read">पढिएको अध्यायहरूको रेन्जमा चिनो लगाउनुहोस्</string>
+    <string name="mark_range_as_read">पढिएको अध्यायहरूको रेन्जमा चिन्ह लगाउनुहोस्</string>
     <string name="default_orientation">पूर्वनिर्धारित अभिमुखीकरण</string>
     <string name="orientation">अभिमुखीकरण</string>
     <string name="search_">%1$s खोज्नुहोस्</string>
@@ -1005,7 +1005,7 @@
     <string name="enabled">सक्षम गरियो</string>
     <string name="hide">लुकाउनुहोस्</string>
     <string name="keep_in_">%1$s मा राख्नुहोस्</string>
-    <string name="mark_all_as_unread">सबैलाई नपढिएको चिनो लगाउनुहोस्</string>
+    <string name="mark_all_as_unread">सबैलाई नपढिएको चिन्ह लगाउनुहोस्</string>
     <string name="move_to_">%1$s मा सार्नुहोस्</string>
     <string name="moved_to_">%1$s मा सारियो</string>
     <string name="open">खोल्नुहोस्</string>
@@ -1061,11 +1061,12 @@
     <string name="invalid_download_location">अवैध डाउनलोड स्थान</string>
     <string name="download_complete">डाउनलोड पूरा भयो</string>
     <string name="visit_recents_for_download_queue">डाउनलोड लाममा जान हालैका ट्याबमा जानुहोस्। छिटो पहुँचको लागि तपाईं डबल ट्याप वा थिचेर होल्ड गर्न पनि सक्नुहुन्छ</string>
-    <string name="remove_when_marked_as_read">पढिएको चिनो लगाउँदा हटाउनुहोस्</string>
+    <string name="remove_when_marked_as_read">पढिएको चिन्ह लगाउँदा हटाउनुहोस्</string>
     <string name="delete_downloaded_if_removed_online">यदि स्रोतले अध्याय अनलाइन हटाएको छ भने डाउनलोड गरिएका अध्यायहरू हटाउनुहोस्</string>
-    <string name="mark_all_as_read">सबैलाई पढिएको चिनो लगाउनुहोस्</string>
+    <string name="mark_all_as_read">सबैलाई पढिएको चिन्ह लगाउनुहोस्</string>
     <string name="recently_updated">हालै अपडेट गरिएको</string>
     <string name="recently_installed">हालै स्थापना गरिएको</string>
     <string name="not_downloaded">डाउनलोड नगरिएको</string>
     <string name="allow_notifications_recommended">तपाईंको पुस्तकालय र एपलाई अपडेट राख्न सूचनाहरूलाई अनुमति दिन सिफारिस गरिन्छ।</string>
+    <string name="pref_remove_exclude_categories">बहिष्कृत वर्गहरू</string>
 </resources>

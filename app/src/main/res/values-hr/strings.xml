@@ -523,7 +523,7 @@
 \nTrebala bi završiti s .proto.gz ili .json.</string>
     <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan manga.</string>
     <string name="restore_missing_sources">Nedostaju izvori:</string>
-    <string name="restore_missing_trackers">Neprijavljene usluge praćenja:</string>
+    <string name="restore_missing_trackers">Usluge praćenja bez prijave:</string>
     <string name="restore_content_full">Podaci datoteke sigurnosne kopije će se obnoviti.
 \n
 \nZa upotrebu podataka, morat ćeš instalirati nedostajuća proširenja i nakon toga se prijaviti na usluge praćenja.</string>
@@ -940,7 +940,7 @@
     <string name="navigate_pan">Navigiraj pomicanjem slike</string>
     <string name="grayscale">Sive nijanse</string>
     <string name="pref_inverted_colors">Invertirano</string>
-    <string name="move_series_to_top">Pomakni serijal na vrh</string>
+    <string name="move_series_to_top">Pomakni seriju na vrh</string>
     <string name="ascending">Uzlazno</string>
     <string name="date">Datum</string>
     <string name="descending">Silazno</string>
@@ -1036,13 +1036,13 @@
     <string name="chapters_read">Pročitana poglavlja</string>
     <string name="tracked_titles">Praćeni naslovi</string>
     <string name="tags">Oznake</string>
-    <string name="trackers">Tragači</string>
+    <string name="trackers">Usluge praćenja</string>
     <string name="read_duration">Trajanje čitanja</string>
     <string name="manga_status_distribution">Raspodjela stanja</string>
     <string name="count">Zbroj</string>
     <string name="not_rated">Neocijenjeno</string>
     <string name="source">Izvor</string>
-    <string name="tracker">Tragač</string>
+    <string name="tracker">Usluga praćenja</string>
     <string name="length">Duljina</string>
     <string name="start_year">Početna godina</string>
     <string name="no_data_for_filters">Nema podataka za trenutačni filtar</string>
@@ -1093,4 +1093,6 @@
     <string name="app_updates">Aktualiziranja aplikacije</string>
     <string name="open">Otvori</string>
     <string name="allow_notifications_recommended">Preporučuje se dopuštanje obavijesti kako bi tvoja biblioteka i aplikacija bile aktualne.</string>
+    <string name="pref_remove_exclude_categories">Isključene kategorije</string>
+    <string name="apply">Primijeni</string>
 </resources>

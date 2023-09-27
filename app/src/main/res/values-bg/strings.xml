@@ -304,7 +304,7 @@
     <string name="dodge_lighten">Осветен</string>
     <string name="burn_darken">Затъмнен</string>
     <string name="help">Помощ</string>
-    <string name="lock_with_biometrics">Заключи с биометрични данни</string>
+    <string name="lock_with_biometrics">Изисквай отключване</string>
     <string name="lock_when_idle">Заключи при неактивност</string>
     <string name="date_format">Формат на датата</string>
     <string name="update">Обнови</string>
@@ -1015,4 +1015,7 @@
     <string name="popular">Популярни</string>
     <string name="allow_deleting_bookmarked_chapters">Позволи изтриване на отметнати глави</string>
     <string name="appwidget_unavailable_locked">Приставката не е достъпна, когато е активирано заключване на приложението</string>
+    <string name="app_updates">Актуализации на приложението</string>
+    <string name="gray_background">Сиво</string>
+    <string name="pref_remove_exclude_categories">Изключени категории</string>
 </resources>

@@ -1040,4 +1040,6 @@
     <string name="gray_background">グレー</string>
     <string name="app_updates">アプリのアップデート</string>
     <string name="open">開く</string>
+    <string name="allow_notifications_recommended">ライブラリとアプリを最新の状態に保つために、通知を許可することをお勧めします。</string>
+    <string name="pref_remove_exclude_categories">除外されるカテゴリー</string>
 </resources>

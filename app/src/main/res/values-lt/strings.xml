@@ -484,7 +484,7 @@
     <string name="category_is_empty">Kategorija tuščia</string>
     <string name="show_categories_while_filtering">Filtruojant rodyti tuščias kategorijas</string>
     <string name="new_chapters">Nauji skyriai</string>
-    <string name="lock_with_biometrics">Užrakinti naudojant biometrinius duomenis</string>
+    <string name="lock_with_biometrics">Reikalauti atrakinimo</string>
     <string name="no_chapters_to_delete">Nėra skyrių, kuriuos būtų galima ištrinti</string>
     <string name="last_read_chapter_">Paskutinis skaitytas skyrius %1$s</string>
     <string name="chapter_x_of_y">%1$d skyrius iš %2$d</string>
@@ -509,4 +509,13 @@
     <string name="appwidget_updates_description">Peržiūrėkite neseniai atnaujintus bibliotekos įrašus</string>
     <string name="appwidget_unavailable_locked">Valdiklis nepasiekiamas, kai įjungtas programėlės užraktas</string>
     <string name="updates_last_update_info">Biblioteka paskutinį kartą atnaujinta: %s</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Praleidžiamas %d skyrius, arba jo nėra šaltinyje, arba jis buvo nepasirinktas</item>
+        <item quantity="few">Praleidžiami %d skyriai, arba jų nėra šaltinyje, arba jie buvo nepasirinkti</item>
+        <item quantity="other">Praleidžiamia %d skyrių, arba jų nėra šaltinyje, arba jie buvo nepasirinkti</item>
+    </plurals>
+    <string name="decode_image_error">Nepavyko pakrauti paveikslėlio</string>
+    <string name="app_updates">Programėlių atnaujinimai</string>
+    <string name="gray_background">Pilka</string>
+    <string name="pref_remove_exclude_categories">Neįtrauktos kategorijos</string>
 </resources>

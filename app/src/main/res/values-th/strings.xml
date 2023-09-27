@@ -1042,4 +1042,5 @@
     <string name="app_updates">การอัปเดตแอป</string>
     <string name="open">เปิด</string>
     <string name="allow_notifications_recommended">ขอแนะนำให้อนุญาตการแจ้งเตือนเพื่อให้คลังและแอปทันสมัยอยู่เสมอ</string>
+    <string name="pref_remove_exclude_categories">หมวดหมู่ที่ยกเว้น</string>
 </resources>

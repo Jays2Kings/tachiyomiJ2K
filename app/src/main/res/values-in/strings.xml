@@ -1042,4 +1042,6 @@
     <string name="app_updates">Pembaruan aplikasi</string>
     <string name="open">Buka</string>
     <string name="allow_notifications_recommended">Disarankan untuk mengizinkan notifikasi agar perpustakaan dan aplikasi Anda tetap terbarui.</string>
+    <string name="apply">Terapkan</string>
+    <string name="pref_remove_exclude_categories">Kategori yang dikecualikan</string>
 </resources>

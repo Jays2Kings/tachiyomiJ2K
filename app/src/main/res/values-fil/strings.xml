@@ -207,8 +207,8 @@
     <string name="background_color">Likurang kulay</string>
     <string name="white">Puti</string>
     <string name="black">Itim</string>
-    <string name="left_to_right_viewer">Kaliwa pakanan</string>
-    <string name="right_to_left_viewer">Kanan pakaliwa</string>
+    <string name="left_to_right_viewer">Mula kaliwa pakanan</string>
+    <string name="right_to_left_viewer">Mula kanan pakaliwa</string>
     <string name="vertical_viewer">Patayo</string>
     <string name="continuous_vertical">Patayong tuloy-tuloy</string>
     <string name="paged">Nakapahina</string>
@@ -327,7 +327,7 @@
     <string name="unlock_library">I-unlock para ma-access ang Aklatan</string>
     <string name="unknown_status">Di alam ang Estado</string>
     <string name="artist">Gumuhit</string>
-    <string name="read">Nabasa</string>
+    <string name="read">Nabasa Na</string>
     <string name="in_progress">Binabasa</string>
     <string name="not_started">Di pa nasimulan</string>
     <string name="comic">Komiks</string>
@@ -615,7 +615,7 @@
         <item quantity="one">Para sa %d serye</item>
         <item quantity="other">Para sa %d (na) serye</item>
     </plurals>
-    <string name="external_storage_download_notice">Kailangan ng TachiyomiJ2K ng access sa lahat po ng mga file para maka-download ng mga kabanata. Pakipindot po ito, tapos pakibuksan po ang \"Payagan ang pamamahala ng lahat ng file.\"</string>
+    <string name="external_storage_download_notice">Kailangan ng TachiyomiJ2K ng access sa lahat ng mga file para maka-download ng mga kabanata. Pakipindot ito, tapos pakibuksan ang \"Payagan ang pamamahala ng lahat ng file.\"</string>
     <string name="external_storage_permission_notice">Ang TachiyomiJ2K ay nangangailangan ng access sa lahat ng mga file sa Android 11 upang mag-download ng mga kabanata, gumawa ng mga awtomatikong pag-backup, at magbasa ng lokal na manga.
 \n
 \nSa susunod na screen, paganahin ang \"Payagan ang pag-access upang pamahalaan ang lahat ng mga file.\"</string>
@@ -929,7 +929,7 @@
     <string name="download_ahead_info">Gumagana lamang sa mga entry sa aklatan at kung ang kasalukuyang kabanata at ang susunod na kabanata ay na-download na</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Susunod na hindi pa nababasa na kabanata</item>
-        <item quantity="other">Susunod na ang %d na hindi pa nababasa na kabanata</item>
+        <item quantity="other">Susunod na %d di pa nababasa na kabanata</item>
     </plurals>
     <string name="add_to_">Idagdag sa %1$s</string>
     <string name="added_to_">Idinagdag sa %1$s</string>
@@ -1067,4 +1067,6 @@
     <string name="gray_background">Abo</string>
     <string name="app_updates">Mga update sa app</string>
     <string name="open">Buksan</string>
+    <string name="allow_notifications_recommended">Ang pagpermiso sa pagkakaroon ng abiso ay nakatutulong upang manatiling updated ang inyong library.</string>
+    <string name="pref_remove_exclude_categories">Kategoryang di-kasama</string>
 </resources>

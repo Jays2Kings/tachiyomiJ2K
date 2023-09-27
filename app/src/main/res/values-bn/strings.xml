@@ -197,7 +197,7 @@
     <string name="cover_updated">প্রচ্ছদ আপডেট হয়েছে</string>
     <string name="page_">পৃষ্ঠা: %1$d</string>
     <string name="next_chapter_not_found">পরবর্তী অধ্যায় খুঁজে পাওয়া যায়নি</string>
-    <string name="decode_image_error">ছবিটি ডিকোড করা যায়নি</string>
+    <string name="decode_image_error">ছবিটি লোড করা যাচ্ছে না</string>
     <string name="use_image_as_cover">আপনি কি এই ছবিটিকে কভার হিসেবে সেট করতে চান?</string>
     <string name="new_chapters_found">নতুন অধ্যায় পাওয়া গিয়েছে</string>
     <string name="failed_to_update_cover">কভার আপডেট করতে অসফল হয়েছে</string>
@@ -270,7 +270,7 @@
     <string name="burn_darken">বার্ন/অন্ধকার</string>
     <string name="multiply">গুণ</string>
     <string name="help">সাহায্য</string>
-    <string name="lock_with_biometrics">বায়োমেট্রিক্স দিয়ে লক করুন</string>
+    <string name="lock_with_biometrics">আনলক প্রয়োজন</string>
     <string name="lock_when_idle">কর্মহীন হলে লক করুন</string>
     <string name="security">নিরাপত্তা</string>
     <string name="backup_failed">ব্যাকআপ ব্যর্থ হয়েছে</string>
@@ -994,4 +994,7 @@
     <string name="appwidget_unavailable_locked">অ্যাপ লক চালু থাকলে Widget পাওয়া যায় না</string>
     <string name="show_more_chapters">আরো অধ্যায় দেখান</string>
     <string name="skipped_reason_not_always_update">বাদ দেওয়া হয়েছে কারণ সিরিজের আপডেটের প্রয়োজন নেই৷</string>
+    <string name="app_updates">অ্যাপ আপডেট</string>
+    <string name="gray_background">ধূসর</string>
+    <string name="pref_remove_exclude_categories">বর্জিত বিভাগ গুলি</string>
 </resources>

@@ -1170,4 +1170,7 @@
     <string name="gray_background">رمادي</string>
     <string name="app_updates">تحديثات التطبيق</string>
     <string name="open">افتح</string>
+    <string name="allow_notifications_recommended">يستحسن أن تجعل الإشعارات تأتيك لتحافظ على المكتبة والتطبيق محدَّثين.</string>
+    <string name="apply">نفِّذ</string>
+    <string name="pref_remove_exclude_categories">الفئات المستثناة</string>
 </resources>

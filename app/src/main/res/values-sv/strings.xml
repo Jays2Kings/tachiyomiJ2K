@@ -1068,4 +1068,5 @@
     <string name="app_updates">Appuppdateringar</string>
     <string name="open">Öppna</string>
     <string name="allow_notifications_recommended">Tillåta meddelanden rekommenderas för att hålla ditt bibliotek och app uppdaterad.</string>
+    <string name="pref_remove_exclude_categories">Uteslutna kategorier</string>
 </resources>

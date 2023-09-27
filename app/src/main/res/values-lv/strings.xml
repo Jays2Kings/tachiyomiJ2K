@@ -573,4 +573,16 @@
     </plurals>
     <string name="download_ahead_info">Darbojas tikai ar ierakstiem bibliotēkā un tad, ja pašreizējā un nākamā nodaļa jau ir lejupielādēta</string>
     <string name="skipped_reason_not_always_update">Izlaists, jo sērijai nav nepieciešami atjauninājumi</string>
+    <string name="decode_image_error">Attēlu nevarēja ielādēt</string>
+    <string name="user_agent_string">Noklusējuma lietotāja agent virkne</string>
+    <string name="_per_row">%d katrā rindā</string>
+    <string name="hide_in_library_items">Slēpt ierakstus, kas jau ir bibliotēkā</string>
+    <string name="statistics">Statistika</string>
+    <string name="grid_size">Režģa izmērs</string>
+    <string name="app_updates">Lietotnes atjauninājumi</string>
+    <string name="read_duration">Lasīšanas ilgums</string>
+    <string name="trackers">Izsekotāji</string>
+    <string name="gray_background">Pelēks</string>
+    <string name="skip_dupe_chapters">Izlaist vienādas nodaļas</string>
+    <string name="pref_remove_exclude_categories">Izslēgtās kategorijas</string>
 </resources>

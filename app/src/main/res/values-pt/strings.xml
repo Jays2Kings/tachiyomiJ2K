@@ -917,9 +917,9 @@
     <string name="remove_previous_tracker">Remover o rastreador anterior\?</string>
     <string name="select_an_entry">Selecione uma entrada</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">A saltar 1 capítulo, ou a fonte está em falta ou foi filtrado</item>
-        <item quantity="many">A saltar %d capítulos, ou a fonte está em falta ou foi filtrado</item>
-        <item quantity="other">A saltar %d capítulos, ou a fonte está em falta ou foi filtrado</item>
+        <item quantity="one">Ignorando %d capítulo, ou a fonte está em falta ou foi filtrado</item>
+        <item quantity="many">Ignorando %d capítulos, ou a fonte está em falta ou foi filtrado</item>
+        <item quantity="other">Capítulos %d ignorados, ou a fonte está em falta ou foi filtrado</item>
     </plurals>
     <string name="affects_library_grid">Afeta as grades de cobertura da biblioteca</string>
     <string name="getting_started_guide">Guia de introdução</string>
@@ -1121,4 +1121,5 @@
     <string name="gray_background">Cinza</string>
     <string name="app_updates">Atualizações do aplicativo</string>
     <string name="open">Abrir</string>
+    <string name="pref_remove_exclude_categories">Categorias excluídas</string>
 </resources>

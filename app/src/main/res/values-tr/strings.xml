@@ -949,7 +949,7 @@
     <string name="cover_only_grid">Sadece-kapak ızgara</string>
     <string name="notification_update_error">%1$d güncelleme başarısız oldu</string>
     <string name="notification_update_skipped">%1$d güncelleme atlandı</string>
-    <string name="skipped_reason_completed">Manga bitirildiği için atlandı</string>
+    <string name="skipped_reason_completed">Dizi bitirildiği için atlandı</string>
     <string name="skipped_reason_not_caught_up">Okunmamış bölümler olduğu için atlandı</string>
     <string name="skipped_reason_not_started">Hiçbir bölüm okunmadığı için atlandı</string>
     <string name="channel_skipped">Atlandı</string>
@@ -1068,4 +1068,6 @@
     <string name="app_updates">Uygulama güncellemeleri</string>
     <string name="open">Aç</string>
     <string name="allow_notifications_recommended">Kitaplığınızı ve uygulamanızı güncel tutmak için bildirimlere izin vermeniz tavsiye edilir.</string>
+    <string name="apply">Uygula</string>
+    <string name="pref_remove_exclude_categories">Hariç tutulan kategoriler</string>
 </resources>

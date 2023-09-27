@@ -1067,4 +1067,8 @@
     <string name="use_staggered_grid">Bruk flytende rutenett</string>
     <string name="gray_background">Grå</string>
     <string name="app_updates">Appoppdateringer</string>
+    <string name="apply">Bruk</string>
+    <string name="open">Åpne</string>
+    <string name="allow_notifications_recommended">Tillat varsler for å sørge for at appen og biblioteket ditt er oppdatert.</string>
+    <string name="pref_remove_exclude_categories">Utelukkede kategorier</string>
 </resources>

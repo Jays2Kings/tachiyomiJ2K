@@ -1040,4 +1040,6 @@
     <string name="gray_background">灰色</string>
     <string name="open">打开</string>
     <string name="app_updates">应用更新</string>
+    <string name="allow_notifications_recommended">建议允许通知以保持你的应用和书架是最新的.</string>
+    <string name="pref_remove_exclude_categories">排除的分类</string>
 </resources>

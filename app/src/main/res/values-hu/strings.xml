@@ -397,7 +397,7 @@
     <string name="pref_low">Alacsony</string>
     <string name="pref_lowest">Legalacsonyabb</string>
     <string name="latest">Legújabb</string>
-    <string name="split_tall_images">Nagy képek automatikus elválasztása</string>
+    <string name="split_tall_images">Magas képek szétvágása</string>
     <string name="split_tall_images_summary">Növeli a teljesítményt a nagy képek elválasztásával.</string>
     <string name="restore_completed">Helyreállítás befejeződött</string>
     <string name="restore_duration">%02d perc, %02d másodperc</string>
@@ -557,7 +557,7 @@
     <string name="display_options">Képernyő beállítások</string>
     <string name="new_beta_version_available">Új béta verzió elérhető!</string>
     <string name="show_categories_while_filtering">Üres kategóriák mutatása szűrés közben</string>
-    <string name="remove_all_downloads">Törli minden letöltöttet\?</string>
+    <string name="remove_all_downloads">Törölsz minden letöltöttet\?</string>
     <string name="could_not_install_update">Nem tudta telepíteni a frissítést</string>
     <string name="update_completed">Frissités befejezve</string>
     <string name="your_library">Könyvtárad</string>
@@ -567,11 +567,11 @@
     <string name="no_chapters_to_delete">Nincs törölhető fejezet</string>
     <string name="by_source_order">Forrás szerinti csoportositás</string>
     <string name="no_matches_for_filters_short">Nincs találat a filterre</string>
-    <string name="expand_collapse_all_categories">Minden kategória szétnyitása/Összecsukása</string>
+    <string name="expand_collapse_all_categories">Minden kategória szétnyitása/összecsukása</string>
     <string name="open_random_series">Random sorozat megnyitása</string>
     <string name="expand_all_categories">Összes kategória szétnyitása</string>
     <string name="collapse_all_categories">Összes kategória összecsukása</string>
-    <string name="reorder_filters">Szürők újrarendezése</string>
+    <string name="reorder_filters">Szűrők újrarendezése</string>
     <string name="series_type">Sorozat típus</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Alap hálózati kliens szöveg</string>
@@ -606,4 +606,15 @@
     </plurals>
     <string name="decode_image_error">A képet nem lehetett betölteni</string>
     <string name="popular">Felkapott</string>
+    <string name="view_all">Mutasd mindet</string>
+    <string name="tracking_status">Nyomonkövetés állapota</string>
+    <string name="not_bookmarked">Nem könyvjelzőzött</string>
+    <string name="drag_and_drop">Drag &amp; Drop</string>
+    <string name="hide_in_library_items">Már könyvtári bejegyzések elrejtése</string>
+    <string name="grid_size">Rács mérete</string>
+    <string name="app_updates">Alkalmazás frissítések</string>
+    <string name="read_duration">Olvasási idő</string>
+    <string name="gray_background">Szürke</string>
+    <string name="skip_dupe_chapters">Duplikált fejezetek átugrása</string>
+    <string name="pref_remove_exclude_categories">Tiltott kategóriák</string>
 </resources>

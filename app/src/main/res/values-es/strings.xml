@@ -995,15 +995,15 @@
     <string name="select_inverse">Invertir selección</string>
     <string name="cover_only_grid">Cuadrícula sólo de portadas</string>
     <string name="notification_update_skipped">Actualizaciones omitidas: %1$d</string>
-    <string name="skipped_reason_completed">Omitido porque la serie está completa</string>
+    <string name="skipped_reason_completed">Omitido, ya que su publicación ha terminado</string>
     <string name="skipped_reason_not_caught_up">Omitido porque hay capítulos sin leer</string>
     <string name="notification_update_error">Actualizaciones fallidas: %1$d</string>
     <string name="skipped_reason_not_started">Omitido porque no hay capítulos leídos</string>
     <string name="channel_skipped">Omitidas</string>
     <string name="pref_library_update_manga_restriction">Omitir actualizaciones</string>
     <string name="pref_update_only_completely_read">Con capítulos sin leer</string>
-    <string name="pref_update_only_non_completed">Series completadas</string>
-    <string name="pref_update_only_started">Series sin empezar</string>
+    <string name="pref_update_only_non_completed">Marcadas como completadas</string>
+    <string name="pref_update_only_started">Sin empezar</string>
     <string name="tap_to_see_details">Toca para ver los detalles del error</string>
     <string name="tap_to_learn_more">Ver más detalles</string>
     <string name="pref_clear_webview_data">Limpiar datos del WebView</string>
@@ -1106,7 +1106,7 @@
         <item quantity="other">%d tipos de series</item>
     </plurals>
     <string name="read_duration_info">Tiempo usado por el lector, basado en el historial del capítulo</string>
-    <string name="skipped_reason_not_always_update">Saltando, porque este manga no necesita actualizarse</string>
+    <string name="skipped_reason_not_always_update">Omitido, ya que no es necesario actualizarse</string>
     <string name="mean_tracking_score">Puntuación media de seguimiento</string>
     <string name="error_user_agent_string_invalid">El nombre de agente de usuario no vale</string>
     <string name="popular">Populares</string>
@@ -1126,4 +1126,6 @@
     <string name="app_updates">Actualizaciones de la aplicación</string>
     <string name="open">Abrir</string>
     <string name="allow_notifications_recommended">Se recomienda permitir las notificaciones para mantener la biblioteca y la aplicación actualizadas.</string>
+    <string name="apply">Aplicar</string>
+    <string name="pref_remove_exclude_categories">Categorías excluidas</string>
 </resources>

@@ -578,4 +578,5 @@
     </plurals>
     <string name="gray_background">خاکستری</string>
     <string name="app_updates">بروزرسانی برنامه</string>
+    <string name="pref_remove_exclude_categories">دسته‌بندی‌های محذوف</string>
 </resources>

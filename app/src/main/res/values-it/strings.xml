@@ -1126,4 +1126,5 @@
     <string name="gray_background">Grigio</string>
     <string name="app_updates">Aggiornamenti dell\'app</string>
     <string name="open">Aprire</string>
+    <string name="pref_remove_exclude_categories">Categorie escluse</string>
 </resources>

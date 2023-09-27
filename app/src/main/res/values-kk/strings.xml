@@ -520,4 +520,12 @@
     <string name="hide_in_library_items">Кітапханада бар туындыларды жасыру</string>
     <string name="updates_last_update_info">Кітапхананың ақырғы жаңаруы: %s</string>
     <string name="by_source_order">Дереккөздің бұйрығы бойынша</string>
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">Дереккөзі жоқ немесе сүзілген %d тарау өткізіліп жіберілді</item>
+        <item quantity="other">Дереккөзі жоқ немесе сүзілген %d тарау өткізіліп жіберілді</item>
+    </plurals>
+    <string name="decode_image_error">Сурет жүктелінбеді</string>
+    <string name="app_updates">Қолданба жаңартулары</string>
+    <string name="gray_background">Сұр</string>
+    <string name="pref_remove_exclude_categories">Саналмайтын санаттар</string>
 </resources>

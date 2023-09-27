@@ -324,8 +324,8 @@
     <string name="obsolete_extension_message">Cette extension n’est plus disponible.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Mise à jour d\'extension disponible</item>
-        <item quantity="many">%d mises à jour d\'extensions disponibles</item>
-        <item quantity="other">%d mises à jour d\'extensions disponibles</item>
+        <item quantity="many">%d mises à jour des extensions disponibles</item>
+        <item quantity="other">%d mises à jour des extensions disponibles</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Réduit les bandes de couleur, mais peut impacter les performances</string>
     <string name="skip_filtered_chapters">Passer les chapitres filtrés</string>
@@ -840,10 +840,10 @@
     <string name="pad_cutout_areas">Surfaces coupées du bloc</string>
     <string name="category_hopper_long_press">Action d\'un appui long sur le filtre par Catégorie</string>
     <string name="cancel_all_for_series">Tout annuler pour cette série</string>
-    <string name="external_storage_download_notice">Pour télécharger des chapitres, TachiyomiJ2K nécessite l\'accès à tous les fichiers. Appuyez ici, puis activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
+    <string name="external_storage_download_notice">Pour télécharger des chapitres, TachiyomiJ2K nécessite l\'accès à tous les fichiers. Appuyez ici, puis activez « Autoriser l\'accès pour gérer tous les fichiers.»</string>
     <string name="external_storage_permission_notice">Sous Android 11, TachiyomiJ2K nécessite l\'accès à tous les fichiers pour pouvoir télécharger des chapitres, créer des sauvegardes automatiques et lire des manga locaux.
 \n
-\nSur l\'écran suivant, activez « Autoriser l\'accès pour gérer tous les fichiers ».</string>
+\nSur l\'écran suivant, activez « Autoriser l\'accès pour gérer tous les fichiers.»</string>
     <string name="include_">Inclure : %s</string>
     <string name="force_download_cache_refresh_summary">Cela forcera le recalcul du cache de téléchargement. Utile si vous avez modifié des fichiers téléchargés en dehors de l\'application et que vous souhaitez que l\'application les récupère</string>
     <string name="force_download_cache_refresh">Rafraichir le cache de téléchargement</string>
@@ -1058,7 +1058,7 @@
     <string name="tap_zones">Zones tactiles</string>
     <string name="lavender">Lavande</string>
     <string name="violet">Violet</string>
-    <string name="webtoon_side_padding_5">5 %</string>
+    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Agents utilisateurs par défaut</string>
     <string name="language_requires_app_restart">Certains langages peuvent nécessiter un redémarrage de l\'application pour s\'afficher correctement</string>
     <string name="loader_rar5_error">Le format RARv5 n\'est pas supporté</string>
@@ -1109,7 +1109,7 @@
         <item quantity="other">%d langues</item>
     </plurals>
     <string name="read_duration_info">Temps passé dans le lecteur, basé sur l\'historique des chapitres</string>
-    <string name="skipped_reason_not_always_update">Passées car la série ne nécessite pas de mise à jour</string>
+    <string name="skipped_reason_not_always_update">Ignorée car la série ne nécessite pas de mises à jour</string>
     <string name="mean_tracking_score">Note moyenne de suivi</string>
     <string name="error_user_agent_string_invalid">Chaîne d\'agent utilisateur invalide</string>
     <string name="allow_deleting_bookmarked_chapters">Permettre la suppression des chapitres marqués d\'un marque-page</string>
@@ -1128,4 +1128,6 @@
     <string name="gray_background">Gris</string>
     <string name="app_updates">Mises à jour de l\'application</string>
     <string name="open">Ouvrir</string>
+    <string name="allow_notifications_recommended">Autoriser les notifications est recommandé pour garder votre bibliothèque et votre application à jour.</string>
+    <string name="pref_remove_exclude_categories">Catégories exclues</string>
 </resources>

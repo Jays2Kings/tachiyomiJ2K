@@ -197,7 +197,7 @@
     <string name="cover_updated">Muka hadapan dikemas kini</string>
     <string name="page_">Halaman: %1$d</string>
     <string name="next_chapter_not_found">Bab seterusnya tidak dijumpai</string>
-    <string name="decode_image_error">Imej tidak dapat diyahkod</string>
+    <string name="decode_image_error">Imej tidak dapat dimuatkan</string>
     <string name="use_image_as_cover">Adakah anda ingin set imej ini sebagai muka hadapan?</string>
     <string name="new_chapters_found">Bab baharu dijumpai</string>
     <string name="failed_to_update_cover">Gagal untuk kemas kini muka hadapan</string>
@@ -271,7 +271,7 @@
     <string name="dodge_lighten">Elak/</string>
     <string name="burn_darken">Bakar / Darken</string>
     <string name="no_results_found">Tiada hasil dijumpai</string>
-    <string name="lock_with_biometrics">Kunci dengan biometrik</string>
+    <string name="lock_with_biometrics">Memerlukan buka kunci</string>
     <string name="lock_when_idle">Kunci apabila terbiar</string>
     <string name="paged">Muka surat</string>
     <string name="always_show_chapter_transition">Sentiasa tunjuk peralihan bab</string>
@@ -1031,4 +1031,7 @@
     <string name="mean_tracking_score">Purata skor penjejak</string>
     <string name="read_duration_info">Masa yang dihabiskan dalam membaca, berdasarkan sejarah bab</string>
     <string name="updates_last_update_info">Terakhir pustaka dikemas kini: %s</string>
+    <string name="app_updates">Kemas kini aplikasi</string>
+    <string name="gray_background">Kelabu</string>
+    <string name="pref_remove_exclude_categories">Kategori dikecualikan</string>
 </resources>

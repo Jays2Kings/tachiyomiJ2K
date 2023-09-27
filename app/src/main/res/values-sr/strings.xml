@@ -21,7 +21,7 @@
     <string name="alphabetically">Alfabetno</string>
     <string name="total_chapters">Ukupno poglavlja</string>
     <string name="last_read">Zadnje čitano</string>
-    <string name="search">Pretraži</string>
+    <string name="search">Тражи</string>
     <string name="select_all">Izaberi sve</string>
     <string name="mark_as_read">Označi kao pročitano</string>
     <string name="mark_previous_as_read">Označi prošla poglavlja kao pročitane</string>
@@ -190,7 +190,7 @@
     <string name="other">Ostalo</string>
     <string name="global_search">Globalno pretraživanje…</string>
     <string name="latest">Poslednje</string>
-    <string name="browse">Pretraži</string>
+    <string name="browse">Претражи</string>
     <string name="description">Deskripcija</string>
     <string name="ongoing">U toku</string>
     <string name="unknown">Nepoznato</string>
@@ -210,7 +210,7 @@
     <string name="all_chapters">Preuzmi sve</string>
     <string name="all_unread_chapters">Preuzmi nepročitano</string>
     <string name="title">Наслов</string>
-    <string name="completed">Završeno</string>
+    <string name="completed">Завршено</string>
     <string name="lock_with_biometrics">Захтевај закључавање</string>
     <string name="lock_when_idle">Закључај приликом мировања</string>
     <string name="date_format">Format datuma</string>
@@ -427,7 +427,7 @@
     <string name="restore_content_full">Podaci iz fajla rezervne kopije će se koristiti za oporavak.
 \n
 \nZa upotrebu podataka ćete nakon toga morati da instalirate sve dodatke koji nedostaju i da se prijavite na trekere.</string>
-    <string name="complete">Završeno</string>
+    <string name="complete">Заврши</string>
     <string name="crash_logs">Logovi krešova</string>
     <string name="saves_error_logs">Čuva logove grešaka u fajl za dalji uvid developerima</string>
     <string name="doh">DNS preko HTTPS</string>
@@ -1094,4 +1094,6 @@
     <string name="collapse_grouped_chapters">Сруши груписана поглавља</string>
     <string name="clear_db_exclude_read">Чувај мангу са прочитаним поглављима</string>
     <string name="open_in_app">Отвори у апликацији</string>
+    <string name="allow_notifications_recommended">Препоручује се омогућавање обавештења да би колекција и апликација били ажурни.</string>
+    <string name="pref_remove_exclude_categories">Искључене категорије</string>
 </resources>
