@@ -121,6 +121,8 @@ object PreferenceKeys {
 
     const val backupInterval = "backup_interval"
 
+    const val isBackupIntervalManuallyChanged = "backup_manually_changed"
+
     const val removeAfterReadSlots = "remove_after_read_slots"
 
     const val deleteRemovedChapters = "delete_removed_chapters"

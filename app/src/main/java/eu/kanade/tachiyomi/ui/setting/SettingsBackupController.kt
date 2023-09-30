@@ -39,7 +39,6 @@ class SettingsBackupController : SettingsController() {
      * Flags containing information of what to backup.
      */
     private var backupFlags = 0
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestFilePermissionsSafe(500, preferences)
@@ -110,6 +109,7 @@ class SettingsBackupController : SettingsController() {
                 onChange { newValue ->
                     val interval = newValue as Int
                     BackupCreatorJob.setupTask(context, interval)
+                    preferences.isBackupIntervalManuallyChanged().set(true)
                     true
                 }
             }

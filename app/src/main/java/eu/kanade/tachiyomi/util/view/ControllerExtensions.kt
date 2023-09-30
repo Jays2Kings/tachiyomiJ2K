@@ -46,6 +46,7 @@ import com.bluelinelabs.conductor.ControllerChangeType
 import com.bluelinelabs.conductor.Router
 import com.bluelinelabs.conductor.RouterTransaction
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.backup.BackupCreatorJob
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MainActivityBinding
 import eu.kanade.tachiyomi.ui.base.SmallToolbarInterface
@@ -775,6 +776,11 @@ fun Controller.requestFilePermissionsSafe(
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
+    } else {
+        if (preferences.backupInterval().get() == 0 && !preferences.isBackupIntervalManuallyChanged().get()) {
+            preferences.backupInterval().set(24)
+            BackupCreatorJob.setupTask(activity, 24)
+        }
     }
 }
 

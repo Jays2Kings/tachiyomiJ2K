@@ -261,7 +261,7 @@ class PreferencesHelper(val context: Context) {
     fun numberOfBackups() = flowPrefs.getInt(Keys.numberOfBackups, 2)
 
     fun backupInterval() = flowPrefs.getInt(Keys.backupInterval, 0)
-
+    fun isBackupIntervalManuallyChanged() = flowPrefs.getBoolean(Keys.isBackupIntervalManuallyChanged, false)
     fun removeAfterReadSlots() = flowPrefs.getInt(Keys.removeAfterReadSlots, -1)
 
     fun removeAfterMarkedAsRead() = prefs.getBoolean(Keys.removeAfterMarkedAsRead, false)
