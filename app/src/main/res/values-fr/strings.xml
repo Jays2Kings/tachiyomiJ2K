@@ -118,7 +118,7 @@
     <string name="clear_cookies">Effacer cookies</string>
     <string name="cookies_cleared">Cookies effacés</string>
     <string name="clear_database">Effacer base de données</string>
-    <string name="clear_database_summary">Supprimer les mangas et chapitres non présents dans la bibliothèque</string>
+    <string name="clear_database_summary">Supprimer l\'historique des entrées qui ne sont pas enregistrées dans votre bibliothèque</string>
     <string name="clear_database_completed">Entrées supprimées</string>
     <string name="refresh_library_metadata">Actualiser les méta-données de la bibliothèque</string>
     <string name="updates_covers_genres_desc">Mettre à jour les couvertures, genres, description et statut des mangas</string>
@@ -205,7 +205,7 @@
     <string name="no_wifi_connection">Aucune connexion Wi-Fi disponible</string>
     <string name="no_network_connection">Aucune connexion disponible</string>
     <string name="language">Langue</string>
-    <string name="clear_database_confirmation">Êtes-vous sûr(e) \? Les chapitres lus et la progression des mangas non présents dans la bibliothèque seront perdus</string>
+    <string name="clear_database_confirmation">Êtes-vous sûr(e) \? Les chapitres lus et la progression des entrées non présentes dans la bibliothèque seront perdues</string>
     <string name="custom_location">Répertoire personnalisé</string>
     <string name="could_not_download_unexpected_error">Une erreur inattendue s\'est produite lors du téléchargement du chapitre</string>
     <string name="fifth_to_last">Cinquième chapitre avant la fin</string>
@@ -279,7 +279,6 @@
     <string name="custom_range">Téléchargement personalisé</string>
     <string name="started">Démarré</string>
     <string name="type">Type</string>
-    <string name="url_not_set_click_again">L\'URL du manga n\'a pas été entrée, veuillez cliquer sur le titre et sélectionner le manga</string>
     <string name="source_migration">Migration de source</string>
     <string name="extension_info">Information complémentaire</string>
     <string name="trust">Fiable</string>
@@ -825,8 +824,6 @@
     <string name="portrait">Portrait</string>
     <string name="release_page">Page de sortie</string>
     <string name="app_shortcuts">Raccourcis d\'applications</string>
-    <string name="create_folders_by_manga_title">Crée des dossiers en fonction du titre du manga</string>
-    <string name="save_pages_separately">Enregistrer les pages dans des dossiers séparés</string>
     <string name="show_on_long_press">Afficher en appuyant longuement</string>
     <string name="actions">Actions</string>
     <string name="search_tips_show_periodically">Des suggestions de recherche apparaîtront périodiquement. Appuyez longuement sur la suggestion pour la rechercher.</string>
@@ -955,8 +952,6 @@
     <string name="show_outline_around_covers">Afficher le contour des couvertures</string>
     <string name="ext_installer_shizuku_stopped">Shizuku n\'est pas en cours d\'exécution</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installez et démarrez Shizuku pour utiliser Shizuku comme installateur d\'extensions.</string>
-    <string name="use_shizuku_to_install">Utiliser Shizuku pour installer des extensions</string>
-    <string name="use_shizuku_summary">Permet l\'installation d\'extensions sans l\'intervention de l\'utilisateur et active les mises à jour automatiques pour les appareils sous Android 12</string>
     <string name="classic_blue">Bleu classique</string>
     <string name="lime_time">Temps citron vert</string>
     <string name="every_3_days">Tous les 3 jours</string>
@@ -989,7 +984,7 @@
     <string name="ascending">Croissante</string>
     <string name="date">Date</string>
     <string name="descending">Décroissant</string>
-    <string name="clear_database_source_item_count">%1$d manga hors bibliothèque dans la base de données</string>
+    <string name="clear_database_source_item_count">%1$d entrées qui ne sont pas dans la bibliothèque dans la base de données</string>
     <string name="database_clean">Base de données effacée</string>
     <string name="confirm_manga_add_duplicate">Vous avez une entrée dans votre bibliothèque portant le même nom mais provenant d\'une source différente (%1$s).
 \n
@@ -1130,4 +1125,6 @@
     <string name="open">Ouvrir</string>
     <string name="allow_notifications_recommended">Autoriser les notifications est recommandé pour garder votre bibliothèque et votre application à jour.</string>
     <string name="pref_remove_exclude_categories">Catégories exclues</string>
+    <string name="ext_installer_pref">Installateur</string>
+    <string name="library_entries">Entrées de la bibliothèque</string>
 </resources>

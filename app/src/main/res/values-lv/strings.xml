@@ -255,7 +255,7 @@
     <string name="cookies_cleared">Sīkfaili notīrīti</string>
     <string name="version">Versija</string>
     <string name="tracking_info">Vienvirziena sinhronizācija, lai atjauninātu izsekošanas pakalpojumu nodaļas progresu. Iestatiet izsekošanu atsevišķiem manga ierakstiem, izmantojot izsekošanas pogu.</string>
-    <string name="clear_database_confirmation">Vai esi pārliecināts\? Lasītās nodaļas un progress priekš manga, kuras nav bibliotēkā, būs zudis</string>
+    <string name="clear_database_confirmation">Vai esi pārliecināts\? Lasītās nodaļas un progress priekš ieraksta, kuras nav bibliotēkā, būs zudis</string>
     <string name="crash_log_saved">Avārijas žurnāli saglabāti</string>
     <string name="restoring_backup_canceled">Atjaunošana atcelta</string>
     <string name="kindlish_nav">Kindle-ish</string>
@@ -287,7 +287,7 @@
     <string name="right_to_left_viewer">No labās puses uz kreiso</string>
     <string name="requires_app_restart">Lai stātos spēkā, ir nepieciešama lietotnes restartēšana</string>
     <string name="restore_miui_warning">Dublēšana/atjaunošana var nedarboties pareizi, ja ir atspējota MIUI Optimization.</string>
-    <string name="clear_database_source_item_count">%1$d grāmatas, kas nav bibliotēkas, ir datu bāzē</string>
+    <string name="clear_database_source_item_count">%1$d ierakstu, kas nav bibliotēkas, ir datu bāzē</string>
     <string name="cache_delete_error">Tīrīšanas laikā radās kļūda</string>
     <string name="clear_database_completed">Ieraksti izdzēsti</string>
     <string name="pref_clear_webview_data">Notīrīt WebView datus</string>
@@ -366,7 +366,6 @@
     <string name="white">Balts</string>
     <string name="black">Melns</string>
     <string name="actions">Darbība</string>
-    <string name="create_folders_by_manga_title">Izveido mapes atbilstoši manga nosaukumam</string>
     <string name="started">Sākts</string>
     <string name="refresh_tracking">Atsvaidzināt sekošanu</string>
     <string name="network">Tīkls</string>
@@ -585,4 +584,7 @@
     <string name="gray_background">Pelēks</string>
     <string name="skip_dupe_chapters">Izlaist vienādas nodaļas</string>
     <string name="pref_remove_exclude_categories">Izslēgtās kategorijas</string>
+    <string name="ext_installer_pref">Instalētājs</string>
+    <string name="library_entries">Bibliotēkas ieraksti</string>
+    <string name="clear_database_summary">Dzēst vēsturi ierakstiem, kas nav saglabāti jūsu bibliotēkā</string>
 </resources>

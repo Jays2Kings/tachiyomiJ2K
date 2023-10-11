@@ -462,7 +462,6 @@
     <string name="update_all">آپدیت همگی</string>
     <string name="enhanced_services">سرویس های بهینه شده</string>
     <string name="no_match_found">هیچ مورد مشابهی پیدا نشد</string>
-    <string name="create_folders_by_manga_title">ساخت پوشه بر اساس نام مانگا</string>
     <string name="tracked">دنبال شده</string>
     <string name="tracking_info">برای به روز رسانی وضعیت پیشرفت قسمت ها، در سایت های خدمات ردیابی، همگام سازی یک طرفه انجام دهید. برای ردیابی هر مانگا از تب ردیابی اقدام کنید.</string>
     <string name="select_inverse">معکوس کردن انتخاب شده</string>
@@ -579,4 +578,6 @@
     <string name="gray_background">خاکستری</string>
     <string name="app_updates">بروزرسانی برنامه</string>
     <string name="pref_remove_exclude_categories">دسته‌بندی‌های محذوف</string>
+    <string name="ext_installer_pref">نصب کننده</string>
+    <string name="library_entries">کتابخانه ورودی‌ها</string>
 </resources>

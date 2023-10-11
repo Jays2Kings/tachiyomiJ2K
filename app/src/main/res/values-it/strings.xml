@@ -79,7 +79,7 @@
     <string name="white">Bianco</string>
     <string name="black">Nero</string>
     <string name="left_to_right_viewer">Sinistra a destra</string>
-    <string name="right_to_left_viewer">Destra a sinistra</string>
+    <string name="right_to_left_viewer">Da destra a sinistra</string>
     <string name="vertical_viewer">Verticale</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Scala</string>
@@ -122,8 +122,8 @@
     <string name="clear_cookies">Cancella cookie</string>
     <string name="cookies_cleared">Cookie cancellati</string>
     <string name="clear_database">Pulisci database</string>
-    <string name="clear_database_summary">Elimina manga e capitoli che non sono nella tua libreria</string>
-    <string name="clear_database_confirmation">Sei sicuro\? I capitoli letti e i progressi di lettura di elementi fuori dalla libreria verranno persi</string>
+    <string name="clear_database_summary">Elimina la cronologia delle voci che non sono presenti nella libreria</string>
+    <string name="clear_database_confirmation">Sei sicuro\? I capitoli letti e i progressi di lettura di voci fuori dalla libreria verranno persi</string>
     <string name="clear_database_completed">Elementi eliminati</string>
     <string name="refresh_library_metadata">Aggiorna metadati libreria</string>
     <string name="updates_covers_genres_desc">Aggiorna copertine, generi, descrizioni e stato dei manga</string>
@@ -282,7 +282,6 @@
     <string name="rereading">Ri-leggendo</string>
     <string name="started">Iniziato</string>
     <string name="type">Tipo</string>
-    <string name="url_not_set_click_again">L\'URL del manga non è impostato, clicca sul titolo e selezionalo ancora</string>
     <string name="migrate">Migra</string>
     <string name="common">Comune</string>
     <string name="finished_chapter">Finito:</string>
@@ -701,7 +700,8 @@
     <string name="category">Categoria</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s capitolo</item>
-        <item quantity="other">%1$s capitoli</item>
+        <item quantity="many">%1$s capitoli</item>
+        <item quantity="other"/>
     </plurals>
     <string name="backup_in_progress">Il backup è già in corso</string>
     <string name="next">Successivo</string>
@@ -773,8 +773,6 @@
         <item quantity="many">%1$d pagine</item>
         <item quantity="other">%1$d pagine</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Crea cartelle relative al titolo del manga</string>
-    <string name="save_pages_separately">Salva pagine in cartelle separate</string>
     <string name="page_layout">Impaginazione</string>
     <string name="switch_to_single">Passa a pagina singola</string>
     <string name="switch_to_double">Passa a doppia pagina</string>
@@ -953,8 +951,6 @@
     <string name="show_outline_around_covers">Mostra il contorno delle coperture</string>
     <string name="ext_installer_shizuku_stopped">Shizuku non è in esecuzione</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installa e avvia Shizuku per usarlo come installatore delle estensioni.</string>
-    <string name="use_shizuku_to_install">Usa Shizuku per installare le estensioni</string>
-    <string name="use_shizuku_summary">Permette l\'installazione di estensioni senza le richieste dell\'utente e abilita gli aggiornamenti automatici per i dispositivi sotto Android 12</string>
     <string name="classic_blue">Blu classico</string>
     <string name="lime_time">Tempo di lime</string>
     <string name="every_3_days">Ogni 3 giorni</string>
@@ -980,7 +976,7 @@
     <string name="date">Data</string>
     <string name="descending">Decrescente</string>
     <string name="database_clean">Database pulito</string>
-    <string name="clear_database_source_item_count">%1$d manga non presenti in libreria nel database</string>
+    <string name="clear_database_source_item_count">%1$d voci non presenti in libreria nel database</string>
     <string name="confirm_manga_add_duplicate">Hai un elemento nella libreria con lo stesso nome ma da un altra fonte (%1$s).
 \n
 \nVuoi comunque continuare\?</string>
@@ -1127,4 +1123,10 @@
     <string name="app_updates">Aggiornamenti dell\'app</string>
     <string name="open">Aprire</string>
     <string name="pref_remove_exclude_categories">Categorie escluse</string>
+    <string name="apply">Applica</string>
+    <string name="allow_notifications_recommended">Si consiglia di consentire le notifiche per mantenere aggiornate la libreria e l\'app.</string>
+    <string name="ext_installer_pref">Installatore</string>
+    <string name="library_entries">Voci della libreria</string>
+    <string name="source_settings">Impostazioni delle fonti</string>
+    <string name="app_settings">Impostazioni app</string>
 </resources>

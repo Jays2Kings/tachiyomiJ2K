@@ -166,8 +166,8 @@
     <string name="clear_cookies">Esborra les galetes</string>
     <string name="cookies_cleared">S’han esborrat les galetes</string>
     <string name="clear_database">Buida la base de dades</string>
-    <string name="clear_database_summary">Suprimeix el manga i els capítols que no siguin a la biblioteca</string>
-    <string name="clear_database_confirmation">N’esteu segur\? Es perdrà el progrés i els capítols llegits del manga que no sigui a la biblioteca</string>
+    <string name="clear_database_summary">Suprimeix l’historial dels elements que no siguin a la biblioteca</string>
+    <string name="clear_database_confirmation">N’esteu segur\? Es perdrà el progrés i els capítols llegits dels elements que no siguin a la biblioteca</string>
     <string name="clear_database_completed">S’han suprimit les entrades</string>
     <string name="refresh_library_metadata">Refresca les metadades de la biblioteca</string>
     <string name="updates_covers_genres_desc">Actualitza portades, gèneres, descripcions i informació de l’estat del manga</string>
@@ -219,7 +219,6 @@
     <string name="title">Títol</string>
     <string name="started">Començat</string>
     <string name="type">Tipus</string>
-    <string name="url_not_set_click_again">La URL del manga no està definida. Feu clic al títol i torneu a triar un manga</string>
     <string name="category_with_name_exists">Ja hi ha una categoria amb aquest nom!</string>
     <string name="this_will_remove_the_read_date_question">S’eliminarà la data de lectura d’aquest capítol. N’esteu segur\?</string>
     <string name="picture_saved">S’ha desat la imatge</string>
@@ -451,7 +450,6 @@
     <string name="exclude_">Exclou: %s</string>
     <string name="show_number_of_items">Mostra el nombre d’elements</string>
     <string name="actions">Accions</string>
-    <string name="create_folders_by_manga_title">Crea carpetes segons el títol del manga</string>
     <string name="by_chapter_number">Per número de capítol</string>
     <string name="by_update_date">Per data de pujada</string>
     <string name="extension_updates">Actualitzacions d’extensions</string>
@@ -546,7 +544,7 @@
     <string name="ascending">Ascendent</string>
     <string name="date">Data</string>
     <string name="descending">Descendent</string>
-    <string name="clear_database_source_item_count">Hi ha %1$d manga que no és a la biblioteca a la base de dades</string>
+    <string name="clear_database_source_item_count">Hi ha %1$d elements a la base de dades que no són a la biblioteca</string>
     <string name="database_clean">Buidatge de la base de dades</string>
     <string name="confirm_manga_add_duplicate">Teniu un element a la vostra biblioteca amb el mateix nom però d’una font diferent (%1$s).
 \n
@@ -756,7 +754,6 @@
     <string name="ignore_cutout_areas">Ignora les àrees retallades</string>
     <string name="cutout_behavior_only_applies">El comportament de l’àrea retallada només s’aplica en mode vertical amb certs tipus d’escalat</string>
     <string name="automatic_can_still_switch">Quan utilitzeu la distribució de pàgines automàtiques, podeu canviar igualment entre distribucions mentre llegiu sense canviar aquesta configuració</string>
-    <string name="save_pages_separately">Desa les pàgines en carpetes separades</string>
     <string name="continue_reading_chapter_">Continua llegint el capítol %1$s</string>
     <string name="continue_reading">Continua llegint</string>
     <string name="volume_">Volum %1$d</string>
@@ -798,4 +795,8 @@
     <string name="cutout_area_behavior">Comportament de l’àrea de retall</string>
     <string name="app_updates">Actualitzacions de l’aplicació</string>
     <string name="pref_remove_exclude_categories">Categories excloses</string>
+    <string name="ext_installer_pref">Instal·lador</string>
+    <string name="library_entries">Elements de la biblioteca</string>
+    <string name="source_settings">Configuració de la font</string>
+    <string name="app_settings">Configuració de l’aplicació</string>
 </resources>

@@ -53,7 +53,7 @@
     <string name="clear_cookies">Linisin ang mga cookie</string>
     <string name="cookies_cleared">Nalinis na ang mga cookie</string>
     <string name="clear_database">Linisin ang database</string>
-    <string name="clear_database_confirmation">Sigurado ka ba talaga\? Mawawala ang lahat ng mga nabasang kabanata at bahagdang nabasa ng mga manga na wala sa Aklatan</string>
+    <string name="clear_database_confirmation">Sigurado ka ba\? Ang mga nabasang kabanata at pag-unlad ng mga wala sa aklatan ay mawawala</string>
     <string name="clear_database_completed">Binura na</string>
     <string name="updates_tracking_details">Ina-update ang estado, iskor, at huling nabasang kabanata mula sa mga serbisyo sa pagta-track</string>
     <string name="disable_battery_optimization">Patayin ang pag-o-optimisa sa baterya</string>
@@ -121,7 +121,7 @@
     <string name="create">Gumawa</string>
     <string name="default_value">Ipagpaubaya</string>
     <string name="delete">Burahin</string>
-    <string name="default_category">Panimulang lagayan</string>
+    <string name="default_category">Default na kategorya</string>
     <string name="edit_categories">I-edit</string>
     <string name="update">I-update</string>
     <string name="new_version_available">May bagong bersyon!</string>
@@ -682,7 +682,6 @@
     <string name="extensions_updated">Na-update na ang mga dugtong</string>
     <string name="horizontally">Pahiga</string>
     <string name="scanlators">Mga Scanlator</string>
-    <string name="create_folders_by_manga_title">Gumagawa ng mga folder base sa pamagat ng manga</string>
     <string name="select_ending_chapter">Piliin ang huling kabanata</string>
     <string name="bottom">Baba</string>
     <string name="start_downloading_now">I-download na</string>
@@ -720,8 +719,6 @@
     <string name="on_hiatus">Naka-hiatus</string>
     <string name="tracking_info">Isahang pagsabay para ma-update ang bilang ng nabasang kabanata sa mga tracker. Isaayos ang pag-track sa mga ito sa Pagta-track na makikita sa screen nila.</string>
     <string name="enhanced_tracking_info">Mga serbisyong nagbibigay ng pinahusay na tampok para sa mga piling source. Kusang ita-track ang manga kapag dinagdag ito sa Aklatan mo.</string>
-    <string name="use_shizuku_to_install">Gamitin ang Shizuku para mag-install</string>
-    <string name="use_shizuku_summary">Payagan ang mga dugtong na ma-install nang walang user prompt at payagan ang mga kusang pag-update para sa mga device na mas luma sa Android 12</string>
     <string name="notification_size_warning">Maaari pong humantong sa mataas na paggamit ng baterya at pagbagal ng mga source ang mga malalaking update. Pakipindot po ito para matuto pa.</string>
     <string name="local_invalid_format">Invalid na format ng kabanata</string>
     <string name="order_by">Ayusin base sa</string>
@@ -733,7 +730,7 @@
     <string name="ascending">Pataas</string>
     <string name="date">Petsa</string>
     <string name="descending">Pababa</string>
-    <string name="clear_database_source_item_count">May %1$d (na) manga sa database na wala sa Aklatan</string>
+    <string name="clear_database_source_item_count">%1$d na entry sa database na wala sa Aklatan</string>
     <string name="database_clean">Linisin ang database</string>
     <string name="confirm_manga_add_duplicate">May entry ka sa Aklatan na may kaparehong pangalan pero galing sa ibang source (%1$s).
 \n
@@ -752,7 +749,6 @@
     <string name="pref_update_only_started">Hindi pa nasisimulan</string>
     <string name="tap_to_learn_more">Matuto pa</string>
     <string name="tap_to_see_details">Pindutin para makita ang detalye</string>
-    <string name="url_not_set_click_again">Walang nakatakdang URL ng manga, pakipindot po ang pamagat at piliin ang manga uli</string>
     <string name="update_tracking_scoring_type">I-update ang uri ng iskor ng %1$s</string>
     <string name="scoring_type_updated">Na-update na ang uri ng iskor</string>
     <string name="sort_by_source_s_order">Ayusin base sa ayos ng source</string>
@@ -805,7 +801,6 @@
     <string name="split_double_pages_portrait">Hatiin ang mga dobleng pahina sa Nakatayo</string>
     <string name="pad_cutout_areas">I-pad ang mga cutout area</string>
     <string name="automatic_can_still_switch">Habang ginagamit ang kusang pag-layout sa pahina, maaari ka pa ring magpalit ng layout habang nagbabasa nang hindi ino-override ito</string>
-    <string name="save_pages_separately">I-save ang mga pahina sa magkakahiwalay na folder</string>
     <string name="sort_by_chapter_number">Ayusin base sa bilang ng kabanata</string>
     <string name="newest_first">Pinakabago papaluma</string>
     <string name="oldest_first">Pinakaluma papabago</string>
@@ -884,7 +879,7 @@
     <string name="sapphire_dusk">Takipsilim</string>
     <string name="lime_time">Lime Time</string>
     <string name="warning_unenroll_from_beta">Maaaring humantong sa mga isyu ang pagbalik sa mas lumang bersyon at baka kailanganin nito ang paglilinis sa data ng app.</string>
-    <string name="clear_database_summary">Burahin ang mga manga at kabanata na wala sa Aklatan mo</string>
+    <string name="clear_database_summary">Burahin ang nakaraan ng mga entry na hindi naka-save sa aklatan mo</string>
     <string name="refresh_tracking_metadata">I-refresh ang metadata ng pagta-track</string>
     <string name="warning_enroll_into_beta">Maaaring di stable ang mga beta at baka kailanganin nito ang paglilinis sa data ng app.</string>
     <string name="clean_up_downloaded_chapters">Linisin lahat ng mga na-download na kabanata</string>
@@ -1069,4 +1064,8 @@
     <string name="open">Buksan</string>
     <string name="allow_notifications_recommended">Ang pagpermiso sa pagkakaroon ng abiso ay nakatutulong upang manatiling updated ang inyong library.</string>
     <string name="pref_remove_exclude_categories">Kategoryang di-kasama</string>
+    <string name="ext_installer_pref">Taga-install</string>
+    <string name="library_entries">Mga entry ng aklatan</string>
+    <string name="source_settings">Mga setting ng source</string>
+    <string name="app_settings">Mga setting ng app</string>
 </resources>

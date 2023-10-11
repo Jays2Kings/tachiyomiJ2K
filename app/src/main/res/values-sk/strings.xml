@@ -418,7 +418,7 @@
     <string name="update_available">Dostupná aktualizácia</string>
     <string name="release_page">Stránka vydania</string>
     <string name="could_not_install_update">Aktualizáciu sa nepodarilo nainštalovať</string>
-    <string name="sort_by">Zoradiť podľa</string>
+    <string name="sort_by">Zotriediť podľa</string>
     <string name="read_progress">Priebeh čítania</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Nainštalujte a spustite Shizuku, aby ste mohli používať Shizuku ako inštalátor rozšírení.</string>
     <string name="unofficial_extension_message">Toto rozšírenie nie je z oficiálneho zoznamu rozšírení Tachiyomi.</string>
@@ -537,13 +537,13 @@
     <plurals name="after_minutes">
         <item quantity="one">Po %1$s minutePo %1$s minútachPo %1$s minútach</item>
         <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="other">Po %1$s minút</item>
     </plurals>
     <string name="user_agent_string">Predvolený reťazec pre User-Agent</string>
     <plurals name="for_n_titles">
         <item quantity="one">Pre %d titulPre %d titulyPre %d titulov</item>
         <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="other">Pre %d tituly</item>
     </plurals>
     <string name="nsfw_short">18+</string>
     <string name="next_page">Ďalšia strana</string>
@@ -558,7 +558,6 @@
     <string name="webview_is_required">WebView je potrebné pre Tachiyomi</string>
     <string name="save_chapters_as_cbz">Uložiť ako archív CBZ</string>
     <string name="actions">Akcie</string>
-    <string name="create_folders_by_manga_title">Vytvára priečinky podľa názvu mangy</string>
     <string name="unofficial">Neoficiálne</string>
     <string name="previous_page">Predchádzajúca strana</string>
     <string name="paged">Stránkovanie</string>
@@ -617,9 +616,14 @@
     <plurals name="missing_chapters_warning">
         <item quantity="one">Preskočenie %d kapitoly, buď zdroj chýba, alebo bol odfiltrovaný</item>
         <item quantity="few">Preskočenie %d kapitol, buď zdroj chýba, alebo bol odfiltrovaný</item>
-        <item quantity="other">Preskočenie %d kapitol, buď zdroj chýba, alebo bol odfiltrovaný</item>
+        <item quantity="other">Zložky %d kapitoly, buď zdroj chýba, alebo boli filtrované</item>
     </plurals>
-    <string name="gray_background">Sivá</string>
+    <string name="gray_background">Šedivá</string>
     <string name="app_updates">Aktualizácie aplikácie</string>
     <string name="pref_remove_exclude_categories">Vylúčené kategórie</string>
+    <string name="backup_in_progress">Zálohovanie už prebieha</string>
+    <string name="hide_start_reading_button">Skryť tlačidlo pre začatie čítania</string>
+    <string name="comfortable_grid">Príjemná mriežka</string>
+    <string name="ext_installer_pref">Inštalátor</string>
+    <string name="library_entries">Záznamy v knižnici</string>
 </resources>

@@ -166,8 +166,8 @@
     <string name="clear_cookies">Διαγραφή cookies</string>
     <string name="cookies_cleared">Τα cookies διαγράφηκαν</string>
     <string name="clear_database">Καθαρισμός βάσης δεδομένων</string>
-    <string name="clear_database_summary">Διαγραφή manga και κεφάλαιων που δεν περιλαμβάνονται στη βιβλιοθήκη σας</string>
-    <string name="clear_database_confirmation">Είστε σίγουροι; Τα διαβασμένα κεφάλαια και η πρόοδος των manga εκτός βιβλιοθήκης θα χαθεί</string>
+    <string name="clear_database_summary">Διαγραφή ιστορικού για καταχωρήσεις που δεν έχουν αποθηκευτεί στη βιβλιοθήκη σας</string>
+    <string name="clear_database_confirmation">Είστε σίγουροι; Τα διαβασμένα κεφάλαια και η πρόοδος των καταχωρήσεων εκτός βιβλιοθήκης θα χαθούν</string>
     <string name="clear_database_completed">Οι καταχωρίσεις διαγράφηκαν</string>
     <string name="refresh_library_metadata">Ανανέωση μεταδεδομένων βιβλιοθήκης</string>
     <string name="updates_covers_genres_desc">Ενημερώνει εξώφυλλα, είδη, περιγραφή και πληροφορίες κατάστασης του manga</string>
@@ -219,7 +219,6 @@
     <string name="title">Τίτλος</string>
     <string name="started">Ξεκίνησε</string>
     <string name="type">Τύπος</string>
-    <string name="url_not_set_click_again">Το Manga url δεν έχει οριστεί, κάντε κλικ στον τίτλο και επιλέξτε ξανά το manga</string>
     <string name="category_with_name_exists">Μια κατηγορία με αυτό το όνομα υπάρχει ήδη!</string>
     <string name="this_will_remove_the_read_date_question">Αυτό θα αφαιρέσει την ημερομηνία ανάγνωσης αυτού του κεφαλαίου. Είσαι σίγουρος;</string>
     <string name="picture_saved">Η εικόνα αποθηκεύτηκε</string>
@@ -775,8 +774,6 @@
     <string name="fetched_">Ανακτήθηκε %1$s</string>
     <string name="landscape">Οριζόντια</string>
     <string name="portrait">Κατακόρυφα</string>
-    <string name="create_folders_by_manga_title">Δημιουργεί φακέλους σύμφωνα με τον τίτλο manga</string>
-    <string name="save_pages_separately">Αποθήκευση σελίδων σε ξεχωριστούς φακέλους</string>
     <string name="show_on_long_press">Εμφάνιση με παρατεταμένο πάτημα</string>
     <string name="actions">Ενέργειες</string>
     <string name="release_page">Σελίδα κυκλοφορίας</string>
@@ -899,8 +896,6 @@
     <string name="show_outline_around_covers">Εμφάνιση περιγράμματος γύρω από τα εξώφυλλα</string>
     <string name="ext_installer_shizuku_stopped">Το Shizuku δεν τρέχει</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Εγκαταστήστε και ξεκινήστε το Shizuku για να χρησιμοποιήσετε το Shizuku ως πρόγραμμα εγκατάστασης επεκτάσεων.</string>
-    <string name="use_shizuku_to_install">Χρησιμοποιήστε το Shizuku για να εγκαταστήσετε επεκτάσεις</string>
-    <string name="use_shizuku_summary">Επιτρέπει την εγκατάσταση επεκτάσεων χωρίς προτροπές από το χρήστη και επιτρέπει αυτόματες ενημερώσεις για συσκευές κάτω από το Android 12</string>
     <string name="download_queue_size_warning">Προειδοποίηση: οι μαζικές λήψεις ενδέχεται να οδηγήσουν σε επιβράδυνση των πηγών ή/και αποκλεισμό του Tachiyomi. Πατήστε για να μάθετε περισσότερα.</string>
     <string name="every_3_days">Κάθε 3 ημέρες</string>
     <string name="save_chapters_as_cbz">Αποθήκευση ως αρχείο CBZ</string>
@@ -922,7 +917,7 @@
     <string name="ascending">Αύξουσα</string>
     <string name="date">Ημερομηνία</string>
     <string name="descending">Φθίνουσα</string>
-    <string name="clear_database_source_item_count">%1$d manga εκτός βιβλιοθήκης στη βάση δεδομένων</string>
+    <string name="clear_database_source_item_count">%1$d καταχωρήσεις εκτός βιβλιοθήκης στη βάση δεδομένων</string>
     <string name="database_clean">Καθαρισμός βάσης δεδομένων</string>
     <string name="confirm_manga_add_duplicate">Έχετε μια καταχώρηση στη βιβλιοθήκη σας με το ίδιο όνομα αλλά από διαφορετική πηγή (%1$s).
 \n
@@ -1068,4 +1063,8 @@
     <string name="app_updates">Ενημερώσεις εφαρμογής</string>
     <string name="open">Άνοιγμα</string>
     <string name="pref_remove_exclude_categories">Εξαιρούμενες κατηγορίες</string>
+    <string name="ext_installer_pref">Εγκαταστάτης</string>
+    <string name="library_entries">Καταχωρήσεις βιβλιοθήκης</string>
+    <string name="source_settings">Ρυθμίσεις πηγών</string>
+    <string name="app_settings">Ρυθμίσεις εφαρμογής</string>
 </resources>

@@ -222,7 +222,6 @@
     <string name="stretch">Тарту</string>
     <string name="zoom_start_position">Үлкейтудің бастапқы қалпы</string>
     <string name="locked_portrait">Құлыпталған портрет</string>
-    <string name="create_folders_by_manga_title">Манга тақырыбына сәйкес қалталар жасау</string>
     <string name="create_backup">Сақтық көшірме жасау</string>
     <string name="restore_missing_sources">Жоқ дереккөздер:</string>
     <string name="clear_chapter_cache">Тарау кэшін тазалау</string>
@@ -277,8 +276,8 @@
     <string name="chapter_not_found">Тарау табылмады</string>
     <string name="manhwa">Манхва</string>
     <string name="cache_delete_error">Тазалауда қателік пайда болды</string>
-    <string name="clear_database_source_item_count">Кітапханадағы емес %1$d маңга дерекқорда</string>
-    <string name="clear_database_confirmation">Сенімдісіз бе\? Кітапханадағы емес маңгалардың оқылған тараулары мен прогрессі жоғалады</string>
+    <string name="clear_database_source_item_count">Кітапханадағы емес %1$d жазбалар дерекқорда</string>
+    <string name="clear_database_confirmation">Сенімдісіз бе\? Кітапханадағы емес жазбалардың оқылған тараулары мен прогрессі жоғалады</string>
     <string name="local_source_help_guide">Локал дереккөзді қолдану нұсқаулығы</string>
     <string name="licensed">Лицензаланған</string>
     <string name="description">Сипаттама</string>
@@ -528,4 +527,7 @@
     <string name="app_updates">Қолданба жаңартулары</string>
     <string name="gray_background">Сұр</string>
     <string name="pref_remove_exclude_categories">Саналмайтын санаттар</string>
+    <string name="ext_installer_pref">Орнатушы</string>
+    <string name="library_entries">Кітапхана жазбалары</string>
+    <string name="clear_database_summary">Кітапханада жоқ жазбалардың тарихын жою</string>
 </resources>

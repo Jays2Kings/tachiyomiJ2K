@@ -137,7 +137,7 @@
     <string name="clear_chapter_cache">チャプターキャッシュをクリア</string>
     <string name="cache_delete_error">消去中にエラーが発生しました</string>
     <string name="clear_database">データベースをクリア</string>
-    <string name="clear_database_summary">ライブラリにない漫画や章を削除します</string>
+    <string name="clear_database_summary">ライブラリにない項目の履歴を削除</string>
     <string name="version">バージョン</string>
     <string name="build_time">ビルド日時</string>
     <string name="check_for_updates">更新を確認</string>
@@ -264,7 +264,7 @@
     <string name="used_">サイズ：%1$s</string>
     <string name="clear_cookies">Cookiesを削除</string>
     <string name="cookies_cleared">Cookiesを削除しました</string>
-    <string name="clear_database_confirmation">データベースをクリアしてもよろしいですか？ライブラリにない漫画の読んだ章と読書進捗はすべて失われます</string>
+    <string name="clear_database_confirmation">データベースをクリアしてもよろしいですか？ライブラリにない項目の読んだ章と読書進捗はすべて失われます</string>
     <string name="clear_database_completed">エントリーを削除しました</string>
     <string name="updates_tracking_details">同期サービスでステータス、評価と最後に読んだ章を更新します</string>
     <string name="disable_battery_optimization">バッテリー最適化を無効にする</string>
@@ -699,8 +699,6 @@
 \n%2$s
 \nダウンロードを削除しますか？</item>
     </plurals>
-    <string name="create_folders_by_manga_title">漫画のタイトルに応じてフォルダを作成します</string>
-    <string name="save_pages_separately">ページを別のフォルダに保存</string>
     <string name="show_on_long_press">長押しで表示</string>
     <string name="ignore_cutout_areas">カットアウト領域を無視</string>
     <string name="automatic_removal">自動削除</string>
@@ -743,7 +741,6 @@
     <string name="use_first_source">最初のソースを代わりに使用</string>
     <string name="skip_pre_migration">移行設定をスキップ</string>
     <string name="remove_tracking_from_">%1$sからも削除する</string>
-    <string name="url_not_set_click_again">マンガのURLが設定されていません。タイトルをクリックして、もう一度マンガを選択してください</string>
     <string name="currently_reading">現在読書中</string>
     <string name="changing_will_reset_reading_mode">これを行うと、このシリーズのビューア設定をリセットします</string>
     <string name="pages_">%1$sページ</string>
@@ -877,8 +874,6 @@
     <string name="ext_installer_shizuku_stopped">Shizukuは実行中ではありません</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Shizukuを拡張機能インストーラーとして使用するには、Shizukuをインストールして起動してください。</string>
     <string name="show_outline_around_covers">表紙に輪郭を表示</string>
-    <string name="use_shizuku_to_install">Shizuku経由で拡張機能をインストール</string>
-    <string name="use_shizuku_summary">拡張機能のインストールをユーザー入力なしで行うことができ、Android 12以前のシステムで自動アップデートをONにします</string>
     <string name="every_3_days">3日ごと</string>
     <string name="download_queue_size_warning">警告：大量の一括ダウンロードにより、ソースは遅くなったり、Tachiyomiを接続禁止したりする恐れがあります。詳しくはタップでご覧ください。</string>
     <string name="save_chapters_as_cbz">CBZアーカイブとして保存</string>
@@ -911,7 +906,7 @@
     <string name="ascending">昇順</string>
     <string name="date">日付</string>
     <string name="descending">降順</string>
-    <string name="clear_database_source_item_count">データベースにはライブラリにない%1$d件のマンガがあります</string>
+    <string name="clear_database_source_item_count">データベースにはライブラリにない項目は%1$d件あります</string>
     <string name="database_clean">データベースクリーンアップ</string>
     <string name="confirm_manga_add_duplicate">同じ名前で異なるソース（%1$s）の項目はすでにライブラリに存在します。
 \n
@@ -1042,4 +1037,8 @@
     <string name="open">開く</string>
     <string name="allow_notifications_recommended">ライブラリとアプリを最新の状態に保つために、通知を許可することをお勧めします。</string>
     <string name="pref_remove_exclude_categories">除外されるカテゴリー</string>
+    <string name="ext_installer_pref">インストーラ</string>
+    <string name="library_entries">ライブラリの項目</string>
+    <string name="source_settings">ソース設定</string>
+    <string name="app_settings">アプリ設定</string>
 </resources>

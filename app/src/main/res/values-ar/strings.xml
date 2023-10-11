@@ -144,11 +144,11 @@
     <string name="clear_cookies">محو ملفات تعريف الارتباط</string>
     <string name="cookies_cleared">تم محو ملفات تعريف الارتباط</string>
     <string name="clear_database">محو قاعدة البيانات</string>
-    <string name="clear_database_summary">مسح المانجا والفصول التى ليست فى مكتبتك</string>
-    <string name="clear_database_confirmation">هل أنت متأكد؟ الفصول المقروءة ومستوى التقدم للمانجا الغير الموجودة في مكتبتك سيتم فقده</string>
+    <string name="clear_database_summary">امسح سجلَّ المدخلات التي ليست محفوظةً في مكتبتك</string>
+    <string name="clear_database_confirmation">أمتأكِّد؟ إن فعلتَ خسرتَ الفصول المقروءة وسير القراءة</string>
     <string name="clear_database_completed">تم حذف المدخلات</string>
     <string name="refresh_library_metadata">تحديث البيانات الوصفية للمكتبة</string>
-    <string name="updates_covers_genres_desc">تحديث اﻷغلفة، التصنيفات، الوصف ومعلومات حالة المانجا</string>
+    <string name="updates_covers_genres_desc">يحدِّث الغُلُف والأصناف والأوصاف وحالة المدخلات</string>
     <string name="refresh_tracking_metadata">تحديث البيانات الوصفية للتتبع</string>
     <string name="updates_tracking_details">تحديث الحالة، والتقييم وآخر فصل عن طريق خدمات التتبع</string>
     <string name="version">اﻹصدار</string>
@@ -199,7 +199,7 @@
     <string name="use_image_as_cover">هل تريد استخدام هذه الصورة غلافًا؟</string>
     <string name="new_chapters_found">عُثر على فصول جديدة</string>
     <string name="failed_to_update_cover">فشل تحديث الغلاف</string>
-    <string name="must_be_in_library_to_edit">يجب أن تكون المانجا في مكتبك لتحرِّرها</string>
+    <string name="must_be_in_library_to_edit">يجب أن تكون السلسلة في مكتبك لتحرِّرها</string>
     <string name="select_cover_image">اختر صورة الغلاف</string>
     <string name="select_backup_file">اختر ملف النسخ الاحتياطي</string>
     <string name="new_version_available">يتوفَّر إصدار جديد!</string>
@@ -209,9 +209,9 @@
     <string name="download_complete">اكتمل التنزيل</string>
     <string name="download_error">حدث خطأ فى التنزيل</string>
     <string name="update_available">يتوفَّر تحديث</string>
-    <string name="cover_of_image">غلاف المانجا</string>
+    <string name="cover_of_image">غلاف السلسلة</string>
     <string name="no_recent_chapters">لا توجد فصول حديثة</string>
-    <string name="no_recently_read_manga">لا توجد مانجا قُرئت مؤخَّرًا</string>
+    <string name="no_recently_read_manga">لا سلسلة قُرئت مؤخَّرًا</string>
     <string name="library_is_empty_add_from_browse">مكتبك خاوية. أضف سلاسل لها من لسان «تصفَّح».</string>
     <string name="could_not_download_unexpected_error">حدث خطأ غير متوقع أثناء تنزيل الفصل</string>
     <string name="no_wifi_connection">لا يتوفر اتصال واي فاي</string>
@@ -250,7 +250,6 @@
     <string name="rereading">أعيد قراءتها</string>
     <string name="started">بُدئ فيها</string>
     <string name="type">النوع</string>
-    <string name="url_not_set_click_again">لم يعيَّن رابط المانجا، عليك النقر على العنوان واختيارها كرَّةً أخرى</string>
     <string name="migrate">رحِّل</string>
     <string name="finished_chapter">المنتهى منه:</string>
     <string name="current_chapter">الحالي:</string>
@@ -382,8 +381,8 @@
     <string name="category_deleted">حُذفت الفئة</string>
     <string name="manage_category">أدر الفئات</string>
     <string name="add_categories">أضف فئات</string>
-    <string name="already_in_category">توجد المانجا في الفئة بالفعل</string>
-    <string name="confirm_category_deletion_message">سوف تنقل المانجا في هذه الفئة للفئة المبدئية.</string>
+    <string name="already_in_category">يوجد العنصر في الفئة</string>
+    <string name="confirm_category_deletion_message">سوف تنقل عناصر هذه الفئة إلى الفئة المبدئية.</string>
     <plurals name="pages_left">
         <item quantity="zero">انتهت الصفحات</item>
         <item quantity="one">تبقَّت صفحة</item>
@@ -468,7 +467,7 @@
     <string name="downloading_">جاري تنزيل: %1$s</string>
     <string name="username_must_not_be_blank">لا يمكن أن يكون اسم المستخدم أو كلمة المرور فارغًا</string>
     <string name="whats_new">ما الجديد</string>
-    <string name="you_can_migrate_in_library">يمكنك أيضاً الترحيل عن طريق اختيار المانجا في مكتبتك</string>
+    <string name="you_can_migrate_in_library">يمكنك أيضاً الترحيل باختيار المدخلات في مكتبتك</string>
     <string name="migration_sources_changed">مصادر الترحيل التي تم تغييرها</string>
     <string name="use_last_saved_migration_preferences">استخدم آخر تفضيلات المصادر المحفوظة للترحيل العادي للترحيل الجماعي</string>
     <string name="only_enable_enabled_for_migration">تمكين المصادر الممكّنة حاليًا فقط للترحيل</string>
@@ -479,7 +478,7 @@
     <string name="disable_if_issues_with_updating">عطل هذا إنكنت تواجه مشاكل مع تحديث أو استعادة المكتبة</string>
     <string name="no_folders_to_cleanup">لا توجد مجلدات لتنظيفها</string>
     <string name="starting_cleanup">بدء التنظيف</string>
-    <string name="clean_read_manga_not_in_library">تنظيف المانجا الغير موجودة في المكتبة</string>
+    <string name="clean_read_manga_not_in_library">أزل المدخلات التي ليست في المكتبة</string>
     <string name="clean_read_downloads">تنظيف المقروءة</string>
     <string name="clean_orphaned_downloads">تنظيف المهجورة</string>
     <string name="clean_up_downloaded_chapters">تنظيف الفصول التي تم تنزيلها</string>
@@ -490,7 +489,7 @@
     <string name="skipping_">(تخطي %1$d)</string>
     <string name="stop_migrating">أأوقف الترحيل؟</string>
     <string name="no_alternatives_found">لم يُعثر على بدائل</string>
-    <string name="no_chapters_found_for_migration">لم يُعثر على فصول، ولذلك لا يمكن استخدام هذه المانجا للترحيل</string>
+    <string name="no_chapters_found_for_migration">لم يُعثر على فصول، ولذلك لا يمكن استخدام هذه السلسلة للترحيل</string>
     <string name="migrate_">رحِّل %1$s</string>
     <string name="copy_now">انسخ الآن</string>
     <string name="migrate_now">رحِّل الآن</string>
@@ -573,8 +572,8 @@
     <string name="delete_all_covers__not_in_library_used_">حذف كافة الأغلفة المخزنة مؤقتاً غير الموجودة في مكتبتك
 \nحاليا يتم استخدام: %1$s</string>
     <string name="clear_cached_covers_non_library">مسح الأغلفة المخزنة مؤقتًا غير الموجودة في المكتبة</string>
-    <string name="delete_old_covers_in_library_used_">حذف الأغلفة المخزنة مؤقتا القديمة و الغير مستخدمة الخاصة بالمانجا الموجودة في مكتبتك التى تم تحديثها.
-\nحاليا يتم استخدام: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">احذف الغُلُف القديمة للمدخلات التي حُدِّثت غُلُفها.
+\nيُستخدَم الآن: %1$s</string>
     <string name="clean_up_cached_covers">تنظيف الأغلفة المخزنة مؤقتًا</string>
     <string name="error_sharing_cover">فشلت مشاركة الغلاف</string>
     <string name="error_saving_cover">خطأ في حفظ الغلاف</string>
@@ -584,7 +583,7 @@
     <string name="uniform_covers">غُلُف موحَّدة</string>
     <string name="auto_refresh_covers">حدِّث الغُلُف تلقائيًّا</string>
     <string name="include_in_global_update">ضمِّنه في التحديث الشامل</string>
-    <string name="when_sorting_ignore_articles">تجاهل البوادئ (a، an، the) في بداية عناوين المانجا في حال الفرز حسب ترتيب الحروف</string>
+    <string name="when_sorting_ignore_articles">تجاهل البوادئ (a، an، the) في بداية عناوين السلاسل في حال فرزها حسب ترتيب الحروف</string>
     <string name="sort_by_ignoring_articles">افرز حسب تجاهل المواضيع</string>
     <plurals name="for_n_titles">
         <item quantity="zero">لصفر عنوان</item>
@@ -650,7 +649,7 @@
     <string name="invalid_backup_file">ملفُّ النسخ الاحتياطيِّ غير صالح</string>
     <string name="invalid_backup_file_type">نوع ملفِّ النسخ الاحتياطي غير صالح: %1$s
 \nيجب أن ينتهي ب‍ .proto.gz أو .json.</string>
-    <string name="backup_has_no_manga">ليس في النسخة الاحتياطية أيُّ مانجا.</string>
+    <string name="backup_has_no_manga">ليس في النسخة الاحتياطية أيُّ سلسلة.</string>
     <string name="restore_missing_sources">المصادر المفقودة:</string>
     <string name="restore_missing_trackers">المتتبِّعات التي لم يسجَّل الدخول فيها:</string>
     <string name="restoring_backup_canceled">أُلغيت الاستعادة</string>
@@ -703,7 +702,7 @@
     <string name="show_download_button">أظهر زرَّ التنزيل</string>
     <string name="press_and_hold_to_also_reset">اضغط مطوَّلًا لتصفِّر تاريخ الفصل</string>
     <string name="grouped">مجمَّعة</string>
-    <string name="no_recent_read_updated_manga">لا توجد مانجا قُرئت مؤخَّرًا أو حُدِّثت</string>
+    <string name="no_recent_read_updated_manga">لا سلسلة قُرئت مؤخَّرًا أو حُدِّثت</string>
     <string name="fetched_">جُلب %1$s</string>
     <string name="reset_chapter_history">صفِّر تاريخ الفصل</string>
     <string name="updates_and_history">التحديثات والتاريخ</string>
@@ -738,12 +737,12 @@
     <string name="save_combined_pages">احفظ الصفحات المجمَّعة</string>
     <string name="share_combined_pages">شارك الصفحات المجمَّعة</string>
     <plurals name="manga_migrated">
-        <item quantity="zero">لم ترحَّل أيُّ مانجا</item>
-        <item quantity="one">رحِّلت المانجا</item>
-        <item quantity="two">رحِّلت مانجتان</item>
-        <item quantity="few">رحِّلت %d مانجات</item>
-        <item quantity="many">رحِّلت %d مانجا</item>
-        <item quantity="other">رحِّلت %d مانجا</item>
+        <item quantity="zero">لم تُرحَّل أيُّ سلسلة</item>
+        <item quantity="one">رُحِّلت السلسلة</item>
+        <item quantity="two">رُحِّلت سلسلتان</item>
+        <item quantity="few">رُحِّلت %d سلسلات</item>
+        <item quantity="many">رُحِّلت %d سلسلةً</item>
+        <item quantity="other">رُحِّلت %d سلسلةٍ</item>
     </plurals>
     <string name="automatic_removal">الحذف التلقائي</string>
     <string name="pressing_back_to_start">ضغط «عد لشاشة البداية»</string>
@@ -766,25 +765,25 @@
     <string name="filter_languages">صفِّ اللغات</string>
     <string name="show_read_chapters_all">أظهر الفصول المقروءة في «مجمَّع» و «الكلُّ»</string>
     <plurals name="copy_manga">
-        <item quantity="zero">ألا أنسخ أيَّ مانجا؟</item>
-        <item quantity="one">أأنسخ المانجا؟</item>
-        <item quantity="two">أأنسخ المانجتين؟</item>
-        <item quantity="few">أأنسخ %1$d%2$s مانجات؟</item>
-        <item quantity="many">أأنسخ %1$d%2$s مانجا؟</item>
-        <item quantity="other">أأنسخ %1$d%2$s مانجا؟</item>
+        <item quantity="zero">ألا أنسخ أيَّ سلسلة؟</item>
+        <item quantity="one">أأنسخ السلسلة؟</item>
+        <item quantity="two">أأنسخ السلسلتين؟</item>
+        <item quantity="few">أأنسخ %1$d (بتخطي %2$s) سلاسل؟</item>
+        <item quantity="many">أأنسخ %1$d (بتخطي %2$s) سلسلةً؟</item>
+        <item quantity="other">أأنسخ %1$d (بتخطي %2$s) سلسلةٍ؟</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="zero">ألا أرحِّل أيَّ مانجا؟</item>
-        <item quantity="one">أأرحِّل المانجا؟</item>
-        <item quantity="two">أأرحِّل المانجتين؟</item>
-        <item quantity="few">أأرحِّل %1$d (بتخطِّي %2$s) مانجات؟</item>
-        <item quantity="many">أأرحِّل %1$d (بتخطِّي %2$s) مانجا؟</item>
-        <item quantity="other">نقل %1$d%2$s مانجا؟</item>
+        <item quantity="zero">ألا أرحِّل أيَّ سلسلة؟</item>
+        <item quantity="one">أأرحِّل السلسلة؟</item>
+        <item quantity="two">أأرحِّل السلسلتين؟</item>
+        <item quantity="few">أأرحِّل %1$d (بتخطِّي %2$s) سلسلات؟</item>
+        <item quantity="many">أأرحِّل %1$d (بتخطِّي %2$s) سلسلةً؟</item>
+        <item quantity="other">أأرحِّل %1$d (بتخطِّي %2$s) سلسلةٍ؟</item>
     </plurals>
     <string name="app_info">معلومات التطبيق</string>
     <string name="hide_bottom_nav">أخفِ أزرار التنقُّل تلقائيًّا</string>
     <string name="turn_off_">عطِّل %s</string>
-    <string name="custom_manga_info">معلومات مانجا مخصَّصة</string>
+    <string name="custom_manga_info">تخصيص معلومات السلسلة</string>
     <string name="automatic_can_still_switch">لك التبديل بين النُّسُق بينما تقرأ دون تجاوز هذا الإعداد، وذلك عند استخدامك تنسيق الصفحة التلقائيَّ</string>
     <plurals name="pages_plural">
         <item quantity="zero">لا توجد صفحات</item>
@@ -794,10 +793,8 @@
         <item quantity="many">%1$d صفحةً</item>
         <item quantity="other">%1$d صفحة</item>
     </plurals>
-    <string name="save_pages_separately">احفظ الصفحات في ملفات مختلفة</string>
     <string name="actions">إجراءات</string>
     <string name="automatic_orientation">تلقائيٌّ (حسب الاتِّجاه)</string>
-    <string name="create_folders_by_manga_title">أنشئ ملفات طبقًا لعنوان المانجا</string>
     <string name="show_on_long_press">أظهر عند الضغط مطوَّلًا</string>
     <string name="vertically">عموديًّا</string>
     <string name="horizontally">أفقيًّا</string>
@@ -906,9 +903,9 @@
     <string name="by_source_order">حسب ترتيب المصدر</string>
     <string name="not_bookmarked">لم يعلَّم</string>
     <string name="external_storage_download_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات لينزِّل الفصول. اضغط هنا ثم مكِّن «السماح بالوصول لإدارة جميع الملفات.»</string>
-    <string name="external_storage_permission_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات في أندرويد 11 لينزِّل الفصول وينشئ نسخًا احتياطيةً تلقائيًا ويقرأ المانجا المحلية.
+    <string name="external_storage_permission_notice">يحتاج TachiyomiJ2K للوصول إلى كلِّ الملفَّات في أندرويد ١١، فبذلك ينزِّل الفصول ويحتاط ويقرأ السلاسل المنزَّلة.
 \n
-\nمكِّن «السماح بالوصول لإدارة جميع الملفات.» في الشاشة التالية</string>
+\nمكِّن «اسمح بإدارة كافة الملفات.» عندما تراها في الشاشة التالية</string>
     <string name="all_files_permission_required">إذن الوصول إلى الملفات مطلوب</string>
     <string name="warning">تحذير</string>
     <string name="search_">بحث %1$s</string>
@@ -983,8 +980,6 @@
     <string name="ext_installer_shizuku_unavailable_dialog">ثبِّت «شيزوكو» وشغِّله لتستخدمه مثبِّت إضافات.</string>
     <string name="ext_installer_shizuku_stopped">«Shizuku» لا يعمل</string>
     <string name="lime_time">وقت الليمون الأخضر</string>
-    <string name="use_shizuku_to_install">استخدم «شيزوكو» لتثبِّت الإضافات</string>
-    <string name="use_shizuku_summary">يسمح بتثبيت الإضافات دون مطالبات من المستخدم ويمكِّن التحديثات التلقائية للأجهزة التي تعمل بنظام أندرويد ١٢</string>
     <string name="scanlators">المترجمون</string>
     <string name="filter_groups">صفِّ مجموعات المترجمين</string>
     <string name="classic_blue">أزرق كلاسيكي</string>
@@ -992,9 +987,9 @@
     <string name="publishing_finished">انتهى النشر</string>
     <string name="cancelled">أُلغيت</string>
     <string name="on_hiatus">منقطعة</string>
-    <string name="tracking_info">مزامنة أحادية لتحديث تقدُّم الفصول في خدمات التتبع. أعِدَّ تتبُّع مانجا محدَّدة من زرِّ تتبُّعها.</string>
+    <string name="tracking_info">مزامنة أحادية لتحديث تقدُّم الفصول في خدمات التتبع، ولك أن تُعِدَّ تتبُّع سلسلةٍ من زرِّ تتبُّعها.</string>
     <string name="enhanced_services">خدمات محسَّنة</string>
-    <string name="enhanced_tracking_info">الخدمات التي تقدم ميزات محسَّنة لمصادر معينة. سوف تُتتبَّع المانجا تلقائيًّا حال إضافتها لمكتبك.</string>
+    <string name="enhanced_tracking_info">الخدمات التي تقدم ميزات محسَّنة لمصادر معينة، وسوف تُتتبَّع السلاسل حال إضافتها لمكتبك.</string>
     <string name="language_badge">شارات اللغات</string>
     <string name="new_beta_version_available">تتوفَّر نسخة تجريبٍ جديدة!</string>
     <string name="check_for_beta_releases">تحقق من وجود إصدارات تجريبية</string>
@@ -1017,7 +1012,7 @@
     <string name="move_series_to_top">أنقل السلسلة للأعلى</string>
     <string name="date">التاريخ</string>
     <string name="descending">تنازلًا</string>
-    <string name="clear_database_source_item_count">%1$d مانجا ليست من المكتبة في قاعدة البيانات</string>
+    <string name="clear_database_source_item_count">%1$d مدخلةً في قاعدة البيانات وليست في المكتبة</string>
     <string name="database_clean">قاعدة البيانات نظيفة</string>
     <string name="confirm_manga_add_duplicate">لديك مدخلة في مكتبتك بنفس السم و لكن من مصدر مختلف (%1$s).
 \n
@@ -1048,7 +1043,7 @@
     <string name="clear_history_completed">حُذف التاريخ</string>
     <string name="clear_history_confirmation">أمتأكِّد؟ سوف يُحذف التاريخ.</string>
     <string name="use_staggered_grid">استخدم شبكةً متداخلةً</string>
-    <string name="pref_update_only_completely_read_summary">حدِّث المانجا فقط في حال عدم وجود فصول لم تُقرأ (أي أنها قُرئت بالكامل)</string>
+    <string name="pref_update_only_completely_read_summary">لا تحدِّث السلسلة إلا إن كانت مقروءةً بالكامل</string>
     <string name="update_tracking_after_reading">حدِّث التتبُّع بعد القراءة</string>
     <string name="update_tracking_marked_read">حدِّث التتبُّع حال تعليم الفصل مقروءًا</string>
     <string name="view_all">عرض الكل</string>
@@ -1148,8 +1143,8 @@
     <string name="statistics_details">إحصائيات مفصله</string>
     <string name="titles_in_library">عناوين في المكتبه</string>
     <string name="chapters_read">الفصول المقروء</string>
-    <string name="all_read_manga">جميع المانجا المقروءة</string>
-    <string name="clear_db_exclude_read">ابقي المانجا التي تحتوي على فصل مقروء</string>
+    <string name="all_read_manga">جميع السلاسل المقروءة</string>
+    <string name="clear_db_exclude_read">حافظ على المدخلات التي قرأتَ فصولًا منها</string>
     <string name="read_duration_info">الوقت المنفق في القارئ, بناء على تاريخ الفصل</string>
     <string name="skipped_reason_not_always_update">تُخُطِّيت لأن السلسلة لا تتطلب تحديثات</string>
     <string name="error_user_agent_string_invalid">سلسلة وكيل المستخدم المبدئية غير صالحة</string>
@@ -1173,4 +1168,9 @@
     <string name="allow_notifications_recommended">يستحسن أن تجعل الإشعارات تأتيك لتحافظ على المكتبة والتطبيق محدَّثين.</string>
     <string name="apply">نفِّذ</string>
     <string name="pref_remove_exclude_categories">الفئات المستثناة</string>
+    <string name="ext_installer_pref">المثبِّت</string>
+    <string name="ext_installer_summary">يُثبِّت الإضافات ويحدِّثها دون طلب من المستخدم، وذلك للأجهزة التي على نظام أقدم من أندرويد ١٢</string>
+    <string name="library_entries">عناصر المكتبة</string>
+    <string name="source_settings">إعدادات المصادر</string>
+    <string name="app_settings">إعدادات التطبيق</string>
 </resources>

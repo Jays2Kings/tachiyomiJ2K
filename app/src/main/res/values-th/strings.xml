@@ -167,8 +167,8 @@
     <string name="clear_cookies">ล้างคุกกี้</string>
     <string name="cookies_cleared">ล้างคุกกี้แล้ว</string>
     <string name="clear_database">ล้างฐานข้อมูล</string>
-    <string name="clear_database_summary">ลบมังงะและตอนที่ไม่ได้อยู่ในคลัง</string>
-    <string name="clear_database_confirmation">แน่ใจไหม\? ข้อมูลการอ่านของมังงะที่ไม่ได้อยู่ในคลังจะหายไป</string>
+    <string name="clear_database_summary">ลบประวัติรายการที่ไม่ได้บันทึกไว้ในคลัง</string>
+    <string name="clear_database_confirmation">แน่ใจไหม\? ข้อมูลการอ่านของรายการที่ไม่ได้อยู่ในคลังจะหายไป</string>
     <string name="clear_database_completed">ลบรายการแล้ว</string>
     <string name="refresh_library_metadata">โหลดข้อมูลเมตาของคลังใหม่</string>
     <string name="updates_covers_genres_desc">อัปเดตข้อมูลภาพปก, ประเภท, รายละเอียดและสถานะของมังงะ</string>
@@ -228,7 +228,6 @@
     <string name="title">ชื่อเรื่อง</string>
     <string name="started">เริ่มอ่านแล้ว</string>
     <string name="type">ประเภท</string>
-    <string name="url_not_set_click_again">ไม่ได้ตั้งค่า URL ของมังงะ โปรดคลิกที่ชื่อและเลือกมังงะอีกครั้ง</string>
     <string name="category_with_name_exists">หมวดหมู่ที่มีชื่อนี้มีอยู่แล้ว!</string>
     <string name="this_will_remove_the_read_date_question">การดำเนินการนี้จะลบวันที่อ่านของตอนนี้ แน่ใจไหม\?</string>
     <string name="picture_saved">บันทึกรูปภาพแล้ว</string>
@@ -325,7 +324,6 @@
     <string name="show_number_of_items">แสดงจำนวนรายการ</string>
     <string name="default_reading_mode">โหมดการอ่านเริ่มต้น</string>
     <string name="locked_landscape">ล็อกแนวนอน</string>
-    <string name="create_folders_by_manga_title">สร้างโฟลเดอร์ตามชื่อเรื่องมังงะ</string>
     <string name="incognito_mode">โหมดไม่ระบุตัวตน</string>
     <string name="cancel_all">ยกเลิกทั้งหมด</string>
     <string name="include_">ที่รวมไว้: %s</string>
@@ -685,7 +683,6 @@
     <string name="restrictions_">ข้อจำกัด: %1$s</string>
     <string name="sort_by_ignoring_articles">เรียงแบบยกเว้นคำนำหน้าคำนาม</string>
     <string name="global_updates">อัปเดตทั้งหมด</string>
-    <string name="use_shizuku_summary">อนุญาตให้ติดตั้งส่วนขยายโดยไม่ต้องแจ้งให้ผู้ใช้ทราบ และเปิดใช้งานการอัปเดตอัตโนมัติสำหรับอุปกรณ์ที่ใช้ Android 12</string>
     <string name="installed_">ติดตั้ง %1$s แล้ว</string>
     <string name="extensions_miui_warning">ต้องปิดใช้การเพิ่มประสิทธิภาพ MIUI เพื่อติดตั้งส่วนขยาย</string>
     <string name="app_info">ข้อมูลแอป</string>
@@ -726,7 +723,6 @@
     <string name="start_past_cutout">ข้ามส่วนที่ตัดออก</string>
     <string name="cutout_area_behavior">ลักษณะการทำงานของพื้นที่ที่ตัดออก</string>
     <string name="page_layout">เค้าโครงหน้า</string>
-    <string name="save_pages_separately">บันทึกหน้าในโฟลเดอร์แยกต่างหาก</string>
     <string name="source_not_installed">แหลงที่มายังไม่ได้ติดตั้ง</string>
     <string name="remove_tracking_from_">และลบออกจาก %1$s ด้วย</string>
     <string name="restore_error">คืนค่าข้อมูลสำรองล้มเหลว</string>
@@ -857,7 +853,6 @@
     <string name="comfortable_grid">ตารางแบบเต็มที</string>
     <string name="uniform_grid_covers">แสดงปกในตารางให้สม่ำเสมอ</string>
     <string name="tag">แท็ก</string>
-    <string name="use_shizuku_to_install">ใช้ Shizuku เพื่อติดตั้งส่วนขยาย</string>
     <string name="amount_of_pages_to_preload">จำนวนหน้าที่จะโหลดล่วงหน้าเมื่ออ่าน ค่าที่สูงขึ้นจะส่งผลให้ประสบการณ์การอ่านราบรื่นขึ้น แต่จะต้องใช้พื้นที่แคชและเครือข่ายที่มากขึ้น</string>
     <string name="crop_borders_webtoon">ตัดขอบ (เว็บตูน)</string>
     <string name="smart_by_theme">อัตโนมัติ (ตามธีม)</string>
@@ -912,7 +907,7 @@
     <string name="ascending">น้อยไปมาก</string>
     <string name="date">วันที่</string>
     <string name="descending">มากไปน้อย</string>
-    <string name="clear_database_source_item_count">มังงะ %1$d เรื่อง ที่ไม่ได้อยู่ในคลังในฐานข้อมูล</string>
+    <string name="clear_database_source_item_count">มี %1$d รายการ ที่ไม่ได้อยู่ในคลังในฐานข้อมูล</string>
     <string name="database_clean">ล้างฐานข้อมูลแล้ว</string>
     <string name="confirm_manga_add_duplicate">มีรายการในคลังที่มีชื่อเดียวกัน แต่มาจากคนละแหล่งที่มา (%1$s)
 \n
@@ -1042,5 +1037,11 @@
     <string name="app_updates">การอัปเดตแอป</string>
     <string name="open">เปิด</string>
     <string name="allow_notifications_recommended">ขอแนะนำให้อนุญาตการแจ้งเตือนเพื่อให้คลังและแอปทันสมัยอยู่เสมอ</string>
-    <string name="pref_remove_exclude_categories">หมวดหมู่ที่ยกเว้น</string>
+    <string name="pref_remove_exclude_categories">หมวดหมู่ที่ยกเว้นไว้</string>
+    <string name="apply">นำไปใช้</string>
+    <string name="ext_installer_pref">ตัวติดตั้ง</string>
+    <string name="ext_installer_summary">อนุญาตให้ติดตั้งส่วนขยายโดยไม่ต้องแจ้งเตือนผู้ใช้และเปิดใช้การอัปเดตอัตโนมัติสำหรับอุปกรณ์ที่ใช้ Android 12 ขึ้นไป</string>
+    <string name="library_entries">รายการคลัง</string>
+    <string name="source_settings">การตั้งค่าแหล่งที่มา</string>
+    <string name="app_settings">การตั้งค่าแอป</string>
 </resources>

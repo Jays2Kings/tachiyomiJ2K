@@ -343,7 +343,6 @@
     <string name="status">Status</string>
     <string name="started">Gestartet</string>
     <string name="type">Typ</string>
-    <string name="url_not_set_click_again">Manga URL ist nicht gesetzt. Bitte auf den Titel drücken und den Manga erneut wählen</string>
     <string name="refresh_tracking">Synchronisation aktualisieren</string>
     <string name="add_tracking">Tracking hinzufügen</string>
     <string name="remove_tracking">Synchronisation aus App entfernen</string>
@@ -425,7 +424,7 @@
     <string name="clear_chapter_cache">Kapitel-Zwischenspeicher leeren</string>
     <string name="data_management">Datenverwaltung</string>
     <string name="network">Netzwerk</string>
-    <string name="requires_app_restart">Erfordert einen Neustart der Anwendung, um wirksam zu werden</string>
+    <string name="requires_app_restart">Erfordert einen Neustart der App, um wirksam zu werden</string>
     <string name="used_">Belegt: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Zwischenspeicher geleert. %d Datei wurde gelöscht</item>
@@ -435,8 +434,8 @@
     <string name="clear_cookies">Cookies löschen</string>
     <string name="cookies_cleared">Cookies gelöscht</string>
     <string name="clear_database">Datenbank leeren</string>
-    <string name="clear_database_summary">Alle Manga und Kapitel die nicht in der Bibliothek sind löschen</string>
-    <string name="clear_database_confirmation">Bist du sicher\? Der Lesestatus aller Manga, die nicht in der Bibliothek sind, wird gelöscht</string>
+    <string name="clear_database_summary">Verlauf für Einträge löschen, die nicht in deiner Bibliothek gespeichert sind</string>
+    <string name="clear_database_confirmation">Bist du dir sicher\? Die gelesenen Kapitel und Fortschritte von Einträgen, die nicht in deiner Bibliothek sind, werden gelöscht</string>
     <string name="clear_database_completed">Einträge gelöscht</string>
     <string name="refresh_library_metadata">Bibliotheksmetadaten erneuern</string>
     <string name="updates_covers_genres_desc">Aktualisiert Vorschaubilder, Genres, Beschreibungen und andere Mangainformationen</string>
@@ -451,7 +450,7 @@
     <string name="no_folders_to_cleanup">Keine Ordner zum Aufräumen</string>
     <string name="disable_battery_optimization">Optimierung des Akkuverbrauchs beenden</string>
     <string name="disable_if_issues_with_updating">Deaktivieren wenn Sie Probleme mit der Aktualisierung oder dem Wiederherstellen der Bibliothek haben</string>
-    <string name="battery_optimization_disabled">Optimierung des Akkuverbrauchs ist schon deaktiviert</string>
+    <string name="battery_optimization_disabled">Akkuverbrauch-Optimierung ist bereits deaktiviert</string>
     <plurals name="cleanup_done">
         <item quantity="one">Aufräumen abgeschlossen. %d Ordner entfernt</item>
         <item quantity="other">Aufräumen abgeschlossen. %d Ordner entfernt</item>
@@ -807,8 +806,6 @@
     <string name="remove_all_downloads">Alle heruntergeladene Dateien entfernen\?</string>
     <string name="actions">Aktionen</string>
     <string name="automatic_removal">Automatisches Löschen</string>
-    <string name="create_folders_by_manga_title">Erstellt Ordner nach Manga-Titel</string>
-    <string name="save_pages_separately">Seiten in separaten Ordnern speichern</string>
     <string name="show_on_long_press">Bei langem Tippen anzeigen</string>
     <string name="locked_landscape">Querformat erzwingen</string>
     <string name="locked_portrait">Hochformat erzwingen</string>
@@ -879,7 +876,7 @@
     <string name="update_all">Alle aktualisieren</string>
     <string name="could_not_install_update">Aktualisierung konnte nicht installiert werden</string>
     <string name="update_completed">Aktualisierung abgeschlossen</string>
-    <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche Anwendungsbeschränkungen, die Hintergrunddienste stoppen. Diese Webseite hat mehr Informationen darüber, wie man dies beheben kann.</string>
+    <string name="about_dont_kill_my_app">Einige Hersteller haben zusätzliche App-Beschränkungen, die Hintergrunddienste stoppen. Diese Webseite hat mehr Informationen darüber, wie man dies beheben kann.</string>
     <string name="tako">Tako</string>
     <string name="recently_installed">Kürzlich installiert</string>
     <string name="recently_updated">Kürzlich aktualisiert</string>
@@ -934,8 +931,6 @@
     <string name="show_outline_around_covers">Rahmen um Cover anzeigen</string>
     <string name="ext_installer_shizuku_stopped">Shizuku läuft nicht</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installiere und starte Shizuku, um Shizuku als Installationsprogramm für Erweiterungen zu verwenden.</string>
-    <string name="use_shizuku_to_install">Installiere Erweiterungen mit Shizuku</string>
-    <string name="use_shizuku_summary">Erlaube Erweiterungen, ohne Eingabeaufforderungen installiert zu werden und aktiviere automatische Aktualisierungen für Geräte unter Android 12</string>
     <string name="classic_blue">Klassisches Blau</string>
     <string name="lime_time">Limettenzeit</string>
     <string name="download_queue_size_warning">Achtung: Große Downloads könnten dazu führen, dass Quellen langsamer werden und/oder Tachiyomi blockieren. Tippe, um mehr zu erfahren.</string>
@@ -961,7 +956,7 @@
     <string name="move_series_to_top">Serie nach oben verschieben</string>
     <string name="ascending">Aufsteigend</string>
     <string name="descending">Absteigend</string>
-    <string name="clear_database_source_item_count">%1$d Nicht-Bibliotheksmanga in der Datenbank</string>
+    <string name="clear_database_source_item_count">%1$d Nicht-Bibliothekseinträge in der Datenbank</string>
     <string name="database_clean">Datenbank bereinigt</string>
     <string name="confirm_manga_add_duplicate">In deiner Bibliothek existiert ein Eintrag mit dem gleichen Namen, aber aus einer anderen Quelle (%1$s).
 \n
@@ -1090,7 +1085,7 @@
     <string name="hide_in_library_items">Einträge verbergen, die bereits in der Bibliothek sind</string>
     <string name="allow_deleting_bookmarked_chapters">Erlauben, mit Lesezeichen versehene Kapitel zu löschen</string>
     <string name="appwidget_updates_description">Deine kürzlich aktualisierten Bibliothekseinträge ansehen</string>
-    <string name="appwidget_unavailable_locked">Widget nicht verfügbar, wenn die App-Sperre aktiviert ist</string>
+    <string name="appwidget_unavailable_locked">Widget ist nicht verfügbar, wenn die App-Sperre aktiviert ist</string>
     <string name="mean_tracking_score">Mittlerer Tracking-Score</string>
     <string name="failed_to_update_">Fehler beim Aktualisieren von %1$s</string>
     <string name="by_series">Nach Serie</string>
@@ -1105,4 +1100,9 @@
     <string name="allow_notifications_recommended">Es wird empfohlen, Benachrichtigungen zuzulassen, um deine Bibliothek und die App auf dem neuesten Stand zu halten.</string>
     <string name="apply">Anwenden</string>
     <string name="pref_remove_exclude_categories">Ausgeschlossene Kategorien</string>
+    <string name="ext_installer_pref">Installationsprogramm</string>
+    <string name="ext_installer_summary">Erlaubt es Erweiterungen, ohne Eingabeaufforderung installiert zu werden und aktiviert automatische Aktualisierungen für Geräte unter Android 12</string>
+    <string name="library_entries">Bibliothekseinträge</string>
+    <string name="source_settings">Quelleneinstellungen</string>
+    <string name="app_settings">App-Einstellungen</string>
 </resources>

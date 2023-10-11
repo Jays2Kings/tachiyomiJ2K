@@ -166,8 +166,8 @@
     <string name="clear_cookies">Iscantzella sos cookies</string>
     <string name="cookies_cleared">Cookies iscantzellados</string>
     <string name="clear_database">Isbòida sa base de datos</string>
-    <string name="clear_database_summary">Iscantzella sos manga e sos capìtulos chi non sunt in sa biblioteca tua</string>
-    <string name="clear_database_confirmation">Seguru ses\? Sos capìtulos lèghidos e su progressu de sos mangas chi non sunt in sa biblioteca s\'ant a pèrdere</string>
+    <string name="clear_database_summary">Iscantzella sa cronologia pro sos elementos chi non sunt sarvados in sa biblioteca tua</string>
+    <string name="clear_database_confirmation">Seguru ses\? Sos capìtulos lèghidos e su progressu de sos elementos chi non sunt in sa biblioteca s\'ant a pèrdere</string>
     <string name="clear_database_completed">Boghes iscantzelladas</string>
     <string name="refresh_library_metadata">Agiorna sos metadatos de sa biblioteca</string>
     <string name="updates_covers_genres_desc">Agiornat sas coberteddas, sos gèneres, sa descritzione e sas informatziones de istadu de sos manga</string>
@@ -219,7 +219,6 @@
     <string name="title">Tìtulu</string>
     <string name="started">Incumintzadu</string>
     <string name="type">Casta</string>
-    <string name="url_not_set_click_again">S\'url de su manga no est impostadu, pro praghere incarca in su tìtulu e ischerta torra su manga</string>
     <string name="category_with_name_exists">Esistit giai una categoria cun custu nùmene!</string>
     <string name="this_will_remove_the_read_date_question">Custu at a bogare sa data de leghidura de custu capìtulu. Seguru ses\?</string>
     <string name="picture_saved">Immàgine sarvada</string>
@@ -776,9 +775,7 @@
     <string name="portrait">Verticale</string>
     <string name="date_fetched">Data recuperada</string>
     <string name="release_page">Pàgina de publicatzione</string>
-    <string name="save_pages_separately">Sarvat sas pàginas in cartellas separadas</string>
     <string name="show_on_long_press">Ammustra cun un\'incarcu longu</string>
-    <string name="create_folders_by_manga_title">Creat cartellas in base a su tìtulu de su manga</string>
     <string name="actions">Atziones</string>
     <string name="search_tips_show_periodically">Sos impòsitos de chirca s\'ant a ammustrare in manera periòdica. Incarca a longu in un\'impòsitu pro lu chircare.</string>
     <string name="search_suggestions">Impòsitos de chirca</string>
@@ -899,8 +896,6 @@
     <string name="show_outline_around_covers">Ammustra sos oros de sas coberteddas</string>
     <string name="ext_installer_shizuku_stopped">Shizuku no est in esecutzione</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installa e avia Shizuku pro l\'impreare comente installadore de estensiones.</string>
-    <string name="use_shizuku_to_install">Imprea Shizuku pro installare estensiones</string>
-    <string name="use_shizuku_summary">Permitit s\'installatzione de estensiones chene interventu de s\'utente e abilitat sos agiornamentos automàticos pro sos dispositivos in suta de Android 12</string>
     <string name="download_queue_size_warning">Dae cara: sos iscarrigamentos de massa mannos diant pòdere rallentare sas fontes e/o blocare Tachiyomi. Toca pro nde ischire de prus.</string>
     <string name="every_3_days">Cada 3 dies</string>
     <string name="classic_blue">Biaitu clàssicu</string>
@@ -926,7 +921,7 @@
     <string name="ascending">Creschente</string>
     <string name="date">Data</string>
     <string name="descending">In achirrada</string>
-    <string name="clear_database_source_item_count">%1$d manga chi non sunt in sa biblioteca in sa base de datos</string>
+    <string name="clear_database_source_item_count">%1$d elementos chi non sunt in sa biblioteca in sa base de datos</string>
     <string name="database_clean">Base de datos neta</string>
     <string name="warning_enroll_into_beta">Sas versiones beta diat pòdere no èssere istàbiles e diant pòdere bisongiare de un\'isboidadura de sa memòria temporànea de s\'aplicatzione.</string>
     <string name="new_beta_version_available">Versione beta noa a disponimentu!</string>
@@ -1070,4 +1065,6 @@
     <string name="pref_remove_exclude_categories">Categorias esclùdidas</string>
     <string name="apply">Àplica</string>
     <string name="allow_notifications_recommended">Est racumandadu a permìtere sas notìficas pro mantènnere sa biblioteca e s\'aplicatzione tua atualizadas.</string>
+    <string name="ext_installer_pref">Installadore</string>
+    <string name="library_entries">Elementos de sa biblioteca</string>
 </resources>

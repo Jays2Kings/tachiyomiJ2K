@@ -166,8 +166,8 @@
     <string name="clear_cookies">Çerezleri temizle</string>
     <string name="cookies_cleared">Çerezler temizlendi</string>
     <string name="clear_database">Veritabanını temizle</string>
-    <string name="clear_database_summary">Kitaplığınızda olmayan manga ve bölümleri silin</string>
-    <string name="clear_database_confirmation">Emin misiniz\? Kitaplıkta olmayan mangaların okunan bölümleri ve ilerlemesi kaybolacak</string>
+    <string name="clear_database_summary">Kitaplığına kaydedilmeyen girdilerin geçmiş bilgisini sil</string>
+    <string name="clear_database_confirmation">Emin misin\? Kitaplıkta olmayan girdilerin okunan bölümleri ve ilerlemesi kaybolacak</string>
     <string name="clear_database_completed">Girdiler silindi</string>
     <string name="refresh_library_metadata">Kitaplık üst verilerini yenile</string>
     <string name="updates_covers_genres_desc">Kapakları, türleri, açıklamayı ve manga durum bilgisini günceller</string>
@@ -219,7 +219,6 @@
     <string name="title">Başlık</string>
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
-    <string name="url_not_set_click_again">Manga URL\'si ayarlı değil, lütfen başlığa dokunun ve mangayı yeniden seçin</string>
     <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
     <string name="this_will_remove_the_read_date_question">Bu, bu bölümün okunma tarihini kaldıracak. Emin misiniz?</string>
     <string name="picture_saved">Resim kaydedildi</string>
@@ -776,8 +775,6 @@
     <string name="portrait">Dikey</string>
     <string name="date_fetched">Alındığı tarih</string>
     <string name="automatic_removal">Otomatik kaldırma</string>
-    <string name="create_folders_by_manga_title">Klasörleri manga başlığına göre oluşturur</string>
-    <string name="save_pages_separately">Sayfaları ayrı klasörlere kaydet</string>
     <string name="show_on_long_press">Uzun basınca göster</string>
     <string name="actions">Eylemler</string>
     <string name="search_tips_show_periodically">Arama ipuçları düzenli olarak görünecek. Aramak için öneriye uzun basın.</string>
@@ -899,8 +896,6 @@
     <string name="show_outline_around_covers">Kapakların etrafında anahattı göster</string>
     <string name="ext_installer_shizuku_stopped">Shizuku çalışmıyor</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Uzantı kurucusu olarak kullanmak için Shizuku\'yu kurun ve başlatın.</string>
-    <string name="use_shizuku_to_install">Uzantıları kurmak için Shizuku\'yu kullan</string>
-    <string name="use_shizuku_summary">Uzantıların kullanıcı istemleri olmadan kurulmasına izin verir ve Android 12\'nin altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="every_3_days">Her 3 günde</string>
     <string name="download_queue_size_warning">Uyarı: Büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir. Daha çok öğrenmek için dokunun.</string>
     <string name="lime_time">Limon Zamanı</string>
@@ -934,7 +929,7 @@
     <string name="date">Tarih</string>
     <string name="descending">Azalan</string>
     <string name="zoom_double_page_spreads">İki sayfaya yayılanları yakınlaştır</string>
-    <string name="clear_database_source_item_count">Veri tabanında %1$d kitaplık dışı manga</string>
+    <string name="clear_database_source_item_count">Veri tabanında %1$d kitaplık dışı girdi</string>
     <string name="database_clean">Veri tabanı temiz</string>
     <string name="confirm_manga_add_duplicate">Kitaplığınızda aynı ada sahip ama farklı bir kaynaktan olan bir öge var (%1$s).
 \n
@@ -1070,4 +1065,7 @@
     <string name="allow_notifications_recommended">Kitaplığınızı ve uygulamanızı güncel tutmak için bildirimlere izin vermeniz tavsiye edilir.</string>
     <string name="apply">Uygula</string>
     <string name="pref_remove_exclude_categories">Hariç tutulan kategoriler</string>
+    <string name="ext_installer_pref">Kurucu</string>
+    <string name="ext_installer_summary">Uzantıların kullanıcı etkileşimi olmadan kurulmasına izin verir ve Android 12 altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
+    <string name="library_entries">Kitaplık girdileri</string>
 </resources>

@@ -184,7 +184,7 @@
     <string name="clear_chapter_cache">Leeg hoofdstuk cache</string>
     <string name="cache_delete_error">Fout opgetreden tijdens het wissen</string>
     <string name="clear_database">Database legen</string>
-    <string name="clear_database_summary">Verwijder manga en hoofdstukken die niet in je bibliotheek staan</string>
+    <string name="clear_database_summary">Verwijder geschiedenis voor items die niet in je bibliotheek zijn opgeslagen</string>
     <string name="refresh_library_metadata">Bijwerken van bibliotheek metadata</string>
     <string name="updates_covers_genres_desc">Update omslagen, genres, beschrijvingen en status van manga</string>
     <string name="refresh_tracking_metadata">Bijwerken van tracking metadata</string>
@@ -198,7 +198,7 @@
     <string name="categories_to_include_in_global_update">Categorieën om op te nemen in globale update</string>
     <string name="keep_screen_on">Automatisch dimmen uitschakelen</string>
     <string name="categories_to_include_in_download">Categorieën om op te nemen in de download</string>
-    <string name="clear_database_confirmation">Weet je het zeker\? Gelezen hoofdstukken en voortgang voor manga die niet in de bibliotheek zitten zullen verloren gaan</string>
+    <string name="clear_database_confirmation">Weet je het zeker\? Gelezen hoofdstukken en voortgang voor items die niet in de bibliotheek zitten zullen verloren gaan</string>
     <string name="clear_database_completed">Database geleegd</string>
     <string name="ongoing">Lopend</string>
     <string name="reading">Aan het lezen</string>
@@ -250,7 +250,6 @@
     <string name="rereading">Herlezen</string>
     <string name="started">Gestart</string>
     <string name="type">Soort</string>
-    <string name="url_not_set_click_again">Manga url is niet ingesteld, klik alsjeblieft op de titel en selecteer de manga opnieuw</string>
     <string name="finished_chapter">Afgerond:</string>
     <string name="current_chapter">Huidige:</string>
     <string name="next_title">Volgende:</string>
@@ -740,8 +739,6 @@
     <string name="incognito_mode">Incognitomodus</string>
     <string name="turn_off_">Schakel %s uit</string>
     <string name="turn_on_">Schakel %s in</string>
-    <string name="create_folders_by_manga_title">Mappen aanmaken op basis van mangatitel</string>
-    <string name="save_pages_separately">Pagina\'s opslaan in aparte mappen</string>
     <string name="show_on_long_press">Weergeven bij lang indrukken</string>
     <string name="actions">Acties</string>
     <string name="locked_landscape">Vergrendeld liggend</string>
@@ -899,8 +896,6 @@
     <string name="theme_buttons_based_on_cover">Themaknoppen gebaseerd op de omslag</string>
     <string name="ext_installer_shizuku_stopped">Shizuku wordt niet uitgevoerd</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installeer en start Shizuku om deze als extensie-installatieprogramma te gebruiken.</string>
-    <string name="use_shizuku_summary">Staat extensies toe om geïnstalleerd te worden zonder bevestigingsvenster en schakelt automatische updates voor apparaten onder Android 12 in</string>
-    <string name="use_shizuku_to_install">Gebruik Shizuku om extensies te installeren</string>
     <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
     <string name="every_3_days">Iedere 3 dagen</string>
     <string name="classic_blue">Klassiek Blauw</string>
@@ -924,7 +919,7 @@
     <string name="ascending">Oplopend</string>
     <string name="date">Datum</string>
     <string name="descending">Aflopend</string>
-    <string name="clear_database_source_item_count">%1$d niet-bibliotheek manga in database</string>
+    <string name="clear_database_source_item_count">%1$d items niet in de bibliotheek in database</string>
     <string name="database_clean">Database leeg</string>
     <string name="confirm_manga_add_duplicate">Je hebt een manga in je bibliotheek met dezelfde naam maar van een andere bron (%1$s).
 \n
@@ -1069,4 +1064,6 @@
         <item quantity="other">%d talen</item>
     </plurals>
     <string name="pref_remove_exclude_categories">Uitgesloten categoriën</string>
+    <string name="ext_installer_pref">Installatieprogramma</string>
+    <string name="library_entries">Bibliotheek</string>
 </resources>

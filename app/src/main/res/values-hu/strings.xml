@@ -346,7 +346,6 @@
     <string name="blue_initial">Kék</string>
     <string name="always_show_chapter_transition">Mindig mutasson fejezet áttűnést</string>
     <string name="invert_tapping">Érintési zónák fordítása</string>
-    <string name="create_folders_by_manga_title">Mappák létrehozása manga cím szerint</string>
     <string name="chapters_">%1$s. fejezetek</string>
     <string name="source_not_installed_">Forrás nincs telepítve: %1$s</string>
     <string name="tracked">Követve</string>
@@ -617,4 +616,6 @@
     <string name="gray_background">Szürke</string>
     <string name="skip_dupe_chapters">Duplikált fejezetek átugrása</string>
     <string name="pref_remove_exclude_categories">Tiltott kategóriák</string>
+    <string name="ext_installer_pref">Telepítő</string>
+    <string name="library_entries">Könyvtár bejegyzések</string>
 </resources>

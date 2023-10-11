@@ -282,7 +282,6 @@
     <string name="skip_filtered_chapters">Preterpasi filtritajn ĉapitroj</string>
     <string name="invert_volume_keys">Inversigi laŭtec-butonojn</string>
     <string name="actions">Agoj</string>
-    <string name="create_folders_by_manga_title">Kreas dosierujojn laŭ mangaaj titoloj</string>
     <string name="removed_from_library">Forigita de biblioteko</string>
     <string name="failed_to_update_cover">Aktualigo de kovrilo fiaskis</string>
     <string name="set_as_default">Agordi kiel defaŭlta</string>
@@ -395,4 +394,5 @@
     <string name="warning">Averto</string>
     <string name="lock_with_biometrics">Devigi malŝlosi</string>
     <string name="gray_background">Griza</string>
+    <string name="library_entries">Biblioteka kontribuoj</string>
 </resources>

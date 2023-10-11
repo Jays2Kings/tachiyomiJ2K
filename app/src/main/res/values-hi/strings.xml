@@ -145,8 +145,8 @@
     <string name="clear_cookies">कुकीज़ को साफ़ करें</string>
     <string name="cookies_cleared">कुकीज़ को साफ़ किया हुआ</string>
     <string name="clear_database">डेटाबेस साफ़ करें</string>
-    <string name="clear_database_summary">मैंगा और अध्याय जो आपकी लाइब्रेरी में नहीं हैं हटाएं</string>
-    <string name="clear_database_confirmation">क्या आपको यकीन है? अध्यायों और गैर-पुस्तकालय मंगा की प्रगति को खो दिया जाएगा</string>
+    <string name="clear_database_summary">उन आइटम का इतिहास हटाएं जो आपकी पुस्तकालय में सहेजी नहीं गई हैं</string>
+    <string name="clear_database_confirmation">क्या आपको यकीन है\? आपके द्वारा पढ़े गए अध्याय और गैर-पुस्तकालय आइटम की प्रगति खो जाएगी</string>
     <string name="clear_database_completed">प्रविष्टियां हटाई गईं</string>
     <string name="refresh_library_metadata">रीफ़्रेश लाइब्रेरी मेटाडेटा</string>
     <string name="updates_covers_genres_desc">अपडेट कवर, शैलियों, विवरण और मंगा स्थिति की जानकारी</string>
@@ -251,7 +251,6 @@
     <string name="rereading">फिर से पढाना</string>
     <string name="started">शुरू कर दिया है</string>
     <string name="type">प्रकार</string>
-    <string name="url_not_set_click_again">मंगा यूआरएल सेट नहीं है कृपया शीर्षक पर क्लिक करें और फिर मंगा का चयन करें</string>
     <string name="finished_chapter">समाप्त:</string>
     <string name="current_chapter">प्रचलित:</string>
     <string name="next_title">अगला:</string>
@@ -448,7 +447,6 @@
     <string name="landscape">लैंडस्केप</string>
     <string name="locked_portrait">सीधे बंद</string>
     <string name="locked_landscape">मजबूर लैंडस्केप</string>
-    <string name="create_folders_by_manga_title">पुस्तक के शीर्षक के अनुसार फोल्डर बनाता है</string>
     <string name="set_as_default">डिफ़ॉल्ट के रूप में सेट करें</string>
     <string name="strawberry_daiquiri">स्ट्रॉबेरी</string>
     <string name="side_nav_icon_alignment">साइड नेविगेशन आइकन अलाइनमेंट</string>
@@ -532,7 +530,7 @@
     <string name="date">दिनांक</string>
     <string name="descending">अवरोही</string>
     <string name="database_clean">डेटाबेस साफ़ करें</string>
-    <string name="clear_database_source_item_count">डेटाबेस में %1$d मंगा हैं जो पुस्तकालय में नहीं है</string>
+    <string name="clear_database_source_item_count">डेटाबेस में %1$d गैर-पुस्तकालय आइटम</string>
     <string name="confirm_manga_add_duplicate">आपकी लाइब्रेरी में एक ही नाम के साथ लेकिन एक अलग स्रोत (%1$s) से एक प्रविष्टि है।
 \n
 \nक्या आप अभी भी जारी रखना चाहते हैं\?</string>
@@ -632,4 +630,6 @@
     <string name="skip_dupe_chapters">डुप्लिकेट अध्याय छोड़ें</string>
     <string name="app_updates">ऐप अपडेट</string>
     <string name="pref_remove_exclude_categories">बहिष्कृत श्रेणियां</string>
+    <string name="ext_installer_pref">इंस्टालर</string>
+    <string name="library_entries">लाइब्रेरी के आइटम</string>
 </resources>

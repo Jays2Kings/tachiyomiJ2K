@@ -528,4 +528,9 @@
     <string name="app_updates">Actualizacións da aplicación</string>
     <string name="gray_background">Gris</string>
     <string name="pref_remove_exclude_categories">Categorías excluídas</string>
+    <string name="ext_installer_pref">Instalador</string>
+    <string name="library_entries">Elementos da biblioteca</string>
+    <string name="clear_database_confirmation">Estás seguro\? Perderanse os capítulos lidos e o progreso dos elementos que non estean na biblioteca</string>
+    <string name="clear_database_source_item_count">Hai %1$d elementos na base de datos que non están na biblioteca</string>
+    <string name="clear_database_summary">Borrar o historial dos elementos que non estean gardados na túa biblioteca</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="unpin">Copot pin</string>
     <string name="view_chapters">Ndeleng bab</string>
     <string name="warning">Awas</string>
+    <string name="ext_installer_pref">Pemasang</string>
+    <string name="library_entries">Entri perpustakaan</string>
 </resources>

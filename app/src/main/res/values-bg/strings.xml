@@ -285,7 +285,6 @@
     <string name="rereading">Препрочитане</string>
     <string name="started">Начало</string>
     <string name="type">Тип</string>
-    <string name="url_not_set_click_again">Мангата няма връзка с акаунта, молим отново да натиснете заглавието и да изберете мангата</string>
     <string name="finished_chapter">Завършени:</string>
     <string name="current_chapter">Текущи:</string>
     <string name="next_title">Следва:</string>
@@ -493,7 +492,6 @@
     <string name="locked_portrait">Заключено - портрет</string>
     <string name="locked_landscape">Заключено - пейзаж</string>
     <string name="actions">Действия</string>
-    <string name="create_folders_by_manga_title">Създава папки според заглавието на мангата</string>
     <string name="set_as_default">Направи по подразбиране</string>
     <string name="search_settings">Настройки за търсене</string>
     <string name="incognito_mode">Инкогнито режим</string>
@@ -658,7 +656,6 @@
     <string name="cutout_behavior_only_applies">Поведението на зоната на изрязване се прилага само в портретен режим с определени типове мащаби</string>
     <string name="page_layout">Оформление на страница</string>
     <string name="automatic_orientation">Автоматично (в зависимост от ориентацията)</string>
-    <string name="save_pages_separately">Запазвай страниците в отделни папки</string>
     <string name="show_on_long_press">Показване при продължително натискане</string>
     <string name="no_description">няма описание</string>
     <string name="mark_all_chapters_as_read">Маркирате всички глави като прочетени\?</string>
@@ -817,8 +814,6 @@
         <item quantity="one">и %1$d повече глава</item>
         <item quantity="other">и %1$d повече глави</item>
     </plurals>
-    <string name="use_shizuku_to_install">Използвайте Shizuku, за да инсталирате разширения</string>
-    <string name="use_shizuku_summary">Позволява да се инсталират разширения без потребителски подкани и дава възможност за автоматични актуализации за устройства под Android 12</string>
     <string name="update_all">Обновяване на всички</string>
     <string name="split_double_pages_portrait">Разделяне на двойни страници в портрет</string>
     <string name="crop_borders_paged">Изрязване на граници (страници)</string>
@@ -1018,4 +1013,5 @@
     <string name="app_updates">Актуализации на приложението</string>
     <string name="gray_background">Сиво</string>
     <string name="pref_remove_exclude_categories">Изключени категории</string>
+    <string name="ext_installer_pref">Инсталатор</string>
 </resources>

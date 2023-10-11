@@ -22,7 +22,7 @@
     <string name="categories">Kategorije</string>
     <string name="cookies_cleared">Kolačići su izbrisani</string>
     <string name="clear_database">Isprazni bazu podataka</string>
-    <string name="clear_database_confirmation">Sigurno\? Izgubit ćeš pročitana poglavlja i napredak manga koji nisu u biblioteci</string>
+    <string name="clear_database_confirmation">Jesi siguran\? Izgubit će se čitanje poglavlja i tijek unosa koji nisu u biblioteci</string>
     <string name="clear_database_completed">Unosi su izbrisani</string>
     <string name="updates_tracking_details">Aktualizira stanje, ocjenu i zadnje pročitano poglavlje iz usluga za praćenje</string>
     <string name="disable_battery_optimization">Deaktiviraj optimiranje baterije</string>
@@ -452,7 +452,7 @@
     <string name="clean_up_downloaded_chapters">Izbriši preuzeta poglavlja</string>
     <string name="refresh_tracking_metadata">Aktualiziraj metapodatke praćenja</string>
     <string name="refresh_library_metadata">Aktualiziraj metapodatke biblioteke</string>
-    <string name="clear_database_summary">Izbriši manga i poglavlja koja se ne nalaze u tvojoj biblioteci</string>
+    <string name="clear_database_summary">Brisanje povijesti za unose koji nisu spremljeni u biblioteci</string>
     <plurals name="cleanup_done">
         <item quantity="one">Brisanje je gotovo. Uklonjena je %d mapa</item>
         <item quantity="few">Brisanje je gotovo. Uklonjene su %d mape</item>
@@ -564,7 +564,6 @@
     <string name="system_default">Standard sustava</string>
     <string name="remove_tracking_from_">Također ukloni iz %1$s</string>
     <string name="remove_tracking">Ukloni praćenje iz programa</string>
-    <string name="url_not_set_click_again">URL mange nije postavljen, klikni naslov i ponovo odaberi mangu</string>
     <plurals name="deleted_chapters">
         <item quantity="one">Iz izvora je uklonjeno jedno poglavlje:
 \n%2$s
@@ -788,8 +787,6 @@
     <string name="remove_all_downloads">Ukloniti sva preuzimanja\?</string>
     <string name="search_">Traži %1$s</string>
     <string name="automatic_removal">Automatsko uklanjanje</string>
-    <string name="create_folders_by_manga_title">Stvara mape prema naslovu mange</string>
-    <string name="save_pages_separately">Spremi stranice u zasebne mape</string>
     <string name="show_on_long_press">Pokaži pri dugom dodiru</string>
     <string name="actions">Radnje</string>
     <string name="locked_landscape">Zaključan ležeći format</string>
@@ -912,8 +909,6 @@
     <string name="remove_from_">Ukloni iz %1$s</string>
     <string name="scanlators">Scanlatori</string>
     <string name="ext_installer_shizuku_stopped">Shizuku ne radi</string>
-    <string name="use_shizuku_to_install">Koristi Shizuku za instaliranje proširenja</string>
-    <string name="use_shizuku_summary">Omogućuje instalaciju proširenja bez korisničkih upita i omogućuje automatska aktualiziranja za uređaje pod Androidom 12</string>
     <string name="use_suggested_date">Koristi predloženi datum</string>
     <string name="details_page">Stranica s detaljima</string>
     <string name="notification_size_warning">Velika aktualiziranja mogu dovesti do povećane potrošnje baterije i usporavanja izvora. Za daljnje informacije dodirni.</string>
@@ -945,7 +940,7 @@
     <string name="date">Datum</string>
     <string name="descending">Silazno</string>
     <string name="database_clean">Čišćenje baze podataka</string>
-    <string name="clear_database_source_item_count">Broj manga u bazi odataka koje nisu u zbirci: %1$d</string>
+    <string name="clear_database_source_item_count">Broj unosa u bazi odataka koje nisu u zbirci: %1$d</string>
     <string name="confirm_manga_add_duplicate">U biblioteci imaš unos s istim imenom ali iz drugog izvora (%1$s).
 \n
 \nŽeliš li svejedno nastaviti\?</string>
@@ -1095,4 +1090,7 @@
     <string name="allow_notifications_recommended">Preporučuje se dopuštanje obavijesti kako bi tvoja biblioteka i aplikacija bile aktualne.</string>
     <string name="pref_remove_exclude_categories">Isključene kategorije</string>
     <string name="apply">Primijeni</string>
+    <string name="ext_installer_pref">Instalacijski program</string>
+    <string name="ext_installer_summary">Omogućuje automatsko instaliranje dodataka i aktualiziranja sustava Android 12 uređaja</string>
+    <string name="library_entries">Unosi u biblioteci</string>
 </resources>

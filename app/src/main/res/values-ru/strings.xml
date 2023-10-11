@@ -84,7 +84,7 @@
         <item quantity="other">Очистка завершена. %d папок удалено</item>
     </plurals>
     <string name="clear_database_completed">Серии удалены</string>
-    <string name="clear_database_confirmation">Вы уверены\? Прочитанные главы и прогресс не-библиотечных серий будет потерян</string>
+    <string name="clear_database_confirmation">Вы уверены\? Прочитанные главы и прогресс не библиотечных серий будет потерян</string>
     <string name="alpha_initial">А</string>
     <string name="blue_initial">С</string>
     <string name="green_initial">З</string>
@@ -239,7 +239,7 @@
     <string name="clear_chapter_cache">Очистить кэш глав</string>
     <string name="clear_cookies">Очистить cookies</string>
     <string name="clear_database">Очистить базу данных</string>
-    <string name="clear_database_summary">Удалять серии и главы, которых больше нет в библиотеке</string>
+    <string name="clear_database_summary">Удалить историю для серий, которые не находятся в библиотеке</string>
     <string name="color_filter_blend_mode">Режим наложения цветофильтра</string>
     <string name="create_backup">Создать резервную копию</string>
     <string name="can_be_used_to_restore">Может быть использовано для восстановления текущей библиотеки</string>
@@ -352,7 +352,6 @@
     <string name="manual">Ручное</string>
     <string name="weekly">Еженедельно</string>
     <string name="updating_library">Обновление библиотеки</string>
-    <string name="url_not_set_click_again">Нажмите на название серии ещё раз, чтобы получить ссылку</string>
     <string name="use_first_source">Использовать первый источник с альтернативой</string>
     <string name="use_most_chapters">Использовать источник с наибольшим количеством глав (медленнее)</string>
     <string name="used_">Использовано: %1$s</string>
@@ -841,8 +840,6 @@
     <string name="portrait">Портретная</string>
     <string name="date_fetched">Дата получения</string>
     <string name="release_page">Страница обновления</string>
-    <string name="create_folders_by_manga_title">Создавать папки в соответствии с названием серии</string>
-    <string name="save_pages_separately">Сохранять страницы в отдельные папки</string>
     <string name="show_on_long_press">Опции читалки при долгом нажатии</string>
     <string name="actions">Действия</string>
     <string name="automatic_removal">Автоматическое удаление</string>
@@ -970,8 +967,6 @@
     <string name="show_outline_around_covers">Показать контур вокруг обложек</string>
     <string name="ext_installer_shizuku_stopped">Shizuku не работает</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Установите и запустите Shizuku, чтобы использовать его как установщик расширений.</string>
-    <string name="use_shizuku_to_install">Использовать Shizuku для установки расширений</string>
-    <string name="use_shizuku_summary">Позволяет расширениям быть установленными без разрешений пользователя, а также включает автоматические обновления для устройств ниже Android 12</string>
     <string name="classic_blue">Классический Синий</string>
     <string name="lime_time">Время Лайма</string>
     <string name="save_chapters_as_cbz">Сохранить как архив CBZ</string>
@@ -993,7 +988,7 @@
     <string name="move_series_to_top">Переместить серию в начало</string>
     <string name="descending">По убыванию</string>
     <string name="ascending">По возрастанию</string>
-    <string name="clear_database_source_item_count">%1$d не-библиотечных серий в базе данных</string>
+    <string name="clear_database_source_item_count">%1$d не библиотечных серий в базе данных</string>
     <string name="database_clean">Очистка базы данных</string>
     <string name="confirm_manga_add_duplicate">В вашей библиотеке есть серия с таким же названием, но из другого источника (%1$s).
 \n
@@ -1150,4 +1145,9 @@
     <string name="open">Открыть</string>
     <string name="allow_notifications_recommended">Рекомендуется разрешить уведомления для автоматического обновления Вашей библиотеки и приложения.</string>
     <string name="pref_remove_exclude_categories">Исключённые категории</string>
+    <string name="apply">Применить</string>
+    <string name="ext_installer_pref">Установщик</string>
+    <string name="library_entries">Серии библиотеки</string>
+    <string name="source_settings">Настройки источников</string>
+    <string name="app_settings">Настройки приложения</string>
 </resources>

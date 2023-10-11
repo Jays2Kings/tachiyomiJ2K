@@ -125,8 +125,8 @@
     <string name="clear_cookies">Dọn dẹp thông tin lưu trữ</string>
     <string name="cookies_cleared">Thông tin lưu trữ đã được xóa</string>
     <string name="clear_database">Dọn dẹp cơ sở dữ liệu</string>
-    <string name="clear_database_summary">Xóa truyện và các chương không nằm trong thư viện</string>
-    <string name="clear_database_confirmation">Bạn có chắc không? Các chương đã đọc và tiến độ đọc các truyện không nằm trong thư viện sẽ bị mất</string>
+    <string name="clear_database_summary">Xóa lịch sử đọc truyện và các chương không nằm trong thư viện</string>
+    <string name="clear_database_confirmation">Bạn có chắc không\? Các chương đã đọc và tiến độ đọc các truyện không nằm trong thư viện sẽ bị mất</string>
     <string name="clear_database_completed">Các mục đã bị xóa</string>
     <string name="refresh_library_metadata">Làm mới siêu dữ liệu của thư viện</string>
     <string name="updates_covers_genres_desc">Cập nhật ảnh bìa, thể loại, thông tin trạng thái của các bộ truyện</string>
@@ -283,7 +283,6 @@
     <string name="rereading">Đọc lại</string>
     <string name="started">Đã bắt đầu</string>
     <string name="type">Loại</string>
-    <string name="url_not_set_click_again">Đường dẫn truyện chưa được đặt, vui lòng nhấn vào tiêu đề và chọn lại truyện một lần nữa</string>
     <string name="finished_chapter">Đã hoàn thành:</string>
     <string name="current_chapter">Chương hiện tại:</string>
     <string name="next_title">Chương kế:</string>
@@ -526,7 +525,7 @@
     <string name="restore_error">Khôi phục sao lưu thất bại</string>
     <string name="backup_failed">Sao lưu thất bại</string>
     <string name="restore_in_progress">Quá trình khôi phục đang diễn ra rồi</string>
-    <string name="backup_in_progress">Sao lưu thành công</string>
+    <string name="backup_in_progress">Quá trình sao lưu đang xảy ra</string>
     <string name="backup_and_restore">Sao lưu và khôi phục</string>
     <string name="pressing_back_to_start">Nhấn nút trở lại để quay về màn hình bắt đầu</string>
     <string name="back_to_start">Trở về mục bắt đầu</string>
@@ -547,7 +546,7 @@
     <string name="turn_off_">Tắt %s</string>
     <string name="turn_on_">Bật %s</string>
     <plurals name="manga_migrated">
-        <item quantity="other">Truyện %d đã được di chuyển</item>
+        <item quantity="other">Đã di chuyển %d truyện</item>
     </plurals>
     <string name="skipping_">(bỏ qua %1$d)</string>
     <plurals name="copy_manga">
@@ -628,8 +627,6 @@
     <plurals name="pages_plural">
         <item quantity="other">%1$d trang</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Tạo thư mục dựa trên tiêu đề của trang</string>
-    <string name="save_pages_separately">Lưu trang trong từng thư mục</string>
     <string name="show_on_long_press">Hiện khi nhấn giữ</string>
     <string name="actions">Hành động</string>
     <string name="automatic_orientation">Tự động (dựa trên hướng)</string>
@@ -814,7 +811,7 @@
     <string name="by_chapter_number">Theo số thứ tự chương</string>
     <string name="not_bookmarked">Chưa được đánh dấu</string>
     <string name="external_storage_download_notice">TachiyomiJ2K cần quyền truy cập tất cả các file để tải chương. Ấn vào đây, rồi xác nhận \"Cho phép quản lý tất cả các file.\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K cần quyền truy cập vào tất cả các tập tin trên Android 11 để tải xuống các chương, tạo bản sao lưu tự động và đọc truyện tranh cục bộ.
+    <string name="external_storage_permission_notice">TachiyomiJ2K cần quyền truy cập vào tất cả các tập tin trên Android 11 để tải xuống các chương, tạo bản sao lưu tự động và đọc truyện đã tải xuống.
 \n
 \nTrong màn hình tiếp theo, hãy cho phép \"Cho phép truy cập để quản lý tất cả tệp.\"</string>
     <string name="all_files_permission_required">Yêu cầu quyền truy cập tập tin</string>
@@ -911,8 +908,6 @@
     <string name="show_in_sources_and_extensions">Hiển thị trong các danh sách nguồn và tiện ích mở rộng</string>
     <string name="ext_installer_shizuku_stopped">Shizuku đang không chạy</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Cài và chạy Shizuku để sử dụng Shizuku như một trình cài đặt tiện ích mở rộng.</string>
-    <string name="use_shizuku_summary">Cho phép các tiện ích có thể được cài đặt mà không cần nhắc nhở người dùng và cho phép tự động cập nhật cho các thiết bị có phiên bản dưới Android 12</string>
-    <string name="use_shizuku_to_install">Sử dụng Shizuku để cài đặt các tiện ích</string>
     <string name="download_queue_size_warning">Cảnh báo: các tải xuống hàng loạt lớn có thể dẫn đến các nguồn trở nên chậm hơn và / hoặc chặn Tachiyomi. Nhấn vào để tìm hiểu thêm.</string>
     <string name="every_3_days">3 ngày một lần</string>
     <string name="save_chapters_as_cbz">Lưu dưới định dạng CBZ</string>
@@ -1076,4 +1071,10 @@
     <string name="hide_in_library_items">Giấu các mục đã có trong thư viện</string>
     <string name="allow_notifications_recommended">Bạn nên cho phép thông báo để luôn cập nhật ứng dụng và thư viện của mình.</string>
     <string name="pref_remove_exclude_categories">Các thể loại bị loại trừ</string>
+    <string name="ext_installer_pref">Trình cài đặt</string>
+    <string name="library_entries">Truyện trong thư viện</string>
+    <string name="ext_installer_summary">Cho phép tiện ích mở rộng cài đặt mà không cần phải hỏi người dùng và tự động cập nhật cho những thiết bị dưới Android 12</string>
+    <string name="apply">Áp dụng</string>
+    <string name="source_settings">Cài đặt nguồn</string>
+    <string name="app_settings">Cài đặt ứng dụng</string>
 </resources>

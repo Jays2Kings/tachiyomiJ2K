@@ -235,7 +235,6 @@
     <string name="status">Tila</string>
     <string name="started">Aloitettu</string>
     <string name="type">Tyyppi</string>
-    <string name="url_not_set_click_again">Sarjan URL-osoitetta ei ole asetettu, näpäytä nimikettä ja valitse sarja uudelleen</string>
     <string name="category_with_name_exists">Tämän niminen kategoria on jo olemassa!</string>
     <string name="backup">Varmuuskopiointi</string>
     <string name="create_backup">Luo varmuuskopio</string>
@@ -742,8 +741,6 @@
     <string name="incognito_mode">Incognito-tila</string>
     <string name="turn_off_">Poista käytöstä %s</string>
     <string name="turn_on_">Ota käyttöön %s</string>
-    <string name="create_folders_by_manga_title">Luo kansioita manga-otsikon mukaan</string>
-    <string name="save_pages_separately">Tallenna sivut erillisiin kansioihin</string>
     <string name="show_on_long_press">Näytä pitkällä painalluksella</string>
     <string name="actions">Toiminnot</string>
     <string name="locked_landscape">Lukittu vaakataso</string>
@@ -904,4 +901,5 @@
     <string name="app_updates">Sovelluspäivitykset</string>
     <string name="gray_background">Harmaa</string>
     <string name="pref_remove_exclude_categories">Poissuljetut kategoriat</string>
+    <string name="ext_installer_pref">Asentaja</string>
 </resources>

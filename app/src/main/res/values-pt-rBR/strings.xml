@@ -352,7 +352,6 @@
     <string name="status">Estado</string>
     <string name="started">Começado</string>
     <string name="type">Tipo</string>
-    <string name="url_not_set_click_again">URL do mangá não definida, por favor clique no título e selecione o mangá novamente</string>
     <string name="refresh_tracking">Atualizar monitoramento</string>
     <string name="add_tracking">Adicionar monitoramento</string>
     <!-- Migration -->
@@ -443,8 +442,8 @@
     <string name="clear_cookies">Excluir cookies</string>
     <string name="cookies_cleared">Cookies limpos</string>
     <string name="clear_database">Limpar banco de dados</string>
-    <string name="clear_database_summary">Exclua mangás e capítulos que não estão na sua biblioteca</string>
-    <string name="clear_database_confirmation">Tem certeza\? Os capítulos lidos e o progresso em mangás que não estão salvos na sua biblioteca serão perdidos</string>
+    <string name="clear_database_summary">Exclui o histórico de itens que não estão salvos em sua biblioteca</string>
+    <string name="clear_database_confirmation">Tem certeza\? Os capítulos lidos e o progresso em itens que não estão na sua biblioteca serão perdidos</string>
     <string name="clear_database_completed">Entradas excluídas</string>
     <string name="refresh_library_metadata">Atualizar metadados da biblioteca</string>
     <string name="updates_covers_genres_desc">Atualiza capas, gêneros, descrição e informação de estado dos mangás</string>
@@ -842,8 +841,6 @@
     <string name="landscape">Paisagem</string>
     <string name="portrait">Retrato</string>
     <string name="automatic_removal">Remoção automática</string>
-    <string name="create_folders_by_manga_title">Cria pastas de acordo com o título do mangá</string>
-    <string name="save_pages_separately">Salvar páginas em pastas separadas</string>
     <string name="show_on_long_press">Mostrar no toque longo</string>
     <string name="actions">Ações</string>
     <string name="search_tips_show_periodically">Dicas de pesquisa aparecerão periodicamente. Pressione-a e segure-a para pesquisá-la.</string>
@@ -969,11 +966,9 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
     <string name="every_3_days">A cada 3 dias</string>
-    <string name="use_shizuku_summary">Permite que extensões sejam instaladas ou atualizadas automaticamente sem a necessidade de confirmação do usuário em dispositivos anteriores ao Android 12</string>
     <string name="save_chapters_as_cbz">Salvar como arquivo CBZ</string>
     <string name="classic_blue">Azul Clássico</string>
     <string name="scanlators">Scanlators</string>
-    <string name="use_shizuku_to_install">Use Shizuku para instalar extensões</string>
     <string name="lime_time">Tempo de Limão</string>
     <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitoramento. Configure o monitoramento para entradas individuais dos mangás a partir de seus botões de monitoramento.</string>
     <string name="enhanced_services">Serviços aprimorados</string>
@@ -991,7 +986,7 @@
     <string name="ascending">Crescente</string>
     <string name="date">Data</string>
     <string name="descending">Decrescente</string>
-    <string name="clear_database_source_item_count">%1$d mangás que não estão na biblioteca no banco de dados</string>
+    <string name="clear_database_source_item_count">%1$d itens que não estão na biblioteca no banco de dados</string>
     <string name="database_clean">Banco de dados limpo</string>
     <string name="confirm_manga_add_duplicate">Você tem um item na sua biblioteca com o mesmo nome, mas de uma fonte diferente (%1$s).
 \n
@@ -1143,4 +1138,8 @@
     <string name="open">Abrir</string>
     <string name="allow_notifications_recommended">Ativando notificações é recomendado para guardar sua biblioteca e manter o aplicativo atualizado em dia.</string>
     <string name="pref_remove_exclude_categories">Categorias ignoradas</string>
+    <string name="ext_installer_pref">Instalador</string>
+    <string name="library_entries">Itens da biblioteca</string>
+    <string name="source_settings">Configurações das fontes</string>
+    <string name="app_settings">Configurações do aplicativo</string>
 </resources>

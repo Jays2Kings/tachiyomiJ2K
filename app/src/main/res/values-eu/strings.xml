@@ -514,8 +514,6 @@
     <string name="landscape">Horizontala</string>
     <string name="automatic_can_still_switch">Orrialdearen diseinu automatikoa erabiltzen duzun bitartean, diseinu batetik bestera alda dezakezu irakurtzen duzun bitartean ezarpen hau baliogabetu gabe</string>
     <string name="automatic_orientation">Automatikoa (orientazioan oinarrituta)</string>
-    <string name="save_pages_separately">Gorde orrialdeak karpeta ezberdinetan</string>
-    <string name="create_folders_by_manga_title">Sortu karpetak manga izenburuaren arabera</string>
     <string name="about_this_">Honi buruz %1$s</string>
     <string name="start_past_cutout">Hasi mozketaren ostean</string>
     <string name="ignore_cutout_areas">Ez egin kasurik mozturiko eremuei</string>
@@ -668,7 +666,6 @@
     <string name="error_saving_cover">Errorea azala gordetzean</string>
     <string name="error_sharing_cover">Errorea azala partekatzean</string>
     <string name="type">Mota</string>
-    <string name="url_not_set_click_again">Mangaren URLa ez da ezarri. Mesedez, egin klik izenburuan eta hautatu manga berriro</string>
     <string name="select_an_entry">Hautatu sarrera bat</string>
     <string name="source_unsupported">Iturria ez dago onartua</string>
     <string name="no_match_found">Ez da aurkitu</string>
@@ -690,8 +687,6 @@
         <item quantity="other">eta %1$d kapitulu gehiago</item>
     </plurals>
     <string name="ext_installer_shizuku_stopped">Shizuku ez dago martxan</string>
-    <string name="use_shizuku_to_install">Erabili Shizuku luzapenak instalatzeko</string>
-    <string name="use_shizuku_summary">Luzapenak erabiltzaileari eskatu gabe instalatzeko aukera ematen du eta eguneratze automatikoak gaitzen ditu Android 12 erabiltzen duten gailuetan</string>
     <string name="obsolete_extension_message">Luzapen hau jada ez dago eskuragarri.</string>
     <string name="unofficial_extension_message">Luzapen hau ez da Tachiyomi-ren luzapenen zerrenda ofizialekoa.</string>
     <string name="version_">Bertsioa: %1$s</string>
@@ -954,4 +949,5 @@
     <string name="app_updates">Aplikazioen eguneraketak</string>
     <string name="gray_background">Grisa</string>
     <string name="pref_remove_exclude_categories">Baztertutako kategoriak</string>
+    <string name="ext_installer_pref">Instalatzailea</string>
 </resources>

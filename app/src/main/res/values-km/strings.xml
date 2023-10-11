@@ -255,4 +255,7 @@
     </plurals>
     <string name="statistics">ស្ថិតិ</string>
     <string name="failed_to_bypass_cloudflare">បរាជ័យក្នុងការឆ្លងកាត់Cloudflare</string>
+    <string name="reorder_filters">តម្រៀបតម្រងឡើងវិញ</string>
+    <string name="_unread">មាន %d មិនទាន់អាន</string>
+    <string name="open_random_series">មើលរឿងណាមួយ</string>
 </resources>

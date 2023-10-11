@@ -453,7 +453,6 @@
     <string name="include_">Ҫут: %s</string>
     <string name="reading_mode">Вулав тытӑмӗ</string>
     <string name="actions">Тӑвӑмсем</string>
-    <string name="create_folders_by_manga_title">Папкӑсене манкӑ ячӗпе тумалла</string>
     <string name="name">Йат</string>
     <string name="disabled">Сӳнтернӗ</string>
     <string name="channel_errors">Йӑнӑшсем</string>
@@ -510,4 +509,6 @@
     <string name="statistics">Шутлавсем</string>
     <string name="grid_size">Сетке пысӑкӑшӗ</string>
     <string name="gray_background">Сӑрӑ</string>
+    <string name="ext_installer_pref">Ларткӑч</string>
+    <string name="library_entries">Вулавӑшри серилӗхсем</string>
 </resources>

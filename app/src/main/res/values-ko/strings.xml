@@ -143,8 +143,8 @@
     <string name="clear_cookies">쿠키 삭제</string>
     <string name="cookies_cleared">쿠키 삭제됨</string>
     <string name="clear_database">데이터베이스 삭제</string>
-    <string name="clear_database_summary">서재에 추가되지 않은 만화와 챕터들을 삭제합니다</string>
-    <string name="clear_database_confirmation">확실합니까\? 서재에 없는 만화의 읽은 기록이 삭제됩니다</string>
+    <string name="clear_database_summary">서재에 추가되지 않은 항목의 기록을 삭제합니다</string>
+    <string name="clear_database_confirmation">확실합니까\? 서재에 없는 항목의 읽은 기록이 삭제됩니다</string>
     <string name="refresh_library_metadata">서재 메타데이터 갱신</string>
     <string name="updates_covers_genres_desc">표지와 장르, 설명, 만화 상태 정보들을 업데이트합니다</string>
     <string name="refresh_tracking_metadata">동기화 메타데이터 새로 고침</string>
@@ -252,7 +252,6 @@
     <string name="rereading">다시 읽는 중</string>
     <string name="started">시작 일자</string>
     <string name="type">종류</string>
-    <string name="url_not_set_click_again">만화 URL이 설정 되지 않았습니다. 제목을 클릭하고 만화를 다시 선택해주세요</string>
     <string name="category_with_name_exists">같은 이름을 가진 카테고리가 이미 존재합니다!</string>
     <string name="migrate">데이터 이전</string>
     <string name="must_be_in_library_to_edit">이 행동을 하기 전 서재에 만화를 추가해주세요</string>
@@ -424,7 +423,6 @@
     <plurals name="for_n_titles">
         <item quantity="other">%d개의 제목</item>
     </plurals>
-    <string name="create_folders_by_manga_title">만화 제목에 따라 폴더 생성</string>
     <string name="chapters_">%1$s화</string>
     <string name="refresh_tracking">트래커 동기화 새로고침</string>
     <string name="restore_content_full">백업 파일에서 데이터가 복구됩니다.
@@ -468,7 +466,7 @@
     <string name="ascending">오름차순</string>
     <string name="date">날짜</string>
     <string name="descending">내림차순</string>
-    <string name="clear_database_source_item_count">데이터베이스에 없는 만화가 %1$d개 있습니다</string>
+    <string name="clear_database_source_item_count">데이터베이스에 없는 항목이 %1$d개 있습니다</string>
     <string name="database_clean">데이터베이스 정리</string>
     <string name="confirm_manga_add_duplicate">서재에 제목이 같지만 소스가 다른 항목이 있습니다 (%1$s).
 \n
@@ -669,7 +667,6 @@
     <string name="switch_to_double">이중 페이지로 전환</string>
     <string name="all_sources">모든 출처</string>
     <string name="filter_languages">언어 필터링</string>
-    <string name="use_shizuku_summary">사용자 요청없이 확장 앱을 설치할 수 있으며 안드로이드 12에서 장치에 대한 자동 업데이트를 활성화합니다</string>
     <string name="installed_">설치됨 %1$s</string>
     <string name="extensions_miui_warning">MIUI 최적화를 비활성화한 후 확장 기능을 설치하십시오.</string>
     <string name="_must_be_enabled_first">%1$s를 먼저 사용하도록 설정해야 합니다</string>
@@ -717,7 +714,6 @@
     <string name="only_downloaded">다운로드만</string>
     <string name="show_reset_history_button">재설정 기록 표시 단추</string>
     <string name="show_read_chapters_all">그룹화된 챕터와 모두 읽기 챕터 표시</string>
-    <string name="use_shizuku_to_install">Shizuku를 사용하여 확장 앱 설치</string>
     <string name="changing_will_reset_reading_mode">이를 변경하면 이 시리즈의 읽기 모드가 재설정됩니다</string>
     <string name="switch_to_single">단일 페이지로 전환</string>
     <string name="smart_based_on_page">스마트(페이지 기반)</string>
@@ -847,7 +843,6 @@
     <string name="automatic_can_still_switch">자동 페이지 레이아웃을 사용하는 동안에도 이 설정을 재정의하지 않고 읽는 동안 레이아웃 간에 전환할 수 있습니다</string>
     <string name="automatic_orientation">자동(방향 기준)</string>
     <string name="show_on_long_press">길게 누르기에 표시</string>
-    <string name="save_pages_separately">페이지를 별도의 폴더에 저장</string>
     <string name="show_">%1$s 표시</string>
     <string name="must_view_details_before_migration">마이그레이션하기 전에 이 항목의 세부 정보 페이지를 확인해야 합니다</string>
     <string name="search_chapters">챕터 검색</string>
@@ -1045,4 +1040,6 @@
     <string name="allow_notifications_recommended">서재와 앱을 최신 상태로 유지하려면 알림을 허용하는 것이 좋습니다.</string>
     <string name="apply">적용하기</string>
     <string name="pref_remove_exclude_categories">제외된 카테고리</string>
+    <string name="ext_installer_pref">인스톨러</string>
+    <string name="library_entries">서재 항목</string>
 </resources>

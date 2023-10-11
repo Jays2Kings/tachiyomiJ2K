@@ -50,7 +50,6 @@
     <string name="kindlish_nav">Taip pat kaip Kindle</string>
     <string name="edge_nav">Kraštas</string>
     <string name="none">Nėra</string>
-    <string name="create_folders_by_manga_title">Kurti aplankus pagal manga pavadinimus</string>
     <string name="pref_hide_threshold">Jautrumas, skirtas paslėpti meniu slinkant</string>
     <string name="remove_from_library">Pašalinti iš bibliotekos</string>
     <string name="failed_to_update_cover">Nepavyko atnaujinti viršelio</string>
@@ -172,8 +171,8 @@
     <string name="cookies_cleared">Slapukai išvalyti</string>
     <string name="pref_clear_webview_data">Išvalyti \"WebView\" duomenis</string>
     <string name="webview_data_deleted">„WebView“ duomenys išvalyti</string>
-    <string name="clear_database_source_item_count">%1$d nebibliotekinė manga duomenų bazėje</string>
-    <string name="clear_database_confirmation">Ar tikrai\? Perskaityti skyriai ir nebibliotekinė mangos progresas bus prarastas</string>
+    <string name="clear_database_source_item_count">%1$d nebibliotekiniai įrašai duomenų bazėje</string>
+    <string name="clear_database_confirmation">Ar tikrai\? Perskaityti skyriai ir nebibliotekinių įrašų progresas bus prarastas</string>
     <string name="clear_database_completed">Ištrinti įrašai</string>
     <string name="updates_tracking_details">Atnaujina būseną, įvertinimą ir paskutinį perskaitytą skyrių iš sekimo paslaugų</string>
     <string name="disable_battery_optimization">Išjungti akumuliatoriaus optimizavimą</string>
@@ -518,4 +517,7 @@
     <string name="app_updates">Programėlių atnaujinimai</string>
     <string name="gray_background">Pilka</string>
     <string name="pref_remove_exclude_categories">Neįtrauktos kategorijos</string>
+    <string name="ext_installer_pref">Diegimo programa</string>
+    <string name="library_entries">Bibliotekos įrašai</string>
+    <string name="clear_database_summary">Ištrinkite įrašų istoriją, kurie nėra išsaugoti jūsų bibliotekoje</string>
 </resources>

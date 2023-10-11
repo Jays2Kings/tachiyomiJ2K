@@ -237,7 +237,7 @@
     <string name="clear_chapter_cache">თავის ქეშის გასუფთავება</string>
     <string name="restore_duration">%02d წუთი, %02d წამი</string>
     <string name="clear_database">მონაცემთა ბაზის გასუფთავება</string>
-    <string name="clear_database_confirmation">დარწმუნებული ხარ\? წაკითხული თავები და ბიბლიოთეკაში არ არსებული მანგების პროგრესი დაიკარგება</string>
+    <string name="clear_database_confirmation">დარწმუნებული ბრძანდებით\? წაკითხული თავები და ბიბლიოთეკაში არ არსებული ჩანაწერების პროგრესი დაიკარგება</string>
     <string name="disable_battery_optimization">გამორთე ბატარეის ოპტიმიზაცია</string>
     <string name="log_out_from_">გამოვიდე %1$s-დან\?</string>
     <string name="downloaded">გადმოწერილი</string>
@@ -353,4 +353,6 @@
     <string name="learn_why">გაიგეთ, რატომ</string>
     <string name="all_files_permission_required">ფაილის აუცილებელი წვდომები</string>
     <string name="gray_background">ნაცრისფერი</string>
+    <string name="library_entries">ბიბლიოთეკის ჩანაწერები</string>
+    <string name="clear_database_summary">ისტორიიდან წაიშლება ჩანაწერები, რომლებიც თქვენს ბიბლიოთეკაში არაა შენახული</string>
 </resources>

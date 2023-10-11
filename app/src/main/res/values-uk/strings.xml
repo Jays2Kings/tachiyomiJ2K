@@ -166,8 +166,8 @@
     <string name="clear_cookies">Очистити реп`яшки</string>
     <string name="cookies_cleared">Куки очищено</string>
     <string name="clear_database">Очистити базу даних</string>
-    <string name="clear_database_summary">Видаляти манґу і розділи котрі не знаходяться у бібліотеці</string>
-    <string name="clear_database_confirmation">Ви впевнені\? Прочитані розділи і прогрес не бібліотечної манґи будуть втрачені</string>
+    <string name="clear_database_summary">Видалити історію для записів, котрі не знаходяться в вашій бібліотеці</string>
+    <string name="clear_database_confirmation">Ви впевнені\? Прочитані розділи та прогрес не бібліотечних записів будуть втрачені</string>
     <string name="clear_database_completed">Дані видалено</string>
     <string name="refresh_library_metadata">Оновити метадані</string>
     <string name="updates_covers_genres_desc">Оновити обкладинки, жанри, описи та інформацію про манґу</string>
@@ -219,7 +219,6 @@
     <string name="title">Заголовок</string>
     <string name="started">Розпочато</string>
     <string name="type">Тип</string>
-    <string name="url_not_set_click_again">Посилання манґи не встановлено, будь ласка натисніть на заголовок та виберіть манґу знову</string>
     <string name="category_with_name_exists">Категорія з таким іменем вже існує!</string>
     <string name="this_will_remove_the_read_date_question">Ця дія видалить дату прочитання розділа. Ви впевнені\?</string>
     <string name="picture_saved">Картинку збережено</string>
@@ -705,7 +704,6 @@
     <string name="ext_installer_shizuku_stopped">Shizuku не запущений</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Встановіть і запустіть Shizuku, щоб використовувати Shizuku як інсталятор розширення.</string>
     <string name="app_info">Про застосунок</string>
-    <string name="create_folders_by_manga_title">Створювати теки в відповідності до назви манґи</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Пропускається %d розділ, тому що джерело не має його, або він був відфільтрований</item>
         <item quantity="few">Пропускаються %d розділи, тому що джерело не має їх, або вони були відфільтровані</item>
@@ -856,7 +854,6 @@
     <string name="ignore_cutout_areas">Ігнорувати виріз</string>
     <string name="cutout_behavior_only_applies">Поведінка вирізу вживається лише в портретному режимі з визначеними типами масштабів</string>
     <string name="automatic_orientation">Автоматичне (на основі орієнтації)</string>
-    <string name="save_pages_separately">Зберігати сторінки в окремих теках</string>
     <string name="custom_manga_info">Користувальницька інформація про манґу</string>
     <string name="spring_blossom">Квітуча весна</string>
     <string name="follow_system_theme">Дотримуватися системного тла</string>
@@ -910,8 +907,6 @@
     <string name="series">Серія</string>
     <string name="uniform_grid_covers">Уніфікований розмір обкладинок</string>
     <string name="grid_size">Розмір сітки</string>
-    <string name="use_shizuku_to_install">Використовувати Shizuku для встановлення розширень</string>
-    <string name="use_shizuku_summary">Дозволяти встановлювати розширення без перепитування користувача та ввімкнути автоматичне оновлення для пристроїв під керуванням Android 12</string>
     <string name="changing_will_reset_reading_mode">Зміна цього призведе до скиду режиму читання для цієї серії</string>
     <string name="horizontally">Горизонтально</string>
     <string name="both_axes">Обидві осі</string>
@@ -964,7 +959,7 @@
     <string name="ascending">За зростанням</string>
     <string name="date">Дата</string>
     <string name="descending">За спаданням</string>
-    <string name="clear_database_source_item_count">%1$d небібліотечний комікс у базі даних</string>
+    <string name="clear_database_source_item_count">%1$d небібліотечний записів у базі даних</string>
     <string name="database_clean">Очищення бази даних</string>
     <string name="select_inverse">Інвертувати вибір</string>
     <string name="cover_only_grid">Тільки обкладинки</string>
@@ -1123,4 +1118,7 @@
     <string name="open">Відкрито</string>
     <string name="allow_notifications_recommended">Рекомендується увімкнути сповіщення, щоб підтримувати вашу бібліотеку та додаток в актуальному стані.</string>
     <string name="pref_remove_exclude_categories">Виключені категорії</string>
+    <string name="apply">Застосувати</string>
+    <string name="ext_installer_pref">Встановлювач</string>
+    <string name="library_entries">Записи бібліотеки</string>
 </resources>

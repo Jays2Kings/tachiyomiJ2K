@@ -239,4 +239,5 @@
     <string name="disabled">అశక్తమైనది</string>
     <string name="daily">ప్రతిరోజు</string>
     <string name="lock_with_biometrics">తాళమును తెరుచుట ఆవశ్యకము</string>
+    <string name="library_entries">లైబ్రరీ ఎంట్రీలు</string>
 </resources>

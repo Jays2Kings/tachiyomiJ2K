@@ -370,7 +370,6 @@
     <string name="status">Status</string>
     <string name="started">Rozpoczęto</string>
     <string name="type">Typ</string>
-    <string name="url_not_set_click_again">URL mangi nie jest ustawiony, kliknij tytuł i wybierz mangę jeszcze raz</string>
     <string name="refresh_tracking">Odśwież śledzenie</string>
     <string name="add_tracking">Dodaj śledzenie</string>
     <string name="remove_tracking">Usuń śledzenie z aplikacji</string>
@@ -470,8 +469,8 @@
     <string name="clear_cookies">Usuń ciasteczka</string>
     <string name="cookies_cleared">Ciasteczka usunięte</string>
     <string name="clear_database">Wyczyść bazę danych</string>
-    <string name="clear_database_summary">Usuń mangi i rozdziały, których nie ma w twojej bibliotece</string>
-    <string name="clear_database_confirmation">Na pewno? Przeczytane rozdziały i postęp w mangach spoza biblioteki zostaną utracone</string>
+    <string name="clear_database_summary">Usuń historię wpisów, których nie ma w twojej bibliotece</string>
+    <string name="clear_database_confirmation">Na pewno\? Przeczytane rozdziały i postęp w wpisach spoza biblioteki zostaną utracone</string>
     <string name="clear_database_completed">Pozycje usunięte</string>
     <string name="refresh_library_metadata">Odśwież metadane biblioteki</string>
     <string name="updates_covers_genres_desc">Aktualizuje okładki, gatunki, opisy i informacje o statusie mang</string>
@@ -880,7 +879,6 @@
         <item quantity="many">%1$d stron</item>
         <item quantity="other">%1$d stron</item>
     </plurals>
-    <string name="save_pages_separately">Zapisuj strony w osobnych folderach</string>
     <string name="show_on_long_press">Pokaż po przytrzymaniu</string>
     <string name="actions">Akcje</string>
     <string name="automatic_orientation">Automatyczny (na podstawie orientacji)</string>
@@ -957,7 +955,6 @@
     <string name="remove_x_from_service_and_add_y">Usuń %1$s z %2$s i dodaj %3$s</string>
     <string name="remove_previous_tracker">Usunąć wcześniejsze śledzenie\?</string>
     <string name="no_match_found">Nie znaleziono pasującego wyniku</string>
-    <string name="create_folders_by_manga_title">Tworzy foldery zgodnie z tytułem mangi</string>
     <string name="crop_borders_paged">Przycinaj krawędzie (Strony)</string>
     <string name="some_extensions_may_prompt">Niektóre rozszerzenia mogą nadal prosić o zainstalowanie.</string>
     <string name="getting_started_guide">Wprowadzenie - poradnik</string>
@@ -984,8 +981,6 @@
     <string name="show_outline_around_covers">Pokaż obrys wokół okładek</string>
     <string name="ext_installer_shizuku_stopped">Shizuku nie jest aktywne</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Zainstaluj i uruchom Shizuku, aby używać go jako instalatora rozszerzeń.</string>
-    <string name="use_shizuku_to_install">Używaj Shizuku do instalowania rozszerzeń</string>
-    <string name="use_shizuku_summary">Umożliwia instalowanie rozszerzeń bez wyświetlania monitów oraz pozwala na automatyczne aktualizacje dla urządzeń pracujących na systemie starszym niż Android 12</string>
     <string name="classic_blue">Klasyczny Niebieski</string>
     <string name="lime_time">Pora na Limonkę</string>
     <string name="download_queue_size_warning">Ostrzeżenie: Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł.</string>
@@ -1005,7 +1000,7 @@
     <string name="ascending">Rosnąco</string>
     <string name="date">Data</string>
     <string name="descending">Malejąco</string>
-    <string name="clear_database_source_item_count">%1$d mang spoza biblioteki w bazie danych</string>
+    <string name="clear_database_source_item_count">%1$d wpisów spoza biblioteki w bazie danych</string>
     <string name="database_clean">Baza danych wyczyszczona</string>
     <string name="confirm_manga_add_duplicate">W swojej bibliotece posiadasz wpis o tej samej nazwie lecz z innego źródła(%1$s).
 \n
@@ -1164,4 +1159,6 @@
     </plurals>
     <string name="allow_notifications_recommended">Zezwalanie na powiadomienia jest zalecane, aby zapewnić aktualność twojej biblioteki.</string>
     <string name="pref_remove_exclude_categories">Wykluczone kategorie</string>
+    <string name="ext_installer_pref">Instalator</string>
+    <string name="library_entries">Biblioteka</string>
 </resources>

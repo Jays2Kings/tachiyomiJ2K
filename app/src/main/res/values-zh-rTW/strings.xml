@@ -187,10 +187,10 @@
     <string name="username">使用者名稱</string>
     <string name="global_search">全域搜尋…</string>
     <string name="select_cover_image">選擇書封圖片</string>
-    <string name="no_recently_read_manga">沒有近期閱讀</string>
+    <string name="no_recently_read_manga">無近期閱讀的漫畫系列</string>
     <string name="common">一般</string>
     <string name="can_be_used_to_restore">可用來保存目前書櫃內容</string>
-    <string name="clear_database_summary">將未收藏於書櫃中的漫畫的記錄刪除</string>
+    <string name="clear_database_summary">清除不在「我的收藏」內的漫畫閱讀紀錄</string>
     <string name="clear_database_completed">已刪除項目</string>
     <string name="unknown_error">不明的錯誤</string>
     <string name="local">本機</string>
@@ -213,7 +213,7 @@
     <string name="title">標題</string>
     <string name="options">選項</string>
     <string name="decode_image_error">圖片無法載入</string>
-    <string name="must_be_in_library_to_edit">請先將漫畫收藏至書櫃再進行更新</string>
+    <string name="must_be_in_library_to_edit">想要編輯的漫畫系列必須收藏在「我的收藏」中</string>
     <string name="select_backup_file">選擇備份檔案</string>
     <string name="cover_of_image">漫畫封面</string>
     <string name="search_filters">篩選器</string>
@@ -223,7 +223,7 @@
     <string name="use_image_as_cover">要將該圖片設為書封嗎？</string>
     <string name="loading_pages">正在載入頁面…</string>
     <string name="library_is_empty_add_from_browse">尚未收藏任何作品，探索來源以挖掘你的愛書。</string>
-    <string name="updates_covers_genres_desc">更新書封、類型、描述和連載狀態等漫畫簡介</string>
+    <string name="updates_covers_genres_desc">更新漫畫封面、類型、簡介及狀態</string>
     <string name="migrate">遷移</string>
     <string name="failed_to_update_cover">封面更新失敗</string>
     <string name="library_update_restriction_summary">僅在符合條件時更新</string>
@@ -250,7 +250,7 @@
 \n信任這個憑證，即表示你願意承擔上述風險。</string>
     <string name="last_read_chapter">最後閱畢的章節</string>
     <string name="max_auto_backups">最大備份保留數</string>
-    <string name="clear_database_confirmation">不在書櫃中的漫畫閱讀進度將被清除，你確定嗎？</string>
+    <string name="clear_database_confirmation">您確定要這樣做嗎？未收藏的漫畫的閱讀進度和章節會被刪除</string>
     <string name="refresh_tracking_metadata">更新閱讀歷程</string>
     <string name="updates_tracking_details">與歷程平台同步處理閱讀狀態、評分以及進度</string>
     <string name="latest">新上架</string>
@@ -259,7 +259,6 @@
     <string name="rereading">重溫中</string>
     <string name="started">創刊</string>
     <string name="type">類型</string>
-    <string name="url_not_set_click_again">漫畫網址未設置，請點擊標題再選擇一次漫畫</string>
     <string name="this_will_remove_the_read_date_question">這將會清除此章節的閱讀日期，確定嗎？</string>
     <string name="current_chapter">目前章節：</string>
     <string name="previous_title">上一章：</string>
@@ -359,7 +358,7 @@
     <string name="invalid_backup_file">無效的備份檔</string>
     <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
 \n副檔名應為 .proto.gz 或 .json。</string>
-    <string name="backup_has_no_manga">備份檔並未包含任何漫畫。</string>
+    <string name="backup_has_no_manga">此備份不含任何漫畫項目。</string>
     <string name="restore_missing_sources">遺失來源：</string>
     <string name="restore_missing_trackers">尚未登入至歷程平台：</string>
     <string name="restoring_backup_canceled">已取消還原</string>
@@ -470,9 +469,9 @@
     <string name="all_chapters_read">以下章節已讀</string>
     <string name="last_read_chapter_">最後閱讀的章節%1$s</string>
     <string name="new_chapters">新章節</string>
-    <string name="external_storage_permission_notice">Tachiyomi 需要有在Android 11上的儲存空間存取權限才能下載漫畫、備份設定、開啟本機漫畫。
+    <string name="external_storage_permission_notice">為了讓您順利下載漫畫章節、自動進行資料備份，以及閱讀儲存在本機的漫畫，TachiyomiJ2K 需要您授予其在 Android 11 環境下的「全檔案存取」權限。
 \n
-\n請在下一個畫面開啟\"允許存取儲存空間\"</string>
+\n接下來，在出現的畫面中，請啟動「允許存取並管理所有檔案」選項。</string>
     <string name="external_storage_download_notice">Tachiyomi 需要有儲存空間存取權限才能下載漫畫。請允許\"管理儲存空間\"</string>
     <string name="getting_started_guide">入門指南</string>
     <string name="help_translate">協助翻譯</string>
@@ -513,7 +512,6 @@
     <string name="no_match_found">未找到匹配項</string>
     <string name="name">名稱</string>
     <string name="top">頂端</string>
-    <string name="create_folders_by_manga_title">根據漫畫名稱建立資料夾</string>
     <string name="yotsuba">四葉</string>
     <string name="tako">章魚</string>
     <string name="locked_portrait">鎖定直向</string>
@@ -540,12 +538,12 @@
     <string name="next">下一頁</string>
     <string name="every_3_days">每 3 日</string>
     <string name="download_queue_size_warning">警告：大量批次下載可能壅塞來源並 (或) 使其封鎖 Tachiyomi。輕觸以瞭解詳情。</string>
-    <string name="confirm_category_deletion_message">在這個分類中的漫畫會被移動至默認分類。</string>
+    <string name="confirm_category_deletion_message">這些項目將會被自動移到「預設分類」。</string>
     <string name="manage_category">管理分類</string>
     <plurals name="remove_n_chapters">
         <item quantity="other">移除 %1$d 個已下載的章節？</item>
     </plurals>
-    <string name="already_in_category">漫畫原本已在該分類中</string>
+    <string name="already_in_category">已存在於分類中的項目</string>
     <string name="recents">最新</string>
     <string name="updates_and_history">更新與閱讀記錄</string>
     <string name="newly_added">最新入櫃</string>
@@ -566,9 +564,9 @@
     <string name="publishing_finished">出版完畢</string>
     <string name="cancelled">已取消</string>
     <string name="on_hiatus">休刊中</string>
-    <string name="tracking_info">將章節進度單向同步至閱讀歷程平台，請逕行前往個別作品的「歷程」專區以設置。</string>
+    <string name="tracking_info">透過「追蹤按鈕」設定，個別漫畫的閱讀進度可以單向同步到追蹤服務。</string>
     <string name="enhanced_services">增強服務</string>
-    <string name="enhanced_tracking_info">為特定來源提供增強功能的服務。當漫畫被加入書櫃時，將自動登錄閱讀歷程。</string>
+    <string name="enhanced_tracking_info">為特定來源提供附加功能的服務。收藏到「我的收藏」的項目會自動追蹤。</string>
     <plurals name="after_minutes">
         <item quantity="other">%1$s 分鐘後</item>
     </plurals>
@@ -585,7 +583,7 @@
     <string name="pref_inverted_colors">反轉</string>
     <string name="move_series_to_top">置頂此叢書</string>
     <string name="empty_backup_error">書櫃中尚無項目可供備份</string>
-    <string name="clear_database_source_item_count">資料庫中有 %1$d 本漫畫不屬於藏書</string>
+    <string name="clear_database_source_item_count">資料庫中有 %1$d 個非收藏項目</string>
     <string name="database_clean">清理資料庫</string>
     <string name="select_inverse">反向選擇</string>
     <string name="confirm_manga_add_duplicate">書櫃中已有一個來自不同來源 (%1$s) 的同名項目。
@@ -640,7 +638,7 @@
     <string name="uniform_grid_covers">統一格狀封面</string>
     <string name="can_be_found_in_library_filters">也可以在展開書櫃篩選器找到</string>
     <string name="use_staggered_grid">使用交錯格狀</string>
-    <string name="pref_update_only_completely_read_summary">只在沒有未讀章節（全讀完）時才更新漫画</string>
+    <string name="pref_update_only_completely_read_summary">只在所有章節都已讀完後，才進行系列更新</string>
     <string name="chapter_x_of_y">%1$d/%2$d</string>
     <string name="release_page">發佈頁面</string>
     <string name="your_library">你的書櫃</string>
@@ -696,7 +694,7 @@
     <string name="reorder_filters">重排篩選</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">預設使用者代理字串</string>
-    <string name="no_recent_read_updated_manga">沒有近期閱讀或更新的漫畫</string>
+    <string name="no_recent_read_updated_manga">無近期閱讀或更新的漫畫系列</string>
     <string name="show_read_chapters_all">在分組和全部中顯示閱讀章節</string>
     <string name="search_tips_show_periodically">搜尋提示會定期出現。長按建議進行搜尋。</string>
     <string name="unread_or_downloaded">未讀或已下載</string>
@@ -717,7 +715,7 @@
     <string name="show_download_button">顯示下載按鈕</string>
     <string name="this_will_remove_the_read_date_for_x_question">這將刪除 「%1$s」 的讀取日期。你確定嗎？</string>
     <string name="last_read_">最新閱讀 %1$s</string>
-    <string name="when_sorting_ignore_articles">當按字母排序時，排序忽略漫畫標題開頭的（a、an、the）</string>
+    <string name="when_sorting_ignore_articles">系列名稱首字母排序時，忽略開頭的冠詞（如「a」、「an」、和「the」）</string>
     <string name="include_in_global_update">包含在全域性更新中</string>
     <string name="global_updates">全域性更新</string>
     <string name="certain_buttons_can_be_found">如果在這裡禁用某些按鈕，可以在其他地方找到</string>
@@ -776,8 +774,6 @@
     <string name="share_combined_pages">分享合併頁面</string>
     <string name="enable_zoom_out">啟用縮放功能</string>
     <string name="set_first_page_as_cover">將第一頁設置為封面</string>
-    <string name="use_shizuku_to_install">使用Shizuku來安裝擴充套件</string>
-    <string name="use_shizuku_summary">允許在沒有用戶提示的情況下安裝擴充套件，並為安卓12以下的設備實現自動更新</string>
     <string name="_must_be_enabled_first">%1$s必須先啟用</string>
     <string name="could_not_install_extension">無法安裝擴充套件</string>
     <string name="switch_to_single">切換到單頁</string>
@@ -811,12 +807,12 @@
     <string name="keep_both_on_service">在 %1$s 上保留兩者，並僅在本地取代</string>
     <string name="select_a_source_then_item_to_migrate">選擇一個來源，然後選擇要遷移的項目</string>
     <string name="dont_migrate">不要遷移</string>
-    <string name="no_chapters_found_for_migration">沒有找到章節，此漫畫無法用於遷移</string>
+    <string name="no_chapters_found_for_migration">無可用章節，該漫畫系列無法進行資料遷移</string>
     <plurals name="migrate_manga">
-        <item quantity="other">遷移%1$d%2$s漫畫？</item>
+        <item quantity="other">確定要遷移 %1$d%2$s 個漫畫系列嗎？</item>
     </plurals>
     <plurals name="manga_migrated">
-        <item quantity="other">%d 漫畫已遷移</item>
+        <item quantity="other">已成功遷移 %d 個漫畫系列</item>
     </plurals>
     <string name="a_brighter_you">更明亮的你（動態）</string>
     <string name="classic_blue">經典藍</string>
@@ -830,7 +826,7 @@
     <string name="update_tracking_after_reading">在閱讀後更新追蹤</string>
     <string name="reset_tags">重置標籤</string>
     <string name="hide_bottom_nav">自動隱藏底部導覽列</string>
-    <string name="all_read_manga">所有閱讀過的漫畫</string>
+    <string name="all_read_manga">所有已完整閱讀的漫畫</string>
     <string name="use_suggested_date">使用建議的日期</string>
     <string name="include_extra_search_parameter">搜尋時額外的搜尋參數</string>
     <string name="use_most_chapters">使用最多章節的來源（較慢）</string>
@@ -848,7 +844,7 @@
     <string name="migrating_to">遷移到</string>
     <string name="migrate_now">立即遷移</string>
     <plurals name="copy_manga">
-        <item quantity="other">複製%1$d%2$s漫畫？</item>
+        <item quantity="other">確定要複製 %1$d%2$s 個漫畫系列嗎？</item>
     </plurals>
     <string name="yang">陽</string>
     <string name="lime_time">灰暗時光</string>
@@ -881,7 +877,7 @@
     <string name="starting_cleanup">開始清理</string>
     <string name="clear_cached_covers_non_library">清除未在圖書館內的漫畫快取封面</string>
     <string name="use_last_saved_migration_preferences">使用上次保存的遷移前偏好設定和來源進行大量遷移</string>
-    <string name="you_can_migrate_in_library">您還可以通過選擇書庫中的漫畫進行遷移</string>
+    <string name="you_can_migrate_in_library">你也可以透過選擇「我的收藏」中的漫畫來進行資料遷移</string>
     <string name="whats_new_this_release">本次版本更新內容</string>
     <string name="helpful_translation_links">有用的翻譯連結</string>
     <string name="username_must_not_be_blank">使用者名稱和密碼不能空白</string>
@@ -903,7 +899,7 @@
     <string name="starting_screen">起始頁面</string>
     <string name="series_opens_new_chapters">漫畫系列快捷方式會開啟新的章節</string>
     <string name="no_folders_to_cleanup">沒有需要清理的資料夾</string>
-    <string name="delete_old_covers_in_library_used_">刪除已更新且不再使用的圖書館漫畫的舊封面快取。
+    <string name="delete_old_covers_in_library_used_">刪除已更新漫畫的過期和未使用的緩存封面。
 \n目前使用：%1$s</string>
     <string name="remove_crop">移除裁剪</string>
     <string name="vertically">縱向</string>
@@ -940,7 +936,7 @@
     <string name="show_recent_series">顯示最近的漫畫系列</string>
     <string name="only_enable_pinned_for_migration">僅為遷移啟用您的固定來源</string>
     <string name="language_requires_app_restart">某些語言可能需要重新啟動應用程式以正確顯示</string>
-    <string name="clean_read_manga_not_in_library">清理不在資料庫的已讀漫畫</string>
+    <string name="clean_read_manga_not_in_library">清除未收藏漫畫項目</string>
     <string name="learn_why">瞭解原因</string>
     <string name="most_entries">最多條目</string>
     <string name="match_pinned_sources">匹配固定的來源</string>
@@ -958,7 +954,6 @@
     <string name="cutout_area_behavior">切割區域行為</string>
     <string name="pad_cutout_areas">填充切割區域</string>
     <string name="start_past_cutout">在切割區域之後開始</string>
-    <string name="save_pages_separately">將頁面分開保存到不同資料夾</string>
     <string name="show_">顯示%1$s</string>
     <string name="must_view_details_before_migration">必須查看此項目的詳細資訊頁面才能遷移</string>
     <string name="by_default_side_nav_info">預設情況下，在橫向模式下使用側邊導航欄，而在較大的平板電腦上則始終顯示</string>
@@ -969,7 +964,7 @@
     <string name="check_for_beta_releases">檢查 Beta 版本</string>
     <string name="try_new_features">嘗試尚未正式發布的新功能，Beta 版本可能不穩定，僅供使用者提供開發者回饋意見。</string>
     <string name="warning_unenroll_from_beta">回到之前的正式版本可能會造成問題，需要清除應用程式資料。</string>
-    <string name="clear_db_exclude_read">保留有已讀章節的漫畫</string>
+    <string name="clear_db_exclude_read">保留有已讀章節的漫畫項目</string>
     <string name="some_extensions_may_not_update">如果擴充套件是在此應用程式之外安裝的，則某些擴充套件可能不會自動更新</string>
     <string name="add_to_">新增至%1$s</string>
     <string name="open_in_app">在應用程式中打開</string>
@@ -1041,6 +1036,11 @@
     <string name="app_updates">應用程式更新</string>
     <string name="open">開啟</string>
     <string name="allow_notifications_recommended">推薦開啟通知功能，以便保持您的書庫和應用程式更新至最新狀態。</string>
-    <string name="pref_remove_exclude_categories">不包括的漫畫類別</string>
+    <string name="pref_remove_exclude_categories">排除的類別</string>
     <string name="apply">立即套用設定</string>
+    <string name="ext_installer_pref">套件安裝程式</string>
+    <string name="ext_installer_summary">這個功能可讓您無需進行手動確認即可安裝擴充功能，同時也支援 Android 12 以下裝置的自動更新</string>
+    <string name="library_entries">「我的收藏」項目</string>
+    <string name="source_settings">來源設定</string>
+    <string name="app_settings">應用程式設定</string>
 </resources>

@@ -162,8 +162,8 @@
     <string name="clear_cookies">Tøm kaker</string>
     <string name="cookies_cleared">Informasjonskapsler slettet</string>
     <string name="clear_database">Tøm database</string>
-    <string name="clear_database_summary">Slett manga og kapittel som ikke finnes i biblioteket ditt</string>
-    <string name="clear_database_confirmation">Er du sikker\? Leste kapitler og framdrift for manga som ikke er i biblioteket vil gå tapt</string>
+    <string name="clear_database_summary">Slett historikk for oppføringer som ikke er lagret i biblioteket ditt</string>
+    <string name="clear_database_confirmation">Er du sikker\? Leste kapitler og framdrift for oppføringer som ikke er i biblioteket vil gå tapt</string>
     <string name="clear_database_completed">Oppføringer slettet</string>
     <string name="refresh_library_metadata">Gjenoppfrisk biblioteksmetadata</string>
     <string name="updates_covers_genres_desc">Oppdater omslag, sjangere, beskrivelse og statusinfo for manga</string>
@@ -215,7 +215,6 @@
     <string name="title">Tittel</string>
     <string name="started">Startet</string>
     <string name="type">Type</string>
-    <string name="url_not_set_click_again">Manga-nettadresse ikke satt, klikk tittel og velg manga igjen</string>
     <string name="category_with_name_exists">En kategori ved dette navnet finnes allerede!</string>
     <string name="this_will_remove_the_read_date_question">Lesningsdato for dette kapittelet vil bli fjernet. Er du sikker\?</string>
     <string name="picture_saved">Bilde lagret</string>
@@ -761,8 +760,6 @@
         <item quantity="one">%1$d side</item>
         <item quantity="other">%1$d sider</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Opprett mapper i henhold til mangatittel</string>
-    <string name="save_pages_separately">Lagre sider i egne mapper</string>
     <string name="show_on_long_press">Vis ved langtrykk</string>
     <string name="automatic_orientation">Automatisk (basert på sideretning)</string>
     <string name="extension_updates_pending">Ventende utvidelsesoppdateringer</string>
@@ -910,8 +907,6 @@
     <string name="enhanced_services">Forbedrede tjenester</string>
     <string name="enhanced_tracking_info">Tjenester som gir forbedrede funksjoner for spesifikke ressurser. Det holdes automatisk øye med manga når den legges til i biblioteket ditt.</string>
     <string name="download_queue_size_warning">Advarsel: store bulknedlastinger kan føre til at kilder blir tregere og/eller blokkerer Tachiyomi. Trykk for å lære mer.</string>
-    <string name="use_shizuku_to_install">Bruk Shizuku for å installere utvidelser</string>
-    <string name="use_shizuku_summary">Lar utvidelser installeres uten manuell bekreftelse og aktiverer automatiske oppdateringer for Android 12 enheter</string>
     <string name="update_tracking_scoring_type">Oppdater %1$s sin poengtype</string>
     <string name="scoring_type_updated">Poengtype oppdatert</string>
     <string name="could_not_update_scoring_">Kunne ikke oppdatere poengtype: %1$s</string>
@@ -923,7 +918,7 @@
     <string name="order_by">Sorter etter</string>
     <string name="pref_inverted_colors">Invertert</string>
     <string name="grayscale">Gråskala</string>
-    <string name="clear_database_source_item_count">%1$d ikke-bibliotek manga i databasen</string>
+    <string name="clear_database_source_item_count">%1$d ikke-bibliotek oppføringer i databasen</string>
     <string name="database_clean">Rengjør databasen</string>
     <string name="confirm_manga_add_duplicate">Du har en oppføring i biblioteket ditt med samme navn, men fra en annen kilde (%1$s).
 \n
@@ -1071,4 +1066,6 @@
     <string name="open">Åpne</string>
     <string name="allow_notifications_recommended">Tillat varsler for å sørge for at appen og biblioteket ditt er oppdatert.</string>
     <string name="pref_remove_exclude_categories">Utelukkede kategorier</string>
+    <string name="ext_installer_pref">Installatør</string>
+    <string name="library_entries">Bibliotekoppføringer</string>
 </resources>

@@ -259,7 +259,6 @@
     <string name="theres_no_previous_chapter">কোন পূর্ববর্তী অধ্যায় আছে</string>
     <string name="loading_pages">পৃষ্ঠা লোড হচ্ছে …</string>
     <string name="failed_to_load_pages_">পৃষ্ঠা লোড করতে ব্যর্থ হয়েছে: %1$s</string>
-    <string name="url_not_set_click_again">মাংগা ইউআরএল সেট না শিরোনাম ক্লিক করুন এবং আবার মাংগা নির্বাচন করুন</string>
     <string name="open_in_webview">ওয়েব দর্শনে খুলুন</string>
     <string name="true_32bit_color">৩২-বিট রঙ</string>
     <string name="skip_read_chapters">পঠিত অধ্যায়গুলো এড়িয়ে যান</string>
@@ -580,7 +579,6 @@
 \nআপনাকে যে কোন অনুপস্থিত এক্সটেনশন ইনস্টল করতে হবে এবং সেগুলি ব্যবহার করার জন্য পরে ট্র্যাকিং পরিষেবাগুলিতে লগ ইন করতে হবে।</string>
     <string name="nsfw_sources">প্রাপ্তবয়স্কদের জন্য (18+) উৎস</string>
     <string name="date_fetched">প্রাপ্তির তারিখ</string>
-    <string name="create_folders_by_manga_title">মাঙ্গা শিরোনাম অনুযায়ী ফোল্ডার তৈরি করে</string>
     <string name="no_match_found">পাওয়া যায়নি</string>
     <string name="midnight_dusk">মধ্যরাতের সন্ধ্যা</string>
     <string name="strawberry_daiquiri">স্ট্রবেরি ডাইকুইরি</string>
@@ -644,7 +642,6 @@
     <string name="update_all">সব আপডেট কর</string>
     <string name="invert_double_pages">ডাবল পেজ উল্টাও</string>
     <string name="automatic_orientation">স্বয়ংক্রিয় (অভিযোজনের উপর ভিত্তি করে)</string>
-    <string name="save_pages_separately">পৃষ্ঠাগুলি আলাদা ফোল্ডারে সংরক্ষণ করুন</string>
     <string name="custom_manga_info">কাস্টম মাঙ্গা তথ্য</string>
     <string name="cannot_remove_tracking_while_offline">অফলাইনে থাকাকালীন %1$s থেকে ট্র্যাকার সরানো যাবে না</string>
     <string name="no_chapters_found_for_migration">কোন অধ্যায় পাওয়া যায়নি, এই মাঙ্গা মাইগ্রেশনের জন্য ব্যবহার করা যাবে না</string>
@@ -705,9 +702,7 @@
     <string name="show_read_chapters_all">পঠিত অধ্যায়গুলিকে গোষ্ঠীভুক্ত এবং সকলে দেখাও</string>
     <string name="affects_library_grid">লাইব্রেরি গ্রিড কভার প্রভাবিত করে</string>
     <string name="filter_languages">ভাষা ফিল্টার কর</string>
-    <string name="use_shizuku_to_install">এক্সটেনশন ইনস্টল করতে Shizuku ব্যবহার করুন</string>
     <string name="some_extensions_may_prompt">কিছু এক্সটেনশন এখনও প্রথমে ইনস্টল করার অনুরোধ জানাতে পারে।</string>
-    <string name="use_shizuku_summary">ব্যবহারকারীর প্রম্পট ছাড়াই এক্সটেনশনগুলি ইনস্টল করার অনুমতি দেয় এবং Android 12 এর অধীনে ডিভাইসগুলির জন্য স্বয়ংক্রিয় আপডেটগুলি সক্ষম করে</string>
     <string name="reader_settings">পাঠক সেটিংস</string>
     <string name="switch_to_single">একক পৃষ্ঠায় স্যুইচ কর</string>
     <string name="add_tag">ট্যাগ যোগ কর</string>
@@ -997,4 +992,6 @@
     <string name="app_updates">অ্যাপ আপডেট</string>
     <string name="gray_background">ধূসর</string>
     <string name="pref_remove_exclude_categories">বর্জিত বিভাগ গুলি</string>
+    <string name="ext_installer_pref">ইন্সটলআর</string>
+    <string name="library_entries">পুস্তক সংগ্রহ</string>
 </resources>

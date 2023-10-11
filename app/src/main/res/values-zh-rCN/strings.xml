@@ -166,8 +166,8 @@
     <string name="clear_cookies">清除 Cookies</string>
     <string name="cookies_cleared">Cookie 已清除</string>
     <string name="clear_database">清理数据库</string>
-    <string name="clear_database_summary">删除未在书架的漫画与章节</string>
-    <string name="clear_database_confirmation">你确定吗？不在书架中的漫画的已读章节和进度将会丢失</string>
+    <string name="clear_database_summary">删除未添加到书架的作品记录</string>
+    <string name="clear_database_confirmation">你确定吗？不在书架中的作品的已读章节和进度将会丢失</string>
     <string name="clear_database_completed">数据已删除</string>
     <string name="refresh_library_metadata">刷新书架数据</string>
     <string name="updates_covers_genres_desc">更新封面，类型，描述与漫画状态信息</string>
@@ -219,7 +219,6 @@
     <string name="title">标题</string>
     <string name="started">已开始</string>
     <string name="type">类型</string>
-    <string name="url_not_set_click_again">漫画链接未设置，请点击标题再选择一次漫画</string>
     <string name="category_with_name_exists">已存在名称相同的分类！</string>
     <string name="this_will_remove_the_read_date_question">将清除此章节的阅读日期，确定吗？</string>
     <string name="picture_saved">图片已保存</string>
@@ -755,8 +754,6 @@
     <string name="landscape">横屏</string>
     <string name="portrait">竖屏</string>
     <string name="date_fetched">取得日期</string>
-    <string name="create_folders_by_manga_title">根据漫画标题创建文件夹</string>
-    <string name="save_pages_separately">保存页面到单独文件夹</string>
     <string name="show_on_long_press">长按显示</string>
     <string name="actions">操作</string>
     <string name="release_page">发布页面</string>
@@ -875,8 +872,6 @@
     <string name="notification_size_warning">大型更新可能会导致电池使用量增加和图源变慢。轻按了解更多。</string>
     <string name="show_in_sources_and_extensions">显示在图源和扩展列表中</string>
     <string name="show_outline_around_covers">显示封面图轮廓</string>
-    <string name="use_shizuku_to_install">使用 Shizuku 安装扩展</string>
-    <string name="use_shizuku_summary">允许不提示用户安装扩展，并对运行 Android 12 以下系统的设备启用自动更新</string>
     <string name="ext_installer_shizuku_stopped">Shizuku 未在运行</string>
     <string name="ext_installer_shizuku_unavailable_dialog">安装并启动 Shizuku 以将 Shizuku 用作插件安装程序。</string>
     <string name="lime_time">石灰时代</string>
@@ -913,7 +908,7 @@
     <string name="descending">降序</string>
     <string name="zoom_double_page_spreads">缩放至中心跨页</string>
     <string name="database_clean">无需清理</string>
-    <string name="clear_database_source_item_count">数据库中有 %1$d 本漫画未添加到书架</string>
+    <string name="clear_database_source_item_count">数据库中有 %1$d 部作品未添加到书架</string>
     <string name="select_inverse">反选</string>
     <string name="confirm_manga_add_duplicate">库中有一个名称相同但图源不同（%1$s）的条目。
 \n
@@ -1042,4 +1037,6 @@
     <string name="app_updates">应用更新</string>
     <string name="allow_notifications_recommended">建议允许通知以保持你的应用和书架是最新的.</string>
     <string name="pref_remove_exclude_categories">排除的分类</string>
+    <string name="ext_installer_pref">安装程序</string>
+    <string name="library_entries">书架中的作品</string>
 </resources>

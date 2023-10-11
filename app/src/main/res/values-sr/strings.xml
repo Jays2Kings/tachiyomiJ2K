@@ -166,8 +166,8 @@
     <string name="clear_cookies">Izbriši kolačiće</string>
     <string name="cookies_cleared">Колачићи су избрисани</string>
     <string name="clear_database">Izbriši baze podataka</string>
-    <string name="clear_database_summary">Izbriši mange i poglavlja koji nisu u vašoj biblioteci</string>
-    <string name="clear_database_confirmation">Да ли сте сигурни\? Изгубићете прочитана поглавља и статус манги које нису у колекцији</string>
+    <string name="clear_database_summary">Обриши историју за наслове који нису сачувани у твојој колекцији</string>
+    <string name="clear_database_confirmation">Да ли сте сигурни\? Изгубићете прочитана поглавља и статус наслова који нису у колекцији</string>
     <string name="clear_database_completed">Уноси избрисани</string>
     <string name="refresh_library_metadata">Osvježi metada biblioteke</string>
     <string name="updates_covers_genres_desc">Ažuriraj naslovnice, žanrove, deskripcije i status informacije o mangama</string>
@@ -409,7 +409,6 @@
     <string name="burn_darken">Zapali / Potamni</string>
     <string name="invert_tapping">Обрни додире</string>
     <string name="actions">Akcije</string>
-    <string name="create_folders_by_manga_title">Pravi foldere po naslovu mange</string>
     <string name="set_as_default">Postavi kao podrazumevano</string>
     <string name="refresh_tracking">Osveži trekovanje</string>
     <string name="no_match_found">Ništa nije pronađeno</string>
@@ -494,7 +493,6 @@
     <string name="show_downloaded_chapters">Pokaži preuzeta poglavlja</string>
     <string name="show_unread_chapters">Pokaži nepročitana poglavlja</string>
     <string name="hide_chapter_titles">Sakriti naslove poglavlja</string>
-    <string name="url_not_set_click_again">URL mange nije podešen, kliknite na naslov i ponovo izaberite mangu</string>
     <string name="remove_tracking">Uklonite praćenja iz aplikacije</string>
     <string name="remove_tracking_from_">Ukluni i iz %1$s</string>
     <string name="remove_previous_tracker">Ukloni prethodni tragač\?</string>
@@ -595,7 +593,6 @@
     <string name="all_sources">Svi izvori</string>
     <string name="source_hidden">Sakriveni izvor</string>
     <string name="extension_updates_pending">Ažuriranje proširenja je na čekanju</string>
-    <string name="use_shizuku_summary">Omogućava instaliranje ekstenzija bez upita korisnika i omogućava automatska ažuriranja za uredjaje pod Android 12</string>
     <string name="pages_">Strane %1$s</string>
     <string name="installed_">Instalirano %1$s</string>
     <string name="extensions_miui_warning">MIUI optimizacija mora biti ugašena da bi instalirali ekstenzije.</string>
@@ -762,7 +759,6 @@
     <string name="group_chapters_together">Grupiši poglavlja</string>
     <string name="_must_be_enabled_first">%1$s mora biti ukljucen prvo</string>
     <string name="uniform_covers">Uniforma korice</string>
-    <string name="use_shizuku_to_install">Korostite Shizuku za instaliranje ekstenzija</string>
     <string name="filter_languages">Filtriraj jezike</string>
     <string name="changing_will_reset_reading_mode">Menjanje ovoga će restartovatu čitani mod za ovu seriju</string>
     <string name="could_not_install_extension">Nije bilo moguće instalirati ekstenziju</string>
@@ -786,7 +782,6 @@
     <string name="cutout_area_behavior">Ponašanje oblasti izraza</string>
     <string name="about_this_">O ovome %1$s</string>
     <string name="automatic_orientation">Automatsko (na osnovu orijentacije)</string>
-    <string name="save_pages_separately">Sačuvaj stranice u posednim fasciklama</string>
     <string name="mark_all_chapters_as_read">Označi sva poglavlja kao pročitana\?</string>
     <string name="select_ending_chapter">Izaberite krajne poglavlje</string>
     <string name="manhwa">Koreanska manga</string>
@@ -946,7 +941,7 @@
     <string name="date">Datum</string>
     <string name="move_series_to_top">Pomakni serijal na vrh</string>
     <string name="descending">Opadajuće</string>
-    <string name="clear_database_source_item_count">Број манги у бази података које нису у колекцији: %1$d</string>
+    <string name="clear_database_source_item_count">Број наслова у бази података које нису у колекцији: %1$d</string>
     <string name="database_clean">Čišćenje baze podataka</string>
     <string name="confirm_manga_add_duplicate">Imate unos u kolekciji sa istim imenom, ali iz drugog izvora (%1$s).
 \n
@@ -1096,4 +1091,6 @@
     <string name="open_in_app">Отвори у апликацији</string>
     <string name="allow_notifications_recommended">Препоручује се омогућавање обавештења да би колекција и апликација били ажурни.</string>
     <string name="pref_remove_exclude_categories">Искључене категорије</string>
+    <string name="ext_installer_pref">Инсталер</string>
+    <string name="library_entries">Наслови колекције</string>
 </resources>

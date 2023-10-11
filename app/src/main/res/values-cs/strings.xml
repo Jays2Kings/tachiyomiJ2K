@@ -206,8 +206,8 @@
     <string name="clear_cookies">Vymazat cookies</string>
     <string name="cookies_cleared">Cookies vymazány</string>
     <string name="clear_database">Vyčistit databázi</string>
-    <string name="clear_database_summary">Smaže mangy a kapitoly, které nejsou ve vaší knihovně</string>
-    <string name="clear_database_confirmation">Jsi si jist\? Přečtené kapitoly a postup v mangách mimo knihovnu budou ztraceny</string>
+    <string name="clear_database_summary">Smazat historii položek, které nejsou uloženy ve vaší knihovně</string>
+    <string name="clear_database_confirmation">Jste si jistí\? Přečtené kapitoly a postup v položkách mimo knihovnu bude ztracen</string>
     <string name="clear_database_completed">Položky byly smazány</string>
     <string name="refresh_library_metadata">Obnovit metadata knihovny</string>
     <string name="refresh_tracking_metadata">Obnovit metadata sledování</string>
@@ -249,7 +249,6 @@
     <string name="max_auto_backups">Maximální automatické zálohování</string>
     <string name="updates_covers_genres_desc">Aktualizuje obaly, žánry, popisy a informace o stavu mangy</string>
     <string name="log_in_to_">Přihlášení pro %1$s</string>
-    <string name="url_not_set_click_again">Url mangy není nastaveno, klikněte prosím na název a vyberte mangu znovu</string>
     <string name="category_with_name_exists">Kategorie s tímto jménem již existuje!</string>
     <string name="this_will_remove_the_read_date_question">Toto odstraní datum přečtení této kapitoly. Jste si jistý\?</string>
     <string name="use_image_as_cover">Chcete tento obrázek nastavit jako obal\?</string>
@@ -632,7 +631,6 @@
         <item quantity="few">%1$d stránky</item>
         <item quantity="other">%1$d stránek</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Vytvoří složky podle názvu mangy</string>
     <string name="show_on_long_press">Zobrazit při dlouhém stisknutí</string>
     <string name="actions">Akce</string>
     <plurals name="_updates_pending">
@@ -700,12 +698,10 @@
 \n
 \nNa obrazovce povolte \"Povolit aplikaci přístup ke všem souborům.\"</string>
     <string name="extension_updates_pending">Rozšíření čekající na aktualizaci</string>
-    <string name="use_shizuku_summary">Umožňuje aby rozšíření byly nainstalovány bez zásahu uživatele a povoluje automatické aktualizace pro zařízení se systémem nižším než Android 12</string>
     <string name="reading_">Čtení %1$s</string>
     <string name="grouped">Ve skupině</string>
     <string name="show_updated_time">Zobrazit čas aktualizace</string>
     <string name="uniform_covers">Uniformní obaly</string>
-    <string name="use_shizuku_to_install">Použít Shizuku pro instalaci rozšíření</string>
     <string name="installed_">Nainstalováno %1$s</string>
     <string name="extensions_updated">Rozšíření aktualizována</string>
     <plurals name="extensions_updated_plural">
@@ -745,7 +741,7 @@
     <string name="ascending">Vzestupně</string>
     <string name="date">Datum</string>
     <string name="descending">Sestupně</string>
-    <string name="clear_database_source_item_count">v databázi je manga %1$d mimo knihovnu</string>
+    <string name="clear_database_source_item_count">%1$d neknihovní záznamy v databázi</string>
     <string name="database_clean">vyčištění databáze</string>
     <string name="confirm_manga_add_duplicate">Ve své knihovně máte položku se stejným názvem, ale z jiného zdroje (%1$s).
 \n
@@ -797,7 +793,6 @@
     <string name="no_matches_for_filters_short">Žádné shody pro vaše filtry</string>
     <string name="automatic_orientation">Automaticky (na základě orientace)</string>
     <string name="restrictions_">Omezení: %1$s</string>
-    <string name="save_pages_separately">Uložit stránky v samostatných složkách</string>
     <string name="notification_size_warning">Velké aktualizace mohou vést ke zvýšené spotřebě baterie a zpomalení zdrojů. Klepnutím se dozvíte více.</string>
     <string name="release_page">Stránka vydání</string>
     <string name="search_chapters">Vyhledávání kapitol</string>
@@ -1097,4 +1092,8 @@
     <string name="allow_notifications_recommended">Doporučujeme povolit oznámení, aby byla knihovna a aplikace stále aktuální.</string>
     <string name="apply">Použít</string>
     <string name="pref_remove_exclude_categories">Vyloučené kategorie</string>
+    <string name="ext_installer_pref">Instalátor</string>
+    <string name="library_entries">Záznamy v knihovně</string>
+    <string name="source_settings">Nastavení zdroje</string>
+    <string name="app_settings">Nastavení aplikace</string>
 </resources>

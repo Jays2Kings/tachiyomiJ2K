@@ -144,8 +144,8 @@
     <string name="clear_cookies">Hapus cookies</string>
     <string name="cookies_cleared">Cookies dihapus</string>
     <string name="clear_database">Hapus database</string>
-    <string name="clear_database_summary">Hapus manga dan bab yang tidak ada di pustaka Anda</string>
-    <string name="clear_database_confirmation">Apakah Anda yakin\? Bab yang telah dibaca dan progres manga bukan-pustaka akan hilang</string>
+    <string name="clear_database_summary">Hapus riwayat untuk entri yang tidak disimpan di perpustakaan Anda</string>
+    <string name="clear_database_confirmation">Apa kamu yakin\? Baca bab dan kemajuan entri non-perpustakaan akan hilang</string>
     <string name="clear_database_completed">Entri dihapus</string>
     <string name="refresh_library_metadata">Perbarui metadata pustaka</string>
     <string name="updates_covers_genres_desc">Mengunduh ulang sampul, genre, deskripsi dan informasi status manga</string>
@@ -251,7 +251,6 @@
     <string name="rereading">Baca ulang</string>
     <string name="started">Dimulai</string>
     <string name="type">Tipe</string>
-    <string name="url_not_set_click_again">URL Manga belum diatur, klik judul dan pilih manga lagi</string>
     <string name="finished_chapter">Selesai:</string>
     <string name="current_chapter">Saat ini:</string>
     <string name="next_title">Selanjutnya:</string>
@@ -642,8 +641,6 @@
     <plurals name="pages_plural">
         <item quantity="other">%1$d halaman</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Buat halaman berdasarkan judul manga</string>
-    <string name="save_pages_separately">Simpan halaman dalam folder terpisah</string>
     <string name="show_on_long_press">Tampilkan pada tekan lama</string>
     <string name="automatic_orientation">Otomatis (berdasarkan orientasi)</string>
     <string name="automatic_can_still_switch">Ketika menggunakan tata letak halaman secara otomatis, Anda masih dapat menukar tata letak ketika sedang membaca tanpa menimpa pengaturan ini</string>
@@ -878,8 +875,6 @@
     <string name="show_outline_around_covers">Tampilkan garis di sekitar sampul</string>
     <string name="ext_installer_shizuku_stopped">Shizuku tidak berjalan</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Pasang dan mulai Shizuku untuk menggunakan Shizuku sebagai pemasang ekstensi.</string>
-    <string name="use_shizuku_to_install">Gunakan Shizuku untuk memasang ekstensi</string>
-    <string name="use_shizuku_summary">Izinkan ekstensi untuk dipasang tanpa peringatan ke pengguna dan aktifkan pembaruan otomatis untuk perangkat di bawah Android 12</string>
     <string name="download_queue_size_warning">Peringatan: mengunduh dalam jumlah besar bisa menyebabkan sumber menjadi lambat dan/atau memblokir Tachiyomi. Ketuk untuk mempelajari lebih lanjut.</string>
     <string name="every_3_days">Tiap 3 hari</string>
     <string name="save_chapters_as_cbz">Simpan sebagai arsip CBZ</string>
@@ -903,7 +898,7 @@
     <string name="move_series_to_top">Pindahkan seri ke atas</string>
     <string name="ascending">Urutan naik</string>
     <string name="descending">Urutan turun</string>
-    <string name="clear_database_source_item_count">%1$d manga diluar kategori pustaka pada database</string>
+    <string name="clear_database_source_item_count">%1$d entri non-perpustakaan dalam database</string>
     <string name="database_clean">Bersihkan database</string>
     <string name="confirm_manga_add_duplicate">Anda memiliki sebuah entri di pustaka anda dengan nama yang sama tapi dari sumber yang berbeda (%1$s).
 \n
@@ -1044,4 +1039,6 @@
     <string name="allow_notifications_recommended">Disarankan untuk mengizinkan notifikasi agar perpustakaan dan aplikasi Anda tetap terbarui.</string>
     <string name="apply">Terapkan</string>
     <string name="pref_remove_exclude_categories">Kategori yang dikecualikan</string>
+    <string name="ext_installer_pref">Pemasang</string>
+    <string name="library_entries">Entri pustaka</string>
 </resources>

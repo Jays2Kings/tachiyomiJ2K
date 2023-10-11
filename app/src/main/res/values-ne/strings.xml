@@ -600,7 +600,6 @@
     <string name="source_hidden">स्रोत लुकेको छ</string>
     <string name="filter_languages">भाषाहरू फिल्टर गर्नुहोस्</string>
     <string name="extension_updates_pending">एक्सटेन्शन अपडेटहरू विचाराधीन छन्</string>
-    <string name="use_shizuku_to_install">एक्सटेन्शन स्थापना गर्न Shizuku प्रयोग गर्नुहोस्</string>
     <string name="obsolete_extension_message">यो एक्सटेन्शन अब उपलब्ध छैन ।</string>
     <string name="version_">संस्करण: %1$s</string>
     <string name="language_">भाषा: %1$s</string>
@@ -695,7 +694,6 @@
     <string name="read_">%1$s पढेको</string>
     <string name="show_updated_time">अपडेट गरिएको समय देखाउनुहोस्</string>
     <string name="all_sources">सबै स्रोतहरू</string>
-    <string name="use_shizuku_summary">युजर प्रम्प्टहरू बिना एक्सटेन्शनहरू स्थापना गर्न अनुमति दिन्छ र एन्ड्रोइड १२ अन्तर्गतका यन्त्रहरूका लागि स्वचालित अद्यावधिकहरू सक्षम गर्दछ</string>
     <plurals name="extensions_updated_plural">
         <item quantity="one">एक्सटेन्शन अपडेट गरियो</item>
         <item quantity="other">%d एक्सटेन्शनहरू अपडेट गरियो</item>
@@ -715,8 +713,6 @@
     <string name="split_double_pages_portrait">पोर्ट्रेटमा डबल पृष्ठ विभाजित गर्नुहोस्</string>
     <string name="horizontally">तेर्सो रूपमा</string>
     <string name="vertically">ठाडो रूपमा</string>
-    <string name="save_pages_separately">फरक फोल्डरमा पृष्ठहरू सेभ गर्नुहोस्</string>
-    <string name="create_folders_by_manga_title">माङ्गा शीर्षक अनुसार फोल्डरहरू सिर्जना गर्दछ</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d पृष्ठ</item>
         <item quantity="other">%1$d पृष्ठहरू</item>
@@ -739,7 +735,6 @@
     <string name="enhanced_tracking_info">सेवाहरू जसले विशिष्ट स्रोतहरूको लागि परिष्कृत सुविधाहरू प्रदान गर्दछ। तपाईंको पुस्तकालयमा माङ्गा थप्दा स्वतः ट्र्याक गरिन्छ।</string>
     <string name="update_tracking_after_reading">पढिसकेपछि ट्र्याकिङ अपडेट गर्नुहोस्</string>
     <string name="currently_reading">हाल पढ्दै</string>
-    <string name="url_not_set_click_again">माङ्गा URL सेट गरिएको छैन, कृपया शीर्षकमा क्लिक गर्नुहोस् र माङ्गालाई फेरि चयन गर्नुहोस्</string>
     <string name="select_an_entry">एउटा इन्ट्री चयन गर्नुहोस्</string>
     <string name="remove_tracking">एपबाट ट्र्याकिङ हटाउनुहोस्</string>
     <string name="keep_both_on_service">दुबै %1$s मा राख्नुहोस् र स्थानीय रूपमा मात्र बदल्नुहोस्</string>
@@ -914,7 +909,7 @@
     <string name="side_nav_icon_alignment">साइड नेभिगेसन आइकन अलाइनमेंट</string>
     <string name="backup">ब्याकअप</string>
     <string name="backup_has_no_manga">ब्याकअपमा कुनै माङ्गा समावेश छैन।</string>
-    <string name="clear_database_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? पढेका अध्यायहरू र गैर-पुस्तकालय माङ्गाको प्रगति हराउनेछ</string>
+    <string name="clear_database_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? तपाईंले पढ्नुभएको अध्यायहरू र गैर-पुस्तकालय इन्ट्रीहरूको प्रगति हराउनेछ</string>
     <string name="clean_up_cached_covers">क्यास गरिएका आवरणहरू सफा गर्नुहोस्</string>
     <string name="delete_all_covers__not_in_library_used_">तपाईंको पुस्तकालयमा नभएका क्यास गरिएका सबै आवरणहरू हटाउनुहोस्
 \nहाल प्रयोग गर्दै: %1$s</string>
@@ -1033,8 +1028,8 @@
         <item quantity="one">क्यास खाली गरियो। %d फाइल मेटाइएको छ</item>
         <item quantity="other">क्यास खाली गरियो। %d फाइलहरू मेटिएका छन्</item>
     </plurals>
-    <string name="clear_database_source_item_count">डेटाबेसमा %1$d गैर-पुस्तकालय माङ्गा छन्</string>
-    <string name="clear_database_summary">तपाईंको पुस्तकालयमा नभएका माङ्गा र अध्यायहरू हटाउनुहोस्</string>
+    <string name="clear_database_source_item_count">डेटाबेसमा %1$d गैर-पुस्तकालय इन्ट्रीहरू</string>
+    <string name="clear_database_summary">पुस्तकालयमा नभएका इन्ट्रीको इतिहास हटाउनुहोस्</string>
     <string name="clear_db_exclude_read">पढिएका अध्यायहरू भएको माङ्गा राख्नुहोस्</string>
     <string name="clear_cached_covers_non_library">पुस्तकालयमा नभएका क्यास गरिएका आवरणहरू खाली गर्नुहोस्</string>
     <string name="username_must_not_be_blank">युजरनेम वा पासवर्ड खाली हुन सक्दैन</string>
@@ -1069,4 +1064,6 @@
     <string name="not_downloaded">डाउनलोड नगरिएको</string>
     <string name="allow_notifications_recommended">तपाईंको पुस्तकालय र एपलाई अपडेट राख्न सूचनाहरूलाई अनुमति दिन सिफारिस गरिन्छ।</string>
     <string name="pref_remove_exclude_categories">बहिष्कृत वर्गहरू</string>
+    <string name="ext_installer_pref">इंस्टलर</string>
+    <string name="library_entries">पुस्तकालयका इन्ट्रीहरू</string>
 </resources>

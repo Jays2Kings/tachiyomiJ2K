@@ -106,8 +106,8 @@
     <string name="clear_cookies">Limpar cookies</string>
     <string name="cookies_cleared">Cookies limpos</string>
     <string name="clear_database">Limpar base de dados</string>
-    <string name="clear_database_summary">Eliminar mangás e capítulos não presentes na biblioteca</string>
-    <string name="clear_database_confirmation">Tem certeza\? O progresso de capítulos e mangás fora da biblioteca será perdido</string>
+    <string name="clear_database_summary">Exclui o histórico de itens que não estão salvos nasua biblioteca</string>
+    <string name="clear_database_confirmation">Tem certeza\? Os capítulos lidos e o progresso em itens que não estão na sua biblioteca serão perdidos</string>
     <string name="clear_database_completed">Eliminar entradas</string>
     <!-- About section -->
     <string name="version">Versão</string>
@@ -273,7 +273,6 @@
     <string name="rereading">Relendo</string>
     <string name="started">Começado</string>
     <string name="type">Tipo</string>
-    <string name="url_not_set_click_again">URL da manga não definida, por favor clique no título e selecione a manga novamente</string>
     <string name="category_with_name_exists">Já existe uma categoria com este nome!</string>
     <string name="picture_saved">Imagem guardada</string>
     <string name="options">Opções</string>
@@ -740,8 +739,6 @@
         <item quantity="many">%1$d páginas</item>
         <item quantity="other">%1$d páginas</item>
     </plurals>
-    <string name="create_folders_by_manga_title">Cria pastas de acordo com o título do manga</string>
-    <string name="save_pages_separately">Salvar páginas em pastas separadas</string>
     <string name="show_on_long_press">Mostrar no toque longo</string>
     <string name="actions">Ações</string>
     <string name="automatic_orientation">Automático (baseado na orientação)</string>
@@ -938,12 +935,10 @@
     <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="help_translate">Ajude a traduzir</string>
-    <string name="use_shizuku_to_install">Use o Shizuku para instalar extensões</string>
     <string name="show_outline_around_covers">Mostrar contorno ao redor das capas</string>
     <string name="notification_size_warning">Atualizações grandes podem levar ao aumento do uso da bateria e abrandamento das fontes. Toque para aprender mais.</string>
     <string name="scanlators">Tradutores</string>
     <string name="save_chapters_as_cbz">Guardar como ficheiro CBZ</string>
-    <string name="use_shizuku_summary">Permite que extensões sejam instaladas sem avisos do usuário e ativa atualizações automáticas para dispositivos com Android 12</string>
     <string name="theme_buttons_based_on_cover">Tema dos botões com base na capa</string>
     <string name="helpful_translation_links">Links de tradução úteis</string>
     <string name="filter_groups">Filtrar grupos de tradutores</string>
@@ -968,7 +963,7 @@
     <string name="ascending">Ascendente</string>
     <string name="date">Data</string>
     <string name="descending">Descendente</string>
-    <string name="clear_database_source_item_count">%1$d mangás que não estão na biblioteca na base de dados</string>
+    <string name="clear_database_source_item_count">%1$d itens que não estão na biblioteca no banco de dados</string>
     <string name="database_clean">Base de dados limpa</string>
     <string name="select_inverse">Seleção inversa</string>
     <string name="clear_history">Eliminar histórico</string>
@@ -1122,4 +1117,6 @@
     <string name="app_updates">Atualizações do aplicativo</string>
     <string name="open">Abrir</string>
     <string name="pref_remove_exclude_categories">Categorias excluídas</string>
+    <string name="ext_installer_pref">Instalador</string>
+    <string name="library_entries">Itens da biblioteca</string>
 </resources>

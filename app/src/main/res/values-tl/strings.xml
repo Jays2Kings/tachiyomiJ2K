@@ -229,7 +229,6 @@
     <string name="title">Pamagat</string>
     <string name="started">Nagsimula</string>
     <string name="type">Uri</string>
-    <string name="url_not_set_click_again">Hindi na-set ang URL ng manga. Mangyaring pindutin ang pamagat at pumili ng manga muli.</string>
     <string name="category_with_name_exists">Mayroon nang kategoryang kasing-pangalan nito!</string>
     <string name="this_will_remove_the_read_date_question">Tatanggalin nito ang petsa ng pagbasa ng kabanatang ito. Sigurado ka ba\?</string>
     <string name="picture_saved">Na-save ang larawan</string>

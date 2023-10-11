@@ -144,8 +144,8 @@
     <string name="clear_cookies">Hapus cookies</string>
     <string name="cookies_cleared">Cookies dihapuskan</string>
     <string name="clear_database">Hapus pangkalan data</string>
-    <string name="clear_database_summary">Hapus manga dan bab yang tidak ada di dalam koleksi</string>
-    <string name="clear_database_confirmation">Adakah anda pasti\? Bab dibaca dan kemajuan manga bukan-pustaka akan hilang</string>
+    <string name="clear_database_summary">Hapus sejarah entri yang tidak disimpan di dalam pustaka</string>
+    <string name="clear_database_confirmation">Adakah anda pasti\? Bab dibaca dan kemajuan entri bukan-pustaka akan hilang</string>
     <string name="clear_database_completed">Entri dihapuskan</string>
     <string name="refresh_library_metadata">Muat semula metadata koleksi</string>
     <string name="updates_covers_genres_desc">Kemas kini muka hadapan, genre, keterangan dan maklumat status manga</string>
@@ -253,7 +253,6 @@
     <string name="rereading">Membaca semula</string>
     <string name="started">Bermula</string>
     <string name="type">Jenis</string>
-    <string name="url_not_set_click_again">Manga url tidak ditetapkan, sila klik tajuk dan pilih manga sekali lagi</string>
     <string name="finished_chapter">Selesai:</string>
     <string name="current_chapter">Sekarang:</string>
     <string name="next_title">Seterusnya:</string>
@@ -758,8 +757,6 @@
     <string name="portrait">Potret</string>
     <string name="release_page">Halaman keluaran</string>
     <string name="show_on_long_press">Tunjuk bila menahan ketik</string>
-    <string name="create_folders_by_manga_title">Mencipta folder mengikut tajuk manga</string>
-    <string name="save_pages_separately">Simpan muka surat dalam folder berasingan</string>
     <string name="actions">Tindakan</string>
     <string name="search_tips_show_periodically">Cadangan carian akan muncul secara berkala. Menahan tekan pada cadangan untuk mencarinya.</string>
     <string name="search_suggestions">Cadangan carian</string>
@@ -821,7 +818,7 @@
     <string name="ascending">Menaik</string>
     <string name="date">Tarikh</string>
     <string name="descending">Menurun</string>
-    <string name="clear_database_source_item_count">%1$d manga bukan pustaka dalam pangkalan data</string>
+    <string name="clear_database_source_item_count">%1$d entri bukan pustaka dalam pangkalan data</string>
     <string name="database_clean">Bersihkan pengkalan data</string>
     <string name="confirm_manga_add_duplicate">Anda mempunyai entri yang mempunyai nama yang sama tetapi daripada sumber yang berlainan (%1$s).
 \n
@@ -899,7 +896,6 @@
     <string name="update_tracking_scoring_type">Kemas kini jenis penskoran %1$s</string>
     <string name="scoring_type_updated">Jenis penskoran dikemas kini</string>
     <string name="select_an_entry">Pilih satu entri</string>
-    <string name="use_shizuku_to_install">Guna Shizuku untuk memasang sambungan</string>
     <string name="extension_updates_pending">Kemas kini sambungan tergantung</string>
     <string name="extensions_miui_warning">Pengoptimuman MIUI perlu dilumpuhkan untuk memasang sambungan.</string>
     <string name="could_not_install_extension">Tidak boleh memasang sambungan</string>
@@ -910,7 +906,6 @@
         <item quantity="other">%d sambungan dikemas kini</item>
     </plurals>
     <string name="must_view_details_before_migration">Halaman maklumat entri ini perlu dilihat sebelum dibolehkan untuk migrasi</string>
-    <string name="use_shizuku_summary">Membenarkan sambungan untuk dipasang tanpa prom pengguna dan membenarkan kemas kini automatik untuk peranti bawah Android 12</string>
     <string name="classic_blue">Classic Blue</string>
     <plurals name="next_unread_chapters">
         <item quantity="other">%d bab tidak dibaca seterusnya</item>
@@ -1034,4 +1029,6 @@
     <string name="app_updates">Kemas kini aplikasi</string>
     <string name="gray_background">Kelabu</string>
     <string name="pref_remove_exclude_categories">Kategori dikecualikan</string>
+    <string name="ext_installer_pref">Pemasang</string>
+    <string name="library_entries">Entri pustaka</string>
 </resources>

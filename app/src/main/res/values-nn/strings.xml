@@ -227,4 +227,5 @@
     <string name="webtoon_side_padding_5">5%</string>
     <string name="gray_background">Grå</string>
     <string name="pref_remove_exclude_categories">Utelatne kategoriar</string>
+    <string name="ext_installer_pref">Installatør</string>
 </resources>
