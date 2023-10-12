@@ -109,7 +109,6 @@ class SettingsBackupController : SettingsController() {
                 onChange { newValue ->
                     val interval = newValue as Int
                     BackupCreatorJob.setupTask(context, interval)
-                    preferences.isBackupIntervalManuallyChanged().set(true)
                     true
                 }
             }
