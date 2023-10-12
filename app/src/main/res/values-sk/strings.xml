@@ -535,15 +535,15 @@
     <string name="crash_log_saved">Uložené logy o zlyhaní</string>
     <string name="restore_miui_warning">Zálohovanie/obnovenie nemusí fungovať správne, ak je vypnutá optimalizácia MIUI.</string>
     <plurals name="after_minutes">
-        <item quantity="one">Po %1$s minutePo %1$s minútachPo %1$s minútach</item>
-        <item quantity="few"/>
-        <item quantity="other">Po %1$s minút</item>
+        <item quantity="one">Po %1$s minúte</item>
+        <item quantity="few">Po %1$s minútach</item>
+        <item quantity="other">Po %1$s minútach</item>
     </plurals>
     <string name="user_agent_string">Predvolený reťazec pre User-Agent</string>
     <plurals name="for_n_titles">
-        <item quantity="one">Pre %d titulPre %d titulyPre %d titulov</item>
-        <item quantity="few"/>
-        <item quantity="other">Pre %d tituly</item>
+        <item quantity="one">Pre %d titul</item>
+        <item quantity="few">Pre %d tituly</item>
+        <item quantity="other">Pre %d titulov</item>
     </plurals>
     <string name="nsfw_short">18+</string>
     <string name="next_page">Ďalšia strana</string>
