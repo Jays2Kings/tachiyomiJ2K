@@ -776,11 +776,9 @@ fun Controller.requestFilePermissionsSafe(
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
-    } else {
-        if (preferences.backupInterval().get() == 0 && !preferences.isBackupIntervalManuallyChanged().get()) {
-            preferences.backupInterval().set(24)
-            BackupCreatorJob.setupTask(activity, 24)
-        }
+    } else if ((Build.VERSION.SDK_INT < Build.VERSION_CODES.R || Environment.isExternalStorageManager()) && preferences.backupInterval().isNotSet()) {
+        preferences.backupInterval().set(24)
+        BackupCreatorJob.setupTask(activity, 24)
     }
 }
 
