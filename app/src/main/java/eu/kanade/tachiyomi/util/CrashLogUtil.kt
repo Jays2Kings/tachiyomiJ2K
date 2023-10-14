@@ -16,6 +16,8 @@ import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 import java.io.IOException
 
 class CrashLogUtil(private val context: Context) {
@@ -23,10 +25,9 @@ class CrashLogUtil(private val context: Context) {
     private val notificationBuilder = context.notificationBuilder(Notifications.CHANNEL_CRASH_LOGS) {
         setSmallIcon(R.drawable.ic_tachij2k_notification)
     }
-    val extensionManager = ExtensionManager(context) // Instantiate the ExtensionManager
 
+    val scope = CoroutineScope(Dispatchers.IO)
     fun dumpLogs() {
-        val scope = CoroutineScope(Dispatchers.IO)
         scope.launch {
             try {
                 val file = context.createFileInCacheDir("tachiyomi_crash_logs.txt")
@@ -53,6 +54,7 @@ class CrashLogUtil(private val context: Context) {
     }
 
     suspend fun getExtensionsInfo(): String {
+        val extensionManager: ExtensionManager = Injekt.get()
         extensionManager.findAvailableExtensions()
         val installedExtensions = extensionManager.installedExtensionsFlow.value
         val availableExtensions = extensionManager.availableExtensionsFlow.value
@@ -79,8 +81,8 @@ class CrashLogUtil(private val context: Context) {
     }
 
     private fun showNotification(uri: Uri) {
+        ExtensionManager(context)
         context.notificationManager.cancel(Notifications.ID_CRASH_LOGS)
-
         with(notificationBuilder) {
             setContentTitle(context.getString(R.string.crash_log_saved))
 
