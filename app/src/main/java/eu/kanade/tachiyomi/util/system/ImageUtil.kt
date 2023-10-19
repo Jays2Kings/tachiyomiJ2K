@@ -560,21 +560,22 @@ object ImageUtil {
         val options = extractImageOptions(imageFile.openInputStream(), resetAfterExtraction = false).apply {
             inJustDecodeBounds = false
         }
-        val imageWidth = options.outWidth
-
         val splitDataList = options.splitData
 
         return try {
             splitDataList.forEach { splitData ->
                 val splitPath = splitImagePath(imageFilePath, splitData.index)
 
-                val region = Rect(0, splitData.topOffset, imageWidth, splitData.bottomOffset)
+                val region = Rect(0, splitData.topOffset, splitData.splitWidth, splitData.bottomOffset)
 
                 FileOutputStream(splitPath).use { outputStream ->
                     val splitBitmap = bitmapRegionDecoder.decodeRegion(region, options)
                     splitBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
                     splitBitmap.recycle()
                 }
+                Timber.d(
+                    "Success: Split #${splitData.index + 1} with topOffset=${splitData.topOffset} height=${splitData.splitHeight} bottomOffset=${splitData.bottomOffset}",
+                )
             }
             imageFile.delete()
             true
@@ -603,6 +604,10 @@ object ImageUtil {
             // -1 so it doesn't try to split when imageHeight = optimalImageHeight
             val partCount = (imageHeight - 1) / optimalImageHeight + 1
             val optimalSplitHeight = imageHeight / partCount
+
+            Timber.d(
+                "Splitting image with height of $imageHeight into $partCount part with estimated ${optimalSplitHeight}px height per split",
+            )
 
             return mutableListOf<SplitData>().apply {
                 val range = 0 until partCount
