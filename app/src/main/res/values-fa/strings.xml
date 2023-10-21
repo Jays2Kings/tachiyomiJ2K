@@ -112,7 +112,6 @@
     <string name="library_update_restriction_summary">در چه شرایطی کتابخانه آپدیت شود</string>
     <string name="categories_to_include_in_global_update">دسته بندی هایی که در به آپدیت سراسری شامل می شوند</string>
     <string name="updates">آپدیت‌ها</string>
-    <string name="this_will_remove_the_read_date_question">با این کار تاریخ خواندن این فصل حذف می شود. مطمئنید؟</string>
     <string name="other">دیگر</string>
     <string name="global_search">جست و جو در تمام منابع…</string>
     <string name="sources">منابع</string>
@@ -580,4 +579,5 @@
     <string name="pref_remove_exclude_categories">دسته‌بندی‌های محذوف</string>
     <string name="ext_installer_pref">نصب کننده</string>
     <string name="library_entries">کتابخانه ورودی‌ها</string>
+    <string name="label_background_activity">فعالیت در پس زمینه</string>
 </resources>

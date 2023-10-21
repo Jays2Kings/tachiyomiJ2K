@@ -143,7 +143,6 @@
     <string name="categories_to_include_in_global_update">Kategoryang kasama sa panlahatang update</string>
     <string name="updates">Bago</string>
     <string name="history">Nakaraan</string>
-    <string name="this_will_remove_the_read_date_question">Tatanggalin nito ang petsa ng pagbasa sa kabanatang ito. Sigurado ka ba talaga\?</string>
     <string name="no_more_results">Wala na\'ng resulta</string>
     <string name="no_results_found">Walang nakitang resulta</string>
     <string name="local_source">Lokal na Source</string>
@@ -1068,4 +1067,6 @@
     <string name="library_entries">Mga entry ng aklatan</string>
     <string name="source_settings">Mga setting ng source</string>
     <string name="app_settings">Mga setting ng app</string>
+    <string name="pref_debug_info">Impormasyon sa pag-debug</string>
+    <string name="label_background_activity">Gawaing likuran</string>
 </resources>

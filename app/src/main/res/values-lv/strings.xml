@@ -480,7 +480,6 @@
     <string name="source_not_installed_">Avots nav instalēts: %1$s</string>
     <string name="no_description">Nav apraksta</string>
     <string name="source_migration_guide">Avota migrācijas rokasgrāmata</string>
-    <string name="this_will_remove_the_read_date_question">Tiks noņemts šīs nodaļas lasīšanas datums. Vai esi pārliecināts\?</string>
     <string name="badges">Nozīmītes</string>
     <string name="pauses_reading_history">Pauzē lasīšanas vēsturi</string>
     <string name="crash_logs">Avāriju žurnāli</string>
@@ -587,4 +586,6 @@
     <string name="ext_installer_pref">Instalētājs</string>
     <string name="library_entries">Bibliotēkas ieraksti</string>
     <string name="clear_database_summary">Dzēst vēsturi ierakstiem, kas nav saglabāti jūsu bibliotēkā</string>
+    <string name="pref_debug_info">Atkļūdošanas informācija</string>
+    <string name="label_background_activity">Fona darbība</string>
 </resources>

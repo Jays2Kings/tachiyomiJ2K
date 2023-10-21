@@ -164,8 +164,6 @@
     <string name="recent_updates">Ostatnie aktualizacje</string>
     <string name="this_will_remove_the_read_date_for_x_question">Ta czynność usunie datę przeczytania z
         \"%1$s\". Kontynuować?</string>
-    <string name="this_will_remove_the_read_date_question">Ta czynność usunie datę przeczytania z tego
-        rozdziału. Kontynuować?</string>
     <string name="reset_all_chapters_for_this_">Zresetuj wszystkie rozdziały dla %1$s</string>
     <string name="last_read_">Wcześniej czytano %1$s</string>
     <string name="read_">Czytano %1$s</string>
@@ -1161,4 +1159,6 @@
     <string name="pref_remove_exclude_categories">Wykluczone kategorie</string>
     <string name="ext_installer_pref">Instalator</string>
     <string name="library_entries">Biblioteka</string>
+    <string name="pref_debug_info">Informacje debugowania</string>
+    <string name="label_background_activity">Aktywność w tle</string>
 </resources>

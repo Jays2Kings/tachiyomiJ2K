@@ -22,7 +22,7 @@
     <string name="categories">Kategorije</string>
     <string name="cookies_cleared">Kolačići su izbrisani</string>
     <string name="clear_database">Isprazni bazu podataka</string>
-    <string name="clear_database_confirmation">Jesi siguran\? Izgubit će se čitanje poglavlja i tijek unosa koji nisu u biblioteci</string>
+    <string name="clear_database_confirmation">Sigurno\? Pročitana poglavlja i tijek unosa koji nisu u biblioteci će se izgubiti</string>
     <string name="clear_database_completed">Unosi su izbrisani</string>
     <string name="updates_tracking_details">Aktualizira stanje, ocjenu i zadnje pročitano poglavlje iz usluga za praćenje</string>
     <string name="disable_battery_optimization">Deaktiviraj optimiranje baterije</string>
@@ -65,7 +65,6 @@
     <string name="categories_to_include_in_global_update">Kategorije koje treba uključiti u globalno aktualiziranje</string>
     <string name="updates">Aktualiziranja</string>
     <string name="history">Povijest</string>
-    <string name="this_will_remove_the_read_date_question">Ovo će ukloniti datum čitanja ovog poglavlja. Je li to stvarno želiš\?</string>
     <string name="no_more_results">Nema daljnjih rezultata</string>
     <string name="no_results_found">Nema rezultata</string>
     <string name="local_source">Lokalni izvor</string>
@@ -250,7 +249,7 @@
     <string name="charging">Punjenje</string>
     <string name="close">Zatvori</string>
     <string name="common">Opće</string>
-    <string name="cover_of_image">Naslovnica mange</string>
+    <string name="cover_of_image">Naslovnica serija</string>
     <string name="create">Stvori</string>
     <string name="default_value">Standardno</string>
     <string name="delete">Izbriši</string>
@@ -367,8 +366,8 @@
     <string name="move_to_categories">Premjesti u kategorije</string>
     <string name="manage_category">Upravljaj kategorijom</string>
     <string name="add_categories">Dodaj kategorije</string>
-    <string name="already_in_category">Manga se već nalazi u kategoriji</string>
-    <string name="confirm_category_deletion_message">Manga u ovoj kategoriji premjestit će se u standardnu kategoriju.</string>
+    <string name="already_in_category">Unos se već nalazi u kategoriji</string>
+    <string name="confirm_category_deletion_message">Unosi u ovoj kategoriji premjestit će se u standardnu kategoriju.</string>
     <string name="confirm_category_deletion">Izbrisati kategoriju\?</string>
     <string name="extension_updates">Aktualiziranja proširenja</string>
     <string name="last_used">Zadnje korišteno</string>
@@ -378,7 +377,7 @@
     <string name="in_library">U biblioteci</string>
     <string name="search_filters">Filtri pretrage</string>
     <string name="reset_chapter_question">Obnoviti poglavlje\?</string>
-    <string name="no_recently_read_manga">Nema nedavno čitanih manga</string>
+    <string name="no_recently_read_manga">Nema nedavno čitanih serija</string>
     <string name="no_recent_chapters">Nema nedavnih poglavlja</string>
     <string name="search_recents">Pretraži nedavne …</string>
     <string name="view_all_updates">Pogledaj sva aktualiziranja</string>
@@ -391,7 +390,7 @@
     <string name="auto_refresh_covers_summary">Također osvježi naslovnice u biblioteci prilikom aktualiziranja biblioteke</string>
     <string name="auto_refresh_covers">Automatski osvježi naslovnice</string>
     <string name="include_in_global_update">Uključi u globalno aktualiziranje</string>
-    <string name="when_sorting_ignore_articles">Prilikom razvrstavanja po abecedi, razvrstaj naslove manga bez člana (engl. a, an, the)</string>
+    <string name="when_sorting_ignore_articles">Prilikom razvrstavanja po abecedi, razvrstaj članke zanemarujući naslove serija koji počinju s (engl. a, an, the)</string>
     <string name="sort_by_ignoring_articles">Razvrstaj bez člana</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">i još %1$d naslov</item>
@@ -445,27 +444,27 @@
     <string name="visit_recents_for_download_queue">Za pristup popisu preuzimanja pogledaj karticu nedavnih preuzimanja. Za brži pristup dodirni dvaput ili dodirni i drži</string>
     <string name="no_folders_to_cleanup">Nema mapa za brisanje</string>
     <string name="starting_cleanup">Pokretanje brisanja</string>
-    <string name="clean_read_manga_not_in_library">Izbriši mange koje nisu u biblioteci</string>
+    <string name="clean_read_manga_not_in_library">Izbriši unose koje nisu u biblioteci</string>
     <string name="clean_read_downloads">Izbriši pročitane</string>
     <string name="clean_orphaned_downloads">Izbriši nepovezane</string>
     <string name="delete_unused_chapters">Izbriši mape nepostojećih, djelomično preuzetih i pročitanih poglavlja</string>
     <string name="clean_up_downloaded_chapters">Izbriši preuzeta poglavlja</string>
     <string name="refresh_tracking_metadata">Aktualiziraj metapodatke praćenja</string>
     <string name="refresh_library_metadata">Aktualiziraj metapodatke biblioteke</string>
-    <string name="clear_database_summary">Brisanje povijesti za unose koji nisu spremljeni u biblioteci</string>
+    <string name="clear_database_summary">Izbriši povijest za unose koji nisu spremljeni u biblioteci</string>
     <plurals name="cleanup_done">
         <item quantity="one">Brisanje je gotovo. Uklonjena je %d mapa</item>
         <item quantity="few">Brisanje je gotovo. Uklonjene su %d mape</item>
         <item quantity="other">Brisanje je gotovo. Uklonjeno je %d mapa</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Deaktiviraj ovo ako imaš problema s aktualiziranjem ili obnavljanjem tvoje biblioteke</string>
-    <string name="delete_old_covers_in_library_used_">Izbriši stare i nekorištene predmemorirane manga naslovnice koje nisu u tvojoj biblioteci koje su aktualizirane.
+    <string name="delete_old_covers_in_library_used_">Izbriši stare i nekorištene unose predmemoriranih naslovnica u tvojoj biblioteci koje su aktualizirane.
 \nTrenutačno se koristi: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">Izbriši sve predmemorirane naslovnice koje nisu u tvojoj biblioteci
 \nTrenutačno se koristi: %1$s</string>
     <string name="clear_cached_covers_non_library">Izbriši predmemorirane naslovnice koje nisu u biblioteci</string>
     <string name="clean_up_cached_covers">Izbriši predmemorirane naslovnice</string>
-    <string name="updates_covers_genres_desc">Aktualizira naslovnice, žanrove, opis i podatke o stanju mange</string>
+    <string name="updates_covers_genres_desc">Aktualizira naslovnice, žanrove, opis i podatke o stanju unosa</string>
     <string name="error_sharing_cover">Greška tijekom dijeljenja naslovnice</string>
     <string name="error_saving_cover">Greška tijekom spremanja naslovnice</string>
     <string name="cover_saved">Naslovnica spremljena</string>
@@ -521,7 +520,7 @@
     <string name="invalid_backup_file">Neispravna datoteka sigurnosne kopije</string>
     <string name="invalid_backup_file_type">Neispravna datoteka sigurnosne kopije: %1$s
 \nTrebala bi završiti s .proto.gz ili .json.</string>
-    <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan manga.</string>
+    <string name="backup_has_no_manga">Sigurnosna kopija ne sadrži nijedan unos.</string>
     <string name="restore_missing_sources">Nedostaju izvori:</string>
     <string name="restore_missing_trackers">Usluge praćenja bez prijave:</string>
     <string name="restore_content_full">Podaci datoteke sigurnosne kopije će se obnoviti.
@@ -576,7 +575,7 @@
 \nŽeliš li izbrisati njihova preuzimanja\?</item>
     </plurals>
     <string name="not_tracked">Ne prati se</string>
-    <string name="custom_manga_info">Prilagođeni manga podaci</string>
+    <string name="custom_manga_info">Prilagođeni podaci serije</string>
     <string name="currently_reading">Trenutačno čitam</string>
     <string name="source_not_installed">Izvor nije instaliran</string>
     <string name="category">Kategorija</string>
@@ -596,24 +595,24 @@
     <string name="max_auto_backups">Maksimalni broj automatskih sigurnosnih kopija</string>
     <string name="amoled_black">AMOLED crna</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga migriran</item>
-        <item quantity="few">%d mange migrirane</item>
-        <item quantity="other">%d manga migrirano</item>
+        <item quantity="one">%d serija migrirana</item>
+        <item quantity="few">%d serije migrirane</item>
+        <item quantity="other">%d serija migrirano</item>
     </plurals>
     <string name="skipping_">(%1$d se preskače)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Kopirati manga %1$d%2$s\?</item>
-        <item quantity="few">Kopirati manga %1$d%2$s\?</item>
-        <item quantity="other">Kopirati manga %1$d%2$s\?</item>
+        <item quantity="one">Kopirati %1$d%2$s seriju\?</item>
+        <item quantity="few">Kopirati %1$d%2$s serije\?</item>
+        <item quantity="other">Kopirati %1$d%2$s serija\?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrati %1$d%2$s manga\?</item>
-        <item quantity="few">Migrati %1$d%2$s manga\?</item>
-        <item quantity="other">Migrati %1$d%2$s manga\?</item>
+        <item quantity="one">Migrati %1$d%2$s seriju\?</item>
+        <item quantity="few">Migrati %1$d%2$s serije\?</item>
+        <item quantity="other">Migrati %1$d%2$s serija\?</item>
     </plurals>
     <string name="stop_migrating">Prekinuti migriranje\?</string>
     <string name="no_alternatives_found">Nisu pronađene alternative</string>
-    <string name="no_chapters_found_for_migration">Nisu pronađena poglavlja, manga se ne može koristiti za migraciju</string>
+    <string name="no_chapters_found_for_migration">Nisu pronađena poglavlja. Ova se serija ne može koristiti za migraciju</string>
     <string name="migrate_">Migriraj %1$s</string>
     <string name="copy_now">Kopiraj sada</string>
     <string name="migrate_now">Migriraj sada</string>
@@ -634,7 +633,7 @@
     <string name="source_migration">Migracija izvora</string>
     <string name="select_sources">Odaberi izvore</string>
     <string name="remember_this_choice">Zapamti ovaj izbor</string>
-    <string name="must_be_in_library_to_edit">Za uređivanje se manga mora nalaziti u tvojoj biblioteci</string>
+    <string name="must_be_in_library_to_edit">Za uređivanje se serija mora nalaziti u tvojoj biblioteci</string>
     <string name="reset_tags">Obnovi oznake</string>
     <string name="clear_tags">Izbriši oznake</string>
     <string name="oldest_first">Stara prema novim</string>
@@ -684,7 +683,7 @@
     <string name="successfully_logged_in">Prijava uspjela</string>
     <string name="username_must_not_be_blank">Korisničko ime ili lozinka ne smiju biti prazni</string>
     <string name="whats_new_this_release">Novosti u ovom izdanju</string>
-    <string name="you_can_migrate_in_library">Migrirati možeš i putem biranja mange u tvojoj biblioteci</string>
+    <string name="you_can_migrate_in_library">Migrirati možeš i putem biranja unosa u tvojoj biblioteci</string>
     <string name="migration_sources_changed">Izvori migracije su se promijenili</string>
     <string name="only_enable_enabled_for_migration">Aktiviraj samo trenutačno aktivne izvore za migraciju</string>
     <string name="match_enabled_sources">Poklapanje s aktiviranim izvorima</string>
@@ -724,7 +723,7 @@
     <string name="show_reset_history_button">Pokaži gumb za obnavljanje povijesti</string>
     <string name="press_and_hold_to_also_reset">Pritiskanjem gumba i držanjem gumba pritisnuto također može obnoviti povijesti poglavlja</string>
     <string name="grouped">Grupirano</string>
-    <string name="no_recent_read_updated_manga">Nema nedavno pročitanih ili aktualiziranih manga</string>
+    <string name="no_recent_read_updated_manga">Nema nedavno pročitanih ili aktualiziranih serija</string>
     <string name="reset_chapter_history">Obnovi povijest poglavlja</string>
     <string name="shift_one_page_over">Pomakni za jednu stranicu</string>
     <string name="category_cannot_be_blank">Ime kategorije ne smije biti prazno</string>
@@ -801,7 +800,7 @@
     <string name="mark_range_as_read">Označi raspon poglavlja kao pročitana</string>
     <string name="app_shortcuts">Prečaci programa</string>
     <string name="cancel_all_for_series">Prekini sve za ovu seriju</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K zahtijeva pristup svim datotekama u Androidu 11 za preuzimanje poglavlja, za stvaranje automatskih sigurnosnih kopija i za čitanje lokalnih manga.
+    <string name="external_storage_permission_notice">TachiyomiJ2K zahtijeva pristup svim datotekama u Androidu 11 za preuzimanje poglavlja, za stvaranje automatskih sigurnosnih kopija i za čitanje lokalnih serija.
 \n
 \nU sljedećem ekranu aktiviraj „Dopusti pristup za upravljanje svim datotekama”.</string>
     <string name="all_files_permission_required">Potrebne su dozvole za datoteke</string>
@@ -924,9 +923,9 @@
     <string name="publishing_finished">Objavljivanje završeno</string>
     <string name="cancelled">Prekinuto</string>
     <string name="on_hiatus">Zaustavljeno</string>
-    <string name="tracking_info">Jednosmjerna sinkronizacija za aktualiziranje napretka poglavlja u usluzi praćenja. Postavi praćenje pojedinačnih unosa manga putem gumba za praćenje.</string>
+    <string name="tracking_info">Jednosmjerna sinkronizacija za aktualiziranje napretka poglavlja u usluzi praćenja. Postavi praćenje pojedinačnih unosa putem gumba za praćenje.</string>
     <string name="enhanced_services">Poboljšane usluge</string>
-    <string name="enhanced_tracking_info">Usluge koje pružaju poboljšane funkcije za određene izvore. Manga se automatski prati kad se doda u tvoju biblioteku.</string>
+    <string name="enhanced_tracking_info">Usluge koje pružaju poboljšane funkcije za određene izvore. Unosi se automatski prate kada se dodaju u tvoju biblioteku.</string>
     <string name="scoring_type_updated">Vrsta bodovanja je aktualizirana</string>
     <string name="could_not_update_scoring_">Nije bilo moguće aktualizirati vrstu bodovanja: %1$s</string>
     <string name="update_tracking_scoring_type">Aktualiziraj vrstu bodovanja za %1$s</string>
@@ -1013,16 +1012,16 @@
     <string name="download_notifier_split_failed">Nije bilo moguće podijeliti preuzetu sliku</string>
     <string name="battery_not_low">Baterija nije slaba</string>
     <string name="pref_update_only_started">Koja još nisu pokrenuta</string>
-    <string name="pref_update_only_completely_read_summary">Aktualiziraj manga samo ako nema nepročitanog poglavlja (potpuno pročitano)</string>
+    <string name="pref_update_only_completely_read_summary">Aktualiziraj serije samo ako nema nepročitanog poglavlja (potpuno pročitano)</string>
     <string name="most_entries">Najveći broj unosa</string>
     <string name="select_uninstalled_sources">Odaberi deinstalirane izvore</string>
     <string name="open_in_app">Otvori u programu</string>
     <string name="webtoon_side_padding_5">5 %</string>
     <string name="language_requires_app_restart">Neki jezici mogu zahtijevati ponovno pokretanje aplikacije za ispravan prikaz</string>
     <string name="loader_rar5_error">RARv5 format nije podržan</string>
-    <string name="all_read_manga">Sva pročitana manga</string>
+    <string name="all_read_manga">Sve pročitane serije</string>
     <string name="user_agent_string">Standardni izraz korisničkog agenta</string>
-    <string name="clear_db_exclude_read">Čuvaj manga s pročitanim poglavljima</string>
+    <string name="clear_db_exclude_read">Čuvaj unose s pročitanim poglavljima</string>
     <string name="downloaded_chapters">Preuzeta poglavlja</string>
     <string name="auto_download_while_reading">Automatski preuzmi tijekom čitanja</string>
     <string name="stat">Statistika</string>
@@ -1093,4 +1092,8 @@
     <string name="ext_installer_pref">Instalacijski program</string>
     <string name="ext_installer_summary">Omogućuje automatsko instaliranje dodataka i aktualiziranja sustava Android 12 uređaja</string>
     <string name="library_entries">Unosi u biblioteci</string>
+    <string name="source_settings">Postavke izvora</string>
+    <string name="app_settings">Postavke aplikacije</string>
+    <string name="pref_debug_info">Informacije otklanjanja grešaka</string>
+    <string name="label_background_activity">Aktivnost u pozadini</string>
 </resources>

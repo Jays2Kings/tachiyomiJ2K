@@ -180,7 +180,6 @@
     <string name="all_unread_chapters">읽지 않은 챕터 다운로드</string>
     <string name="score">평점</string>
     <string name="title">제목</string>
-    <string name="this_will_remove_the_read_date_question">이 챕터의 읽은 날짜를 삭제합니다. 확실합니까\?</string>
     <string name="picture_saved">사진 저장됨</string>
     <string name="options">설정</string>
     <string name="set_as_cover">표지로 설정</string>
@@ -1042,4 +1041,6 @@
     <string name="pref_remove_exclude_categories">제외된 카테고리</string>
     <string name="ext_installer_pref">인스톨러</string>
     <string name="library_entries">서재 항목</string>
+    <string name="pref_debug_info">디버그 정보</string>
+    <string name="label_background_activity">백그라운드 활동</string>
 </resources>

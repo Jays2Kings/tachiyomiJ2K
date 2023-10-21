@@ -259,7 +259,6 @@
     <string name="certain_buttons_can_be_found">Botoi batzuk beste leku batzuetan aurki daitezke hemen desgaituta badago</string>
     <string name="search_recents">Bilatu azkenekoak…</string>
     <string name="show_updated_time">Erakutsi eguneratutako ordua</string>
-    <string name="this_will_remove_the_read_date_question">Honek kapitulu honen irakurketa-data kenduko du. Ziur zaude\?</string>
     <string name="categories_to_include_in_global_update">Eguneratze globalean sartu beharreko kategoriak</string>
     <string name="this_will_remove_the_read_date_for_x_question">Honek \"%1$s\"-ren irakurketa-data kenduko du. Ziur zaude\?</string>
     <string name="extension_info">Luzapenaren informazioa</string>
@@ -950,4 +949,5 @@
     <string name="gray_background">Grisa</string>
     <string name="pref_remove_exclude_categories">Baztertutako kategoriak</string>
     <string name="ext_installer_pref">Instalatzailea</string>
+    <string name="label_background_activity">Atzeko planoko ekintzak</string>
 </resources>

@@ -190,7 +190,6 @@
     <string name="score">স্কোর</string>
     <string name="title">শিরোনাম</string>
     <string name="category_with_name_exists">এই নামে ধরণ বিদ্যমান!</string>
-    <string name="this_will_remove_the_read_date_question">এটা এই অধ্যায়ের পড়ার সময়কাল সরিয়ে ফেলবে। আপনি নিশ্চিত?</string>
     <string name="picture_saved">ছবি সংরক্ষিত হয়েছে</string>
     <string name="options">অপশন্স</string>
     <string name="set_as_cover">প্রচ্ছদ হিসাবে সংরক্ষণ করুন</string>
@@ -994,4 +993,6 @@
     <string name="pref_remove_exclude_categories">বর্জিত বিভাগ গুলি</string>
     <string name="ext_installer_pref">ইন্সটলআর</string>
     <string name="library_entries">পুস্তক সংগ্রহ</string>
+    <string name="pref_debug_info">ডিবাগ তথ্য</string>
+    <string name="label_background_activity">পটভূমি কার্যকলাপ</string>
 </resources>

@@ -16,16 +16,15 @@
     <string name="new_chapters_found">Atrasti nauji skyriai</string>
     <string name="updates">Naujiniai</string>
     <string name="history">Istorija</string>
-    <string name="this_will_remove_the_read_date_question">Tai pašalins šio skyriaus skaitymo datą. Ar tu tuo tikras\?</string>
     <string name="clear_history">Išvalyti istoriją</string>
     <string name="clear_history_completed">Istorija ištrinta</string>
     <string name="clear_history_confirmation">Ar tu tuo tikras\? Visa istorija bus prarasta.</string>
     <string name="sources">Šaltiniai</string>
     <string name="untrusted_extension">Nepatikimas plėtinys</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">%d plėtinio atnaujinimas pasiekiamas%d plėtinių atnaujinimai pasiekiami%d plėtinių atnaujinimai pasiekiami</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">%d plėtinio atnaujinimas pasiekiamas</item>
+        <item quantity="few">%d plėtinių atnaujinimai pasiekiami</item>
+        <item quantity="other">%d plėtinių atnaujinimai pasiekiami</item>
     </plurals>
     <string name="set_as_cover">Nustatyti kaip viršelį</string>
     <string name="next_chapter_not_found">Kitas skyrius nerastas</string>
@@ -92,9 +91,9 @@
     <string name="categories">Kategorijos</string>
     <string name="edit_categories">Redaguoti kategorijas</string>
     <plurals name="category_plural">
-        <item quantity="one">%d kategorija%d kategorijos%d kategorijos</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">%d kategorija</item>
+        <item quantity="few">%d kategorijos</item>
+        <item quantity="other">%d kategorijos</item>
     </plurals>
     <string name="update">Naujinti</string>
     <string name="new_version_available">Nauja versija pasiekiama!</string>
@@ -102,9 +101,9 @@
     <string name="total_chapters">Skyrių skaičius</string>
     <string name="download_queue_size_warning">Įspėjimas: dėl didelių masinių atsisiuntimų šaltiniai gali tapti lėtesni ir (arba) jie blokuoti \"Tachiyomi\". Bakstelėkite , jei norite sužinoti daugiau.</string>
     <plurals name="for_n_titles">
-        <item quantity="one">Dėl %d pavadinimoDėl %d pavadinimųDėl %d pavadinimo</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Dėl %d pavadinimo</item>
+        <item quantity="few">Dėl %d pavadinimų</item>
+        <item quantity="other">Dėl %d pavadinimo</item>
     </plurals>
     <string name="notification_update_error">Nepavyko atnaujinti %1$d</string>
     <string name="notification_update_skipped">Praleistas %1$d naujinys (-iai)</string>
@@ -153,9 +152,9 @@
     <string name="progress">Progresas</string>
     <string name="complete">Baigtas</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">Atlikta %1$s su %2$s klaidaAtlikta %1$s su %2$s klaidomisAtlikta %1$s su %2$s klaidomis</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Atlikta %1$s su %2$s klaida</item>
+        <item quantity="few">Atlikta %1$s su %2$s klaidomis</item>
+        <item quantity="other">Atlikta %1$s su %2$s klaidomis</item>
     </plurals>
     <string name="clear_chapter_cache">Išvalyti skyriaus talpyklą</string>
     <string name="dump_crash_logs">Išmeskite strigčių žurnalus</string>
@@ -229,9 +228,9 @@
     <string name="every_3_days">Kas 3 dienas</string>
     <string name="weekly">Kas savaitę</string>
     <plurals name="after_minutes">
-        <item quantity="one">Po %1$s minutėsPo %1$s minučiųPo %1$s minučių</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Po %1$s minutės</item>
+        <item quantity="few">Po %1$s minučių</item>
+        <item quantity="other">Po %1$s minučių</item>
     </plurals>
     <string name="select_cover_image">Pasirinkti viršelio vaizdą</string>
     <string name="select_backup_file">Pasirinkti atsarginės kopijos failą</string>
@@ -341,9 +340,9 @@
     <string name="source_not_installed_">Šaltinis neįdiegtas: %1$s</string>
     <string name="no_description">Nėra aprašymo</string>
     <plurals name="next_unread_chapters">
-        <item quantity="one">Kitas neskaitytas skyriusKiti %d neskaityti skyriaiKiti %d neskaitytų skyrių</item>
-        <item quantity="few"/>
-        <item quantity="other"/>
+        <item quantity="one">Kitas neskaitytas skyrius</item>
+        <item quantity="few">Kiti %d neskaityti skyriai</item>
+        <item quantity="other">Kiti %d neskaitytų skyrių</item>
     </plurals>
     <string name="tracking">Sekimas</string>
     <string name="tracked">Sekami</string>
@@ -520,4 +519,5 @@
     <string name="ext_installer_pref">Diegimo programa</string>
     <string name="library_entries">Bibliotekos įrašai</string>
     <string name="clear_database_summary">Ištrinkite įrašų istoriją, kurie nėra išsaugoti jūsų bibliotekoje</string>
+    <string name="label_background_activity">Fono veikla</string>
 </resources>

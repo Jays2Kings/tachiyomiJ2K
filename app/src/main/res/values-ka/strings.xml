@@ -122,7 +122,6 @@
     <string name="help">დახმარება</string>
     <string name="library">ბიბლიოთეკა</string>
     <string name="updating_library">ბიბლიოთეკის განახლება</string>
-    <string name="this_will_remove_the_read_date_question">ეს წაშლის ამ თავის წაკითხვის თარიღს. დარწმუნებული ხართ\?</string>
     <string name="fit_width">სიგანეზე მორგება</string>
     <string name="fit_height">სიმაღლეზე მორგება</string>
     <string name="original_size">ორიგინალური ზომა</string>

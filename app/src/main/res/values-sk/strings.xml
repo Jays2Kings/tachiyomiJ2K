@@ -185,7 +185,6 @@
     <string name="local">Lokálny</string>
     <string name="latest_chapter">Najnovšia kapitola</string>
     <string name="new_chapters_found">Boli nájdené nové kapitoly</string>
-    <string name="this_will_remove_the_read_date_question">Týmto sa odstráni dátum prečítania tejto kapitoly. Si si istý\?</string>
     <string name="no_more_results">Žiadne ďalšie výsledky</string>
     <string name="no_results_found">Neboli nájdené žiadne výsledky</string>
     <string name="other">Ostatné</string>
@@ -626,4 +625,5 @@
     <string name="comfortable_grid">Príjemná mriežka</string>
     <string name="ext_installer_pref">Inštalátor</string>
     <string name="library_entries">Záznamy v knižnici</string>
+    <string name="label_background_activity">Aktivita na pozadí</string>
 </resources>

@@ -224,7 +224,6 @@
     <string name="date_added">Datum dodavanja</string>
     <string name="latest_chapter">Poslednje poglavlje</string>
     <string name="new_chapters_found">Pronađena su nova poglavlja</string>
-    <string name="this_will_remove_the_read_date_question">Ovo će ukloniti datum čitanja ovog poglavlja. Da li ste sigurni\?</string>
     <string name="no_results_found">Нема пронађених резултата</string>
     <string name="local_source_help_guide">Vodič za lokalni izvor</string>
     <string name="check_site_in_web">Proveri vebsajt u WebView</string>
@@ -1093,4 +1092,6 @@
     <string name="pref_remove_exclude_categories">Искључене категорије</string>
     <string name="ext_installer_pref">Инсталер</string>
     <string name="library_entries">Наслови колекције</string>
+    <string name="pref_debug_info">Информације за отклањање грешака</string>
+    <string name="label_background_activity">Активност у позадини</string>
 </resources>

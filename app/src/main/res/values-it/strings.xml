@@ -169,7 +169,6 @@
     <!-- Category activity -->
     <string name="category_with_name_exists">Esiste già una categoria con questo nome!</string>
     <!-- Dialog remove recently view -->
-    <string name="this_will_remove_the_read_date_question">Questo rimuoverà la data lettura di questo capitolo. Sei sicuro?</string>
     <!-- Image notifier -->
     <string name="picture_saved">Immagine salvata</string>
     <string name="options">Opzioni</string>
@@ -1129,4 +1128,6 @@
     <string name="library_entries">Voci della libreria</string>
     <string name="source_settings">Impostazioni delle fonti</string>
     <string name="app_settings">Impostazioni app</string>
+    <string name="pref_debug_info">Informazioni di debug</string>
+    <string name="label_background_activity">Attività in secondo piano</string>
 </resources>

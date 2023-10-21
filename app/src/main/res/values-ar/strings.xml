@@ -188,7 +188,6 @@
     <string name="score">التقييم</string>
     <string name="title">العنوان</string>
     <string name="category_with_name_exists">توجد بالفعل فئة بهذا الاسم!</string>
-    <string name="this_will_remove_the_read_date_question">سوف يزيل هذا تاريخ قراءة هذا الفصل. أأنت متأكِّد؟</string>
     <string name="picture_saved">تم حفظ الصورة</string>
     <string name="options">الخيارات</string>
     <string name="set_as_cover">عيِّنها غلافًا</string>
@@ -1173,4 +1172,6 @@
     <string name="library_entries">عناصر المكتبة</string>
     <string name="source_settings">إعدادات المصادر</string>
     <string name="app_settings">إعدادات التطبيق</string>
+    <string name="pref_debug_info">معلومات التنقيح</string>
+    <string name="label_background_activity">الأنشطة التي تعمل في الخلفية</string>
 </resources>

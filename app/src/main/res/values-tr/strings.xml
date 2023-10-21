@@ -220,7 +220,6 @@
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
     <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
-    <string name="this_will_remove_the_read_date_question">Bu, bu bölümün okunma tarihini kaldıracak. Emin misiniz?</string>
     <string name="picture_saved">Resim kaydedildi</string>
     <string name="options">Seçenekler</string>
     <string name="set_as_cover">Kapak olarak ayarla</string>
@@ -1068,4 +1067,6 @@
     <string name="ext_installer_pref">Kurucu</string>
     <string name="ext_installer_summary">Uzantıların kullanıcı etkileşimi olmadan kurulmasına izin verir ve Android 12 altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="library_entries">Kitaplık girdileri</string>
+    <string name="pref_debug_info">Hata ayıklama bilgisi</string>
+    <string name="label_background_activity">Arka plan etkinliği</string>
 </resources>

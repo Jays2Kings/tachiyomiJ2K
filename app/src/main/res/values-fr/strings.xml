@@ -163,7 +163,6 @@
     <!-- Category activity -->
     <string name="category_with_name_exists">Une catégorie avec ce nom existe déjà !</string>
     <!-- Dialog option with checkbox view -->
-    <string name="this_will_remove_the_read_date_question">Cela enlèvera la date de lecture de ce chapitre. Êtes-vous sûr ?</string>
     <!-- SnackBar -->
     <!-- Image notifier -->
     <string name="picture_saved">Image sauvegardée</string>
@@ -1127,4 +1126,6 @@
     <string name="pref_remove_exclude_categories">Catégories exclues</string>
     <string name="ext_installer_pref">Installateur</string>
     <string name="library_entries">Entrées de la bibliothèque</string>
+    <string name="pref_debug_info">Informations de débogage</string>
+    <string name="label_background_activity">Activité en arrière-plan</string>
 </resources>

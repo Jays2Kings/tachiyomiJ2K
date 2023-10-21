@@ -111,7 +111,6 @@
     <string name="pref_update_only_completely_read">नपढेको अध्याय(हरू) सँग</string>
     <string name="pref_update_only_non_completed">\"समाप्त\" स्थिति भएको</string>
     <string name="pref_update_only_started">जो सुरु भएको छैन</string>
-    <string name="this_will_remove_the_read_date_question">यसले यस अध्यायको पढेको मिति हटाउनेछ। के तपाईँ निश्चित हुनुहुन्छ\?</string>
     <string name="clear_history_completed">इतिहास हटाइयो</string>
     <string name="clear_history_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? सबै इतिहास हराउनेछ।</string>
     <string name="no_more_results">थप परिणामहरू छैनन्</string>
@@ -451,7 +450,7 @@
     <string name="unknown_error">अज्ञात त्रुटि</string>
     <string name="unpin">अनपिन</string>
     <string name="view_chapters">अध्यायहरू हेर्नुहोस्</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न सबै फाइलहरू माथि पहुँच चाहिन्छ। यहाँ ट्याप गर्नुहोस्, त्यसपछि \"सबै फाइलहरू व्यवस्थापन गर्न पहुँच अनुमति दिनुहोस्\" सक्षम गर्नुहोस्।</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न सबै फाइलहरू माथि पहुँच चाहिन्छ। यहाँ ट्याप गर्नुहोस्, त्यसपछि \"Allow access to manage all files.\" सक्षम गर्नुहोस्।</string>
     <string name="all_files_permission_required">फाइल अनुमति आवश्यक छ</string>
     <string name="manga">माङ्गा</string>
     <string name="manhwa">मानह्वा</string>
@@ -483,7 +482,7 @@
         <item quantity="other">%d अध्यायहरू छोड्दै, या त स्रोत सँग छैन वा यसलाई फिल्टर गरिएको छ</item>
     </plurals>
     <string name="backup_in_progress">ब्याकअप पहिले नै प्रगतिमा छ</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न, स्वचालित ब्याकअपहरू सिर्जना गर्न र लोकल माङ्गा पढ्नको लागि Android 11 मा सबै फाइलहरू माथि पहुँच चाहिन्छ।
+    <string name="external_storage_permission_notice">TachiyomiJ2K लाई अध्यायहरू डाउनलोड गर्न, स्वचालित ब्याकअपहरू सिर्जना गर्न र लोकल श्रृङ्खला पढ्नको लागि Android 11 मा सबै फाइलहरू माथि पहुँच चाहिन्छ।
 \n
 \nअर्को स्क्रिनमा, \"Allow access to manage all files.\" सक्षम गर्नुहोस्।</string>
     <string name="tracker">ट्र्याकर</string>
@@ -531,8 +530,8 @@
     <string name="_already_in_queue">%1$s पहिले नै लाममा छ</string>
     <string name="no_matches_for_filters_short">तपाईँको फिल्टरका लागि कुनै मेल खाँदैन</string>
     <string name="confirm_category_deletion">वर्ग हटाउने हो\?</string>
-    <string name="confirm_category_deletion_message">यस वर्गको माङ्गा पूर्वनिर्धारित कोटीमा सारिनेछ।</string>
-    <string name="already_in_category">माङ्गा पहिले नै वर्गमा छ</string>
+    <string name="confirm_category_deletion_message">यस वर्गका इन्ट्रीहरू पूर्वनिर्धारित वर्गमा सारिनेछ।</string>
+    <string name="already_in_category">इन्ट्री पहिले नै वर्गमा छ</string>
     <string name="add_categories">वर्गहरू थप्नुहोस्</string>
     <string name="add_edit_categories">वर्गहरू थप्नु/सम्पादन गर्नुहोस्</string>
     <string name="manage_category">वर्ग व्यवस्थापन गर्नुहोस्</string>
@@ -573,9 +572,9 @@
     <string name="view_all_updates">सबै अपडेटहरू हेर्नुहोस्</string>
     <string name="show_more_chapters">थप अध्यायहरू देखाउनुहोस्</string>
     <string name="search_recents">हालैका खोजी गर्नुहोस्…</string>
-    <string name="no_recent_read_updated_manga">हालै पढिएको वा अपडेट गरिएको माङ्गा छैन</string>
+    <string name="no_recent_read_updated_manga">हालै पढिएको वा अपडेट गरिएको श्रृङ्खला छैन</string>
     <string name="no_recent_chapters">हालको कुनै अध्यायहरू छैनन्</string>
-    <string name="no_recently_read_manga">हालसालै पढिएको माङ्गा छैन</string>
+    <string name="no_recently_read_manga">हालसालै पढिएको श्रृङ्खला छैन</string>
     <string name="grouped">समूहबद्ध</string>
     <string name="reset_chapter_question">अध्याय रिसेट गर्ने हो\?</string>
     <string name="press_and_hold_to_also_reset">थिचेर होल्ड गरेर पनि अध्याय रिसेट गर्न सकिन्छ</string>
@@ -683,8 +682,8 @@
     </plurals>
     <string name="auto_refresh_covers_summary">पुस्तकालय अपडेट गर्दा आवरणहरू पनि रिफ्रेस गर्नुहोस्</string>
     <string name="pref_library_update_manga_restriction">शीर्षकहरू अपडेट गर्न छोड्नुहोस्</string>
-    <string name="pref_update_only_completely_read_summary">नपढिएको अध्याय नभएमा मात्र माङ्गा अपडेट गर्नुहोस् (पुरै पढिसकेको)</string>
-    <string name="when_sorting_ignore_articles">वर्णमाला अनुसार क्रमबद्ध गर्दा, माङ्गा शीर्षकको सुरुमा लेखहरू (a, an, the) बेवास्ता गर्दै क्रमबद्ध गर्नुहोस्</string>
+    <string name="pref_update_only_completely_read_summary">नपढिएको अध्याय नभएमा मात्र श्रृङ्खला अपडेट गर्नुहोस् (पुरै पढिसकेको)</string>
+    <string name="when_sorting_ignore_articles">वर्णमाला अनुसार क्रमबद्ध गर्दा, श्रृङ्खलाको शीर्षकको सुरुमा लेखहरू (a, an, the) बेवास्ता गर्दै क्रमबद्ध गर्नुहोस्</string>
     <string name="categories_to_include_in_global_update">ग्लोबल अपडेटमा समावेश गर्ने वर्गहरू</string>
     <string name="include_in_global_update">ग्लोबल अपडेटमा समावेश गर्नुहोस्</string>
     <string name="auto_refresh_covers">आवरणहरू स्वतः रिफ्रेस गर्नुहोस्</string>
@@ -732,7 +731,7 @@
 \nतिनीहरूका डाउनलोडहरू हटाउने हो\?</item>
     </plurals>
     <string name="update_tracking_marked_read">पढिएको चिन्ह लगाउँदा ट्र्याकिङ अपडेट गर्नुहोस्</string>
-    <string name="enhanced_tracking_info">सेवाहरू जसले विशिष्ट स्रोतहरूको लागि परिष्कृत सुविधाहरू प्रदान गर्दछ। तपाईंको पुस्तकालयमा माङ्गा थप्दा स्वतः ट्र्याक गरिन्छ।</string>
+    <string name="enhanced_tracking_info">सेवाहरू जसले विशिष्ट स्रोतहरूको लागि परिष्कृत सुविधाहरू प्रदान गर्दछ। तपाईंको पुस्तकालयमा श्रृङ्खला थप्दा स्वतः ट्र्याक गरिन्छ।</string>
     <string name="update_tracking_after_reading">पढिसकेपछि ट्र्याकिङ अपडेट गर्नुहोस्</string>
     <string name="currently_reading">हाल पढ्दै</string>
     <string name="select_an_entry">एउटा इन्ट्री चयन गर्नुहोस्</string>
@@ -747,12 +746,12 @@
     <string name="to_show_again_setting_sources">यो स्क्रिन फेरि देखाउन, सेटिङहरू -&gt; स्रोतहरूमा जानुहोस्।</string>
     <string name="latest_">नवीनतम: %1$s</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d माङ्गा स्थानान्तरण भयो</item>
-        <item quantity="other">%d माङ्गा स्थानान्तरण भयो</item>
+        <item quantity="one">%d श्रृङ्खला स्थानान्तरण भयो</item>
+        <item quantity="other">%d श्रृङ्खला स्थानान्तरण भयो</item>
     </plurals>
     <plurals name="copy_manga">
-        <item quantity="one">%1$d%2$s माङ्गा प्रतिलिपि गर्ने हो\?</item>
-        <item quantity="other">%1$d%2$s माङ्गा प्रतिलिपि गर्ने हो\?</item>
+        <item quantity="one">%1$d%2$s श्रृङ्खला प्रतिलिपि गर्ने हो\?</item>
+        <item quantity="other">%1$d%2$s श्रृङ्खला प्रतिलिपि गर्ने हो\?</item>
     </plurals>
     <string name="dark">अँध्यारो</string>
     <string name="a_brighter_you">एक उज्ज्वल तपाईं (डायनामिक)</string>
@@ -808,11 +807,11 @@
     <string name="hide_chapter_titles">अध्याय शीर्षक लुकाउनुहोस्</string>
     <string name="sort_by_chapter_number">अध्याय सङ्ख्या अनुसार क्रमबद्ध गर्नुहोस्</string>
     <string name="reset_cover">आवरण रिसेट गर्नुहोस्</string>
-    <string name="must_be_in_library_to_edit">सम्पादन गर्नको लागि माङ्गा तपाईंको पुस्तकालयमा हुनुपर्छ</string>
+    <string name="must_be_in_library_to_edit">सम्पादन गर्नको लागि श्रृङ्खला तपाईंको पुस्तकालयमा हुनुपर्छ</string>
     <string name="remember_this_choice">यो छनौट सम्झनुहोस्</string>
     <string name="source_not_installed">स्रोत स्थापना गरिएको छैन</string>
-    <string name="custom_manga_info">कस्टम माङ्गा जानकारी</string>
-    <string name="all_read_manga">सबै पढिएका माङ्गा</string>
+    <string name="custom_manga_info">कस्टम श्रृङ्खला जानकारी</string>
+    <string name="all_read_manga">सबै पढिएका श्रृङ्खला</string>
     <string name="filter_groups">स्क्यानलेटर टोली फिल्टर गर्नुहोस्</string>
     <string name="cannot_remove_tracking_while_offline">अफलाइन हुँदा %1$s बाट ट्र्याकर हटाउन सकिँदैन</string>
     <string name="started_reading_date">सुरु गरेको मिति</string>
@@ -839,8 +838,8 @@
     <string name="sapphire_dusk">नीलमणि साँझ</string>
     <string name="violet">बैंगनी</string>
     <plurals name="migrate_manga">
-        <item quantity="one">%1$d%2$s माङ्गा स्थानान्तरण गर्ने हो\?</item>
-        <item quantity="other">%1$d%2$s माङ्गा स्थानान्तरण गर्ने हो\?</item>
+        <item quantity="one">%1$d%2$s श्रृङ्खला स्थानान्तरण गर्ने हो\?</item>
+        <item quantity="other">%1$d%2$s श्रृङ्खला स्थानान्तरण गर्ने हो\?</item>
     </plurals>
     <string name="app_updates">एप अपडेटहरू</string>
     <string name="theme_buttons_based_on_cover">आवरणमा आधारित थीम बटनहरू</string>
@@ -886,7 +885,7 @@
     <string name="default_behavior">पूर्वनिर्धारित व्यवहार</string>
     <string name="by_default_side_nav_info">पूर्वनिर्धारित रूपमा, ल्यान्डस्केपमा हुँदा केही फोनहरू र साना ट्याब्लेटहरूका लागि साइड नेभिगेसन प्रयोग गरिन्छ, र सधैं ठूला ट्याब्लेटहरूमा देखाइन्छ</string>
     <string name="reset_tags">ट्यागहरू रिसेट गर्नुहोस्</string>
-    <string name="tracking_info">ट्र्याकिङ सेवाहरूमा अध्याय प्रगति अपडेट गर्न एकतर्फी सिङ्क। तिनीहरूको ट्र्याकिङ बटनबाट व्यक्तिगत इन्ट्रीहरूको लागि ट्र्याकिङ सेट अप गर्नुहोस्।</string>
+    <string name="tracking_info">बाह्य ट्र्याकर सेवाहरूमा अध्याय प्रगति अपडेट गर्न एक-तर्फी सिङ्क। तिनीहरूको ट्र्याकिङ बटनबाट व्यक्तिगत इन्ट्रीहरूको लागि ट्र्याकिङ सेट अप गर्नुहोस्।</string>
     <string name="sort_by_source_s_order">स्रोतको क्रम अनुसार क्रमबद्ध गर्नुहोस्</string>
     <string name="newest_first">सबैभन्दा नयाँ देखि पुरानो</string>
     <string name="oldest_first">पुरानो देखि सबैभन्दा नयाँ</string>
@@ -901,14 +900,14 @@
     <string name="skip_pre_migration">प्रि-स्थानान्तरण छोड्नुहोस्</string>
     <string name="select_a_source_then_item_to_migrate">स्रोत चयन गर्नुहोस्, त्यसपछि स्थानान्तरण गर्न वस्तु चयन गर्नुहोस्</string>
     <string name="copy_now">अहिले प्रतिलिपि गर्नुहोस्</string>
-    <string name="no_chapters_found_for_migration">कुनै अध्याय फेला परेन, यो माङ्गा स्थानान्तरणको लागि प्रयोग गर्न सकिँदैन</string>
+    <string name="no_chapters_found_for_migration">कुनै अध्याय फेला परेन, यो श्रृङ्खला स्थानान्तरणको लागि प्रयोग गर्न सकिँदैन</string>
     <string name="migrate_">%1$s स्थानान्तरण गर्नुहोस्</string>
     <string name="no_alternatives_found">कुनै विकल्प फेला परेन</string>
     <string name="classic_blue">क्लासिक नीलो</string>
     <string name="amoled_black">एमोलेड कालो</string>
     <string name="side_nav_icon_alignment">साइड नेभिगेसन आइकन अलाइनमेंट</string>
     <string name="backup">ब्याकअप</string>
-    <string name="backup_has_no_manga">ब्याकअपमा कुनै माङ्गा समावेश छैन।</string>
+    <string name="backup_has_no_manga">ब्याकअपमा कुनै इन्ट्री समावेश छैन।</string>
     <string name="clear_database_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? तपाईंले पढ्नुभएको अध्यायहरू र गैर-पुस्तकालय इन्ट्रीहरूको प्रगति हराउनेछ</string>
     <string name="clean_up_cached_covers">क्यास गरिएका आवरणहरू सफा गर्नुहोस्</string>
     <string name="delete_all_covers__not_in_library_used_">तपाईंको पुस्तकालयमा नभएका क्यास गरिएका सबै आवरणहरू हटाउनुहोस्
@@ -922,7 +921,7 @@
     <string name="added_to_">%1$s मा थपियो</string>
     <string name="beta">बीटा</string>
     <string name="bottom">तल</string>
-    <string name="change">परिवर्तन</string>
+    <string name="change">बदल्नुहोस्</string>
     <string name="charging">चार्ज गर्दै</string>
     <string name="clear">खाली गर्नुहोस्</string>
     <string name="ignore">बेवास्ता गर्नुहोस्</string>
@@ -954,7 +953,7 @@
     <string name="refresh_tracking_metadata">ट्र्याकिङ मेटाडेटा रिफ्रेस गर्नुहोस्</string>
     <string name="clean_up_downloaded_chapters">डाउनलोड गरिएका अध्यायहरू सफा गर्नुहोस्</string>
     <string name="clean_read_downloads">पढिएको सफा गर्नुहोस्</string>
-    <string name="clean_read_manga_not_in_library">पुस्तकालयमा नभएको माङ्गा सफा गर्नुहोस्</string>
+    <string name="clean_read_manga_not_in_library">पुस्तकालयमा नभएको इन्ट्री सफा गर्नुहोस्</string>
     <string name="starting_cleanup">सफाई सुरु गर्दैछ</string>
     <plurals name="cleanup_done">
         <item quantity="one">सफाई सक्यो। %d फोल्डर हटाइयो</item>
@@ -1028,15 +1027,15 @@
         <item quantity="one">क्यास खाली गरियो। %d फाइल मेटाइएको छ</item>
         <item quantity="other">क्यास खाली गरियो। %d फाइलहरू मेटिएका छन्</item>
     </plurals>
-    <string name="clear_database_source_item_count">डेटाबेसमा %1$d गैर-पुस्तकालय इन्ट्रीहरू</string>
+    <string name="clear_database_source_item_count">डेटाबेसमा %1$d गैर-पुस्तकालय इन्ट्रीहरू छन्</string>
     <string name="clear_database_summary">पुस्तकालयमा नभएका इन्ट्रीको इतिहास हटाउनुहोस्</string>
-    <string name="clear_db_exclude_read">पढिएका अध्यायहरू भएको माङ्गा राख्नुहोस्</string>
+    <string name="clear_db_exclude_read">पढिएका अध्यायहरू भएको इन्ट्री राख्नुहोस्</string>
     <string name="clear_cached_covers_non_library">पुस्तकालयमा नभएका क्यास गरिएका आवरणहरू खाली गर्नुहोस्</string>
     <string name="username_must_not_be_blank">युजरनेम वा पासवर्ड खाली हुन सक्दैन</string>
     <string name="categories_to_include_in_download">डाउनलोडमा समावेश गर्न वर्गहरू</string>
     <string name="delete_removed_chapters">हटाइएका अध्यायहरू मेटाउनुहोस्</string>
     <string name="add_to_">%1$s मा थप्नुहोस्</string>
-    <string name="cover_of_image">माङ्गाको आवरण</string>
+    <string name="cover_of_image">श्रृङ्खलाको आवरण</string>
     <string name="tag">ट्याग</string>
     <string name="remove_from_">%1$s बाट हटाउनुहोस्</string>
     <string name="top">माथि</string>
@@ -1048,10 +1047,10 @@
     <string name="delete_unused_chapters">अवस्थित नभएको, आंशिक रूपमा डाउनलोड गरिएको, र पढेको अध्याय फोल्डरहरू हटाउनुहोस्</string>
     <string name="no_folders_to_cleanup">सफा गर्न कुनै फोल्डर छैनन्</string>
     <string name="disable_if_issues_with_updating">यदि तपाईँले आफ्नो पुस्तकालय अपडेट गर्न वा रिस्टोर गर्न समस्याहरू अनुभव गर्दै हुनुहुन्छ भने यो असक्षम पार्नुहोस्</string>
-    <string name="updates_covers_genres_desc">यसले आवरणहरू, विवरणहरू, जानरा, र माङ्गा स्थिति जानकारी अपडेट गर्दछ</string>
-    <string name="delete_old_covers_in_library_used_">अपडेट गरिएको तपाईंको पुस्तकालयमा माङ्गाको पुरानो र प्रयोग नगरिएको क्यास कभरहरू हटाउनुहोस्।
+    <string name="updates_covers_genres_desc">यसले आवरणहरू, विवरणहरू, जानरा, र इन्ट्रीहरूको स्थिति जानकारी अपडेट गर्दछ</string>
+    <string name="delete_old_covers_in_library_used_">अपडेट गरिएको तपाईंको पुस्तकालयमा इन्ट्रीको पुरानो र प्रयोग नगरिएको क्यास कभरहरू हटाउनुहोस्।
 \nहाल प्रयोग गर्दै: %1$s</string>
-    <string name="you_can_migrate_in_library">तपाईंले आफ्नो पुस्तकालयमा माङ्गा चयन गरेर पनि स्थानान्तरण गर्न सक्नुहुन्छ</string>
+    <string name="you_can_migrate_in_library">तपाईंले आफ्नो पुस्तकालयमा इन्ट्री चयन गरेर पनि स्थानान्तरण गर्न सक्नुहुन्छ</string>
     <string name="only_search_pinned_when">पिन गरिएका स्रोतहरूमा मात्र खोज्नुहोस्</string>
     <string name="invalid_download_location">अवैध डाउनलोड स्थान</string>
     <string name="download_complete">डाउनलोड पूरा भयो</string>
@@ -1066,4 +1065,10 @@
     <string name="pref_remove_exclude_categories">बहिष्कृत वर्गहरू</string>
     <string name="ext_installer_pref">इंस्टलर</string>
     <string name="library_entries">पुस्तकालयका इन्ट्रीहरू</string>
+    <string name="ext_installer_summary">एक्सटेन्शनहरूलाई युजर प्रम्प्टहरू बिना स्थापना गर्न अनुमति दिन्छ र एन्ड्रोइड १२ अन्तर्गतका यन्त्रहरूका लागि स्वचालित अपडेटहरू सक्षम गर्दछ</string>
+    <string name="apply">अप्लाई</string>
+    <string name="source_settings">स्रोत सेटिङहरू</string>
+    <string name="app_settings">एप सेटिङहरू</string>
+    <string name="pref_debug_info">Debug जानकारी</string>
+    <string name="label_background_activity">ब्याकग्राउण्ड गतिविधि</string>
 </resources>

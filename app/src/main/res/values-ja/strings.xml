@@ -190,7 +190,6 @@
     <string name="latest_chapter">最新章の更新順</string>
     <string name="new_chapters_found">新しい章が見つかりました</string>
     <string name="updates">アップデート</string>
-    <string name="this_will_remove_the_read_date_question">この章の読書日時を本当に削除してもよろしいですか？</string>
     <string name="no_more_results">これ以上の結果はありません</string>
     <string name="no_results_found">結果が見つかりませんでした</string>
     <string name="local_source">ローカルソース</string>
@@ -297,7 +296,7 @@
     <string name="always">常時</string>
     <string name="back">前へ</string>
     <string name="common">一般設定</string>
-    <string name="cover_of_image">マンガカバー</string>
+    <string name="cover_of_image">シリーズカバー</string>
     <string name="forward">次へ</string>
     <string name="ignore">無視</string>
     <string name="less">詳細を非表示</string>
@@ -336,8 +335,8 @@
     <string name="category_with_name_exists">同じ名前のカテゴリーが既に存在します！</string>
     <string name="manage_category">カテゴリーを管理</string>
     <string name="add_categories">カテゴリーを追加</string>
-    <string name="already_in_category">この漫画は既にこのカテゴリーに追加されています</string>
-    <string name="confirm_category_deletion_message">このカテゴリーに載っていた漫画はデフォルトカテゴリーに移動されます。</string>
+    <string name="already_in_category">この項目は既にこのカテゴリーに追加されています</string>
+    <string name="confirm_category_deletion_message">このカテゴリーにある項目はデフォルトカテゴリーに移動されます。</string>
     <string name="confirm_category_deletion">カテゴリーを削除しますか？</string>
     <string name="category_is_empty">カテゴリーが空です</string>
     <string name="create_new_category">新しいカテゴリーを作成</string>
@@ -405,7 +404,7 @@
     <string name="invalid_backup_file">バックアップファイルは無効です</string>
     <string name="invalid_backup_file_type">無効なバックアップ ファイル：%1$s
 \nファイル拡張子は.proto.gzもしくは.jsonであるよう確認してください。</string>
-    <string name="backup_has_no_manga">バックアップにはマンガが含まれていません。</string>
+    <string name="backup_has_no_manga">バックアップには項目が含まれていません。</string>
     <string name="restore_missing_sources">ソースがありません：</string>
     <string name="restore_missing_trackers">ログインしていないトラッカー：</string>
     <string name="restore_content_full">バックアップファイルからデータを復旧します。
@@ -519,7 +518,7 @@
     <string name="grid_size">グリッドサイズ</string>
     <string name="comfortable_grid">快適グリッド</string>
     <string name="app_info">アプリ情報</string>
-    <string name="no_recently_read_manga">最近読んだ漫画はありません</string>
+    <string name="no_recently_read_manga">最近読んだ項目はありません</string>
     <string name="reset_chapter_history">章の履歴をリセット</string>
     <string name="search_suggestions">検索候補</string>
     <string name="more_library_settings">ライブラリの詳細設定</string>
@@ -544,7 +543,7 @@
     <string name="sort_and_filter">ソート＆フィルター</string>
     <string name="mark_previous_as_unread">前の章を未読にする</string>
     <string name="stop_migrating">移行を停止しますか？</string>
-    <string name="clean_read_manga_not_in_library">ライブラリにない漫画をクリア</string>
+    <string name="clean_read_manga_not_in_library">ライブラリにない項目を消去</string>
     <string name="disabled">無効</string>
     <string name="refresh_tracking_metadata">同期のメタデータを更新</string>
     <string name="if_disabled_transition_will_skip">無効にした場合、次の章を読み込む際の遷移ページはスキップされます</string>
@@ -616,13 +615,13 @@
     <string name="delete_unused_chapters">存在しないか、部分的にダウンロードされているか、既読の章のフォルダーを削除します</string>
     <string name="pauses_reading_history">読書履歴を一時停止します</string>
     <string name="want_to_read">読みたい</string>
-    <string name="must_be_in_library_to_edit">編集するには、漫画をライブラリに追加してください</string>
+    <string name="must_be_in_library_to_edit">編集するには、項目をライブラリに追加してください</string>
     <string name="smart_by_page">スマート（ページ別）</string>
     <string name="smart_by_theme">スマート（テーマ別）</string>
     <string name="amount_of_pages_to_preload">読書中にプリロードするページの数です。数値を大きくすると、キャッシュとネットワークの使用量が増える代わりに、よりスムーズな読書体験を得られます。</string>
     <string name="source_hidden">隠されたソース</string>
     <string name="press_and_hold_to_also_reset">押し続けると章の履歴をリセットすることもできます</string>
-    <string name="no_recent_read_updated_manga">最近読んだり更新したりしたマンガはありません</string>
+    <string name="no_recent_read_updated_manga">最近読んだり更新したりした項目はありません</string>
     <string name="no_recent_chapters">新しい章はありません</string>
     <plurals name="chapters_plural">
         <item quantity="other">%1$s章</item>
@@ -655,7 +654,7 @@
     <string name="back_to_start">スタートに戻る</string>
     <string name="backup_in_progress">バックアップは既に実行中です</string>
     <string name="restore_in_progress">復元は既に実行中です</string>
-    <string name="custom_manga_info">カスタムマンガ情報</string>
+    <string name="custom_manga_info">カスタムシリーズ情報</string>
     <string name="restore_error">バックアップの復元に失敗しました</string>
     <plurals name="cache_cleared">
         <item quantity="other">キャッシュをクリアしました。%dファイルが削除されました</item>
@@ -663,7 +662,7 @@
     <string name="doh">DNS over HTTPS</string>
     <string name="clean_orphaned_downloads">放棄をクリア</string>
     <string name="disable_if_issues_with_updating">ライブラリの復元や更新に不具合が発生した場合無効にしてください</string>
-    <string name="updates_covers_genres_desc">カバー、ジャンル、説明と漫画のステータス情報を更新します</string>
+    <string name="updates_covers_genres_desc">カバー、ジャンル、説明と項目のステータス情報を更新します</string>
     <string name="clean_read_downloads">既読をクリア</string>
     <string name="only_enable_enabled_for_migration">有効化したソースを移行する際にのみ有効にしてください</string>
     <string name="only_enable_pinned_for_migration">ピン留めしたソースを移行する際にのみ有効にしてください</string>
@@ -677,11 +676,11 @@
     <string name="this_will_remove_the_read_date_for_x_question">「%1$s」の読書日時を本当に削除してもよろしいですか？</string>
     <string name="newly_added">最近追加された</string>
     <string name="can_be_found_in_library_filters">ライブラリのフィルターを展開して見つけることもできます</string>
-    <string name="delete_old_covers_in_library_used_">ライブラリの更新後に不要になった漫画の古いカバーを削除します。
+    <string name="delete_old_covers_in_library_used_">ライブラリの更新後に不要になった項目の古いカバーを削除します。
 \n現在使用中：%1$s</string>
     <string name="webview_is_required">TachiyomiにはWebViewが必要です</string>
-    <string name="you_can_migrate_in_library">ライブラリでマンガを選択して移行することもできます</string>
-    <string name="when_sorting_ignore_articles">アルファベット順に並べ替える場合は、マンガのタイトルの先頭にある冠詞（a、an、the）を無視して並べ替えます</string>
+    <string name="you_can_migrate_in_library">ライブラリで項目を選択して移行することもできます</string>
+    <string name="when_sorting_ignore_articles">アルファベット順に並べ替える場合は、項目のタイトルの先頭にある冠詞（a、an、the）を無視して並べ替えます</string>
     <string name="sort_by_ignoring_articles">冠詞を無視してソート</string>
     <string name="use_most_chapters">章が最も多いソースを使用する（遅い）</string>
     <string name="data_to_include_in_migration">移行に含めるデータ</string>
@@ -720,17 +719,17 @@
     <string name="visit_recents_for_download_queue">「最近」タブにアクセスして、ダウンロードキューにアクセスします。ダブルタップまたは長押しで素早くアクセスすることもできます</string>
     <string name="use_last_saved_migration_preferences">最後に使用した移行設定とソースを使用して、一括移行します</string>
     <plurals name="manga_migrated">
-        <item quantity="other">%dのマンガを移行しました</item>
+        <item quantity="other">%dのシリーズを移行しました</item>
     </plurals>
     <string name="skipping_">（スキップ %1$d）</string>
     <plurals name="copy_manga">
-        <item quantity="other">%1$d%2$sのマンガをコピーしますか？</item>
+        <item quantity="other">%1$d%2$sのシリーズをコピーしますか？</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="other">%1$d%2$sのマンガを移行しますか？</item>
+        <item quantity="other">%1$d%2$sのシリーズを移行しますか？</item>
     </plurals>
     <string name="no_alternatives_found">代替が見つかりません</string>
-    <string name="no_chapters_found_for_migration">章が見つかりません。このマンガは移行に使用できません</string>
+    <string name="no_chapters_found_for_migration">章が見つかりません。このシリーズは移行に使用できません</string>
     <string name="migrate_">%1$sを移行</string>
     <string name="copy_now">コピーします</string>
     <string name="migrate_now">移行します</string>
@@ -853,7 +852,7 @@
     <string name="by_source_order">ソースでの順位に基づく</string>
     <string name="not_bookmarked">未ブックマーク</string>
     <string name="external_storage_download_notice">章をダウンロードするには、TachiyomiJ2Kは全ファイルへのアクセス権が必要です。こちらをタップして「全てのファイルの管理を許可」を有効にしてください。</string>
-    <string name="external_storage_permission_notice">章のダウンロード、自動バックアップの作成及びローカルマンガの閲覧を行うには、TachiyomiJ2KはAndroid 11での全ファイルへのアクセス権が必要です。
+    <string name="external_storage_permission_notice">章のダウンロード、自動バックアップの作成及びローカルマンガシリーズの閲覧を行うには、TachiyomiJ2KはAndroid 11での全ファイルへのアクセス権が必要です。
 \n
 \n次の画面で「全てのファイルの管理を許可」を有効にしてください。</string>
     <string name="all_files_permission_required">ファイルアクセス権限が必要</string>
@@ -882,9 +881,9 @@
     <string name="publishing_finished">完結済み</string>
     <string name="cancelled">キャンセル済み</string>
     <string name="on_hiatus">休載中</string>
-    <string name="tracking_info">一方同期の追跡サービスにある章の読書進捗を更新します。個別のマンガの「同期」ボタンで追跡サービスを設定してください。</string>
+    <string name="tracking_info">一方同期の追跡サービスにある章の読書進捗を更新します。個別の項目の「同期」ボタンで追跡サービスを設定してください。</string>
     <string name="enhanced_services">高度なサービス</string>
-    <string name="enhanced_tracking_info">特定ソース専用の高度な機能を提供するサービスです。漫画はライブラリに追加される時、自動で追跡され始めます。</string>
+    <string name="enhanced_tracking_info">特定ソース専用の高度な機能を提供するサービスです。項目はライブラリに追加される時、自動で追跡され始めます。</string>
     <string name="update_tracking_scoring_type">%1$sの評価種類を更新</string>
     <string name="scoring_type_updated">評価種類を更新しました</string>
     <string name="could_not_update_scoring_">評価種類を更新できませんでした：%1$s</string>
@@ -930,7 +929,7 @@
     <string name="clear_history_confirmation">履歴がすべて失われます。続行しますか？</string>
     <string name="show_">%1$sを表示</string>
     <string name="use_staggered_grid">スタッガード格子を使用</string>
-    <string name="pref_update_only_completely_read_summary">未読の章がない時のみ（つまり完読の後のみ）漫画を更新</string>
+    <string name="pref_update_only_completely_read_summary">未読の章がない時のみ（つまり完読後のみ）漫画を更新</string>
     <string name="must_view_details_before_migration">この項目の詳細ページに目を通してから移行してください</string>
     <string name="view_all">全て表示</string>
     <string name="zoom_double_page_spreads">ダブルページ上でズーム</string>
@@ -977,8 +976,8 @@
     <string name="user_agent_string">デフォルトのユーザーエージェント文字列</string>
     <string name="language_requires_app_restart">一部の言語はアプリが再起動される前、正しく表示されないことがあります</string>
     <string name="loader_rar5_error">フォーマットRARv5は未対応です</string>
-    <string name="clear_db_exclude_read">既読の章があるマンガを保留</string>
-    <string name="all_read_manga">全ての既読マンガ</string>
+    <string name="clear_db_exclude_read">既読の章がある項目を保留</string>
+    <string name="all_read_manga">全ての既読シリーズ</string>
     <string name="auto_download_while_reading">読書中に自動でダウンロード</string>
     <string name="downloaded_chapters">ダウンロードした章の数</string>
     <string name="statistics">統計情報</string>
@@ -1041,4 +1040,8 @@
     <string name="library_entries">ライブラリの項目</string>
     <string name="source_settings">ソース設定</string>
     <string name="app_settings">アプリ設定</string>
+    <string name="ext_installer_summary">Android 12 以前のバージョンの端末でユーザー入力なしで拡張機能のインストールを許可し、自動アップデートをONにします</string>
+    <string name="apply">適用</string>
+    <string name="pref_debug_info">デバッグ情報</string>
+    <string name="label_background_activity">バックアップアクティビティ</string>
 </resources>

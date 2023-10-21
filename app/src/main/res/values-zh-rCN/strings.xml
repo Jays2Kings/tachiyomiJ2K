@@ -35,7 +35,7 @@
     <string name="close">关闭</string>
     <string name="retry">重试</string>
     <string name="remove">删除</string>
-    <string name="resume">继续阅读</string>
+    <string name="resume">继续下载</string>
     <string name="open_in_browser">在浏览器中打开</string>
     <string name="display">显示</string>
     <string name="compact_grid">紧凑网格</string>
@@ -170,7 +170,7 @@
     <string name="clear_database_confirmation">你确定吗？不在书架中的作品的已读章节和进度将会丢失</string>
     <string name="clear_database_completed">数据已删除</string>
     <string name="refresh_library_metadata">刷新书架数据</string>
-    <string name="updates_covers_genres_desc">更新封面，类型，描述与漫画状态信息</string>
+    <string name="updates_covers_genres_desc">更新封面，类型，描述以及漫画状态信息</string>
     <string name="refresh_tracking_metadata">刷新追踪数据</string>
     <string name="updates_tracking_details">更新同步服务的状态，评分以及已读章节</string>
     <string name="version">版本</string>
@@ -220,7 +220,6 @@
     <string name="started">已开始</string>
     <string name="type">类型</string>
     <string name="category_with_name_exists">已存在名称相同的分类！</string>
-    <string name="this_will_remove_the_read_date_question">将清除此章节的阅读日期，确定吗？</string>
     <string name="picture_saved">图片已保存</string>
     <string name="options">选项</string>
     <string name="set_as_cover">设为封面</string>
@@ -240,7 +239,7 @@
     <string name="migrate">迁移</string>
     <string name="new_chapters_found">发现新章节</string>
     <string name="failed_to_update_cover">更新封面失败</string>
-    <string name="must_be_in_library_to_edit">请先收藏漫画到书架再进行更新</string>
+    <string name="must_be_in_library_to_edit">请先收藏漫画到书架再进行编辑</string>
     <string name="select_cover_image">选择封面图片</string>
     <string name="select_backup_file">选择备份文件</string>
     <string name="new_version_available">有新版本！</string>
@@ -450,7 +449,7 @@
     </plurals>
     <string name="stop_migrating">停止迁移？</string>
     <string name="no_alternatives_found">找不到替代</string>
-    <string name="no_chapters_found_for_migration">找不到章节，此漫画无法用于迁移</string>
+    <string name="no_chapters_found_for_migration">无可用章节，此漫画无法进行迁移</string>
     <string name="migrate_">迁移到 %1$s</string>
     <string name="copy_now">立即复制</string>
     <string name="dont_migrate">不迁移</string>
@@ -791,9 +790,9 @@
     <string name="open_random_series">打开一个随机系列</string>
     <string name="show_number_of_items">显示项目数</string>
     <string name="external_storage_download_notice">TachiyomiJ2K 需要访问所有文件才能下载章节。 点按此处，然后启用“允许访问以管理所有文件”</string>
-    <string name="external_storage_permission_notice">在 Android 11 中，TachiyomiJ2K 需要访问所有文件才能下载章节、创建自动备份和阅读本地漫画。
+    <string name="external_storage_permission_notice">TachiyomiJ2K 在 Android 11 下需要授权访问所有文件才能进行下载章节、创建自动备份和阅读本地漫画的功能。
 \n
-\n在下一个屏幕上，启用“允许访问管理所有文件”</string>
+\n在接下来的出现的画面中，请启用“允许访问管理所有文件”</string>
     <string name="all_files_permission_required">需要文件权限</string>
     <string name="orientation">方向</string>
     <string name="default_orientation">默认方向</string>
@@ -978,7 +977,7 @@
     <string name="user_agent_string">默认 User Agent 字符串</string>
     <string name="loader_rar5_error">不支持 RARv5 格式</string>
     <string name="all_read_manga">所有已读漫画</string>
-    <string name="clear_db_exclude_read">保留带已读章节的漫画</string>
+    <string name="clear_db_exclude_read">保留有已读章节的漫画</string>
     <string name="statistics_details">统计详情</string>
     <string name="titles_in_library">书架上作品</string>
     <string name="chapters_read">已读章节</string>
@@ -1039,4 +1038,10 @@
     <string name="pref_remove_exclude_categories">排除的分类</string>
     <string name="ext_installer_pref">安装程序</string>
     <string name="library_entries">书架中的作品</string>
+    <string name="ext_installer_summary">可允许插件在不需要用户确认的情况下安装并对 Android 12 以下的设备启用自动更新</string>
+    <string name="apply">应用</string>
+    <string name="source_settings">图源设置</string>
+    <string name="app_settings">应用设置</string>
+    <string name="pref_debug_info">调试信息</string>
+    <string name="label_background_activity">后台活动</string>
 </resources>

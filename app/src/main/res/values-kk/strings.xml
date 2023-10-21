@@ -473,7 +473,6 @@
     <string name="no_wifi_connection">Wi-Fi байланысы жоқ</string>
     <string name="no_network_connection">Желі байланысы жоқ</string>
     <string name="less">Азырақ</string>
-    <string name="this_will_remove_the_read_date_question">Бұл осы тараудың оқылған уақытын жояды. Сенімдісіз бе\?</string>
     <string name="extension_updates">Кеңейту жаңартулары</string>
     <string name="next_chapter_not_found">Келісі тарау табылмады</string>
     <string name="current_chapter">Қазіргі:</string>
@@ -530,4 +529,6 @@
     <string name="ext_installer_pref">Орнатушы</string>
     <string name="library_entries">Кітапхана жазбалары</string>
     <string name="clear_database_summary">Кітапханада жоқ жазбалардың тарихын жою</string>
+    <string name="pref_debug_info">Дебаг туралы ақпарат</string>
+    <string name="label_background_activity">Аялық белсенділік</string>
 </resources>

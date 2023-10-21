@@ -148,7 +148,6 @@
     <string name="title">Título</string>
     <string name="chapters">Capítulos</string>
     <!-- Dialog remove recently view -->
-    <string name="this_will_remove_the_read_date_question">Esta ação irá remover a data de leitura deste capítulo. Continuar?</string>
     <!-- Reader activity -->
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Capítulo seguinte não encontrado</string>
@@ -414,7 +413,7 @@
     <string name="manhwa">Manhwa</string>
     <string name="tracked">Monitorizado</string>
     <string name="display_as">Visualizar como</string>
-    <string name="tap_library_to_show_filters">Clicar no icone da Libraria para mostrar filtros</string>
+    <string name="tap_library_to_show_filters">Toque no ícone da biblioteca para mostrar os filtros</string>
     <string name="uniform_covers">Capas uniformes</string>
     <string name="hide_start_reading_button">Esconder butão de iniciar leitura</string>
     <string name="comfortable_grid">Grelha confortável</string>
@@ -931,7 +930,7 @@
     <string name="log_out">Terminar sessão</string>
     <string name="log_out_from_">Terminar sessão em %1$s\?</string>
     <string name="every_3_days">A cada 3 dias</string>
-    <string name="download_queue_size_warning">Aviso: descargas grandes em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
+    <string name="download_queue_size_warning">Aviso: downloads grandes em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
     <string name="ext_installer_shizuku_stopped">O Shizuku não está em execução</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instale e inicie o Shizuku para utilizá-lo como o instalador de extensões.</string>
     <string name="help_translate">Ajude a traduzir</string>
@@ -1119,4 +1118,7 @@
     <string name="pref_remove_exclude_categories">Categorias excluídas</string>
     <string name="ext_installer_pref">Instalador</string>
     <string name="library_entries">Itens da biblioteca</string>
+    <string name="allow_notifications_recommended">Permitir as notificações é recomendado para manter o aplicativo e sua biblioteca atualizados.</string>
+    <string name="pref_debug_info">Informações de depuração</string>
+    <string name="label_background_activity">Atividade em segundo plano</string>
 </resources>

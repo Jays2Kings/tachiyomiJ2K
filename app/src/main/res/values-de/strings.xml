@@ -149,7 +149,6 @@
     <string name="history">Verlauf</string>
     <string name="recent_updates">Neu verfügbare Kapitel</string>
     <string name="this_will_remove_the_read_date_for_x_question">Das Lesedatum von „%1$s“ wird gelöscht. Bist du sicher\?</string>
-    <string name="this_will_remove_the_read_date_question">Das Lesedatum dieses Kapitels wird gelöscht. Bist du sicher\?</string>
     <string name="reset_all_chapters_for_this_">Alle Kapitel für %1$s</string>
     <string name="last_read_">Zuletzt gelesen %1$s</string>
     <string name="read_">%1$s gelesen</string>
@@ -1105,4 +1104,6 @@
     <string name="library_entries">Bibliothekseinträge</string>
     <string name="source_settings">Quelleneinstellungen</string>
     <string name="app_settings">App-Einstellungen</string>
+    <string name="pref_debug_info">Debug-Info</string>
+    <string name="label_background_activity">Hintergrundaktivität</string>
 </resources>

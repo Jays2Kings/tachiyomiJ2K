@@ -220,7 +220,6 @@
     <string name="started">Ξεκίνησε</string>
     <string name="type">Τύπος</string>
     <string name="category_with_name_exists">Μια κατηγορία με αυτό το όνομα υπάρχει ήδη!</string>
-    <string name="this_will_remove_the_read_date_question">Αυτό θα αφαιρέσει την ημερομηνία ανάγνωσης αυτού του κεφαλαίου. Είσαι σίγουρος;</string>
     <string name="picture_saved">Η εικόνα αποθηκεύτηκε</string>
     <string name="options">Επιλογές</string>
     <string name="set_as_cover">Ορισμός ως εξώφυλλο</string>
@@ -1067,4 +1066,6 @@
     <string name="library_entries">Καταχωρήσεις βιβλιοθήκης</string>
     <string name="source_settings">Ρυθμίσεις πηγών</string>
     <string name="app_settings">Ρυθμίσεις εφαρμογής</string>
+    <string name="pref_debug_info">Πληροφορίες εντοπισμού σφαλμάτων</string>
+    <string name="label_background_activity">Δραστηριότητα παρασκηνίου</string>
 </resources>

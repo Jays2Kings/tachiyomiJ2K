@@ -174,7 +174,6 @@
     <!-- Category activity -->
     <string name="category_with_name_exists">Tên danh mục này đã tồn tại!</string>
     <!-- Dialog option with checkbox view -->
-    <string name="this_will_remove_the_read_date_question">Sẽ xóa ngày đọc các chương. Bạn chắc chứ?</string>
     <!-- SnackBar -->
     <!-- Image notifier -->
     <string name="picture_saved">Đã lưu ảnh</string>
@@ -1077,4 +1076,6 @@
     <string name="apply">Áp dụng</string>
     <string name="source_settings">Cài đặt nguồn</string>
     <string name="app_settings">Cài đặt ứng dụng</string>
+    <string name="pref_debug_info">Thông tin Debug</string>
+    <string name="label_background_activity">Hoạt động ngầm</string>
 </resources>

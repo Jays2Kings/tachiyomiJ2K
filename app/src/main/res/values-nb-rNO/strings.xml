@@ -216,7 +216,6 @@
     <string name="started">Startet</string>
     <string name="type">Type</string>
     <string name="category_with_name_exists">En kategori ved dette navnet finnes allerede!</string>
-    <string name="this_will_remove_the_read_date_question">Lesningsdato for dette kapittelet vil bli fjernet. Er du sikker\?</string>
     <string name="picture_saved">Bilde lagret</string>
     <string name="options">Valg</string>
     <string name="set_as_cover">Sett som omslag</string>
@@ -1068,4 +1067,8 @@
     <string name="pref_remove_exclude_categories">Utelukkede kategorier</string>
     <string name="ext_installer_pref">Installatør</string>
     <string name="library_entries">Bibliotekoppføringer</string>
+    <string name="source_settings">Kildeinnstillinger</string>
+    <string name="app_settings">Programinnstillinger</string>
+    <string name="pref_debug_info">Debug info</string>
+    <string name="label_background_activity">Bakgrunnsaktivitet</string>
 </resources>

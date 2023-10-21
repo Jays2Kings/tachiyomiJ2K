@@ -220,7 +220,6 @@
     <string name="started">Incumintzadu</string>
     <string name="type">Casta</string>
     <string name="category_with_name_exists">Esistit giai una categoria cun custu nùmene!</string>
-    <string name="this_will_remove_the_read_date_question">Custu at a bogare sa data de leghidura de custu capìtulu. Seguru ses\?</string>
     <string name="picture_saved">Immàgine sarvada</string>
     <string name="options">Optziones</string>
     <string name="set_as_cover">Imposta comente cobertedda</string>
@@ -1067,4 +1066,6 @@
     <string name="allow_notifications_recommended">Est racumandadu a permìtere sas notìficas pro mantènnere sa biblioteca e s\'aplicatzione tua atualizadas.</string>
     <string name="ext_installer_pref">Installadore</string>
     <string name="library_entries">Elementos de sa biblioteca</string>
+    <string name="pref_debug_info">Informatziones de depuratzione de còdighe</string>
+    <string name="label_background_activity">Atividade in s\'isfundu</string>
 </resources>

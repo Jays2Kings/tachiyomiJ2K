@@ -220,7 +220,6 @@
     <string name="started">Început</string>
     <string name="type">Tip</string>
     <string name="category_with_name_exists">O categorie cu acest nume deja există!</string>
-    <string name="this_will_remove_the_read_date_question">Aceasta va șterge data citirii acestui capitol. Ești sigur\?</string>
     <string name="picture_saved">Imagine salvată</string>
     <string name="options">Opțiuni</string>
     <string name="set_as_cover">Stabilește ca și copertă</string>
@@ -1089,4 +1088,5 @@
     <string name="pref_remove_exclude_categories">Categorii excluse</string>
     <string name="ext_installer_pref">Program instalare</string>
     <string name="library_entries">Intrări în bibliotecă</string>
+    <string name="label_background_activity">Activități în fundal</string>
 </resources>

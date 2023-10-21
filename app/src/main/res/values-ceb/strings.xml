@@ -349,4 +349,5 @@
     <string name="pref_remove_exclude_categories">Wala iapil nga mga kategorya</string>
     <string name="ext_installer_pref">Installer</string>
     <string name="library_entries">Mga entri sa basahonan</string>
+    <string name="label_background_activity">Kalihokan sa background</string>
 </resources>

@@ -111,7 +111,6 @@
     <string name="picture_saved">Fotografia u ruajt</string>
     <string name="unknown">E panjohur</string>
     <string name="newest">Më të rejat</string>
-    <string name="this_will_remove_the_read_date_question">Kjo do të heqë datën e leximit të këtij kapitulli. A je i sigurt\?</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Kapitulli tjetër i palexuar</item>
         <item quantity="other">%d kapitujt e ardhshëm të palexuar</item>
@@ -439,4 +438,5 @@
     <string name="clear_database_confirmation">A je i sigurt\? Lexoni kapitujt dhe përparimi i hyrjeve që nuk janë në bibliotekë do të humbasin</string>
     <string name="clear_database_source_item_count">%1$d hyrje jashtë bibliotekës në bazën e të dhënave</string>
     <string name="clear_database_summary">Fshi historikun për shënimet që nuk janë ruajtur në bibliotekën tënde</string>
+    <string name="label_background_activity">Aktiviteti në sfond</string>
 </resources>

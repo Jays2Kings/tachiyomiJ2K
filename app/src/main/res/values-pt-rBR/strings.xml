@@ -154,7 +154,6 @@
     <string name="history">Histórico</string>
     <string name="recent_updates">Atualizações recentes</string>
     <string name="this_will_remove_the_read_date_for_x_question">Isto removerá a data de leitura de \"%1$s\". Tem certeza\?</string>
-    <string name="this_will_remove_the_read_date_question">Isto removerá a data de leitura deste capítulo. Tem certeza\?</string>
     <string name="reset_all_chapters_for_this_">Redefinir todos os capítulos para este %1$s</string>
     <string name="last_read_">Última leitura %1$s</string>
     <string name="read_">%1$s lido</string>
@@ -850,7 +849,7 @@
     <string name="mark_range_as_read">Marcar um intervalo de capítulos como lido</string>
     <string name="cancel_all_for_series">Cancelar todos para esta série</string>
     <string name="app_shortcuts">Atalhos do app</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K requer o acesso ao armazenamento de arquivos no Android 11 para baixar capítulos, criar backups automáticos e ler mangás locais.
+    <string name="external_storage_permission_notice">TachiyomiJ2K requer acesso total ao armazenamento do Android 11 para baixar capítulos, criar backups automáticos e ler mangás locais.
 \n
 \nNa próxima tela ative \"Permitir acesso de gerenciamento de todos arquivos.\"</string>
     <string name="dark_theme">Tema escuro</string>
@@ -866,7 +865,7 @@
     <string name="global_updates">Atualizações globais</string>
     <string name="open_random_series">Abrir uma série aleatória</string>
     <string name="show_number_of_items">Mostrar o número de itens</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso total aos arquivos para baixar os capítulos. Clique aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K requer o acesso a todos os arquivos para baixar os capítulos. Toque aqui, então habilite \"Permitir o acesso para gerenciar todos os arquivos\"</string>
     <string name="all_files_permission_required">Permissão para acessar arquivos</string>
     <string name="restore_miui_warning">Backup/restauração pode não funcionar adequadamente se a Otimização MIUI estiver desabilitada.</string>
     <string name="set_as_default">Definir como padrão</string>
@@ -1090,7 +1089,7 @@
     <string name="tracker">Rastreador</string>
     <string name="clear_db_exclude_read">Mantenha mangás como capítulos lidos</string>
     <string name="statistics_details">Detalhes dos Status</string>
-    <string name="all_read_manga">Todos os mangás Lidos</string>
+    <string name="all_read_manga">Todos os mangás lidos</string>
     <string name="statistics">Estatísticas</string>
     <string name="tracked_titles">Títulos Monitorados</string>
     <string name="chapters_read">Capítulos lidos</string>
@@ -1142,4 +1141,8 @@
     <string name="library_entries">Itens da biblioteca</string>
     <string name="source_settings">Configurações das fontes</string>
     <string name="app_settings">Configurações do aplicativo</string>
+    <string name="ext_installer_summary">Permite instalar extensões sem a necessidade de confirmação do usuário e ativa atualizações automáticas para dispositivos anteriores ao Android 12</string>
+    <string name="apply">Aplicar</string>
+    <string name="pref_debug_info">Informações de depuração</string>
+    <string name="label_background_activity">Atividade em segundo plano</string>
 </resources>

@@ -190,7 +190,6 @@
     <string name="score">स्कोर</string>
     <string name="title">शीर्षक</string>
     <string name="category_with_name_exists">इस नाम के साथ एक श्रेणी पहले से मौजूद है!</string>
-    <string name="this_will_remove_the_read_date_question">यह इस अध्याय की पठन तिथि को निकाल देगा क्या आप निश्चित है?</string>
     <string name="picture_saved">चित्र सहेजा गया</string>
     <string name="options">विकल्प</string>
     <string name="set_as_cover">कवर के रूप में सेट करें</string>
@@ -632,4 +631,6 @@
     <string name="pref_remove_exclude_categories">बहिष्कृत श्रेणियां</string>
     <string name="ext_installer_pref">इंस्टालर</string>
     <string name="library_entries">लाइब्रेरी के आइटम</string>
+    <string name="pref_debug_info">डीबग जानकारी</string>
+    <string name="label_background_activity">पृष्ठभूमि गतिविधि</string>
 </resources>

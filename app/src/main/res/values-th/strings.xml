@@ -171,7 +171,7 @@
     <string name="clear_database_confirmation">แน่ใจไหม\? ข้อมูลการอ่านของรายการที่ไม่ได้อยู่ในคลังจะหายไป</string>
     <string name="clear_database_completed">ลบรายการแล้ว</string>
     <string name="refresh_library_metadata">โหลดข้อมูลเมตาของคลังใหม่</string>
-    <string name="updates_covers_genres_desc">อัปเดตข้อมูลภาพปก, ประเภท, รายละเอียดและสถานะของมังงะ</string>
+    <string name="updates_covers_genres_desc">อัปเดตข้อมูลภาพปก, ประเภท, รายละเอียดและสถานะของรายการ</string>
     <string name="refresh_tracking_metadata">โหลดข้อมูลเมตาของการติดตามใหม่</string>
     <string name="updates_tracking_details">อัปเดตสถานะคะแนนและตอนสุดท้ายที่อ่านจากบริการติดตาม</string>
     <string name="version">เวอร์ชัน</string>
@@ -229,7 +229,6 @@
     <string name="started">เริ่มอ่านแล้ว</string>
     <string name="type">ประเภท</string>
     <string name="category_with_name_exists">หมวดหมู่ที่มีชื่อนี้มีอยู่แล้ว!</string>
-    <string name="this_will_remove_the_read_date_question">การดำเนินการนี้จะลบวันที่อ่านของตอนนี้ แน่ใจไหม\?</string>
     <string name="picture_saved">บันทึกรูปภาพแล้ว</string>
     <string name="options">ตัวเลือก</string>
     <string name="set_as_cover">ตั้งเป็นปก</string>
@@ -249,7 +248,7 @@
     <string name="migrate">โยกย้าย</string>
     <string name="new_chapters_found">พบตอนใหม่</string>
     <string name="failed_to_update_cover">ไม่สามารถอัปเดตหน้าปก</string>
-    <string name="must_be_in_library_to_edit">มังงะจะต้องอยู่ในคลังก่อนจึงจะแก้ไขได้</string>
+    <string name="must_be_in_library_to_edit">รายการจะต้องอยู่ในคลังก่อนจึงจะแก้ไขได้</string>
     <string name="select_cover_image">เลือกภาพหน้าปก</string>
     <string name="select_backup_file">เลือกแฟ้มข้อมูลสำรอง</string>
     <string name="new_version_available">มีการอัปเดตเวอร์ชั่นใหม่!</string>
@@ -259,9 +258,9 @@
     <string name="download_complete">ดาวน์โหลดเสร็จสิ้น</string>
     <string name="download_error">ดาวน์โหลดเกิดข้อผิดพลาด</string>
     <string name="update_available">อัปเดตพร้อมใช้งาน</string>
-    <string name="cover_of_image">ปกของมังงะ</string>
+    <string name="cover_of_image">ปกของรายการ</string>
     <string name="no_recent_chapters">ไม่มีตอนล่าสุด</string>
-    <string name="no_recently_read_manga">ไม่มีมังงะที่เพิ่งอ่าน</string>
+    <string name="no_recently_read_manga">ไม่มีรายการที่เพิ่งอ่าน</string>
     <string name="library_is_empty_add_from_browse">คลังว่างเปล่า สามารถเพิ่มเรื่องไปยังคลังได้จากแท็บเรียกดู</string>
     <string name="could_not_download_unexpected_error">ไม่สามารถดาวน์โหลดตอนได้เนื่องจากข้อผิดพลาดที่ไม่คาดคิด</string>
     <string name="no_wifi_connection">ไม่มีการเชื่อมต่อ Wi-Fi</string>
@@ -380,7 +379,7 @@
     <string name="hide_notification_content">ซ่อนเนื้อหาการแจ้งเตือน</string>
     <string name="security">ความปลอดภัย</string>
     <string name="backup_and_restore">สำรองข้อมูลและการเรียกคืน</string>
-    <string name="backup_has_no_manga">แฟ้มข้อมูลสํารองไม่มีมังงะใด ๆ</string>
+    <string name="backup_has_no_manga">แฟ้มข้อมูลสํารองไม่มีรายการใด ๆ</string>
     <string name="restore_missing_sources">แหล่งที่มาที่หายไป:</string>
     <string name="restore_missing_trackers">ตัวติดตามไม่ได้เข้าสู่ระบบ:</string>
     <string name="restore_content_full">ข้อมูลจากแฟ้มข้อมูลสำรองจะถูกคืนค่า
@@ -430,7 +429,7 @@
     <string name="getting_started_guide">คู่มือเริ่มต้นใช้งาน</string>
     <string name="ext_installer_shizuku_stopped">Shizuku ไม่ทำงาน</string>
     <string name="in_progress">กำลังอ่าน</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K ต้องการการเข้าถึงไฟล์ทั้งหมดใน Android 11 เพื่อดาวน์โหลดตอน สร้างการสำรองข้อมูลอัตโนมัติ และอ่านมังงะในเครื่อง
+    <string name="external_storage_permission_notice">TachiyomiJ2K ต้องการการเข้าถึงไฟล์ทั้งหมดใน Android 11 เพื่อดาวน์โหลดตอน สร้างการสำรองข้อมูลอัตโนมัติ และอ่านซีรีย์ในเครื่อง
 \n
 \nในหน้าจอถัดไป ให้เปิดใช้งาน \"อนุญาตการเข้าถึงเพื่อจัดการไฟล์ทั้งหมด\"</string>
     <string name="unlock">ปลดล็อก</string>
@@ -442,7 +441,7 @@
     <string name="updating_">กำลังอัปเดต %1$s</string>
     <string name="your_library">คลังของฉัน</string>
     <string name="sort_by">เรียงตาม</string>
-    <string name="when_sorting_ignore_articles">เมื่อจัดเรียงตามตัวอักษร ให้เรียงลำดับโดยไม่สนใจคำนำหน้าคำนาม (เช่น a, an, the) ที่ด้านหน้าของชื่อมังงะ</string>
+    <string name="when_sorting_ignore_articles">เมื่อจัดเรียงตามตัวอักษร ให้เรียงลำดับโดยไม่สนใจคำนำหน้าคำนาม (เช่น a, an, the) ที่ด้านหน้าของชื่อรายการ</string>
     <string name="show_download_button">แสดงปุ่มดาวน์โหลด</string>
     <string name="reset_chapter_question">รีเซ็ตตอน\?</string>
     <string name="only_downloaded">เฉพาะดาวน์โหลดไว้</string>
@@ -467,7 +466,7 @@
     <string name="manhwa">มังฮวา</string>
     <string name="new_chapters">ตอนใหม่</string>
     <string name="marked_as_read">ทำเครื่องหมายว่าอ่านแล้ว</string>
-    <string name="confirm_category_deletion_message">มังงะในหมวดนี้จะย้ายไปอยู่ในหมวดเริ่มต้น</string>
+    <string name="confirm_category_deletion_message">รายการในหมวดนี้จะย้ายไปอยู่ในหมวดเริ่มต้น</string>
     <string name="use_most_chapters">ใช้แหล่งที่มาที่มีตอนมากที่สุด (ช้ากว่า)</string>
     <string name="skipping_">(ข้าม %1$d)</string>
     <string name="light_theme">ธีมสว่าง</string>
@@ -476,7 +475,7 @@
     </plurals>
     <string name="classic_blue">คลาสสิคบลู</string>
     <plurals name="copy_manga">
-        <item quantity="other">คัดลอกมังงะ %1$d%2$s เรื่อง\?</item>
+        <item quantity="other">คัดลอก %1$d%2$s เรื่อง\?</item>
     </plurals>
     <string name="use_side_navigation">ใช้แถบนำทางด้านข้าง</string>
     <string name="by_default_side_nav_info">ตามค่าเริ่มต้น แถบการนำทางด้านข้างจะใช้สำหรับโทรศัพท์บางรุ่นและแท็บเล็ตขนาดเล็กเมื่ออยู่ในแนวนอน และจะแสดงบนแท็บเล็ตขนาดใหญ่เสมอ</string>
@@ -484,12 +483,12 @@
     <string name="show_recent_sources">แสดงแหล่งที่มาที่ใช้ล่าสุด</string>
     <string name="over_any_network">ผ่านทุกเครือข่าย</string>
     <string name="show_recent_series">แสดงเรื่องล่าสุด</string>
-    <string name="clean_read_manga_not_in_library">ล้างมังงะไม่ไม่มีอยู่ในคลัง</string>
+    <string name="clean_read_manga_not_in_library">ล้างรายการที่ไม่มีอยู่ในคลัง</string>
     <plurals name="cleanup_done">
         <item quantity="other">ล้างเสร็จสิ้น ลบออกไป %d โฟล์เดอร์</item>
     </plurals>
-    <string name="delete_old_covers_in_library_used_">ลบหน้าปกมังงะเก่าและไม่ได้ใช้หลังจากที่คลังอัปเดตแล้ว
-\nกำลังใช้ไป: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">ลบหน้าปกเก่าและไม่ได้ใช้ของรายการที่อยู่ในคลังอัปเดต
+\nกำลังใช้: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">ล้างแคชภาพปกที่ไม่ได้อยู่ในคลังทั้งหมด
 \nกำลังใช้ไป: %1$s</string>
     <string name="some_extensions_may_not_update">ส่วนขยายบางรายการอาจอัปเดตอัตโนมัติไม่ได้ หากติดตั้งจากภายนอกแอป</string>
@@ -514,7 +513,7 @@
     <string name="removed_bookmark">นำบุ๊คมาร์กออกแล้ว</string>
     <string name="new_category">หมวดหมู่ใหม่</string>
     <string name="confirm_category_deletion">ลบหมวดหมู่\?</string>
-    <string name="already_in_category">มังงะอยู่ในหมวดหมู่อยู่แล้ว</string>
+    <string name="already_in_category">รายการอยู่ในหมวดหมู่อยู่แล้ว</string>
     <string name="add_categories">เพิ่มหมวดหมู่</string>
     <string name="add_edit_categories">เพิ่ม/แก้ไขหมวดหมู่</string>
     <string name="category_cannot_be_blank">ชื่อหมวดหมู่ต้องไม่เว้นว่าง</string>
@@ -594,7 +593,7 @@
     <string name="oldest_first">เก่าที่สุดก่อน</string>
     <string name="reset_tags">รีเซ็ตแท็ก</string>
     <string name="reset_cover">รีเซ็ตปก</string>
-    <string name="custom_manga_info">ข้อมูลมังงะกำหนดเอง</string>
+    <string name="custom_manga_info">ข้อมูลกำหนดเอง</string>
     <string name="remove_tracking">ลบการติดตามออกจากแอป</string>
     <string name="started_reading_date">วันที่เริ่มอ่าน</string>
     <string name="select_sources">เลือกแหล่งที่มา</string>
@@ -646,7 +645,7 @@
     <string name="match_pinned_sources">แหล่งที่มาที่ตรึงไว้เท่านั้น</string>
     <string name="match_enabled_sources">แหล่งที่มาที่เปิดไว้เท่านั้น</string>
     <string name="only_enable_enabled_for_migration">โยกย้ายได้เฉพาะแหล่งที่มาที่เปิดใช้งานไว้อยู่</string>
-    <string name="you_can_migrate_in_library">คุณยังสามารถโยกย้า โดยเลือกมังงะในคลัง</string>
+    <string name="you_can_migrate_in_library">คุณยังสามารถโยกย้าย โดยเลือกรายการในคลัง</string>
     <string name="helpful_translation_links">ลิงค์แปลที่เป็นประโยชน์</string>
     <string name="log_in">ลงชื่อเข้าใช้</string>
     <string name="username_must_not_be_blank">ชื่อผู้ใช้หรือรหัสผ่านไม่สามารถเว้นว่างได้</string>
@@ -763,7 +762,7 @@
     <string name="_per_row">%d ต่อแถว</string>
     <string name="display_as">แสดงเป็น</string>
     <string name="read_">อ่านเมื่อ %1$s</string>
-    <string name="no_chapters_found_for_migration">ไม่พบตอน มังงะนี้ไม่สามารถใช้ทำการโยกย้ายได้</string>
+    <string name="no_chapters_found_for_migration">ไม่พบตอน เรื่องนี้ไม่สามารถใช้ทำการโยกย้ายได้</string>
     <string name="turn_off_">ปิด%s</string>
     <string name="starting_cleanup">กำลังเริ่มการล้าง</string>
     <string name="tako">ทาโกะ</string>
@@ -789,7 +788,7 @@
     <string name="added_">เพิ่มแล้วเมื่อ %1$s</string>
     <string name="updated_">อัปเดตแล้วเมื่อ %1$s</string>
     <string name="fetched_">เรียกข้อมูลแล้วเมื่อ %1$s</string>
-    <string name="no_recent_read_updated_manga">ไม่มีมังงะที่อ่านหรืออัปเดตล่าสุด</string>
+    <string name="no_recent_read_updated_manga">ไม่มีรายการที่อ่านหรืออัปเดตล่าสุด</string>
     <string name="reset_chapter_history">รีเซ็ตประวัติตอน</string>
     <string name="newly_added">เพิ่มล่าสุด</string>
     <string name="this_will_remove_the_read_date_for_x_question">การดำเนินการนี้จะลบวันที่อ่านของ \"%1$s\" แน่ใจไหม\?</string>
@@ -884,8 +883,8 @@
     <string name="publishing_finished">เผยแพร่จบแล้ว</string>
     <string name="cancelled">ถูกยกเลิก</string>
     <string name="on_hiatus">อยู่ระหว่างพัก</string>
-    <string name="tracking_info">ซิงค์ทางเดียวเพื่ออัปเดตความคืบหน้าของตอนกับบริการการติดตาม ตั้งค่าการติดตามรายการมังงะในแต่ละรายการได้จากปุ่มติดตาม</string>
-    <string name="enhanced_tracking_info">บริการที่มีคุณลักษณะขั้นสูงสำหรับแหล่งที่มาเฉพาะ มังงะจะถูกติดตามโดยอัตโนมัติเมื่อเพิ่มลงในคลัง</string>
+    <string name="tracking_info">ซิงค์ทางเดียวเพื่ออัปเดตความคืบหน้าของตอนกับบริการการติดตาม ตั้งค่าการติดตามในแต่ละรายการได้จากปุ่มติดตาม</string>
+    <string name="enhanced_tracking_info">บริการที่มีคุณลักษณะขั้นสูงสำหรับแหล่งที่มาเฉพาะ รายการจะถูกติดตามโดยอัตโนมัติเมื่อเพิ่มลงในคลัง</string>
     <string name="scoring_type_updated">อัปเดตประเภทการให้คะแนนแล้ว</string>
     <string name="could_not_update_scoring_">ไม่สามารถอัปเดตประเภทการให้คะแนน: %1$s</string>
     <string name="update_tracking_scoring_type">อัปเดตประเภทการให้คะแนนของ %1$s</string>
@@ -932,7 +931,7 @@
     <string name="zoom_double_page_spreads">ซูมเข้าไปในหน้าคู่แยก</string>
     <string name="most_entries">รายการที่มากที่สุด</string>
     <string name="use_staggered_grid">ตารางแบบถมที่</string>
-    <string name="pref_update_only_completely_read_summary">อัปเดตเฉพาะที่ไม่มีตอนที่ยังไม่ได้อ่าน (อ่านจนหมดแล้ว)</string>
+    <string name="pref_update_only_completely_read_summary">อัปเดตเฉพาะรายการที่ไม่มีตอนที่ยังไม่ได้อ่าน (อ่านจนหมดแล้ว)</string>
     <string name="update_tracking_after_reading">อัปเดตการติดตามหลังจากอ่าน</string>
     <string name="view_all">ดูทั้งหมด</string>
     <string name="show_">แสดง%1$s</string>
@@ -978,8 +977,8 @@
     <string name="user_agent_string">ตัวแทนผู้ใช้เริ่มต้น</string>
     <string name="language_requires_app_restart">บางภาษาอาจจำเป็นต้องปิดเปิดแอปใหม่ เพื่อให้แสดงได้อย่างถูกต้อง</string>
     <string name="loader_rar5_error">ไม่รับรองรูปแบบ RARv5</string>
-    <string name="all_read_manga">มังงะที่อ่านหมดแล้ว</string>
-    <string name="clear_db_exclude_read">ละเว้นมังงะที่มีตอนที่อ่านไว้</string>
+    <string name="all_read_manga">รายการที่อ่านหมดแล้ว</string>
+    <string name="clear_db_exclude_read">ละเว้นรายการที่มีตอนที่อ่านไว้</string>
     <string name="auto_download_while_reading">ดาวน์โหลดอัตโนมัติขณะกำลังอ่าน</string>
     <string name="downloaded_chapters">ตอนที่ดาวน์โหลดแล้ว</string>
     <string name="stat">สถิติ</string>
@@ -1044,4 +1043,6 @@
     <string name="library_entries">รายการคลัง</string>
     <string name="source_settings">การตั้งค่าแหล่งที่มา</string>
     <string name="app_settings">การตั้งค่าแอป</string>
+    <string name="pref_debug_info">ข้อมูลดีบัก</string>
+    <string name="label_background_activity">กิจกรรมเบื้องหลัง</string>
 </resources>

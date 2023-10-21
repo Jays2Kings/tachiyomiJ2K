@@ -259,7 +259,6 @@
     <string name="rereading">重溫中</string>
     <string name="started">創刊</string>
     <string name="type">類型</string>
-    <string name="this_will_remove_the_read_date_question">這將會清除此章節的閱讀日期，確定嗎？</string>
     <string name="current_chapter">目前章節：</string>
     <string name="previous_title">上一章：</string>
     <string name="could_not_download_unexpected_error">下載時發生不可預期的錯誤</string>
@@ -1043,4 +1042,6 @@
     <string name="library_entries">「我的收藏」項目</string>
     <string name="source_settings">來源設定</string>
     <string name="app_settings">應用程式設定</string>
+    <string name="pref_debug_info">偵錯資訊</string>
+    <string name="label_background_activity">背景活動</string>
 </resources>

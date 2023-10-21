@@ -220,7 +220,6 @@
     <string name="started">Розпочато</string>
     <string name="type">Тип</string>
     <string name="category_with_name_exists">Категорія з таким іменем вже існує!</string>
-    <string name="this_will_remove_the_read_date_question">Ця дія видалить дату прочитання розділа. Ви впевнені\?</string>
     <string name="picture_saved">Картинку збережено</string>
     <string name="options">Опції</string>
     <string name="set_as_cover">Встановити як обкладинку</string>
@@ -1121,4 +1120,6 @@
     <string name="apply">Застосувати</string>
     <string name="ext_installer_pref">Встановлювач</string>
     <string name="library_entries">Записи бібліотеки</string>
+    <string name="pref_debug_info">Інформація про налагодження</string>
+    <string name="label_background_activity">Фонова активність</string>
 </resources>

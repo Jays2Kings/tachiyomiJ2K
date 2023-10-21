@@ -116,7 +116,6 @@
     <string name="default_value">По умолчанию</string>
     <string name="description">Описание</string>
     <string name="cover_of_image">Обложка серии</string>
-    <string name="this_will_remove_the_read_date_question">Это удалит дату прочтения главы. Вы уверены\?</string>
     <string name="chapter_">Глава %1$s</string>
     <string name="no_animation">Без анимации</string>
     <string name="fast">Быстро</string>
@@ -1150,4 +1149,6 @@
     <string name="library_entries">Серии библиотеки</string>
     <string name="source_settings">Настройки источников</string>
     <string name="app_settings">Настройки приложения</string>
+    <string name="pref_debug_info">Отладочная информация</string>
+    <string name="label_background_activity">Фоновая активность</string>
 </resources>

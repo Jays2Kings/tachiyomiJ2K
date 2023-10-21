@@ -73,7 +73,6 @@
     <string name="pref_update_only_started">זה עוד לא התחיל</string>
     <string name="updates">עדכונים</string>
     <string name="history">היסטוריה</string>
-    <string name="this_will_remove_the_read_date_question">פעולה זו תסיר את התאריך הקריאה של פרק זה. האם אתה בטוח\?</string>
     <string name="clear_history">נקה היסטוריה</string>
     <string name="clear_history_completed">ההיסטוריה נמחקה</string>
     <string name="clear_history_confirmation">אתה בטוח\? כל ההיסטוריה תמחק.</string>
@@ -590,4 +589,6 @@
     <string name="ext_installer_pref">מתקין</string>
     <string name="library_entries">פריטים בספריה</string>
     <string name="clear_database_summary">מחק את היסטוריית הפריטים שאינם שמורים בספריה שלך</string>
+    <string name="pref_debug_info">מידע דיבוג</string>
+    <string name="label_background_activity">פעילות רקע</string>
 </resources>

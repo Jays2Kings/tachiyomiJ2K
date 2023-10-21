@@ -220,7 +220,6 @@
     <string name="started">Començat</string>
     <string name="type">Tipus</string>
     <string name="category_with_name_exists">Ja hi ha una categoria amb aquest nom!</string>
-    <string name="this_will_remove_the_read_date_question">S’eliminarà la data de lectura d’aquest capítol. N’esteu segur\?</string>
     <string name="picture_saved">S’ha desat la imatge</string>
     <string name="options">Opcions</string>
     <string name="set_as_cover">Defineix com a portada</string>
@@ -799,4 +798,6 @@
     <string name="library_entries">Elements de la biblioteca</string>
     <string name="source_settings">Configuració de la font</string>
     <string name="app_settings">Configuració de l’aplicació</string>
+    <string name="pref_debug_info">Informació de depuració</string>
+    <string name="label_background_activity">Activitat en segon pla</string>
 </resources>
