@@ -59,17 +59,18 @@ class CrashLogUtil(private val context: Context) {
             val availableExtension = availableExtensions.find { it.pkgName == installedExtension.pkgName }
 
             val hasUpdate = (availableExtension?.versionCode ?: 0) > installedExtension.versionCode
-            if (hasUpdate || installedExtension.isObsolete) {
+            if (hasUpdate || installedExtension.isObsolete || installedExtension.isUnofficial) {
                 val extensionInfo =
                     "Extension Name: ${installedExtension.name}\n" +
                         "Installed Version: ${installedExtension.versionName}\n" +
                         "Available Version: ${availableExtension?.versionName ?: "N/A"}\n" +
-                        "Obsolete: ${installedExtension.isObsolete}\n"
+                        "Obsolete: ${installedExtension.isObsolete}\n" +
+                        "Unofficial: ${installedExtension.isUnofficial}\n"
                 extensionInfoList.add(extensionInfo)
             }
         }
         if (extensionInfoList.isNotEmpty()) {
-            extensionInfoList.add(0, "Extensions that are outdated or obsolete")
+            extensionInfoList.add(0, "Extensions that are outdated, obsolete, or unofficial")
         }
         return extensionInfoList.joinToString("\n")
     }
