@@ -170,7 +170,7 @@
     <string name="clear_database_confirmation">Είστε σίγουροι; Τα διαβασμένα κεφάλαια και η πρόοδος των καταχωρήσεων εκτός βιβλιοθήκης θα χαθούν</string>
     <string name="clear_database_completed">Οι καταχωρίσεις διαγράφηκαν</string>
     <string name="refresh_library_metadata">Ανανέωση μεταδεδομένων βιβλιοθήκης</string>
-    <string name="updates_covers_genres_desc">Ενημερώνει εξώφυλλα, είδη, περιγραφή και πληροφορίες κατάστασης του manga</string>
+    <string name="updates_covers_genres_desc">Ενημερώνει εξώφυλλα, είδη, περιγραφή και πληροφορίες κατάστασης των σειρών</string>
     <string name="refresh_tracking_metadata">Ανανέωση μεταδεδομένων παρακολούθησης</string>
     <string name="updates_tracking_details">Ενημερώνει κατάσταση, βαθμολογία και τελευταίο αναγνωσμένο κεφάλαιο από τις υπηρεσίες παρακολούθησης</string>
     <string name="version">Έκδοση</string>
@@ -239,7 +239,7 @@
     <string name="migrate">Μεταφορά</string>
     <string name="new_chapters_found">Βρέθηκαν νέα κεφάλαια</string>
     <string name="failed_to_update_cover">Δεν ήταν δυνατή η ενημέρωση του εξώφυλλου</string>
-    <string name="must_be_in_library_to_edit">Παρακαλώ προσθέστε το manga στη βιβλιοθήκη σας πριν κάνετε κάτι τέτοιο</string>
+    <string name="must_be_in_library_to_edit">Παρακαλώ προσθέστε τη σειρά στη βιβλιοθήκη σας πριν κάνετε κάτι τέτοιο</string>
     <string name="select_cover_image">Επιλέξτε εικόνα εξωφύλλου</string>
     <string name="select_backup_file">Επιλέξτε αρχείο αντιγράφου ασφαλείας</string>
     <string name="new_version_available">Νέα διαθέσιμη ενημέρωση!</string>
@@ -249,9 +249,9 @@
     <string name="download_complete">Η λήψη ολοκληρώθηκε</string>
     <string name="download_error">Σφάλμα λήψης</string>
     <string name="update_available">Υπάρχει διαθέσιμη ενημέρωση</string>
-    <string name="cover_of_image">Εξώφυλλο manga</string>
+    <string name="cover_of_image">Εξώφυλλο σειράς</string>
     <string name="no_recent_chapters">Δεν υπάρχουν πρόσφατα κεφάλαια</string>
-    <string name="no_recently_read_manga">Δεν υπάρχουν πρόσφατα αναγνωσμένα manga</string>
+    <string name="no_recently_read_manga">Δεν υπάρχουν πρόσφατες αναγνωσμένες σειρές</string>
     <string name="library_is_empty_add_from_browse">Η βιβλιοθήκη σας είναι κενή, μπορείτε να προσθέσετε σειρές στη βιβλιοθήκη σας από τους καταλόγους.</string>
     <string name="could_not_download_unexpected_error">Παρουσιάστηκε μη αναμενόμενο σφάλμα κατά τη λήψη του κεφαλαίου</string>
     <string name="no_wifi_connection">Δεν υπάρχει διαθέσιμη σύνδεση wifi</string>
@@ -364,7 +364,7 @@
     <string name="auto_refresh_covers_summary">Ανανέωση εξώφυλλων στη βιβλιοθήκη και κατά την ενημέρωση της βιβλιοθήκης</string>
     <string name="auto_refresh_covers">Αυτόματη ανανέωση εξωφύλλων</string>
     <string name="include_in_global_update">Συμπερίληψη σε καθολική ενημέρωση</string>
-    <string name="when_sorting_ignore_articles">Κατά την αλφαβητική ταξινόμηση, ταξινομήστε αγνοώντας τα άρθρα (a, an, the) στην αρχή των τίτλων manga</string>
+    <string name="when_sorting_ignore_articles">Κατά την αλφαβητική ταξινόμηση, ταξινομήστε αγνοώντας τα άρθρα (a, an, the) στην αρχή των τίτλων από τις σειρές</string>
     <string name="sort_by_ignoring_articles">Ταξινόμηση αγνοώντας άρθρα</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">και %1$d περισσότερο κεφάλαιο</item>
@@ -402,8 +402,8 @@
     <string name="category_deleted">Η κατηγορία διαγράφηκε</string>
     <string name="manage_category">Διαχείριση κατηγορίας</string>
     <string name="add_categories">Προσθήκη κατηγοριών</string>
-    <string name="already_in_category">Manga ήδη στην κατηγορία</string>
-    <string name="confirm_category_deletion_message">Το Manga αυτής της κατηγορίας θα μετακινηθεί στην προεπιλεγμένη κατηγορία.</string>
+    <string name="already_in_category">Η καταχώρηση είναι ήδη στην κατηγορία</string>
+    <string name="confirm_category_deletion_message">Οι καταχωρήσεις αυτής της κατηγορίας θα μετακινηθουν στην προεπιλεγμένη κατηγορία.</string>
     <string name="confirm_category_deletion">Διαγραφή κατηγορίας;</string>
     <string name="category_is_empty">Η κατηγορία είναι κενή</string>
     <string name="create_new_category">Δημιουργία νέας κατηγορίας</string>
@@ -467,7 +467,7 @@
     <string name="invalid_backup_file">Μη έγκυρο αρχείο αντιγράφου ασφαλείας</string>
     <string name="invalid_backup_file_type">Μη έγκυρος τύπος αρχείου αντιγράφου ασφαλείας: %1$s
 \nΘα πρέπει να τελειώνει με .proto.gz ή .json.</string>
-    <string name="backup_has_no_manga">Το αντίγραφο ασφαλείας δεν περιέχει manga.</string>
+    <string name="backup_has_no_manga">Το αντίγραφο ασφαλείας δεν περιέχει καμία καταχώρηση.</string>
     <string name="restore_missing_sources">Πηγές που λείπουν:</string>
     <string name="restore_missing_trackers">Ιχνηλάτες που δεν έχουν συνδεθεί:</string>
     <string name="restore_content_full">Τα δεδομένα από το αντίγραφο ασφαλείας θα αποκατασταθούν
@@ -541,15 +541,16 @@
     <string name="start_downloading_now">Έναρξη λήψης τώρα</string>
     <string name="not_downloaded">Δεν έχει ληφθεί</string>
     <string name="whats_new_this_release">Τι νέο υπάρχει σε αυτή την έκδοση</string>
-    <string name="you_can_migrate_in_library">Μπορείτε επίσης να μετεγκαταστήσετε επιλέγοντας μάνγκα στη βιβλιοθήκη σας</string>
+    <string name="you_can_migrate_in_library">Μπορείτε επίσης να μετεγκαταστήσετε επιλέγοντας σειρές στη βιβλιοθήκη σας</string>
     <string name="match_enabled_sources">Αντιστοίχιση ενεργοποιημένων πηγών</string>
     <string name="match_pinned_sources">Αντιστοίχιση καρφιτσωμένων πηγών</string>
     <string name="only_search_pinned_when">Αναζήτηση μόνο σε καρφιτσωμένες πηγές</string>
     <string name="delete_all_covers__not_in_library_used_">Διαγραφή όλων των εξώφυλλων που έχουν αποθηκευτεί προσωρινά και δε βρίσκονται στη βιβλιοθήκη σας
 \nΑυτήν τη στιγμή χρησιμοποιούνται: %1$s</string>
     <string name="clear_cached_covers_non_library">Εκκαθάριση προσωρινά αποθηκευμένων εξώφυλλων που δε βρίσκονται στη βιβλιοθήκη</string>
-    <string name="delete_old_covers_in_library_used_">Διαγραφή παλιών και αχρησιμοποίητων αποθηκευμένων εξώφυλλων manga στη βιβλιοθήκη σας που έχουν ενημερωθεί.
-\nΧρησιμοποιούνται επί του παρόντος: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Διαγραφή παλιών και αχρησιμοποίητων αποθηκευμένων εξώφυλλων σειρών στη βιβλιοθήκη σας που έχουν ενημερωθεί.
+\nΧρησιμοποιούνται επί του παρόντος:
+\n%1$s</string>
     <string name="clean_up_cached_covers">Καθαρισμός προσωρινά αποθηκευμένων εξώφυλλων</string>
     <plurals name="cleanup_done">
         <item quantity="one">Ο καθαρισμός ολοκληρώθηκε. Αφαιρέθηκε %d φάκελος</item>
@@ -558,7 +559,7 @@
     <string name="disable_if_issues_with_updating">Απενεργοποιήστε το εάν αντιμετωπίζετε προβλήματα με την ενημέρωση ή την επαναφορά της βιβλιοθήκης σας</string>
     <string name="no_folders_to_cleanup">Δεν υπάρχουν φάκελοι για καθαρισμό</string>
     <string name="starting_cleanup">Έναρξη καθαρισμού</string>
-    <string name="clean_read_manga_not_in_library">Καθαρισμός manga που δεν υπάρχουν στη βιβλιοθήκη</string>
+    <string name="clean_read_manga_not_in_library">Καθαρισμός σειρών που δεν υπάρχουν στη βιβλιοθήκη</string>
     <string name="clean_read_downloads">Καθαρισμός διαβασμένων</string>
     <string name="clean_orphaned_downloads">Καθαρισμός ορφανών</string>
     <string name="delete_unused_chapters">Διαγραφή μη υπαρκτών, μερικώς κατεβασμένων και διαβασμένων φακέλων κεφαλαίων</string>
@@ -586,17 +587,17 @@
     <string name="turn_off_">Απενεργοποίηση %s</string>
     <string name="turn_on_">Ενεργοποίηση %s</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga μετεγκαταστήθηκε</item>
-        <item quantity="other">%d manga μετεγκαταστήθηκαν</item>
+        <item quantity="one">%d σειρά μετεγκαταστήθηκε</item>
+        <item quantity="other">%d σειρές μετεγκαταστήθηκαν</item>
     </plurals>
     <string name="skipping_">(παράλειψη %1$d)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Αντιγραφή %1$d%2$s manga;</item>
-        <item quantity="other">Αντιγραφή %1$d%2$s manga;</item>
+        <item quantity="one">Αντιγραφή %1$d%2$s σειρά;</item>
+        <item quantity="other">Αντιγραφή %1$d%2$s σειρών;</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Μετεγκατάσταση %1$d%2$s manga;</item>
-        <item quantity="other">Μετεγκατάσταση %1$d%2$s manga;</item>
+        <item quantity="one">Μετεγκατάσταση %1$d%2$s σειρά;</item>
+        <item quantity="other">Μετεγκατάσταση %1$d%2$s σειρών;</item>
     </plurals>
     <string name="stop_migrating">Διακοπή μετεγκατάστασης;</string>
     <string name="no_alternatives_found">Δε βρέθηκαν εναλλακτικές</string>
@@ -617,7 +618,7 @@
     <string name="use_last_saved_migration_preferences">Χρήση των τελευταίων αποθηκευμένων προτιμήσεων και πηγών προ-μετεγκατάστασης για τη μαζική μετεγκατάσταση</string>
     <string name="only_enable_enabled_for_migration">Ενεργοποίηση μόνο των τρέχων καρφιτσωμένων πηγών για μετεγκατάσταση</string>
     <string name="only_enable_pinned_for_migration">Ενεργοποίηση μόνο των καρφιτσωμένων πηγών για μετεγκατάσταση</string>
-    <string name="no_chapters_found_for_migration">Δε βρέθηκαν κεφάλαια, αυτό το manga δεν μπορεί να χρησιμοποιηθεί για μετεγκατάσταση</string>
+    <string name="no_chapters_found_for_migration">Δε βρέθηκαν κεφάλαια, αυτό η σειρά δεν μπορεί να χρησιμοποιηθεί για μετεγκατάσταση</string>
     <string name="data_to_include_in_migration">Δεδομένα προς συμπερίληψη στη μετεγκατάσταση</string>
     <string name="skip_pre_migration">Παράλειψη προ-μετεγκατάστασης</string>
     <string name="migration">Μετεγκατάσταση</string>
@@ -635,7 +636,7 @@
 \n
 \nΔιαγραφή των λήψεων τους;</item>
     </plurals>
-    <string name="custom_manga_info">Προσαρμοσμένες πληροφορίες manga</string>
+    <string name="custom_manga_info">Προσαρμοσμένες πληροφορίες σειρών</string>
     <string name="error_sharing_cover">Σφάλμα κοινής χρήσης του εξωφύλλου</string>
     <string name="error_saving_cover">Σφάλμα αποθήκευσης εξωφύλλου</string>
     <string name="cover_saved">Το εξώφυλλο αποθηκεύτηκε</string>
@@ -728,7 +729,7 @@
     <string name="show_download_button">Εμφάνιση κουμπιού λήψης</string>
     <string name="press_and_hold_to_also_reset">Το παρατεταμένο πάτημα μπορεί επίσης να επαναφέρει το ιστορικό κεφαλαίου</string>
     <string name="grouped">Ομαδοποιημένα</string>
-    <string name="no_recent_read_updated_manga">Δεν υπάρχουν πρόσφατα διαβασμένα ή ενημερωμένα manga</string>
+    <string name="no_recent_read_updated_manga">Δεν υπάρχουν πρόσφατες αναγνωσμένες ή ενημερωμένες σειρές</string>
     <string name="reset_chapter_history">Επαναφορά ιστορικού κεφαλαίων</string>
     <string name="certain_buttons_can_be_found">Ορισμένα κουμπιά μπορούν να βρεθούν σε άλλα σημεία αν απενεργοποιηθούν εδώ</string>
     <string name="display_buttons_bottom_reader">Κουμπιά στο κάτω μέρος του αναγνώστη</string>
@@ -822,7 +823,7 @@
     <string name="by_source_order">Κατά σειρά πηγής</string>
     <string name="not_bookmarked">Χωρίς σελιδοδείκτη</string>
     <string name="external_storage_download_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία για να κατεβάσετε κεφάλαια. Πατήστε εδώ και στη συνέχεια, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
-    <string name="external_storage_permission_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία στο Android 11 για να κατεβάζει κεφάλαια, να δημιουργεί αυτόματα αντίγραφα ασφαλείας και να διαβάζει τοπικά manga.
+    <string name="external_storage_permission_notice">Το TachiyomiJ2K απαιτεί πρόσβαση σε όλα τα αρχεία στο Android 11 για να κατεβάζει κεφάλαια, να δημιουργεί αυτόματα αντίγραφα ασφαλείας και να διαβάζει τις τοπικά αποθηκευμένες σειρές.
 \n
 \nΣτην επόμενη οθόνη, ενεργοποιήστε την επιλογή \"Να επιτρέπεται η πρόσβαση στη διαχείριση όλων των αρχείων.\"</string>
     <string name="all_files_permission_required">Απαιτείται άδεια πρόσβασης αρχείων</string>
@@ -904,8 +905,8 @@
     <string name="publishing_finished">Η έκδοση ολοκληρώθηκε</string>
     <string name="cancelled">Ακυρώθηκε</string>
     <string name="on_hiatus">Σε αναστολή</string>
-    <string name="tracking_info">Μονόδρομος συγχρονισμός για ενημέρωση των υπηρεσιών παρακολούθησης προόδου κεφαλαίων. Ρυθμίστε την παρακολούθηση για μεμονωμένες καταχωρήσεις manga από το κουμπί παρακολούθησης τους.</string>
-    <string name="enhanced_tracking_info">Υπηρεσίες που παρέχουν βελτιωμένες δυνατότητες για συγκεκριμένες πηγές. Τα manga παρακολουθούνται αυτόματα όταν προστίθεται στη βιβλιοθήκη σας.</string>
+    <string name="tracking_info">Μονόδρομος συγχρονισμός για ενημέρωση των υπηρεσιών παρακολούθησης προόδου κεφαλαίων. Ρυθμίστε την παρακολούθηση για μεμονωμένες καταχωρήσεις σειρών από το κουμπί παρακολούθησης τους.</string>
+    <string name="enhanced_tracking_info">Υπηρεσίες που παρέχουν βελτιωμένες δυνατότητες για συγκεκριμένες πηγές. Οι καταχωρήσεις παρακολουθούνται αυτόματα όταν προστίθεται στη βιβλιοθήκη σας.</string>
     <string name="empty_backup_error">Δεν υπάρχουν καταχωρήσεις βιβλιοθήκης για δημιουργία αντιγράφων ασφαλείας</string>
     <string name="order_by">Ταξινόμηση κατά</string>
     <string name="local_invalid_format">Μη έγκυρη μορφή κεφαλαίου</string>
@@ -947,7 +948,7 @@
     <string name="try_new_features">Δοκιμάστε τις νέες λειτουργίες πριν κυκλοφορήσουν επίσημα. Οι εκδόσεις beta ενδέχεται να είναι ασταθείς και παρέχονται για να δώσουν σχόλια στον προγραμματιστή.</string>
     <string name="most_entries">Οι περισσότερες καταχωρήσεις</string>
     <string name="use_staggered_grid">Χρήση κλιμακωτού πλέγματος</string>
-    <string name="pref_update_only_completely_read_summary">Ενημερώστε το manga μόνο εάν δεν υπάρχει μη αναγνωσμένο κεφάλαιο (πλήρως διαβασμένο)</string>
+    <string name="pref_update_only_completely_read_summary">Ενημέρωση των σειρών μόνο όταν δεν υπάρχει μη αναγνωσμένο κεφάλαιο (πλήρως διαβασμένο)</string>
     <string name="view_all">Προβολή όλων</string>
     <string name="show_">Εμφάνιση %1$s</string>
     <string name="update_tracking_marked_read">Ενημέρωση παρακολούθησης όταν επισημανθεί ως αναγνωσμένη</string>
@@ -999,8 +1000,8 @@
     <string name="user_agent_string">Προεπιλεγμένη συμβολοσειρά πράκτορα χρήστη</string>
     <string name="loader_rar5_error">Η μορφή RARv5 δεν υποστηρίζεται</string>
     <string name="language_requires_app_restart">Ορισμένες γλώσσες ενδέχεται να απαιτούν επανεκκίνηση της εφαρμογής για να εμφανιστούν σωστά</string>
-    <string name="clear_db_exclude_read">Διατήρηση manga με αναγνωσμένα κεφάλαια</string>
-    <string name="all_read_manga">Όλα τα manga που διαβάστηκαν</string>
+    <string name="clear_db_exclude_read">Διατήρηση σειρών με αναγνωσμένα κεφάλαια</string>
+    <string name="all_read_manga">Όλες οι σειρές που διαβάστηκαν</string>
     <string name="auto_download_while_reading">Αυτόματη λήψη κατά την ανάγνωση</string>
     <string name="downloaded_chapters">Κεφάλαια που έχουν ληφθεί</string>
     <string name="stats">Στατιστικά</string>
@@ -1068,4 +1069,8 @@
     <string name="app_settings">Ρυθμίσεις εφαρμογής</string>
     <string name="pref_debug_info">Πληροφορίες εντοπισμού σφαλμάτων</string>
     <string name="label_background_activity">Δραστηριότητα παρασκηνίου</string>
+    <string name="ext_installer_summary">Επιτρέπει την εγκατάσταση επεκτάσεων χωρίς εντολή από τον χρήστη και ενεργοποιεί αυτόματες ενημερώσεις για συσκευές με λογισμικό παλιότερο από Android 12</string>
+    <string name="apply">Εφαρμογή</string>
+    <string name="allow_notifications_recommended">Συνιστάται να επιτρέψετε τις ειδοποιήσεις για να διατηρείται την βιβλιοθήκη σας και την εφαρμογή σας ενημερωμένες.</string>
+    <string name="share_cover">Κοινοποίηση εξωφύλλου</string>
 </resources>

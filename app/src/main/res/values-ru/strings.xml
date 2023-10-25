@@ -278,7 +278,7 @@
     <string name="restore_from_backup_file">Восстановить библиотеку из резервной копии</string>
     <string name="rotation">Ориентация</string>
     <string name="show_page_number">Показать номер страницы</string>
-    <string name="skip_pre_migration">Пропустить предварительную миграцию</string>
+    <string name="skip_pre_migration">Пропускать настройки миграции</string>
     <string name="use_last_saved_migration_preferences">Использовать последние сохраненные премиграционные настройки и источники для массовой миграции</string>
     <string name="skip_read_chapters">Пропускать главы, помеченные как «Прочитано»</string>
     <string name="app_theme">Тема приложения</string>

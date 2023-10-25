@@ -1127,6 +1127,7 @@
     <string name="library_entries">Entradas de la biblioteca</string>
     <string name="source_settings">Ajustes de la fuente</string>
     <string name="app_settings">Ajustes de la aplicación</string>
-    <string name="pref_debug_info">Información de depuración</string>
+    <string name="pref_debug_info">Información sobre la depuración</string>
     <string name="label_background_activity">Actividad en segundo plano</string>
+    <string name="share_cover">Compartir la portada</string>
 </resources>

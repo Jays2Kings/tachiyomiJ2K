@@ -1044,4 +1044,5 @@
     <string name="app_settings">應用程式設定</string>
     <string name="pref_debug_info">偵錯資訊</string>
     <string name="label_background_activity">背景活動</string>
+    <string name="share_cover">分享封面</string>
 </resources>

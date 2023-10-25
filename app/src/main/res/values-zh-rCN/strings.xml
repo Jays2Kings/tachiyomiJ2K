@@ -963,11 +963,11 @@
     <string name="download_notifier_split_failed">无法拆分下载的图像</string>
     <string name="split_tall_images">分割长图</string>
     <string name="split_tall_images_summary">可以改善阅读器的性能</string>
-    <string name="reading_list">阅读列表</string>
-    <string name="wish_list">想读列表</string>
-    <string name="complete_list">读完列表</string>
-    <string name="on_hold_list">稍后读列表</string>
-    <string name="unfinished_list">未读完列表</string>
+    <string name="reading_list">阅读中</string>
+    <string name="wish_list">计划读</string>
+    <string name="complete_list">已完结</string>
+    <string name="on_hold_list">搁置中</string>
+    <string name="unfinished_list">已放弃</string>
     <string name="sort_fetched_time">按获取时间排序</string>
     <string name="tap_zones">点按区域</string>
     <string name="lavender">薰衣草</string>

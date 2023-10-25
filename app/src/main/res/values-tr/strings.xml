@@ -1069,4 +1069,6 @@
     <string name="library_entries">Kitaplık girdileri</string>
     <string name="pref_debug_info">Hata ayıklama bilgisi</string>
     <string name="label_background_activity">Arka plan etkinliği</string>
+    <string name="source_settings">Kaynak ayarları</string>
+    <string name="app_settings">Uygulama ayarları</string>
 </resources>
