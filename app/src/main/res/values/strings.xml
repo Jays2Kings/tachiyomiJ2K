@@ -891,6 +891,7 @@
     <string name="some_extensions_may_not_update">Some extensions may not be auto-updated if they were installed outside this app</string>
     <string name="only_search_pinned_when">Only search pinned sources</string>
     <string name="hide_in_library_items">Hide entries already in library</string>
+    <string name="less_visible_in_library_items">Make entries already in library less visible</string>
     <string name="match_pinned_sources">Match pinned sources</string>
     <string name="match_enabled_sources">Match enabled sources</string>
     <string name="only_enable_pinned_for_migration">Only enable your pinned sources for

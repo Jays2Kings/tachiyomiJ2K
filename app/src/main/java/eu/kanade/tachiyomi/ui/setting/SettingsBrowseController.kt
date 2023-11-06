@@ -38,6 +38,13 @@ class SettingsBrowseController : SettingsController() {
         }
 
         preferenceCategory {
+            switchPreference {
+                bindTo(preferences.lessVisibleInLibraryItems())
+                titleRes = R.string.less_visible_in_library_items
+            }
+        }
+
+        preferenceCategory {
             titleRes = R.string.extensions
             switchPreference {
                 key = PreferenceKeys.automaticExtUpdates

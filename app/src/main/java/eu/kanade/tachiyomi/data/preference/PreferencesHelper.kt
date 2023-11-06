@@ -419,6 +419,8 @@ class PreferencesHelper(val context: Context) {
 
     fun hideInLibraryItems() = flowPrefs.getBoolean("browse_hide_in_library_items", false)
 
+    fun lessVisibleInLibraryItems() = flowPrefs.getBoolean("browse_less_visible_in_library_items", false)
+
     // Tutorial preferences
     fun shownFilterTutorial() = flowPrefs.getBoolean("shown_filter_tutorial", false)
 
