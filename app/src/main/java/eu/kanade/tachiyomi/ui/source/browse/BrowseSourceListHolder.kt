@@ -11,11 +11,8 @@ import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import eu.kanade.tachiyomi.data.image.coil.MangaCoverFetcher
-import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.MangaListItemBinding
 import eu.kanade.tachiyomi.util.view.setCards
-import uy.kohesive.injekt.Injekt
-import uy.kohesive.injekt.api.get
 
 /**
  * Class used to hold the displayed data of a manga in the catalogue, like the cover or the title.
@@ -29,7 +26,6 @@ class BrowseSourceListHolder(
     private val view: View,
     adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>,
     showOutline: Boolean,
-    val prefs: PreferencesHelper = Injekt.get(),
 ) :
     BrowseSourceHolder(view, adapter) {
 
@@ -64,7 +60,7 @@ class BrowseSourceListHolder(
                 .build()
             Coil.imageLoader(view.context).enqueue(request)
 
-            binding.coverThumbnail.alpha = if (manga.favorite && prefs.lessVisibleInLibraryItems().get()) 0.34f else 1.0f
+            binding.coverThumbnail.alpha = if (manga.favorite) 0.34f else 1.0f
         }
     }
 }
