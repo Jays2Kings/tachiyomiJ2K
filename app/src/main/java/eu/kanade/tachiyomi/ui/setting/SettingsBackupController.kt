@@ -125,7 +125,7 @@ class SettingsBackupController : SettingsController() {
                 preferences.backupsDirectory().asFlow()
                     .onEach { path ->
                         val dir = UniFile.fromUri(context, path.toUri())
-                        summary = dir.filePath + "/automatic"
+                        summary = dir.filePath
                     }
                     .launchIn(viewScope)
             }
