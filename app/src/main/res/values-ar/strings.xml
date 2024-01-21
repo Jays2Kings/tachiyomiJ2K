@@ -145,7 +145,7 @@
     <string name="cookies_cleared">تم محو ملفات تعريف الارتباط</string>
     <string name="clear_database">محو قاعدة البيانات</string>
     <string name="clear_database_summary">امسح سجلَّ المدخلات التي ليست محفوظةً في مكتبتك</string>
-    <string name="clear_database_confirmation">أمتأكِّد؟ إن فعلتَ خسرتَ الفصول المقروءة وسير القراءة</string>
+    <string name="clear_database_confirmation">أمتأكِّد؟ إن فعلتَ خسرتَ الفصول المقروءة و التقدم فى العنوانين الغير محفوظة فى المكتبة</string>
     <string name="clear_database_completed">تم حذف المدخلات</string>
     <string name="refresh_library_metadata">تحديث البيانات الوصفية للمكتبة</string>
     <string name="updates_covers_genres_desc">يحدِّث الغُلُف والأصناف والأوصاف وحالة المدخلات</string>
@@ -635,9 +635,7 @@
     <string name="file_picker_error">لم يتم العثور على تطبيق منتقي الملفات</string>
     <string name="open_log">فتح السجل</string>
     <string name="badges">شارات</string>
-    <string name="unofficial_extension_message">هذه الإضافة ليست من قائمة إضافات Tachiyomi الرسمية.</string>
     <string name="nsfw_short">١٨+</string>
-    <string name="unofficial">غير رسمي</string>
     <string name="may_contain_nsfw">قد تحتوى على محتوًى خادش للحياء (١٨+)</string>
     <string name="started_reading_date">تاريخ بدء القراءة</string>
     <string name="finished_reading_date">تاريخ الانتهاء من القراءة</string>
@@ -690,7 +688,7 @@
     </plurals>
     <string name="category">الفئة</string>
     <string name="new_category">فئة جديدة</string>
-    <string name="no_chapters_to_delete">لا توجد أيُّ فصول للتحذف</string>
+    <string name="no_chapters_to_delete">لا توجد أيُّ فصول لتحذف</string>
     <string name="remove_all_downloads">أأحذف كلَّ التنزيلات؟</string>
     <string name="no_pages_found">لم يُعثر على أيِّ صفحات</string>
     <string name="add_x_to">أضف %1$s إلى…</string>
@@ -902,7 +900,7 @@
     <string name="by_source_order">حسب ترتيب المصدر</string>
     <string name="not_bookmarked">لم يعلَّم</string>
     <string name="external_storage_download_notice">يتطلب TachiyomiJ2K الوصول إلى جميع الملفات لينزِّل الفصول. اضغط هنا ثم مكِّن «السماح بالوصول لإدارة جميع الملفات.»</string>
-    <string name="external_storage_permission_notice">يحتاج TachiyomiJ2K للوصول إلى كلِّ الملفَّات في أندرويد ١١، فبذلك ينزِّل الفصول ويحتاط ويقرأ السلاسل المنزَّلة.
+    <string name="external_storage_permission_notice">يحتاج TachiyomiJ2K للوصول إلى كلِّ الملفَّات في أندرويد 11، فبذلك ينزِّل الفصول ويحتاط ويقرأ السلاسل المنزَّلة.
 \n
 \nمكِّن «اسمح بإدارة كافة الملفات.» عندما تراها في الشاشة التالية</string>
     <string name="all_files_permission_required">إذن الوصول إلى الملفات مطلوب</string>
@@ -1175,4 +1173,6 @@
     <string name="pref_debug_info">معلومات التنقيح</string>
     <string name="label_background_activity">الأنشطة التي تعمل في الخلفية</string>
     <string name="share_cover">شارك الغلاف</string>
+    <string name="save_pages_separately">احفظ الصفحات في مجلدات مختلفة</string>
+    <string name="create_folders_by_manga_title">يُنشِئ ملفات حسب عنوان المانجا</string>
 </resources>

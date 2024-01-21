@@ -150,7 +150,7 @@
     <string name="next_chapter_not_found">Volgend hoofdstuk niet gevonden</string>
     <string name="use_image_as_cover">Wil je deze afbeelding als omslagfoto gebruiken?</string>
     <string name="new_chapters_found">Nieuwe hoofdstukken gevonden</string>
-    <string name="must_be_in_library_to_edit">Gelieve eerst de manga aan je bibliotheek toe te voegen</string>
+    <string name="must_be_in_library_to_edit">Gelieve eerst de serie aan je bibliotheek toe te voegen</string>
     <string name="select_cover_image">Selecteer omslagfoto</string>
     <string name="select_backup_file">Selecteer back-upbestand</string>
     <string name="new_version_available">Nieuwe update beschikbaar!</string>
@@ -191,7 +191,7 @@
     <string name="build_time">Gecompileerd op</string>
     <string name="send_crash_report">Rapporteer bugs</string>
     <string name="helps_fix_bugs">Helpt bij het bestrijden van bugs. Geen gevoelige data wordt verzonden</string>
-    <string name="no_recently_read_manga">Geen recentelijk gelezen manga</string>
+    <string name="no_recently_read_manga">Geen recentelijk gelezen series</string>
     <string name="could_not_download_unexpected_error">Er is een onverwachte fout opgetreden bij het downloaden van het hoofdstuk</string>
     <string name="clear">Legen</string>
     <string name="library_update_restriction">Apparaatbeperkingen</string>
@@ -365,7 +365,7 @@
     <string name="auto_refresh_covers_summary">Omslagen in bibliotheek ook verversen bij het bijwerken van de bibliotheek</string>
     <string name="auto_refresh_covers">Omslagen automatisch vernieuwen</string>
     <string name="include_in_global_update">Meenemen in globale update</string>
-    <string name="when_sorting_ignore_articles">Bij het alfabetisch sorteren, negeer Engelse lidwoorden (a, an, the) aan het begin van mangatitels</string>
+    <string name="when_sorting_ignore_articles">Bij het alfabetisch sorteren, negeer Engelse lidwoorden (a, an, the) aan het begin van serietitels</string>
     <string name="sort_by_ignoring_articles">Lidwoorden negeren bij sorteren</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">en %1$d nog hoofdstuk</item>
@@ -405,8 +405,8 @@
     <string name="category_deleted">Categorie verwijderd</string>
     <string name="manage_category">Categorie beheren</string>
     <string name="add_categories">Categorieën toevoegen</string>
-    <string name="already_in_category">Manga zit al in deze categorie</string>
-    <string name="confirm_category_deletion_message">Manga in deze categorie worden verplaatst naar de standaardcategorie.</string>
+    <string name="already_in_category">Item zit al in deze categorie</string>
+    <string name="confirm_category_deletion_message">Items in deze categorie worden verplaatst naar de standaardcategorie.</string>
     <string name="confirm_category_deletion">Categorie verwijderen\?</string>
     <string name="category_is_empty">Categorie is leeg</string>
     <string name="create_new_category">Maak nieuwe categorie aan</string>
@@ -488,21 +488,21 @@
     <string name="restore_error">Fout bij het herstellen van de back-up</string>
     <string name="white_theme">Puur wit</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga gemigreerd</item>
-        <item quantity="other">%d manga gemigreerd</item>
+        <item quantity="one">%d serie gemigreerd</item>
+        <item quantity="other">%d series gemigreerd</item>
     </plurals>
     <string name="skipping_">(%1$d overgeslagen)</string>
     <plurals name="copy_manga">
-        <item quantity="one">%1$d%2$s manga kopiëren\?</item>
-        <item quantity="other">%1$d%2$s manga kopiëren\?</item>
+        <item quantity="one">%1$d%2$s serie kopiëren?</item>
+        <item quantity="other">%1$d%2$s series kopiëren?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">%1$d%2$s manga migreren\?</item>
-        <item quantity="other">%1$d%2$s manga migreren\?</item>
+        <item quantity="one">%1$d%2$s serie migreren?</item>
+        <item quantity="other">%1$d%2$s series migreren?</item>
     </plurals>
     <string name="stop_migrating">Migratie stoppen\?</string>
     <string name="no_alternatives_found">Geen alternatieven gevonden</string>
-    <string name="no_chapters_found_for_migration">Geen hoofdstukken gevonden, deze manga kan niet gebruikt worden voor migratie</string>
+    <string name="no_chapters_found_for_migration">Geen hoofdstukken gevonden, deze serie kan niet gebruikt worden voor migratie</string>
     <string name="migrate_">Migreer %1$s</string>
     <string name="copy_now">Nu kopiëren</string>
     <string name="migrate_now">Nu migreren</string>
@@ -605,9 +605,7 @@
     <string name="no_chapters_error">Geen hoofdstukken gevonden</string>
     <string name="badges">Badges</string>
     <string name="open_log">Open log</string>
-    <string name="unofficial_extension_message">Deze extensie behoort niet tot de officiële Tachiyomi extensielijst.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Niet officieel</string>
     <string name="may_contain_nsfw">Kan NSFW-inhoud (18+) bevatten</string>
     <string name="next_page">Volgende pagina</string>
     <string name="previous_page">Vorige pagina</string>
@@ -620,7 +618,7 @@
     <string name="invalid_backup_file">Ongeldig backupbestand</string>
     <string name="invalid_backup_file_type">Ongeldig type back-upbestand: %1$s
 \nDe bestandsnaam moet eindigen op .proto.gz of .json.</string>
-    <string name="backup_has_no_manga">Back-up bevat geen manga.</string>
+    <string name="backup_has_no_manga">Back-up bevat geen items.</string>
     <string name="restore_missing_sources">Missende bronnen:</string>
     <string name="restore_missing_trackers">Niet-ingelogde trackers:</string>
     <string name="restoring_backup_canceled">Herstellen geannuleerd</string>
@@ -657,7 +655,7 @@
     <string name="hides_on_scroll">Verbergen tijdens scrollen</string>
     <string name="hide_bottom_nav">Onderste navigatiebalk automatisch verbergen</string>
     <string name="last_used_library_recents">Laatst gebruikt (Bibliotheek of Nieuwste)</string>
-    <string name="custom_manga_info">Aangepaste manga-informatie</string>
+    <string name="custom_manga_info">Aangepaste serie-informatie</string>
     <string name="mark_all_chapters_as_unread">Alle hoofstukken als ongelezen markeren\?</string>
     <string name="ignore_cutout_areas">Uitgeknipte gebieden negeren</string>
     <string name="start_past_cutout">Beginnen na het uitgeknipte gebied</string>
@@ -714,7 +712,7 @@
     <string name="only_unread">Alleen ongelezen</string>
     <string name="press_and_hold_to_also_reset">Ingedrukt houden kan ook de hoofdstukgeschiedenis vergeten</string>
     <string name="grouped">Gegroepeerd</string>
-    <string name="no_recent_read_updated_manga">Geen recent gelezen of bijgewerkte manga</string>
+    <string name="no_recent_read_updated_manga">Geen recent gelezen of bijgewerkte series</string>
     <string name="reset_chapter_history">Hoofdstukgeschiedenis vergeten</string>
     <string name="shift_one_page_over">Eén pagina opschuiven</string>
     <string name="category_cannot_be_blank">Categorienaam mag niet leeg zijn</string>
@@ -783,7 +781,7 @@
     <string name="mark_range_as_read">Markeer een reeks hoofstukken als gelezen</string>
     <string name="cancel_all_for_series">Alles annuleren voor deze serie</string>
     <string name="app_shortcuts">App-snelkoppelingen</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden in Android 11 om hoofdstukken te downloaden, automatische backups aan te maken, en lokale manga te lezen.
+    <string name="external_storage_permission_notice">TachiyomiJ2K heeft toegang nodig tot alle bestanden in Android 11 om hoofdstukken te downloaden, automatische backups aan te maken, en lokale series te lezen.
 \n
 \nOp het volgende scherm, schakel \"Toegang verlenen om alle bestanden te beheren\" in.</string>
     <string name="orientation">Oriëntatie</string>
@@ -903,9 +901,9 @@
     <string name="publishing_finished">Uitgave voltooid</string>
     <string name="cancelled">Geannuleerd</string>
     <string name="on_hiatus">Gepauzeerd</string>
-    <string name="tracking_info">Eenzijdige synchronisatie om voortang van hoofdstukken bij te werken bij trackingdiensten. Stel tracking in bij individuele manga via de \"Tracking\"-knop.</string>
+    <string name="tracking_info">Eenzijdige synchronisatie om voortang van hoofdstukken bij te werken bij trackingdiensten. Stel tracking in bij individuele series via de \"Tracking\"-knop.</string>
     <string name="enhanced_services">Verbeterde diensten</string>
-    <string name="enhanced_tracking_info">Diensten die uitgebreidere functionaliteit bieden voor bepaalde bronnen. Het tracken van manga gebeurt automatisch wanneer je deze toevoegt aan je bibliotheek.</string>
+    <string name="enhanced_tracking_info">Diensten die uitgebreidere functionaliteit bieden voor bepaalde bronnen. Het tracken van items gebeurt automatisch wanneer je deze toevoegt aan je bibliotheek.</string>
     <string name="update_tracking_scoring_type">%1$s\'s scoretype bijwerken</string>
     <string name="scoring_type_updated">Scoringstype bijgewerkt</string>
     <string name="could_not_update_scoring_">Kan scoretype niet bijwerken: %1$s</string>
@@ -949,7 +947,7 @@
     <string name="expanded_toolbar">Uitgebreide werkbalk</string>
     <string name="update_tracking_after_reading">Trackers bijwerken na het lezen</string>
     <string name="language_badge">Taalbadges</string>
-    <string name="pref_update_only_completely_read_summary">Werk manga alleen bij als deze geen ongelezen hoofdstukken heeft (volledig gelezen)</string>
+    <string name="pref_update_only_completely_read_summary">Werk serie alleen bij als deze geen ongelezen hoofdstukken heeft (volledig gelezen)</string>
     <string name="update_tracking_marked_read">Trackers bijwerken na het markeren als gelezen</string>
     <string name="reading_list">Leeslijst</string>
     <plurals name="next_unread_chapters">
@@ -981,7 +979,7 @@
     <string name="violet">Violet</string>
     <string name="user_agent_string">Standaard user agent string</string>
     <string name="webview_data_deleted">WebView-gegevens gewist</string>
-    <string name="all_read_manga">Allemaal gelezen manga</string>
+    <string name="all_read_manga">Alle gelezen series</string>
     <string name="complete_list">Volledige lijst</string>
     <string name="unfinished_list">Onvoltooide lijst</string>
     <string name="most_entries">De meeste inzendingen</string>
@@ -1067,4 +1065,9 @@
     <string name="library_entries">Bibliotheek</string>
     <string name="pref_debug_info">Foutopsporingsinformatie</string>
     <string name="label_background_activity">Achtergrond activiteit</string>
+    <string name="source_settings">Bron-instellingen</string>
+    <string name="app_settings">App-instellingen</string>
+    <string name="share_cover">Omslag delen</string>
+    <string name="save_pages_separately">Sla pagina\'s op in aparte mappen</string>
+    <string name="create_folders_by_manga_title">Maakt mappen aan op basis van mangatitel</string>
 </resources>

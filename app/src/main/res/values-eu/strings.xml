@@ -687,7 +687,6 @@
     </plurals>
     <string name="ext_installer_shizuku_stopped">Shizuku ez dago martxan</string>
     <string name="obsolete_extension_message">Luzapen hau jada ez dago eskuragarri.</string>
-    <string name="unofficial_extension_message">Luzapen hau ez da Tachiyomi-ren luzapenen zerrenda ofizialekoa.</string>
     <string name="version_">Bertsioa: %1$s</string>
     <string name="language_">Hizkuntza: %1$s</string>
     <string name="app_info">Aplikazioaren informazioa</string>
@@ -703,7 +702,6 @@
     <string name="set_as_cover">Ezarri azal gisa</string>
     <string name="reader_settings">Irakurgailuaren ezarpenak</string>
     <string name="set_as_default_for_all">Ezarri lehenetsia bezala denarentzat</string>
-    <string name="unofficial">Ez-ofiziala</string>
     <string name="extensions_miui_warning">MIUI Optimizazioa desgaitu egin behar da luzapenak instalatzeko.</string>
     <string name="cover_updated">Azala eguneratu da</string>
     <string name="_must_be_enabled_first">Lehenik %1$s gaitu behar da</string>
@@ -836,7 +834,7 @@
     </plurals>
     <string name="network">Sarea</string>
     <string name="doh">DNS HTTPS bidez</string>
-    <string name="clear_database_summary">Ezabatu zure liburutegian ez dauden manga eta kapituluak</string>
+    <string name="clear_database_summary">Ezabatu zure liburutegian gordeta ez dauden mangen historia</string>
     <string name="refresh_library_metadata">Freskatu liburutegiko metadatuak</string>
     <string name="clean_up_downloaded_chapters">Garbitu deskargatutako kapituluak</string>
     <string name="delete_unused_chapters">Ezabatu ez dauden, partzialki deskargatutako eta irakurritako kapituluen karpetak</string>
@@ -950,4 +948,7 @@
     <string name="pref_remove_exclude_categories">Baztertutako kategoriak</string>
     <string name="ext_installer_pref">Instalatzailea</string>
     <string name="label_background_activity">Atzeko planoko ekintzak</string>
+    <string name="library_entries">Manga</string>
+    <string name="trackers">Zerbitzuak</string>
+    <string name="apply">Ezarri</string>
 </resources>

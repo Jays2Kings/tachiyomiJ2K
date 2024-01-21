@@ -145,7 +145,7 @@
     <string name="clear_cookies">কুকিস পরিষ্কার করুন</string>
     <string name="cookies_cleared">কুকিস পরিষ্কার হয়েছে</string>
     <string name="clear_database">ডাটাবেজ পরিষ্কার করুন</string>
-    <string name="clear_database_summary">আপনার মাংগাশালায় যেসব মাংগা এবং অধ্যায়গুলো নেই সেগুলো মুছে ফেলুন</string>
+    <string name="clear_database_summary">আপনার সংগ্রহশালাতে যেসব মাংগা সংরক্ষিত নেই সেগুলোর ইতিহাস মুছে ফেলুন</string>
     <string name="clear_database_confirmation">আপনি কি নিশ্চিত\? পঠিত অধ্যায় এবং সংগ্রহশালাতে অনুপস্থিত মাংগার অগ্রগতি মুছে যাবে</string>
     <string name="clear_database_completed">এন্ট্রিগুলো মুছে ফেলা হয়েছে</string>
     <string name="refresh_library_metadata">মাংগাশালার মেটাডাটা রিফ্রেশ করা হয়েছে</string>
@@ -367,7 +367,7 @@
     <string name="category_deleted">বিভাগ মুছা হয়েছে</string>
     <string name="manage_category">বিভাগ পরিচালনা করুন</string>
     <string name="add_categories">বিভাগ যুক্ত করুন</string>
-    <string name="already_in_category">মাঙ্গা আগে থেকেই বিভাগে</string>
+    <string name="already_in_category">মাঙ্গা আগে থেকেই এই বিভাগে আছে</string>
     <string name="confirm_category_deletion_message">এই বিভাগের মাঙ্গা ডিফল্ট বিভাগে চলে যাবে।</string>
     <string name="adding_category_to_queue">আপডেট সারিতে %1$sকে যোগ করা হচ্ছে</string>
     <string name="unlock_library">লাইব্রেরীতে প্রবেশ করতে আনলক করুন</string>
@@ -501,9 +501,7 @@
     <string name="badges">প্রতীক গুলি</string>
     <string name="source_migration_guide">উৎস স্থানান্তর গাইড</string>
     <string name="file_picker_error">কোনো ফাইল বাছাইকারী অ্যাপ পাওয়া যায় নি</string>
-    <string name="unofficial_extension_message">এক্সটেনশনটি তাচিওমির অনুমোদিত এক্সটেনশন তালিকায় নেই।</string>
     <string name="nsfw_short">১৮+</string>
-    <string name="unofficial">অনুমোদনহীন</string>
     <string name="next_page">পরের পৃষ্ঠা</string>
     <string name="previous_page">আগের পৃষ্ঠা</string>
     <string name="next_chapter">পরের পৃষ্ঠা</string>
@@ -992,7 +990,10 @@
     <string name="gray_background">ধূসর</string>
     <string name="pref_remove_exclude_categories">বর্জিত বিভাগ গুলি</string>
     <string name="ext_installer_pref">ইন্সটলআর</string>
-    <string name="library_entries">পুস্তক সংগ্রহ</string>
+    <string name="library_entries">লাইব্রেরীতে সংগ্রহ</string>
     <string name="pref_debug_info">ডিবাগ তথ্য</string>
     <string name="label_background_activity">পটভূমি কার্যকলাপ</string>
+    <string name="appwidget_updates_description">সম্প্রতি আপনার হালনাগাদকৃত মাঙ্গা দেখুন</string>
+    <string name="skipped_reason_not_started">স্কিপ করা হয়েছে কারণ আগে কোন চ্যাপ্টার পড়া হয়নি</string>
+    <string name="allow_notifications_recommended">অ্যাপ এবং লাইব্রেরীতে থাকা সকল কিছুর আপডেট পেতে নোটিফিকেশন অন করুন।</string>
 </resources>

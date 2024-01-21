@@ -105,9 +105,7 @@
 \n
 \nעל ידי אמון באישור זה אתה מקבל סיכונים אלה.</string>
     <string name="obsolete_extension_message">תוסף זה אינו זמין עוד.</string>
-    <string name="unofficial_extension_message">ההרחבה הזאת לא נמצאת ברשימת ההרחבות הרשמיות של Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">בלתי רשמי</string>
     <string name="app_info">פרטי האפליקצייה</string>
     <string name="update_all">עדכן הכל</string>
     <plurals name="extension_updates_available">
@@ -591,4 +589,5 @@
     <string name="clear_database_summary">מחק את היסטוריית הפריטים שאינם שמורים בספריה שלך</string>
     <string name="pref_debug_info">מידע דיבוג</string>
     <string name="label_background_activity">פעילות רקע</string>
+    <string name="rotation">סוג הסיבוב</string>
 </resources>

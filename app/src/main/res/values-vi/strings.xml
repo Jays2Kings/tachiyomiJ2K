@@ -378,10 +378,8 @@
     <string name="in_progress">Trong quá trình</string>
     <string name="not_started">Chưa bắt đầu</string>
     <string name="manhwa">Manhwa</string>
-    <string name="unofficial_extension_message">Tiện ích mở rộng này không nằm trong danh sách tiện ích mở rộng chính thức của Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
     <string name="open_log">Nhật ký mở</string>
-    <string name="unofficial">Không chính thức</string>
     <string name="animate_page_transitions">Hoạt ảnh chuyển trang</string>
     <string name="default_reading_mode">Kiểu đọc mặc định</string>
     <string name="search_settings">Cài đặt tìm kiếm</string>
@@ -1076,6 +1074,9 @@
     <string name="apply">Áp dụng</string>
     <string name="source_settings">Cài đặt nguồn</string>
     <string name="app_settings">Cài đặt ứng dụng</string>
-    <string name="pref_debug_info">Thông tin Debug</string>
-    <string name="label_background_activity">Hoạt động ngầm</string>
+    <string name="pref_debug_info">Thông tin gỡ lỗi</string>
+    <string name="label_background_activity">Hoạt động nền</string>
+    <string name="share_cover">Chia sẻ ảnh bìa</string>
+    <string name="save_pages_separately">Lưu trang trong thư mục riêng</string>
+    <string name="create_folders_by_manga_title">Tạo thư mục dựa theo tiêu đề truyện</string>
 </resources>

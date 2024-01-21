@@ -88,7 +88,7 @@
     <string name="trust">Confia-hi</string>
     <string name="untrusted">No és de confiança</string>
     <string name="uninstall">Desinstal·la</string>
-    <string name="untrusted_extension">Extensió no fiable</string>
+    <string name="untrusted_extension">Extensió que no és de confiança</string>
     <string name="untrusted_extension_message">Aquesta extensió s’ha signat amb un certificat que no és de confiança i no s’ha activat.
 \n
 \nUna extensió maliciosa podria llegir qualsevol credencial desada al Tachiyomi o executar codi arbitrari.
@@ -167,10 +167,10 @@
     <string name="cookies_cleared">S’han esborrat les galetes</string>
     <string name="clear_database">Buida la base de dades</string>
     <string name="clear_database_summary">Suprimeix l’historial dels elements que no siguin a la biblioteca</string>
-    <string name="clear_database_confirmation">N’esteu segur\? Es perdrà el progrés i els capítols llegits dels elements que no siguin a la biblioteca</string>
+    <string name="clear_database_confirmation">N’esteu segur? Es perdrà el progrés i els capítols llegits dels elements que no siguin a la biblioteca</string>
     <string name="clear_database_completed">S’han suprimit les entrades</string>
     <string name="refresh_library_metadata">Refresca les metadades de la biblioteca</string>
-    <string name="updates_covers_genres_desc">Actualitza portades, gèneres, descripcions i informació de l’estat del manga</string>
+    <string name="updates_covers_genres_desc">Actualitza portades, gèneres, descripcions i informació de l’estat dels elements</string>
     <string name="refresh_tracking_metadata">Refresca les metadades de seguiment</string>
     <string name="updates_tracking_details">Actualitza l’estat, la puntuació i el darrer capítol llegit dels serveis de seguiment</string>
     <string name="version">Versió</string>
@@ -239,7 +239,7 @@
     <string name="migrate">Migra</string>
     <string name="new_chapters_found">S’han trobat nous capítols</string>
     <string name="failed_to_update_cover">No s’ha pogut actualitzar la portada</string>
-    <string name="must_be_in_library_to_edit">Afegiu el manga a la vostra biblioteca abans de fer això</string>
+    <string name="must_be_in_library_to_edit">Heu de tenir sèries a la biblioteca per a poder editar-les</string>
     <string name="select_cover_image">Seleccioneu la imatge de portada</string>
     <string name="select_backup_file">Seleccioneu el fitxer de còpia de seguretat</string>
     <string name="new_version_available">Nova actualització disponible!</string>
@@ -249,9 +249,9 @@
     <string name="download_complete">Baixada completada</string>
     <string name="download_error">S’ha produït un error en baixar</string>
     <string name="update_available">Actualització disponible</string>
-    <string name="cover_of_image">Portada del manga</string>
+    <string name="cover_of_image">Portada de la sèrie</string>
     <string name="no_recent_chapters">No hi ha capítols recents</string>
-    <string name="no_recently_read_manga">No hi ha manga llegit recentment</string>
+    <string name="no_recently_read_manga">No hi ha sèries llegides recentment</string>
     <string name="library_is_empty_add_from_browse">La vostra biblioteca és buida, podeu afegir-hi sèries a la pestanya Explora.</string>
     <string name="could_not_download_unexpected_error">S’ha produït un error inesperat en baixar en capítol</string>
     <string name="no_wifi_connection">No hi ha cap connexió Wi-Fi disponible</string>
@@ -282,6 +282,7 @@
     <string name="obsolete_extension_message">Aquesta extensió ja no està disponible.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Hi ha una actualització d’una extensió</item>
+        <item quantity="many">Hi ha actualitzacions de %d extensions</item>
         <item quantity="other">Hi ha actualitzacions de %d extensions</item>
     </plurals>
     <string name="reduces_banding_impacts_performance">Redueix les bandes de colors, però pot afectar el rendiment</string>
@@ -345,8 +346,9 @@
     <string name="_already_in_queue">%1$s ja és a la cua d’actualitzacions</string>
     <string name="adding_category_to_queue">S’està afegint %1$s a la cua d’actualitzacions</string>
     <plurals name="remove_n_chapters">
-        <item quantity="one">Voleu eliminar %1$d capítol baixat\?</item>
-        <item quantity="other">Voleu eliminar %1$d capítols baixats\?</item>
+        <item quantity="one">Voleu eliminar %1$d capítol baixat?</item>
+        <item quantity="many">Voleu eliminar %1$d capítols baixats?</item>
+        <item quantity="other">Voleu eliminar %1$d capítols baixats?</item>
     </plurals>
     <string name="chapter_not_found">No s’ha trobat el capítol</string>
     <string name="chapters_removed">S’han eliminat els capítols.</string>
@@ -361,10 +363,12 @@
     <string name="unlock_library">Desbloqueu per a accedir a la biblioteca</string>
     <plurals name="category_plural">
         <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categories</item>
         <item quantity="other">%d categories</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d pàgina restant</item>
+        <item quantity="many">%1$d pàgines restants</item>
         <item quantity="other">%1$d pàgines restants</item>
     </plurals>
     <string name="create_new_category">Crea una categoria nova</string>
@@ -375,7 +379,7 @@
     <string name="always_show_current_category">Mostra sempre la categoria actual</string>
     <string name="show_all_categories">Mostra totes les categories</string>
     <string name="add_categories">Afegeix categories</string>
-    <string name="confirm_category_deletion_message">El manga d’aquesta categoria es mourà a la categoria per defecte.</string>
+    <string name="confirm_category_deletion_message">Els elements d’aquesta categoria es mouran a la categoria per defecte.</string>
     <string name="confirm_category_deletion">Voleu suprimir la categoria\?</string>
     <string name="next_page">Pàgina següent</string>
     <string name="previous_page">Pàgina anterior</string>
@@ -387,13 +391,12 @@
     <string name="restore_duration">%02d min i %02d s</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Fet en %1$s amb %2$s error</item>
+        <item quantity="many">Fet en %1$s amb %2$s errors</item>
         <item quantity="other">Fet en %1$s amb %2$s errors</item>
     </plurals>
     <string name="badges">Icones</string>
     <string name="last_used">Utilitzada per darrer cop</string>
-    <string name="unofficial_extension_message">Aquesta extensió no pertany a la llista d’extensions oficials del Tachiyomi.</string>
     <string name="nsfw_short">+18</string>
-    <string name="unofficial">No oficial</string>
     <string name="may_contain_nsfw">Pot contenir contingut NSFW (+18)</string>
     <string name="default_reading_mode">Mode de lectura per defecte</string>
     <string name="l_nav">En forma d’L</string>
@@ -411,7 +414,7 @@
     <string name="invalid_backup_file">Fitxer de còpia de seguretat invàlid</string>
     <string name="invalid_backup_file_type">Tipus de fitxer de còpia de seguretat invàlid: %1$s
 \nHauria d’acabar en .proto.gz o .json.</string>
-    <string name="backup_has_no_manga">La còpia de seguretat no conté cap manga.</string>
+    <string name="backup_has_no_manga">La còpia de seguretat no conté cap element.</string>
     <string name="restore_missing_sources">Manquen fonts:</string>
     <string name="restore_missing_trackers">Seguidors sense sessió iniciada:</string>
     <string name="restore_content_full">Es restauraran les dades del fitxer de còpia de seguretat.
@@ -480,6 +483,7 @@
     <string name="add_x_to">Afegeix %1$s a…</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s capítol</item>
+        <item quantity="many">%1$s capítols</item>
         <item quantity="other">%1$s capítols</item>
     </plurals>
     <string name="all_files_permission_required">Calen permisos de fitxers</string>
@@ -500,12 +504,13 @@
     <string name="show_in_sources_and_extensions">Mostra a la llista de fonts i extensions</string>
     <string name="not_bookmarked">No marcats</string>
     <string name="library_search_hint">Cerqueu un títol, etiquetes o una font</string>
-    <string name="already_in_category">El manga ja és a la categoria</string>
+    <string name="already_in_category">L’element ja és a la categoria</string>
     <string name="restore_miui_warning">És possible que la còpia de seguretat i la restauració no funcionin correctament si l’Optimització del MIUI està desactivada.</string>
     <string name="about_dont_kill_my_app">Alguns fabricants tenen restriccions addicionals per a les aplicacions que finalitzen els serveis en segon pla. Aquest lloc web té més informació de com solucionar-ho.</string>
     <string name="download_queue_size_warning">Advertència: Les baixades massa grosses poden fer que les fonts es tornin més lentes i/o bloquin el Tachiyomi. Premeu per a obtenir-ne més informació.</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">S’ha omès %d capítol. És possible que manqui a la font o que hagi estat filtrat</item>
+        <item quantity="many">S’han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
         <item quantity="other">S’han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
     </plurals>
     <string name="no_matches_for_filters">No s’ha trobat cap coincidència amb els vostres filtres actuals</string>
@@ -520,15 +525,17 @@
     <string name="on_hiatus">En pausa</string>
     <string name="publishing_finished">Publicació finalitzada</string>
     <string name="cancelled">Cancel·lada</string>
-    <string name="tracking_info">Sincronització unidireccional per a actualitzar el progrés dels capítols als serveis de seguiment. Configureu el seguiment d’entrades individuals de manga al seu botó de seguiment.</string>
+    <string name="tracking_info">Sincronització unidireccional per a actualitzar el progrés dels capítols als serveis de seguiment. Configureu el seguiment d’entrades individuals al seu botó de seguiment.</string>
     <string name="enhanced_services">Serveis millorats</string>
-    <string name="enhanced_tracking_info">Serveix que proporcionen funcionalitats millorades per a fonts específiques. El manga se segueix automàticament en afegir-lo a la vostra biblioteca.</string>
+    <string name="enhanced_tracking_info">Serveix que proporcionen funcionalitats millorades per a fonts específiques. Els elements se segueixen automàticament en afegir-los a la vostra biblioteca.</string>
     <plurals name="for_n_titles">
         <item quantity="one">Per a %d títol</item>
+        <item quantity="many">Per a %d títols</item>
         <item quantity="other">Per a %d títols</item>
     </plurals>
     <plurals name="after_minutes">
         <item quantity="one">Després d’%1$s minut</item>
+        <item quantity="many">Després de %1$s minuts</item>
         <item quantity="other">Després de %1$s minuts</item>
     </plurals>
     <string name="_unread">%d no llegits</string>
@@ -575,6 +582,7 @@
     <string name="tap_library_to_show_filters">Premeu la icona de Biblioteca per a mostrar els filtres</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">i %1$d capítol més</item>
+        <item quantity="many">i %1$d capítols més</item>
         <item quantity="other">i %1$d capítols més</item>
     </plurals>
     <string name="hide_start_reading_button">Amaga el botó de començar a llegir</string>
@@ -584,7 +592,7 @@
     <string name="recents">Recents</string>
     <string name="auto_refresh_covers_summary">Actualitza també les portades quan s’actualitzi la biblioteca</string>
     <string name="newly_added">Afegits recentment</string>
-    <string name="when_sorting_ignore_articles">En ordenar alfabèticament, ordena ignorant els articles («un», «una», «el», «la») a l’inici dels títols dels mangues</string>
+    <string name="when_sorting_ignore_articles">En ordenar alfabèticament, ordena ignorant els articles («un», «una», «el», «la») a l’inici dels títols de les sèries</string>
     <string name="clear_history">Suprimeix l’historial</string>
     <string name="clear_history_completed">S’ha buidat l’historial</string>
     <string name="clear_history_confirmation">N’esteu segur\? Es perdrà tot l’historial.</string>
@@ -621,6 +629,7 @@
     <string name="download_ahead_info">Només funciona en elements de la biblioteca i si el capítol actual i el següent ja estan baixats</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">El següent capítol no llegit</item>
+        <item quantity="many">Els següents %d capítols no llegits</item>
         <item quantity="other">Els següents %d capítols no llegits</item>
     </plurals>
     <string name="external_storage_download_notice">El TachiyomiJ2K requereix l’accés a tots els fitxers per a poder baixar capítols. Premeu aquí i activeu «Permet l’accés a tots els fitxers».</string>
@@ -629,7 +638,7 @@
     <string name="your_library">La vostra biblioteca</string>
     <string name="new_beta_version_available">Nova versió beta disponible!</string>
     <string name="update_completed">Actualització completada</string>
-    <string name="external_storage_permission_notice">El TachiyomiJ2K requereix l’accés a tots els fitxers en Android 11 per a poder baixar capítols, crear còpies de seguretat automàtiques i llegir mangues locals.
+    <string name="external_storage_permission_notice">El TachiyomiJ2K requereix l’accés a tots els fitxers en Android 11 per a poder baixar capítols, crear còpies de seguretat automàtiques i llegir sèries locals.
 \n
 \nA la següent pantalla, activeu «Permet l’accés a tots els fitxers».</string>
     <string name="skipped_reason_not_always_update">S’ha omès perquè no cal actualitzar la sèrie</string>
@@ -672,7 +681,7 @@
     <string name="by_series">Per sèrie</string>
     <string name="by_day">Per dia</string>
     <string name="view_all_updates">Mostra totes les actualitzacions</string>
-    <string name="no_recent_read_updated_manga">No hi ha mangues llegits o actualitzats recentment</string>
+    <string name="no_recent_read_updated_manga">No hi ha sèries llegides o actualitzades recentment</string>
     <string name="show_title_first">Mostra primer el títol</string>
     <string name="a_while_ago">Fa temps</string>
     <string name="show_updated_time">Mostra l’hora d’actualització</string>
@@ -711,7 +720,7 @@
     <string name="all_read_chapters">Tots els capítols llegits</string>
     <string name="reset_tags">Restableix les etiquetes</string>
     <string name="remove_tracking">Elimina el seguiment amb l’aplicació</string>
-    <string name="custom_manga_info">Informació personalitzada del manga</string>
+    <string name="custom_manga_info">Informació personalitzada de la sèrie</string>
     <string name="want_to_read">El vull llegir</string>
     <string name="save_first_page">Desa la primera pàgina</string>
     <string name="share_second_page">Comparteix la segona pàgina</string>
@@ -719,6 +728,7 @@
     <string name="set_second_page_as_cover">Defineix la segona pàgina com a portada</string>
     <plurals name="pages_plural">
         <item quantity="one">%1$d pàgina</item>
+        <item quantity="many">%1$d pàgines</item>
         <item quantity="other">%1$d pàgines</item>
     </plurals>
     <string name="add_x_to_library">Voleu afegir %1$s a la biblioteca\?</string>
@@ -732,7 +742,7 @@
     <string name="smart_based_on_page_and_theme">Intel·ligent (basat en la pàgina i el tema)</string>
     <string name="select_starting_chapter">Selecciona el capítol inicial</string>
     <string name="currently_reading">Llegint actualment</string>
-    <string name="all_read_manga">Tots els mangues llegits</string>
+    <string name="all_read_manga">Totes les sèries llegides</string>
     <string name="filter_groups">Filtra els grups de scanlations</string>
     <string name="horizontally">En horitzontal</string>
     <string name="save_combined_pages">Desa pàgines combinades</string>
@@ -774,11 +784,15 @@
     <plurals name="deleted_chapters">
         <item quantity="one">S’ha suprimit un capítol d’aquesta font:
 \n%2$s
-\nVoleu eliminar-ne la baixada\?</item>
+\nVoleu eliminar-ne la baixada?</item>
+        <item quantity="many">S’han suprimit %1$s capítols d’aquesta font:
+\n%2$s
+\n
+\nVoleu eliminar-ne les baixades?</item>
         <item quantity="other">S’han suprimit %1$s capítols d’aquesta font:
 \n%2$s
 \n
-\nVoleu eliminar-ne les baixades\?</item>
+\nVoleu eliminar-ne les baixades?</item>
     </plurals>
     <string name="not_tracked">No seguit</string>
     <string name="update_tracking_after_reading">Actualitza el seguiment després de llegir</string>
@@ -786,7 +800,7 @@
     <string name="certain_buttons_can_be_found">Alguns botons es poden trobar en altres llocs si els desactiveu aquí</string>
     <string name="webtoon_style">estil webtoon</string>
     <string name="notification_size_warning">Les actualitzacions grosses poden fer un ús més elevat de la bateria i fer que les fonts es tornin lentes. Premeu aquí per a més informació.</string>
-    <string name="pref_update_only_completely_read_summary">Actualitza els mangues només si no hi ha capítols no llegits (llegits completament)</string>
+    <string name="pref_update_only_completely_read_summary">Actualitza les sèries només si no hi ha capítols no llegits (llegits completament)</string>
     <string name="restrictions_">Restriccions: %1$s</string>
     <string name="display_buttons_bottom_reader">Botons sota el lector</string>
     <string name="search_suggestions">Cerca suggeriments</string>
@@ -800,4 +814,5 @@
     <string name="app_settings">Configuració de l’aplicació</string>
     <string name="pref_debug_info">Informació de depuració</string>
     <string name="label_background_activity">Activitat en segon pla</string>
+    <string name="apply">Aplica</string>
 </resources>

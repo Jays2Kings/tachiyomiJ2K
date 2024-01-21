@@ -20,7 +20,6 @@
 \n
 \nამ სერტიფიკატის ნდობით თქვენ თქვენს თავზე იღებთ რისკებს და პასუხისმგებლობას.</string>
     <string name="obsolete_extension_message">დამატება აღარ არის ხელმისაწვდომი.</string>
-    <string name="unofficial_extension_message">დამატება არ არის Tachiyomi-ს ოფიციალური დამატებების სიიდან.</string>
     <string name="nsfw_short">18+</string>
     <string name="may_contain_nsfw">შეიძლება შეიჩაცდეს უცენზურო(18+) კონტენტს</string>
     <plurals name="extension_updates_available">
@@ -167,7 +166,6 @@
     <string name="untrusted">არასანდო</string>
     <string name="uninstall">წაშლა</string>
     <string name="untrusted_extension">არასანდო დამატება</string>
-    <string name="unofficial">არაოფიციცალური</string>
     <string name="use_image_as_cover">გამოვიყენოთ ეს სურათი ყდის ნახატად\?</string>
     <string name="current_chapter">მიმდინარე:</string>
     <string name="next_title">შემდეგი:</string>
@@ -354,4 +352,6 @@
     <string name="gray_background">ნაცრისფერი</string>
     <string name="library_entries">ბიბლიოთეკის ჩანაწერები</string>
     <string name="clear_database_summary">ისტორიიდან წაიშლება ჩანაწერები, რომლებიც თქვენს ბიბლიოთეკაში არაა შენახული</string>
+    <string name="grid_size">ნივთები რიგში</string>
+    <string name="trackers">სერვისები</string>
 </resources>

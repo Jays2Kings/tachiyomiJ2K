@@ -163,7 +163,7 @@
     <string name="unknown_error">Ralat tidak diketahui</string>
     <string name="local">lokal</string>
     <string name="no_more_results">Tiada lagi hasil</string>
-    <string name="local_source">Sumber setempat</string>
+    <string name="local_source">Sumber lokal</string>
     <string name="other">Lain</string>
     <string name="global_search">Carian keseluruhan…</string>
     <string name="latest">Terkini</string>
@@ -323,7 +323,7 @@
     <string name="updating_library">Mengemas kini pustaka</string>
     <string name="date_added">Tarikh ditambah</string>
     <string name="latest_chapter">Bab terkini</string>
-    <string name="local_source_help_guide">Panduan penggunaan sumber setempat</string>
+    <string name="local_source_help_guide">Panduan penggunaan sumber lokal</string>
     <string name="check_site_in_web">Semak laman web dalam WebView</string>
     <string name="obsolete">Usang</string>
     <string name="obsolete_extension_message">Sambungan ini tidak lagi ada.</string>
@@ -576,9 +576,7 @@
         <item quantity="other">%d kategori</item>
     </plurals>
     <string name="unlock">Buka kunci</string>
-    <string name="unofficial_extension_message">Sambungan ini bukan daripada senarai sambungan Tachiyomi yang rasmi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Tidak rasmi</string>
     <string name="may_contain_nsfw">Mungkin mengandungi kandungan 18+ tahun keatas</string>
     <string name="next_page">Halaman seterusnya</string>
     <string name="previous_page">Halaman terdahulu</string>
@@ -1032,4 +1030,6 @@
     <string name="library_entries">Entri pustaka</string>
     <string name="pref_debug_info">Maklumat nyahpepijat</string>
     <string name="label_background_activity">Aktiviti latar belakang</string>
+    <string name="app_settings">Tetapan aplikasi</string>
+    <string name="source_settings">Tetapan sumber</string>
 </resources>

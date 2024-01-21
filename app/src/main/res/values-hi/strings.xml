@@ -344,9 +344,7 @@
     <string name="no_chapters_error">कोई अध्याय नहीं मिला</string>
     <string name="badges">बैज</string>
     <string name="last_used">आखरी इस्त्तमाल किया गया</string>
-    <string name="unofficial_extension_message">यह एक्सटेंशन आधिकारिक ताचियोमी एक्सटेंशन सूची से नहीं है।</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">अनौपचारिक</string>
     <string name="may_contain_nsfw">इसमें NSFW (18+) सामग्री हो सकती है</string>
     <string name="next_page">अगला पृष्ठ</string>
     <string name="previous_page">पिछला पृष्ठ</string>
@@ -633,4 +631,5 @@
     <string name="library_entries">लाइब्रेरी के आइटम</string>
     <string name="pref_debug_info">डीबग जानकारी</string>
     <string name="label_background_activity">पृष्ठभूमि गतिविधि</string>
+    <string name="trackers">सेवाएं</string>
 </resources>

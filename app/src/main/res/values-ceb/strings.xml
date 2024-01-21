@@ -62,7 +62,6 @@
     <string name="landscape">Landscape</string>
     <string name="untrusted_extension">Dili kasaligan nga extension</string>
     <string name="obsolete_extension_message">Kini nga extension dili na magamit.</string>
-    <string name="unofficial_extension_message">Kini nga extension dili gikan sa opisyal nga listahan sa mga extension sa Tachiyomi.</string>
     <string name="ext_installer_shizuku_stopped">Si Shizuku wala modagan</string>
     <string name="ext_installer_shizuku_unavailable_dialog">I-install ug sugdi ang Shizuku aron gamiton ang Shizuku isip extension installer.</string>
     <string name="none">Wala</string>
@@ -102,7 +101,6 @@
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Pinulongan: %1$s</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Dili opisyal</string>
     <string name="next_chapter">Sunod nga kapitulo</string>
     <string name="webtoon_side_padding_0">Wala</string>
     <string name="actions">Mga aksyon</string>
@@ -350,4 +348,8 @@
     <string name="ext_installer_pref">Installer</string>
     <string name="library_entries">Mga entri sa basahonan</string>
     <string name="label_background_activity">Kalihokan sa background</string>
+    <string name="clear_database_summary">I-delete ang history para sa manga nga wala ma-save sa imong library</string>
+    <string name="grid_size">Mga butang kada laray</string>
+    <string name="trackers">Mga serbisyo</string>
+    <string name="rotation">Uri sa rotation</string>
 </resources>

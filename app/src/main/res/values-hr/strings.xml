@@ -490,9 +490,7 @@
     <string name="custom_range">Prilagođeni raspon</string>
     <string name="search_chapters">Traži poglavlja</string>
     <string name="badges">Značke</string>
-    <string name="unofficial_extension_message">Ovo proširenje nije sa službenog popisa Tachiyomi proširenja.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Neslužbeno</string>
     <string name="may_contain_nsfw">Može sadržavati neprikladan sadržaj (18+)</string>
     <string name="finished_chapter">Završeno:</string>
     <string name="current_chapter">Trenutačno:</string>
@@ -876,7 +874,7 @@
     <string name="extension_updates_pending">Aktualiziranja proširenja na čekanju</string>
     <string name="affects_library_grid">Utječe na raspored naslovnica knjižnice</string>
     <string name="restrictions_">Restrikcije: %1$s</string>
-    <string name="getting_started_guide">Početni vodič</string>
+    <string name="getting_started_guide">Vodič za pokretanje</string>
     <string name="no_matches_for_filters_short">Nema podudaranja za vaše filtre</string>
     <string name="show_categories_while_filtering">Prikaži prazne kategorije tijekom filtritanja</string>
     <string name="recently_installed">Nedavno instalirano</string>
@@ -1094,6 +1092,9 @@
     <string name="library_entries">Unosi u biblioteci</string>
     <string name="source_settings">Postavke izvora</string>
     <string name="app_settings">Postavke aplikacije</string>
-    <string name="pref_debug_info">Informacije otklanjanja grešaka</string>
+    <string name="pref_debug_info">Informacije o otklanjanju grešaka</string>
     <string name="label_background_activity">Aktivnost u pozadini</string>
+    <string name="share_cover">Dijeli naslovnicu</string>
+    <string name="save_pages_separately">Spremi stranice u zasebne mape</string>
+    <string name="create_folders_by_manga_title">Stvara mape na osnovi naslova mange</string>
 </resources>

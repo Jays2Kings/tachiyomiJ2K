@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">Ulamlar</string>
-    <string name="manga">Manga</string>
+    <string name="manga">Kitaplık girdileri</string>
     <string name="chapters">Bölümler</string>
     <string name="tracking">İzleme</string>
     <string name="history">Geçmiş</string>
@@ -29,8 +29,8 @@
     <string name="delete">Sil</string>
     <string name="edit">Düzenle</string>
     <string name="add">Ekle</string>
-    <string name="edit_categories">Kategorileri düzenle</string>
-    <string name="move_to_categories">Kategorilere taşı</string>
+    <string name="edit_categories">Ulamları düzenle</string>
+    <string name="move_to_categories">Ulamlara taşı</string>
     <string name="start">Başlat</string>
     <string name="stop">Durdur</string>
     <string name="pause">Duraklat</string>
@@ -69,7 +69,7 @@
     <string name="daily">Her gün</string>
     <string name="every_2_days">2 günde bir</string>
     <string name="weekly">Her hafta</string>
-    <string name="categories_to_include_in_global_update">Genel güncellemeye eklenecek kategoriler</string>
+    <string name="categories_to_include_in_global_update">Genel güncellemeye eklenecek ulamlar</string>
     <string name="all">Tümü</string>
     <string name="library_update_restriction">Aygıt kısıtlamaları</string>
     <string name="library_update_restriction_summary">Yalnızca koşullar sağlandığında güncelle</string>
@@ -80,7 +80,7 @@
     <string name="amoled_black">AMOLED Siyah</string>
     <string name="language">Dil</string>
     <string name="system_default">Sistem öntanımlı</string>
-    <string name="default_category">Varsayılan kategori</string>
+    <string name="default_category">Varsayılan ulam</string>
     <string name="always_ask">Her zaman sor</string>
     <string name="pending">Beklemede</string>
     <string name="installing">Kuruluyor</string>
@@ -89,11 +89,9 @@
     <string name="untrusted">Güvenilmeyen</string>
     <string name="uninstall">Kaldır</string>
     <string name="untrusted_extension">Güvenilmeyen uzantı</string>
-    <string name="untrusted_extension_message">Bu uzantı güvenilmeyen bir sertifika ile imzalanmış ve etkinleştirilmedi. 
-\n 
-\nKötü niyetli bir uzantı, Tachiyomi\'de saklanan her giriş kimlik bilgisini okuyabilir veya rastgele kod yürütebilir. 
-\n 
-\nBu sertifikaya güvenerek bu riskleri kabul etmiş oluyorsunuz.</string>
+    <string name="untrusted_extension_message">Kötü niyetli uzantılar, saklanan oturum açma kimlik bilgilerini okuyabilir veya rastgele kod çalıştırabilir.
+\n
+\nBu uzantıya güvenerek bu riskleri kabul etmiş olursunuz.</string>
     <string name="version_">Sürüm: %1$s</string>
     <string name="language_">Dil: %1$s</string>
     <string name="fullscreen">Tam Ekran</string>
@@ -146,7 +144,7 @@
     <string name="fourth_to_last">Sondan dördüncü bölüm</string>
     <string name="fifth_to_last">Sondan beşinci bölüm</string>
     <string name="download_new_chapters">Yeni bölümleri indir</string>
-    <string name="categories_to_include_in_download">İndirmeye eklenecek kategoriler</string>
+    <string name="categories_to_include_in_download">İndirmeye eklenecek ulamlar</string>
     <string name="services">Hizmetler</string>
     <string name="backup">Yedekleme</string>
     <string name="create_backup">Yedek oluştur</string>
@@ -167,10 +165,10 @@
     <string name="cookies_cleared">Çerezler temizlendi</string>
     <string name="clear_database">Veritabanını temizle</string>
     <string name="clear_database_summary">Kitaplığına kaydedilmeyen girdilerin geçmiş bilgisini sil</string>
-    <string name="clear_database_confirmation">Emin misin\? Kitaplıkta olmayan girdilerin okunan bölümleri ve ilerlemesi kaybolacak</string>
+    <string name="clear_database_confirmation">Emin misin? Kitaplıkta olmayan girdilerin okunan bölümleri ve ilerlemesi kaybolacak</string>
     <string name="clear_database_completed">Girdiler silindi</string>
     <string name="refresh_library_metadata">Kitaplık üst verilerini yenile</string>
-    <string name="updates_covers_genres_desc">Kapakları, türleri, açıklamayı ve manga durum bilgisini günceller</string>
+    <string name="updates_covers_genres_desc">Kapakları, türleri, açıklamayı ve girdi durum bilgisini günceller</string>
     <string name="refresh_tracking_metadata">İzleme üst verisini yenile</string>
     <string name="updates_tracking_details">İzleme servisinden durumu, puanı ve son okunan bölümü günceller</string>
     <string name="version">Sürüm</string>
@@ -219,7 +217,7 @@
     <string name="title">Başlık</string>
     <string name="started">Başlangıç</string>
     <string name="type">Tür</string>
-    <string name="category_with_name_exists">Bu adla bir kategori zaten var!</string>
+    <string name="category_with_name_exists">Bu adla bir ulam zaten var!</string>
     <string name="picture_saved">Resim kaydedildi</string>
     <string name="options">Seçenekler</string>
     <string name="set_as_cover">Kapak olarak ayarla</string>
@@ -231,7 +229,7 @@
     <string name="migrate">Geçiş yap</string>
     <string name="new_chapters_found">Yeni bölümler bulundu</string>
     <string name="failed_to_update_cover">Kapak güncellenemedi</string>
-    <string name="must_be_in_library_to_edit">Düzenleme için manga kitaplığınızda olmalı</string>
+    <string name="must_be_in_library_to_edit">Düzenleme için dizi kitaplığınızda olmalı</string>
     <string name="select_cover_image">Kapak görselini seç</string>
     <string name="select_backup_file">Yedek dosyasını seç</string>
     <string name="new_version_available">Yeni güncelleme var!</string>
@@ -241,9 +239,9 @@
     <string name="download_complete">İndirme tamamlandı</string>
     <string name="download_error">İndirme hatası</string>
     <string name="update_available">Güncelleme var</string>
-    <string name="cover_of_image">Manganın kapağı</string>
+    <string name="cover_of_image">Girdinin kapağı</string>
     <string name="no_recent_chapters">Yeni bölüm yok</string>
-    <string name="no_recently_read_manga">Yakınlarda okunan manga yok</string>
+    <string name="no_recently_read_manga">Yakınlarda okunan dizi yok</string>
     <string name="library_is_empty_add_from_browse">Kitaplığınız boş, kataloglardan kitaplığınıza serileri ekleyebilirsiniz.</string>
     <string name="could_not_download_unexpected_error">Bölüm, beklenmeyen hata sonucu indirilemedi</string>
     <string name="no_wifi_connection">Wi-Fi bağlantısı yok</string>
@@ -335,25 +333,25 @@
     <string name="pinned">Sabit</string>
     <string name="reorder">Yeniden sırala</string>
     <string name="read_progress">Okuma durumu</string>
-    <string name="always_show_current_category">Her zaman şu anki kategoriyi göster</string>
-    <string name="show_all_categories">Tüm kategorileri göster</string>
-    <string name="collapse_all_categories">Tüm kategorileri küçült</string>
-    <string name="expand_all_categories">Tüm kategorileri genişlet</string>
+    <string name="always_show_current_category">Her zaman şu anki ulamı göster</string>
+    <string name="show_all_categories">Tüm ulamları göster</string>
+    <string name="collapse_all_categories">Tüm ulamları küçült</string>
+    <string name="expand_all_categories">Tüm ulamları genişlet</string>
     <string name="library_search_hint">Başlık, etiket, kaynak ara</string>
     <string name="updating_">%1$s güncelleniyor</string>
-    <string name="jump_to_category">Kategoriye atla</string>
-    <string name="category_deleted">Kategori silindi</string>
+    <string name="jump_to_category">Ulama atla</string>
+    <string name="category_deleted">Ulam silindi</string>
     <string name="manage_category">Katedorileri yönet</string>
-    <string name="add_categories">Kategori ekle</string>
-    <string name="already_in_category">Manga zaten bu kategoride</string>
-    <string name="confirm_category_deletion_message">Bu kategorideki mangalar varsayılan kategoriye taşınacak.</string>
-    <string name="confirm_category_deletion">Kategoriyi sil\?</string>
-    <string name="category_is_empty">Kategori boş</string>
-    <string name="create_new_category">Yeni kategori oluştur</string>
+    <string name="add_categories">Ulamları ekle</string>
+    <string name="already_in_category">Girdi zaten bu ulamda</string>
+    <string name="confirm_category_deletion_message">Bu ulamdaki girdiler varsayılan ulama taşınacak.</string>
+    <string name="confirm_category_deletion">Ulamı sil?</string>
+    <string name="category_is_empty">Ulam boş</string>
+    <string name="create_new_category">Yeni ulam oluştur</string>
     <string name="_already_in_queue">%1$s zaten kuyrukta</string>
     <plurals name="category_plural">
-        <item quantity="one">%d kategori</item>
-        <item quantity="other">%d kategoriler</item>
+        <item quantity="one">%d ulam</item>
+        <item quantity="other">%d ulam</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d sayfa kaldı</item>
@@ -376,18 +374,18 @@
     <string name="not_started">Başlamadı</string>
     <string name="manhwa">Manhwa</string>
     <string name="manhua">Manhua</string>
-    <string name="long_press_category">Kategoriyi düzenlemek için basılı tut</string>
+    <string name="long_press_category">Ulamı düzenlemek için basılı tut</string>
     <string name="adding_category_to_queue">%1$s güncelleme kuyruğuna eklendi</string>
     <string name="chapter_x_of_y">Bölüm %1$d / %2$d</string>
     <string name="unlock_library">Kitaplığa erişmek için kilidi aç</string>
     <string name="in_progress">Devam Ediyor</string>
     <string name="comic">Çizgi Roman</string>
     <string name="clear_cached_covers_non_library">Kitaplıkta olmayan önbelleklenmiş kapakları temizleyin</string>
-    <string name="delete_old_covers_in_library_used_">Güncellenen kitaplığınızdaki eski ve kullanılmayan önbelleklenmiş manga kapaklarını silin.
+    <string name="delete_old_covers_in_library_used_">Güncellenen kitaplığınızdaki eski ve kullanılmayan güncellenmiş dizi kapaklarını silin.
 \nŞu anda kullanılan: %1$s</string>
     <string name="clean_up_cached_covers">Önbelleklenmiş kapakları temizle</string>
     <string name="disable_if_issues_with_updating">Kitaplığınızı güncelleme veya geri yükleme ile ilgili sorunlar yaşıyorsanız bunu devre dışı bırakın</string>
-    <string name="clean_read_manga_not_in_library">Kitaplıkta olmayan mangayı temizle</string>
+    <string name="clean_read_manga_not_in_library">Kitaplıkta olmayan girdiyi temizle</string>
     <string name="no_folders_to_cleanup">Temizlenecek klasör yok</string>
     <string name="white_theme">Saf Beyaz</string>
     <string name="data_to_include_in_migration">Geçişe dahil edilecek veriler</string>
@@ -461,7 +459,7 @@
     <string name="invalid_backup_file">Geçersiz yedekleme dosyası</string>
     <string name="invalid_backup_file_type">Geçersiz yedekleme dosyası türü: %1$s
 \n.proto.gz veya .json ile bitmelidir.</string>
-    <string name="backup_has_no_manga">Yedek bir manga içermiyor.</string>
+    <string name="backup_has_no_manga">Yedek bir girdi içermiyor.</string>
     <string name="restore_missing_sources">Eksik kaynaklar:</string>
     <string name="restore_missing_trackers">İzleyiciler giriş yapmadı:</string>
     <string name="restore_content_full">Yedek dosyadaki veriler geri yüklenecek.
@@ -476,9 +474,7 @@
     <string name="no_chapters_error">Bölüm bulunamadı</string>
     <string name="badges">Rozetler</string>
     <string name="last_used">Son kullanılan</string>
-    <string name="unofficial_extension_message">Bu uzantı resmi Tachiyomi uzantıları dizelgesinden değil.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Resmi olmayan</string>
     <string name="may_contain_nsfw">Yetişkin (18+) içerik içerebilir</string>
     <string name="next_page">Sonraki sayfa</string>
     <string name="previous_page">Önceki sayfa</string>
@@ -528,7 +524,7 @@
     <string name="migration">Geçiş</string>
     <string name="select_sources">Kaynakları seç</string>
     <string name="remove_tracking_from_">%1$s \'den de kaldır</string>
-    <string name="custom_manga_info">Özel manga bilgisi</string>
+    <string name="custom_manga_info">Özel dizi bilgisi</string>
     <string name="error_sharing_cover">Kapak paylaşılamadı</string>
     <string name="add_x_to_library">%1$s kitaplığa eklensin mi\?</string>
     <string name="all_but_bookmarked_chapters">Yer imli bölümler hariç tümü</string>
@@ -598,7 +594,7 @@
     <string name="reset_chapter_history">Bölüm geçmişini sıfırla</string>
     <string name="recents">Yakındakiler</string>
     <string name="include_in_global_update">Genel güncelleştirmeye ekle</string>
-    <string name="when_sorting_ignore_articles">Alfabetik olarak sıralarken, manga başlıklarının başındaki makaleleri yok sayarak sırala</string>
+    <string name="when_sorting_ignore_articles">Alfabetik olarak sıralarken, bir dizinin başlığının başındaki \"a, an, the\" tanımlıklarını yok sayarak sırala</string>
     <string name="sort_by_ignoring_articles">Makaleleri yok sayarak sırala</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">ve %1$d bölüm daha</item>
@@ -610,7 +606,7 @@
     </plurals>
     <string name="shift_one_page_over">Bir sayfayı kaydır</string>
     <string name="more_library_settings">Diğer kitaplık ayarları</string>
-    <string name="hide_category_hopper">Kategori haznesini gizle</string>
+    <string name="hide_category_hopper">Ulam haznesini gizle</string>
     <string name="display_as">Olarak göster</string>
     <string name="show_unread_count">Okunmayan sayısını göster</string>
     <string name="show_unread_badges">Okunmayan rozetleri göster</string>
@@ -620,10 +616,10 @@
     <string name="series_type">Seri türü</string>
     <string name="search_globally">\"%1$s\" genel arama</string>
     <string name="_unread">%d okunmayan</string>
-    <string name="category_cannot_be_blank">Kategori adı boş olamaz</string>
-    <string name="add_edit_categories">Kategorileri ekle/düzenle</string>
-    <string name="new_category">Yeni kategori</string>
-    <string name="category">Kategori</string>
+    <string name="category_cannot_be_blank">Ulam adı boş olamaz</string>
+    <string name="add_edit_categories">Ulamları ekle/düzenle</string>
+    <string name="new_category">Yeni ulam</string>
+    <string name="category">Ulam</string>
     <plurals name="chapters_plural">
         <item quantity="one">%1$s bölüm</item>
         <item quantity="other">%1$s bölüm</item>
@@ -644,26 +640,26 @@
     <string name="pressing_back_to_start">Başlangıç ekranına dönmek için geri düğmesine basın</string>
     <string name="back_to_start">Başlangıç ekranına dön</string>
     <plurals name="copy_manga">
-        <item quantity="one">%1$d%2$s manga kopyala\?</item>
-        <item quantity="other">%1$d%2$s manga kopyala\?</item>
+        <item quantity="one">%1$d%2$s dizi kopyalansın mı?</item>
+        <item quantity="other">%1$d%2$s dizi kopyalansın mı?</item>
     </plurals>
     <string name="automatic_can_still_switch">Otomatik sayfa düzenini kullanırken, bu ayarı geçersiz kılmadan da, okuma sırasında düzenler arasında geçiş yapabilirsiniz</string>
     <string name="visit_recents_for_download_queue">İndirme sırasına erişim için yakındakiler sekmesini ziyaret edin. Daha hızlı erişim için çift dokunabilir veya basılı tutabilirsiniz</string>
     <string name="last_used_library_recents">Son kullanılan (Kitaplık veya Yakındakiler)</string>
-    <string name="no_recent_read_updated_manga">Yakınlarda okunan veya güncellenen manga yok</string>
-    <string name="you_can_migrate_in_library">Kitaplığınızdan manga seçerek de geçiş yapabilirsiniz</string>
+    <string name="no_recent_read_updated_manga">Yakınlarda okunan veya güncellenen dizi yok</string>
+    <string name="you_can_migrate_in_library">Kitaplığınızdan girdi seçerek de geçiş yapabilirsiniz</string>
     <string name="use_last_saved_migration_preferences">Toplu geçiş için son kaydedilen geçiş öncesi tercihleri ve kaynakları kullan</string>
     <string name="only_enable_enabled_for_migration">Yalnızca etkin kaynaklarınızı geçiş için etkinleştir</string>
     <string name="only_enable_pinned_for_migration">Yalnızca sabitlenmiş kaynaklarınızı geçiş için etkinleştir</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga geçiş yaptı</item>
-        <item quantity="other">%d manga geçiş yaptı</item>
+        <item quantity="one">%d dizi geçiş yaptı</item>
+        <item quantity="other">%d dizi geçiş yaptı</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">%1$d%2$s mangayı geçiş yap\?</item>
-        <item quantity="other">%1$d%2$s mangayı geçiş yap\?</item>
+        <item quantity="one">%1$d%2$s diziye geçiş yapılsın mı?</item>
+        <item quantity="other">%1$d%2$s diziye geçiş yapılsın mı?</item>
     </plurals>
-    <string name="no_chapters_found_for_migration">Bölüm bulunamadı, bu manga geçiş için kullanılamaz</string>
+    <string name="no_chapters_found_for_migration">Bölüm bulunamadı, bu dizi geçiş için kullanılamaz</string>
     <string name="remove_downloads">İndirmeleri kaldır</string>
     <string name="remove_download">İndirmeyi kaldır</string>
     <string name="start_downloading_now">Şimdi indirmeye başla</string>
@@ -752,11 +748,11 @@
     <string name="grid_size">Izgara boyutu</string>
     <string name="uniform_grid_covers">Düzenli ızgara kapakları</string>
     <string name="can_be_found_in_library_filters">Kitaplık filtrelerini genişleterek de bulunabilir</string>
-    <string name="expand_collapse_all_categories">Tüm kategorileri genişlet/küçült</string>
-    <string name="category_hopper_long_press">Kategori haznesi uzun basma eylemi</string>
+    <string name="expand_collapse_all_categories">Tüm ulamları genişlet/küçült</string>
+    <string name="category_hopper_long_press">Ulam haznesi uzun basma eylemi</string>
     <string name="no_pages_found">Sayfa bulunamadı</string>
     <string name="couldnt_download_low_space">Disk alanı az olduğundan bölümler indirilemedi</string>
-    <string name="move_dynamic_to_bottom">Daraltılmış dinamik kategorileri aşağı taşı</string>
+    <string name="move_dynamic_to_bottom">Daraltılmış dinamik ulamları aşağı taşı</string>
     <string name="when_grouping_by_sources_tags">Kitaplığı kaynak, durum, vs. ile gruplarken</string>
     <string name="show_read_chapters_all">Okunan bölümleri, tüm ve gruplanmışlar içinde göster</string>
     <string name="label_global_search">Genel arama</string>
@@ -811,7 +807,7 @@
     <string name="global_updates">Genel güncellemeler</string>
     <string name="show_number_of_items">Öge sayısını göster</string>
     <string name="external_storage_download_notice">TachiyomiJ2K\'in, bölümleri indirmek için tüm dosyalara erişmesi gerekir. Buraya dokunun, ardından \"Tüm dosyaları yönetmek için erişime izin ver\"i etkinleştirin</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K\'in, bölümleri indirmek, otomatik yedeklemeler oluşturmak ve yerel mangaları okumak için Android 11\'deki tüm dosyalara erişimesi gerekir.
+    <string name="external_storage_permission_notice">TachiyomiJ2K\'in, bölümleri indirmek, otomatik yedeklemeler oluşturmak ve yerel dizileri okumak için Android 11\'deki tüm dosyalara erişimesi gerekir.
 \n
 \nBir sonraki ekranda, \"Tüm dosyaları yönetmek için erişime izin ver\" seçeneğini etkinleştirin</string>
     <string name="all_files_permission_required">Dosya izinleri gerekli</string>
@@ -865,7 +861,7 @@
     <string name="select_an_entry">Girdi seç</string>
     <string name="getting_started_guide">Başlangıç kılavuzu</string>
     <string name="no_matches_for_filters_short">Filtreleriniz için eşleşme yok</string>
-    <string name="show_categories_while_filtering">Filtreleme sırasında boş kategorileri göster</string>
+    <string name="show_categories_while_filtering">Filtreleme sırasında boş ulamları göster</string>
     <string name="by_default_side_nav_info">Öntanımlı olarak, yan gezinme, belirli telefonlarda ve küçük tabletlerde yatay konumdayken kullanılır, ve daha büyük tabletlerde her zaman görünür</string>
     <string name="default_behavior">Öntanımlı davranış</string>
     <string name="use_side_navigation">Yan gezinmeyi kullan</string>
@@ -903,9 +899,9 @@
     <string name="publishing_finished">Yayımı tamamlandı</string>
     <string name="cancelled">İptal edildi</string>
     <string name="on_hiatus">Molada</string>
-    <string name="tracking_info">Bölüm ilerlemesini, izleme hizmetlerinde güncellemek için tek yönlü eşitleme. Her manga girdisinin izleme düğmesinden, izlemeyi ayarlayın.</string>
+    <string name="tracking_info">Bölüm ilerlemesini, izleme hizmetlerinde güncellemek için tek yönlü eşitleme. Her girdinin izleme düğmesinden, izlemeyi ayarlayın.</string>
     <string name="enhanced_services">Gelişmiş hizmetler</string>
-    <string name="enhanced_tracking_info">Belirli kaynaklar için gelişmiş özellikler sağlayan hizmetler. Manga, kitaplığınıza eklendiğinde otomatik olarak izlenir.</string>
+    <string name="enhanced_tracking_info">Belirli kaynaklar için gelişmiş özellikler sağlayan hizmetler. Girdiler kitaplığınıza eklendiğinde otomatik olarak izlenir.</string>
     <string name="update_tracking_scoring_type">%1$s puanlama türünü güncelle</string>
     <string name="scoring_type_updated">Puanlama türü güncellendi</string>
     <string name="could_not_update_scoring_">Puanlama türü güncellenemedi: %1$s</string>
@@ -956,7 +952,7 @@
     <string name="tap_to_see_details">Ayrıntıları görmek için dokun</string>
     <string name="tap_to_learn_more">Daha fazla bilgi edinmek için dokunun</string>
     <string name="use_staggered_grid">Aşamalı ızgara kullan</string>
-    <string name="pref_update_only_completely_read_summary">Mangayı yalnızca okunmayan bölüm yoksa (tamamen okundu ise) güncelle</string>
+    <string name="pref_update_only_completely_read_summary">Diziyi yalnızca okunmayan bölüm yoksa (tamamen okundu ise) güncelle</string>
     <string name="update_tracking_marked_read">Okundu olarak işaretlendiğinde izlemeyi güncelle</string>
     <string name="view_all">Tümünü görüntüle</string>
     <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
@@ -999,8 +995,8 @@
     <string name="language_requires_app_restart">Bazı dillerin doğru görüntülenmesi için uygulamanın yeniden başlatılması gerekebilir</string>
     <string name="user_agent_string">Öntanımlı kullanıcı aracısı dizgesi</string>
     <string name="loader_rar5_error">RARv5 biçimi desteklenmiyor</string>
-    <string name="all_read_manga">Tüm okunan manga</string>
-    <string name="clear_db_exclude_read">Okunan bölümleri olan mangaları tut</string>
+    <string name="all_read_manga">Tüm okunan diziler</string>
+    <string name="clear_db_exclude_read">Okunan bölümleri olan girdileri tut</string>
     <string name="stat">Durum</string>
     <string name="stats">İstatistikler</string>
     <string name="local_titles">Yerel başlıklar</string>
@@ -1063,7 +1059,7 @@
     <string name="open">Aç</string>
     <string name="allow_notifications_recommended">Kitaplığınızı ve uygulamanızı güncel tutmak için bildirimlere izin vermeniz tavsiye edilir.</string>
     <string name="apply">Uygula</string>
-    <string name="pref_remove_exclude_categories">Hariç tutulan kategoriler</string>
+    <string name="pref_remove_exclude_categories">Hariç tutulan ulamlar</string>
     <string name="ext_installer_pref">Kurucu</string>
     <string name="ext_installer_summary">Uzantıların kullanıcı etkileşimi olmadan kurulmasına izin verir ve Android 12 altındaki aygıtlar için otomatik güncellemeleri etkinleştirir</string>
     <string name="library_entries">Kitaplık girdileri</string>
@@ -1071,4 +1067,24 @@
     <string name="label_background_activity">Arka plan etkinliği</string>
     <string name="source_settings">Kaynak ayarları</string>
     <string name="app_settings">Uygulama ayarları</string>
+    <string name="share_cover">Kapağı paylaş</string>
+    <string name="save_pages_separately">Sayfaları ayrı klasörlere kaydet</string>
+    <string name="create_folders_by_manga_title">Manga başlığına göre klasörler oluşturur</string>
+    <string name="extension_api_error">Kullanılabilir uzantılar alınamadı</string>
+    <string name="ext_revoke_trust">Güvenilen bilinmeyen uzantıları iptal et</string>
+    <plurals name="num_repos">
+        <item quantity="one">%d depo</item>
+        <item quantity="other">%d depo</item>
+    </plurals>
+    <string name="action_add_repo">Depo ekle</string>
+    <string name="repo_cannot_be_blank">Depo adı boş olamaz</string>
+    <string name="confirm_repo_deletion">Depoyu sil</string>
+    <string name="delete_repo_confirmation">\"%s\" deposunu silmek istiyor musunuz?</string>
+    <string name="url_not_set_click_again">Depo URL\'si ayarlanmadı, lütfen URL\'yi düzenleyin</string>
+    <string name="open_source_repo">Açık kaynaklı depo</string>
+    <string name="action_add_repo_message">Tachiyomi\'ye ek depolar ekleyin. Bu, \"index.min.json\" ile biten bir URL olmalıdır</string>
+    <string name="extension_repos">Uzantı depoları</string>
+    <string name="error_repo_exists">Bu depo zaten var!</string>
+    <string name="snack_repo_deleted">Depo silindi</string>
+    <string name="invalid_repo_name">Geçersiz depo adı</string>
 </resources>

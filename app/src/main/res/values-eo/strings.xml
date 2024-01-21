@@ -67,7 +67,6 @@
     <string name="version_">Versio: %1$s</string>
     <string name="language_">Lingvo: %1$s</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Neoficiala</string>
     <string name="next_chapter">Sekvanta ĉapitro</string>
     <string name="previous_chapter">Antaŭa ĉapitro</string>
     <string name="volume_keys">Laŭtecaj klavoj</string>
@@ -187,7 +186,6 @@
     <string name="cancel_all_for_series">Nuligi ĉiujn por ĉi tiu serio</string>
     <string name="restoring_backup_canceled">Rezignita restaŭro</string>
     <string name="services">Servoj</string>
-    <string name="unofficial_extension_message">Ĉi tiu kromaĵo ne estas de la oficiala Tachiyomi kromaĵlisto.</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">Mankas 1 ĉapitron</item>
         <item quantity="other">Mankas %d ĉapitrojn</item>
@@ -395,4 +393,11 @@
     <string name="lock_with_biometrics">Devigi malŝlosi</string>
     <string name="gray_background">Griza</string>
     <string name="library_entries">Biblioteka kontribuoj</string>
+    <string name="grid_size">Elementoj vice</string>
+    <string name="trackers">Servoj</string>
+    <string name="rotation">Orientiĝa speco</string>
+    <plurals name="next_unread_chapters">
+        <item quantity="one">Sekva nelegita ĉapitro</item>
+        <item quantity="other">Sekvaj %d nelegitaj ĉapitroj</item>
+    </plurals>
 </resources>

@@ -167,10 +167,10 @@
     <string name="cookies_cleared">Cookies iscantzellados</string>
     <string name="clear_database">Isbòida sa base de datos</string>
     <string name="clear_database_summary">Iscantzella sa cronologia pro sos elementos chi non sunt sarvados in sa biblioteca tua</string>
-    <string name="clear_database_confirmation">Seguru ses\? Sos capìtulos lèghidos e su progressu de sos elementos chi non sunt in sa biblioteca s\'ant a pèrdere</string>
+    <string name="clear_database_confirmation">Seguru ses? Sos capìtulos lèghidos e su progressu de sos elementos chi non sunt in sa biblioteca s\'ant a pèrdere</string>
     <string name="clear_database_completed">Boghes iscantzelladas</string>
     <string name="refresh_library_metadata">Agiorna sos metadatos de sa biblioteca</string>
-    <string name="updates_covers_genres_desc">Agiornat sas coberteddas, sos gèneres, sa descritzione e sas informatziones de istadu de sos manga</string>
+    <string name="updates_covers_genres_desc">Agiornat sas coberteddas, sos gèneres, sa descritzione e sas informatziones de istadu de sos elementos</string>
     <string name="refresh_tracking_metadata">Agiorna sos metadatos de arrastamentu</string>
     <string name="updates_tracking_details">Agiornat s\'istadu, su votu e s\'ùrtimu capìtulu lèghidu dae sos servìtzios de arrastamentu</string>
     <string name="version">Versione</string>
@@ -239,7 +239,7 @@
     <string name="migrate">Tràmuda</string>
     <string name="new_chapters_found">Capìtulos noos agatados</string>
     <string name="failed_to_update_cover">Agiornamentu de sa cobertedda fallidu</string>
-    <string name="must_be_in_library_to_edit">Pro praghere annanghe su manga a sa biblioteca tua in antis de fàghere custu</string>
+    <string name="must_be_in_library_to_edit">Sa sèrie depet èssere in sa biblioteca tua pro la modificare</string>
     <string name="select_cover_image">Ischerta s\'immàgine de cobertedda</string>
     <string name="select_backup_file">Ischerta sa còpia de seguresa</string>
     <string name="new_version_available">Est disponìbile un\'agiornamentu nou!</string>
@@ -249,9 +249,9 @@
     <string name="download_complete">Iscarrigamentu acabadu</string>
     <string name="download_error">Errore de iscarrigamentu</string>
     <string name="update_available">Agiornamentu disponìbile</string>
-    <string name="cover_of_image">Cobertedda de su manga</string>
+    <string name="cover_of_image">Cobertedda de sa sèrie</string>
     <string name="no_recent_chapters">Perunu capìtulu reghente</string>
-    <string name="no_recently_read_manga">Perunu manga lèghidu dae pagu</string>
+    <string name="no_recently_read_manga">Peruna sèrie lèghida dae pagu</string>
     <string name="library_is_empty_add_from_browse">Sa biblioteca tua est bòida, podes annànghere sèries a sa biblioteca tua dae sos Catàlogos.</string>
     <string name="could_not_download_unexpected_error">B\'at àpidu un\'errore imprevistu durante s\'iscarrigamentu de su capìtulu</string>
     <string name="no_wifi_connection">Peruna connessione wifi disponìbile</string>
@@ -369,7 +369,7 @@
     <string name="downloading_">Iscarrighende: %1$s</string>
     <string name="username_must_not_be_blank">Su nùmene de impreadore e sa crae non podent abarrare bòidos</string>
     <string name="whats_new">Ite b\'at de nou</string>
-    <string name="you_can_migrate_in_library">Podes fintzas tramudare ischertende sos manga in sa biblioteca tua</string>
+    <string name="you_can_migrate_in_library">Podes fintzas tramudare ischertende sos elementos in sa biblioteca tua</string>
     <string name="migration_sources_changed">Mitzas de tramudòngiu mudadas</string>
     <string name="use_last_saved_migration_preferences">Imprea sas ùrtimas preferèntzias e mitzas de pre-tramudòngiu sarvadas pro tramudare in massa</string>
     <string name="only_enable_pinned_for_migration">Abìlita, pro su tramudòngiu, petzi sas mitzas apicadas tuas</string>
@@ -380,7 +380,7 @@
     <string name="delete_all_covers__not_in_library_used_">Iscantzella sas coberteddas in sa memòria temporànea chi non sunt in sa biblioteca
 \nImpreende como: %1$s</string>
     <string name="clear_cached_covers_non_library">Iscantzella sas coberteddas in sa memòria temporànea chi non sunt in sa biblioteca</string>
-    <string name="delete_old_covers_in_library_used_">Iscantzella sas coberteddas betzas e no impreadas de sos manga in sa biblioteca tua chi sunt istados agiornados.
+    <string name="delete_old_covers_in_library_used_">Iscantzella sas coberteddas betzas e no impreadas de sos elementos in sa biblioteca tua chi sunt istados agiornados.
 \nImpreende como: %1$s</string>
     <string name="clean_up_cached_covers">Inneta sas coberteddas in sa memòria temporànea</string>
     <plurals name="cleanup_done">
@@ -390,7 +390,7 @@
     <string name="disable_if_issues_with_updating">Disabìlita custa optzione si ses tenende problemas agiornende o ripristinende sa biblioteca tua</string>
     <string name="no_folders_to_cleanup">Peruna cartella de innetare</string>
     <string name="starting_cleanup">Incumintzende s\'innetadura</string>
-    <string name="clean_read_manga_not_in_library">Inneta sos manga chi non sunt in sa biblioteca</string>
+    <string name="clean_read_manga_not_in_library">Inneta sos elementos chi non sunt in sa biblioteca</string>
     <string name="clean_read_downloads">Iscantzella sos lèghidos</string>
     <string name="clean_orphaned_downloads">Iscantzella sos òrfanos</string>
     <string name="delete_unused_chapters">Iscantzella sas cartellas de sos capìtulos chi no esistint, as iscarrigadu petzi in parte, o as giai lèghidu</string>
@@ -404,21 +404,21 @@
     <string name="restore_error">Riprìstinu de sa còpia de seguresa fallidu</string>
     <string name="white_theme">Biancu puru</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga tramudadu</item>
-        <item quantity="other">%d manga tramudados</item>
+        <item quantity="one">%d sèrie tramudada</item>
+        <item quantity="other">%d sèries tramudadas</item>
     </plurals>
     <string name="skipping_">(brinchende %1$d)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Copiare %1$d%2$s manga\?</item>
-        <item quantity="other">Copiare %1$d%2$s manga\?</item>
+        <item quantity="one">Copiare %1$d%2$s sèrie?</item>
+        <item quantity="other">Copiare %1$d%2$s sèries?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Tramudare %1$d%2$s manga\?</item>
-        <item quantity="other">Tramudare %1$d%2$s manga\?</item>
+        <item quantity="one">Tramudare %1$d%2$s sèrie?</item>
+        <item quantity="other">Tramudare %1$d%2$s sèries?</item>
     </plurals>
     <string name="stop_migrating">Firmare su tramudòngiu\?</string>
     <string name="no_alternatives_found">Peruna alternativa agatada</string>
-    <string name="no_chapters_found_for_migration">Perunu capìtulu agatadu. Custu manga non si podet impreare pro su tramudòngiu</string>
+    <string name="no_chapters_found_for_migration">Perunu capìtulu agatadu. Custa sèrie non si podet impreare pro su tramudòngiu</string>
     <string name="migrate_">Tràmuda a %1$s</string>
     <string name="copy_now">Còpia como</string>
     <string name="migrate_now">Tràmuda como</string>
@@ -516,7 +516,7 @@
     <string name="auto_refresh_covers_summary">Annoa fintzas sas coberteddas in sa biblioteca cando ses agiornende sa biblioteca</string>
     <string name="auto_refresh_covers">Annoa sas coberteddas automaticamente</string>
     <string name="include_in_global_update">Include in s\'agiornamentu globale</string>
-    <string name="when_sorting_ignore_articles">Ordinende in manera alfebètica ignora sos artìculos (unu, una, su, sa) a s\'incumintzu de sos tìtulos de sos manga</string>
+    <string name="when_sorting_ignore_articles">Ordinende in manera alfebètica ignora sos artìculos (unu, una, su, sa) a s\'incumintzu de sos tìtulos de sas sèries</string>
     <string name="sort_by_ignoring_articles">Òrdina ignorende sos artìculos</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">e %1$d àteru capìtulu</item>
@@ -556,8 +556,8 @@
     <string name="category_deleted">Categoria iscantzellada</string>
     <string name="manage_category">Amministra sa categoria</string>
     <string name="add_categories">Annanghe categorias</string>
-    <string name="already_in_category">Manga giai in sa categoria</string>
-    <string name="confirm_category_deletion_message">Sos manga in custa categoria s\'ant a tramudare a sa categoria predefinida.</string>
+    <string name="already_in_category">Elementu giai in sa categoria</string>
+    <string name="confirm_category_deletion_message">Sos elementos in custa categoria s\'ant a tramudare a sa categoria predefinida.</string>
     <string name="confirm_category_deletion">Iscantzellare sa categoria\?</string>
     <string name="category_is_empty">Sa categoria est bòida</string>
     <string name="create_new_category">Crea una categoria noa</string>
@@ -607,7 +607,7 @@
     <string name="invalid_backup_file">Documentu de sa còpia de seguresa non vàlidu</string>
     <string name="invalid_backup_file_type">Casta de documentu de còpia de seguresa non vàlidu: %1$s
 \nDiat dèpere acabbare cun .proto.gz o .json.</string>
-    <string name="backup_has_no_manga">Sa còpia de seguresa non tenet perunu manga.</string>
+    <string name="backup_has_no_manga">Sa còpia de seguresa non tenet perunu elementu.</string>
     <string name="restore_missing_sources">Mitzas chi mancant:</string>
     <string name="restore_missing_trackers">Arrastadores a sos cales no as fatu atzessu:</string>
     <string name="restore_content_full">Sos datos dae su documentu de sa còpia de seguresa s\'ant a ripristinare.
@@ -624,9 +624,7 @@
     <string name="does_not_prevent_unofficial_nsfw">Custu no impedit a estensiones no ufitziales o potentzialmente non curretas de ammustrare cuntenutos NSFW (18+) in s\'aplicatzione.</string>
     <string name="no_chapters_error">Perunu capìtulu agatadu</string>
     <string name="badges">Distintivos</string>
-    <string name="unofficial_extension_message">Custa estensione non benit dae sa lista de estensiones ufitziales de Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">No ufitziale</string>
     <string name="may_contain_nsfw">Diat pòdere cuntènnere cuntenutos NSFW (18+)</string>
     <string name="next_page">Pàgina imbeniente</string>
     <string name="previous_page">Pàgina anteposta</string>
@@ -672,7 +670,7 @@
         <item quantity="other">%1$s capìtulos</item>
     </plurals>
     <string name="hide_bottom_nav">Cua automaticamente su butone de navigatzione</string>
-    <string name="custom_manga_info">Informatziones personalizadas de su manga</string>
+    <string name="custom_manga_info">Informatziones personalizadas de sa sèrie</string>
     <string name="ignore_cutout_areas">Ignora sas àreas segadas</string>
     <string name="cutout_area_behavior">Cumportamentu de s\'àrea de segadura</string>
     <string name="filter_languages">Filtra sas limbas</string>
@@ -716,7 +714,7 @@
     <string name="show_download_button">Ammustra su butone de iscarrigamentu</string>
     <string name="press_and_hold_to_also_reset">Incarchende a longu podes fintzas resetare sa cronologia de sos capìtulos</string>
     <string name="grouped">Agrupadu</string>
-    <string name="no_recent_read_updated_manga">Perunu manga lèghidu o agiornadu dae pagu</string>
+    <string name="no_recent_read_updated_manga">Peruna sèrie lèghida o agiornada dae pagu</string>
     <string name="reset_chapter_history">Reseta sa cronologia de sos capìtulos</string>
     <string name="shift_one_page_over">Move una pàgina</string>
     <string name="category_cannot_be_blank">Su nùmene de sa categoria non podet èssere bòidu</string>
@@ -811,7 +809,7 @@
     <string name="open_random_series">Aberi una sèrie a casu</string>
     <string name="show_number_of_items">Ammustra su nùmeru de elementos</string>
     <string name="external_storage_download_notice">Pro iscarrigare capìtulos TachiyomiJ2K tenet bisòngiu de s\'atzessu a totu sos documentos. Incarca inoghe, e a pustis abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
-    <string name="external_storage_permission_notice">Pro iscarrigare capìtulos, creare còpias de seguresa e lèghere manga in locale TachiyomiJ2K tenet bisòngiu de s\'atzessu a sos documentos de Android 11.
+    <string name="external_storage_permission_notice">TachiyomiJ2K tenet bisòngiu de s\'atzessu a sos documentos de Android 11 pro iscarrigare capìtulos, creare còpias de seguresa automàticas e lèghere sèries in locale.
 \n
 \nIn s\'ischermada imbeniente abìlita \"Permite s\'atzessu pro amministrare totu sos documentos.\"</string>
     <string name="all_files_permission_required">Permissos de iscritura pedidos</string>
@@ -904,8 +902,8 @@
     <string name="cancelled">Annullada</string>
     <string name="on_hiatus">In pàusa</string>
     <string name="enhanced_services">Servìtzios avantzados</string>
-    <string name="tracking_info">Sincronizatzione a una diretzione ebbia pro agiornare su progressu in sos capìtulos in su servìtziu de arrastamentu. Imposta s\'arrastamentu pro sos elementos de sos manga dae su butone de arrastamentu issoro.</string>
-    <string name="enhanced_tracking_info">Servìtzios chi frunint funtzionalidades avantzadas pro fontes ispetzìficas. Sos mangas benint arrastados in manera automàtica cando los annanghes a sa biblioteca tua.</string>
+    <string name="tracking_info">Sincronizatzione a una diretzione ebbia pro agiornare su progressu in sos capìtulos in su servìtziu de arrastamentu. Imposta s\'arrastamentu pro sos elementos dae su butone de arrastamentu issoro.</string>
+    <string name="enhanced_tracking_info">Servìtzios chi frunint funtzionalidades avantzadas pro fontes ispetzìficas. Sos elementos benint arrastados in manera automàtica cando los annanghes a sa biblioteca tua.</string>
     <string name="update_tracking_scoring_type">Agiorna sa genia de votu de %1$s</string>
     <string name="scoring_type_updated">Genia de votu agiornada</string>
     <string name="could_not_update_scoring_">No at fatu a agiornare sa genia de votu: %1$s</string>
@@ -969,7 +967,7 @@
     <string name="download_ahead_info">Funtzionat petzi cun sos elementos in biblioteca e si su capìtulu atuale e cussu imbeniente sunt giai iscarrigados</string>
     <string name="learn_why">Impara proite</string>
     <string name="use_staggered_grid">Imprea una grìllia iscansada</string>
-    <string name="pref_update_only_completely_read_summary">Agiorna sos menga petzi si non bi sunt capìtulos non lèghidos (lèghidu de su totu)</string>
+    <string name="pref_update_only_completely_read_summary">Agiorna sas sèries petzi si non bi sunt capìtulos non lèghidos (lèghidu de su totu)</string>
     <string name="most_entries">Sa parte manna de sos elementos</string>
     <string name="select_uninstalled_sources">Seletziona sas fontes disinstalladas</string>
     <string name="downloads_swipe_tutorial">Sos iscarrigamentos si podent annullare traghende·los a foras
@@ -999,8 +997,8 @@
     <string name="user_agent_string">Istringa de agente de utente predefinida</string>
     <string name="language_requires_app_restart">Unas cantas limbas diant pòdere bisongiare chi torres a allùghere s\'aplicatzione pro las ammustrare comente si tocat</string>
     <string name="loader_rar5_error">Su formadu RARv5 no est suportadu</string>
-    <string name="clear_db_exclude_read">Mantene sos manga cun capìtulos lèghidos</string>
-    <string name="all_read_manga">Totu sos manga lèghidos</string>
+    <string name="clear_db_exclude_read">Mantene sos elementos cun capìtulos lèghidos</string>
+    <string name="all_read_manga">Totu sas sèries lèghidas</string>
     <string name="auto_download_while_reading">Iscàrriga in automàticu durante sa letura</string>
     <string name="downloaded_chapters">Capìtulos iscarrigados</string>
     <string name="stat">Istatìstica</string>
@@ -1068,4 +1066,10 @@
     <string name="library_entries">Elementos de sa biblioteca</string>
     <string name="pref_debug_info">Informatziones de depuratzione de còdighe</string>
     <string name="label_background_activity">Atividade in s\'isfundu</string>
+    <string name="ext_installer_summary">Permitit s\'installatzione de estensiones chene rechestas fatas dae s\'utente e abilitat agiornamentos automàticos pro dispositivos suta de Android 12</string>
+    <string name="share_cover">Cumpartzi sa cobertedda</string>
+    <string name="source_settings">Impostatziones de sas fontes</string>
+    <string name="save_pages_separately">Sarva sas pàginas in cartellas a banda</string>
+    <string name="app_settings">Impostatziones de s\'aplicatzione</string>
+    <string name="create_folders_by_manga_title">Crea cartellas segundu su tìtulu de su manga</string>
 </resources>

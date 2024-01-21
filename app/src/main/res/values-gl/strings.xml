@@ -185,9 +185,7 @@
     <string name="right_to_left_viewer">De dereita a esquerda</string>
     <string name="left_to_right_viewer">De esquerda a dereita</string>
     <string name="manhua">Manhua</string>
-    <string name="unofficial_extension_message">Esta extensión non é da lista de extensións oficiais de Tachiyomi.</string>
     <string name="nsfw_short">+18</string>
-    <string name="unofficial">Non oficial</string>
     <string name="animate_page_transitions">Animar transición de páxinas</string>
     <string name="default_reading_mode">Modo de lectura por defecto</string>
     <string name="none">Ningún</string>

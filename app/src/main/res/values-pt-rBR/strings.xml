@@ -65,8 +65,8 @@
     <string name="category_is_empty">A categoria está vazia</string>
     <string name="default_category">Categoria padrão</string>
     <string name="confirm_category_deletion">Excluir categoria?</string>
-    <string name="confirm_category_deletion_message">O mangá nesta categoria será movido à categoria padrão.</string>
-    <string name="already_in_category">O mangá já está na categoria</string>
+    <string name="confirm_category_deletion_message">Itens nesta categoria serão movidos para a categoria padrão.</string>
+    <string name="already_in_category">O item já está nesta categoria</string>
     <string name="edit_categories">Editar categorias</string>
     <string name="manage_category">Gerenciar categoria</string>
     <string name="move_to_categories">Mover para categorias</string>
@@ -142,7 +142,7 @@
     <string name="library_update_restriction">Restrições do dispositivo</string>
     <string name="library_update_restriction_summary">Atualizar apenas quando as condições se cumprirem</string>
     <string name="sort_by_ignoring_articles">Ordenar ignorando artigos</string>
-    <string name="when_sorting_ignore_articles">Ao ordenar em ordem alfabética, ignore artigos (a, an, the) no início dos títulos dos mangás</string>
+    <string name="when_sorting_ignore_articles">Ao ordenar em ordem alfabética, ignore artigos (a, an, the) no início dos títulos das obras</string>
     <string name="categories_to_include_in_global_update">Categorias para incluir na atualização global</string>
     <string name="include_in_global_update">Incluir na atualização global</string>
     <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
@@ -318,7 +318,7 @@
     <string name="clear_tags">Limpar tags</string>
     <string name="reset_cover">Redefinir capa</string>
     <string name="failed_to_update_cover">Erro ao atualizar a capa</string>
-    <string name="must_be_in_library_to_edit">O mangá deve estar em sua biblioteca para editar</string>
+    <string name="must_be_in_library_to_edit">O item deve estar em sua biblioteca para ser editado</string>
     <string name="remember_this_choice">Lembrar esta opção</string>
     <string name="source_not_installed">Fonte não instalada</string>
     <plurals name="deleted_chapters">
@@ -375,25 +375,24 @@
     <string name="migrate">Migrar</string>
     <string name="migrate_">Migrar %1$s</string>
     <string name="copy_value">Copiar</string>
-    <string name="no_chapters_found_for_migration">Nenhum capítulo encontrado, este mangá não
-        pode ser usado para migração</string>
+    <string name="no_chapters_found_for_migration">Nenhum capítulo encontrado, esta obra não pode ser usada para migração</string>
     <string name="no_alternatives_found">Nenhuma alternativa encontrada</string>
     <string name="stop_migrating">Parar de migrar?</string>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrar %1$d%2$s mangá\?</item>
-        <item quantity="many">Migrar %1$d%2$s mangás\?</item>
-        <item quantity="other">Migrar %1$d%2$s mangás\?</item>
+        <item quantity="one">Migrar %1$d%2$s obra?</item>
+        <item quantity="many">Migrar %1$d%2$s obras?</item>
+        <item quantity="other">Migrar %1$d%2$s obras?</item>
     </plurals>
     <plurals name="copy_manga">
-        <item quantity="one">Copiar %1$d%2$s mangá\?</item>
-        <item quantity="many">Copiar %1$d%2$s mangás\?</item>
-        <item quantity="other">Copiar %1$d%2$s mangás\?</item>
+        <item quantity="one">Copiar %1$d%2$s obra?</item>
+        <item quantity="many">Copiar %1$d%2$s obras?</item>
+        <item quantity="other">Copiar %1$d%2$s obras?</item>
     </plurals>
     <string name="skipping_">(pulando %1$d)</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d mangá migrado</item>
-        <item quantity="many">%d mangás migrados</item>
-        <item quantity="other">%d mangás migrados</item>
+        <item quantity="one">%d obra migrada</item>
+        <item quantity="many">%d obras migradas</item>
+        <item quantity="other">%d obras migradas</item>
     </plurals>
     <!-- Settings -->
     <string name="settings">Configurações</string>
@@ -441,11 +440,11 @@
     <string name="clear_cookies">Excluir cookies</string>
     <string name="cookies_cleared">Cookies limpos</string>
     <string name="clear_database">Limpar banco de dados</string>
-    <string name="clear_database_summary">Exclui o histórico de itens que não estão salvos em sua biblioteca</string>
-    <string name="clear_database_confirmation">Tem certeza\? Os capítulos lidos e o progresso em itens que não estão na sua biblioteca serão perdidos</string>
+    <string name="clear_database_summary">Exclua o histórico de itens que não estão salvos em sua biblioteca</string>
+    <string name="clear_database_confirmation">Você tem certeza? Os capítulos lidos e o progresso de itens que não estão em sua biblioteca serão perdidos</string>
     <string name="clear_database_completed">Entradas excluídas</string>
     <string name="refresh_library_metadata">Atualizar metadados da biblioteca</string>
-    <string name="updates_covers_genres_desc">Atualiza capas, gêneros, descrição e informação de estado dos mangás</string>
+    <string name="updates_covers_genres_desc">Atualiza capas, gêneros, descrições e informações do estado dos ítens</string>
     <string name="refresh_tracking_metadata">Atualizar metadados do monitoramento</string>
     <string name="updates_tracking_details">Atualiza estado, avaliação e último capítulo lido dos serviços de monitoramento</string>
     <string name="clean_up_downloaded_chapters">Limpar capítulos baixados</string>
@@ -463,7 +462,7 @@
         <item quantity="other">Limpeza realizada. %d pastas removidas</item>
     </plurals>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
-    <string name="delete_old_covers_in_library_used_">Exclua capas em cache antigas e não usadas de mangás em sua biblioteca que foram atualizados.
+    <string name="delete_old_covers_in_library_used_">Exclua capas e caches antigos de itens não usados em sua biblioteca que foram atualizados.
 \nAtualmente usando: %1$s</string>
     <!-- Browse Settings -->
     <string name="pref_global_search">Pesquisa global</string>
@@ -477,7 +476,7 @@
         para migração</string>
     <string name="use_last_saved_migration_preferences">Usar as últimas preferências de pré-migração 
     salvas e fontes para migrar em massa</string>
-    <string name="you_can_migrate_in_library">Você também pode migrar selecionando o mangá na sua biblioteca</string>
+    <string name="you_can_migrate_in_library">Você também pode migrar selecionando os itens em sua biblioteca</string>
     <!-- About section -->
     <string name="version">Versão</string>
     <string name="build_time">Data de compilação</string>
@@ -568,7 +567,7 @@
     <string name="clear">Limpar</string>
     <string name="close">Fechar</string>
     <string name="common">Comum</string>
-    <string name="cover_of_image">Capa do mangá</string>
+    <string name="cover_of_image">Capa das series</string>
     <string name="create">Criar</string>
     <string name="default_value">Padrão</string>
     <string name="delete">Excluir</string>
@@ -649,7 +648,7 @@
     <string name="delete_all_covers__not_in_library_used_">Exclui todas as capas em cache fora da sua biblioteca.
 \nAtualmente usando: %1$s</string>
     <string name="clear_cached_covers_non_library">Limpar capas em cache fora da biblioteca</string>
-    <string name="clean_read_manga_not_in_library">Limpar mangás fora da biblioteca</string>
+    <string name="clean_read_manga_not_in_library">Limpar ítens que não estão na biblioteca</string>
     <string name="clean_read_downloads">Limpar capítulos lidos</string>
     <string name="clean_orphaned_downloads">Limpar capítulos órfãos</string>
     <string name="data_management">Gerenciamento de Dados</string>
@@ -661,9 +660,7 @@
     <string name="cover_saved">Capa salva</string>
     <string name="reset_tags">Redefinir tags</string>
     <string name="enable_zoom_out">Ativar zoom para fora</string>
-    <string name="unofficial_extension_message">Esta extensão não é da lista oficial de extensões do Tachiyomi.</string>
     <string name="nsfw_short">+18</string>
-    <string name="unofficial">Não oficial</string>
     <string name="may_contain_nsfw">Pode haver conteúdo NSFW (+18)</string>
     <string name="next_page">Próxima página</string>
     <string name="previous_page">Página anterior</string>
@@ -688,7 +685,7 @@
     <string name="invalid_backup_file">Arquivo de backup inválido</string>
     <string name="invalid_backup_file_type">Tipo de arquivo de backup inválido: %1$s
 \nO arquivo deve terminar com .proto.gz ou .json.</string>
-    <string name="backup_has_no_manga">O backup não possui nenhum mangá.</string>
+    <string name="backup_has_no_manga">O backup não possui nenhum item.</string>
     <string name="restore_missing_sources">Fontes faltando:</string>
     <string name="restore_missing_trackers">Monitoradores sem login realizado:</string>
     <string name="restore_content_full">Os dados do arquivo de backup serão restaurados.
@@ -740,7 +737,7 @@
     <string name="category_hopper_long_press">Ação ao pressionar e segurar o seletor de categoria</string>
     <string name="when_grouping_by_sources_tags">Ao agrupar a biblioteca por: fontes, estados etc.</string>
     <string name="no_pages_found">Nenhuma página encontrada</string>
-    <string name="custom_manga_info">Informações de mangá personalizada</string>
+    <string name="custom_manga_info">Informações personalizadas</string>
     <string name="mark_all_chapters_as_unread">Marcar todos os capítulos como não lidos\?</string>
     <string name="selection">Seleção</string>
     <string name="previous">Anterior</string>
@@ -969,7 +966,7 @@
     <string name="classic_blue">Azul Clássico</string>
     <string name="scanlators">Scanlators</string>
     <string name="lime_time">Tempo de Limão</string>
-    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitoramento. Configure o monitoramento para entradas individuais dos mangás a partir de seus botões de monitoramento.</string>
+    <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitoramento. Configure o monitoramento para entradas individuais a partir de seus botões de monitoramento.</string>
     <string name="enhanced_services">Serviços aprimorados</string>
     <string name="enhanced_tracking_info">Serviços que oferecem recursos aprimorados para fontes específicas. Os mangás são automaticamente monitorados quando adicionados em sua biblioteca.</string>
     <string name="publishing_finished">Publicação finalizada</string>
@@ -985,7 +982,7 @@
     <string name="ascending">Crescente</string>
     <string name="date">Data</string>
     <string name="descending">Decrescente</string>
-    <string name="clear_database_source_item_count">%1$d itens que não estão na biblioteca no banco de dados</string>
+    <string name="clear_database_source_item_count">%1$d itens não ralacionados à biblioteca no banco de dados</string>
     <string name="database_clean">Banco de dados limpo</string>
     <string name="confirm_manga_add_duplicate">Você tem um item na sua biblioteca com o mesmo nome, mas de uma fonte diferente (%1$s).
 \n
@@ -1019,7 +1016,7 @@
     <string name="must_view_details_before_migration">A página de detalhes do título deve ser vista antes da migração</string>
     <string name="show_">Mostrar %1$s</string>
     <string name="use_staggered_grid">Usar grade intercalada</string>
-    <string name="pref_update_only_completely_read_summary">Só atualiza os mangás que estão completamente lidos (sem capítulos não lidos)</string>
+    <string name="pref_update_only_completely_read_summary">Só atualiza as obras que estão completamente lidas (sem capítulos não lidos)</string>
     <string name="update_tracking_marked_read">Atualizar monitoramento após marcar como lido</string>
     <string name="most_entries">Mostrar entradas</string>
     <string name="select_uninstalled_sources">Selecionar fontes desinstaladas</string>
@@ -1087,7 +1084,7 @@
     <string name="manga_status_distribution">Distribuição de Status</string>
     <string name="count">Contar</string>
     <string name="tracker">Rastreador</string>
-    <string name="clear_db_exclude_read">Mantenha mangás como capítulos lidos</string>
+    <string name="clear_db_exclude_read">Mantenha os itens com capítulos lidos</string>
     <string name="statistics_details">Detalhes dos Status</string>
     <string name="all_read_manga">Todos os mangás lidos</string>
     <string name="statistics">Estatísticas</string>
@@ -1136,7 +1133,7 @@
     <string name="app_updates">atualizações do app</string>
     <string name="open">Abrir</string>
     <string name="allow_notifications_recommended">Ativando notificações é recomendado para guardar sua biblioteca e manter o aplicativo atualizado em dia.</string>
-    <string name="pref_remove_exclude_categories">Categorias ignoradas</string>
+    <string name="pref_remove_exclude_categories">Categorias excluídas</string>
     <string name="ext_installer_pref">Instalador</string>
     <string name="library_entries">Itens da biblioteca</string>
     <string name="source_settings">Configurações das fontes</string>
@@ -1144,5 +1141,8 @@
     <string name="ext_installer_summary">Permite instalar extensões sem a necessidade de confirmação do usuário e ativa atualizações automáticas para dispositivos anteriores ao Android 12</string>
     <string name="apply">Aplicar</string>
     <string name="pref_debug_info">Informações de depuração</string>
-    <string name="label_background_activity">Atividade em segundo plano</string>
+    <string name="label_background_activity">Atividades em segundo plano</string>
+    <string name="share_cover">Compartilhar capa</string>
+    <string name="save_pages_separately">Salvar as páginas em pastas diferentes</string>
+    <string name="create_folders_by_manga_title">Criar pastas de acordo com o título do mangá</string>
 </resources>

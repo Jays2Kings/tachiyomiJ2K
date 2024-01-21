@@ -189,7 +189,6 @@
     <string name="trust">నమ్మకం</string>
     <string name="untrusted">నమ్మదగినది కాదు</string>
     <string name="nsfw_short">౧౮+</string>
-    <string name="unofficial">అనధికారిక</string>
     <string name="portrait">చిత్తరువు</string>
     <string name="webtoon_side_padding_10">౧౦%</string>
     <string name="kindlish_nav">కిండల్ మాదిరి</string>
@@ -240,4 +239,6 @@
     <string name="daily">ప్రతిరోజు</string>
     <string name="lock_with_biometrics">తాళమును తెరుచుట ఆవశ్యకము</string>
     <string name="library_entries">లైబ్రరీ ఎంట్రీలు</string>
+    <string name="local_source">స్థానిక సోర్స్</string>
+    <string name="trackers">సేవలు</string>
 </resources>

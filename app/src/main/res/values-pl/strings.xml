@@ -678,10 +678,8 @@
     <string name="locale">Język</string>
     <string name="no_chapters_error">Nie znaleziono rozdziałów</string>
     <string name="badges">Plakietki</string>
-    <string name="unofficial_extension_message">Te rozszerzenie nie jest na liście oficjalnych rozszerzeń Tachiyomi.</string>
     <string name="open_log">Otwórz log</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Nieoficjalne</string>
     <string name="may_contain_nsfw">Może zawierać zawartość NSFW (18+)</string>
     <string name="next_page">Następna strona</string>
     <string name="previous_page">Poprzednia strona</string>
@@ -1161,4 +1159,11 @@
     <string name="library_entries">Biblioteka</string>
     <string name="pref_debug_info">Informacje debugowania</string>
     <string name="label_background_activity">Aktywność w tle</string>
+    <string name="apply">Zatwierdź</string>
+    <string name="save_pages_separately">Zapisuj strony w osobnych folderach</string>
+    <string name="ext_installer_summary">Pozwól na instalacje rozszerzeń bez powiadomień oraz włącz automatyczne aktualizacje dla urządzeń poniżej Android 12</string>
+    <string name="share_cover">Udostępnij okładkę</string>
+    <string name="source_settings">Ustawienia źródła</string>
+    <string name="app_settings">Ustawienia aplikacji</string>
+    <string name="create_folders_by_manga_title">Utwórz foldery na podstawie tytułu mangi</string>
 </resources>

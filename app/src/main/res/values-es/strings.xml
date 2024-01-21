@@ -100,8 +100,8 @@
     <string name="cookies_cleared">Cookies borradas</string>
     <string name="clear_database">Borrar redundancia de la base de datos</string>
     <string name="clear_database_summary">Eliminar el historial de las entradas que no se guardan en la biblioteca</string>
-    <string name="clear_database_confirmation">¿Está seguro\? Se perderán los capítulos leídos y el progreso de las entradas que no pertenezcan a la biblioteca</string>
-    <string name="clear_database_completed">Entradas eliminadas</string>
+    <string name="clear_database_confirmation">¿Seguro? Perderás los capítulos leídos y el progreso de los títulos que no pertenezcan a la biblioteca</string>
+    <string name="clear_database_completed">Elementos borrados</string>
     <!-- About section -->
     <string name="version">Versión</string>
     <string name="build_time">Hora de compilación</string>
@@ -240,8 +240,8 @@
     <string name="category_with_name_exists">¡Ya existe una categoría con este nombre!</string>
     <string name="picture_saved">Imagen guardada</string>
     <string name="options">Opciones</string>
-    <string name="set_as_cover">Establecer como cubierta</string>
-    <string name="cover_updated">Cubierta actualizada</string>
+    <string name="set_as_cover">Poner como portada</string>
+    <string name="cover_updated">Se ha actualizado la portada de la serie</string>
     <string name="failed_to_update_cover">Error al actualizar la portada</string>
     <string name="download_badge">Insignias de descarga</string>
     <string name="local">Local</string>
@@ -259,7 +259,7 @@
     <string name="trust">Confiable</string>
     <string name="untrusted">No confiable</string>
     <string name="uninstall">Desinstalar</string>
-    <string name="untrusted_extension">Extensión no confiable</string>
+    <string name="untrusted_extension">La extensión no es fiable</string>
     <string name="version_">Versión: %1$s</string>
     <string name="language_">Idioma: %1$s</string>
     <string name="normal">Normal</string>
@@ -269,11 +269,9 @@
     <string name="theres_no_next_chapter">No hay capítulo siguiente</string>
     <string name="theres_no_previous_chapter">No hay capítulo anterior</string>
     <string name="migrate">Migrar</string>
-    <string name="untrusted_extension_message">Esta extensión está firmada por una fuente sin certificar y por lo tanto no se ha activado.
+    <string name="untrusted_extension_message">Las extensiones maliciosas pueden leer cualquier credencial de inicio de sesión almacenada o ejecutar código arbitrario.
 \n
-\nUna extensión maliciosa puede leer credenciales de inicio guardadas en Tachiyomi o ejecutar cualquier tipo de código en tu dispositivo.
-\n
-\nAl confiar en este certificado aceptas estos riesgos.</string>
+\nAl confiar en esta extensión, aceptas estos riesgos.</string>
     <string name="no_animation">Sin animación</string>
     <string name="search_filters">Filtros de búsqueda</string>
     <string name="added_to_library">Añadido a la biblioteca</string>
@@ -300,12 +298,12 @@
     <string name="burn_darken">Quemar / Oscurecer</string>
     <string name="help">Ayuda</string>
     <string name="no_results_found">No se han encontrado resultados</string>
-    <string name="lock_with_biometrics">Requiere desbloqueo</string>
+    <string name="lock_with_biometrics">Desbloqueo biométrico</string>
     <string name="lock_when_idle">Bloquear por inactividad</string>
     <string name="backup_failed">Falló de copia de seguridad</string>
     <string name="creating_backup">Creando copia de seguridad</string>
     <string name="network">Red</string>
-    <string name="requires_app_restart">Es necesario reiniciar la aplicación para que surja efecto</string>
+    <string name="requires_app_restart">Es necesario reiniciar la aplicación para que surta efecto</string>
     <string name="disable_battery_optimization">Desactivar optimización de la batería</string>
     <string name="battery_optimization_disabled">La optimización de la batería ya está desactivada</string>
     <string name="pref_global_search">Búsqueda global</string>
@@ -518,9 +516,9 @@
 \n
 \n¿Eliminar capítulos descargados\?</item>
     </plurals>
-    <string name="error_sharing_cover">Error al compartir portada</string>
-    <string name="error_saving_cover">Error al guardar portada</string>
-    <string name="cover_saved">Portada guardada</string>
+    <string name="error_sharing_cover">Hubo un error al compartir la portada</string>
+    <string name="error_saving_cover">Hubo un error al guardar la portada</string>
+    <string name="cover_saved">Se ha guardado la portada</string>
     <string name="source_not_installed">Fuente no instalada</string>
     <string name="remember_this_choice">Recordar selección</string>
     <string name="reset_cover">Recolocar portada</string>
@@ -587,7 +585,6 @@
     <string name="to_show_again_setting_sources">Para volver a mostrar esta pantalla, vaya a Configuración -&gt; Fuentes.</string>
     <string name="include_extra_search_parameter">Incluir un parámetro de búsqueda adicional al buscar</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">No oficial</string>
     <string name="may_contain_nsfw">Puede incluir contenido solo apto para adultos</string>
     <string name="next_page">Siguiente página</string>
     <string name="previous_page">Página anterior</string>
@@ -597,7 +594,6 @@
     <string name="default_reading_mode">Modo de lectura predeterminado</string>
     <string name="no_chapters_error">No hay capítulos</string>
     <string name="badges">Insignias</string>
-    <string name="unofficial_extension_message">Esta extensión no es de la lista oficial de extensiones de Tachiyomi.</string>
     <string name="l_nav">En forma de L</string>
     <string name="kindlish_nav">Estilo Kindle</string>
     <string name="edge_nav">Borde</string>
@@ -953,7 +949,7 @@
     <string name="download_queue_size_warning">Advertencia: Las descargas grandes pueden llevar a que las fuentes se vuelvan cada vez más lentas y en casos extremos que los servidores limiten o impidan el acceso a Tachiyomi. Toca aquí para más información.</string>
     <string name="every_3_days">Cada 3 días</string>
     <string name="save_chapters_as_cbz">Guardar como archivo CBZ</string>
-    <string name="publishing_finished">Serie terminada</string>
+    <string name="publishing_finished">Publicación finalizada</string>
     <string name="cancelled">Cancelada</string>
     <string name="on_hiatus">En pausa</string>
     <string name="tracking_info">Sincronización unidireccional para actualizar el progreso del capítulo en los servicios de seguimiento. Configura el seguimiento de entradas individuales desde el botón de seguimiento.</string>
@@ -981,7 +977,7 @@
     <string name="ascending">Ascendente</string>
     <string name="date">Fecha</string>
     <string name="descending">Descendiente</string>
-    <string name="clear_database_source_item_count">%1$d entradas que no pertenecen a la biblioteca en la base de datos</string>
+    <string name="clear_database_source_item_count">%1$d títulos que no pertenecen a la biblioteca en la base de datos</string>
     <string name="database_clean">Base de datos limpia</string>
     <string name="confirm_manga_add_duplicate">Tienes un elemento en tu biblioteca con el mismo nombre pero de distinto origen (%1$s).
 \n
@@ -990,7 +986,7 @@
     <string name="cover_only_grid">Cuadrícula sólo de portadas</string>
     <string name="notification_update_skipped">Actualizaciones omitidas: %1$d</string>
     <string name="skipped_reason_completed">Omitido, ya que su publicación ha terminado</string>
-    <string name="skipped_reason_not_caught_up">Omitido porque hay capítulos sin leer</string>
+    <string name="skipped_reason_not_caught_up">Omitido porque todavía hay capítulos sin leer</string>
     <string name="notification_update_error">Actualizaciones fallidas: %1$d</string>
     <string name="skipped_reason_not_started">Omitido porque no hay capítulos leídos</string>
     <string name="channel_skipped">Omitidas</string>
@@ -1028,7 +1024,7 @@
     <string name="pref_manage_notifications">Gestionar notificaciones</string>
     <string name="battery_not_low">Batería cargada</string>
     <string name="faq_and_guides">Guías y soluciones</string>
-    <string name="secure_screen_summary">Pantalla segura oculta el contenido al cambiar de aplicación y bloquea las capturas de pantalla</string>
+    <string name="secure_screen_summary">Activando «pantalla segura» ocultas la vista previa del contenido de la ventana al cambiar de aplicación y se bloquean las capturas de pantalla</string>
     <string name="pref_high">Alta</string>
     <string name="pref_hide_threshold">Sensibilidad para ocultar automáticamente el menú al desplazarse</string>
     <string name="pref_highest">Más alta</string>
@@ -1038,11 +1034,11 @@
     <string name="open_in_app">Abrir en la aplicación</string>
     <string name="download_notifier_split_failed">No se pudo dividir la imagen descargada</string>
     <string name="split_tall_images">Dividir las imágenes altas</string>
-    <string name="split_tall_images_summary">Mejora el rendimiento del lector dividiendo páginas descargadas mucho más altas que anchas</string>
+    <string name="split_tall_images_summary">Mejora el rendimiento del visor, dividiendo páginas descargadas mucho más altas que anchas</string>
     <string name="download_notifier_split_page_not_found">No se ha encontrado la página %d al dividir</string>
     <string name="reading_list">Leyendo</string>
     <string name="wish_list">A leer en un futuro</string>
-    <string name="complete_list">Manga terminado</string>
+    <string name="complete_list">Leídos del todo</string>
     <string name="on_hold_list">En pausa</string>
     <string name="unfinished_list">Sin terminar</string>
     <string name="sort_fetched_time">Ordenar por tiempo</string>
@@ -1051,7 +1047,7 @@
     <string name="violet">Violeta</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Nombre del navegador a usar («user agent»)</string>
-    <string name="loader_rar5_error">La app no soporta el formato RARv5</string>
+    <string name="loader_rar5_error">La aplicación no es capaz de leer el formato RARv5</string>
     <string name="language_requires_app_restart">Algunos idiomas pueden requerir un reinicio de la aplicación para mostrarse correctamente</string>
     <string name="clear_db_exclude_read">Guardar las entradas con los capítulos leídos</string>
     <string name="all_read_manga">Todas las series leídas</string>
@@ -1102,7 +1098,7 @@
     <string name="read_duration_info">Tiempo usado por el lector, basado en el historial del capítulo</string>
     <string name="skipped_reason_not_always_update">Omitido, ya que no es necesario actualizarse</string>
     <string name="mean_tracking_score">Puntuación media de seguimiento</string>
-    <string name="error_user_agent_string_invalid">El nombre de agente de usuario no vale</string>
+    <string name="error_user_agent_string_invalid">La cadena con el agente de usuario («user agent») no parece ser correcta</string>
     <string name="popular">Populares</string>
     <string name="skip_dupe_chapters">Saltarse los capítulos repetidos</string>
     <string name="hide_in_library_items">Saltar elementos que ya estén en la biblioteca</string>
@@ -1127,7 +1123,27 @@
     <string name="library_entries">Entradas de la biblioteca</string>
     <string name="source_settings">Ajustes de la fuente</string>
     <string name="app_settings">Ajustes de la aplicación</string>
-    <string name="pref_debug_info">Información sobre la depuración</string>
+    <string name="pref_debug_info">Información de depuración</string>
     <string name="label_background_activity">Actividad en segundo plano</string>
     <string name="share_cover">Compartir la portada</string>
+    <string name="save_pages_separately">Guardar las páginas en carpetas separadas</string>
+    <string name="create_folders_by_manga_title">Crea carpetas según el título del manga</string>
+    <string name="extension_api_error">No se han podido obtener las extensiones disponibles</string>
+    <string name="ext_revoke_trust">Revocar extensiones desconocidas de confianza</string>
+    <string name="open_source_repo">Repositorio de código abierto</string>
+    <string name="action_add_repo">Añadir repositorio</string>
+    <string name="action_add_repo_message">Añade repositorios adicionales a Tachiyomi. Debe ser una URL que termine en \"index.min.json\"</string>
+    <string name="extension_repos">Repositorios de extensiones</string>
+    <plurals name="num_repos">
+        <item quantity="one">%d repo</item>
+        <item quantity="many">%d repos</item>
+        <item quantity="other">%d repos</item>
+    </plurals>
+    <string name="error_repo_exists">¡Este repositorio ya existe!</string>
+    <string name="repo_cannot_be_blank">El nombre del repositorio no puede estar en blanco</string>
+    <string name="snack_repo_deleted">Repo borrado</string>
+    <string name="invalid_repo_name">Nombre de repositorio no válido</string>
+    <string name="confirm_repo_deletion">Borrar repo</string>
+    <string name="delete_repo_confirmation">¿Desea eliminar el repo \"%s\"?</string>
+    <string name="url_not_set_click_again">La URL del repositorio no está configurada, por favor edite la URL</string>
 </resources>

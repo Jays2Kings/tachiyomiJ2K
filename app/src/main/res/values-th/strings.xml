@@ -310,7 +310,6 @@
     <string name="edge_nav">ขอบ</string>
     <string name="kindlish_nav">เหมือน Kindle</string>
     <string name="l_nav">รูปตัว L</string>
-    <string name="unofficial_extension_message">ส่วนขยายนี้ไม่ได้มาจากรายการส่วนขยายทางการของ Tachiyomi</string>
     <string name="obsolete_extension_message">ส่วนขยายนี้ไม่สามารถใช้ได้อีกต่อไป</string>
     <string name="none">ไม่มี</string>
     <string name="landscape">แนวนอน</string>
@@ -350,7 +349,6 @@
     <string name="webview_is_required">Tachiyomi จำเป็นต้องใช้ WebView</string>
     <string name="name">ชื่อ</string>
     <string name="no_pages_found">ไม่พบหน้า</string>
-    <string name="unofficial">ไม่เป็นทางการ</string>
     <string name="animate_page_transitions">แสดงแอนิเมชั่นเมื่อเปลี่ยนหน้า</string>
     <string name="last_used">ใช้ล่าสุด</string>
     <string name="check_site_in_web">ตรวจสอบเว็บไซต์ใน WebView</string>
@@ -422,7 +420,7 @@
     <string name="about_dont_kill_my_app">ผู้ผลิตบางรายมีข้อจำกัดเพิ่มเติมของแอปที่ปิดบริการพื้นหลัง เว็บไซต์นี้มีข้อมูลเพิ่มเติมเกี่ยวกับวิธีการแก้ไข</string>
     <string name="download_queue_size_warning">คำเตือน: การดาวน์โหลดจำนวนมากอาจทำให้แหล่งที่มาทำงานช้าลงและ/หรือปิดกั้น Tachiyomi แตะเพื่อเรียนรู้เพิ่มเติม</string>
     <string name="ext_installer_shizuku_unavailable_dialog">ติดตั้งและเริ่ม Shizuku เพื่อใช้ Shizuku เป็นตัวติดตั้งส่วนขยาย</string>
-    <string name="help_translate">แปลเป็นภาษาไทยโดย altinat</string>
+    <string name="help_translate">แปลเป็นภาษาไทยโดย altqx</string>
     <string name="cover_saved">บันทึกปกแล้ว</string>
     <string name="error_saving_cover">ผิดพลาดในการบันทึกปก</string>
     <string name="error_sharing_cover">ผิดพลาดในการแบ่งปันปก</string>
@@ -1045,4 +1043,7 @@
     <string name="app_settings">การตั้งค่าแอป</string>
     <string name="pref_debug_info">ข้อมูลดีบัก</string>
     <string name="label_background_activity">กิจกรรมเบื้องหลัง</string>
+    <string name="share_cover">แบ่งปันหน้าปก</string>
+    <string name="save_pages_separately">บันทึกแต่ละหน้าลงในโฟลเดอร์แยกต่างหาก</string>
+    <string name="create_folders_by_manga_title">สร้างโฟลเดอร์ตามชื่อของมังงะ</string>
 </resources>

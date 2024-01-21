@@ -181,7 +181,7 @@
     <string name="could_not_download_unexpected_error">Erro inesperado ao transferir capítulo</string>
     <string name="no_wifi_connection">Sem ligação de Wi-Fi disponível</string>
     <string name="categories">Categorias</string>
-    <string name="manga">Manga</string>
+    <string name="manga">Mangá</string>
     <string name="tracking">Manutenção</string>
     <string name="history">Histórico</string>
     <string name="extensions">Extensões</string>
@@ -439,9 +439,7 @@
     <string name="myanimelist_relogin">Por favor inicie sessão no MAL novamente</string>
     <string name="no_chapters_error">Nenhum capítulo encontrado</string>
     <string name="last_used">Último usado</string>
-    <string name="unofficial_extension_message">Esta extensão não vem da lista oficial de extensões do Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Não oficial</string>
     <string name="may_contain_nsfw">Pode conter conteúdo NSFW (18+)</string>
     <string name="next_page">Página seguinte</string>
     <string name="previous_page">Página anterior</string>

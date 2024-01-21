@@ -121,7 +121,7 @@
     <string name="clear_database_summary">Supprimer l\'historique des entrées qui ne sont pas enregistrées dans votre bibliothèque</string>
     <string name="clear_database_completed">Entrées supprimées</string>
     <string name="refresh_library_metadata">Actualiser les méta-données de la bibliothèque</string>
-    <string name="updates_covers_genres_desc">Mettre à jour les couvertures, genres, description et statut des mangas</string>
+    <string name="updates_covers_genres_desc">Mettre à jour les couvertures, genres, description et statut des entrées</string>
     <!-- About section -->
     <string name="version">Version</string>
     <string name="build_time">Date de compilation</string>
@@ -181,7 +181,7 @@
     <!-- Library update service notifications -->
     <string name="new_chapters_found">Des nouveaux chapitres ont été trouvés</string>
     <string name="failed_to_update_cover">La mise à jour de la couverture a échoué</string>
-    <string name="must_be_in_library_to_edit">Veuillez ajouter le manga dans votre bibliothèque avant</string>
+    <string name="must_be_in_library_to_edit">La série doit être dans votre bibliothèque pour être modifiée</string>
     <!-- File Picker Titles -->
     <string name="select_cover_image">Sélectionner l\'image de couverture</string>
     <string name="select_backup_file">Sélectionner un fichier de sauvegarde</string>
@@ -195,16 +195,16 @@
     <string name="download_error">Erreur lors du téléchargement</string>
     <string name="update_available">Mise à jour disponible</string>
     <!--Content Description-->
-    <string name="cover_of_image">Couverture du manga</string>
+    <string name="cover_of_image">Couverture de la série</string>
     <!-- Information Text -->
     <string name="no_recent_chapters">Aucun chapitre récent</string>
-    <string name="no_recently_read_manga">Aucun manga lu récemment</string>
+    <string name="no_recently_read_manga">Aucune série lue récemment</string>
     <string name="library_is_empty_add_from_browse">Votre bibliothèque est vide, vous pouvez ajouter des séries à votre bibliothèque depuis le menu Explorer.</string>
     <!-- Download Notification -->
     <string name="no_wifi_connection">Aucune connexion Wi-Fi disponible</string>
     <string name="no_network_connection">Aucune connexion disponible</string>
     <string name="language">Langue</string>
-    <string name="clear_database_confirmation">Êtes-vous sûr(e) \? Les chapitres lus et la progression des entrées non présentes dans la bibliothèque seront perdues</string>
+    <string name="clear_database_confirmation">Êtes-vous sûr(e) ? Les chapitres lus et la progression des entrées hors dans la bibliothèque seront perdues</string>
     <string name="custom_location">Répertoire personnalisé</string>
     <string name="could_not_download_unexpected_error">Une erreur inattendue s\'est produite lors du téléchargement du chapitre</string>
     <string name="fifth_to_last">Cinquième chapitre avant la fin</string>
@@ -390,7 +390,7 @@
     <string name="auto_refresh_covers_summary">Rafraîchir aussi les couvertures dans la bibliothèque lors de la mise à jour de la bibliothèque</string>
     <string name="auto_refresh_covers">Rafraîchir automatiquement les couvertures</string>
     <string name="include_in_global_update">Inclure dans la mise à jour globale</string>
-    <string name="when_sorting_ignore_articles">Lors du tri par ordre alphabétique, ne pas tenir compte des déterminants (un, une, le) au début des titres de manga</string>
+    <string name="when_sorting_ignore_articles">Lors du tri par ordre alphabétique, ne pas tenir compte des déterminants (un, une, le) au début des titres de la série</string>
     <string name="sort_by_ignoring_articles">Trier en ignorant les déterminants</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">et %1$d autre chapitre</item>
@@ -432,8 +432,8 @@
     <string name="category_deleted">Catégorie supprimée</string>
     <string name="manage_category">Gérer la catégorie</string>
     <string name="add_categories">Ajouter des catégories</string>
-    <string name="already_in_category">Manga déjà dans la catégorie</string>
-    <string name="confirm_category_deletion_message">Les mangas de cette catégorie seront déplacés dans la catégorie par défaut.</string>
+    <string name="already_in_category">Élément déjà dans la catégorie</string>
+    <string name="confirm_category_deletion_message">Les éléments de cette catégorie seront déplacés dans la catégorie par défaut.</string>
     <string name="confirm_category_deletion">Supprimer la catégorie \?</string>
     <plurals name="remove_n_chapters">
         <item quantity="one">Supprimer %1$d chapitre téléchargé \?</item>
@@ -504,7 +504,7 @@
     <string name="add_x_to_library">Ajouter %1$s à la bibliothèque \?</string>
     <string name="all_read_chapters">Tous les chapitres lus</string>
     <string name="starting_cleanup">Début du nettoyage</string>
-    <string name="no_chapters_found_for_migration">Aucun chapitre trouvé, ce manga ne peut pas être utilisé pour la migration</string>
+    <string name="no_chapters_found_for_migration">Aucun chapitre trouvé, cette série ne peut pas être utilisée pour la migration</string>
     <string name="use_default">Utilisation par défaut</string>
     <string name="top">Haut</string>
     <string name="sort_and_filter">Trier et filtrer</string>
@@ -538,7 +538,7 @@
     <string name="start_downloading_now">Commencer le téléchargement maintenant</string>
     <string name="not_downloaded">Non téléchargé</string>
     <string name="whats_new">Quoi de neuf</string>
-    <string name="you_can_migrate_in_library">Vous pouvez également migrer en sélectionnant un manga dans votre bibliothèque</string>
+    <string name="you_can_migrate_in_library">Vous pouvez également migrer en sélectionnant des entrées dans votre bibliothèque</string>
     <string name="migration_sources_changed">Les sources de migration ont changé</string>
     <string name="use_last_saved_migration_preferences">Utiliser les dernières préférences de pré-migration et les sources enregistrées pour les migrations de groupe</string>
     <string name="only_enable_enabled_for_migration">Active uniquement vos sources actuellement activées pour la migration</string>
@@ -549,8 +549,8 @@
     <string name="delete_all_covers__not_in_library_used_">Supprimez toutes les couvertures mises en cache qui ne sont pas dans votre bibliothèque
 \nEn cours d\'utilisation : %1$s</string>
     <string name="clear_cached_covers_non_library">Effacer les couvertures mises en cache qui ne sont pas dans la bibliothèque</string>
-    <string name="delete_old_covers_in_library_used_">Supprimez les anciennes et inutilisées couvertures de manga mises en cache dans votre bibliothèque qui a été mise à jour.
-\nEn cours d\'utilisation : %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Supprimez les anciennes et inutilisées couvertures des entrées mises en cache dans votre bibliothèque qui a été mise à jour.
+\nEn cours d\'utilisation : %1$s</string>
     <string name="clean_up_cached_covers">Nettoyer les couvertures mises en cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Nettoyage terminé. %d dossier supprimé</item>
@@ -562,7 +562,7 @@
     <string name="clean_orphaned_downloads">Supprimer les catégories vides</string>
     <string name="clean_up_downloaded_chapters">Supprimer les chapitres téléchargés</string>
     <string name="clean_read_downloads">Supprimer les lectures</string>
-    <string name="clean_read_manga_not_in_library">Supprimer les mangas qui ne sont pas dans la bibliothèque</string>
+    <string name="clean_read_manga_not_in_library">Supprimer les entrées qui ne sont pas dans la bibliothèque</string>
     <string name="delete_unused_chapters">Supprimer les catégories de chapitres inexistants, partiellement téléchargés et lus</string>
     <plurals name="cache_cleared">
         <item quantity="one">Cache effacé. %d fichier a été supprimé</item>
@@ -574,20 +574,20 @@
     <string name="restore_error">Échec de la restauration de la sauvegarde</string>
     <string name="white_theme">Blanc pur</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga migré</item>
-        <item quantity="many">%d mangas migrés</item>
-        <item quantity="other">%d mangas migrés</item>
+        <item quantity="one">%d série migrée</item>
+        <item quantity="many">%d séries migrées</item>
+        <item quantity="other">%d séries migrées</item>
     </plurals>
     <string name="skipping_">(sauter %1$d)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Copier le manga %1$d%2$s \?</item>
-        <item quantity="many">Copier les mangas %1$d%2$s \?</item>
-        <item quantity="other">Copier les mangas %1$d%2$s \?</item>
+        <item quantity="one">Copier la série %1$d%2$s ?</item>
+        <item quantity="many">Copier les séries%1$d%2$s ?</item>
+        <item quantity="other">Copier les séries %1$d%2$s ?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrer le manga %1$d%2$s \?</item>
-        <item quantity="many">Migrer les mangas %1$d%2$s \?</item>
-        <item quantity="other">Migrer les mangas %1$d%2$s \?</item>
+        <item quantity="one">Migrer la série %1$d%2$s ?</item>
+        <item quantity="many">Migrer les séries %1$d%2$s ?</item>
+        <item quantity="other">Migrer les séries %1$d%2$s ?</item>
     </plurals>
     <string name="stop_migrating">Arrêter de migrer \?</string>
     <string name="no_alternatives_found">Aucune alternatives trouvées</string>
@@ -652,9 +652,7 @@
     <string name="badges">Badges</string>
     <string name="file_picker_error">L’application de sélection de fichier est introuvable</string>
     <string name="open_log">Ouvrir le fichier journal</string>
-    <string name="unofficial_extension_message">Cette extension ne fait pas partie de la liste des extensions officielles de Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Non officiel</string>
     <string name="may_contain_nsfw">Peut contenir du contenu +18</string>
     <string name="next_page">Page suivante</string>
     <string name="previous_page">Page précédente</string>
@@ -671,7 +669,7 @@
     <string name="invalid_backup_file">Fichier de sauvegarde invalide</string>
     <string name="invalid_backup_file_type">Fichier de sauvegarde invalide : %1$s
 \nIl devrait se terminer par .proto.gz ou .json.</string>
-    <string name="backup_has_no_manga">La sauvegarde ne contient aucune série.</string>
+    <string name="backup_has_no_manga">La sauvegarde ne contient aucun élément.</string>
     <string name="restore_missing_sources">Sources manquantes :</string>
     <string name="restore_missing_trackers">Traceurs non connectés :</string>
     <string name="restore_content_full">Les données du fichier de sauvegarde seront restaurées.
@@ -708,7 +706,7 @@
     <string name="hides_on_scroll">Se cache lors du défilement</string>
     <string name="hide_bottom_nav">Masquer automatiquement la navigation du bas</string>
     <string name="last_used_library_recents">Dernière utilisation (Bibliothèque ou Récents)</string>
-    <string name="custom_manga_info">Infos personnalisées sur le manga</string>
+    <string name="custom_manga_info">Infos personnalisées sur la série</string>
     <string name="mark_all_chapters_as_unread">Marquer tous les chapitres comme non lus \?</string>
     <string name="cutout_area_behavior">Comportement de la zone de découpe</string>
     <string name="both_axes">Les deux axes</string>
@@ -750,7 +748,7 @@
     <string name="single_page">Page seule</string>
     <string name="double_pages">Doubles pages</string>
     <string name="preview">Aperçu</string>
-    <string name="no_recent_read_updated_manga">Manga non lu ou mis à jour récemment</string>
+    <string name="no_recent_read_updated_manga">Série non lue ou mis à jour récemment</string>
     <string name="show_reset_history_button">Afficher bouton pour réinitialiser l\'historique</string>
     <string name="unread_or_downloaded">Non lus ou téléchargés</string>
     <string name="only_downloaded">Seulement téléchargés</string>
@@ -837,7 +835,7 @@
     <string name="category_hopper_long_press">Action d\'un appui long sur le filtre par Catégorie</string>
     <string name="cancel_all_for_series">Tout annuler pour cette série</string>
     <string name="external_storage_download_notice">Pour télécharger des chapitres, TachiyomiJ2K nécessite l\'accès à tous les fichiers. Appuyez ici, puis activez « Autoriser l\'accès pour gérer tous les fichiers.»</string>
-    <string name="external_storage_permission_notice">Sous Android 11, TachiyomiJ2K nécessite l\'accès à tous les fichiers pour pouvoir télécharger des chapitres, créer des sauvegardes automatiques et lire des manga locaux.
+    <string name="external_storage_permission_notice">Sous Android 11, TachiyomiJ2K nécessite l\'accès à tous les fichiers pour pouvoir télécharger des chapitres, créer des sauvegardes automatiques et lire des séries locales.
 \n
 \nSur l\'écran suivant, activez « Autoriser l\'accès pour gérer tous les fichiers.»</string>
     <string name="include_">Inclure : %s</string>
@@ -961,7 +959,7 @@
     <string name="on_hiatus">En pause</string>
     <string name="tracking_info">Permet de synchroniser automatiquement les chapitres lus avec les services externes proposés. Allez dans le bouton « Suivi » d\'une série pour activer son suivi.</string>
     <string name="enhanced_services">Services avancés</string>
-    <string name="enhanced_tracking_info">Services qui fournissent des fonctionnalités améliorées pour des sources spécifiques. Les mangas sont automatiquement suivis quand ils sont ajoutés à votre bibliothèque.</string>
+    <string name="enhanced_tracking_info">Services qui fournissent des fonctionnalités améliorées pour des sources spécifiques. Les séries sont automatiquement suivies quand elles sont ajoutées à votre bibliothèque.</string>
     <string name="update_tracking_scoring_type">Mettre à jour le type de notation de %1$s</string>
     <string name="could_not_update_scoring_">Impossible de mettre à jour le type de notation : %1$s</string>
     <string name="scoring_type_updated">Type de notation mis à jour</string>
@@ -983,7 +981,7 @@
     <string name="ascending">Croissante</string>
     <string name="date">Date</string>
     <string name="descending">Décroissant</string>
-    <string name="clear_database_source_item_count">%1$d entrées qui ne sont pas dans la bibliothèque dans la base de données</string>
+    <string name="clear_database_source_item_count">%1$d entrées hors de la bibliothèque dans la base de données</string>
     <string name="database_clean">Base de données effacée</string>
     <string name="confirm_manga_add_duplicate">Vous avez une entrée dans votre bibliothèque portant le même nom mais provenant d\'une source différente (%1$s).
 \n
@@ -1009,7 +1007,7 @@
     <string name="most_entries">Le plus d\'entrées</string>
     <string name="select_uninstalled_sources">Sélectionner les sources désinstallées</string>
     <string name="use_staggered_grid">Utiliser une grille échelonnée</string>
-    <string name="pref_update_only_completely_read_summary">Ne mettre à jour le manga que s\'il n\'y a pas de chapitre non lu (complètement lu)</string>
+    <string name="pref_update_only_completely_read_summary">Ne mettre à jour la série que s\'il n\'y a pas de chapitre non lu (complètement lu)</string>
     <string name="update_tracking_after_reading">Mettre à jour le suivi après lecture</string>
     <string name="update_tracking_marked_read">Mettre à jour le suivi quand marqué comme lu</string>
     <string name="downloads_swipe_tutorial">Les téléchargements peuvent être annulés en les faisant glisser.
@@ -1079,8 +1077,8 @@
     <string name="statistics">Statistiques</string>
     <string name="local_titles">Titres locaux</string>
     <string name="no_data_for_filters">Aucune donnée trouvée pour vos filtres actuels</string>
-    <string name="all_read_manga">Tous les mangas lus</string>
-    <string name="clear_db_exclude_read">Conserver les mangas avec des chapitres lus</string>
+    <string name="all_read_manga">Toutes les séries lues</string>
+    <string name="clear_db_exclude_read">Conserver les entrées avec des chapitres lus</string>
     <string name="tracker">Traqueur</string>
     <plurals name="_series_types">
         <item quantity="one">%d type de série</item>
@@ -1124,8 +1122,15 @@
     <string name="open">Ouvrir</string>
     <string name="allow_notifications_recommended">Autoriser les notifications est recommandé pour garder votre bibliothèque et votre application à jour.</string>
     <string name="pref_remove_exclude_categories">Catégories exclues</string>
-    <string name="ext_installer_pref">Installateur</string>
+    <string name="ext_installer_pref">installeur</string>
     <string name="library_entries">Entrées de la bibliothèque</string>
     <string name="pref_debug_info">Informations de débogage</string>
     <string name="label_background_activity">Activité en arrière-plan</string>
+    <string name="app_settings">Paramètres de l\'application</string>
+    <string name="apply">Appliquer</string>
+    <string name="ext_installer_summary">Autorise les extensions d\'être installées sans action de l\'utilisateur et permet les mises à jour automatiques pour les appareils sous Android 12</string>
+    <string name="share_cover">Partager la couverture</string>
+    <string name="save_pages_separately">Sauvegarder les pages dans des dossiers séparés</string>
+    <string name="create_folders_by_manga_title">Crée les dossier selon le titre du manga</string>
+    <string name="source_settings">Paramètres sources</string>
 </resources>

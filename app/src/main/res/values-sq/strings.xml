@@ -19,7 +19,7 @@
     <string name="color_filter_blend_mode">Filtri me ngjyra modaliteti i përzierjes</string>
     <string name="secure_screen">Ekran i sigurt</string>
     <string name="categories">Kategoritë</string>
-    <string name="tracking">Ndjekja</string>
+    <string name="tracking">Gjurmimi</string>
     <string name="close">Mbylle</string>
     <string name="progress">Përparim</string>
     <string name="cancel_all">Anulo të gjitha</string>
@@ -35,7 +35,7 @@
     <string name="reduces_banding_impacts_performance">Redukton brezin, por mund të ndikojë në performancën</string>
     <string name="title">Titulli</string>
     <string name="split_tall_images_summary">Përmirëson performancën e lexuesit</string>
-    <string name="filter">Filtro</string>
+    <string name="filter">Filter</string>
     <string name="restore_missing_sources">Burimet që mungojnë:</string>
     <string name="reset">Rivendos</string>
     <string name="label_global_search">Kërkimi global</string>
@@ -52,7 +52,7 @@
     <string name="tako">Tako</string>
     <string name="backup_frequency">Frekuenca rezervë</string>
     <string name="channel_skipped">U anashkalua</string>
-    <string name="clear_database_completed">Hyrjet u fshinë</string>
+    <string name="clear_database_completed">Elementet u fshinë</string>
     <string name="no_match_found">Nuk u gjet asnjë përputhje</string>
     <string name="navigation">Navigimi</string>
     <string name="edit_categories">Redakto kategoritë</string>
@@ -70,7 +70,7 @@
     <string name="appwidget_unavailable_locked">Miniaplikacioni nuk ofrohet kur kyçja e aplikacionit është aktivizuar</string>
     <string name="portrait">Portret</string>
     <string name="unread">Të palexuara</string>
-    <string name="bookmarked">faqeshënuar</string>
+    <string name="bookmarked">Faqeshënuar</string>
     <string name="select_inverse">Zgjidhni anasjelltas</string>
     <string name="nsfw_sources">Burimet NSFW (18+)</string>
     <string name="website">Faqja e internetit</string>
@@ -122,7 +122,7 @@
     <string name="current_chapter">Aktuale:</string>
     <string name="category_is_empty">Kategorija është bosh</string>
     <string name="installing">duke instaluar</string>
-    <string name="appwidget_updates_description">Shiko përditësimin e fundit te bibliotekes tuaj</string>
+    <string name="appwidget_updates_description">Shiko përditësimin e fundit të elementeve të bibliotekes tuaj</string>
     <string name="channel_errors">Gabimet</string>
     <string name="complete_list">Lista e plotë</string>
     <string name="untrusted_extension">Shtesë pabesueshme</string>
@@ -152,7 +152,6 @@
     <string name="pref_inverted_colors">I përmbysur</string>
     <string name="crop_borders">Kufijtë e prerjeve</string>
     <string name="start_downloading_now">Fillo shkarkimin tani</string>
-    <string name="unofficial">Jozyrtare</string>
     <string name="hide_notification_content">Fshih përmbajtjen e njoftimit</string>
     <string name="screen">Ekrani</string>
     <string name="type">Lloji</string>
@@ -207,7 +206,7 @@
     <string name="what_should_backup">Çfarë dëshironi të bëni rezervë\?</string>
     <string name="skip_read_chapters">Kapërceni kapitujt e shënuar si të lexuar</string>
     <string name="move_to_top">Lëvizni në krye</string>
-    <string name="restore_missing_trackers">Gjurmuesit nuk kanë hyrë në:</string>
+    <string name="restore_missing_trackers">I pa identifikuar ne gjurmuesit:</string>
     <string name="chapter_not_found">Kapitulli nuk u gjet</string>
     <string name="pref_manage_notifications">Menaxho njoftimet</string>
     <string name="pinned">Fiksuar</string>
@@ -219,7 +218,7 @@
     <string name="open_in_webview">Hapni në WebView</string>
     <string name="copy_value">Kopjo</string>
     <string name="skipped_reason_not_caught_up">U anashkalua sepse ka kapituj të palexuar</string>
-    <string name="hide_in_library_items">Fshih hyrjet tashmë në bibliotekë</string>
+    <string name="hide_in_library_items">Fshih elementet tashmë në bibliotekë</string>
     <string name="fit_width">Gjerësia e përshtatshme</string>
     <string name="scale_type">Lloji i shkallës</string>
     <string name="help_translate">Ndihmoni në përkthimin</string>
@@ -279,7 +278,7 @@
     <string name="pref_highest">Më e larta</string>
     <string name="extensions">Shtesa</string>
     <string name="vertical_viewer">Vertikale</string>
-    <string name="read">Lexo</string>
+    <string name="read">Të lexuara</string>
     <string name="clear_history_confirmation">A je i sigurt\? E gjithë historia do të humbasë.</string>
     <string name="pref_global_search">Kërkimi global</string>
     <string name="l_nav">Në formë L</string>
@@ -347,7 +346,7 @@
     <string name="cancel_all_for_series">Anulo të gjitha për këtë seri</string>
     <string name="restore_duration">%02d min, %02d sek</string>
     <string name="sort">Rendit</string>
-    <string name="empty_backup_error">Nuk ka hyrje në bibliotekë për të rezervuar</string>
+    <string name="empty_backup_error">Nuk ka element në bibliotekë për të rezervuar</string>
     <string name="weekly">Javore</string>
     <string name="app_updates">Përditësimet e aplikacioneve</string>
     <string name="grayscale">Shkallëgri</string>
@@ -358,7 +357,7 @@
     <string name="download_new_chapters">Shkarkoni kapitujt e rinj</string>
     <string name="read_duration">Koha e të lezuarit</string>
     <string name="can_be_used_to_restore">Mund të përdoret për të rivendosur bibliotekën aktuale</string>
-    <string name="tracked">Gjurmuar</string>
+    <string name="tracked">I gjurmuar</string>
     <string name="remove_from_library">Hiqe nga biblioteka</string>
     <string name="right_and_left_nav">E djathta dhe e majta</string>
     <string name="restore_from_backup_file">Rivendosni bibliotekën nga skedari rezervë</string>
@@ -381,7 +380,7 @@
     <string name="battery_optimization_disabled">Optimizimi i baterisë është tashmë i çaktivizuar</string>
     <string name="by_update_date">Sipas datës së ngarkimit</string>
     <string name="green_initial">G</string>
-    <string name="trackers">Ndjekësit</string>
+    <string name="trackers">Gjurmuesit</string>
     <string name="download_notifier_split_page_not_found">Faqja %d nuk u gjet gjatë ndarjes</string>
     <string name="theres_no_previous_chapter">Nuk ka kapitull të mëparshëm</string>
     <string name="ongoing">Në vazhdim</string>
@@ -434,9 +433,41 @@
     <string name="cover_only_grid">Rrjetë vetëm me mbulesë</string>
     <string name="pref_remove_exclude_categories">Kategoritë e përjashtuara</string>
     <string name="ext_installer_pref">Instalues</string>
-    <string name="library_entries">Regjistrimet e bibliotekës</string>
-    <string name="clear_database_confirmation">A je i sigurt\? Lexoni kapitujt dhe përparimi i hyrjeve që nuk janë në bibliotekë do të humbasin</string>
-    <string name="clear_database_source_item_count">%1$d hyrje jashtë bibliotekës në bazën e të dhënave</string>
-    <string name="clear_database_summary">Fshi historikun për shënimet që nuk janë ruajtur në bibliotekën tënde</string>
+    <string name="library_entries">Elementet e bibliotekës</string>
+    <string name="clear_database_confirmation">A je i sigurt? Kapitujt e lexuar dhe progresi i elementeve që nuk janë në bibliotekë do të humbasin</string>
+    <string name="clear_database_source_item_count">%1$d element jashtë bibliotekës në bazën e të dhënave</string>
+    <string name="clear_database_summary">Fshi historikun për elementet që nuk janë ruajtur në bibliotekën tënde</string>
     <string name="label_background_activity">Aktiviteti në sfond</string>
+    <string name="grid_size">Përmasat e grafikut</string>
+    <string name="rotation">Lloji i rrotullimit</string>
+    <string name="comic">Libra Komik</string>
+    <string name="marked_as_unread">Shëno si i pa lexuar</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K ka nevojë për aksesin e të gjithë dokumentave në Android 11 për të shkarkuar kapitujt, për të krijuar rezerva automatike, dhe lezoj serite lokale.
+\n
+\nNë vijim, aktivizo \"Lejo aksesin për të menaxhuar të gjithe dokumentat.\"</string>
+    <string name="unlock">Hap</string>
+    <string name="manga">Manga</string>
+    <string name="manhwa">Manhwa</string>
+    <string name="in_progress">Në progres</string>
+    <string name="unlock_library">Hap për të aksesuar librarine</string>
+    <string name="last_read_chapter_">Kapitulli i lexuar i fundit %1$s</string>
+    <string name="description">Përshkrim</string>
+    <string name="marked_as_read">Shëno si i lexuar</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K ka nevojë për aksesin e të gjithë dokumentave për të shkarkuar kapitujt. Shtyp ketu, dhe pastaj \"Lejo aksesin për të menaxhuar të gjithe dokumentat.\"</string>
+    <string name="add_x_to">Shto %1$s në…</string>
+    <string name="not_started">Të pa nisura</string>
+    <string name="all_chapters_read">Të gjithë kapitujtë e lexuar</string>
+    <string name="artist">Artisti</string>
+    <string name="new_chapters">Kapituj të rinjë</string>
+    <string name="chapter_x_of_y">Kapitulli %1$d nga %2$d</string>
+    <string name="move_x_to">Lëviz %1$s në…</string>
+    <string name="unknown_status">Status i panjohur</string>
+    <string name="chapters_removed">Kapituj të hequr.</string>
+    <string name="webtoon">Webtoon</string>
+    <string name="author">Autori</string>
+    <string name="all_files_permission_required">Leje për dokumentat është e nevojshme</string>
+    <string name="manhua">Manhua</string>
+    <string name="removed_bookmark">Shenjëlibri e hequr</string>
+    <string name="not_bookmarked">Pa shenjëlibri</string>
+    <string name="dark">Errët</string>
 </resources>

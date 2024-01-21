@@ -144,11 +144,11 @@
     <string name="clear_cookies">Hapus cookies</string>
     <string name="cookies_cleared">Cookies dihapus</string>
     <string name="clear_database">Hapus database</string>
-    <string name="clear_database_summary">Hapus riwayat untuk entri yang tidak disimpan di perpustakaan Anda</string>
-    <string name="clear_database_confirmation">Apa kamu yakin\? Baca bab dan kemajuan entri non-perpustakaan akan hilang</string>
+    <string name="clear_database_summary">Menghapus riwayat untuk entri yang tidak disimpan di perpustakaan Anda</string>
+    <string name="clear_database_confirmation">Apakah Anda yakin\? Bab yang sudah dibaca dan kemajuan entri non-perpustakaan akan hilang</string>
     <string name="clear_database_completed">Entri dihapus</string>
     <string name="refresh_library_metadata">Perbarui metadata pustaka</string>
-    <string name="updates_covers_genres_desc">Mengunduh ulang sampul, genre, deskripsi dan informasi status manga</string>
+    <string name="updates_covers_genres_desc">Memperbarui sampul, genre, deskripsi, dan informasi status entri</string>
     <string name="refresh_tracking_metadata">Perbarui metadata pelacakan</string>
     <string name="updates_tracking_details">Perbarui status, nilai dan bab terakhir yang dibaca dari layanan pelacakan</string>
     <string name="version">Versi</string>
@@ -194,7 +194,7 @@
     <string name="use_image_as_cover">Gunakan gambar ini sebagai sampul\?</string>
     <string name="new_chapters_found">Bab baru ditemukan</string>
     <string name="failed_to_update_cover">Gagal memperbarui sampul</string>
-    <string name="must_be_in_library_to_edit">Manga harus sudah ditambahkan ke pustaka Anda sebelum diubah</string>
+    <string name="must_be_in_library_to_edit">Seri harus ada di perpustakaan Anda untuk diedit</string>
     <string name="select_cover_image">Pilih gambar sampul</string>
     <string name="select_backup_file">Pilih berkas cadangan</string>
     <string name="new_version_available">Versi aplikasi yang lebih baru tersedia!</string>
@@ -204,9 +204,9 @@
     <string name="download_complete">Mengunduh selesai</string>
     <string name="download_error">Kesalahan dalam mengunduh</string>
     <string name="update_available">Tersedia versi yang lebih baru</string>
-    <string name="cover_of_image">Sampul manga</string>
+    <string name="cover_of_image">Sampul seri</string>
     <string name="no_recent_chapters">Tidak ada bab yang baru</string>
-    <string name="no_recently_read_manga">Tidak ada manga yang barusan dibaca</string>
+    <string name="no_recently_read_manga">Tidak ada seri yang barusan dibaca</string>
     <string name="library_is_empty_add_from_browse">Pustaka Anda kosong, tambahkan seri ke pustaka Anda dari tab jelajahi.</string>
     <string name="could_not_download_unexpected_error">Terjadi kesalahan tak terduga saat mengunduh bab</string>
     <string name="no_wifi_connection">Tidak ada koneksi wifi yang tersedia</string>
@@ -377,7 +377,7 @@
     <string name="auto_refresh_covers_summary">Perbarui sampul di pustaka ketika memperbarui pustaka</string>
     <string name="auto_refresh_covers">Perbaharui sampul secara otomatis</string>
     <string name="include_in_global_update">Sertakan pembaharuan global</string>
-    <string name="when_sorting_ignore_articles">Ketika mengurutkan berdasarkan alfabet, urutan mengabaikan artikel (a,an,the) di awal judul komik</string>
+    <string name="when_sorting_ignore_articles">Saat mengurutkan menurut abjad, urutkan dengan mengabaikan artikel (a, an, the) di awal judul seri</string>
     <string name="sort_by_ignoring_articles">Urutkan dengan mengabaikan artikel</string>
     <plurals name="notification_and_n_more">
         <item quantity="other">dan %1$d bab lain</item>
@@ -415,8 +415,8 @@
     <string name="category_deleted">Kategori dihapus</string>
     <string name="manage_category">Kelola kategori</string>
     <string name="add_categories">Tambah kategori</string>
-    <string name="already_in_category">Manga telah ada dalam kategori</string>
-    <string name="confirm_category_deletion_message">Manga dalam kategori ini akan dipindahkan ke kategori default.</string>
+    <string name="already_in_category">Entri sudah ada dalam kategori</string>
+    <string name="confirm_category_deletion_message">Entri dalam kategori ini akan dipindahkan ke kategori default.</string>
     <string name="confirm_category_deletion">Hapus kategori\?</string>
     <string name="category_is_empty">Kategori kosong</string>
     <string name="create_new_category">Buat kategori baru</string>
@@ -472,9 +472,7 @@
     <string name="does_not_prevent_unofficial_nsfw">Hal ini tidak mencegah ekstensi tidak resmi atau yang berpotensi salahnya label untuk menampilkan konten NSFW (18+) dalam aplikasi.</string>
     <string name="whats_new">Apa yang baru</string>
     <string name="file_picker_error">Tidak ada aplikasi pemilih berkas yang ditemukan</string>
-    <string name="unofficial_extension_message">Ekstensi ini bukan dari daftar ekstensi resmi Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Tidak resmi</string>
     <string name="may_contain_nsfw">Mungkin berisi konten 18+</string>
     <string name="l_nav">Bentuk L</string>
     <string name="edge_nav">Tepi</string>
@@ -490,7 +488,7 @@
     <string name="invalid_backup_file">Berkas cadangan tidak valid</string>
     <string name="invalid_backup_file_type">Tipe berkas cadangan tidak valid: %1$s
 \nHarusnya nama berkas berakhir dengan .proto.gz atau .json.</string>
-    <string name="backup_has_no_manga">Cadangan tidak berisi manga apapun.</string>
+    <string name="backup_has_no_manga">Cadangan tidak berisi entri apapun.</string>
     <string name="restore_missing_sources">Kehilangan sumber:</string>
     <string name="restore_missing_trackers">Pelacakan tidak tersinkronisasi di:</string>
     <string name="restoring_backup_canceled">Pemulihan dibatalkan</string>
@@ -538,7 +536,7 @@
     <string name="unread_or_downloaded">Belum dibaca atau diunduh</string>
     <string name="top">Teratas</string>
     <string name="tag">Tag</string>
-    <string name="custom_manga_info">Info manga kustom</string>
+    <string name="custom_manga_info">Info seri kustom</string>
     <string name="error_sharing_cover">Gagal berbagi sampul</string>
     <string name="error_saving_cover">Gagal menyimpan sampul</string>
     <string name="cover_saved">Sampul disimpan</string>
@@ -561,11 +559,11 @@
     <string name="select_sources">Pilih sumber</string>
     <string name="selection">Pilihan</string>
     <plurals name="manga_migrated">
-        <item quantity="other">%d manga dimigrasi</item>
+        <item quantity="other">%d seri dimigrasi</item>
     </plurals>
     <string name="skipping_">(melewatkan %1$d)</string>
     <plurals name="copy_manga">
-        <item quantity="other">Salin manga %1$d%2$s\?</item>
+        <item quantity="other">Salin seri %1$d%2$s\?</item>
     </plurals>
     <string name="visit_recents_for_download_queue">Kunjungi tab terbaru untuk mengakses antrean unduhan. Anda juga dapat mengetuk atau menekan dan menahan dua kali untuk akses yang lebih cepat</string>
     <string name="manage_whats_downloading">Atur apa yang diunduh</string>
@@ -610,7 +608,7 @@
         <item quantity="other">Pembersihan selesai. %d folder telah dihapus</item>
     </plurals>
     <string name="starting_cleanup">Memulai pembersihan</string>
-    <string name="clean_read_manga_not_in_library">Bersihkan manga yang tidak terdapat di pustaka</string>
+    <string name="clean_read_manga_not_in_library">Bersihkan entri yang tidak ada di perpustakaan</string>
     <string name="clean_orphaned_downloads">Bersihkan unduhan yatim</string>
     <plurals name="cache_cleared">
         <item quantity="other">Cache telah dibersihkan. %d berkas telah dihapus</item>
@@ -681,7 +679,7 @@
     <string name="only_unread">Hanya yang belum dibaca</string>
     <string name="press_and_hold_to_also_reset">Tekan dan tahan dapat juga mengatur ulang riwayat bab</string>
     <string name="grouped">Kelompokkan</string>
-    <string name="no_recent_read_updated_manga">Tidak ada manga yang dibaca atau diperbarui saat ini</string>
+    <string name="no_recent_read_updated_manga">Tidak ada seri yang baru dibaca atau diperbarui</string>
     <string name="fetched_">Diambil %1$s</string>
     <string name="reset_chapter_history">Atur ulang riwayat bab</string>
     <string name="updates_and_history">Pembaruan &amp; riwayat</string>
@@ -720,7 +718,7 @@
     <string name="delete_downloaded_if_removed_online">Hapus bab yang diunduh jika sumber telah menghapus bab secara daring</string>
     <string name="delete_removed_chapters">Hapus bab yang dihapus</string>
     <string name="couldnt_download_low_space">Tidak dapat mengunduh bab karena kapasitas penyimpanan rendah</string>
-    <string name="you_can_migrate_in_library">Anda juga dapat migrasi dengan memilih manga di pustaka Anda</string>
+    <string name="you_can_migrate_in_library">Anda juga dapat melakukan migrasi dengan memilih entri di perpustakaan Anda</string>
     <string name="migration_sources_changed">Sumber migrasi telah berubah</string>
     <string name="use_last_saved_migration_preferences">Gunakan preferensi dan sumber pra-migrasi yang disimpan terakhir untuk migrasi massal</string>
     <string name="only_enable_enabled_for_migration">Hanya aktifkan sumber Anda saat ini untuk migrasi</string>
@@ -731,7 +729,7 @@
     <string name="delete_all_covers__not_in_library_used_">Hapus semua cache sampul yang tidak ada di pustaka Anda
 \nSaat ini menggunakan: %1$s</string>
     <string name="clear_cached_covers_non_library">Bersihkan cache sampul yang tidak ada di pustaka</string>
-    <string name="delete_old_covers_in_library_used_">Hapus sampul manga yang lama dan tidak digunakan di pustaka Anda yang telah diperbarui.
+    <string name="delete_old_covers_in_library_used_">Menghapus sampul cache yang lama dan tidak terpakai dari entri di perpustakaan Anda yang telah diperbarui.
 \nSaat ini menggunakan: %1$s</string>
     <string name="disable_if_issues_with_updating">Nonaktifkan ini jika Anda mengalami masalah dengan pembaruan dan pemulihan pustaka Anda</string>
     <string name="no_folders_to_cleanup">Tidak ada folder untuk dibersihkan</string>
@@ -761,10 +759,10 @@
     <string name="turn_off_">Nonaktifkan %s</string>
     <string name="turn_on_">Aktifkan %s</string>
     <plurals name="migrate_manga">
-        <item quantity="other">Migrasi %1$d%2$s manga\?</item>
+        <item quantity="other">Migrasi %1$d%2$s seri\?</item>
     </plurals>
     <string name="no_alternatives_found">Tidak ada Alternatif Ditemukan</string>
-    <string name="no_chapters_found_for_migration">Tidak ada bab yang ditemukan, manga ini tidak dapat digunakan untuk migrasi</string>
+    <string name="no_chapters_found_for_migration">Tidak ada bab yang ditemukan, seri ini tidak dapat digunakan untuk migrasi</string>
     <string name="all_files_permission_required">Perizinan berkas diperlukan</string>
     <string name="about_dont_kill_my_app">Beberapa pabrikan mempunyai batasan aplikasi tambahan yang mematikan layanan latar belakang. Website ini memiliki info lebih lanjut untuk memperbaikinya.</string>
     <string name="force_download_cache_refresh_summary">Hal ini akan memaksa cache unduhan untuk mengkalkulasi ulang. Berguna jika Anda memodifikasi unduhan di luar aplikasi ini dan ingin aplikasi ini untuk membacanya</string>
@@ -820,9 +818,9 @@
     <string name="update_completed">Pembaruan selesai</string>
     <string name="not_bookmarked">Tak ditandai</string>
     <string name="external_storage_download_notice">TachiyomiJ2K membutuhkan akses semua berkas untuk mengunduh bab. Ketuk di sini, lalu izinkan \"Izinkan akses untuk mengatur semua berkas.\"</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K membutuhkan akses ke semua berkas di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan memuat manga lokal.
+    <string name="external_storage_permission_notice">TachiyomiJ2K memerlukan akses ke semua file di Android 11 untuk mengunduh bab, membuat cadangan otomatis, dan membaca seri lokal.
 \n
-\nPada layar selanjutnya, izinkan \"Izinkan akses untuk mengatur semua berkas\"</string>
+\nPada layar berikutnya, aktifkan \"Izinkan akses untuk mengelola semua file.\"</string>
     <string name="restrictions_">Pembatasan: %1$s</string>
     <string name="remove_x_from_service_and_add_y">Hapus %1$s dari %2$s dan tambahkan %3$s</string>
     <string name="recently_installed">Dipasang baru-baru ini</string>
@@ -883,8 +881,8 @@
     <string name="cancelled">Dibatalkan</string>
     <string name="on_hiatus">Sedang Hiatus</string>
     <string name="enhanced_services">Layanan yang ditingkatkan</string>
-    <string name="enhanced_tracking_info">Layanan yang menyediakan fitur yang ditingkatan untuk sumber tertentu. Manga dilacak secara otomatis ketika ditambahkan ke pustaka Anda.</string>
-    <string name="tracking_info">Sinkronisasi satu arah untuk memperbarui kemajuan bab dalam layanan pelacakan. Siapkan pelacakan untuk entri manga individual dari tombol pelacakan.</string>
+    <string name="enhanced_tracking_info">Layanan yang menyediakan fitur yang disempurnakan untuk sumber tertentu. Entri secara otomatis dilacak ketika ditambahkan ke perpustakaan Anda.</string>
+    <string name="tracking_info">Sinkronisasi satu arah untuk memperbarui kemajuan bab dalam layanan pelacakan. Mengatur pelacakan untuk setiap entri dari tombol pelacakan.</string>
     <string name="scoring_type_updated">Tipe penilaian diperbarui</string>
     <string name="update_tracking_scoring_type">Perbarui tipe penilaian %1$s</string>
     <string name="could_not_update_scoring_">Tidak dapat memperbarui tipe penilaian: %1$s</string>
@@ -932,7 +930,7 @@
     <string name="language_badge">Penanda bahasa</string>
     <string name="show_">Tampilkan %1$s</string>
     <string name="must_view_details_before_migration">Detail halaman entri ini harus dilihat sebelum migrasi bisa dilakukan</string>
-    <string name="pref_update_only_completely_read_summary">Hanya perbarui manga jika tidak ada bab yang belum dibaca(selesai dibaca)</string>
+    <string name="pref_update_only_completely_read_summary">Hanya perbarui seri jika tidak ada bab yang belum dibaca (sudah selesai dibaca)</string>
     <string name="view_all">Tampilkan semua</string>
     <string name="update_tracking_after_reading">Perbarui pelacakan setelah dibaca</string>
     <string name="update_tracking_marked_read">Perbarui pelacakan setelah tandai telah dibaca</string>
@@ -977,8 +975,8 @@
     <string name="user_agent_string">String agen pengguna default</string>
     <string name="language_requires_app_restart">Beberapa bahasa mungkin memerlukan peluncuran ulang aplikasi untuk ditampilkan dengan benar</string>
     <string name="loader_rar5_error">Format RARv5 tidak didukung</string>
-    <string name="all_read_manga">Semua manga yang dibaca</string>
-    <string name="clear_db_exclude_read">Simpan manga dengan membaca chapter</string>
+    <string name="all_read_manga">Semua seri yang dibaca</string>
+    <string name="clear_db_exclude_read">Menyimpan entri dengan bab yang sudah dibaca</string>
     <string name="auto_download_while_reading">Unduh otomatis ketika sedang membaca</string>
     <string name="downloaded_chapters">Diunduh</string>
     <string name="titles_in_library">Judul-judul di perpustakaan</string>
@@ -1041,5 +1039,11 @@
     <string name="ext_installer_pref">Pemasang</string>
     <string name="library_entries">Entri pustaka</string>
     <string name="pref_debug_info">Info debug</string>
-    <string name="label_background_activity">Aktivitas dibelakang layar</string>
+    <string name="label_background_activity">Aktivitas latar belakang</string>
+    <string name="ext_installer_summary">Memungkinkan ekstensi diinstal tanpa petunjuk pengguna dan memungkinkan pembaruan otomatis untuk perangkat di bawah Android 12</string>
+    <string name="share_cover">Bagikan sampul</string>
+    <string name="source_settings">Pengaturan sumber</string>
+    <string name="app_settings">Pengaturan aplikasi</string>
+    <string name="save_pages_separately">Simpan halaman dalam folder terpisah</string>
+    <string name="create_folders_by_manga_title">Buat folder berdasarkan judul manga</string>
 </resources>

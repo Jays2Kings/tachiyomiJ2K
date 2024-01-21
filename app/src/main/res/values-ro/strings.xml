@@ -166,11 +166,11 @@
     <string name="clear_cookies">Curățare cookies</string>
     <string name="cookies_cleared">Cookies curățate</string>
     <string name="clear_database">Curățați baza de date</string>
-    <string name="clear_database_summary">Ștergeți istoricul pentru intrările care nu sunt salvate în bibliotecă</string>
-    <string name="clear_database_confirmation">Ești sigur\? Capitolele citite și progresul intrărilor din afara bibliotecii vor fi pierdute</string>
+    <string name="clear_database_summary">Ștergeți istoricul înregistrărilor care nu sunt salvate în bibliotecă</string>
+    <string name="clear_database_confirmation">Ești sigur? Capitolele citite și progresul înregistrărilor din afara bibliotecii vor fi pierdute</string>
     <string name="clear_database_completed">Înregistrări șterse</string>
     <string name="refresh_library_metadata">Reîncărca metadata bibliotecii</string>
-    <string name="updates_covers_genres_desc">Actualizare coperți, genuri, descrieri și informații despre starea mangaului</string>
+    <string name="updates_covers_genres_desc">Actualizare coperți, genuri, descrieri și informații despre starea înregistrărilor</string>
     <string name="refresh_tracking_metadata">Reîncărca urmarirea metadata</string>
     <string name="updates_tracking_details">Actualizează statusul, scorul și ultimul capitol citit de la serviciile de urmarire</string>
     <string name="version">Versiune</string>
@@ -239,7 +239,7 @@
     <string name="migrate">Migrează</string>
     <string name="new_chapters_found">Capitol nou găsit</string>
     <string name="failed_to_update_cover">Actualizare copertă eșuată</string>
-    <string name="must_be_in_library_to_edit">Vă rugăma să adăugați mangaul la bibliotecă incinte de a face asta</string>
+    <string name="must_be_in_library_to_edit">Seria trebuie să se afle in bibliotecă pentru a o putea edita</string>
     <string name="select_cover_image">Selectează imagine copertă</string>
     <string name="select_backup_file">Selectează fișier de copie de rezervă</string>
     <string name="new_version_available">Nouă actualizare disponibilă!</string>
@@ -249,9 +249,9 @@
     <string name="download_complete">Descărcare completă</string>
     <string name="download_error">Eroare la descărcare</string>
     <string name="update_available">Actualizare valabilă</string>
-    <string name="cover_of_image">Coperta la manga</string>
+    <string name="cover_of_image">Copertă înregistrare</string>
     <string name="no_recent_chapters">Nu există capitole recente</string>
-    <string name="no_recently_read_manga">Nici un manga citi recent</string>
+    <string name="no_recently_read_manga">Nici o serie citită recent</string>
     <string name="library_is_empty_add_from_browse">Biblioteca dumneavoastră este goală, puteți adaugă serii la bibliotecă de la Categorii.</string>
     <string name="could_not_download_unexpected_error">Nu s-a putut descărca capitolul din cauza unei erori neașteptate</string>
     <string name="no_wifi_connection">Nici o conexiune Wi Fi valabilă</string>
@@ -338,9 +338,7 @@
     <string name="badges">Insigne</string>
     <string name="no_chapters_error">Nu a fost găsit niciun capitol</string>
     <string name="last_used">Data ultimei utilizări</string>
-    <string name="unofficial_extension_message">Aceasta extensie nu face parte din lista oficială de extensii Tachiyomi.</string>
     <string name="nsfw_short">Peste 18</string>
-    <string name="unofficial">Neoficial</string>
     <string name="next_page">Pagina următoare</string>
     <string name="previous_page">Pagina anterioară</string>
     <string name="next_chapter">Capitolul următor</string>
@@ -354,7 +352,7 @@
     <string name="locale">Local</string>
     <string name="automatic_backups">Copii de rezervă create automat</string>
     <string name="invalid_backup_file">Fișierul de rezerva este invalid</string>
-    <string name="backup_has_no_manga">Copia de rezerva nu conține nici o manga.</string>
+    <string name="backup_has_no_manga">Copia de rezerva nu conține nici o intrare.</string>
     <string name="restore_missing_sources">Surse lipsă:</string>
     <string name="restore_missing_trackers">Trackerele nu sunt conectate la:</string>
     <string name="restoring_backup_canceled">Restaurare anulată</string>
@@ -477,8 +475,8 @@
     <string name="manage_category">Gestionați categoria</string>
     <string name="add_edit_categories">Adăugați/modificați categorii</string>
     <string name="add_categories">Adăugați categorii</string>
-    <string name="already_in_category">Manga deja în categorie</string>
-    <string name="confirm_category_deletion_message">Manga din această categorie va fi mutată în categoria implicită.</string>
+    <string name="already_in_category">Înregistrarea se află deja în categorie</string>
+    <string name="confirm_category_deletion_message">Înregistrările din această categorie va fi mutată în categoria implicită.</string>
     <string name="confirm_category_deletion">Ștergeți categoria\?</string>
     <string name="category_is_empty">Categoria este goală</string>
     <string name="new_category">Categorie nouă</string>
@@ -543,7 +541,7 @@
     <string name="show_download_button">Afișați butonul de descărcare</string>
     <string name="press_and_hold_to_also_reset">Apăsarea și menținerea apăsată poate reseta, de asemenea, istoricul capitolelor</string>
     <string name="reset_chapter_question">Resetați capitolul\?</string>
-    <string name="no_recent_read_updated_manga">Nici o manga recent citită sau actualizată</string>
+    <string name="no_recent_read_updated_manga">Nici o serie recent citită sau actualizată</string>
     <string name="added_">Adăugat %1$s</string>
     <string name="updated_">Actualizat %1$s</string>
     <string name="last_read_">Ultima citire %1$s</string>
@@ -556,7 +554,7 @@
     <string name="auto_refresh_covers_summary">Reîmprospătarea coperților din bibliotecă și la actualizarea bibliotecii</string>
     <string name="auto_refresh_covers">Reîmprospătează automat coperțile</string>
     <string name="include_in_global_update">Includeți în actualizarea globală</string>
-    <string name="when_sorting_ignore_articles">Când sortați în ordine alfabetică, sortați ignorând articolele (a, an, the) de la începutul titlurilor manga</string>
+    <string name="when_sorting_ignore_articles">Când sortați în ordine alfabetică, sortați ignorând articolele (a, an, the) de la începutul titlurilor seriilor</string>
     <string name="sort_by_ignoring_articles">Sortează după articole ignorate</string>
     <string name="_per_row">%d pe rând</string>
     <string name="grid_size">Dimensiunea grilei</string>
@@ -574,7 +572,7 @@
     <string name="use_last_saved_migration_preferences">Utilizați ultimele preferințe și surse salvate înainte de migrare pentru a migra în masă</string>
     <string name="only_enable_enabled_for_migration">Activați pentru migrare doar sursele activate în prezent</string>
     <string name="only_enable_pinned_for_migration">Se activează numai sursele fixate pentru migrare</string>
-    <string name="no_chapters_found_for_migration">Nu s-au găsit capitole, această manga nu poate fi folosită pentru migrare</string>
+    <string name="no_chapters_found_for_migration">Nu s-au găsit capitole, această serie nu poate fi folosită pentru migrare</string>
     <string name="data_to_include_in_migration">Date de inclus în migrație</string>
     <string name="skip_pre_migration">Treceți peste pre-migrație</string>
     <string name="migration">Migrație</string>
@@ -583,14 +581,14 @@
     <string name="search_recents">Căutați recentele…</string>
     <string name="recents">Recente</string>
     <plurals name="copy_manga">
-        <item quantity="one">Copiați %1$d%2$s manga\?</item>
-        <item quantity="few">Copiați %1$d%2$s manga\?</item>
-        <item quantity="other">Copiați %1$d%2$s manga\?</item>
+        <item quantity="one">Copiați seria %1$d%2$s?</item>
+        <item quantity="few">Copiați seriile %1$d%2$s?</item>
+        <item quantity="other">Copiați seriile %1$d%2$s?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrează %1$d%2$s manga\?</item>
-        <item quantity="few">Migrează %1$d%2$s manga\?</item>
-        <item quantity="other">Migrează %1$d%2$s manga\?</item>
+        <item quantity="one">Migrează seria %1$d%2$s?</item>
+        <item quantity="few">Migrează seriile %1$d%2$s?</item>
+        <item quantity="other">Migrează seriile %1$d%2$s?</item>
     </plurals>
     <string name="stop_migrating">Opriți migrarea\?</string>
     <string name="no_alternatives_found">Nu s-au găsit alternative</string>
@@ -628,7 +626,7 @@
 \n
 \nȘtergeți descărcarea acestora\?</item>
     </plurals>
-    <string name="custom_manga_info">Informații manga personalizate</string>
+    <string name="custom_manga_info">Informații serie personalizate</string>
     <string name="error_sharing_cover">Eroare la distribuirea copertei</string>
     <string name="error_saving_cover">Eroare la salvarea copertei</string>
     <string name="cover_saved">Copertă salvată</string>
@@ -711,11 +709,11 @@
     <string name="tako">Tako</string>
     <string name="warning">Avertizare</string>
     <string name="appearance">Aspect</string>
-    <string name="tracking_info">Sincronizare unidirecțională pentru actualizarea progresului capitolului în cadrul serviciilor de urmărire. Configurați urmărirea pentru intrările manga individuale din butonul de urmărire al acestora.</string>
+    <string name="tracking_info">Sincronizare unidirecțională pentru actualizarea progresului capitolului în cadrul serviciilor de monitorizare. Configurați monitorizarea pentru înregistrările individuale din butonul de monitorizare al acestora.</string>
     <string name="no_chapters_to_delete">Niciun capitol de șters</string>
     <string name="external_storage_download_notice">TachiyomiJ2K are nevoie de acces la toate fișierele pentru a descărca capitole. Atingeți aici, apoi activați \"Permiteți accesul pentru a gestiona toate fișierele\".</string>
     <string name="all_files_permission_required">Permisiuni necesare pentru a accesa fișierele</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K necesită acces la toate fișierele din Android 11 pentru a descărca capitole, pentru a crea copii de rezervă automate și pentru a citi manga locală.
+    <string name="external_storage_permission_notice">TachiyomiJ2K necesită acces la toate fișierele din Android 11 pentru a descărca capitole, pentru a crea automat copii de rezervă, și pentru a citi seriile locale.
 \n
 \nÎn ecranul următor, activați \"Allow access to manage all files\" (Permiteți accesul pentru a gestiona toate fișierele).</string>
     <string name="remove_all_downloads">Înlăturați toate descărcările\?</string>
@@ -742,7 +740,7 @@
     <string name="cover_only_grid">Grilaj doar cu coperți</string>
     <string name="use_staggered_grid">Grilaj în serie</string>
     <string name="notification_update_error">%1$d actualizari esuate</string>
-    <string name="notification_update_skipped">%1$d actualizari sarite</string>
+    <string name="notification_update_skipped">%1$d actualizări omise</string>
     <string name="skipped_reason_completed">Ignorata deoarece seria este completa</string>
     <string name="skipped_reason_not_caught_up">Ignorata deoarece sunt capitole necitite</string>
     <string name="skipped_reason_not_started">Ignorat din cauza lipsei de capitolel citite</string>
@@ -762,9 +760,9 @@
         <item quantity="other">Curățenie făcută. Au fost eliminate %d dosare</item>
     </plurals>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga a migrat</item>
-        <item quantity="few">%d mangauri au migrat</item>
-        <item quantity="other">%d mangauri au migrat</item>
+        <item quantity="one">%d seria a fost migrată</item>
+        <item quantity="few">%d seriile au fost migrate</item>
+        <item quantity="other">%d seriile au fost migrate</item>
     </plurals>
     <string name="global_updates">Actualizări globale</string>
     <string name="locked_landscape">Peisaj blocat</string>
@@ -779,7 +777,7 @@
     <string name="empty_backup_error">Nu există intrări în bibliotecă pentru a face backupuri</string>
     <string name="backup_restore_invalid_uri">Eroare: URI gol</string>
     <string name="webview_data_deleted">Datele WebView au fost șterse</string>
-    <string name="clear_database_source_item_count">%1$d intrări non-bibliotecare în baza de date</string>
+    <string name="clear_database_source_item_count">%1$d înregistrări în baza de datecare nu aparțin bibliotecii</string>
     <string name="move_series_to_top">Mutați seria în partea de sus</string>
     <string name="downloads_swipe_tutorial">Descărcările pot fi anulate prin îndepărtarea lor cu o glisare
 \nGlisați acest pont pentru a-l respinge</string>
@@ -879,7 +877,7 @@
     <string name="battery_not_low">Bateria nu este scăzută</string>
     <string name="download_ahead_info">Funcționează numai pentru intrările din bibliotecă și dacă capitolul curent și următorul sunt deja descărcate</string>
     <string name="always_keep">Păstrați întotdeauna</string>
-    <string name="split_tall_images">Împărțiți imagini înalte</string>
+    <string name="split_tall_images">Împărțiți imaginile înalte</string>
     <string name="split_tall_images_summary">Îmbunătățește performanța cititorului</string>
     <string name="orientation">Orientare</string>
     <string name="hide">Ascundeți</string>
@@ -937,7 +935,7 @@
     <string name="remove_from_">Scoateți din %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">Ștergeți toate coperțile stocate în memoria cache care nu se află în biblioteca dvs.
 \nUtilizați în prezent: %1$s</string>
-    <string name="you_can_migrate_in_library">Puteți migra, de asemenea, prin selectarea de manga în bibliotecă</string>
+    <string name="you_can_migrate_in_library">Puteți migra, de asemenea, prin selectarea înregistrărilor în bibliotecă</string>
     <string name="disable_if_issues_with_updating">Dezactivați această opțiune dacă întâmpinați probleme cu actualizarea sau restaurarea bibliotecii</string>
     <string name="automatic_removal">Eliminare automată</string>
     <string name="date">Dată</string>
@@ -974,9 +972,9 @@
     <string name="starting_cleanup">Începerea curățeniei</string>
     <string name="no_folders_to_cleanup">Nu există dosare de curățat</string>
     <string name="clean_up_cached_covers">Curățați coperțile din memoria cache</string>
-    <string name="delete_old_covers_in_library_used_">Ștergeți coperțile vechi și nefolosite din memoria cache a manga din biblioteca dvs. care a fost actualizată.
+    <string name="delete_old_covers_in_library_used_">Ștergeți coperțile vechi și nefolosite din memoria cache a înregistrărilor din biblioteca dvs. care a fost actualizată.
 \nÎn prezent se utilizează: %1$s</string>
-    <string name="clean_read_manga_not_in_library">Curăță mangaul care nu este în bibliotecă</string>
+    <string name="clean_read_manga_not_in_library">Curăță înregistrările care nu se află în bibliotecă</string>
     <string name="enabled">Activat</string>
     <string name="moved_to_">Mutat la %1$s</string>
     <string name="recently_updated">Actualizat recent</string>
@@ -1000,7 +998,7 @@
     <string name="unfinished_list">Lista neterminată</string>
     <string name="by_default_side_nav_info">În mod implicit, navigarea laterală este utilizată pentru anumite telefoane și tablete mici atunci când sunt în modul peisaj și se afișează întotdeauna pe tabletele mai mari</string>
     <string name="includes_recently_read_updated_added">Include seriile citite, actualizate și adăugate recent</string>
-    <string name="pref_update_only_completely_read_summary">Actualizați manga doar dacă nu există niciun capitol necitit (complet citit)</string>
+    <string name="pref_update_only_completely_read_summary">Actualizați seriile doar dacă nu există nici un capitol necitit (citite complet)</string>
     <string name="pref_inverted_colors">Inversate</string>
     <string name="show_on_long_press">Afișați la apăsare lungă</string>
     <string name="pure_black_dark_mode">Mod întunecat negru pur</string>
@@ -1010,7 +1008,7 @@
         <item quantity="few">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
         <item quantity="other">Omiterea a %d capitole, fie că sursa nu le are, fie că au fost filtrate</item>
     </plurals>
-    <string name="enhanced_tracking_info">Servicii care oferă caracteristici îmbunătățite pentru anumite surse. Manga sunt urmărite în mod automat atunci când sunt adăugate la biblioteca dumneavoastră.</string>
+    <string name="enhanced_tracking_info">Servicii care oferă caracteristici îmbunătățite pentru anumite surse. Seriile sunt monitorizate în mod automat atunci când sunt adăugate la biblioteca dumneavoastră.</string>
     <string name="update_tracking_marked_read">Actualizați urmărirea când este marcată ca fiind citită</string>
     <string name="complete_list">Lista completă</string>
     <string name="warning_unenroll_from_beta">Revenirea la versiunea de producție anterioară poate cauza probleme și ar putea necesita ștergerea datelor aplicației.</string>
@@ -1021,7 +1019,7 @@
     <string name="loader_rar5_error">Formatul RARv5 nu este acceptat</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="language_requires_app_restart">Unele limbi pot necesita o relansare a aplicației pentru a fi afișate corect</string>
-    <string name="clear_db_exclude_read">Păstrează manga cu capitole citite</string>
+    <string name="clear_db_exclude_read">Păstrează înregistrările cu capitole citite</string>
     <string name="user_agent_string">Șir de agent utilizator implicit</string>
     <string name="auto_download_while_reading">Descărcă automat în timp ce citiți</string>
     <string name="downloaded_chapters">Capitole descărcate</string>
@@ -1056,7 +1054,7 @@
         <item quantity="few">%d Limbi</item>
         <item quantity="other">%d Limbi</item>
     </plurals>
-    <string name="all_read_manga">Tot manga citit</string>
+    <string name="all_read_manga">Tote seriile citite</string>
     <string name="length">Lungime</string>
     <string name="start_year">Anul începerii</string>
     <string name="not_rated">Neevaluat</string>
@@ -1084,9 +1082,21 @@
     <string name="by_day">După zi</string>
     <string name="failed_to_update_">Actualizarea a eșuat pentru %1$s</string>
     <string name="gray_background">Gri</string>
-    <string name="app_updates">Actualizări de aplicație</string>
+    <string name="app_updates">Actualizări aplicație</string>
     <string name="pref_remove_exclude_categories">Categorii excluse</string>
-    <string name="ext_installer_pref">Program instalare</string>
-    <string name="library_entries">Intrări în bibliotecă</string>
+    <string name="ext_installer_pref">Program de instalare</string>
+    <string name="library_entries">Înregistrări în bibliotecă</string>
     <string name="label_background_activity">Activități în fundal</string>
+    <string name="show_more_chapters">Afișează mai multe capitole</string>
+    <string name="collapse_grouped_chapters">Restrânge capitolele grupate</string>
+    <string name="ext_installer_summary">Permite extensiilor să fie instalate fără a solicita utilizatorul și activează actualizările automate pentru dispozitive sub Android 12</string>
+    <string name="pref_debug_info">Informații de depanare</string>
+    <string name="apply">Aplicați</string>
+    <string name="share_cover">Partajați coperta</string>
+    <string name="source_settings">Setări surse</string>
+    <string name="save_pages_separately">Salvați paginile în directoare diferite</string>
+    <string name="app_settings">Setări aplicație</string>
+    <string name="open">Deschideți</string>
+    <string name="allow_notifications_recommended">Permiterea notificărilor este recomandată pentru a ține biblioteca la zi.</string>
+    <string name="create_folders_by_manga_title">Creați directoare in conformitate cu titlul manga-ului</string>
 </resources>

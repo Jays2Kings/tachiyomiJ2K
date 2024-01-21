@@ -413,9 +413,7 @@
 \n
 \nJūs priimate šias rizikas pasitikėdami sertifikatu.</string>
     <string name="obsolete_extension_message">Šis plėtinys nebėra prieinamas.</string>
-    <string name="unofficial_extension_message">Šis plėtinys nėra iš oficialaus Tachiyomi sąrašo.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Neoficiali</string>
     <string name="app_info">Aplikacijos informacija</string>
     <string name="update_all">Atnaujinti viską</string>
     <string name="cover_updated">Atnaujintas viršelis</string>
@@ -520,4 +518,6 @@
     <string name="library_entries">Bibliotekos įrašai</string>
     <string name="clear_database_summary">Ištrinkite įrašų istoriją, kurie nėra išsaugoti jūsų bibliotekoje</string>
     <string name="label_background_activity">Fono veikla</string>
+    <string name="grid_size">Elementai eilutėje</string>
+    <string name="rotation">Sukimosi tipas</string>
 </resources>

@@ -4,7 +4,7 @@
     <string name="manga">Manga</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K mbutuhake akses menyang kabeh file ing Android 11 kanggo ndownload bab, nggawe serep otomatis, lan maca manga lokal.
 \n
-\n Ing layar sabanjure, aktifake \"Allow akses kanggo ngatur kabeh file.\"</string>
+\nIng layar sabanjure, aktifake \"Allow akses kanggo ngatur kabeh file.\"</string>
     <string name="external_storage_download_notice">TachiyomiJ2K mbutuhake akses menyang kabeh file kanggo ngundhuh bab. Tutul ing kene, banjur aktifake \"Allow akses kanggo ngatur kabeh file.\"</string>
     <string name="manhwa">Manhwa</string>
     <string name="title">Judhul</string>
@@ -14,7 +14,6 @@
     <string name="other">Liyane</string>
     <string name="label_global_search">Penggolekan global</string>
     <string name="untrusted_extension">Ekstensi ora kapracaya</string>
-    <string name="unofficial_extension_message">Ekstensi iki ora saka dhaptar ekstensi Tachiyomi resmi.</string>
     <string name="tracking">Ngelacak</string>
     <string name="type">Jinis</string>
     <string name="migrate">Pindah</string>
@@ -83,7 +82,6 @@
 \n Kanthi percaya karo sertifikat iki, sampeyan nampa risiko kasebut.</string>
     <string name="nsfw_short">18+</string>
     <string name="app_info">Infone aplikasi</string>
-    <string name="unofficial">Ora resmi</string>
     <string name="update_all">Nganyari kabeh</string>
     <string name="next_chapter">Bab sabanjure</string>
     <string name="previous_chapter">Bab sadurunge</string>
@@ -225,4 +223,11 @@
     <string name="warning">Awas</string>
     <string name="ext_installer_pref">Pemasang</string>
     <string name="library_entries">Entri perpustakaan</string>
+    <string name="in_progress">Otw</string>
+    <string name="description">Deskripsi</string>
+    <string name="not_started">Gorong dimulai</string>
+    <string name="read">Moco</string>
+    <string name="manhua">Manhua</string>
+    <string name="local_source">Lokal manga</string>
+    <string name="grid_size">Item saben baris</string>
 </resources>

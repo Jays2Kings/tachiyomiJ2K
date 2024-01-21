@@ -134,7 +134,7 @@
     <string name="download_error">Chyba při stahování</string>
     <string name="update_available">Dostupná aktualizace</string>
     <string name="no_recent_chapters">Žádné nedávné kapitoly</string>
-    <string name="no_recently_read_manga">Žádné nedávno čtené mangy</string>
+    <string name="no_recently_read_manga">Žádné nedávno čtené publikace</string>
     <string name="could_not_download_unexpected_error">Došlo k neznámé chybě při stahování kapitoly</string>
     <string name="no_wifi_connection">WiFi připojení není dostupné</string>
     <string name="no_network_connection">Síťové připojení není dostupné</string>
@@ -207,7 +207,7 @@
     <string name="cookies_cleared">Cookies vymazány</string>
     <string name="clear_database">Vyčistit databázi</string>
     <string name="clear_database_summary">Smazat historii položek, které nejsou uloženy ve vaší knihovně</string>
-    <string name="clear_database_confirmation">Jste si jistí\? Přečtené kapitoly a postup v položkách mimo knihovnu bude ztracen</string>
+    <string name="clear_database_confirmation">Jste si jistí? Přečtené kapitoly a postup v položkách mimo knihovnu bude ztracen</string>
     <string name="clear_database_completed">Položky byly smazány</string>
     <string name="refresh_library_metadata">Obnovit metadata knihovny</string>
     <string name="refresh_tracking_metadata">Obnovit metadata sledování</string>
@@ -247,15 +247,15 @@
     <string name="can_be_used_to_restore">Lze použít k obnovení aktuální knihovny</string>
     <string name="restore_from_backup_file">Obnovit knihovnu ze záložního souboru</string>
     <string name="max_auto_backups">Maximální automatické zálohování</string>
-    <string name="updates_covers_genres_desc">Aktualizuje obaly, žánry, popisy a informace o stavu mangy</string>
+    <string name="updates_covers_genres_desc">Aktualizuje obaly, žánry, popisy a informace o stavu publikace</string>
     <string name="log_in_to_">Přihlášení pro %1$s</string>
     <string name="category_with_name_exists">Kategorie s tímto jménem již existuje!</string>
     <string name="use_image_as_cover">Chcete tento obrázek nastavit jako obal\?</string>
     <string name="failed_to_load_pages_">Chyba při načítání stránek: %1$s</string>
     <string name="failed_to_update_cover">Chyba při aktualizaci obalu</string>
-    <string name="must_be_in_library_to_edit">Přidejte si prosím mangu do knihovny před tím, než toto uděláte</string>
+    <string name="must_be_in_library_to_edit">Přidejte si prosím publikaci do knihovny před tím, než toto uděláte</string>
     <string name="select_cover_image">Vybrat obrázek obalu</string>
-    <string name="cover_of_image">Obal mangy</string>
+    <string name="cover_of_image">Obal publikace</string>
     <string name="library_is_empty_add_from_browse">Vaše knihovna je prázdná, můžete si sem přidat série ze záložky \"Procházet\".</string>
     <string name="common">Běžný</string>
     <string name="creating_backup">Vytváření zálohy</string>
@@ -315,7 +315,6 @@
     <string name="webtoon_side_padding_0">Žádné</string>
     <string name="right_and_left_nav">Vpravo a Vlevo</string>
     <string name="l_nav">Ve tvaru písmene L</string>
-    <string name="unofficial_extension_message">Toto rozšíření není z oficiálního seznamu rozšíření pro Tachiyomi.</string>
     <string name="secure_screen">Chráněná obrazovka</string>
     <string name="lock_with_biometrics">Vyžadovat odemknutí</string>
     <string name="updating_library">Aktualizuji knihovnu</string>
@@ -341,8 +340,8 @@
     <string name="manage_category">Spravovat kategorie</string>
     <string name="add_edit_categories">Přidat/Upravit kategorie</string>
     <string name="add_categories">Přidat kategorie</string>
-    <string name="already_in_category">Manga již je v kategorii</string>
-    <string name="confirm_category_deletion_message">Manga v této kategorii bude přesunuta do výchozí kategorie.</string>
+    <string name="already_in_category">Položka již je v kategorii</string>
+    <string name="confirm_category_deletion_message">Položky v této kategorii budou přesunuty do výchozí kategorie.</string>
     <string name="confirm_category_deletion">Smazat kategorii\?</string>
     <string name="category_is_empty">Kategorie je prázdná</string>
     <string name="create_new_category">Vytvořit novou kategori</string>
@@ -384,7 +383,7 @@
     <string name="recents">Nedávné</string>
     <string name="auto_refresh_covers_summary">Obnovit přebaly v knihovně i při aktualizaci knihovny</string>
     <string name="auto_refresh_covers">Automaticky obnovovat přebaly</string>
-    <string name="when_sorting_ignore_articles">Při řazení dle abecedy, zahrnovat i ignorované členy (a, an, the) na začátku názvů mang</string>
+    <string name="when_sorting_ignore_articles">Při řazení dle abecedy, zahrnovat i ignorované členy (a, an, the) na začátku názvů publikací</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">a %1$d další kapitolu</item>
         <item quantity="few">a %1$d další kapitoly</item>
@@ -438,7 +437,6 @@
     <string name="finished_reading_date">Datum dokončení čtení</string>
     <string name="check_site_in_web">Zobrazit stránku ve WebView</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Neoficiální</string>
     <string name="may_contain_nsfw">Může obsahovat obsah pro dospělé (18+)</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Je dostupná aktualizace rozšíření</item>
@@ -462,7 +460,7 @@
     <string name="updated_to_">Aktualizováno na verzi v%1$s</string>
     <string name="backup_and_restore">Záloha a obnova</string>
     <string name="automatic_backups">Automatické zálohy</string>
-    <string name="backup_has_no_manga">Záloha neobsahuje žádnou mangu.</string>
+    <string name="backup_has_no_manga">Záloha neobsahuje žádné položky.</string>
     <string name="backup_failed">Zálohování selhalo</string>
     <string name="restore_missing_sources">Chybějící zdroje:</string>
     <string name="restore_missing_trackers">Sledovače, ve kterých nejsi přihlášený/á:</string>
@@ -504,7 +502,7 @@
     <string name="only_unread">Pouze nepřečtené</string>
     <string name="show_download_button">Zobrazit tlačítko stažení</string>
     <string name="reset_chapter_question">Resetovat kapitolu\?</string>
-    <string name="no_recent_read_updated_manga">Žádná nedávno čtená nebo aktualizovaná manga</string>
+    <string name="no_recent_read_updated_manga">Žádná nedávno čtená nebo aktualizovaná publikace</string>
     <string name="reset_chapter_history">Resetovat historii kapitol</string>
     <string name="edge_nav">Okraj</string>
     <string name="changing_will_reset_reading_mode">Změněním této hodnoty se resetuje režim čtení pro tuto sérii</string>
@@ -598,7 +596,7 @@
 \nChcete je smazat\?</item>
     </plurals>
     <string name="set_as_default">Nastavit jako výchozí</string>
-    <string name="custom_manga_info">Vlastní info o manze</string>
+    <string name="custom_manga_info">Vlastní informace o publikaci</string>
     <string name="source_not_installed">Zdroj není nainstalován</string>
     <string name="remember_this_choice">Zapamatovat si tuto volbu</string>
     <string name="reset_cover">Obnovit přebal</string>
@@ -693,7 +691,7 @@
     <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi. Klepnutím se dozvíte více.</string>
     <string name="every_3_days">Každé 3 dny</string>
     <string name="reduces_banding_impacts_performance">Snižuje pruhování barev, ale může mít vliv na výkon</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uloženou mangu.
+    <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uložené publikace.
 \n
 \nNa obrazovce povolte \"Povolit aplikaci přístup ke všem souborům.\"</string>
     <string name="extension_updates_pending">Rozšíření čekající na aktualizaci</string>
@@ -729,9 +727,9 @@
     <string name="publishing_finished">Zveřejnění dokončeno</string>
     <string name="cancelled">Zrušeno</string>
     <string name="on_hiatus">Má pauzu</string>
-    <string name="tracking_info">Jednosměrná synchronizace pro aktualizaci počtu přečtených kapitol ve sledovacích službách. Nastavení sledování pro každou mangu je možné z jejich tlačítka sledování.</string>
+    <string name="tracking_info">Jednosměrná synchronizace pro aktualizaci počtu přečtených kapitol ve sledovacích službách. Nastavení sledování pro každou publikaci je možné z jejich tlačítka sledování.</string>
     <string name="enhanced_services">Rozšířené služby</string>
-    <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Manga je po přidání do knihovny automaticky sledována.</string>
+    <string name="enhanced_tracking_info">Služby, které poskytují rozšířené funkce pro konkrétní zdroje. Publikace je po přidání do knihovny automaticky sledována.</string>
     <string name="local_invalid_format">Neplatný formát kapitoly</string>
     <string name="order_by">Seřadit podle</string>
     <string name="grayscale">Odstíny šedé</string>
@@ -740,7 +738,7 @@
     <string name="ascending">Vzestupně</string>
     <string name="date">Datum</string>
     <string name="descending">Sestupně</string>
-    <string name="clear_database_source_item_count">%1$d neknihovní záznamy v databázi</string>
+    <string name="clear_database_source_item_count">%1$d položek v databázi co nejsou v knihovně</string>
     <string name="database_clean">vyčištění databáze</string>
     <string name="confirm_manga_add_duplicate">Ve své knihovně máte položku se stejným názvem, ale z jiného zdroje (%1$s).
 \n
@@ -837,13 +835,13 @@
     <string name="white_theme">Čistě Bílá</string>
     <string name="update_tracking_scoring_type">Aktualizovat typ hodnocení %1$s</string>
     <string name="skip_pre_migration">Přeskočit předmigraci</string>
-    <string name="no_chapters_found_for_migration">Nebyly nalezeny žádné kapitoly, tuto mangu nelze použít pro migraci</string>
+    <string name="no_chapters_found_for_migration">Nebyly nalezeny žádné kapitoly, tuto publikaci nelze použít pro migraci</string>
     <string name="show_larger_toolbar">Zobrazení většího, rozšířeného panelu nástrojů v horní části většiny stránek (nezobrazuje se na menších zařízeních bez ohledu na nastavení)</string>
     <string name="dont_migrate">Nemigrovat</string>
     <string name="copy_now">Kopírovat nyní</string>
     <string name="migrate_">Migrovat %1$s</string>
     <string name="use_staggered_grid">Použít odstupňovanou mřížku</string>
-    <string name="pref_update_only_completely_read_summary">Aktualizovat mangu pouze v případě, že není žádná nepřečtená kapitola (kompletně přečtená)</string>
+    <string name="pref_update_only_completely_read_summary">Aktualizovat publikace pouze v případě, že není žádná nepřečtená kapitola (kompletně přečtená)</string>
     <string name="show_">Zobrazit %1$s</string>
     <string name="currently_reading">Aktuálně čteno</string>
     <string name="select_an_entry">Vyberte položky</string>
@@ -873,7 +871,7 @@
     <string name="classic_blue">Klasická Modrá</string>
     <string name="includes_recently_read_updated_added">Zahrnout nedávno přečtené, aktualizované a přidané série</string>
     <string name="shift_one_page_over">Posunout o jednu stránku</string>
-    <string name="clean_read_manga_not_in_library">Vyčištění mangy, která není v knihovně</string>
+    <string name="clean_read_manga_not_in_library">Vyčištění publikací, které nejsou v knihovně</string>
     <string name="manage_whats_downloading">Spravujte, co se stahuje</string>
     <string name="add_to_">Přidat do %1$s</string>
     <string name="preview">Náhled</string>
@@ -920,9 +918,9 @@
     <string name="delete_downloaded_if_removed_online">Odstranění stažených kapitol, pokud zdroj odstranil tuto kapitolu online</string>
     <string name="ask_on_chapters_page">Odstranění během globálních aktualizací, dotázat se na stránce kapitol</string>
     <plurals name="migrate_manga">
-        <item quantity="one">Migrovat %1$d%2$s mangu\?</item>
-        <item quantity="few">Migrovat %1$d%2$s mangy\?</item>
-        <item quantity="other">Migrovat %1$d%2$s mang\?</item>
+        <item quantity="one">Migrovat %1$d%2$s publikaci?</item>
+        <item quantity="few">Migrovat %1$d%2$s publikace?</item>
+        <item quantity="other">Migrovat %1$d%2$s publikací?</item>
     </plurals>
     <string name="restore_error">Nepodařilo se obnovit zálohu</string>
     <string name="warning_enroll_into_beta">Beta verze mohou být nestabilní a mohou vyžadovat vymazání dat aplikace.</string>
@@ -933,7 +931,7 @@
     <string name="notify_extension_updated">Oznamovat aktualizaci rozšíření</string>
     <string name="some_extensions_may_not_update">Některá rozšíření nemusí být automaticky aktualizována, pokud byla nainstalována mimo tuto aplikaci</string>
     <string name="only_enable_enabled_for_migration">Povolit migraci pouze aktuálně povolených zdrojů</string>
-    <string name="you_can_migrate_in_library">Migrovat můžete také výběrem mangy v knihovně</string>
+    <string name="you_can_migrate_in_library">Migrovat můžete také výběrem publikací v knihovně</string>
     <string name="migration_sources_changed">Změněny zdroje migrace</string>
     <string name="match_enabled_sources">Shodovat s povolenými zdroji</string>
     <string name="log_in">Přihlásit se</string>
@@ -959,14 +957,14 @@
     <string name="recently_updated">Nedávno aktualizované</string>
     <string name="must_view_details_before_migration">Stránka s podrobnostmi o této položce musí být zobrazena před tím, než bude možné migrovat</string>
     <plurals name="copy_manga">
-        <item quantity="one">Kopírovat %1$d%2$s mangu\?</item>
-        <item quantity="few">Kopírovat %1$d%2$s mangy\?</item>
-        <item quantity="other">Kopírovat %1$d%2$s mang\?</item>
+        <item quantity="one">Kopírovat %1$d%2$s publikaci?</item>
+        <item quantity="few">Kopírovat %1$d%2$s publikace?</item>
+        <item quantity="other">Kopírovat %1$d%2$s publikací?</item>
     </plurals>
     <plurals name="manga_migrated">
-        <item quantity="one">%d manga migrována</item>
-        <item quantity="few">%d manga migrovány</item>
-        <item quantity="other">%d manga migrováno</item>
+        <item quantity="one">%d publikace migrována</item>
+        <item quantity="few">%d publikace migrovány</item>
+        <item quantity="other">%d publikací migrováno</item>
     </plurals>
     <string name="delete_unused_chapters">Odstraňte neexistující, částečně stažené a přečtené složky kapitol</string>
     <string name="clean_up_cached_covers">Vyčištění obalů uložených v mezipaměti</string>
@@ -1016,14 +1014,14 @@
     <string name="username_must_not_be_blank">Uživatelské jméno nebo heslo nesmí být prázdné</string>
     <string name="beta">BETA</string>
     <string name="no_new_chapters_open_details">Pokud nejsou k dispozici žádné nové kapitoly, otevřou se místo toho podrobnosti o sérii</string>
-    <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů mangy v knihovně, které byly aktualizovány.
+    <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů publikací v knihovně, které byly aktualizovány.
 \nAktuálně používáno: %1$s</string>
     <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Výchozí řetězec uživatelského agenta</string>
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
-    <string name="all_read_manga">Všechna přečtená manga</string>
-    <string name="clear_db_exclude_read">Ponechejte mangu s přečtenými kapitolami</string>
+    <string name="all_read_manga">Všechny přečtené publikace</string>
+    <string name="clear_db_exclude_read">Ponechejte položky s přečtenými kapitolami</string>
     <string name="auto_download_while_reading">Automatické stahování při čtení</string>
     <string name="downloaded_chapters">Stažené kapitoly</string>
     <string name="statistics">Statistiky</string>
@@ -1097,4 +1095,8 @@
     <string name="app_settings">Nastavení aplikace</string>
     <string name="pref_debug_info">Ladící informace</string>
     <string name="label_background_activity">Činnost na pozadí</string>
+    <string name="save_pages_separately">Uložit stránky do odlišných složek</string>
+    <string name="ext_installer_summary">Umožňuje aby rozšíření byly nainstalovány bez zásahu uživatele a povoluje automatické aktualizace pro zařízení se systémem nižším než Android 12</string>
+    <string name="share_cover">Sdílet obálku</string>
+    <string name="create_folders_by_manga_title">Vytvoří složky podle názvu mangy</string>
 </resources>

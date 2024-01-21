@@ -336,9 +336,7 @@
     <string name="whats_new">Hva er nytt</string>
     <string name="badges">merker</string>
     <string name="last_used">Sist brukt</string>
-    <string name="unofficial_extension_message">Denne utvidelsen kommer ikke fra den offisielle Tachiyomi-utvidelseslisten.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Uoffisiell</string>
     <string name="animate_page_transitions">Sideovergangsanimasjoner</string>
     <string name="default_reading_mode">Forvalgt lesemodus</string>
     <string name="invert_tapping">Inverter trykk</string>

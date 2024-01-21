@@ -163,9 +163,7 @@
     <string name="never">Soha</string>
     <string name="search_settings">Keresési beállítások</string>
     <string name="locale">Helyszín</string>
-    <string name="unofficial_extension_message">Ez a bővítmény nem a hivatalos Tachiyomi bővítménylistából származik.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Nem hivatalos</string>
     <string name="nsfw_sources">NSFW (18+) források</string>
     <string name="open_log">Napló megnyitása</string>
     <plurals name="category_plural">
@@ -619,4 +617,13 @@
     <string name="library_entries">Könyvtár bejegyzések</string>
     <string name="pref_debug_info">Debug információ</string>
     <string name="label_background_activity">Háttér aktivitás</string>
+    <string name="skipped_reason_not_always_update">Átlépve, mert a sorozatot nem kell frissíteni</string>
+    <string name="error_user_agent_string_invalid">Érvénytelen felhasználói ágens (user agent) szöveg</string>
+    <string name="source_settings">Forrás beállítások</string>
+    <string name="app_settings">Applikáció beállítások</string>
+    <string name="appwidget_updates_description">Lásd nemrég frissített mangádat</string>
+    <string name="clear_database_summary">Nem könyvtári elemek előzményeinek törlése</string>
+    <string name="updates_last_update_info">Könyvtár utoljára frissítve: %s</string>
+    <string name="trackers">Követők</string>
+    <string name="rotation">Forgatás típus</string>
 </resources>

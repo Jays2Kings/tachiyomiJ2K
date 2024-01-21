@@ -126,7 +126,7 @@
     <string name="clear_cookies">Изчисти бисквитки</string>
     <string name="cookies_cleared">Бисквитки изчистени</string>
     <string name="clear_database">Изчисти базата данни</string>
-    <string name="clear_database_summary">Изтрий манга и глави, които не са в библиотеката ми</string>
+    <string name="clear_database_summary">Изтрий историята на манги, които не са запазени в библиотеката</string>
     <string name="clear_database_confirmation">Сигурни ли сте\? Прочетените глави и напредъкът на манги, които не са в библиотеката Ви, ще бъдат изгубени</string>
     <string name="clear_database_completed">Базата данни изчистена</string>
     <string name="refresh_library_metadata">Обнови метаданните на библиотеката</string>
@@ -302,7 +302,7 @@
     <string name="dodge_lighten">Осветен</string>
     <string name="burn_darken">Затъмнен</string>
     <string name="help">Помощ</string>
-    <string name="lock_with_biometrics">Изисквай отключване</string>
+    <string name="lock_with_biometrics">Изискване на отключване</string>
     <string name="lock_when_idle">Заключи при неактивност</string>
     <string name="date_format">Формат на датата</string>
     <string name="update">Обнови</string>
@@ -373,9 +373,7 @@
     <string name="whats_new">Какво е новото</string>
     <string name="badges">Значки</string>
     <string name="last_used">Последно използвани</string>
-    <string name="unofficial_extension_message">Това разширение не е част от официалните разширения на Тачийоми.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Неофициален</string>
     <string name="animate_page_transitions">Анимирани преходи</string>
     <string name="none">Никоя</string>
     <string name="locale">Език</string>
@@ -580,9 +578,9 @@
     <string name="dont_auto_update">Не актуализирайте автоматично</string>
     <string name="all_files_permission_required">Необходими са разрешения за файлове</string>
     <string name="category_deleted">Изтрита категория</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K изисква достъп до всички файлове в Android 11, за да изтегля глави, да създава автоматични резервни копия и да чете локална манга.
+    <string name="external_storage_permission_notice">TachiyomiJ2K изисква достъп до всички файлове в Android 11, за да изтегля глави, да създава автоматични резервни копия и да чете локални серии.
 \n
-\nНа следващия екран разрешете \"Разрешаване на достъп за управление на всички файлове.\"</string>
+\nНа следващия екран позволете \"Разрешаване на достъп за управление на всички файлове.\"</string>
     <string name="add_categories">Добавете категории</string>
     <string name="no_matches_for_filters">Няма намерени съвпадения за текущите ви филтри</string>
     <string name="show_all_categories">Покажи всички категории</string>
@@ -938,7 +936,7 @@
     <string name="enhanced_services">Подобрени услуги</string>
     <string name="enhanced_tracking_info">Услуги, предлагащи подобрени особености за определени източници. Манга се проследява автоматично, щом бъде добавена към библиотеката Ви.</string>
     <string name="local_invalid_format">Невалиден формат на главата</string>
-    <string name="order_by">Нареди по</string>
+    <string name="order_by">Подреди по</string>
     <string name="grayscale">Черно-бяло</string>
     <string name="pref_inverted_colors">Инвертирани цветове</string>
     <string name="ascending">Възходящ</string>
@@ -1014,4 +1012,26 @@
     <string name="pref_remove_exclude_categories">Изключени категории</string>
     <string name="ext_installer_pref">Инсталатор</string>
     <string name="label_background_activity">Работа на заден план</string>
+    <string name="appwidget_updates_description">Виж наскоро обновената манга</string>
+    <string name="library_entries">Библиотечни записи</string>
+    <string name="updates_last_update_info">Последно обновяване на библиотеката: %1$s</string>
+    <string name="trackers">Услуги</string>
+    <string name="language_badge">Езикови значки</string>
+    <string name="new_beta_version_available">Нова бета версия е налична!</string>
+    <string name="pref_update_only_completely_read_summary">Обновявай серии само ако няма непрочетена глава (напълно прочетен)</string>
+    <string name="skip_dupe_chapters">Пропускане на дублиращи се глави</string>
+    <string name="by_day">По ден</string>
+    <string name="ext_installer_summary">Позволява инсталиране на разширения без покани от потребителя и позволява автоматични актуализации за устройства под Android 12</string>
+    <string name="zoom_double_page_spreads">Увеличаване на двойни страници</string>
+    <string name="navigate_pan">Навигирайте до панел</string>
+    <string name="show_">Покажи %1$s</string>
+    <string name="show_more_chapters">Покажи повече глави</string>
+    <string name="collapse_grouped_chapters">Свиване на групирани глави</string>
+    <string name="by_series">По серия</string>
+    <string name="by_week">По седмица</string>
+    <string name="use_staggered_grid">Използване на стъпаловидна мрежа</string>
+    <string name="allow_notifications_recommended">Позволяването на нотификации е препоръчително за да бъдат библиотеката и приложението ви актуални.</string>
+    <string name="sort_fetched_time">Сортирай по време на извличане</string>
+    <string name="save_pages_separately">Запазване на страници в отделни папки</string>
+    <string name="create_folders_by_manga_title">Създава папки според заглавието на мангата</string>
 </resources>

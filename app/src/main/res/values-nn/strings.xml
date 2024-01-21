@@ -42,7 +42,6 @@
     <string name="none">Ingen</string>
     <string name="all">Alle</string>
     <string name="untrusted_extension">Ikkje-tiltrudd utvidelse</string>
-    <string name="unofficial_extension_message">Denne utvidinga kjem ikkje frå den offisielle Tachiyomi-utvidingslista.</string>
     <string name="pref_inverted_colors">Invertert</string>
     <string name="kindlish_nav">Kindle-ish</string>
     <string name="right_and_left_nav">Høgre og Venstre</string>
@@ -89,7 +88,6 @@
     <string name="version_">Versjon: %1$s</string>
     <string name="language_">Språk: %1$s</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Uoffisiell</string>
     <string name="may_contain_nsfw">Kan innehalda NSFW (18+) innhald</string>
     <string name="update_all">Oppdater alle</string>
     <string name="previous_chapter">Førre kapittel</string>
@@ -228,4 +226,7 @@
     <string name="gray_background">Grå</string>
     <string name="pref_remove_exclude_categories">Utelatne kategoriar</string>
     <string name="ext_installer_pref">Installatør</string>
+    <string name="library_entries">Manga</string>
+    <string name="grid_size">Element per rad</string>
+    <string name="trackers">Tenester</string>
 </resources>

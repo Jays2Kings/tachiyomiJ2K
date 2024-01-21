@@ -360,9 +360,7 @@
     <string name="unlock_library">Вулавӑша уҫма ҫаклату салт</string>
     <string name="tracked">Сӑнавланакан</string>
     <string name="last_used">Юлашки усӑ курни</string>
-    <string name="unofficial_extension_message">Ҫак хушма Tachiyomi-н ӗҫ йӗркиллӗ хушмасен йат-йышне кӗмест.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Официаллӑ мар</string>
     <string name="may_contain_nsfw">NSFW (18+) шалаш пулма пултарать</string>
     <string name="automatic_backups">Хӑй-халлӗн янтӑвлани</string>
     <string name="invalid_backup_file">Тӗрӗс мар янтӑв файлӗ</string>
@@ -510,4 +508,6 @@
     <string name="gray_background">Сӑрӑ</string>
     <string name="ext_installer_pref">Ларткӑч</string>
     <string name="library_entries">Вулавӑшри серилӗхсем</string>
+    <string name="clear_database_summary">Санӑн вулавӑшра упранман манкӑн вуланӑ кун-ҫулне катерт</string>
+    <string name="trackers">Сервиссем</string>
 </resources>

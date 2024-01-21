@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="categories">카테고리</string>
-    <string name="manga">일본만화</string>
+    <string name="manga">일본 만화</string>
     <string name="chapters">회차</string>
     <string name="tracking">동기화</string>
     <string name="selected_">%1$d 선택됨</string>
@@ -31,7 +31,7 @@
     <string name="cancel">취소</string>
     <string name="sort">정렬</string>
     <string name="install">설치</string>
-    <string name="settings">세팅</string>
+    <string name="settings">설정</string>
     <string name="display">디스플레이</string>
     <string name="history">기록</string>
     <string name="download_queue">다운로드 대기열</string>
@@ -144,16 +144,16 @@
     <string name="cookies_cleared">쿠키 삭제됨</string>
     <string name="clear_database">데이터베이스 삭제</string>
     <string name="clear_database_summary">서재에 추가되지 않은 항목의 기록을 삭제합니다</string>
-    <string name="clear_database_confirmation">확실합니까\? 서재에 없는 항목의 읽은 기록이 삭제됩니다</string>
+    <string name="clear_database_confirmation">확실합니까? 서재에 없는 항목의 읽기 기록이 삭제됩니다</string>
     <string name="refresh_library_metadata">서재 메타데이터 갱신</string>
-    <string name="updates_covers_genres_desc">표지와 장르, 설명, 만화 상태 정보들을 업데이트합니다</string>
+    <string name="updates_covers_genres_desc">표지와 장르, 설명, 만화 상태 정보를 업데이트합니다</string>
     <string name="refresh_tracking_metadata">동기화 메타데이터 새로 고침</string>
-    <string name="updates_tracking_details">상태 및 평점, 마지막으로 읽은 챕터를 동기화 서비스에서 업데이트합니다</string>
+    <string name="updates_tracking_details">상태, 평점, 마지막으로 읽은 챕터를 트래킹 서비스에서 동기화합니다</string>
     <string name="version">버전</string>
     <string name="build_time">빌드 시간</string>
     <string name="check_for_updates">업데이트 확인</string>
     <string name="send_crash_report">충돌 보고서 전송</string>
-    <string name="helps_fix_bugs">버그들을 수정하는데 도움이 됩니다. 민감한 정보는 전송되지 않습니다</string>
+    <string name="helps_fix_bugs">버그를 수정하는데 도움이 됩니다. 개인 정보는 전송되지 않습니다</string>
     <string name="log_in_to_">%1$s 으로 로그인</string>
     <string name="username">사용자명</string>
     <string name="password">비밀번호</string>
@@ -168,7 +168,7 @@
     <string name="unknown">알 수 없음</string>
     <string name="added_to_library">서제에 추가됨</string>
     <string name="removed_from_library">서재에서 제거됨</string>
-    <string name="author">작자</string>
+    <string name="author">작가</string>
     <string name="artist">그림작가</string>
     <string name="status">상태</string>
     <string name="source_not_installed_">소스 미설치: %1$s</string>
@@ -215,7 +215,7 @@
     <string name="download_badge">다운로드 배지</string>
     <string name="wifi">Wi-Fi</string>
     <string name="always_ask">항상 물어보기</string>
-    <string name="can_be_used_to_restore">현재 서재를 나중에 복구하는 데 사용 가능</string>
+    <string name="can_be_used_to_restore">현재 서재를 복원하는 데 사용할 수 있습니다</string>
     <string name="navigation">네비게이션</string>
     <string name="background_color">배경 색상</string>
     <string name="white">흰색</string>
@@ -253,8 +253,8 @@
     <string name="type">종류</string>
     <string name="category_with_name_exists">같은 이름을 가진 카테고리가 이미 존재합니다!</string>
     <string name="migrate">데이터 이전</string>
-    <string name="must_be_in_library_to_edit">이 행동을 하기 전 서재에 만화를 추가해주세요</string>
-    <string name="library_is_empty_add_from_browse">서재가 비어있습니다. 카탈로그에서 만화 시리즈를 서재에 추가 할 수 있습니다.</string>
+    <string name="must_be_in_library_to_edit">항목을 수정하려면 항목이 서재에 있어야 합니다</string>
+    <string name="library_is_empty_add_from_browse">서재가 비어있습니다. 찾아보기 탭에서 만화를 서재에 추가할 수 있습니다.</string>
     <string name="no_wifi_connection">Wifi 연결 사용 불가능</string>
     <string name="no_network_connection">네트워크 연결 사용 불가능</string>
     <string name="common">일반</string>
@@ -267,7 +267,7 @@
     <string name="screen">스크린</string>
     <string name="dodge_lighten">닷지 / 밝게하기</string>
     <string name="burn_darken">번 / 어둡게하기</string>
-    <string name="help">도움</string>
+    <string name="help">도움말</string>
     <string name="update">업데이트</string>
     <string name="remove_from_library">서재에서 제거</string>
     <string name="copy_value">복사</string>
@@ -283,7 +283,7 @@
     <string name="error_sharing_cover">표지 이미지 공유 오류</string>
     <string name="error_saving_cover">표지 이미지 저장 오류</string>
     <string name="cover_saved">표지 이미지 저장</string>
-    <string name="requires_app_restart">설정을 적용하기 위해 앱을 재시작해야 합니다</string>
+    <string name="requires_app_restart">앱을 재시작한 후에 적용됩니다</string>
     <string name="restoring_backup_canceled">복원 취소</string>
     <string name="restore_duration">%02d분 %02d초</string>
     <string name="invalid_backup_file_type">부적합한 백업 파일 타입: %1$s
@@ -306,12 +306,11 @@
     <string name="log_out_from_">%1$s 에서 로그아웃 하시겠습니까\?</string>
     <string name="date_added">추가된 날짜</string>
     <string name="latest_chapter">최신 챕터</string>
-    <string name="unofficial">비공식</string>
     <string name="next_page">다음 페이지</string>
     <string name="animate_page_transitions">페이지 전환 효과 표시</string>
     <string name="search_settings">검색 설정</string>
     <string name="incognito_mode">시크릿 모드</string>
-    <string name="pure_black_dark_mode">다크 모드에 검정색 사용</string>
+    <string name="pure_black_dark_mode">다크 모드에서 완전한 검정색 사용</string>
     <string name="backup_and_restore">백업 및 복원</string>
     <string name="complete">완료</string>
     <string name="network">네트워크</string>
@@ -337,13 +336,13 @@
     <string name="hide_notification_content">알림 내용 숨기기</string>
     <string name="updating_library">서재 업데이트 중</string>
     <string name="channel_errors">오류</string>
-    <string name="reduces_banding_impacts_performance">밴딩을 줄이지만 성능에 영향을 줄 수 있음</string>
+    <string name="reduces_banding_impacts_performance">컬러 밴딩을 줄이지만 성능에 영향을 줄 수 있음</string>
     <string name="always_show_chapter_transition">회차 변경 항상 표시</string>
     <string name="set_as_default">기본값으로 설정</string>
     <plurals name="after_minutes">
         <item quantity="other">%1$s분 후</item>
     </plurals>
-    <string name="always">항상</string>
+    <string name="always">항상 사용</string>
     <string name="never">끄기</string>
     <string name="invert_tapping">탭 영역 반전</string>
     <string name="actions">행동</string>
@@ -368,12 +367,11 @@
     <string name="webtoon_side_padding_10">10%</string>
     <string name="webtoon_side_padding_15">15%</string>
     <string name="webtoon_side_padding_20">20%</string>
-    <string name="tracking_info">트래커 서비스에 만화 진행 상황을 동기화합니다. 트래킹 버튼을 이용하여 각각의 만화 별로 트래킹을 설정하세요.</string>
+    <string name="tracking_info">트래킹 서비스에 읽은 진행 상황을 업데이트합니다. 트래킹 버튼을 이용하여 각각의 만화 별로 트래킹 서비스를 설정하세요.</string>
     <string name="enhanced_services">향상된 서비스</string>
-    <string name="enhanced_tracking_info">특정 소스에 향상된 서비스를 제공합니다. 서재에 만화가 추가될 시 자동으로 트래킹 됩니다.</string>
+    <string name="enhanced_tracking_info">특정 소스에 향상된 서비스를 제공합니다. 서재에 만화가 추가될 시 자동으로 트래킹이 활성화 됩니다.</string>
     <string name="ext_installer_shizuku_stopped">Shizuku가 실행 중이 아닙니다</string>
     <string name="obsolete_extension_message">이 확장 앱은 더이상 이용이 불가능합니다.</string>
-    <string name="unofficial_extension_message">이 확장 앱은 Tachiyomi 공식 앱이 아닙니다.</string>
     <string name="crash_log_saved">오류 로그가 저장되었습니다</string>
     <string name="about_dont_kill_my_app">일부 제조사는 백그라운드 서비스를 종료하는 추가적인 제한 사항이 있습니다. 자세한 사항은 웹사이트를 참조하세요.</string>
     <string name="battery_optimization_disabled">배터리 최적화가 이미 꺼져 있습니다</string>
@@ -438,7 +436,7 @@
     <string name="strawberry_daiquiri">딸기 칵테일</string>
     <string name="tako">문어</string>
     <string name="automatic_backups">자동 백업</string>
-    <string name="backup_has_no_manga">백업에 만화가 포함되어있지 않습니다.</string>
+    <string name="backup_has_no_manga">백업 파일에 만화가 포함되어있지 않습니다.</string>
     <string name="cancel_all">모두 취소</string>
     <string name="unpin">핀 해제</string>
     <string name="show_number_of_items">항목 개수 보이기</string>
@@ -465,7 +463,7 @@
     <string name="ascending">오름차순</string>
     <string name="date">날짜</string>
     <string name="descending">내림차순</string>
-    <string name="clear_database_source_item_count">데이터베이스에 없는 항목이 %1$d개 있습니다</string>
+    <string name="clear_database_source_item_count">서재에 없는 항목이 데이터베이스에 %1$d개 있습니다</string>
     <string name="database_clean">데이터베이스 정리</string>
     <string name="confirm_manga_add_duplicate">서재에 제목이 같지만 소스가 다른 항목이 있습니다 (%1$s).
 \n
@@ -493,17 +491,16 @@
     <string name="not_started">읽지 않은 작품</string>
     <string name="in_progress">진행 중</string>
     <string name="new_chapters">새 장</string>
-    <string name="all_files_permission_required">안드로이드의 파일 사용권한이 필요합니다</string>
-    <string name="external_storage_permission_notice">안드로이드 정책 변화에 따라 앱은 사용자에게 파일 접근권한을 요청합니다.
-\nTachiyomiJ2K는 안드로이드11의 모든 파일에 접근하여, 챕터를 다운로드하고, 자동백업을 만들며, 휴대전화 저장소에 저장된 오프라인 만화를 읽을 수 있습니다.
+    <string name="all_files_permission_required">파일 사용 권한이 필요합니다</string>
+    <string name="external_storage_permission_notice">안드로이드 11의 \"모든 파일에 대한 접근 권한\"이 활성화 되어야 TachiyomiJ2K가 챕터를 다운로드하고, 자동 백업을 진행하며, 저장된 오프라인 만화를 읽을 수 있습니다.
 \n
-\n이에, 다음 화면에서 TachiyomiJ2K에 대한 \"모든 파일에 대한 접근권한\"을 허용해 주십시오.</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K는 챕터를 다운로드하기 위해 모든 파일에 액세스해야 합니다. 여기를 탭한 다음에 “모든 파일을 관리하기 위한 액세스 허용\"을 활성화해주십시오.</string>
-    <string name="manhwa">한국만화</string>
-    <string name="manhua">중국만화</string>
+\n다음 화면에서 TachiyomiJ2K에 대한 \"모든 파일에 대한 접근권한\"을 허용해 주십시오.</string>
+    <string name="external_storage_download_notice">챕터를 다운로드하기 위해서는 모든 파일에 액세스 권한이 필요합니다. 여기를 탭한 다음에 “모든 파일에 액세스 허용\"을 활성화해주십시오.</string>
+    <string name="manhwa">한국 만화</string>
+    <string name="manhua">중국 만화</string>
     <string name="unlock">잠금 해제</string>
     <string name="unknown_status">알 수 없는 상태</string>
-    <string name="unlock_library">잠금해제하여 라이브러리에 접근하십시오.</string>
+    <string name="unlock_library">라이브러리에 접근하려면 잠금을 해제하십시오</string>
     <string name="scanlators">번역자</string>
     <string name="no_chapters_to_delete">삭제할 챕터가 없음</string>
     <string name="last_read_chapter_">%1$s 장을 마지막으로 읽었습니다</string>
@@ -536,8 +533,8 @@
     <string name="new_category">새 범주</string>
     <string name="category_is_empty">범주가 비어 있습니다</string>
     <string name="confirm_category_deletion">범주를 삭제하시겠습니까\?</string>
-    <string name="confirm_category_deletion_message">이 범주의 망가는 기본 범주로 이동합니다.</string>
-    <string name="already_in_category">망가는 이미 카테고리에 있습니다</string>
+    <string name="confirm_category_deletion_message">이 카테고리의 항목들을 기본 카테고리로 이동합니다.</string>
+    <string name="already_in_category">항목이 이미 카테고리에 있습니다</string>
     <string name="show_categories_while_filtering">필터링하는 동안 빈 범주 표시</string>
     <string name="no_matches_for_filters_short">필터와 일치하는 항목이 없습니다</string>
     <string name="add_categories">범주 추가</string>
@@ -601,8 +598,8 @@
     </plurals>
     <string name="unfinished_list">미완성된 목록</string>
     <string name="notification_size_warning">대규모 업데이트는 배터리 사용량이 증가하고 느려됨 소스를 일으킬 수 있습니다. 탭하여 자세히 알아보기.</string>
-    <string name="pref_update_only_completely_read_summary">읽지 않은 화 없을 때만 업데이트하기 (완전히 읽기)</string>
-    <string name="sort_by_ignoring_articles">관사 무시하로 정렬하기</string>
+    <string name="pref_update_only_completely_read_summary">모든 챕터를 다 읽었을 때만 업데이트하기 (완전히 읽기)</string>
+    <string name="sort_by_ignoring_articles">관사 제외 정렬</string>
     <string name="more_library_settings">더 서재 설정</string>
     <string name="include_in_global_update">전역 업데이트에 포함하기</string>
     <string name="auto_refresh_covers">표지 자동 갱신</string>
@@ -615,13 +612,13 @@
     <string name="auto_refresh_covers_summary">업데이트 할 땐 서재에는 표지도 새로고침</string>
     <string name="group_library_by">서재 분류 방법은…</string>
     <string name="ungrouped">그룹화되지 않음</string>
-    <string name="when_sorting_ignore_articles">알파벳으로 정렬 할 땐, 만화 제목 첫머리에 관사 (a, an, the) 무시하기 정렬함</string>
+    <string name="when_sorting_ignore_articles">알파벳 순으로 정렬 시 영어 관사 (a, an, the) 부분을 제외하고 정렬합니다</string>
     <string name="uniform_grid_covers">균등 그리드 표지</string>
     <string name="use_staggered_grid">스태거드그리드를 사용함</string>
     <string name="complete_list">완결 목록</string>
     <string name="on_hold_list">보류 목록</string>
     <string name="download_notifier_split_failed">다운로드한 사진을 나눌 수 없습니다</string>
-    <string name="download_notifier_split_page_not_found">나누어 짐 중에 %d페이지 안 찾습니다</string>
+    <string name="download_notifier_split_page_not_found">분리 중 페이지 %d을 찾을 수 없습니다</string>
     <string name="reset_all_chapters_for_this_">이 %1$s의 모든 장 재설정</string>
     <string name="last_read_">마지막으로 읽은 %1$s</string>
     <string name="read_">%1$s 읽기</string>
@@ -629,8 +626,8 @@
     <string name="newly_added">새로 추가됨</string>
     <string name="this_will_remove_the_read_date_for_x_question">\"%1$s\"의 읽은 날짜가 제거됩니다. 확실합니까\?</string>
     <string name="read_progress">진행 상황 읽기</string>
-    <string name="can_be_found_in_library_filters">library 라이브러리 필터를 확장하여 찾을 수도 있습니다</string>
-    <string name="recents">최근</string>
+    <string name="can_be_found_in_library_filters">라이브러리 필터에서도 사용 가능합니다</string>
+    <string name="recents">신간</string>
     <string name="updates_and_history">업데이트 및 기록</string>
     <string name="view_history">기록 보기</string>
     <string name="view_all_updates">모든 업데이트 보기</string>
@@ -689,11 +686,11 @@
     <string name="search_extensions">확장 앱 검색…</string>
     <string name="some_extensions_may_prompt">일부 확장 앱은 여전히 먼저 설치하라는 메시지가 표시될 수 있습니다.</string>
     <string name="updating_extensions">확장 앱 업데이트</string>
-    <string name="amount_of_pages_to_preload">읽을 때 미리 로드할 페이지의 양입니다. 값이 높을수록 더 부드러운 읽기 환경이 만들어지며 캐시 및 네트워크 사용량이 높아집니다.</string>
+    <string name="amount_of_pages_to_preload">읽을 때 미리 로드할 페이지의 수입니다. 높을수록 더 부드러운 읽기 환경이 만들어지자먼 캐시 및 네트워크 사용량이 높아집니다.</string>
     <string name="invert_double_pages">이중 페이지 반전</string>
     <string name="sort_fetched_time">가져온 시간별로 정렬</string>
     <plurals name="_updates_pending">
-        <item quantity="other">%d 업데이트 보류 중</item>
+        <item quantity="other">%d개의 업데이트 보류 중</item>
     </plurals>
     <string name="extensions_updated">확장 앱 업데이트됨</string>
     <string name="set_first_page_as_cover">첫 번째 페이지를 표지로 설정</string>
@@ -723,7 +720,7 @@
     <string name="all_read_chapters">모든 읽기 챕터</string>
     <string name="add_x_to_library">라이브러리에 %1$s를 추가하시겠습니까\?</string>
     <string name="dont_migrate">마이그레이션하지 않음</string>
-    <string name="details_page">세부내용 페이지</string>
+    <string name="details_page">상세정보 페이지</string>
     <string name="turn_off_">%s 끄기</string>
     <string name="ignore_cutout_areas">컷아웃 영역 무시</string>
     <string name="page_layout">페이지 레이아웃</string>
@@ -758,15 +755,15 @@
     <string name="no_alternatives_found">대안을 찾을 수 없음</string>
     <string name="default_behavior">기본 동작</string>
     <string name="follow_system_theme">시스템 테마 따르기</string>
-    <string name="by_default_side_nav_info">기본적으로 측면 탐색은 가로가 비어있을 때 특정 휴대 전화 및 작은 태블릿에 사용되며 항상 더 큰 태블릿에 표시됩니다</string>
+    <string name="by_default_side_nav_info">기본 설정 시 측면 네비게이션 버튼은 작은 태블릿 또는 일부 스마트폰의 가로 모드에서 표시되며, 큰 태블릿에서는 항상 표시됩니다</string>
     <string name="select_an_entry">항목 선택</string>
     <string name="yin">음</string>
-    <string name="hide_bottom_nav">아래쪽 탐색 자동 숨기기</string>
+    <string name="hide_bottom_nav">하단 네비게이션 버튼 자동 숨기기</string>
     <string name="horizontally">가로로</string>
     <string name="vertically">세로로</string>
     <string name="all_but_bookmarked_chapters">책갈피가 지정된 장을 제외한 모든 장</string>
     <string name="reset_cover">커버 재설정</string>
-    <string name="custom_manga_info">사용자 지정 만화 정보</string>
+    <string name="custom_manga_info">추가 정보</string>
     <string name="not_tracked">추적되지 않음</string>
     <string name="to_show_again_setting_sources">이 화면을 다시 표시하려면 설정 -&gt; 소스로 이동합니다.</string>
     <string name="latest_">최신: %1$s</string>
@@ -782,12 +779,12 @@
     <string name="keep_both_on_service">%1$s에 둘 다 유지하고 로컬로만 바꿉니다</string>
     <string name="sapphire_dusk">사파이어 황혼</string>
     <string name="hot_pink">핫 핑크</string>
-    <string name="no_chapters_found_for_migration">챕터를 찾을 수 없습니다,이 만화는 마이그레이션에 사용할 수 없습니다</string>
-    <string name="update_tracking_after_reading">읽기 후 추적 업데이트</string>
-    <string name="update_tracking_marked_read">읽음으로 표시된 경우 추적 업데이트</string>
+    <string name="no_chapters_found_for_migration">챕터를 찾을 수 없습니다, 이 만화는 마이그레이션에 사용할 수 없습니다</string>
+    <string name="update_tracking_after_reading">읽기 후 트래커 업데이트</string>
+    <string name="update_tracking_marked_read">모두 읽음으로 표시된 항목 트래커 업데이트</string>
     <string name="currently_reading">현재 읽기</string>
     <string name="data_to_include_in_migration">마이그레이션에 포함할 데이터</string>
-    <string name="all_read_manga">모두 만화를 읽었습니다</string>
+    <string name="all_read_manga">모든 만화를 읽었습니다</string>
     <string name="include_extra_search_parameter">검색 시 추가 검색 매개 변수 포함</string>
     <string name="migrate_">%1$s 마이그레이션</string>
     <string name="locale">로캘</string>
@@ -818,22 +815,22 @@
     </plurals>
     <string name="use_suggested_date">제안된 날짜 사용</string>
     <plurals name="manga_migrated">
-        <item quantity="other">%d 만화가 마이그레이션됨</item>
+        <item quantity="other">%d 개의 만화가 마이그레이션됨</item>
     </plurals>
     <string name="migrating_to">마이그레이션 대상</string>
-    <string name="use_side_navigation">측면 탐색 사용</string>
+    <string name="use_side_navigation">측면 네비게이션 버튼 사용</string>
     <string name="want_to_read">읽고 싶어</string>
-    <string name="light_theme">조명 테마</string>
+    <string name="light_theme">밝은 테마</string>
     <string name="dark_theme">어두운 테마</string>
     <string name="chocolate_strawberries">초콜릿 딸기</string>
-    <string name="theme_buttons_based_on_cover">표지를 기반으로 한 테마 버튼</string>
+    <string name="theme_buttons_based_on_cover">표지 색을 따라 버튼 색 바꾸기</string>
     <string name="show_larger_toolbar">대부분의 페이지 맨 위에 더 크고 확장된 도구 모음 표시(설정에 관계없이 작은 장치에는 표시되지 않음)</string>
     <string name="mark_all_chapters_as_unread">모든 챕터를 읽지 않은 것으로 표시하시겠습니까\?</string>
     <plurals name="migrate_manga">
-        <item quantity="other">%1$d%2$s 만화를 마이그레이션하시겠습니까\?</item>
+        <item quantity="other">%1$d%2$s개 항목을 마이그레이션하시겠습니까?</item>
     </plurals>
     <plurals name="copy_manga">
-        <item quantity="other">%1$d%2$s 만화를 복사하시겠습니까\?</item>
+        <item quantity="other">%1$d%2$s 개의 만화를 복사하시겠습니까\?</item>
     </plurals>
     <string name="skipping_">(%1$d 건너뛰기)</string>
     <string name="smart_based_on_page_and_theme">스마트(페이지 및 테마 기준)</string>
@@ -843,7 +840,7 @@
     <string name="automatic_orientation">자동(방향 기준)</string>
     <string name="show_on_long_press">길게 누르기에 표시</string>
     <string name="show_">%1$s 표시</string>
-    <string name="must_view_details_before_migration">마이그레이션하기 전에 이 항목의 세부 정보 페이지를 확인해야 합니다</string>
+    <string name="must_view_details_before_migration">마이그레이션하기 전에 이 항목의 상세정보 페이지를 확인해야 합니다</string>
     <string name="search_chapters">챕터 검색</string>
     <string name="show_bookmarked_chapters">책갈피가 지정된 장 표시</string>
     <string name="reset_tags">태그 재설정</string>
@@ -857,9 +854,9 @@
     <string name="lime_time">라임 타임</string>
     <string name="flat_lime">플랫 라임</string>
     <string name="white_theme">퓨어 화이트</string>
-    <string name="last_used_library_recents">마지막으로 사용(라이브러리 또는 최근)</string>
+    <string name="last_used_library_recents">최근 화면(내 서재 또는 신간)</string>
     <string name="select_a_source_then_item_to_migrate">원본을 선택한 다음 마이그레이션할 항목을 선택합니다</string>
-    <string name="migration">이주</string>
+    <string name="migration">마이그레이션</string>
     <string name="skip_pre_migration">마이그레이션 전 건너뛰기</string>
     <string name="app_shortcuts">앱 바로 가기</string>
     <string name="restore_error">백업을 복원하지 못했습니다</string>
@@ -867,7 +864,7 @@
     <string name="force_download_cache_refresh">다운로드 캐시 새로 고침</string>
     <string name="force_download_cache_refresh_summary">이렇게 하면 다운로드 캐시가 강제로 다시 계산됩니다. 이 앱 외부에서 다운로드를 수정하고 앱에서 다운로드를 선택하려는 경우에 유용합니다</string>
     <string name="warning_enroll_into_beta">베타 릴리스는 불안정할 수 있으며 앱 데이터를 지워야 할 수 있습니다.</string>
-    <string name="pressing_back_to_start">시작 화면으로 다시 누르기</string>
+    <string name="pressing_back_to_start">뒤로 가기 버튼을 눌러 시작 화면으로 이동</string>
     <plurals name="cache_cleared">
         <item quantity="other">캐시가 지워졌습니다. %d 파일이 삭제되었습니다</item>
     </plurals>
@@ -878,31 +875,31 @@
     <string name="clean_up_downloaded_chapters">다운로드한 챕터 정리</string>
     <string name="clean_orphaned_downloads">깨끗한 고아</string>
     <string name="not_logged_into_">%1$s에 로그인하지 않았습니다</string>
-    <string name="clear_db_exclude_read">읽기 챕터로 만화를 유지하십시오</string>
+    <string name="clear_db_exclude_read">읽은 챕터가 있는 항목 유지</string>
     <string name="language_requires_app_restart">일부 언어는 올바르게 표시하려면 앱을 다시 시작해야 할 수 있습니다</string>
     <string name="hides_on_scroll">스크롤할 때 숨김</string>
-    <string name="auto_update_app">자동 업데이트 앱</string>
+    <string name="auto_update_app">앱 자동 업데이트</string>
     <string name="warning_unenroll_from_beta">이전 프로덕션 버전으로 롤백하면 문제가 발생할 수 있으며 앱 데이터를 지워야 할 수 있습니다.</string>
     <string name="check_for_beta_releases">베타 릴리스 확인</string>
     <string name="try_new_features">공식적으로 출시되기 전에 새로운 기능을 사용해 보십시오. 베타 릴리스는 불안정할 수 있으며 개발자에게 피드백을 제공하기 위해 제공됩니다.</string>
-    <string name="over_wifi_only">Wi-Fi를 통해서만 사용 가능</string>
-    <string name="over_any_network">모든 네트워크를 통해</string>
+    <string name="over_wifi_only">Wi-Fi에서만 업데이트</string>
+    <string name="over_any_network">모든 네트워크 사용</string>
     <string name="dont_auto_update">자동 업데이트 안 함</string>
     <string name="starting_screen">시작 화면</string>
     <string name="auto_updates">자동 업데이트</string>
-    <string name="no_new_chapters_open_details">새로운 챕터가 없으면 시리즈의 세부 정보가 대신 열립니다</string>
+    <string name="no_new_chapters_open_details">새로운 챕터가 없을 경우 시리즈의 상세정보가 표시됩니다</string>
     <string name="show_recent_series">최근 시리즈 표시</string>
-    <string name="includes_recently_read_updated_added">최근 읽기, 업데이트 및 추가된 시리즈 포함</string>
-    <string name="series_opens_new_chapters">시리즈 바로 가기가 새 챕터를 엽니다</string>
+    <string name="includes_recently_read_updated_added">최근에 읽었거나, 추가 또는 업데이트 된 항목을 포함합니다</string>
+    <string name="series_opens_new_chapters">시리즈 바로 가기로 새 챕터 열기</string>
     <string name="helpful_translation_links">유용한 번역 링크</string>
     <string name="view_all">모두 보기</string>
     <string name="only_enable_pinned_for_migration">고정된 원본만 마이그레이션에 사용하도록 설정</string>
     <string name="recently_installed">최근에 설치됨</string>
     <string name="use_default">기본값 사용</string>
     <string name="log_in">로그인</string>
-    <string name="notify_extension_updated">알림 확장 앱이 업데이트되었습니다</string>
+    <string name="notify_extension_updated">확장 앱이 업데이트 될 경우 알림</string>
     <string name="whats_new_this_release">이 릴리스의 새로운 기능</string>
-    <string name="you_can_migrate_in_library">라이브러리에서 만화를 선택하여 마이그레이션할 수도 있습니다</string>
+    <string name="you_can_migrate_in_library">서재에서도 만화를 선택하여 마이그레이션할 수 있습니다</string>
     <string name="downloading_">다운로드 중: %1$s</string>
     <string name="mark_range_as_unread">다양한 챕터를 읽지 않은 것으로 표시</string>
     <string name="preview">미리 보기</string>
@@ -912,9 +909,9 @@
     <string name="download_ahead">미리 다운로드</string>
     <string name="manage_whats_downloading">다운로드 항목 관리</string>
     <string name="visit_recents_for_download_queue">최근 탭을 방문하여 다운로드 큐에 액세스합니다. 더 빨리 액세스 할 수 있도록 두 번 탭하거나 길게 누를 수도 있습니다</string>
-    <string name="clean_up_cached_covers">캐시된 덮개 정리</string>
+    <string name="clean_up_cached_covers">캐시에 저장된 표지 정리</string>
     <string name="clean_read_downloads">깨끗한 읽기</string>
-    <string name="clean_read_manga_not_in_library">도서관에없는 깨끗한 만화</string>
+    <string name="clean_read_manga_not_in_library">서재에 없는 항목 삭제</string>
     <string name="most_entries">대부분의 항목</string>
     <string name="not_downloaded">다운로드되지 않음</string>
     <string name="nothing_is_downloading">현재 아무것도 다운로드되지 않습니다</string>
@@ -965,7 +962,7 @@
     <string name="keep_in_">%1$s에 보관</string>
     <string name="no_folders_to_cleanup">정리할 폴더가 없습니다</string>
     <string name="disable_if_issues_with_updating">라이브러리를 업데이트하거나 복원하는 데 문제가 있는 경우 이 기능을 사용하지 않도록 설정합니다</string>
-    <string name="delete_old_covers_in_library_used_">업데이트 된 라이브러리에서 오래되고 사용되지 않은 만화 커버를 삭제하십시오.
+    <string name="delete_old_covers_in_library_used_">라이브러리에서 오래되고 사용되지 않은 만화 표지를 삭제합니다.
 \n현재 사용 중: %1$s</string>
     <string name="clear_cached_covers_non_library">라이브러리에 없는 캐시된 커버 지우기</string>
     <string name="starting_cleanup">정리 시작</string>
@@ -983,7 +980,7 @@
     <string name="downloaded_chapters">다운로드된 회차</string>
     <string name="auto_download_while_reading">읽을 때 자동 다운로드</string>
     <string name="stats">통계</string>
-    <string name="statistics_details">통계 세부정보</string>
+    <string name="statistics_details">통계 상세 정보</string>
     <string name="chapters_read">읽은 만화</string>
     <string name="titles_in_library">서재에 있는 만화</string>
     <string name="stat">통계</string>
@@ -1017,7 +1014,7 @@
     <string name="mean_tracking_score">평균 추적 점수</string>
     <string name="read_duration_info">챕터 기록을 기준으로 한 로딩에 걸린 시간</string>
     <plurals name="_series_types">
-        <item quantity="other">"%d  시리즈 형식"</item>
+        <item quantity="other">%d 시리즈 형식</item>
     </plurals>
     <plurals name="_sources">
         <item quantity="other">%d 소스</item>
@@ -1043,4 +1040,10 @@
     <string name="library_entries">서재 항목</string>
     <string name="pref_debug_info">디버그 정보</string>
     <string name="label_background_activity">백그라운드 활동</string>
+    <string name="share_cover">커버 공유하기</string>
+    <string name="source_settings">소스 설정</string>
+    <string name="app_settings">앱 설정</string>
+    <string name="ext_installer_summary">안드로이드 12 이하 기기에서 사용자 개입 없이 확장 기능 설치와 업데이트가 가능하도록 합니다</string>
+    <string name="save_pages_separately">각각의 폴더에 페이지 저장</string>
+    <string name="create_folders_by_manga_title">만화 제목을 따라 폴더 생성</string>
 </resources>

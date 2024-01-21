@@ -8,7 +8,7 @@
     <string name="copy_now">Копировать сейчас</string>
     <string name="create">Создать</string>
     <string name="delete">Удалить</string>
-    <string name="display">Отображение</string>
+    <string name="display">Вид</string>
     <string name="download_badge">Загруженные главы</string>
     <string name="compact_grid">Компактная сетка</string>
     <string name="list">Список</string>
@@ -21,7 +21,7 @@
     <string name="install">Установить</string>
     <string name="mark_as_read">Отметить как «Прочитано»</string>
     <string name="mark_previous_as_read">Отметить предыдущие главы, как «Прочитано»</string>
-    <string name="migrate_now">Мигрировать сейчас</string>
+    <string name="migrate_now">Перенести сейчас</string>
     <string name="move_to_categories">Поместить в категории</string>
     <string name="move_to_bottom">В конец</string>
     <string name="move_to_top">В начало</string>
@@ -41,7 +41,7 @@
     <string name="search_manually">Поиск вручную</string>
     <string name="select_all">Выбрать всё</string>
     <string name="share">Поделиться</string>
-    <string name="dont_migrate">Не мигрировать</string>
+    <string name="dont_migrate">Не переносить</string>
     <string name="sort">Сортировать</string>
     <string name="alphabetically">Алфавит</string>
     <string name="drag_and_drop">Перетаскивание</string>
@@ -84,23 +84,23 @@
         <item quantity="other">Очистка завершена. %d папок удалено</item>
     </plurals>
     <string name="clear_database_completed">Серии удалены</string>
-    <string name="clear_database_confirmation">Вы уверены\? Прочитанные главы и прогресс не библиотечных серий будет потерян</string>
+    <string name="clear_database_confirmation">Вы уверены? Прочитанные главы и прогресс небиблиотечных записей будут потеряны</string>
     <string name="alpha_initial">А</string>
     <string name="blue_initial">С</string>
     <string name="green_initial">З</string>
     <string name="red_initial">К</string>
     <string name="completed">Завершено</string>
     <plurals name="copy_manga">
-        <item quantity="one">Копировать %1$d%2$s серию\?</item>
-        <item quantity="few">Копировать %1$d%2$s серии\?</item>
-        <item quantity="many">Копировать %1$d%2$s серий\?</item>
-        <item quantity="other">Копировать %1$d%2$s серий\?</item>
+        <item quantity="one">Копировать %1$d%2$s серию?</item>
+        <item quantity="few">Копировать %1$d%2$s серии?</item>
+        <item quantity="many">Копировать %1$d%2$s серий?</item>
+        <item quantity="other">Копировать %1$d%2$s серий?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Мигрировать %1$d%2$s серию\?</item>
-        <item quantity="few">Мигрировать %1$d%2$s серии\?</item>
-        <item quantity="many">Мигрировать %1$d%2$s серий\?</item>
-        <item quantity="other">Мигрировать %1$d%2$s серий\?</item>
+        <item quantity="one">Перенести %1$d%2$s серию\?</item>
+        <item quantity="few">Перенести %1$d%2$s серии\?</item>
+        <item quantity="many">Перенести %1$d%2$s серий\?</item>
+        <item quantity="other">Перенести %1$d%2$s серий\?</item>
     </plurals>
     <string name="use_image_as_cover">Использовать это изображение как обложку серии\?</string>
     <string name="cookies_cleared">Cookies очищены</string>
@@ -109,13 +109,13 @@
     <string name="currently_reading">Сейчас читаю</string>
     <string name="custom_location">Пользовательская папка</string>
     <string name="dark">Тёмная</string>
-    <string name="data_to_include_in_migration">Данные которые нужно мигрировать</string>
+    <string name="data_to_include_in_migration">Данные которые нужно перенести</string>
     <string name="decode_image_error">Не удалось загрузить изображение</string>
     <string name="default_category">Основная категория</string>
     <string name="always_ask">Всегда спрашивать</string>
     <string name="default_value">По умолчанию</string>
     <string name="description">Описание</string>
-    <string name="cover_of_image">Обложка серии</string>
+    <string name="cover_of_image">Обложка серий</string>
     <string name="chapter_">Глава %1$s</string>
     <string name="no_animation">Без анимации</string>
     <string name="fast">Быстро</string>
@@ -126,7 +126,7 @@
     <string name="could_not_download_unexpected_error">Неожиданная ошибка при загрузке главы</string>
     <string name="dropped">Брошено</string>
     <string name="category_with_name_exists">Категория с таким именем уже существует!</string>
-    <string name="no_chapters_found_for_migration">Глав не найденo, эта серия не может быть использована для миграции</string>
+    <string name="no_chapters_found_for_migration">Главы не найдены, эта серия не может быть использована для переноса</string>
     <string name="installed">Установлено</string>
     <string name="installing">Устанавливается</string>
     <string name="language_">Язык: %1$s</string>
@@ -156,7 +156,7 @@
     <string name="extensions">Расширения</string>
     <string name="help">Помощь</string>
     <string name="library">Библиотека</string>
-    <string name="source_migration">Миграция источника</string>
+    <string name="source_migration">Перенос источника</string>
     <string name="recent_updates">Недавние обновления</string>
     <string name="selected_">Выбранo: %1$d</string>
     <string name="settings">Настройки</string>
@@ -165,7 +165,7 @@
     <string name="left_to_right_viewer">Слева направо</string>
     <string name="licensed">Лицензировано</string>
     <string name="loading">Загрузка…</string>
-    <string name="local_source">Источник пользователя</string>
+    <string name="local_source">Источник на устройстве</string>
     <string name="local">Локально</string>
     <plurals name="after_minutes">
         <item quantity="one">Через %1$s минуту</item>
@@ -185,14 +185,14 @@
     <string name="author">Автор</string>
     <string name="status">Статус</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d серия перемещёна</item>
+        <item quantity="one">%d серия перемещена</item>
         <item quantity="few">%d серии перемещено</item>
         <item quantity="many">%d серий перемещено</item>
         <item quantity="other">%d серий перемещено</item>
     </plurals>
     <string name="removed_from_library">Удалено из библиотеки</string>
-    <string name="migrating_to">Мигрировать в</string>
-    <string name="migration">Миграция</string>
+    <string name="migrating_to">Перенести в</string>
+    <string name="migration">Перенос</string>
     <string name="no_alternatives_found">Альтернатив не найдено</string>
     <string name="no_folders_to_cleanup">Нет папок для очистки</string>
     <string name="no_more_results">Больше нет результатов</string>
@@ -206,7 +206,7 @@
         <item quantity="other">и ещё %1$d глав</item>
     </plurals>
     <string name="failed_to_update_cover">Не удалось обновить обложку</string>
-    <string name="must_be_in_library_to_edit">Серия должна быть в библиотеке для редактирования</string>
+    <string name="must_be_in_library_to_edit">Серия должна быть в библиотеке, для редактирования</string>
     <string name="new_chapters_found">Новые главы найдены</string>
     <plurals name="for_n_titles">
         <item quantity="one">Для %d серии</item>
@@ -238,7 +238,7 @@
     <string name="clear_chapter_cache">Очистить кэш глав</string>
     <string name="clear_cookies">Очистить cookies</string>
     <string name="clear_database">Очистить базу данных</string>
-    <string name="clear_database_summary">Удалить историю для серий, которые не находятся в библиотеке</string>
+    <string name="clear_database_summary">Удалить историю записей, которые не сохранены в вашей библиотеке</string>
     <string name="color_filter_blend_mode">Режим наложения цветофильтра</string>
     <string name="create_backup">Создать резервную копию</string>
     <string name="can_be_used_to_restore">Может быть использовано для восстановления текущей библиотеки</string>
@@ -267,19 +267,19 @@
     <string name="auto_refresh_covers">Обновлять обложки</string>
     <string name="auto_refresh_covers_summary">Также обновлять обложки при обновлении библиотеки</string>
     <string name="refresh_library_metadata">Обновлять библиотечные метаданные</string>
-    <string name="updates_covers_genres_desc">Обновить обложки, жанры, описание и информацию о сериях</string>
+    <string name="updates_covers_genres_desc">Обновить обложки, жанры, описания и информацию о записях</string>
     <string name="refresh_tracking_metadata">Обновить отслеживаемую метадату</string>
     <string name="updates_tracking_details">Обновляет статус, оценку и последнюю прочитанную главу для сервисов отслеживания</string>
     <string name="remove_when_marked_as_read">Удалить, когда помечено как «Прочитано»</string>
     <string name="remove_after_read">Удалять после прочтения</string>
     <string name="sort_by_ignoring_articles">Сортировать по игнорированым артиклям</string>
-    <string name="when_sorting_ignore_articles">Игнорировать артикли (a, an, the) при алфавитной сортировке серий</string>
+    <string name="when_sorting_ignore_articles">При сортировке по алфавиту игнорировать артикли (a, an, the) в начале названия серии</string>
     <string name="restore_backup">Восстановить резервную копию</string>
     <string name="restore_from_backup_file">Восстановить библиотеку из резервной копии</string>
     <string name="rotation">Ориентация</string>
     <string name="show_page_number">Показать номер страницы</string>
-    <string name="skip_pre_migration">Пропускать настройки миграции</string>
-    <string name="use_last_saved_migration_preferences">Использовать последние сохраненные премиграционные настройки и источники для массовой миграции</string>
+    <string name="skip_pre_migration">Пропускать настройки переноса</string>
+    <string name="use_last_saved_migration_preferences">Использовать последние сохраненные настройки и источники для массового переноса</string>
     <string name="skip_read_chapters">Пропускать главы, помеченные как «Прочитано»</string>
     <string name="app_theme">Тема приложения</string>
     <string name="true_32bit_color">32-битный цвет</string>
@@ -314,7 +314,7 @@
     <string name="source_not_installed_">Источник не установлен: %1$s</string>
     <string name="search_filters">Поисковые фильтры</string>
     <string name="starting_cleanup">Начало очистки</string>
-    <string name="stop_migrating">Остановить миграцию\?</string>
+    <string name="stop_migrating">Остановить перенос\?</string>
     <string name="system_default">Система</string>
     <string name="third_to_last">Третья от прочитанной</string>
     <string name="title">Название</string>
@@ -332,11 +332,9 @@
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="unlock_library">Разблокируйте, чтобы открыть библиотеку</string>
     <string name="untrusted_extension">Ненадёжное расширение</string>
-    <string name="untrusted_extension_message">Это расширение было подписано ненадёжным сертификатом и не было активировано.
+    <string name="untrusted_extension_message">Вредоносные расширения могут читать любые сохранённые учётные данные для входа или выполнять произвольный код.
 \n
-\nВредоносное расширение может считывать любые учетные данные для входа, хранящиеся в Tachiyomi, или выполнять произвольный код.
-\n
-\nДоверяя этому сертификату, вы принимаете эти риски.</string>
+\nДоверяя этому расширению, вы принимаете эти риски.</string>
     <string name="every_12_hours">Каждые 12 часов</string>
     <string name="daily">Ежедневно</string>
     <string name="every_2_days">Каждые 2 дня</string>
@@ -414,8 +412,8 @@
     <string name="create_new_category">Создать новую категорию</string>
     <string name="category_is_empty">Категория пуста</string>
     <string name="confirm_category_deletion">Удалить категорию\?</string>
-    <string name="confirm_category_deletion_message">Серия в этой категории будет перемещена в категорию по умолчанию.</string>
-    <string name="already_in_category">Серия уже в категории</string>
+    <string name="confirm_category_deletion_message">Записи из этой категории будут перемещены в категорию по умолчанию.</string>
+    <string name="already_in_category">Запись уже в категории</string>
     <string name="add_categories">Добавить категории</string>
     <string name="manage_category">Управление категорией</string>
     <string name="category_deleted">Категория удалена</string>
@@ -479,7 +477,7 @@
     <string name="latest">Последняя</string>
     <string name="source_hidden">Источник скрыт</string>
     <string name="last_used">Последний использованный</string>
-    <string name="local_source_help_guide">Руководство по источнику пользователя</string>
+    <string name="local_source_help_guide">Руководство по источнику на устройстве</string>
     <string name="check_site_in_web">Проверить сайт в WebView</string>
     <!-- Reader -->
     <string name="set_as_default_for_all">Установить по умолчанию для всех</string>
@@ -561,9 +559,9 @@
     <string name="remove_tracking_from_">Также удалить из %1$s</string>
     <!-- Migration -->
     <string name="select_sources">Выберите источники</string>
-    <string name="select_a_source_then_item_to_migrate">Выберите источник, затем выберите элемент для миграции</string>
+    <string name="select_a_source_then_item_to_migrate">Выберите источник, затем выберите элемент для переноса</string>
     <string name="to_show_again_setting_sources">Чтобы снова показать этот экран, перейдите по (Настройки → Источники).</string>
-    <string name="migrate_">Миграция %1$s</string>
+    <string name="migrate_">Перенос %1$s</string>
     <string name="migrate">Перенести</string>
     <string name="copy_value">Копировать</string>
     <!-- General settings -->
@@ -580,13 +578,13 @@
     <string name="requires_app_restart">Для вступления в силу требуется перезапуск приложения</string>
     <string name="clean_orphaned_downloads">Очистить потерянное</string>
     <string name="clean_read_downloads">Очистить прочитанное</string>
-    <string name="clean_read_manga_not_in_library">Очистить отсутствующее в библиотеке</string>
+    <string name="clean_read_manga_not_in_library">Очистить записи вне библиотеки</string>
     <string name="disable_battery_optimization">Выключить оптимизацию батареи</string>
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением/восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже выключена</string>
     <string name="clean_up_cached_covers">Очистить кэш обложек</string>
-    <string name="delete_old_covers_in_library_used_">Удалять старые и неиспользуемые кэшированные обложки серий в вашей библиотеке, которые были обновлены.
-\nИспользуется: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Удалите старые и неиспользуемые кэшированные обложки записей в вашей библиотеке, которая была обновлена.
+\nСейчас используется: %1$s</string>
     <string name="clear_cached_covers_non_library">Очистить кешированные обложки, которых нет в библиотеке</string>
     <string name="delete_all_covers__not_in_library_used_">Удалить все кешированные обложки, которых нет в библиотеке
 \nИспользуется: %1$s</string>
@@ -594,12 +592,12 @@
     <string name="pref_global_search">Глобальный поиск</string>
     <string name="check_for_extension_updates">Проверить обновления для расширений</string>
     <string name="only_search_pinned_when">Поиск только в закрепленных источниках</string>
-    <string name="match_pinned_sources">Соответствие закрепленных источников</string>
-    <string name="match_enabled_sources">Соответствие включенных источников</string>
-    <string name="only_enable_pinned_for_migration">Включить закрепленные источники для миграции</string>
-    <string name="only_enable_enabled_for_migration">Включить в текущий момент включенные источники для миграции</string>
-    <string name="migration_sources_changed">Миграционные источники изменены</string>
-    <string name="you_can_migrate_in_library">Вы также можете мигрировать, выбрав серии в своей библиотеке</string>
+    <string name="match_pinned_sources">Соответствие закрепленным</string>
+    <string name="match_enabled_sources">Соответствие включенным</string>
+    <string name="only_enable_pinned_for_migration">Включить закрепленные источники для переноса</string>
+    <string name="only_enable_enabled_for_migration">Включить в текущий момент включенные источники для переноса</string>
+    <string name="migration_sources_changed">Источники переноса изменены</string>
+    <string name="you_can_migrate_in_library">Вы также можете осуществить перенос, выбрав серии в своей библиотеке</string>
     <!-- About section -->
     <string name="whats_new">Что нового</string>
     <string name="website">Сайт</string>
@@ -658,9 +656,7 @@
     <string name="error_sharing_cover">Ошибка отправки обложки</string>
     <string name="error_saving_cover">Ошибка сохранения обложки</string>
     <string name="cover_saved">Обложка сохранена</string>
-    <string name="unofficial_extension_message">Это расширение не входит в официальный список расширений Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Неофициальное</string>
     <string name="may_contain_nsfw">Может содержать контент NSFW (18+)</string>
     <string name="next_page">Следующая страница</string>
     <string name="previous_page">Предыдущая страница</string>
@@ -668,7 +664,7 @@
     <string name="previous_chapter">Предыдущая глава</string>
     <string name="animate_page_transitions">Анимированные переходы страниц</string>
     <string name="default_reading_mode">Режим чтения по умолчанию</string>
-    <string name="source_migration_guide">Руководство по миграции источников</string>
+    <string name="source_migration_guide">Руководство по переносу источников</string>
     <string name="nsfw_sources">Источники NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Это не предотвращает появление внутри приложения контента NSFW (18+) из неофициальных или потенциально неправильно помеченных расширений.</string>
     <string name="no_chapters_error">Нет глав</string>
@@ -688,7 +684,7 @@
     <string name="invalid_backup_file">Неверный файл резервной копии</string>
     <string name="invalid_backup_file_type">Неверный тип файла резервной копии: %1$s
 \nФайл должен заканчиваться на .proto.gz или .json.</string>
-    <string name="backup_has_no_manga">Резервная копия не содержит серий.</string>
+    <string name="backup_has_no_manga">Резервная копия не содержит записей.</string>
     <string name="restore_missing_sources">Отсутствующие источники:</string>
     <string name="restore_missing_trackers">Сервисы отслеживания, в которые не выполнен вход:</string>
     <string name="restore_content_full">Данные из файла резервной копии будут восстановлены.
@@ -717,7 +713,7 @@
     <string name="hides_on_scroll">Скрывается при прокрутке</string>
     <string name="hide_bottom_nav">Скрывать панель навигации</string>
     <string name="last_used_library_recents">Последнее использованное (Библиотека или Недавние)</string>
-    <string name="custom_manga_info">Пользовательские сведения о серии</string>
+    <string name="custom_manga_info">Пользовательская информация о сериях</string>
     <string name="both_axes">Обе оси</string>
     <string name="vertically">Вертикально</string>
     <string name="horizontally">Горизонтально</string>
@@ -912,7 +908,7 @@
     <string name="recently_installed">Недавно установленный</string>
     <string name="recently_updated">Недавно обновленный</string>
     <string name="some_extensions_may_not_update">Некоторые расширения не могут автообновляться, если они были установлены вне этого приложения</string>
-    <string name="notify_extension_updated">Расширение уведомлений было обновлено</string>
+    <string name="notify_extension_updated">Уведомлять когда расширение было обновлено</string>
     <string name="auto_update_extensions">Автообновлять расширения</string>
     <string name="split_double_pages">Разделить двойные страницы</string>
     <string name="split_double_pages_portrait">Разделить двойные страницы в портретном режиме</string>
@@ -942,10 +938,10 @@
     <string name="default_behavior">По умолчанию</string>
     <string name="use_side_navigation">Использовать боковую панель навигации</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Пропущена %d глава, так как она либо отсутствует в источнике, либо была отфильтрована</item>
-        <item quantity="few">Пропущено %d главы, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
-        <item quantity="many">Пропущено %d глав, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
-        <item quantity="other">Пропущено %d глав, так как они либо отсутствуют в источнике, либо были отфильтрованы</item>
+        <item quantity="one">Отсутствует %d глава</item>
+        <item quantity="few">Отсутствуют %d главы</item>
+        <item quantity="many">Отсутствуют %d глав</item>
+        <item quantity="other">Отсутствуют %d глав</item>
     </plurals>
     <string name="helpful_translation_links">Полезные ссылки на перевод</string>
     <string name="help_translate">Помочь с переводом</string>
@@ -974,9 +970,9 @@
     <string name="publishing_finished">Публикация завершена</string>
     <string name="cancelled">Отменено</string>
     <string name="on_hiatus">Перерыв</string>
-    <string name="tracking_info">Односторонняя синхронизация для обновления прогресса в сервисах отслеживания. Настройте отслеживание при помощи кнопки «Отслеживание».</string>
+    <string name="tracking_info">Односторонняя синхронизация для обновления прогресса главы в отслеживании услуг. Настройте отслеживание отдельных записей с помощью кнопки отслеживания.</string>
     <string name="enhanced_services">Расширенные сервисы</string>
-    <string name="enhanced_tracking_info">Сервисы, предоставляющие расширенные возможности для определённых источников. Серия будет автоматически отслеживаться при добавлении в библиотеку.</string>
+    <string name="enhanced_tracking_info">Службы, предоставляющие расширенные функции для конкретных источников. Записи автоматически отслеживаются при добавлении в вашу библиотеку.</string>
     <string name="grayscale">Оттенки серого</string>
     <string name="date">Дата</string>
     <string name="local_invalid_format">Недопустимый формат глав</string>
@@ -987,7 +983,7 @@
     <string name="move_series_to_top">Переместить серию в начало</string>
     <string name="descending">По убыванию</string>
     <string name="ascending">По возрастанию</string>
-    <string name="clear_database_source_item_count">%1$d не библиотечных серий в базе данных</string>
+    <string name="clear_database_source_item_count">%1$d небиблиотечных записей в базе данных</string>
     <string name="database_clean">Очистка базы данных</string>
     <string name="confirm_manga_add_duplicate">В вашей библиотеке есть серия с таким же названием, но из другого источника (%1$s).
 \n
@@ -1015,7 +1011,7 @@
     <string name="backup_restore_invalid_uri">Ошибка: Пустой URI</string>
     <string name="backup_info">Настоятельно рекомендуется использовать автоматические резервные копии. Вы также должны хранить копии в разных папках.</string>
     <string name="zoom_double_page_spreads">Увеличивать масштаб для двухстраничных разворотов</string>
-    <string name="must_view_details_before_migration">Страницу сведений об этой записи необходимо просмотреть, прежде чем можно будет выполнять миграцию</string>
+    <string name="must_view_details_before_migration">Страницу сведений об этой записи необходимо просмотреть, прежде чем можно будет выполнять перенос</string>
     <string name="update_tracking_scoring_type">Обновить тип подсчета оценки %1$s</string>
     <string name="update_tracking_after_reading">Обновить отслеживание после прочтения</string>
     <string name="show_larger_toolbar">Показывать увеличенную, расширенную панель инструментов поверх большинства страниц (не показывается на меньших устройствах, вне зависимости от настройки)</string>
@@ -1029,7 +1025,7 @@
     <string name="show_">Показать %1$s</string>
     <string name="view_all">Просмотреть всё</string>
     <string name="use_staggered_grid">Использовать сетку в виде шахматной доски</string>
-    <string name="pref_update_only_completely_read_summary">Обновлять мангу, только если нет непрочитанных глав (полностью прочитано)</string>
+    <string name="pref_update_only_completely_read_summary">Обновлять серии, только если нет непрочитанных глав (полностью прочитано)</string>
     <string name="select_uninstalled_sources">Выбрать неустановленные источники</string>
     <string name="downloads_swipe_tutorial">Загрузки можно отменить свайпом
 \nСвайпните, чтобы убрать эту подсказку</string>
@@ -1081,7 +1077,7 @@
     <string name="length">Размер</string>
     <string name="no_data_for_filters">Данные текущих фильтров не найдены</string>
     <string name="tracker">Трекер</string>
-    <string name="clear_db_exclude_read">Сохранить мангу с прочитанными главами</string>
+    <string name="clear_db_exclude_read">Сохранить записи с прочитанными главами</string>
     <string name="stats">Статистика</string>
     <string name="titles_in_library">Тайтлы в библиотеке</string>
     <string name="tracked_titles">Отслеживаемые тайтлы</string>
@@ -1118,7 +1114,7 @@
         <item quantity="many">%d языков</item>
         <item quantity="other">%d языков</item>
     </plurals>
-    <string name="all_read_manga">Вся прочитанная манга</string>
+    <string name="all_read_manga">Все прочитанные серии</string>
     <string name="statistics_details">Детальная статистика</string>
     <string name="manga_score_distribution">Распределение оценок</string>
     <string name="local_titles">Локальные тайтлы</string>
@@ -1146,9 +1142,32 @@
     <string name="pref_remove_exclude_categories">Исключённые категории</string>
     <string name="apply">Применить</string>
     <string name="ext_installer_pref">Установщик</string>
-    <string name="library_entries">Серии библиотеки</string>
+    <string name="library_entries">Записи библиотеки</string>
     <string name="source_settings">Настройки источников</string>
     <string name="app_settings">Настройки приложения</string>
-    <string name="pref_debug_info">Отладочная информация</string>
+    <string name="pref_debug_info">Информация для отладки</string>
     <string name="label_background_activity">Фоновая активность</string>
+    <string name="ext_installer_summary">Разрешает разширениям быть установленными без запросов пользователя и включает автоматические обновления для устройств на Android 12</string>
+    <string name="share_cover">Поделиться обложкой</string>
+    <string name="save_pages_separately">Сохранять страницы в отдельных папках</string>
+    <string name="create_folders_by_manga_title">Создавать папки в соответствии с названием серии</string>
+    <string name="ext_revoke_trust">Отозвать доверенные неизвестные расширения</string>
+    <string name="open_source_repo">Репозиторий с открытым исходным кодом</string>
+    <string name="repo_cannot_be_blank">Имя репозитория не может быть пустым</string>
+    <string name="snack_repo_deleted">Репозиторий удалён</string>
+    <string name="invalid_repo_name">Неверное имя репозитория</string>
+    <string name="delete_repo_confirmation">Вы хотите удалить репозиторий «%s»?</string>
+    <string name="url_not_set_click_again">Не задан URL-адрес репозитория. Измените его</string>
+    <string name="extension_api_error">Не удалось получить доступные расширения</string>
+    <string name="action_add_repo">Добавить репозиторий</string>
+    <string name="action_add_repo_message">Добавьте дополнительные репозитории в Tachiyomi. Это должен быть URL-адрес, заканчивающийся на «index.min.json»</string>
+    <string name="extension_repos">Репозитории расширений</string>
+    <plurals name="num_repos">
+        <item quantity="one">%d репозиторий</item>
+        <item quantity="few">%d репозитория</item>
+        <item quantity="many">%d репозиториев</item>
+        <item quantity="other">%d репозиториев</item>
+    </plurals>
+    <string name="error_repo_exists">Этот репозиторий уже существует!</string>
+    <string name="confirm_repo_deletion">Удалить репозиторий</string>
 </resources>

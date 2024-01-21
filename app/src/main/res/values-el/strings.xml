@@ -452,9 +452,7 @@
     <string name="badges">Σήματα</string>
     <string name="next">Επόμενο</string>
     <string name="open_log">Άνοιγμα αρχείου καταγραφής</string>
-    <string name="unofficial_extension_message">Αυτή η επέκταση δεν προέρχεται από την επίσημη λίστα επεκτάσεων Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Ανεπίσημη</string>
     <string name="may_contain_nsfw">Μπορεί να περιέχει NSFW (18+) περιεχόμενο</string>
     <string name="next_page">Επόμενη σελίδα</string>
     <string name="previous_page">Προηγούμενη σελίδα</string>
@@ -1073,4 +1071,6 @@
     <string name="apply">Εφαρμογή</string>
     <string name="allow_notifications_recommended">Συνιστάται να επιτρέψετε τις ειδοποιήσεις για να διατηρείται την βιβλιοθήκη σας και την εφαρμογή σας ενημερωμένες.</string>
     <string name="share_cover">Κοινοποίηση εξωφύλλου</string>
+    <string name="save_pages_separately">Αποθήκευση σελίδων σε ξεχωριστούς φακέλους</string>
+    <string name="create_folders_by_manga_title">Δημιουργεί φακέλους σύμφωνα με τον τίτλο manga</string>
 </resources>

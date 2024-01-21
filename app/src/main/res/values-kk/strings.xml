@@ -68,9 +68,7 @@
 \n
 \nОсы сертификатқа сену арқылы сіз осы қауіп-қатерді қабылдайсыз.</string>
     <string name="obsolete_extension_message">Бұл кеңейту енді қолжетімсіз.</string>
-    <string name="unofficial_extension_message">Бұл кеңейту Tachiyomi кеңейтулерінің ресми тізімінен емес.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Бейресми</string>
     <string name="next_chapter">Келесі бөлім</string>
     <string name="previous_chapter">Алдыңғы бөлім</string>
     <string name="fullscreen">Толық экранды</string>
@@ -531,4 +529,6 @@
     <string name="clear_database_summary">Кітапханада жоқ жазбалардың тарихын жою</string>
     <string name="pref_debug_info">Дебаг туралы ақпарат</string>
     <string name="label_background_activity">Аялық белсенділік</string>
+    <string name="grid_size">Әр жолдағы элемент саны</string>
+    <string name="rotation">Айналу түрі</string>
 </resources>

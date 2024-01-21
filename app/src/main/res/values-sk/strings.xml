@@ -420,7 +420,6 @@
     <string name="sort_by">Zotriediť podľa</string>
     <string name="read_progress">Priebeh čítania</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Nainštalujte a spustite Shizuku, aby ste mohli používať Shizuku ako inštalátor rozšírení.</string>
-    <string name="unofficial_extension_message">Toto rozšírenie nie je z oficiálneho zoznamu rozšírení Tachiyomi.</string>
     <string name="pref_webtoon_side_padding">Bočné odsadenie</string>
     <string name="webtoon_side_padding_20">20%</string>
     <string name="webtoon_side_padding_25">25%</string>
@@ -557,7 +556,6 @@
     <string name="webview_is_required">WebView je potrebné pre Tachiyomi</string>
     <string name="save_chapters_as_cbz">Uložiť ako archív CBZ</string>
     <string name="actions">Akcie</string>
-    <string name="unofficial">Neoficiálne</string>
     <string name="previous_page">Predchádzajúca strana</string>
     <string name="paged">Stránkovanie</string>
     <string name="pauses_reading_history">Pozastaví históriu čítania</string>
@@ -626,4 +624,8 @@
     <string name="ext_installer_pref">Inštalátor</string>
     <string name="library_entries">Záznamy v knižnici</string>
     <string name="label_background_activity">Aktivita na pozadí</string>
+    <string name="appwidget_updates_description">Pozrite si svoju nedávno aktualizovanú mangu</string>
+    <string name="clear_database_summary">Odstránenie histórie mangy, ktorá nie je uložená vo vašej knižnici</string>
+    <string name="grid_size">Položky na riadok</string>
+    <string name="trackers">Služby</string>
 </resources>

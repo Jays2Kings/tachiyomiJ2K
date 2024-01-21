@@ -32,7 +32,7 @@
     <string name="top">លើ</string>
     <string name="undo">ត្រឡប់វាវិញ</string>
     <string name="warning">បំរាម</string>
-    <string name="manga">ម៊េងហ្គា</string>
+    <string name="manga">ត្លុកជប៉ុន</string>
     <string name="unread">មិនទាន់អាន</string>
     <string name="bookmarked">បានបញ្ចូលទៅក្នុងបណ្ណាល័យ</string>
     <string name="by_update_date">តម្រៀបតាមកាលបរិច្ឆេទ</string>
@@ -122,10 +122,10 @@
     <string name="external_storage_permission_notice">តាឈិយ៉ូមិJ2K ត្រូវការaccessរាល់ហ្វល់ទាំងអស់នៅក្នុងអ៊េនដ្រយដ៏១១ដើម្បីទាញយកភាគ បង្កើតbackupsដោយស្វ័យប្រវត្ត និងអានម៊េងហ្គាដែលមានស្រាប់នៅក្នុងទូរសព្ទ។
 \n
 \nនៅអេក្រង់បន្ទាប់​ បើក \"អនុញ្ញាតឲ្យaccessដើម្បីគ្រប់គ្រងរាល់ហ្វាល់ទាំងអស់\"</string>
-    <string name="manhwa">ម៉ាន់វ៉ា</string>
-    <string name="manhua">ម៉ាន់ហួរ</string>
-    <string name="comic">កូមិច</string>
-    <string name="webtoon">វេបធូន</string>
+    <string name="manhwa">ត្លុកកូរ៉េ</string>
+    <string name="manhua">ត្លុកចិន</string>
+    <string name="comic">ត្លុក</string>
+    <string name="webtoon">ត្លុកលើវែប</string>
     <string name="title">ចំណងជើង</string>
     <string name="author">អ្នកនិពន្ធ</string>
     <string name="artist">វិចិត្រករ</string>
@@ -258,4 +258,9 @@
     <string name="reorder_filters">តម្រៀបតម្រងឡើងវិញ</string>
     <string name="_unread">មាន %d មិនទាន់អាន</string>
     <string name="open_random_series">មើលរឿងណាមួយ</string>
+    <string name="local_source">ម៊េងហ្គាដែលមានស្រាប់ក្នុងឧបករណ៍</string>
+    <string name="library_entries">បណ្ដុំក្នុងបណ្ណាល័យ</string>
+    <string name="new_chapters_found">មានភាគថ្មី</string>
+    <string name="grid_size">ធាតុក្នុងមួយជួ</string>
+    <string name="backup_and_restore">បម្រុងទុក និងស្ដារឡើងវិញ</string>
 </resources>

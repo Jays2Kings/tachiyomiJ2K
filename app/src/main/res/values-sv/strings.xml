@@ -369,9 +369,7 @@
     <string name="open_log">Öppna logg</string>
     <string name="no_chapters_error">Inga kapitel hittades</string>
     <string name="last_used">Senast använd</string>
-    <string name="unofficial_extension_message">Detta tillägg kommer inte från den officiella Tachiyomi-tilläggslistan.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Inofficiell</string>
     <string name="may_contain_nsfw">Kan innehålla NSFW(18+) innehåll</string>
     <string name="next_page">Nästa sida</string>
     <string name="previous_page">Föregående sida</string>
@@ -1071,4 +1069,7 @@
     <string name="app_settings">Appinställningar</string>
     <string name="pref_debug_info">Felsökningsinformation</string>
     <string name="label_background_activity">Bakgrundsaktivitet</string>
+    <string name="share_cover">Dela omslag</string>
+    <string name="save_pages_separately">Spara sidor i separata mappar</string>
+    <string name="create_folders_by_manga_title">Skapar mappar enligt manga titel</string>
 </resources>

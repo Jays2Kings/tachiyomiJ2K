@@ -143,9 +143,7 @@
 \nएउटा खराब एक्सटेन्शनले ताचियोमीमा भण्डारण गरिएका कुनै पनि लगइन प्रमाणहरू पढ्न वा स्वेच्छाचारी कोड कार्यान्वयन गर्न सक्छ।
 \n
 \nयस प्रमाणपत्रमा विश्वास गरेर तपाईंले यी जोखिमहरू स्वीकार गर्नुहुन्छ।</string>
-    <string name="unofficial_extension_message">यो एक्सटेन्शन आधिकारिक ताचियोमीको एक्सटेन्शन सूचीबाट होइन।</string>
     <string name="nsfw_short">१८+</string>
-    <string name="unofficial">अनौपचारिक</string>
     <string name="app_info">एप जानकारी</string>
     <string name="update_all">सबै अपडेट गर्नुहोस्</string>
     <plurals name="extension_updates_available">
@@ -1071,4 +1069,7 @@
     <string name="app_settings">एप सेटिङहरू</string>
     <string name="pref_debug_info">Debug जानकारी</string>
     <string name="label_background_activity">ब्याकग्राउण्ड गतिविधि</string>
+    <string name="share_cover">आवरण साझा गर्नुहोस्</string>
+    <string name="save_pages_separately">फरक फोल्डरमा पृष्ठहरू सेभ गर्नुहोस्</string>
+    <string name="create_folders_by_manga_title">माङ्गा शीर्षक अनुसार फोल्डरहरू सिर्जना गर्दछ</string>
 </resources>

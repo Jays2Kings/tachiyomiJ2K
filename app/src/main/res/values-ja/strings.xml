@@ -23,7 +23,7 @@
     <string name="compact_grid">グリッド</string>
     <string name="list">リスト</string>
     <string name="sort">ソート</string>
-    <string name="tracking">追跡</string>
+    <string name="tracking">トラッキング</string>
     <string name="extensions">拡張機能</string>
     <string name="extension_info">拡張機能の情報</string>
     <string name="source_migration">ソース移行</string>
@@ -181,8 +181,8 @@
     <string name="copy_value">コピー</string>
     <string name="reader">ビューア</string>
     <string name="update">更新</string>
-    <string name="new_version_available">アップデート利用可能！</string>
-    <string name="no_new_updates_available">新しいバージョンがありません</string>
+    <string name="new_version_available">新しいバージョンが利用可能です！</string>
+    <string name="no_new_updates_available">利用可能な新しいアップデートはありません</string>
     <string name="searching_for_updates">アップデートを確認中…</string>
     <string name="updating_library">ライブラリを更新中</string>
     <string name="local">ローカル</string>
@@ -355,7 +355,7 @@
     <string name="chapters_removed">章が消去されました。</string>
     <string name="removed_bookmark">お気に入りを削除しました</string>
     <string name="library_search_hint">タイトル、タグまたはソースを検索</string>
-    <string name="update_available">更新可能</string>
+    <string name="update_available">アップデートが利用可能です</string>
     <string name="updating_">%1$sを更新</string>
     <string name="tracking_status">ステータスの追跡</string>
     <string name="series_type">シリーズタイプ</string>
@@ -379,9 +379,7 @@
     <string name="no_chapters_error">章が見つかりません</string>
     <string name="badges">バッジ</string>
     <string name="last_used">最後に使用した</string>
-    <string name="unofficial_extension_message">この拡張機能はTachiyomiの公式拡張機能リストに含まれていません。</string>
     <string name="nsfw_short">成人向け</string>
-    <string name="unofficial">非公式</string>
     <string name="may_contain_nsfw">成人向けのコンテンツが含まれる可能性があります</string>
     <string name="finished_chapter">読み終わりました：</string>
     <string name="current_chapter">読んでいます：</string>
@@ -413,7 +411,7 @@
     <string name="restoring_backup_canceled">復元をキャンセルしました</string>
     <string name="restore_duration">%02d分%02d秒</string>
     <plurals name="restore_completed_message">
-        <item quantity="other">%1$sで完成済み　%2$s件のエラーが発生しました</item>
+        <item quantity="other">%1$sで完了しました (%2$s件のエラー)</item>
     </plurals>
     <string name="source_migration_guide">ソース移行ガイド</string>
     <string name="nsfw_sources">成人向けのソース</string>
@@ -811,7 +809,7 @@
     <string name="set_as_default">既定として設定</string>
     <string name="add_tag">タグを追加</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="other">ソースには存在しないか、フィルターによって排除されたため、%d章がスキップされました</item>
+        <item quantity="other">%d章をスキップします。ソースに章が存在しないか、フィルタリングされています。</item>
     </plurals>
     <string name="split_double_pages">ダブルページを分割</string>
     <string name="remove_crop">クロップを除去</string>
@@ -874,7 +872,7 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Shizukuを拡張機能インストーラーとして使用するには、Shizukuをインストールして起動してください。</string>
     <string name="show_outline_around_covers">表紙に輪郭を表示</string>
     <string name="every_3_days">3日ごと</string>
-    <string name="download_queue_size_warning">警告：大量の一括ダウンロードにより、ソースは遅くなったり、Tachiyomiを接続禁止したりする恐れがあります。詳しくはタップでご覧ください。</string>
+    <string name="download_queue_size_warning">警告: 大量の一括ダウンロードにより、ソースは遅くなったり、Tachiyomiを接続禁止したりする恐れがあります。詳しくはタップでご覧ください。</string>
     <string name="save_chapters_as_cbz">CBZアーカイブとして保存</string>
     <string name="lime_time">石灰の世代</string>
     <string name="classic_blue">クラシックブルー</string>
@@ -890,7 +888,7 @@
     <string name="check_for_beta_releases">ベータリリースをチェック</string>
     <string name="expanded_toolbar">高度なツールバー</string>
     <string name="warning_enroll_into_beta">ベータリリースは不安定な可能性があり、アプリデータを全消去しなければならないかもしれません。</string>
-    <string name="new_beta_version_available">新しいベータバージョンが利用可能！</string>
+    <string name="new_beta_version_available">新しいベータバージョンが利用可能です！</string>
     <string name="language_badge">言語バッジ</string>
     <string name="show_larger_toolbar">ほとんどのページで大きめの高度なツールバーを表示（画面の小さな端末ではONにしても表示しません）</string>
     <string name="try_new_features">まだ正式にリリースされていない機能をいち早く試すことができます。ベータリリースは不安定な可能性があり、開発者にフィードバックを集めることを目的として提供しています。</string>
@@ -1027,7 +1025,7 @@
     <string name="mean_tracking_score">平均追跡スコア</string>
     <string name="show_more_chapters">章をもっと表示</string>
     <string name="collapse_grouped_chapters">グループ化した章を折り畳む</string>
-    <string name="updates_last_update_info">前回のライブラリ更新：%s</string>
+    <string name="updates_last_update_info">前回のライブラリ更新: %s</string>
     <string name="by_series">シリーズ</string>
     <string name="by_week">週</string>
     <string name="by_day">日</string>
@@ -1043,5 +1041,8 @@
     <string name="ext_installer_summary">Android 12 以前のバージョンの端末でユーザー入力なしで拡張機能のインストールを許可し、自動アップデートをONにします</string>
     <string name="apply">適用</string>
     <string name="pref_debug_info">デバッグ情報</string>
-    <string name="label_background_activity">バックアップアクティビティ</string>
+    <string name="label_background_activity">バックグラウンドアクティビティ</string>
+    <string name="share_cover">シェアカバー</string>
+    <string name="save_pages_separately">ページを別々のフォルダに保存する</string>
+    <string name="create_folders_by_manga_title">マンガのタイトルに合わせてフォルダを作成</string>
 </resources>

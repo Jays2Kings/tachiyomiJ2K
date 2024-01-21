@@ -10,7 +10,7 @@
     <string name="library">Бібліотека</string>
     <string name="recent_updates">Оновлення бібліотеки</string>
     <string name="selected_">Обрані: %1$d</string>
-    <string name="source_migration">Міграція джерела</string>
+    <string name="source_migration">Перенос джерела</string>
     <string name="extensions">Розширення</string>
     <string name="extension_info">Інформація про розширення</string>
     <string name="filter">Фільтр</string>
@@ -166,11 +166,11 @@
     <string name="clear_cookies">Очистити реп`яшки</string>
     <string name="cookies_cleared">Куки очищено</string>
     <string name="clear_database">Очистити базу даних</string>
-    <string name="clear_database_summary">Видалити історію для записів, котрі не знаходяться в вашій бібліотеці</string>
-    <string name="clear_database_confirmation">Ви впевнені\? Прочитані розділи та прогрес не бібліотечних записів будуть втрачені</string>
+    <string name="clear_database_summary">Видалити історію для записів, котрі не збережено в вашій бібліотеці</string>
+    <string name="clear_database_confirmation">Ви впевнені? Прочитані розділи та прогрес не бібліотечних записів будуть втрачені</string>
     <string name="clear_database_completed">Дані видалено</string>
     <string name="refresh_library_metadata">Оновити метадані</string>
-    <string name="updates_covers_genres_desc">Оновити обкладинки, жанри, описи та інформацію про манґу</string>
+    <string name="updates_covers_genres_desc">Оновити обкладинки, жанри, описи та інформацію про записи</string>
     <string name="refresh_tracking_metadata">Оновити метадані відстеження</string>
     <string name="updates_tracking_details">Оновити стан, оцінку і останній розділ з сервісів відстеження</string>
     <string name="version">Версія</string>
@@ -239,7 +239,7 @@
     <string name="migrate">Мігрувати</string>
     <string name="new_chapters_found">Знайдено нові розділи</string>
     <string name="failed_to_update_cover">Не вдалось оновити обкладинку</string>
-    <string name="must_be_in_library_to_edit">Будь ласка, додайте манґу до своєї бібліотеки перед тим як робити це</string>
+    <string name="must_be_in_library_to_edit">Будь ласка, додайте серії до своєї бібліотеки перед тим як робити це</string>
     <string name="select_cover_image">Вибрати обкладинку</string>
     <string name="select_backup_file">Виберіть файл резервної копії</string>
     <string name="new_version_available">Доступні нові оновлення!</string>
@@ -249,9 +249,9 @@
     <string name="download_complete">Завантаження завершено</string>
     <string name="download_error">Помилка завантаження</string>
     <string name="update_available">Доступно оновлення</string>
-    <string name="cover_of_image">Обкладинка манґи</string>
+    <string name="cover_of_image">Обкладинка серій</string>
     <string name="no_recent_chapters">Немає нових розділів</string>
-    <string name="no_recently_read_manga">Немає нещодавно прочитаних розділів</string>
+    <string name="no_recently_read_manga">Немає нещодавно прочитаних серій</string>
     <string name="library_is_empty_add_from_browse">Ваша бібліотека порожня, ви можете додати з каталогу.</string>
     <string name="could_not_download_unexpected_error">Невідома помилка при завантаженні розділу</string>
     <string name="no_wifi_connection">Немає Wi-Fi підключення</string>
@@ -335,7 +335,7 @@
     <string name="reorder">Переупорядкувати</string>
     <string name="unpin">Відкріпити</string>
     <string name="view_chapters">Подивитись розділи</string>
-    <string name="confirm_category_deletion_message">Манґу з цієї категорії буде переміщено до основної категорії.</string>
+    <string name="confirm_category_deletion_message">Серії з цієї категорії буде переміщено до основної категорії.</string>
     <string name="confirm_category_deletion">Видалити категорію\?</string>
     <string name="category_is_empty">Категорія порожня</string>
     <string name="create_new_category">Створити нову категорію</string>
@@ -406,7 +406,7 @@
         <item quantity="many">Для %d заголовків</item>
         <item quantity="other">Для %d заголовків</item>
     </plurals>
-    <string name="when_sorting_ignore_articles">При сортуванні за алфавітом, ігнорувати артиклі (a, an, the) на початку назви манґи</string>
+    <string name="when_sorting_ignore_articles">При сортуванні за алфавітом, ігнорувати артиклі (a, an, the) на початку назви серії</string>
     <string name="sort_by_ignoring_articles">Сортувати ігноруючи артиклі</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">та %1$d ще розділ</item>
@@ -444,12 +444,12 @@
     <string name="category_deleted">Категорію видалено</string>
     <string name="manage_category">Керувати категоріями</string>
     <string name="add_categories">Додати категорії</string>
-    <string name="already_in_category">Манґа вже в категорії</string>
+    <string name="already_in_category">Серії вже в категорії</string>
     <string name="search_parameter_eg">Параметр пошуку (наприклад, мова:англійська)</string>
     <string name="select_a_source_then_item_to_migrate">Оберіть джерело, після чого оберіть елемент для міграції</string>
-    <string name="data_to_include_in_migration">Дані що будуть включені для міграції</string>
-    <string name="skip_pre_migration">Пропустити перед-міграцію</string>
-    <string name="migration">Міграція</string>
+    <string name="data_to_include_in_migration">Дані, що будуть включені для перенос</string>
+    <string name="skip_pre_migration">Пропустити передперенос</string>
+    <string name="migration">Перенос</string>
     <string name="select_sources">Обрати джерела</string>
     <string name="remove_tracking_from_">Також видалити з %1$s</string>
     <string name="remove_tracking">Видалити відстеження з застосунку</string>
@@ -504,27 +504,27 @@
     <string name="restore_error">Не вдалось відновити резервну копію</string>
     <string name="white_theme">Чисто-білий</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d мангу змігровано</item>
-        <item quantity="few">%d манґи змігровано</item>
-        <item quantity="many">%d манґи змігровано</item>
-        <item quantity="other">%d манґи змігровано</item>
+        <item quantity="one">%d серії змігровано</item>
+        <item quantity="few">%d серій змігровано</item>
+        <item quantity="many">%d серій змігровано</item>
+        <item quantity="other">%d серій змігровано</item>
     </plurals>
     <string name="skipping_">(пропускаємо %1$d)</string>
     <plurals name="copy_manga">
-        <item quantity="one">Копіювати %1$d%2$s манґу\?</item>
-        <item quantity="few">Копіювати %1$d%2$s манґи\?</item>
-        <item quantity="many">Копіювати %1$d%2$s манґи\?</item>
-        <item quantity="other">Копіювати %1$d%2$s манґи\?</item>
+        <item quantity="one">Копіювати %1$d%2$s серію?</item>
+        <item quantity="few">Копіювати %1$d%2$s серій?</item>
+        <item quantity="many">Копіювати %1$d%2$s серій?</item>
+        <item quantity="other">Копіювати %1$d%2$s серій?</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">Мігрувати %1$d%2$s манґу\?</item>
-        <item quantity="few">Мігрувати %1$d%2$s манґ\?</item>
-        <item quantity="many">Мігрувати %1$d%2$s манґ\?</item>
-        <item quantity="other">Мігрувати %1$d%2$s манґ\?</item>
+        <item quantity="one">Мігрувати %1$d%2$s серії?</item>
+        <item quantity="few">Мігрувати %1$d%2$s серій?</item>
+        <item quantity="many">Мігрувати %1$d%2$s серій?</item>
+        <item quantity="other">Мігрувати %1$d%2$s серій?</item>
     </plurals>
     <string name="stop_migrating">Припинити міграцію\?</string>
     <string name="no_alternatives_found">Альтернатив не знайдено</string>
-    <string name="no_chapters_found_for_migration">Розділи не знайдено, цю манґу не можна використати для міграції</string>
+    <string name="no_chapters_found_for_migration">Розділи не знайдено, цю серію не можна використати для переносу</string>
     <string name="migrate_">Мігрувати %1$s</string>
     <string name="copy_now">Копіювати зараз</string>
     <string name="migrate_now">Мігрувати зараз</string>
@@ -554,17 +554,17 @@
 \n
 \nВидалити завантажене\?</item>
     </plurals>
-    <string name="migration_sources_changed">Джерела міграції змінено</string>
-    <string name="use_last_saved_migration_preferences">Використовувати останні збережені передміграційні налаштування та джерела для масової міграції</string>
-    <string name="only_enable_enabled_for_migration">Включити тільки включені джерела для міграції</string>
-    <string name="only_enable_pinned_for_migration">Включити тільки закріплені джерела для міграції</string>
+    <string name="migration_sources_changed">Джерела переносу змінено</string>
+    <string name="use_last_saved_migration_preferences">Використовувати останні збережені передпереносу налаштування та джерела для масової міграції</string>
+    <string name="only_enable_enabled_for_migration">Включити тільки включені джерела для переносу</string>
+    <string name="only_enable_pinned_for_migration">Включити тільки закріплені джерела для переносу</string>
     <string name="match_enabled_sources">Відповідність включених джерел</string>
     <string name="only_search_pinned_when">Шукати тільки в закріплених джерелах</string>
     <string name="match_pinned_sources">Відповідність до закріплених джерел</string>
     <string name="delete_all_covers__not_in_library_used_">Видалити усі кешовані обкладинки котрих нема у вашій бібліотеці
 \nВикористовується: %1$s</string>
     <string name="clear_cached_covers_non_library">Очистити кешовані обкладинки котрих нема в бібліотеці</string>
-    <string name="delete_old_covers_in_library_used_">Видалити старі та невикористовувані чи кешовані обкладинки манґи, у вашій бібліотеці котру було оновлено.
+    <string name="delete_old_covers_in_library_used_">Видалити старі та невикористовувані чи кешовані обкладинки, у вашій бібліотеці котру було оновлено.
 \nВикористовується: %1$s</string>
     <string name="clean_up_cached_covers">Очистити кеш обкладинок</string>
     <plurals name="cleanup_done">
@@ -576,7 +576,7 @@
     <string name="disable_if_issues_with_updating">Вимкніть це, якщо у вас виникли проблеми з оновленням чи відновленням бібліотеки</string>
     <string name="no_folders_to_cleanup">Нема тек для очищення</string>
     <string name="starting_cleanup">Початок очищення</string>
-    <string name="clean_read_manga_not_in_library">Очистити манґу поза бібліотекою</string>
+    <string name="clean_read_manga_not_in_library">Очистити записи поза бібліотекою</string>
     <string name="clean_read_downloads">Очистити прочитане</string>
     <string name="clean_orphaned_downloads">Очистити загублене</string>
     <string name="delete_unused_chapters">Видалити не існуючі, частково завантажені а також прочитані розділи</string>
@@ -617,7 +617,7 @@
     <string name="downloading_">Завантаження: %1$s</string>
     <string name="username_must_not_be_blank">Ім`я користувача чи пароль не можуть бути порожніми</string>
     <string name="whats_new">Що новенького</string>
-    <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши манґу з вашої бібліотеки</string>
+    <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши записи з вашої бібліотеки</string>
     <string name="badges">Значки</string>
     <string name="started_reading_date">Дата початку читання</string>
     <string name="finished_reading_date">Дата закінчення читання</string>
@@ -627,9 +627,7 @@
     <string name="no_chapters_error">Немає розділів</string>
     <string name="next">Наступний</string>
     <string name="open_log">Відкрити лог</string>
-    <string name="unofficial_extension_message">Це розширення не входить до переліку офіційних розширень Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Неофіційне</string>
     <string name="may_contain_nsfw">Може включати в собі непристойний вміст (18+)</string>
     <string name="next_page">Наступна сторінка</string>
     <string name="previous_page">Попередня сторінка</string>
@@ -647,7 +645,7 @@
     <string name="invalid_backup_file">Невірний файл резервної копії</string>
     <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
 \nЙого розширення повинне бути .proto.gz or .json.</string>
-    <string name="backup_has_no_manga">Резервна копія не містить жодної манґи.</string>
+    <string name="backup_has_no_manga">Резервна копія не містить жодних записів.</string>
     <string name="restore_missing_sources">Відсутні джерела:</string>
     <string name="restore_missing_trackers">Трекери не авторизовано:</string>
     <string name="restore_content_full">Дані з файлу резервної копії буде відновлено.
@@ -661,7 +659,7 @@
         <item quantity="many">Зроблено за %1$s з %2$s помилками</item>
         <item quantity="other">Зроблено за %1$s з %2$s помилками</item>
     </plurals>
-    <string name="source_migration_guide">Гайд по міграції джерел</string>
+    <string name="source_migration_guide">Гайд по переносу джерел</string>
     <string name="nsfw_sources">NSFW (18+) джерела</string>
     <string name="does_not_prevent_unofficial_nsfw">Це не заважає неофіційним або потенційно неправильно позначеним розширенням розміщувати вміст NSFW (18+) у застосунку.</string>
     <string name="file_picker_error">Застосунок вибору файлів не знайдено</string>
@@ -726,7 +724,7 @@
     <string name="warning">Попередження</string>
     <string name="download_queue_size_warning">Попередження: великий об\'єм завантажень може призвести до сповільнення роботи джерел та/або блокуванню Tachiyomi.</string>
     <string name="every_3_days">Що 3 дні</string>
-    <string name="external_storage_permission_notice">TachiyomiJ2K потребує доступу до всіх файлів в Android 11, щоб завантажувати розділи, створювати автоматичні резервні копії та читати локальну манґу.
+    <string name="external_storage_permission_notice">TachiyomiJ2K потребує доступу до всіх файлів в Android 11, щоб завантажувати розділи, створювати автоматичні резервні копії та читати особисті серії.
 \n
 \nНа наступному екрані ввімкніть \"Дозволити доступ для керування всіма файлами.\"</string>
     <string name="external_storage_download_notice">TachiyomiJ2K потребує доступу до всіх файлів для завантаження розділів. Натисніть тут, а потім увімкніть \"Дозволити доступ для керування всіма файлами.\"</string>
@@ -740,7 +738,7 @@
     <string name="all_files_permission_required">Потрібен дозвіл доступу до файлів</string>
     <string name="not_bookmarked">Не в закладинках</string>
     <string name="search_tips_show_periodically">Підказки щодо пошуку періодично з’являтимуться. Довго натисніть на пропозицію, щоб шукати це.</string>
-    <string name="no_recent_read_updated_manga">Немає нещодавно прочитаної чи оновленої манґи</string>
+    <string name="no_recent_read_updated_manga">Немає нещодавно прочитаних чи оновлених серії</string>
     <string name="show_title_first">Спочатку показати назву</string>
     <string name="show_read_chapters_all">Показати прочитані розділи в розділах Згруповані та Усі</string>
     <plurals name="extensions_updated_plural">
@@ -853,7 +851,7 @@
     <string name="ignore_cutout_areas">Ігнорувати виріз</string>
     <string name="cutout_behavior_only_applies">Поведінка вирізу вживається лише в портретному режимі з визначеними типами масштабів</string>
     <string name="automatic_orientation">Автоматичне (на основі орієнтації)</string>
-    <string name="custom_manga_info">Користувальницька інформація про манґу</string>
+    <string name="custom_manga_info">Користувальницька інформація про серії</string>
     <string name="spring_blossom">Квітуча весна</string>
     <string name="follow_system_theme">Дотримуватися системного тла</string>
     <string name="details_page">Подробиці сторінки</string>
@@ -947,9 +945,9 @@
     <string name="publishing_finished">Публікація завершена</string>
     <string name="cancelled">Відмінено</string>
     <string name="on_hiatus">Заморожено</string>
-    <string name="tracking_info">Одностороння синхронізація для оновлення прогресу в службах відстеження. Налаштуйте для окремих записів манґи з допомогою кнопки \"Відстеження\".</string>
+    <string name="tracking_info">Одностороння синхронізація для оновлення прогресу в службах відстеження. Налаштуйте для окремих записів серій з допомогою кнопки \"Відстеження\".</string>
     <string name="enhanced_services">Розширені сервіси</string>
-    <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Манґа буде автоматично відстежуватись при додаванні до бібліотеки.</string>
+    <string name="enhanced_tracking_info">Сервіси, які надають розширені можливості для певних джерел. Серії буде автоматично відстежуватись при додаванні до бібліотеки.</string>
     <string name="local_invalid_format">Невірний формат розділів</string>
     <string name="order_by">Сортувати за</string>
     <string name="grayscale">Відтінки сірого</string>
@@ -958,7 +956,7 @@
     <string name="ascending">За зростанням</string>
     <string name="date">Дата</string>
     <string name="descending">За спаданням</string>
-    <string name="clear_database_source_item_count">%1$d небібліотечний записів у базі даних</string>
+    <string name="clear_database_source_item_count">%1$d небібліотечних записів у базі даних</string>
     <string name="database_clean">Очищення бази даних</string>
     <string name="select_inverse">Інвертувати вибір</string>
     <string name="cover_only_grid">Тільки обкладинки</string>
@@ -1006,11 +1004,11 @@
     <string name="battery_not_low">Батарея заряджена</string>
     <string name="learn_why">Дізнайтеся чому</string>
     <string name="show_">Показати %1$s</string>
-    <string name="must_view_details_before_migration">Сторінку відомостей про цей запис необхідно переглянути, перш ніж можна буде виконувати міграцію</string>
+    <string name="must_view_details_before_migration">Сторінку відомостей про цей запис необхідно переглянути, перш ніж можна буде виконувати перенос</string>
     <string name="confirm_manga_add_duplicate">У вашій бібліотеці є серія з такою самою назвою, але з іншого джерела (%1$s).
 \n
 \nВи хочете продовжити\?</string>
-    <string name="pref_update_only_completely_read_summary">Оновлювати манґу, лише якщо немає непрочитаних розділів (повністю прочитано)</string>
+    <string name="pref_update_only_completely_read_summary">Оновлювати серії, лише якщо немає непрочитаних розділів (повністю прочитано)</string>
     <string name="update_tracking_marked_read">Оновлювати відстеження, якщо позначено як прочитане</string>
     <string name="update_tracking_after_reading">Оновлювати відстеження після читання</string>
     <string name="check_for_beta_releases">Перевіряти наявність бета-релізів</string>
@@ -1061,7 +1059,7 @@
         <item quantity="other">%d типів серій</item>
     </plurals>
     <string name="language_requires_app_restart">Деяким мовам необхідний перезапуск застосунку для правильного відображення</string>
-    <string name="clear_db_exclude_read">Зберегти манґу з прочитаними розділами</string>
+    <string name="clear_db_exclude_read">Зберегти записи з прочитаними розділами</string>
     <string name="tracked_titles">Тайтли що відстежуються</string>
     <string name="local_titles">Локальні тайтли</string>
     <string name="titles_in_global_update">Тайтли в глобальному оновленні</string>
@@ -1094,7 +1092,7 @@
         <item quantity="many">%d мов</item>
         <item quantity="other">%d мов</item>
     </plurals>
-    <string name="all_read_manga">Уся прочитана манґа</string>
+    <string name="all_read_manga">Усі прочитані серії</string>
     <string name="read_duration_info">Час витрачений в читалці, базуючись на історії розділів</string>
     <string name="skipped_reason_not_always_update">Пропущено, оскільки серія не потребує оновлень</string>
     <string name="mean_tracking_score">Середній бал відстеження</string>
@@ -1119,7 +1117,13 @@
     <string name="pref_remove_exclude_categories">Виключені категорії</string>
     <string name="apply">Застосувати</string>
     <string name="ext_installer_pref">Встановлювач</string>
-    <string name="library_entries">Записи бібліотеки</string>
-    <string name="pref_debug_info">Інформація про налагодження</string>
+    <string name="library_entries">Серії бібліотеки</string>
+    <string name="pref_debug_info">Інформація для відлагодження</string>
     <string name="label_background_activity">Фонова активність</string>
+    <string name="ext_installer_summary">Дозволяє встановлювати розширення без запитів користувачів і дозволяє автоматично оновлюватися для пристроїв на Android 12</string>
+    <string name="share_cover">Обкладинка</string>
+    <string name="source_settings">Налаштування джерела</string>
+    <string name="app_settings">Налаштування застосунку</string>
+    <string name="save_pages_separately">Зберегти сторінки в окремих теках</string>
+    <string name="create_folders_by_manga_title">Створювати теки відповідно до назви манги</string>
 </resources>

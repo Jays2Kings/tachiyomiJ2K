@@ -202,7 +202,7 @@
     <string name="clear_cookies">Tyhjennä keksit</string>
     <string name="cookies_cleared">Keksit tyhjennetty</string>
     <string name="clear_database">Tyhjennä tietokanta</string>
-    <string name="clear_database_summary">Poista sarjat ja luvut jotka eivät ole kirjastossa</string>
+    <string name="clear_database_summary">Poista mangan historia, jota ei ole tallennettu kirjastoosi</string>
     <string name="clear_database_confirmation">Oletko varma\? Luetut luvut ja eteneminen poistetaan muista kun kirjastossa olevista sarjoista</string>
     <string name="clear_database_completed">Tiedot poistettu</string>
     <string name="refresh_library_metadata">Päivitä kirjaston metatiedot</string>
@@ -437,9 +437,7 @@
     <string name="no_chapters_error">Lukuja ei löytynyt</string>
     <string name="badges">Merkit</string>
     <string name="last_used">Viimeksi käytetty</string>
-    <string name="unofficial_extension_message">Tämä laajennus ei ole virallisesta Tachiyomi-laajennusluettelosta.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Epävirallinen</string>
     <string name="may_contain_nsfw">Voi sisältää NSFW (18+) -sisältöä</string>
     <string name="next_page">Seuraava sivu</string>
     <string name="previous_page">Edellinen sivu</string>
@@ -902,4 +900,7 @@
     <string name="pref_remove_exclude_categories">Poissuljetut kategoriat</string>
     <string name="ext_installer_pref">Asentaja</string>
     <string name="label_background_activity">Taustatoiminta</string>
+    <string name="library_entries">Manga</string>
+    <string name="updates_last_update_info">Kirjasto päivitetty viimeksi: %1$s</string>
+    <string name="trackers">Palvelut</string>
 </resources>

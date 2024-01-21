@@ -246,7 +246,6 @@
     <string name="pref_update_only_started">Kas nav sāktas</string>
     <string name="cancel_all_for_series">Atcelt visu šai sērijai</string>
     <string name="untrusted_extension">Neuzticams paplašinājums</string>
-    <string name="unofficial_extension_message">Šis paplašinājums nav no oficiālo Tachiyomi paplašinājumu saraksta.</string>
     <string name="ext_installer_shizuku_stopped">Shizuku nedarbojas</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instalējiet un startējiet Shizuku, lai izmantotu Shizuku kā paplašinājuma instalētāju.</string>
     <string name="pref_update_only_completely_read">Ar nelasītu(ām) nodaļu(ām)</string>
@@ -419,7 +418,6 @@
         <item quantity="one"/>
         <item quantity="other"/>
     </plurals>
-    <string name="unofficial">Neoficiāls</string>
     <string name="overlay">Parklājums</string>
     <string name="updates_tracking_details">Atjaunina statusu, vērtējumu un pēdējo izlasīto nodaļu no sekošanas servisa</string>
     <string name="faq_and_guides">Biežāk uzdotie jautājumi un rokasgrāmatas</string>
@@ -588,4 +586,8 @@
     <string name="clear_database_summary">Dzēst vēsturi ierakstiem, kas nav saglabāti jūsu bibliotēkā</string>
     <string name="pref_debug_info">Atkļūdošanas informācija</string>
     <string name="label_background_activity">Fona darbība</string>
+    <string name="source_settings">Avota iestatījumi</string>
+    <string name="app_settings">Lietotnes iestatījumi</string>
+    <string name="apply">Pieteikties</string>
+    <string name="rotation">Rotācijas tips</string>
 </resources>

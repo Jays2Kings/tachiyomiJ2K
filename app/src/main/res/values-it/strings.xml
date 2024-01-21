@@ -658,9 +658,7 @@
     <string name="does_not_prevent_unofficial_nsfw">Questo non impedisce a estensioni non ufficiali o potenzialmente segnalate in modo errato mostrare contenuti 18+ all\'interno dell\'applicazione.</string>
     <string name="file_picker_error">Nessuna app per la selezione dei file trovata</string>
     <string name="badges">Caratteristiche</string>
-    <string name="unofficial_extension_message">Questa estensione non è presente nella lista ufficiale delle estensioni di Tachiyomi.</string>
     <string name="nsfw_short">18+</string>
-    <string name="unofficial">Non ufficiale</string>
     <string name="may_contain_nsfw">Potrebbe contenere materiale 18+</string>
     <string name="default_reading_mode">Modalità di lettura predefinita</string>
     <string name="l_nav">A forma di L</string>
@@ -1129,7 +1127,7 @@
     <string name="source_settings">Impostazioni delle fonti</string>
     <string name="app_settings">Impostazioni app</string>
     <string name="pref_debug_info">Informazioni di debug</string>
-    <string name="label_background_activity">Attività in background</string>
+    <string name="label_background_activity">Attività in secondo piano</string>
     <string name="ext_installer_summary">Consente l\'installazione delle estensioni senza richieste da parte dell\'utente e abilita gli aggiornamenti automatici per i dispositivi con Android 12</string>
     <string name="share_cover">Condividi copertina</string>
 </resources>
