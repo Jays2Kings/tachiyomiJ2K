@@ -168,6 +168,7 @@
     <string name="date_fetched">Date fetched</string>
     <string name="latest_chapter">Latest chapter</string>
     <string name="drag_and_drop">Drag &amp; Drop</string>
+    <string name="next_unread_chapter">Next unread chapter</string>
 
     <!-- Library Display -->
     <string name="display_options">Display options</string>
@@ -253,6 +254,7 @@
         \"%1$s\". Are you sure?</string>
     <string name="reset_all_chapters_for_this_">Reset all chapters for this %1$s</string>
     <string name="last_read_">Last read %1$s</string>
+    <string name="next_unread_chapter_">Next unread chapter %1$s</string>
     <string name="read_">Read %1$s</string>
     <string name="updated_">Updated %1$s</string>
     <string name="added_">Added %1$s</string>
