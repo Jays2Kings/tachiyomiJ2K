@@ -64,7 +64,7 @@ Please make sure to read the full guidelines. Your issue may be closed without w
 
 DO: https://github.com/tachiyomiorg/tachiyomi/issues/24 https://github.com/tachiyomiorg/tachiyomi/issues/71 (dead links)
 
-DON'T: https://github.com/tachiyomiorg/tachiyomi/issues/75 (dead link)
+DON'T: https://github.com/Jays2Kings/tachiyomij2k/issues/1757
 
 </details>
 
