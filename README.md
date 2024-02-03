@@ -1,5 +1,5 @@
-| Download | Contribute | Support Server |
-|-------|----------|---------|
+| Download | Contribute |
+|-------|----------|
 | [![release](https://img.shields.io/github/release/jays2kings/tachiyomi.svg?maxAge=3600&label=download)](https://github.com/jays2kings/tachiyomiJ2K/releases) | [![Translation status](https://hosted.weblate.org/widgets/tachiyomi/-/tachiyomi-j2k/svg-badge.svg)](https://hosted.weblate.org/engage/tachiyomi/?utm_source=widget)
 
 
