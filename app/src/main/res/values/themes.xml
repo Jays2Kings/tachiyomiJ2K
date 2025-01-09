@@ -87,7 +87,6 @@
 
     <style name="ThemeOverlay.Tachiyomi.Amoled" parent="">
         <item name="colorSurface">@color/md_black_1000</item>
-        <item name="colorPrimaryVariant">@color/md_black_1000</item>
         <item name="background">@color/md_black_1000</item>
         <item name="readerBackground">@color/md_black_1000</item>
     </style>
