@@ -1,9 +1,9 @@
-| Download | Contribute | Support Server |
-|-------|----------|---------|
-| [![release](https://img.shields.io/github/release/jays2kings/tachiyomi.svg?maxAge=3600&label=download)](https://github.com/jays2kings/tachiyomiJ2K/releases) | [![Translation status](https://hosted.weblate.org/widgets/tachiyomi/-/tachiyomi-j2k/svg-badge.svg)](https://hosted.weblate.org/engage/tachiyomi/?utm_source=widget) | [![Discord](https://img.shields.io/discord/349436576037732353.svg?label=discord&labelColor=7289da&color=2c2f33&style=flat)](https://discord.gg/tachiyomi) |
+| Download | Contribute |
+|-------|----------|
+| [![release](https://img.shields.io/github/release/jays2kings/tachiyomi.svg?maxAge=3600&label=download)](https://github.com/jays2kings/tachiyomiJ2K/releases) | [![Translation status](https://hosted.weblate.org/widgets/tachiyomi/-/tachiyomi-j2k/svg-badge.svg)](https://hosted.weblate.org/engage/tachiyomi/?utm_source=widget)
 
 
-# ![app icon](./.github/readme-images/app-icon.png)TachiyomiJ2K
+# ![app icon](./.github/readme-images/app-icon.png) TachiyomiJ2K
 TachiyomiJ2K is a free and open source manga reader for Android 6.0 and above. Based on the original [Tachiyomi](https://github.com/tachiyomiorg/tachiyomi)
 
 ![screenshots of app](./.github/readme-images/screens.gif)
@@ -62,9 +62,9 @@ Please make sure to read the full guidelines. Your issue may be closed without w
 * For large logs use http://pastebin.com/ (or similar)
 * Don't group unrelated requests into one issue
 
-DO: https://github.com/tachiyomiorg/tachiyomi/issues/24 https://github.com/tachiyomiorg/tachiyomi/issues/71
+DO: https://github.com/tachiyomiorg/tachiyomi/issues/24 https://github.com/tachiyomiorg/tachiyomi/issues/71 (dead links)
 
-DON'T: https://github.com/tachiyomiorg/tachiyomi/issues/75
+DON'T: https://github.com/Jays2Kings/tachiyomij2k/issues/1757
 
 </details>
 
