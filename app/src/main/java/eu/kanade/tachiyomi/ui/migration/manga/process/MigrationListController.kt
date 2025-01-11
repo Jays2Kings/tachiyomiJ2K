@@ -27,6 +27,7 @@ import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SChapter
+import eu.kanade.tachiyomi.ui.base.SmallToolbarInterface
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.base.controller.FadeChangeHandler
 import eu.kanade.tachiyomi.ui.main.BottomNavBarInterface
@@ -65,6 +66,7 @@ class MigrationListController(bundle: Bundle? = null) :
     BaseController<MigrationListControllerBinding>(bundle),
     MigrationProcessAdapter.MigrationProcessInterface,
     BottomNavBarInterface,
+    SmallToolbarInterface,
     CoroutineScope {
 
     init {
