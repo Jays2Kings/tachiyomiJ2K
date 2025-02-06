@@ -220,6 +220,19 @@ interface MangaQueries : DbProvider {
         )
         .prepare()
 
+    /**
+     * Sorts Mangas by the release date of their next unread chapter.
+     */
+    fun getNextUnreadManga() = db.get()
+        .listOfObjects(Manga::class.java)
+        .withQuery(
+            RawQuery.builder()
+                .query(getNextUnreadChapterMangaQuery())
+                .observesTables(MangaTable.TABLE)
+                .build(),
+        )
+        .prepare()
+
     fun getTotalChapterManga() = db.get().listOfObjects(Manga::class.java)
         .withQuery(RawQuery.builder().query(getTotalChapterMangaQuery()).observesTables(MangaTable.TABLE).build()).prepare()
 

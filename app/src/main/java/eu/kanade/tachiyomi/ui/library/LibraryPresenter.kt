@@ -574,6 +574,11 @@ class LibraryPresenter(
             db.getLastFetchedManga().executeAsBlocking().associate { it.id!! to counter++ }
         }
 
+        val nextUnreadManga by lazy {
+            var counter = 0
+            db.getNextUnreadManga().executeAsBlocking().associate { it.id!! to counter++ }
+        }
+
         val sortFn: (LibraryItem, LibraryItem) -> Int = { i1, i2 ->
             if (i1.header.category.id == i2.header.category.id) {
                 val category = i1.header.category
@@ -625,6 +630,13 @@ class LibraryPresenter(
                                 } else {
                                     sortAlphabetical(i1, i2)
                                 }
+                            }
+                            LibrarySort.NextUnread -> {
+                                val manga1NextUnread =
+                                    nextUnreadManga[i1.manga.id!!] ?: nextUnreadManga.size
+                                val manga2NextUnread =
+                                    nextUnreadManga[i2.manga.id!!] ?: nextUnreadManga.size
+                                manga1NextUnread.compareTo(manga2NextUnread)
                             }
                         }
                         if (!category.isAscending()) sort *= -1

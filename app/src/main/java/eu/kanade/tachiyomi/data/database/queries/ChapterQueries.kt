@@ -29,6 +29,18 @@ interface ChapterQueries : DbProvider {
         )
         .prepare()
 
+    fun getUnreadChapters(mangaId: Long?) = db.get()
+        .listOfObjects(Chapter::class.java)
+        .withQuery(
+            Query.builder()
+                .table(ChapterTable.TABLE)
+                .where("${ChapterTable.COL_MANGA_ID} = ?")
+                .whereArgs(mangaId)
+                .where("${ChapterTable.COL_READ} = 0")
+                .build(),
+        )
+        .prepare()
+
     fun getRecentChapters(search: String = "", offset: Int, isResuming: Boolean) = db.get()
         .listOfObjects(MangaChapter::class.java)
         .withQuery(

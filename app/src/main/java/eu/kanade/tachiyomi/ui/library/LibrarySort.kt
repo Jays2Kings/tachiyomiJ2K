@@ -29,7 +29,7 @@ enum class LibrarySort(
         R.string.category,
         R.drawable.ic_label_outline_24dp,
     ),
-
+    NextUnread(8, R.string.next_unread_chapter, R.drawable.ic_next_unread_24dp),
     ;
 
     val categoryValue: Char
@@ -58,7 +58,7 @@ enum class LibrarySort(
     fun iconRes(isDynamic: Boolean) = if (isDynamic) dynamicIconRes else iconRes
 
     val hasInvertedSort: Boolean
-        get() = this in listOf(LastRead, DateAdded, LatestChapter, DateFetched)
+        get() = this in listOf(LastRead, DateAdded, LatestChapter, DateFetched, NextUnread)
 
     fun menuSheetItem(isDynamic: Boolean): MaterialMenuSheet.MenuSheetItem {
         return MaterialMenuSheet.MenuSheetItem(

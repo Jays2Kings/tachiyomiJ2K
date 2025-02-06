@@ -279,6 +279,22 @@ fun getLastFetchedMangaQuery() =
     ORDER BY max DESC
 """
 
+/**
+ * This maps Mangas to the date of the next unread chapter.
+ * The next unread chapter is the oldest unread chapter.
+ */
+fun getNextUnreadChapterMangaQuery() =
+    """
+    SELECT ${Manga.TABLE}.*, MIN(${Chapter.TABLE}.${Chapter.COL_DATE_UPLOAD}) AS min
+    FROM ${Manga.TABLE}
+    JOIN ${Chapter.TABLE}
+    ON ${Manga.TABLE}.${Manga.COL_ID} = ${Chapter.TABLE}.${Chapter.COL_MANGA_ID}
+    WHERE ${Chapter.TABLE}.${Chapter.COL_READ} = 0
+    AND ${Manga.TABLE}.${Manga.COL_FAVORITE} = 1
+    GROUP BY ${Manga.TABLE}.${Manga.COL_ID}
+    ORDER BY min DESC
+"""
+
 fun getTotalChapterMangaQuery() =
     """
     SELECT ${Manga.TABLE}.*
