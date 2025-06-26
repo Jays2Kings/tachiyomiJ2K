@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.updater.AppDownloadInstallJob
 import eu.kanade.tachiyomi.data.updater.AppUpdateJob
 import eu.kanade.tachiyomi.extension.ExtensionUpdateJob
+import eu.kanade.tachiyomi.extension.repository.exception.SaveExtensionRepoException // Added
 import eu.kanade.tachiyomi.network.PREF_DOH_CLOUDFLARE
 import eu.kanade.tachiyomi.ui.library.LibraryPresenter
 import eu.kanade.tachiyomi.ui.library.LibrarySort
@@ -23,6 +24,7 @@ import eu.kanade.tachiyomi.ui.recents.RecentsPresenter
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.toast
 import kotlinx.coroutines.CoroutineScope
+import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import java.io.File
@@ -39,6 +41,7 @@ object Migrations {
         preferences: PreferencesHelper,
         preferenceStore: PreferenceStore,
         scope: CoroutineScope,
+        extensionRepoRepository: eu.kanade.tachiyomi.extension.repository.ExtensionRepoRepository,
     ): Boolean {
         val context = preferences.context
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -259,6 +262,30 @@ object Migrations {
             if (oldVersion < 111) {
                 prefs.edit {
                     remove("trusted_signatures")
+                }
+            }
+            if (oldVersion < 112) {
+                // Migrate extension repos from preference to database
+                val oldRepos = preferences.extensionRepos().get()
+                if (oldRepos.isNotEmpty()) {
+                    scope.launchIO {
+                        oldRepos.forEachIndexed { index, repoUrl ->
+                            try {
+                                extensionRepoRepository.upsertRepository(
+                                    baseUrl = repoUrl,
+                                    name = "Repo #${index + 1}", // Placeholder name
+                                    shortName = null, // No short name available
+                                    website = repoUrl, // Use base URL as website placeholder
+                                    signingKeyFingerprint = "NOFINGERPRINT-${index + 1}", // Placeholder fingerprint
+                                )
+                            } catch (e: SaveExtensionRepoException) {
+                                Timber.e(e, "Error Migrating Extension Repo with baseUrl: $repoUrl")
+                            } catch (e: Exception) {
+                                Timber.e(e, "(Generic Error) Migrating Extension Repo with baseUrl: $repoUrl")
+                            }
+                        }
+                        preferences.extensionRepos().delete()
+                    }
                 }
             }
 

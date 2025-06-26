@@ -380,6 +380,7 @@
     <string name="confirm_repo_deletion">Delete repo</string>
     <string name="delete_repo_confirmation">Do you wish to delete the repo \"%s\"?</string>
     <string name="url_not_set_click_again">Repo URL not set, please edit the URL</string>
+    <string name="duplicate_fingerprint_error">Repository \"%1$s\" and \"%2$s\" have the same signing key fingerprint</string>
 
     <!-- Reader -->
     <string name="set_as_cover">Set as cover</string>

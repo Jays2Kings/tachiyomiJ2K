@@ -6,12 +6,14 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.extension.model.ExtensionRepo
 
 /**
  * Repo item for a recycler view.
  */
 class RepoItem(
-    val repo: String,
+    val repo: ExtensionRepo?,
+    val type: Type,
 ) : AbstractFlexibleItem<RepoHolder>() {
     /**
      * Whether this item is currently selected.
@@ -48,7 +50,7 @@ class RepoItem(
         position: Int,
         payloads: List<Any?>?,
     ) {
-        holder.bind(repo)
+        holder.bind(this)
         holder.isEditing(isEditing)
     }
 
@@ -57,7 +59,27 @@ class RepoItem(
      */
     override fun isDraggable(): Boolean = false
 
-    override fun equals(other: Any?): Boolean = this === other
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is RepoItem) return false
 
-    override fun hashCode(): Int = repo.hashCode()
+        if (type != other.type) return false
+
+        // For CREATE type, all items are equal
+        if (type == Type.CREATE) return true
+
+        // For DATA type, compare by baseUrl
+        return repo?.baseUrl == other.repo?.baseUrl
+    }
+
+    override fun hashCode(): Int {
+        var result = repo?.baseUrl?.hashCode() ?: 0
+        result = 31 * result + type.hashCode()
+        return result
+    }
+
+    enum class Type {
+        DATA,
+        CREATE,
+    }
 }

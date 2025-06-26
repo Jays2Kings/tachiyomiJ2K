@@ -13,6 +13,15 @@ import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.track.TrackManager
 import eu.kanade.tachiyomi.data.track.TrackPreferences
 import eu.kanade.tachiyomi.extension.ExtensionManager
+import eu.kanade.tachiyomi.extension.api.ExtensionRepoService
+import eu.kanade.tachiyomi.extension.interactor.CreateExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.DeleteExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.GetExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.GetExtensionRepoCount
+import eu.kanade.tachiyomi.extension.interactor.ReplaceExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.UpdateExtensionRepo
+import eu.kanade.tachiyomi.extension.repository.ExtensionRepoRepository
+import eu.kanade.tachiyomi.extension.repository.ExtensionRepoRepositoryImpl
 import eu.kanade.tachiyomi.extension.util.TrustExtension
 import eu.kanade.tachiyomi.network.JavaScriptEngine
 import eu.kanade.tachiyomi.network.NetworkHelper
@@ -42,6 +51,8 @@ class AppModule(
 
         addSingletonFactory { DatabaseHelper(app) }
 
+        addSingletonFactory<eu.kanade.tachiyomi.data.database.DbProvider> { get<DatabaseHelper>() }
+
         addSingletonFactory { ChapterCache(app) }
 
         addSingletonFactory { CoverCache(app) }
@@ -70,7 +81,16 @@ class AppModule(
 
         addSingletonFactory { MangaShortcutManager() }
 
-        addSingletonFactory { TrustExtension(get()) }
+        addSingletonFactory { TrustExtension(get(), get()) }
+
+        addSingletonFactory<ExtensionRepoRepository> { ExtensionRepoRepositoryImpl(get()) }
+        addSingletonFactory { ExtensionRepoService() }
+        addSingletonFactory { CreateExtensionRepo(get(), get()) }
+        addSingletonFactory { DeleteExtensionRepo(get()) }
+        addSingletonFactory { GetExtensionRepo(get()) }
+        addSingletonFactory { GetExtensionRepoCount(get()) }
+        addSingletonFactory { ReplaceExtensionRepo(get()) }
+        addSingletonFactory { UpdateExtensionRepo(get(), get()) }
 
         // Asynchronously init expensive components for a faster cold start
 

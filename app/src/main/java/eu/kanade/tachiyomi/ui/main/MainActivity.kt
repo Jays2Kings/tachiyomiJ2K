@@ -685,8 +685,13 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
             // Reset Incognito Mode on relaunch
             preferences.incognitoMode().set(false)
 
-            // Show changelog if needed
-            if (Migrations.upgrade(preferences, Injekt.get(), lifecycleScope)) {
+            if (Migrations.upgrade(
+                    preferences = preferences,
+                    preferenceStore = Injekt.get(),
+                    scope = lifecycleScope,
+                    extensionRepoRepository = Injekt.get(),
+                )
+            ) { // Show changelog if needed
                 if (!BuildConfig.DEBUG) {
                     content.post {
                         whatsNewSheet().show()

@@ -3,18 +3,22 @@ package eu.kanade.tachiyomi.extension.api
 import android.content.Context
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.extension.ExtensionManager
+import eu.kanade.tachiyomi.extension.interactor.GetExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.UpdateExtensionRepo
 import eu.kanade.tachiyomi.extension.model.Extension
+import eu.kanade.tachiyomi.extension.model.ExtensionRepo
 import eu.kanade.tachiyomi.extension.model.LoadResult
 import eu.kanade.tachiyomi.extension.util.ExtensionLoader
 import eu.kanade.tachiyomi.network.GET
 import eu.kanade.tachiyomi.network.NetworkHelper
 import eu.kanade.tachiyomi.network.awaitSuccess
 import eu.kanade.tachiyomi.network.parseAs
-import eu.kanade.tachiyomi.util.system.withIOContext
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import timber.log.Timber
-import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import uy.kohesive.injekt.injectLazy
 
@@ -22,30 +26,47 @@ internal class ExtensionApi {
     private val json: Json by injectLazy()
     private val networkService: NetworkHelper by injectLazy()
     private val preferences: PreferencesHelper by injectLazy()
+    private val getExtensionRepo: GetExtensionRepo by injectLazy()
+    private val updateExtensionRepo: UpdateExtensionRepo by injectLazy()
+    private val extensionManager: ExtensionManager by injectLazy()
 
     suspend fun findExtensions(): List<Extension.Available> {
-        return withIOContext {
-            val repos = preferences.extensionRepos().get()
+        return withContext(context = kotlinx.coroutines.Dispatchers.IO) {
+            val repos = getExtensionRepo.getAll()
             if (repos.isEmpty()) {
-                return@withIOContext emptyList()
+                return@withContext emptyList()
             }
-            val extensions = repos.flatMap { getExtensions(it) }
+            val extensions =
+                repos
+                    .map { repo -> async { getExtensions(repo) } }
+                    .awaitAll()
+                    .flatten()
+            try {
+                updateExtensionRepo.awaitAll()
+            } catch (e: Exception) {
+                Timber.e(e, "Error updating extension repos details")
+            }
 
             if (extensions.isEmpty()) {
-                throw Exception()
+                Timber.w("No extensions found from any repository.")
+                return@withContext emptyList()
             }
-
             extensions
         }
     }
 
-    private suspend fun getExtensions(repoBaseUrl: String): List<Extension.Available> =
-        try {
+    /**
+     * Fetches extensions from a single repository.
+     *
+     * @param extRepo The repository to fetch extensions from.
+     */
+    private suspend fun getExtensions(extRepo: ExtensionRepo): List<Extension.Available> {
+        val repoBaseUrl = extRepo.baseUrl
+        return try {
             val response =
                 networkService.client
                     .newCall(GET("$repoBaseUrl/index.min.json"))
                     .awaitSuccess()
-
             with(json) {
                 response
                     .parseAs<List<ExtensionJsonObject>>()
@@ -55,15 +76,14 @@ internal class ExtensionApi {
             Timber.e(e, "Failed to get extensions from $repoBaseUrl")
             emptyList()
         }
+    }
 
     suspend fun checkForUpdates(
         context: Context,
         prefetchedExtensions: List<Extension.Available>? = null,
     ): List<Extension.Available> =
-        withIOContext {
+        withContext(context = kotlinx.coroutines.Dispatchers.IO) {
             val extensions = prefetchedExtensions ?: findExtensions()
-
-            val extensionManager: ExtensionManager = Injekt.get()
             val installedExtensions =
                 extensionManager.installedExtensionsFlow.value.ifEmpty {
                     ExtensionLoader
@@ -71,7 +91,6 @@ internal class ExtensionApi {
                         .filterIsInstance<LoadResult.Success>()
                         .map { it.extension }
                 }
-
             val extensionsWithUpdate = mutableListOf<Extension.Available>()
             for (installedExt in installedExtensions) {
                 val pkgName = installedExt.pkgName
@@ -83,7 +102,6 @@ internal class ExtensionApi {
                     extensionsWithUpdate.add(availableExt)
                 }
             }
-
             extensionsWithUpdate
         }
 

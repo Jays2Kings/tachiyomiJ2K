@@ -1,12 +1,19 @@
 package eu.kanade.tachiyomi.ui.source.browse.repos
 
-import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.extension.interactor.CreateExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.DeleteExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.GetExtensionRepo
+import eu.kanade.tachiyomi.extension.interactor.UpdateExtensionRepo
+import eu.kanade.tachiyomi.extension.model.ExtensionRepo
 import eu.kanade.tachiyomi.ui.base.presenter.BaseCoroutinePresenter
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
@@ -15,106 +22,123 @@ import uy.kohesive.injekt.api.get
  */
 class RepoPresenter(
     private val controller: RepoController,
-    private val preferences: PreferencesHelper = Injekt.get(),
+    private val getExtensionRepo: GetExtensionRepo = Injekt.get(),
+    private val createExtensionRepo: CreateExtensionRepo = Injekt.get(),
+    private val deleteExtensionRepo: DeleteExtensionRepo = Injekt.get(),
+    private val updateExtensionRepo: UpdateExtensionRepo = Injekt.get(),
 ) : BaseCoroutinePresenter<RepoController>() {
-    private var scope = CoroutineScope(Job() + Dispatchers.Default)
-
-    /**
-     * List containing repos.
-     */
-    private var repos: Set<String>
-        get() =
-            preferences
-                .extensionRepos()
-                .get()
-                .map { "$it/index.min.json" }
-                .sorted()
-                .toSet()
-        set(value) = preferences.extensionRepos().set(value.map { it.removeSuffix("/index.min.json") }.toSet())
-
     /**
      * Called when the presenter is created.
+     * Subscribes to the flow of repositories and updates the UI when changes occur.
      */
     fun getRepos() {
-        scope.launch(Dispatchers.IO) {
-            withContext(Dispatchers.Main) {
-                controller.updateRepos()
-            }
-        }
+        getExtensionRepo
+            .subscribeAll()
+            .onEach { repos ->
+                withContext(Dispatchers.Main) {
+                    controller.setRepos(repos)
+                }
+            }.catch { error ->
+                Timber.e(error, "Error while subscribing to repos")
+            }.launchIn(presenterScope)
     }
 
-    fun getReposWithCreate(): List<RepoItem> = (listOf(CREATE_REPO_ITEM) + repos).map(::RepoItem)
+    /**
+     * Returns the website URL for a repository.
+     * Uses the website field from ExtensionRepo, or falls back to GitHub URL parsing for compatibility.
+     */
+    fun getRepoUrl(repo: ExtensionRepo): String {
+        if (repo.website.isNotBlank()) {
+            return repo.website
+        }
 
-    fun getRepoUrl(repo: String): String =
-        githubRepoRegex
-            .find(repo)
+        // Fallback for compatibility with old URLs
+        return githubRepoRegex
+            .find(repo.baseUrl)
             ?.let {
                 val (user, repoName) = it.destructured
                 "https://github.com/$user/$repoName"
-            } ?: repo
+            } ?: repo.baseUrl
+    }
 
     /**
      * Creates and adds a new repo to the database.
      *
-     * @param name The name of the repo to create.
+     * @param repoUrl The URL of the repo to create (ending with /index.min.json).
      */
-    fun createRepo(name: String): Boolean {
-        if (isInvalidRepo(name)) return false
-
-        // Do not allow duplicate repos.
-        if (repoExists(name)) {
-            controller.onRepoExistsError()
-            return true
+    fun createRepo(repoUrl: String): Boolean {
+        if (!repoUrl.matches(repoRegex)) {
+            controller.onRepoInvalidNameError()
+            return false
         }
 
-        repos += name
-        controller.updateRepos()
+        presenterScope.launch {
+            when (val result = createExtensionRepo.await(repoUrl)) {
+                is CreateExtensionRepo.Result.Success -> {
+                    // The flow will automatically update the UI, but ensure it does so immediately.
+                    // Collect the latest list and update the controller.
+                    getExtensionRepo.subscribeAll().firstOrNull()?.let { latestRepos ->
+                        withContext(Dispatchers.Main) {
+                            // Ensure UI update is on the main thread
+                            controller.setRepos(latestRepos)
+                        }
+                    }
+                }
+                is CreateExtensionRepo.Result.InvalidUrl -> {
+                    controller.onRepoInvalidNameError()
+                }
+                is CreateExtensionRepo.Result.RepoAlreadyExists -> {
+                    controller.onRepoExistsError()
+                }
+                is CreateExtensionRepo.Result.DuplicateFingerprint -> {
+                    controller.onRepoDuplicateFingerprintError(
+                        result.existingRepo.name,
+                        result.newRepo.name,
+                    )
+                }
+                is CreateExtensionRepo.Result.Error -> {
+                    controller.onGenericError()
+                }
+            }
+        }
         return true
     }
 
     /**
      * Deletes the repo from the database.
      *
-     * @param repo The repo to delete.
+     * @param baseUrl The base URL of the repo to delete.
      */
-    fun deleteRepo(repo: String?) {
-        val safeRepo = repo ?: return
-        repos -= safeRepo
-        controller.updateRepos()
+    fun deleteRepo(baseUrl: String?) {
+        val safeBaseUrl = baseUrl ?: return
+        presenterScope.launch {
+            deleteExtensionRepo.await(safeBaseUrl)
+            // The flow will automatically update the UI
+        }
     }
 
     /**
-     * Renames a repo.
+     * Renames a repo by deleting the old one and creating a new one.
      *
-     * @param repo The repo to rename.
-     * @param name The new name of the repo.
+     * @param oldBaseUrl The base URL of the repo to rename.
+     * @param newRepoUrl The new URL of the repo (ending with /index.min.json).
      */
     fun renameRepo(
-        repo: String,
-        name: String,
+        oldBaseUrl: String,
+        newRepoUrl: String,
     ): Boolean {
-        if (!repo.equals(name, true)) {
-            if (isInvalidRepo(name)) return false
-            repos -= repo
-            repos += name
-            controller.updateRepos()
+        if (!newRepoUrl.matches(repoRegex)) {
+            controller.onRepoInvalidNameError()
+            return false
+        }
+
+        presenterScope.launch {
+            deleteExtensionRepo.await(oldBaseUrl)
+            createExtensionRepo.await(newRepoUrl)
+            // The flow will automatically update the UI
         }
         return true
     }
-
-    private fun isInvalidRepo(name: String): Boolean {
-        // Do not allow invalid formats
-        if (!name.matches(repoRegex)) {
-            controller.onRepoInvalidNameError()
-            return true
-        }
-        return false
-    }
-
-    /**
-     * Returns true if a repo with the given name already exists.
-     */
-    private fun repoExists(name: String): Boolean = repos.any { it.equals(name, true) }
 
     companion object {
         private val repoRegex = """^https://.*/index\.min\.json$""".toRegex()

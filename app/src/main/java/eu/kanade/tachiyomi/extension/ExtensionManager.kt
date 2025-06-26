@@ -345,14 +345,14 @@ class ExtensionManager(
         val untrustedPkgNames = untrustedExtensionsFlow.value.map { it.pkgName }.toSet()
         if (pkgName !in untrustedPkgNames) return
 
-        trustExtension.trust(pkgName, versionCode, signatureHash)
-
-        val nowTrustedExtensions =
-            untrustedExtensionsFlow.value
-                .filter { it.pkgName == pkgName && it.versionCode == versionCode }
-        _untrustedExtensionsFlow.value -= nowTrustedExtensions
-
         launchNow {
+            trustExtension.trust(pkgName, versionCode, signatureHash)
+
+            val nowTrustedExtensions =
+                untrustedExtensionsFlow.value
+                    .filter { it.pkgName == pkgName && it.versionCode == versionCode }
+            _untrustedExtensionsFlow.value -= nowTrustedExtensions
+
             nowTrustedExtensions
                 .map { extension ->
                     async { ExtensionLoader.loadExtensionFromPkgName(context, extension.pkgName) }.await()

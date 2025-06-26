@@ -5,6 +5,7 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper
 import com.pushtorefresh.storio.sqlite.impl.DefaultStorIOSQLite
 import eu.kanade.tachiyomi.data.database.mappers.CategoryTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.ChapterTypeMapping
+import eu.kanade.tachiyomi.data.database.mappers.ExtensionRepoTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.HistoryTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.MangaCategoryTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.MangaTypeMapping
@@ -24,6 +25,7 @@ import eu.kanade.tachiyomi.data.database.queries.MangaCategoryQueries
 import eu.kanade.tachiyomi.data.database.queries.MangaQueries
 import eu.kanade.tachiyomi.data.database.queries.SearchMetadataQueries
 import eu.kanade.tachiyomi.data.database.queries.TrackQueries
+import eu.kanade.tachiyomi.extension.model.ExtensionRepo
 import io.requery.android.database.sqlite.RequerySQLiteOpenHelperFactory
 
 /**
@@ -56,6 +58,7 @@ open class DatabaseHelper(
             .addTypeMapping(MangaCategory::class.java, MangaCategoryTypeMapping())
             .addTypeMapping(SearchMetadata::class.java, SearchMetadataTypeMapping())
             .addTypeMapping(History::class.java, HistoryTypeMapping())
+            .addTypeMapping(ExtensionRepo::class.java, ExtensionRepoTypeMapping())
             .build()
 
     inline fun inTransaction(block: () -> Unit) = db.inTransaction(block)

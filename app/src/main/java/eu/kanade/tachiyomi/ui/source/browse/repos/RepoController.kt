@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import eu.davidea.flexibleadapter.FlexibleAdapter
+import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.databinding.CategoriesControllerBinding
+import eu.kanade.tachiyomi.extension.model.ExtensionRepo
 import eu.kanade.tachiyomi.ui.base.SmallToolbarInterface
 import eu.kanade.tachiyomi.ui.base.controller.BaseController
 import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.util.system.isOnline
-import eu.kanade.tachiyomi.util.system.materialAlertDialog
 import eu.kanade.tachiyomi.util.system.openInBrowser
 import eu.kanade.tachiyomi.util.system.toast
 import eu.kanade.tachiyomi.util.view.liftAppbarWith
@@ -101,10 +102,17 @@ class RepoController(
     /**
      * Called from the presenter when the repos are updated.
      *
+     * @param repos The list of extension repositories.
      */
-    fun updateRepos() {
-        adapter?.updateDataSet(presenter.getReposWithCreate())
-        adapter?.addItem(0, InfoRepoMessage())
+    fun setRepos(repos: List<ExtensionRepo>) {
+        val items = mutableListOf<AbstractFlexibleItem<*>>()
+        items.add(InfoRepoMessage())
+
+        items.add(RepoItem(null, RepoItem.Type.CREATE))
+
+        items.addAll(repos.map { RepoItem(it, RepoItem.Type.DATA) })
+
+        adapter?.updateDataSet(items)
     }
 
     /**
@@ -122,10 +130,12 @@ class RepoController(
     }
 
     override fun onLogoClick(position: Int) {
-        val repo = (adapter?.getItem(position) as? RepoItem)?.repo ?: return
-        val repoUrl = presenter.getRepoUrl(repo)
+        val item = adapter?.getItem(position) as? RepoItem ?: return
+        val repo = item.repo ?: return
+
         if (isNotOnline()) return
 
+        val repoUrl = presenter.getRepoUrl(repo)
         if (repoUrl.isBlank()) {
             activity?.toast(R.string.url_not_set_click_again)
         } else {
@@ -145,33 +155,31 @@ class RepoController(
         position: Int,
         newName: String,
     ): Boolean {
-        val repo = (adapter?.getItem(position) as? RepoItem)?.repo ?: return false
+        val item = adapter?.getItem(position) as? RepoItem ?: return false
+
         if (newName.isBlank()) {
             activity?.toast(R.string.repo_cannot_be_blank)
             return false
         }
-        if (repo == RepoPresenter.CREATE_REPO_ITEM) {
-            return (presenter.createRepo(newName))
+
+        if (item.type == RepoItem.Type.CREATE) {
+            return presenter.createRepo(newName)
         }
-        return (presenter.renameRepo(repo, newName))
+
+        val repo = item.repo ?: return false
+        return presenter.renameRepo(repo.baseUrl, newName)
     }
 
     override fun onItemDelete(position: Int) {
-        activity!!
-            .materialAlertDialog()
-            .setTitle(R.string.confirm_repo_deletion)
-            .setMessage(
-                activity!!.getString(
-                    R.string.delete_repo_confirmation,
-                    (adapter!!.getItem(position) as RepoItem).repo,
-                ),
-            ).setPositiveButton(R.string.delete) { _, _ ->
-                deleteRepo(position)
-            }.setNegativeButton(android.R.string.cancel, null)
-            .show()
+        val item = adapter?.getItem(position) as? RepoItem ?: return
+        val repo = item.repo ?: return
+
+        deleteRepo(position)
     }
 
     private fun deleteRepo(position: Int) {
+        val item = adapter?.getItem(position) as? RepoItem ?: return
+
         adapter?.removeItem(position)
         snack =
             view?.snack(R.string.snack_repo_deleted, Snackbar.LENGTH_INDEFINITE) {
@@ -197,7 +205,10 @@ class RepoController(
 
     fun confirmDelete() {
         val adapter = adapter ?: return
-        presenter.deleteRepo(adapter.deletedItems.map { (it as RepoItem).repo }.firstOrNull())
+        val deletedItem = adapter.deletedItems.firstOrNull() as? RepoItem ?: return
+        val repo = deletedItem.repo ?: return
+
+        presenter.deleteRepo(repo.baseUrl)
         adapter.confirmDeletion()
         snack = null
     }
@@ -210,10 +221,27 @@ class RepoController(
     }
 
     /**
-     * Called from the presenter when a invalid repo is made
+     * Called from the presenter when an invalid repo is made
      */
     fun onRepoInvalidNameError() {
         activity?.toast(R.string.invalid_repo_name)
+    }
+
+    /**
+     * Called from the presenter when a repo with duplicate fingerprint is detected
+     */
+    fun onRepoDuplicateFingerprintError(
+        existingRepoName: String,
+        newRepoName: String,
+    ) {
+        activity?.toast(activity?.getString(R.string.duplicate_fingerprint_error, existingRepoName, newRepoName))
+    }
+
+    /**
+     * Called from the presenter when a generic error occurs
+     */
+    fun onGenericError() {
+        activity?.toast(R.string.unknown_error)
     }
 
     companion object {
