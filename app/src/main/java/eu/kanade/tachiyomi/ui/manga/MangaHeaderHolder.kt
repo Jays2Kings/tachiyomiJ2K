@@ -42,6 +42,7 @@ import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.system.isInNightMode
 import eu.kanade.tachiyomi.util.system.isLTR
+import io.noties.markwon.Markwon
 
 @SuppressLint("ClickableViewAccessibility")
 class MangaHeaderHolder(
@@ -273,19 +274,26 @@ class MangaHeaderHolder(
                 adapter.controller
                     .mangaPresenter()
                     .manga.description
-            binding.mangaSummary.text =
-                when {
-                    desc.isNullOrBlank() -> itemView.context.getString(R.string.no_description)
-                    binding.mangaSummary.maxLines != Int.MAX_VALUE ->
-                        desc.replace(
-                            Regex(
-                                "[\\r\\n\\s*]{2,}",
-                                setOf(RegexOption.MULTILINE),
-                            ),
-                            "\n",
-                        )
-                    else -> desc.trim()
+            if (desc.isNullOrBlank()) {
+                binding.mangaSummary.text = itemView.context.getString(R.string.no_description)
+            } else {
+                val markwon = Markwon.create(itemView.context)
+                if (binding.mangaSummary.maxLines != Int.MAX_VALUE) {
+                    val spanned = markwon.toMarkdown(desc)
+                    binding.mangaSummary.text =
+                        spanned
+                            .toString()
+                            .replace(
+                                Regex(
+                                    "[\\r\\n\\s*]{2,}",
+                                    setOf(RegexOption.MULTILINE),
+                                ),
+                                "\n",
+                            ).trim()
+                } else {
+                    markwon.setMarkdown(binding.mangaSummary, desc.trim())
                 }
+            }
         }
     }
 
