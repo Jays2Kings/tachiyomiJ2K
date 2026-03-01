@@ -65,6 +65,7 @@ class ReaderPagedView
                     R.array.webtoon_side_padding_values,
                 )
                 webtoonEnableZoomOut.bindToPreference(preferences.webtoonEnableZoomOut())
+                webtoonDoubleTapZoom.bindToPreference(preferences.webtoonDoubleTapZoom())
                 webtoonNav.bindToPreference(preferences.navigationModeWebtoon())
                 webtoonInvert.bindToPreference(preferences.webtoonNavInverted())
                 webtoonPageLayout.bindToPreference(preferences.webtoonPageLayout())
@@ -98,6 +99,7 @@ class ReaderPagedView
                 binding.cropBordersWebtoon,
                 binding.webtoonSidePadding,
                 binding.webtoonEnableZoomOut,
+                binding.webtoonDoubleTapZoom,
                 binding.webtoonNav,
                 binding.webtoonInvert,
                 binding.webtoonPageLayout,

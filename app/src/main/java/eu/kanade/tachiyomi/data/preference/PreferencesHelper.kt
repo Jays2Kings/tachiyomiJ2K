@@ -182,6 +182,8 @@ class PreferencesHelper(
 
     fun webtoonEnableZoomOut() = flowPrefs.getBoolean(Keys.webtoonEnableZoomOut, false)
 
+    fun webtoonDoubleTapZoom() = flowPrefs.getInt(Keys.webtoonDoubleTapZoom, 0)
+
     fun readWithLongTap() = flowPrefs.getBoolean(Keys.readWithLongTap, true)
 
     fun readWithVolumeKeys() = flowPrefs.getBoolean(Keys.readWithVolumeKeys, false)

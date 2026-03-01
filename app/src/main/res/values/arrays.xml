@@ -127,6 +127,11 @@
         <item>@string/split_double_pages</item>
     </string-array>
 
+    <string-array name="double_tap_zoom">
+        <item>@string/double_tap_zoom_in</item>
+        <item>@string/double_tap_fit_to_screen</item>
+    </string-array>
+
     <string-array name="invert_tapping_mode">
         <item>@string/none</item>
         <item>@string/horizontally</item>
