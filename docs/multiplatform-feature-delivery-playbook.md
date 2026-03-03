@@ -182,3 +182,85 @@ Toda contribución nueva debe cumplir estas reglas:
 - [ ] Kill-switch validado
 - [ ] Plan de rollback por PR independiente
 ```
+
+---
+
+## 6) Plan incremental sugerido (PR1…PR8)
+
+Este plan divide el trabajo en cambios pequeños y reversibles para proteger Android mientras Desktop madura.
+
+### PR1 — Congelar contratos comunes
+
+- Alcance: contratos de `network`, `extensions`, `bootstrap` en `commonMain`.
+- Entregables:
+  - Interfaces/modelos públicos estabilizados.
+  - Invariantes documentadas en KDoc o docs técnicas.
+  - Pruebas de contrato iniciales en `commonTest`.
+- DoD foco: **Contrato común**.
+
+### PR2 — Wiring por plataforma (inyección explícita)
+
+- Alcance: composición de dependencias Android/Desktop sin condicionales en lógica de negocio común.
+- Entregables:
+  - Registro explícito de implementaciones por target.
+  - Eliminación de branching por plataforma en capas compartidas.
+- DoD foco: **Android/Desktop** + **Contrato común**.
+
+### PR3 — Paridad mínima de red
+
+- Alcance: políticas compartidas de HTTP/cookies/headers/timeouts y diferencias documentadas.
+- Entregables:
+  - Semántica equivalente Android/Desktop.
+  - Documento de diferencias inevitables por plataforma.
+  - Tests de contrato de red en `commonTest`.
+- DoD foco: **Contrato común** + **Pruebas**.
+
+### PR4 — Pipeline de extensiones desacoplado
+
+- Alcance: separar descubrimiento, descarga, validación de confianza e instalación.
+- Entregables:
+  - Casos de uso comunes para instalación con errores normalizados.
+  - Adaptadores Android/Desktop alineados al mismo flujo.
+- DoD foco: **Android/Desktop** + **Observabilidad** (errores normalizados).
+
+### PR5 — Persistencia y migraciones seguras
+
+- Alcance: `shared/data` (factories, drivers, migraciones SQLDelight).
+- Entregables:
+  - Compatibilidad hacia atrás validada en esquema.
+  - Pruebas de migración y smoke tests por plataforma.
+- DoD foco: **Contrato común** + **Pruebas**.
+
+### PR6 — Feature flags y kill-switch por plataforma
+
+- Alcance: capacidades/flags para activar Desktop experimental sin tocar comportamiento Android estable.
+- Entregables:
+  - Modelo de capacidades por plataforma.
+  - Kill-switch validado y documentado.
+- DoD foco: **Rollout/Reversión**.
+
+### PR7 — CI en matriz Android/Desktop
+
+- Alcance: checks separados y rápidos por módulo/target.
+- Entregables:
+  - Builds Android + Desktop requeridos en PR.
+  - Evidencia de ejecución y artefactos de depuración.
+- DoD foco: **Pruebas**.
+
+### PR8 — Hardening operativo y promoción
+
+- Alcance: observabilidad final, umbrales y criterios de promoción a Android.
+- Entregables:
+  - Logs/errores/métricas por `platform` y `feature`.
+  - Umbral de alerta definido.
+  - Criterio de salida de Desktop experimental a adopción Android.
+  - Playbook de rollback validado por PR independiente.
+- DoD foco: **Observabilidad** + **Rollout/Reversión**.
+
+### Regla de oro para todos los PRs
+
+Cada PR debe:
+
+1. Ser pequeño y revertible de forma aislada.
+2. Mantener Android estable por defecto.
+3. Adjuntar checklist DoD completo con evidencia.
