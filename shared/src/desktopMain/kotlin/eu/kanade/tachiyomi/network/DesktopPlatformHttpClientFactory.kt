@@ -3,10 +3,9 @@ package eu.kanade.tachiyomi.network
 import okhttp3.OkHttpClient
 
 class DesktopPlatformHttpClientFactory(
+    override val cookieStore: CookieStore = DesktopCookieStore(),
     private val cloudflareBypassEnabled: Boolean = false,
 ) : PlatformHttpClientFactory {
-
-    override val cookieStore: CookieStore = DesktopCookieStore()
 
     override val webChallengeSolver: WebChallengeSolver? =
         if (cloudflareBypassEnabled) {

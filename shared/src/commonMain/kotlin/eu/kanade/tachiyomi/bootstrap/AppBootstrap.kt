@@ -3,45 +3,63 @@ package eu.kanade.tachiyomi.bootstrap
 import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
 import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
+import eu.kanade.tachiyomi.network.CookieStore
+import eu.kanade.tachiyomi.network.JsRuntime
 import eu.kanade.tachiyomi.network.PlatformHttpClientFactory
 
-interface NetworkConfigRegistrar {
-    fun registerNetworkConfiguration()
+fun interface ExtensionRepositoryFactory {
+    fun create(): ExtensionRepository
 }
 
-interface RepositoryRegistrar {
-    fun registerRepositories()
+fun interface ExtensionPackageInstallerFactory {
+    fun create(): ExtensionPackageInstaller
 }
 
-interface DomainServiceRegistrar {
-    fun registerDomainServices()
+fun interface ExtensionTrustStoreFactory {
+    fun create(): ExtensionTrustStore
 }
 
-/**
- * Shared contract that exposes platform networking adapter instances to common consumers.
- */
-interface NetworkContractsProvider {
-    val platformHttpClientFactory: PlatformHttpClientFactory
+fun interface CookieStoreFactory {
+    fun create(): CookieStore
 }
 
-/**
- * Shared contract that exposes extension adapters to common consumers.
- */
-interface ExtensionContractsProvider {
-    val extensionRepository: ExtensionRepository
-    val extensionPackageInstaller: ExtensionPackageInstaller
-    val extensionTrustStore: ExtensionTrustStore
+fun interface PlatformHttpClientFactoryFactory {
+    fun create(cookieStore: CookieStore): PlatformHttpClientFactory
 }
 
-class AppBootstrap(
-    private val networkConfigRegistrar: NetworkConfigRegistrar,
-    private val repositoryRegistrar: RepositoryRegistrar,
-    private val domainServiceRegistrar: DomainServiceRegistrar,
-) {
+fun interface JsRuntimeProviderFactory {
+    fun create(): JsRuntime
+}
 
-    fun initialize() {
-        networkConfigRegistrar.registerNetworkConfiguration()
-        repositoryRegistrar.registerRepositories()
-        domainServiceRegistrar.registerDomainServices()
+data class AppContractFactories(
+    val extensionRepositoryFactory: ExtensionRepositoryFactory,
+    val extensionPackageInstallerFactory: ExtensionPackageInstallerFactory,
+    val extensionTrustStoreFactory: ExtensionTrustStoreFactory,
+    val cookieStoreFactory: CookieStoreFactory,
+    val platformHttpClientFactoryFactory: PlatformHttpClientFactoryFactory,
+    val jsRuntimeProviderFactory: JsRuntimeProviderFactory,
+)
+
+data class AppContracts(
+    val extensionRepository: ExtensionRepository,
+    val extensionPackageInstaller: ExtensionPackageInstaller,
+    val extensionTrustStore: ExtensionTrustStore,
+    val cookieStore: CookieStore,
+    val platformHttpClientFactory: PlatformHttpClientFactory,
+    val jsRuntimeProvider: JsRuntimeProviderFactory,
+)
+
+class AppBootstrap(private val factories: AppContractFactories) {
+
+    fun initialize(): AppContracts {
+        val cookieStore = factories.cookieStoreFactory.create()
+        return AppContracts(
+            extensionRepository = factories.extensionRepositoryFactory.create(),
+            extensionPackageInstaller = factories.extensionPackageInstallerFactory.create(),
+            extensionTrustStore = factories.extensionTrustStoreFactory.create(),
+            cookieStore = cookieStore,
+            platformHttpClientFactory = factories.platformHttpClientFactoryFactory.create(cookieStore),
+            jsRuntimeProvider = factories.jsRuntimeProviderFactory,
+        )
     }
 }
