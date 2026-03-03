@@ -7,6 +7,7 @@ actual class DataDriverFactory actual constructor(
 ) {
     actual fun createDriver(dbName: String): JdbcSqliteDriver {
         val driver = JdbcSqliteDriver("jdbc:sqlite:$dbName")
+        // Desktop bootstrap: create schema for first database open.
         runCatching { SharedDataDatabase.Schema.create(driver) }
         return driver
     }
