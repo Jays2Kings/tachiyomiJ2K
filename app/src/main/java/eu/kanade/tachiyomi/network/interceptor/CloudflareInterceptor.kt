@@ -6,7 +6,8 @@ import android.webkit.WebView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import eu.kanade.tachiyomi.R
-import eu.kanade.tachiyomi.network.AndroidCookieJar
+import eu.kanade.tachiyomi.network.CookieStore
+import eu.kanade.tachiyomi.network.WebChallengeSolver
 import eu.kanade.tachiyomi.util.system.WebViewClientCompat
 import eu.kanade.tachiyomi.util.system.isOutdated
 import eu.kanade.tachiyomi.util.system.toast
@@ -20,9 +21,9 @@ import java.util.concurrent.CountDownLatch
 
 class CloudflareInterceptor(
     private val context: Context,
-    private val cookieManager: AndroidCookieJar,
+    private val cookieManager: CookieStore,
     defaultUserAgentProvider: () -> String,
-) : WebViewInterceptor(context, defaultUserAgentProvider) {
+) : WebViewInterceptor(context, defaultUserAgentProvider), WebChallengeSolver {
 
     private val executor = ContextCompat.getMainExecutor(context)
 
