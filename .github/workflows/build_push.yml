@@ -1,64 +1,282 @@
 name: CI
+
 on:
+  pull_request:
   push:
     branches:
       - master
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version'     
+        description: 'Version'
         required: true
         type: string
-        
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
-    name: Build app
+  changes:
+    name: Detect changed scopes
     runs-on: ubuntu-latest
-
+    outputs:
+      shared: ${{ steps.filter.outputs.shared }}
+      shared_data: ${{ steps.filter.outputs.shared_data }}
+      android_apps: ${{ steps.filter.outputs.android_apps }}
+      desktop_app: ${{ steps.filter.outputs.desktop_app }}
     steps:
-      - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ github.token }}
-          all_but_latest: true
-
       - name: Clone repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Detect changed files
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            shared:
+              - 'shared/**'
+              - 'build.gradle.kts'
+              - 'settings.gradle.kts'
+              - 'gradle/**'
+              - 'buildSrc/**'
+            shared_data:
+              - 'shared/data/**'
+              - 'build.gradle.kts'
+              - 'settings.gradle.kts'
+              - 'gradle/**'
+              - 'buildSrc/**'
+            android_apps:
+              - 'app/**'
+              - 'androidApp/**'
+              - 'build.gradle.kts'
+              - 'settings.gradle.kts'
+              - 'gradle/**'
+              - 'buildSrc/**'
+            desktop_app:
+              - 'desktopApp/**'
+              - 'build.gradle.kts'
+              - 'settings.gradle.kts'
+              - 'gradle/**'
+              - 'buildSrc/**'
+
+  shared:
+    name: shared (compile/lint/format/tests)
+    needs: changes
+    if: github.event_name != 'pull_request' || needs.changes.outputs.shared == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
-        
-      - name: Setup Android SDK
-        run: |
-          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager "build-tools;29.0.3"
-
+        uses: gradle/wrapper-validation-action@v3
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: temurin
-
       - name: Copy CI gradle.properties
         run: |
           mkdir -p ~/.gradle
           cp .github/runner-files/ci-gradle.properties ~/.gradle/gradle.properties
-
-      - name: Build app
-        uses: gradle/gradle-command-action@v2
+      - name: Run shared checks
+        run: |
+          mkdir -p ci-logs
+          set -o pipefail
+          ./gradlew \
+            :shared:compileKotlinAndroid \
+            :shared:compileKotlinDesktop \
+            :shared:kotlinterCheck \
+            :shared:kotlinterFormat \
+            :shared:allTests | tee ci-logs/shared.log
+      - name: Upload shared artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          arguments: assembleStandardRelease
+          name: shared-artifacts
+          path: |
+            ci-logs/shared.log
+            shared/build/reports/**
+            shared/build/test-results/**
+            shared/build/tmp/**
+          if-no-files-found: warn
 
-      # Sign APK and create release for tags
+  shared_data:
+    name: shared/data (compile/lint/format/tests)
+    needs: changes
+    if: github.event_name != 'pull_request' || needs.changes.outputs.shared_data == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Setup Android SDK
+        run: |
+          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager "build-tools;29.0.3"
+      - name: Copy CI gradle.properties
+        run: |
+          mkdir -p ~/.gradle
+          cp .github/runner-files/ci-gradle.properties ~/.gradle/gradle.properties
+      - name: Run shared/data checks
+        run: |
+          mkdir -p ci-logs
+          set -o pipefail
+          ./gradlew \
+            :shared:data:compileKotlinAndroid \
+            :shared:data:compileKotlinDesktop \
+            :shared:data:kotlinterCheck \
+            :shared:data:kotlinterFormat \
+            :shared:data:desktopTest | tee ci-logs/shared-data.log
+      - name: Upload shared/data artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-data-artifacts
+          path: |
+            ci-logs/shared-data.log
+            shared/data/build/reports/**
+            shared/data/build/test-results/**
+            shared/data/build/tmp/**
+          if-no-files-found: warn
+
+  android_apps:
+    name: app + androidApp (compile/lint/format/tests)
+    needs: changes
+    if: github.event_name != 'pull_request' || needs.changes.outputs.android_apps == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v3
+      - name: Setup Android SDK
+        run: |
+          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager "build-tools;29.0.3"
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Copy CI gradle.properties
+        run: |
+          mkdir -p ~/.gradle
+          cp .github/runner-files/ci-gradle.properties ~/.gradle/gradle.properties
+      - name: Run Android app checks
+        run: |
+          mkdir -p ci-logs
+          set -o pipefail
+          ./gradlew \
+            :app:assembleStandardDebug \
+            :app:testStandardDebugUnitTest \
+            :app:kotlinterCheck \
+            :app:kotlinterFormat \
+            :androidApp:assembleDebug \
+            :androidApp:testDebugUnitTest \
+            :androidApp:kotlinterCheck \
+            :androidApp:kotlinterFormat | tee ci-logs/android-apps.log
+      - name: Upload Android app artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apps-artifacts
+          path: |
+            ci-logs/android-apps.log
+            app/build/outputs/**
+            app/build/reports/**
+            app/build/test-results/**
+            androidApp/build/outputs/**
+            androidApp/build/reports/**
+            androidApp/build/test-results/**
+          if-no-files-found: warn
+
+  desktop_app:
+    name: desktopApp (compile/lint/format/tests)
+    needs: changes
+    if: github.event_name != 'pull_request' || needs.changes.outputs.desktop_app == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Copy CI gradle.properties
+        run: |
+          mkdir -p ~/.gradle
+          cp .github/runner-files/ci-gradle.properties ~/.gradle/gradle.properties
+      - name: Run desktopApp checks
+        run: |
+          mkdir -p ci-logs
+          set -o pipefail
+          ./gradlew \
+            :desktopApp:compileKotlin \
+            :desktopApp:test \
+            :desktopApp:kotlinterCheck \
+            :desktopApp:kotlinterFormat | tee ci-logs/desktop-app.log
+      - name: Upload desktopApp artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-app-artifacts
+          path: |
+            ci-logs/desktop-app.log
+            desktopApp/build/reports/**
+            desktopApp/build/test-results/**
+            desktopApp/build/tmp/**
+          if-no-files-found: warn
+
+  release:
+    name: Sign and publish release
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.version != ''
+    needs:
+      - android_apps
+      - shared
+      - shared_data
+      - desktop_app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v3
+      - name: Setup Android SDK
+        run: |
+          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager "build-tools;29.0.3"
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Copy CI gradle.properties
+        run: |
+          mkdir -p ~/.gradle
+          cp .github/runner-files/ci-gradle.properties ~/.gradle/gradle.properties
+      - name: Build release APKs
+        run: ./gradlew :app:assembleStandardRelease
       - name: Get tag name
-        if: github.event.inputs.version != ''
         run: |
           set -x
           echo "VERSION_TAG=${{github.event.inputs.version}}" >> $GITHUB_ENV
-
       - name: Sign APK
-        if: env.VERSION_TAG != ''
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: app/build/outputs/apk/standard/release
@@ -66,9 +284,7 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
-
       - name: Clean up build artifacts
-        if: env.VERSION_TAG != ''
         run: |
           set -e
 
@@ -87,14 +303,12 @@ jobs:
           cp app/build/outputs/apk/standard/release/app-standard-x86-release-unsigned-signed.apk tachiyomij2k-x86-${{ env.VERSION_TAG }}.apk
           sha=`sha256sum tachiyomij2k-x86-${{ env.VERSION_TAG }}.apk | awk '{ print $1 }'`
           echo "APK_X86_SHA=$sha" >> $GITHUB_ENV
-          
+
           cp app/build/outputs/apk/standard/release/app-standard-x86_64-release-unsigned-signed.apk tachiyomij2k-x86_64-${{ env.VERSION_TAG }}.apk
           sha=`sha256sum tachiyomij2k-x86_64-${{ env.VERSION_TAG }}.apk | awk '{ print $1 }'`
           echo "APK_X86_64_SHA=$sha" >> $GITHUB_ENV
-
       - name: Create Release
-        if: env.VERSION_TAG != ''
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.VERSION_TAG }}
           name: TachiyomiJ2K ${{ env.VERSION_TAG }}
@@ -105,9 +319,9 @@ jobs:
 
             | Variant | SHA-256 |
             | ------- | ------- |
-            | Universal | ${{ env.APK_UNIVERSAL_SHA }}
-            | arm64-v8a | ${{ env.APK_ARM64_V8A_SHA }}
-            | armeabi-v7a | ${{ env.APK_ARMEABI_V7A_SHA }}
+            | Universal | ${{ env.APK_UNIVERSAL_SHA }} |
+            | arm64-v8a | ${{ env.APK_ARM64_V8A_SHA }} |
+            | armeabi-v7a | ${{ env.APK_ARMEABI_V7A_SHA }} |
             | x86 | ${{ env.APK_X86_SHA }} |
             | x86_64 | ${{ env.APK_X86_64_SHA }} |
           files: |
