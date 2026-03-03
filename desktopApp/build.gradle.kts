@@ -13,4 +13,5 @@ application {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":shared:data"))
 }

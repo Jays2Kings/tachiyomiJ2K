@@ -128,6 +128,7 @@ android {
 dependencies {
     // Legacy adapter module while screens/services are migrated to :shared in phases.
     implementation(project(":shared"))
+    implementation(project(":shared:data"))
 
     // Compose
     implementation("androidx.activity:activity-compose:1.7.2")
