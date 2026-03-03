@@ -1,12 +1,11 @@
 package eu.kanade.tachiyomi.network
 
-import android.content.Context
 import eu.kanade.tachiyomi.util.system.withIOContext
 
 /**
  * Util for evaluating JavaScript in sources.
  */
-class JavaScriptEngine(context: Context) {
+class JavaScriptEngine {
 
     /**
      * Evaluate arbitrary JavaScript code and get the result as a primtive type
