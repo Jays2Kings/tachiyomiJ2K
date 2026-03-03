@@ -29,26 +29,15 @@ import uy.kohesive.injekt.api.get
 
 class AndroidAppBootstrap(
     private val app: Application,
-) : NetworkConfigRegistrar, RepositoryRegistrar, DomainServiceRegistrar {
-
-    private val appBootstrap = AppBootstrap(this, this, this)
+) {
 
     fun initialize() {
         Injekt.importModule(CommonAndroidModule(app))
-        appBootstrap.initialize()
-        warmupSingletons()
-    }
-
-    override fun registerNetworkConfiguration() {
+        initializeAndroidAppBootstrap(app)
         Injekt.importModule(NetworkConfigModule(app))
-    }
-
-    override fun registerRepositories() {
         Injekt.importModule(RepositoryModule(app))
-    }
-
-    override fun registerDomainServices() {
         Injekt.importModule(DomainServicesModule(app))
+        warmupSingletons()
     }
 
     private fun warmupSingletons() {
