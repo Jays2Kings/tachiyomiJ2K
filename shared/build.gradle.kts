@@ -17,6 +17,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-okio:1.6.0")
                 implementation("com.squareup.okio:okio:3.4.0")
                 implementation("io.ktor:ktor-client-core:2.3.6")
+                implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
             }
         }
         val androidMain by getting {
@@ -29,6 +30,7 @@ kotlin {
             dependencies {
                 implementation("org.mozilla:rhino:1.7.15")
                 implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
+                implementation("com.squareup.okhttp3:okhttp-urlconnection:5.0.0-alpha.11")
             }
         }
     }

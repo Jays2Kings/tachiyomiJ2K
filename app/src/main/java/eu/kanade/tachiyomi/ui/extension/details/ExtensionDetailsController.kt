@@ -170,7 +170,7 @@ class ExtensionDetailsController(bundle: Bundle? = null) :
             ?.distinct() ?: emptyList()
 
         val cleared = urls.sumOf {
-            network.cookieJar.remove(it.toHttpUrl())
+            network.cookieJar.remove(it.toHttpUrl(), null, -1)
         }
 
         Timber.d("Cleared $cleared cookies for: ${urls.joinToString()}")
