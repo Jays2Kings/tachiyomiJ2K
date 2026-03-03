@@ -5,6 +5,7 @@ import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
 import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
 import eu.kanade.tachiyomi.network.CookieStore
+import eu.kanade.tachiyomi.platform.PlatformCapabilities
 import eu.kanade.tachiyomi.network.JsRuntime
 import eu.kanade.tachiyomi.network.PlatformHttpClientFactory
 
@@ -36,6 +37,10 @@ fun interface JsRuntimeProviderFactory {
     fun create(): JsRuntime
 }
 
+fun interface PlatformCapabilitiesFactory {
+    fun create(): PlatformCapabilities
+}
+
 data class AppContractFactories(
     val extensionRepositoryFactory: ExtensionRepositoryFactory,
     val extensionPackageDownloaderFactory: ExtensionPackageDownloaderFactory,
@@ -44,6 +49,7 @@ data class AppContractFactories(
     val cookieStoreFactory: CookieStoreFactory,
     val platformHttpClientFactoryFactory: PlatformHttpClientFactoryFactory,
     val jsRuntimeProviderFactory: JsRuntimeProviderFactory,
+    val platformCapabilitiesFactory: PlatformCapabilitiesFactory,
 )
 
 data class AppContracts(
@@ -54,6 +60,7 @@ data class AppContracts(
     val cookieStore: CookieStore,
     val platformHttpClientFactory: PlatformHttpClientFactory,
     val jsRuntimeProvider: JsRuntimeProviderFactory,
+    val platformCapabilities: PlatformCapabilities,
 )
 
 class AppBootstrap(private val factories: AppContractFactories) {
@@ -68,6 +75,7 @@ class AppBootstrap(private val factories: AppContractFactories) {
             cookieStore = cookieStore,
             platformHttpClientFactory = factories.platformHttpClientFactoryFactory.create(cookieStore),
             jsRuntimeProvider = factories.jsRuntimeProviderFactory,
+            platformCapabilities = factories.platformCapabilitiesFactory.create(),
         )
     }
 }

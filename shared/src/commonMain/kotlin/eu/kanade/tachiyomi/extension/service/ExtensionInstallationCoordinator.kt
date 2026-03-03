@@ -5,10 +5,11 @@ import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
 import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
 import eu.kanade.tachiyomi.extension.model.ExtensionInstallProgress
+import eu.kanade.tachiyomi.extension.model.ExtensionPackage
 import eu.kanade.tachiyomi.extension.model.InstallError
 import eu.kanade.tachiyomi.extension.model.InstallErrorCode
-import eu.kanade.tachiyomi.extension.model.ExtensionPackage
 import eu.kanade.tachiyomi.extension.model.InstallStep
+import eu.kanade.tachiyomi.platform.PlatformCapabilities
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -20,6 +21,7 @@ class ExtensionInstallationCoordinator(
     private val downloader: ExtensionPackageDownloader,
     private val installer: ExtensionPackageInstaller,
     private val trustStore: ExtensionTrustStore,
+    private val platformCapabilities: PlatformCapabilities = PlatformCapabilities.conservative(targetName = "unknown"),
 ) {
 
     fun install(extensionPackage: ExtensionPackage, fingerprint: String): Flow<ExtensionInstallProgress> {
@@ -40,7 +42,21 @@ class ExtensionInstallationCoordinator(
                 return@flow
             }
 
-            emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.VerifyingTrust))
+            if (!platformCapabilities.supports(discovered.distribution)) {
+                val message = platformCapabilities.unsupportedMessage(discovered.distribution)
+                println("[ExtensionInstallationCoordinator] Unsupported install target: $message")
+                emit(
+                    errorProgress(
+                        extensionId = discovered.id,
+                        step = InstallStep.Discovering,
+                        code = InstallErrorCode.UnsupportedDistribution,
+                        message = message,
+                    ),
+                )
+                return@flow
+            }
+
+            emit(ExtensionInstallProgress(discovered.id, InstallStep.VerifyingTrust))
             if (!trustStore.isTrusted(discovered.id, fingerprint)) {
                 emit(
                     errorProgress(
