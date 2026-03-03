@@ -8,6 +8,12 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 
+/**
+ * Cookie storage contract shared by common networking code.
+ *
+ * Implementations must remain thread-safe and keep behavior equivalent to [CookieJar]
+ * while also supporting targeted removals through [remove].
+ */
 interface CookieStore : CookieJar {
     fun get(url: HttpUrl): List<Cookie>
 
@@ -16,10 +22,19 @@ interface CookieStore : CookieJar {
     fun removeAll()
 }
 
+/**
+ * Optional web challenge handler (e.g. Cloudflare flows) wired in the HTTP stack.
+ */
 fun interface WebChallengeSolver {
     fun intercept(chain: Interceptor.Chain, request: Request, response: Response): Response
 }
 
+/**
+ * Factory for creating preconfigured [OkHttpClient.Builder] instances.
+ *
+ * Target implementations must expose a shared [cookieStore] and can optionally expose
+ * [webChallengeSolver] when the platform supports challenge bypass handling.
+ */
 interface PlatformHttpClientFactory {
     val cookieStore: CookieStore
     val webChallengeSolver: WebChallengeSolver?

@@ -3,21 +3,30 @@ package eu.kanade.tachiyomi.bootstrap
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionRepository
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionTrustStore
+import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
+import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
+import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
 import eu.kanade.tachiyomi.network.DesktopPlatformHttpClientFactory
+import eu.kanade.tachiyomi.network.PlatformHttpClientFactory
 import java.nio.file.Path
 
-class DesktopBootstrapAdapters : NetworkConfigRegistrar, RepositoryRegistrar, DomainServiceRegistrar {
+class DesktopBootstrapAdapters :
+    NetworkConfigRegistrar,
+    RepositoryRegistrar,
+    DomainServiceRegistrar,
+    NetworkContractsProvider,
+    ExtensionContractsProvider {
 
-    lateinit var platformHttpClientFactory: DesktopPlatformHttpClientFactory
+    override lateinit var platformHttpClientFactory: PlatformHttpClientFactory
         private set
 
-    lateinit var extensionRepository: DesktopExtensionRepository
+    override lateinit var extensionRepository: ExtensionRepository
         private set
 
-    lateinit var extensionPackageInstaller: DesktopExtensionPackageInstaller
+    override lateinit var extensionPackageInstaller: ExtensionPackageInstaller
         private set
 
-    lateinit var extensionTrustStore: DesktopExtensionTrustStore
+    override lateinit var extensionTrustStore: ExtensionTrustStore
         private set
 
     override fun registerNetworkConfiguration() {
