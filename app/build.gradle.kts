@@ -196,7 +196,6 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttpVersion")
     implementation("com.squareup.okhttp3:okhttp-dnsoverhttps:$okhttpVersion")
     implementation("com.squareup.okhttp3:okhttp-brotli:$okhttpVersion")
-    implementation("com.squareup.okio:okio:3.4.0")
 
     // Chucker
     val chuckerVersion = "3.5.2"
@@ -205,15 +204,6 @@ dependencies {
     add("betaImplementation", "com.github.ChuckerTeam.Chucker:library-no-op:$chuckerVersion")
 
     implementation(kotlin("reflect", version = AndroidVersions.kotlin))
-
-    // JSON
-    val kotlinSerialization =  "1.6.0"
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${kotlinSerialization}")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:${kotlinSerialization}")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-okio:${kotlinSerialization}")
-
-    // JavaScript engine
-    implementation("app.cash.quickjs:quickjs-android:0.9.2")
 
     // Disk
     implementation("com.jakewharton:disklrucache:2.0.2")
@@ -285,7 +275,6 @@ dependencies {
     implementation(kotlin("stdlib", org.jetbrains.kotlin.config.KotlinCompilerVersion.VERSION))
 
     val coroutines = "1.7.3"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines")
 
     // Text distance
