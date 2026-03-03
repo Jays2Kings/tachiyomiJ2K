@@ -15,6 +15,6 @@ class DesktopPlatformHttpClientFactory(
         }
 
     override fun newBuilder(): OkHttpClient.Builder {
-        return OkHttpClient.Builder().cookieJar(cookieStore)
+        return SharedHttpClientPolicy.applyTo(OkHttpClient.Builder(), cookieStore)
     }
 }

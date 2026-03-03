@@ -9,6 +9,6 @@ class AndroidSharedPlatformHttpClientFactory(
     override val webChallengeSolver: WebChallengeSolver? = null
 
     override fun newBuilder(): OkHttpClient.Builder {
-        return OkHttpClient.Builder().cookieJar(cookieStore)
+        return SharedHttpClientPolicy.applyTo(OkHttpClient.Builder(), cookieStore)
     }
 }

@@ -16,6 +16,10 @@ class AndroidPlatformHttpClientFactory(
     }
 
     override fun newBuilder(): OkHttpClient.Builder {
-        return OkHttpClient.Builder().cookieJar(cookieStore)
+        return SharedHttpClientPolicy.applyTo(
+            builder = OkHttpClient.Builder(),
+            cookieStore = cookieStore,
+            userAgentProvider = defaultUserAgentProvider,
+        )
     }
 }

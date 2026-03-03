@@ -6,13 +6,11 @@ import com.chuckerteam.chucker.api.ChuckerInterceptor
 import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.network.interceptor.UncaughtExceptionInterceptor
-import eu.kanade.tachiyomi.network.interceptor.UserAgentInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.brotli.BrotliInterceptor
 import uy.kohesive.injekt.injectLazy
 import java.io.File
-import java.util.concurrent.TimeUnit
 
 class NetworkHelper(val context: Context) {
 
@@ -29,17 +27,11 @@ class NetworkHelper(val context: Context) {
     val cookieJar: CookieStore
         get() = platformHttpClientFactory.cookieStore
 
-    private val userAgentInterceptor by lazy { UserAgentInterceptor(::defaultUserAgent) }
-
     private val baseClientBuilder: OkHttpClient.Builder
         get() {
             val builder = platformHttpClientFactory.newBuilder()
-                .connectTimeout(30, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
-                .callTimeout(2, TimeUnit.MINUTES)
                 .addInterceptor(BrotliInterceptor)
                 .addInterceptor(UncaughtExceptionInterceptor())
-                .addInterceptor(userAgentInterceptor)
                 .apply {
                     if (BuildConfig.DEBUG) {
                         addInterceptor(
@@ -84,6 +76,6 @@ class NetworkHelper(val context: Context) {
         get() = preferences.defaultUserAgent().get().replace("\n", " ").trim()
 
     companion object {
-        const val DEFAULT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0"
+        const val DEFAULT_USER_AGENT = SharedHttpClientPolicy.fallbackUserAgent
     }
 }
