@@ -20,6 +20,11 @@ kotlin {
                 implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
             }
         }
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
         val androidMain by getting {
             dependencies {
                 implementation("app.cash.quickjs:quickjs-android:0.9.2")
