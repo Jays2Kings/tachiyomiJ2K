@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.bootstrap
 
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionPackageInstaller
+import eu.kanade.tachiyomi.extension.backend.DesktopExtensionPackageDownloader
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionRepository
 import eu.kanade.tachiyomi.extension.backend.DesktopExtensionTrustStore
 import eu.kanade.tachiyomi.network.DesktopCookieStore
@@ -17,9 +18,11 @@ fun desktopAppFactories(
         extensionRepositoryFactory = ExtensionRepositoryFactory {
             DesktopExtensionRepository(pluginDir) { emptyList() }
         },
+        extensionPackageDownloaderFactory = ExtensionPackageDownloaderFactory {
+            DesktopExtensionPackageDownloader(appDir.resolve("distribution"))
+        },
         extensionPackageInstallerFactory = ExtensionPackageInstallerFactory {
             DesktopExtensionPackageInstaller(
-                distributionRoot = appDir.resolve("distribution"),
                 pluginDirectory = pluginDir,
             )
         },

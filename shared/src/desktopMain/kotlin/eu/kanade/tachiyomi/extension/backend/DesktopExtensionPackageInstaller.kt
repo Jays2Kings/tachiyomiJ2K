@@ -1,8 +1,11 @@
 package eu.kanade.tachiyomi.extension.backend
 
+import eu.kanade.tachiyomi.extension.contract.DownloadedExtensionArtifact
 import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.model.ExtensionDistribution
 import eu.kanade.tachiyomi.extension.model.ExtensionInstallProgress
+import eu.kanade.tachiyomi.extension.model.InstallError
+import eu.kanade.tachiyomi.extension.model.InstallErrorCode
 import eu.kanade.tachiyomi.extension.model.ExtensionPackage
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.extension.model.LoadedExtension
@@ -20,25 +23,36 @@ import kotlin.io.path.exists
 import kotlin.io.path.extension
 
 class DesktopExtensionPackageInstaller(
-    private val distributionRoot: Path,
     private val pluginDirectory: Path,
     private val sandboxMode: SandboxMode = SandboxMode.ClassLoaderIsolated,
 ) : ExtensionPackageInstaller {
 
     private val classLoaders = mutableMapOf<String, URLClassLoader>()
 
-    override fun install(extensionPackage: ExtensionPackage): Flow<ExtensionInstallProgress> = flow {
+    override fun install(extensionPackage: ExtensionPackage, artifact: DownloadedExtensionArtifact): Flow<ExtensionInstallProgress> = flow {
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Pending))
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Installing))
 
-        withContext(Dispatchers.IO) {
-            Files.createDirectories(pluginDirectory)
-            when (val distribution = extensionPackage.distribution) {
-                is ExtensionDistribution.DesktopJar -> installJar(distribution.fileName)
-                is ExtensionDistribution.DesktopZip -> installZip(distribution.fileName)
-                is ExtensionDistribution.DesktopPluginFolder -> installFolder(distribution.folderName)
-                is ExtensionDistribution.AndroidApk -> error("Android distribution is not supported in desktop")
+        runCatching {
+            withContext(Dispatchers.IO) {
+                Files.createDirectories(pluginDirectory)
+                when (val distribution = extensionPackage.distribution) {
+                    is ExtensionDistribution.DesktopJar -> installJar(Path.of(artifact.localPath), distribution.fileName)
+                    is ExtensionDistribution.DesktopZip -> installZip(Path.of(artifact.localPath), distribution.fileName)
+                    is ExtensionDistribution.DesktopPluginFolder -> installFolder(Path.of(artifact.localPath), distribution.folderName)
+                    is ExtensionDistribution.AndroidApk -> error("Android distribution is not supported in desktop")
+                }
             }
+        }.onFailure {
+            emit(
+                ExtensionInstallProgress(
+                    extensionPackage.id,
+                    InstallStep.Error,
+                    it.message ?: "Desktop install failed",
+                    InstallError(InstallErrorCode.InstallationFailed, InstallStep.Installing, it.message),
+                ),
+            )
+            return@flow
         }
 
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Installed))
@@ -78,14 +92,12 @@ class DesktopExtensionPackageInstaller(
         LoadedExtension(extensionId, "classloader://${artifact.fileName}")
     }
 
-    private fun installJar(fileName: String) {
-        val source = distributionRoot.resolve(fileName)
+    private fun installJar(source: Path, fileName: String) {
         val target = pluginDirectory.resolve(fileName)
         Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING)
     }
 
-    private fun installZip(fileName: String) {
-        val zipPath = distributionRoot.resolve(fileName)
+    private fun installZip(zipPath: Path, fileName: String) {
         val outputDir = pluginDirectory.resolve(fileName.removeSuffix(".zip"))
         Files.createDirectories(outputDir)
 
@@ -104,8 +116,7 @@ class DesktopExtensionPackageInstaller(
         }
     }
 
-    private fun installFolder(folderName: String) {
-        val source = distributionRoot.resolve(folderName)
+    private fun installFolder(source: Path, folderName: String) {
         val target = pluginDirectory.resolve(folderName)
 
         if (!source.exists()) {

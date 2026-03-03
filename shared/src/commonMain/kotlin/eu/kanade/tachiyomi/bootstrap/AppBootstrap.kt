@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.bootstrap
 
+import eu.kanade.tachiyomi.extension.contract.ExtensionPackageDownloader
 import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
 import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
@@ -9,6 +10,10 @@ import eu.kanade.tachiyomi.network.PlatformHttpClientFactory
 
 fun interface ExtensionRepositoryFactory {
     fun create(): ExtensionRepository
+}
+
+fun interface ExtensionPackageDownloaderFactory {
+    fun create(): ExtensionPackageDownloader
 }
 
 fun interface ExtensionPackageInstallerFactory {
@@ -33,6 +38,7 @@ fun interface JsRuntimeProviderFactory {
 
 data class AppContractFactories(
     val extensionRepositoryFactory: ExtensionRepositoryFactory,
+    val extensionPackageDownloaderFactory: ExtensionPackageDownloaderFactory,
     val extensionPackageInstallerFactory: ExtensionPackageInstallerFactory,
     val extensionTrustStoreFactory: ExtensionTrustStoreFactory,
     val cookieStoreFactory: CookieStoreFactory,
@@ -42,6 +48,7 @@ data class AppContractFactories(
 
 data class AppContracts(
     val extensionRepository: ExtensionRepository,
+    val extensionPackageDownloader: ExtensionPackageDownloader,
     val extensionPackageInstaller: ExtensionPackageInstaller,
     val extensionTrustStore: ExtensionTrustStore,
     val cookieStore: CookieStore,
@@ -55,6 +62,7 @@ class AppBootstrap(private val factories: AppContractFactories) {
         val cookieStore = factories.cookieStoreFactory.create()
         return AppContracts(
             extensionRepository = factories.extensionRepositoryFactory.create(),
+            extensionPackageDownloader = factories.extensionPackageDownloaderFactory.create(),
             extensionPackageInstaller = factories.extensionPackageInstallerFactory.create(),
             extensionTrustStore = factories.extensionTrustStoreFactory.create(),
             cookieStore = cookieStore,

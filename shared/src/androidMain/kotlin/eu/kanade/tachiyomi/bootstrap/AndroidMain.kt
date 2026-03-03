@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.bootstrap
 
 import android.content.Context
 import eu.kanade.tachiyomi.extension.backend.AndroidApkExtensionPackageInstaller
+import eu.kanade.tachiyomi.extension.backend.AndroidExtensionPackageDownloader
 import eu.kanade.tachiyomi.extension.backend.AndroidExtensionRepository
 import eu.kanade.tachiyomi.extension.backend.AndroidExtensionTrustStore
 import eu.kanade.tachiyomi.network.AndroidSharedCookieStore
@@ -12,6 +13,9 @@ fun androidAppFactories(context: Context): AppContractFactories {
     return AppContractFactories(
         extensionRepositoryFactory = ExtensionRepositoryFactory {
             AndroidExtensionRepository(context) { emptyList() }
+        },
+        extensionPackageDownloaderFactory = ExtensionPackageDownloaderFactory {
+            AndroidExtensionPackageDownloader(context)
         },
         extensionPackageInstallerFactory = ExtensionPackageInstallerFactory {
             AndroidApkExtensionPackageInstaller(context)
