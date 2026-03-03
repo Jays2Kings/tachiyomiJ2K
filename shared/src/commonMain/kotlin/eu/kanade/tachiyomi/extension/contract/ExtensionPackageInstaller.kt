@@ -13,9 +13,9 @@ import kotlinx.coroutines.flow.Flow
  */
 interface ExtensionPackageInstaller {
     /**
-     * Starts installation of [extensionPackage] and emits progress updates until completion.
+     * Starts installation of [artifact] for [extensionPackage] and emits progress updates until completion.
      */
-    fun install(extensionPackage: ExtensionPackage): Flow<ExtensionInstallProgress>
+    fun install(extensionPackage: ExtensionPackage, artifact: DownloadedExtensionArtifact): Flow<ExtensionInstallProgress>
 
     /**
      * Removes the installed extension identified by [extensionId].

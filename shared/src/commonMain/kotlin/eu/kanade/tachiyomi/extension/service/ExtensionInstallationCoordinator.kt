@@ -1,20 +1,23 @@
 package eu.kanade.tachiyomi.extension.service
 
+import eu.kanade.tachiyomi.extension.contract.ExtensionPackageDownloader
 import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.contract.ExtensionRepository
 import eu.kanade.tachiyomi.extension.contract.ExtensionTrustStore
 import eu.kanade.tachiyomi.extension.model.ExtensionInstallProgress
+import eu.kanade.tachiyomi.extension.model.InstallError
+import eu.kanade.tachiyomi.extension.model.InstallErrorCode
 import eu.kanade.tachiyomi.extension.model.ExtensionPackage
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.onCompletion
 
 /**
  * Platform-agnostic install orchestration so UI layers only render [ExtensionInstallProgress].
  */
 class ExtensionInstallationCoordinator(
     private val repository: ExtensionRepository,
+    private val downloader: ExtensionPackageDownloader,
     private val installer: ExtensionPackageInstaller,
     private val trustStore: ExtensionTrustStore,
 ) {
@@ -22,26 +25,79 @@ class ExtensionInstallationCoordinator(
     fun install(extensionPackage: ExtensionPackage, fingerprint: String): Flow<ExtensionInstallProgress> {
         return flow {
             emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Pending))
+            emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Discovering))
 
-            if (!trustStore.isTrusted(extensionPackage.id, fingerprint)) {
+            val discovered = repository.getById(extensionPackage.id)
+            if (discovered == null) {
                 emit(
-                    ExtensionInstallProgress(
+                    errorProgress(
                         extensionId = extensionPackage.id,
-                        step = InstallStep.Error,
+                        step = InstallStep.Discovering,
+                        code = InstallErrorCode.ExtensionNotFound,
+                        message = "Extension not found in repository",
+                    ),
+                )
+                return@flow
+            }
+
+            emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.VerifyingTrust))
+            if (!trustStore.isTrusted(discovered.id, fingerprint)) {
+                emit(
+                    errorProgress(
+                        extensionId = discovered.id,
+                        step = InstallStep.VerifyingTrust,
+                        code = InstallErrorCode.Untrusted,
                         message = "Extension is not trusted",
                     ),
                 )
                 return@flow
             }
 
-            installer.install(extensionPackage).collect { emit(it) }
-        }.onCompletion {
-            repository.refresh()
+            emit(ExtensionInstallProgress(discovered.id, InstallStep.Downloading))
+            val artifact = runCatching { downloader.download(discovered) }.getOrElse { error ->
+                emit(
+                    errorProgress(
+                        extensionId = discovered.id,
+                        step = InstallStep.Downloading,
+                        code = InstallErrorCode.DownloadFailed,
+                        message = error.message ?: "Download failed",
+                    ),
+                )
+                return@flow
+            }
+
+            installer.install(discovered, artifact).collect { emit(it) }
+
+            emit(ExtensionInstallProgress(discovered.id, InstallStep.Refreshing))
+            runCatching { repository.refresh() }.onFailure { error ->
+                emit(
+                    errorProgress(
+                        extensionId = discovered.id,
+                        step = InstallStep.Refreshing,
+                        code = InstallErrorCode.RefreshFailed,
+                        message = error.message ?: "Repository refresh failed",
+                    ),
+                )
+            }
         }
     }
 
     suspend fun trustAndInstall(extensionPackage: ExtensionPackage, fingerprint: String): Flow<ExtensionInstallProgress> {
         trustStore.trust(extensionPackage.id, fingerprint)
         return install(extensionPackage, fingerprint)
+    }
+
+    private fun errorProgress(
+        extensionId: String,
+        step: InstallStep,
+        code: InstallErrorCode,
+        message: String,
+    ): ExtensionInstallProgress {
+        return ExtensionInstallProgress(
+            extensionId = extensionId,
+            step = InstallStep.Error,
+            message = message,
+            error = InstallError(code = code, step = step, detail = message),
+        )
     }
 }

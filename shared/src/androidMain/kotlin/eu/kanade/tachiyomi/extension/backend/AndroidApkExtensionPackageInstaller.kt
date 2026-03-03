@@ -4,9 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.net.Uri
+import eu.kanade.tachiyomi.extension.contract.DownloadedExtensionArtifact
 import eu.kanade.tachiyomi.extension.contract.ExtensionPackageInstaller
 import eu.kanade.tachiyomi.extension.model.ExtensionDistribution
 import eu.kanade.tachiyomi.extension.model.ExtensionInstallProgress
+import eu.kanade.tachiyomi.extension.model.InstallError
+import eu.kanade.tachiyomi.extension.model.InstallErrorCode
 import eu.kanade.tachiyomi.extension.model.ExtensionPackage
 import eu.kanade.tachiyomi.extension.model.InstallStep
 import eu.kanade.tachiyomi.extension.model.LoadedExtension
@@ -15,24 +18,39 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 import java.io.File
-import java.net.URL
 
 class AndroidApkExtensionPackageInstaller(
     private val context: Context,
 ) : ExtensionPackageInstaller {
 
-    override fun install(extensionPackage: ExtensionPackage): Flow<ExtensionInstallProgress> = flow {
+    override fun install(extensionPackage: ExtensionPackage, artifact: DownloadedExtensionArtifact): Flow<ExtensionInstallProgress> = flow {
         val distribution = extensionPackage.distribution as? ExtensionDistribution.AndroidApk
         if (distribution == null) {
-            emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Error, "Unsupported distribution"))
+            emit(
+                ExtensionInstallProgress(
+                    extensionPackage.id,
+                    InstallStep.Error,
+                    "Unsupported distribution",
+                    InstallError(InstallErrorCode.UnsupportedDistribution, InstallStep.Installing, "Unsupported distribution"),
+                ),
+            )
             return@flow
         }
 
-        emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Downloading))
-        val apkFile = downloadApk(extensionPackage.id, distribution.downloadUrl)
+        val apkFile = File(artifact.localPath)
 
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Installing))
-        installApk(apkFile)
+        runCatching { installApk(apkFile) }.onFailure {
+            emit(
+                ExtensionInstallProgress(
+                    extensionPackage.id,
+                    InstallStep.Error,
+                    it.message ?: "Android install failed",
+                    InstallError(InstallErrorCode.InstallationFailed, InstallStep.Installing, it.message),
+                ),
+            )
+            return@flow
+        }
 
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Installed))
         emit(ExtensionInstallProgress(extensionPackage.id, InstallStep.Done))
@@ -53,14 +71,6 @@ class AndroidApkExtensionPackageInstaller(
             extensionId = extensionId,
             entrypointClass = packageInfo.applicationInfo.className ?: "",
         )
-    }
-
-    private suspend fun downloadApk(extensionId: String, url: String): File = withContext(Dispatchers.IO) {
-        val outputFile = File(context.cacheDir, "$extensionId.apk")
-        URL(url).openStream().use { input ->
-            outputFile.outputStream().use { output -> input.copyTo(output) }
-        }
-        outputFile
     }
 
     private suspend fun installApk(apkFile: File) = withContext(Dispatchers.IO) {

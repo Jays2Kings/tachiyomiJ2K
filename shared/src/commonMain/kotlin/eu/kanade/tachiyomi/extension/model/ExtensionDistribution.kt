@@ -23,6 +23,23 @@ data class ExtensionInstallProgress(
     val extensionId: String,
     val step: InstallStep,
     val message: String? = null,
+    val error: InstallError? = null,
+)
+
+enum class InstallErrorCode {
+    ExtensionNotFound,
+    Untrusted,
+    UnsupportedDistribution,
+    DownloadFailed,
+    InstallationFailed,
+    RefreshFailed,
+    Unknown,
+}
+
+data class InstallError(
+    val code: InstallErrorCode,
+    val step: InstallStep,
+    val detail: String? = null,
 )
 
 data class LoadedExtension(
