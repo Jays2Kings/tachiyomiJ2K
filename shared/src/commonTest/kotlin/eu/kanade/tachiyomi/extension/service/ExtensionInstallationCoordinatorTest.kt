@@ -71,6 +71,24 @@ class ExtensionInstallationCoordinatorTest {
     }
 
     @Test
+    fun install_stopsWhenDistributionIsUnsupportedForTarget() = runBlocking {
+        val extension = sampleDesktopZipExtension()
+        val repository = FakeRepository(extension)
+        val downloader = FakeDownloader()
+        val installer = FakeInstaller()
+        val trustStore = FakeTrustStore(trusted = true)
+        val coordinator = ExtensionInstallationCoordinator(repository, downloader, installer, trustStore)
+
+        val progress = coordinator.install(extension, "fingerprint").toList()
+
+        assertEquals(InstallStep.Error, progress.last().step)
+        assertEquals(InstallErrorCode.UnsupportedDistribution, progress.last().error?.code)
+        assertEquals(0, downloader.downloadCalls)
+        assertEquals(0, installer.installCalls)
+        assertEquals(0, repository.refreshCalls)
+    }
+
+    @Test
     fun install_mapsDownloaderFailureToDomainError() = runBlocking {
         val extension = sampleExtension()
         val repository = FakeRepository(extension)
@@ -108,6 +126,13 @@ class ExtensionInstallationCoordinatorTest {
         name = "Test",
         versionName = "1.0",
         distribution = ExtensionDistribution.AndroidApk("https://example.org/test.apk"),
+    )
+
+    private fun sampleDesktopZipExtension() = ExtensionPackage(
+        id = "eu.kanade.tachiyomi.extension.desktop-test",
+        name = "Desktop Test",
+        versionName = "1.0",
+        distribution = ExtensionDistribution.DesktopZip("desktop-test.zip"),
     )
 
     private class FakeRepository(

@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.extension.backend.AndroidExtensionTrustStore
 import eu.kanade.tachiyomi.network.AndroidSharedCookieStore
 import eu.kanade.tachiyomi.network.AndroidSharedPlatformHttpClientFactory
 import eu.kanade.tachiyomi.network.JsRuntimeFactory
+import eu.kanade.tachiyomi.platform.PlatformCapabilities
 
 fun androidAppFactories(context: Context): AppContractFactories {
     return AppContractFactories(
@@ -28,6 +29,9 @@ fun androidAppFactories(context: Context): AppContractFactories {
             AndroidSharedPlatformHttpClientFactory(cookieStore)
         },
         jsRuntimeProviderFactory = JsRuntimeProviderFactory { JsRuntimeFactory.create() },
+        platformCapabilitiesFactory = PlatformCapabilitiesFactory {
+            PlatformCapabilities.conservative(targetName = "android")
+        },
     )
 }
 

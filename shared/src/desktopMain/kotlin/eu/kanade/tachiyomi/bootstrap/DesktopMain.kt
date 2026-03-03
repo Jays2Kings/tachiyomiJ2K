@@ -7,6 +7,7 @@ import eu.kanade.tachiyomi.extension.backend.DesktopExtensionTrustStore
 import eu.kanade.tachiyomi.network.DesktopCookieStore
 import eu.kanade.tachiyomi.network.DesktopPlatformHttpClientFactory
 import eu.kanade.tachiyomi.network.JsRuntimeFactory
+import eu.kanade.tachiyomi.platform.PlatformCapabilities
 import java.nio.file.Path
 
 fun desktopAppFactories(
@@ -34,6 +35,14 @@ fun desktopAppFactories(
             DesktopPlatformHttpClientFactory(cookieStore = cookieStore)
         },
         jsRuntimeProviderFactory = JsRuntimeProviderFactory { JsRuntimeFactory.create() },
+        platformCapabilitiesFactory = PlatformCapabilitiesFactory {
+            PlatformCapabilities(
+                targetName = "desktop",
+                supportsDesktopJar = true,
+                supportsDesktopZipExperimental = true,
+                supportsDesktopPluginFolderExperimental = true,
+            )
+        },
     )
 }
 
