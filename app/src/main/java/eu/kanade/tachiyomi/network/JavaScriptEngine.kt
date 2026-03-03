@@ -1,7 +1,6 @@
 package eu.kanade.tachiyomi.network
 
 import android.content.Context
-import app.cash.quickjs.QuickJs
 import eu.kanade.tachiyomi.util.system.withIOContext
 
 /**
@@ -19,7 +18,7 @@ class JavaScriptEngine(context: Context) {
      */
     @Suppress("UNUSED", "UNCHECKED_CAST")
     suspend fun <T> evaluate(script: String): T = withIOContext {
-        QuickJs.create().use {
+        JsRuntimeFactory.create().use {
             it.evaluate(script) as T
         }
     }
