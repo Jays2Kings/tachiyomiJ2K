@@ -21,6 +21,7 @@ import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.multidex.MultiDex
 import eu.kanade.tachiyomi.appwidget.TachiyomiWidgetManager
+import eu.kanade.tachiyomi.bootstrap.AndroidAppBootstrap
 import eu.kanade.tachiyomi.data.image.coil.CoilSetup
 import eu.kanade.tachiyomi.data.notification.Notifications
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
@@ -38,7 +39,6 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.conscrypt.Conscrypt
 import timber.log.Timber
-import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.injectLazy
 import java.security.Security
 
@@ -64,7 +64,7 @@ open class App : Application(), DefaultLifecycleObserver {
             if (packageName != process) WebView.setDataDirectorySuffix(process)
         }
 
-        Injekt.importModule(AppModule(this))
+        AndroidAppBootstrap(this).initialize()
 
         CoilSetup(this)
         setupNotificationChannels()
