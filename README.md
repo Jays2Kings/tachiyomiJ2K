@@ -81,6 +81,10 @@ Source requests should be created at https://github.com/tachiyomiorg/tachiyomi-e
 [See our website.](https://tachiyomi.org/)
 You can also reach out to us on [Discord](https://discord.gg/tachiyomi).
 
+## Compilar para Android, Linux y Windows
+
+Consulta la guía de compilación multiplataforma en [`docs/building-multiplatform.md`](docs/building-multiplatform.md).
+
 ## License
 
     Copyright 2015 Javier Tomás
