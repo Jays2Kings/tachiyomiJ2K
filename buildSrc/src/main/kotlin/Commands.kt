@@ -1,5 +1,4 @@
 import org.gradle.api.Project
-import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.TimeZone
 import java.util.Date
@@ -35,10 +34,16 @@ fun Project.getBuildTime(): String {
 }
 
 fun Project.runCommand(command: String): String {
-    val byteOut = ByteArrayOutputStream()
-    project.exec {
-        commandLine = command.split(" ")
-        standardOutput = byteOut
+    return try {
+        val process = ProcessBuilder(command.split(" "))
+            .redirectOutput(ProcessBuilder.Redirect.PIPE)
+            .redirectError(ProcessBuilder.Redirect.PIPE)
+            .start()
+
+        val output = process.inputStream.bufferedReader().readText()
+        process.waitFor()
+        output.trim()
+    } catch (e: Exception) {
+        ""
     }
-    return String(byteOut.toByteArray()).trim()
 }

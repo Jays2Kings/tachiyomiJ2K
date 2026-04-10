@@ -155,6 +155,14 @@ abstract class PagerViewer(
             activity.binding.navigationOverlay.setNavigation(config.navigator, showOnStart)
         }
         config.navigationModeInvertedListener = { activity.binding.navigationOverlay.showNavigationAgain() }
+
+        // Set up page transition listener
+        config.pageTransitionChangedListener = {
+            updatePageTransformer()
+        }
+
+        // Apply initial page transformer
+        updatePageTransformer()
     }
 
     /**
@@ -166,6 +174,13 @@ abstract class PagerViewer(
      * Returns the view this viewer uses.
      */
     override fun getView(): View = pager
+
+    /**
+     * Updates the page transformer based on current configuration
+     */
+    private fun updatePageTransformer() {
+        pager.setPageTransformer(false, config.getPageTransformer())
+    }
 
     override fun destroy() {
         super.destroy()

@@ -113,6 +113,14 @@
             android:text="@string/animate_page_transitions"
             android:textColor="?attr/colorOnBackground" />
 
+        <eu.kanade.tachiyomi.widget.MaterialSpinnerView
+            android:id="@+id/page_transition_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:title="@string/page_transition_type"
+            android:entries="@array/page_transition_types" />
+
         <!-- Webtoon Prefs -->
         <eu.kanade.tachiyomi.widget.MaterialSpinnerView
             android:id="@+id/webtoon_nav"

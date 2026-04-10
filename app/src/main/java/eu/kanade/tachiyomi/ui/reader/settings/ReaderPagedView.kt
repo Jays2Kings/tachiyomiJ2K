@@ -39,7 +39,26 @@ class ReaderPagedView
                 binding.landscapeZoom.bindToPreference(preferences.landscapeZoom())
                 zoomStart.bindToPreference(preferences.zoomStart(), 1)
                 cropBorders.bindToPreference(preferences.cropBorders())
-                pageTransitions.bindToPreference(preferences.pageTransitions())
+                pageTransitions.bindToPreference(preferences.pageTransitions()) {
+                    // Update visibility of page transition type selector when page transitions toggle
+                    val mangaViewer = (context as? ReaderActivity)?.viewModel?.getMangaReadingMode() ?: 0
+                    binding.pageTransitionType.isVisible = it && !ReadingModeType.isWebtoonType(mangaViewer)
+                }
+
+                // Setup page transition type selector
+                pageTransitionType.bindToIntPreference(
+                    preferences.pageTransitionType(),
+                    R.array.page_transition_types,
+                )
+
+                // Get manga viewer mode once and reuse it
+                val mangaViewer = (context as? ReaderActivity)?.viewModel?.getMangaReadingMode() ?: 0
+                val isWebtoonView = ReadingModeType.isWebtoonType(mangaViewer)
+                val hasMargins = mangaViewer == ReadingModeType.CONTINUOUS_VERTICAL.flagValue
+
+                // Set initial visibility
+                pageTransitionType.isVisible = preferences.pageTransitions().get() && !isWebtoonView
+
                 pagerNav.bindToPreference(preferences.navigationModePager())
                 pagerInvert.bindToPreference(preferences.pagerNavInverted())
                 extendPastCutout.bindToPreference(preferences.pagerCutoutBehavior())
@@ -47,18 +66,15 @@ class ReaderPagedView
                     needsActivityRecreate = true
                 }
                 pageLayout.bindToPreference(preferences.pageLayout()) {
-                    val mangaViewer = (context as? ReaderActivity)?.viewModel?.getMangaReadingMode() ?: 0
-                    val isWebtoonView = ReadingModeType.isWebtoonType(mangaViewer)
-                    updatePagedGroup(!isWebtoonView)
+                    val currentMangaViewer = (context as? ReaderActivity)?.viewModel?.getMangaReadingMode() ?: 0
+                    val currentIsWebtoonView = ReadingModeType.isWebtoonType(currentMangaViewer)
+                    updatePagedGroup(!currentIsWebtoonView)
                 }
 
                 invertDoublePages.bindToPreference(preferences.invertDoublePages())
 
                 pageLayout.title = pageLayout.title.toString().addBetaTag(context)
 
-                val mangaViewer = (context as? ReaderActivity)?.viewModel?.getMangaReadingMode() ?: 0
-                val isWebtoonView = ReadingModeType.isWebtoonType(mangaViewer)
-                val hasMargins = mangaViewer == ReadingModeType.CONTINUOUS_VERTICAL.flagValue
                 cropBordersWebtoon.bindToPreference(if (hasMargins) preferences.cropBorders() else preferences.cropBordersWebtoon())
                 webtoonSidePadding.bindToIntPreference(
                     preferences.webtoonSidePadding(),
@@ -94,6 +110,10 @@ class ReaderPagedView
                 binding.landscapeZoom,
                 binding.navigatePan,
             ).forEach { it.isVisible = show }
+
+            // Page transition type is only visible for paged viewers AND when page transitions are enabled
+            binding.pageTransitionType.isVisible = show && preferences.pageTransitions().get()
+
             listOf(
                 binding.cropBordersWebtoon,
                 binding.webtoonSidePadding,
@@ -143,5 +163,7 @@ class ReaderPagedView
                 )
             }
             binding.invertDoublePages.isVisible = show && preferences.pageLayout().get() != PageLayout.SINGLE_PAGE.value
+            // Handle page transition type visibility separately
+            binding.pageTransitionType.isVisible = show && preferences.pageTransitions().get()
         }
     }

@@ -422,6 +422,22 @@
     <!-- Reader settings -->
     <string name="fullscreen">Fullscreen</string>
     <string name="animate_page_transitions">Animate page transitions</string>
+    <string name="page_transition_type">Page transition type</string>
+    <string name="slide">Slide</string>
+    <string name="fade">Fade</string>
+    <string name="flip">Flip</string>
+    <string name="depth">Depth</string>
+    <string name="zoom">Zoom</string>
+    <string name="cube">Cube</string>
+    <string name="accordion">Accordion</string>
+    <string name="transition_none_description">No animation between pages</string>
+    <string name="transition_slide_description">Standard sliding animation</string>
+    <string name="transition_fade_description">Pages fade in and out</string>
+    <string name="transition_flip_description">3D flip effect between pages</string>
+    <string name="transition_depth_description">Pages slide with depth perspective</string>
+    <string name="transition_zoom_description">Zoom in/out transition effect</string>
+    <string name="transition_cube_description">3D cube rotation effect</string>
+    <string name="transition_accordion_description">Accordion-style folding effect</string>
     <string name="enable_zoom_out">Enable zoom out</string>
     <string name="double_tap_anim_speed">Double tap animation speed</string>
     <string name="show_page_number">Show page number</string>

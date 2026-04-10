@@ -132,6 +132,8 @@ class PreferencesHelper(
 
     fun pageTransitions() = flowPrefs.getBoolean(Keys.enableTransitions, true)
 
+    fun pageTransitionType() = flowPrefs.getInt(Keys.pageTransitionType, 1) // Default to SLIDE
+
     fun pagerCutoutBehavior() = flowPrefs.getInt(Keys.pagerCutoutBehavior, 0)
 
     fun landscapeCutoutBehavior() = flowPrefs.getInt("landscape_cutout_behavior", 0)

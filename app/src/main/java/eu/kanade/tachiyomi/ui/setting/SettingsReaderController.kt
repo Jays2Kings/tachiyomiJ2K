@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.ui.reader.settings.ReaderBackgroundColor
 import eu.kanade.tachiyomi.ui.reader.settings.ReaderBottomButton
 import eu.kanade.tachiyomi.ui.reader.settings.ReadingModeType
 import eu.kanade.tachiyomi.ui.reader.viewer.ViewerNavigation
+import eu.kanade.tachiyomi.ui.reader.viewer.pager.PageTransitionType
 import eu.kanade.tachiyomi.util.lang.addBetaTag
 import eu.kanade.tachiyomi.util.system.isTablet
 import eu.kanade.tachiyomi.util.view.activityBinding
@@ -61,6 +62,15 @@ class SettingsReaderController : SettingsController() {
                     key = Keys.enableTransitions
                     titleRes = R.string.animate_page_transitions
                     defaultValue = true
+                }
+                intListPreference(activity) {
+                    key = Keys.pageTransitionType
+                    titleRes = R.string.page_transition_type
+                    val enumConstants = PageTransitionType.entries
+                    entriesRes = enumConstants.map { it.nameRes }.toTypedArray()
+                    entryValues = enumConstants.map { it.value }
+                    defaultValue = PageTransitionType.DEFAULT.value
+                    preferences.pageTransitions().asImmediateFlowIn(viewScope) { isVisible = it }
                 }
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     switchPreference {

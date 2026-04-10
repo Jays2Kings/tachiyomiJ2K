@@ -25,7 +25,12 @@ class PagerConfig(
     private val viewer: PagerViewer,
     preferences: PreferencesHelper = Injekt.get(),
 ) : ViewerConfig(preferences, scope) {
+    var pageTransitionChangedListener: (() -> Unit)? = null
+
     var usePageTransitions = false
+        private set
+
+    var pageTransitionType = PageTransitionType.fromValue(preferences.pageTransitionType().get())
         private set
 
     var imageScaleType = 1
@@ -73,6 +78,10 @@ class PagerConfig(
 
     init {
         preferences.pageTransitions().register({ usePageTransitions = it })
+
+        preferences.pageTransitionType().register({
+            pageTransitionType = PageTransitionType.fromValue(it)
+        }, { pageTransitionChangedListener?.invoke() })
 
         preferences.fullscreen().register({ isFullscreen = it })
 
@@ -211,6 +220,40 @@ class PagerConfig(
                 else -> defaultNavigation()
             }
         navigationModeChangedListener?.invoke()
+    }
+
+    /**
+     * Gets the appropriate PageTransformer for the current transition type
+     */
+    fun getPageTransformer(): androidx.viewpager.widget.ViewPager.PageTransformer? {
+        if (!usePageTransitions) {
+            return null
+        }
+
+        return when (pageTransitionType) {
+            PageTransitionType.NONE -> null
+            PageTransitionType.SLIDE ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .SlidePageTransformer()
+            PageTransitionType.FADE ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .FadePageTransformer()
+            PageTransitionType.FLIP ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .FlipPageTransformer()
+            PageTransitionType.DEPTH ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .DepthPageTransformer()
+            PageTransitionType.ZOOM ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .ZoomPageTransformer()
+            PageTransitionType.CUBE ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .CubePageTransformer()
+            PageTransitionType.ACCORDION ->
+                eu.kanade.tachiyomi.ui.reader.viewer.pager.transform
+                    .AccordionPageTransformer()
+        }
     }
 
     enum class ZoomType {

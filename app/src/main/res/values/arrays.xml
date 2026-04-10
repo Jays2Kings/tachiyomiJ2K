@@ -33,6 +33,17 @@
         <item>@string/smart_fit</item>
     </string-array>
 
+    <string-array name="page_transition_types">
+        <item>@string/none</item>
+        <item>@string/slide</item>
+        <item>@string/fade</item>
+        <item>@string/flip</item>
+        <item>@string/depth</item>
+        <item>@string/zoom</item>
+        <item>@string/cube</item>
+        <item>@string/accordion</item>
+    </string-array>
+
     <string-array name="manga_statuses">
         <item>@string/unknown_status</item>
         <item>@string/ongoing</item>
