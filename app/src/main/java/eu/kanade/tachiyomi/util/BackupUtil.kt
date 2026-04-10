@@ -5,7 +5,6 @@ import android.content.Context
 import android.net.Uri
 import eu.kanade.tachiyomi.data.backup.BackupCreator
 import eu.kanade.tachiyomi.data.backup.models.Backup
-import eu.kanade.tachiyomi.data.backup.models.BackupSerializer
 import okio.buffer
 import okio.gzip
 import okio.source
@@ -37,6 +36,6 @@ object BackupUtil {
                 backupStringSource
             }.use { it.readByteArray() }
 
-        return backupCreator.parser.decodeFromByteArray(BackupSerializer, backupString)
+        return backupCreator.parser.decodeFromByteArray(Backup.serializer(), backupString)
     }
 }

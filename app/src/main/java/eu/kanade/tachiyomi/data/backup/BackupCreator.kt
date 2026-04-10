@@ -26,7 +26,6 @@ import eu.kanade.tachiyomi.data.backup.models.BackupChapter
 import eu.kanade.tachiyomi.data.backup.models.BackupHistory
 import eu.kanade.tachiyomi.data.backup.models.BackupManga
 import eu.kanade.tachiyomi.data.backup.models.BackupPreference
-import eu.kanade.tachiyomi.data.backup.models.BackupSerializer
 import eu.kanade.tachiyomi.data.backup.models.BackupSource
 import eu.kanade.tachiyomi.data.backup.models.BackupSourcePreferences
 import eu.kanade.tachiyomi.data.backup.models.BackupTracking
@@ -129,7 +128,7 @@ class BackupCreator(
                 throw IllegalStateException("Failed to get handle on file")
             }
 
-            val byteArray = parser.encodeToByteArray(BackupSerializer, backup!!)
+            val byteArray = parser.encodeToByteArray(Backup.serializer(), backup!!)
             if (byteArray.isEmpty()) {
                 throw IllegalStateException(context.getString(R.string.empty_backup_error))
             }
