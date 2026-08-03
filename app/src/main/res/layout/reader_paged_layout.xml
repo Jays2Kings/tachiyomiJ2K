@@ -5,7 +5,7 @@
     android:id="@+id/filter_bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bottom_sheet_rounded_background"
+    android:background="?attr/background"
     android:clipToPadding="false">
 
     <LinearLayout
