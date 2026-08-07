@@ -41,6 +41,8 @@ open class WebtoonRecyclerView
                 }
             }
 
+        var doubleTapZoom = 0
+
         private val minRate
             get() = if (canZoomOut) MIN_RATE else DEFAULT_RATE
 
@@ -111,6 +113,7 @@ open class WebtoonRecyclerView
             toX: Float,
             fromY: Float,
             toY: Float,
+            scrollByY: Int = 0,
         ) {
             isZooming = true
             val animatorSet = AnimatorSet()
@@ -122,9 +125,33 @@ open class WebtoonRecyclerView
 
             val scaleAnimator = ValueAnimator.ofFloat(fromRate, toRate)
             scaleAnimator.addUpdateListener { animation ->
-                setScaleRate(animation.animatedValue as Float)
+                val scale = animation.animatedValue as Float
+                setScaleRate(scale)
+
+                if (scale < 1f || fromRate < 1f) {
+                    layoutParams.height =
+                        if (scale < 1f) {
+                            (originalHeight / scale).toInt()
+                        } else {
+                            originalHeight
+                        }
+                    halfHeight = layoutParams.height / 2
+                    requestLayout()
+                }
             }
-            animatorSet.playTogether(translationXAnimator, translationYAnimator, scaleAnimator)
+            val animators = mutableListOf(translationXAnimator, translationYAnimator, scaleAnimator)
+            if (scrollByY != 0) {
+                val scrollAnimator = ValueAnimator.ofInt(0, scrollByY)
+                var previousScrollValue = 0
+                scrollAnimator.addUpdateListener { animation ->
+                    val currentValue = animation.animatedValue as Int
+                    val delta = currentValue - previousScrollValue
+                    previousScrollValue = currentValue
+                    scrollBy(0, delta)
+                }
+                animators.add(scrollAnimator)
+            }
+            animatorSet.playTogether(animators as Collection<Animator>)
             animatorSet.duration = ANIMATOR_DURATION_TIME.toLong()
             animatorSet.interpolator = DecelerateInterpolator()
             animatorSet.start()
@@ -249,7 +276,23 @@ open class WebtoonRecyclerView
             fun onDoubleTapConfirmed(ev: MotionEvent) {
                 if (!isZooming) {
                     if (scaleX != DEFAULT_RATE) {
-                        zoom(currentScale, DEFAULT_RATE, x, 0f, y, 0f)
+                        val scrollByY =
+                            if (currentScale < DEFAULT_RATE) {
+                                (ev.y * (1f / currentScale - 1f)).toInt()
+                            } else {
+                                0
+                            }
+                        zoom(currentScale, DEFAULT_RATE, x, 0f, y, 0f, scrollByY = scrollByY)
+                    } else if (doubleTapZoom == 1) {
+                        val child = findChildViewUnder(ev.x, ev.y)
+                        if (child != null && child.height > originalHeight) {
+                            val toScale =
+                                (originalHeight.toFloat() / child.height)
+                                    .coerceIn(MIN_RATE, DEFAULT_RATE)
+                            val targetHalfHeight = (originalHeight / toScale / 2).toInt()
+                            val toY = (originalHeight / 2f - targetHalfHeight)
+                            zoom(DEFAULT_RATE, toScale, 0f, 0f, 0f, toY, scrollByY = child.top)
+                        }
                     } else {
                         val toScale = 2f
                         val toX = (halfWidth - ev.x) * (toScale - 1)

@@ -36,7 +36,11 @@ class WebtoonConfig(
     var enableZoomOut = false
         private set
 
+    var doubleTapZoom = 0
+        private set
+
     var zoomPropertyChangedListener: ((Boolean) -> Unit)? = null
+    var doubleTapZoomChangedListener: ((Int) -> Unit)? = null
 
     var splitPages = preferences.webtoonPageLayout().get() == PageLayout.SPLIT_PAGES.webtoonValue
 
@@ -81,6 +85,10 @@ class WebtoonConfig(
         preferences
             .webtoonEnableZoomOut()
             .register({ enableZoomOut = it }, { zoomPropertyChangedListener?.invoke(it) })
+
+        preferences
+            .webtoonDoubleTapZoom()
+            .register({ doubleTapZoom = it }, { doubleTapZoomChangedListener?.invoke(it) })
 
         preferences
             .webtoonPageLayout()

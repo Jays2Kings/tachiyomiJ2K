@@ -386,6 +386,18 @@ class SettingsReaderController : SettingsController() {
                     titleRes = R.string.enable_zoom_out
                     defaultValue = false
                 }
+
+                intListPreference(activity) {
+                    key = Keys.webtoonDoubleTapZoom
+                    titleRes = R.string.double_tap_zoom
+                    entriesRes =
+                        arrayOf(
+                            R.string.double_tap_zoom_in,
+                            R.string.double_tap_fit_to_screen,
+                        )
+                    entryValues = listOf(0, 1)
+                    defaultValue = "0"
+                }
             }
             preferenceCategory {
                 titleRes = R.string.navigation
