@@ -219,4 +219,17 @@ class LibraryBadge
                         ColorStateList.valueOf(context.getResourceColor(R.attr.colorPrimary))
                 }
         }
+
+        fun setDuplicatedInLibrary(duplicatedInLibrary: Boolean) {
+            this.isVisible = duplicatedInLibrary
+            binding.unreadAngle.isVisible = false
+            binding.unreadText.updatePaddingRelative(start = 5.dpToPx)
+            binding.unreadText.isVisible = duplicatedInLibrary
+            binding.unreadText.text = resources.getText(R.string.duplicated_in_library)
+            binding.unreadText.background =
+                MaterialShapeDrawable(makeShapeCorners(ogRadius, ogRadius)).apply {
+                    this.fillColor =
+                        ColorStateList.valueOf(context.getResourceColor(R.attr.colorSecondary))
+                }
+        }
     }

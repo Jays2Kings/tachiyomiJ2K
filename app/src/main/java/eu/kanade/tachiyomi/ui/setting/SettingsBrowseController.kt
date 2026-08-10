@@ -35,6 +35,11 @@ class SettingsBrowseController : SettingsController() {
                     bindTo(preferences.hideInLibraryItems())
                     titleRes = R.string.hide_in_library_items
                 }
+                switchPreference {
+                    bindTo(preferences.showDuplicatedInLibraryItems())
+                    titleRes = R.string.show_duplicated_in_library_items
+                    summaryRes = R.string.show_duplicated_in_library_items_summary
+                }
             }
 
             preferenceCategory {
