@@ -32,6 +32,7 @@ import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.sourcePreferences
 import eu.kanade.tachiyomi.ui.library.LibrarySort
 import eu.kanade.tachiyomi.util.BackupUtil
+import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.system.createFileInCacheDir
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.isActive
@@ -161,20 +162,40 @@ class BackupRestorer(
             backupManga.brokenHistory.map { BackupHistory(it.url, it.lastRead, it.readDuration) } + backupManga.history
         val tracks = backupManga.getTrackingImpl()
         val customManga = backupManga.getCustomMangaInfo()
+        val filteredScanlators = backupManga.excludedScanlators
 
         try {
             val dbManga = db.getManga(manga.url, manga.source).executeAsBlocking()
             if (dbManga == null) {
                 // Manga not in database
-                restoreExistingManga(manga, chapters, categories, history, tracks, backupCategories, customManga)
+                restoreExistingManga(
+                    manga,
+                    chapters,
+                    categories,
+                    history,
+                    tracks,
+                    backupCategories,
+                    filteredScanlators,
+                    customManga,
+                )
             } else {
                 // Manga in database
                 // Copy information from manga already in database
                 manga.id = dbManga.id
+                manga.filtered_scanlators = dbManga.filtered_scanlators
                 manga.copyFrom(dbManga)
                 db.insertManga(manga).executeAsBlocking()
                 // Fetch rest of manga information
-                restoreNewManga(manga, chapters, categories, history, tracks, backupCategories, customManga)
+                restoreNewManga(
+                    manga,
+                    chapters,
+                    categories,
+                    history,
+                    tracks,
+                    backupCategories,
+                    filteredScanlators,
+                    customManga,
+                )
             }
         } catch (e: Exception) {
             val sourceName = sourceMapping[manga.source] ?: manga.source.toString()
@@ -200,6 +221,7 @@ class BackupRestorer(
         history: List<BackupHistory>,
         tracks: List<Track>,
         backupCategories: List<BackupCategory>,
+        filteredScanlators: List<String>,
         customManga: CustomMangaManager.MangaJson?,
     ) {
         val fetchedManga =
@@ -210,7 +232,7 @@ class BackupRestorer(
         fetchedManga.id ?: return
 
         restoreChapters(fetchedManga, chapters)
-        restoreExtras(fetchedManga, categories, history, tracks, backupCategories, customManga)
+        restoreExtras(fetchedManga, categories, history, tracks, backupCategories, filteredScanlators, customManga)
     }
 
     private fun restoreNewManga(
@@ -220,10 +242,11 @@ class BackupRestorer(
         history: List<BackupHistory>,
         tracks: List<Track>,
         backupCategories: List<BackupCategory>,
+        filteredScanlators: List<String>,
         customManga: CustomMangaManager.MangaJson?,
     ) {
         restoreChapters(backupManga, chapters)
-        restoreExtras(backupManga, categories, history, tracks, backupCategories, customManga)
+        restoreExtras(backupManga, categories, history, tracks, backupCategories, filteredScanlators, customManga)
     }
 
     private fun restoreChapters(
@@ -262,11 +285,13 @@ class BackupRestorer(
         history: List<BackupHistory>,
         tracks: List<Track>,
         backupCategories: List<BackupCategory>,
+        filteredScanlators: List<String>,
         customManga: CustomMangaManager.MangaJson?,
     ) {
         restoreCategories(manga, categories, backupCategories)
         restoreHistoryForManga(history)
         restoreTrackForManga(manga, tracks)
+        restoreFilteredScanlatorsForManga(manga, filteredScanlators)
         customManga?.id = manga.id!!
         customManga?.let { customMangaManager.saveMangaInfo(it) }
     }
@@ -381,6 +406,17 @@ class BackupRestorer(
         if (trackToUpdate.isNotEmpty()) {
             db.insertTracks(trackToUpdate).executeAsBlocking()
         }
+    }
+
+    private fun restoreFilteredScanlatorsForManga(
+        manga: Manga,
+        filteredScanlators: List<String>,
+    ) {
+        if (filteredScanlators.isEmpty()) return
+
+        val actualList = ChapterUtil.getScanlators(manga.filtered_scanlators) + filteredScanlators
+        manga.filtered_scanlators = ChapterUtil.getScanlatorString(actualList.toSet())
+        db.updateMangaFilteredScanlators(manga).executeAsBlocking()
     }
 
     private fun restoreAppPreferences(preferences: List<BackupPreference>) {
