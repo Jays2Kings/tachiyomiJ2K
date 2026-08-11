@@ -284,7 +284,7 @@ class MangaDetailsPresenter(
     fun hasDownloads(): Boolean = allChapters.any { it.isDownloaded }
 
     fun getUnreadChaptersSorted() =
-        allChapters
+        chapters
             .filter { !it.read && it.status == Download.State.NOT_DOWNLOADED }
             .distinctBy { it.name }
             .sortedWith(chapterSort.sortComparator(true))
