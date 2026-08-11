@@ -220,12 +220,12 @@ class LibraryBadge
                 }
         }
 
-        fun setDuplicatedInLibrary(duplicatedInLibrary: Boolean) {
-            this.isVisible = duplicatedInLibrary
+        fun setDuplicateInLibrary(duplicateInLibrary: Boolean) {
+            this.isVisible = duplicateInLibrary
             binding.unreadAngle.isVisible = false
             binding.unreadText.updatePaddingRelative(start = 5.dpToPx)
-            binding.unreadText.isVisible = duplicatedInLibrary
-            binding.unreadText.text = resources.getText(R.string.duplicated_in_library)
+            binding.unreadText.isVisible = duplicateInLibrary
+            binding.unreadText.text = resources.getText(R.string.duplicate_in_library)
             binding.unreadText.background =
                 MaterialShapeDrawable(makeShapeCorners(ogRadius, ogRadius)).apply {
                     this.fillColor =

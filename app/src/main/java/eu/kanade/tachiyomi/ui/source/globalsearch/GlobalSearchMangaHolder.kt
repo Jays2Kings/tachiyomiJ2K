@@ -71,11 +71,11 @@ class GlobalSearchMangaHolder(
         setImage(manga)
         binding.itemImage.alpha = if (manga.favorite) 0.34f else 1.0f
 
-        binding.duplicatedInLibraryButton.isVisible = false
-        if (!manga.favorite && prefs.showDuplicatedInLibraryItems().get()) {
+        binding.duplicateInLibraryButton.isVisible = false
+        if (!manga.favorite && prefs.showDuplicateInLibraryItems().get()) {
             val duplicatedManga = db.getDuplicateLibraryManga(manga).executeAsBlocking()
             if (duplicatedManga != null) {
-                binding.duplicatedInLibraryButton.isVisible = true
+                binding.duplicateInLibraryButton.isVisible = true
                 binding.itemImage.alpha = 0.34f
             }
         }

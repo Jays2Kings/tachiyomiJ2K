@@ -69,12 +69,12 @@ class BrowseSourceListHolder(
 
             binding.coverThumbnail.alpha = if (manga.favorite) 0.34f else 1.0f
 
-            if (prefs.showDuplicatedInLibraryItems().get()) {
+            if (!manga.favorite && prefs.showDuplicateInLibraryItems().get()) {
                 val duplicatedManga = db.getDuplicateLibraryManga(manga).executeAsBlocking()
 
-                if (duplicatedManga != null && !manga.favorite) {
+                if (duplicatedManga != null) {
                     binding.coverThumbnail.alpha = 0.34f
-                    binding.duplicatedInLibraryBadge.badge.isVisible = true
+                    binding.duplicateInLibraryBadge.duplicateBadge.isVisible = true
                 }
             }
         }

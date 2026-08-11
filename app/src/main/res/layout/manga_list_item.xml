@@ -19,8 +19,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        layout="@layout/duplicated_in_library_badge"
-        android:id="@+id/duplicated_in_library_badge"
+        layout="@layout/duplicate_in_library_badge"
+        android:id="@+id/duplicate_in_library_badge"
         android:layout_width="16dp"
         android:layout_height="16dp"
         app:layout_constraintStart_toStartOf="parent"

@@ -74,7 +74,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/duplicated_in_library_button"
+            android:id="@+id/duplicate_in_library_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
@@ -99,7 +99,7 @@
                 style="?textAppearanceCaption"
                 android:layout_height="wrap_content"
                 android:tint="@color/md_white_1000"
-                android:text="@string/duplicated_in_library"/>
+                android:text="@string/duplicate_in_library"/>
 
         </com.google.android.material.card.MaterialCardView>
 

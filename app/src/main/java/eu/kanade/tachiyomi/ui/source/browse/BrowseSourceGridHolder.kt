@@ -85,12 +85,12 @@ class BrowseSourceGridHolder(
                 binding.card.strokeColor = ColorUtils.setAlphaComponent(color, if (manga.favorite) 87 else 255)
             }
 
-            if (prefs.showDuplicatedInLibraryItems().get()) {
+            if (!manga.favorite && prefs.showDuplicateInLibraryItems().get()) {
                 val duplicatedManga = db.getDuplicateLibraryManga(manga).executeAsBlocking()
 
-                if (duplicatedManga != null && !manga.favorite) {
+                if (duplicatedManga != null) {
                     binding.coverThumbnail.alpha = 0.34f
-                    binding.unreadDownloadBadge.root.setDuplicatedInLibrary(true)
+                    binding.unreadDownloadBadge.root.setDuplicateInLibrary(true)
                 }
             }
         }
