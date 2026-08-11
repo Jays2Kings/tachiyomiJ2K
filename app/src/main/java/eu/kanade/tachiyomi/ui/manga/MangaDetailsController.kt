@@ -1468,8 +1468,8 @@ class MangaDetailsController :
                     rangeMode = RangeMode.Download
                     return
                 }
-                R.id.download_unread -> presenter.allChapters.filter { !it.read }
-                R.id.download_all -> presenter.allChapters
+                R.id.download_unread -> presenter.chapters.filter { !it.read }
+                R.id.download_all -> presenter.chapters
                 else -> emptyList()
             }
         if (chaptersToDownload.isNotEmpty()) {
