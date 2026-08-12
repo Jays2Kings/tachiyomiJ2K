@@ -414,7 +414,8 @@ class BackupRestorer(
     ) {
         if (filteredScanlators.isEmpty()) return
 
-        val actualList = ChapterUtil.getScanlators(manga.filtered_scanlators) + filteredScanlators
+        val actualList = ChapterUtil.getScanlators(manga.filtered_scanlators) +
+            filteredScanlators.flatMap { ChapterUtil.getScanlators(it) }
         manga.filtered_scanlators = ChapterUtil.getScanlatorString(actualList.toSet())
         db.updateMangaFilteredScanlators(manga).executeAsBlocking()
     }
