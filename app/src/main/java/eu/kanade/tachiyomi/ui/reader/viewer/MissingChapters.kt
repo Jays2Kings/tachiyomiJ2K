@@ -61,3 +61,26 @@ fun calculateChapterDifference(
     if (higherChapterNumber < 0f || lowerChapterNumber < 0f) return 0f
     return floor(higherChapterNumber) - floor(lowerChapterNumber) - 1f
 }
+
+/**
+ * True if [candidateChapter] looks like a mis-numbered bonus/extra chapter rather than a genuine
+ * gap in the main numbering: [prevChapter] and [nextChapter] are themselves (near-)consecutive,
+ * but [candidateChapter] sits far outside that pair's number range. Sources label these chapters
+ * inconsistently (e.g. "ex - Bonus Chapter 38" between chapters 174 and 175), so this only catches
+ * a single stray chapter wedged between two chapters that are truly adjacent to each other.
+ */
+fun isChapterNumberOutlier(
+    prevChapter: Chapter,
+    candidateChapter: Chapter,
+    nextChapter: Chapter,
+): Boolean {
+    if (!prevChapter.isRecognizedNumber || !candidateChapter.isRecognizedNumber || !nextChapter.isRecognizedNumber) {
+        return false
+    }
+    val outerHigher = maxOf(prevChapter.chapter_number, nextChapter.chapter_number)
+    val outerLower = minOf(prevChapter.chapter_number, nextChapter.chapter_number)
+    // prevChapter and nextChapter must themselves be (near-)consecutive for candidateChapter to be
+    // considered a stray outlier rather than part of a genuinely large gap.
+    if (floor(outerHigher) - floor(outerLower) > 1f) return false
+    return candidateChapter.chapter_number < outerLower - 1f || candidateChapter.chapter_number > outerHigher + 1f
+}

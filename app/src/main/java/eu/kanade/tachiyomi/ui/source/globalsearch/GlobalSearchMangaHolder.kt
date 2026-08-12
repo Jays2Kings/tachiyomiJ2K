@@ -10,16 +10,22 @@ import coil.request.ImageRequest
 import com.google.android.material.animation.AnimationUtils.lerp
 import com.google.android.material.shape.CornerFamily
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.image.coil.CoverViewTarget
 import eu.kanade.tachiyomi.data.image.coil.MangaCoverFetcher
+import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.databinding.SourceGlobalSearchControllerCardItemBinding
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.system.isLTR
+import uy.kohesive.injekt.Injekt
+import uy.kohesive.injekt.api.get
 
 class GlobalSearchMangaHolder(
     view: View,
     adapter: GlobalSearchCardAdapter,
+    val db: DatabaseHelper = Injekt.get(),
+    val prefs: PreferencesHelper = Injekt.get(),
 ) : BaseFlexibleViewHolder(view, adapter) {
     private val binding = SourceGlobalSearchControllerCardItemBinding.bind(view)
 
@@ -64,6 +70,15 @@ class GlobalSearchMangaHolder(
         binding.favoriteButton.isVisible = manga.favorite
         setImage(manga)
         binding.itemImage.alpha = if (manga.favorite) 0.34f else 1.0f
+
+        binding.duplicateInLibraryButton.isVisible = false
+        if (!manga.favorite && prefs.showDuplicateInLibraryItems().get()) {
+            val duplicatedManga = db.getDuplicateLibraryManga(manga).executeAsBlocking()
+            if (duplicatedManga != null) {
+                binding.duplicateInLibraryButton.isVisible = true
+                binding.itemImage.alpha = 0.34f
+            }
+        }
     }
 
     var drawable: Drawable? = null

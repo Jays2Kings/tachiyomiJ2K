@@ -326,6 +326,7 @@
     <string name="popular">Popular</string>
     <string name="browse">Browse</string>
     <string name="in_library">In Library</string>
+    <string name="duplicate_in_library">Duplicate</string>
     <string name="search_extensions">Search extensions…</string>
     <string name="all_sources">All sources</string>
     <string name="sources">Sources</string>
@@ -959,6 +960,8 @@
     <string name="only_search_pinned_when">Only search pinned sources</string>
     <string name="sources_to_search">Sources to search</string>
     <string name="hide_in_library_items">Hide entries already in library</string>
+    <string name="show_duplicate_in_library_items">Show \"Duplicate\" badge</string>
+    <string name="show_duplicate_in_library_items_summary">Display a \"Duplicate\" badge for entries already in library from another extension. Note: Some duplicates may not be detected due to differences in names or URLs.</string>
     <string name="match_pinned_sources">Match pinned sources</string>
     <string name="match_enabled_sources">Match enabled sources</string>
     <string name="only_enable_pinned_for_migration">Only enable your pinned sources for

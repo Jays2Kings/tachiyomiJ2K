@@ -11,6 +11,7 @@ import eu.kanade.tachiyomi.ui.manga.chapter.BaseChapterAdapter
 import eu.kanade.tachiyomi.ui.manga.chapter.ChapterItem
 import eu.kanade.tachiyomi.ui.manga.chapter.MissingChaptersItem
 import eu.kanade.tachiyomi.ui.reader.viewer.calculateChapterDifference
+import eu.kanade.tachiyomi.ui.reader.viewer.isChapterNumberOutlier
 import eu.kanade.tachiyomi.util.chapter.ChapterUtil
 import eu.kanade.tachiyomi.util.system.isLTR
 import uy.kohesive.injekt.injectLazy
@@ -72,19 +73,37 @@ class MangaDetailsAdapter(
         if (chapters.size < 2 || !preferences.showChapterMissingWarnings().get()) return chapters
 
         val descending = presenter.sortDescending()
-        val result = ArrayList<IFlexible<*>>(chapters.size)
-        chapters.forEachIndexed { index, chapterItem ->
-            result.add(chapterItem)
-            val next = chapters.getOrNull(index + 1) ?: return@forEachIndexed
-            val (higher, lower) = if (descending) chapterItem to next else next to chapterItem
-            val gap = calculateChapterDifference(higher.chapter, lower.chapter).toInt()
-            if (gap > 0) {
-                val startChapter = floor(lower.chapter.chapter_number).toInt() + 1
-                val endChapter = floor(higher.chapter.chapter_number).toInt() - 1
-                result.add(
-                    MissingChaptersItem("${lower.chapter.id}-${higher.chapter.id}", gap, startChapter, endChapter),
-                )
+        val result = ArrayList<IFlexible<*>>(chapters.size + 1)
+        var anchor = chapters.first()
+        result.add(anchor)
+        var i = 1
+        while (i < chapters.size) {
+            val current = chapters[i]
+            val next = chapters.getOrNull(i + 1)
+            val isOutlier = next != null && isChapterNumberOutlier(anchor.chapter, current.chapter, next.chapter)
+            if (!isOutlier) {
+                val (higher, lower) = if (descending) anchor to current else current to anchor
+                val gap = calculateChapterDifference(higher.chapter, lower.chapter).toInt()
+                if (gap > 0) {
+                    val startChapter = floor(lower.chapter.chapter_number).toInt() + 1
+                    val endChapter = floor(higher.chapter.chapter_number).toInt() - 1
+                    result.add(
+                        MissingChaptersItem("${lower.chapter.id}-${higher.chapter.id}", gap, startChapter, endChapter),
+                    )
+                }
+                anchor = current
             }
+            result.add(current)
+            i++
+        }
+
+        // The oldest chapter (last in display order when descending, first when ascending) may not
+        // start at 1 if the earliest chapters aren't available from the source.
+        val oldestChapter = if (descending) anchor else chapters.first()
+        val missingFromStart = floor(oldestChapter.chapter.chapter_number).toInt().minus(1).coerceAtLeast(0)
+        if (missingFromStart > 0) {
+            val startItem = MissingChaptersItem("start-${oldestChapter.chapter.id}", missingFromStart, 1, missingFromStart)
+            if (descending) result.add(startItem) else result.add(0, startItem)
         }
         return result
     }

@@ -12,9 +12,9 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="0.75dp"
         android:layout_weight="1"
-        android:background="?attr/colorError" />
+        android:background="?android:textColorSecondary" />
 
     <TextView
         android:id="@+id/missing_chapters_text"
@@ -23,13 +23,13 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:textAppearance="?attr/textAppearanceLabelMedium"
-        android:textColor="?attr/colorError"
+        android:textColor="?android:textColorSecondary"
         tools:text="Missing 5 chapters" />
 
     <View
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="0.75dp"
         android:layout_weight="1"
-        android:background="?attr/colorError" />
+        android:background="?android:textColorSecondary" />
 
 </LinearLayout>

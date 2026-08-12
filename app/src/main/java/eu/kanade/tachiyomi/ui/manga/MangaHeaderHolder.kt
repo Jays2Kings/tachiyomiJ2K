@@ -43,7 +43,6 @@ import eu.kanade.tachiyomi.databinding.MangaHeaderItemBinding
 import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
-import eu.kanade.tachiyomi.ui.reader.viewer.calculateChapterDifference
 import eu.kanade.tachiyomi.util.isLocal
 import eu.kanade.tachiyomi.util.lang.toNormalized
 import eu.kanade.tachiyomi.util.system.getResourceColor
@@ -362,15 +361,24 @@ class MangaHeaderHolder(
     }
 
     private fun missingChapterCount(presenter: MangaDetailsPresenter): Int {
-        val chapters = presenter.chapters
-        if (chapters.size < 2) return 0
-        val descending = presenter.sortDescending()
-        var total = 0
-        for (i in 0 until chapters.size - 1) {
-            val (higher, lower) = if (descending) chapters[i] to chapters[i + 1] else chapters[i + 1] to chapters[i]
-            total += calculateChapterDifference(higher.chapter, lower.chapter).toInt().coerceAtLeast(0)
+        val chapterNumbers =
+            presenter.chapters
+                .map { it.chapter_number }
+                .filterNot { it == -1f }
+                .map { it.toInt() }
+                .distinct()
+                .sorted()
+        if (chapterNumbers.isEmpty()) return 0
+
+        var missingCount = 0
+        var previousChapter = 0
+        for (currentChapter in chapterNumbers) {
+            if (currentChapter > previousChapter + 1) {
+                missingCount += currentChapter - previousChapter - 1
+            }
+            previousChapter = currentChapter
         }
-        return total
+        return missingCount
     }
 
     @SuppressLint("SetTextI18n")
