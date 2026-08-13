@@ -1237,6 +1237,7 @@
     <string name="replace">Replace</string>
     <string name="reset">Reset</string>
     <string name="restore">Restore</string>
+    <string name="return_to_source">Return to source</string>
     <string name="resume">Resume</string>
     <string name="retry">Retry</string>
     <string name="right">Right</string>
