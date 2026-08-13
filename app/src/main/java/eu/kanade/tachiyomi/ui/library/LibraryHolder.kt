@@ -9,6 +9,7 @@ import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.util.isLocal
 import eu.kanade.tachiyomi.util.system.getResourceColor
 import eu.kanade.tachiyomi.util.view.setCards
+import kotlin.math.floor
 
 /**
  * Generic class used to hold the displayed data of a manga in the library.
@@ -59,6 +60,9 @@ abstract class LibraryHolder(
             showTotal,
             item.sourceLanguage,
             this is LibraryGridHolder,
+            item.latestChapterNumber
+                .takeIf { it > 0f }
+                ?.let { floor(it).toInt() },
         )
     }
 

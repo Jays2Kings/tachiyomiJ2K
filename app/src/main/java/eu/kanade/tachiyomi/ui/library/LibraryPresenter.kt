@@ -256,6 +256,7 @@ class LibraryPresenter(
                 setDownloadCount(hiddenItems)
                 setUnreadBadge(hiddenItems)
                 setSourceLanguage(hiddenItems)
+                setLatestChapterNumber(library, hiddenItems)
                 allLibraryItems = library
                 hiddenLibraryItems = hiddenItems
                 var mangaMap = library
@@ -621,6 +622,33 @@ class LibraryPresenter(
 
         for (item in itemList) {
             item.downloadCount = downloadManager.getDownloadCount(item.manga)
+        }
+    }
+
+    private suspend fun setLatestChapterNumber(vararg itemLists: List<LibraryItem>) {
+        if (!preferences.latestChapterBadge().get()) {
+            itemLists.forEach { items ->
+                items.forEach { it.latestChapterNumber = -1f }
+            }
+            return
+        }
+
+        val mangaIds =
+            itemLists
+                .asSequence()
+                .flatten()
+                .mapNotNull { it.manga.id }
+                .distinct()
+                .toList()
+        val latestByManga =
+            withContext(Dispatchers.IO) {
+                db.getLatestChapterNumbers(mangaIds)
+            }
+
+        itemLists.forEach { items ->
+            items.forEach { item ->
+                item.latestChapterNumber = latestByManga[item.manga.id] ?: -1f
+            }
         }
     }
 
@@ -1169,6 +1197,14 @@ class LibraryPresenter(
     /** Requests the library to have language badges changed. */
     fun requestLanguageBadgesUpdate() {
         requestBadgeUpdate { setSourceLanguage(it) }
+    }
+
+    /** Requests the library to have latest chapter badges added/removed. */
+    fun requestLatestChapterBadgesUpdate() {
+        presenterScope.launch {
+            setLatestChapterNumber(allLibraryItems, hiddenLibraryItems, libraryItems)
+            sectionLibrary(libraryItems)
+        }
     }
 
     /** Requests the library to be sorted. */

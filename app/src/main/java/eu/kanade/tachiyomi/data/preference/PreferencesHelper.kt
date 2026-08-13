@@ -314,6 +314,8 @@ class PreferencesHelper(
 
     fun downloadBadge() = flowPrefs.getBoolean(Keys.downloadBadge, false)
 
+    fun latestChapterBadge() = flowPrefs.getBoolean(Keys.latestChapterBadge, false)
+
     fun languageBadge() = flowPrefs.getBoolean(Keys.languageBadge, false)
 
     fun filterDownloaded() = flowPrefs.getInt(Keys.filterDownloaded, 0)

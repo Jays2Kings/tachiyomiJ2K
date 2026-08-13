@@ -45,6 +45,34 @@ interface ChapterQueries : DbProvider {
                     .build(),
             ).prepare()
 
+    fun getLatestChapterNumbers(mangaIds: List<Long>): Map<Long, Float> {
+        if (mangaIds.isEmpty()) return emptyMap()
+
+        val result = HashMap<Long, Float>()
+        mangaIds.distinct().chunked(500).forEach { ids ->
+            val cursor =
+                db
+                    .lowLevel()
+                    .rawQuery(
+                        RawQuery
+                            .builder()
+                            .query(
+                                "SELECT ${ChapterTable.COL_MANGA_ID}, MAX(${ChapterTable.COL_CHAPTER_NUMBER}) " +
+                                    "FROM ${ChapterTable.TABLE} " +
+                                    "WHERE ${ChapterTable.COL_MANGA_ID} IN (${ids.joinToString(",")}) " +
+                                    "GROUP BY ${ChapterTable.COL_MANGA_ID}",
+                            ).observesTables(ChapterTable.TABLE)
+                            .build(),
+                    )
+            cursor.use {
+                while (it.moveToNext()) {
+                    result[it.getLong(0)] = it.getFloat(1)
+                }
+            }
+        }
+        return result
+    }
+
     fun getRecentChapters(
         search: String = "",
         offset: Int,

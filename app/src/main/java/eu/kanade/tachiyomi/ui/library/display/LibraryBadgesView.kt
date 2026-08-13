@@ -22,6 +22,9 @@ class LibraryBadgesView
             binding.downloadBadge.bindToPreference(preferences.downloadBadge()) {
                 controller?.presenter?.requestDownloadBadgesUpdate()
             }
+            binding.latestChapterBadge.bindToPreference(preferences.latestChapterBadge()) {
+                controller?.presenter?.requestLatestChapterBadgesUpdate()
+            }
             binding.languageBadge.bindToPreference(preferences.languageBadge()) {
                 controller?.presenter?.requestLanguageBadgesUpdate()
             }

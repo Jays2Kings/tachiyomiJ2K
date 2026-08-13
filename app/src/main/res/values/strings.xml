@@ -197,6 +197,7 @@
     <string name="cover_only_grid">Cover-only grid</string>
     <string name="compact_grid">Compact Grid</string>
     <string name="download_badge">Download badges</string>
+    <string name="latest_chapter_badge">Latest chapter number</string>
     <string name="language_badge">Language badges</string>
     <string name="hide_start_reading_button">Hide start reading button</string>
     <string name="badges">Badges</string>

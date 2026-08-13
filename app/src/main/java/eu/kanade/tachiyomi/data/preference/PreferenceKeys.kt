@@ -166,6 +166,8 @@ object PreferenceKeys {
 
     const val downloadBadge = "display_download_badge"
 
+    const val latestChapterBadge = "display_latest_chapter_badge"
+
     const val languageBadge = "display_language_badge"
 
     const val useBiometrics = "use_biometrics"

@@ -46,6 +46,7 @@ class LibraryBadge
             showTotalChapters: Boolean,
             lang: String?,
             changeShape: Boolean,
+            latestChapter: Int? = null,
         ) {
             // Update the unread count and its visibility.
 
@@ -71,6 +72,16 @@ class LibraryBadge
                     },
                 )
                 setBackgroundColor(unreadBadgeBackground)
+            }
+
+            val latestBadgeBackground = context.getResourceColor(R.attr.colorSecondaryContainer)
+            with(binding.latestText) {
+                isVisible = latestChapter != null
+                if (latestChapter != null) {
+                    text = latestChapter.toString()
+                    setTextColor(context.getResourceColor(R.attr.colorOnSecondaryContainer))
+                    setBackgroundColor(latestBadgeBackground)
+                }
             }
 
             // Update the download count or local status and its visibility.
@@ -104,6 +115,7 @@ class LibraryBadge
 
             binding.unreadAngle.isVisible = false
             binding.downloadAngle.isVisible = false
+            binding.latestAngle.isVisible = false
             val visibleChildren: List<View> =
                 (0 until binding.cardConstraint.childCount)
                     .mapNotNull {
@@ -118,7 +130,13 @@ class LibraryBadge
                     binding.unreadText.updateLayoutParams { width = (roundedRadius * 2).toInt() }
                     shapeAppearanceModel = shapeAppearanceModel.withCornerSize(roundedRadius)
                 } else {
-                    shapeAppearanceModel = makeShapeCorners(ogRadius, if (hasUnreadDot) roundedRadius else ogRadius, hasUnreadDot)
+                    val unreadDotIsLast = hasUnreadDot && visibleChildren.lastOrNull() == binding.unreadText
+                    shapeAppearanceModel =
+                        makeShapeCorners(
+                            ogRadius,
+                            if (unreadDotIsLast) roundedRadius else ogRadius,
+                            unreadDotIsLast,
+                        )
                     if (hasUnreadDot) {
                         binding.unreadText.updateLayoutParams { width = (roundedRadius * 1.25f).toInt() }
                     }
@@ -126,11 +144,7 @@ class LibraryBadge
                         val startRadius = if (index == 0) ogRadius else 0f
                         val endRadius =
                             if (index == visibleChildren.size - 1) {
-                                if (binding.unreadText.isVisible && unread == -1) {
-                                    roundedRadius
-                                } else {
-                                    ogRadius
-                                }
+                                if (view == binding.unreadText && hasUnreadDot) roundedRadius else ogRadius
                             } else {
                                 0f
                             }
@@ -138,6 +152,7 @@ class LibraryBadge
                             when (view) {
                                 binding.downloadText -> context.getResourceColor(R.attr.colorTertiary)
                                 binding.unreadText -> unreadBadgeBackground
+                                binding.latestText -> latestBadgeBackground
                                 else -> context.getResourceColor(R.attr.background)
                             }
                         if (view is ShapeableImageView) {
@@ -163,32 +178,39 @@ class LibraryBadge
                 }
             }
 
-            // Show the badge card if unread or downloads exists
+            // Show the badge card if any badge segment exists
             isVisible = visibleChildren.isNotEmpty()
 
-            // Show the angles divider if both unread and downloads exists
+            // Show an angled divider before each visible segment that follows another segment.
             binding.unreadAngle.isVisible =
                 binding.unreadText.isVisible &&
-                visibleChildren.size > 1
+                visibleChildren.indexOf(binding.unreadText) > 0
             binding.downloadAngle.isVisible =
                 binding.downloadText.isVisible &&
                 binding.langImage.isVisible
+            binding.latestAngle.isVisible =
+                binding.latestText.isVisible &&
+                visibleChildren.indexOf(binding.latestText) > 0
 
             binding.unreadAngle.setColorFilter(unreadBadgeBackground)
-            if (binding.unreadAngle.isVisible) {
-                binding.downloadText.updatePaddingRelative(end = 8.dpToPx)
-                binding.unreadText.updatePaddingRelative(start = 2.dpToPx)
-            } else {
-                binding.downloadText.updatePaddingRelative(end = 5.dpToPx)
-                binding.unreadText.updatePaddingRelative(start = 5.dpToPx)
-            }
+            binding.latestAngle.setColorFilter(latestBadgeBackground)
+
             binding.downloadText.updatePaddingRelative(
-                start =
-                    if (binding.downloadAngle.isVisible) {
-                        2.dpToPx
+                start = if (binding.downloadAngle.isVisible) 2.dpToPx else 5.dpToPx,
+                end =
+                    if (binding.unreadAngle.isVisible || (!binding.unreadText.isVisible && binding.latestAngle.isVisible)) {
+                        8.dpToPx
                     } else {
                         5.dpToPx
                     },
+            )
+            binding.unreadText.updatePaddingRelative(
+                start = if (binding.unreadAngle.isVisible) 2.dpToPx else 5.dpToPx,
+                end = if (binding.latestAngle.isVisible) 8.dpToPx else 5.dpToPx,
+            )
+            binding.latestText.updatePaddingRelative(
+                start = if (binding.latestAngle.isVisible) 2.dpToPx else 5.dpToPx,
+                end = 5.dpToPx,
             )
         }
 

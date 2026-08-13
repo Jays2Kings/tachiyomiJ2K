@@ -38,6 +38,7 @@ class LibraryItem(
     IFilterable<String> {
     var downloadCount = -1
     var unreadType = 2
+    var latestChapterNumber = -1f
     var sourceLanguage: String? = null
     var filter = ""
 
