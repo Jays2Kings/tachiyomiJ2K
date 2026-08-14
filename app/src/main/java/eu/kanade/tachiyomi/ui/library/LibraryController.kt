@@ -82,6 +82,7 @@ import eu.kanade.tachiyomi.ui.base.controller.BaseCoroutineController
 import eu.kanade.tachiyomi.ui.category.CategoryController
 import eu.kanade.tachiyomi.ui.category.ManageCategoryDialog
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_AUTHOR
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_CUSTOM_TAG
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_DEFAULT
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_LANGUAGE
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_SOURCE
@@ -592,7 +593,7 @@ open class LibraryController(
     }
 
     internal fun showGroupOptions() {
-        val groupItems = mutableListOf(BY_DEFAULT, BY_TAG, BY_SOURCE, BY_STATUS, BY_AUTHOR)
+        val groupItems = mutableListOf(BY_DEFAULT, BY_TAG, BY_CUSTOM_TAG, BY_SOURCE, BY_STATUS, BY_AUTHOR)
         if (presenter.isLoggedIntoTracking) {
             groupItems.add(BY_TRACK_STATUS)
         }

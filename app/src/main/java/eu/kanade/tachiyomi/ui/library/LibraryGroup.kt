@@ -10,6 +10,7 @@ object LibraryGroup {
     const val BY_TRACK_STATUS = 4
     const val BY_AUTHOR = 6
     const val BY_LANGUAGE = 7
+    const val BY_CUSTOM_TAG = 8
     const val UNGROUPED = 5
 
     fun groupTypeStringRes(
@@ -19,6 +20,7 @@ object LibraryGroup {
         when (type) {
             BY_STATUS -> R.string.status
             BY_TAG -> R.string.tag
+            BY_CUSTOM_TAG -> R.string.custom_tags
             BY_SOURCE -> R.string.sources
             BY_TRACK_STATUS -> R.string.tracking_status
             BY_AUTHOR -> R.string.author
@@ -31,6 +33,7 @@ object LibraryGroup {
         when (type) {
             BY_STATUS -> R.drawable.ic_progress_clock_24dp
             BY_TAG -> R.drawable.ic_style_24dp
+            BY_CUSTOM_TAG -> R.drawable.ic_label_outline_24dp
             BY_TRACK_STATUS -> R.drawable.ic_sync_24dp
             BY_SOURCE -> R.drawable.ic_browse_24dp
             BY_AUTHOR -> R.drawable.ic_author_24dp

@@ -23,6 +23,7 @@ import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.ui.base.presenter.BaseCoroutinePresenter
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_AUTHOR
+import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_CUSTOM_TAG
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_DEFAULT
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_LANGUAGE
 import eu.kanade.tachiyomi.ui.library.LibraryGroup.BY_SOURCE
@@ -963,6 +964,16 @@ class LibraryPresenter(
                                 }
                             tags.map {
                                 LibraryItem(manga, makeOrGetHeader(it), viewContext)
+                            }
+                        }
+                        BY_CUSTOM_TAG -> {
+                            val tags =
+                                customTagsForManga(manga).ifEmpty {
+                                    listOf(context.getString(R.string.untagged))
+                                }
+                            tags.map { tag ->
+                                val existingTag = tagItems.keys.find { it.equals(tag, ignoreCase = true) }
+                                LibraryItem(manga, makeOrGetHeader(existingTag ?: tag), viewContext)
                             }
                         }
                         BY_TRACK_STATUS -> {

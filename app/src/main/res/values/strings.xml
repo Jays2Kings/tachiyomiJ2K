@@ -179,6 +179,7 @@
     <string name="group_library_by">Group library by…</string>
     <string name="tracking_status">Tracking status</string>
     <string name="ungrouped">Ungrouped</string>
+    <string name="untagged">Untagged</string>
 
     <!-- Library Sort -->
     <string name="sort_by">Sort by</string>
