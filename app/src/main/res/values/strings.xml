@@ -606,6 +606,12 @@
     <string name="sort_by_chapter_number">Sort by chapter number</string>
     <string name="newest_first">Newest to oldest</string>
     <string name="oldest_first">Oldest to newest</string>
+    <string name="custom_tags">Custom tags</string>
+    <string name="add_custom_tag">Add custom tag</string>
+    <string name="remove_custom_tag">Remove custom tag</string>
+    <string name="enter_new_tag">Enter new tag…</string>
+    <string name="custom_tag_hint">Custom tag</string>
+    <string name="no_custom_tags_selected">The selected manga have no custom tags to remove</string>
     <string name="add_tag">Add tag</string>
     <string name="clear_tags">Clear tags</string>
     <string name="reset_tags">Reset tags</string>

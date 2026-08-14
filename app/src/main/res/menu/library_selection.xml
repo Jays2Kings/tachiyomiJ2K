@@ -22,6 +22,20 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_custom_tags"
+        android:title="@string/custom_tags"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_add_custom_tag"
+                android:title="@string/add_custom_tag" />
+            <item
+                android:id="@+id/action_remove_custom_tag"
+                android:title="@string/remove_custom_tag" />
+        </menu>
+    </item>
+
+    <item
         android:id="@+id/action_download_unread"
         android:title="@string/download_unread"
         app:showAsAction="never" />

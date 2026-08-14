@@ -11,6 +11,7 @@ import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
 import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.data.download.DownloadManager
+import eu.kanade.tachiyomi.data.library.CustomMangaManager
 import eu.kanade.tachiyomi.data.preference.DelayedLibrarySuggestionsJob
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.minusAssign
@@ -70,6 +71,7 @@ class LibraryPresenter(
     private val downloadManager: DownloadManager = Injekt.get(),
     private val chapterFilter: ChapterFilter = Injekt.get(),
     private val trackManager: TrackManager = Injekt.get(),
+    private val customMangaManager: CustomMangaManager = Injekt.get(),
 ) : BaseCoroutinePresenter<LibraryController>() {
     private val context = preferences.context
     private val viewContext
@@ -1223,6 +1225,92 @@ class LibraryPresenter(
                 requestDownloadBadgesUpdate()
             }
         }
+    }
+
+    fun getCustomTags(mangas: List<Manga>): List<String> =
+        mangas
+            .asSequence()
+            .flatMap { manga -> customTagsForManga(manga).asSequence() }
+            .distinctBy { it.lowercase(Locale.ROOT) }
+            .sortedBy { it.lowercase(Locale.ROOT) }
+            .toList()
+
+    fun getAllCustomTags(): List<String> = getCustomTags(allLibraryItems.map { it.manga })
+
+    fun addCustomTag(
+        mangas: List<Manga>,
+        tag: String,
+    ) {
+        val cleanTag = tag.trim()
+        if (cleanTag.isBlank()) return
+        presenterScope.launchIO {
+            val updates =
+                mangas.distinctBy { it.id }.mapNotNull { manga ->
+                    val current = manga.getGenres().orEmpty()
+                    if (current.any { it.equals(cleanTag, ignoreCase = true) }) return@mapNotNull null
+                    customInfoWithGenres(manga, current + cleanTag)
+                }
+            if (updates.isNotEmpty()) {
+                customMangaManager.saveMangaInfo(updates)
+                withUIContext { updateManga() }
+            }
+        }
+    }
+
+    fun removeCustomTag(
+        mangas: List<Manga>,
+        tag: String,
+    ) {
+        presenterScope.launchIO {
+            val updates =
+                mangas.distinctBy { it.id }.mapNotNull { manga ->
+                    if (customTagsForManga(manga).none { it.equals(tag, ignoreCase = true) }) {
+                        return@mapNotNull null
+                    }
+                    val remaining = manga.getGenres().orEmpty().filterNot { it.equals(tag, ignoreCase = true) }
+                    customInfoWithGenres(manga, remaining)
+                }
+            if (updates.isNotEmpty()) {
+                customMangaManager.saveMangaInfo(updates)
+                withUIContext { updateManga() }
+            }
+        }
+    }
+
+    private fun customTagsForManga(manga: Manga): List<String> {
+        val customGenres =
+            customMangaManager
+                .getCustomInfo(manga)
+                ?.genre
+                ?.toList()
+                .orEmpty()
+        val originalGenres = manga.getOriginalGenres().orEmpty()
+        return customGenres.filter { custom ->
+            originalGenres.none { it.equals(custom, ignoreCase = true) }
+        }
+    }
+
+    private fun customInfoWithGenres(
+        manga: Manga,
+        genres: List<String>,
+    ): CustomMangaManager.MangaJson {
+        val existing = customMangaManager.getCustomInfo(manga)
+        val originalGenres = manga.getOriginalGenres().orEmpty()
+        val genreOverride =
+            genres
+                .takeUnless { current ->
+                    current.size == originalGenres.size &&
+                        current.zip(originalGenres).all { (a, b) -> a.equals(b, ignoreCase = true) }
+                }?.toTypedArray()
+        return CustomMangaManager.MangaJson(
+            id = manga.id,
+            title = existing?.title,
+            author = existing?.author,
+            artist = existing?.artist,
+            description = existing?.description,
+            genre = genreOverride,
+            status = existing?.status,
+        )
     }
 
     /** Called when Library Service updates a manga, update the item as well */

@@ -25,6 +25,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewPropertyAnimator
 import android.view.ViewTreeObserver
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
@@ -2411,7 +2412,9 @@ open class LibraryController(
         val migrationItem = menu.findItem(R.id.action_migrate)
         val shareItem = menu.findItem(R.id.action_share)
         val categoryItem = menu.findItem(R.id.action_move_to_category)
+        val customTagsItem = menu.findItem(R.id.action_custom_tags)
         categoryItem.isVisible = presenter.allCategories.size > 1
+        customTagsItem.isVisible = selectedMangas.any { !it.isLocal() }
         migrationItem.isVisible = selectedMangas.any { it.source != LocalSource.ID }
         shareItem.isVisible = migrationItem.isVisible
         if (count == 0) {
@@ -2482,6 +2485,8 @@ open class LibraryController(
                     }.setNegativeButton(android.R.string.cancel, null)
                     .show()
             }
+            R.id.action_add_custom_tag -> showAddCustomTagDialog()
+            R.id.action_remove_custom_tag -> showRemoveCustomTagDialog()
             R.id.action_migrate -> {
                 val skipPre = preferences.skipPreMigration().get()
                 PreMigrationController.navigateToMigration(
@@ -2494,6 +2499,82 @@ open class LibraryController(
             else -> return false
         }
         return true
+    }
+
+    private fun showAddCustomTagDialog() {
+        val mangas = selectedMangas.filterNot { it.isLocal() }
+        if (mangas.isEmpty()) return
+        val savedTags = presenter.getAllCustomTags()
+        if (savedTags.isEmpty()) {
+            showNewCustomTagDialog(mangas)
+            return
+        }
+        val options = savedTags + activity!!.getString(R.string.enter_new_tag)
+        activity!!
+            .materialAlertDialog()
+            .setTitle(R.string.add_custom_tag)
+            .setItems(options.toTypedArray()) { _, which ->
+                if (which == savedTags.size) {
+                    showNewCustomTagDialog(mangas)
+                } else {
+                    presenter.addCustomTag(mangas, savedTags[which])
+                    destroyActionModeIfNeeded()
+                }
+            }.setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun showNewCustomTagDialog(mangas: List<Manga>) {
+        val input =
+            EditText(activity).apply {
+                hint = activity!!.getString(R.string.custom_tag_hint)
+                isSingleLine = true
+                setPadding(24.dpToPx, 0, 24.dpToPx, 0)
+            }
+        val dialog =
+            activity!!
+                .materialAlertDialog()
+                .setTitle(R.string.add_custom_tag)
+                .setView(input)
+                .setPositiveButton(R.string.add_tag, null)
+                .setNegativeButton(android.R.string.cancel, null)
+                .show()
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            val tag =
+                input.text
+                    ?.toString()
+                    ?.trim()
+                    .orEmpty()
+            if (tag.isNotBlank()) {
+                presenter.addCustomTag(mangas, tag)
+                dialog.dismiss()
+                destroyActionModeIfNeeded()
+            }
+        }
+        input.requestFocus()
+        dialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+    }
+
+    private fun showRemoveCustomTagDialog() {
+        val mangas = selectedMangas.filterNot { it.isLocal() }
+        if (mangas.isEmpty()) return
+        val tags = presenter.getCustomTags(mangas)
+        if (tags.isEmpty()) {
+            activity!!
+                .materialAlertDialog()
+                .setMessage(R.string.no_custom_tags_selected)
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+            return
+        }
+        activity!!
+            .materialAlertDialog()
+            .setTitle(R.string.remove_custom_tag)
+            .setItems(tags.toTypedArray()) { _, which ->
+                presenter.removeCustomTag(mangas, tags[which])
+                destroyActionModeIfNeeded()
+            }.setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun markReadStatus(
