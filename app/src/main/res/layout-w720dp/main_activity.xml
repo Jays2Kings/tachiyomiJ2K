@@ -248,6 +248,8 @@
         app:menuGravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:headerLayout="@layout/side_nav_header"
+        app:expandedMinWidth="96dp"
+        app:expandedMaxWidth="160dp"
         app:menu="@menu/side_navigation" />
 
     <View

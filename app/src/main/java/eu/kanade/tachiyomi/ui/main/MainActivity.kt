@@ -818,6 +818,16 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
                 )
                 updateControllersWithSideNavChanges()
             }
+        preferences
+            .alwaysShowNavLabels()
+            .asImmediateFlowIn(lifecycleScope) {
+                nav.labelVisibilityMode =
+                    if (it) {
+                        NavigationBarView.LABEL_VISIBILITY_LABELED
+                    } else {
+                        NavigationBarView.LABEL_VISIBILITY_SELECTED
+                    }
+            }
         setFloatingToolbar(canShowFloatingToolbar(router.backstack.lastOrNull()?.controller), changeBG = false)
 
         lifecycleScope.launchUI {

@@ -25,6 +25,14 @@ class SideNavView : NavigationRailView {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
         super(context, attrs, defStyleAttr)
 
+    init {
+        setItemIconGravity(ITEM_ICON_GRAVITY_TOP)
+        setItemGravity(ITEM_GRAVITY_TOP_CENTER)
+        setItemActiveIndicatorExpandedHeight(itemActiveIndicatorHeight)
+        setItemActiveIndicatorExpandedMarginHorizontal(itemActiveIndicatorMarginHorizontal)
+        setItemActiveIndicatorExpandedPadding(0, 0, 0, 0)
+    }
+
     private val sideNavMenuView: SideNavMenuView?
         get() = menuView as? SideNavMenuView
 
@@ -100,7 +108,16 @@ private class SideNavItemView(
     // initialize() and setExpanded() both run the rail's visibility pass, so clamp here instead of
     // at either call site
     override fun setVisibility(visibility: Int) {
-        val hidden = isExpanded && itemData?.itemId == R.id.nav_recents
+        val itemId = itemData?.itemId
+        val hidden =
+            if (isExpanded) {
+                itemId == R.id.nav_recents
+            } else {
+                itemId == R.id.nav_summary ||
+                    itemId == R.id.nav_ungrouped ||
+                    itemId == R.id.nav_history ||
+                    itemId == R.id.nav_updates
+            }
         super.setVisibility(if (hidden) GONE else visibility)
     }
 }

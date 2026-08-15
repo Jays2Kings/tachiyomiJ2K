@@ -8,35 +8,25 @@
     <item
         android:id="@+id/nav_recents"
         android:icon="@drawable/ic_recents_selector_24dp"
-        android:title="@string/recents" >
-    </item>
+        android:title="@string/recents" />
     <item
-    android:id="@+id/nav_recents_group"
-    android:title="@string/recents" >
-    <menu
-        android:id="@+id/recents_menu_group"
-        android:visible="false">
-        <item
-            android:id="@+id/nav_summary"
-            android:icon="@drawable/ic_recents_selector_24dp"
-            android:title="@string/grouped" />
-        <item
-            android:id="@+id/nav_ungrouped"
-            android:icon="@drawable/ic_ungrouped_selector_24dp"
-            android:title="@string/all" />
-        <item
-            android:id="@+id/nav_history"
-            android:icon="@drawable/ic_history_selector_24dp"
-            android:title="@string/history" />
-        <item
-            android:id="@+id/nav_updates"
-            android:icon="@drawable/ic_updates_selector_24dp"
-            android:title="@string/updates" />
-    </menu>
-    </item>
+        android:id="@+id/nav_summary"
+        android:icon="@drawable/ic_recents_selector_24dp"
+        android:title="@string/grouped" />
+    <item
+        android:id="@+id/nav_ungrouped"
+        android:icon="@drawable/ic_ungrouped_selector_24dp"
+        android:title="@string/all" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history_selector_24dp"
+        android:title="@string/history" />
+    <item
+        android:id="@+id/nav_updates"
+        android:icon="@drawable/ic_updates_selector_24dp"
+        android:title="@string/updates" />
     <item
         android:id="@+id/nav_browse"
         android:icon="@drawable/ic_browse_selector_24dp"
         android:title="@string/browse" />
-
 </menu>
