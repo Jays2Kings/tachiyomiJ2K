@@ -149,12 +149,6 @@ class SettingsAppearanceController : SettingsController() {
                     defaultValue = true
                 }
 
-                switchPreference {
-                    bindTo(preferences.alwaysShowNavLabels())
-                    titleRes = R.string.always_show_navigation_labels
-                    summaryRes = R.string.always_show_navigation_labels_summary
-                }
-
                 intListPreference(activity) {
                     key = Keys.sideNavIconAlignment
                     titleRes = R.string.side_nav_icon_alignment

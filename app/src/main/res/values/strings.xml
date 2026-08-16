@@ -793,8 +793,6 @@
     <string name="hide_bottom_nav">Auto-hide bottom navigation</string>
     <string name="side_nav_icon_alignment">Side navigation icon alignment</string>
     <string name="use_side_navigation">Use side navigation</string>
-    <string name="always_show_navigation_labels">Always show navigation labels</string>
-    <string name="always_show_navigation_labels_summary">When off, only the selected item\'s label will be shown</string>
     <string name="default_behavior">Default behavior</string>
     <string name="by_default_side_nav_info">By default, side navigation is used for certain phones and small tablets when in landscape, and always shows on larger tablets</string>
     <string name="follow_system_theme">Follow system theme</string>
