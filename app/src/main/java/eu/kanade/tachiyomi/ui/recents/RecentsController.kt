@@ -226,7 +226,6 @@ class RecentsController(
         binding.recycler.adapter = adapter
         binding.recycler.layoutManager = LinearLayoutManagerAccurateOffset(view.context)
         binding.recycler.setHasFixedSize(true)
-        binding.recycler.recycledViewPool.setMaxRecycledViews(0, 0)
         binding.recycler.addItemDecoration(RecentMangaDivider(view.context))
         adapter.isSwipeEnabled = true
         adapter.itemTouchHelperCallback.setSwipeFlags(

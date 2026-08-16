@@ -3,13 +3,13 @@ package eu.kanade.tachiyomi.ui.recents
 import android.animation.LayoutTransition
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
+import androidx.core.view.isEmpty
 import androidx.core.view.isVisible
 import androidx.core.view.marginStart
 import androidx.core.view.updateLayoutParams
@@ -48,15 +48,19 @@ class RecentMangaHolder(
 
     private val isUpdates get() = adapter.viewType.isUpdates
     private val isSmallUpdates get() = isUpdates && !adapter.showUpdatedTime
-    var extraChapterMaxSize = 10
 
     init {
         binding.cardLayout.setOnClickListener { adapter.delegate.onCoverClick(flexibleAdapterPosition) }
         binding.removeHistory.setOnClickListener { adapter.delegate.onRemoveHistoryClicked(flexibleAdapterPosition) }
         binding.showMoreChapters.setOnClickListener { _ ->
+            val position = flexibleAdapterPosition
+            val item = adapter.getItem(position) as? RecentMangaItem ?: return@setOnClickListener
             val moreVisible = !binding.moreChaptersLayout.isVisible
+            if (moreVisible) {
+                buildSubChapters(item)
+            }
             binding.moreChaptersLayout.isVisible = moreVisible
-            adapter.delegate.updateExpandedExtraChapters(flexibleAdapterPosition, moreVisible)
+            adapter.delegate.updateExpandedExtraChapters(position, moreVisible)
             binding.showMoreChapters.setAnimVectorCompat(
                 if (moreVisible) {
                     R.drawable.anim_expand_more_to_less
@@ -64,32 +68,11 @@ class RecentMangaHolder(
                     R.drawable.anim_expand_less_to_more
                 },
             )
-            if (moreVisible) {
-                binding.moreChaptersLayout.children.forEach { view ->
-                    RecentSubChapterItemBinding.bind(view).updateDivider()
-                }
-            }
-            if (isUpdates &&
-                binding.moreChaptersLayout.children.any { view ->
-                    !RecentSubChapterItemBinding
-                        .bind(view)
-                        .subtitle.text
-                        .isNullOrBlank()
-                }
-            ) {
-                showScanlatorInBody(moreVisible)
-            } else {
-                addMoreUpdatesText(!moreVisible)
-            }
-            if (adapter.viewType.isHistory) {
-                readLastText(!moreVisible)
-                    .takeIf { it.isNotEmpty() }
-                    ?.let { binding.body.text = it }
-            }
+            updateBody(item, moreVisible)
             binding.endView.updateLayoutParams<ViewGroup.LayoutParams> {
                 height = binding.recentCard.height
             }
-            (adapter.getItem(flexibleAdapterPosition) as? RecentMangaItem)?.setCorners(flexibleAdapterPosition, this, adapter)
+            item.setCorners(position, this, adapter)
             val transition =
                 TransitionSet()
                     .addTransition(androidx.transition.ChangeBounds())
@@ -197,34 +180,7 @@ class RecentMangaHolder(
             adapter.delegate.areExtraChaptersExpanded(flexibleAdapterPosition)
         val moreVisible = binding.moreChaptersLayout.isVisible
 
-        binding.body.isVisible = !isSmallUpdates
-        binding.body.text =
-            when {
-                item.mch.chapter.id == null -> context.timeSpanFromNow(R.string.added_, item.mch.manga.date_added)
-                isSmallUpdates -> ""
-                item.mch.history.id == null -> {
-                    if (isUpdates) {
-                        if (adapter.sortByFetched) {
-                            context.timeSpanFromNow(R.string.fetched_, item.chapter.date_fetch)
-                        } else {
-                            context.timeSpanFromNow(R.string.updated_, item.chapter.date_upload)
-                        }
-                    } else {
-                        context.timeSpanFromNow(R.string.fetched_, item.chapter.date_fetch) + "\n" +
-                            context.timeSpanFromNow(R.string.updated_, item.chapter.date_upload)
-                    }
-                }
-                item.chapter.id != item.mch.chapter.id -> readLastText(!moreVisible)
-                item.chapter.pages_left > 0 && !item.chapter.read ->
-                    context.timeSpanFromNow(R.string.read_, item.mch.history.last_read) +
-                        "\n" +
-                        itemView.resources.getQuantityString(
-                            R.plurals.pages_left,
-                            item.chapter.pages_left,
-                            item.chapter.pages_left,
-                        )
-                else -> context.timeSpanFromNow(R.string.read_, item.mch.history.last_read)
-            }
+        updateBody(item, moreVisible)
         if ((context as? Activity)?.isDestroyed != true) {
             binding.coverThumbnail.loadManga(item.mch.manga)
         }
@@ -243,62 +199,10 @@ class RecentMangaHolder(
                 R.drawable.ic_expand_more_24dp
             },
         )
-        val extraIds =
-            binding.moreChaptersLayout.children
-                .toList()
-                .shorterList()
-                .map {
-                    it?.findViewById<DownloadButton>(R.id.download_button)?.tag
-                }.toList()
-        if (extraIds ==
-            item.mch.extraChapters
-                .shorterList()
-                .map { it?.id }
-        ) {
-            var hasSameChapter = false
-            item.mch.extraChapters.shorterList().forEachIndexed { index, chapter ->
-                val binding =
-                    RecentSubChapterItemBinding.bind(binding.moreChaptersLayout.getChildAt(index))
-                binding.configureView(chapter, item)
-                if (isUpdates && !binding.subtitle.text.isNullOrBlank() && !hasSameChapter) {
-                    showScanlatorInBody(moreVisible, item)
-                    hasSameChapter = true
-                }
-            }
-            addMoreUpdatesText(!moreVisible, item)
+        if (moreVisible) {
+            buildSubChapters(item)
         } else {
-            extraChapterMaxSize = if (adapter.viewType.isHistory) 20 else 10
-            val newChapters = item.mch.extraChapters.shorterList()
-            val existingViews = binding.moreChaptersLayout.children.toList()
-            var hasSameChapter = false
-            // Reuse as many existing rows as possible instead of destroying and re-inflating
-            // everything - a recycled ViewHolder almost never matches its new item's chapter
-            // set exactly, so the fast path above rarely applies during normal scrolling.
-            newChapters.forEachIndexed { index, chapter ->
-                val subBinding =
-                    if (index < existingViews.size) {
-                        RecentSubChapterItemBinding.bind(existingViews[index])
-                    } else {
-                        RecentSubChapterItemBinding.inflate(
-                            LayoutInflater.from(context),
-                            binding.moreChaptersLayout,
-                            true,
-                        )
-                    }
-                subBinding.configureView(chapter, item)
-                if (isUpdates && !subBinding.subtitle.text.isNullOrBlank() && !hasSameChapter) {
-                    showScanlatorInBody(moreVisible, item)
-                    hasSameChapter = true
-                }
-            }
-            for (index in existingViews.size - 1 downTo newChapters.size) {
-                binding.moreChaptersLayout.removeViewAt(index)
-            }
-            if (newChapters.isNotEmpty()) {
-                addMoreUpdatesText(!moreVisible, item)
-            } else {
-                chapterId = null
-            }
+            releaseSubChapters()
         }
         listOf(binding.mainView, binding.downloadButton.root, binding.showMoreChapters, binding.cardLayout).forEach {
             it.setOnTouchListener { _, event ->
@@ -318,36 +222,135 @@ class RecentMangaHolder(
         }
     }
 
-    private fun addMoreUpdatesText(
-        add: Boolean,
-        originalItem: RecentMangaItem? = null,
-    ) {
-        val item = originalItem ?: adapter.getItem(bindingAdapterPosition) as? RecentMangaItem ?: return
-        val originalText = binding.body.text.toString()
-        val andMoreText =
-            itemView.context.resources.getQuantityString(
-                R.plurals.notification_and_n_more,
-                (item.mch.extraChapters.size),
-                (item.mch.extraChapters.size),
-            )
-        if (add &&
-            item.mch.extraChapters.isNotEmpty() &&
-            isUpdates &&
-            !isSmallUpdates &&
-            !originalText.contains(andMoreText)
-        ) {
-            val text = "${originalText.substringBefore("\n")}\n$andMoreText"
-            binding.body.text = text
-        } else if (!add && originalText.contains(andMoreText)) {
-            binding.body.text = originalText.removeSuffix("\n$andMoreText")
+    /**
+     * Builds the rows for [item]'s extra chapters, reusing whatever is already in the layout and
+     * taking the rest from the adapter's pool.
+     */
+    private fun buildSubChapters(item: RecentMangaItem) {
+        val context = itemView.context
+        val extraChapterMaxSize = if (adapter.viewType.isHistory) 20 else 10
+        val newChapters = item.mch.extraChapters.shorterList(extraChapterMaxSize)
+        val extraIds =
+            binding.moreChaptersLayout.children
+                .toList()
+                .map { it.findViewById<DownloadButton>(R.id.download_button)?.tag }
+        if (extraIds == newChapters.map { it?.id }) {
+            newChapters.forEachIndexed { index, chapter ->
+                RecentSubChapterItemBinding
+                    .bind(binding.moreChaptersLayout.getChildAt(index))
+                    .configureView(chapter, item, extraChapterMaxSize)
+            }
+            return
+        }
+        // Reuse rows from the holder, then the adapter, or inflate a new one (in the adapter)
+        val existingCount = binding.moreChaptersLayout.childCount
+        newChapters.forEachIndexed { index, chapter ->
+            val subBinding =
+                if (index < existingCount) {
+                    RecentSubChapterItemBinding.bind(binding.moreChaptersLayout.getChildAt(index))
+                } else {
+                    RecentSubChapterItemBinding
+                        .bind(adapter.obtainSubChapterView(context, binding.moreChaptersLayout))
+                        .also { binding.moreChaptersLayout.addView(it.root) }
+                }
+            subBinding.configureView(chapter, item, extraChapterMaxSize)
+        }
+        for (index in existingCount - 1 downTo newChapters.size) {
+            val child = binding.moreChaptersLayout.getChildAt(index)
+            binding.moreChaptersLayout.removeViewAt(index)
+            adapter.recycleSubChapterView(child)
+        }
+        if (newChapters.isEmpty()) {
+            chapterId = null
         }
     }
 
+    /** Hands this group's extra rows back to the adapter's pool for another group to use. */
+    fun releaseSubChapters() {
+        if (binding.moreChaptersLayout.isEmpty()) return
+        val children = binding.moreChaptersLayout.children.toList()
+        binding.moreChaptersLayout.removeAllViews()
+        children.forEach { adapter.recycleSubChapterView(it) }
+        chapterId = null
+    }
+
+    private fun updateBody(
+        item: RecentMangaItem,
+        expanded: Boolean,
+    ) {
+        val context = itemView.context
+        val body = binding.body
+        body.maxLines = 2
+        val scanlator = item.chapter.scanlator?.takeIf { expanded && item.hasScanlatorConflict() }
+        if (scanlator != null && isSmallUpdates) {
+            body.maxLines = 1
+            body.text = scanlator
+            body.isVisible = true
+            return
+        }
+        body.isVisible = !isSmallUpdates
+        val baseText =
+            when {
+                item.mch.chapter.id == null -> context.timeSpanFromNow(R.string.added_, item.mch.manga.date_added)
+                isSmallUpdates -> ""
+                item.mch.history.id == null -> {
+                    if (isUpdates) {
+                        if (adapter.sortByFetched) {
+                            context.timeSpanFromNow(R.string.fetched_, item.chapter.date_fetch)
+                        } else {
+                            context.timeSpanFromNow(R.string.updated_, item.chapter.date_upload)
+                        }
+                    } else {
+                        context.timeSpanFromNow(R.string.fetched_, item.chapter.date_fetch) + "\n" +
+                            context.timeSpanFromNow(R.string.updated_, item.chapter.date_upload)
+                    }
+                }
+                item.chapter.id != item.mch.chapter.id -> readLastText(item, !expanded)
+                item.chapter.pages_left > 0 && !item.chapter.read ->
+                    context.timeSpanFromNow(R.string.read_, item.mch.history.last_read) +
+                        "\n" +
+                        itemView.resources.getQuantityString(
+                            R.plurals.pages_left,
+                            item.chapter.pages_left,
+                            item.chapter.pages_left,
+                        )
+                else -> context.timeSpanFromNow(R.string.read_, item.mch.history.last_read)
+            }
+        val andMoreText =
+            itemView.context.resources
+                .getQuantityString(
+                    R.plurals.notification_and_n_more,
+                    item.mch.extraChapters.size,
+                    item.mch.extraChapters.size,
+                ).takeIf {
+                    !expanded && isUpdates && !isSmallUpdates && item.mch.extraChapters.isNotEmpty()
+                }
+        val extraLine = scanlator ?: andMoreText
+        body.text =
+            if (extraLine != null) {
+                "${baseText.substringBefore("\n")}\n$extraLine"
+            } else {
+                baseText
+            }
+    }
+
+    /**
+     * Whether an extra chapter shares the main chapter's number, which is what makes the scanlator
+     * worth calling out on this row and on the sub rows.
+     */
+    private fun RecentMangaItem.hasScanlatorConflict(): Boolean =
+        isUpdates &&
+            !chapter.scanlator.isNullOrBlank() &&
+            mch.extraChapters.any {
+                it.isRecognizedNumber &&
+                    it.chapter_number == chapter.chapter_number &&
+                    !it.scanlator.isNullOrBlank()
+            }
+
     private fun readLastText(
+        item: RecentMangaItem,
         show: Boolean,
-        originalItem: RecentMangaItem? = null,
     ): String {
-        val item = originalItem ?: adapter.getItem(bindingAdapterPosition) as? RecentMangaItem ?: return ""
         val notValidNum = item.mch.chapter.chapter_number <= 0
         return if (item.chapter.id != item.mch.chapter.id) {
             if (show) {
@@ -364,34 +367,7 @@ class RecentMangaHolder(
         }
     }
 
-    private fun showScanlatorInBody(
-        add: Boolean,
-        originalItem: RecentMangaItem? = null,
-    ) {
-        val item = originalItem ?: adapter.getItem(bindingAdapterPosition) as? RecentMangaItem ?: return
-        val originalText = binding.body.text.toString()
-        binding.body.maxLines = 2
-        val scanlator = item.chapter.scanlator ?: return
-        if (add) {
-            if (isSmallUpdates) {
-                binding.body.maxLines = 1
-                binding.body.text = item.chapter.scanlator
-                binding.body.isVisible = true
-            } else if (!originalText.contains(scanlator)) {
-                val text = "${originalText.substringBefore("\n")}\n$scanlator"
-                binding.body.text = text
-            }
-        } else {
-            if (isSmallUpdates) {
-                binding.body.isVisible = false
-            } else {
-                binding.body.text = originalText.removeSuffix("\n$scanlator")
-                addMoreUpdatesText(true, item)
-            }
-        }
-    }
-
-    private fun <T> List<T>.shorterList(): List<T?> =
+    private fun <T> List<T>.shorterList(extraChapterMaxSize: Int): List<T?> =
         if (size > extraChapterMaxSize + 1) {
             take(extraChapterMaxSize / 2) + null + takeLast(extraChapterMaxSize / 2)
         } else {
@@ -424,6 +400,7 @@ class RecentMangaHolder(
     private fun RecentSubChapterItemBinding.configureView(
         chapter: ChapterHistory?,
         item: RecentMangaItem,
+        extraChapterMaxSize: Int,
     ) {
         // Rows are recycled between real chapters and the "and N more" placeholder now, so reset
         // the state only one of those two branches assigns back to its inflated default. Without

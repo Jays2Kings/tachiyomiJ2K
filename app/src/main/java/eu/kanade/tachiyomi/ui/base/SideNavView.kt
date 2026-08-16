@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.ViewGroup
+import androidx.appcompat.view.menu.MenuItemImpl
 import androidx.transition.TransitionManager
 import com.google.android.material.navigation.NavigationBarItemView
 import com.google.android.material.navigationrail.NavigationRailMenuView
@@ -102,6 +103,17 @@ private class SideNavItemView(
                 measuredWidthAndState,
                 max(measuredHeight, MeasureSpec.getSize(heightMeasureSpec)),
             )
+        }
+    }
+
+    // Set here rather than on the rail, as it builds these views fresh whenever the menu changes
+    override fun initialize(
+        itemData: MenuItemImpl,
+        menuType: Int,
+    ) {
+        super.initialize(itemData, menuType)
+        if (itemData.itemId == R.id.nav_settings) {
+            setOnlyShowWhenExpanded(true)
         }
     }
 

@@ -14,7 +14,8 @@
         android:layout_width="0dp"
         android:layout_height="0.75dp"
         android:layout_weight="1"
-        android:background="?android:textColorSecondary" />
+        android:alpha="0.54"
+        android:background="?attr/colorOnBackground" />
 
     <TextView
         android:id="@+id/missing_chapters_text"
@@ -30,6 +31,7 @@
         android:layout_width="0dp"
         android:layout_height="0.75dp"
         android:layout_weight="1"
-        android:background="?android:textColorSecondary" />
+        android:alpha="0.54"
+        android:background="?attr/colorOnBackground" />
 
 </LinearLayout>

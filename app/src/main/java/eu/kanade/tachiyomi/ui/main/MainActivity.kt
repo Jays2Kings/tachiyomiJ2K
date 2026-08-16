@@ -411,6 +411,9 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
                 if (preferences.sideNavExpanded().get()) {
                     sideNav.expand()
                 }
+                if (sideNav.headerView == null) {
+                    sideNav.addHeaderView(R.layout.side_nav_header)
+                }
                 sideNav.headerView?.isVisible = true
                 // The rail centers its header, line it up with the icons of the items instead
                 sideNav.headerView?.updateLayoutParams<FrameLayout.LayoutParams> {
@@ -421,6 +424,8 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
                     preferences.sideNavExpanded().toggle()
                 }
             }
+        } else {
+            binding.sideNav?.removeHeaderView()
         }
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
@@ -544,6 +549,10 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
             // Only moving the checkmark to follow the recents view, the tab is already showing
             if (isSyncingNavSelection) return@setOnItemSelectedListener true
             val currentController = router.backstack.lastOrNull()?.controller
+            if (id == R.id.nav_settings) {
+                showSettings()
+                return@setOnItemSelectedListener false
+            }
             if (!continueSwitchingTabs && currentController is BottomNavBarInterface) {
                 if (!currentController.canChangeTabs {
                         continueSwitchingTabs = true

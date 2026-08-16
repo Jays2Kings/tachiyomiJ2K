@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.widget.preference
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.StringRes
@@ -10,6 +11,7 @@ import androidx.preference.PreferenceViewHolder
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.preference.TypeSafeSharedPreferences
 
 /**
  * A boolean preference rendered as a two-button toggle group instead of a switch.
@@ -27,6 +29,8 @@ class TwoButtonPreference
         private var defValue: Boolean = false
         var inverted = false
         var forceDirection = false
+
+        override fun getSharedPreferences(): SharedPreferences? = super.getSharedPreferences()?.let(::TypeSafeSharedPreferences)
 
         init {
             widgetLayoutResource = R.layout.preference_widget_button_toggle_group

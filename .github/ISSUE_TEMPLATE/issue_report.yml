@@ -100,7 +100,7 @@ body:
           required: true
         - label: I have tried the [troubleshooting guide](https://mihon.app/docs/guides/troubleshooting/).
           required: true
-        - label: I have updated the app to version **[1.8.0](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
+        - label: I have updated the app to version **[1.8.1](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
           required: true
         - label: I have updated all installed extensions.
           required: true

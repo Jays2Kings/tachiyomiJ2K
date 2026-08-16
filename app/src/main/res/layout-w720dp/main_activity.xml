@@ -241,13 +241,14 @@
     <eu.kanade.tachiyomi.ui.base.SideNavView
         android:id="@+id/side_nav"
         app:elevation="0dp"
+        app:submenuDividersEnabled="true"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menuGravity="center"
         app:layout_constraintTop_toTopOf="parent"
-        app:headerLayout="@layout/side_nav_header"
+        tools:headerLayout="@layout/side_nav_header"
         app:expandedMinWidth="96dp"
         app:expandedMaxWidth="160dp"
         app:menu="@menu/side_navigation" />

@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.widget.preference
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.util.AttributeSet
 import androidx.core.content.edit
 import androidx.core.view.isVisible
@@ -9,6 +10,7 @@ import androidx.preference.PreferenceViewHolder
 import com.google.android.material.slider.Slider
 import com.google.android.material.textview.MaterialTextView
 import eu.kanade.tachiyomi.R
+import eu.kanade.tachiyomi.data.preference.TypeSafeSharedPreferences
 
 /**
  * An Int preference rendered as a title/value row with a slider below instead of a list dialog.
@@ -25,6 +27,8 @@ class SliderPreference
         var entryValues: List<Int> = emptyList()
         var valueFormatter: ((Int) -> String)? = null
         private var defValue: Int = 0
+
+        override fun getSharedPreferences(): SharedPreferences? = super.getSharedPreferences()?.let(::TypeSafeSharedPreferences)
 
         init {
             layoutResource = R.layout.preference_slider

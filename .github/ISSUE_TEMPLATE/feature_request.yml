@@ -35,7 +35,7 @@ body:
           required: true
         - label: If this is an issue with an extension, or a request for an extension, I should be checking the [extensions FAQ](https://mihon.app/docs/faq/browse/extensions) instead.
           required: true
-        - label: I have updated the app to version **[1.8.0](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
+        - label: I have updated the app to version **[1.8.1](https://github.com/Jays2Kings/tachiyomiJ2K/releases/latest)**.
           required: true
         - label: I have checked through the app settings for my feature.
           required: true
