@@ -282,7 +282,6 @@
     <string name="use_last_saved_migration_preferences">Использовать последние сохраненные настройки и источники для массового переноса</string>
     <string name="skip_read_chapters">Пропускать главы, помеченные как «Прочитано»</string>
     <string name="app_theme">Тема приложения</string>
-    <string name="true_32bit_color">32-битный цвет</string>
     <string name="zoom_start_position">Стартовая позиция увеличения</string>
     <string name="smart_based_on_page">Умный (по странице)</string>
     <string name="smart_based_on_page_and_theme">Умный (по странице и теме)</string>
@@ -483,8 +482,6 @@
     <string name="set_as_default_for_all">Установить по умолчанию для всех</string>
     <string name="reading_">Чтение %1$s</string>
     <string name="webtoon_style">Стиль веб-комикса</string>
-    <!-- Reader settings -->
-    <string name="reduces_banding_impacts_performance">Уменьшает полосатость, но может влиять на производительность</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Постранично</string>
     <string name="enable_zoom_out">Уменьшение масштаба</string>
@@ -492,11 +489,6 @@
     <string name="always_show_chapter_transition">Переход между главами</string>
     <string name="if_disabled_transition_will_skip">Если отключено, переход будет пропущен, если загружена следующая глава</string>
     <string name="pref_webtoon_side_padding">Боковой отступ</string>
-    <string name="webtoon_side_padding_0">Нет</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
     <string name="about_this_">О чём эта %1$s</string>
     <string name="start_reading">Начать чтение</string>
@@ -938,10 +930,10 @@
     <string name="default_behavior">По умолчанию</string>
     <string name="use_side_navigation">Использовать боковую панель навигации</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">Отсутствует %d глава</item>
-        <item quantity="few">Отсутствуют %d главы</item>
-        <item quantity="many">Отсутствуют %d глав</item>
-        <item quantity="other">Отсутствуют %d глав</item>
+        <item quantity="one">Была пропущена %d глава, поскольку она отсутствует в источнике или была отфильтрована</item>
+        <item quantity="few">Были пропущены %d главы, поскольку они отсутствуют в источнике или были отфильтрованы</item>
+        <item quantity="many">Было пропущено %d глав, поскольку они отсутствуют в источнике или были отфильтрованы</item>
+        <item quantity="other">Было пропущено %d глав, поскольку они отсутствуют в источнике или были отфильтрованы</item>
     </plurals>
     <string name="helpful_translation_links">Полезные ссылки на перевод</string>
     <string name="help_translate">Помочь с переводом</string>
@@ -1064,7 +1056,6 @@
     <string name="tap_zones">Зоны касания</string>
     <string name="lavender">Лаванда</string>
     <string name="violet">Фиолетовый</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">User agent по умолчанию</string>
     <string name="language_requires_app_restart">Некоторым языкам требуется перезапуск приложения для корректного отображения</string>
     <string name="loader_rar5_error">Формат RARv5 не поддерживается</string>
