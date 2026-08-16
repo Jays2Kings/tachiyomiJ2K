@@ -140,16 +140,7 @@ private class SideNavItemView(
     // initialize() and setExpanded() both run the rail's visibility pass, so clamp here instead of
     // at either call site
     override fun setVisibility(visibility: Int) {
-        val itemId = itemData?.itemId
-        val hidden =
-            if (isExpanded) {
-                itemId == R.id.nav_recents
-            } else {
-                itemId == R.id.nav_summary ||
-                    itemId == R.id.nav_ungrouped ||
-                    itemId == R.id.nav_history ||
-                    itemId == R.id.nav_updates
-            }
+        val hidden = isExpanded && itemData?.itemId == R.id.nav_recents
         super.setVisibility(if (hidden) GONE else visibility)
     }
 }
