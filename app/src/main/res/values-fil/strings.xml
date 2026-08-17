@@ -57,7 +57,7 @@
     <string name="clear_database_completed">Binura na</string>
     <string name="updates_tracking_details">Ina-update ang estado, iskor, at huling nabasang kabanata mula sa mga serbisyo sa pagta-track</string>
     <string name="disable_battery_optimization">Patayin ang pag-o-optimisa sa baterya</string>
-    <string name="battery_optimization_disabled">Nakapatay na ang pag-o-optimisa sa baterya</string>
+    <string name="battery_optimization_disabled">Di na pinagana ang pag-o-optimisa sa baterya</string>
     <string name="pref_global_search">Panlahatang paghahanap</string>
     <string name="check_for_extension_updates">Maghanap ng update sa extension</string>
     <string name="version">Bersyon</string>
@@ -186,8 +186,6 @@
     <string name="fullscreen">Naka-fullscreen</string>
     <string name="double_tap_anim_speed">Bilis ng animasyon sa pagdoble-pindot</string>
     <string name="show_page_number">Ipakita ang bilang ng pahina</string>
-    <string name="true_32bit_color">Totoong kulay (32-bit)</string>
-    <string name="reduces_banding_impacts_performance">Binabawasan ang banding, ngunit maaaring makaapekto ito sa performance</string>
     <string name="crop_borders">Gupitin ang gilid</string>
     <string name="color_filter_blend_mode">Blend mode ng filter ng kulay</string>
     <string name="overlay">Nakapatong (Overlay)</string>
@@ -223,11 +221,6 @@
     <string name="alpha_initial">A</string>
     <string name="always_show_chapter_transition">Ipakita palagi ang paglipat-kabanata</string>
     <string name="pref_webtoon_side_padding">Kapal ng gilid</string>
-    <string name="webtoon_side_padding_0">Wala</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Mga Kabanata %1$s</string>
     <string name="added_to_library">Dinagdag sa Aklatan</string>
     <string name="removed_from_library">Tinanggal sa Aklatan</string>
@@ -489,7 +482,7 @@
     <string name="hide_unread_badges">Itago ang bilang ng babasahin</string>
     <string name="stop_migrating">Itigil ang paglipat\?</string>
     <string name="portrait">Patayo</string>
-    <string name="disabled">Sarado</string>
+    <string name="disabled">Di-pinagana</string>
     <string name="landscape">Pahiga</string>
     <string name="error_sharing_cover">Error sa pagbabahagi ng cover</string>
     <string name="error_saving_cover">Error sa pag-save ng cover</string>
@@ -529,7 +522,7 @@
     <string name="back_to_start">Bumalik sa simula</string>
     <string name="max_auto_backups">Dami ng kusang pag-backup</string>
     <string name="restore_error">Bigong ma-restore ang backup</string>
-    <string name="restore_miui_warning">Maaaring hindi gumana nang maayos ang pag-backup/pag-restore kung nakasara ang MIUI optimization.</string>
+    <string name="restore_miui_warning">Maaaring hindi gumana nang maayos ang pag-backup/pag-restore kung di-pinagana ang MIUI optimization.</string>
     <string name="backup_in_progress">Bina-backup na</string>
     <string name="restore_in_progress">Rine-restore na</string>
     <string name="hide_notification_content">Itago ang laman ng abiso</string>
@@ -992,7 +985,6 @@
     <string name="tap_zones">Mga tap zone</string>
     <string name="lavender">Lila</string>
     <string name="violet">Lila</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Default na string ng user agent</string>
     <string name="loader_rar5_error">Di suportado ang format na RARv5</string>
     <string name="language_requires_app_restart">Maaaring kailanganin ng ilang wika na muling magdispley ng app para magdispley nang tama</string>
@@ -1045,7 +1037,7 @@
     <string name="popular">Sikat</string>
     <string name="skip_dupe_chapters">Laktawan ang (mga) magkaparehong kabanata</string>
     <string name="appwidget_updates_description">Tingnan ang mga kamakailang nai-update na entry sa iyong aklatan</string>
-    <string name="appwidget_unavailable_locked">Di available ang widget kapag nakabukas ang lock</string>
+    <string name="appwidget_unavailable_locked">Di available ang widget kapag pinagana ang app lock</string>
     <string name="hide_in_library_items">Itago ang mga entry na nasa aklatan na</string>
     <string name="failed_to_update_">Nabigong i-update ang %1$s</string>
     <string name="mean_tracking_score">Mean tracking score</string>
