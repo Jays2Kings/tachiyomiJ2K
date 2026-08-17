@@ -230,8 +230,6 @@
     <string name="fullscreen">Tela cheia</string>
     <string name="double_tap_anim_speed">Velocidade da animação de toque duplo</string>
     <string name="show_page_number">Mostrar número da página</string>
-    <string name="true_32bit_color">Cor de 32 bits</string>
-    <string name="reduces_banding_impacts_performance">Reduz o efeito de anéis nos degradês, mas pode afetar o desempenho</string>
     <string name="crop_borders">Aparar bordas</string>
     <string name="use_custom_brightness">Usar brilho personalizado</string>
     <string name="use_custom_color_filter">Usar filtro de cores personalizado</string>
@@ -274,11 +272,6 @@
     <string name="always_show_chapter_transition">Sempre mostrar transição do capítulo</string>
     <string name="if_disabled_transition_will_skip">Se desativada, a página de transição será pulada se o próximo capítulo estiver carregado</string>
     <string name="pref_webtoon_side_padding">Margem lateral</string>
-    <string name="webtoon_side_padding_0">Nenhum</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
     <string name="about_this_">Sobre este %1$s</string>
     <string name="start_reading">Comece a ler</string>
@@ -1062,7 +1055,6 @@
     <string name="tap_zones">Zonas de toque</string>
     <string name="lavender">Lavanda</string>
     <string name="violet">Violeta</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">User Agent padrão</string>
     <string name="loader_rar5_error">O formato RARv5 não é suportado</string>
     <string name="auto_download_while_reading">Download automático durante a leitura</string>
@@ -1145,4 +1137,24 @@
     <string name="share_cover">Compartilhar capa</string>
     <string name="save_pages_separately">Salvar as páginas em pastas diferentes</string>
     <string name="create_folders_by_manga_title">Criar pastas de acordo com o título do mangá</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d Fonte</item>
+        <item quantity="many">%1$d Fontes</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d página</item>
+        <item quantity="many">%1$d páginas</item>
+    </plurals>
+    <string name="search_operator_and">Incluir</string>
+    <string name="search_operator_not">Excluir</string>
+    <string name="search_exactly">Exatamente</string>
+    <string name="search_between">Entre</string>
+    <string name="search_more_than">Mais que</string>
+    <string name="search_less_than">Menos que</string>
+    <string name="search_after">Depois</string>
+    <string name="search_before">Antes</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Depois de ler um capítulo</string>
+    <string name="duplicate_in_library">Duplicata</string>
+    <string name="action_add_repo">Adicionar loja</string>
+    <string name="extension_repos">Loja de extensões</string>
 </resources>
