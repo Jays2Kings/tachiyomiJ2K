@@ -1138,12 +1138,14 @@
     <string name="save_pages_separately">Salvar as páginas em pastas diferentes</string>
     <string name="create_folders_by_manga_title">Criar pastas de acordo com o título do mangá</string>
     <plurals name="num_sources">
-        <item quantity="one">%1$d Fonte</item>
-        <item quantity="many">%1$d Fontes</item>
+        <item quantity="one">%1$d fonte</item>
+        <item quantity="many">%1$d fontes</item>
+        <item quantity="other">%1$d fontes</item>
     </plurals>
     <plurals name="num_pages">
         <item quantity="one">%1$d página</item>
         <item quantity="many">%1$d páginas</item>
+        <item quantity="other">%1$d páginas</item>
     </plurals>
     <string name="search_operator_and">Incluir</string>
     <string name="search_operator_not">Excluir</string>
@@ -1157,4 +1159,15 @@
     <string name="duplicate_in_library">Duplicata</string>
     <string name="action_add_repo">Adicionar loja</string>
     <string name="extension_repos">Loja de extensões</string>
+    <string name="library_search_filters">Mostrar itens que…</string>
+    <string name="library_optional_search_filters">Mostrar itens que opcionalmente…</string>
+    <string name="search_toggle_optional">Tornar esse filtro opcional</string>
+    <string name="search_fewer_than">Menos que</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Marcar capítulo lido duplicado como lido</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Depois de buscar um novo capítulo</string>
+    <string name="orphaned">Órfão</string>
+    <string name="extension_api_error">Erro ao obter as extensões disponíveis</string>
+    <string name="extension_must_reinstall">Por favor, desinstale e então reinstale para atualizar.</string>
+    <string name="ext_revoke_trust">Revogar a confiabilidade de extensões desconhecidas</string>
+    <string name="open_source_repo">Abrir repositório da fonte</string>
 </resources>
