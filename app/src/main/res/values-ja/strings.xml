@@ -15,7 +15,7 @@
     <string name="unread">未読</string>
     <string name="read">既読</string>
     <string name="alphabetically">アルファベット順</string>
-    <string name="total_chapters">全ての章</string>
+    <string name="total_chapters">総章数</string>
     <string name="last_read">最後に読んだ</string>
     <string name="search">検索</string>
     <string name="select_all">すべて選択</string>
@@ -47,7 +47,7 @@
     <string name="create">作成する</string>
     <string name="restore">復元</string>
     <string name="loading">読み込み中…</string>
-    <string name="general">全般</string>
+    <string name="general">一般</string>
     <string name="downloads">ダウンロード</string>
     <string name="sources">ソース</string>
     <string name="advanced">その他</string>
@@ -61,7 +61,7 @@
     <string name="every_2_days">2日ごと</string>
     <string name="weekly">毎週</string>
     <string name="categories_to_include_in_global_update">グローバルアップデートに含まれるカテゴリー</string>
-    <string name="all">全て</string>
+    <string name="all">すべて</string>
     <string name="library_update_restriction">デバイス制限</string>
     <string name="library_update_restriction_summary">条件に合致する場合にのみ更新する</string>
     <string name="wifi">Wi-Fi</string>
@@ -161,8 +161,8 @@
     <string name="licensed">ライセンス済み</string>
     <string name="completed">完結済み</string>
     <string name="lock_with_biometrics">アンロックを必要とする</string>
-    <string name="lock_when_idle">タイムアウトロック</string>
-    <string name="chapter_">第%1$s章</string>
+    <string name="lock_when_idle">アイドル時にロック</string>
+    <string name="chapter_">第 %1$s 章</string>
     <string name="failed_to_update_cover">カバーの更新に失敗しました</string>
     <string name="services">サービス</string>
     <string name="reading">読書中</string>
@@ -200,19 +200,15 @@
     <string name="local_source_help_guide">ローカルソースガイド</string>
     <string name="check_site_in_web">WebViewでサイトを開く</string>
     <string name="obsolete">廃止済み</string>
-    <string name="untrusted_extension_message">この拡張機能は信頼できない証明書でサインされているため、有効にされていません。
-\n
-\n悪意のある拡張機能はTachiyomiに保存されているすべてのログイン情報を読み取ることや、任意コード実行をすることができます。
-\n
-\nこれらのリスクを受け入れ、この証明書を信頼しますか？</string>
+    <string name="untrusted_extension_message">悪意のある拡張機能は、保存されているログイン認証情報を読み取ったり、任意のコードを実行したりする可能性があります。\n\nこの拡張機能を信頼することで、あなたはこれらのリスクを受け入れることになります。</string>
     <string name="obsolete_extension_message">この拡張機能は利用不可になりました。</string>
     <plurals name="extension_updates_available">
-        <item quantity="other">%d件の拡張機能の更新が利用可能</item>
+        <item quantity="other">%d 件の拡張機能の更新が利用可能です</item>
     </plurals>
-    <string name="set_as_cover">カバーとして設定</string>
-    <string name="cover_updated">カバーとして設定しました</string>
+    <string name="set_as_cover">表紙として設定</string>
+    <string name="cover_updated">表紙を更新しました</string>
     <string name="next_chapter_not_found">次の章が見つかりません</string>
-    <string name="use_image_as_cover">カバーとして設定しますか？</string>
+    <string name="use_image_as_cover">この画像を表紙として使用しますか？</string>
     <string name="next">次</string>
     <string name="previous">前</string>
     <string name="theres_no_next_chapter">次の章がありません</string>
@@ -220,8 +216,6 @@
     <string name="loading_pages">ページをロード中…</string>
     <string name="failed_to_load_pages_">ページのロードに失敗：%1$s</string>
     <string name="show_page_number">ページ数を表示</string>
-    <string name="true_32bit_color">32ビットカラー</string>
-    <string name="reduces_banding_impacts_performance">バンディングを軽減しますが、パフォーマンスを影響するかもしれません</string>
     <string name="color_filter_blend_mode">ｶﾗｰﾌｨﾙﾀｰﾌﾞﾚﾝﾄﾞﾓｰﾄﾞ</string>
     <string name="overlay">オーバーレイ</string>
     <string name="multiply">乗算</string>
@@ -240,11 +234,6 @@
     <string name="view_chapters">章を見る</string>
     <string name="always_show_chapter_transition">章の間の遷移エフェクトを常に表示</string>
     <string name="pref_webtoon_side_padding">余白</string>
-    <string name="webtoon_side_padding_0">なし</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">第%1$s章</string>
     <string name="added_to_library">ライブラリに追加しました</string>
     <string name="removed_from_library">ライブラリから削除されました</string>
@@ -275,7 +264,7 @@
     <string name="open_source_licenses">オープンソースライセンス</string>
     <string name="email">メールアドレス</string>
     <string name="successfully_logged_out">ログアウトしました</string>
-    <string name="cancel_all">全てキャンセル</string>
+    <string name="cancel_all">すべてキャンセル</string>
     <string name="downloading">ダウンロード中</string>
     <string name="downloading_progress">ダウンロード中（%1$d/%2$d）</string>
     <string name="invalid_download_location">ダウンロードディレクトリが無効です</string>
@@ -317,8 +306,8 @@
     <string name="marked_as_unread">未読にしました</string>
     <string name="marked_as_read">既読にしました</string>
     <string name="all_chapters_read">全章既読</string>
-    <string name="chapter_x_of_y">第%1$d章（計%2$d章）</string>
-    <string name="last_read_chapter_">最後に読んだ 第%1$s章</string>
+    <string name="chapter_x_of_y">第 %1$d 章（全 %2$d 章中）</string>
+    <string name="last_read_chapter_">最後に読んだ章 第 %1$s 章</string>
     <string name="new_chapters">新章</string>
     <string name="unlock">アンロック</string>
     <string name="unlock_library">ライブラリへのアクセスをアンロック</string>
@@ -340,33 +329,33 @@
     <string name="confirm_category_deletion">カテゴリーを削除しますか？</string>
     <string name="category_is_empty">カテゴリーが空です</string>
     <string name="create_new_category">新しいカテゴリーを作成</string>
-    <string name="_already_in_queue">%1$sは既にキュー内に存在しています</string>
-    <string name="adding_category_to_queue">%1$sをアップデートキューに追加します</string>
+    <string name="_already_in_queue">%1$s はすでにキューに入っています</string>
+    <string name="adding_category_to_queue">%1$s を更新キューに追加しています</string>
     <plurals name="category_plural">
-        <item quantity="other">%d カテゴリー</item>
+        <item quantity="other">%d 個のカテゴリー</item>
     </plurals>
     <plurals name="pages_left">
-        <item quantity="other">残り%1$dページ</item>
+        <item quantity="other">残り %1$d ページ</item>
     </plurals>
     <plurals name="remove_n_chapters">
-        <item quantity="other">%1$d件のダウンロードした章を削除してもよろしいですか？</item>
+        <item quantity="other">ダウンロードした %1$d 個の章を削除しますか？</item>
     </plurals>
     <string name="chapter_not_found">章が見つかりませんでした</string>
     <string name="chapters_removed">章が消去されました。</string>
     <string name="removed_bookmark">お気に入りを削除しました</string>
     <string name="library_search_hint">タイトル、タグまたはソースを検索</string>
     <string name="update_available">アップデートが利用可能です</string>
-    <string name="updating_">%1$sを更新</string>
+    <string name="updating_">%1$s を更新中</string>
     <string name="tracking_status">ステータスの追跡</string>
     <string name="series_type">シリーズタイプ</string>
     <string name="read_progress">読書の進捗状況</string>
     <string name="search_globally">「%1$s」をグローバルに検索する</string>
     <string name="_unread">%d 未読</string>
     <string name="reorder_filters">フィルターの並べ替え</string>
-    <string name="collapse_all_categories">全てのカテゴリーを折りたたむ</string>
-    <string name="expand_all_categories">全てのカテゴリーを展開する</string>
+    <string name="collapse_all_categories">すべてのカテゴリーを折りたたむ</string>
+    <string name="expand_all_categories">すべてのカテゴリーを展開</string>
     <string name="always_show_current_category">常に現在のカテゴリーを表示する</string>
-    <string name="show_all_categories">全てのカテゴリーを表示する</string>
+    <string name="show_all_categories">すべてのカテゴリーを表示</string>
     <string name="no_matches_for_filters">現在のフィルターに一致する項目が見つかりませんでした</string>
     <string name="library_is_empty_add_from_browse">ライブラリが空です。「ブラウザ」タブからライブラリにシリーズを追加してください。</string>
     <string name="display_options">表示オプション</string>
@@ -435,18 +424,18 @@
     <string name="refresh_library_metadata">ライブラリのメタデータを更新</string>
     <string name="invert_double_pages">見開きページを反転</string>
     <string name="beta">ベータ</string>
-    <string name="show_read_chapters_all">グループと全てで既読の章を表示</string>
+    <string name="show_read_chapters_all">「グループ別」と「すべて」で既読の章を表示</string>
     <string name="only_search_pinned_when">ピン留めしたソースのみを検索</string>
     <string name="category_cannot_be_blank">カテゴリー名を空白にすることはできません</string>
     <string name="new_category">新しいカテゴリー</string>
     <string name="category">カテゴリー</string>
-    <string name="add_edit_categories">カテゴリーを追加/編集</string>
+    <string name="add_edit_categories">カテゴリーを追加 / 編集</string>
     <string name="show_unread_count">未読数を表示</string>
     <string name="show_unread_badges">未読バッジを表示</string>
     <string name="hide_unread_badges">未読バッジを隠す</string>
     <string name="uniform_grid_covers">グリッドカバーを整形する</string>
     <string name="uniform_covers">カバーを整形する</string>
-    <string name="_per_row">1行%d列</string>
+    <string name="_per_row">1 行あたり %d 列</string>
     <string name="ungrouped">グループ化しない</string>
     <string name="tag">タグ</string>
     <string name="group_library_by">ライブラリのグループ化…</string>
@@ -468,7 +457,7 @@
     <string name="show_unread_chapters">未読の章を表示</string>
     <string name="show_downloaded_chapters">ダウンロードした章を表示</string>
     <string name="show_bookmarked_chapters">ブックマークした章を表示</string>
-    <string name="show_all">全ての章を表示</string>
+    <string name="show_all">すべて表示</string>
     <string name="select_a_source_then_item_to_migrate">ソースを選択して、移行したい項目を選択します</string>
     <string name="migration">移行</string>
     <string name="show_title_first">タイトルを先に表示</string>
@@ -482,22 +471,22 @@
     <string name="show_download_button">ダウンロードボタンを表示</string>
     <string name="a_while_ago">少し前</string>
     <string name="follow_system_theme">システムテーマに従う</string>
-    <string name="view_all_updates">全てのアップデートを見る</string>
+    <string name="view_all_updates">すべての更新情報を表示</string>
     <string name="read_">読んだ %1$s</string>
     <string name="view_history">履歴を見る</string>
     <string name="last_read_">最後に読んだ %1$s</string>
     <string name="updated_">更新 %1$s</string>
     <string name="grouped">グループ</string>
-    <string name="mark_all_chapters_as_unread">全ての章を未読にしますか？</string>
-    <string name="mark_all_chapters_as_read">全ての章を既読にしますか？</string>
-    <string name="mark_all_as_read">全てを既読にする</string>
-    <string name="mark_all_as_unread">全てを未読にする</string>
+    <string name="mark_all_chapters_as_unread">すべての章を未読にしますか？</string>
+    <string name="mark_all_chapters_as_read">すべての章を既読にしますか？</string>
+    <string name="mark_all_as_read">すべて既読にする</string>
+    <string name="mark_all_as_unread">すべて未読にする</string>
     <string name="remove_downloads">ダウンロードを削除</string>
     <string name="remove_download">ダウンロードを削除</string>
     <string name="add_to_library">ライブラリに追加</string>
     <string name="about_this_">この%1$sについて</string>
     <string name="reset_cover">カバーをリセット</string>
-    <string name="clear_tags">タグを全消去</string>
+    <string name="clear_tags">タグを消去</string>
     <string name="reset_tags">タグをリセット</string>
     <string name="reading_mode">ビューアモード</string>
     <string name="display_buttons_bottom_reader">ビューア下のボタン</string>
@@ -522,22 +511,22 @@
     <string name="more_library_settings">ライブラリの詳細設定</string>
     <string name="search_extensions">拡張機能を検索…</string>
     <string name="show_updated_time">更新時間を表示</string>
-    <string name="all_sources">全てのソース</string>
+    <string name="all_sources">すべてのソース</string>
     <string name="extension_updates">拡張機能の更新</string>
     <string name="cover_saved">表紙を保存しました</string>
-    <string name="share_second_page">2ページ目をシェア</string>
-    <string name="set_second_page_as_cover">2ページ目をカバーとして設定</string>
-    <string name="save_second_page">2ページ目を保存</string>
-    <string name="save_first_page">1ページ目を保存</string>
-    <string name="share_first_page">1ページ目をシェア</string>
-    <string name="set_first_page_as_cover">1ページ目をカバーとして設定</string>
+    <string name="share_second_page">2 ページ目を共有</string>
+    <string name="set_second_page_as_cover">2 ページ目を表紙として設定</string>
+    <string name="save_second_page">2 ページ目を保存</string>
+    <string name="save_first_page">最初のページを保存</string>
+    <string name="share_first_page">最初のページを共有</string>
+    <string name="set_first_page_as_cover">最初のページを表紙として設定</string>
     <string name="add_x_to_library">%1$sをライブラリに追加しますか？</string>
-    <string name="all_but_bookmarked_chapters">ブックマークを除いた全ての章</string>
-    <string name="all_read_chapters">全ての既読の章</string>
-    <string name="all_unread_chapters">全ての未読の章</string>
-    <string name="all_chapters">全ての章</string>
+    <string name="all_but_bookmarked_chapters">ブックマークを除いたすべての章</string>
+    <string name="all_read_chapters">すべての既読の章</string>
+    <string name="all_unread_chapters">すべての未読の章</string>
+    <string name="all_chapters">すべての章</string>
     <string name="custom_range">カスタム範囲</string>
-    <string name="page_">%1$dページ</string>
+    <string name="page_">%1$d ページ</string>
     <string name="sort_and_filter">ソート＆フィルター</string>
     <string name="mark_previous_as_unread">前の章を未読にする</string>
     <string name="stop_migrating">移行を停止しますか？</string>
@@ -563,21 +552,20 @@
     <string name="delete_downloaded_if_removed_online">ソースがオンラインの章を消去していた場合、ダウンロードした章を削除します</string>
     <string name="delete_removed_chapters">消去された章を削除</string>
     <string name="source_not_installed">ソースがインストールされていません</string>
-    <string name="remove_all_downloads">全てのダウンロードを削除しますか？</string>
+    <string name="remove_all_downloads">ダウンロードしたファイルをすべて削除しますか？</string>
     <string name="updates_and_history">アップデート＆履歴</string>
     <string name="shift_double_pages">2ページずらす</string>
     <string name="hide_start_reading_button">読み始めるボタンを隠す</string>
     <string name="drag_and_drop">ドラッグ＆ドロップ</string>
-    <string name="add_x_to">%1$sに追加…</string>
-    <string name="move_x_to">%1$sに移動…</string>
+    <string name="add_x_to">%1$s を追加しています…</string>
+    <string name="move_x_to">%1$s を移動しています…</string>
     <string name="added_to_">%1$sに追加しました</string>
     <string name="series">シリーズ</string>
-    <string name="expand_collapse_all_categories">全てのカテゴリーを展開/折りたたむ</string>
+    <string name="expand_collapse_all_categories">すべてのカテゴリーを展開 / 折りたたむ</string>
     <string name="your_library">ライブラリ</string>
     <string name="release_page">リリースページ</string>
     <string name="no_chapters_to_delete">削除する章がありません</string>
-    <string name="delete_all_covers__not_in_library_used_">ライブラリにないキャッシュされたカバーを全て削除します。
-\n使用中: %1$s</string>
+    <string name="delete_all_covers__not_in_library_used_">ライブラリに登録されていないキャッシュされた表紙をすべて削除します \n現在使用中: %1$s</string>
     <string name="nothing_is_downloading">現在のダウンロードはありません</string>
     <string name="start_downloading_now">ダウンロードを開始します</string>
     <string name="downloading_">ダウンロード中：%1$s</string>
@@ -590,9 +578,9 @@
     <string name="use_default">デフォルトを使用</string>
     <string name="top">トップ</string>
     <string name="category_hopper_long_press">カテゴリーホッパーの長押しアクション</string>
-    <string name="set_as_default_for_all">全てのデフォルトとして設定</string>
+    <string name="set_as_default_for_all">すべてのデフォルトとして設定</string>
     <string name="filter_languages">言語フィルター</string>
-    <string name="decode_image_error">画像をロードできませんでした</string>
+    <string name="decode_image_error">画像を読み込めませんでした</string>
     <string name="clear_cached_covers_non_library">ライブラリにないキャッシュされたカバーをクリア</string>
     <string name="not_logged_into_">%1$sにログインしていません</string>
     <string name="search_recents">最近を検索…</string>
@@ -622,11 +610,11 @@
     <string name="no_recent_read_updated_manga">最近読んだり更新したりした項目はありません</string>
     <string name="no_recent_chapters">新しい章はありません</string>
     <plurals name="chapters_plural">
-        <item quantity="other">%1$s章</item>
+        <item quantity="other">%1$s 章</item>
     </plurals>
     <string name="auto_refresh_covers_summary">ライブラリを更新する時に、ライブラリのカバーも更新する</string>
     <string name="group_chapters_together">章をグループ化する</string>
-    <string name="webtoon_style">webtoonスタイル</string>
+    <string name="webtoon_style">webtoon 風</string>
     <string name="crop_borders_webtoon">余白をトリミング（Webtoon）</string>
     <string name="crop_borders_paged">余白をトリミング（ページ）</string>
     <string name="enable_zoom_out">ズームアウトを有効にする</string>
@@ -670,7 +658,7 @@
     <string name="to_show_again_setting_sources">この画面を再び表示するには、設定→ソースを開いてください。</string>
     <string name="automatic_can_still_switch">自動ページレイアウトを使用している場合でも、この設定を上書きせずに、読書中にレイアウトを切り替えることができます</string>
     <string name="cutout_behavior_only_applies">カットアウト領域の動作は、特定のスケールタイプの縦向きモードでのみ適用されます</string>
-    <string name="reset_all_chapters_for_this_">%1$sの全ての章をリセット</string>
+    <string name="reset_all_chapters_for_this_">この %1$s のすべての章をリセットします</string>
     <string name="this_will_remove_the_read_date_for_x_question">「%1$s」の読書日時を本当に削除してもよろしいですか？</string>
     <string name="newly_added">最近追加された</string>
     <string name="can_be_found_in_library_filters">ライブラリのフィルターを展開して見つけることもできます</string>
@@ -740,9 +728,9 @@
     <string name="remove_tracking_from_">%1$sからも削除する</string>
     <string name="currently_reading">現在読書中</string>
     <string name="changing_will_reset_reading_mode">これを行うと、このシリーズのビューア設定をリセットします</string>
-    <string name="pages_">%1$sページ</string>
+    <string name="pages_">%1$s ページ</string>
     <string name="reader_settings">ビューア設定</string>
-    <string name="_must_be_enabled_first">最初に%1$sを有効にする必要があります</string>
+    <string name="_must_be_enabled_first">最初に %1$s を有効にする必要があります</string>
     <string name="search_tips_show_periodically">検索のヒントは定期的に表示されます。検索するには、検索候補を長押しします。</string>
     <string name="certain_buttons_can_be_found">ここで無効にしたいくつかのボタンは他の場所で見つけることができます</string>
     <string name="start_past_cutout">カットアウト領域外から描画</string>
@@ -751,7 +739,7 @@
     <string name="app_shortcuts">アプリショートカット</string>
     <string name="mark_range_as_unread">選択範囲の章を未読にする</string>
     <string name="mark_range_as_read">選択範囲の章を既読にする</string>
-    <string name="cancel_all_for_series">このシリーズの全項目をキャンセル</string>
+    <string name="cancel_all_for_series">このシリーズのすべてをキャンセル</string>
     <string name="dark_theme">ダークテーマ</string>
     <string name="light_theme">ライトテーマ</string>
     <string name="about_dont_kill_my_app">一部のスマホメーカーはバックグラウンドサービスを終了する追加のアプリ制限を施しています。修正する方法についてはこのWebサイトをご覧ください。</string>
@@ -814,20 +802,20 @@
     <string name="split_double_pages">ダブルページを分割</string>
     <string name="remove_crop">クロップを除去</string>
     <string name="split_double_pages_portrait">縦向き画面でダブルページを分割</string>
-    <string name="reading_">%1$sを閲覧中</string>
+    <string name="reading_">%1$s を読んでいます</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="other">%d件の拡張機能をアップデートしました</item>
+        <item quantity="other">%d 件の拡張機能が更新されました</item>
     </plurals>
-    <string name="extensions_updated">拡張機能をアップデートしました</string>
+    <string name="extensions_updated">拡張機能が更新されました</string>
     <plurals name="_updates_pending">
-        <item quantity="other">%d件のアップデートが待機中</item>
+        <item quantity="other">%d 件の更新が保留中です</item>
     </plurals>
     <string name="updating_extensions">拡張機能をアップデートしています</string>
-    <string name="some_extensions_may_prompt">一部の拡張機能はそれでも先にインストールするよう表示する場合があります。</string>
-    <string name="update_all">全てアップデート</string>
+    <string name="some_extensions_may_prompt">一部の拡張機能については、まずインストールを促すメッセージが表示される場合があります。</string>
+    <string name="update_all">すべて更新</string>
     <string name="could_not_install_extension">拡張機能をインストールできませんでした</string>
-    <string name="extensions_miui_warning">MIUI最適化を無効にしてから拡張機能をインストールしてください。</string>
-    <string name="installed_">%1$sをインストールしました</string>
+    <string name="extensions_miui_warning">拡張機能をインストールするには、MIUI 最適化を無効にする必要があります。</string>
+    <string name="installed_">%1$s をインストールしました</string>
     <string name="extension_updates_pending">アップデート待ちの拡張機能</string>
     <string name="affects_library_grid">ライブラリのグリッド表紙に影響します</string>
     <string name="global_updates">グローバル更新</string>
@@ -836,7 +824,7 @@
         <item quantity="other">とさらに%1$d章</item>
     </plurals>
     <plurals name="for_n_titles">
-        <item quantity="other">%d件のタイトル</item>
+        <item quantity="other">%d 個のタイトル</item>
     </plurals>
     <string name="open_random_series">ランダムにシリーズを開く</string>
     <string name="show_number_of_items">項目数を表示</string>
@@ -849,15 +837,13 @@
     <string name="by_chapter_number">章の数に基づく</string>
     <string name="by_source_order">ソースでの順位に基づく</string>
     <string name="not_bookmarked">未ブックマーク</string>
-    <string name="external_storage_download_notice">章をダウンロードするには、TachiyomiJ2Kは全ファイルへのアクセス権が必要です。こちらをタップして「全てのファイルの管理を許可」を有効にしてください。</string>
-    <string name="external_storage_permission_notice">章のダウンロード、自動バックアップの作成及びローカルマンガシリーズの閲覧を行うには、TachiyomiJ2KはAndroid 11での全ファイルへのアクセス権が必要です。
-\n
-\n次の画面で「全てのファイルの管理を許可」を有効にしてください。</string>
-    <string name="all_files_permission_required">ファイルアクセス権限が必要</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K は章をダウンロードするためにすべてのファイルへのアクセス権限を必要とします。ここをタップして、「全ファイルの管理権を付与」を有効にしてください。</string>
+    <string name="external_storage_permission_notice">Android 11 以降では、TachiyomiJ2K が章のダウンロード、自動バックアップの作成、ローカルシリーズの閲覧を行うために、すべてのファイルへのアクセス権限を必要とします。 \n\n次の画面で「全ファイルの管理権を付与」を有効にしてください。</string>
+    <string name="all_files_permission_required">「すべてのファイルへのアクセス」権限が必要です</string>
     <string name="filter_groups">スキャナー&amp;翻訳者グループを絞り込む</string>
     <string name="cannot_remove_tracking_while_offline">オフライン中では%1$sからトラッカーを削除できません</string>
     <string name="use_suggested_date">推奨の日付を使用</string>
-    <string name="scanlators">スキャナー&amp;翻訳者</string>
+    <string name="scanlators">スキャンレーター</string>
     <string name="channel_errors">エラー</string>
     <string name="details_page">詳細ページ</string>
     <string name="theme_buttons_based_on_cover">表紙に基づいたテーマのボタン</string>
@@ -887,12 +873,12 @@
     <string name="could_not_update_scoring_">評価種類を更新できませんでした：%1$s</string>
     <string name="check_for_beta_releases">ベータリリースをチェック</string>
     <string name="expanded_toolbar">高度なツールバー</string>
-    <string name="warning_enroll_into_beta">ベータリリースは不安定な可能性があり、アプリデータを全消去しなければならないかもしれません。</string>
+    <string name="warning_enroll_into_beta">ベータ版は不安定な場合があり、アプリデータの消去が必要になる場合があります。</string>
     <string name="new_beta_version_available">新しいベータバージョンが利用可能です！</string>
     <string name="language_badge">言語バッジ</string>
     <string name="show_larger_toolbar">ほとんどのページで大きめの高度なツールバーを表示（画面の小さな端末ではONにしても表示しません）</string>
     <string name="try_new_features">まだ正式にリリースされていない機能をいち早く試すことができます。ベータリリースは不安定な可能性があり、開発者にフィードバックを集めることを目的として提供しています。</string>
-    <string name="warning_unenroll_from_beta">従来のプロダクションバージョンに戻すとエラーを生じることがあり、アプリデータを全消去しなければならないかもしれません。</string>
+    <string name="warning_unenroll_from_beta">以前のバージョンに戻すと問題が発生する可能性があり、アプリデータの消去が必要になる場合があります。</string>
     <string name="grayscale">グレースケール</string>
     <string name="local_invalid_format">章フォーマットが無効です</string>
     <string name="order_by">並び順</string>
@@ -929,7 +915,7 @@
     <string name="use_staggered_grid">スタッガード格子を使用</string>
     <string name="pref_update_only_completely_read_summary">未読の章がない時のみ（つまり完読後のみ）漫画を更新</string>
     <string name="must_view_details_before_migration">この項目の詳細ページに目を通してから移行してください</string>
-    <string name="view_all">全て表示</string>
+    <string name="view_all">すべて表示</string>
     <string name="zoom_double_page_spreads">ダブルページ上でズーム</string>
     <string name="update_tracking_after_reading">読書の後追跡を更新</string>
     <string name="update_tracking_marked_read">既読とした後追跡を更新</string>
@@ -970,12 +956,11 @@
     <string name="tap_zones">タップ可能なゾーン</string>
     <string name="lavender">ラベンダー色</string>
     <string name="violet">バイオレット</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">デフォルトのユーザーエージェント文字列</string>
     <string name="language_requires_app_restart">一部の言語はアプリが再起動される前、正しく表示されないことがあります</string>
-    <string name="loader_rar5_error">フォーマットRARv5は未対応です</string>
+    <string name="loader_rar5_error">RARv5 形式はサポートされていません</string>
     <string name="clear_db_exclude_read">既読の章がある項目を保留</string>
-    <string name="all_read_manga">全ての既読シリーズ</string>
+    <string name="all_read_manga">すべての既読のシリーズ</string>
     <string name="auto_download_while_reading">読書中に自動でダウンロード</string>
     <string name="downloaded_chapters">ダウンロードした章の数</string>
     <string name="statistics">統計情報</string>
@@ -1038,7 +1023,7 @@
     <string name="library_entries">ライブラリの項目</string>
     <string name="source_settings">ソース設定</string>
     <string name="app_settings">アプリ設定</string>
-    <string name="ext_installer_summary">Android 12 以前のバージョンの端末でユーザー入力なしで拡張機能のインストールを許可し、自動アップデートをONにします</string>
+    <string name="ext_installer_summary">拡張機能をユーザーの許可なしにインストールできるようにし、Android 12 以前のデバイスで自動更新を有効にします</string>
     <string name="apply">適用</string>
     <string name="pref_debug_info">デバッグ情報</string>
     <string name="label_background_activity">バックグラウンドアクティビティ</string>
@@ -1050,5 +1035,39 @@
     <string name="action_add_repo">リポジトリを追加</string>
     <string name="invalid_repo_name">リポジトリ名が無効です</string>
     <string name="snack_repo_deleted">リポジトリを削除しました</string>
-    <string name="extension_repos">拡張リポジトリ</string>
+    <string name="extension_repos">拡張機能ストア</string>
+    <plurals name="num_sources">
+        <item quantity="other">%1$d 件のソース</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="other">%1$d ページ</item>
+    </plurals>
+    <string name="library_search_filters">以下のエントリーを表示します…</string>
+    <string name="library_optional_search_filters">オプションで以下のエントリーを表示します…</string>
+    <string name="search_operator_and">含む</string>
+    <string name="search_operator_not">含まない</string>
+    <string name="search_toggle_optional">このフィルターをオプションにする</string>
+    <string name="search_exactly">一致</string>
+    <string name="search_between">間</string>
+    <string name="search_more_than">より多い</string>
+    <string name="search_less_than">未満</string>
+    <string name="search_fewer_than">未満</string>
+    <string name="search_after">後</string>
+    <string name="search_before">前</string>
+    <string name="pref_mark_duplicate_read_chapter_read">重複する既読章を既読としてマークする</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">章の読了後</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">新章取得後</string>
+    <string name="duplicate_in_library">重複</string>
+    <string name="extension_api_error">利用可能な拡張機能を取得できませんでした</string>
+    <string name="extension_must_reinstall">更新するには、一度アンインストールしてから再インストールしてください。</string>
+    <string name="ext_revoke_trust">不明な拡張機能の信頼を取り消す</string>
+    <string name="open_source_repo">ソースリポジトリを開く</string>
+    <string name="action_add_repo_message">Tachiyomi に拡張機能ストアを追加します。これは拡張機能ストアのインデックスファイルの URL です</string>
+    <plurals name="num_repos">
+        <item quantity="other">%d 件の拡張機能ストア</item>
+    </plurals>
+    <string name="error_repo_exists">この拡張機能ストアはすでに存在しています！</string>
+    <string name="repo_cannot_be_blank">拡張機能ストア名は空欄にできません</string>
+    <string name="error_repo_unreachable">この拡張機能ストアにアクセスまたは解析できませんでした</string>
+    <string name="url_not_set_click_again">拡張機能ストアの URLが設定されていません。URL を編集してください</string>
 </resources>
