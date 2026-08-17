@@ -2,6 +2,7 @@ package eu.kanade.tachiyomi.ui.base
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.Configuration
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
@@ -32,11 +33,13 @@ class SideNavView : NavigationRailView {
         super(context, attrs, defStyleAttr)
 
     init {
-        setItemIconGravity(ITEM_ICON_GRAVITY_TOP)
-        setItemGravity(ITEM_GRAVITY_TOP_CENTER)
-        setItemActiveIndicatorExpandedHeight(itemActiveIndicatorHeight)
+        if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setItemIconGravity(ITEM_ICON_GRAVITY_TOP)
+            setItemGravity(ITEM_GRAVITY_TOP_CENTER)
+            setItemActiveIndicatorExpandedHeight(itemActiveIndicatorHeight)
+            setItemActiveIndicatorExpandedPadding(0, 0, 0, 0)
+        }
         setItemActiveIndicatorExpandedMarginHorizontal(itemActiveIndicatorMarginHorizontal)
-        setItemActiveIndicatorExpandedPadding(0, 0, 0, 0)
     }
 
     private val sideNavMenuView: SideNavMenuView?
