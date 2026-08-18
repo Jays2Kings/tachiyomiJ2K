@@ -35,7 +35,7 @@ class LibraryCategoryGestureDetector(
             ).none {
                 val viewRect = Rect()
                 it.getGlobalVisibleRect(viewRect)
-                viewRect.contains(e.rawX.toInt(), e.rawY.toInt())
+                viewRect.contains(e.x.toInt(), e.y.toInt())
             }
         cancelled = !startingOnLibraryView
         return startingOnLibraryView
