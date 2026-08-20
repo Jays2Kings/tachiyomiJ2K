@@ -10,6 +10,7 @@ import eu.kanade.tachiyomi.data.database.models.LibraryManga
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
 import eu.kanade.tachiyomi.data.download.DownloadManager
+import eu.kanade.tachiyomi.data.library.CustomMangaManager
 import eu.kanade.tachiyomi.data.preference.DelayedLibrarySuggestionsJob
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.data.preference.minusAssign
@@ -58,6 +59,18 @@ import java.util.concurrent.TimeUnit
 import kotlin.math.roundToInt
 import kotlin.random.Random
 
+data class BulkEditState(
+    val commonStatus: Int?,
+    val commonSeriesType: Int?,
+    val sharedTags: List<BulkSharedTag>,
+)
+
+data class BulkSharedTag(
+    val name: String,
+    val isCustom: Boolean,
+    val removable: Boolean,
+)
+
 /**
  * Presenter of [LibraryController].
  */
@@ -69,6 +82,7 @@ class LibraryPresenter(
     private val downloadManager: DownloadManager = Injekt.get(),
     private val chapterFilter: ChapterFilter = Injekt.get(),
     private val trackManager: TrackManager = Injekt.get(),
+    private val customMangaManager: CustomMangaManager = Injekt.get(),
 ) : BaseCoroutinePresenter<LibraryController>() {
     private val context = preferences.context
     private val viewContext
@@ -1208,6 +1222,199 @@ class LibraryPresenter(
             }
         }
     }
+
+    fun getBulkEditState(mangaIds: List<Long>): BulkEditState {
+        val mangas = getBulkEditMangas(mangaIds)
+        if (mangas.isEmpty()) {
+            return BulkEditState(null, null, emptyList())
+        }
+
+        val commonStatus = mangas.map { it.status }.distinct().singleOrNull()
+        val commonSeriesType =
+            mangas
+                .map { it.seriesType(sourceManager = sourceManager) }
+                .distinct()
+                .singleOrNull()
+
+        val sharedTagNames =
+            mangas
+                .first()
+                .getGenres()
+                .orEmpty()
+                .filter { tag ->
+                    mangas.drop(1).all { manga ->
+                        manga.getGenres().orEmpty().any { it.equals(tag, ignoreCase = true) }
+                    }
+                }.distinctBy { it.lowercase(Locale.ROOT) }
+
+        val sharedTags =
+            sharedTagNames.map { tag ->
+                val isCustom =
+                    mangas.all { manga ->
+                        customTagsForManga(manga).any { it.equals(tag, ignoreCase = true) }
+                    }
+                BulkSharedTag(
+                    name = tag,
+                    isCustom = isCustom,
+                    // A shared tag is only removable when it is a custom addition on every
+                    // selected series. Source-provided tags still appear, but are protected.
+                    removable = isCustom,
+                )
+            }
+
+        return BulkEditState(commonStatus, commonSeriesType, sharedTags)
+    }
+
+    fun bulkEditManga(
+        mangaIds: List<Long>,
+        status: Int?,
+        seriesType: Int?,
+        tagsToAdd: List<String>,
+        tagsToRemove: List<String>,
+    ) {
+        val mangas = getBulkEditMangas(mangaIds)
+        if (mangas.isEmpty()) return
+
+        val cleanAdds =
+            tagsToAdd
+                .map { it.trim() }
+                .filter { it.isNotBlank() }
+                .distinctBy { it.lowercase(Locale.ROOT) }
+        val cleanRemovals =
+            tagsToRemove
+                .map { it.trim() }
+                .filter { it.isNotBlank() }
+                .distinctBy { it.lowercase(Locale.ROOT) }
+
+        presenterScope.launchIO {
+            val updates =
+                mangas.mapNotNull { manga ->
+                    val existing = customMangaManager.getCustomInfo(manga)
+                    var genres = manga.getGenres().orEmpty()
+                    var genreChanged = false
+                    var changed = false
+
+                    // Re-check source protection here as well as in the UI. This prevents a
+                    // source-provided tag from being removed even if the dialog state is stale.
+                    val removableForManga = customTagsForManga(manga)
+                    if (cleanRemovals.isNotEmpty()) {
+                        val nextGenres =
+                            genres.filterNot { current ->
+                                cleanRemovals.any { remove ->
+                                    remove.equals(current, ignoreCase = true) &&
+                                        removableForManga.any { it.equals(current, ignoreCase = true) }
+                                }
+                            }
+                        if (!sameTags(genres, nextGenres)) {
+                            genres = nextGenres
+                            genreChanged = true
+                            changed = true
+                        }
+                    }
+
+                    cleanAdds.forEach { tag ->
+                        if (genres.none { it.equals(tag, ignoreCase = true) }) {
+                            genres = genres + tag
+                            genreChanged = true
+                            changed = true
+                        }
+                    }
+
+                    if (seriesType != null) {
+                        val oldType = manga.seriesType(sourceManager = sourceManager)
+                        val nextGenres = setSeriesType(manga, seriesType, genres)
+                        if (!sameTags(genres, nextGenres)) {
+                            genres = nextGenres
+                            genreChanged = true
+                            changed = true
+                        }
+                        if (oldType != seriesType) {
+                            manga.viewer_flags = -1
+                            db.updateViewerFlags(manga).executeAsBlocking()
+                        }
+                    }
+
+                    val statusOverride =
+                        if (status != null) {
+                            status.takeUnless { it == manga.originalStatus }
+                        } else {
+                            existing?.status
+                        }
+                    if (status != null && statusOverride != existing?.status) {
+                        changed = true
+                    }
+
+                    if (!changed) return@mapNotNull null
+
+                    CustomMangaManager.MangaJson(
+                        id = manga.id,
+                        title = existing?.title,
+                        author = existing?.author,
+                        artist = existing?.artist,
+                        description = existing?.description,
+                        genre = if (genreChanged) customGenreOverride(manga, genres) else existing?.genre,
+                        status = statusOverride,
+                    )
+                }
+
+            if (updates.isNotEmpty()) {
+                customMangaManager.saveMangaInfo(updates)
+                withUIContext { updateManga() }
+            }
+        }
+    }
+
+    private fun getBulkEditMangas(mangaIds: List<Long>): List<Manga> {
+        val ids = mangaIds.toSet()
+        return allLibraryItems
+            .asSequence()
+            .map { it.manga }
+            .filter { it.id?.let(ids::contains) == true && !it.isLocal() }
+            .distinctBy { it.id }
+            .toList()
+    }
+
+    private fun customTagsForManga(manga: Manga): List<String> {
+        val customGenres = customMangaManager.getCustomInfo(manga)?.genre?.toList().orEmpty()
+        val originalGenres = manga.getOriginalGenres().orEmpty()
+        return customGenres.filter { custom ->
+            originalGenres.none { it.equals(custom, ignoreCase = true) }
+        }
+    }
+
+    private fun customGenreOverride(
+        manga: Manga,
+        genres: List<String>,
+    ): Array<String>? {
+        val originalGenres = manga.getOriginalGenres().orEmpty()
+        return genres
+            .takeUnless { sameTags(it, originalGenres) }
+            ?.toTypedArray()
+    }
+
+    private fun setSeriesType(
+        manga: Manga,
+        seriesType: Int,
+        genres: List<String>,
+    ): List<String> {
+        val tags = genres.toMutableList()
+        tags.removeAll { manga.isSeriesTag(it) }
+        when (seriesType) {
+            Manga.TYPE_MANGA -> tags.add("Manga")
+            Manga.TYPE_MANHUA -> tags.add("Manhua")
+            Manga.TYPE_MANHWA -> tags.add("Manhwa")
+            Manga.TYPE_COMIC -> tags.add("Comic")
+            Manga.TYPE_WEBTOON -> tags.add("Webtoon")
+        }
+        return tags
+    }
+
+    private fun sameTags(
+        first: List<String>,
+        second: List<String>,
+    ): Boolean =
+        first.size == second.size &&
+            first.zip(second).all { (a, b) -> a.equals(b, ignoreCase = true) }
 
     /** Called when Library Service updates a manga, update the item as well */
     fun updateManga() {
