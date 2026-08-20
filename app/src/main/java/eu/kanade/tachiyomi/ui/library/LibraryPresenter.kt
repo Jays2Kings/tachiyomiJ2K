@@ -1268,7 +1268,9 @@ class LibraryPresenter(
     fun bulkEditManga(
         mangaIds: List<Long>,
         status: Int?,
+        resetStatus: Boolean,
         seriesType: Int?,
+        resetSeriesType: Boolean,
         tagsToAdd: List<String>,
         tagsToRemove: List<String>,
     ) {
@@ -1320,27 +1322,38 @@ class LibraryPresenter(
                         }
                     }
 
-                    if (seriesType != null) {
+                    if (resetSeriesType || seriesType != null) {
                         val oldType = manga.seriesType(sourceManager = sourceManager)
-                        val nextGenres = setSeriesType(manga, seriesType, genres)
+                        val targetType =
+                            if (resetSeriesType) {
+                                manga.seriesType(useOriginalTags = true, sourceManager = sourceManager)
+                            } else {
+                                seriesType!!
+                            }
+                        val nextGenres =
+                            if (resetSeriesType) {
+                                restoreDefaultSeriesType(manga, genres)
+                            } else {
+                                setSeriesType(manga, targetType, genres)
+                            }
                         if (!sameTags(genres, nextGenres)) {
                             genres = nextGenres
                             genreChanged = true
                             changed = true
                         }
-                        if (oldType != seriesType) {
+                        if (oldType != targetType) {
                             manga.viewer_flags = -1
                             db.updateViewerFlags(manga).executeAsBlocking()
                         }
                     }
 
                     val statusOverride =
-                        if (status != null) {
-                            status.takeUnless { it == manga.originalStatus }
-                        } else {
-                            existing?.status
+                        when {
+                            resetStatus -> null
+                            status != null -> status.takeUnless { it == manga.originalStatus }
+                            else -> existing?.status
                         }
-                    if (status != null && statusOverride != existing?.status) {
+                    if ((resetStatus || status != null) && statusOverride != existing?.status) {
                         changed = true
                     }
 
@@ -1406,6 +1419,31 @@ class LibraryPresenter(
             Manga.TYPE_COMIC -> tags.add("Comic")
             Manga.TYPE_WEBTOON -> tags.add("Webtoon")
         }
+        return tags
+    }
+
+    private fun restoreDefaultSeriesType(
+        manga: Manga,
+        genres: List<String>,
+    ): List<String> {
+        val originalGenres = manga.getOriginalGenres().orEmpty()
+        val currentNonSeriesTags = genres.filterNot { manga.isSeriesTag(it) }
+        val originalNonSeriesTags = originalGenres.filterNot { manga.isSeriesTag(it) }
+
+        // If series type is the only tag-level override, restore the exact source list so
+        // the custom genre override can be removed completely.
+        if (sameTags(currentNonSeriesTags, originalNonSeriesTags)) {
+            return originalGenres
+        }
+
+        val tags = currentNonSeriesTags.toMutableList()
+        originalGenres
+            .filter { manga.isSeriesTag(it) }
+            .forEach { originalTag ->
+                if (tags.none { it.equals(originalTag, ignoreCase = true) }) {
+                    tags += originalTag
+                }
+            }
         return tags
     }
 

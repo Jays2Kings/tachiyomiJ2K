@@ -50,7 +50,8 @@ class BulkEditMangaDialog : DialogController {
 
         val statusEntries =
             listOf(activity!!.getString(R.string.bulk_edit_default)) +
-                resources!!.getStringArray(R.array.manga_statuses).toList()
+                resources!!.getStringArray(R.array.manga_statuses).toList() +
+                activity!!.getString(R.string.source_default)
         binding.mangaStatus.setEntries(statusEntries)
         val initialStatusPosition =
             initialState.commonStatus
@@ -60,7 +61,8 @@ class BulkEditMangaDialog : DialogController {
 
         val seriesTypeEntries =
             listOf(activity!!.getString(R.string.bulk_edit_default)) +
-                resources!!.getStringArray(R.array.series_type).toList()
+                resources!!.getStringArray(R.array.series_type).toList() +
+                activity!!.getString(R.string.source_default)
         binding.seriesType.setEntries(seriesTypeEntries)
         val initialSeriesTypePosition = initialState.commonSeriesType ?: DEFAULT_POSITION
         binding.seriesType.setSelection(initialSeriesTypePosition)
@@ -75,24 +77,30 @@ class BulkEditMangaDialog : DialogController {
             .setNegativeButton(android.R.string.cancel, null)
             .setPositiveButton(R.string.save) { _, _ ->
                 val selectedStatusPosition = binding.mangaStatus.selectedPosition
+                val resetStatus = selectedStatusPosition == statusEntries.lastIndex
                 val status =
                     selectedStatusPosition
                         .takeIf {
                             it != DEFAULT_POSITION &&
+                                it != statusEntries.lastIndex &&
                                 it != initialStatusPosition
                         }?.minus(1)
 
                 val selectedSeriesTypePosition = binding.seriesType.selectedPosition
+                val resetSeriesType = selectedSeriesTypePosition == seriesTypeEntries.lastIndex
                 val seriesType =
                     selectedSeriesTypePosition.takeIf {
                         it != DEFAULT_POSITION &&
+                            it != seriesTypeEntries.lastIndex &&
                             it != initialSeriesTypePosition
                     }
 
                 libraryController.presenter.bulkEditManga(
                     mangaIds = mangaIds.toList(),
                     status = status,
+                    resetStatus = resetStatus,
                     seriesType = seriesType,
+                    resetSeriesType = resetSeriesType,
                     tagsToAdd = tagsToAdd,
                     tagsToRemove = tagsToRemove,
                 )
