@@ -259,7 +259,6 @@
     <string name="no_network_connection">네트워크 연결 사용 불가능</string>
     <string name="common">일반</string>
     <string name="open_in_webview">웹뷰로 열기</string>
-    <string name="true_32bit_color">32비트 컬러</string>
     <string name="skip_read_chapters">읽음 표시된 챕터 건너뛰기</string>
     <string name="color_filter_blend_mode">컬러 필터 블렌딩 모드</string>
     <string name="overlay">오버레이</string>
@@ -327,7 +326,6 @@
     <string name="pref_webtoon_side_padding">모서리 여백</string>
     <string name="none">없음</string>
     <string name="getting_started_guide">초기 설정 도움말</string>
-    <string name="webtoon_side_padding_0">없음</string>
     <plurals name="restore_completed_message">
         <item quantity="other">소요 시간: %1$s, 발생한 오류: %2$s</item>
     </plurals>
@@ -336,7 +334,6 @@
     <string name="hide_notification_content">알림 내용 숨기기</string>
     <string name="updating_library">서재 업데이트 중</string>
     <string name="channel_errors">오류</string>
-    <string name="reduces_banding_impacts_performance">컬러 밴딩을 줄이지만 성능에 영향을 줄 수 있음</string>
     <string name="always_show_chapter_transition">회차 변경 항상 표시</string>
     <string name="set_as_default">기본값으로 설정</string>
     <plurals name="after_minutes">
@@ -364,9 +361,6 @@
     <string name="date_format">날짜 표시 형식</string>
     <string name="security">보안</string>
     <string name="progress">진행 상황</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
     <string name="tracking_info">트래킹 서비스에 읽은 진행 상황을 업데이트합니다. 트래킹 버튼을 이용하여 각각의 만화 별로 트래킹 서비스를 설정하세요.</string>
     <string name="enhanced_services">향상된 서비스</string>
     <string name="enhanced_tracking_info">특정 소스에 향상된 서비스를 제공합니다. 서재에 만화가 추가될 시 자동으로 트래킹이 활성화 됩니다.</string>
@@ -376,7 +370,6 @@
     <string name="about_dont_kill_my_app">일부 제조사는 백그라운드 서비스를 종료하는 추가적인 제한 사항이 있습니다. 자세한 사항은 웹사이트를 참조하세요.</string>
     <string name="battery_optimization_disabled">배터리 최적화가 이미 꺼져 있습니다</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Shizuku를 확장 앱 인스톨러로 사용하려면 Shizuku를 먼저 설치해 주세요.</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="cancel_all_for_series">이 만화의 항목을 모두 취소</string>
     <string name="no_chapters_error">검색된 회차가 없습니다</string>
     <string name="download_queue_size_warning">경고: 대량 다운로드는 소스가 느려지거나 Tachiyomi를 차단할 수 있습니다. 탭하여 자세히 알아보기.</string>
@@ -645,7 +638,6 @@
     <string name="grouped">그룹화</string>
     <string name="added_">%1$s 추가됨</string>
     <string name="search_tips_show_periodically">검색 팁이 주기적으로 표시됩니다. 추천 검색어를 길게 눌러 검색하세요.</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">기본 사용자 에이전트 문자열</string>
     <string name="loader_rar5_error">RARv5 포맷은 지원되지 않습니다</string>
     <string name="double_pages">더블 페이지</string>
@@ -1046,4 +1038,10 @@
     <string name="ext_installer_summary">안드로이드 12 이하 기기에서 사용자 개입 없이 확장 기능 설치와 업데이트가 가능하도록 합니다</string>
     <string name="save_pages_separately">각각의 폴더에 페이지 저장</string>
     <string name="create_folders_by_manga_title">만화 제목을 따라 폴더 생성</string>
+    <plurals name="num_sources">
+        <item quantity="other">%1$d개 소스</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="other">%1$d페이지</item>
+    </plurals>
 </resources>
