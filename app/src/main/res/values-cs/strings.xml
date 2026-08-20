@@ -263,7 +263,6 @@
     <string name="no_results_found">Nenalezeny žádné výsledky</string>
     <string name="obsolete">Zastaralý</string>
     <string name="obsolete_extension_message">Tohle rozšíření již není dostupné.</string>
-    <string name="true_32bit_color">32-bitová barva</string>
     <string name="color_filter_blend_mode">Režim mísení filtru barev</string>
     <string name="overlay">Překrytí</string>
     <string name="multiply">Násobení</string>
@@ -306,11 +305,6 @@
     <string name="invalid_backup_file_type">Neplatný typ souboru se zálohou: %1$s
 \nSoubor by měl končit na .proto.gz nebo .json.</string>
     <string name="invalid_backup_file">Neplatný soubor se zálohou</string>
-    <string name="webtoon_side_padding_25">25%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_0">Žádné</string>
     <string name="right_and_left_nav">Vpravo a Vlevo</string>
     <string name="l_nav">Ve tvaru písmene L</string>
     <string name="secure_screen">Chráněná obrazovka</string>
@@ -688,7 +682,6 @@
     <string name="channel_errors">Chyby</string>
     <string name="download_queue_size_warning">Varování: hromadné stahování může vést k tomu, že zdroje zpomalí a/nebo zablokují Tachiyomi. Klepnutím se dozvíte více.</string>
     <string name="every_3_days">Každé 3 dny</string>
-    <string name="reduces_banding_impacts_performance">Snižuje pruhování barev, ale může mít vliv na výkon</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K požaduje přístup ke všem souborům v Android 11, aby mohlo stahovat kapitoly, vytvářet zálohy a načíst lokálně uložené publikace.
 \n
 \nNa obrazovce povolte \"Povolit aplikaci přístup ke všem souborům.\"</string>
@@ -1014,7 +1007,6 @@
     <string name="no_new_chapters_open_details">Pokud nejsou k dispozici žádné nové kapitoly, otevřou se místo toho podrobnosti o sérii</string>
     <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů publikací v knihovně, které byly aktualizovány.
 \nAktuálně používáno: %1$s</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Výchozí řetězec uživatelského agenta</string>
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
@@ -1115,4 +1107,31 @@
     <string name="confirm_repo_deletion">Odstranit repozitář</string>
     <string name="delete_repo_confirmation">Přejete si odstranit repozitář \"%s\"?</string>
     <string name="url_not_set_click_again">URL repozitáře není nastavena, upravte prosím URL</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d zdroj</item>
+        <item quantity="few">%1$d zdroje</item>
+        <item quantity="many">%1$d zdrojů</item>
+        <item quantity="other">%1$d zdrojů</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d stránka</item>
+        <item quantity="few">%1$d stránky</item>
+        <item quantity="many">%1$d stránek</item>
+        <item quantity="other">%1$d stránek</item>
+    </plurals>
+    <string name="library_search_filters">Zobrazit záznamy, které…</string>
+    <string name="library_optional_search_filters">Zobrazit záznamy, které případně…</string>
+    <string name="search_operator_and">Zahrnout</string>
+    <string name="search_operator_not">Vyloučit</string>
+    <string name="search_toggle_optional">Nastavte tento filtr jako volitelný</string>
+    <string name="search_exactly">Přímo</string>
+    <string name="search_between">Mezi</string>
+    <string name="search_more_than">Více než</string>
+    <string name="search_less_than">Méně než</string>
+    <string name="search_fewer_than">O méně než</string>
+    <string name="search_after">Po</string>
+    <string name="search_before">Před</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Označit duplicitně přečtenou kapitolu jako přečtenou</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Po přečtení kapitoly</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Po načtení nové kapitoly</string>
 </resources>
