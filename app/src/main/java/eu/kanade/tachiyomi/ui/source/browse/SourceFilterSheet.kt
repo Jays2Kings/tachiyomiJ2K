@@ -22,9 +22,7 @@ import eu.kanade.tachiyomi.widget.StickyFooterBottomSheetDialog
 
 class SourceFilterSheet(
     val activity: Activity,
-) : StickyFooterBottomSheetDialog<SourceFilterSheetBinding>(activity),
-    FlexibleAdapter.OnItemClickListener,
-    FlexibleAdapter.OnItemLongClickListener {
+) : StickyFooterBottomSheetDialog<SourceFilterSheetBinding>(activity) {
     private var filterChanged = true
 
     val adapter: FlexibleAdapter<IFlexible<*>> =
@@ -92,15 +90,6 @@ class SourceFilterSheet(
         binding.filtersRecycler.clipToPadding = false
         binding.filtersRecycler.adapter = adapter
         binding.filtersRecycler.setHasFixedSize(false)
-        adapter.addListener(this)
-    }
-
-    override fun onItemClick(
-        view: View?,
-        position: Int,
-    ): Boolean = true
-
-    override fun onItemLongClick(position: Int) {
     }
 
     fun setCardViewMax(topInset: Int) {

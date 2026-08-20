@@ -353,10 +353,14 @@ open class BrowseSourcePresenter(
         query = savedSearch.query ?: ""
         sourceFilters = source.getFilterList()
         savedSearch.filtersJson?.let {
-            val json =
-                kotlinx.serialization.json.Json
-                    .decodeFromString<kotlinx.serialization.json.JsonArray>(it)
-            filterSerializer.deserialize(sourceFilters, json)
+            try {
+                val json =
+                    kotlinx.serialization.json.Json
+                        .decodeFromString<kotlinx.serialization.json.JsonArray>(it)
+                filterSerializer.deserialize(sourceFilters, json)
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to restore filters for saved search ${savedSearch.name}")
+            }
         }
         filterItems = sourceFilters.toItems()
     }

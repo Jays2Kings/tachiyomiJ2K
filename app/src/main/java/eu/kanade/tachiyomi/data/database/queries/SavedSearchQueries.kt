@@ -6,16 +6,6 @@ import eu.kanade.tachiyomi.data.database.models.SavedSearch
 import eu.kanade.tachiyomi.data.database.tables.SavedSearchTable
 
 interface SavedSearchQueries : DbProvider {
-    fun getSavedSearches() =
-        db
-            .get()
-            .listOfObjects(SavedSearch::class.java)
-            .withQuery(
-                Query
-                    .builder()
-                    .table(SavedSearchTable.TABLE)
-                    .build(),
-            ).prepare()
 
     fun getSavedSearches(sourceId: Long) =
         db
@@ -32,9 +22,5 @@ interface SavedSearchQueries : DbProvider {
 
     fun insertSavedSearch(savedSearch: SavedSearch) = db.put().`object`(savedSearch).prepare()
 
-    fun insertSavedSearches(savedSearches: List<SavedSearch>) = db.put().objects(savedSearches).prepare()
-
     fun deleteSavedSearch(savedSearch: SavedSearch) = db.delete().`object`(savedSearch).prepare()
-
-    fun deleteSavedSearches(savedSearches: List<SavedSearch>) = db.delete().objects(savedSearches).prepare()
 }
