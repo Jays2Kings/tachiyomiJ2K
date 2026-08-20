@@ -190,7 +190,7 @@
     <string name="latest">Новинки</string>
     <string name="browse">Огляд</string>
     <string name="description">Опис</string>
-    <string name="ongoing">Онгоінг</string>
+    <string name="ongoing">Триває</string>
     <string name="unknown">Невідомо</string>
     <string name="licensed">Ліцензовано</string>
     <string name="added_to_library">Додати до бібліотеки</string>
@@ -257,7 +257,6 @@
     <string name="download_paused">Завантаження призупинено</string>
     <string name="common">Звичайний</string>
     <string name="open_in_webview">Відкрити у webview</string>
-    <string name="true_32bit_color">32-бітний колір</string>
     <string name="skip_read_chapters">Пропускати розділи, відмічені як прочитані</string>
     <string name="color_filter_blend_mode">Режим накладання кольорового фільтру</string>
     <string name="overlay">Оверлей</string>
@@ -295,17 +294,11 @@
         <item quantity="many">%d оновлень для розширень доступні</item>
         <item quantity="other">%d оновлень для розширень доступні</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Зменшує смугастість, але може вплинути на продуктивність</string>
     <string name="skip_filtered_chapters">Пропускати відфільтровані розділи</string>
     <string name="continuous_vertical">Безперервний вертикальний</string>
     <string name="paged">Посторінково</string>
     <string name="always_show_chapter_transition">Завжди показувати перехід між розділами</string>
     <string name="pref_webtoon_side_padding">Бічний відступ</string>
-    <string name="webtoon_side_padding_0">Без меж</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Розділи %1$s</string>
     <string name="remove_from_library">Видалити з бібліотеки</string>
     <string name="refresh_tracking">Оновити відстеження</string>
@@ -1037,7 +1030,6 @@
     <string name="tap_zones">Зони тицяння</string>
     <string name="lavender">Лаванда</string>
     <string name="violet">Фіолетовий</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Типовий user agent</string>
     <string name="loader_rar5_error">Формат RARv5 не підтримується</string>
     <string name="downloaded_chapters">Завантажені розділи</string>
