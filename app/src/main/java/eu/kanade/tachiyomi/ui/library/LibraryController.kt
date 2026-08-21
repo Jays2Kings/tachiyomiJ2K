@@ -2415,7 +2415,9 @@ open class LibraryController(
         val migrationItem = menu.findItem(R.id.action_migrate)
         val shareItem = menu.findItem(R.id.action_share)
         val categoryItem = menu.findItem(R.id.action_move_to_category)
+        val editItem = menu.findItem(R.id.action_edit_manga)
         categoryItem.isVisible = presenter.allCategories.size > 1
+        editItem.isVisible = selectedMangas.isNotEmpty() && selectedMangas.all { !it.isLocal() }
         migrationItem.isVisible = selectedMangas.any { it.source != LocalSource.ID }
         shareItem.isVisible = migrationItem.isVisible
         if (count == 0) {
@@ -2433,6 +2435,12 @@ open class LibraryController(
     ): Boolean {
         when (item.itemId) {
             R.id.action_move_to_category -> showChangeMangaCategoriesSheet()
+            R.id.action_edit_manga -> {
+                val ids = selectedMangas.mapNotNull { it.id }.distinct().toLongArray()
+                if (ids.isNotEmpty()) {
+                    BulkEditMangaDialog(this, ids).showDialog(router)
+                }
+            }
             R.id.action_share -> shareManga()
             R.id.action_delete -> {
                 val options =

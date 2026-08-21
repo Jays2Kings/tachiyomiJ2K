@@ -606,6 +606,9 @@
     <string name="sort_by_chapter_number">Sort by chapter number</string>
     <string name="newest_first">Newest to oldest</string>
     <string name="oldest_first">Oldest to newest</string>
+    <string name="shared_tags">Shared tags</string>
+    <string name="bulk_edit_default">Default</string>
+    <string name="source_default">Source default</string>
     <string name="add_tag">Add tag</string>
     <string name="clear_tags">Clear tags</string>
     <string name="reset_tags">Reset tags</string>

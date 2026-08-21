@@ -56,6 +56,29 @@ class CustomMangaManager(
     }
 
     fun saveMangaInfo(manga: MangaJson) {
+        updateMangaInfo(manga)
+        saveCustomInfo()
+    }
+
+    fun saveMangaInfo(mangas: List<MangaJson>) {
+        mangas.forEach(::updateMangaInfo)
+        saveCustomInfo()
+    }
+
+    fun getCustomInfo(manga: Manga): MangaJson? {
+        val custom = customMangaMap[manga.id] ?: return null
+        return MangaJson(
+            id = manga.id,
+            title = custom.title.takeUnless { it.isBlank() },
+            author = custom.author,
+            artist = custom.artist,
+            description = custom.description,
+            genre = custom.getGenres()?.toTypedArray(),
+            status = custom.status.takeUnless { it == -1 },
+        )
+    }
+
+    private fun updateMangaInfo(manga: MangaJson) {
         val mangaId = manga.id ?: return
         if (manga.title == null &&
             manga.author == null &&
@@ -68,7 +91,6 @@ class CustomMangaManager(
         } else {
             customMangaMap[mangaId] = manga.toManga()
         }
-        saveCustomInfo()
     }
 
     private fun saveCustomInfo() {
@@ -76,6 +98,8 @@ class CustomMangaManager(
         if (jsonElements.isNotEmpty()) {
             editJson.delete()
             editJson.writeText(Json.encodeToString(MangaList(jsonElements)))
+        } else {
+            editJson.delete()
         }
     }
 
