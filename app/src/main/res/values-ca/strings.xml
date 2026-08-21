@@ -259,7 +259,6 @@
     <string name="download_paused">Baixada pausada</string>
     <string name="common">Comú</string>
     <string name="open_in_webview">Obre en una visualització web</string>
-    <string name="true_32bit_color">Color de 32 bits</string>
     <string name="skip_read_chapters">Omet els capítols marcats com a llegits</string>
     <string name="color_filter_blend_mode">Mode de mescla del filtre de color</string>
     <string name="overlay">Sobreposa</string>
@@ -285,7 +284,6 @@
         <item quantity="many">Hi ha actualitzacions de %d extensions</item>
         <item quantity="other">Hi ha actualitzacions de %d extensions</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Redueix les bandes de colors, però pot afectar el rendiment</string>
     <string name="skip_filtered_chapters">Omet els capítols filtrats</string>
     <string name="continuous_vertical">Continu en vertical</string>
     <string name="paged">Paginat</string>
@@ -305,11 +303,6 @@
     <string name="view_chapters">Mostra els capítols</string>
     <string name="always_show_chapter_transition">Mostra sempre la transició de capítol</string>
     <string name="pref_webtoon_side_padding">Espaiat lateral</string>
-    <string name="webtoon_side_padding_0">Cap</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Capítols %1$s</string>
     <string name="remove_from_library">Elimina de la biblioteca</string>
     <string name="add_tracking">Segueix</string>
@@ -620,7 +613,6 @@
     <string name="tap_zones">Zones de toc</string>
     <string name="lavender">Lavanda</string>
     <string name="no_description">Sense descripció</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Cadena d’agent d’usuari per defecte</string>
     <string name="loader_rar5_error">El format RARv5 no està suportat</string>
     <string name="downloaded_chapters">Capítols baixats</string>
@@ -815,4 +807,24 @@
     <string name="pref_debug_info">Informació de depuració</string>
     <string name="label_background_activity">Activitat en segon pla</string>
     <string name="apply">Aplica</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d font</item>
+        <item quantity="many">%1$d fonts</item>
+        <item quantity="other">%1$d fonts</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d pàgina</item>
+        <item quantity="many">%1$d pàgines</item>
+        <item quantity="other">%1$d pàgines</item>
+    </plurals>
+    <string name="library_search_filters">Mostra elements que…</string>
+    <string name="library_optional_search_filters">Mostra els elements que opcionalment…</string>
+    <string name="search_operator_and">Inclou</string>
+    <string name="search_operator_not">Exclou</string>
+    <string name="search_toggle_optional">Fes que aquest filtre sigui opcional</string>
+    <string name="search_exactly">Exactament</string>
+    <string name="search_between">Entre</string>
+    <string name="search_more_than">Més que</string>
+    <string name="search_less_than">Menys que</string>
+    <string name="search_fewer_than">Menys que</string>
 </resources>
