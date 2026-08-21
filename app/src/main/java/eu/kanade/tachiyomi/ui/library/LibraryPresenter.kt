@@ -1256,9 +1256,7 @@ class LibraryPresenter(
                 BulkSharedTag(
                     name = tag,
                     isCustom = isCustom,
-                    // A shared tag is only removable when it is a custom addition on every
-                    // selected series. Source-provided tags still appear, but are protected.
-                    removable = isCustom,
+                    removable = true,
                 )
             }
 
@@ -1296,15 +1294,11 @@ class LibraryPresenter(
                     var genreChanged = false
                     var changed = false
 
-                    // Re-check source protection here as well as in the UI. This prevents a
-                    // source-provided tag from being removed even if the dialog state is stale.
-                    val removableForManga = customTagsForManga(manga)
                     if (cleanRemovals.isNotEmpty()) {
                         val nextGenres =
                             genres.filterNot { current ->
                                 cleanRemovals.any { remove ->
-                                    remove.equals(current, ignoreCase = true) &&
-                                        removableForManga.any { it.equals(current, ignoreCase = true) }
+                                    remove.equals(current, ignoreCase = true)
                                 }
                             }
                         if (!sameTags(genres, nextGenres)) {
