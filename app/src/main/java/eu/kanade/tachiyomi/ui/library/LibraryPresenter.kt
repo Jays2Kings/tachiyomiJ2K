@@ -63,6 +63,7 @@ data class BulkEditState(
     val commonStatus: Int?,
     val commonSeriesType: Int?,
     val sharedTags: List<BulkSharedTag>,
+    val sourceSharedTags: List<BulkSharedTag>,
 )
 
 data class BulkSharedTag(
@@ -1226,7 +1227,7 @@ class LibraryPresenter(
     fun getBulkEditState(mangaIds: List<Long>): BulkEditState {
         val mangas = getBulkEditMangas(mangaIds)
         if (mangas.isEmpty()) {
-            return BulkEditState(null, null, emptyList())
+            return BulkEditState(null, null, emptyList(), emptyList())
         }
 
         val commonStatus = mangas.map { it.status }.distinct().singleOrNull()
@@ -1259,8 +1260,19 @@ class LibraryPresenter(
                     removable = true,
                 )
             }
+        val sourceSharedTags =
+            mangas
+                .first()
+                .getOriginalGenres()
+                .orEmpty()
+                .filter { tag ->
+                    mangas.drop(1).all { manga ->
+                        manga.getOriginalGenres().orEmpty().any { it.equals(tag, ignoreCase = true) }
+                    }
+                }.distinctBy { it.lowercase(Locale.ROOT) }
+                .map { tag -> BulkSharedTag(tag, isCustom = false, removable = true) }
 
-        return BulkEditState(commonStatus, commonSeriesType, sharedTags)
+        return BulkEditState(commonStatus, commonSeriesType, sharedTags, sourceSharedTags)
     }
 
     fun bulkEditManga(
@@ -1269,6 +1281,7 @@ class LibraryPresenter(
         resetStatus: Boolean,
         seriesType: Int?,
         resetSeriesType: Boolean,
+        resetTags: Boolean,
         tagsToAdd: List<String>,
         tagsToRemove: List<String>,
     ) {
@@ -1293,6 +1306,15 @@ class LibraryPresenter(
                     var genres = manga.getGenres().orEmpty()
                     var genreChanged = false
                     var changed = false
+
+                    if (resetTags) {
+                        val sourceGenres = manga.getOriginalGenres().orEmpty()
+                        if (!sameTags(genres, sourceGenres) || existing?.genre != null) {
+                            genres = sourceGenres
+                            genreChanged = true
+                            changed = true
+                        }
+                    }
 
                     if (cleanRemovals.isNotEmpty()) {
                         val nextGenres =
@@ -1382,7 +1404,12 @@ class LibraryPresenter(
     }
 
     private fun customTagsForManga(manga: Manga): List<String> {
-        val customGenres = customMangaManager.getCustomInfo(manga)?.genre?.toList().orEmpty()
+        val customGenres =
+            customMangaManager
+                .getCustomInfo(manga)
+                ?.genre
+                ?.toList()
+                .orEmpty()
         val originalGenres = manga.getOriginalGenres().orEmpty()
         return customGenres.filter { custom ->
             originalGenres.none { it.equals(custom, ignoreCase = true) }

@@ -27,6 +27,7 @@ class BulkEditMangaDialog : DialogController {
     private val displayedTags = mutableListOf<BulkSharedTag>()
     private val tagsToAdd = mutableListOf<String>()
     private val tagsToRemove = mutableListOf<String>()
+    private var resetTags = false
 
     private val libraryController
         get() = targetController as LibraryController
@@ -68,6 +69,17 @@ class BulkEditMangaDialog : DialogController {
         binding.seriesType.setSelection(initialSeriesTypePosition)
 
         setupTagEditor()
+        binding.resetTags.setOnClickListener {
+            resetTags = true
+            tagsToAdd.clear()
+            tagsToRemove.clear()
+            displayedTags.clear()
+            displayedTags += initialState.sourceSharedTags
+            binding.addTagEditText.text?.clear()
+            binding.addTagEditText.isVisible = false
+            binding.addTagChip.isVisible = true
+            renderSharedTags()
+        }
         renderSharedTags()
 
         return activity!!
@@ -101,6 +113,7 @@ class BulkEditMangaDialog : DialogController {
                     resetStatus = resetStatus,
                     seriesType = seriesType,
                     resetSeriesType = resetSeriesType,
+                    resetTags = resetTags,
                     tagsToAdd = tagsToAdd,
                     tagsToRemove = tagsToRemove,
                 )
@@ -155,7 +168,8 @@ class BulkEditMangaDialog : DialogController {
     private fun addTag(tag: String) {
         if (displayedTags.any { it.name.equals(tag, ignoreCase = true) }) return
 
-        val originalTag = initialState.sharedTags.find { it.name.equals(tag, ignoreCase = true) }
+        val originalTags = if (resetTags) initialState.sourceSharedTags else initialState.sharedTags
+        val originalTag = originalTags.find { it.name.equals(tag, ignoreCase = true) }
         if (originalTag != null) {
             tagsToRemove.removeAll { it.equals(tag, ignoreCase = true) }
             displayedTags += originalTag
@@ -202,7 +216,10 @@ class BulkEditMangaDialog : DialogController {
         }
     }
 
-    private fun applyTagColors(chip: Chip, tag: BulkSharedTag) {
+    private fun applyTagColors(
+        chip: Chip,
+        tag: BulkSharedTag,
+    ) {
         val backgroundAttr =
             if (tag.isCustom) {
                 androidx.appcompat.R.attr.colorPrimary
