@@ -88,6 +88,8 @@ class BulkEditMangaDialog : DialogController {
             .setView(binding.root)
             .setNegativeButton(android.R.string.cancel, null)
             .setPositiveButton(R.string.save) { _, _ ->
+                addTags(false)
+
                 val selectedStatusPosition = binding.mangaStatus.selectedPosition
                 val resetStatus = selectedStatusPosition == statusEntries.lastIndex
                 val status =
