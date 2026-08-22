@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.data.database.mappers.ChapterTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.HistoryTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.MangaCategoryTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.MangaTypeMapping
+import eu.kanade.tachiyomi.data.database.mappers.SavedSearchTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.SearchMetadataTypeMapping
 import eu.kanade.tachiyomi.data.database.mappers.TrackTypeMapping
 import eu.kanade.tachiyomi.data.database.models.Category
@@ -15,6 +16,7 @@ import eu.kanade.tachiyomi.data.database.models.Chapter
 import eu.kanade.tachiyomi.data.database.models.History
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.data.database.models.MangaCategory
+import eu.kanade.tachiyomi.data.database.models.SavedSearch
 import eu.kanade.tachiyomi.data.database.models.SearchMetadata
 import eu.kanade.tachiyomi.data.database.models.Track
 import eu.kanade.tachiyomi.data.database.queries.CategoryQueries
@@ -22,6 +24,7 @@ import eu.kanade.tachiyomi.data.database.queries.ChapterQueries
 import eu.kanade.tachiyomi.data.database.queries.HistoryQueries
 import eu.kanade.tachiyomi.data.database.queries.MangaCategoryQueries
 import eu.kanade.tachiyomi.data.database.queries.MangaQueries
+import eu.kanade.tachiyomi.data.database.queries.SavedSearchQueries
 import eu.kanade.tachiyomi.data.database.queries.SearchMetadataQueries
 import eu.kanade.tachiyomi.data.database.queries.TrackQueries
 import io.requery.android.database.sqlite.RequerySQLiteOpenHelperFactory
@@ -37,7 +40,8 @@ open class DatabaseHelper(
     CategoryQueries,
     MangaCategoryQueries,
     HistoryQueries,
-    SearchMetadataQueries {
+    SearchMetadataQueries,
+    SavedSearchQueries {
     private val configuration =
         SupportSQLiteOpenHelper.Configuration
             .builder(context)
@@ -56,6 +60,7 @@ open class DatabaseHelper(
             .addTypeMapping(MangaCategory::class.java, MangaCategoryTypeMapping())
             .addTypeMapping(SearchMetadata::class.java, SearchMetadataTypeMapping())
             .addTypeMapping(History::class.java, HistoryTypeMapping())
+            .addTypeMapping(SavedSearch::class.java, SavedSearchTypeMapping())
             .build()
 
     inline fun inTransaction(block: () -> Unit) = db.inTransaction(block)

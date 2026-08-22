@@ -11,6 +11,7 @@ import androidx.core.view.updatePaddingRelative
 import androidx.recyclerview.widget.RecyclerView
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
+import eu.kanade.tachiyomi.data.database.models.SavedSearch
 import eu.kanade.tachiyomi.databinding.SourceFilterSheetBinding
 import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.util.system.dpToPx
@@ -32,6 +33,12 @@ class SourceFilterSheet(
 
     var onResetClicked = {}
 
+    var onSaveClicked = {}
+
+    var onSavedSearchClicked: (SavedSearch) -> Unit = {}
+
+    var onSavedSearchLongClicked: (SavedSearch) -> Unit = {}
+
     override var recyclerView: RecyclerView? = binding.filtersRecycler
 
     override fun createBinding(inflater: LayoutInflater) = SourceFilterSheetBinding.inflate(inflater)
@@ -42,6 +49,7 @@ class SourceFilterSheet(
     init {
         binding.searchBtn.setOnClickListener { dismiss() }
         binding.resetBtn.setOnClickListener { onResetClicked() }
+        binding.saveBtn.setOnClickListener { onSaveClicked() }
 
         sheetBehavior.peekHeight = 450.dpToPx
         sheetBehavior.collapse()
@@ -128,6 +136,13 @@ class SourceFilterSheet(
     }
 
     fun setFilters(items: List<IFlexible<*>>) {
+        items.filterIsInstance<SavedSearchesItem>().forEach {
+            it.onSavedSearchClicked = { savedSearch ->
+                onSavedSearchClicked(savedSearch)
+                dismiss()
+            }
+            it.onSavedSearchLongClicked = onSavedSearchLongClicked
+        }
         adapter.updateDataSet(items)
     }
 }

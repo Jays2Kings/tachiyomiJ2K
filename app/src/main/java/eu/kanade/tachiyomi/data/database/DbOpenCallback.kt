@@ -7,6 +7,7 @@ import eu.kanade.tachiyomi.data.database.tables.ChapterTable
 import eu.kanade.tachiyomi.data.database.tables.HistoryTable
 import eu.kanade.tachiyomi.data.database.tables.MangaCategoryTable
 import eu.kanade.tachiyomi.data.database.tables.MangaTable
+import eu.kanade.tachiyomi.data.database.tables.SavedSearchTable
 import eu.kanade.tachiyomi.data.database.tables.TrackTable
 
 class DbOpenCallback : SupportSQLiteOpenHelper.Callback(DATABASE_VERSION) {
@@ -19,7 +20,7 @@ class DbOpenCallback : SupportSQLiteOpenHelper.Callback(DATABASE_VERSION) {
         /**
          * Version of the database.
          */
-        const val DATABASE_VERSION = 20
+        const val DATABASE_VERSION = 21
     }
 
     override fun onOpen(db: SupportSQLiteDatabase) {
@@ -46,11 +47,13 @@ class DbOpenCallback : SupportSQLiteOpenHelper.Callback(DATABASE_VERSION) {
             execSQL(CategoryTable.createTableQuery)
             execSQL(MangaCategoryTable.createTableQuery)
             execSQL(HistoryTable.createTableQuery)
+            execSQL(SavedSearchTable.createTableQuery)
 
             // DB indexes
             execSQL(MangaTable.createUrlIndexQuery)
             execSQL(MangaTable.createLibraryIndexQuery)
             execSQL(MangaTable.createSourceIndexQuery)
+            execSQL(SavedSearchTable.createSourceIndexQuery)
             execSQL(ChapterTable.createMangaIdIndexQuery)
             execSQL(ChapterTable.createUnreadChaptersIndexQuery)
             execSQL(ChapterTable.createUrlIndexQuery)
@@ -147,6 +150,10 @@ class DbOpenCallback : SupportSQLiteOpenHelper.Callback(DATABASE_VERSION) {
             db.execSQL(MangaTable.createSourceIndexQuery)
             // Redundant with the UNIQUE constraint on history_chapter_id
             db.execSQL(HistoryTable.dropChapterIdIndexQuery)
+        }
+        if (oldVersion < 21) {
+            db.execSQL(SavedSearchTable.createTableQuery)
+            db.execSQL(SavedSearchTable.createSourceIndexQuery)
         }
     }
 
