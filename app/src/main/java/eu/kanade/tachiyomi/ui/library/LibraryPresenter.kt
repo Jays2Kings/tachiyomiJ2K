@@ -1431,6 +1431,7 @@ class LibraryPresenter(
         seriesType: Int,
         genres: List<String>,
     ): List<String> {
+        if (manga.seriesType(sourceManager = sourceManager) == seriesType) return genres
         val tags = genres.toMutableList()
         tags.removeAll { manga.isSeriesTag(it) }
         when (seriesType) {
