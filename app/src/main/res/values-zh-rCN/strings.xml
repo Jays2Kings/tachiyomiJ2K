@@ -257,7 +257,6 @@
     <string name="download_paused">下载暂停</string>
     <string name="common">通用</string>
     <string name="open_in_webview">在WebView中打开</string>
-    <string name="true_32bit_color">32 位色彩</string>
     <string name="skip_read_chapters">跳过已读章节</string>
     <string name="color_filter_blend_mode">滤镜调和模式</string>
     <string name="help">帮助</string>
@@ -276,7 +275,6 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d个插件可更新</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">缓解色带问题，但可能会影响性能</string>
     <string name="skip_filtered_chapters">跳过筛选掉的章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已经关闭</string>
@@ -295,11 +293,6 @@
     <string name="paged">分页</string>
     <string name="always_show_chapter_transition">总是显示章节间的过渡页面</string>
     <string name="pref_webtoon_side_padding">侧边留白</string>
-    <string name="webtoon_side_padding_0">无</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">第 %1$s 章</string>
     <string name="remove_from_library">移出书架</string>
     <string name="refresh_tracking">刷新进度记录</string>
@@ -969,7 +962,6 @@
     <string name="tap_zones">点按区域</string>
     <string name="lavender">薰衣草</string>
     <string name="violet">紫罗兰</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="language_requires_app_restart">某些语言可能需要重启应用才能正确显示</string>
     <string name="user_agent_string">默认 User Agent 字符串</string>
     <string name="loader_rar5_error">不支持 RARv5 格式</string>
@@ -1060,4 +1052,23 @@
     <string name="invalid_repo_name">仓库网址无效</string>
     <string name="delete_repo_confirmation">确定要删除仓库“%s”吗？</string>
     <string name="error_repo_exists">此仓库网址已存在！</string>
+    <plurals name="num_sources">
+        <item quantity="other">%1$d 个图源</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="other">%1$d 页</item>
+    </plurals>
+    <string name="library_search_filters">显示符合条件的作品…</string>
+    <string name="library_optional_search_filters">显示符合筛选条件的作品…</string>
+    <string name="search_operator_and">包含</string>
+    <string name="search_operator_not">排除</string>
+    <string name="search_less_than">少于</string>
+    <string name="search_toggle_optional">将此筛选条件设为可选项</string>
+    <string name="search_exactly">恰好</string>
+    <string name="search_between">介于</string>
+    <string name="search_more_than">多于</string>
+    <string name="search_fewer_than">少于</string>
+    <string name="search_after">晚于</string>
+    <string name="search_before">早于</string>
+    <string name="pref_mark_duplicate_read_chapter_read">将重复的已读章节标记为已读</string>
 </resources>
