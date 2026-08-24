@@ -1088,4 +1088,20 @@
     <string name="unread_chapters">未読の章</string>
     <string name="all_enabled">すべて有効</string>
     <string name="replace">置き換え</string>
+    <string name="vertical_seekbar_dock_left">垂直バーを配置</string>
+    <string name="vertical_seekbar_height">垂直バーの高さ</string>
+    <string name="missing_chapters_count">%d 章不足しています</string>
+    <string name="missing_chapters_range">不足している %1$s 章</string>
+    <string name="tracked_privately">非公開で追跡</string>
+    <string name="add_tracking_privately">追跡を非公開で追加</string>
+    <string name="track_options">追跡オプション</string>
+    <string name="render_description_images">説明文に画像を表示</string>
+    <string name="pref_firebase">分析とクラッシュログ</string>
+    <string name="enable_analytics_summary">アプリの機能改善のために、匿名化された使用状況データを送信します</string>
+    <string name="sources_to_search">検索対象ソース</string>
+    <string name="show_duplicate_in_library_items">「重複」バッジを表示</string>
+    <string name="show_duplicate_in_library_items_summary">他の拡張機能からすでにライブラリに登録されている項目に対して、「重複」バッジを表示します。注：名前や URL の違いにより、重複が検出されない場合があります。</string>
+    <string name="finding_downloads">ダウンロードを検索中…</string>
+    <string name="concurrent_page_downloads_summary">ソースごとに同時にダウンロードされるページ数</string>
+    <string name="pinned_only">ピン留めのみ</string>
 </resources>
