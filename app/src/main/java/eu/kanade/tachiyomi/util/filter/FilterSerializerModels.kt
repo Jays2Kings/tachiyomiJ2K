@@ -10,7 +10,6 @@ import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonArray
@@ -175,12 +174,10 @@ class GroupSerializer(
         json: JsonObject,
         filter: Filter.Group<Any?>,
     ) {
-        json[STATE]!!.jsonArray.forEachIndexed { index, jsonElement ->
-            if (jsonElement !is JsonNull) {
-                @Suppress("UNCHECKED_CAST")
-                serializer.deserialize(filter.state[index] as Filter<Any?>, jsonElement.jsonObject)
-            }
-        }
+        @Suppress("UNCHECKED_CAST")
+        val subFilters = filter.state.filterIsInstance<Filter<Any?>>()
+        val state = json[STATE]?.jsonArray ?: return
+        serializer.deserializeMatchingByName(subFilters, state, parentName = filter.name)
     }
 
     override fun mappings() =
@@ -224,10 +221,9 @@ class SortSerializer(
         // Deserialize state
         filter.state =
             (json[STATE] as? JsonObject)?.let {
-                Filter.Sort.Selection(
-                    it[STATE_INDEX]!!.jsonPrimitive.int,
-                    it[STATE_ASCENDING]!!.jsonPrimitive.boolean,
-                )
+                val index = it[STATE_INDEX]?.jsonPrimitive?.int ?: return@let null
+                val ascending = it[STATE_ASCENDING]?.jsonPrimitive?.boolean ?: return@let null
+                Filter.Sort.Selection(index, ascending)
             }
     }
 

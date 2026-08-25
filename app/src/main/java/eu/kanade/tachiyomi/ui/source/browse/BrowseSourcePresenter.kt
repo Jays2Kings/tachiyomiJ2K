@@ -72,6 +72,10 @@ open class BrowseSourcePresenter(
 
     val filterSerializer = FilterSerializer()
 
+    /** Names of filters that couldn't be restored on the most recent [loadSearch] call. */
+    var lastSkippedFilterNames: List<String> = emptyList()
+        private set
+
     /**
      * Modifiable list of filters.
      */
@@ -352,12 +356,14 @@ open class BrowseSourcePresenter(
     fun loadSearch(savedSearch: SavedSearch) {
         query = savedSearch.query ?: ""
         sourceFilters = source.getFilterList()
+        lastSkippedFilterNames = emptyList()
         savedSearch.filtersJson?.let {
             try {
                 val json =
                     kotlinx.serialization.json.Json
                         .decodeFromString<kotlinx.serialization.json.JsonArray>(it)
                 filterSerializer.deserialize(sourceFilters, json)
+                lastSkippedFilterNames = filterSerializer.skippedFilterNames
             } catch (e: Exception) {
                 Timber.e(e, "Failed to restore filters for saved search ${savedSearch.name}")
             }

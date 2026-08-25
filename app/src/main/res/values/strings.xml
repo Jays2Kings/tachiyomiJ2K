@@ -1248,6 +1248,7 @@
     <string name="saved_searches_hold">Saved Searches (Hold to delete)</string>
     <string name="delete_search">Delete search</string>
     <string name="delete_search_confirmation">Are you sure you want to delete the saved search %1$s?</string>
+    <string name="filters_not_restored">Some filters could not be restored: %1$s</string>
     <string name="search">Search</string>
     <string name="search_">Search %1$s</string>
     <string name="select_all">Select all</string>

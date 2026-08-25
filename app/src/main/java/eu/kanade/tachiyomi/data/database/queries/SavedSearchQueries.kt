@@ -6,7 +6,6 @@ import eu.kanade.tachiyomi.data.database.models.SavedSearch
 import eu.kanade.tachiyomi.data.database.tables.SavedSearchTable
 
 interface SavedSearchQueries : DbProvider {
-
     fun getSavedSearches(sourceId: Long) =
         db
             .get()

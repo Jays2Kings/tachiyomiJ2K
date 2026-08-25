@@ -445,6 +445,15 @@ open class BrowseSourceController(
 
         sheet.onSavedSearchClicked = { savedSearch ->
             presenter.loadSearch(savedSearch)
+            if (presenter.lastSkippedFilterNames.isNotEmpty()) {
+                binding.sourceLayout.snack(
+                    activity!!.getString(
+                        R.string.filters_not_restored,
+                        presenter.lastSkippedFilterNames.joinToString(),
+                    ),
+                    Snackbar.LENGTH_LONG,
+                )
+            }
             showProgressBar()
             adapter?.clear()
             presenter.restartPager(presenter.query, presenter.sourceFilters)
