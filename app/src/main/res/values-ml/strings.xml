@@ -5,4 +5,12 @@
 \nഅടുത്ത സ്ക്രീനിൽ, \"എല്ലാ ഫയലുകളും നിയന്ത്രിക്കാൻ ആക്സസ് അനുവദിക്കുക\" പ്രവർത്തനക്ഷമമാക്കുക.</string>
     <string name="external_storage_download_notice">ചാപ്റ്ററുകൾ ഡൗൺലോഡ് ചെയ്യുന്നതിന് TachiyomiJ2K-ന് എല്ലാ ഫയലുകളിലേക്കും ആക്‌സസ് ആവശ്യമാണ്. ഇവിടെ ടാപ്പ് ചെയ്യുക, തുടർന്ന് \"എല്ലാ ഫയലുകളും മാനേജ് ചെയ്യാൻ ആക്സസ് അനുവദിക്കുക\" പ്രവർത്തനക്ഷമമാക്കുക.</string>
     <string name="all_files_permission_required">ഫയൽ അനുമതികൾ ആവശ്യമാണ്</string>
+    <string name="not_started">ആരംഭിച്ചിട്ടില്ല</string>
+    <string name="in_progress">പുരോഗതിയിൽ</string>
+    <string name="read">വായിക്കുക</string>
+    <string name="title">തലക്കെട്ട്</string>
+    <string name="description">വിവരണം</string>
+    <string name="move_x_to">%1$s ലേക്ക് മാറ്റുക…</string>
+    <string name="add_x_to">%1$s ലേക്ക് ചേർക്കുക…</string>
+    <string name="ongoing">തുടരുന്നു</string>
 </resources>
