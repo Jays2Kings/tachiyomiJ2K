@@ -343,8 +343,8 @@
     <string name="create_new_category">Yeni ulam oluştur</string>
     <string name="_already_in_queue">%1$s zaten kuyrukta</string>
     <plurals name="category_plural">
-        <item quantity="one">%d ulam</item>
-        <item quantity="other">%d ulam</item>
+        <item quantity="one">%d kategori</item>
+        <item quantity="other">%d kategori</item>
     </plurals>
     <plurals name="pages_left">
         <item quantity="one">%1$d sayfa kaldı</item>
@@ -587,8 +587,8 @@
     <string name="when_sorting_ignore_articles">Alfabetik olarak sıralarken, bir dizinin başlığının başındaki \"a, an, the\" tanımlıklarını yok sayarak sırala</string>
     <string name="sort_by_ignoring_articles">Makaleleri yok sayarak sırala</string>
     <plurals name="notification_and_n_more">
-        <item quantity="one">ve %1$d bölüm daha</item>
-        <item quantity="other">ve %1$d bölüm daha</item>
+        <item quantity="one">ve diğer %1$d bölüm</item>
+        <item quantity="other">ve diğer %1$d bölüm</item>
     </plurals>
     <plurals name="for_n_titles">
         <item quantity="one">%d başlık için</item>
@@ -630,8 +630,8 @@
     <string name="pressing_back_to_start">Geri gitmek, uygulamadan çıkmadan önce başlangıç ekranına döner</string>
     <string name="back_to_start">Başlangıç ekranına dön</string>
     <plurals name="copy_manga">
-        <item quantity="one">%1$d%2$s dizi kopyalansın mı?</item>
-        <item quantity="other">%1$d%2$s dizi kopyalansın mı?</item>
+        <item quantity="one">%1$d%2$s girdiyi kopyala?</item>
+        <item quantity="other">%1$d%2$s girdiyi kopyala?</item>
     </plurals>
     <string name="automatic_can_still_switch">Otomatik sayfa düzenini kullanırken, bu ayarı geçersiz kılmadan da, okuma sırasında düzenler arasında geçiş yapabilirsiniz</string>
     <string name="visit_recents_for_download_queue">İndirme sırasına erişim için En Son sekmesini ziyaret edin. Daha hızlı erişim için çift dokunabilir ya da basılı tutabilirsiniz</string>
@@ -642,12 +642,12 @@
     <string name="only_enable_enabled_for_migration">Yalnızca etkin kaynaklarınızı geçiş için etkinleştir</string>
     <string name="only_enable_pinned_for_migration">Yalnızca sabitlenmiş kaynaklarınızı geçiş için etkinleştir</string>
     <plurals name="manga_migrated">
-        <item quantity="one">%d dizi geçiş yaptı</item>
-        <item quantity="other">%d dizi geçiş yaptı</item>
+        <item quantity="one">%d girdi taşındı</item>
+        <item quantity="other">%d girdi taşındı</item>
     </plurals>
     <plurals name="migrate_manga">
-        <item quantity="one">%1$d%2$s diziye geçiş yapılsın mı?</item>
-        <item quantity="other">%1$d%2$s diziye geçiş yapılsın mı?</item>
+        <item quantity="one">%1$d%2$s girdiyi taşı?</item>
+        <item quantity="other">%1$d%2$s girdiyi taşı?</item>
     </plurals>
     <string name="no_chapters_found_for_migration">Bölüm bulunamadı, bu dizi geçiş için kullanılamaz</string>
     <string name="remove_downloads">İndirmeleri kaldır</string>
@@ -656,7 +656,7 @@
     <string name="not_downloaded">İndirilmedi</string>
     <string name="whats_new_this_release">Bu sürümdeki yenilikler</string>
     <string name="migration_sources_changed">Geçiş kaynakları değişti</string>
-    <string name="match_enabled_sources">Etkin kaynakları eşleştir</string>
+    <string name="match_enabled_sources">Aktif olan kaynakları eşleştir</string>
     <string name="match_pinned_sources">Sabitlenmiş kaynakları eşleştir</string>
     <string name="only_search_pinned_when">Yalnızca sabitlenmiş kaynakları ara</string>
     <plurals name="cleanup_done">
@@ -859,8 +859,8 @@
     <string name="teal_ocean">Mavi Okyanus</string>
     <string name="appearance">Görünüm</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">%d bölüm atlanıyor, ya kaynakta yok ya da süzgeçlenmiş</item>
-        <item quantity="other">%d bölüm atlanıyor, ya kaynakta yok ya da süzgeçlenmiş</item>
+        <item quantity="one">%d bölüm atlandı, kaynak mevcut değil ya da bölüm filtrelendi</item>
+        <item quantity="other">%d bölüm atlandı, kaynak mevcut değil ya da bölümler filtrelendi</item>
     </plurals>
     <string name="helpful_translation_links">Yararlı çeviri bağlantıları</string>
     <string name="help_translate">Çeviriye yardım edin</string>
@@ -1062,8 +1062,8 @@
     <string name="extension_api_error">Kullanılabilir uzantılar alınamadı</string>
     <string name="ext_revoke_trust">Güvenilen bilinmeyen uzantıları iptal et</string>
     <plurals name="num_repos">
-        <item quantity="one">%d depo</item>
-        <item quantity="other">%d depo</item>
+        <item quantity="one">%d mağaza</item>
+        <item quantity="other">%d mağaza</item>
     </plurals>
     <string name="action_add_repo">Depo ekle</string>
     <string name="repo_cannot_be_blank">Depo adı boş olamaz</string>
