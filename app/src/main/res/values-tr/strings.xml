@@ -454,7 +454,7 @@
     <string name="backup_has_no_manga">Yedek bir girdi içermiyor.</string>
     <string name="restore_missing_sources">Eksik kaynaklar:</string>
     <string name="restore_missing_trackers">Giriş yapılmamış izleyiciler:</string>
-    <string name="restore_content_full">Yedek dosyadaki veriler geri yüklenecek. \n\nEksik uzantıları yüklemeniz ve daha sonra bunları kullanmak için izleme hizmetlerinde oturum açmanız gerekecektir.</string>
+    <string name="restore_content_full">Yedek dosyasındaki veriler geri yüklenecek. \n\nEksik uzantıları yüklemeniz ve izleme hizmetlerini kullanabilmek için oturum açmanız gerekecektir.</string>
     <string name="restoring_backup_canceled">Geri yükleme iptal edildi</string>
     <string name="restore_duration">%02d dk, %02d sn</string>
     <plurals name="restore_completed_message">
