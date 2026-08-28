@@ -585,7 +585,7 @@
     <string name="check_for_extension_updates">Проверить обновления для расширений</string>
     <string name="only_search_pinned_when">Поиск только в закрепленных источниках</string>
     <string name="match_pinned_sources">Соответствие закрепленным</string>
-    <string name="match_enabled_sources">Соответствие включенным</string>
+    <string name="match_enabled_sources">Соответствие включённых источников</string>
     <string name="only_enable_pinned_for_migration">Включить закрепленные источники для переноса</string>
     <string name="only_enable_enabled_for_migration">Включить в текущий момент включенные источники для переноса</string>
     <string name="migration_sources_changed">Источники переноса изменены</string>
