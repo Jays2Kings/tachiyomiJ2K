@@ -1135,4 +1135,30 @@
     <string name="repo_cannot_be_blank">Ім\'я репозиторію не може бути порожнім</string>
     <string name="snack_repo_deleted">Репозиторій видалено</string>
     <string name="invalid_repo_name">Неправильна назва репозиторія</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d джерело</item>
+        <item quantity="few">%1$d джерела</item>
+        <item quantity="many">%1$d джерел</item>
+        <item quantity="other">%1$d джерел</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d сторінка</item>
+        <item quantity="few">%1$d сторінки</item>
+        <item quantity="many">%1$d сторінок</item>
+        <item quantity="other">%1$d сторінок</item>
+    </plurals>
+    <string name="library_search_filters">Показати записи, які…</string>
+    <string name="library_optional_search_filters">Показати записи, які додатково…</string>
+    <string name="search_operator_and">Включає</string>
+    <string name="search_operator_not">Виключає</string>
+    <string name="search_toggle_optional">Зробити цей фільтр опційним</string>
+    <string name="search_exactly">Точно</string>
+    <string name="search_between">Між</string>
+    <string name="search_more_than">Більше ніж</string>
+    <string name="search_less_than">Менше ніж</string>
+    <string name="search_fewer_than">Менше ніж</string>
+    <string name="search_after">Після</string>
+    <string name="search_before">Перед</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Позначити дублікат прочитаного розділу як прочитаний</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Після прочитання розділу</string>
 </resources>
