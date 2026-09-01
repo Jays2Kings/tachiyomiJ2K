@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="categories">Ulamlar</string>
+    <string name="categories">Kategoriler</string>
     <string name="manga">Kitaplık girdileri</string>
     <string name="chapters">Bölümler</string>
     <string name="tracking">İzleme</string>
