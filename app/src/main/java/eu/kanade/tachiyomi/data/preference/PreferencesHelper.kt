@@ -491,6 +491,8 @@ class PreferencesHelper(
 
     fun showDuplicateInLibraryItems() = flowPrefs.getBoolean("browse_show_duplicate_in_library_items", false)
 
+    fun expandSourceMangaDescription() = flowPrefs.getBoolean(Keys.expandSourceMangaDescription, false)
+
     // Tutorial preferences
     fun shownFilterTutorial() = flowPrefs.getBoolean("shown_filter_tutorial", false)
 

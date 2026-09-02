@@ -949,6 +949,8 @@
     <string name="hide_in_library_items">Hide entries already in library</string>
     <string name="show_duplicate_in_library_items">Show \"Duplicate\" badge</string>
     <string name="show_duplicate_in_library_items_summary">Display a \"Duplicate\" badge for entries already in library from another extension. Note: Some duplicates may not be detected due to differences in names or URLs.</string>
+    <string name="expand_source_manga_description">Expand manga descriptions from sources</string>
+    <string name="expand_source_manga_description_summary">Automatically expand the description when opening manga from a source</string>
     <string name="match_pinned_sources">Match pinned sources</string>
     <string name="match_enabled_sources">Match enabled sources</string>
     <string name="only_enable_pinned_for_migration">Only enable your pinned sources for

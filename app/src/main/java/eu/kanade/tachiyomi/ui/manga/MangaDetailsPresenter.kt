@@ -105,7 +105,12 @@ class MangaDetailsPresenter(
     var allHistory: List<History> = emptyList()
         private set
 
-    val headerItem by lazy { MangaHeaderItem(manga, view?.fromCatalogue == true) }
+    val headerItem by lazy {
+        MangaHeaderItem(
+            manga,
+            view?.fromCatalogue == true && preferences.expandSourceMangaDescription().get(),
+        )
+    }
     var tabletChapterHeaderItem: MangaHeaderItem? = null
     var allChapterScanlators: Set<String> = emptySet()
 
