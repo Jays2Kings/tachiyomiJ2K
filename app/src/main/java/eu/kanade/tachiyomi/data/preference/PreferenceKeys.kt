@@ -86,6 +86,8 @@ object PreferenceKeys {
 
     const val webtoonEnableZoomOut = "webtoon_enable_zoom_out"
 
+    const val webtoonDoubleTapZoom = "webtoon_double_tap_zoom"
+
     const val autoUpdateTrack = "pref_auto_update_manga_sync_key"
 
     const val trackMarkedAsRead = "track_marked_as_read"
