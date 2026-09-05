@@ -5,6 +5,7 @@ import eu.kanade.tachiyomi.data.cache.CoverCache
 import eu.kanade.tachiyomi.data.database.DatabaseHelper
 import eu.kanade.tachiyomi.data.database.models.Category
 import eu.kanade.tachiyomi.data.database.models.Manga
+import eu.kanade.tachiyomi.data.database.models.SavedSearch
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
 import eu.kanade.tachiyomi.source.CatalogueSource
@@ -26,6 +27,7 @@ import eu.kanade.tachiyomi.ui.source.filter.TextItem
 import eu.kanade.tachiyomi.ui.source.filter.TextSectionItem
 import eu.kanade.tachiyomi.ui.source.filter.TriStateItem
 import eu.kanade.tachiyomi.ui.source.filter.TriStateSectionItem
+import eu.kanade.tachiyomi.util.filter.FilterSerializer
 import eu.kanade.tachiyomi.util.manga.duplicateLibraryMangaIds
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -66,6 +68,14 @@ open class BrowseSourcePresenter(
     val page: Int
         get() = pager.currentPage
 
+    var savedSearches = mutableListOf<SavedSearch>()
+
+    val filterSerializer = FilterSerializer()
+
+    /** Names of filters that couldn't be restored on the most recent [loadSearch] call. */
+    var lastSkippedFilterNames: List<String> = emptyList()
+        private set
+
     /**
      * Modifiable list of filters.
      */
@@ -103,6 +113,7 @@ open class BrowseSourcePresenter(
         if (!::pager.isInitialized) {
             source = sourceManager.get(sourceId) as? CatalogueSource ?: return
 
+            loadSavedSearches()
             sourceFilters = source.getFilterList()
 
             if (oldFilters.isEmpty()) {
@@ -320,6 +331,46 @@ open class BrowseSourcePresenter(
         restartPager(filters = filters)
     }
 
+    fun loadSavedSearches() {
+        savedSearches = db.getSavedSearches(sourceId).executeAsBlocking().toMutableList()
+    }
+
+    fun saveSearch(name: String) {
+        val savedSearch =
+            SavedSearch.create(sourceId).apply {
+                this.name = name
+                this.query = this@BrowseSourcePresenter.query
+                this.filtersJson = filterSerializer.serialize(sourceFilters).toString()
+            }
+        db.insertSavedSearch(savedSearch).executeAsBlocking()
+        loadSavedSearches()
+        filterItems = sourceFilters.toItems()
+    }
+
+    fun deleteSearch(savedSearch: SavedSearch) {
+        db.deleteSavedSearch(savedSearch).executeAsBlocking()
+        loadSavedSearches()
+        filterItems = sourceFilters.toItems()
+    }
+
+    fun loadSearch(savedSearch: SavedSearch) {
+        query = savedSearch.query ?: ""
+        sourceFilters = source.getFilterList()
+        lastSkippedFilterNames = emptyList()
+        savedSearch.filtersJson?.let {
+            try {
+                val json =
+                    kotlinx.serialization.json.Json
+                        .decodeFromString<kotlinx.serialization.json.JsonArray>(it)
+                filterSerializer.deserialize(sourceFilters, json)
+                lastSkippedFilterNames = filterSerializer.skippedFilterNames
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to restore filters for saved search ${savedSearch.name}")
+            }
+        }
+        filterItems = sourceFilters.toItems()
+    }
+
     open fun createPager(
         query: String,
         filters: FilterList,
@@ -331,42 +382,51 @@ open class BrowseSourcePresenter(
             BrowseSourcePager(source, query, filters)
         }
 
-    private fun FilterList.toItems(): List<IFlexible<*>> =
-        mapNotNull { filter ->
-            when (filter) {
-                is Filter.Header -> HeaderItem(filter)
-                is Filter.Separator -> SeparatorItem(filter)
-                is Filter.CheckBox -> CheckboxItem(filter)
-                is Filter.TriState -> TriStateItem(filter)
-                is Filter.Text -> TextItem(filter)
-                is Filter.Select<*> -> SelectItem(filter)
-                is Filter.Group<*> -> {
-                    val group = GroupItem(filter)
-                    val subItems =
-                        filter.state.mapNotNull { type ->
-                            when (type) {
-                                is Filter.CheckBox -> CheckboxSectionItem(type)
-                                is Filter.TriState -> TriStateSectionItem(type)
-                                is Filter.Text -> TextSectionItem(type)
-                                is Filter.Select<*> -> SelectSectionItem(type)
-                                else -> null
-                            }
-                        }
-                    subItems.forEach { it.header = group }
-                    group.subItems = subItems
-                    group
-                }
-                is Filter.Sort -> {
-                    val group = SortGroup(filter)
-                    val subItems =
-                        filter.values.map {
-                            SortItem(it, group)
-                        }
-                    group.subItems = subItems
-                    group
-                }
-            }
+    private fun FilterList.toItems(): List<IFlexible<*>> {
+        val items = mutableListOf<IFlexible<*>>()
+        if (savedSearches.isNotEmpty()) {
+            items.add(SavedSearchesItem(savedSearches))
+            items.add(SeparatorItem(Filter.Separator()))
         }
+        items.addAll(
+            mapNotNull { filter ->
+                when (filter) {
+                    is Filter.Header -> HeaderItem(filter)
+                    is Filter.Separator -> SeparatorItem(filter)
+                    is Filter.CheckBox -> CheckboxItem(filter)
+                    is Filter.TriState -> TriStateItem(filter)
+                    is Filter.Text -> TextItem(filter)
+                    is Filter.Select<*> -> SelectItem(filter)
+                    is Filter.Group<*> -> {
+                        val group = GroupItem(filter)
+                        val subItems =
+                            filter.state.mapNotNull { type ->
+                                when (type) {
+                                    is Filter.CheckBox -> CheckboxSectionItem(type)
+                                    is Filter.TriState -> TriStateSectionItem(type)
+                                    is Filter.Text -> TextSectionItem(type)
+                                    is Filter.Select<*> -> SelectSectionItem(type)
+                                    else -> null
+                                }
+                            }
+                        subItems.forEach { it.header = group }
+                        group.subItems = subItems
+                        group
+                    }
+                    is Filter.Sort -> {
+                        val group = SortGroup(filter)
+                        val subItems =
+                            filter.values.map {
+                                SortItem(it, group)
+                            }
+                        group.subItems = subItems
+                        group
+                    }
+                }
+            },
+        )
+        return items
+    }
 
     /**
      * Get user categories.

@@ -9,6 +9,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.core.view.isVisible
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bluelinelabs.conductor.ControllerChangeHandler
 import com.bluelinelabs.conductor.ControllerChangeType
 import com.google.android.material.behavior.HideViewOnScrollBehavior
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
@@ -376,7 +378,6 @@ open class BrowseSourceController(
         if (filterSheet != null) return
         val sheet = SourceFilterSheet(activity!!)
         filterSheet = sheet
-        sheet.setFilters(presenter.filterItems)
         presenter.filtersChanged = false
         val oldFilters = mutableListOf<Any?>()
         for (i in presenter.sourceFilters) {
@@ -427,12 +428,58 @@ open class BrowseSourceController(
             presenter.sourceFilters = newFilters
             sheet.setFilters(presenter.filterItems)
         }
+
+        sheet.onSaveClicked = {
+            val dialogView = View.inflate(activity, R.layout.name_input_dialog, null)
+            val nameInput = dialogView.findViewById<EditText>(R.id.name_input)
+            MaterialAlertDialogBuilder(activity!!)
+                .setTitle(R.string.save_search)
+                .setView(dialogView)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    val name = nameInput.text.toString()
+                    if (name.isNotBlank()) {
+                        presenter.saveSearch(name)
+                        sheet.setFilters(presenter.filterItems)
+                    }
+                }.setNegativeButton(android.R.string.cancel, null)
+                .show()
+        }
+
+        sheet.onSavedSearchClicked = { savedSearch ->
+            presenter.loadSearch(savedSearch)
+            if (presenter.lastSkippedFilterNames.isNotEmpty()) {
+                binding.sourceLayout.snack(
+                    activity!!.getString(
+                        R.string.filters_not_restored,
+                        presenter.lastSkippedFilterNames.joinToString(),
+                    ),
+                    Snackbar.LENGTH_LONG,
+                )
+            }
+            showProgressBar()
+            adapter?.clear()
+            presenter.restartPager(presenter.query, presenter.sourceFilters)
+            updatePopLatestIcons()
+        }
+
+        sheet.onSavedSearchLongClicked = { savedSearch ->
+            MaterialAlertDialogBuilder(activity!!)
+                .setTitle(R.string.delete_search)
+                .setMessage(activity!!.getString(R.string.delete_search_confirmation, savedSearch.name))
+                .setPositiveButton(R.string.delete) { _, _ ->
+                    presenter.deleteSearch(savedSearch)
+                    sheet.setFilters(presenter.filterItems)
+                }.setNegativeButton(android.R.string.cancel, null)
+                .show()
+        }
+
         sheet.setOnDismissListener {
             filterSheet = null
         }
         sheet.setOnCancelListener {
             filterSheet = null
         }
+        sheet.setFilters(presenter.filterItems)
         sheet.show()
     }
 
