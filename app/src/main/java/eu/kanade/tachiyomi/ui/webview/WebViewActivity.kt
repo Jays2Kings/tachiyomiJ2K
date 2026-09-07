@@ -11,6 +11,7 @@ import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.core.graphics.ColorUtils
+import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.network.NetworkHelper
@@ -29,6 +30,9 @@ open class WebViewActivity : BaseWebViewActivity() {
     private val sourceManager by injectLazy<SourceManager>()
     private val network by injectLazy<NetworkHelper>()
     private var bundle: Bundle? = null
+    private var originalHost: String? = null
+    private var lastSourceUrl: String? = null
+    private var webViewHeaders = emptyMap<String, String>()
 
     private var backPressedCallback: OnBackPressedCallback? = null
     private val backCallback = {
@@ -69,16 +73,17 @@ open class WebViewActivity : BaseWebViewActivity() {
         }
         if (bundle == null) {
             val url = intent.extras!!.getString(URL_KEY) ?: return
-            var headers = emptyMap<String, String>()
+            originalHost = normalizedHost(url)
+            lastSourceUrl = url
             (sourceManager.get(intent.extras!!.getLong(SOURCE_KEY)) as? HttpSource)?.let { source ->
                 try {
-                    headers = source.headers.toMultimap().mapValues { it.value.getOrNull(0) ?: "" }
+                    webViewHeaders = source.headers.toMultimap().mapValues { it.value.getOrNull(0) ?: "" }
                 } catch (e: Exception) {
                     Timber.e(e, "Failed to build headers")
                 }
             }
 
-            binding.webview.setUserAgent(headers["user-agent"] ?: network.defaultUserAgent)
+            binding.webview.setUserAgent(webViewHeaders["user-agent"] ?: network.defaultUserAgent)
 
             binding.webview.webViewClient =
                 object : WebViewClientCompat() {
@@ -92,7 +97,7 @@ open class WebViewActivity : BaseWebViewActivity() {
                         }
 
                         // Continue with request, but with custom headers
-                        view.loadUrl(url, headers)
+                        view.loadUrl(url, webViewHeaders)
                         return true
                     }
 
@@ -112,6 +117,7 @@ open class WebViewActivity : BaseWebViewActivity() {
                         favicon: Bitmap?,
                     ) {
                         super.onPageStarted(view, url, favicon)
+                        updateLastSourceUrl(url)
                         binding.progressBar.isIndeterminate = true
                         binding.progressBar.isVisible = true
                         invalidateOptionsMenu()
@@ -131,13 +137,14 @@ open class WebViewActivity : BaseWebViewActivity() {
                         isReload: Boolean,
                     ) {
                         super.doUpdateVisitedHistory(view, url, isReload)
+                        updateLastSourceUrl(url)
                         if (!isReload) {
                             invalidateOptionsMenu()
                         }
                     }
                 }
 
-            binding.webview.loadUrl(url, headers)
+            binding.webview.loadUrl(url, webViewHeaders)
         }
     }
 
@@ -158,14 +165,39 @@ open class WebViewActivity : BaseWebViewActivity() {
         backPressedCallback?.isEnabled = binding.webview.canGoBack()
     }
 
+    private fun normalizedHost(url: String?): String? =
+        url
+            ?.toUri()
+            ?.host
+            ?.lowercase()
+            ?.removePrefix("www.")
+
+    private fun isOriginalHost(url: String?): Boolean =
+        originalHost != null && normalizedHost(url) == originalHost
+
+    private fun updateLastSourceUrl(url: String?) {
+        if (isOriginalHost(url)) {
+            lastSourceUrl = url
+        }
+    }
+
+    private fun returnToSource() {
+        lastSourceUrl?.let { binding.webview.loadUrl(it, webViewHeaders) }
+    }
+
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         val backItem = binding.toolbar.menu.findItem(R.id.action_web_back)
         val forwardItem = binding.toolbar.menu.findItem(R.id.action_web_forward)
+        val returnToSourceItem = binding.toolbar.menu.findItem(R.id.action_return_to_source)
         backItem?.isEnabled = binding.webview.canGoBack()
         forwardItem?.isEnabled = binding.webview.canGoForward()
         val hasHistory = binding.webview.canGoBack() || binding.webview.canGoForward()
         backItem?.isVisible = hasHistory
         forwardItem?.isVisible = hasHistory
+        returnToSourceItem?.isVisible =
+            lastSourceUrl != null &&
+                binding.webview.url != null &&
+                !isOriginalHost(binding.webview.url)
         val tintColor = getResourceColor(R.attr.actionBarTintColor)
         val translucentWhite = ColorUtils.setAlphaComponent(tintColor, 127)
         backItem.icon?.setTint(if (binding.webview.canGoBack()) tintColor else translucentWhite)
@@ -187,6 +219,7 @@ open class WebViewActivity : BaseWebViewActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_web_back -> binding.webview.goBack()
+            R.id.action_return_to_source -> returnToSource()
             R.id.action_web_forward -> binding.webview.goForward()
             R.id.action_web_share -> shareWebpage()
             R.id.action_web_browser -> openInBrowser()

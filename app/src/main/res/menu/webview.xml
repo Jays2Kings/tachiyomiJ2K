@@ -8,6 +8,12 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_return_to_source"
+        android:icon="@drawable/ic_history_24dp"
+        android:title="@string/return_to_source"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_open_in_app"
         android:icon="@drawable/ic_browse_24dp"
         android:title="@string/open_in_app"
