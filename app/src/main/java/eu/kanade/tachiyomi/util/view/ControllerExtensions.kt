@@ -85,17 +85,21 @@ fun Controller.setOnQueryTextChangeListener(
     searchView: SearchView?,
     onlyOnSubmit: Boolean = false,
     hideKbOnSubmit: Boolean = true,
+    onTextChange: ((text: String?) -> Unit)? = null,
     f: (text: String?) -> Boolean,
 ) {
     searchView?.setOnQueryTextListener(
         object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (!onlyOnSubmit &&
-                    router.backstack
+                if (router.backstack
                         .lastOrNull()
                         ?.controller == this@setOnQueryTextChangeListener
                 ) {
-                    return f(newText)
+                    // fires even with onlyOnSubmit, for anything watching what's typed
+                    onTextChange?.invoke(newText)
+                    if (!onlyOnSubmit) {
+                        return f(newText)
+                    }
                 }
                 return false
             }

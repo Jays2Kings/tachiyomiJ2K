@@ -374,6 +374,25 @@ class PreferencesHelper(
 
     fun installedExtensionsOrder() = flowPrefs.getInt(Keys.installedExtensionsOrder, InstalledExtensionsOrder.Name.value)
 
+    fun showBrowseSearchHistory() = flowPrefs.getBoolean(Keys.showBrowseSearchHistory, true)
+
+    /** Recent browse queries, newest first. Global search and per source search share the one list. */
+    fun browseSearchHistory() =
+        flowPrefs.getObject(
+            Keys.browseSearchHistory,
+            object : Serializer<List<String>> {
+                override fun serialize(value: List<String>): String = Json.encodeToString(value)
+
+                override fun deserialize(serialized: String): List<String> =
+                    try {
+                        Json.decodeFromString(serialized)
+                    } catch (e: Exception) {
+                        emptyList()
+                    }
+            },
+            emptyList(),
+        )
+
     fun migrationSourceOrder() = flowPrefs.getInt("migration_source_order", Values.MigrationSourceOrder.Alphabetically.value)
 
     fun collapsedCategories() = flowPrefs.getStringSet("collapsed_categories", mutableSetOf())

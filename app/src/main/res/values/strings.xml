@@ -317,6 +317,8 @@
     <string name="other">Other</string>
     <string name="global_search">Global search…</string>
     <string name="label_global_search">Global search</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="clear_all">Clear all</string>
     <string name="latest">Latest</string>
     <string name="popular">Popular</string>
     <string name="browse">Browse</string>
@@ -957,6 +959,10 @@
     <string name="notify_extension_updated">Notify extension has been updated</string>
     <string name="some_extensions_may_not_update">Some extensions may not be auto-updated if they were installed outside this app</string>
     <string name="sources_to_search">Sources to search</string>
+    <string name="show_search_history">Show search history</string>
+    <string name="show_search_history_summary">List your recent searches when you focus a browse search bar</string>
+    <string name="clear_search_history">Clear search history</string>
+    <string name="search_history_cleared">Search history cleared</string>
     <string name="hide_in_library_items">Hide entries already in library</string>
     <string name="show_duplicate_in_library_items">Show \"Duplicate\" badge</string>
     <string name="show_duplicate_in_library_items_summary">Display a \"Duplicate\" badge for entries already in library from another extension. Note: Some duplicates may not be detected due to differences in names or URLs.</string>

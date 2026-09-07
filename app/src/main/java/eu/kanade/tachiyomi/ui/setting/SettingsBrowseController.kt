@@ -18,6 +18,7 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.ui.main.MainActivity
 import eu.kanade.tachiyomi.ui.migration.MigrationController
 import eu.kanade.tachiyomi.ui.source.browse.repos.RepoController
+import eu.kanade.tachiyomi.ui.source.searchhistory.clearSearchHistory
 import eu.kanade.tachiyomi.util.view.snack
 import eu.kanade.tachiyomi.util.view.withFadeTransaction
 import uy.kohesive.injekt.injectLazy
@@ -117,12 +118,39 @@ class SettingsBrowseController : SettingsController() {
             }
 
             preferenceCategory {
-                titleRes = R.string.label_global_search
+                titleRes = R.string.search
                 twoButtonPreference {
                     bindTo(preferences.onlySearchPinned())
                     titleRes = R.string.sources_to_search
                     startTextRes = R.string.all_enabled
                     endTextRes = R.string.pinned_only
+                }
+                switchPreference {
+                    bindTo(preferences.showBrowseSearchHistory())
+                    titleRes = R.string.show_search_history
+                    summaryRes = R.string.show_search_history_summary
+                }
+                preference {
+                    key = "pref_clear_search_history"
+                    titleRes = R.string.clear_search_history
+
+                    preferences
+                        .browseSearchHistory()
+                        .asImmediateFlowIn(viewScope) { history ->
+                            isVisible = history.isNotEmpty()
+                        }
+
+                    onClick {
+                        val oldHistory = preferences.browseSearchHistory().get()
+                        preferences.clearSearchHistory()
+                        (activity as? MainActivity)?.setUndoSnackBar(
+                            view?.snack(R.string.search_history_cleared) {
+                                setAction(R.string.undo) {
+                                    preferences.browseSearchHistory().set(oldHistory)
+                                }
+                            },
+                        )
+                    }
                 }
             }
 

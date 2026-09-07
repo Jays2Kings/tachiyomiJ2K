@@ -14,4 +14,10 @@
         android:paddingBottom="4dp"
         tools:listitem="@layout/source_global_search_controller_card" />
 
+    <eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
+        android:id="@+id/search_history_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
 </FrameLayout>

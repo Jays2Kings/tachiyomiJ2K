@@ -41,6 +41,7 @@ import eu.kanade.tachiyomi.ui.main.SearchActivity
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.source.BrowseController
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchController
+import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
 import eu.kanade.tachiyomi.util.addOrRemoveToFavorites
 import eu.kanade.tachiyomi.util.system.connectivityManager
@@ -177,6 +178,7 @@ open class BrowseSourceController(
         // Initialize adapter, scroll listener and recycler views
         adapter = FlexibleAdapter(null, this)
         setupRecycler(view)
+        setUpSearchHistory()
 
         if (presenter.sourceFilters.isEmpty() && !presenter.source.supportsLatest) {
             binding.floatingBrowseBar.isVisible = false
@@ -284,6 +286,10 @@ open class BrowseSourceController(
                     top = (bigToolbarHeight + insets.getInsets(systemBars()).top),
                     bottom = insets.getInsets(systemBars()).bottom,
                 )
+                binding.searchHistoryView.setContentPadding(
+                    top = recycler.paddingTop,
+                    bottom = recycler.paddingBottom,
+                )
             },
         )
         binding.floatingBrowseBar.applyBottomAnimatedInsets(8.dpToPx)
@@ -316,7 +322,12 @@ open class BrowseSourceController(
             searchItem?.collapseActionView()
             searchView?.setQuery("", true)
         }
-        setOnQueryTextChangeListener(searchView, onlyOnSubmit = true, hideKbOnSubmit = true) {
+        setOnQueryTextChangeListener(
+            searchView,
+            onlyOnSubmit = true,
+            hideKbOnSubmit = true,
+            onTextChange = { setSearchHistoryVisible(it.isNullOrBlank()) },
+        ) {
             searchWithQuery(it ?: "")
             true
         }
@@ -339,11 +350,36 @@ open class BrowseSourceController(
         }
     }
 
+    override fun onActionViewExpand(item: MenuItem?) {
+        setSearchHistoryVisible(true)
+    }
+
     override fun onActionViewCollapse(item: MenuItem?) {
+        setSearchHistoryVisible(false)
         if (isBehindGlobalSearch) {
             router.popController(this)
         } else {
             searchWithQuery("")
+        }
+    }
+
+    private fun setUpSearchHistory() {
+        binding.searchHistoryView.onQueryClicked = { query ->
+            activityBinding?.searchToolbar?.searchView?.setQuery(query, true)
+        }
+        binding.searchHistoryView.onHistoryEmptied = { setSearchHistoryVisible(false) }
+    }
+
+    private fun setSearchHistoryVisible(show: Boolean) {
+        if (!isBindingInitialized) return
+        val shouldShow =
+            show &&
+                activityBinding?.searchToolbar?.isSearchExpanded == true &&
+                binding.searchHistoryView.hasHistory()
+        if (binding.searchHistoryView.isVisible == shouldShow) return
+        binding.searchHistoryView.isVisible = shouldShow
+        if (shouldShow) {
+            binding.searchHistoryView.scrollToTop()
         }
     }
 
@@ -570,6 +606,9 @@ open class BrowseSourceController(
      * @param newQuery the new query.
      */
     private fun searchWithQuery(newQuery: String) {
+        // saved before the early return below, so re-searching the same thing still bumps it up
+        presenter.prefs.addToSearchHistory(newQuery)
+        setSearchHistoryVisible(false)
         // If text didn't change, do nothing
         if (presenter.query == newQuery) {
             return

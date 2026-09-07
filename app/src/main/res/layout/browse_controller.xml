@@ -18,6 +18,12 @@
             android:clipToPadding="false"
             tools:listitem="@layout/source_header_item" />
 
+        <eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
+            android:id="@+id/search_history_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
     </FrameLayout>
 
     <!-- Adding bottom sheet after main content -->
