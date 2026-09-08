@@ -10,6 +10,8 @@ import android.view.MenuItem
 import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.widget.FrameLayout
 import androidx.activity.BackEventCompat
 import androidx.appcompat.widget.SearchView
 import androidx.core.graphics.ColorUtils
@@ -45,6 +47,7 @@ import eu.kanade.tachiyomi.ui.setting.SettingsSourcesController
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
 import eu.kanade.tachiyomi.ui.source.browse.repos.RepoController
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchController
+import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
 import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getBottomGestureInsets
@@ -98,6 +101,8 @@ class BrowseController :
      * Adapter containing sources.
      */
     private var adapter: SourceAdapter? = null
+
+    private var searchHistoryView: SearchHistoryView? = null
 
     var extQuery = ""
         private set
@@ -576,6 +581,7 @@ class BrowseController :
 
     override fun onDestroyView(view: View) {
         adapter = null
+        searchHistoryView = null
         binding.bottomSheet.root.onDestroy()
         super.onDestroyView(view)
     }
@@ -782,33 +788,39 @@ class BrowseController :
     }
 
     private fun setUpSearchHistory() {
-        if (!isBindingInitialized) return
-        binding.searchHistoryView.onQueryClicked = { query ->
-            activityBinding?.searchToolbar?.searchView?.setQuery(query, true)
-        }
-        binding.searchHistoryView.onHistoryEmptied = { setSearchHistoryVisible(false) }
+        val searchView = { activityBinding?.searchToolbar?.searchView }
+        searchHistoryView =
+            SearchHistoryView(binding.browseFrameLayout.context).apply {
+                isVisible = false
+                onQueryClicked = { searchView()?.setQuery(it, true) }
+                onQueryFilled = { searchView()?.setQuery(it, false) }
+                onHistoryEmptied = { setSearchHistoryVisible(false) }
+                binding.browseFrameLayout.addView(
+                    this,
+                    FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT),
+                )
+            }
     }
 
     private fun updateSearchHistoryPadding() {
-        if (!isBindingInitialized) return
-        binding.searchHistoryView.setContentPadding(
+        searchHistoryView?.setContentPadding(
             top = binding.sourceRecycler.paddingTop,
             bottom = binding.sourceRecycler.paddingBottom,
         )
     }
 
     private fun setSearchHistoryVisible(show: Boolean) {
-        if (!isBindingInitialized) return
+        val historyView = searchHistoryView ?: return
         val shouldShow =
             show &&
                 !showingExtensions &&
                 activityBinding?.searchToolbar?.isSearchExpanded == true &&
-                binding.searchHistoryView.hasHistory()
-        if (binding.searchHistoryView.isVisible == shouldShow) return
-        binding.searchHistoryView.isVisible = shouldShow
+                historyView.hasHistory()
+        if (historyView.isVisible == shouldShow) return
+        historyView.isVisible = shouldShow
         if (shouldShow) {
             updateSearchHistoryPadding()
-            binding.searchHistoryView.scrollToTop()
+            historyView.scrollToTop()
         }
     }
 

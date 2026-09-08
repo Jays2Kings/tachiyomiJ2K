@@ -1,11 +1,20 @@
 package eu.kanade.tachiyomi.ui.source.searchhistory
 
 import eu.kanade.tachiyomi.data.preference.PreferencesHelper
+import eu.kanade.tachiyomi.source.isIncognitoModeForSource
 
 private const val SEARCH_HISTORY_LIMIT = 20
 
-fun PreferencesHelper.addToSearchHistory(query: String) {
+/**
+ * @param sourceId the source being searched, so its extension's incognito setting counts too.
+ * Null for global search, which only cares about the app wide one.
+ */
+fun PreferencesHelper.addToSearchHistory(
+    query: String,
+    sourceId: Long? = null,
+) {
     if (!showBrowseSearchHistory().get()) return
+    if (isIncognitoModeForSource(sourceId, this)) return
     val trimmedQuery = query.trim()
     if (trimmedQuery.isBlank()) return
     val pref = browseSearchHistory()

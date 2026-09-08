@@ -90,11 +90,4 @@
         </com.google.android.material.button.MaterialButtonGroup>
     </com.google.android.material.floatingtoolbar.FloatingToolbarLayout>
 
-    <!-- last so it covers the floating popular/latest bar too -->
-    <eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
-        android:id="@+id/search_history_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

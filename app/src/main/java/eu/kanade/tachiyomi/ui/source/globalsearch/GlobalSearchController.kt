@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.widget.FrameLayout
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.core.view.isVisible
 import androidx.core.view.updatePaddingRelative
@@ -23,6 +25,7 @@ import eu.kanade.tachiyomi.ui.main.SearchActivity
 import eu.kanade.tachiyomi.ui.main.SearchControllerInterface
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
+import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
 import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.util.addOrRemoveToFavorites
 import eu.kanade.tachiyomi.util.system.rootWindowInsetsCompat
@@ -65,6 +68,8 @@ open class GlobalSearchController(
      */
     private var snack: Snackbar? = null
     private var lastPosition: Int = -1
+
+    private var searchHistoryView: SearchHistoryView? = null
 
     protected open val supportsSearchHistory: Boolean = true
 
@@ -214,20 +219,29 @@ open class GlobalSearchController(
     }
 
     private fun setUpSearchHistory() {
-        binding.searchHistoryView.onQueryClicked = { query ->
-            activityBinding?.searchToolbar?.searchView?.setQuery(query, true)
-        }
-        binding.searchHistoryView.onHistoryEmptied = { setSearchHistoryVisible(false) }
+        if (!supportsSearchHistory) return
+        val searchView = { activityBinding?.searchToolbar?.searchView }
+        searchHistoryView =
+            SearchHistoryView(binding.root.context).apply {
+                isVisible = false
+                onQueryClicked = { searchView()?.setQuery(it, true) }
+                onQueryFilled = { searchView()?.setQuery(it, false) }
+                onHistoryEmptied = { setSearchHistoryVisible(false) }
+                binding.root.addView(
+                    this,
+                    FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT),
+                )
+            }
     }
 
     // search is always expanded here, so this only kicks in once the query is cleared
     private fun setSearchHistoryVisible(show: Boolean) {
-        if (!supportsSearchHistory || !isBindingInitialized) return
-        val shouldShow = show && binding.searchHistoryView.hasHistory()
-        if (binding.searchHistoryView.isVisible == shouldShow) return
-        binding.searchHistoryView.isVisible = shouldShow
+        val historyView = searchHistoryView ?: return
+        val shouldShow = show && historyView.hasHistory()
+        if (historyView.isVisible == shouldShow) return
+        historyView.isVisible = shouldShow
         if (shouldShow) {
-            binding.searchHistoryView.scrollToTop()
+            historyView.scrollToTop()
         }
     }
 
@@ -268,7 +282,7 @@ open class GlobalSearchController(
             binding.recycler,
             padBottom = true,
             afterInsets = {
-                binding.searchHistoryView.setContentPadding(
+                searchHistoryView?.setContentPadding(
                     top = binding.recycler.paddingTop,
                     bottom = binding.recycler.paddingBottom,
                 )
@@ -282,6 +296,7 @@ open class GlobalSearchController(
 
     override fun onDestroyView(view: View) {
         adapter = null
+        searchHistoryView = null
         super.onDestroyView(view)
     }
 

@@ -118,21 +118,24 @@ class SettingsBrowseController : SettingsController() {
             }
 
             preferenceCategory {
-                titleRes = R.string.search
+                titleRes = R.string.label_global_search
                 twoButtonPreference {
                     bindTo(preferences.onlySearchPinned())
                     titleRes = R.string.sources_to_search
                     startTextRes = R.string.all_enabled
                     endTextRes = R.string.pinned_only
                 }
+            }
+
+            preferenceCategory {
+                titleRes = R.string.search_history
                 switchPreference {
                     bindTo(preferences.showBrowseSearchHistory())
-                    titleRes = R.string.show_search_history
-                    summaryRes = R.string.show_search_history_summary
+                    titleRes = R.string.show_recent_searches
                 }
                 preference {
                     key = "pref_clear_search_history"
-                    titleRes = R.string.clear_search_history
+                    titleRes = R.string.clear_history
 
                     preferences
                         .browseSearchHistory()

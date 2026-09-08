@@ -14,6 +14,7 @@ class SearchHistoryItem(
     private val isTopOfGroup: Boolean,
     private val isBottomOfGroup: Boolean,
     private val onDeleteClicked: (String) -> Unit,
+    private val onFillClicked: (String) -> Unit,
 ) : AbstractItem<FastAdapter.ViewHolder<SearchHistoryItem>>() {
     override val type: Int = R.id.history_card
 
@@ -30,6 +31,7 @@ class SearchHistoryItem(
         private val frontView: View = view.findViewById(R.id.front_view)
         private val title: TextView = view.findViewById(R.id.title)
         private val deleteButton: MaterialButton = view.findViewById(R.id.delete_button)
+        private val fillButton: MaterialButton = view.findViewById(R.id.fill_button)
 
         override fun bindView(
             item: SearchHistoryItem,
@@ -44,11 +46,13 @@ class SearchHistoryItem(
                     clipContentTo = frontView,
                 )
             deleteButton.setOnClickListener { item.onDeleteClicked(item.query) }
+            fillButton.setOnClickListener { item.onFillClicked(item.query) }
         }
 
         override fun unbindView(item: SearchHistoryItem) {
             title.text = null
             deleteButton.setOnClickListener(null)
+            fillButton.setOnClickListener(null)
         }
     }
 }

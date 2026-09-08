@@ -39,6 +39,7 @@ class SearchHistoryView
         private var scope: CoroutineScope? = null
 
         var onQueryClicked: (String) -> Unit = { _ -> }
+        var onQueryFilled: (String) -> Unit = { _ -> }
         var onHistoryEmptied: () -> Unit = { }
 
         init {
@@ -98,6 +99,7 @@ class SearchHistoryView
                         isTopOfGroup = index == 0,
                         isBottomOfGroup = index == history.lastIndex,
                         onDeleteClicked = { preferences.removeFromSearchHistory(it) },
+                        onFillClicked = { onQueryFilled(it) },
                     )
                 },
             )

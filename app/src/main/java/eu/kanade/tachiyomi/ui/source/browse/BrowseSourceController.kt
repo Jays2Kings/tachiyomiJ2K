@@ -9,7 +9,9 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import androidx.appcompat.widget.PopupMenu
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
@@ -41,6 +43,7 @@ import eu.kanade.tachiyomi.ui.main.SearchActivity
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.source.BrowseController
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchController
+import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryView
 import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.ui.webview.WebViewActivity
 import eu.kanade.tachiyomi.util.addOrRemoveToFavorites
@@ -122,6 +125,8 @@ open class BrowseSourceController(
      * Recycler view with the list of results.
      */
     private var recycler: RecyclerView? = null
+
+    private var searchHistoryView: SearchHistoryView? = null
 
     /**
      * Endless loading item.
@@ -221,6 +226,7 @@ open class BrowseSourceController(
         adapter = null
         snack = null
         recycler = null
+        searchHistoryView = null
         super.onDestroyView(view)
     }
 
@@ -286,7 +292,7 @@ open class BrowseSourceController(
                     top = (bigToolbarHeight + insets.getInsets(systemBars()).top),
                     bottom = insets.getInsets(systemBars()).bottom,
                 )
-                binding.searchHistoryView.setContentPadding(
+                searchHistoryView?.setContentPadding(
                     top = recycler.paddingTop,
                     bottom = recycler.paddingBottom,
                 )
@@ -363,23 +369,32 @@ open class BrowseSourceController(
         }
     }
 
+    // added last so it covers the floating popular/latest bar too
     private fun setUpSearchHistory() {
-        binding.searchHistoryView.onQueryClicked = { query ->
-            activityBinding?.searchToolbar?.searchView?.setQuery(query, true)
-        }
-        binding.searchHistoryView.onHistoryEmptied = { setSearchHistoryVisible(false) }
+        val searchView = { activityBinding?.searchToolbar?.searchView }
+        searchHistoryView =
+            SearchHistoryView(binding.sourceLayout.context).apply {
+                isVisible = false
+                onQueryClicked = { searchView()?.setQuery(it, true) }
+                onQueryFilled = { searchView()?.setQuery(it, false) }
+                onHistoryEmptied = { setSearchHistoryVisible(false) }
+                binding.sourceLayout.addView(
+                    this,
+                    CoordinatorLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT),
+                )
+            }
     }
 
     private fun setSearchHistoryVisible(show: Boolean) {
-        if (!isBindingInitialized) return
+        val historyView = searchHistoryView ?: return
         val shouldShow =
             show &&
                 activityBinding?.searchToolbar?.isSearchExpanded == true &&
-                binding.searchHistoryView.hasHistory()
-        if (binding.searchHistoryView.isVisible == shouldShow) return
-        binding.searchHistoryView.isVisible = shouldShow
+                historyView.hasHistory()
+        if (historyView.isVisible == shouldShow) return
+        historyView.isVisible = shouldShow
         if (shouldShow) {
-            binding.searchHistoryView.scrollToTop()
+            historyView.scrollToTop()
         }
     }
 
@@ -607,7 +622,7 @@ open class BrowseSourceController(
      */
     private fun searchWithQuery(newQuery: String) {
         // saved before the early return below, so re-searching the same thing still bumps it up
-        presenter.prefs.addToSearchHistory(newQuery)
+        presenter.prefs.addToSearchHistory(newQuery, presenter.source.id)
         setSearchHistoryVisible(false)
         // If text didn't change, do nothing
         if (presenter.query == newQuery) {
