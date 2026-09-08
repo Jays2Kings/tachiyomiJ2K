@@ -40,6 +40,11 @@ class SettingsBrowseController : SettingsController() {
                     titleRes = R.string.show_duplicate_in_library_items
                     summaryRes = R.string.show_duplicate_in_library_items_summary
                 }
+                switchPreference {
+                    bindTo(preferences.expandSourceMangaDescription())
+                    titleRes = R.string.expand_source_manga_description
+                    summaryRes = R.string.expand_source_manga_description_summary
+                }
             }
 
             preferenceCategory {
