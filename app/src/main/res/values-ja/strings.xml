@@ -79,7 +79,7 @@
     <string name="trust">信頼できる</string>
     <string name="untrusted">信頼できない</string>
     <string name="uninstall">アンインストール</string>
-    <string name="untrusted_extension">信頼できない拡張</string>
+    <string name="untrusted_extension">信頼できない拡張機能</string>
     <string name="version_">バージョン：%1$s</string>
     <string name="language_">言語： %1$s</string>
     <string name="fullscreen">フルスクリーン</string>
@@ -924,7 +924,7 @@
     <string name="pref_manage_notifications">通知設定</string>
     <string name="battery_not_low">バッテリー残量が低くない</string>
     <string name="faq_and_guides">よくあるご質問とガイド</string>
-    <string name="secure_screen_summary">セキュアスクリーンは、アプリ切り替え時にアプリのコンテンツを非表示にし、スクリーンショットをブロックします</string>
+    <string name="secure_screen_summary">セキュア画面は、アプリ切り替え時にアプリのコンテンツを非表示にし、スクリーンショットをブロックします</string>
     <plurals name="next_unread_chapters">
         <item quantity="other">次の未読の %d 章</item>
     </plurals>
