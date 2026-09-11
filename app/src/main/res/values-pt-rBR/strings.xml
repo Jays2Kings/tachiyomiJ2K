@@ -1170,4 +1170,5 @@
     <string name="extension_must_reinstall">Por favor, desinstale e então reinstale para atualizar.</string>
     <string name="ext_revoke_trust">Revogar a confiabilidade de extensões desconhecidas</string>
     <string name="open_source_repo">Abrir repositório da fonte</string>
+    <string name="crash_screen_title">Ooops!</string>
 </resources>
