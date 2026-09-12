@@ -537,8 +537,7 @@
     <string name="delete_all_covers__not_in_library_used_">Видалити усі кешовані обкладинки котрих нема у вашій бібліотеці
 \nВикористовується: %1$s</string>
     <string name="clear_cached_covers_non_library">Очистити кешовані обкладинки котрих нема в бібліотеці</string>
-    <string name="delete_old_covers_in_library_used_">Видалити старі та невикористовувані чи кешовані обкладинки, у вашій бібліотеці котру було оновлено.
-\nВикористовується: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Видалити старі та невикористовувані чи кешовані обкладинки, у вашій бібліотеці котру було оновлено. \nВикористовується: %1$s</string>
     <string name="clean_up_cached_covers">Очистити кеш обкладинок</string>
     <plurals name="cleanup_done">
         <item quantity="one">Очистку завершено. %d тека видалена</item>
