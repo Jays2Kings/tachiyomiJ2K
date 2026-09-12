@@ -861,8 +861,7 @@
     <string name="starting_screen">起始頁面</string>
     <string name="series_opens_new_chapters">漫畫系列快捷方式會開啟新的章節</string>
     <string name="no_folders_to_cleanup">沒有需要清理的資料夾</string>
-    <string name="delete_old_covers_in_library_used_">刪除已更新漫畫的過期和未使用的緩存封面。
-\n目前使用：%1$s</string>
+    <string name="delete_old_covers_in_library_used_">刪除已更新漫畫的過期和未使用的緩存封面。 \n目前使用：%1$s</string>
     <string name="remove_crop">移除裁剪</string>
     <string name="vertically">縱向</string>
     <string name="both_axes">兩個軸</string>
