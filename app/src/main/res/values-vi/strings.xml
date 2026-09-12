@@ -469,8 +469,7 @@
     <string name="delete_all_covers__not_in_library_used_">Xoá tất cả ảnh bìa không có trong thư viện 
 \nHiện tại đang sử dụng : %1$s</string>
     <string name="clear_cached_covers_non_library">Xoá ảnh bìa không có trong thư viện</string>
-    <string name="delete_old_covers_in_library_used_">Xoá ảnh bìa cũ hoặc không dùng đến của truyện trong thư viện sau khi được cập nhật.
-\nHiện tại đang sử dụng %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Xoá ảnh bìa cũ hoặc không dùng đến của truyện trong thư viện sau khi được cập nhật. \nHiện tại đang sử dụng %1$s</string>
     <string name="clean_up_cached_covers">Làm sạch ảnh bìa tạm</string>
     <plurals name="cleanup_done">
         <item quantity="other">Làm sạch xong. Đã xoá %d thư mục</item>
