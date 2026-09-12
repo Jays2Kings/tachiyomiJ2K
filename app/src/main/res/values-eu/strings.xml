@@ -814,8 +814,7 @@
     <string name="clean_orphaned_downloads">Garbitu umezurtzak</string>
     <string name="battery_optimization_disabled">Bateriaren optimizazioa desgaituta dago dagoeneko</string>
     <string name="clear_database_confirmation">Ziur zaude\? Kapitulu iraurriak eta liburutegikoak ez diren manga-en aurrerapenak galduko dira</string>
-    <string name="delete_old_covers_in_library_used_">Liburutegian eguneratu berriak dauden manga-en azalen cache-ko kopia zahar eta erabili gabeak ezabatu.
-\nUne honetan erabiltzen: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Liburutegian eguneratu berriak dauden manga-en azalen cache-ko kopia zahar eta erabili gabeak ezabatu. \nUne honetan erabiltzen: %1$s</string>
     <string name="auto_update_extensions">Eguneratu luzapenak automatikoki</string>
     <string name="notify_extension_updated">Jakinarazi luzapena eguneratu dela</string>
     <string name="some_extensions_may_not_update">Baliteke luzapen batzuk automatikoki ez eguneratzea aplikazio honetatik kanpo instalatu badira</string>
