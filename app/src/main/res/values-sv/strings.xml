@@ -590,8 +590,7 @@
     <string name="delete_all_covers__not_in_library_used_">Ta bort alla cachade omslag som inte finns i ditt bibliotek
 \nFör närvarande används: %1$s</string>
     <string name="clear_cached_covers_non_library">Rensa cachade omslag som inte finns i biblioteket</string>
-    <string name="delete_old_covers_in_library_used_">Ta bort gamla och oanvända cachade omslag av poster i ditt bibliotek som har uppdaterats.
-\nAnvänder för närvarande: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Ta bort gamla och oanvända cachade omslag av poster i ditt bibliotek som har uppdaterats. \nAnvänder för närvarande: %1$s</string>
     <string name="clean_up_cached_covers">Rensa cachelagrade omslag</string>
     <plurals name="cleanup_done">
         <item quantity="one">Rensning klar. %d mapp har tagits bort</item>
