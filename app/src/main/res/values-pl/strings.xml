@@ -470,8 +470,7 @@
         <item quantity="other">Czyszczenie skończone. Usunięto %d folderów</item>
     </plurals>
     <string name="clean_up_cached_covers">Wyczyść okładki zapisane w pamięci podręcznej</string>
-    <string name="delete_old_covers_in_library_used_">Usuń stare i nieużywane okładki mang w twojej bibliotece, które zostały zaktualizowane, z pamięci podręcznej.
-\nObecnie używane: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Usuń stare i nieużywane okładki mang w twojej bibliotece, które zostały zaktualizowane, z pamięci podręcznej. \nObecnie używane: %1$s</string>
     <string name="clear_cached_covers_non_library">Wyczyść okładki spoza biblioteki zapisane w pamięci podręcznej</string>
     <string name="delete_all_covers__not_in_library_used_">Usuń wszystkie okładki nie znajdujące się w twojej bibliotece z pamięci podręcznej
 \nObecnie używane: %1$s</string>
