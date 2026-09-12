@@ -364,8 +364,7 @@
     <string name="in_progress">Devam Ediyor</string>
     <string name="comic">Çizgi Roman</string>
     <string name="clear_cached_covers_non_library">Kitaplıkta olmayan önbelleklenmiş kapakları temizleyin</string>
-    <string name="delete_old_covers_in_library_used_">Güncellenen kitaplığınızdaki eski ve kullanılmayan güncellenmiş dizi kapaklarını silin.
-\nŞu anda kullanılan: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Güncellenen kitaplığınızdaki eski ve kullanılmayan güncellenmiş dizi kapaklarını silin. \nŞu anda kullanılan: %1$s</string>
     <string name="clean_up_cached_covers">Önbelleklenmiş kapakları temizle</string>
     <string name="disable_if_issues_with_updating">Kitaplığınızı güncelleme veya geri yükleme ile ilgili sorunlar yaşıyorsanız bunu devre dışı bırakın</string>
     <string name="clean_read_manga_not_in_library">Kitaplıkta olmayan girdileri temizle</string>
