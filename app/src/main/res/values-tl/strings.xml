@@ -281,8 +281,7 @@
     <string name="delete_all_covers__not_in_library_used_">Burahin lahat ng naka-cache na pabalat na wala sa iyong library
 \nKasalukuyang ginagamit: %1$s</string>
     <string name="clear_cached_covers_non_library">Burahin ang mga naka-cache na pabalat na wala sa iyong library</string>
-    <string name="delete_old_covers_in_library_used_">Burahin ang mga luma at hindi na ginagamit na naka-cache na pabalat sa iyong library na pinalitan na.
-\nKasalukuyang ginagamit: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Burahin ang mga luma at hindi na ginagamit na naka-cache na pabalat sa iyong library na pinalitan na. \nKasalukuyang ginagamit: %1$s</string>
     <string name="clean_up_cached_covers">Linisin ang naka-cache na pabalat</string>
     <plurals name="cleanup_done">
         <item quantity="one">Tapos na ang paglilinis. Nakapagtanggal ng %d folder.</item>
