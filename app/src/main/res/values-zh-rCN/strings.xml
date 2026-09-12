@@ -507,8 +507,7 @@
     <string name="delete_all_covers__not_in_library_used_">删除不在书架的所有封面缓存
 \n当前使用：%1$s</string>
     <string name="clear_cached_covers_non_library">清除不在书架内漫画的封面缓存</string>
-    <string name="delete_old_covers_in_library_used_">删除书架更新过后旧的和未使用的作品封面缓存
-\n当前使用：%1$s</string>
+    <string name="delete_old_covers_in_library_used_">删除书架更新过后旧的和未使用的作品封面缓存 \n当前使用：%1$s</string>
     <string name="clean_up_cached_covers">清除封面缓存</string>
     <plurals name="cleanup_done">
         <item quantity="other">清除完成，移除了%d个目录</item>
