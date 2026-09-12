@@ -938,8 +938,7 @@
     <string name="starting_cleanup">Începerea curățeniei</string>
     <string name="no_folders_to_cleanup">Nu există dosare de curățat</string>
     <string name="clean_up_cached_covers">Curățați coperțile din memoria cache</string>
-    <string name="delete_old_covers_in_library_used_">Ștergeți coperțile vechi și nefolosite din memoria cache a înregistrărilor din biblioteca dvs. care a fost actualizată.
-\nÎn prezent se utilizează: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Ștergeți coperțile vechi și nefolosite din memoria cache a înregistrărilor din biblioteca dvs. care a fost actualizată. \nÎn prezent se utilizează: %1$s</string>
     <string name="clean_read_manga_not_in_library">Curăță înregistrările care nu se află în bibliotecă</string>
     <string name="enabled">Activat</string>
     <string name="moved_to_">Mutat la %1$s</string>
