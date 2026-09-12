@@ -610,8 +610,7 @@
     <string name="show_recent_sources">Prikaži nedavno korišćene izvore</string>
     <string name="show_recent_series">Prikaži nedavne serije</string>
     <string name="data_management">Upravljanje podacima</string>
-    <string name="delete_old_covers_in_library_used_">Izbrišite stare i neiskorišćene korice mangi u vašoj biblioteci koje su već ažurirane.
-\nTrenutno koristi : %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Izbrišite stare i neiskorišćene korice mangi u vašoj biblioteci koje su već ažurirane. \nTrenutno koristi : %1$s</string>
     <string name="clear_cached_covers_non_library">Obrišite keširane korice koje nisu u biblioteci</string>
     <string name="no_folders_to_cleanup">Nema fascikla za čišćenje</string>
     <string name="disable_if_issues_with_updating">Isključi ovo ako imate problema sa ažuriranjem ili vraćanjem vaše biblioteke</string>
