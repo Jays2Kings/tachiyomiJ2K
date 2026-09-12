@@ -669,8 +669,7 @@
     <string name="shift_double_pages">Mover páginas dobles</string>
     <string name="shift_one_page_over">Mover únicamente una página</string>
     <string name="add_to_">Añadido a %1$s</string>
-    <string name="delete_old_covers_in_library_used_">Elimina las portadas en la caché y no utilizadas de las entradas de la biblioteca que se han actualizado.
-\nActualmente estás usando: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Elimina las portadas en la caché y no utilizadas de las entradas de la biblioteca que se han actualizado. \nActualmente estás usando: %1$s</string>
     <plurals name="cache_cleared">
         <item quantity="one">Caché borrada. Se ha eliminado el archivo %d</item>
         <item quantity="many">Caché borrada. Se han eliminado archivos %d</item>
