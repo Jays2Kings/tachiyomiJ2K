@@ -459,8 +459,7 @@
     <plurals name="cleanup_done">
         <item quantity="other">ล้างเสร็จสิ้น ลบออกไป %d โฟล์เดอร์</item>
     </plurals>
-    <string name="delete_old_covers_in_library_used_">ลบหน้าปกเก่าและไม่ได้ใช้ของรายการที่อยู่ในคลังอัปเดต
-\nกำลังใช้: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">ลบหน้าปกเก่าและไม่ได้ใช้ของรายการที่อยู่ในคลังอัปเดต \nกำลังใช้: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">ล้างแคชภาพปกที่ไม่ได้อยู่ในคลังทั้งหมด
 \nกำลังใช้ไป: %1$s</string>
     <string name="some_extensions_may_not_update">ส่วนขยายบางรายการอาจอัปเดตอัตโนมัติไม่ได้ หากติดตั้งจากภายนอกแอป</string>
