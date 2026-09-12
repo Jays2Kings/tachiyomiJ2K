@@ -1008,8 +1008,7 @@
     <string name="no_folders_to_cleanup">सफा गर्न कुनै फोल्डर छैनन्</string>
     <string name="disable_if_issues_with_updating">यदि तपाईँले आफ्नो पुस्तकालय अपडेट गर्न वा रिस्टोर गर्न समस्याहरू अनुभव गर्दै हुनुहुन्छ भने यो असक्षम पार्नुहोस्</string>
     <string name="updates_covers_genres_desc">यसले आवरणहरू, विवरणहरू, जानरा, र इन्ट्रीहरूको स्थिति जानकारी अपडेट गर्दछ</string>
-    <string name="delete_old_covers_in_library_used_">अपडेट गरिएको तपाईंको पुस्तकालयमा इन्ट्रीको पुरानो र प्रयोग नगरिएको क्यास कभरहरू हटाउनुहोस्।
-\nहाल प्रयोग गर्दै: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">अपडेट गरिएको तपाईंको पुस्तकालयमा इन्ट्रीको पुरानो र प्रयोग नगरिएको क्यास कभरहरू हटाउनुहोस्। \nहाल प्रयोग गर्दै: %1$s</string>
     <string name="you_can_migrate_in_library">तपाईंले आफ्नो पुस्तकालयमा इन्ट्री चयन गरेर पनि स्थानान्तरण गर्न सक्नुहुन्छ</string>
     <string name="invalid_download_location">अवैध डाउनलोड स्थान</string>
     <string name="download_complete">डाउनलोड पूरा भयो</string>
