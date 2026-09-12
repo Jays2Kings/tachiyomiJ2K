@@ -697,8 +697,7 @@
     <string name="delete_all_covers__not_in_library_used_">Hapus semua cache sampul yang tidak ada di pustaka Anda
 \nSaat ini menggunakan: %1$s</string>
     <string name="clear_cached_covers_non_library">Bersihkan cache sampul yang tidak ada di pustaka</string>
-    <string name="delete_old_covers_in_library_used_">Hapus cache sampul-sampul lama dan tidak terpakai dari entri dalam pustaka Anda yang telah diperbarui.
-\nSaat ini menggunakan: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Hapus cache sampul-sampul lama dan tidak terpakai dari entri dalam pustaka Anda yang telah diperbarui. \nSaat ini menggunakan: %1$s</string>
     <string name="disable_if_issues_with_updating">Nonaktifkan ini jika Anda mengalami masalah dengan pembaruan dan pemulihan pustaka Anda</string>
     <string name="no_folders_to_cleanup">Tidak ada folder untuk dibersihkan</string>
     <string name="clean_read_downloads">Bersihkan yang telah dibaca</string>
