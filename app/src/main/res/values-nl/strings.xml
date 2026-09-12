@@ -445,8 +445,7 @@
     <string name="delete_all_covers__not_in_library_used_">Verwijder covers die niet in je bibliotheek staan
 \nOp dit moment gebruikt: %1$s</string>
     <string name="clear_cached_covers_non_library">Verwijder tijdelijke covers die niet in bibliotheek staan</string>
-    <string name="delete_old_covers_in_library_used_">Verwijder oude en ongebruikte covers van manga in je bibliotheek die zijn vervangen.
-\nOp dit moment gebruikt: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Verwijder oude en ongebruikte covers van manga in je bibliotheek die zijn vervangen. \nOp dit moment gebruikt: %1$s</string>
     <string name="clean_up_cached_covers">Tijdelijke covers opschonen</string>
     <plurals name="cleanup_done">
         <item quantity="one">Schoonmaak klaar. %d map verwijderd</item>
