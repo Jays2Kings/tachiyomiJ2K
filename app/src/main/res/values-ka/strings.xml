@@ -25,7 +25,6 @@
         <item quantity="other">ხელმისაწვდომია %d გაფართოების განახლება</item>
     </plurals>
     <string name="vertical_viewer">ვერტიკალური</string>
-    <string name="webtoon_side_padding_0">არცერთი</string>
     <string name="none">არცერთი</string>
     <string name="search_settings">პარამეტრების ძიება</string>
     <string name="updated_to_">განახლებულია v%1$s-მდე</string>
@@ -36,10 +35,8 @@
         <item quantity="other">დასრულების დრო %1$s. %2$s შეცდომა</item>
     </plurals>
     <string name="does_not_prevent_unofficial_nsfw">ეს არ აღმოფხვრავს პროგრამაში NSFW (18+) შიგთავსის არაოფიციალურ, ან შესაძლო არასწორად მონიშნული გაფართოებებოიდან გამოჩენას.</string>
-    <string name="whats_new">რა არის ახალი</string>
     <string name="download_queue">გადმოწერის რიგი</string>
     <string name="loading">იტვირთება…</string>
-    <string name="start">დაწყება</string>
     <string name="name">სახელი</string>
     <string name="navigation">ნავიგაცია</string>
     <string name="started">დაწყებული</string>
@@ -50,7 +47,6 @@
     <string name="reader">წამკითხველი</string>
     <string name="warning">გაფრთხილება</string>
     <string name="tap_to_see_details">დააჭირე დეტალების სანახავად</string>
-    <string name="faq_and_guides">ხდკ და სახელმძღვანელოები</string>
     <string name="on_hold">ლოდინის რეჟიმში</string>
     <string name="date_format">თარიღის ფორმატი</string>
     <string name="check_for_updates">განახლებების მოძებნა</string>
@@ -61,7 +57,6 @@
     <string name="set_as_cover">ყდად დაყენება</string>
     <string name="default_reading_mode">ნაგულისხმევი კითხვის რეჟიმი</string>
     <string name="left_to_right_viewer">მარცხნიდან მარჯვნივ</string>
-    <string name="webtoon_side_padding_20">20%</string>
     <string name="remove_from_library">ბიბლიოთეკიდან წაშლა</string>
     <string name="failed_to_update_cover">ვერ მოხერხდა ყდის განახლება</string>
     <string name="dropped">გადაგდებული</string>
@@ -97,8 +92,6 @@
     <string name="total_chapters">თავების რაოდენობა</string>
     <string name="last_read">ბოლოს წაკითხული</string>
     <string name="badges">ნიშნაკები</string>
-    <string name="reduces_banding_impacts_performance">აუმჯობესებს ხარისხს, თუმცა ამცირებს წარმადობას</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="tracking_info">ცალმხრივი სინქრონიზაცია თვალყურის სადევნებელ სერვისებში თავების პროგრესის განსაახლებლად. მიადევნე თვალყური ინდივიდუალურ მანგებს მათი ჩანართებიდან.</string>
     <string name="restore_backup">რეზერვის აღდგენა</string>
     <string name="restore_missing_sources">დაკარგული წყაროები:</string>
@@ -161,7 +154,6 @@
     <string name="browse">დათვალიერება</string>
     <string name="sources">წყაროები</string>
     <string name="trust">ნდობა</string>
-    <string name="untrusted">არასანდო</string>
     <string name="uninstall">წაშლა</string>
     <string name="untrusted_extension">არასანდო დამატება</string>
     <string name="use_image_as_cover">გამოვიყენოთ ეს სურათი ყდის ნახატად\?</string>
@@ -173,14 +165,11 @@
     <string name="previous_chapter">წინა თავი</string>
     <string name="show_page_number">გვერდის ნომრის ჩვენება</string>
     <string name="double_tap_anim_speed">ორჯერ დაჭერისას ანიმაციის სისწრაფე</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
     <string name="added_to_library">დამატებულია ბიბლიოთეკაში</string>
     <string name="add_tracking">თვალი ადევნე</string>
     <string name="downloads">გადმოწერები</string>
     <string name="more">მეტი</string>
     <string name="copy_value">კოპირება</string>
-    <string name="pref_global_search">გლობალური ძებნა</string>
     <string name="check_for_extension_updates">მოძებნე გავრცობის განახლებები</string>
     <string name="email">ელ. ფოსტა</string>
     <string name="log_out">გამოსვლა</string>
@@ -210,7 +199,6 @@
     <string name="finished_chapter">დამთავრებულია:</string>
     <string name="fullscreen">მთლიან ეკრანზე</string>
     <string name="animate_page_transitions">გვერდის გადასვლების ანიმირება</string>
-    <string name="true_32bit_color">32-bit ფერი</string>
     <string name="crop_borders">კუთხეების ჩამოჭრა</string>
     <string name="color_filter_blend_mode">ფერთა ფილტრის შეხამების რეჟიმი</string>
     <string name="overlay">გადაფარება</string>

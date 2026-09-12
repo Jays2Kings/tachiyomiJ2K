@@ -28,7 +28,6 @@
     <string name="add">添加</string>
     <string name="edit_categories">编辑分类</string>
     <string name="move_to_categories">移至分类</string>
-    <string name="start">开始</string>
     <string name="stop">停止</string>
     <string name="pause">暂停</string>
     <string name="clear">清除</string>
@@ -69,15 +68,12 @@
     <string name="daily">每天</string>
     <string name="every_2_days">每2天</string>
     <string name="weekly">每周</string>
-    <string name="categories_to_include_in_global_update">全局更新时包含的分类</string>
     <string name="all">全部</string>
     <string name="library_update_restriction">设备限制</string>
-    <string name="library_update_restriction_summary">仅在符合条件时更新</string>
     <string name="wifi">已连接 Wi-Fi</string>
     <string name="charging">正在充电</string>
     <string name="app_theme">主题</string>
     <string name="dark">夜间模式</string>
-    <string name="amoled_black">AMOLED模式</string>
     <string name="language">语言</string>
     <string name="system_default">系统默认</string>
     <string name="default_category">默认归入分类</string>
@@ -86,7 +82,6 @@
     <string name="installing">安装中</string>
     <string name="installed">已安装</string>
     <string name="trust">信任</string>
-    <string name="untrusted">不可信</string>
     <string name="uninstall">卸载</string>
     <string name="untrusted_extension">插件未受信任</string>
     <string name="untrusted_extension_message">恶意插件可能会读取所有登录的账号或执行任意代码。
@@ -128,7 +123,6 @@
     <string name="fast">快速</string>
     <string name="rotation">方向</string>
     <string name="free">闲置</string>
-    <string name="lock">锁定</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -144,9 +138,7 @@
     <string name="fourth_to_last">倒数第四章</string>
     <string name="fifth_to_last">倒数第五章</string>
     <string name="download_new_chapters">自动下载新章节</string>
-    <string name="categories_to_include_in_download">下载时包含的分类</string>
     <string name="services">平台</string>
-    <string name="backup">备份</string>
     <string name="create_backup">创建备份</string>
     <string name="can_be_used_to_restore">可用于恢复当前数据</string>
     <string name="restore_backup">恢复备份</string>
@@ -246,7 +238,6 @@
     <string name="searching_for_updates">正在检查更新…</string>
     <string name="download_complete">下载完成</string>
     <string name="download_error">下载时发生错误</string>
-    <string name="update_available">有可用的更新</string>
     <string name="cover_of_image">作品封面</string>
     <string name="no_recent_chapters">无最近章节</string>
     <string name="no_recently_read_manga">无最近阅读的作品</string>
@@ -278,7 +269,6 @@
     <string name="skip_filtered_chapters">跳过筛选掉的章节</string>
     <string name="disable_battery_optimization">禁用电池优化</string>
     <string name="battery_optimization_disabled">电池优化已经关闭</string>
-    <string name="pref_global_search">全局搜索</string>
     <string name="check_for_extension_updates">检查插件更新</string>
     <string name="website">官网</string>
     <string name="open_source_licenses">开源许可证</string>
@@ -463,12 +453,7 @@
     <string name="error_saving_cover">保存封面时出错</string>
     <string name="source_not_installed">图源未安装</string>
     <string name="remember_this_choice">记住这个选择</string>
-    <string name="oldest_first">最旧到最新</string>
-    <string name="newest_first">最新到最旧</string>
-    <string name="sort_by_chapter_number">按章节编号排序</string>
-    <string name="sort_by_source_s_order">按图源顺序排序</string>
     <string name="hide_chapter_titles">隐藏章节标题</string>
-    <string name="show_read_chapters">显示已阅读章节</string>
     <string name="show_unread_chapters">显示未阅读章节</string>
     <string name="show_downloaded_chapters">显示已下载章节</string>
     <string name="show_bookmarked_chapters">显示已添加书签的章节</string>
@@ -512,7 +497,6 @@
     <string name="start_downloading_now">立即开始下载</string>
     <string name="username_must_not_be_blank">用户名或密码不能为空</string>
     <string name="not_downloaded">未下载</string>
-    <string name="whats_new">更新日志</string>
     <string name="you_can_migrate_in_library">你还可以选择书架中的作品进行迁移</string>
     <string name="migration_sources_changed">迁移图源已更改</string>
     <string name="only_enable_enabled_for_migration">仅迁移当前启用的图源</string>
@@ -520,7 +504,6 @@
     <string name="use_last_saved_migration_preferences">使用上次保存的预迁移配置和图源进行批量迁移</string>
     <string name="match_enabled_sources">匹配启用图源</string>
     <string name="match_pinned_sources">匹配置顶图源</string>
-    <string name="only_search_pinned_when">仅搜索置顶图源</string>
     <string name="delete_all_covers__not_in_library_used_">删除不在书架的所有封面缓存
 \n当前使用：%1$s</string>
     <string name="clear_cached_covers_non_library">清除不在书架内漫画的封面缓存</string>
@@ -538,14 +521,12 @@
     <string name="clean_up_downloaded_chapters">清除已下载章节</string>
     <string name="delete_unused_chapters">删除不存在、部分下载和已读章节的文件夹</string>
     <string name="data_management">数据管理</string>
-    <string name="not_logged_into_">尚未登录%1$s</string>
     <plurals name="cache_cleared">
         <item quantity="other">缓存已清除，%d个文件已被删除</item>
     </plurals>
     <string name="bottom">底部</string>
     <string name="downloading_">正在下载：%1$s</string>
     <string name="enable_zoom_out">启用缩小</string>
-    <string name="webtoon_style">卷纸样式</string>
     <string name="reading_">正在阅读%1$s</string>
     <string name="set_as_default_for_all">设置为全局默认</string>
     <string name="extension_updates">插件更新</string>
@@ -568,7 +549,6 @@
     <string name="auto_refresh_covers_summary">更新书架的同时刷新书架作品封面</string>
     <string name="include_in_global_update">包含在全局更新中</string>
     <string name="when_sorting_ignore_articles">当按字母排序时，排序忽略漫画标题开头的冠词（a，an，the）</string>
-    <string name="no_chapters_error">没有章节</string>
     <string name="badges">标记</string>
     <string name="search_settings">搜索设置</string>
     <string name="locale">语言</string>
@@ -591,8 +571,6 @@
     <string name="started_reading_date">开始阅读日期</string>
     <string name="finished_reading_date">完成阅读日期</string>
     <string name="myanimelist_relogin">请重新登录MyAnimeList</string>
-    <string name="invalid_backup_file_type">无效的备份文件类型：%1$s
-\n文件扩展名应为.proto.gz或.json。</string>
     <string name="backup_has_no_manga">备份不包含任何作品。</string>
     <string name="restore_missing_sources">图源缺失：</string>
     <string name="restore_missing_trackers">未登录的进度记录平台：</string>
@@ -663,8 +641,6 @@
     </plurals>
     <string name="automatic_orientation">自动 (基于方向)</string>
     <string name="page_layout">页面布局</string>
-    <string name="switch_to_single">切为单页</string>
-    <string name="switch_to_double">转到双页</string>
     <string name="single_page">单页</string>
     <string name="double_pages">双页</string>
     <string name="amount_of_pages_to_preload">读取时要预加载的页数。更高的值将带来更流畅的阅读体验，但代价是更高的缓存和网络数据用量。</string>
@@ -695,7 +671,6 @@
     <string name="spring_blossom">春暖花开</string>
     <string name="midnight_dusk">午夜薄暮</string>
     <string name="flat_lime">平石灰</string>
-    <string name="hot_pink">亮粉色</string>
     <string name="invert_double_pages">反转双页</string>
     <string name="save_combined_pages">保存合并页</string>
     <string name="share_combined_pages">分享合并页</string>
@@ -864,7 +839,6 @@
     <string name="ext_installer_shizuku_stopped">Shizuku 未在运行</string>
     <string name="ext_installer_shizuku_unavailable_dialog">安装并启动 Shizuku 后才能设置 Shizuku 为插件安装程序。</string>
     <string name="lime_time">石灰时代</string>
-    <string name="classic_blue">经典蓝</string>
     <string name="every_3_days">每3天</string>
     <string name="download_queue_size_warning">警告：批量下载可能导致图源变慢，甚至会使得它们屏蔽 Tachiyomi。点击了解详情。</string>
     <string name="save_chapters_as_cbz">保存为CBZ存档</string>
@@ -909,9 +883,7 @@
 \n滑动以忽略此提示</string>
     <string name="most_entries">多数作品</string>
     <string name="use_staggered_grid">使用交错网格</string>
-    <string name="pref_update_only_completely_read_summary">仅在无未读章节（全读完）时才更新漫画</string>
     <string name="update_tracking_marked_read">标记为已读时更新进度记录</string>
-    <string name="view_all">查看全部</string>
     <string name="update_tracking_after_reading">阅读后更新进度记录</string>
     <string name="cover_only_grid">封面网格</string>
     <string name="notification_update_error">%1$d 个更新失败了</string>
@@ -940,7 +912,6 @@
     <string name="download_ahead">预先下载</string>
     <string name="pref_manage_notifications">通知管理</string>
     <string name="battery_not_low">非低电量</string>
-    <string name="faq_and_guides">常见问题和指南</string>
     <string name="learn_why">了解原因</string>
     <string name="secure_screen_summary">阻止截屏，并在切换后台时隐藏预览图</string>
     <string name="open_in_app">在应用中打开</string>

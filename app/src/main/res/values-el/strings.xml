@@ -31,7 +31,6 @@
     <string name="add">Προσθήκη</string>
     <string name="edit_categories">Επεξεργασία βιβλιοθήκης</string>
     <string name="move_to_categories">Μετακίνηση σε κατηγορίες</string>
-    <string name="start">Εκκίνηση</string>
     <string name="stop">Σταμάτημα</string>
     <string name="pause">Παύση</string>
     <string name="clear">Απαλοιφή</string>
@@ -69,15 +68,12 @@
     <string name="daily">Καθημερινά</string>
     <string name="every_2_days">Κάθε 2 ημέρες</string>
     <string name="weekly">Εβδομαδιαία</string>
-    <string name="categories_to_include_in_global_update">Κατηγορίες που περιλαμβάνονται στην ολική ενημέρωση</string>
     <string name="all">Όλα</string>
     <string name="library_update_restriction">Περιορισμοί συσκευής</string>
-    <string name="library_update_restriction_summary">Ενημέρωση μόνο όταν πληρούνται οι προϋποθέσεις</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Φορτίζει</string>
     <string name="app_theme">Θέμα εφαρμογής</string>
     <string name="dark">Σκοτεινό</string>
-    <string name="amoled_black">Μαύρο AMOLED</string>
     <string name="language">Γλώσσα</string>
     <string name="system_default">Προεπιλογή συστήματος</string>
     <string name="default_category">Προεπιλεγμένη κατηγορία</string>
@@ -86,7 +82,6 @@
     <string name="installing">Εγκατάσταση</string>
     <string name="installed">Εγκαταστημένο</string>
     <string name="trust">Εμπιστοσύνη</string>
-    <string name="untrusted">Μη αξιόπιστο</string>
     <string name="uninstall">Απεγκατάσταση</string>
     <string name="untrusted_extension">Μη αξιόπιστη επέκταση</string>
     <string name="untrusted_extension_message">Οι κακόβουλες επεκτάσεις μπορούν να διαβάσουν τυχόν αποθηκευμένα διαπιστευτήρια σύνδεσης ή να εκτελέσουν αυθαίρετο κώδικα.
@@ -128,7 +123,6 @@
     <string name="fast">Γρήγορο</string>
     <string name="rotation">Περιστροφή</string>
     <string name="free">Ελεύθερο</string>
-    <string name="lock">Κλέιδωμα</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -144,9 +138,7 @@
     <string name="fourth_to_last">Προ-προ-προτελευταίο αναγνωσμένο κεφάλαιο</string>
     <string name="fifth_to_last">Προ-προ-προ-προτελευταίο αναγνωσμένο κεφάλαιο</string>
     <string name="download_new_chapters">Λήψη νέων κεφάλαιων</string>
-    <string name="categories_to_include_in_download">Κατηγορίες που να συμπεριλαμβάνονται στην λήψη</string>
     <string name="services">Υπηρεσίες</string>
-    <string name="backup">Αντίγραφο ασφαλείας</string>
     <string name="create_backup">Δημιουργία αντίγραφου ασφαλείας</string>
     <string name="can_be_used_to_restore">Μπορεί να χρησιμοποιηθεί για επαναφορά τρέχουσας βιβλιοθήκης</string>
     <string name="restore_backup">Επαναφορά αντίγραφου ασφάλειας</string>
@@ -246,7 +238,6 @@
     <string name="searching_for_updates">Αναζήτηση για ενημερώσεις…</string>
     <string name="download_complete">Η λήψη ολοκληρώθηκε</string>
     <string name="download_error">Σφάλμα λήψης</string>
-    <string name="update_available">Υπάρχει διαθέσιμη ενημέρωση</string>
     <string name="cover_of_image">Εξώφυλλο σειράς</string>
     <string name="no_recent_chapters">Δεν υπάρχουν πρόσφατα κεφάλαια</string>
     <string name="no_recently_read_manga">Δεν υπάρχουν πρόσφατες αναγνωσμένες σειρές</string>
@@ -257,7 +248,6 @@
     <string name="download_paused">Λήψη σε παύση</string>
     <string name="common">Κοινό</string>
     <string name="open_in_webview">Άνοιγμα σε Web View</string>
-    <string name="true_32bit_color">32-bit χρώμα</string>
     <string name="skip_read_chapters">Προσπέραση διαβαζμένων κεφαλέων</string>
     <string name="overlay">επικάλυψη</string>
     <string name="multiply">Πολλαπλασιαζμός</string>
@@ -278,7 +268,6 @@
         <item quantity="one">Διαθέσιμη ενημέρωση επέκτασης</item>
         <item quantity="other">%d διαθέσιμες ενημερώσεις επεκτάσεων</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Μειώνει το banding, αλλά μπορεί να επηρεάσει την απόδοση</string>
     <string name="color_filter_blend_mode">Μέθοδος μίξης χρωματικού φίλτρου</string>
     <string name="dodge_lighten">Dodge / Φώτισε</string>
     <string name="burn_darken">Burn / Σκουραίωσε</string>
@@ -290,11 +279,6 @@
     <string name="back">Πίσω</string>
     <string name="always_show_chapter_transition">Να εμφανίζεται πάντα η μετάβαση κεφαλαίου</string>
     <string name="pref_webtoon_side_padding">Πλευρικό γέμισμα</string>
-    <string name="webtoon_side_padding_0">Κανένα</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Κεφάλαια %1$s</string>
     <string name="remove_from_library">Κατάργηση από τη βιβλιοθήκη</string>
     <string name="refresh_tracking">Ανανέωση παρακολούθησης</string>
@@ -309,7 +293,6 @@
     <string name="requires_app_restart">Απαιτείται επανεκκίνηση της εφαρμογής για να τεθεί σε ισχύ</string>
     <string name="disable_battery_optimization">Απενεργοποίηση βελτιστοποίησης μπαταρίας</string>
     <string name="battery_optimization_disabled">Η βελτιστοποίηση μπαταρίας είναι ήδη απενεργοποιημένη</string>
-    <string name="pref_global_search">Καθολική αναζήτηση</string>
     <string name="check_for_extension_updates">Έλεγχος για ενημερώσεις επεκτάσεων</string>
     <string name="website">Ιστότοπος</string>
     <string name="open_source_licenses">Άδειες ανοιχτού κώδικα</string>
@@ -435,7 +418,6 @@
     <string name="add_to_library">Προσθήκη στη βιβλιοθήκη</string>
     <string name="library_search_hint">Αναζήτηση τίτλου, ετικετών, πηγής</string>
     <string name="username_must_not_be_blank">Το όνομα χρήστη ή ο κωδικός πρόσβασης δεν μπορούν να είναι κενά</string>
-    <string name="whats_new">Τι νέο υπάρχει</string>
     <string name="default_reading_mode">Προεπιλεγμένη λειτουργία ανάγνωσης</string>
     <string name="l_nav">Σχήματος L</string>
     <string name="kindlish_nav">Σαν Kindle</string>
@@ -446,7 +428,6 @@
     <string name="started_reading_date">Ημερομηνία έναρξης ανάγνωσης</string>
     <string name="finished_reading_date">Ημερομηνία ολοκλήρωσης ανάγνωσης</string>
     <string name="myanimelist_relogin">Συνδεθείτε ξανά στο MAL</string>
-    <string name="no_chapters_error">Δεν βρέθηκαν κεφάλαια</string>
     <string name="badges">Σήματα</string>
     <string name="next">Επόμενο</string>
     <string name="open_log">Άνοιγμα αρχείου καταγραφής</string>
@@ -461,8 +442,6 @@
     <string name="locale">Περιοχή</string>
     <string name="automatic_backups">Αυτόματα αντίγραφα ασφαλείας</string>
     <string name="invalid_backup_file">Μη έγκυρο αρχείο αντιγράφου ασφαλείας</string>
-    <string name="invalid_backup_file_type">Μη έγκυρος τύπος αρχείου αντιγράφου ασφαλείας: %1$s
-\nΘα πρέπει να τελειώνει με .proto.gz ή .json.</string>
     <string name="backup_has_no_manga">Το αντίγραφο ασφαλείας δεν περιέχει καμία καταχώρηση.</string>
     <string name="restore_missing_sources">Πηγές που λείπουν:</string>
     <string name="restore_missing_trackers">Ιχνηλάτες που δεν έχουν συνδεθεί:</string>
@@ -481,7 +460,6 @@
     <string name="file_picker_error">Δεν βρέθηκε εφαρμογή επιλογής αρχείων</string>
     <string name="restore_in_progress">Η επαναφορά βρίσκεται ήδη σε εξέλιξη</string>
     <string name="backup_in_progress">Η δημιουργία αντιγράφων ασφαλείας βρίσκεται ήδη σε εξέλιξη</string>
-    <string name="not_logged_into_">Δεν έχετε συνδεθεί στο %1$s</string>
     <string name="backup_and_restore">Δημιουργία αντιγράφων ασφαλείας και επαναφορά</string>
     <string name="progress">Η λήψη ολοκληρώθηκε</string>
     <string name="complete">Ολοκληρωμένο</string>
@@ -540,7 +518,6 @@
     <string name="you_can_migrate_in_library">Μπορείτε επίσης να μετεγκαταστήσετε επιλέγοντας σειρές στη βιβλιοθήκη σας</string>
     <string name="match_enabled_sources">Αντιστοίχιση ενεργοποιημένων πηγών</string>
     <string name="match_pinned_sources">Αντιστοίχιση καρφιτσωμένων πηγών</string>
-    <string name="only_search_pinned_when">Αναζήτηση μόνο σε καρφιτσωμένες πηγές</string>
     <string name="delete_all_covers__not_in_library_used_">Διαγραφή όλων των εξώφυλλων που έχουν αποθηκευτεί προσωρινά και δε βρίσκονται στη βιβλιοθήκη σας
 \nΑυτήν τη στιγμή χρησιμοποιούνται: %1$s</string>
     <string name="clear_cached_covers_non_library">Εκκαθάριση προσωρινά αποθηκευμένων εξώφυλλων που δε βρίσκονται στη βιβλιοθήκη</string>
@@ -575,7 +552,6 @@
     <string name="hide_bottom_nav">Αυτόματη απόκρυψη κάτω πλοήγησης</string>
     <string name="last_used_library_recents">Τελευταία χρήση (Βιβλιοθήκη ή Πρόσφατα)</string>
     <string name="flat_lime">Επίπεδο Μοσχολέμονο</string>
-    <string name="hot_pink">Καυτό ροζ</string>
     <string name="spring_blossom">Ανοιξιάτικο Άνθος</string>
     <string name="midnight_dusk">Midnight Dusk</string>
     <string name="pauses_reading_history">Παύει το ιστορικό ανάγνωσης</string>
@@ -640,12 +616,7 @@
     <string name="reset_cover">Επαναφορά εξωφύλλου</string>
     <string name="reset_tags">Επαναφορά ετικετών</string>
     <string name="clear_tags">Διαγραφή ετικετών</string>
-    <string name="oldest_first">Παλαιότερο προς νεότερο</string>
-    <string name="newest_first">Νεότερο προς παλαιότερο</string>
-    <string name="sort_by_chapter_number">Ταξινόμηση κατά αριθμό κεφαλαίου</string>
-    <string name="sort_by_source_s_order">Ταξινόμηση με βάση τη σειρά της πηγής</string>
     <string name="hide_chapter_titles">Απόκρυψη τίτλων κεφαλαίων</string>
-    <string name="show_read_chapters">Εμφάνιση αναγνωσμένων κεφαλαίων</string>
     <string name="show_unread_chapters">Εμφάνιση μη αναγνωσμένων κεφαλαίων</string>
     <string name="show_downloaded_chapters">Εμφάνιση ληφθέντων κεφαλαίων</string>
     <string name="show_bookmarked_chapters">Εμφάνιση κεφαλαίων με σελιδοδείκτη</string>
@@ -683,8 +654,6 @@
     <string name="if_disabled_transition_will_skip">Εάν απενεργοποιηθεί, η σελίδα μετάβασης θα παραλειφθεί εάν φορτωθεί το επόμενο κεφάλαιο</string>
     <string name="smart_based_on_page_and_theme">Έξυπνο (βάση σελίδας και θέματος)</string>
     <string name="smart_based_on_page">Smart (βάσει σελίδας)</string>
-    <string name="switch_to_single">Αλλαγή σε μία σελίδα</string>
-    <string name="switch_to_double">Αλλαγή σε διπλές σελίδες</string>
     <string name="single_page">Μονή σελίδα</string>
     <string name="double_pages">Διπλές σελίδες</string>
     <string name="smart_by_theme">Έξυπνο (ανά θέμα)</string>
@@ -704,7 +673,6 @@
     <string name="save_first_page">Αποθήκευση πρώτης σελίδας</string>
     <string name="share_first_page">Κοινή χρήση πρώτης σελίδας</string>
     <string name="set_first_page_as_cover">Ορισμός πρώτης σελίδας ως εξωφύλλου</string>
-    <string name="webtoon_style">στυλ webtoon</string>
     <string name="reading_">Ανάγνωση %1$s</string>
     <string name="changing_will_reset_reading_mode">Η αλλαγή αυτού θα επαναφέρει τη λειτουργία ανάγνωσης για αυτήν τη σειρά</string>
     <string name="filter_languages">Φιλτράρισμα γλωσσών</string>
@@ -895,7 +863,6 @@
     <string name="download_queue_size_warning">Προειδοποίηση: οι μαζικές λήψεις ενδέχεται να οδηγήσουν σε επιβράδυνση των πηγών ή/και αποκλεισμό του Tachiyomi. Πατήστε για να μάθετε περισσότερα.</string>
     <string name="every_3_days">Κάθε 3 ημέρες</string>
     <string name="save_chapters_as_cbz">Αποθήκευση ως αρχείο CBZ</string>
-    <string name="classic_blue">Κλασικό Μπλε</string>
     <string name="lime_time">Lime Time</string>
     <string name="enhanced_services">Βελτιωμένες υπηρεσίες</string>
     <string name="publishing_finished">Η έκδοση ολοκληρώθηκε</string>
@@ -944,8 +911,6 @@
     <string name="try_new_features">Δοκιμάστε τις νέες λειτουργίες πριν κυκλοφορήσουν επίσημα. Οι εκδόσεις beta ενδέχεται να είναι ασταθείς και παρέχονται για να δώσουν σχόλια στον προγραμματιστή.</string>
     <string name="most_entries">Οι περισσότερες καταχωρήσεις</string>
     <string name="use_staggered_grid">Χρήση κλιμακωτού πλέγματος</string>
-    <string name="pref_update_only_completely_read_summary">Ενημέρωση των σειρών μόνο όταν δεν υπάρχει μη αναγνωσμένο κεφάλαιο (πλήρως διαβασμένο)</string>
-    <string name="view_all">Προβολή όλων</string>
     <string name="show_">Εμφάνιση %1$s</string>
     <string name="update_tracking_marked_read">Ενημέρωση παρακολούθησης όταν επισημανθεί ως αναγνωσμένη</string>
     <string name="zoom_double_page_spreads">Μεγέθυνση σε ανάπτυγμα διπλής σελίδας</string>
@@ -964,7 +929,6 @@
     <string name="backup_info">Συνιστάται ιδιαίτερα η δημιουργία αυτόματων αντιγράφων ασφαλείας. Θα πρέπει να διατηρείτε αντίγραφα και σε άλλα μέρη.</string>
     <string name="battery_not_low">Η μπαταρία δεν είναι χαμηλή</string>
     <string name="pref_manage_notifications">Διαχείριση ειδοποιήσεων</string>
-    <string name="faq_and_guides">Συχνές ερωτήσεις και οδηγοί</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Επόμενο αδιάβαστο κεφάλαιο</item>
         <item quantity="other">Επόμενα %d αδιάβαστα κεφάλαια</item>
@@ -992,7 +956,6 @@
     <string name="tap_zones">Ζώνες πατήματος</string>
     <string name="lavender">Λεβάντα</string>
     <string name="violet">Βιολετί</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Προεπιλεγμένη συμβολοσειρά πράκτορα χρήστη</string>
     <string name="loader_rar5_error">Η μορφή RARv5 δεν υποστηρίζεται</string>
     <string name="language_requires_app_restart">Ορισμένες γλώσσες ενδέχεται να απαιτούν επανεκκίνηση της εφαρμογής για να εμφανιστούν σωστά</string>

@@ -28,7 +28,6 @@
     <string name="add">Pievienot</string>
     <string name="edit_categories">Rediģēt kategorijas</string>
     <string name="move_to_categories">Pārvietot uz kategorijam</string>
-    <string name="start">Sākt</string>
     <string name="stop">Beigt</string>
     <string name="pause">Pārtraukt</string>
     <string name="clear">Notīrīt</string>
@@ -60,13 +59,11 @@
     <string name="lock_with_biometrics">Vajadzīgs atbloķēt</string>
     <string name="lock_when_idle">Bloķēt, ja dīkstāvē</string>
     <string name="security">Drošība</string>
-    <string name="backup">Rezerves kopija</string>
     <string name="backup_failed">Dublēšana neizdevās</string>
     <string name="restore_completed">Atjaunošana pabeigta</string>
     <string name="creating_backup">Izveido dublējumu</string>
     <string name="what_should_backup">Ko tu gribi dublēt\?</string>
     <string name="restoring_backup">Dublējuma atjaunošana</string>
-    <string name="pref_global_search">Globālā meklēšana</string>
     <string name="cancel_all">Atcelt visu</string>
     <string name="download_paused">Lejuplāde pauzēta</string>
     <string name="could_not_download_unexpected_error">Nevarēja lejupielādēt nodaļu neparedzētas kļūdas dēļ</string>
@@ -84,7 +81,6 @@
     <string name="extensions">Paplašinājumi</string>
     <string name="extension_info">Paplašinājumu informācija</string>
     <string name="vertical_viewer">Vertikāls</string>
-    <string name="webtoon_side_padding_0">Nekāds</string>
     <string name="migrate">Migrēt</string>
     <string name="help">Palīdzība</string>
     <string name="language">Valoda</string>
@@ -127,7 +123,6 @@
     <string name="local">Lokāls</string>
     <string name="updating_library">Atjauninās bibliotēka</string>
     <string name="new_version_available">Pieejama jauna versija!</string>
-    <string name="update_available">Pieejams atjauninājums</string>
     <string name="updating_">Artjauninās %1$s</string>
     <string name="jump_to_category">Pārlec uz kategoriju</string>
     <string name="long_press_category">Nospied un turi lai labotu kategoriju</string>
@@ -183,8 +178,6 @@
     <string name="next_chapter">Nākama nodaļa</string>
     <string name="previous_chapter">Iepriekšēja nodaļa</string>
     <string name="label_global_search">Globālā meklēšana</string>
-    <string name="invalid_backup_file_type">Nederīgs dublējuma faila tips: %1$s
-\nTam vajadzētu beigties ar .proto.gz vai .json.</string>
     <string name="restrictions_">Ierobežojumi: %1$s</string>
     <string name="library_update_restriction">Bibliotēkas atjaunināšanas ierobežojumi</string>
     <plurals name="notification_and_n_more">
@@ -266,16 +259,11 @@
     <string name="backup_info">Automātiskā dublēšana ir ļoti ieteicama. Kopijas vajadzētu glabāt arī citās vietās.</string>
     <string name="invalid_backup_file">Nederīgs dublējuma fails</string>
     <string name="website">Tīmekļa vietne</string>
-    <string name="whats_new">Jaunumi</string>
     <string name="split_tall_images">Sadalīt augstus attēlus</string>
     <string name="pref_inverted_colors">Invertēts</string>
     <string name="pref_webtoon_side_padding">Sānu platums</string>
     <string name="l_nav">L formas</string>
     <string name="right_and_left_nav">Pa labi un pa kreisi</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="enhanced_tracking_info">Pakalpojumi, kas nodrošina uzlabotus līdzekļus konkrētiem avotiem. Pievienojot bibliotēkai, manga tiks automātiski izsekota.</string>
     <string name="enhanced_services">Uzlabotie pakalpojumi</string>
     <string name="empty_backup_error">Nav bibliotēkas ierakstu, ko dublēt</string>
@@ -303,7 +291,6 @@
     <string name="show_in_sources_and_extensions">Rādīt avotos un paplašinājumu sarakstos</string>
     <string name="does_not_prevent_unofficial_nsfw">Šis neliedz neoficiāliem vai, iespējams, nepareizi atzīmētiem paplašinājumiem parādīties NSFW (18+) saturu lietotnē.</string>
     <string name="send_crash_report">Sūtīt avārijas ziņojumus</string>
-    <string name="true_32bit_color">32-bit krāsa</string>
     <string name="free">Brīvs</string>
     <string name="default_reading_mode">Noklusējuma lasīšanas režīms</string>
     <string name="fit_screen">Ietilpt ekrānā</string>
@@ -316,7 +303,6 @@
     <string name="smart_fit">Viedā ietilpšana</string>
     <string name="pending">Gaida</string>
     <string name="installed">Instalēts</string>
-    <string name="untrusted">Neuzticams</string>
     <string name="uninstall">Atinstalēt</string>
     <string name="reading_mode">Lasīšanas režīms</string>
     <string name="scale_type">Mēroga tips</string>
@@ -418,9 +404,7 @@
     </plurals>
     <string name="overlay">Parklājums</string>
     <string name="updates_tracking_details">Atjaunina statusu, vērtējumu un pēdējo izlasīto nodaļu no sekošanas servisa</string>
-    <string name="faq_and_guides">Biežāk uzdotie jautājumi un rokasgrāmatas</string>
     <string name="browse">Pārlūkot</string>
-    <string name="no_chapters_error">Nav atrastu nodaļu</string>
     <string name="remove_from_library">Noņemt no bibliotēkas</string>
     <string name="channel_errors">Kļūdas</string>
     <string name="download_queue_size_warning">Brīdinājums: liela apjoma lejupielāde var izraisīt to, ka avoti kļūst lēnāki un/vai bloķē Tachiyomi. Pieskarieties, lai uzzinātu vairāk.</string>
@@ -543,8 +527,6 @@
     <string name="rereading">Pārlasīšana</string>
     <string name="lavender">Lavanda</string>
     <string name="tap_zones">Skāriena zonas</string>
-    <string name="reduces_banding_impacts_performance">Samazina grupēšanu, bet var ietekmēt veiktspēju</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Lejupielādētās nodaļas</string>
     <string name="allow_deleting_bookmarked_chapters">Atļaut dzēst ar grāmatzīmēm atzīmētās nodaļas</string>
     <string name="updates_last_update_info">Bibliotēka pēdējo reizi atjaunināta: %s</string>

@@ -22,7 +22,6 @@
     <string name="app_theme">Tema aplikasi</string>
     <string name="date_format">Format tanggal</string>
     <string name="complete">Komplit</string>
-    <string name="pref_global_search">Penggolekan global</string>
     <string name="cancel_all_for_series">Batalke kabeh seri iki</string>
     <string name="downloaded">Diundhuh</string>
     <string name="download_location">Lokasi donlot</string>
@@ -41,7 +40,6 @@
     <string name="lock_when_idle">Kunci wektu meneng</string>
     <string name="chapter_">bab %1$s</string>
     <string name="bookmarked">Diwenehi tandha</string>
-    <string name="no_chapters_error">Ora ditemokake bab</string>
     <string name="by_chapter_number">Miturut nomer bab</string>
     <string name="by_update_date">Miturut tanggal unggah</string>
     <string name="categories">Kategori</string>
@@ -71,7 +69,6 @@
     <string name="installing">Masang</string>
     <string name="installed">Ngetrap</string>
     <string name="trust">Pracaya</string>
-    <string name="untrusted">Ora kapracaya</string>
     <string name="uninstall">Ucul</string>
     <string name="ext_installer_shizuku_stopped">Shizuku ora lumaku</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Pasang lan wiwit Shizuku kanggo migunakake Shizuku dadi pemasang ekstensi.</string>
@@ -89,8 +86,6 @@
     <string name="animate_page_transitions">Animasi transisi kaca</string>
     <string name="double_tap_anim_speed">Kacepetan animasi tutul kaping pindho</string>
     <string name="show_page_number">Tampilake nomer halaman</string>
-    <string name="true_32bit_color">Werna 32-bit</string>
-    <string name="reduces_banding_impacts_performance">Nyuda banding, nanging bisa mengaruhi kinerja</string>
     <string name="crop_borders">Ketok pinggiran</string>
     <string name="grayscale">Grayscale</string>
     <string name="pref_inverted_colors">Kuwalik</string>
@@ -117,12 +112,6 @@
     <string name="green_initial">I</string>
     <string name="blue_initial">B</string>
     <string name="alpha_initial">T</string>
-    <string name="webtoon_side_padding_0">Ora</string>
-    <string name="webtoon_side_padding_5">5%</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="l_nav">Wangun L</string>
     <string name="kindlish_nav">Kaya Kindle</string>
     <string name="edge_nav">Tepi</string>
@@ -154,7 +143,6 @@
     <string name="show_in_sources_and_extensions">Tampilaken ing sumber lan dhaptar ekstensi</string>
     <string name="does_not_prevent_unofficial_nsfw">Iki ora nyegah ekstensi kang ora resmi utawa salah dilabeli kanggo nampilake konten NSFW (18+) ing aplikasi.</string>
     <string name="version">Versi</string>
-    <string name="faq_and_guides">Takon jawab lan panduan</string>
     <string name="username">Jeneng pangguna</string>
     <string name="password">Sandhi</string>
     <string name="downloads">Donlot</string>
@@ -215,7 +203,6 @@
     <string name="select_inverse">Pilih kuwalik</string>
     <string name="share">Bagi</string>
     <string name="sort">Urutke</string>
-    <string name="start">Mulai</string>
     <string name="tap_to_see_details">Klik gae Inpo luwih lanjut</string>
     <string name="undo">Baleni</string>
     <string name="unpin">Copot pin</string>

@@ -48,15 +48,12 @@
     <string name="enabled">Включено</string>
     <string name="last_read">Последняя прочитанная глава</string>
     <string name="total_chapters">Количество глав</string>
-    <string name="start">Старт</string>
     <string name="stop">Стоп</string>
     <string name="undo">Отменить</string>
     <string name="view_chapters">Посмотреть главы</string>
     <string name="back">Назад</string>
     <string name="forward">Вперёд</string>
     <string name="all">Все</string>
-    <string name="amoled_black">AMOLED чёрная</string>
-    <string name="backup">Резервная копия</string>
     <string name="what_should_backup">Что добавить в резервную копию\?</string>
     <string name="backup_created">Резервная копия создана</string>
     <string name="black">Чёрный</string>
@@ -134,7 +131,6 @@
     <string name="pending">Ожидается</string>
     <string name="trust">Надёжное</string>
     <string name="uninstall">Удалить</string>
-    <string name="untrusted">Ненадёжное</string>
     <string name="version_">Версия: %1$s</string>
     <string name="fifth_to_last">Пятая от прочитанной</string>
     <string name="select_backup_file">Выбрать файл резервной копии</string>
@@ -198,7 +194,6 @@
     <string name="no_more_results">Больше нет результатов</string>
     <string name="next_chapter_not_found">Следующая глава не найдена</string>
     <string name="no_results_found">Нет результатов</string>
-    <string name="not_logged_into_">Не выполнен вход в: %1$s</string>
     <plurals name="notification_and_n_more">
         <item quantity="one">и ещё %1$d глава</item>
         <item quantity="few">и ещё %1$d главы</item>
@@ -248,7 +243,6 @@
     <string name="double_tap_anim_speed">Скорость анимации при двойном нажатии</string>
     <string name="download_location">Каталог загрузок</string>
     <string name="download_new_chapters">Загружать новые главы</string>
-    <string name="categories_to_include_in_download">Категории для включения в загрузку</string>
     <string name="only_download_over_wifi">Загружать только через Wi-Fi</string>
     <string name="send_crash_report">Отсылать отчеты о падениях</string>
     <string name="check_for_updates">Проверить обновления</string>
@@ -256,10 +250,8 @@
     <string name="scale_type">Масштабирование</string>
     <string name="keep_screen_on">Держать экран включенным</string>
     <string name="language">Язык</string>
-    <string name="categories_to_include_in_global_update">Категории включённые в глобальный поиск</string>
     <string name="library_update_frequency">Частота обновления библиотеки</string>
     <string name="library_update_restriction">Ограничения устройства</string>
-    <string name="library_update_restriction_summary">Обновлять когда условия соблюдены</string>
     <string name="volume_keys">Клавиши громкости</string>
     <string name="invert_volume_keys">Клавиши громкости наоборот</string>
     <string name="navigation">Навигация</string>
@@ -292,7 +284,6 @@
     <string name="restoring_backup">Восстановление из резервной копии</string>
     <string name="right_to_left_viewer">Справа налево</string>
     <string name="free">Свободная</string>
-    <string name="lock">Заблокированная</string>
     <string name="fit_height">По высоте</string>
     <string name="fit_screen">Уместить в экран</string>
     <string name="fit_width">По ширине</string>
@@ -343,7 +334,6 @@
     <string name="no_new_updates_available">Обновлений не обнаружено</string>
     <string name="download_complete">Загрузка завершена</string>
     <string name="download_error">Ошибка загрузки</string>
-    <string name="update_available">Доступно обновление</string>
     <string name="new_version_available">Доступна новая версия!</string>
     <string name="manual">Ручное</string>
     <string name="weekly">Еженедельно</string>
@@ -481,7 +471,6 @@
     <!-- Reader -->
     <string name="set_as_default_for_all">Установить по умолчанию для всех</string>
     <string name="reading_">Чтение %1$s</string>
-    <string name="webtoon_style">Стиль веб-комикса</string>
     <string name="skip_filtered_chapters">Пропускать отфильтрованные главы</string>
     <string name="paged">Постранично</string>
     <string name="enable_zoom_out">Уменьшение масштаба</string>
@@ -515,12 +504,7 @@
     <string name="show_bookmarked_chapters">Показать главы с закладками</string>
     <string name="show_downloaded_chapters">Показать загруженные главы</string>
     <string name="show_unread_chapters">Показать непрочитанные главы</string>
-    <string name="show_read_chapters">Показать прочитанные главы</string>
     <string name="hide_chapter_titles">Скрыть названия глав</string>
-    <string name="sort_by_source_s_order">Сортировать по расположению источников</string>
-    <string name="sort_by_chapter_number">Сортировать по номеру главы</string>
-    <string name="newest_first">От новейшего к старейшему</string>
-    <string name="oldest_first">От старейшего к новейшему</string>
     <string name="clear_tags">Очистить теги</string>
     <string name="reset_tags">Сбросить теги</string>
     <string name="reset_cover">Сбросить обложку</string>
@@ -580,18 +564,13 @@
     <string name="clear_cached_covers_non_library">Очистить кешированные обложки, которых нет в библиотеке</string>
     <string name="delete_all_covers__not_in_library_used_">Удалить все кешированные обложки, которых нет в библиотеке
 \nИспользуется: %1$s</string>
-    <!-- Browse Settings -->
-    <string name="pref_global_search">Глобальный поиск</string>
     <string name="check_for_extension_updates">Проверить обновления для расширений</string>
-    <string name="only_search_pinned_when">Поиск только в закрепленных источниках</string>
     <string name="match_pinned_sources">Соответствие закрепленным</string>
     <string name="match_enabled_sources">Соответствие включённых источников</string>
     <string name="only_enable_pinned_for_migration">Включить закрепленные источники для переноса</string>
     <string name="only_enable_enabled_for_migration">Включить в текущий момент включенные источники для переноса</string>
     <string name="migration_sources_changed">Источники переноса изменены</string>
     <string name="you_can_migrate_in_library">Вы также можете осуществить перенос, выбрав серии в своей библиотеке</string>
-    <!-- About section -->
-    <string name="whats_new">Что нового</string>
     <string name="website">Сайт</string>
     <string name="open_source_licenses">Лицензии с открытым исходным кодом</string>
     <!-- Login/Logout dialog -->
@@ -659,7 +638,6 @@
     <string name="source_migration_guide">Руководство по переносу источников</string>
     <string name="nsfw_sources">Источники NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Это не предотвращает появление внутри приложения контента NSFW (18+) из неофициальных или потенциально неправильно помеченных расширений.</string>
-    <string name="no_chapters_error">Нет глав</string>
     <string name="badges">Значки</string>
     <string name="l_nav">L-образная</string>
     <string name="kindlish_nav">Kindle-подобная</string>
@@ -674,8 +652,6 @@
     <string name="locale">Региональные настройки</string>
     <string name="automatic_backups">Автоматические резервные копии</string>
     <string name="invalid_backup_file">Неверный файл резервной копии</string>
-    <string name="invalid_backup_file_type">Неверный тип файла резервной копии: %1$s
-\nФайл должен заканчиваться на .proto.gz или .json.</string>
     <string name="backup_has_no_manga">Резервная копия не содержит записей.</string>
     <string name="restore_missing_sources">Отсутствующие источники:</string>
     <string name="restore_missing_trackers">Сервисы отслеживания, в которые не выполнен вход:</string>
@@ -750,8 +726,6 @@
     <string name="automatic_orientation">Автоматически (на основе ориентации)</string>
     <string name="automatic_can_still_switch">При использовании автоматической схемы страницы вы всё равно можете переключиться между схемами во время чтения, не переопределяя этот параметр</string>
     <string name="page_layout">Схема страницы</string>
-    <string name="switch_to_single">Переключиться на одну страницу</string>
-    <string name="switch_to_double">Переключиться на двойные страницы</string>
     <string name="single_page">Одна страница</string>
     <string name="double_pages">Двойные страницы</string>
     <string name="amount_of_pages_to_preload">Количество страниц для предварительной загрузки при чтении. Более высокие значения приведут к более плавному чтению за счет увеличения использования кэша и сети.</string>
@@ -778,7 +752,6 @@
     <string name="spring_blossom">Весенний Цветок</string>
     <string name="midnight_dusk">Полночные Сумерки</string>
     <string name="flat_lime">Плоский Лайм</string>
-    <string name="hot_pink">Ярко Розовый</string>
     <string name="invert_double_pages">Двойные страницы наоборот</string>
     <string name="save_combined_pages">Сохранить объединённые страницы</string>
     <string name="share_combined_pages">Поделиться объединёнными страницами</string>
@@ -954,7 +927,6 @@
     <string name="show_outline_around_covers">Показать контур вокруг обложек</string>
     <string name="ext_installer_shizuku_stopped">Shizuku не работает</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Установите и запустите Shizuku, чтобы использовать его как установщик расширений.</string>
-    <string name="classic_blue">Классический Синий</string>
     <string name="lime_time">Время Лайма</string>
     <string name="save_chapters_as_cbz">Сохранить как архив CBZ</string>
     <string name="download_queue_size_warning">Предупреждение: Большое количество загрузок может привести к замедлению работы источников и/или блокировке Tachiyomi. Нажмите для подробностей.</string>
@@ -1015,9 +987,7 @@
     <string name="expanded_toolbar">Расширенная панель инструментов</string>
     <string name="most_entries">Большинство записей</string>
     <string name="show_">Показать %1$s</string>
-    <string name="view_all">Просмотреть всё</string>
     <string name="use_staggered_grid">Использовать сетку в виде шахматной доски</string>
-    <string name="pref_update_only_completely_read_summary">Обновлять серии, только если нет непрочитанных глав (полностью прочитано)</string>
     <string name="select_uninstalled_sources">Выбрать неустановленные источники</string>
     <string name="downloads_swipe_tutorial">Загрузки можно отменить свайпом
 \nСвайпните, чтобы убрать эту подсказку</string>
@@ -1026,7 +996,6 @@
     <string name="update_tracking_marked_read">Обновлять отслеживание при пометке как прочитано</string>
     <string name="pref_manage_notifications">Управление уведомлениями</string>
     <string name="battery_not_low">Батарея заряжена</string>
-    <string name="faq_and_guides">Руководства и FAQ</string>
     <string name="secure_screen_summary">Защита экрана скрывает содержимое при переключении между приложениями, а также блокирует создание скриншотов</string>
     <string name="pref_hide_threshold">Чувствительность скрытия меню при прокрутке</string>
     <string name="pref_highest">Самая высокая</string>

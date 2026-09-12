@@ -37,7 +37,6 @@
     <string name="previous_chapter">Ankstesnis skyrius</string>
     <string name="fullscreen">Pilno ekrano rėžimas</string>
     <string name="animate_page_transitions">Puslapių perėjimų animacijos</string>
-    <string name="reduces_banding_impacts_performance">Sumažina spalvų gradientą, bet daro įtaką našumui</string>
     <string name="crop_borders">Apkarpyti kraštus</string>
     <string name="pref_inverted_colors">Invertuoti spalvas</string>
     <string name="color_filter_blend_mode">Spalvų filtrų maišymo rėžimas</string>
@@ -135,7 +134,6 @@
     <string name="installing">Diegiasi</string>
     <string name="installed">Įdiegtas</string>
     <string name="trust">Patikimas</string>
-    <string name="untrusted">Nepatikimas</string>
     <string name="uninstall">Šalinti</string>
     <string name="ext_installer_shizuku_stopped">Shizuku neveikia</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instaliuoti ir paleisti Shizuku, kad galėtumėte naudoti Shizuku kaip papildinių instaliuotoją.</string>
@@ -176,15 +174,12 @@
     <string name="updates_tracking_details">Atnaujina būseną, įvertinimą ir paskutinį perskaitytą skyrių iš sekimo paslaugų</string>
     <string name="disable_battery_optimization">Išjungti akumuliatoriaus optimizavimą</string>
     <string name="battery_optimization_disabled">Akumuliatoriaus optimizavimas jau išjungtas</string>
-    <string name="pref_global_search">Globali paieška</string>
     <string name="check_for_extension_updates">Patikrinkite plėtinių atnaujinimus</string>
     <string name="source_migration_guide">Šaltinio perkėlimo vadovas</string>
     <string name="does_not_prevent_unofficial_nsfw">Tai nesustabdo neoficialių ar potencialiai neteisingai pažymėtų plėtinių nuo N18+ turinio rodymo programoje.</string>
     <string name="version">Versija</string>
     <string name="send_crash_report">Siųsti strigčių ataskaitas</string>
     <string name="helps_fix_bugs">Padeda ištaisyti bet kokias klaidas. Skelbtini duomenys nebus siunčiami</string>
-    <string name="whats_new">Kas naujo</string>
-    <string name="faq_and_guides">DUK ir vadovai</string>
     <string name="help_translate">Padėkite išversti programa</string>
     <string name="website">Internetinis puslapis</string>
     <string name="open_source_licenses">Atvirojo kodo licencijos</string>
@@ -298,7 +293,6 @@
     <string name="select_inverse">Atvirkščias žymėjimas</string>
     <string name="share">Dalintis</string>
     <string name="sort">Rikiavimas</string>
-    <string name="start">Pradėti</string>
     <string name="stop">Stop</string>
     <string name="tap_to_see_details">Paspausti klaidų rodymui</string>
     <string name="tap_to_learn_more">Palieskite, kad sužinotumėte daugiau</string>
@@ -312,17 +306,10 @@
     <string name="chapter_not_found">Skyrius nerastas</string>
     <string name="local_invalid_format">Netinkamas skyriaus formatas</string>
     <string name="order_by">Rūšiuoti pagal</string>
-    <string name="no_chapters_error">Skyrių nerasta</string>
     <string name="no_pages_found">Puslapių nerasta</string>
     <string name="loader_rar5_error">RARv5 formatas nepalaikomas</string>
     <string name="always_show_chapter_transition">Visada rodyti skyrių perėjimus</string>
     <string name="pref_webtoon_side_padding">Šoninis spaudinėjimas</string>
-    <string name="webtoon_side_padding_0">Nėra</string>
-    <string name="webtoon_side_padding_5">5%</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="l_nav">L formos</string>
     <string name="right_and_left_nav">Dešinė ir Kairė</string>
     <string name="invert_tapping">Invertuoti paspaudimo zonas</string>
@@ -426,7 +413,6 @@
     <string name="next_chapter">Sekantis skyrius</string>
     <string name="double_tap_anim_speed">Dvigubo paspaudimo animacijos greitis</string>
     <string name="show_page_number">Parodyti puslapio numerį</string>
-    <string name="true_32bit_color">32-bitų spalva</string>
     <string name="grayscale">Nespalvotai</string>
     <string name="screen">Ekranas</string>
     <string name="dodge_lighten">Pašviesinti</string>

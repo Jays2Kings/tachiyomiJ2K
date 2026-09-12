@@ -31,7 +31,6 @@
     <string name="add">Додати</string>
     <string name="edit_categories">Редагувати категорію</string>
     <string name="move_to_categories">Помістити в категорію</string>
-    <string name="start">Старт</string>
     <string name="stop">Стоп</string>
     <string name="pause">Пауза</string>
     <string name="clear">Очистити</string>
@@ -69,15 +68,12 @@
     <string name="daily">Щодня</string>
     <string name="every_2_days">Кожні 2 дні</string>
     <string name="weekly">Щонеділі</string>
-    <string name="categories_to_include_in_global_update">Категорії включені в глобальний пошук</string>
     <string name="all">Всі</string>
     <string name="library_update_restriction">Обмеження пристрою</string>
-    <string name="library_update_restriction_summary">Оновлювати коли умови виконано</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Заряджається</string>
     <string name="app_theme">Тема застосунку</string>
     <string name="dark">Темна тема</string>
-    <string name="amoled_black">AMOLED тема</string>
     <string name="language">Мова</string>
     <string name="system_default">Системний</string>
     <string name="default_category">Типова категорія</string>
@@ -86,7 +82,6 @@
     <string name="installing">Встановлюється</string>
     <string name="installed">Встановлено</string>
     <string name="trust">Довірений</string>
-    <string name="untrusted">Ненадійне</string>
     <string name="uninstall">Видалити</string>
     <string name="untrusted_extension">Ненадійне розширення</string>
     <string name="untrusted_extension_message">Зловмисне розширення може зчитувати будь-які збережені авторизаційні дані або виконувати сторонній код.
@@ -128,7 +123,6 @@
     <string name="fast">Швидка</string>
     <string name="rotation">Орієнтація</string>
     <string name="free">Вільна</string>
-    <string name="lock">Заблокована</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -144,9 +138,7 @@
     <string name="fourth_to_last">Четвертий від прочитаного розділу</string>
     <string name="fifth_to_last">П\'ятий від прочитаного розділу</string>
     <string name="download_new_chapters">Завантажувати нові розділи</string>
-    <string name="categories_to_include_in_download">Категорії для включення до завантажень</string>
     <string name="services">Сервіси</string>
-    <string name="backup">Резервна копія</string>
     <string name="create_backup">Створити резервну копію</string>
     <string name="can_be_used_to_restore">Можна використовувати для відновлення поточної бібліотеки</string>
     <string name="restore_backup">Відновити резервну копію</string>
@@ -246,7 +238,6 @@
     <string name="searching_for_updates">Пошук оновлень…</string>
     <string name="download_complete">Завантаження завершено</string>
     <string name="download_error">Помилка завантаження</string>
-    <string name="update_available">Доступно оновлення</string>
     <string name="cover_of_image">Обкладинка серій</string>
     <string name="no_recent_chapters">Немає нових розділів</string>
     <string name="no_recently_read_manga">Немає нещодавно прочитаних серій</string>
@@ -271,7 +262,6 @@
     <string name="network">Мережа</string>
     <string name="disable_battery_optimization">Вимкнути збереження батареї</string>
     <string name="battery_optimization_disabled">Збереження батареї вже вимкнено</string>
-    <string name="pref_global_search">Глобальний пошук</string>
     <string name="check_for_extension_updates">Перевірити оновлення розширень</string>
     <string name="website">Сторінка</string>
     <string name="open_source_licenses">Ліцензії з відкритим кодом</string>
@@ -367,7 +357,6 @@
     <string name="smart_by_theme">Розумне (за темою)</string>
     <string name="smart_by_page">Розумне (за сторінкою)</string>
     <string name="enable_zoom_out">Увімкнути збільшення</string>
-    <string name="webtoon_style">Стиль вебкоміксів</string>
     <string name="reading_">Читання %1$s</string>
     <string name="set_as_default_for_all">Встановити основним для всіх</string>
     <string name="extension_updates">Оновлення розширення</string>
@@ -456,12 +445,7 @@
     <string name="reset_cover">Скинути обкладинку</string>
     <string name="reset_tags">Скинути теги</string>
     <string name="clear_tags">Очистити теги</string>
-    <string name="oldest_first">Від старіших до нових</string>
-    <string name="newest_first">Від новіших до старіших</string>
-    <string name="sort_by_chapter_number">Сортувати за номерами розділів</string>
-    <string name="sort_by_source_s_order">Сортувати за джерелом</string>
     <string name="hide_chapter_titles">Приховати заголовки розділів</string>
-    <string name="show_read_chapters">Показати прочитані розділи</string>
     <string name="show_unread_chapters">Показати непрочитані розділи</string>
     <string name="show_downloaded_chapters">Показати завантажені розділи</string>
     <string name="show_bookmarked_chapters">Показати розділи в закладинках</string>
@@ -491,7 +475,6 @@
         <item quantity="other">Кеш очищено. %d файлів було видалено</item>
     </plurals>
     <string name="data_management">Керування даними</string>
-    <string name="not_logged_into_">Не залогінено в %1$s</string>
     <string name="restore_error">Не вдалось відновити резервну копію</string>
     <string name="white_theme">Чисто-білий</string>
     <plurals name="manga_migrated">
@@ -550,7 +533,6 @@
     <string name="only_enable_enabled_for_migration">Включити тільки включені джерела для переносу</string>
     <string name="only_enable_pinned_for_migration">Включити тільки закріплені джерела для переносу</string>
     <string name="match_enabled_sources">Відповідність включених джерел</string>
-    <string name="only_search_pinned_when">Шукати тільки в закріплених джерелах</string>
     <string name="match_pinned_sources">Відповідність до закріплених джерел</string>
     <string name="delete_all_covers__not_in_library_used_">Видалити усі кешовані обкладинки котрих нема у вашій бібліотеці
 \nВикористовується: %1$s</string>
@@ -607,7 +589,6 @@
     <string name="not_downloaded">Не завантажене</string>
     <string name="downloading_">Завантаження: %1$s</string>
     <string name="username_must_not_be_blank">Ім`я користувача чи пароль не можуть бути порожніми</string>
-    <string name="whats_new">Що новенького</string>
     <string name="you_can_migrate_in_library">Також ви можете мігрувати обравши записи з вашої бібліотеки</string>
     <string name="badges">Значки</string>
     <string name="started_reading_date">Дата початку читання</string>
@@ -615,7 +596,6 @@
     <string name="myanimelist_relogin">Будь ласка, увійдіть до MAL знову</string>
     <string name="search_settings">Налаштування пошуку</string>
     <string name="locale">Локаль</string>
-    <string name="no_chapters_error">Немає розділів</string>
     <string name="next">Наступний</string>
     <string name="open_log">Відкрити лог</string>
     <string name="nsfw_short">18+</string>
@@ -634,8 +614,6 @@
     <string name="none">Немає</string>
     <string name="automatic_backups">Автоматичне резервування</string>
     <string name="invalid_backup_file">Невірний файл резервної копії</string>
-    <string name="invalid_backup_file_type">Невірний файл резервної копії: %1$s
-\nЙого розширення повинне бути .proto.gz or .json.</string>
     <string name="backup_has_no_manga">Резервна копія не містить жодних записів.</string>
     <string name="restore_missing_sources">Відсутні джерела:</string>
     <string name="restore_missing_trackers">Трекери не авторизовано:</string>
@@ -740,7 +718,6 @@
     </plurals>
     <string name="share_combined_pages">Поділитися об\'єднаними сторінками</string>
     <string name="amount_of_pages_to_preload">Кількість сторінок, які потрібно попередньо завантажити під час читання. Вищі значення призведуть до плавнішого читання, за рахунок вищого кешу та використання мережі.</string>
-    <string name="switch_to_single">Перейти до одинарної сторінки</string>
     <string name="split_double_pages_portrait">Розділити подвійні сторінки у портреті</string>
     <string name="automatic_can_still_switch">Під час використання автоматичного макета сторінки все одно можна перемикатися між макетами під час читання, не перевизначуючи цей параметр</string>
     <string name="cannot_remove_tracking_while_offline">Відстеження не можна видалити з %1$s під час автономного режиму</string>
@@ -777,7 +754,6 @@
     <string name="pages_">%1$s сторінок</string>
     <string name="crop_borders_paged">Обрізати межі (Сторінково)</string>
     <string name="remove_crop">Прибрати обрізання</string>
-    <string name="switch_to_double">Перейти до подвійних сторінок</string>
     <string name="turn_on_">Увімкнути %s</string>
     <string name="a_calmer_you">Спокійніший \"Ти\" (Динамічний)</string>
     <string name="teal_ocean">Синьо-зелений океан</string>
@@ -791,10 +767,8 @@
     <string name="remove_previous_tracker">Видалити попереднє відстеження\?</string>
     <string name="keep_both_on_service">Зберегти обидва на %1$s і замінити тільки на пристрої</string>
     <string name="use_suggested_date">Використовувати запропоновану дату</string>
-    <string name="classic_blue">Класичний синій</string>
     <string name="yin">Інь</string>
     <string name="sapphire_dusk">Сапфірові сутінки</string>
-    <string name="hot_pink">Гарячий рожевий</string>
     <string name="lime_time">Лаймовий час</string>
     <string name="last_used_library_recents">Нещодавно використані (Бібліотека або Останні)</string>
     <string name="use_side_navigation">Використовувати бокову панель навігації</string>
@@ -958,7 +932,6 @@
     <string name="backup_restore_invalid_uri">Помилка: порожній URI</string>
     <string name="backup_info">Наполегливо рекомендується використовувати автоматичне резервування. Також ви повинні зберігати копії в інших місцях.</string>
     <string name="pref_manage_notifications">Керування сповіщеннями</string>
-    <string name="faq_and_guides">Довідка та FAQ</string>
     <string name="secure_screen_summary">Ховати вміст застосунку при перемиканні програм та блокувати скріншоти</string>
     <string name="pref_hide_threshold">Чутливість приховування меню при прокручуванні</string>
     <string name="pref_highest">Найвища</string>
@@ -977,7 +950,6 @@
     <string name="pref_update_only_completely_read">Є непрочитаний(ні) розділ(и)</string>
     <string name="pref_update_only_non_completed">З статусом \"Завершено\"</string>
     <string name="pref_update_only_started">Серія не почата</string>
-    <string name="view_all">Переглянути все</string>
     <string name="new_beta_version_available">Доступна нова бета версія!</string>
     <string name="expanded_toolbar">Розширена панель інструментів</string>
     <string name="warning_enroll_into_beta">Бета-версії можуть бути нестабільними та можуть вимагати очищення даних застосунку.</string>
@@ -999,7 +971,6 @@
     <string name="confirm_manga_add_duplicate">У вашій бібліотеці є серія з такою самою назвою, але з іншого джерела (%1$s).
 \n
 \nВи хочете продовжити\?</string>
-    <string name="pref_update_only_completely_read_summary">Оновлювати серії, лише якщо немає непрочитаних розділів (повністю прочитано)</string>
     <string name="update_tracking_marked_read">Оновлювати відстеження, якщо позначено як прочитане</string>
     <string name="update_tracking_after_reading">Оновлювати відстеження після читання</string>
     <string name="check_for_beta_releases">Перевіряти наявність бета-релізів</string>

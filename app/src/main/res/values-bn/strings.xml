@@ -28,7 +28,6 @@
     <string name="add">যোগ করুন</string>
     <string name="edit_categories">ধরন সম্পাদন</string>
     <string name="move_to_categories">ধরণে সরান</string>
-    <string name="start">শুরু</string>
     <string name="stop">থামুন</string>
     <string name="pause">বিরতি</string>
     <string name="clear">পরিষ্কার</string>
@@ -66,15 +65,12 @@
     <string name="daily">প্রতিদিন</string>
     <string name="every_2_days">প্রতি ২ দিন</string>
     <string name="weekly">সাপ্তাহিক</string>
-    <string name="categories_to_include_in_global_update">সার্বজনীন আপডেটের জন্য ধরণগুলো</string>
     <string name="all">সব</string>
     <string name="library_update_restriction">ডিভাইস নিষেধাজ্ঞা</string>
-    <string name="library_update_restriction_summary">তথ্য মিলেগেলে কেবল আপডেট করুন</string>
     <string name="wifi">ওয়াই-ফাই</string>
     <string name="charging">চার্জ হচ্ছে</string>
     <string name="app_theme">এপ্লিকেশন থিম</string>
     <string name="dark">কালো থিম</string>
-    <string name="amoled_black">এমোলেড থিম</string>
     <string name="language">ভাষা</string>
     <string name="system_default">প্রথম অবস্থা</string>
     <string name="default_category">সাধারণ বিভাগ</string>
@@ -109,7 +105,6 @@
     <string name="center">মাঝে</string>
     <string name="rotation">ঘুরানো</string>
     <string name="free">ফ্রি</string>
-    <string name="lock">বন্ধ</string>
     <string name="red_initial">লাল</string>
     <string name="green_initial">সবুজ</string>
     <string name="blue_initial">নীল</string>
@@ -125,9 +120,7 @@
     <string name="fourth_to_last">৪র্থ থেকে শেষ অধ্যায়</string>
     <string name="fifth_to_last">৫ম থেকে শেষ অধ্যায়</string>
     <string name="download_new_chapters">নতুন অধ্যায় ডাউনলোড করুন</string>
-    <string name="categories_to_include_in_download">ডাউনলোডে যোগ করার জন্য ধরণ</string>
     <string name="services">সেবা সমূহ</string>
-    <string name="backup">ব্যাকআপ</string>
     <string name="create_backup">ব্যাকআপ তৈরী করুন</string>
     <string name="can_be_used_to_restore">বর্তমান মাংগাশালা পুনরুদ্ধারের জন্য ব্যাবহার করা যাবে</string>
     <string name="restore_backup">ব্যাকআপ পুনরুদ্ধার</string>
@@ -209,7 +202,6 @@
     <string name="searching_for_updates">আপডেট খোঁজা হচ্ছে…</string>
     <string name="download_complete">ডাউনলোড হয়ে গেছে</string>
     <string name="download_error">ডাউনলোড ত্রুটি দেখা গিয়েছে</string>
-    <string name="update_available">আপডেট এসেছে</string>
     <string name="cover_of_image">মাংগার কভার</string>
     <string name="no_recent_chapters">কোন সাম্প্রতিক অধ্যায় নেই</string>
     <string name="no_recently_read_manga">কোন সাম্প্রতিক পড়া সিরিজ নেই</string>
@@ -226,7 +218,6 @@
     <string name="installing">ইন্সটল হচ্ছে</string>
     <string name="installed">ইন্সটল হয়েছে</string>
     <string name="trust">নির্ভর</string>
-    <string name="untrusted">অনির্ভরযোগ্য</string>
     <string name="uninstall">আন ইন্সটল</string>
     <string name="untrusted_extension">অনির্ভর‍যোগ্য এক্সটেনশন</string>
     <string name="untrusted_extension_message">অনুমোদিত এক্সটেনশানগুলি আপনার লগইন তথ্য বা ডিভাইস ক্ষতিগ্রস্ত করতে পারে।
@@ -257,7 +248,6 @@
     <string name="loading_pages">পৃষ্ঠা লোড হচ্ছে …</string>
     <string name="failed_to_load_pages_">পৃষ্ঠা লোড করতে ব্যর্থ হয়েছে: %1$s</string>
     <string name="open_in_webview">ওয়েব দর্শনে খুলুন</string>
-    <string name="true_32bit_color">৩২-বিট রঙ</string>
     <string name="skip_read_chapters">পঠিত অধ্যায়গুলো এড়িয়ে যান</string>
     <string name="color_filter_blend_mode">রঙ ফিল্টার মিশ্রন মোড</string>
     <string name="overlay">ওভারলে</string>
@@ -274,7 +264,6 @@
     <string name="network">নেটওয়ার্ক</string>
     <string name="disable_battery_optimization">ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন</string>
     <string name="battery_optimization_disabled">ব্যাটারি অপ্টিমাইজেশন ইতিমধ্যে অক্ষম করা আছে</string>
-    <string name="pref_global_search">সর্বত্র খুঁজুন</string>
     <string name="check_for_extension_updates">এক্সটেনশনের হালনাগাদ সমূহ</string>
     <string name="update">হালনাগাদ</string>
     <string name="updating_library">সংগ্রহশালার হালনাগাদ হচ্ছে</string>
@@ -289,17 +278,11 @@
         <item quantity="one">এক্সটেনশন আপডেট পাওয়া গেছে</item>
         <item quantity="other">%dটি এক্সটেনশন আপডেট পাওয়া গেছে</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">ব্যানডিং কমায়, কিন্তু কর্মক্ষমতায় প্রভাভ ফেলে</string>
     <string name="skip_filtered_chapters">ফিলটারড অধ্যায় গুলো এড়িয়ে যান</string>
     <string name="continuous_vertical">একটানা উল্লম্ব</string>
     <string name="paged">পেজড</string>
     <string name="always_show_chapter_transition">সবসময় অধ্যায় পরিবর্তন দেখান</string>
     <string name="pref_webtoon_side_padding">পার্শ্ব প্যাডিং</string>
-    <string name="webtoon_side_padding_0">কিছুই না</string>
-    <string name="webtoon_side_padding_10">১০%</string>
-    <string name="webtoon_side_padding_15">১৫%</string>
-    <string name="webtoon_side_padding_20">২০%</string>
-    <string name="webtoon_side_padding_25">২৫%</string>
     <string name="chapters_">অধ্যায়গুলি %1$s</string>
     <string name="remove_from_library">সংগ্রহশালা থেকে অপসারণ করুন</string>
     <string name="refresh_tracking">ট্র্যাকিং হালনাগাদ করুন</string>
@@ -397,14 +380,12 @@
     <string name="not_downloaded">ডাউনলোড হয়নি</string>
     <string name="downloading_">ডাউনলোড হচ্ছে: %1$s</string>
     <string name="username_must_not_be_blank">ব্যবহারকারীর নাম বা পাসওয়ার্ড ফাঁকা থাকতে পারে না</string>
-    <string name="whats_new">নতুন কি</string>
     <string name="migration_sources_changed">স্থানান্তর উৎস পরিবর্তন করা হয়েছে</string>
     <string name="clear_cached_covers_non_library">লাইব্রেরিতে নেই ক্যাশেড কভারগুলো পরিষ্কার করুন</string>
     <string name="disable_if_issues_with_updating">আপনি যদি আপনার লাইব্রেরিটি আপডেট বা পুনরুদ্ধার করতে সমস্যা অনুভব করছেন তবে এটি অক্ষম করুন</string>
     <string name="no_folders_to_cleanup">পরিষ্কার করার জন্য কোনো ফোল্ডার নেই</string>
     <string name="starting_cleanup">ক্লিনআপ শুরু হচ্ছে</string>
     <string name="clean_read_manga_not_in_library">লাইব্রেরিতে নেই মঙ্গা পরিষ্কার করুন</string>
-    <string name="not_logged_into_">%1$s এ লগইন করা নেই</string>
     <string name="restore_error">ব্যাকআপ পুনরুদ্ধার করতে ব্যর্থ হয়েছে</string>
     <string name="white_theme">পুরো সাদা</string>
     <string name="skipping_">(%1$d এড়িয়ে যাওয়া হচ্ছে)</string>
@@ -429,10 +410,7 @@
     <string name="reset_cover">কভার রিসেট করুন</string>
     <string name="reset_tags">ট্যাগগুলো রিসেট কর</string>
     <string name="clear_tags">ট্যাগ গুলো মুছে ফেল</string>
-    <string name="sort_by_chapter_number">অধ্যাযয়ের নম্বর অনুসারে সাজান</string>
-    <string name="sort_by_source_s_order">উৎসের ক্রমানুসারে সাজান</string>
     <string name="hide_chapter_titles">অধ্যায়ের শিরোনামগুলো লুকান</string>
-    <string name="show_read_chapters">পঠিত অধ্যায়গুলো প্রদর্শন করুন</string>
     <string name="show_unread_chapters">অপঠিত অধ্যায়গুলো প্রদর্শন করুন</string>
     <string name="show_downloaded_chapters">ডাউনলোড করা অধ্যায়গুলো প্রদর্শন করুন</string>
     <string name="show_bookmarked_chapters">বুকমার্ক করা অধ্যায়গুলো প্রদর্শন করুন</string>
@@ -459,7 +437,6 @@
     <string name="smart_by_theme">স্মার্ট (থিম অনুসারে)</string>
     <string name="smart_by_page">স্মার্ট (পৃষ্ঠা অনুসারে)</string>
     <string name="enable_zoom_out">জুম আউট সক্ষম করুন</string>
-    <string name="webtoon_style">ওয়েবটুন স্টাইল</string>
     <string name="reading_">পড়া হচ্ছে %1$s</string>
     <string name="set_as_default_for_all">সবার জন্য ডিফল্ট হিসাবে সেট করা হলো</string>
     <string name="extension_updates">এক্সটেনশন আপডেট</string>
@@ -495,7 +472,6 @@
     <string name="expand_all_categories">সমস্ত বিভাগ প্রসারিত করুন</string>
     <string name="tracked">ট্র্যাকড</string>
     <string name="l_nav">L আকারের</string>
-    <string name="no_chapters_error">কোনও অধ্যায় পাওয়া যায় নি</string>
     <string name="badges">প্রতীক গুলি</string>
     <string name="source_migration_guide">উৎস স্থানান্তর গাইড</string>
     <string name="file_picker_error">কোনো ফাইল বাছাইকারী অ্যাপ পাওয়া যায় নি</string>
@@ -518,8 +494,6 @@
     <string name="locale">স্থানীয়</string>
     <string name="automatic_backups">স্বয়ংক্রিয় ব্যাকআপ</string>
     <string name="invalid_backup_file">ব্যাকআপ ফাইল গ্রহণযোগ্য নয়</string>
-    <string name="invalid_backup_file_type">অকার্যকর ব্যাকআপ ফাইল ধরণ: %1$s
-\nএটা .proto.gz বা .json দিয়ে শেষ হওয়া উচিত।</string>
     <string name="backup_has_no_manga">ব্যাকআপে কোনো মাংগা নেই।</string>
     <string name="restore_missing_sources">উৎস অনুপলব্ধ:</string>
     <string name="restore_missing_trackers">ট্র্যাকারগুলিতে প্রবেশ হয়নি:</string>
@@ -659,7 +633,6 @@
     <string name="starting_screen">শুরু স্ক্রীন</string>
     <string name="search_parameter_eg">অনুসন্ধান প্যারামিটার (যেমন ভাষা: ইংরেজি)</string>
     <string name="search_globally">বিশ্বব্যাপী \"%1$s\" অনুসন্ধান কর</string>
-    <string name="only_search_pinned_when">শুধুমাত্র পিন করা উৎস অনুসন্ধান কর</string>
     <string name="beta">বেটা</string>
     <string name="shift_double_pages">ডাবল পেজ শিফট কর</string>
     <string name="double_pages">ডাবল পেজ</string>
@@ -699,7 +672,6 @@
     <string name="filter_languages">ভাষা ফিল্টার কর</string>
     <string name="some_extensions_may_prompt">কিছু এক্সটেনশন এখনও প্রথমে ইনস্টল করার অনুরোধ জানাতে পারে।</string>
     <string name="reader_settings">পাঠক সেটিংস</string>
-    <string name="switch_to_single">একক পৃষ্ঠায় স্যুইচ কর</string>
     <string name="add_tag">ট্যাগ যোগ কর</string>
     <string name="filter_groups">স্ক্যানলেটরের গ্রুপ ফিল্টার কর</string>
     <string name="select_an_entry">একটি এন্ট্রি নির্বাচন কর</string>
@@ -790,7 +762,6 @@
     <string name="crop_borders_webtoon">সীমানা ক্রপ কর (ওয়েবটুন)</string>
     <string name="remove_crop">ক্রপ সরাও</string>
     <string name="split_double_pages">দ্বিগুণ পৃষ্ঠা বিভক্ত করুন</string>
-    <string name="switch_to_double">দ্বিগুণ পৃষ্ঠাতে স্যুইচ কর</string>
     <string name="single_page">এক পাতা</string>
     <string name="page_layout">পৃষ্ঠা বিন্যাস</string>
     <string name="horizontally">অনুভূমিকভাবে</string>
@@ -808,8 +779,6 @@
         <item quantity="other">%1$dটি পৃষ্ঠা</item>
     </plurals>
     <string name="mark_all_chapters_as_unread">সমস্ত অধ্যায় অপঠিত হিসাবে চিহ্নিত করবেন\?</string>
-    <string name="newest_first">নতুন থেকে পুরাতন</string>
-    <string name="oldest_first">পুরাতন থেকে নতুন</string>
     <string name="remove_tracking">অ্যাপ থেকে ট্র্যাকিং সরাও</string>
     <string name="remove_x_from_service_and_add_y">%2$s থেকে %1$s সরান এবং %3$s যোগ কর</string>
     <string name="keep_both_on_service">উভয়কেই %1$s-এ রাখো এবং শুধুমাত্র স্থানীয়ভাবে প্রতিস্থাপন করুন</string>
@@ -833,7 +802,6 @@
     <string name="yang">য়াং</string>
     <string name="teal_ocean">টিল ওশান</string>
     <string name="sapphire_dusk">সাফাইয়ার ডস্ক</string>
-    <string name="hot_pink">হট পিঙ্ক</string>
     <string name="flat_lime">ফ্ল্যাট লাইম</string>
     <string name="last_used_library_recents">সর্বশেষ ব্যবহৃত (লাইব্রেরি বা সাম্প্রতিক)</string>
     <string name="hide_bottom_nav">নিচের নেভিগেশন স্বয়ংক্রিয়ভাবে লুকান</string>
@@ -893,7 +861,6 @@
     <string name="extension_updates_pending">এক্সটেনশন আপডেট মুলতুবি আছে</string>
     <string name="download_queue_size_warning">সতর্কতা: বড় আকারের ডাউনলোডের ফলে উৎসগুলি মন্থর হয়ে যেতে পারে এবং/অথবা তাচিওমি ব্লক হয়ে যেতে পারে। আরও জানতে এখানে ট্যাপ করুন।</string>
     <string name="every_3_days">প্রতি ৩ দিন</string>
-    <string name="classic_blue">ক্লাসিক নীল</string>
     <string name="tracking_info">ট্র্যাকিং সার্ভিসে অধ্যায়ের অগ্রগতি হালনাগাদের একমুখী পথ। স্বতন্ত্র মাঙ্গার ট্র্যকিং সেটাপের জন্য তাদের নিজস্ব ট্র্যাকিং বাটন ব্যবহার করুন।</string>
     <string name="enhanced_services">উন্নত সেবা</string>
     <string name="enhanced_tracking_info">নির্দিষ্ট উৎসের জন্য উন্নত বৈশিষ্ট্য প্রদান করে এমন পরিষেবা। আপনার লাইব্রেরিতে যোগ করা হলে মাঙ্গা স্বয়ংক্রিয়ভাবে ট্র্যাক করা হয়।</string>
@@ -960,7 +927,6 @@
     <string name="count">সংখ্যা</string>
     <string name="lavender">ল্যাভেন্ডার</string>
     <string name="pref_update_only_started">যেগুলো শুরু করা হয়নি</string>
-    <string name="view_all">সব দেখুন</string>
     <string name="violet">বেগুনি</string>
     <string name="download_notifier_split_failed">ডাউনলোড করা চিত্র বিভক্ত করা যায়নি</string>
     <string name="split_tall_images_summary">পঠন কর্মক্ষমতা উন্নত করে</string>
@@ -978,7 +944,6 @@
     <string name="pref_update_only_completely_read">অপঠিত অধ্যায়সহ</string>
     <string name="loader_rar5_error">RARv5 ধরন সমর্থিত নয়</string>
     <string name="skipped_reason_not_caught_up">অপঠিত অধ্যায় থাকায় এড়িয়ে যাওয়া হয়েছে</string>
-    <string name="faq_and_guides">FAQ এবং নির্দেশনা</string>
     <string name="move_series_to_top">সিরিজ কে উপরে তুলুন</string>
     <string name="allow_deleting_bookmarked_chapters">বুকমার্ক করা অধ্যায়গুলি মুছে ফেলার অনুমতি দিন</string>
     <string name="appwidget_unavailable_locked">অ্যাপ লক চালু থাকলে Widget পাওয়া যায় না</string>
@@ -1014,9 +979,7 @@
     <string name="save_pages_separately">প্রতিটি পৃষ্ঠার জন্য আলাদা ফোল্ডারে সংরক্ষণ করুন</string>
     <string name="updates_last_update_info">লাইব্রেরিটি সর্বশেষ আপডেট করা হয়েছে:%s</string>
     <string name="by_series">সিরিজ অনুসারে</string>
-    <string name="pref_update_only_completely_read_summary">কোনো অপঠিত অধ্যায় না থাকলেই সিরিজটি আপডেট করুন (সম্পূর্ণ পড়া)</string>
     <string name="url_not_set_click_again">দুঃখিত, রিপোর URL গ্রহণ করা যায়নি, অনুগ্রহ করে এটি সংশোধন করুন।</string>
-    <string name="webtoon_side_padding_5">৫%</string>
     <string name="sort_fetched_time">ফেচ করা সময় অনুসারে সাজানো</string>
     <string name="zoom_double_page_spreads">দু\'পৃষ্ঠার স্প্রেডগুলো জুম ইন করুন</string>
     <string name="popular">প্রচলিত</string>

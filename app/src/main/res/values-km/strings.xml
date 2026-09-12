@@ -27,7 +27,6 @@
     <string name="save">រក្សាទុក</string>
     <string name="search">ស្វែងរក</string>
     <string name="sort">តម្រៀប</string>
-    <string name="start">ចាប់ផ្ដើម</string>
     <string name="stop">ឈប់</string>
     <string name="top">លើ</string>
     <string name="undo">ត្រឡប់វាវិញ</string>
@@ -69,7 +68,6 @@
     <string name="pure_black_dark_mode">ខ្មៅដិត</string>
     <string name="hide_notification_content">លាក់ការជូនដំណឹង</string>
     <string name="security">សន្តិសុខ</string>
-    <string name="pref_global_search">ស្វែងរកជាសកល</string>
     <string name="nsfw_sources">ប្រភពមិនល្អ(១៨+)</string>
     <string name="show_in_sources_and_extensions">បង្ហាញនៅក្នុងបញ្ចីប្រភព</string>
     <string name="does_not_prevent_unofficial_nsfw">ការសម្រេចចិត្តនេះមិនបិទការflagនៃប្រភពទៅលើរឿង(១៨+)នៅក្នុងកម្មវិធីឡើយ។</string>
@@ -140,7 +138,6 @@
     <string name="cover_only_grid">ជ្រុងដែលមានតែគម្រប</string>
     <string name="tap_to_see_details">ប៉ះដើម្បីមើលលម្អិត</string>
     <string name="pref_manage_notifications">កំណត់ការជូនដំណឹង</string>
-    <string name="faq_and_guides">FAQនិងមគ្គុទ្ទេសក៍</string>
     <string name="secure_screen_summary">ការពារអេក្រង់លាក់contentរបស់កម្មវិធីនៅពេលswitchingកម្មីធីនិងប្លុកscreenshots</string>
     <string name="completed">បានបញ្ចប់ការចេញផ្សាយ</string>
     <string name="downloaded_chapters">ភាគដែលបានទាញយក</string>
@@ -160,7 +157,6 @@
     <string name="chapters_removed">ភាគបានដកចេញ។</string>
     <string name="no_pages_found">គ្មានទំព័រ</string>
     <string name="chapter_not_found">គ្មានភាគ</string>
-    <string name="no_chapters_error">គ្មានភាគ</string>
     <string name="remove_all_downloads">លុបអ្វីដែលបានទាញយករួចចោលទាំងអស់\?</string>
     <string name="order_by">តម្រង់</string>
     <string name="adding_category_to_queue">កំពុងថែម %1$s ដើម្បីធ្វើបច្ចុប្បន្នភាព</string>
@@ -216,7 +212,6 @@
     <string name="scanlators">អ្នកស្កេន/ក្រុមស្កេន</string>
     <string name="jump_to_category">ទៅថ្នាក់</string>
     <string name="updating_">កំពុងធ្វើបច្ចុប្បន្នភាព %1$s</string>
-    <string name="update_available">អ្នកអាចធ្វើបច្ចុប្បន្នភាព</string>
     <string name="new_version_available">មានវើសិនថ្មី!</string>
     <string name="no_new_updates_available">គ្មានការធ្វើបច្ចុប្បន្នភាពថ្មីទេ</string>
     <string name="category_is_empty">ថ្នាក់ទទេ</string>

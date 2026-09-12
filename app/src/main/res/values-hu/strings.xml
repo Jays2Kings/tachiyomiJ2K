@@ -32,15 +32,12 @@
     <string name="daily">Naponta</string>
     <string name="every_2_days">2 naponta</string>
     <string name="weekly">Hetente</string>
-    <string name="categories_to_include_in_global_update">Globális frissítésben tartalmazott kategóriák</string>
     <string name="all">Összes</string>
     <string name="library_update_restriction">Könyvtár frissítési korlátozások</string>
-    <string name="library_update_restriction_summary">Frissítés csak akkor, ha a feltételek teljesülnek</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Töltés</string>
     <string name="app_theme">Alkalmazás téma</string>
     <string name="dark">Sötét téma</string>
-    <string name="amoled_black">AMOLED téma</string>
     <string name="language">Nyelv</string>
     <string name="system_default">Rendszer alapértelmezése</string>
     <string name="default_category">Alapértelmezett kategória</string>
@@ -53,7 +50,6 @@
     <string name="invert_volume_keys">Gombok felcserélése</string>
     <string name="background_color">Háttérszín</string>
     <string name="download_location">Letöltések könyvtára</string>
-    <string name="backup">Biztonsági mentés</string>
     <string name="version">Verzió</string>
     <string name="send_crash_report">Összeomlás-jelentések küldése</string>
     <string name="completed">Befejezett</string>
@@ -86,7 +82,6 @@
     <string name="add">Hozzáadás</string>
     <string name="edit_categories">Kategóriák szerkesztése</string>
     <string name="move_to_categories">Áthelyezés kategóriákba</string>
-    <string name="start">Kezdés</string>
     <string name="stop">Megállítás</string>
     <string name="pause">Szüneteltetés</string>
     <string name="clear">Törlés</string>
@@ -112,7 +107,6 @@
     <string name="fit_screen">Képernyőhöz igazítás</string>
     <string name="source_migration">Forrás váltása</string>
     <string name="extensions">Bővítmények</string>
-    <string name="untrusted">Nem megbízható</string>
     <string name="uninstall">Eltávolítás</string>
     <string name="extension_info">Bővítmény információ</string>
     <string name="pending">Függőben</string>
@@ -132,7 +126,6 @@
     </plurals>
     <string name="view_chapters">Fejezetek megtekintése</string>
     <string name="date_format">Dátum formátum</string>
-    <string name="pref_global_search">Globális keresés</string>
     <string name="email">E-mail-cím</string>
     <string name="download_paused">Letöltés szüneteltetve</string>
     <string name="download_complete">Letöltés kész</string>
@@ -153,7 +146,6 @@
     <string name="date_added">Dátum hozzáadva</string>
     <string name="version_">Verzió: %1$s</string>
     <string name="language_">Nyelv: %1$s</string>
-    <string name="true_32bit_color">32 bites színmélység</string>
     <string name="original_size">Eredeti méret</string>
     <string name="security">Biztonság</string>
     <string name="always">Mindig</string>
@@ -222,7 +214,6 @@
     <string name="updating_library">Könyvtár frissítése</string>
     <string name="searching_for_updates">Frissítések keresése…</string>
     <string name="no_new_updates_available">Nincs új elérhető frissítés</string>
-    <string name="update_available">Frissítés elérhető</string>
     <string name="updating_">%1$s frissítése</string>
     <string name="jump_to_category">Ugrás a kategóriához</string>
     <string name="long_press_category">Nyomd hosszan a kategória módosításához</string>
@@ -253,7 +244,6 @@
         <item quantity="one">Eltávolítasz %1$d letöltött fejezetet\?</item>
         <item quantity="other">Eltávolítasz %1$d letöltött fejezeteket\?</item>
     </plurals>
-    <string name="no_chapters_error">Nem található fejezet</string>
     <string name="chapter_not_found">A fejezet nem található</string>
     <string name="chapters_removed">Fejezetek eltávolítva.</string>
     <string name="removed_bookmark">Eltávolított könyvjelző</string>
@@ -280,17 +270,12 @@
     <string name="lock_when_idle">Zárás tétlen állapotban</string>
     <string name="browse">Böngészés</string>
     <string name="cancel_all_for_series">Mégse az összesre a sorozatból</string>
-    <string name="webtoon_side_padding_0">Semennyi</string>
     <string name="services">Szolgáltatások</string>
     <string name="fifth_to_last">Hátulról az ötödik fejezet</string>
     <string name="fourth_to_last">Hátulról a negyedik fejezet</string>
     <string name="third_to_last">Utolsó előtti előtti fejezet</string>
     <string name="second_to_last">Utolsó előtti fejezet</string>
     <string name="disabled">Kikapcsolva</string>
-    <string name="webtoon_side_padding_25">25%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_10">10%</string>
     <string name="pref_webtoon_side_padding">Bélés oldalon</string>
     <string name="kindlish_nav">Kindle-féle</string>
     <string name="l_nav">L alakú</string>
@@ -302,7 +287,6 @@
     <string name="alpha_initial">Áttetszőség</string>
     <string name="reading_mode">Olvasási mód</string>
     <string name="date_fetched">Lekérés dátuma</string>
-    <string name="reduces_banding_impacts_performance">Csökkenti a sávosodást, de befolyásolhatja a teljesítményt</string>
     <string name="zoom_start_position">Nagyítás kezdő pozíciója</string>
     <string name="pin">Kitűzés</string>
     <string name="side_nav_icon_alignment">Oldalsó navigációs ikon illeszkedés</string>
@@ -415,7 +399,6 @@
     </plurals>
     <string name="clear_database_completed">Elemek törölve</string>
     <string name="clear_database_confirmation">Biztos benne\? Nem könyvtári elemek olvasott fejezetei elvesznek</string>
-    <string name="whats_new">Újdonságok</string>
     <string name="help_translate">Segíts fordítani</string>
     <string name="picture_saved">Kép elmentve</string>
     <string name="download_notifier_split_page_not_found">%d oldal nem található felosztás közben</string>
@@ -472,7 +455,6 @@
     <string name="clear_cookies">Sütik törlése</string>
     <string name="clear_database">Adatbázis törlése</string>
     <string name="updates_tracking_details">Frissíti az állapotot, értékelést és az utolsó olvasott fejezetet a tracking szolgáltatás által</string>
-    <string name="faq_and_guides">Gyakori kérdések és Útmutatók</string>
     <string name="failed_to_bypass_cloudflare">Nem sikerült megkerülni a Cloudflare-t</string>
     <string name="tap_zones">Érintési zónák</string>
     <string name="used_">Felhasznált gyorsítótár: %1$s</string>
@@ -569,14 +551,12 @@
     <string name="collapse_all_categories">Összes kategória összecsukása</string>
     <string name="reorder_filters">Szűrők újrarendezése</string>
     <string name="series_type">Sorozat típus</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Alap hálózati kliens szöveg</string>
     <string name="loader_rar5_error">RARv5 formátum nem támogatót</string>
     <string name="downloaded_chapters">Letölzozz fejezetek</string>
     <string name="hide_start_reading_button">Kezdése gomb elrejtése</string>
     <string name="more_library_settings">Több könyvtár beállítás</string>
     <string name="when_sorting_ignore_articles">Amikor abc-be rendez figyelmen kívül hagyja az (a, an, the) kezdetű manga címeket</string>
-    <string name="pref_update_only_completely_read_summary">Csak akkor frissítse ha nincs olvasatlan fejezet</string>
     <string name="display_as">Kijelzés mint</string>
     <string name="library_is_empty_add_from_browse">A könyvtárad üres, adj hozzá mangát a böngészés fülön</string>
     <string name="updates_and_history">Frissítések és Előzmények</string>
@@ -602,7 +582,6 @@
     </plurals>
     <string name="decode_image_error">A képet nem lehetett betölteni</string>
     <string name="popular">Felkapott</string>
-    <string name="view_all">Mutasd mindet</string>
     <string name="tracking_status">Nyomonkövetés állapota</string>
     <string name="not_bookmarked">Nem könyvjelzőzött</string>
     <string name="drag_and_drop">Drag &amp; Drop</string>

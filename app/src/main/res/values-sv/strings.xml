@@ -31,7 +31,6 @@
     <string name="add">Lägg till</string>
     <string name="edit_categories">Redigera kategorier</string>
     <string name="move_to_categories">Flytta till kategorier</string>
-    <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="pause">Paus</string>
     <string name="clear">Rensa</string>
@@ -69,15 +68,12 @@
     <string name="daily">Dagligen</string>
     <string name="every_2_days">Varannan dag</string>
     <string name="weekly">Varje vecka</string>
-    <string name="categories_to_include_in_global_update">Kategorier som ska inkluderas i global uppdatering</string>
     <string name="all">Alla</string>
     <string name="library_update_restriction">Enhetsbegränsningar</string>
-    <string name="library_update_restriction_summary">Uppdatera endast när vilkoren är uppfyllda</string>
     <string name="wifi">WiFi</string>
     <string name="charging">Laddning</string>
     <string name="app_theme">Programtema</string>
     <string name="dark">Mörkt tema</string>
-    <string name="amoled_black">AMOLED tema</string>
     <string name="language">Språk</string>
     <string name="system_default">Systemstandard</string>
     <string name="default_category">Standardkategori</string>
@@ -86,7 +82,6 @@
     <string name="installing">Installerar</string>
     <string name="installed">Installerad</string>
     <string name="trust">Förtroende</string>
-    <string name="untrusted">Opålitlig</string>
     <string name="uninstall">Avinstallera</string>
     <string name="untrusted_extension">Opålitlig extension</string>
     <string name="untrusted_extension_message">Detta tillägg tecknades med ett otillförlitligt certifikat och var inte aktiverat.
@@ -130,7 +125,6 @@
     <string name="fast">Snabb</string>
     <string name="rotation">Rotering</string>
     <string name="free">Upplåst</string>
-    <string name="lock">Lås</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -146,9 +140,7 @@
     <string name="fourth_to_last">Fjärde till sista kapitlet</string>
     <string name="fifth_to_last">Femte till sista kapitlet</string>
     <string name="download_new_chapters">Ladda ner nya kapitel</string>
-    <string name="categories_to_include_in_download">Kategorier att inkludera i nedladdning</string>
     <string name="services">Tjänster</string>
-    <string name="backup">Säkerhetskopiering</string>
     <string name="create_backup">Skapa backup</string>
     <string name="can_be_used_to_restore">Kan användas för att återställa biblioteket</string>
     <string name="restore_backup">Återställ backup</string>
@@ -248,7 +240,6 @@
     <string name="searching_for_updates">Söker efter uppdateringar…</string>
     <string name="download_complete">Nedladdning färdig</string>
     <string name="download_error">Nedladdningsfel</string>
-    <string name="update_available">Uppdatering tillgänglig</string>
     <string name="cover_of_image">Omslag till serie</string>
     <string name="no_recent_chapters">Inga nya kapitel</string>
     <string name="no_recently_read_manga">Ingen nyligen läst serie</string>
@@ -259,7 +250,6 @@
     <string name="download_paused">Nedladdning pausad</string>
     <string name="common">Vanlig</string>
     <string name="open_in_webview">Öppna i webbvisning</string>
-    <string name="true_32bit_color">32-bitars färg</string>
     <string name="skip_read_chapters">Skippa över kapitel markerad som läst</string>
     <string name="color_filter_blend_mode">Färgfilterblandningsläge</string>
     <string name="overlay">Överlägg</string>
@@ -277,7 +267,6 @@
     <string name="requires_app_restart">Kräver omstart av appen för att börja gälla</string>
     <string name="disable_battery_optimization">Inaktivera batterioptimering</string>
     <string name="battery_optimization_disabled">Batterioptimering är redan inaktiverat</string>
-    <string name="pref_global_search">Global sökning</string>
     <string name="check_for_extension_updates">Sök efter tilläggsuppdateringar</string>
     <string name="website">Hemsida</string>
     <string name="open_source_licenses">Open source-licenser</string>
@@ -298,17 +287,11 @@
         <item quantity="one">Tilläggsuppdatering tillgänglig</item>
         <item quantity="other">%d tilläggsuppdateringar tillgängliga</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Minskar bandning, men kan påverka prestandan</string>
     <string name="skip_filtered_chapters">Skippa filtrerade kapitel</string>
     <string name="continuous_vertical">Kontinuerlig vertikal</string>
     <string name="paged">Sidläsare</string>
     <string name="always_show_chapter_transition">Visa alltid kapitelövergång</string>
     <string name="pref_webtoon_side_padding">Sidofyllning</string>
-    <string name="webtoon_side_padding_0">Ingen</string>
-    <string name="webtoon_side_padding_10">10 %</string>
-    <string name="webtoon_side_padding_15">15 %</string>
-    <string name="webtoon_side_padding_20">20 %</string>
-    <string name="webtoon_side_padding_25">25 %</string>
     <string name="chapters_">Kapitlen %1$s</string>
     <string name="remove_from_library">Ta bort från biblioteket</string>
     <string name="refresh_tracking">Uppdatera spårning</string>
@@ -347,8 +330,6 @@
     <string name="locale">Språk</string>
     <string name="automatic_backups">Automatiska säkerhetskopior</string>
     <string name="invalid_backup_file">Ogiltig säkerhetskopia</string>
-    <string name="invalid_backup_file_type">Ogiltig säkerhetskopia: %1$s
-\nDet bör sluta med .proto.gz eller .json.</string>
     <string name="backup_has_no_manga">Säkerhetskopian innehåller inga inlägg.</string>
     <string name="restore_missing_sources">Saknade källor:</string>
     <string name="restore_missing_trackers">Spårare som inte har loggats in:</string>
@@ -364,10 +345,8 @@
     <string name="source_migration_guide">Migreringsguide för källor</string>
     <string name="nsfw_sources">NSFW (18+) källor</string>
     <string name="does_not_prevent_unofficial_nsfw">Detta förhindrar inte inofficiella eller potentiellt felaktigt flaggade tillägg från att visa NSFW(18+) innehåll i appen.</string>
-    <string name="whats_new">Vad är nytt</string>
     <string name="next">Nästa</string>
     <string name="open_log">Öppna logg</string>
-    <string name="no_chapters_error">Inga kapitel hittades</string>
     <string name="last_used">Senast använd</string>
     <string name="nsfw_short">18+</string>
     <string name="may_contain_nsfw">Kan innehålla NSFW(18+) innehåll</string>
@@ -488,7 +467,6 @@
     <string name="smart_by_theme">Smart (efter tema)</string>
     <string name="smart_by_page">Smart (per sida)</string>
     <string name="enable_zoom_out">Aktivera utzoomning</string>
-    <string name="webtoon_style">webtoon-stil</string>
     <string name="reading_">Läser %1$s</string>
     <string name="set_as_default_for_all">Ange som standard för alla</string>
     <string name="reader_settings">Läsinställningar</string>
@@ -548,12 +526,7 @@
     <string name="reset_cover">Återställ omslag</string>
     <string name="reset_tags">Återställ taggar</string>
     <string name="clear_tags">Rensa taggar</string>
-    <string name="oldest_first">Äldsta till nyaste</string>
-    <string name="newest_first">Nyaste till äldsta</string>
-    <string name="sort_by_chapter_number">Sortera efter kapitelnummer</string>
-    <string name="sort_by_source_s_order">Sortera efter källans ordning</string>
     <string name="hide_chapter_titles">Dölj kapitelrubriker</string>
-    <string name="show_read_chapters">Visa lästa kapitel</string>
     <string name="show_unread_chapters">Visa olästa kapitel</string>
     <string name="show_downloaded_chapters">Visa nedladdade kapitel</string>
     <string name="show_bookmarked_chapters">Visa bokmärkta kapitel</string>
@@ -589,8 +562,6 @@
     <string name="both_axes">Båda axlarna</string>
     <string name="vertically">Vertikal</string>
     <string name="horizontally">Horisontell</string>
-    <string name="switch_to_single">Byt till enkelsidig</string>
-    <string name="switch_to_double">Byt till dubbelsidor</string>
     <string name="single_page">Enkelsidig</string>
     <string name="double_pages">Dubbla sidor</string>
     <string name="amount_of_pages_to_preload">Mängden sidor som ska laddas in vid läsning. Högre värden kommer att resultera i en mjukare läsupplevelse, till priset av högre cache och nätverksanvändning.</string>
@@ -639,7 +610,6 @@
         <item quantity="other">Cache rensad. %d filer har tagits bort</item>
     </plurals>
     <string name="data_management">Datahanteing</string>
-    <string name="not_logged_into_">Inte inloggad mot %1$s</string>
     <string name="restore_error">Det gick inte att återställa säkerhetskopian</string>
     <string name="pressing_back_to_start">Tryck tillbaka till startskärmen</string>
     <string name="back_to_start">Tillbaka till början</string>
@@ -721,9 +691,7 @@
     <string name="only_enable_pinned_for_migration">Aktivera bara dina fästa källor för migration</string>
     <string name="match_enabled_sources">Matcha aktiverade källor</string>
     <string name="match_pinned_sources">Matcha fästa källor</string>
-    <string name="only_search_pinned_when">Sök bara i fästa källor</string>
     <string name="flat_lime">Platt lime</string>
-    <string name="hot_pink">Skrikrosa</string>
     <string name="invert_double_pages">Invertera dubblsidor</string>
     <string name="save_combined_pages">Spara kombinerade sidor</string>
     <string name="share_combined_pages">Dela kombinerade sidor</string>
@@ -895,7 +863,6 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Installera och starta Shizuku för att använda Shizuku som tilläggsinstallationsprogram.</string>
     <string name="every_3_days">Var 3:e dag</string>
     <string name="download_queue_size_warning">Varning: stora massnerladdningar kan leda till att källor blir långsamma och/eller blockerar Tachiyomi. Tryck för att få veta mer.</string>
-    <string name="classic_blue">Klassisk blå</string>
     <string name="save_chapters_as_cbz">Spara som CBZ-arkiv</string>
     <string name="lime_time">Lime tid</string>
     <string name="tracking_info">Envägssynkronisering för att uppdatera kapitelförloppet i spårningstjänster. Ställ in spårning för enskilda inlägg från spårningsknappen under manga info.</string>
@@ -949,7 +916,6 @@
     <string name="clear_history_completed">Historiken har tagits bort</string>
     <string name="clear_history_confirmation">Är du säker\? All historik kommer att försvinna.</string>
     <string name="use_staggered_grid">Använd ett förskjutet rutnät</string>
-    <string name="pref_update_only_completely_read_summary">Uppdatera bara inlägg om det inte finns några olästa kapitel (helt lästa)</string>
     <string name="select_uninstalled_sources">Välj avinstallerade källor</string>
     <string name="show_">Visa %1$s</string>
     <string name="update_tracking_after_reading">Uppdatera spårning efter läsning</string>
@@ -958,14 +924,12 @@
 \nSvep det här tipset för att avlägsna det</string>
     <string name="pref_clear_webview_data">Rensa data från WebView</string>
     <string name="must_view_details_before_migration">Den här posten\'s informationssida måste ses innan du kan migrera</string>
-    <string name="view_all">Visa alla</string>
     <string name="webview_data_deleted">WebView-data rensas</string>
     <string name="update_tracking_marked_read">Uppdatera spårningen när den markeras som läst</string>
     <string name="backup_restore_invalid_uri">Fel: tom URI</string>
     <string name="backup_info">Automatisk säkerhetskopiering rekommenderas starkt. Du bör också förvara kopior på andra ställen.</string>
     <string name="pref_manage_notifications">Hantera aviseringar</string>
     <string name="battery_not_low">Batteriet är inte lågt</string>
-    <string name="faq_and_guides">Vanliga frågor och guider</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Nästa olästa kapitel</item>
         <item quantity="other">Nästa %d olästa kapitel</item>
@@ -993,7 +957,6 @@
     <string name="tap_zones">Tryckzoner</string>
     <string name="lavender">Lavendel</string>
     <string name="violet">Violett</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Standardsträng för användaragent</string>
     <string name="loader_rar5_error">RARv5 formatet stöds inte</string>
     <string name="downloaded_chapters">Nedladdade kapitel</string>

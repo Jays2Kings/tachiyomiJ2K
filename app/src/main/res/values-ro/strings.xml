@@ -31,7 +31,6 @@
     <string name="add">Adaugă</string>
     <string name="edit_categories">Modifică categoriile</string>
     <string name="move_to_categories">Mută în categorii</string>
-    <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="pause">Pauză</string>
     <string name="clear">Curățare</string>
@@ -68,15 +67,12 @@
     <string name="daily">Fiecare zi</string>
     <string name="every_2_days">Fiecare 2 zile</string>
     <string name="weekly">Fiecare săptămână</string>
-    <string name="categories_to_include_in_global_update">Categorii incluse în actualizarea globală</string>
     <string name="all">Toate</string>
     <string name="library_update_restriction">Restricții ale dispozitivului</string>
-    <string name="library_update_restriction_summary">Actualizează doar când condițiile sunt împlinite</string>
     <string name="wifi">Wi Fi</string>
     <string name="charging">Se încarcă</string>
     <string name="app_theme">Temă aplicație</string>
     <string name="dark">Tema întunecată</string>
-    <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Limbă</string>
     <string name="system_default">Prestabilită de sistem</string>
     <string name="default_category">Categorie implicită</string>
@@ -85,7 +81,6 @@
     <string name="installing">În curs de instalare</string>
     <string name="installed">Instalată</string>
     <string name="trust">Ai încredere</string>
-    <string name="untrusted">Nesigură</string>
     <string name="uninstall">Dezinstalează</string>
     <string name="untrusted_extension">Extensie nesigură</string>
     <string name="untrusted_extension_message">Extensia a fost semnată cu un certificat nesigur și nu a fost activată.
@@ -130,7 +125,6 @@
     <string name="fast">Rapid</string>
     <string name="rotation">Rotație</string>
     <string name="free">Liberă</string>
-    <string name="lock">Blocare</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -146,9 +140,7 @@
     <string name="fourth_to_last">Al patrulea capitol până la sfârșit</string>
     <string name="fifth_to_last">Al cincilea capitol până la sfârșit</string>
     <string name="download_new_chapters">Descarcă capitole noi</string>
-    <string name="categories_to_include_in_download">Categorii de inclus în descărcate</string>
     <string name="services">Servicii</string>
-    <string name="backup">Copie de rezervă</string>
     <string name="create_backup">Crează copie de rezervă</string>
     <string name="can_be_used_to_restore">Poate fii folosit pentru a restaura biblioteca curentă</string>
     <string name="restore_backup">Restaurează copia de rezervă</string>
@@ -248,7 +240,6 @@
     <string name="searching_for_updates">Se caută actualizări…</string>
     <string name="download_complete">Descărcare completă</string>
     <string name="download_error">Eroare la descărcare</string>
-    <string name="update_available">Actualizare valabilă</string>
     <string name="cover_of_image">Copertă înregistrare</string>
     <string name="no_recent_chapters">Nu există capitole recente</string>
     <string name="no_recently_read_manga">Nici o serie citită recent</string>
@@ -259,7 +250,6 @@
     <string name="download_paused">Descărcare oprită</string>
     <string name="common">General</string>
     <string name="open_in_webview">Deschide în WebView</string>
-    <string name="true_32bit_color">Culoare 32-bit</string>
     <string name="color_filter_blend_mode">Mod filtru de culoare</string>
     <string name="overlay">Acoperire</string>
     <string name="multiply">Înmulțește</string>
@@ -284,7 +274,6 @@
         <item quantity="few">%d actualizări de extensie disponibile</item>
         <item quantity="other">%d actualizări de extensie disponibile</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Reduce banding-ul, dar poate avea un impact asupra performanței</string>
     <string name="skip_filtered_chapters">Săriți peste capitolele filtrate</string>
     <string name="continuous_vertical">Vertical continuu</string>
     <string name="paged">Setări pagini</string>
@@ -304,11 +293,6 @@
     <string name="view_chapters">Vezi capitolele</string>
     <string name="always_show_chapter_transition">Arată întotdeauna tranziția capitolului</string>
     <string name="pref_webtoon_side_padding">Căptușeală laterală</string>
-    <string name="webtoon_side_padding_0">Fără</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Capitolele %1$s</string>
     <string name="remove_from_library">Elimină din bibliotecă</string>
     <string name="refresh_tracking">Reîncărca urmărirea</string>
@@ -323,7 +307,6 @@
     <string name="requires_app_restart">Necesită repornirea aplicației pentru a avea efect</string>
     <string name="disable_battery_optimization">Dezactivați optimizarea bateriei</string>
     <string name="battery_optimization_disabled">Optimizarea bateriei este deja dezactivată</string>
-    <string name="pref_global_search">Caută global</string>
     <string name="check_for_extension_updates">Verificați dacă există actualizări pentru extensii</string>
     <string name="website">Pagină web</string>
     <string name="open_source_licenses">Licențele open source</string>
@@ -336,7 +319,6 @@
     <string name="always">Întotdeauna</string>
     <string name="back">Înapoi</string>
     <string name="badges">Insigne</string>
-    <string name="no_chapters_error">Nu a fost găsit niciun capitol</string>
     <string name="last_used">Data ultimei utilizări</string>
     <string name="nsfw_short">Peste 18</string>
     <string name="next_page">Pagina următoare</string>
@@ -364,7 +346,6 @@
     </plurals>
     <string name="source_migration_guide">Ghid de migrare a sursei</string>
     <string name="nsfw_sources">Conținut NSFW (18+)</string>
-    <string name="whats_new">Ce este nou</string>
     <string name="file_picker_error">Nicio aplicație de ales fișiere nu a fost găsite</string>
     <string name="open_log">Deschide jurnal</string>
     <plurals name="category_plural">
@@ -410,8 +391,6 @@
     <string name="marked_as_unread">Marcat ca necitit</string>
     <string name="marked_as_read">Marcat ca citit</string>
     <string name="download_unread">Descărcă necititele</string>
-    <string name="invalid_backup_file_type">Tip de fișier de restaurare nevalid: %1$s
-\nAr trebui să se termine cu .proto.gz sau .json.</string>
     <string name="backup_in_progress">Crearea copiei de rezervă este deja în curs de desfășurare</string>
     <string name="restore_in_progress">Restaurarea este deja în curs de desfășurare</string>
     <string name="want_to_read">Vreau să citesc</string>
@@ -498,8 +477,6 @@
     <string name="if_disabled_transition_will_skip">Dacă este dezactivată, pagina de tranziție va fi sărită dacă este încărcat capitolul următor</string>
     <string name="smart_based_on_page_and_theme">Inteligentă (bazată pe pagină și temă)</string>
     <string name="smart_based_on_page">Inteligentă (pe baza paginii)</string>
-    <string name="switch_to_single">Treceți la o singură pagină</string>
-    <string name="switch_to_double">Treceți la pagini duble</string>
     <string name="single_page">Pagina singură</string>
     <string name="double_pages">Pagini duble</string>
     <string name="smart_by_theme">Inteligent (după temă)</string>
@@ -518,7 +495,6 @@
     <string name="save_first_page">Salvați prima pagină</string>
     <string name="share_first_page">Distribuiți prima pagină</string>
     <string name="set_first_page_as_cover">Setați prima pagină ca și copertă</string>
-    <string name="webtoon_style">stil webtoon</string>
     <string name="changing_will_reset_reading_mode">Schimbarea acestui parametru va reseta modul de citire pentru această serie</string>
     <string name="reading_mode">Mod citire</string>
     <string name="pages_">Pagini %1$s</string>
@@ -634,12 +610,7 @@
     <string name="reset_cover">Resetați coperțile</string>
     <string name="reset_tags">Resetați etichetele</string>
     <string name="clear_tags">Ștergeți etichetele</string>
-    <string name="oldest_first">De la cel mai vechi la cel mai nou</string>
-    <string name="newest_first">De la cel mai nou la cel mai vechi</string>
-    <string name="sort_by_chapter_number">Sortează după numărul de capitol</string>
-    <string name="sort_by_source_s_order">Sortează după ordinea sursei</string>
     <string name="hide_chapter_titles">Ascundeți titlurile capitolelor</string>
-    <string name="show_read_chapters">Afișați capitolele citite</string>
     <string name="show_unread_chapters">Afișați capitolele necitite</string>
     <string name="show_downloaded_chapters">Afișați capitolele descărcate</string>
     <string name="show_bookmarked_chapters">Afișați capitolele marcate</string>
@@ -787,7 +758,6 @@
     <string name="keep_in_">Păstrați în %1$s</string>
     <string name="mark_all_as_read">Marcați totul ca fiind citit</string>
     <string name="search_">Căutați %1$s</string>
-    <string name="view_all">Vezi toate</string>
     <string name="selection">Selecție</string>
     <string name="split_double_pages">Divizați paginile duble</string>
     <string name="use_suggested_date">Utilizați data sugerată</string>
@@ -805,7 +775,6 @@
     <string name="search_suggestions">Căutați în sugestii</string>
     <string name="updates_and_history">Actualizări și istoric</string>
     <string name="group_chapters_together">Grupați capitolele împreună</string>
-    <string name="classic_blue">Albastru clasic</string>
     <string name="a_brighter_you">Un tu mai luminos (dinamic)</string>
     <string name="a_calmer_you">Un tu mai calm (dinamic)</string>
     <string name="white_theme">Alb pur</string>
@@ -818,7 +787,6 @@
     <string name="clean_up_downloaded_chapters">Curățați capitolele descărcate</string>
     <string name="delete_unused_chapters">Ștergeți dosarele inexistente, descărcate parțial și pentru capitolele citite</string>
     <string name="clean_orphaned_downloads">Curățați orfan</string>
-    <string name="only_search_pinned_when">Căutați doar sursele fixate</string>
     <string name="match_pinned_sources">Potriviți sursele fixate</string>
     <string name="some_extensions_may_not_update">Este posibil ca unele extensii să nu fie actualizate automat dacă au fost instalate în afara acestei aplicații</string>
     <string name="match_enabled_sources">Potriviți sursele activate</string>
@@ -887,7 +855,6 @@
         <item quantity="few">Următoarele %d capitole necitite</item>
         <item quantity="other">Următoarele %d capitole necitite</item>
     </plurals>
-    <string name="faq_and_guides">Întrebări frecvente și ghiduri</string>
     <string name="every_3_days">La fiecare 3 zile</string>
     <string name="add_to_">Adăugați la %1$s</string>
     <string name="sort_fetched_time">Sortează după timpul recuperat</string>
@@ -917,7 +884,6 @@
     <string name="chocolate_strawberries">Căpșuni de ciocolată</string>
     <string name="teal_ocean">Oceanul Teal</string>
     <string name="sapphire_dusk">Safir amurg</string>
-    <string name="hot_pink">Roz fierbinte</string>
     <string name="pressing_back_to_start">Apăsați înapoi la ecranul de pornire</string>
     <string name="show_recent_sources">Afișați sursele utilizate recent</string>
     <string name="restore_error">Nu s-a restabilit backupul</string>
@@ -985,7 +951,6 @@
     <string name="pref_low">Scăzut</string>
     <string name="pref_lowest">Cel mai scăzut</string>
     <string name="backup_info">Backupurile automate sunt foarte recomandate. Ar trebui să păstrați copii și în alte locuri.</string>
-    <string name="not_logged_into_">Nu este logat în %1$s</string>
     <string name="force_download_cache_refresh_summary">Acest lucru va forța recalcularea cache-ului de descărcare. Util dacă ați modificat descărcările în afara acestei aplicații și doriți ca aplicația să le preia</string>
     <string name="data_management">Managementul datelor</string>
     <string name="update_all">Actualizează tot</string>
@@ -998,7 +963,6 @@
     <string name="unfinished_list">Lista neterminată</string>
     <string name="by_default_side_nav_info">În mod implicit, navigarea laterală este utilizată pentru anumite telefoane și tablete mici atunci când sunt în modul peisaj și se afișează întotdeauna pe tabletele mai mari</string>
     <string name="includes_recently_read_updated_added">Include seriile citite, actualizate și adăugate recent</string>
-    <string name="pref_update_only_completely_read_summary">Actualizați seriile doar dacă nu există nici un capitol necitit (citite complet)</string>
     <string name="pref_inverted_colors">Inversate</string>
     <string name="show_on_long_press">Afișați la apăsare lungă</string>
     <string name="pure_black_dark_mode">Mod întunecat negru pur</string>
@@ -1017,7 +981,6 @@
     <string name="helpful_translation_links">Link-uri utile de traducere</string>
     <string name="download_notifier_split_failed">Nu s-a putut diviza imaginea descărcată</string>
     <string name="loader_rar5_error">Formatul RARv5 nu este acceptat</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="language_requires_app_restart">Unele limbi pot necesita o relansare a aplicației pentru a fi afișate corect</string>
     <string name="clear_db_exclude_read">Păstrează înregistrările cu capitole citite</string>
     <string name="user_agent_string">Șir de agent utilizator implicit</string>
