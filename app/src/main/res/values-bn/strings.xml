@@ -703,8 +703,7 @@
         <item quantity="one">ক্যাশে সাফ করা হয়েছে। %d ফাইল মুছে ফেলা হয়েছে</item>
         <item quantity="other">ক্যাশে সাফ করা হয়েছে। %d টা ফাইল মুছে ফেলা হয়েছে</item>
     </plurals>
-    <string name="delete_old_covers_in_library_used_">আপনার লাইব্রেরিতে মাঙ্গার পুরানো এবং অব্যবহৃত ক্যাশে করা কভারগুলি মুছুন যা আপডেট করা হয়েছে।
-\nবর্তমানে ব্যবহার করছে: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">আপনার লাইব্রেরিতে মাঙ্গার পুরানো এবং অব্যবহৃত ক্যাশে করা কভারগুলি মুছুন যা আপডেট করা হয়েছে। \nবর্তমানে ব্যবহার করছে: %1$s</string>
     <string name="default_behavior">ডিফল্ট আচরণ</string>
     <string name="by_default_side_nav_info">ডিফল্টরূপে, ল্যান্ডস্কেপে থাকাকালীন নির্দিষ্ট ফোন এবং ছোট ট্যাবলেটগুলির জন্য সাইড নেভিগেশন ব্যবহার করা হয় এবং সর্বদা বড় ট্যাবলেটগুলিতে দেখায়</string>
     <string name="clean_up_downloaded_chapters">ডাউনলোড করা অধ্যায়গুলি পরিষ্কার কর</string>
