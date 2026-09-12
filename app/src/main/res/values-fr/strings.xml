@@ -528,8 +528,7 @@
     <string name="delete_all_covers__not_in_library_used_">Supprimez toutes les couvertures mises en cache qui ne sont pas dans votre bibliothèque
 \nEn cours d\'utilisation : %1$s</string>
     <string name="clear_cached_covers_non_library">Effacer les couvertures mises en cache qui ne sont pas dans la bibliothèque</string>
-    <string name="delete_old_covers_in_library_used_">Supprimez les anciennes et inutilisées couvertures des entrées mises en cache dans votre bibliothèque qui a été mise à jour.
-\nEn cours d\'utilisation : %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Supprimez les anciennes et inutilisées couvertures des entrées mises en cache dans votre bibliothèque qui a été mise à jour. \nEn cours d\'utilisation : %1$s</string>
     <string name="clean_up_cached_covers">Nettoyer les couvertures mises en cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Nettoyage terminé. %d dossier supprimé</item>
