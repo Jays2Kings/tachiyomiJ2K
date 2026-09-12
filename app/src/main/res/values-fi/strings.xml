@@ -584,8 +584,7 @@
     <string name="delete_all_covers__not_in_library_used_">Poista kaikki välimuistiin tallennetut kannet, jotka eivät ole kirjastossasi.
 \nTällä hetkellä käytössä: %1$s</string>
     <string name="clear_cached_covers_non_library">Tyhjennä välimuistiin tallennetut kannet, joita ei ole kirjastossa</string>
-    <string name="delete_old_covers_in_library_used_">Poista kirjastossasi olevat vanhat ja käyttämättömät välimuistiin tallennetut mangakannet, jotka on päivitetty.
-\nTällä hetkellä käytössä: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Poista kirjastossasi olevat vanhat ja käyttämättömät välimuistiin tallennetut mangakannet, jotka on päivitetty. \nTällä hetkellä käytössä: %1$s</string>
     <string name="ignore_cutout_areas">Jätä leikkausalueet huomiotta</string>
     <string name="start_past_cutout">Aloita leikkauksen jälkeen</string>
     <string name="pad_cutout_areas">Täytä leikkausalueet</string>
