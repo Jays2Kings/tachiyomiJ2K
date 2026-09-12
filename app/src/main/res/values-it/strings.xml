@@ -467,8 +467,7 @@
     <string name="clear_cached_covers_non_library">Elimina dalla cache le copertine non presenti in Libreria</string>
     <string name="delete_all_covers__not_in_library_used_">Elimina tutte le copertine non presenti in Libreria
 \nIn uso: %1$s</string>
-    <string name="delete_old_covers_in_library_used_">Elimina dalla cache le vecchie copertine delle voci presenti nella tua libreria, le cui copertine sono state aggiornate.
-\nIn uso: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Elimina dalla cache le vecchie copertine delle voci presenti nella tua libreria, le cui copertine sono state aggiornate. \nIn uso: %1$s</string>
     <string name="clean_up_cached_covers">Elimina le copertine in cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Eliminazione completata. Rimossa la cartella %d</item>
