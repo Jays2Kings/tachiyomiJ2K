@@ -434,8 +434,7 @@
         <item quantity="other">Aufräumen abgeschlossen. %d Ordner entfernt</item>
     </plurals>
     <string name="clean_up_cached_covers">Zwischengespeicherte Vorschaubilder aufräumen</string>
-    <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Einträgen in deiner Bibliothek welche aktualisiert wurden löschen.
-\nAktuell genutzt: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Alte und ungenutzte zwischengespeicherte Vorschaubilder von Einträgen in deiner Bibliothek welche aktualisiert wurden löschen. \nAktuell genutzt: %1$s</string>
     <string name="clear_cached_covers_non_library">Zwischengespeicherte Vorschaubilder welche nicht in der Bibliothek sind bereinigen</string>
     <string name="delete_all_covers__not_in_library_used_">Alle zwischengespeicherten Vorschaubilder welche nicht in der Bibliothek sind löschen \nAktuell genutzt: %1$s</string>
     <string name="check_for_extension_updates">Erweiterungsaktualisierungen prüfen</string>
