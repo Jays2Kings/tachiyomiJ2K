@@ -559,8 +559,7 @@
     <string name="disable_if_issues_with_updating">Отключите это, если у вас возникли проблемы с обновлением/восстановлением вашей библиотеки</string>
     <string name="battery_optimization_disabled">Оптимизация батареи уже выключена</string>
     <string name="clean_up_cached_covers">Очистить кэш обложек</string>
-    <string name="delete_old_covers_in_library_used_">Удалите старые и неиспользуемые кэшированные обложки записей в вашей библиотеке, которая была обновлена.
-\nСейчас используется: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Удалите старые и неиспользуемые кэшированные обложки записей в вашей библиотеке, которая была обновлена. \nСейчас используется: %1$s</string>
     <string name="clear_cached_covers_non_library">Очистить кешированные обложки, которых нет в библиотеке</string>
     <string name="delete_all_covers__not_in_library_used_">Удалить все кешированные обложки, которых нет в библиотеке
 \nИспользуется: %1$s</string>
