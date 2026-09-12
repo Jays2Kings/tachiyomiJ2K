@@ -439,8 +439,7 @@
         <item quantity="other">Brisanje je gotovo. Uklonjeno je %d mapa</item>
     </plurals>
     <string name="disable_if_issues_with_updating">Deaktiviraj ovo ako imaš problema s aktualiziranjem ili obnavljanjem tvoje biblioteke</string>
-    <string name="delete_old_covers_in_library_used_">Izbriši stare i nekorištene unose predmemoriranih naslovnica u tvojoj biblioteci koje su aktualizirane.
-\nTrenutačno se koristi: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Izbriši stare i nekorištene unose predmemoriranih naslovnica u tvojoj biblioteci koje su aktualizirane. \nTrenutačno se koristi: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">Izbriši sve predmemorirane naslovnice koje nisu u tvojoj biblioteci
 \nTrenutačno se koristi: %1$s</string>
     <string name="clear_cached_covers_non_library">Izbriši predmemorirane naslovnice koje nisu u biblioteci</string>
