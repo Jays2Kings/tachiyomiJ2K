@@ -582,8 +582,7 @@
     <string name="delete_all_covers__not_in_library_used_">Apaga todas as capas do cache fora da sua biblioteca.
 \nAtualmente a usar: %1$s</string>
     <string name="clear_cached_covers_non_library">Limpar capas em cache fora da biblioteca</string>
-    <string name="delete_old_covers_in_library_used_">Apaga capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados.
-\nAtualmente a usar: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Apaga capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados. \nAtualmente a usar: %1$s</string>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Limpeza realizada. %d pasta removida</item>
