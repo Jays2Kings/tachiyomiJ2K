@@ -361,8 +361,7 @@
     <string name="delete_all_covers__not_in_library_used_">Iscantzella sas coberteddas in sa memòria temporànea chi non sunt in sa biblioteca
 \nImpreende como: %1$s</string>
     <string name="clear_cached_covers_non_library">Iscantzella sas coberteddas in sa memòria temporànea chi non sunt in sa biblioteca</string>
-    <string name="delete_old_covers_in_library_used_">Iscantzella sas coberteddas betzas e no impreadas de sos elementos in sa biblioteca tua chi sunt istados agiornados.
-\nImpreende como: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Iscantzella sas coberteddas betzas e no impreadas de sos elementos in sa biblioteca tua chi sunt istados agiornados. \nImpreende como: %1$s</string>
     <string name="clean_up_cached_covers">Inneta sas coberteddas in sa memòria temporànea</string>
     <plurals name="cleanup_done">
         <item quantity="one">Innetadura acabada. %d cartella iscantzellada</item>
