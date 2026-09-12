@@ -548,8 +548,7 @@
     <string name="delete_all_covers__not_in_library_used_">حذف كافة الأغلفة المخزنة مؤقتاً غير الموجودة في مكتبتك
 \nحاليا يتم استخدام: %1$s</string>
     <string name="clear_cached_covers_non_library">مسح الأغلفة المخزنة مؤقتًا غير الموجودة في المكتبة</string>
-    <string name="delete_old_covers_in_library_used_">احذف الغُلُف القديمة للمدخلات التي حُدِّثت غُلُفها.
-\nيُستخدَم الآن: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">احذف الغُلُف القديمة للمدخلات التي حُدِّثت غُلُفها. \nيُستخدَم الآن: %1$s</string>
     <string name="clean_up_cached_covers">تنظيف الأغلفة المخزنة مؤقتًا</string>
     <string name="error_sharing_cover">فشلت مشاركة الغلاف</string>
     <string name="error_saving_cover">خطأ في حفظ الغلاف</string>
