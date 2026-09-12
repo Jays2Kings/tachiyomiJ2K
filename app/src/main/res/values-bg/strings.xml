@@ -818,8 +818,7 @@
         <item quantity="other">Почистването е завършено. Премахнати са папките %d</item>
     </plurals>
     <string name="clean_up_cached_covers">Почистване на кеширани корици</string>
-    <string name="delete_old_covers_in_library_used_">Изтрийте старите и неизползвани кеширани корици на серии в библиотеката си, които са били актуализирани.
-\nВ момента използвате: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Изтрийте старите и неизползвани кеширани корици на серии в библиотеката си, които са били актуализирани. \nВ момента използвате: %1$s</string>
     <string name="delete_all_covers__not_in_library_used_">Изтриване на всички корици в кеша, които не са в библиотеката ви
 \nВ момента използвани: %1$s</string>
     <string name="match_pinned_sources">Съвпадение на фиксирани източници</string>
