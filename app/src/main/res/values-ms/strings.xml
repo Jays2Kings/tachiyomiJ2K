@@ -436,8 +436,7 @@
     <string name="delete_all_covers__not_in_library_used_">Padam semua covers cached yang tidak ada di pustaka
 \nTengah di guna: %1$s</string>
     <string name="clear_cached_covers_non_library">Besihkan cached covers bukan di</string>
-    <string name="delete_old_covers_in_library_used_">Padam cached covers lama dan tidak di guna di dalam pustaka yang telah di kemas kini.
-\nTengah digunakan: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Padam cached covers lama dan tidak di guna di dalam pustaka yang telah di kemas kini. \nTengah digunakan: %1$s</string>
     <string name="clean_up_cached_covers">Bersihkan cached</string>
     <plurals name="cleanup_done">
         <item quantity="other">Pembersihan selesai. Di buang %d folder</item>
