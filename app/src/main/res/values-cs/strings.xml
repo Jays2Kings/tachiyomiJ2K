@@ -976,8 +976,7 @@
     <string name="username_must_not_be_blank">Uživatelské jméno nebo heslo nesmí být prázdné</string>
     <string name="beta">BETA</string>
     <string name="no_new_chapters_open_details">Pokud nejsou k dispozici žádné nové kapitoly, otevřou se místo toho podrobnosti o sérii</string>
-    <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů publikací v knihovně, které byly aktualizovány.
-\nAktuálně používáno: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů publikací v knihovně, které byly aktualizovány. \nAktuálně používáno: %1$s</string>
     <string name="user_agent_string">Výchozí řetězec uživatelského agenta</string>
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
