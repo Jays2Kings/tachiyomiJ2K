@@ -441,8 +441,7 @@
         <item quantity="other">Limpeza realizada. %d pastas removidas</item>
     </plurals>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
-    <string name="delete_old_covers_in_library_used_">Exclua capas e caches antigos de itens não usados em sua biblioteca que foram atualizados.
-\nAtualmente usando: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Exclua capas e caches antigos de itens não usados em sua biblioteca que foram atualizados. \nAtualmente usando: %1$s</string>
     <string name="check_for_extension_updates">Verifique se há atualizações de extensão</string>
     <string name="match_pinned_sources">Corresponder às fontes fixadas</string>
     <string name="match_enabled_sources">Corresponder às fontes ativadas</string>
