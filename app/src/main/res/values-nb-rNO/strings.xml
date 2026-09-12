@@ -592,8 +592,7 @@
     <string name="delete_all_covers__not_in_library_used_">Slett alle omslag i hurtiglager som ikke er i biblioteket.
 \nBruker nå: %1$s</string>
     <string name="clear_cached_covers_non_library">Tøm hurtiglagrede omslag som ikke er i biblioteket</string>
-    <string name="delete_old_covers_in_library_used_">Rydd opp i hurtigbufferede omslag som ikke er i bruk for oppdaterte manga i biblioteket ditt.
-\nBruker nå: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Rydd opp i hurtigbufferede omslag som ikke er i bruk for oppdaterte manga i biblioteket ditt. \nBruker nå: %1$s</string>
     <string name="clean_up_cached_covers">Tøm hurtiglagrede omslag</string>
     <plurals name="cache_cleared">
         <item quantity="one">Hurtiglager tømt. %d fil har blitt slettet.</item>
