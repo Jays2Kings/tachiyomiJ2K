@@ -401,8 +401,7 @@
     <string name="add_x_to">Idagdag ang %1$s sa…</string>
     <string name="move_x_to">Ilipat ang %1$s sa…</string>
     <string name="ask_on_chapters_page">Buburahin tuwing panlahatang update, tanungin sa Mga Kabanata</string>
-    <string name="delete_old_covers_in_library_used_">Tanggalin ang mga luma at hindi nagamit na mga naka-cache na pabalat ng mga entry sa iyong Aklatan na na-update.
-\nKasalukuyang ginagamit: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Tanggalin ang mga luma at hindi nagamit na mga naka-cache na pabalat ng mga entry sa iyong Aklatan na na-update. \nKasalukuyang ginagamit: %1$s</string>
     <string name="updates_covers_genres_desc">Ini-a-update ang mga pabalat, genre, paglalarawan at impormasyon sa katayuan ng mga entry</string>
     <string name="extension_updates">Mga update sa Extension</string>
     <string name="show_updated_time">Ipakita ang oras ng pag-update</string>
