@@ -925,8 +925,7 @@
     <string name="keep_in_">%1$s에 보관</string>
     <string name="no_folders_to_cleanup">정리할 폴더가 없습니다</string>
     <string name="disable_if_issues_with_updating">라이브러리를 업데이트하거나 복원하는 데 문제가 있는 경우 이 기능을 사용하지 않도록 설정합니다</string>
-    <string name="delete_old_covers_in_library_used_">라이브러리에서 오래되고 사용되지 않은 만화 표지를 삭제합니다.
-\n현재 사용 중: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">라이브러리에서 오래되고 사용되지 않은 만화 표지를 삭제합니다. \n현재 사용 중: %1$s</string>
     <string name="clear_cached_covers_non_library">라이브러리에 없는 캐시된 커버 지우기</string>
     <string name="starting_cleanup">정리 시작</string>
     <string name="mark_range_as_read">다양한 챕터를 읽은 것으로 표시</string>
