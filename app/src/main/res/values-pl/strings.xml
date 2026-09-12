@@ -88,7 +88,6 @@
     <!-- Updates -->
     <string name="update">Aktualizuj</string>
     <string name="updating_">Aktualizowanie %1$s</string>
-    <string name="update_available">Aktualizacja dostępna</string>
     <string name="new_version_available">Nowa wersja dostępna!</string>
     <string name="no_new_updates_available">Brak nowych aktualizacji</string>
     <string name="searching_for_updates">Szukanie aktualizacji…</string>
@@ -149,10 +148,8 @@
     <!-- Library settings -->
     <string name="library_update_frequency">Częstotliwość aktualizowania biblioteki</string>
     <string name="library_update_restriction">Ograniczenia urządzenia</string>
-    <string name="library_update_restriction_summary">Aktualizuj tylko kiedy spełnione są te warunki</string>
     <string name="sort_by_ignoring_articles">Sortuj ignorując przedimki</string>
     <string name="when_sorting_ignore_articles">Podczas alfabetycznego sortowania, sortuj ignorując angielskie przedimki (a, an, the) rozpoczynające tytuły mang</string>
-    <string name="categories_to_include_in_global_update">Kategorie zawarte w globalnej aktualizacji</string>
     <string name="include_in_global_update">Zawrzyj w globalnej aktualizacji</string>
     <string name="auto_refresh_covers">Automatycznie odśwież okładki</string>
     <string name="auto_refresh_covers_summary">Odśwież okładki w bibliotece podczas aktualizowania biblioteki</string>
@@ -202,7 +199,6 @@
     <string name="installing">Instalowanie</string>
     <string name="installed">Zainstalowane</string>
     <string name="trust">Ufaj</string>
-    <string name="untrusted">Niezaufane</string>
     <string name="uninstall">Odinstaluj</string>
     <string name="untrusted_extension">Niezaufane rozszerzenie</string>
     <string name="untrusted_extension_message">To rozszerzenie było podpisane niezaufanym certyfikatem i nie zostało aktywowane.
@@ -236,14 +232,11 @@
     <string name="loading_pages">Ładowanie stron…</string>
     <string name="failed_to_load_pages_">Nie udało się załadować stron: %1$s</string>
     <string name="reading_">Czytanie %1$s</string>
-    <string name="webtoon_style">w stylu webtoon</string>
     <!-- Reader settings -->
     <string name="fullscreen">Pełny ekran</string>
     <string name="enable_zoom_out">Włącz możliwość oddalania</string>
     <string name="double_tap_anim_speed">Szybkość animacji podwójnego dotknięcia</string>
     <string name="show_page_number">Pokazuj numer strony</string>
-    <string name="true_32bit_color">Kolor 32-bitowy</string>
-    <string name="reduces_banding_impacts_performance">Ogranicza banding, ale może mieć wpływ na wydajność</string>
     <string name="crop_borders">Przycinaj krawędzie</string>
     <string name="use_custom_brightness">Niestandardowa jasność</string>
     <string name="use_custom_color_filter">Niestandardowy filtr kolorów</string>
@@ -286,11 +279,6 @@
     <string name="always_show_chapter_transition">Zawsze pokazuj przejście między rozdziałami</string>
     <string name="if_disabled_transition_will_skip">Jeśli opcja jest wyłączona, przejście między rozdziałami będzie pominięte, jeżeli następny rozdział jest załadowany</string>
     <string name="pref_webtoon_side_padding">Marginesy boczne</string>
-    <string name="webtoon_side_padding_0">Brak</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <!-- Manga details -->
     <string name="about_this_">Opis (%1$s)</string>
     <string name="start_reading">Zacznij czytać</string>
@@ -321,12 +309,7 @@
     <string name="show_bookmarked_chapters">Wyświetl rozdziały zapisane w zakładkach</string>
     <string name="show_downloaded_chapters">Wyświetl pobrane rozdziały</string>
     <string name="show_unread_chapters">Wyświetl nieprzeczytane rozdziały</string>
-    <string name="show_read_chapters">Wyświetl przeczytane rozdziały</string>
     <string name="hide_chapter_titles">Ukryj tytuły rozdziałów</string>
-    <string name="sort_by_source_s_order">Sortuj według kolejności źródła</string>
-    <string name="sort_by_chapter_number">Sortuj według numeru rozdziałów</string>
-    <string name="newest_first">Od najnowszego do najstarszego</string>
-    <string name="oldest_first">Od najstarszego do najnowszego</string>
     <string name="clear_tags">Wyczyść tagi</string>
     <string name="reset_tags">Resetuj tagi</string>
     <string name="reset_cover">Resetuj okładkę</string>
@@ -426,7 +409,6 @@
     <!-- General settings -->
     <string name="app_theme">Motyw aplikacji</string>
     <string name="dark">Ciemny</string>
-    <string name="amoled_black">Ciemny AMOLED</string>
     <string name="white_theme">Jasny</string>
     <string name="language">Język</string>
     <string name="system_default">Domyślny w systemie</string>
@@ -434,8 +416,6 @@
     <string name="check_for_updates">Sprawdź aktualizacje</string>
     <string name="secure_screen">Ukryj ekran</string>
     <string name="security">Zabezpieczenia</string>
-    <!-- Backup -->
-    <string name="backup">Kopia zapasowa</string>
     <string name="create_backup">Utwórz kopię zapasową</string>
     <string name="can_be_used_to_restore">Może być użyta do przywrócenia aktualnej biblioteki</string>
     <string name="restore_backup">Przywróć kopię zapasową</string>
@@ -450,7 +430,6 @@
     <string name="creating_backup">Tworzenie kopii zapasowej</string>
     <string name="what_should_backup">Co zawrzeć w kopii zapasowej?</string>
     <string name="restoring_backup">Przywracanie kopii zapasowej</string>
-    <string name="not_logged_into_">Niezalogowany do %1$s</string>
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Wyczyść pamięć podręczną rozdziałów</string>
     <string name="data_management">Zarządzanie Danymi</string>
@@ -496,10 +475,7 @@
     <string name="clear_cached_covers_non_library">Wyczyść okładki spoza biblioteki zapisane w pamięci podręcznej</string>
     <string name="delete_all_covers__not_in_library_used_">Usuń wszystkie okładki nie znajdujące się w twojej bibliotece z pamięci podręcznej
 \nObecnie używane: %1$s</string>
-    <!-- Browse Settings -->
-    <string name="pref_global_search">Wyszukiwanie globalne</string>
     <string name="check_for_extension_updates">Szukaj aktualizacji rozszerzenia</string>
-    <string name="only_search_pinned_when">Szukaj tylko w przypiętych źródłach</string>
     <string name="match_pinned_sources">Dopasuj przypięte źródła</string>
     <string name="match_enabled_sources">Dopasuj włączone źródła</string>
     <string name="only_enable_pinned_for_migration">Użyj tylko przypiętych źródeł do migracji</string>
@@ -512,7 +488,6 @@
     <string name="build_time">Data utworzenia kompilacji</string>
     <string name="send_crash_report">Wysyłaj raporty o awariach</string>
     <string name="helps_fix_bugs">Pomaga naprawiać błędy. Żadne wrażliwe dane nie będą wysyłane</string>
-    <string name="whats_new">Co nowego</string>
     <string name="website">Strona WWW</string>
     <string name="open_source_licenses">Licencje typu open source</string>
     <!-- Login/Logout dialog -->
@@ -559,7 +534,6 @@
     <string name="fourth_to_last">4 rozdziały do tyłu</string>
     <string name="fifth_to_last">5 rozdziałów do tyłu</string>
     <string name="download_new_chapters">Pobieraj nowe rozdziały</string>
-    <string name="categories_to_include_in_download">Kategorie do auto-pobierania</string>
     <string name="delete_removed_chapters">Usuń usunięte rozdziały</string>
     <string name="delete_downloaded_if_removed_online">Usuń pobrane rozdziały jeżeli źródło usunęło rozdziały online</string>
     <string name="ask_on_chapters_page">Usuń podczas aktualizacji globalnych, pytaj na stronie rozdziałów</string>
@@ -619,7 +593,6 @@
     <string name="left">Od lewej</string>
     <string name="less">Mniej</string>
     <string name="loading">Ładowanie…</string>
-    <string name="lock">Zablokuj</string>
     <string name="mark_all_as_read">Oznacz wszystko jako przeczytane</string>
     <string name="mark_all_as_unread">Oznacz wszystko jako nieprzeczytane</string>
     <string name="mark_as_read">Oznacz jako przeczytane</string>
@@ -655,7 +628,6 @@
     <string name="share">Udostępnij</string>
     <string name="sort">Sortuj</string>
     <string name="sort_and_filter">Sortuj i Filtruj</string>
-    <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="tag">Tag</string>
     <string name="top">Góra</string>
@@ -676,7 +648,6 @@
     <string name="myanimelist_relogin">Wymagane ponowne zalogowanie do MAL</string>
     <string name="search_settings">Ustawienia szukania</string>
     <string name="locale">Język</string>
-    <string name="no_chapters_error">Nie znaleziono rozdziałów</string>
     <string name="badges">Plakietki</string>
     <string name="open_log">Otwórz log</string>
     <string name="nsfw_short">18+</string>
@@ -695,8 +666,6 @@
     <string name="none">Brak</string>
     <string name="automatic_backups">Automatyczna kopia zapasowa</string>
     <string name="invalid_backup_file">Nieprawidłowy plik kopii zapasowej</string>
-    <string name="invalid_backup_file_type">Nieprawidłowe rozszczerzenie pliku kopii zapasowej: %1$s
-\nPowinno być .proto.gz albo .json.</string>
     <string name="backup_has_no_manga">Kopia zapasowa nie zawiera żadnych mang.</string>
     <string name="restore_missing_sources">Brakujące źródła:</string>
     <string name="restore_missing_trackers">Serwisy, do których nie zalogowono:</string>
@@ -853,7 +822,6 @@
     <string name="over_any_network">Po dowolnej sieci</string>
     <string name="over_wifi_only">Tylko po Wi-Fi</string>
     <string name="pure_black_dark_mode">Czarny tryb ciemny</string>
-    <string name="hot_pink">Gorący Róż</string>
     <string name="sapphire_dusk">Szafirowy Zmierzch</string>
     <string name="teal_ocean">Turkusowy Ocean</string>
     <string name="chocolate_strawberries">Czekoladowe Truskawki</string>
@@ -884,8 +852,6 @@
     <string name="default_orientation">Domyślna orientacja</string>
     <string name="locked_landscape">Wymuś poziomo</string>
     <string name="locked_portrait">Wymuś pionowo</string>
-    <string name="switch_to_single">Przełącz na pojedynczą stronę</string>
-    <string name="switch_to_double">Przełącz na podwójne strony</string>
     <string name="double_pages">Podwójne strony</string>
     <string name="split_double_pages">Podziel podwójne strony</string>
     <string name="remove_crop">Usuń przycięcie</string>
@@ -977,7 +943,6 @@
     <string name="show_outline_around_covers">Pokaż obrys wokół okładek</string>
     <string name="ext_installer_shizuku_stopped">Shizuku nie jest aktywne</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Zainstaluj i uruchom Shizuku, aby używać go jako instalatora rozszerzeń.</string>
-    <string name="classic_blue">Klasyczny Niebieski</string>
     <string name="lime_time">Pora na Limonkę</string>
     <string name="download_queue_size_warning">Ostrzeżenie: Duże aktualizacje biblioteki mogą prowadzić do zwiększonego zużycia baterii oraz spowolnienia działania źródeł.</string>
     <string name="every_3_days">Co 3 dni</string>
@@ -1024,14 +989,12 @@
     <string name="pref_update_only_completely_read">Posiada nieprzeczytane rozdziały</string>
     <string name="pref_update_only_non_completed">Ukończone serie</string>
     <string name="pref_update_only_started">Brak przeczytanych rozdziałów</string>
-    <string name="pref_update_only_completely_read_summary">Aktualizuj tytuł tylko wtedy, gdy nie ma żadnego nieprzeczytanego rozdziału (całkowicie przeczytany)</string>
     <string name="scoring_type_updated">Zaktualizowano typ punktacji</string>
     <string name="could_not_update_scoring_">Nie można zaktualizować typu punktacji: %1$s</string>
     <string name="update_tracking_after_reading">Aktualizacja śledzenia po przeczytaniu</string>
     <string name="update_tracking_marked_read">Aktualizuj śledzenie po oznaczeniu jako przeczytane</string>
     <string name="move_series_to_top">Przenieś serię na górę</string>
     <string name="pref_manage_notifications">Zarządzaj powiadomieniami</string>
-    <string name="faq_and_guides">FAQ i poradniki</string>
     <string name="secure_screen_summary">Ukrywa zawartość ekranu przy przełączaniu między aplikacjami i blokuj zrzuty ekranu</string>
     <string name="pref_highest">Najwyższy</string>
     <string name="pref_hide_threshold">Czułość ukrywania dolnego paska podczas przewijania</string>
@@ -1064,9 +1027,7 @@
     <string name="tap_to_learn_more">Kliknij, by dowiedzieć się więcej</string>
     <string name="tap_zones">Strefy kliknięcia</string>
     <string name="lavender">Lawenda</string>
-    <string name="view_all">Pokaż wszystko</string>
     <string name="open_in_app">Otwórz w aplikacji</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Domyślny user agent string</string>
     <string name="loader_rar5_error">Format RARv5 jest nieobsługiwany</string>
     <string name="battery_not_low">Poziom baterii nie jest niski</string>

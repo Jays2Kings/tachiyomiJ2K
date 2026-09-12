@@ -42,7 +42,6 @@
     <string name="used_">प्रयोग गरिएको: %1$s</string>
     <string name="clear_database_completed">इन्ट्रीहरू हटाइयो</string>
     <string name="updates_tracking_details">ट्र्याकिङ सेवाहरूबाट स्थिति, स्कोर र अन्तिम पढिएको अध्याय अपडेट गर्दछ</string>
-    <string name="pref_global_search">ग्लोबल खोजी</string>
     <string name="nsfw_sources">NSFW (१८+) स्रोतहरू</string>
     <string name="successfully_logged_out">तपाई अब लग-आउट हुनुभएको छ</string>
     <string name="downloads">डाउनलोडहरू</string>
@@ -79,7 +78,6 @@
     <string name="chapter_not_found">अध्याय फेला परेन</string>
     <string name="local_invalid_format">अवैध अध्याय ढाँचा</string>
     <string name="order_by">द्वारा अर्डर गर्नुहोस्</string>
-    <string name="no_chapters_error">अध्यायहरू भेटिएन</string>
     <string name="loader_rar5_error">RARv5 समर्थित छैन</string>
     <string name="by_chapter_number">अध्याय संख्या द्वारा</string>
     <string name="by_update_date">अपलोड मिति द्वारा</string>
@@ -133,7 +131,6 @@
     <string name="installing">स्थापना गर्दै</string>
     <string name="installed">स्थापना गरियो</string>
     <string name="trust">विश्वास</string>
-    <string name="untrusted">अविश्वसनीय</string>
     <string name="uninstall">अनइन्स्टल गर्नुहोस्</string>
     <string name="ext_installer_shizuku_stopped">Shizuku चलिरहेको छैन</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Shizuku लाई एक्सटेन्शन इंस्टलरको रूपमा प्रयोग गर्न Shizuku स्थापना गर्नुहोस् र सुरु गर्नुहोस्।</string>
@@ -165,8 +162,6 @@
     <string name="animate_page_transitions">पृष्ठ ट्रान्जिसन एनिमेट गर्नुहोस्</string>
     <string name="double_tap_anim_speed">एनिमेसनको गति डबल ट्याप गर्नुहोस्</string>
     <string name="show_page_number">पृष्ठ नम्बर देखाउनुहोस्</string>
-    <string name="true_32bit_color">३२-बिट रङ</string>
-    <string name="reduces_banding_impacts_performance">ब्यान्डिङ घटाउँछ, तर कार्यसम्पादनलाई असर गर्न सक्छ</string>
     <string name="crop_borders">सीमाना क्रप गर्नुहोस्</string>
     <string name="color_filter_blend_mode">रङ फिल्टर मिश्रण मोड</string>
     <string name="overlay">ओभरले</string>
@@ -208,12 +203,6 @@
     <string name="blue_initial">B</string>
     <string name="alpha_initial">A</string>
     <string name="always_show_chapter_transition">अध्याय ट्रान्जिसन सधैँ देखाउनुहोस्</string>
-    <string name="webtoon_side_padding_0">कुनै पनि हैन</string>
-    <string name="webtoon_side_padding_5">५%</string>
-    <string name="webtoon_side_padding_10">१०%</string>
-    <string name="webtoon_side_padding_15">१५%</string>
-    <string name="webtoon_side_padding_20">२०%</string>
-    <string name="webtoon_side_padding_25">२५%</string>
     <string name="l_nav">L आकारको</string>
     <string name="kindlish_nav">किन्डल जस्तै</string>
     <string name="edge_nav">कुना</string>
@@ -334,8 +323,6 @@
     <string name="version">संस्करण</string>
     <string name="send_crash_report">क्र्यास रिपोर्टहरू पठाउनुहोस्</string>
     <string name="helps_fix_bugs">कुनै पनि बगहरू ठीक गर्न मद्दत गर्दछ। कुनै संवेदनशील डेटा पठाइने छैन</string>
-    <string name="whats_new">नयाँ के छ</string>
-    <string name="faq_and_guides">बारम्बार सोधिएका प्रश्न उत्तर र गाइडहरू</string>
     <string name="help_translate">अनुवाद गर्न मद्दत गर्नुहोस्</string>
     <string name="website">वेबसाइट</string>
     <string name="open_source_licenses">खुला स्रोत लाइसेन्सहरू</string>
@@ -438,7 +425,6 @@
     <string name="select_inverse">उल्टो चयन गर्नुहोस्</string>
     <string name="share">साझा गर्नुहोस्</string>
     <string name="sort">क्रमबद्ध</string>
-    <string name="start">सुरु गर्नुहोस्</string>
     <string name="stop">रोक्नुहोस्</string>
     <string name="tap_to_see_details">विवरणहरू हेर्न ट्याप गर्नुहोस्</string>
     <string name="tap_to_learn_more">थप जान्नका लागि ट्याप गर्नुहोस्</string>
@@ -534,7 +520,6 @@
     <string name="category_with_name_exists">त्यो नामको वर्ग पहिल्यै नै अवस्थित छ!</string>
     <string name="long_press_category">वर्ग सम्पादन गर्न थिच्नुहोस् र होल्ड गर्नुहोस्</string>
     <string name="updating_">%1$s अपडेट गर्दै</string>
-    <string name="update_available">अपडेट उपलब्ध छ</string>
     <string name="new_beta_version_available">नयाँ बीटा संस्करण उपलब्ध छ!</string>
     <string name="release_page">रिलीज पृष्ठ</string>
     <string name="could_not_install_update">अपडेट स्थापना गर्न सकिएन</string>
@@ -678,14 +663,11 @@
     </plurals>
     <string name="auto_refresh_covers_summary">पुस्तकालय अपडेट गर्दा आवरणहरू पनि रिफ्रेस गर्नुहोस्</string>
     <string name="pref_library_update_manga_restriction">शीर्षकहरू अपडेट गर्न छोड्नुहोस्</string>
-    <string name="pref_update_only_completely_read_summary">नपढिएको अध्याय नभएमा मात्र श्रृङ्खला अपडेट गर्नुहोस् (पुरै पढिसकेको)</string>
     <string name="when_sorting_ignore_articles">वर्णमाला अनुसार क्रमबद्ध गर्दा, श्रृङ्खलाको शीर्षकको सुरुमा लेखहरू (a, an, the) बेवास्ता गर्दै क्रमबद्ध गर्नुहोस्</string>
-    <string name="categories_to_include_in_global_update">ग्लोबल अपडेटमा समावेश गर्ने वर्गहरू</string>
     <string name="include_in_global_update">ग्लोबल अपडेटमा समावेश गर्नुहोस्</string>
     <string name="auto_refresh_covers">आवरणहरू स्वतः रिफ्रेस गर्नुहोस्</string>
     <string name="library_update_restriction">यन्त्र प्रतिबन्धहरू</string>
     <string name="sort_by_ignoring_articles">लेखहरूलाई बेवास्ता गरेर क्रमबद्ध गर्नुहोस्</string>
-    <string name="library_update_restriction_summary">सर्तहरू पूरा भएपछि मात्र अपडेट गर्नुहोस्</string>
     <string name="read_">%1$s पढेको</string>
     <string name="show_updated_time">अपडेट गरिएको समय देखाउनुहोस्</string>
     <string name="all_sources">सबै स्रोतहरू</string>
@@ -694,7 +676,6 @@
         <item quantity="other">%d एक्सटेन्शनहरू अपडेट गरियो</item>
     </plurals>
     <string name="changing_will_reset_reading_mode">यसलाई परिवर्तन गर्नाले यो श्रृङ्खलाको लागि पढ्ने मोड रिसेट हुनेछ</string>
-    <string name="webtoon_style">वेबटुन जस्तै</string>
     <string name="set_first_page_as_cover">पहिलो पृष्ठ आवरणको रूपमा सेट गर्नुहोस्</string>
     <string name="share_first_page">पहिलो पृष्ठ साझा गर्नुहोस्</string>
     <string name="set_second_page_as_cover">दोस्रो पृष्ठ आवरणको रूपमा सेट गर्नुहोस्</string>
@@ -752,7 +733,6 @@
     <string name="dark">अँध्यारो</string>
     <string name="a_brighter_you">एक उज्ज्वल तपाईं (डायनामिक)</string>
     <string name="a_calmer_you">एक शान्त तपाईं (डायनामिक)</string>
-    <string name="hot_pink">तातो गुलाबी</string>
     <string name="white_theme">शुद्ध सेतो</string>
     <string name="lime_time">लाइम समय</string>
     <string name="system_default">सिस्टम पूर्वनिर्धारित</string>
@@ -799,9 +779,7 @@
     <string name="all_read_chapters">सबै पढेका अध्यायहरू</string>
     <string name="add_x_to_library">पुस्तकालयमा %1$s राख्ने हो\?</string>
     <string name="show_all">सबै देखाउनुहोस्</string>
-    <string name="show_read_chapters">पढेका अध्यायहरू देखाउनुहोस्</string>
     <string name="hide_chapter_titles">अध्याय शीर्षक लुकाउनुहोस्</string>
-    <string name="sort_by_chapter_number">अध्याय सङ्ख्या अनुसार क्रमबद्ध गर्नुहोस्</string>
     <string name="reset_cover">आवरण रिसेट गर्नुहोस्</string>
     <string name="must_be_in_library_to_edit">सम्पादन गर्नको लागि श्रृङ्खला तपाईंको पुस्तकालयमा हुनुपर्छ</string>
     <string name="remember_this_choice">यो छनौट सम्झनुहोस्</string>
@@ -850,7 +828,6 @@
     <string name="share_second_page">दोस्रो पृष्ठ साझा गर्नुहोस्</string>
     <string name="smart_based_on_page_and_theme">स्मार्ट (पृष्ठ र थीममा आधारित)</string>
     <string name="single_page">एकल पृष्ठ</string>
-    <string name="switch_to_double">डबल पृष्ठमा स्विच गर्नुहोस्</string>
     <string name="smart_by_page">स्मार्ट (पृष्ठ अनुसार)</string>
     <string name="smart_by_theme">स्मार्ट (थीम अनुसार)</string>
     <string name="page_layout">पृष्ठ लेआउट</string>
@@ -869,7 +846,6 @@
     <string name="double_pages">डबल पृष्ठ</string>
     <string name="split_double_pages">डबल पृष्ठ विभाजित गर्नुहोस्</string>
     <string name="automatic_orientation">स्वचालित (अभिमुखीकरणमा आधारित)</string>
-    <string name="switch_to_single">एकल पृष्ठमा स्विच गर्नुहोस्</string>
     <string name="smart_based_on_page">स्मार्ट (पृष्ठमा आधारित)</string>
     <string name="ignore_cutout_areas">कटआउट क्षेत्रहरू बेवास्ता गर्नुहोस्</string>
     <string name="cutout_behavior_only_applies">कटआउट क्षेत्र व्यवहार निश्चित स्केल प्रकारहरूसँग पोर्ट्रेट मोडमा मात्र लागू हुन्छ</string>
@@ -882,9 +858,6 @@
     <string name="by_default_side_nav_info">पूर्वनिर्धारित रूपमा, ल्यान्डस्केपमा हुँदा केही फोनहरू र साना ट्याब्लेटहरूका लागि साइड नेभिगेसन प्रयोग गरिन्छ, र सधैं ठूला ट्याब्लेटहरूमा देखाइन्छ</string>
     <string name="reset_tags">ट्यागहरू रिसेट गर्नुहोस्</string>
     <string name="tracking_info">बाह्य ट्र्याकर सेवाहरूमा अध्याय प्रगति अपडेट गर्न एक-तर्फी सिङ्क। तिनीहरूको ट्र्याकिङ बटनबाट व्यक्तिगत इन्ट्रीहरूको लागि ट्र्याकिङ सेट अप गर्नुहोस्।</string>
-    <string name="sort_by_source_s_order">स्रोतको क्रम अनुसार क्रमबद्ध गर्नुहोस्</string>
-    <string name="newest_first">सबैभन्दा नयाँ देखि पुरानो</string>
-    <string name="oldest_first">पुरानो देखि सबैभन्दा नयाँ</string>
     <string name="clear_tags">ट्यागहरू खाली गर्नुहोस्</string>
     <string name="add_tag">ट्याग थप्नुहोस्</string>
     <string name="remove_tracking_from_">%1$s बाट पनि हटाउनुहोस्</string>
@@ -899,10 +872,7 @@
     <string name="no_chapters_found_for_migration">कुनै अध्याय फेला परेन, यो श्रृङ्खला स्थानान्तरणको लागि प्रयोग गर्न सकिँदैन</string>
     <string name="migrate_">%1$s स्थानान्तरण गर्नुहोस्</string>
     <string name="no_alternatives_found">कुनै विकल्प फेला परेन</string>
-    <string name="classic_blue">क्लासिक नीलो</string>
-    <string name="amoled_black">एमोलेड कालो</string>
     <string name="side_nav_icon_alignment">साइड नेभिगेसन आइकन अलाइनमेंट</string>
-    <string name="backup">ब्याकअप</string>
     <string name="backup_has_no_manga">ब्याकअपमा कुनै इन्ट्री समावेश छैन।</string>
     <string name="clear_database_confirmation">के तपाईँ निश्चित हुनुहुन्छ\? तपाईंले पढ्नुभएको अध्यायहरू र गैर-पुस्तकालय इन्ट्रीहरूको प्रगति हराउनेछ</string>
     <string name="clean_up_cached_covers">क्यास गरिएका आवरणहरू सफा गर्नुहोस्</string>
@@ -922,7 +892,6 @@
     <string name="clear">खाली गर्नुहोस्</string>
     <string name="ignore">बेवास्ता गर्नुहोस्</string>
     <string name="keep">राख्नुहोस्</string>
-    <string name="lock">लक गर्नुहोस्</string>
     <string name="mark_range_as_unread">नपढिएको अध्यायहरूको रेन्जमा चिन्ह लगाउनुहोस्</string>
     <string name="mark_previous_as_read">अघिल्लो अध्यायहरू पढिएको चिन्ह लगाउनुहोस्</string>
     <string name="mark_previous_as_unread">अघिल्लो अध्यायहरू नपढिएको चिन्ह लगाउनुहोस्</string>
@@ -937,12 +906,9 @@
     <string name="wifi">Wi-Fi</string>
     <string name="restore_in_progress">रिस्टोर पहिले नै प्रगतिमा छ</string>
     <string name="max_auto_backups">अधिकतम स्वचालित ब्याकअप</string>
-    <string name="invalid_backup_file_type">अवैध ब्याकअप फाइल प्रकार: %1$s
-\nयो .proto.gz वा .json सँग अन्त्य हुनुपर्छ।</string>
     <string name="restore_error">ब्याकअप रिस्टोर गर्न असफल भयो</string>
     <string name="backup_restore_invalid_uri">त्रुटि: खाली URI</string>
     <string name="backup_info">स्वचालित ब्याकअपहरू राख्न अत्यधिक सिफारिस गरिन्छ। तपाईंले अन्य ठाउँहरूमा पनि प्रतिलिपिहरू राख्नु पर्छ।</string>
-    <string name="not_logged_into_">%1$s मा लगइन गरिएको छैन</string>
     <string name="doh">HTTPS माथि DNS</string>
     <string name="database_clean">डेटाबेस सफा गर्नुहोस्</string>
     <string name="refresh_library_metadata">पुस्तकालय मेटाडेटा रिफ्रेस गर्नुहोस्</string>
@@ -1028,7 +994,6 @@
     <string name="clear_db_exclude_read">पढिएका अध्यायहरू भएको इन्ट्री राख्नुहोस्</string>
     <string name="clear_cached_covers_non_library">पुस्तकालयमा नभएका क्यास गरिएका आवरणहरू खाली गर्नुहोस्</string>
     <string name="username_must_not_be_blank">युजरनेम वा पासवर्ड खाली हुन सक्दैन</string>
-    <string name="categories_to_include_in_download">डाउनलोडमा समावेश गर्न वर्गहरू</string>
     <string name="delete_removed_chapters">हटाइएका अध्यायहरू मेटाउनुहोस्</string>
     <string name="add_to_">%1$s मा थप्नुहोस्</string>
     <string name="cover_of_image">श्रृङ्खलाको आवरण</string>
@@ -1036,7 +1001,6 @@
     <string name="remove_from_">%1$s बाट हटाउनुहोस्</string>
     <string name="top">माथि</string>
     <string name="use_default">पूर्वनिर्धारित प्रयोग गर्नुहोस्</string>
-    <string name="view_all">सबै हेर्नुहोस्</string>
     <string name="force_download_cache_refresh_summary">यसले डाउनलोड क्यासलाई पुन: गणना गर्न बाध्य पार्नेछ। तपाईंले यो एप बाहिरका डाउनलोडहरू परिमार्जन गर्नुभयो र एपले तिनीहरूलाई उठाउन चाहनुहुन्छ भने उपयोगी हुन्छ</string>
     <string name="force_download_cache_refresh">डाउनलोड क्यास रिफ्रेस गर्नुहोस्</string>
     <string name="warning_enroll_into_beta">बिटा रिलीजहरू स्थिर नहुन सक्छ र एप डेटा खाली गर्न आवश्यक हुन सक्छ।</string>
@@ -1047,7 +1011,6 @@
     <string name="delete_old_covers_in_library_used_">अपडेट गरिएको तपाईंको पुस्तकालयमा इन्ट्रीको पुरानो र प्रयोग नगरिएको क्यास कभरहरू हटाउनुहोस्।
 \nहाल प्रयोग गर्दै: %1$s</string>
     <string name="you_can_migrate_in_library">तपाईंले आफ्नो पुस्तकालयमा इन्ट्री चयन गरेर पनि स्थानान्तरण गर्न सक्नुहुन्छ</string>
-    <string name="only_search_pinned_when">पिन गरिएका स्रोतहरूमा मात्र खोज्नुहोस्</string>
     <string name="invalid_download_location">अवैध डाउनलोड स्थान</string>
     <string name="download_complete">डाउनलोड पूरा भयो</string>
     <string name="visit_recents_for_download_queue">डाउनलोड लाममा जान हालैका ट्याबमा जानुहोस्। छिटो पहुँचको लागि तपाईं डबल ट्याप वा थिचेर होल्ड गर्न पनि सक्नुहुन्छ</string>

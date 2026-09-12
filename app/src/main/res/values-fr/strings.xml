@@ -24,7 +24,6 @@
     <string name="add">Ajouter</string>
     <string name="edit_categories">Modifier des catégories</string>
     <string name="move_to_categories">Déplacer vers une catégorie</string>
-    <string name="start">Commencer</string>
     <string name="stop">Arrêter</string>
     <string name="pause">Pause</string>
     <string name="clear">Effacer</string>
@@ -59,10 +58,8 @@
     <string name="every_12_hours">Toutes les 12 heures</string>
     <string name="daily">Tous les jours</string>
     <string name="every_2_days">Tous les 2 jours</string>
-    <string name="categories_to_include_in_global_update">Catégories à inclure dans une mise à jour globale</string>
     <string name="all">Tout</string>
     <string name="library_update_restriction">Restrictions relatives à l\'appareil</string>
-    <string name="library_update_restriction_summary">Mettre à jour uniquement lorsque les conditions sont remplies</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Appareil en charge</string>
     <string name="app_theme">Thème de l\'application</string>
@@ -96,7 +93,6 @@
     <string name="center">Centre</string>
     <string name="rotation">Rotation</string>
     <string name="free">Libre</string>
-    <string name="lock">Verrouillée</string>
     <string name="red_initial">R</string>
     <string name="green_initial">V</string>
     <string name="blue_initial">B</string>
@@ -174,8 +170,6 @@
     <string name="next_chapter_not_found">Chapitre suivant non trouvé</string>
     <string name="decode_image_error">L\'image n\'a pas pu être chargée</string>
     <string name="use_image_as_cover">Voulez-vous mettre cette image comme couverture ?</string>
-    <!-- Backup fragment -->
-    <string name="backup">Sauvegarder</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
     <!-- Library update service notifications -->
@@ -193,7 +187,6 @@
     <!--UpdateCheck Notifications-->
     <string name="download_complete">Téléchargement terminé</string>
     <string name="download_error">Erreur lors du téléchargement</string>
-    <string name="update_available">Mise à jour disponible</string>
     <!--Content Description-->
     <string name="cover_of_image">Couverture de la série</string>
     <!-- Information Text -->
@@ -220,7 +213,6 @@
     <string name="close">Fermer</string>
     <string name="create">Créer</string>
     <string name="weekly">Chaque semaine</string>
-    <string name="amoled_black">Thème AMOLED</string>
     <string name="default_category">Catégorie par défaut</string>
     <string name="download_paused">Téléchargement en pause</string>
     <string name="local_source">Source locale</string>
@@ -232,7 +224,6 @@
     <string name="tracking">Suivi</string>
     <string name="total_chapters">Nombre de chapitres</string>
     <string name="updates">Mises à jour</string>
-    <string name="categories_to_include_in_download">Catégories à inclure dans le téléchargement</string>
     <string name="create_backup">Créer une sauvegarde</string>
     <string name="can_be_used_to_restore">Peut être utilisé pour restaurer la bibliothèque actuelle</string>
     <string name="restore_backup">Restaurer une sauvegarde</string>
@@ -281,7 +272,6 @@
     <string name="source_migration">Migration de source</string>
     <string name="extension_info">Information complémentaire</string>
     <string name="trust">Fiable</string>
-    <string name="untrusted">Non fiable</string>
     <string name="rereading">Relecture</string>
     <string name="finished_chapter">Terminé :</string>
     <string name="current_chapter">En cours :</string>
@@ -293,7 +283,6 @@
     <string name="failed_to_load_pages_">Échec du chargement des pages : %1$s</string>
     <string name="migrate">Déplacer</string>
     <string name="open_in_webview">Ouvrir dans le navigateur intégré</string>
-    <string name="true_32bit_color">Couleurs à 32 bits</string>
     <string name="skip_read_chapters">Passer les chapitres marqués comme lus</string>
     <string name="multiply">Multiplier</string>
     <string name="screen">Écran</string>
@@ -325,7 +314,6 @@
         <item quantity="many">%d mises à jour des extensions disponibles</item>
         <item quantity="other">%d mises à jour des extensions disponibles</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Réduit les bandes de couleur, mais peut impacter les performances</string>
     <string name="skip_filtered_chapters">Passer les chapitres filtrés</string>
     <string name="continuous_vertical">Vertical continu</string>
     <string name="paged">Pages</string>
@@ -333,11 +321,6 @@
     <string name="view_chapters">Voir les chapitres</string>
     <string name="always_show_chapter_transition">Toujours afficher la transition de chapitre</string>
     <string name="pref_webtoon_side_padding">Décalage latéral</string>
-    <string name="webtoon_side_padding_0">Aucun</string>
-    <string name="webtoon_side_padding_10">10 %</string>
-    <string name="webtoon_side_padding_15">15 %</string>
-    <string name="webtoon_side_padding_20">20 %</string>
-    <string name="webtoon_side_padding_25">25 %</string>
     <string name="chapters_">Chapitres %1$s</string>
     <string name="remove_from_library">Retirer de la bibliothèque</string>
     <string name="backup_failed">Échec de la sauvegarde</string>
@@ -346,7 +329,6 @@
     <string name="requires_app_restart">Nécessite un redémarrage de l\'application pour prendre effet</string>
     <string name="disable_battery_optimization">Désactiver la fonction Optimisation utilisation batterie</string>
     <string name="battery_optimization_disabled">La fonction d\'optimisation de la batterie est déjà désactivée</string>
-    <string name="pref_global_search">Recherche globale</string>
     <string name="check_for_extension_updates">Vérifier les mises à jour d’extensions</string>
     <string name="website">Site web</string>
     <string name="open_source_licenses">Licences à code source ouvert</string>
@@ -483,7 +465,6 @@
     <string name="username_must_not_be_blank">Le nom d\'utilisateur ou le mot de passe ne peuvent pas être vides</string>
     <string name="smart_by_page">Intelligent (par page)</string>
     <string name="enable_zoom_out">Activer le zoom arrière</string>
-    <string name="webtoon_style">style webtoon</string>
     <string name="reading_">Lecture de %1$s</string>
     <string name="set_as_default_for_all">Définir par défaut pour tous</string>
     <string name="search_chapters">Chercher dans les chapitres</string>
@@ -537,7 +518,6 @@
     <string name="remove_download">Supprimer le téléchargement</string>
     <string name="start_downloading_now">Commencer le téléchargement maintenant</string>
     <string name="not_downloaded">Non téléchargé</string>
-    <string name="whats_new">Quoi de neuf</string>
     <string name="you_can_migrate_in_library">Vous pouvez également migrer en sélectionnant des entrées dans votre bibliothèque</string>
     <string name="migration_sources_changed">Les sources de migration ont changé</string>
     <string name="use_last_saved_migration_preferences">Utiliser les dernières préférences de pré-migration et les sources enregistrées pour les migrations de groupe</string>
@@ -545,7 +525,6 @@
     <string name="only_enable_pinned_for_migration">Active uniquement vos sources épinglées pour la migration</string>
     <string name="match_enabled_sources">Faire correspondre les sources activées</string>
     <string name="match_pinned_sources">Faire correspondre les sources épinglées</string>
-    <string name="only_search_pinned_when">Rechercher uniquement les sources épinglées</string>
     <string name="delete_all_covers__not_in_library_used_">Supprimez toutes les couvertures mises en cache qui ne sont pas dans votre bibliothèque
 \nEn cours d\'utilisation : %1$s</string>
     <string name="clear_cached_covers_non_library">Effacer les couvertures mises en cache qui ne sont pas dans la bibliothèque</string>
@@ -570,7 +549,6 @@
         <item quantity="other">Cache effacé. %d fichiers ont été supprimés</item>
     </plurals>
     <string name="data_management">Gestion des données</string>
-    <string name="not_logged_into_">Non connecté à %1$s</string>
     <string name="restore_error">Échec de la restauration de la sauvegarde</string>
     <string name="white_theme">Blanc pur</string>
     <plurals name="manga_migrated">
@@ -633,12 +611,7 @@
     <string name="cover_saved">Couverture enregistrée</string>
     <string name="source_not_installed">Source non installée</string>
     <string name="remember_this_choice">Se souvenir de ce choix</string>
-    <string name="oldest_first">Du plus ancien au plus récent</string>
-    <string name="newest_first">Du plus récent au plus ancien</string>
-    <string name="sort_by_chapter_number">Trier par numéro de chapitre</string>
-    <string name="sort_by_source_s_order">Trier par source</string>
     <string name="hide_chapter_titles">Masquer les noms des chapitres</string>
-    <string name="show_read_chapters">Afficher les chapitres lus</string>
     <string name="show_unread_chapters">Afficher les chapitres non lus</string>
     <string name="show_bookmarked_chapters">Afficher les signets</string>
     <string name="all_but_bookmarked_chapters">Tous les chapitres, sauf les signets</string>
@@ -648,7 +621,6 @@
     <string name="right_and_left_nav">Droite et gauche</string>
     <string name="invert_tapping">Inverser les zones tactiles</string>
     <string name="none">Aucun(e)</string>
-    <string name="no_chapters_error">Aucun chapitre trouvé</string>
     <string name="badges">Badges</string>
     <string name="file_picker_error">L’application de sélection de fichier est introuvable</string>
     <string name="open_log">Ouvrir le fichier journal</string>
@@ -667,8 +639,6 @@
     <string name="locale">Local</string>
     <string name="automatic_backups">Sauvegardes automatiques</string>
     <string name="invalid_backup_file">Fichier de sauvegarde invalide</string>
-    <string name="invalid_backup_file_type">Fichier de sauvegarde invalide : %1$s
-\nIl devrait se terminer par .proto.gz ou .json.</string>
     <string name="backup_has_no_manga">La sauvegarde ne contient aucun élément.</string>
     <string name="restore_missing_sources">Sources manquantes :</string>
     <string name="restore_missing_trackers">Traceurs non connectés :</string>
@@ -743,8 +713,6 @@
     <string name="only_unread">Seulement non lus</string>
     <string name="reset_chapter_history">Réinitialiser l\'historique de chapitres</string>
     <string name="grouped">Groupé</string>
-    <string name="switch_to_single">Changer à page seule</string>
-    <string name="switch_to_double">Changer à pages doubles</string>
     <string name="single_page">Page seule</string>
     <string name="double_pages">Doubles pages</string>
     <string name="preview">Aperçu</string>
@@ -770,7 +738,6 @@
     <string name="set_first_page_as_cover">Définir la première page en tant que couverture</string>
     <string name="add_x_to">Ajouter %1$s à…</string>
     <string name="move_x_to">Déplacer %1$s vers…</string>
-    <string name="hot_pink">Rose chaud</string>
     <string name="invert_double_pages">Inverser les doubles pages</string>
     <string name="save_combined_pages">Enregistrer les pages combinées</string>
     <string name="share_combined_pages">Partager les pages combinées</string>
@@ -949,7 +916,6 @@
     <string name="show_outline_around_covers">Afficher le contour des couvertures</string>
     <string name="ext_installer_shizuku_stopped">Shizuku n\'est pas en cours d\'exécution</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installez et démarrez Shizuku pour utiliser Shizuku comme installateur d\'extensions.</string>
-    <string name="classic_blue">Bleu classique</string>
     <string name="lime_time">Temps citron vert</string>
     <string name="every_3_days">Tous les 3 jours</string>
     <string name="download_queue_size_warning">Attention : les téléchargements massifs peuvent entraîner un ralentissement des sources ou le blocage de Tachiyomi. Appuyez pour en savoir plus.</string>
@@ -1007,13 +973,11 @@
     <string name="most_entries">Le plus d\'entrées</string>
     <string name="select_uninstalled_sources">Sélectionner les sources désinstallées</string>
     <string name="use_staggered_grid">Utiliser une grille échelonnée</string>
-    <string name="pref_update_only_completely_read_summary">Ne mettre à jour la série que s\'il n\'y a pas de chapitre non lu (complètement lu)</string>
     <string name="update_tracking_after_reading">Mettre à jour le suivi après lecture</string>
     <string name="update_tracking_marked_read">Mettre à jour le suivi quand marqué comme lu</string>
     <string name="downloads_swipe_tutorial">Les téléchargements peuvent être annulés en les faisant glisser.
 \nFaites glisser ce conseil pour l\'annuler</string>
     <string name="must_view_details_before_migration">La page de détails de cet article doit être consultée avant de pouvoir migrer</string>
-    <string name="view_all">Tout voir</string>
     <string name="clear_history">Effacer l\'historique</string>
     <string name="clear_history_completed">Historique supprimé</string>
     <string name="clear_history_confirmation">Êtes-vous sûr(e) \? Tout l\'historique sera effacé.</string>
@@ -1021,7 +985,6 @@
     <string name="backup_info">Les sauvegardes automatiques sont fortement conseillées. Nous vous recommandons aussi de conserver des copies ailleurs.</string>
     <string name="battery_not_low">Batterie non faible</string>
     <string name="pref_manage_notifications">Notifications</string>
-    <string name="faq_and_guides">FAQ et guides</string>
     <string name="download_ahead">Téléchargement anticipé</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Chapitre suivant non lu</item>
@@ -1050,7 +1013,6 @@
     <string name="tap_zones">Zones tactiles</string>
     <string name="lavender">Lavande</string>
     <string name="violet">Violet</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Agents utilisateurs par défaut</string>
     <string name="language_requires_app_restart">Certains langages peuvent nécessiter un redémarrage de l\'application pour s\'afficher correctement</string>
     <string name="loader_rar5_error">Le format RARv5 n\'est pas supporté</string>

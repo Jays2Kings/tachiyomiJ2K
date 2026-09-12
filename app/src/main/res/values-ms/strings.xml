@@ -28,7 +28,6 @@
     <string name="add">Tambah</string>
     <string name="edit_categories">Edit kategori</string>
     <string name="move_to_categories">Pindahkan ke kategori</string>
-    <string name="start">Mula</string>
     <string name="stop">Henti</string>
     <string name="pause">Henti sebentar</string>
     <string name="clear">Kosongkan</string>
@@ -65,15 +64,12 @@
     <string name="daily">Setiap hari</string>
     <string name="every_2_days">Setiap 2 hari</string>
     <string name="weekly">Setiap minggu</string>
-    <string name="categories_to_include_in_global_update">Kategori bagi kemas kini keseluruhan</string>
     <string name="all">Semua</string>
     <string name="library_update_restriction">Batasan peranti</string>
-    <string name="library_update_restriction_summary">Kemas kini hanya apabila syarat dipenuhi</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Ketika mengecas</string>
     <string name="app_theme">Tema aplikasi</string>
     <string name="dark">Gelap</string>
-    <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Bahasa</string>
     <string name="system_default">Sistem asal</string>
     <string name="default_category">Kategori lalai</string>
@@ -108,7 +104,6 @@
     <string name="center">Tengah</string>
     <string name="rotation">Putaran skrin</string>
     <string name="free">Bebas</string>
-    <string name="lock">Kunci</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -124,9 +119,7 @@
     <string name="fourth_to_last">Bab keempat terakhir</string>
     <string name="fifth_to_last">Bab kelima terakhir</string>
     <string name="download_new_chapters">Muat turun bab baharu</string>
-    <string name="categories_to_include_in_download">Kategori untuk disertakan bagi muat turun</string>
     <string name="services">Perkhidmatan</string>
-    <string name="backup">Sandaran</string>
     <string name="create_backup">Cipta sandaran</string>
     <string name="can_be_used_to_restore">Boleh digunakan untuk memulihkan koleksi semasa</string>
     <string name="restore_backup">Pulihkan sandaran</string>
@@ -209,7 +202,6 @@
     <string name="searching_for_updates">Memeriksa untuk kemas kini…</string>
     <string name="download_complete">Muat turun selesai</string>
     <string name="download_error">Ralat muat turun</string>
-    <string name="update_available">kemas kini tersedia</string>
     <string name="cover_of_image">Muka hadapan manga</string>
     <string name="no_recent_chapters">Tiada bab baru dibaca</string>
     <string name="no_recently_read_manga">Tiada manga baru dibaca</string>
@@ -227,7 +219,6 @@
     <string name="installing">Memasang</string>
     <string name="installed">Dipasang</string>
     <string name="trust">Dipercayai</string>
-    <string name="untrusted">Tidak dipercayai</string>
     <string name="uninstall">Nyahpasang</string>
     <string name="untrusted_extension">Sambungan tak dipercayai</string>
     <string name="untrusted_extension_message">Sambungan ini telah ditandatangani dengan sijil tidak dipercayai dan ia tidak diaktifkan.
@@ -238,7 +229,6 @@
     <string name="version_">Versi: %1$s</string>
     <string name="language_">Bahasa: %1$s</string>
     <string name="double_tap_anim_speed">Kelajuan animasi ketik dua kali</string>
-    <string name="true_32bit_color">32-bit warna</string>
     <string name="skip_read_chapters">Langkau bab yang sudah dibaca</string>
     <string name="no_animation">Tiada animasi</string>
     <string name="normal">Biasa</string>
@@ -274,11 +264,6 @@
     <string name="paged">Muka surat</string>
     <string name="always_show_chapter_transition">Sentiasa tunjuk peralihan bab</string>
     <string name="pref_webtoon_side_padding">Tambahan sisi</string>
-    <string name="webtoon_side_padding_0">Tiada</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Bab %1$s</string>
     <string name="remove_from_library">Keluarkan daripada pustaka</string>
     <string name="refresh_tracking">Segar semula penjejakan</string>
@@ -293,7 +278,6 @@
     <string name="requires_app_restart">Mulakan semula aplikasi diperlukan untuk berkesan</string>
     <string name="disable_battery_optimization">Nyahdaya pengoptimuman bateri</string>
     <string name="battery_optimization_disabled">Pengoptimuman bateri sudah dinyahdayakan</string>
-    <string name="pref_global_search">Carian keseluruhan</string>
     <string name="check_for_extension_updates">Menyemak kemas kini sambungan</string>
     <string name="website">Laman web</string>
     <string name="open_source_licenses">Lesen perisian sumber terbuka</string>
@@ -330,7 +314,6 @@
     <plurals name="extension_updates_available">
         <item quantity="other">%d kemas kini sambungan tersedia</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Kurangkan jalinan, tapi memberi kesan kepada prestasi</string>
     <string name="skip_filtered_chapters">Lingkau bab yang ditapis</string>
     <string name="continuous_vertical">Menegak berterusan</string>
     <plurals name="notification_and_n_more">
@@ -444,14 +427,12 @@
     <string name="not_downloaded">Tidak di muat</string>
     <string name="downloading_">Memuat turun: %1$s</string>
     <string name="username_must_not_be_blank">Nama pengguna atau kata laluan tidak boleh</string>
-    <string name="whats_new">Apa yang terbaharu</string>
     <string name="you_can_migrate_in_library">Anda juga boleh pindah dengan memilih manga di pustaka</string>
     <string name="migration_sources_changed">Sumber perpindahan di</string>
     <string name="use_last_saved_migration_preferences">Guna save terakhir pra-perpindahan rujukan dan sumber untuk perpindahan besar</string>
     <string name="only_enable_pinned_for_migration">Hanya benarkan sumber yang di pin untuk perpindahan</string>
     <string name="match_enabled_sources">Padankan sumber yang di</string>
     <string name="match_pinned_sources">Padankan sumber yang di</string>
-    <string name="only_search_pinned_when">Hanya cari sumber yang di</string>
     <string name="delete_all_covers__not_in_library_used_">Padam semua covers cached yang tidak ada di pustaka
 \nTengah di guna: %1$s</string>
     <string name="clear_cached_covers_non_library">Besihkan cached covers bukan di</string>
@@ -473,7 +454,6 @@
         <item quantity="other">Chache di bersihkan. %d fail telah di</item>
     </plurals>
     <string name="data_management">Pengurusan</string>
-    <string name="not_logged_into_">Tidak terlog masuk ke %1$s</string>
     <string name="restore_error">Gagal memulihkan sandaran</string>
     <string name="white_theme">Pure White</string>
     <plurals name="manga_migrated">
@@ -525,12 +505,7 @@
     <string name="reset_cover">Ulang semula cover</string>
     <string name="reset_tags">Set semula tanda</string>
     <string name="clear_tags">Padam tanda</string>
-    <string name="oldest_first">Lama ke baharu</string>
-    <string name="newest_first">Baharu ke lama</string>
-    <string name="sort_by_chapter_number">Susun mengikut nombor bab</string>
-    <string name="sort_by_source_s_order">Di susun mengikut</string>
     <string name="hide_chapter_titles">Sembunyi tajuk</string>
-    <string name="show_read_chapters">Tunjukkan bab yang di</string>
     <string name="show_unread_chapters">Tunjukkan bab yang belum di</string>
     <string name="show_downloaded_chapters">Tunjuk bab yang telah di muat</string>
     <string name="show_bookmarked_chapters">Tunjuk bab yang di</string>
@@ -557,7 +532,6 @@
     <string name="smart_by_theme">smart(engikut tema)</string>
     <string name="smart_by_page">Susum(mengikut muka surat)</string>
     <string name="enable_zoom_out">Benarkan zoom</string>
-    <string name="webtoon_style">Gaya</string>
     <string name="reading_">Membaca %1$s</string>
     <string name="set_as_default_for_all">set semua sebagai</string>
     <string name="extension_updates">Kemas kini sambungan</string>
@@ -584,7 +558,6 @@
     <string name="previous_chapter">Bab terdahulu</string>
     <string name="animate_page_transitions">Menggerakkan peralihan muka surat</string>
     <string name="default_reading_mode">Mod membaca lalai</string>
-    <string name="no_chapters_error">Tiada bab dijumpai</string>
     <string name="source_migration_guide">Panduan memindahkan sumber</string>
     <string name="nsfw_sources">Sumber NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Ini tidak menghalang sambungan yang tidak rasmi atau berpotensi tidak menggunakan tetapan yang betul daripada menayangkan kandungan 18+ tahun keatas dalam aplikasi.</string>
@@ -602,8 +575,6 @@
     <string name="locale">Penempatan</string>
     <string name="automatic_backups">Sandaran automatik</string>
     <string name="invalid_backup_file">Fail sandaran tidak sah</string>
-    <string name="invalid_backup_file_type">Jenis fail sandaran tidak sah: %1$s\t
-\nIa sepatutnya berakhir dengan .proto.gz atau .json.</string>
     <string name="backup_has_no_manga">Sandaran tidak mengandungi apa-apa siri.</string>
     <string name="restore_missing_sources">Tiada sumber:</string>
     <string name="restore_missing_trackers">Penjejak yang tidak dilog masuk:</string>
@@ -672,7 +643,6 @@
     <string name="doh">DNS daripada HTTPS</string>
     <string name="follow_system_theme">Ikut tema sistem</string>
     <string name="flat_lime">Flat Lime</string>
-    <string name="hot_pink">Hot Pink</string>
     <string name="spring_blossom">Spring Blossom</string>
     <string name="midnight_dusk">Midnight Dusk</string>
     <string name="pauses_reading_history">Jeda sejarah membaca</string>
@@ -686,8 +656,6 @@
     <string name="automatic_can_still_switch">Apabila menggunakan halaman automatik, anda boleh menukar antara corak ketika membaca tanpa menukar tetapan ini</string>
     <string name="page_layout">Corak halaman</string>
     <string name="cutout_behavior_only_applies">Area potongan hanya di boleh kan di mod potrait dengan jenis skala tertentu</string>
-    <string name="switch_to_single">Tukar ke satu halaman</string>
-    <string name="switch_to_double">Tukar ke halaman berkembar</string>
     <string name="single_page">Satu halaman</string>
     <string name="double_pages">Halaman berkembar</string>
     <string name="remove_crop">Buang pemotong</string>
@@ -844,7 +812,6 @@
     <string name="backup_info">Sandaran automatik sangat disyorkan. Anda patut simpan salinan di tempat lain juga.</string>
     <string name="pref_manage_notifications">Uruskan pemberitahuan</string>
     <string name="battery_not_low">Bateri tidak lemah</string>
-    <string name="faq_and_guides">Soalan Lazim dan Panduan</string>
     <string name="secure_screen_summary">Skrin keselamatan menyembunyikan kandungan aplikasi apabila menukar aplikasi dan sekat tangkapan skrin</string>
     <string name="pref_highest">Tertinggi</string>
     <string name="pref_hide_threshold">Sensitiviti menyembunyikan menu apabila skrol</string>
@@ -873,7 +840,6 @@
     <string name="show_categories_while_filtering">Tunjuk kategori kosong semasa menapis</string>
     <string name="could_not_install_update">Tidak dapat memasang kemas kini</string>
     <string name="update_completed">kemas kini siap</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Untaian ejen pengguna lalai</string>
     <string name="loader_rar5_error">Format RARv5 tidak disokong</string>
     <string name="not_bookmarked">Tidak ditanda buku</string>
@@ -903,7 +869,6 @@
         <item quantity="other">%d sambungan dikemas kini</item>
     </plurals>
     <string name="must_view_details_before_migration">Halaman maklumat entri ini perlu dilihat sebelum dibolehkan untuk migrasi</string>
-    <string name="classic_blue">Classic Blue</string>
     <plurals name="next_unread_chapters">
         <item quantity="other">%d bab tidak dibaca seterusnya</item>
     </plurals>
@@ -914,7 +879,6 @@
     <string name="yin">Yin</string>
     <string name="violet">Violet</string>
     <string name="download_ahead">Muat turun maju</string>
-    <string name="pref_update_only_completely_read_summary">Hanya kemaskini manga sekiranya tiada bab yang tidak terbaca (dibaca sepenuhnya)</string>
     <string name="affects_library_grid">Mempengaruhi penutup grid pustaka</string>
     <string name="split_double_pages_portrait">Pisah dwihalaman dalam potret</string>
     <string name="dark_theme">Tema gelap</string>
@@ -964,7 +928,6 @@
     <string name="log_in">Log masuk</string>
     <string name="recently_installed">Baru dipasang</string>
     <string name="open_in_app">Buka di dalam apl</string>
-    <string name="view_all">Lihat semua</string>
     <string name="auto_update_app">Auto-kemas kini apl</string>
     <string name="no_new_chapters_open_details">Ketika tiadanya bab baru, perincian siri akan dibuka sebaliknya</string>
     <string name="force_download_cache_refresh_summary">Ini akan memaksa cache muat turun untuk dikira semula. Berguna sekiranya anda mengubah suai muat turun di luar apl ini dan mahu apl untuk mengesannya</string>

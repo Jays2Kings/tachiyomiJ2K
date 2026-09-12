@@ -14,7 +14,6 @@
     <string name="open_in_webview">WebView میں کھولیں</string>
     <string name="resume">از سر نو شروع کریں</string>
     <string name="right">دائیں</string>
-    <string name="start">شروعات</string>
     <string name="downloaded_chapters">ڈاؤن لوڈ شدہ ابواب</string>
     <string name="comic">کامِک</string>
     <string name="categories">اقسام</string>
@@ -100,7 +99,6 @@
     <string name="all_files_permission_required">فائل کی اجازت درکار ہے</string>
     <string name="manhua">منہوا</string>
     <string name="removed_bookmark">بک مارک کو ہٹا دیں</string>
-    <string name="no_chapters_error">کوئی ابواب نہیں ملے</string>
     <string name="not_bookmarked">بک مارک نہیں</string>
     <string name="publishing_finished">اشاعت مکمل ہو گئی</string>
 </resources>

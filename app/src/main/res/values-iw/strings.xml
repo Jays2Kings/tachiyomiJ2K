@@ -31,7 +31,6 @@
     <string name="chapter_">פרקים %1$s</string>
     <string name="bookmarked">סומן</string>
     <string name="chapter_not_found">פרק לא נמצא</string>
-    <string name="no_chapters_error">לא נמצאו פרקים</string>
     <string name="no_pages_found">לא נמצאו עמודים</string>
     <string name="by_chapter_number">לפי מספר הפרק</string>
     <string name="by_update_date">לפי תאריך ההעלאה</string>
@@ -94,7 +93,6 @@
     <string name="installing">מתקין</string>
     <string name="installed">הותקן</string>
     <string name="trust">האמן</string>
-    <string name="untrusted">לא מאומת</string>
     <string name="uninstall">הסר התקנה</string>
     <string name="ext_installer_shizuku_stopped">Shizuku לא פועל</string>
     <string name="ext_installer_shizuku_unavailable_dialog">התקן והפעל את Shizuku כדי להשתמש בShizuku כמתקין ההרחבות.</string>
@@ -135,7 +133,6 @@
     <string name="animate_page_transitions">הנפשת מעברי דפים</string>
     <string name="double_tap_anim_speed">מהירות הנפשה בהקשה כפולה</string>
     <string name="show_page_number">הצג מספר עמוד</string>
-    <string name="true_32bit_color">צבע 32-סיביות</string>
     <string name="crop_borders">חתוך גבולות</string>
     <string name="grayscale">טווח גווני האפור</string>
     <string name="pref_inverted_colors">הופכי</string>
@@ -173,11 +170,6 @@
     <string name="blue_initial">כחול</string>
     <string name="alpha_initial">אלפא</string>
     <string name="always_show_chapter_transition">הצג תמיד מעברי פרקים</string>
-    <string name="webtoon_side_padding_0">ללא</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="l_nav">עשוי בצורת L</string>
     <string name="edge_nav">גבול</string>
     <string name="right_and_left_nav">ימין ושמאל</string>
@@ -287,7 +279,6 @@
     <string name="updates_tracking_details">עדכן סטטוס, ציון ופרק אחרון שנקרא משירותי המעקב</string>
     <string name="disable_battery_optimization">השבתת האופטימיזציה של הסוללה</string>
     <string name="battery_optimization_disabled">אופטימיזציית סוללה כבר מושבתת</string>
-    <string name="pref_global_search">חיפוש כללי</string>
     <string name="check_for_extension_updates">בדוק אם קיימים עדכוני הרחבות</string>
     <string name="nsfw_sources">מקורות NSFW (18+)</string>
     <string name="show_in_sources_and_extensions">הצג ברשימות מקורות ותוספים</string>
@@ -295,8 +286,6 @@
     <string name="version">גרסה</string>
     <string name="send_crash_report">שלח דוחות קריסה</string>
     <string name="helps_fix_bugs">עוזר בתיקון באגים. לא יישלחו נתונים רגישים</string>
-    <string name="whats_new">מה חדש</string>
-    <string name="faq_and_guides">שו\"ת ומדריכים</string>
     <string name="help_translate">עזור לתרגם</string>
     <string name="website">אתר</string>
     <string name="log_in_to_">התחבר אל %1$s</string>
@@ -399,7 +388,6 @@
     <string name="select_inverse">בחר את ההפך</string>
     <string name="share">שתף</string>
     <string name="sort">מיון</string>
-    <string name="start">התחל</string>
     <string name="stop">עצור</string>
     <string name="tap_to_see_details">לחץ כדי לראות פרטים</string>
     <string name="tap_to_learn_more">לחץ כדי ללמוד עוד</string>
@@ -457,13 +445,11 @@
         <item quantity="other">%1$d דפים נותרו</item>
     </plurals>
     <string name="category">קטגוריה</string>
-    <string name="reduces_banding_impacts_performance">מפחית פסים, אך עשוי להשפיע על הביצועים</string>
     <string name="kindlish_nav">כמו ספר אלקטרוני</string>
     <string name="split_tall_images">פצל תמונה מוארכת</string>
     <string name="tap_zones">איזורי נגיעה</string>
     <string name="color_filter_blend_mode">פילטר צבע משתלב</string>
     <string name="multiply">להכפיל</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">פרקים שירדו</string>
     <string name="local_source">מאנגה מקומית</string>
     <string name="overlay">כיסוי</string>
@@ -514,7 +500,6 @@
     <string name="add_categories">הוסף קטגוריות</string>
     <string name="updating_">מעדכן %1$s</string>
     <string name="confirm_category_deletion">מחק קטגוריה\?</string>
-    <string name="update_available">עדכון זמין</string>
     <string name="move_to_categories">העבר לקטגוריות</string>
     <string name="expand_all_categories">הרחב את כל הקטגוריות</string>
     <string name="could_not_install_update">התקנת עדכון נכשלה</string>

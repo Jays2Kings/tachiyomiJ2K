@@ -19,10 +19,6 @@
     <string name="left_to_right_viewer">Venstre til høgre</string>
     <string name="right_to_left_viewer">Høgre til venstre</string>
     <string name="vertical_viewer">Loddrett</string>
-    <string name="webtoon_side_padding_0">Ingen</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
     <string name="invalid_backup_file">Ugyldig reservekopifil</string>
     <string name="restore_completed">Gjenoppretting fullført</string>
     <string name="restore_duration">%02d min, %02d sek</string>
@@ -45,7 +41,6 @@
     <string name="pref_inverted_colors">Invertert</string>
     <string name="kindlish_nav">Kindle-ish</string>
     <string name="right_and_left_nav">Høgre og Venstre</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="services">Tenester</string>
     <string name="enhanced_services">Forbetra tenester</string>
     <string name="enhanced_tracking_info">Tenester som tilbyr forbetra tenester for spesifikke kjelder. Manga blir spora automatisk når dei blir lagt til i biblioteket ditt.</string>
@@ -59,7 +54,6 @@
     <string name="about_dont_kill_my_app">Nokre produsentar har ytterlegare appavgrensingar som drep bakgrunnstenester. Denne nettstaden har meir info om korleis det kan fiksast.</string>
     <string name="clear_database_source_item_count">%1$d ikkje-bibliotek manga i databasen</string>
     <string name="website">Nettstaden</string>
-    <string name="whats_new">Kva er nytt</string>
     <string name="unknown_error">Ukjend feil</string>
     <string name="description">Skildring</string>
     <string name="remove_from_library">Fjern frå bibliotek</string>
@@ -83,7 +77,6 @@
     <string name="check_site_in_web">Sjekk nettstad i WebView</string>
     <string name="installed">Installert</string>
     <string name="trust">Tiltru</string>
-    <string name="untrusted">Ikkje-tiltrudd</string>
     <string name="uninstall">Avinstaller</string>
     <string name="version_">Versjon: %1$s</string>
     <string name="language_">Språk: %1$s</string>
@@ -92,7 +85,6 @@
     <string name="update_all">Oppdater alle</string>
     <string name="previous_chapter">Førre kapittel</string>
     <string name="show_page_number">Vis sidetal</string>
-    <string name="true_32bit_color">32-bits farge</string>
     <string name="grayscale">Gråtonar</string>
     <string name="screen">Skjerm</string>
     <string name="skip_filtered_chapters">Hopp over filtrerte kapittel</string>
@@ -209,7 +201,6 @@
     <string name="select_inverse">Vel motsett</string>
     <string name="share">Del</string>
     <string name="sort">Sorter</string>
-    <string name="start">Start</string>
     <string name="stop">Stopp</string>
     <string name="tap_to_see_details">Trykk for å sjå detaljar</string>
     <string name="top">Topp</string>
@@ -217,12 +208,10 @@
     <string name="view_chapters">Vis kapittel</string>
     <string name="warning">Åtvaring</string>
     <string name="pref_manage_notifications">Handter varslingar</string>
-    <string name="faq_and_guides">FAQ og guidar</string>
     <string name="pref_highest">Høgaste</string>
     <string name="pref_high">Høg</string>
     <string name="pref_low">Låg</string>
     <string name="pref_lowest">Lågaste</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="gray_background">Grå</string>
     <string name="pref_remove_exclude_categories">Utelatne kategoriar</string>
     <string name="ext_installer_pref">Installatør</string>

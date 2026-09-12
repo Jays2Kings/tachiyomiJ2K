@@ -28,7 +28,6 @@
     <string name="add">إضافة</string>
     <string name="edit_categories">حرِّر الفئات</string>
     <string name="move_to_categories">أنقل إلى فئات</string>
-    <string name="start">بدء</string>
     <string name="stop">إيقاف</string>
     <string name="pause">إيقاف موقت</string>
     <string name="clear">مسح</string>
@@ -65,15 +64,12 @@
     <string name="daily">يوميا</string>
     <string name="every_2_days">كل يومان</string>
     <string name="weekly">أسبوعيا</string>
-    <string name="categories_to_include_in_global_update">الفئات المضمَّنة في التحديث الشامل</string>
     <string name="all">الكل</string>
     <string name="library_update_restriction">قيود الجهاز</string>
-    <string name="library_update_restriction_summary">حدِّث فقط حال استيفاء الشروط</string>
     <string name="wifi">الواي فاى</string>
     <string name="charging">جاري الشحن</string>
     <string name="app_theme">سمة التطبيق</string>
     <string name="dark">داكن</string>
-    <string name="amoled_black">آمولِد أسود</string>
     <string name="language">اللغة</string>
     <string name="system_default">مثل النظام</string>
     <string name="default_category">الفئة المبدئية</string>
@@ -108,7 +104,6 @@
     <string name="center">المركز</string>
     <string name="rotation">الدوران</string>
     <string name="free">حر</string>
-    <string name="lock">مغلق</string>
     <string name="download_location">مسار التنزيلات</string>
     <string name="only_download_over_wifi">التنزيل عبر الواي فاي فقط</string>
     <string name="remove_when_marked_as_read">الحذف عند التحديد كمقروءة</string>
@@ -120,9 +115,7 @@
     <string name="fourth_to_last">من الفصل الرابع إلى اﻷخير</string>
     <string name="fifth_to_last">من الفصل الخامس إلى اﻷخير</string>
     <string name="download_new_chapters">تنزيل الفصول الجديدة</string>
-    <string name="categories_to_include_in_download">الفئات المُتَضَمَّنَة في التنزيل</string>
     <string name="services">الخدمات</string>
-    <string name="backup">النسخ الاحتياطيُّ</string>
     <string name="create_backup">أنشئ نسخةً احتياطيةً</string>
     <string name="can_be_used_to_restore">يمكن استخدامها لاستعادة المكتبة الحالية</string>
     <string name="restore_backup">استعد نسخةً احتياطيةً</string>
@@ -207,7 +200,6 @@
     <string name="searching_for_updates">يُبحث عن تحديثات…</string>
     <string name="download_complete">اكتمل التنزيل</string>
     <string name="download_error">حدث خطأ فى التنزيل</string>
-    <string name="update_available">يتوفَّر تحديث</string>
     <string name="cover_of_image">غلاف السلسلة</string>
     <string name="no_recent_chapters">لا توجد فصول حديثة</string>
     <string name="no_recently_read_manga">لا سلسلة قُرئت مؤخَّرًا</string>
@@ -225,7 +217,6 @@
     <string name="installing">يثبَّت</string>
     <string name="installed">تمَّ التثبيت</string>
     <string name="trust">موثوق</string>
-    <string name="untrusted">غير موثوق(ة)</string>
     <string name="uninstall">حذف</string>
     <string name="untrusted_extension">إضافة ذات ريبة</string>
     <string name="untrusted_extension_message">بإمكان أي إضافة خبيثة قراءة بيانات تسجيل الدخول المخزَّنة في Tachiyomi أو تنفيذ تعليمات برمجية عشوائية.
@@ -257,7 +248,6 @@
     <string name="loading_pages">تُحمَّل الصفحات…</string>
     <string name="failed_to_load_pages_">فشل تحميل الصفحات: %1$s</string>
     <string name="open_in_webview">فتح في web view</string>
-    <string name="true_32bit_color">ألوان ٣٢-بت</string>
     <string name="skip_read_chapters">تخطَّ الفصول المقروءة</string>
     <string name="overlay">التراكب</string>
     <string name="multiply">مضاعفة</string>
@@ -286,7 +276,6 @@
         <item quantity="many">يتوفَّر %d تحديثًا للإضافات</item>
         <item quantity="other">يتوفَّر %d تحديث للإضافات</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">يزيد من سلاسة تدرج الألوان بالصور، ولكنه قد يؤثر على الأداء</string>
     <string name="skip_filtered_chapters">تخطَّ الفصول المصفَّاة</string>
     <string name="continuous_vertical">عموديٌّ مستمرٌّ</string>
     <string name="paged">مُصَفَّح</string>
@@ -296,11 +285,6 @@
     <string name="reorder">إعادة ترتيب</string>
     <string name="always_show_chapter_transition">أظهر صفحة الانتقال بين الفصول دائمًا</string>
     <string name="pref_webtoon_side_padding">الإزاحة الجانبية</string>
-    <string name="webtoon_side_padding_0">بلا</string>
-    <string name="webtoon_side_padding_10">١٠٪</string>
-    <string name="webtoon_side_padding_15">١٥٪</string>
-    <string name="webtoon_side_padding_20">٢٠٪</string>
-    <string name="webtoon_side_padding_25">٢٥٪</string>
     <string name="chapters_">الفصول %1$s</string>
     <string name="remove_from_library">أزل من المكتبة</string>
     <string name="refresh_tracking">حدِّث بيانات التتبُّع</string>
@@ -314,7 +298,6 @@
     <string name="requires_app_restart">يتطلب إعادة تشغيل التطبيق ليتم تفعيله</string>
     <string name="disable_battery_optimization">إطفاء وضع تحسين البطارية</string>
     <string name="battery_optimization_disabled">تم إلغاء وضع تحسين البطارية مُسبقاً</string>
-    <string name="pref_global_search">بحث شامل</string>
     <string name="check_for_extension_updates">تحقق من وجود تحديثات للإضافات</string>
     <string name="website">الموقع الإلكتروني</string>
     <string name="open_source_licenses">التراخيص مفتوحة المصدر</string>
@@ -468,7 +451,6 @@
     <string name="start_downloading_now">ابدأ التنزيل الآن</string>
     <string name="downloading_">جاري تنزيل: %1$s</string>
     <string name="username_must_not_be_blank">لا يمكن أن يكون اسم المستخدم أو كلمة المرور فارغًا</string>
-    <string name="whats_new">ما الجديد</string>
     <string name="you_can_migrate_in_library">يمكنك أيضاً الترحيل باختيار المدخلات في مكتبتك</string>
     <string name="migration_sources_changed">مصادر الترحيل التي تم تغييرها</string>
     <string name="use_last_saved_migration_preferences">استخدم آخر تفضيلات المصادر المحفوظة للترحيل العادي للترحيل الجماعي</string>
@@ -476,7 +458,6 @@
     <string name="only_enable_pinned_for_migration">تمكين المصادر المثبتة فقط للترحيل</string>
     <string name="match_enabled_sources">مطابقة المصادر الممكنة</string>
     <string name="match_pinned_sources">مطابقة المصادر المثبتة</string>
-    <string name="only_search_pinned_when">البحث باستخدام المصادر المثبتة فقط</string>
     <string name="disable_if_issues_with_updating">عطل هذا إنكنت تواجه مشاكل مع تحديث أو استعادة المكتبة</string>
     <string name="no_folders_to_cleanup">لا توجد مجلدات لتنظيفها</string>
     <string name="starting_cleanup">بدء التنظيف</string>
@@ -485,7 +466,6 @@
     <string name="clean_orphaned_downloads">تنظيف المهجورة</string>
     <string name="clean_up_downloaded_chapters">تنظيف الفصول التي تم تنزيلها</string>
     <string name="data_management">إدارة البيانات</string>
-    <string name="not_logged_into_">لم تسجِّل دخولك في %1$s</string>
     <string name="restore_error">فشلت استعادة نسخة احتياطية</string>
     <string name="white_theme">أبيض ناصع</string>
     <string name="skipping_">(تخطي %1$d)</string>
@@ -519,12 +499,7 @@
     <string name="remember_this_choice">تذكَّر هذا الاختيار</string>
     <string name="reset_tags">صفِّر الوسوم</string>
     <string name="clear_tags">أزل الوسوم</string>
-    <string name="oldest_first">الأقدم فالأحدث</string>
-    <string name="newest_first">الأحدث فالأقدم</string>
-    <string name="sort_by_chapter_number">افرز حسب رقم الفصل</string>
-    <string name="sort_by_source_s_order">افرز كفرز المصدر</string>
     <string name="hide_chapter_titles">أخفِ عناوين الفصول</string>
-    <string name="show_read_chapters">أظهر الفصول المقروءة</string>
     <string name="show_unread_chapters">أظهر الفصول غير المقروءة</string>
     <string name="show_downloaded_chapters">أظهر الفصول المنزَّلة</string>
     <string name="show_bookmarked_chapters">أظهر الفصول المعلَّمة</string>
@@ -551,7 +526,6 @@
     <string name="smart_by_theme">ذكيٌّ (حسب السمة)</string>
     <string name="smart_by_page">ذكيٌّ (حسب الصفحة)</string>
     <string name="enable_zoom_out">مكِّن التصغير</string>
-    <string name="webtoon_style">نمط الوِبتون</string>
     <string name="reading_">تُقرأ %1$s</string>
     <string name="set_as_default_for_all">عيِّنه مبدئيًا للكلِّ</string>
     <string name="extension_updates">تحديثات اﻹضافات</string>
@@ -634,7 +608,6 @@
     <string name="right_and_left_nav">يميناً ويساراً</string>
     <string name="invert_tapping">اعكس مواضع اللمس</string>
     <string name="none">لا شيء</string>
-    <string name="no_chapters_error">لم يُعثر على فصول</string>
     <string name="file_picker_error">لم يتم العثور على تطبيق منتقي الملفات</string>
     <string name="open_log">فتح السجل</string>
     <string name="badges">شارات</string>
@@ -647,8 +620,6 @@
     <string name="locale">محلي</string>
     <string name="automatic_backups">النسخ الاحتياطيُّ التلقائيُّ</string>
     <string name="invalid_backup_file">ملفُّ النسخ الاحتياطيِّ غير صالح</string>
-    <string name="invalid_backup_file_type">نوع ملفِّ النسخ الاحتياطي غير صالح: %1$s
-\nيجب أن ينتهي ب‍ .proto.gz أو .json.</string>
     <string name="backup_has_no_manga">ليس في النسخة الاحتياطية أيُّ سلسلة.</string>
     <string name="restore_missing_sources">المصادر المفقودة:</string>
     <string name="restore_missing_trackers">المتتبِّعات التي لم يسجَّل الدخول فيها:</string>
@@ -805,11 +776,8 @@
     <string name="starting_screen">شاشة البداية</string>
     <string name="hides_on_scroll">أخفِ عند التمرير</string>
     <string name="follow_system_theme">اتَّبع سمة النظام</string>
-    <string name="hot_pink">وردي فاقع</string>
     <string name="locked_landscape">عرضيٌّ دائمًا</string>
     <string name="locked_portrait">طوليٌّ دائمًا</string>
-    <string name="switch_to_single">حوِّل إلى صفحة واحدة</string>
-    <string name="switch_to_double">حوِّل إلى صفحات زوجية</string>
     <string name="single_page">صفحة فردية</string>
     <string name="double_pages">الصفحات المزدوجة</string>
     <string name="remove_crop">أزل القصَّ</string>
@@ -982,7 +950,6 @@
     <string name="lime_time">وقت الليمون الأخضر</string>
     <string name="scanlators">المترجمون</string>
     <string name="filter_groups">صفِّ مجموعات المترجمين</string>
-    <string name="classic_blue">أزرق كلاسيكي</string>
     <string name="save_chapters_as_cbz">احفظ كأرشيف CBZ</string>
     <string name="publishing_finished">مكتملة</string>
     <string name="cancelled">أُلغيت</string>
@@ -1043,15 +1010,12 @@
     <string name="clear_history_completed">حُذف التاريخ</string>
     <string name="clear_history_confirmation">أمتأكِّد؟ سوف يُحذف التاريخ.</string>
     <string name="use_staggered_grid">استخدم شبكةً متداخلةً</string>
-    <string name="pref_update_only_completely_read_summary">لا تحدِّث السلسلة إلا إن كانت مقروءةً بالكامل</string>
     <string name="update_tracking_after_reading">حدِّث التتبُّع بعد القراءة</string>
     <string name="update_tracking_marked_read">حدِّث التتبُّع حال تعليم الفصل مقروءًا</string>
-    <string name="view_all">عرض الكل</string>
     <string name="backup_restore_invalid_uri">خطأ: رابط فارغ</string>
     <string name="backup_info">يوصى بشدة بالنسخ الاحتياطي التلقائي. يجب عليك الاحتفاظ بنسخ في أماكن أخرى أيضًا.</string>
     <string name="pref_manage_notifications">أدر الإشعارات</string>
     <string name="battery_not_low">البطارية ليست منخفضةً</string>
-    <string name="faq_and_guides">الأسئلة الشائعة والشروحات</string>
     <string name="download_ahead_info">يعمل فقط على الإدخالات في المكتبة وإذا كان الفصل الحالي بالإضافة إلى الفصل التالي قد تم تنزيلهم بالفعل</string>
     <string name="download_ahead">التنزيل المسبق</string>
     <plurals name="next_unread_chapters">
@@ -1083,7 +1047,6 @@
     <string name="tap_zones">مواضع اللمس</string>
     <string name="lavender">أرجواني</string>
     <string name="violet">بنفسجي</string>
-    <string name="webtoon_side_padding_5">٥٪</string>
     <string name="user_agent_string">سلسلة وكيل المستخدم المبدئية</string>
     <string name="loader_rar5_error">تنسيق RARv5 ليس مدعومًا</string>
     <string name="language_requires_app_restart">تتطلَّب بعض اللغات إعادة التشغيل لتظهر صحيحةً</string>

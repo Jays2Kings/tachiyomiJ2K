@@ -16,7 +16,6 @@
     <string name="library">Library</string>
     <string name="searching_for_updates">အပ်ဒိတ်ရှိ၊ မရှိရှာဖွေနေပါတယ်…</string>
     <string name="no_new_updates_available">မည်သည့်အပ်ဒိတ်မှမရှိသေးပါ</string>
-    <string name="update_available">အပ်ဒိတ်ထွက်နေပါပြီ</string>
     <string name="new_version_available">ဗားရှင်းအသစ်ထွက်ပါပြီ</string>
     <string name="updating_">%1$s ကိုအပ်ဒိတ်လုပ်နေပါတယ်</string>
     <string name="update">အပ်ဒိတ်</string>
@@ -53,7 +52,6 @@
         <item quantity="other">ဒေါင်းလုဒ်ဆွဲထားတဲ့အပိုင်း %1$d ပိုင်းကိုဖျက်ပစ်မှာလား</item>
     </plurals>
     <string name="no_pages_found">မည်သည့်စာမျက်နှာမျှရှာမတွေ့ပါ</string>
-    <string name="no_chapters_error">မည်သည့်အပိုင်းမျှမရှိပါ</string>
     <string name="chapter_not_found">ဤအပိုင်းကိုရှာမတွေ့ပါ</string>
     <string name="chapters_removed">အပိုင်းများပြန်ဖြုတ်ချထားသည်။</string>
     <string name="marked_as_unread">မဖတ်ရသေးဘူးလို့သတ်မှတ်မယ်</string>
@@ -92,7 +90,6 @@
     <string name="settings">ဆက်တင်များ</string>
     <string name="search">ရှာဖွေရန်</string>
     <string name="list">စာရင်းစဉ်</string>
-    <string name="start">စတင်မည်</string>
     <string name="advanced">ပိုမိုဆက်လက်၍</string>
     <string name="about">အကြောင်း</string>
     <string name="help">အကူအညီ</string>
@@ -154,7 +151,6 @@
     <string name="tracking">ခြေရာခံခြင်း</string>
     <string name="tracked">ခြေရာခံထားသည်</string>
     <string name="reader">စာဖတ်ကိရိယာ</string>
-    <string name="pref_global_search">နေရာအနှံ့ရှာဖွေခြင်း</string>
     <string name="downloads">Download များ</string>
     <string name="download_queue">ဒေါင်းလုဒ်အစဉ်</string>
     <string name="downloaded">ဒေါင်းလုပ်ထားသော</string>

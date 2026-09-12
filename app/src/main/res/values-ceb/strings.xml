@@ -18,7 +18,6 @@
     <string name="help">Tabang</string>
     <string name="search_settings">Mga setting sa pagpangita</string>
     <string name="backup_and_restore">Tabang ug sa Pagpasig-uli</string>
-    <string name="pref_global_search">Pangkalibutanon nga pagpangita</string>
     <string name="download_queue">Pag-download sa Pila</string>
     <string name="downloaded">Gi-download</string>
     <string name="download">Pag-download</string>
@@ -96,13 +95,11 @@
     <string name="installing">Pag-instalar</string>
     <string name="installed">Gi-install</string>
     <string name="trust">Pagsalig</string>
-    <string name="untrusted">Dili kasaligan</string>
     <string name="uninstall">I-uninstall</string>
     <string name="version_">Bersyon: %1$s</string>
     <string name="language_">Pinulongan: %1$s</string>
     <string name="nsfw_short">18+</string>
     <string name="next_chapter">Sunod nga kapitulo</string>
-    <string name="webtoon_side_padding_0">Wala</string>
     <string name="actions">Mga aksyon</string>
     <string name="about">Mahitungod sa</string>
     <string name="app_theme">Tema sa app</string>
@@ -111,7 +108,6 @@
     <string name="edit">Edit</string>
     <string name="oldest">Kinatigulangan</string>
     <string name="remove">Kuhaa</string>
-    <string name="start">Pagsugod</string>
     <string name="stop">Hunong</string>
     <string name="tap_to_see_details">I-tap aron makita ang mga detalye</string>
     <string name="top">Ibabaw</string>
@@ -132,7 +128,6 @@
     <string name="animate_page_transitions">I-animate ang mga transisyon sa panid</string>
     <string name="double_tap_anim_speed">Doble nga pag-tap sa katulin sa animation</string>
     <string name="show_page_number">Ipakita ang numero sa panid</string>
-    <string name="true_32bit_color">32-bit nga kolor</string>
     <string name="crop_borders">Mga utlanan sa pananom</string>
     <string name="grayscale">Grayscale</string>
     <string name="color_filter_blend_mode">Color filter blend mode</string>
@@ -165,7 +160,6 @@
     <string name="nsfw_sources">NSFW (18+) Mga Tinubdan</string>
     <string name="show_in_sources_and_extensions">Ipakita sa mga tinubdan ug mga lista sa mga extension</string>
     <string name="does_not_prevent_unofficial_nsfw">Dili kini makapugong sa dili opisyal o posibleng sayop nga gi-flag nga mga extension gikan sa pag-surf sa NSFW (18+) nga sulod sulod sa app.</string>
-    <string name="faq_and_guides">FAQ ug mga Giya</string>
     <string name="downloads">Mga pag-download</string>
     <string name="cancel_all">Cancel tanan</string>
     <string name="move_series_to_top">Ibalhin ang serye sa ibabaw</string>
@@ -218,10 +212,6 @@
     <string name="enhanced_tracking_info">Mga serbisyo nga naghatag dugang nga mga bahin alang sa piho nga mga gigikanan. Awtomatikong gisubay ang Manga kon idugang sa imong librarya.</string>
     <string name="split_tall_images_summary">Nagpauswag sa pasundayag sa magbabasa pinaagi sa pagbahin sa taas nga na-download nga mga imahe.</string>
     <string name="pref_webtoon_side_padding">Padding sa kilid</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="services">Mga serbisyo</string>
     <string name="tracking_info">Usa ka paagi nga pag-sync aron ma-update ang pag-uswag sa kapitulo sa mga serbisyo sa pagsubay. I-set up ang tracking para sa indibidwal nga manga entries gikan sa ilang tracking button.</string>
     <string name="enhanced_services">Gipalambo nga mga serbisyo</string>
@@ -291,7 +281,6 @@
     <string name="save_chapters_as_cbz">I-save ingon CBZ archive</string>
     <string name="no_animation">Walay animation</string>
     <string name="tap_zones">Pag-tap sa mga zone</string>
-    <string name="reduces_banding_impacts_performance">Pagpakunhod sa banding, apan mahimong makaapekto sa performance</string>
     <string name="invert_tapping">Balika ang mga tap zone</string>
     <string name="cache_delete_error">Nahitabo ang sayup samtang nanglimpyo</string>
     <string name="pref_clear_webview_data">Tin-aw ang datos sa WebView</string>
@@ -303,7 +292,6 @@
     <string name="clear_database_completed">Gitangtang ang mga entry</string>
     <string name="webview_data_deleted">Ang datos sa WebView gitangtang</string>
     <string name="database_clean">Limpyo ang database</string>
-    <string name="whats_new">Unsay bag-o</string>
     <string name="help_translate">Tabang sa paghubad</string>
     <string name="check_for_updates">Susiha ang mga update</string>
     <string name="used_">Gigamit: %1$s</string>
@@ -329,7 +317,6 @@
     <string name="username">Username</string>
     <string name="email">Email Address</string>
     <string name="password">Password</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="log_out_from_">Log out gikan sa %1$s\?</string>
     <string name="successfully_logged_out">Naka-log out ka na karon</string>
     <string name="log_in_to_">Login sa %1$s</string>

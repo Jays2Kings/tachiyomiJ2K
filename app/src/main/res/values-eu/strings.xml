@@ -25,7 +25,6 @@
     <string name="collapse_all_categories">Tolestu kategoria guztiak</string>
     <string name="install">Instalatu</string>
     <string name="latest_chapter">Azken kapitulua</string>
-    <string name="library_update_restriction_summary">Eguneratu baldintzak betetzen direnean soilik</string>
     <string name="channel_errors">Erroreak</string>
     <string name="library_update_frequency">Liburutegiaren eguneraketa maiztasuna</string>
     <string name="global_updates">Eguneraketa globalak</string>
@@ -63,7 +62,6 @@
     <string name="stop">Gelditu</string>
     <string name="search_">Bilatu %1$s</string>
     <string name="sort_and_filter">Ordenatu eta Iragazi</string>
-    <string name="start">Hasi</string>
     <string name="tag">Etiketa</string>
     <string name="unlock">Desblokeatu</string>
     <string name="unlock_library">Desblokeatu liburutegira sartzeko</string>
@@ -104,7 +102,6 @@
     <string name="removed_bookmark">Orri-markagailua kendua</string>
     <string name="chapters_removed">Kapituluak kenduak.</string>
     <string name="chapter_not_found">Kapitulua ez da aurkitu</string>
-    <string name="no_chapters_error">Ez dira kapitulurik aurkitu</string>
     <string name="no_pages_found">Ez dira orrialderik aurkitu</string>
     <string name="remove_all_downloads">Deskarga guztiak ezabatu\?</string>
     <string name="no_chapters_to_delete">Ez dago kapitulurik ezabatzeko</string>
@@ -129,7 +126,6 @@
     <string name="keep">Mantendu</string>
     <string name="keep_in_">Mantendu %1$s-n</string>
     <string name="loading">Kargatzen…</string>
-    <string name="lock">Blokeatu</string>
     <string name="mark_as_read">Markatu irakurria bezala</string>
     <string name="mark_as_unread">Markatu irakurri gabea bezala</string>
     <string name="mark_range_as_read">Markatu kapitulu sorta irakurria bezala</string>
@@ -183,7 +179,6 @@
     <string name="category_with_name_exists">Izen hori daukan kategoria bat badago dagoeneko!</string>
     <string name="update">Eguneratu</string>
     <string name="updating_">%1$s eguneratzen</string>
-    <string name="update_available">Eguneraketa eskuragarri</string>
     <string name="new_version_available">Bertsio berria eskuragarri!</string>
     <string name="no_new_updates_available">Ez dago eguneraketarik</string>
     <string name="searching_for_updates">Eguneraketak bilatzen…</string>
@@ -228,14 +223,9 @@
     <string name="cutout_area_behavior">Eremu ebakiaren jokaera</string>
     <string name="kindlish_nav">Kindle erakoa</string>
     <string name="none">Ezer ez</string>
-    <string name="webtoon_side_padding_20">%20</string>
     <string name="horizontally">Horizontalki</string>
     <string name="vertically">Bertikalki</string>
     <string name="both_axes">Bi Ardatzak</string>
-    <string name="webtoon_side_padding_25">%25</string>
-    <string name="webtoon_side_padding_0">Ezer ez</string>
-    <string name="webtoon_side_padding_10">%10</string>
-    <string name="webtoon_side_padding_15">%15</string>
     <string name="filter_languages">Iragazi hizkuntzak</string>
     <string name="extension_updates_pending">Luzapenen eguneraketak geratzen dira</string>
     <string name="double_pages">Orrialde bikoitzak</string>
@@ -244,7 +234,6 @@
         <item quantity="one">Kapitulu bat saltatzen, iturria falta da edo iragazia izan da</item>
         <item quantity="other">%d kapitulu saltatzen, iturria falta da edo iragaziak izan dira</item>
     </plurals>
-    <string name="not_logged_into_">Ez da saioa hasi %1$s-n</string>
     <string name="clean_up_cached_covers">Garbitu cacheko azalak</string>
     <string name="log_in">Saioa hasi</string>
     <plurals name="category_plural">
@@ -259,7 +248,6 @@
     <string name="certain_buttons_can_be_found">Botoi batzuk beste leku batzuetan aurki daitezke hemen desgaituta badago</string>
     <string name="search_recents">Bilatu azkenekoak…</string>
     <string name="show_updated_time">Erakutsi eguneratutako ordua</string>
-    <string name="categories_to_include_in_global_update">Eguneratze globalean sartu beharreko kategoriak</string>
     <string name="this_will_remove_the_read_date_for_x_question">Honek \"%1$s\"-ren irakurketa-data kenduko du. Ziur zaude\?</string>
     <string name="extension_info">Luzapenaren informazioa</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Instalatu eta abiarazi Shizuku luzapen instalatzaile gisa erabiltzeko.</string>
@@ -293,10 +281,8 @@
     <string name="continue_reading_chapter_">Jarraitu %1$s kapitulua irakurtzen</string>
     <string name="split_double_pages">Zatitu orrialde bikoitzak</string>
     <string name="start_reading_chapter_">Hasi %1$s kapitulua irakurtzen</string>
-    <string name="switch_to_single">Aldatu orrialde bakarrera</string>
     <string name="actions">Ekintzak</string>
     <string name="select_starting_chapter">Hautatu hasierako kapitulua</string>
-    <string name="newest_first">Berrienetik zaharrenera</string>
     <string name="show_unread_chapters">Erakutsi irakurri gabeko kapituluak</string>
     <string name="services">Zerbitzuak</string>
     <string name="score">Puntuazioa</string>
@@ -314,7 +300,6 @@
     <string name="app_shortcuts">Aplikazioko lasterbideak</string>
     <string name="includes_recently_read_updated_added">Duela gutxi irakurritako, eguneratutako eta gehitutako argitalpenak biltzen ditu</string>
     <string name="reading">Irakurtzen</string>
-    <string name="only_search_pinned_when">Bilatu ainguratutako iturriak soilik</string>
     <string name="paused">Gelditurik</string>
     <string name="rereading">Berrirakurtzen</string>
     <string name="status">Egoera</string>
@@ -398,7 +383,6 @@
     <string name="_copied_to_clipboard">%1$s arbelean kopiatu da</string>
     <string name="source_not_installed_">Iturria ez dago instalatuta: %1$s</string>
     <string name="mark_all_chapters_as_unread">Kapitulu guztiak irakurri gabeak bezala markatu\?</string>
-    <string name="oldest_first">Zaharrenetik berrienera</string>
     <string name="cover_saved">Azala gorde da</string>
     <string name="started_reading_date">Irakurtzen hasi den data</string>
     <string name="myanimelist_relogin">Mesedez, hasi saioa berriro MAL-en</string>
@@ -409,7 +393,6 @@
         <item quantity="one">%d manga migratu da</item>
         <item quantity="other">%d manga migratu dira</item>
     </plurals>
-    <string name="classic_blue">Urdin Klasikoa</string>
     <string name="midnight_dusk">Gauerdiko ilunabarra</string>
     <string name="tako">Tako</string>
     <string name="lime_time">Lima Unea</string>
@@ -433,7 +416,6 @@
         <item quantity="other">Kopiatu %1$d%2$s manga\?</item>
     </plurals>
     <string name="over_any_network">Edozein saretan</string>
-    <string name="backup">Babeskopia</string>
     <string name="backup_and_restore">Babeskopia egin eta leheneratu</string>
     <string name="create_backup">Sortu babeskopia</string>
     <string name="can_be_used_to_restore">Liburutegia berreskuratzeko erabil daiteke</string>
@@ -469,7 +451,6 @@
     </plurals>
     <string name="custom_location">Kokapen pertsonalizatua</string>
     <string name="last_read_chapter">Azkenik irakurritako kapitulua</string>
-    <string name="categories_to_include_in_download">Deskargan sartuko diren kategoriak</string>
     <string name="delete_removed_chapters">Ezabatu kendutako kapituluak</string>
     <string name="second_to_last">Azkenaurreko kapitulua</string>
     <string name="delete_downloaded_if_removed_online">Ezabatu deskargatutako kapituluak iturriak kapitulua sarean kendu badu</string>
@@ -585,7 +566,6 @@
     <string name="installing">Instalatzen</string>
     <string name="installed">Instalatua</string>
     <string name="trust">Fidagarritzat jo</string>
-    <string name="untrusted">Fidatu gabekoa</string>
     <string name="uninstall">Desinstalatu</string>
     <string name="crop_borders_paged">Moztu ertzak (Orrialdeka)</string>
     <string name="volume_keys">Bolumen-teklak</string>
@@ -607,9 +587,7 @@
     <string name="all_but_bookmarked_chapters">Laster-marka gabeko kapitulu guztiak</string>
     <string name="add_x_to_library">%1$s liburutegira gehitu\?</string>
     <string name="show_all">Erakutsi denak</string>
-    <string name="show_read_chapters">Erakutsi kapitulu irakurriak</string>
     <string name="add_tag">Gehitu etiketa</string>
-    <string name="amoled_black">AMOLED Beltza</string>
     <string name="sapphire_dusk">Zafiro Ilunabarra</string>
     <string name="white_theme">Zuri hutsa</string>
     <string name="last_used_library_recents">Azkenik erabilia (Liburutegia edo Azkenekoak)</string>
@@ -630,8 +608,6 @@
     <string name="backup_frequency">Babeskopien maiztasuna</string>
     <string name="max_auto_backups">Gehienezko babeskopia automatikoak</string>
     <string name="invalid_backup_file">Babeskopia fitxategi baliogabea</string>
-    <string name="invalid_backup_file_type">Babeskopia-fitxategi mota baliogabea: %1$s
-\n.proto.gz edo .json-ekin amaitu behar da.</string>
     <string name="backup_created">Babeskopia sortu da</string>
     <string name="nsfw_sources">NSFW (18+) iturriak</string>
     <string name="add">Gehitu</string>
@@ -643,7 +619,6 @@
     <string name="include_">Sartu: %s</string>
     <string name="page_">%1$d orrialdea</string>
     <string name="season_">%1$d Denboraldia</string>
-    <string name="hot_pink">Arrosa Beroa</string>
     <string name="flat_lime">Lima laua</string>
     <string name="locale">Eskualde-ezarpenak</string>
     <string name="uniform_grid_covers">Lauki-sare azal uniformea</string>
@@ -711,7 +686,6 @@
     <string name="may_contain_nsfw">NSFW (18+) edukia izan dezake</string>
     <string name="page_preload_amount">Orrialdeen aurrekargaren zenbatekoa</string>
     <string name="amount_of_pages_to_preload">Irakurtzean aurrez aldetik kargatu beharreko orrialde kopurua. Balio altuagoek irakurketa esperientzia atseginagoa sortuko dute, cache eta sarearen erabilera handiagoaren kostuarekin.</string>
-    <string name="reduces_banding_impacts_performance">Kolore-marraketak murrizten ditu, baina errendimenduan eragina dauka</string>
     <string name="reading_">%1$s Irakurtzen</string>
     <string name="next_page">Hurrengo orrialdea</string>
     <string name="previous_page">Aurreko orrialdea</string>
@@ -723,8 +697,6 @@
     <string name="share_combined_pages">Partekatu orrialde konbinatuak</string>
     <string name="double_tap_anim_speed">Sakaketa bikoitzaren animazioaren abiadura</string>
     <string name="show_page_number">Erakutsi orrialdearen zenbakia</string>
-    <string name="true_32bit_color">32 bit-eko kolorea</string>
-    <string name="webtoon_style">Webtoon estiloa</string>
     <string name="overlay">Gainjarri</string>
     <string name="remove_crop">Kendu mozketa</string>
     <string name="dodge_lighten">Sahiestu / Argitu</string>
@@ -747,7 +719,6 @@
     <string name="paged">Orrikaldekatua</string>
     <string name="fit_screen">Doitu pantaila</string>
     <string name="stretch">Luzatu</string>
-    <string name="switch_to_double">Aldatu orrialde bikoitzetara</string>
     <string name="default_reading_mode">Irakurketa modu lehenetsia</string>
     <string name="red_initial">G</string>
     <string name="green_initial">B</string>
@@ -764,8 +735,6 @@
     <string name="show_bookmarked_chapters">Erakutsi laster-markadun kapituluak</string>
     <string name="show_downloaded_chapters">Erakutsi deskargatutako kapituluak</string>
     <string name="hide_chapter_titles">Ezkutatu kapituluen izenburuak</string>
-    <string name="sort_by_source_s_order">Ordenatu iturriaren ordenaren arabera</string>
-    <string name="sort_by_chapter_number">Ordenatu kapitulu-zenbakiaren arabera</string>
     <string name="clear_tags">Garbitu etiketak</string>
     <string name="reset_tags">Berrezarri etiketak</string>
     <string name="reset_cover">Berrezarri azala</string>
@@ -847,7 +816,6 @@
     <string name="clear_database_confirmation">Ziur zaude\? Kapitulu iraurriak eta liburutegikoak ez diren manga-en aurrerapenak galduko dira</string>
     <string name="delete_old_covers_in_library_used_">Liburutegian eguneratu berriak dauden manga-en azalen cache-ko kopia zahar eta erabili gabeak ezabatu.
 \nUne honetan erabiltzen: %1$s</string>
-    <string name="pref_global_search">Bilaketa globala</string>
     <string name="auto_update_extensions">Eguneratu luzapenak automatikoki</string>
     <string name="notify_extension_updated">Jakinarazi luzapena eguneratu dela</string>
     <string name="some_extensions_may_not_update">Baliteke luzapen batzuk automatikoki ez eguneratzea aplikazio honetatik kanpo instalatu badira</string>
@@ -857,7 +825,6 @@
     <string name="match_pinned_sources">Elkartu ainguratutako iturriak</string>
     <string name="use_last_saved_migration_preferences">Erabili gordetako azken migrazioaren aurreko hobespenak eta iturriak migrazio masiboa egiteko</string>
     <string name="version">Bertsioa</string>
-    <string name="whats_new">Zer dago berri</string>
     <string name="download_new_chapters">Deskargatu kapitulu berriak</string>
     <string name="alphabetically">Alfabetikoki</string>
     <string name="always_ask">Galdetu beti</string>
@@ -927,14 +894,12 @@
     <string name="backup_restore_invalid_uri">Errorea: URI-a hutsik</string>
     <string name="backup_info">Babeskopia automatikoak oso gomendagarriak dira. Kopiak beste leku batzuetan ere gorde beharko zenituzke.</string>
     <string name="pref_manage_notifications">Kudeatu jakinarazpenak</string>
-    <string name="faq_and_guides">Ohiko galderak eta gidak</string>
     <string name="secure_screen_summary">Pantaila seguruak aplikazioaren edukia ezkutatzen du aplikazioak aldatzean, eta pantaila-argazkiak blokeatzen ditu</string>
     <string name="pref_hide_threshold">Pantaila mugitzean menua ezkutatzeko sentikortasuna</string>
     <string name="pref_highest">Altuena</string>
     <string name="pref_high">Altua</string>
     <string name="pref_low">Baxua</string>
     <string name="pref_lowest">Baxuena</string>
-    <string name="webtoon_side_padding_5">%5</string>
     <string name="downloaded_chapters">Deskargatutako kapituluak</string>
     <string name="tap_zones">Nabigazio-diseinua</string>
     <string name="pref_update_only_non_completed">Argitalpen bukatua al da</string>

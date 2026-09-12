@@ -20,7 +20,6 @@
     <string name="edit">Editar</string>
     <string name="edit_categories">Editar categorias</string>
     <string name="move_to_categories">Mover para categorias</string>
-    <string name="start">Começar</string>
     <string name="stop">Parar</string>
     <string name="pause">Pausa</string>
     <string name="clear">Limpar</string>
@@ -49,10 +48,8 @@
     <string name="every_12_hours">A cada 12 horas</string>
     <string name="daily">Diariamente</string>
     <string name="every_2_days">A cada 2 dias</string>
-    <string name="categories_to_include_in_global_update">Categorias a incluir na atualização global</string>
     <string name="all">Tudo</string>
     <string name="library_update_restriction">Restrições do dispositivo</string>
-    <string name="library_update_restriction_summary">Atualizar apenas quando se cumprem as condições</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">A carregar</string>
     <string name="app_theme">Tema da aplicação</string>
@@ -85,7 +82,6 @@
     <string name="center">Centro</string>
     <string name="rotation">Rotação</string>
     <string name="free">Livre</string>
-    <string name="lock">Bloqueado</string>
     <!-- Downloads section -->
     <string name="download_location">Pasta de Transferências</string>
     <string name="only_download_over_wifi">Transferir apenas através Wi-Fi</string>
@@ -152,8 +148,6 @@
     <string name="page_">Página: %1$d</string>
     <string name="next_chapter_not_found">Capítulo seguinte não encontrado</string>
     <string name="decode_image_error">A imagem não pôde ser carregada</string>
-    <!-- Backup fragment -->
-    <string name="backup">Cópia de segurança</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
     <!-- Library update service notifications -->
@@ -170,7 +164,6 @@
     <!--UpdateCheck Notifications-->
     <string name="download_complete">Transferência completa</string>
     <string name="download_error">Erro na transferência</string>
-    <string name="update_available">Atualização disponível</string>
     <!--Content Description-->
     <string name="cover_of_image">Imagem de capa da manga</string>
     <!-- Information Text -->
@@ -201,7 +194,6 @@
     <string name="create">Criar</string>
     <string name="updates">Atualizações</string>
     <string name="weekly">Semanalmente</string>
-    <string name="amoled_black">Tema AMOLED</string>
     <string name="language">Língua</string>
     <string name="system_default">Padrão do sistema</string>
     <string name="restore">Restaurar</string>
@@ -237,7 +229,6 @@
     <string name="reset">Reiniciar</string>
     <string name="double_tap_anim_speed">Velocidade animação dois toques</string>
     <string name="red_initial">R</string>
-    <string name="categories_to_include_in_download">Categorias para incluir na transferência</string>
     <string name="backup_location">Pasta de Backups</string>
     <string name="backup_created">Cópia de segurança criada</string>
     <string name="restore_completed">Restauro completo</string>
@@ -246,11 +237,9 @@
     <string name="max_auto_backups">Máximo de backups automáticos</string>
     <string name="download_badge">Transferir emblemas</string>
     <string name="trust">Confiar</string>
-    <string name="untrusted">Não confiar</string>
     <string name="custom_range">Transferir personalizado</string>
     <string name="updates_covers_genres_desc">Atualizar capas, géneros, descrição e informação sobre o estado de lançamento do mangá</string>
     <string name="open_in_webview">Abra em webview</string>
-    <string name="true_32bit_color">32-bit color</string>
     <string name="skip_read_chapters">Pular capítulos lidos</string>
     <string name="refresh_tracking_metadata">Atualizar metadados do monitoramento</string>
     <string name="updates_tracking_details">Atualiza informações como situação, avaliações e últimos capítulos lidos dos serviços de monitoramento</string>
@@ -320,24 +309,17 @@
         <item quantity="many">%d atualizações de extensão disponíveis</item>
         <item quantity="other">%d atualizações de extensão disponíveis</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Reduz bandas de cor, mas pode impactar a performance</string>
     <string name="skip_filtered_chapters">Saltar capítulos filtrados</string>
     <string name="continuous_vertical">Vertical contínuo</string>
     <string name="paged">Paginação</string>
     <string name="always_show_chapter_transition">Mostrar sempre transição entre capítulos</string>
     <string name="pref_webtoon_side_padding">Preenchimento lateral</string>
-    <string name="webtoon_side_padding_0">Nenhum</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Capítulos %1$s</string>
     <string name="remove_from_library">Remover da biblioteca</string>
     <string name="refresh_tracking">Atualizar monitorização</string>
     <string name="add_tracking">Adicionar à monitorização</string>
     <string name="disable_battery_optimization">Desativar otimização de bateria</string>
     <string name="battery_optimization_disabled">A otimização de bateria já está desativada</string>
-    <string name="pref_global_search">Procura geral</string>
     <string name="check_for_extension_updates">Verificar atualizações de extensão</string>
     <string name="website">Sítio Web</string>
     <string name="open_source_licenses">Licenças de código aberto</string>
@@ -435,7 +417,6 @@
     <string name="started_reading_date">Data de início de leitura</string>
     <string name="finished_reading_date">Data de fim de leitura</string>
     <string name="myanimelist_relogin">Por favor inicie sessão no MAL novamente</string>
-    <string name="no_chapters_error">Nenhum capítulo encontrado</string>
     <string name="last_used">Último usado</string>
     <string name="nsfw_short">18+</string>
     <string name="may_contain_nsfw">Pode conter conteúdo NSFW (18+)</string>
@@ -455,8 +436,6 @@
     <string name="locale">Localidade</string>
     <string name="automatic_backups">Cópias de segurança automáticas</string>
     <string name="invalid_backup_file">Ficheiro de cópia de segurança invalido</string>
-    <string name="invalid_backup_file_type">Tipo de ficheiro da cópia de segurança inválido: %1$s
-\nDeve terminar com .proto.gz ou .json.</string>
     <string name="backup_has_no_manga">Cópia de segurança não contém qualquer mangá.</string>
     <string name="restore_missing_sources">Fontes em falta:</string>
     <string name="restore_missing_trackers">Monitorizadores sem sessão iniciada:</string>
@@ -470,7 +449,6 @@
     <string name="source_migration_guide">Guia de migração de fonte</string>
     <string name="nsfw_sources">Conteúdo 18+ (NSFW)</string>
     <string name="does_not_prevent_unofficial_nsfw">Isto não impede que extensões não oficiais ou potencialmente marcadas de forma incorreta surjam com conteúdos de NSFW (18+) dentro da aplicação.</string>
-    <string name="whats_new">Novidades</string>
     <string name="file_picker_error">Não foi encontrada nenhuma app de seleção de ficheiros</string>
     <string name="open_log">Abrir registo</string>
     <string name="backup_and_restore">Cópia de segurança e restauração</string>
@@ -601,7 +579,6 @@
     <string name="only_enable_pinned_for_migration">Ative apenas suas fontes fixadas para migração</string>
     <string name="match_enabled_sources">Corresponder às fontes ativadas</string>
     <string name="match_pinned_sources">Corresponder às fontes fixadas</string>
-    <string name="only_search_pinned_when">Pesquisar apenas fontes fixadas</string>
     <string name="delete_all_covers__not_in_library_used_">Apaga todas as capas do cache fora da sua biblioteca.
 \nAtualmente a usar: %1$s</string>
     <string name="clear_cached_covers_non_library">Limpar capas em cache fora da biblioteca</string>
@@ -628,7 +605,6 @@
     </plurals>
     <string name="doh">DNS sobre HTTPS</string>
     <string name="data_management">Gestão de dados</string>
-    <string name="not_logged_into_">Não conectado ao %1$s</string>
     <string name="restore_error">Falha ao restaurar backup</string>
     <string name="starting_screen">Ecrã inicial</string>
     <string name="hides_on_scroll">Ocultar ao deslizar</string>
@@ -637,7 +613,6 @@
     <string name="last_used_library_recents">Último usado (Biblioteca ou Recentes)</string>
     <string name="white_theme">Branco Puro</string>
     <string name="flat_lime">Giz de Lima</string>
-    <string name="hot_pink">Rosa Choque</string>
     <string name="spring_blossom">Flor da Primavera</string>
     <string name="midnight_dusk">Aurora-da-noite</string>
     <string name="pauses_reading_history">Pausa o histórico de leitura</string>
@@ -703,12 +678,7 @@
     <string name="reset_cover">Redefinir capa</string>
     <string name="reset_tags">Redefinir tags</string>
     <string name="clear_tags">Limpar tags</string>
-    <string name="oldest_first">Do antigo ao recente</string>
-    <string name="newest_first">Do recente ao antigo</string>
-    <string name="sort_by_chapter_number">Ordenar por número de capítulo</string>
-    <string name="sort_by_source_s_order">Ordenar por ordem da fonte</string>
     <string name="hide_chapter_titles">Ocultar títulos de capítulos</string>
-    <string name="show_read_chapters">Mostrar capítulos lidos</string>
     <string name="show_unread_chapters">Mostrar capítulos não lidos</string>
     <string name="show_downloaded_chapters">Mostrar capítulos descarregados</string>
     <string name="show_bookmarked_chapters">Mostrar capítulos favoritos</string>
@@ -752,8 +722,6 @@
     <string name="smart_based_on_page">Inteligente (baseado na página)</string>
     <string name="locked_landscape">Paisagem bloqueado</string>
     <string name="locked_portrait">Retrato bloqueado</string>
-    <string name="switch_to_single">Mudar para página única</string>
-    <string name="switch_to_double">Mudar para páginas duplas</string>
     <string name="single_page">Página única</string>
     <string name="double_pages">Páginas duplas</string>
     <string name="smart_by_theme">Inteligente (por tema)</string>
@@ -773,7 +741,6 @@
     <string name="save_first_page">Salvar primeira página</string>
     <string name="share_first_page">Compartilhar primeira página</string>
     <string name="set_first_page_as_cover">Definir primeira página como capa</string>
-    <string name="webtoon_style">estilo webtoon</string>
     <string name="reading_">Lendo %1$s</string>
     <string name="changing_will_reset_reading_mode">Mudar isto redefinirá o modo de leitura para esta série</string>
     <string name="reading_mode">Modo de leitura</string>
@@ -944,7 +911,6 @@
     <string name="log_in">Conecte-se</string>
     <string name="keep_in_">Manter em %1$s</string>
     <string name="remove_from_">Remover de %1$s</string>
-    <string name="classic_blue">Azul clássico</string>
     <string name="on_hiatus">Em hiato</string>
     <string name="enhanced_services">Serviços melhorados</string>
     <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de rastreamento. Defina o rastreamento para entradas individuais de manga no seu botão de rastreamento.</string>
@@ -989,7 +955,6 @@
     <string name="pref_update_only_completely_read">Com capítulo(s) não lidos</string>
     <string name="pref_update_only_non_completed">Com estado \'\'Terminado\'\'</string>
     <string name="pref_update_only_started">Que não começaram a ser lidos</string>
-    <string name="pref_update_only_completely_read_summary">Apenas atualizar série se não houver capítulos não lidos (lido completamente)</string>
     <string name="pref_clear_webview_data">Limpar dados do WebView</string>
     <string name="webview_data_deleted">Dados do WebView limpos</string>
     <string name="most_entries">Mais títulos</string>
@@ -1007,7 +972,6 @@
     <string name="navigate_pan">Navegue para mover</string>
     <string name="pref_manage_notifications">Gerir notificações</string>
     <string name="battery_not_low">Bateria não fraca</string>
-    <string name="faq_and_guides">Perguntas frequentes e Guias</string>
     <string name="secure_screen_summary">Ecrã seguro esconde os conteúdos da app durante a troca de apps e impedir capturas de ecrã</string>
     <string name="pref_hide_threshold">Sensibilidade para ocultar menu ao deslocar</string>
     <string name="pref_highest">Mais alta</string>
@@ -1019,7 +983,6 @@
     <string name="split_tall_images">Dividir Imagens altas</string>
     <string name="split_tall_images_summary">Melhora o desempenho do leitor</string>
     <string name="tap_zones">Zonas de toque</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="loader_rar5_error">O formato RARv5 não é suportado</string>
     <string name="downloaded_chapters">Capítulos transferidos</string>
     <string name="auto_download_while_reading">Transferência automática durante leitura</string>
@@ -1090,7 +1053,6 @@
     <string name="learn_why">Aprenda porquê</string>
     <string name="must_view_details_before_migration">Os detalhes desta entrada devem ser vistos antes de ser capaz de migrar</string>
     <string name="not_rated">Não avaliados</string>
-    <string name="view_all">Veja todos</string>
     <string name="skipped_reason_not_always_update">Ignorado porque a série não requer atualizações</string>
     <string name="error_user_agent_string_invalid">Valor de user agent inválido</string>
     <string name="allow_deleting_bookmarked_chapters">Permitir a eliminação de capítulos marcados</string>

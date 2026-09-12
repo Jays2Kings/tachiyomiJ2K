@@ -30,7 +30,6 @@
     <string name="add">Legg til</string>
     <string name="edit_categories">Rediger kategorier</string>
     <string name="move_to_categories">Flytt til kategorier</string>
-    <string name="start">Start</string>
     <string name="stop">Stopp</string>
     <string name="pause">Pause</string>
     <string name="clear">Tøm</string>
@@ -70,7 +69,6 @@
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Lading</string>
     <string name="dark">Mørk drakt</string>
-    <string name="amoled_black">AMOLED-drakt</string>
     <string name="language">Språk</string>
     <string name="system_default">Systemforvalg</string>
     <string name="default_category">Standard kategori</string>
@@ -79,7 +77,6 @@
     <string name="installing">Installerer</string>
     <string name="installed">Installert</string>
     <string name="trust">Tillit</string>
-    <string name="untrusted">Ubetrodd</string>
     <string name="uninstall">Avinstaller</string>
     <string name="untrusted_extension">Ubetrodd utvidelse</string>
     <string name="version_">Versjon: %1$s</string>
@@ -91,11 +88,8 @@
     <string name="tracking">Sporing</string>
     <string name="open_in_webview">Nettvisning</string>
     <string name="library_update_frequency">Frekvens for oppdatering av bibliotek</string>
-    <string name="categories_to_include_in_global_update">Kategorier inkludert i global oppdatering</string>
     <string name="library_update_restriction">Restriksjoner for oppdatering av bibliotek</string>
-    <string name="library_update_restriction_summary">Kun oppdater når disse vilkårene oppfylles</string>
     <string name="app_theme">Programdrakt</string>
-    <string name="true_32bit_color">32-biters fargerom</string>
     <string name="crop_borders">Beskjær kanter</string>
     <string name="use_custom_brightness">Bruk egendefinert lysstyrke</string>
     <string name="use_custom_color_filter">Bruk egendefinert fargefilter</string>
@@ -126,7 +120,6 @@
     <string name="fast">Rask</string>
     <string name="rotation">Rotasjon</string>
     <string name="free">Fri</string>
-    <string name="lock">Låst</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -142,9 +135,7 @@
     <string name="fourth_to_last">Fjerde siste kapittel</string>
     <string name="fifth_to_last">Femte siste kapittel</string>
     <string name="download_new_chapters">Last ned nye kapitler</string>
-    <string name="categories_to_include_in_download">Kategorier å ta med i nedlastning</string>
     <string name="services">Tjenester</string>
-    <string name="backup">Sikkerhetskopier</string>
     <string name="create_backup">Opprett sikkerhetskopi</string>
     <string name="can_be_used_to_restore">Kan brukes til å gjenopprette nåværende bibliotek</string>
     <string name="restore_backup">Gjenopprett sikkerhetskopi</string>
@@ -254,7 +245,6 @@
     <string name="searching_for_updates">Ser etter oppdateringer</string>
     <string name="download_complete">Nedlasting ferdig</string>
     <string name="download_error">Feil ved nedlasting</string>
-    <string name="update_available">Oppdatering tilgjengelig</string>
     <string name="cover_of_image">Omslag til manga</string>
     <string name="no_recent_chapters">Ingen nylige kapittel</string>
     <string name="no_recently_read_manga">Ingen nylig lest manga</string>
@@ -285,15 +275,9 @@
         <item quantity="one">Utvidelsesoppdatering tilgjengelig</item>
         <item quantity="other">%d utvidelsesoppdateringer tilgjengelige</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Reduserer sjattering, men koster ytelse</string>
     <string name="skip_filtered_chapters">Hopp over filtrerte kapittel</string>
     <string name="continuous_vertical">Kontinuerlig loddrett</string>
     <string name="always_show_chapter_transition">Alltid vis kapittelovergang</string>
-    <string name="webtoon_side_padding_0">Ingen</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="remove_from_library">Fjern fra bibliotek</string>
     <string name="add_tracking">Legg til sporing</string>
     <string name="copy_value">Kopier</string>
@@ -303,7 +287,6 @@
     <string name="backup_failed">Sikkerhetskopiering mislyktes</string>
     <string name="disable_battery_optimization">Deaktiver batterioptimalisering</string>
     <string name="battery_optimization_disabled">Batterioptimalisering er allerede deaktivert</string>
-    <string name="pref_global_search">Globalt søk</string>
     <string name="website">Nettside</string>
     <string name="open_source_licenses">Friprog-lisenser</string>
     <string name="email">E-postadresse</string>
@@ -325,7 +308,6 @@
     <string name="unpin">Opphev festin</string>
     <string name="view_chapters">Vis kapitler</string>
     <string name="open_log">Åpne logg</string>
-    <string name="no_chapters_error">Fant ingen kapitler</string>
     <string name="restore_missing_sources">Manglende kilder:</string>
     <string name="restoring_backup_canceled">Avbrutt gjenoppretting</string>
     <string name="restore_duration">%02d min, %02d sek</string>
@@ -333,7 +315,6 @@
         <item quantity="one">Gjort på %1$s med %2$s feil</item>
         <item quantity="other">Gjort på %1$s med %2$s feil</item>
     </plurals>
-    <string name="whats_new">Hva er nytt</string>
     <string name="badges">merker</string>
     <string name="last_used">Sist brukt</string>
     <string name="nsfw_short">18+</string>
@@ -357,8 +338,6 @@
     <string name="file_picker_error">Ingen app for filvelging funnet</string>
     <string name="myanimelist_relogin">Vennligst logg inn på MAL igjen</string>
     <string name="crash_log_saved">Feillogger lagret</string>
-    <string name="invalid_backup_file_type">Ugyldig backup filtype: %1$s
-\nDen burde ende med .proto.gz eller .json.</string>
     <string name="edge_nav">Kant</string>
     <string name="kindlish_nav">Kindle-basert</string>
     <string name="l_nav">L-formet</string>
@@ -556,7 +535,6 @@
     <string name="only_enable_pinned_for_migration">Kun skru på dine festede kilder for flytting</string>
     <string name="match_enabled_sources">Jamfør mot påskrudde kilder</string>
     <string name="match_pinned_sources">Jamfør mot festede kilder</string>
-    <string name="only_search_pinned_when">Kun søk i festede kilder</string>
     <string name="some_extensions_may_not_update">Noen utvidelser kan kanskje ikke oppdateres automatisk hvis de ble installert utenfor programmet</string>
     <string name="notify_extension_updated">Varsle om oppdaterte utvidelser</string>
     <string name="auto_update_extensions">Oppdater utvidelser automatisk</string>
@@ -733,12 +711,7 @@
     <string name="reset_tags">Tilbakestill etiketter</string>
     <string name="clear_tags">Tøm etiketter</string>
     <string name="add_tag">Legg til etikett</string>
-    <string name="oldest_first">Eldste til nyeste</string>
-    <string name="newest_first">Nyeste til eldste</string>
-    <string name="sort_by_chapter_number">Sorter etter kapittelnummer</string>
-    <string name="sort_by_source_s_order">Sorter etter kildens rekkefølge</string>
     <string name="hide_chapter_titles">Skjul kapitteltitler</string>
-    <string name="show_read_chapters">Vis leste kapitler</string>
     <string name="show_unread_chapters">Vis uleste kapitler</string>
     <string name="show_downloaded_chapters">Vis nedlastede kapitler</string>
     <string name="show_bookmarked_chapters">Vis bokmerkede kapitler</string>
@@ -770,8 +743,6 @@
     <string name="smart_based_on_page">Smart (basert på side)</string>
     <string name="locked_landscape">Låst liggende</string>
     <string name="locked_portrait">Låst stående</string>
-    <string name="switch_to_single">Bytt til enkeltsidig</string>
-    <string name="switch_to_double">Bytt til dobbelsider</string>
     <string name="single_page">Enkeltsidig</string>
     <string name="reading_">Leser %1$s</string>
     <string name="pages_">Sider %1$s</string>
@@ -813,7 +784,6 @@
     <string name="includes_recently_read_updated_added">Inkluderer nylig leste, oppdaterte, og tillagte serier</string>
     <string name="pressing_back_to_start">Trykk tilbake til startskjermen</string>
     <string name="flat_lime">Flat lime</string>
-    <string name="hot_pink">Heit rosa</string>
     <string name="spring_blossom">Vårblomstring</string>
     <string name="midnight_dusk">Midnattsskumring</string>
     <string name="remove_previous_tracker">Fjern forrige sporer\?</string>
@@ -832,7 +802,6 @@
     <string name="crop_borders_paged">Beskjær kantlinjer (sideinndelt)</string>
     <string name="split_double_pages_portrait">Del opp dobbeltsider i stående sideretning</string>
     <string name="page_preload_amount">Antall forhåndsinnlastede sider</string>
-    <string name="webtoon_style">nett-tegneseriestil</string>
     <string name="changing_will_reset_reading_mode">Endring av dette vil tilbakestille lesemodus for denne serien</string>
     <string name="updating_extensions">Oppdatering av utvidelser</string>
     <string name="some_extensions_may_prompt">Noen utvidelser kan fremdeles forespørre installasjon først.</string>
@@ -852,7 +821,6 @@
     <string name="hide_start_reading_button">Skjul «Begynn å lese»-knapp</string>
     <string name="search_globally">Søk etter «%1$s» globalt</string>
     <string name="category_hopper_long_press">Langtrykkshandling for kategorihopper</string>
-    <string name="not_logged_into_">Ikke innlogget i %1$s</string>
     <string name="teal_ocean">Grønnblått hav</string>
     <string name="yotsuba">Yotsuba</string>
     <string name="a_brighter_you">Et bedre deg (dynamisk)</string>
@@ -894,7 +862,6 @@
     <string name="show_in_sources_and_extensions">Vis i kilder og utvidelseslister</string>
     <string name="ext_installer_shizuku_stopped">Shizuku kjører ikke</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Installer og start Shizuku for å bruke det som utvidelsesinstallatør.</string>
-    <string name="classic_blue">Klassisk blå</string>
     <string name="save_chapters_as_cbz">Lagre som CBZ-arkiv</string>
     <string name="every_3_days">Hver 3. dag</string>
     <string name="publishing_finished">Ferdig publisert</string>
@@ -944,14 +911,12 @@
     <string name="backup_info">Automatiske sikkerhetskopier anbefales sterkt. Du bør oppbevare flere kopier andre steder også.</string>
     <string name="pref_manage_notifications">Håndter merknader</string>
     <string name="battery_not_low">Batteri er ikke lavt</string>
-    <string name="faq_and_guides">FAQ og guider</string>
     <string name="secure_screen_summary">Sikker skjerm skjuler programinnhold ved bytting av programmer og blokker skjermavbildninger</string>
     <string name="pref_hide_threshold">Følsomhet for å skjule menyen når du ruller</string>
     <string name="pref_highest">Høyeste</string>
     <string name="pref_high">Høy</string>
     <string name="pref_low">Lav</string>
     <string name="pref_lowest">Laveste</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Last ned kapitler</string>
     <string name="tap_zones">Navigasjonsoppsett</string>
     <string name="navigate_pan">Naviger til panorering</string>
@@ -1005,7 +970,6 @@
     <string name="chapters_read">Leste kapitler</string>
     <string name="not_rated">Ikke vurdert</string>
     <string name="learn_why">Lær hvorfor</string>
-    <string name="view_all">Vis alle</string>
     <string name="downloads_swipe_tutorial">Nedlastinger kan avbrytes ved å sveipe dem bort
 \nSveip for å fjerne dette tipset</string>
     <string name="length">Lengde</string>
@@ -1045,7 +1009,6 @@
     <string name="by_day">Hver dag</string>
     <string name="all_read_manga">Alle leste manga</string>
     <string name="statistics_details">Statistikkdetaljer</string>
-    <string name="pref_update_only_completely_read_summary">Kun oppdater manga hvis det ikke er noen uleste kapitler igjen (helt gjennomlest)</string>
     <string name="language_badge">Språkskilt</string>
     <string name="no_data_for_filters">Fant ingen data for nåværende filtre</string>
     <string name="by_series">Etter årgang</string>

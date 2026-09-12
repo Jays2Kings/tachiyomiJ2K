@@ -50,10 +50,6 @@
     <string name="language">ଭାଷା</string>
     <string name="kindlish_nav">Kindle ଭଳିଆ</string>
     <string name="edge_nav">କଡ଼</string>
-    <string name="webtoon_side_padding_10">୧୦%</string>
-    <string name="webtoon_side_padding_15">୧୫%</string>
-    <string name="webtoon_side_padding_20">୨୦%</string>
-    <string name="webtoon_side_padding_25">୨୫%</string>
     <string name="services">ସେବା</string>
     <string name="restore_duration">%02d ମି, %02d ସେ</string>
     <plurals name="restore_completed_message">
@@ -113,10 +109,8 @@
     <string name="descending">ଅବରୋହଣ</string>
     <string name="tap_to_learn_more">ଅଧିକ ଜାଣିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
     <string name="tap_to_see_details">ବିବରଣୀ ଦେଖିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
-    <string name="webtoon_side_padding_5">୫%</string>
     <string name="stats">ପରିସଂଖ୍ୟାନ</string>
     <string name="backup_and_restore">ବ୍ୟାକଅପ୍ ଓ ପୁନରୁଦ୍ଧାର</string>
-    <string name="backup">ବ୍ୟାକଅପ୍</string>
     <string name="automatic">ସ୍ୱଚାଳିତ</string>
     <string name="statistics_details">ପରିସଂଖ୍ୟାନ ବିବରଣୀ</string>
     <string name="auto_refresh_covers">ମଲାଟଗୁଡ଼ିକୁ ସ୍ୱଚାଳିତ ଭାବେ ସତେଜ କରାଯାଉ</string>

@@ -30,7 +30,6 @@
     <string name="chapters_removed">Boqonnaawoni haqamaniiru.</string>
     <string name="chapter_not_found">Boqonnaan hin argamne</string>
     <string name="local_invalid_format">Akkaataa boqonnaa sirrii hin taane</string>
-    <string name="no_chapters_error">Boqonnaawwan hin argamne</string>
     <string name="no_pages_found">Fuulli hin argamne</string>
     <string name="remove_all_downloads">Kan bu\'aan hunda balleessuu\?</string>
     <string name="by_chapter_number">Lakkoofsa boqonnaatiin</string>
@@ -77,14 +76,12 @@
     <string name="category_with_name_exists">Ramaddiin maqaa sana qabu duruu jira!</string>
     <string name="category_cannot_be_blank">Maqaan ramaddii duwwaa ta\'uu hin danda\'u</string>
     <string name="sort">Secca\'uu</string>
-    <string name="start">Eegali</string>
     <string name="stop">Dhaabi</string>
     <string name="tap_to_see_details">Bal\'ina isaa ilaaluuf tuqi</string>
     <string name="tap_to_learn_more">Caalaatti baruuf tuqi</string>
     <string name="top">Gubbaa</string>
     <string name="undo">Deebisii</string>
     <string name="use_default">Durtii fayyadami</string>
-    <string name="view_all">Hundaa ilaali</string>
     <string name="view_chapters">Boqonnaawwan ilaali</string>
     <string name="add_categories">Ramaddiiwwan itti dabali</string>
     <string name="warning">Akeekkachiisa</string>

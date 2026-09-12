@@ -24,7 +24,6 @@
     <string name="add">Добави</string>
     <string name="edit_categories">Редактирай категории</string>
     <string name="move_to_categories">Премести в категории</string>
-    <string name="start">Започни</string>
     <string name="stop">Спри</string>
     <string name="pause">Паузирай</string>
     <string name="clear">Изчисти</string>
@@ -60,15 +59,12 @@
     <string name="every_12_hours">На всеки 12 часа</string>
     <string name="daily">Ежедневно</string>
     <string name="every_2_days">През ден</string>
-    <string name="categories_to_include_in_global_update">Категории, включени в глобалното обновяване</string>
     <string name="all">Всички</string>
     <string name="library_update_restriction">Ограничения на устройството</string>
-    <string name="library_update_restriction_summary">Обновявай само когато дадените условия са спазени</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">На зарядно устройство</string>
     <string name="app_theme">Тема на приложението</string>
     <string name="dark">Тъмна тема</string>
-    <string name="amoled_black">AMOLED тема</string>
     <string name="language">Език</string>
     <string name="system_default">По подразбиране</string>
     <!-- Reader section -->
@@ -100,7 +96,6 @@
     <string name="center">Центрирано</string>
     <string name="rotation">Въртене</string>
     <string name="free">Включено</string>
-    <string name="lock">Заключено</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -185,8 +180,6 @@
     <string name="next_chapter_not_found">Не беше намерена следваща глава</string>
     <string name="decode_image_error">Неуспешно декодиране на изображението</string>
     <string name="use_image_as_cover">Желаете ли да използвате това изображение за корица?</string>
-    <!-- Backup fragment -->
-    <string name="backup">Резервно копие</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
     <!-- Library update service notifications -->
@@ -204,7 +197,6 @@
     <!--UpdateCheck Notifications-->
     <string name="download_complete">Изтегляне завършено</string>
     <string name="download_error">Грешка при изтегляне</string>
-    <string name="update_available">Налична актуализация</string>
     <!--Content Description-->
     <string name="cover_of_image">Корица на поредицата</string>
     <!-- Information Text -->
@@ -229,7 +221,6 @@
     <string name="always_ask">Питай всеки път</string>
     <string name="crop_borders">Изрязвай границите</string>
     <string name="invert_volume_keys">Обърнати бутони за звука</string>
-    <string name="categories_to_include_in_download">Категории, включени при изтегляне</string>
     <string name="create_backup">Създай резервно копие</string>
     <string name="can_be_used_to_restore">Може да се използва за възстановяване на текущата библиотека</string>
     <string name="restore_backup">Възстанови резервно копие</string>
@@ -260,7 +251,6 @@
     <string name="installing">Инсталира се</string>
     <string name="installed">Инсталирани</string>
     <string name="trust">Потвърдени</string>
-    <string name="untrusted">Непотвърдени</string>
     <string name="uninstall">Деинсталирай</string>
     <string name="untrusted_extension">Непотвърдено разширение</string>
     <string name="untrusted_extension_message">Злонамерените разширения могат да виждат всичката запазена информация за вход и да изпълняват неблагонадежден код.
@@ -291,7 +281,6 @@
     <string name="loading_pages">Зареждане на страниците…</string>
     <string name="failed_to_load_pages_">Не бяха заредени успешно: %1$s страници</string>
     <string name="open_in_webview">Отвори онлайн</string>
-    <string name="true_32bit_color">32-битови цветове</string>
     <string name="skip_read_chapters">Пропускай прочетените глави</string>
     <string name="color_filter_blend_mode">Режим на цветовия филтър</string>
     <string name="overlay">Наложен</string>
@@ -316,7 +305,6 @@
         <item quantity="one">1 наличен ъпдейт за разширение</item>
         <item quantity="other">%d налични ъпдейта за разширения</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Намалява бандинга, но се отразява на производителността</string>
     <string name="skip_filtered_chapters">Пропускай филтрирани глави</string>
     <string name="continuous_vertical">Безкраен вертикален изглед</string>
     <string name="paged">Страница</string>
@@ -324,11 +312,6 @@
     <string name="view_chapters">Преглед на глави</string>
     <string name="always_show_chapter_transition">Винаги показвай прехода между главите</string>
     <string name="pref_webtoon_side_padding">Странично разстояние</string>
-    <string name="webtoon_side_padding_0">Никакво</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Глави %1$s</string>
     <string name="remove_from_library">Премахни от библиотеката</string>
     <string name="refresh_tracking">Обнови проследяването</string>
@@ -340,7 +323,6 @@
     <string name="network">Мрежа</string>
     <string name="disable_battery_optimization">Изключи оптимизация на батерията</string>
     <string name="battery_optimization_disabled">Оптимизацията на батерията е изключена</string>
-    <string name="pref_global_search">Глобално търсене</string>
     <string name="check_for_extension_updates">Проверявай за ъпдейти на разширенията</string>
     <string name="website">Уебсайт</string>
     <string name="open_source_licenses">Лицензи за отворен код</string>
@@ -366,9 +348,7 @@
     <string name="reorder">Пренареди</string>
     <string name="tracked">Следени</string>
     <string name="default_reading_mode">Режим на четене по подразбиране</string>
-    <string name="no_chapters_error">Не са намерени глави</string>
     <string name="does_not_prevent_unofficial_nsfw">Тази настройка няма да спре неофициални или потенциално неправилно маркирани разширения да позволяват достъп до съдържание за възрастни (18+) в апликацията.</string>
-    <string name="whats_new">Какво е новото</string>
     <string name="badges">Значки</string>
     <string name="last_used">Последно използвани</string>
     <string name="nsfw_short">18+</string>
@@ -450,8 +430,6 @@
     </plurals>
     <string name="l_nav">L-образно</string>
     <string name="kindlish_nav">Kindle-подобно</string>
-    <string name="invalid_backup_file_type">Невалиден тип на файла: %1$s
-\nТрябва да завършва на .proto.gz или .json.</string>
     <string name="requires_app_restart">Изисква рестартиране, за да влезе в сила</string>
     <string name="about_dont_kill_my_app">Някои производители ограничават приложенията, за да убият задноплановите услуги. Следният уебсайт съдържа информация за разрешаването на проблема.</string>
     <string name="error_sharing_cover">Грешка при споделянето на корицата</string>
@@ -538,7 +516,6 @@
     <string name="tracking_status">Статус на проследяване</string>
     <string name="drag_and_drop">Плъзнете и пуснете</string>
     <string name="display_options">Опции за показване</string>
-    <string name="show_read_chapters">Покажи прочетените глави</string>
     <string name="start_reading_chapter_">Започнете да четете глава %1$s</string>
     <string name="continue_reading">Продължете да четете</string>
     <string name="spring_blossom">Пролетен цъфтеж</string>
@@ -588,7 +565,6 @@
     <string name="hide_unread_badges">Скриване на непрочетени значки</string>
     <string name="show_unread_count">Покажете броя на непрочетените</string>
     <string name="smart_by_theme">Интелигентен (по тема)</string>
-    <string name="sort_by_source_s_order">Сортиране по реда на източника\'</string>
     <string name="can_be_found_in_library_filters">Може да се намери и чрез разширяване на филтрите на библиотеката</string>
     <string name="backup_in_progress">Архивирането вече е в ход</string>
     <string name="no_recent_read_updated_manga">Няма наскоро прочетена или актуализирана поредица</string>
@@ -597,7 +573,6 @@
     <string name="extensions_miui_warning">Оптимизацията на MIUI трябва да е деактивирана, за да се инсталират разширения.</string>
     <string name="reader_settings">Настройки на четеца</string>
     <string name="reading_">Четене на %1$s</string>
-    <string name="webtoon_style">като уебтуун</string>
     <string name="save_combined_pages">Запазване на комбинирани страници</string>
     <string name="page_preload_amount">Количество на предварително зареждане на страницата</string>
     <string name="set_second_page_as_cover">Задайте втората страница като корица</string>
@@ -639,8 +614,6 @@
     <string name="split_double_pages">Разделяне на двойни страници</string>
     <string name="double_pages">Двойни страници</string>
     <string name="single_page">Единична страница</string>
-    <string name="switch_to_double">Превключване към двойни страници</string>
-    <string name="switch_to_single">Преминаване към единична страница</string>
     <string name="smart_based_on_page">Смарт (въз основа на страница)</string>
     <string name="smart_based_on_page_and_theme">Смарт (в зависимост от страницата и темата)</string>
     <string name="if_disabled_transition_will_skip">Ако е деактивирана, преходната страница ще бъде пропусната, ако се зареди следващата глава</string>
@@ -659,14 +632,11 @@
     <string name="add_x_to_library">Добавяне на %1$s към библиотеката\?</string>
     <string name="all_but_bookmarked_chapters">Всички глави, освен тези с отметки</string>
     <string name="hide_chapter_titles">Скриване на заглавията на глави</string>
-    <string name="sort_by_chapter_number">Сортиране по номер на главата</string>
     <string name="show_bookmarked_chapters">Показване на глави с отметки</string>
     <string name="show_downloaded_chapters">Покажи изтеглените глави</string>
     <string name="show_unread_chapters">Покажи непрочетени глави</string>
-    <string name="newest_first">От най-новите към най-старите</string>
     <string name="reset_tags">Нулиране на тагове</string>
     <string name="reset_cover">Нулиране на корицата</string>
-    <string name="oldest_first">Най-старите към най-новите</string>
     <string name="add_tag">Добавяне на етикет</string>
     <string name="clear_tags">Изчистване на етикети</string>
     <string name="select_an_entry">Избор на запис</string>
@@ -708,7 +678,6 @@
     </plurals>
     <string name="turn_on_">Включване на %s</string>
     <string name="turn_off_">Изключване на %s</string>
-    <string name="classic_blue">Класическо синьо</string>
     <string name="starting_screen">Начален екран</string>
     <string name="back_to_start">Обратно към началото</string>
     <string name="pressing_back_to_start">Натискане за връщане към началния екран</string>
@@ -777,7 +746,6 @@
         <item quantity="one">%1$d страница</item>
         <item quantity="other">%1$d страници</item>
     </plurals>
-    <string name="hot_pink">Горещо розово</string>
     <string name="white_theme">Чисто бяло</string>
     <string name="add_edit_categories">Добавяне/Редактиране на категории</string>
     <string name="scanlators">Сканлатори</string>
@@ -875,7 +843,6 @@
     <string name="tag">Етикет</string>
     <string name="use_default">Използване по подразбиране</string>
     <string name="restore_in_progress">Възстановяването е в ход</string>
-    <string name="not_logged_into_">Не сте влезли в %1$s</string>
     <string name="notify_extension_updated">Разширението за уведомяване е актуализирано</string>
     <string name="not_downloaded">Не е изтеглен</string>
     <string name="always_keep">Винаги пазете</string>
@@ -905,7 +872,6 @@
     <string name="mark_range_as_read">Отбележете маркираните глави като прочетени</string>
     <string name="mark_range_as_unread">Отбележете маркираните глави като прочетени</string>
     <string name="log_in">Вход</string>
-    <string name="only_search_pinned_when">Търсете само фиксирани източници</string>
     <string name="whats_new_this_release">Какво е новото в тази версия</string>
     <string name="restore_error">Неуспешно възстановяване на резервно копие</string>
     <string name="clean_read_manga_not_in_library">Изчисти сериите, които не са в библиотеката</string>
@@ -949,7 +915,6 @@
     <string name="clear_history_confirmation">Напълно ли сте сигурен\? Всичката ви история ще бъде загубена.</string>
     <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места.</string>
     <string name="pref_manage_notifications">Уведомления</string>
-    <string name="faq_and_guides">Често задавани въпроси и ръководства</string>
     <string name="secure_screen_summary">Скрий съдържанието на приложението и блокирай снимките на екрана</string>
     <string name="pref_hide_threshold">Чувствителност за скриване на менюто при превъртане</string>
     <string name="pref_highest">Най-висока</string>
@@ -962,7 +927,6 @@
     <string name="pref_library_update_manga_restriction">Ограничения за актуализиране на библиотеката</string>
     <string name="pref_update_only_completely_read">С непрочетени глави</string>
     <string name="tap_to_see_details">Вижте пълните подробности за грешката</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="auto_download_while_reading">Автоматично изтегляне при четене</string>
     <string name="on_hiatus">В хиатус</string>
     <string name="cancelled">Отменена</string>
@@ -1016,7 +980,6 @@
     <string name="trackers">Тракери</string>
     <string name="language_badge">Езикови значки</string>
     <string name="new_beta_version_available">Нова бета версия е налична!</string>
-    <string name="pref_update_only_completely_read_summary">Обновявай серии само ако няма непрочетена глава (напълно прочетен)</string>
     <string name="skip_dupe_chapters">Пропускане на дублиращи се глави</string>
     <string name="by_day">По ден</string>
     <string name="ext_installer_summary">Позволява инсталиране на разширения без покани от потребителя и позволява автоматични актуализации за устройства под Android 12</string>
@@ -1080,7 +1043,6 @@
     <string name="clear_db_exclude_read">Съхранявайте записи с прочетени глави</string>
     <string name="manga_score_distribution">Разпределение на оценката</string>
     <string name="view_detailed_statistics">Преглед на подробна статистика</string>
-    <string name="view_all">Преглед на всички</string>
     <string name="try_new_features">Изпробвайте нови функции, преди да бъдат официално пуснати. Бета версиите може да са нестабилни и се предоставят, за да се даде обратна връзка на разработчика.</string>
     <string name="stats">Статистики</string>
     <string name="read_duration">Продължителност на четене</string>

@@ -50,7 +50,6 @@
     <string name="hide_notification_content">సూచన విషయములను దాయుము</string>
     <string name="security">భద్రత</string>
     <string name="backup_and_restore">భద్రపరచడము మరియు పునరుద్ధారణ</string>
-    <string name="pref_global_search">ప్రాపంచిక శోధన</string>
     <string name="nsfw_sources">పెద్దలకు మాత్రమే (+18) మూలాలు</string>
     <string name="show_in_sources_and_extensions">మూలాలు మరియు పొడిగింపుల జాబితాలలో చూపుము</string>
     <string name="downloads">దిగుమతులు</string>
@@ -98,7 +97,6 @@
     <string name="select_all">అన్నిటినీ ఎంచుకోండి</string>
     <string name="share">పంచుకొనుము</string>
     <string name="sort">సర్దుము</string>
-    <string name="start">మొదలు పెట్టుము</string>
     <string name="stop">ఆపుము</string>
     <string name="top">పైన</string>
     <string name="view_chapters">అధ్యాయాములను చూడుము</string>
@@ -108,7 +106,6 @@
     <string name="descending">అవరోహికము</string>
     <string name="select_inverse">ఎంపికలను విపరీతమును చేయుము</string>
     <string name="pref_manage_notifications">సూచనలను నిర్వహించుము</string>
-    <string name="faq_and_guides">తరుచుగా అడిగిన ప్రశ్నలు మరియు మార్గదర్శకములు</string>
     <string name="downloaded_chapters">దిగుమతి చేసిన అధ్యాయములు</string>
     <string name="unpin">పిన్నును తీయుము</string>
     <string name="loading">లోడ్ అవుతుంది…</string>
@@ -141,10 +138,7 @@
     <string name="grouped">సమూహం చేయబడింది</string>
     <string name="white">తెలుపు</string>
     <string name="black">నలుపు</string>
-    <string name="webtoon_side_padding_15">౧౫%</string>
     <string name="blue_initial">బి</string>
-    <string name="webtoon_side_padding_20">౨౦%</string>
-    <string name="webtoon_side_padding_25">౨౫%</string>
     <string name="alpha_initial">ఎ</string>
     <string name="rereading">పునఃపఠనం</string>
     <string name="network">జాలవ్యవస్థ</string>
@@ -178,7 +172,6 @@
     <string name="type">రకము</string>
     <string name="migration">వలస</string>
     <string name="auto_updates">స్వయం నవీకరణలు</string>
-    <string name="backup">భద్రపరుచుట</string>
     <string name="version">సంస్కరణ</string>
     <string name="website">జాలగూడు</string>
     <string name="password">గుప్తపదం</string>
@@ -187,10 +180,8 @@
     <string name="installing">వ్యవస్థాపిస్తోంది</string>
     <string name="installed">వ్యవస్థాపించబడింది</string>
     <string name="trust">నమ్మకం</string>
-    <string name="untrusted">నమ్మదగినది కాదు</string>
     <string name="nsfw_short">౧౮+</string>
     <string name="portrait">చిత్తరువు</string>
-    <string name="webtoon_side_padding_10">౧౦%</string>
     <string name="kindlish_nav">కిండల్ మాదిరి</string>
     <string name="none">ఏమిలేదు</string>
     <string name="horizontally">అడ్డంగా</string>
@@ -209,13 +200,11 @@
     <string name="series">సిరీస్</string>
     <string name="current_chapter">ప్రస్తుతం:</string>
     <string name="next_title">తరువాత:</string>
-    <string name="webtoon_side_padding_0">ఏదీ లేదు</string>
     <string name="weekly">వారమునకొకసారి</string>
     <string name="all">అన్ని</string>
     <string name="automatic">స్వయంచాలకంగా</string>
     <string name="hide">దాచు</string>
     <string name="keep">ఉంచు</string>
-    <string name="lock">తాళంవేయు</string>
     <string name="menu">వస్తు సూచిక</string>
     <string name="previous_title">మునుపటి:</string>
     <string name="dark">దట్టము</string>

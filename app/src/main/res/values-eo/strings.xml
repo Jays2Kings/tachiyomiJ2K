@@ -41,7 +41,6 @@
     <string name="migrate">Migri</string>
     <string name="settings">Agordoj</string>
     <string name="help">Asistado</string>
-    <string name="backup">Savkopio</string>
     <string name="website">Retejo</string>
     <string name="username">Uzantnomo</string>
     <string name="password">Pasvorto</string>
@@ -62,7 +61,6 @@
     <string name="installing">Instalata</string>
     <string name="installed">Instalita</string>
     <string name="trust">Fidi</string>
-    <string name="untrusted">Malfidanta</string>
     <string name="uninstall">Malinstali</string>
     <string name="version_">Versio: %1$s</string>
     <string name="language_">Lingvo: %1$s</string>
@@ -76,7 +74,6 @@
     <string name="fit_screen">Adapti al ekrano</string>
     <string name="stretch">Streĉi</string>
     <string name="original_size">Originala grando</string>
-    <string name="webtoon_side_padding_0">Neniu</string>
     <string name="daily">Ĉiutage</string>
     <string name="weekly">Ĉiusemajne</string>
     <string name="add">Aldoni</string>
@@ -120,15 +117,10 @@
     <string name="select_all">Elekti ĉiujn</string>
     <string name="share">Konigi</string>
     <string name="sort">Ordigi</string>
-    <string name="start">Komenci</string>
     <string name="stop">Halti</string>
     <string name="undo">Malfari</string>
     <string name="unpin">Depingli</string>
     <string name="browse">Foliumi</string>
-    <string name="webtoon_side_padding_25">25%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_10">10%</string>
     <string name="vertical_viewer">Vertikale</string>
     <string name="right_and_left_nav">Dekstra kaj Maldekstra</string>
     <string name="l_nav">«L» forme</string>
@@ -143,7 +135,6 @@
     <string name="completed">Finitaj</string>
     <string name="reading">Legata</string>
     <string name="add_tracking">Aldoni ŝanospuron</string>
-    <string name="no_chapters_error">Neniu ĉapitro trovita</string>
     <string name="remove_from_library">Forigi de biblioteko</string>
     <string name="unknown">Nekonata</string>
     <string name="ongoing">Okazanta</string>
@@ -151,7 +142,6 @@
     <string name="no_results_found">Neniu rezulto trovita</string>
     <string name="no_more_results">Ne pli rezultoj</string>
     <string name="unknown_error">Nekonata eraro</string>
-    <string name="whats_new">Kio novas</string>
     <string name="version">Versio</string>
     <string name="clear_database_completed">Eroj forigitaj</string>
     <string name="cache_delete_error">Eraro okazis dum viŝado de kaŝmemoro</string>
@@ -177,8 +167,6 @@
     <string name="help_translate">Helpu traduki</string>
     <string name="restoring_backup">Restaŭras savkopion</string>
     <string name="restore_completed">Restaŭrado kompletita</string>
-    <string name="invalid_backup_file_type">Nevalida savkopia dosierspeco: %1$s
-\nĜi devas fini kun .proto.gz aŭ .json.</string>
     <string name="untrusted_extension">Malfidinda kromaĵo</string>
     <string name="charging">Ŝarĝas</string>
     <string name="lock_when_idle">Ŝlosi kiam senokupas</string>
@@ -272,7 +260,6 @@
     <string name="animate_page_transitions">Animi transpaso de paĝoj</string>
     <string name="double_tap_anim_speed">Duobligi animacian rapidecon</string>
     <string name="show_page_number">Montri numero de paĝo</string>
-    <string name="true_32bit_color">32-bitaj koloroj</string>
     <string name="overlay">Plustavolo</string>
     <string name="keep_screen_on">Ne malŝalti ekranon</string>
     <string name="skip_read_chapters">Preterpasi ĉapitrojn markitajn kiel legitaj</string>
@@ -314,7 +301,6 @@
     <string name="clear_cookies">Viŝi kuketojn</string>
     <string name="clear_database">Viŝi datumbazon</string>
     <string name="disable_battery_optimization">Malŝalti bateria optimumigo</string>
-    <string name="pref_global_search">Serĉi ĉie</string>
     <string name="check_for_extension_updates">Kontroli ĉu estas kromaĵaj ĝisdatigoj</string>
     <string name="nsfw_sources">MPL/NSFW (18+) fontoj</string>
     <string name="show_in_sources_and_extensions">Montri en fontlisto kaj kromaĵlisto</string>

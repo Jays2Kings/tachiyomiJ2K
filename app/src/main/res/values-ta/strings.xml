@@ -15,7 +15,6 @@
     <string name="chapters">அத்தியாயங்கள்</string>
     <string name="chapters_removed">அத்தியாயங்கள் அகற்றப்பட்டன.</string>
     <string name="order_by">இதன்படி வரிசைப்படுத்து</string>
-    <string name="no_chapters_error">அத்தியாயங்கள் எதுவும் இல்லை</string>
     <string name="loader_rar5_error">RARv5 வடிவம் ஆதரிக்கப்படவில்லை</string>
     <string name="no_chapters_to_delete">நீக்குவதற்கு அத்தியாயங்கள் இல்லை</string>
     <string name="by_source_order">மூலத்தின் வரிசைப்படி</string>

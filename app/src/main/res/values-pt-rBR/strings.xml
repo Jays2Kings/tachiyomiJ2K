@@ -81,7 +81,6 @@
     <!-- Updates -->
     <string name="update">Atualizar</string>
     <string name="updating_">Atualizando %1$s</string>
-    <string name="update_available">Atualização disponível</string>
     <string name="new_version_available">Nova versão disponível!</string>
     <string name="no_new_updates_available">Sem novas atualizações disponíveis</string>
     <string name="searching_for_updates">Procurando por atualizações…</string>
@@ -140,10 +139,8 @@
     <!-- Library settings -->
     <string name="library_update_frequency">Frequência de atualização da biblioteca</string>
     <string name="library_update_restriction">Restrições do dispositivo</string>
-    <string name="library_update_restriction_summary">Atualizar apenas quando as condições se cumprirem</string>
     <string name="sort_by_ignoring_articles">Ordenar ignorando artigos</string>
     <string name="when_sorting_ignore_articles">Ao ordenar em ordem alfabética, ignore artigos (a, an, the) no início dos títulos das obras</string>
-    <string name="categories_to_include_in_global_update">Categorias para incluir na atualização global</string>
     <string name="include_in_global_update">Incluir na atualização global</string>
     <string name="auto_refresh_covers">Atualizar capas automaticamente</string>
     <string name="auto_refresh_covers_summary">Atualiza as capas enquanto atualiza a biblioteca</string>
@@ -192,7 +189,6 @@
     <string name="installing">Instalando</string>
     <string name="installed">Instalada</string>
     <string name="trust">Confiar</string>
-    <string name="untrusted">Não confiável</string>
     <string name="uninstall">Desinstalar</string>
     <string name="untrusted_extension">Extensão não confiável</string>
     <string name="untrusted_extension_message">Esta extensão foi assinada com um certificado não confiável e não foi ativada.
@@ -225,7 +221,6 @@
     <string name="loading_pages">Carregando páginas…</string>
     <string name="failed_to_load_pages_">Falha ao carregar páginas: %1$s</string>
     <string name="reading_">Lendo %1$s</string>
-    <string name="webtoon_style">estilo webtoon</string>
     <!-- Reader settings -->
     <string name="fullscreen">Tela cheia</string>
     <string name="double_tap_anim_speed">Velocidade da animação de toque duplo</string>
@@ -302,12 +297,7 @@
     <string name="show_bookmarked_chapters">Mostrar capítulos favoritos</string>
     <string name="show_downloaded_chapters">Mostrar capítulos baixados</string>
     <string name="show_unread_chapters">Mostrar capítulos não lidos</string>
-    <string name="show_read_chapters">Mostrar capítulos lidos</string>
     <string name="hide_chapter_titles">Ocultar títulos de capítulos</string>
-    <string name="sort_by_source_s_order">Ordenar por ordem da fonte</string>
-    <string name="sort_by_chapter_number">Ordenar por número de capítulo</string>
-    <string name="newest_first">Do recente ao antigo</string>
-    <string name="oldest_first">Do antigo ao recente</string>
     <string name="clear_tags">Limpar tags</string>
     <string name="reset_cover">Redefinir capa</string>
     <string name="failed_to_update_cover">Erro ao atualizar a capa</string>
@@ -397,7 +387,6 @@
     <!-- General settings -->
     <string name="app_theme">Tema do aplicativo</string>
     <string name="dark">Escuro</string>
-    <string name="amoled_black">Preto AMOLED</string>
     <string name="white_theme">Branco Puro</string>
     <string name="language">Idioma</string>
     <string name="system_default">Padrão do sistema</string>
@@ -405,8 +394,6 @@
     <string name="check_for_updates">Procurar por atualizações</string>
     <string name="secure_screen">Tela segura</string>
     <string name="security">Segurança</string>
-    <!-- Backup -->
-    <string name="backup">Backup</string>
     <string name="create_backup">Criar backup</string>
     <string name="can_be_used_to_restore">Pode ser usado para restaurar a biblioteca atual</string>
     <string name="restore_backup">Restaurar backup</string>
@@ -420,7 +407,6 @@
     <string name="restore_error">Falha ao restaurar backup</string>
     <string name="what_should_backup">Do que você deseja fazer backup?</string>
     <string name="restoring_backup">Restaurando backup</string>
-    <string name="not_logged_into_">Não conectado ao %1$s</string>
     <!-- Advanced section -->
     <string name="clear_chapter_cache">Limpar cache de capítulo</string>
     <string name="used_">Total usado: %1$s</string>
@@ -457,10 +443,7 @@
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
     <string name="delete_old_covers_in_library_used_">Exclua capas e caches antigos de itens não usados em sua biblioteca que foram atualizados.
 \nAtualmente usando: %1$s</string>
-    <!-- Browse Settings -->
-    <string name="pref_global_search">Pesquisa global</string>
     <string name="check_for_extension_updates">Verifique se há atualizações de extensão</string>
-    <string name="only_search_pinned_when">Pesquisar apenas fontes fixadas</string>
     <string name="match_pinned_sources">Corresponder às fontes fixadas</string>
     <string name="match_enabled_sources">Corresponder às fontes ativadas</string>
     <string name="only_enable_pinned_for_migration">Ative apenas suas fontes fixadas
@@ -475,7 +458,6 @@
     <string name="build_time">Data de compilação</string>
     <string name="send_crash_report">Enviar relatórios de erro</string>
     <string name="helps_fix_bugs">Ajuda a corrigir eventuais erros. Não serão enviados dados sensíveis</string>
-    <string name="whats_new">O que há de novo</string>
     <string name="website">Site</string>
     <string name="open_source_licenses">Licenças de código aberto</string>
     <!-- Login dialog -->
@@ -521,7 +503,6 @@
     <string name="fourth_to_last">Quarto capítulo antes do último</string>
     <string name="fifth_to_last">Quinto capítulo antes do último</string>
     <string name="download_new_chapters">Download de novos capítulos</string>
-    <string name="categories_to_include_in_download">Categorias a serem incluídas no download</string>
     <string name="delete_removed_chapters">Excluir capítulos removidos</string>
     <string name="delete_downloaded_if_removed_online">Exclua os capítulos baixados se a fonte removê-los</string>
     <string name="ask_on_chapters_page">Excluir durante atualizações globais mas perguntar na página de capítulos</string>
@@ -580,7 +561,6 @@
     <string name="left">Esquerda</string>
     <string name="less">Menos</string>
     <string name="loading">Carregando…</string>
-    <string name="lock">Bloquear</string>
     <string name="mark_all_as_read">Marcar tudo como lido</string>
     <string name="mark_all_as_unread">Marcar tudo como não lido</string>
     <string name="mark_as_read">Marcar como lido</string>
@@ -615,7 +595,6 @@
     <string name="share">Compartilhar</string>
     <string name="sort">Classificar</string>
     <string name="sort_and_filter">Classificar &amp; Filtrar</string>
-    <string name="start">Iniciar</string>
     <string name="stop">Parar</string>
     <string name="tag">Tag</string>
     <string name="top">Início</string>
@@ -670,14 +649,11 @@
     <string name="started_reading_date">Data de início da leitura</string>
     <string name="finished_reading_date">Data de término da leitura</string>
     <string name="myanimelist_relogin">Por favor, faça login no MAL novamente</string>
-    <string name="no_chapters_error">Nenhum capítulo encontrado</string>
     <string name="badges">Selos</string>
     <string name="search_settings">Pesquisar configurações</string>
     <string name="locale">Localidade</string>
     <string name="automatic_backups">Backups automáticos</string>
     <string name="invalid_backup_file">Arquivo de backup inválido</string>
-    <string name="invalid_backup_file_type">Tipo de arquivo de backup inválido: %1$s
-\nO arquivo deve terminar com .proto.gz ou .json.</string>
     <string name="backup_has_no_manga">O backup não possui nenhum item.</string>
     <string name="restore_missing_sources">Fontes faltando:</string>
     <string name="restore_missing_trackers">Monitoradores sem login realizado:</string>
@@ -758,7 +734,6 @@
     <string name="hide_bottom_nav">Ocultar navegação inferior automaticamente</string>
     <string name="last_used_library_recents">Último usado (Biblioteca ou Recentes)</string>
     <string name="flat_lime">Neko</string>
-    <string name="hot_pink">Rosa Choque</string>
     <string name="spring_blossom">Flor da Primavera</string>
     <string name="midnight_dusk">Aurora-da-noite</string>
     <string name="pauses_reading_history">Pausa o histórico de leitura</string>
@@ -781,8 +756,6 @@
     <string name="both_axes">Ambos os eixos</string>
     <string name="vertically">Verticalmente</string>
     <string name="horizontally">Horizontalmente</string>
-    <string name="switch_to_single">Mudar para página única</string>
-    <string name="switch_to_double">Mudar para páginas duplas</string>
     <string name="single_page">Página única</string>
     <string name="double_pages">Páginas duplas</string>
     <string name="remove_crop">Remover corte</string>
@@ -956,7 +929,6 @@
     <string name="download_queue_size_warning">Aviso: grandes downloads em massa podem levar as fontes a ficarem lentas e/ou começarem a bloquear o Tachiyomi. Toque para saber mais.</string>
     <string name="every_3_days">A cada 3 dias</string>
     <string name="save_chapters_as_cbz">Salvar como arquivo CBZ</string>
-    <string name="classic_blue">Azul Clássico</string>
     <string name="scanlators">Scanlators</string>
     <string name="lime_time">Tempo de Limão</string>
     <string name="tracking_info">Sincronização unidirecional para atualizar o progresso dos capítulos nos serviços de monitoramento. Configure o monitoramento para entradas individuais a partir de seus botões de monitoramento.</string>
@@ -1009,12 +981,10 @@
     <string name="must_view_details_before_migration">A página de detalhes do título deve ser vista antes da migração</string>
     <string name="show_">Mostrar %1$s</string>
     <string name="use_staggered_grid">Usar grade intercalada</string>
-    <string name="pref_update_only_completely_read_summary">Só atualiza as obras que estão completamente lidas (sem capítulos não lidos)</string>
     <string name="update_tracking_marked_read">Atualizar monitoramento após marcar como lido</string>
     <string name="most_entries">Mostrar entradas</string>
     <string name="select_uninstalled_sources">Selecionar fontes desinstaladas</string>
     <string name="update_tracking_after_reading">Atualizar monitoramento após a leitura</string>
-    <string name="view_all">Mostrar tudo</string>
     <string name="downloads_swipe_tutorial">Downloads podem ser cancelados arrastando para os lados
 \nArraste esta notificação para dispensá-la</string>
     <string name="scoring_type_updated">Sistema de avaliação atualizado</string>
@@ -1033,7 +1003,6 @@
     <string name="download_ahead_info">Funciona somente em itens na biblioteca e se o capítulo atual e próximo já estão disponíveis offline</string>
     <string name="pref_manage_notifications">Gerenciar notificações</string>
     <string name="battery_not_low">Bateria não fraca</string>
-    <string name="faq_and_guides">FAQ e Guias</string>
     <string name="learn_why">Saiba porque</string>
     <string name="secure_screen_summary">A tela segura oculta os conteúdos do aplicativo durante a troca de aplicativos e impede capturas de tela</string>
     <string name="open_in_app">Abrir no app</string>

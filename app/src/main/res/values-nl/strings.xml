@@ -24,7 +24,6 @@
     <string name="add">Toevoegen</string>
     <string name="edit_categories">Categorieën bewerken</string>
     <string name="move_to_categories">Verplaatsen naar categorieën</string>
-    <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="pause">Pauzeer</string>
     <string name="close">Sluiten</string>
@@ -61,7 +60,6 @@
     <string name="weekly">Iedere week</string>
     <string name="all">Alles</string>
     <string name="dark">Donker thema</string>
-    <string name="amoled_black">AMOLED thema</string>
     <string name="language">Taal</string>
     <string name="system_default">Systeemstandaard</string>
     <string name="default_category">Standaard categorie</string>
@@ -90,7 +88,6 @@
     <string name="center">Midden</string>
     <string name="rotation">Rotatie</string>
     <string name="free">Vrij</string>
-    <string name="lock">Vast</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -103,7 +100,6 @@
     <string name="third_to_last">Twee-na-laatste hoofdstuk</string>
     <string name="download_new_chapters">Download nieuwe hoofdstukken</string>
     <string name="services">Diensten</string>
-    <string name="backup">Back-up</string>
     <string name="create_backup">Back-up maken</string>
     <string name="can_be_used_to_restore">Kan worden gebruikt om huidige bibliotheek terug te zetten</string>
     <string name="restore_backup">Back-up terugzetten</string>
@@ -157,7 +153,6 @@
     <string name="ignore">Negeren</string>
     <string name="no_new_updates_available">Geen nieuwe updates beschikbaar</string>
     <string name="download_complete">Download voltooid</string>
-    <string name="update_available">Update beschikbaar</string>
     <string name="cover_of_image">Omslag van de manga</string>
     <string name="no_recent_chapters">Geen recente hoofdstukken</string>
     <string name="library_is_empty_add_from_browse">De bibliotheek is leeg, manga kunnen toegevoegd worden vanuit de catalogi.</string>
@@ -168,7 +163,6 @@
     <string name="total_chapters">Aantal hoofdstukken</string>
     <string name="updates">Updates</string>
     <string name="about">Over</string>
-    <string name="library_update_restriction_summary">Update alleen wanneer de voorwaarden zijn voldaan</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Aan het opladen</string>
     <string name="app_theme">Thema</string>
@@ -195,9 +189,7 @@
     <string name="could_not_download_unexpected_error">Er is een onverwachte fout opgetreden bij het downloaden van het hoofdstuk</string>
     <string name="clear">Legen</string>
     <string name="library_update_restriction">Apparaatbeperkingen</string>
-    <string name="categories_to_include_in_global_update">Categorieën om op te nemen in globale update</string>
     <string name="keep_screen_on">Automatisch dimmen uitschakelen</string>
-    <string name="categories_to_include_in_download">Categorieën om op te nemen in de download</string>
     <string name="clear_database_confirmation">Weet je het zeker\? Gelezen hoofdstukken en voortgang voor items die niet in de bibliotheek zitten zullen verloren gaan</string>
     <string name="clear_database_completed">Database geleegd</string>
     <string name="ongoing">Lopend</string>
@@ -226,7 +218,6 @@
     <string name="installing">Aan het installeren</string>
     <string name="installed">Geïnstalleerd</string>
     <string name="trust">Vertouw</string>
-    <string name="untrusted">Niet vertrouwd</string>
     <string name="uninstall">Verwijderen</string>
     <string name="untrusted_extension">Niet vertrouwde extensie</string>
     <string name="untrusted_extension_message">Deze extensie is door een niet vertrouwd certificaat ondertekend en is niet geactiveerd.
@@ -259,7 +250,6 @@
     <string name="failed_to_load_pages_">Fout bij het laden van pagina\'s : %1$s</string>
     <string name="migrate">Migreren</string>
     <string name="open_in_webview">Openen in webview</string>
-    <string name="true_32bit_color">32-bit kleuren</string>
     <string name="skip_read_chapters">Hoofdstukken die gemarkeerd zijn als gelezen overslaan</string>
     <string name="overlay">Overlapping</string>
     <string name="multiply">Vermenigvuldigen</string>
@@ -285,7 +275,6 @@
         <item quantity="one">Extensie-update beschikbaar</item>
         <item quantity="other">%d extensie-updates beschikbaar</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Vermindert banderolleren, maar kan de prestaties beïnvloeden</string>
     <string name="color_filter_blend_mode">Mengmodus kleurfilter</string>
     <string name="dodge_lighten">Tegenhouden / Lichter</string>
     <string name="burn_darken">Doordrukken / Donkerder</string>
@@ -294,11 +283,6 @@
     <string name="paged">Gepagineerd</string>
     <string name="always_show_chapter_transition">Hoofdstukovergangen altijd weergeven</string>
     <string name="pref_webtoon_side_padding">Opvulling zijkant</string>
-    <string name="webtoon_side_padding_0">Geen</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Hoofdstukken %1$s</string>
     <string name="remove_from_library">Verwijderen uit bibliotheek</string>
     <string name="refresh_tracking">Tracking bijwerken</string>
@@ -308,7 +292,6 @@
     <string name="requires_app_restart">Herstart van de app nodig om van kracht te worden</string>
     <string name="disable_battery_optimization">Batterijoptimalisatie uitzetten</string>
     <string name="battery_optimization_disabled">Batterijoptimalisatie is al uitgeschakeld</string>
-    <string name="pref_global_search">Globaal zoeken</string>
     <string name="check_for_extension_updates">Zoeken naar updates voor extensies</string>
     <string name="website">Website</string>
     <string name="open_source_licenses">Open-sourcelicenties</string>
@@ -452,7 +435,6 @@
     <string name="not_downloaded">Niet gedownload</string>
     <string name="downloading_">Downloaden: %1$s</string>
     <string name="username_must_not_be_blank">Gebruikersnaam of wachtwoord mag niet leeg zijn</string>
-    <string name="whats_new">Wat is er nieuw</string>
     <string name="you_can_migrate_in_library">U kunt ook migreren door manga in uw bibliotheek te selecteren</string>
     <string name="migration_sources_changed">Migratiebronnen gewijzigd</string>
     <string name="use_last_saved_migration_preferences">Gebruik de laatst opgeslagen pre-migratievoorkeuren en -bronnen om massaal te migreren</string>
@@ -460,7 +442,6 @@
     <string name="only_enable_enabled_for_migration">Alleen momenteel ingeschakelde bronnen gebruiken voor migratie</string>
     <string name="match_enabled_sources">Gelijk met ingeschakelde bronnen</string>
     <string name="match_pinned_sources">Gelijk met vastgepinde bronnen</string>
-    <string name="only_search_pinned_when">Zoek alleen in vastgepinde bronnen</string>
     <string name="delete_all_covers__not_in_library_used_">Verwijder covers die niet in je bibliotheek staan
 \nOp dit moment gebruikt: %1$s</string>
     <string name="clear_cached_covers_non_library">Verwijder tijdelijke covers die niet in bibliotheek staan</string>
@@ -484,7 +465,6 @@
         <item quantity="other">Cache geleegd. %d bestanden zijn verwijderd</item>
     </plurals>
     <string name="data_management">Gegevensbeheer</string>
-    <string name="not_logged_into_">Niet ingelogd bij %1$s</string>
     <string name="restore_error">Fout bij het herstellen van de back-up</string>
     <string name="white_theme">Puur wit</string>
     <plurals name="manga_migrated">
@@ -544,12 +524,7 @@
     <string name="reset_cover">Omslag terugzetten</string>
     <string name="reset_tags">Tags terugzetten</string>
     <string name="clear_tags">Tags wissen</string>
-    <string name="oldest_first">Oudste naar nieuwste</string>
-    <string name="newest_first">Nieuwste naar oudste</string>
-    <string name="sort_by_chapter_number">Sorteren op hoofdstuknummer</string>
-    <string name="sort_by_source_s_order">Sorteer op volgorde van de bron</string>
     <string name="hide_chapter_titles">Hoofdstuktitels verbergen</string>
-    <string name="show_read_chapters">Gelezen hoofdstukken weergeven</string>
     <string name="show_unread_chapters">Ongelezen hoofdstukken weergeven</string>
     <string name="show_downloaded_chapters">Gedownloade hoofdstukken weergeven</string>
     <string name="show_bookmarked_chapters">Hoofdstukken met bladwijzers weergeven</string>
@@ -576,7 +551,6 @@
     <string name="smart_by_theme">Slim (per thema)</string>
     <string name="smart_by_page">Slim (per pagina)</string>
     <string name="enable_zoom_out">Uitzoomen inschakelen</string>
-    <string name="webtoon_style">Webtoonstijl</string>
     <string name="reading_">Lezen %1$s</string>
     <string name="set_as_default_for_all">Instellen als standaard voor alles</string>
     <string name="extension_updates">Extensie-updates</string>
@@ -602,7 +576,6 @@
     <string name="started_reading_date">Datum begonnen met lezen</string>
     <string name="finished_reading_date">Datum klaar met lezen</string>
     <string name="myanimelist_relogin">Log alstublieft opnieuw in op MAL</string>
-    <string name="no_chapters_error">Geen hoofdstukken gevonden</string>
     <string name="badges">Badges</string>
     <string name="open_log">Open log</string>
     <string name="nsfw_short">18+</string>
@@ -616,8 +589,6 @@
     <string name="locale">Landinstelling</string>
     <string name="automatic_backups">Automatische backups</string>
     <string name="invalid_backup_file">Ongeldig backupbestand</string>
-    <string name="invalid_backup_file_type">Ongeldig type back-upbestand: %1$s
-\nDe bestandsnaam moet eindigen op .proto.gz of .json.</string>
     <string name="backup_has_no_manga">Back-up bevat geen items.</string>
     <string name="restore_missing_sources">Missende bronnen:</string>
     <string name="restore_missing_trackers">Niet-ingelogde trackers:</string>
@@ -692,8 +663,6 @@
     <string name="automatic_can_still_switch">Tijdens het gebruik van automatische pagina-indeling kunt u tijdens het lezen nog steeds schakelen tussen lay-outs zonder deze instelling te overschrijven</string>
     <string name="page_layout">Pagina-indeling</string>
     <string name="cutout_behavior_only_applies">Gedrag van het uitgesneden gebied is alleen van toepassing in portretmodus op bepaalde schaalsoorten</string>
-    <string name="switch_to_single">Wissel naar enkele pagina</string>
-    <string name="switch_to_double">Wissel naar dubbele pagina\'s</string>
     <string name="single_page">Enkele pagina</string>
     <string name="double_pages">Dubbele pagina\'s</string>
     <string name="amount_of_pages_to_preload">Het aantal pagina\'s dat vooraf moet worden geladen tijdens het lezen. Hogere waarden geven een betere leeservaring, ten koste van een hoger cache- en netwerkgebruik.</string>
@@ -731,7 +700,6 @@
     <string name="disabled">Uitgeschakeld</string>
     <string name="doh">DNS over HTTPS</string>
     <string name="flat_lime">Platte Limoen</string>
-    <string name="hot_pink">Felroze</string>
     <string name="pauses_reading_history">Pauzeert leesgeschiedenis</string>
     <string name="incognito_mode">Incognitomodus</string>
     <string name="turn_off_">Schakel %s uit</string>
@@ -895,7 +863,6 @@
     <string name="ext_installer_shizuku_unavailable_dialog">Installeer en start Shizuku om deze als extensie-installatieprogramma te gebruiken.</string>
     <string name="download_queue_size_warning">Waarschuwing: grote bulk downloads kunnen leiden tot trager werkende bronnen en/of Tachiyomi blokkeren</string>
     <string name="every_3_days">Iedere 3 dagen</string>
-    <string name="classic_blue">Klassiek Blauw</string>
     <string name="lime_time">Limoen Groen</string>
     <string name="save_chapters_as_cbz">Opslaan als CBZ archief</string>
     <string name="publishing_finished">Uitgave voltooid</string>
@@ -936,7 +903,6 @@
     <string name="backup_restore_invalid_uri">Fout: lege URI</string>
     <string name="backup_info">Het is erg aangeraden om automatische back-ups te gebruiken en deze op meerdere plekken te bewaren.</string>
     <string name="pref_manage_notifications">Meldingen beheren</string>
-    <string name="faq_and_guides">Veelgestelde vragen en handleidingen</string>
     <string name="secure_screen_summary">Veilig scherm modus verbergt de inhoud van de app bij het wisselen en blokkeert schermafbeeldingen</string>
     <string name="pref_hide_threshold">Sensitiviteit voor het verbergen van het menu tijdens scrollen</string>
     <string name="pref_highest">Hoogste</string>
@@ -947,7 +913,6 @@
     <string name="expanded_toolbar">Uitgebreide werkbalk</string>
     <string name="update_tracking_after_reading">Trackers bijwerken na het lezen</string>
     <string name="language_badge">Taalbadges</string>
-    <string name="pref_update_only_completely_read_summary">Werk serie alleen bij als deze geen ongelezen hoofdstukken heeft (volledig gelezen)</string>
     <string name="update_tracking_marked_read">Trackers bijwerken na het markeren als gelezen</string>
     <string name="reading_list">Leeslijst</string>
     <plurals name="next_unread_chapters">
@@ -970,7 +935,6 @@
     <string name="warning_unenroll_from_beta">Het teruggaan naar de stabiele versie kan tot problemen leiden en mogelijk moet de app-opslag worden gewist.</string>
     <string name="show_">Laat %1$s zien</string>
     <string name="must_view_details_before_migration">Voor dit item gemigreerd kan worden moet er eerst naar de details zijn gekeken</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="lavender">Lavender</string>
     <string name="language_requires_app_restart">Voor sommige talen moet de app opnieuw worden gestart om correct weer te geven</string>
     <string name="download_ahead">Download vooruit</string>
@@ -987,7 +951,6 @@
     <string name="learn_why">Ontdek waarom</string>
     <string name="warning_enroll_into_beta">Bètaversies kunnen onstabiel zijn en vereisen mogelijk het wissen van app-gegevens.</string>
     <string name="split_tall_images_summary">Verbetert de prestaties van de lezer</string>
-    <string name="view_all">Alles weergeven</string>
     <string name="pref_clear_webview_data">WebView-gegevens wissen</string>
     <string name="select_uninstalled_sources">Selecteer verwijderde bronnen</string>
     <string name="download_notifier_split_page_not_found">Pagina %d niet gevonden tijdens het splitsen</string>

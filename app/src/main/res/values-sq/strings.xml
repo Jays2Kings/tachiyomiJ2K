@@ -32,7 +32,6 @@
     <string name="no_results_found">Nuk u gjet asnjë rezultat</string>
     <string name="clear_cookies">Pastro cookie-t</string>
     <string name="by_chapter_number">Sipas numrit të kapitullit</string>
-    <string name="reduces_banding_impacts_performance">Redukton brezin, por mund të ndikojë në performancën</string>
     <string name="title">Titulli</string>
     <string name="split_tall_images_summary">Përmirëson performancën e lexuesit</string>
     <string name="filter">Filter</string>
@@ -202,7 +201,6 @@
     <string name="zoom_start_position">Pozicioni fillestar i zmadhimit</string>
     <string name="delete">Fshije</string>
     <string name="webview_data_deleted">Të dhënat e WebView u pastruan</string>
-    <string name="start">Fillo</string>
     <string name="what_should_backup">Çfarë dëshironi të bëni rezervë\?</string>
     <string name="skip_read_chapters">Kapërceni kapitujt e shënuar si të lexuar</string>
     <string name="move_to_top">Lëvizni në krye</string>
@@ -214,7 +212,6 @@
     <string name="plan_to_read">Planifikoni të lexoni</string>
     <string name="midnight_dusk">Perëndim Mesnate</string>
     <string name="version">Version</string>
-    <string name="faq_and_guides">FAQ dhe udhëzues</string>
     <string name="open_in_webview">Hapni në WebView</string>
     <string name="copy_value">Kopjo</string>
     <string name="skipped_reason_not_caught_up">U anashkalua sepse ka kapituj të palexuar</string>
@@ -280,9 +277,7 @@
     <string name="vertical_viewer">Vertikale</string>
     <string name="read">Të lexuara</string>
     <string name="clear_history_confirmation">A je i sigurt\? E gjithë historia do të humbasë.</string>
-    <string name="pref_global_search">Kërkimi global</string>
     <string name="l_nav">Në formë L</string>
-    <string name="true_32bit_color">Ngjyra 32-bit</string>
     <string name="status">Statusi</string>
     <string name="allow_deleting_bookmarked_chapters">Lejo fshirjen e kapitujve të shënuar</string>
     <string name="include_">Përfshi: %s</string>
@@ -304,7 +299,6 @@
     <string name="invert_volume_keys">Inverto tastet e volumit</string>
     <string name="landscape">Peizazh</string>
     <string name="set_as_cover">Vendos si kopertinë</string>
-    <string name="whats_new">Cfare ka te re</string>
     <string name="cancel">Anulo</string>
     <string name="check_for_updates">Kontrolloni për përditësime</string>
     <string name="about_dont_kill_my_app">Disa prodhues kanë kufizime shtesë të aplikacioneve që shkatërrojnë shërbimet e sfondit. Kjo faqe interneti ka më shumë informacion se si ta rregulloni atë.</string>
@@ -362,12 +356,10 @@
     <string name="right_and_left_nav">E djathta dhe e majta</string>
     <string name="restore_from_backup_file">Rivendosni bibliotekën nga skedari rezervë</string>
     <string name="downloaded_chapters">Kapitujt e shkarkuar</string>
-    <string name="webtoon_side_padding_0">Asnje</string>
     <string name="select_backup_file">Zgjidhni skedarin rezervë</string>
     <string name="never">Kurrë</string>
     <string name="settings">Cilësimet</string>
     <string name="complete">E plotësuar</string>
-    <string name="untrusted">E pabesueshme</string>
     <string name="loading">Po ngarkohet…</string>
     <string name="show_in_sources_and_extensions">Shfaq në listat e burimeve dhe shtesave</string>
     <string name="cookies_cleared">Cookie-t u pastruan</string>
@@ -427,7 +419,6 @@
     <string name="mark_as_unread">Shëno si të palexuar</string>
     <string name="latest">Të fundit</string>
     <string name="new_version_available">Versioni i ri në dispozicion!</string>
-    <string name="no_chapters_error">Nuk u gjet asnjë kapitull</string>
     <string name="pref_hide_threshold">Ndjeshmëria për fshehjen e menysë në lëvizje</string>
     <string name="publishing_finished">Botim i përfunduar</string>
     <string name="cover_only_grid">Rrjetë vetëm me mbulesë</string>

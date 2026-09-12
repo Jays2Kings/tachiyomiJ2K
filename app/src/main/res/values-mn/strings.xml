@@ -45,7 +45,6 @@
     <string name="removed_bookmark">Тэмдгийг устгалаа</string>
     <string name="chapters_removed">Бүлгийг устгалаа.</string>
     <string name="chapter_not_found">Бүлэг олдсонгүй</string>
-    <string name="no_chapters_error">Ямар ч бүлэг олдсонгүй</string>
     <string name="loader_rar5_error">\"RARv5\" формат дэмжихгүй</string>
     <string name="local_invalid_format">Бүлгийн бичиглэл буруу</string>
     <string name="order_by">Эрэмбэлэх</string>

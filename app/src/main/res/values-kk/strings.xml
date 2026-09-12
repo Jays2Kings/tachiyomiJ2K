@@ -57,7 +57,6 @@
     <string name="installing">Орнатылуда</string>
     <string name="installed">Орнатылды</string>
     <string name="trust">Сенім</string>
-    <string name="untrusted">Сенімсіз</string>
     <string name="uninstall">Жою</string>
     <string name="ext_installer_shizuku_stopped">Shizuku қосылмаған</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Shizuku-ны кеңейту орнатушысы ретінде пайдалану үшін Shizuku-ны орнатып іске қосыңыз.</string>
@@ -74,7 +73,6 @@
     <string name="fullscreen">Толық экранды</string>
     <string name="animate_page_transitions">Беттің ауысуын анимациялау</string>
     <string name="double_tap_anim_speed">Қосарлы түрту анимация жылдамдығы</string>
-    <string name="true_32bit_color">32-битті түс</string>
     <string name="crop_borders">Кесу жиектері</string>
     <string name="grayscale">Сұр реңктері</string>
     <string name="pref_inverted_colors">Төңкерілген</string>
@@ -85,7 +83,6 @@
     <string name="vertical_viewer">Тік</string>
     <string name="portrait">Портрет</string>
     <string name="landscape">Пейзаж</string>
-    <string name="webtoon_side_padding_0">Жоқ</string>
     <string name="none">Ешқайсы</string>
     <string name="remove_from_library">Кітапханадан жою</string>
     <string name="reading">Оқылуда</string>
@@ -111,12 +108,10 @@
     <string name="security">Қауіпсіздік</string>
     <string name="pref_manage_notifications">Хабарландыруларды басқару</string>
     <string name="backup_and_restore">Сақтық көшірмесі</string>
-    <string name="pref_global_search">Жаһандық іздеу</string>
     <string name="nsfw_sources">NSFW (18+) дереккөздері</string>
     <string name="show_in_sources_and_extensions">Дереккөздер мен кеңейтулер тізімінде көрсету</string>
     <string name="does_not_prevent_unofficial_nsfw">Бұл қолданбадағы NSFW (18+) мазмұнын көрсетуге бейресми немесе ықтимал қате белгіленген кеңейтімдерге кедергі жасамайды.</string>
     <string name="version">Нұсқа</string>
-    <string name="faq_and_guides">Жиі қойылатын сұрақтар ж/е гайдтар</string>
     <string name="downloads">Жүктелгендер</string>
     <string name="download_queue">Жүктеулер кезегі</string>
     <string name="cancel_all">Бәрінен бас тарту</string>
@@ -184,13 +179,11 @@
     <string name="select_all">Бәрін таңдау</string>
     <string name="share">Бөлісу</string>
     <string name="sort">Сұрыптау</string>
-    <string name="start">Бастау</string>
     <string name="stop">Тоқтату</string>
     <string name="all_files_permission_required">Файлдарға рұқсат керек</string>
     <string name="external_storage_permission_notice">TachiyomiJ2K тарауларды жүктеп алу, автоматты сақтық көшірме жасау және жергілікті манга оқу үшін Android 11 жүйесіндегі барлық файлдарға кіруді қажет етеді.
 \n
 \nКелесі экранда «Барлық файлдарды басқаруға рұқсат беру» опциясын қосыңыз.</string>
-    <string name="reduces_banding_impacts_performance">Жолақты азайтады, бірақ өнімділікке әсер етуі мүмкін</string>
     <string name="disabled">Өшірулі</string>
     <string name="last_read_chapter">Соңғы оқылған тарау</string>
     <string name="split_tall_images">Ұзын суреттерді бөлу</string>
@@ -256,13 +249,8 @@
     <string name="kindlish_nav">Kindle тәріздес</string>
     <string name="l_nav">L тәріздес</string>
     <string name="edge_nav">Шеті</string>
-    <string name="webtoon_side_padding_5">5%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="auto_download_while_reading">Оқығанда дағдылы жүктеу</string>
     <string name="download_ahead_info">Кітапханадағы жазбаларда ғана жұмыс істейді және ағымдағы және келесі тарау әлдеқашан жүктелген болса</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
     <string name="download_ahead">Алдын ала жүктеу</string>
     <string name="split_tall_images_summary">Оқыманың өнімділігін жақсартады</string>
     <string name="tracking_info">Бақылау қызметтеріндегі прогрессті жаңарту үшін бір жақты үйлестіру. Бақылау батырмасын пайдаланып бақылауды орнатыңыз.</string>
@@ -317,7 +305,6 @@
     <string name="crash_log_saved">Қателіктер тіркеуі сақталды</string>
     <string name="webview_data_deleted">WebView дерегі тазаланды</string>
     <string name="pref_clear_webview_data">WebView дерегін тазалау</string>
-    <string name="whats_new">Не жаңалық</string>
     <string name="local_source">Локал дереккөз</string>
     <string name="creating_backup">Сақтық көшірмесін жасау</string>
     <string name="unknown_error">Белгісіз қателік</string>
@@ -385,7 +372,6 @@
     <string name="channel_skipped">Өткізуп жіберілді</string>
     <string name="dropped">Тасталған</string>
     <string name="on_hold">Кейінге қалған</string>
-    <string name="no_chapters_error">Тараулар жоқ</string>
     <string name="channel_errors">Қателіктер</string>
     <string name="clear_history_confirmation">Сенімдісіз бе\? Бар тарих жоғалады.</string>
     <string name="cover_saved">Мұқаба сақталды</string>
@@ -449,7 +435,6 @@
         <item quantity="other">%1$d бет қалды</item>
     </plurals>
     <string name="new_category">Жаңа санат</string>
-    <string name="update_available">Жаңарту қолжетімді</string>
     <string name="new_version_available">Жаңа нұсқа бар!</string>
     <string name="no_chapters_to_delete">Жою үшін еш тарау жоқ</string>
     <string name="category">Санат</string>
