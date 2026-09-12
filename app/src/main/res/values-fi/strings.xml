@@ -43,7 +43,6 @@
     <string name="searching_for_updates">Tarkistetaan päivityksiä…</string>
     <string name="download_complete">Lataus valmis</string>
     <string name="download_error">Latausvirhe</string>
-    <string name="update_available">Päivitys saatavilla</string>
     <string name="cover_of_image">Sarjan kansikuva</string>
     <string name="no_recent_chapters">Ei viimeisimpiä lukuja</string>
     <string name="no_recently_read_manga">Ei viimeksi luettuja sarjoja</string>
@@ -69,7 +68,6 @@
     <string name="add">Lisää</string>
     <string name="edit_categories">Muokkaa kategorioita</string>
     <string name="retry">Yritä uudelleen</string>
-    <string name="start">Aloita</string>
     <string name="stop">Lopeta</string>
     <string name="pause">Pysäytä</string>
     <string name="clear">Tyhjennä</string>
@@ -107,15 +105,12 @@
     <string name="daily">Päivittäin</string>
     <string name="every_2_days">Kahden päivän välein</string>
     <string name="weekly">Viikoittain</string>
-    <string name="categories_to_include_in_global_update">Globaalin päivityksen sisältämät kategoriat</string>
     <string name="all">Kaikki</string>
     <string name="library_update_restriction">Kirjaston päivityksen rajoitukset</string>
-    <string name="library_update_restriction_summary">Päivitä vain kun vaatimukset täyttyvät</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Latauksessa</string>
     <string name="app_theme">Sovelluksen teema</string>
     <string name="dark">Tumma teema</string>
-    <string name="amoled_black">AMOLED teema</string>
     <string name="language">Kieli</string>
     <string name="system_default">Järjestelmän oletus</string>
     <string name="default_category">Oletus kategoria</string>
@@ -124,7 +119,6 @@
     <string name="installing">Asennetaan</string>
     <string name="installed">Asennettu</string>
     <string name="trust">Luota</string>
-    <string name="untrusted">Luottamaton</string>
     <string name="uninstall">Poista asennus</string>
     <string name="untrusted_extension">Luottamattomat laajennokset</string>
     <string name="untrusted_extension_message">Tämä laajennus on allekirjoitettu luottamattomalla sertifikaatilla ja sitä ei ole aktivoitu.
@@ -137,7 +131,6 @@
     <string name="fullscreen">Koko näyttö</string>
     <string name="double_tap_anim_speed">Tuplanäpäytyksen animaation nopeus</string>
     <string name="show_page_number">Näytä sivunumero</string>
-    <string name="true_32bit_color">32-bittinen väri</string>
     <string name="crop_borders">Rajaa reunat</string>
     <string name="use_custom_brightness">Käytä mukautettua kirkautta</string>
     <string name="use_custom_color_filter">Käytä mukautettua värisuodatinta</string>
@@ -170,7 +163,6 @@
     <string name="fast">Nopea</string>
     <string name="rotation">Rotaatio</string>
     <string name="free">Vapaa</string>
-    <string name="lock">Lukitse</string>
     <string name="red_initial">Punainen</string>
     <string name="green_initial">Vihreä</string>
     <string name="blue_initial">Sininen</string>
@@ -186,7 +178,6 @@
     <string name="fourth_to_last">Neljänneksi viimeinen luku</string>
     <string name="fifth_to_last">Viidenneksi viimeinen luku</string>
     <string name="download_new_chapters">Lataa uudet luvut</string>
-    <string name="categories_to_include_in_download">Kategoriat jotka sisällytetään latauksiin</string>
     <string name="services">Palvelut</string>
     <string name="can_be_used_to_restore">Voidaan käyttää nykyisen kirjaston palauttamiseen</string>
     <string name="restore_from_backup_file">Palauta kirjasto varmuuskopiointi-tiedostosta</string>
@@ -236,7 +227,6 @@
     <string name="started">Aloitettu</string>
     <string name="type">Tyyppi</string>
     <string name="category_with_name_exists">Tämän niminen kategoria on jo olemassa!</string>
-    <string name="backup">Varmuuskopiointi</string>
     <string name="create_backup">Luo varmuuskopio</string>
     <string name="restore_backup">Palauta varmuuskopio</string>
     <string name="backup_location">Varmuuskopio kansio</string>
@@ -273,11 +263,6 @@
     <string name="lock_when_idle">Lukitse käyttämättömänä</string>
     <string name="always_show_chapter_transition">Näytä aina luvun vaihdos</string>
     <string name="pref_webtoon_side_padding">Sivuntäyttö</string>
-    <string name="webtoon_side_padding_0">Ei yhtään</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">Luvut %1$s</string>
     <string name="remove_from_library">Poista kirjastosta</string>
     <string name="refresh_tracking">Päivitä seuranta</string>
@@ -293,7 +278,6 @@
         <item quantity="one">Laajennospäivitys saatavilla</item>
         <item quantity="other">%d laajennospäivitystä saatavilla</item>
     </plurals>
-    <string name="reduces_banding_impacts_performance">Vähentää juovia, mutta vaikuttaa suorituskykyyn</string>
     <string name="skip_filtered_chapters">Ohita suodatetut luvut</string>
     <string name="continuous_vertical">Jatkuva pystysuora</string>
     <string name="paged">Sivutettu</string>
@@ -322,7 +306,6 @@
     <string name="requires_app_restart">Edellyttää sovelluksen käynnisstämisen uudelleen</string>
     <string name="disable_battery_optimization">Poista akun optimointi käytöstä</string>
     <string name="battery_optimization_disabled">Akun optimointi on jo poistettu käytöstä</string>
-    <string name="pref_global_search">Globaali haku</string>
     <string name="check_for_extension_updates">Tarkista laajennuspäivitykset</string>
     <string name="website">Kotisivu</string>
     <string name="open_source_licenses">Avoimen lähdekoodin lisenssit</string>
@@ -408,8 +391,6 @@
     <string name="locale">Paikallinen</string>
     <string name="automatic_backups">Automaattiset varmuuskopiot</string>
     <string name="invalid_backup_file">Virheellinen varmuuskopio</string>
-    <string name="invalid_backup_file_type">Virheellinen varmuuskopiotiedosto: %1$s
-\nSen pitäisi päättyä .proto.gz or .json.</string>
     <string name="backup_has_no_manga">Varmuuskopio ei sisällä mangaa.</string>
     <string name="restore_missing_sources">Puuttuvat lähteet:</string>
     <string name="restore_missing_trackers">Seurantapalvelimet joihin et ole kirjautunut sisään:</string>
@@ -434,7 +415,6 @@
     <string name="finished_reading_date">Lopetuspäivämäärä</string>
     <string name="myanimelist_relogin">Kirjaudu uudelleen MAL: iin</string>
     <string name="search_settings">Hakuasetukset</string>
-    <string name="no_chapters_error">Lukuja ei löytynyt</string>
     <string name="badges">Merkit</string>
     <string name="last_used">Viimeksi käytetty</string>
     <string name="nsfw_short">18+</string>
@@ -446,7 +426,6 @@
     <string name="source_migration_guide">Lähteen siirto-opas</string>
     <string name="nsfw_sources">NSFW (18+) lähteet</string>
     <string name="does_not_prevent_unofficial_nsfw">Tämä ei estä epävirallisia tai mahdollisesti väärin merkittyjä laajennuksia näyttämästä NSFW 18+ sisältöä sovelluksessa.</string>
-    <string name="whats_new">Mitä uutta</string>
     <string name="file_picker_error">Tiedostonvalitsinsovellusta ei löytynyt</string>
     <string name="next">Seuraava</string>
     <string name="open_log">Avaa loki</string>
@@ -457,7 +436,6 @@
         <item quantity="other">Välimuisti tyhjennetty. %d tiedostoa on poistettu</item>
     </plurals>
     <string name="data_management">Tiedonhallinta</string>
-    <string name="not_logged_into_">Et ole kirjautunut sisään: %1$s</string>
     <string name="restore_error">Varmuuskopion palauttaminen epäonnistui</string>
     <string name="backup_in_progress">Varmuuskopiointi on jo käynnissä</string>
     <string name="restore_in_progress">Palautus on jo käynnissä</string>
@@ -525,12 +503,7 @@
     <string name="reset_cover">Nollaa kansi</string>
     <string name="reset_tags">Nollaa tunnisteet</string>
     <string name="clear_tags">Tyhjennä tunnisteet</string>
-    <string name="oldest_first">Vanhimmasta uusimpaan</string>
-    <string name="newest_first">Uusimmasta vanhimpaan</string>
-    <string name="sort_by_chapter_number">Lajittele luvun numeron mukaan</string>
-    <string name="sort_by_source_s_order">Lajittele lähteen järjestyksen mukaan</string>
     <string name="hide_chapter_titles">Piilota luvun otsikot</string>
-    <string name="show_read_chapters">Näytä luetut luvut</string>
     <string name="show_unread_chapters">Näytä lukemattomat luvut</string>
     <string name="show_downloaded_chapters">Näytä ladatut luvut</string>
     <string name="show_bookmarked_chapters">Näytä kirjanmerkityt luvut</string>
@@ -560,7 +533,6 @@
     <string name="smart_by_theme">Älykäs (teeman mukaan)</string>
     <string name="smart_by_page">Älykäs (sivun mukaan)</string>
     <string name="enable_zoom_out">Ota zoomaus käyttöön</string>
-    <string name="webtoon_style">Webtoon tyylinen</string>
     <string name="reading_">Luettavana %1$s</string>
     <string name="set_as_default_for_all">Aseta kaikkien oletusasetukseksi</string>
     <string name="reader_settings">Lukijan asetukset</string>
@@ -609,7 +581,6 @@
     <string name="crash_log_saved">Kaatumislokit tallennettu</string>
     <string name="backup_and_restore">Varmuuskopiointi ja palautus</string>
     <string name="updated_to_">Päivitetty versioon v%1$s</string>
-    <string name="only_search_pinned_when">Etsi vain kiinnitetyistä lähteistä</string>
     <string name="delete_all_covers__not_in_library_used_">Poista kaikki välimuistiin tallennetut kannet, jotka eivät ole kirjastossasi.
 \nTällä hetkellä käytössä: %1$s</string>
     <string name="clear_cached_covers_non_library">Tyhjennä välimuistiin tallennetut kannet, joita ei ole kirjastossa</string>
@@ -686,8 +657,6 @@
     <string name="automatic_orientation">Automaattinen (suuntautumisen perusteella)</string>
     <string name="automatic_can_still_switch">Kun käytät automaattista sivun asettelua, voit silti siirtyä asettelusta toiseen lukemisen aikana ohittamatta tätä asetusta</string>
     <string name="page_layout">Sivun asettelu</string>
-    <string name="switch_to_single">Vaihda yksittäiseen sivuun</string>
-    <string name="switch_to_double">Vaihda tuplasivuihin</string>
     <string name="single_page">Yksittäinen sivu</string>
     <string name="double_pages">Tuplasivut</string>
     <string name="amount_of_pages_to_preload">Esiladattavien sivujen määrä lukemisen aikana. Suuremmat arvot johtavat sujuvampaan lukukokemukseen, joka lisää välimuistin ja verkon käyttöä.</string>
@@ -733,7 +702,6 @@
     <string name="doh">DNS HTTPS:n kautta</string>
     <string name="uniform_grid_covers">Yhtenäiset ruudukon kannet</string>
     <string name="flat_lime">Flat Lime</string>
-    <string name="hot_pink">Kuuma vaaleanpunainen</string>
     <string name="pauses_reading_history">Keskeyttää lukuhistorian</string>
     <string name="incognito_mode">Incognito-tila</string>
     <string name="turn_off_">Poista käytöstä %s</string>
@@ -836,9 +804,7 @@
     <string name="clear_history_completed">Historia poistettu</string>
     <string name="clear_history_confirmation">Oletko varma\? Koko historia menetetään.</string>
     <string name="pref_manage_notifications">Hallitse ilmoituksia</string>
-    <string name="faq_and_guides">Usein kysytyt kysymykset ja oppaat</string>
     <string name="secure_screen_summary">Turvallinen ruutu piilottaa sovelluksen sisällön sovelluksia vaihdettaessa ja estää kuvakaappauksen ottamisen</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="backup_restore_invalid_uri">Virhe: tyhjä URI</string>
     <string name="downloaded_chapters">Ladatut luvut</string>
     <string name="pref_update_only_started">Ei lukemattomia lukuja</string>

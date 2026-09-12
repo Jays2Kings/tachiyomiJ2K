@@ -31,7 +31,6 @@
     <string name="add">Dodaj</string>
     <string name="edit_categories">Uredi kategorije</string>
     <string name="move_to_categories">Premesti u kategoriju</string>
-    <string name="start">Počni</string>
     <string name="stop">Zaustavi</string>
     <string name="pause">Pauziraj</string>
     <string name="clear">Očisti</string>
@@ -69,15 +68,12 @@
     <string name="daily">Dnevno</string>
     <string name="every_2_days">Svaka 2 dana</string>
     <string name="weekly">Nedeljno</string>
-    <string name="categories_to_include_in_global_update">Kategorije koje su ubrajane u globalnom ažuriranju</string>
     <string name="all">Све</string>
     <string name="library_update_restriction">Ograničenja uredjaja</string>
-    <string name="library_update_restriction_summary">Ažuriraj samo kada su uslovi zadovoljeni</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Пуњење</string>
     <string name="app_theme">Tema aplikacije</string>
     <string name="dark">Tamna tema</string>
-    <string name="amoled_black">AMOLED tema</string>
     <string name="language">Jezik</string>
     <string name="system_default">Podrazumevani jezik sistema</string>
     <string name="default_category">Podrazumevana kategorija</string>
@@ -86,7 +82,6 @@
     <string name="installing">Instaliranje</string>
     <string name="installed">Instalirano</string>
     <string name="trust">Veruj</string>
-    <string name="untrusted">Ne veruj</string>
     <string name="uninstall">Izbriši</string>
     <string name="untrusted_extension">Ненадійне розширення</string>
     <string name="untrusted_extension_message">Це розширення було підписано ненадійним сертифікатом і не було активовано.
@@ -130,7 +125,6 @@
     <string name="fast">Brzo</string>
     <string name="rotation">Rotacija</string>
     <string name="free">Slovodno</string>
-    <string name="lock">Zaključano</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -146,9 +140,7 @@
     <string name="fourth_to_last">Četiri prije pročitanog poglavlja</string>
     <string name="fifth_to_last">Pet do pročitanog poglavlja</string>
     <string name="download_new_chapters">Preuzmi nova poglavlja</string>
-    <string name="categories_to_include_in_download">Kategorije ubrajane u preuzimanju</string>
     <string name="services">Сервиси</string>
-    <string name="backup">Rezerna kopija</string>
     <string name="create_backup">Napravi rezernu kopiju</string>
     <string name="can_be_used_to_restore">Može biti korišćeno da vrati trenutnu biblioteku</string>
     <string name="restore_backup">Vrati rezernu kopiju</string>
@@ -243,7 +235,6 @@
     <string name="theres_no_previous_chapter">Nema prethodnog poglavlja</string>
     <string name="loading_pages">Učitavan stranice…</string>
     <string name="failed_to_load_pages_">Učitavanje stranica nije uspelo: %1$s</string>
-    <string name="true_32bit_color">32-bitna boja</string>
     <string name="multiply">Umnoži</string>
     <string name="screen">Ekran</string>
     <string name="skip_read_chapters">Preskoči poglavlja označena kao pročitana</string>
@@ -253,11 +244,6 @@
     <string name="view_chapters">Pogledaj poglavlja</string>
     <string name="always_show_chapter_transition">Uvek pokaži tranziciju poglavlja</string>
     <string name="pref_webtoon_side_padding">Растојање од ивице</string>
-    <string name="webtoon_side_padding_0">Ништа</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">%1$s Poglavlja</string>
     <string name="remove_from_library">Обриши из колекције</string>
     <string name="failed_to_update_cover">Ažuriranje omota nije uspelo</string>
@@ -277,7 +263,6 @@
     <string name="creating_backup">Прави се резервна копија</string>
     <string name="disable_battery_optimization">Isključi optimizaciju korišćenja baterije</string>
     <string name="battery_optimization_disabled">Optimizacija potročnje baterije je već isključena</string>
-    <string name="pref_global_search">Pretraži globalno</string>
     <string name="check_for_extension_updates">Provjeri da li ima ažuriranja dodataka</string>
     <string name="website">Sajt</string>
     <string name="email">Imejl adresa</string>
@@ -347,7 +332,6 @@
     <string name="invalid_backup_file">Неисправна датотека резервне копије</string>
     <string name="crash_log_saved">Logovi krešovanja su sačuvani</string>
     <string name="chapter_not_found">Poglavlje nije pronađeno</string>
-    <string name="no_chapters_error">Nije pronadjeni nijedno poglavlje</string>
     <string name="source_unsupported">Извор није подржан</string>
     <string name="getting_started_guide">Почетни водич</string>
     <string name="cover_updated">Омот је ажуриран</string>
@@ -358,11 +342,8 @@
     <string name="right_and_left_nav">Десно и лево</string>
     <string name="error_saving_cover">Greška pri čuvanju omota</string>
     <string name="error_sharing_cover">Greška pri deljenju omota</string>
-    <string name="whats_new">Šta je novo</string>
     <string name="file_picker_error">Није пронађен програм за бирање датотека</string>
     <string name="channel_errors">Грешке</string>
-    <string name="invalid_backup_file_type">Neispravan fajl rezervne kopije: %1$s
-\nTreba da se završava sa .proto.gz ili .json.</string>
     <string name="backup_in_progress">Прављење резервне копије је већ у току</string>
     <string name="decode_image_error">Није могуће учитати слику</string>
     <string name="by_chapter_number">Prema broju poglavlja</string>
@@ -399,7 +380,6 @@
     <string name="next_page">Sledeća stranica</string>
     <string name="previous_page">Prethodna stranica</string>
     <string name="animate_page_transitions">Animacije pri promeni stranice</string>
-    <string name="reduces_banding_impacts_performance">Смањује оштре прелазе међу нијансама, али утиче на перформансе</string>
     <string name="color_filter_blend_mode">Mod stapanja filtera boja</string>
     <string name="overlay">Prekrivanje</string>
     <string name="dodge_lighten">Izbegni / Posvetli</string>
@@ -448,7 +428,6 @@
     <string name="download_queue_size_warning">Упозорење: велики број преузимања може довести до успоравања извора и/или блокирања Tachiyomi-ја. Додирни да сазнаш више.</string>
     <string name="every_3_days">Svaka 3 dana</string>
     <string name="manhua">Kineska manga</string>
-    <string name="update_available">Ažuriranje je moguće</string>
     <string name="not_bookmarked">Nije zabeleženo</string>
     <string name="uniform_grid_covers">Ujednačeni mrežasti pokrivači</string>
     <string name="no_chapters_to_delete">Nema poglavlja za brisanje</string>
@@ -472,7 +451,6 @@
     <string name="this_will_remove_the_read_date_for_x_question">Ovo će izbrisati datum čitanja od \"%1$s\".Da li si siguran\?</string>
     <string name="reset_chapter_history">Resetuj istoriju poglavlja</string>
     <string name="a_while_ago">Pre nekog vremena</string>
-    <string name="switch_to_double">Prebaci na duple stranice</string>
     <string name="move_x_to">Ppmeri %1$s u…</string>
     <string name="add_x_to">Dodaj %1$s u…</string>
     <string name="chapter_x_of_y">Poglavlje %1$d od %2$d</string>
@@ -519,7 +497,6 @@
     <string name="spring_blossom">Letnje cvetanje</string>
     <string name="a_brighter_you">Svetliji ti ( Dinamična)</string>
     <string name="a_calmer_you">Mirniji ti (Dinamična)</string>
-    <string name="hot_pink">Vruća roze</string>
     <string name="lime_time">Vreme kreča</string>
     <string name="flat_lime">Ravan kreč</string>
     <string name="white_theme">Čisto belo</string>
@@ -619,11 +596,7 @@
     <string name="show_on_long_press">Prikaži dugim pritiskom</string>
     <string name="start_reading_chapter_">Počnite da čitate poglavlje %1$s</string>
     <string name="continue_reading">Nastavi čitanje</string>
-    <string name="show_read_chapters">Pokaži pročitana poglavlja</string>
-    <string name="sort_by_chapter_number">Sortiraj prema broju poglavlja</string>
-    <string name="newest_first">Najnovije do najstarije</string>
     <string name="clear_tags">Očisti oznaku</string>
-    <string name="sort_by_source_s_order">Sortiraj prema redosledu izvora</string>
     <string name="reset_cover">Restartuj koricu</string>
     <string name="remember_this_choice">Zapamti ovaj izbor</string>
     <string name="want_to_read">Želi da čita</string>
@@ -701,7 +674,6 @@
     <string name="source_not_installed">Izvor nije instaliran</string>
     <string name="chocolate_strawberries">Čokoladne jagode</string>
     <string name="last_used_library_recents">Zadnje korišćeno (Biblioteka ili Nedavni)</string>
-    <string name="only_search_pinned_when">Pretražujte samo zakačene izvore</string>
     <plurals name="cleanup_done">
         <item quantity="one">Čišćenje završeno.Uklonjena %d fascikla</item>
         <item quantity="few">Čišćenje završeno.Uklonjene %d fascikle</item>
@@ -762,11 +734,9 @@
     <string name="reader_settings">Opcije za čitaoca</string>
     <string name="share_second_page">Podeli drugu stranicu</string>
     <string name="smart_by_theme">Pametno (prema temi)</string>
-    <string name="webtoon_style">Stil stripa</string>
     <string name="enable_zoom_out">Omogući umanjivanje</string>
     <string name="amount_of_pages_to_preload">Količina stranica za prethodno učitavanje prilikom čitanja.Veće vrendosti će rezultirati lakšim iskustvom čitanja po cenu upotrebe keša i mreže.</string>
     <string name="double_pages">Duple stranice</string>
-    <string name="switch_to_single">Prebaci na jednu stranicu</string>
     <string name="horizontally">Horizontalno</string>
     <string name="both_axes">Obe ose</string>
     <string name="smart_based_on_page_and_theme">Pametno (prema stranici i temi)</string>
@@ -815,7 +785,6 @@
         <item quantity="few">Premestine %1$d%2$s mange\?</item>
         <item quantity="other">Premestite %1$d%2$s mangi\?</item>
     </plurals>
-    <string name="classic_blue">Klasična plava</string>
     <string name="dark_theme">Tamna tema</string>
     <string name="teal_ocean">Plavozeleni okean</string>
     <string name="use_side_navigation">Koristite bočnu navigaciju</string>
@@ -827,7 +796,6 @@
     <string name="no_new_chapters_open_details">Kada nema novih poglavlja, detalji serija se otvaraju</string>
     <string name="restore_in_progress">Vraćanje je već u toku</string>
     <string name="force_download_cache_refresh">Osvežite keš memoriju za preuzimanje</string>
-    <string name="not_logged_into_">Niste prijavljeni na %1$s</string>
     <string name="force_download_cache_refresh_summary">Ovo će priporati keš za preuzimanje da se ponovo izračuna.Korisno ako ste izmenili preuzimanje van ove aplikacije i želite da ih aplikacija preuzme</string>
     <string name="delete_unused_chapters">Izbrišite nepostojeće, delimično preuzete, i pročitane fascikle poglavlja</string>
     <string name="delete_all_covers__not_in_library_used_">Izbrisati sve keširane korice koje nisu u tvojoj biblioteci
@@ -904,7 +872,6 @@
     <string name="shift_one_page_over">Pomerite jednu stranicu preko</string>
     <string name="reading_">Čitanjeb%1$s</string>
     <string name="add_tag">Dodaj oznaku</string>
-    <string name="oldest_first">Najstarije do najnovije</string>
     <string name="migrate_">Migriraj %1$s</string>
     <string name="add_to_">Dodaj u %1$s</string>
     <string name="nothing_is_downloading">Trenutno se ništa ne preuzima</string>
@@ -967,7 +934,6 @@
     <string name="pref_update_only_completely_read">Sa neporcitanim poglavljem(ima)</string>
     <string name="pref_update_only_non_completed">Sa završenim \"Statusom\"</string>
     <string name="pref_update_only_started">To nije započeto</string>
-    <string name="pref_update_only_completely_read_summary">Ažurirajte mangu samo ako nema pročitanog poglavlja (potpuno pročitano)</string>
     <string name="zoom_double_page_spreads">Zumirajte duple stranice</string>
     <string name="update_tracking_after_reading">Ažurirajte praćenja nakon čitanja</string>
     <string name="update_tracking_marked_read">Ažurirajte praćenja kada je označeno kao pročitano</string>
@@ -979,7 +945,6 @@
     <string name="clear_history">Избриши историју</string>
     <string name="clear_history_completed">Историја је избрисана</string>
     <string name="clear_history_confirmation">Да ли сте сигурни\? Цела историја ће бити изгубљена.</string>
-    <string name="view_all">Pogledati sve</string>
     <string name="select_uninstalled_sources">Izaberite deinstalirane izvore</string>
     <string name="downloads_swipe_tutorial">Preuzimanja se mogu otkazati prevlačenjem
 \nPrevocite ovaj savet kako biste ga odbacili</string>
@@ -987,14 +952,12 @@
     <string name="backup_info">Препоручује се аутоматско прављење резервне копије. Чувајте копије и на другим местима.</string>
     <string name="pref_manage_notifications">Управљај обавештењима</string>
     <string name="battery_not_low">Baterija nije prazna</string>
-    <string name="faq_and_guides">Pitanja i vodiči</string>
     <string name="secure_screen_summary">Сакриј приказ апликације приликом пребацивања између апликација и онемогући снимке екрана</string>
     <string name="pref_hide_threshold">Осетљивост за сакривање менија при померању</string>
     <string name="pref_highest">Највиша</string>
     <string name="pref_high">Висока</string>
     <string name="pref_low">Ниска</string>
     <string name="pref_lowest">Најнижа</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="downloaded_chapters">Preuzeta poglavlja</string>
     <string name="tap_zones">Начин навигације</string>
     <plurals name="next_unread_chapters">

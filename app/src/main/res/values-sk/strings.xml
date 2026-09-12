@@ -32,7 +32,6 @@
     <string name="add">Pridať</string>
     <string name="edit_categories">Upraviť kategórie</string>
     <string name="move_to_categories">Presunúť do kategórie</string>
-    <string name="start">Začať</string>
     <string name="stop">Zastaviť</string>
     <string name="pause">Pauza</string>
     <string name="clear">Zmazať</string>
@@ -71,15 +70,12 @@
     <string name="daily">Raz za deň</string>
     <string name="every_2_days">Každé 2 dni</string>
     <string name="weekly">Každý týždeň</string>
-    <string name="categories_to_include_in_global_update">Kategórie, ktoré sa majú zahrnúť do globálnej aktualizácie</string>
     <string name="all">Všetko</string>
     <string name="library_update_restriction">Obmedzenia zariadenia</string>
-    <string name="library_update_restriction_summary">Aktualizovať len vtedy, keď sú splnené podmienky</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Nabíjanie</string>
     <string name="app_theme">Motív aplikácie</string>
     <string name="dark">Tmavý motív</string>
-    <string name="amoled_black">AMOLED téma</string>
     <string name="language">Jazyk</string>
     <string name="system_default">Predvolené nastavenie systému</string>
     <string name="default_category">Predvolená kategória</string>
@@ -88,7 +84,6 @@
     <string name="installing">Inštalácia</string>
     <string name="installed">Nainštalované</string>
     <string name="trust">Dôveryhodné</string>
-    <string name="untrusted">Nedôveryhodný</string>
     <string name="uninstall">Odinštalovať</string>
     <string name="untrusted_extension">Nedôveryhodné rozšírenie</string>
     <string name="untrusted_extension_message">Toto rozšírenie bolo podpísané nedôveryhodným certifikátom a nebolo aktivované.
@@ -101,7 +96,6 @@
     <string name="fullscreen">Na celú obrazovku</string>
     <string name="double_tap_anim_speed">Rýchlosť animácie pre dvojité ťuknutie</string>
     <string name="show_page_number">Zobraziť číslo strany</string>
-    <string name="true_32bit_color">32-bitová farba</string>
     <string name="crop_borders">Orezať okraje</string>
     <string name="use_custom_brightness">Použiť vlastný jas</string>
     <string name="use_custom_color_filter">Použiť vlastný farebný filter</string>
@@ -140,7 +134,6 @@
     <string name="fast">Rýchlo</string>
     <string name="rotation">Rotácia</string>
     <string name="free">Voľná</string>
-    <string name="lock">Zamknúť</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -156,9 +149,7 @@
     <string name="fourth_to_last">Štvrtá kapitola od konca</string>
     <string name="fifth_to_last">Piata kapitola od konca</string>
     <string name="download_new_chapters">Stiahnuť nové kapitoly</string>
-    <string name="categories_to_include_in_download">Kategórie, ktoré sa majú zahrnúť do sťahovania</string>
     <string name="services">Služby</string>
-    <string name="backup">Zálohovanie</string>
     <string name="create_backup">Vytvoriť zálohu</string>
     <string name="can_be_used_to_restore">Možno použiť na obnovenie aktuálnej knižnice</string>
     <string name="restore_backup">Obnoviť zálohu</string>
@@ -229,7 +220,6 @@
     <string name="clear_database_confirmation">Ste si istý\? Čítanie kapitol a pokrok v mangách mimo vašu knižnicu sa stratí</string>
     <string name="clear_database_completed">Záznamy boli odstránené</string>
     <string name="updates_tracking_details">Aktualizuje stav, skóre a poslednú čítanú kapitolu zo sledovacích služieb</string>
-    <string name="pref_global_search">Hľadať všade</string>
     <string name="version">Verzia</string>
     <string name="build_time">Čas sestavenia</string>
     <string name="send_crash_report">Odosielať správy o zlyhaní</string>
@@ -335,7 +325,6 @@
     <string name="select_inverse">Vyberte inverzne</string>
     <string name="cover_only_grid">Mriežka len s obalmi</string>
     <string name="pref_manage_notifications">Spravovať oznámenia</string>
-    <string name="faq_and_guides">FAQ a návody</string>
     <string name="secure_screen_summary">Skryť obsah aplikácie pri prepínaní aplikácie a blokovať tvorbu snímkov obrazovky</string>
     <string name="downloaded_chapters">Stiahnuté kapitoly</string>
     <string name="file_picker_error">Nenašla sa žiadna aplikácia na výber súborov</string>
@@ -347,14 +336,12 @@
     <string name="by_source_order">Podľa poradia zdroja</string>
     <string name="updating_library">Aktualizácia knižnice</string>
     <string name="auto_download_while_reading">Automatické sťahovanie počas čítania</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="remove_all_downloads">Odstrániť všetky stiahnuté súbory\?</string>
     <string name="lock_with_biometrics">Vyžaduje odomknutie</string>
     <string name="unlock">Odomknúť</string>
     <string name="new_chapters">Nové kapitoly</string>
     <string name="last_read_chapter_">Naposledy prečítaná kapitola %1$s</string>
     <string name="cover_saved">Obal uložený</string>
-    <string name="no_chapters_error">Nenašli sa žiadne kapitoly</string>
     <plurals name="category_plural">
         <item quantity="one">%d kategória</item>
         <item quantity="few">%d kategórie</item>
@@ -366,14 +353,11 @@
     <string name="channel_skipped">Vynechané</string>
     <string name="none">Žiadne</string>
     <string name="edge_nav">Okraj</string>
-    <string name="webtoon_side_padding_0">Žiadne</string>
     <string name="error_sharing_cover">Chyba pri zdieľaní obalu</string>
     <string name="reading_list">Zoznam čítania</string>
     <string name="wish_list">Zoznam prianí</string>
     <string name="website">Webová stránka</string>
-    <string name="webtoon_side_padding_15">15%</string>
     <string name="restore_duration">%02d min., %02d s</string>
-    <string name="whats_new">Čo je nové</string>
     <string name="not_started">Nezačaté</string>
     <string name="marked_as_read">Označené ako prečítané</string>
     <string name="marked_as_unread">Označené ako neprečítané</string>
@@ -382,7 +366,6 @@
     <string name="category_hopper_long_press">Akcia dlhého stlačenia zásobnika kategórie</string>
     <string name="local_source_help_guide">Návod pre lokálne zdroje</string>
     <string name="battery_optimization_disabled">Optimalizácia batérie je už vypnutá</string>
-    <string name="webtoon_side_padding_10">10%</string>
     <string name="l_nav">V tvare písmena L</string>
     <string name="loader_rar5_error">Formát RARv5 nie je podporovaný</string>
     <string name="no_chapters_to_delete">Žiadne kapitoly na odstránenie</string>
@@ -414,15 +397,12 @@
     <string name="category_cannot_be_blank">Názov kategórie nemôže byť prázdny</string>
     <string name="new_beta_version_available">K dispozícii je nová beta verzia!</string>
     <string name="updating_">Aktualizácia %1$s</string>
-    <string name="update_available">Dostupná aktualizácia</string>
     <string name="release_page">Stránka vydania</string>
     <string name="could_not_install_update">Aktualizáciu sa nepodarilo nainštalovať</string>
     <string name="sort_by">Zotriediť podľa</string>
     <string name="read_progress">Priebeh čítania</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Nainštalujte a spustite Shizuku, aby ste mohli používať Shizuku ako inštalátor rozšírení.</string>
     <string name="pref_webtoon_side_padding">Bočné odsadenie</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="right_and_left_nav">Vpravo a vľavo</string>
     <string name="error_saving_cover">Chyba pri ukladaní obalu</string>
     <string name="_unread">Neprečítané: %d</string>
@@ -578,7 +558,6 @@
     <string name="app_info">Informácie o aplikácii</string>
     <string name="reading_mode">Režim čítania</string>
     <string name="animate_page_transitions">Animácia prechodov strán</string>
-    <string name="reduces_banding_impacts_performance">Znižuje pruhovanie farieb, ale môže ovplyvniť výkon</string>
     <string name="default_reading_mode">Predvolený režim čítania</string>
     <string name="locked_portrait">Zamknuté na výšku</string>
     <string name="always_show_chapter_transition">Vždy zobraziť prechod medzi kapitolami</string>

@@ -33,7 +33,6 @@
     <string name="clear_database">Пӗлӗмсен кӗлете тасат</string>
     <string name="updates_tracking_details">Сӑнану сервиссенчен халне, шутне тата юлашки вуланӑ сыпӑка илсе ҫӗнет</string>
     <string name="disable_battery_optimization">Петтерей лайӑхлатнине сӳнтер</string>
-    <string name="pref_global_search">Пур ҫӗрте шыра</string>
     <string name="check_for_extension_updates">Хушмасем валли ҫӗнетӳ пуррине тӗрӗслемелле</string>
     <string name="edit_categories">Пухмӑшсене тӳрлет</string>
     <string name="update">Ҫӗнет</string>
@@ -51,8 +50,6 @@
     <string name="new_chapters_found">Ҫӗнӗ сыпӑксем тупӑнман</string>
     <string name="library_update_frequency">Вулавӑша ҫӗнетни тӑтӑшлӑхӗ</string>
     <string name="library_update_restriction">Вулавӑша ҫӗнетни чарӑвӗсем</string>
-    <string name="library_update_restriction_summary">Майсем пурнӑҫланӑ чухне кӑна ҫӗнет</string>
-    <string name="categories_to_include_in_global_update">Пур ҫӗрте шырава кӗртнӗ пухмӑшсем</string>
     <string name="updates">Ҫӗнетӳсем</string>
     <string name="other">Ыттисем</string>
     <string name="global_search">Пур ҫӗрте шыра…</string>
@@ -65,7 +62,6 @@
     <string name="installing">Лартӑнать</string>
     <string name="installed">Лартнӑ</string>
     <string name="trust">Шанчӑклӑ</string>
-    <string name="untrusted">Шанчӑклӑ мар</string>
     <string name="uninstall">Катерт</string>
     <string name="version_">%1$s верссийӗ</string>
     <string name="language_">Чӗлхе: %1$s</string>
@@ -84,8 +80,6 @@
     <string name="fullscreen">Тулли экран</string>
     <string name="double_tap_anim_speed">Икӗ хут пуссан эним хӑвӑртлӑхӗ</string>
     <string name="show_page_number">Эл шутне кӑтарт</string>
-    <string name="true_32bit_color">32 битлӑ тӗс</string>
-    <string name="reduces_banding_impacts_performance">Йӑрӑм-йӑрӑм чакать, анчах тухӑҫлӑх ҫине витӗм кӳрет</string>
     <string name="crop_borders">Касӑк чиккисем</string>
     <string name="color_filter_blend_mode">Тӗс алипе хутӑштармалли тытӑм</string>
     <string name="overlay">Витӗм</string>
@@ -148,7 +142,6 @@
     <string name="only_download_over_wifi">Wi-Fi урлӑ ҫеҫ тиесе илмелле</string>
     <string name="custom_location">Усӑҫ палӑртнӑ вырӑнӗ</string>
     <string name="download_new_chapters">Ҫӗнӗ сыпӑксене тиесе илмелле</string>
-    <string name="categories_to_include_in_download">Тиенекенсем патне кӗртмелли пухмӑшсем</string>
     <string name="manual">Алӑ вӗҫҫӗн</string>
     <string name="every_6_hours">Кашни 6 сехет</string>
     <string name="every_12_hours">Кашни 12 сехет</string>
@@ -183,7 +176,6 @@
     <string name="install">Ларт</string>
     <string name="left">Сулахайран</string>
     <string name="less">Сахалрах</string>
-    <string name="lock">Ҫаклатнӑскер</string>
     <string name="mark_as_read">Вуланӑ пек паллӑ ту</string>
     <string name="mark_as_unread">Вуламан пек паллӑ ту</string>
     <string name="mark_previous_as_read">Унчченхине вуланӑ пек паллӑ ту</string>
@@ -213,7 +205,6 @@
     <string name="select_all">Веҫех суйла</string>
     <string name="share">Пайлаш</string>
     <string name="sort">Уйӑр</string>
-    <string name="start">Пуҫла</string>
     <string name="stop">Чар</string>
     <string name="undo">Пӑрахӑҫла</string>
     <string name="unpin">Салт</string>
@@ -235,7 +226,6 @@
     <string name="email">Ылӑккӑтрунлӑ пуштӑ тӗлӗ</string>
     <string name="username">Усӑҫ ячӗ</string>
     <string name="website">Сайт</string>
-    <string name="whats_new">Мӗн ҫӗнни</string>
     <string name="build_time">Пуҫтарнӑ вӑхӑт</string>
     <string name="version">Версси</string>
     <string name="battery_optimization_disabled">Петтерей лайӑхлатнине сӳнтернӗ ӗнтӗ</string>
@@ -245,7 +235,6 @@
     <string name="restoring_backup">Янтӑв тавӑрни</string>
     <string name="creating_backup">Янтӑв тӑвӑнать</string>
     <string name="backup_created">Янтӑв тӑвӑннӑ</string>
-    <string name="backup">Янтӑв</string>
     <string name="secure_screen">Ыкран сыхлавӗ</string>
     <string name="check_for_updates">Ҫӗнетӳсем пуррине тӗрӗсле</string>
     <string name="system_default">Системри пекех</string>
@@ -265,11 +254,6 @@
     <string name="remove_from_library">Вулавӑшран катерт</string>
     <string name="add_to_library">Вулавӑша хуш</string>
     <string name="added_to_library">Вулавӑша хуш</string>
-    <string name="webtoon_side_padding_25">25%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_0">Чакусӑр</string>
     <string name="pref_webtoon_side_padding">Аяккинчи чаку</string>
     <string name="vertical_viewer">Урлӑ</string>
     <string name="right_to_left_viewer">Сылтӑмран сулахаялла</string>
@@ -364,8 +348,6 @@
     <string name="may_contain_nsfw">NSFW (18+) шалаш пулма пултарать</string>
     <string name="automatic_backups">Хӑй-халлӗн янтӑвлани</string>
     <string name="invalid_backup_file">Тӗрӗс мар янтӑв файлӗ</string>
-    <string name="invalid_backup_file_type">Тӗрӗс мар янтӑв файлӗ: %1$s
-\nФайлӗ .proto.gz е .json сӑмахсемпе вӗҫленмелле.</string>
     <string name="backup_has_no_manga">Янтӑвра манкӑсем ҫук.</string>
     <string name="restore_missing_sources">Ҫук ҫӑл куҫсем:</string>
     <string name="restore_missing_trackers">Кӗмен сӑнанусем:</string>
@@ -379,7 +361,6 @@
     <string name="nsfw_sources">NSFW (18+) шалаш</string>
     <string name="does_not_prevent_unofficial_nsfw">Ҫакӑ хушӑмра официаллӑ мар е тӗрӗс мар палӑртнӑ хушмасен NSFW (18+) шалашне кӑтартма чӑрмантармасть.</string>
     <string name="file_picker_error">Файлсене суйламалли хушӑм тупӑнман</string>
-    <string name="no_chapters_error">Сыпӑксем ҫук</string>
     <string name="badges">Паллисем</string>
     <string name="finished_chapter">Пӗтернӗ:</string>
     <string name="current_chapter">Кулленхи:</string>
@@ -413,7 +394,6 @@
     <string name="crash_log_saved">Тухса кайни ҫинчен логсем упраннӑ</string>
     <string name="updated_to_">v%1$s верссиччен ҫӗнетнӗ</string>
     <string name="selected_">Суйланӑ: %1$d</string>
-    <string name="update_available">Ҫӗнетӳ пур</string>
     <string name="updating_">%1$s ҫӗнетни</string>
     <string name="jump_to_category">Пухмӑша хуш</string>
     <string name="category_with_name_exists">Ҫакӑн пек ятлӑ пухмӑш пур-уш!</string>
@@ -475,7 +455,6 @@
     <string name="secure_screen_summary">Ыкран сыхлавӗ тепӗр апсем ҫине куҫнӑ чух ку апӑн мӗн пуррине пытарать тата ыкрана сӑн ҫапма чарать</string>
     <string name="tap_to_see_details">Йӑнӑшсене кӑтарт</string>
     <string name="pref_update_only_non_completed">Серилӗх вӗҫленнӗ</string>
-    <string name="faq_and_guides">Кӑтартусем тата ыйту-хурав</string>
     <string name="start_downloading_now">Тиеве халь пуҫла</string>
     <string name="move_series_to_top">Серие пуҫламӑша куҫар</string>
     <string name="appearance">Кӑтартӑнни</string>

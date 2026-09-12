@@ -28,7 +28,6 @@
     <string name="add">जोड़े</string>
     <string name="edit_categories">श्रेणियाँ संपादित करें</string>
     <string name="move_to_categories">श्रेणियाँ का स्थान-परिवर्तन</string>
-    <string name="start">प्रारंभ</string>
     <string name="stop">रोके</string>
     <string name="pause">ठहराव</string>
     <string name="clear">साफ़ करे</string>
@@ -66,15 +65,12 @@
     <string name="daily">हर रोज़</string>
     <string name="every_2_days">हर २ दिन</string>
     <string name="weekly">साप्ताहिक</string>
-    <string name="categories_to_include_in_global_update">वैश्विक श्रेणियाँ जो अद्यतन में शामिल करनी है</string>
     <string name="all">समस्त</string>
     <string name="library_update_restriction">डिवाइस प्रतिबंध</string>
-    <string name="library_update_restriction_summary">अद्यतन तभी जब परिस्थिति अनुकूल हो</string>
     <string name="wifi">वाई - फाई</string>
     <string name="charging">चार्ज होते समय</string>
     <string name="app_theme">एप्पलीकेशन थीम</string>
     <string name="dark">गहरी थीम</string>
-    <string name="amoled_black">अलौकिक थीम</string>
     <string name="language">भाषा</string>
     <string name="system_default">डिफ़ॉल्ट प्रणाली</string>
     <string name="default_category">डिफ़ॉल्ट श्रेणी</string>
@@ -109,7 +105,6 @@
     <string name="center">मध्यविंदु</string>
     <string name="rotation">नियमित आवर्तन</string>
     <string name="free">मुक्त</string>
-    <string name="lock">ताला</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -125,9 +120,7 @@
     <string name="fourth_to_last">चतुर्थ अंतिम अध्याय</string>
     <string name="fifth_to_last">अंतिम अध्याय के लिए पांचवां</string>
     <string name="download_new_chapters">नए अध्याय डाउनलोड करें</string>
-    <string name="categories_to_include_in_download">श्रेणियाँ डाउनलोड में शामिल करने के लिए</string>
     <string name="services">सेवाएं</string>
-    <string name="backup">बैकअप</string>
     <string name="create_backup">बैकअप बनाये</string>
     <string name="can_be_used_to_restore">वर्तमान पुस्तकालय को पुनर्स्थापित करने के लिए उपयोग किया जा सकता है</string>
     <string name="restore_backup">बैकअप पुनर्स्थापित करे</string>
@@ -209,7 +202,6 @@
     <string name="searching_for_updates">अपडेट्स ढूंढ रहे हैं…</string>
     <string name="download_complete">डाउनलोड सम्पन्न हुआ</string>
     <string name="download_error">डाउनलोड त्रुटि</string>
-    <string name="update_available">अद्यतन उपलब्ध है</string>
     <string name="cover_of_image">मंगा का आवरण</string>
     <string name="no_recent_chapters">हाल के कोई अध्याय नहीं है</string>
     <string name="no_recently_read_manga">कोई हाल ही में पढ़ा सीरीज नही है</string>
@@ -226,7 +218,6 @@
     <string name="installing">स्थापना</string>
     <string name="installed">स्थापित</string>
     <string name="trust">भरोसा</string>
-    <string name="untrusted">अविश्वस्त</string>
     <string name="uninstall">स्थापना रद्द करें</string>
     <string name="untrusted_extension">अविश्वस्त एक्सटेंशन</string>
     <string name="untrusted_extension_message">यह एक्सटेंशन एक अविश्वस्त प्रमाणपत्र के साथ हस्ताक्षरित हुआ था और सक्रिय नहीं हुआ था।
@@ -259,7 +250,6 @@
     <string name="loading_pages">पेज लोड हो रहे है …</string>
     <string name="failed_to_load_pages_">पृष्ठों को लोड करने में विफल है: %1$s</string>
     <string name="open_in_webview">वेब दृश्य में खोलें</string>
-    <string name="true_32bit_color">32 बिट रंग</string>
     <string name="skip_read_chapters">पढ़े हुए अध्यायों को छोड़ें</string>
     <string name="color_filter_blend_mode">रंग फिल्टर मिश्रण मोड</string>
     <string name="overlay">ओवरले</string>
@@ -291,24 +281,17 @@
         <item quantity="one">एक्सटेंशन अपडेट उपलब्ध%d एक्सटेंशन अपडेट उपलब्ध</item>
         <item quantity="other"/>
     </plurals>
-    <string name="reduces_banding_impacts_performance">बैंडिंग को कम करता है, लेकिन प्रदर्शन को प्रभावित कर सकता है</string>
     <string name="skip_filtered_chapters">फ़िल्टर किए गए अध्यायों को छोड़ें</string>
     <string name="continuous_vertical">लगातार लंबवत</string>
     <string name="paged">पृष्ठांकित</string>
     <string name="always_show_chapter_transition">हमेशा अध्याय संक्रमण दिखाएं</string>
     <string name="pref_webtoon_side_padding">साइड पैडिंग</string>
-    <string name="webtoon_side_padding_0">कुछ नहीं</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="chapters_">अध्याय %1$s</string>
     <string name="remove_from_library">लाइब्रेरी से निकालें</string>
     <string name="network">नेटवर्क</string>
     <string name="requires_app_restart">प्रभावी होने के लिए एप्लिकेशन पुनरारंभ की आवश्यकता होती है</string>
     <string name="disable_battery_optimization">बैटरी अनुकूलन को अक्षम करना</string>
     <string name="battery_optimization_disabled">बैटरी अनुकूलन पहले से ही अक्षम है</string>
-    <string name="pref_global_search">वैश्विक खोज</string>
     <string name="check_for_extension_updates">एक्सटेंशन अपडेट की जांच करें</string>
     <string name="website">वेबसाइट</string>
     <string name="open_source_licenses">ओपन सोर्स लाइसेंस</string>
@@ -341,7 +324,6 @@
     <string name="right_and_left_nav">दाएं और बाएं</string>
     <string name="invert_tapping">टैप ज़ोन उलटें</string>
     <string name="none">कोई नहीं</string>
-    <string name="no_chapters_error">कोई अध्याय नहीं मिला</string>
     <string name="badges">बैज</string>
     <string name="last_used">आखरी इस्त्तमाल किया गया</string>
     <string name="nsfw_short">18+</string>
@@ -359,8 +341,6 @@
     <string name="locale">भाषा</string>
     <string name="automatic_backups">स्वचालित बैकअप</string>
     <string name="invalid_backup_file">अमान्य बैकअप फ़ाइल</string>
-    <string name="invalid_backup_file_type">अमान्य बैकअप फ़ाइल प्रकार: %1$s
-\nयह .proto.gz या .json के साथ समाप्त होना चाहिए।</string>
     <string name="backup_has_no_manga">बैकअप में कोई मंगा नहीं होता है।</string>
     <string name="restore_missing_sources">अनुपलब्ध स्रोत:</string>
     <string name="restore_missing_trackers">ट्रैकर्स में लॉग इन नहीं किया गया:</string>
@@ -376,7 +356,6 @@
     <string name="source_migration_guide">स्रोत माइग्रेशन गाइड</string>
     <string name="nsfw_sources">NSFW (18+) स्रोत</string>
     <string name="does_not_prevent_unofficial_nsfw">यह अनौपचारिक या संभावित रूप से फ़्लैग किए गए एक्सटेंशन को ऐप के भीतर NSFW (18+) सामग्री के सामने आने से नहीं रोकता है।</string>
-    <string name="whats_new">नया क्या है</string>
     <string name="file_picker_error">कोई फ़ाइल पिकर ऐप नहीं मिला</string>
     <string name="open_log">लॉग खोले</string>
     <plurals name="category_plural">
@@ -547,7 +526,6 @@
     <string name="backup_restore_invalid_uri">त्रुटि: खाली यू॰आर॰ऐ</string>
     <string name="backup_info">स्वचालित बैकअप की अत्यधिक अनुशंसा की जाती है। आपको अन्य जगहों पर भी प्रतियां रखनी चाहिए।</string>
     <string name="pref_manage_notifications">सूचनाओं का प्रबंधन</string>
-    <string name="faq_and_guides">सामान्य प्रश्नोत्तर और मार्गदर्शन</string>
     <string name="secure_screen_summary">सुरक्षित स्क्रीन एप्लिकेशन स्विच करते समय एप्लिकेशन सामग्री छिपाता हैं और स्क्रीनशॉट ब्लॉक करता हैं</string>
     <string name="pref_hide_threshold">स्क्रॉल पर मेनू छिपाने की संवेदनशीलता</string>
     <string name="pref_highest">उच्चतम</string>
@@ -582,7 +560,6 @@
     <string name="release_page">रिलीज़ पेज</string>
     <string name="library_search_hint">शीर्षक, टैग, स्रोत खोजें</string>
     <string name="no_description">कोई विवरण नहीं</string>
-    <string name="webtoon_side_padding_5">५%</string>
     <string name="downloaded_chapters">डाउनलोड किए गए अध्याय</string>
     <string name="no_matches_for_filters_short">आपके फ़िल्टर के लिए कोई मिलान नहीं</string>
     <string name="loader_rar5_error">RARv5 प्रारूप समर्थित नहीं है</string>
@@ -617,7 +594,6 @@
     <string name="expand_all_categories">सारे कैटेगरी को खोले</string>
     <string name="collapse_all_categories">सारे कैटेगरी को बंद करे</string>
     <string name="search_globally">ग्लोबल पर %1$s खोजें</string>
-    <string name="view_all">सारा देखे</string>
     <string name="series">सीरीज</string>
     <string name="updates_last_update_info">पुस्तकालय पिछली बार अपडेट किया गया: %s</string>
     <string name="appwidget_updates_description">अपनी हाल ही में अपडेट की गई पुस्तकालय एन्ट्री देखें</string>
@@ -692,7 +668,6 @@
     <string name="about_this_">%1$s के बारे में</string>
     <string name="continue_reading_chapter_">चैप्टर %1$s पढ़ना चालू रखें</string>
     <string name="start_reading_chapter_">चैप्टर %1$s पढ़ना चालू करें</string>
-    <string name="newest_first">नए से पुराना</string>
     <string name="show_download_button">डाउनलोड बटन दिखाएं</string>
     <string name="start_reading">पढ़ना चालू करें</string>
     <string name="add_to_library">लाइब्रेरी में जोड़े</string>
@@ -746,7 +721,6 @@
     <string name="search_chapters">चैप्टर खोजें</string>
     <string name="extension_updates_pending">एक्सटेंशन के अपडेट बचे हैं</string>
     <string name="show_">%1$s दिखाए</string>
-    <string name="oldest_first">पुराने से नया</string>
     <string name="reset_chapter_question">चैप्टर रीसेट करें?</string>
     <string name="add_x_to_library">%1$s को लाइब्रेरी में जोड़ें?</string>
     <plurals name="extensions_updated_plural">

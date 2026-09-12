@@ -31,7 +31,6 @@
     <string name="delete">削除する</string>
     <string name="edit">編集</string>
     <string name="edit_categories">カテゴリーを編集</string>
-    <string name="start">開始</string>
     <string name="pause">一時停止</string>
     <string name="clear">クリア</string>
     <string name="close">閉じる</string>
@@ -60,15 +59,12 @@
     <string name="daily">毎日</string>
     <string name="every_2_days">2 日ごと</string>
     <string name="weekly">毎週</string>
-    <string name="categories_to_include_in_global_update">グローバルアップデートに含まれるカテゴリー</string>
     <string name="all">すべて</string>
     <string name="library_update_restriction">デバイス制限</string>
-    <string name="library_update_restriction_summary">条件に合致する場合にのみ更新する</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">充電中</string>
     <string name="app_theme">アプリケーションテーマ</string>
     <string name="dark">ダークテーマ</string>
-    <string name="amoled_black">AMOLED ブラック</string>
     <string name="language">言語</string>
     <string name="system_default">システム標準</string>
     <string name="default_category">デフォルトカテゴリー</string>
@@ -77,7 +73,6 @@
     <string name="installing">インストール</string>
     <string name="installed">インストール済み</string>
     <string name="trust">信頼できる</string>
-    <string name="untrusted">信頼できない</string>
     <string name="uninstall">アンインストール</string>
     <string name="untrusted_extension">信頼できない拡張機能</string>
     <string name="version_">バージョン：%1$s</string>
@@ -112,7 +107,6 @@
     <string name="fast">速い</string>
     <string name="rotation">回転</string>
     <string name="free">自由回転</string>
-    <string name="lock">ロック</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -124,8 +118,6 @@
     <string name="custom_location">カスタムディレクトリ</string>
     <string name="second_to_last">最後に読んだ章から 2 つ前の章</string>
     <string name="download_new_chapters">新しい章をダウンロードする</string>
-    <string name="categories_to_include_in_download">ダウンロードに含まれるカテゴリー</string>
-    <string name="backup">バックアップ</string>
     <string name="create_backup">バックアップを作成する</string>
     <string name="can_be_used_to_restore">現在のライブラリを復元するために使用できます</string>
     <string name="restore_backup">バックアップを復元</string>
@@ -257,7 +249,6 @@
     <string name="updates_tracking_details">同期サービスでステータス、評価と最後に読んだ章を更新します</string>
     <string name="disable_battery_optimization">バッテリー最適化を無効にする</string>
     <string name="battery_optimization_disabled">バッテリー最適化は既に無効です</string>
-    <string name="pref_global_search">グローバル検索</string>
     <string name="check_for_extension_updates">拡張機能の更新を確認</string>
     <string name="helps_fix_bugs">バグの修正などに役立ちます。個人情報を送信しません</string>
     <string name="website">ウェブサイト</string>
@@ -344,7 +335,6 @@
     <string name="chapters_removed">章が消去されました。</string>
     <string name="removed_bookmark">お気に入りを削除しました</string>
     <string name="library_search_hint">タイトル、タグまたはソースを検索</string>
-    <string name="update_available">アップデートが利用可能です</string>
     <string name="updating_">%1$s を更新中</string>
     <string name="tracking_status">ステータスの追跡</string>
     <string name="series_type">シリーズタイプ</string>
@@ -365,7 +355,6 @@
     <string name="myanimelist_relogin">MAL に再度ログインしてください</string>
     <string name="search_settings">設定を検索</string>
     <string name="locale">ロケール</string>
-    <string name="no_chapters_error">章が見つかりません</string>
     <string name="badges">バッジ</string>
     <string name="last_used">最後に使用した</string>
     <string name="nsfw_short">成人向け</string>
@@ -389,7 +378,6 @@
     <string name="none">なし</string>
     <string name="automatic_backups">自動バックアップ</string>
     <string name="invalid_backup_file">バックアップファイルは無効です</string>
-    <string name="invalid_backup_file_type">無効なバックアップファイル形式: %1$s\nファイルの拡張子は .proto.gz または .json である必要があります。</string>
     <string name="backup_has_no_manga">バックアップには項目が含まれていません。</string>
     <string name="restore_missing_sources">ソースがありません：</string>
     <string name="restore_missing_trackers">ログインしていないトラッカー：</string>
@@ -402,7 +390,6 @@
     <string name="source_migration_guide">ソース移行ガイド</string>
     <string name="nsfw_sources">成人向けのソース</string>
     <string name="does_not_prevent_unofficial_nsfw">これは、非公式の拡張機能や誤ってフラグ付けされた可能性のある拡張機能が、アプリ内で NSFW（18 歳以上向け）コンテンツを表示することを防ぐものではありません。</string>
-    <string name="whats_new">更新情報</string>
     <string name="file_picker_error">ファイルを選択できるアプリが見つかりません</string>
     <string name="backup_and_restore">バックアップと復元</string>
     <string name="progress">進捗</string>
@@ -422,7 +409,6 @@
     <string name="invert_double_pages">見開きページを反転</string>
     <string name="beta">ベータ</string>
     <string name="show_read_chapters_all">「グループ別」と「すべて」で既読の章を表示</string>
-    <string name="only_search_pinned_when">ピン留めしたソースのみを検索</string>
     <string name="category_cannot_be_blank">カテゴリー名を空白にすることはできません</string>
     <string name="new_category">新しいカテゴリー</string>
     <string name="category">カテゴリー</string>
@@ -439,7 +425,6 @@
     <string name="in_library">ライブラリ内</string>
     <string name="white_theme">ピュアホワイト</string>
     <string name="flat_lime">フラットライム</string>
-    <string name="hot_pink">ホットピンク</string>
     <string name="spring_blossom">スプリングブロッサム</string>
     <string name="hides_on_scroll">スクロール中に隠す</string>
     <string name="hide_bottom_nav">ナビゲーションバーを自動的に隠す</string>
@@ -450,7 +435,6 @@
     <string name="continue_reading">続きを読む</string>
     <string name="no_description">説明がありません</string>
     <string name="hide_chapter_titles">章のタイトルを隠す</string>
-    <string name="show_read_chapters">既読の章を表示</string>
     <string name="show_unread_chapters">未読の章を表示</string>
     <string name="show_downloaded_chapters">ダウンロードした章を表示</string>
     <string name="show_bookmarked_chapters">ブックマークした章を表示</string>
@@ -490,14 +474,10 @@
     <string name="page_preload_amount">プリロードするページの数</string>
     <string name="sort_by">ソート順</string>
     <string name="preview">プレビュー</string>
-    <string name="switch_to_single">単ページに切替</string>
-    <string name="switch_to_double">見開きページに切替</string>
     <string name="single_page">単ページ</string>
     <string name="double_pages">見開きページ</string>
     <string name="page_layout">ページレイアウト</string>
     <string name="shift_one_page_over">1ページずらす</string>
-    <string name="oldest_first">古い順</string>
-    <string name="newest_first">新しい順</string>
     <string name="no_pages_found">ページが見つかりません</string>
     <string name="grid_size">グリッドサイズ</string>
     <string name="comfortable_grid">快適グリッド</string>
@@ -579,7 +559,6 @@
     <string name="filter_languages">言語フィルター</string>
     <string name="decode_image_error">画像を読み込めませんでした</string>
     <string name="clear_cached_covers_non_library">ライブラリにないキャッシュされた表紙を削除</string>
-    <string name="not_logged_into_">%1$s にログインしていません</string>
     <string name="search_recents">最近を検索…</string>
     <string name="hide">隠す</string>
     <string name="search_filters">フィルターを検索</string>
@@ -611,7 +590,6 @@
     </plurals>
     <string name="auto_refresh_covers_summary">ライブラリを更新する際に、ライブラリ内の表紙も更新します</string>
     <string name="group_chapters_together">章をグループ化する</string>
-    <string name="webtoon_style">webtoon 風</string>
     <string name="crop_borders_webtoon">余白をトリミング（Webtoon）</string>
     <string name="crop_borders_paged">余白をトリミング（ページ）</string>
     <string name="enable_zoom_out">ズームアウトを有効にする</string>
@@ -626,8 +604,6 @@
     <string name="season_">シーズン %1$d</string>
     <string name="volume_">第 %1$d 巻</string>
     <string name="search_chapters">章を検索</string>
-    <string name="sort_by_source_s_order">ソースの並び順</string>
-    <string name="sort_by_chapter_number">章の番号順</string>
     <string name="remember_this_choice">この選択を記憶する</string>
     <string name="error_sharing_cover">表紙を共有できませんでした</string>
     <string name="error_saving_cover">表紙を保存できませんでした</string>
@@ -855,7 +831,6 @@
     <string name="download_queue_size_warning">警告: 大量の一括ダウンロードにより、ソースは遅くなったり、Tachiyomiを接続禁止したりする恐れがあります。詳しくはタップでご覧ください。</string>
     <string name="save_chapters_as_cbz">CBZ アーカイブとして保存</string>
     <string name="lime_time">石灰の世代</string>
-    <string name="classic_blue">クラシックブルー</string>
     <string name="publishing_finished">完結済み</string>
     <string name="cancelled">キャンセル済み</string>
     <string name="on_hiatus">休載中</string>
@@ -907,9 +882,7 @@
     <string name="clear_history_confirmation">履歴がすべて失われます。続行しますか？</string>
     <string name="show_">%1$s を表示</string>
     <string name="use_staggered_grid">スタッガード格子を使用</string>
-    <string name="pref_update_only_completely_read_summary">未読の章がない時のみ（つまり完読後のみ）漫画を更新</string>
     <string name="must_view_details_before_migration">移行するには、この項目の詳細ページを表示する必要があります</string>
-    <string name="view_all">すべて表示</string>
     <string name="zoom_double_page_spreads">ダブルページ上でズーム</string>
     <string name="update_tracking_after_reading">読書の後追跡を更新</string>
     <string name="update_tracking_marked_read">既読とした後追跡を更新</string>
@@ -923,7 +896,6 @@
     <string name="backup_info">バックアップの自動作成は強く推奨されます。ほかの場所にもコピーを保管してください。</string>
     <string name="pref_manage_notifications">通知設定</string>
     <string name="battery_not_low">バッテリー残量が低くない</string>
-    <string name="faq_and_guides">よくあるご質問とガイド</string>
     <string name="secure_screen_summary">セキュア画面は、アプリ切り替え時にアプリのコンテンツを非表示にし、スクリーンショットをブロックします</string>
     <plurals name="next_unread_chapters">
         <item quantity="other">次の未読の %d 章</item>

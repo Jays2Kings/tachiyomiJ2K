@@ -31,7 +31,6 @@
     <string name="add">Idagdag</string>
     <string name="edit_categories">I-edit ang mga kategorya</string>
     <string name="move_to_categories">Ilipat sa (mga) kategorya</string>
-    <string name="start">Mag-umpisa</string>
     <string name="stop">Itigil</string>
     <string name="pause">Ihinto</string>
     <string name="clear">Linisin</string>
@@ -70,15 +69,12 @@
     <string name="daily">Araw-araw</string>
     <string name="every_2_days">Kada 2 araw</string>
     <string name="weekly">Linggo-linggo</string>
-    <string name="categories_to_include_in_global_update">Mga Kategoryang isasama sa pangkalahatang update</string>
     <string name="all">Lahat</string>
     <string name="library_update_restriction">Mga restriksyon sa pag-a-update ng aklatan</string>
-    <string name="library_update_restriction_summary">I-update lamang kung nakamit ang mga kondisyon</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Habang nagtsa-charge</string>
     <string name="app_theme">Tema ng application</string>
     <string name="dark">Madilim na tema</string>
-    <string name="amoled_black">Temang AMOLED</string>
     <string name="language">Wika</string>
     <string name="system_default">Default ng sistema</string>
     <string name="default_category">Default na kategorya</string>
@@ -87,7 +83,6 @@
     <string name="installing">Ini-install</string>
     <string name="installed">Naka-install</string>
     <string name="trust">Tiwala</string>
-    <string name="untrusted">Hindi tiwala</string>
     <string name="uninstall">I-uninstall</string>
     <string name="untrusted_extension">Untrusted na extension</string>
     <string name="untrusted_extension_message">Ang extension na ito ay na-sign gamit ang isang untrusted certificate at hindi pinagana.
@@ -100,7 +95,6 @@
     <string name="fullscreen">I-fullscreen</string>
     <string name="double_tap_anim_speed">Bilis ng animation sa pag-dobleng pindot</string>
     <string name="show_page_number">Ipakita ang bilang ng pahina</string>
-    <string name="true_32bit_color">Kulay na 32-bit</string>
     <string name="crop_borders">I-crop ang mga gilid</string>
     <string name="use_custom_brightness">Gumamit ng custom brightness</string>
     <string name="use_custom_color_filter">Gumamit ng custom na color filter</string>
@@ -133,7 +127,6 @@
     <string name="fast">Mabilis</string>
     <string name="rotation">Pag-ikot</string>
     <string name="free">Malaya</string>
-    <string name="lock">I-lock</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -149,9 +142,7 @@
     <string name="fourth_to_last">Ikaapat sa huling kabanata</string>
     <string name="fifth_to_last">Ikalima sa huling kabanata</string>
     <string name="download_new_chapters">Mag-download ng mga bagong kabanata</string>
-    <string name="categories_to_include_in_download">Mga kategoryang isasama sa pag-download</string>
     <string name="services">Mga Serbisyo</string>
-    <string name="backup">Backup</string>
     <string name="create_backup">Gumawa ng backup</string>
     <string name="can_be_used_to_restore">Maaring magamit para ma-restore ang kasalukuyang aklatan</string>
     <string name="restore_backup">I-restore ang backup</string>
@@ -258,7 +249,6 @@
     <string name="searching_for_updates">Naghahanap ng mga update</string>
     <string name="download_complete">Nakumpleto ang pag-download</string>
     <string name="download_error">Error sa pag-download</string>
-    <string name="update_available">Mayroong update</string>
     <string name="cover_of_image">Pabalat ng manga</string>
     <string name="no_recent_chapters">Walang mga kamakailang kabanata</string>
     <string name="no_recently_read_manga">Walang mga kakabasang kabanata</string>
@@ -277,7 +267,6 @@
     <string name="open_source_licenses">Mga lisensiya sa open source</string>
     <string name="website">Pook-sapot</string>
     <string name="whats_new_this_release">Mga bago sa release na ito</string>
-    <string name="whats_new">Mga bago</string>
     <string name="does_not_prevent_unofficial_nsfw">Hindi nito naiiwasan ang pagpakita ng mga NSFW (18+) ng mga di-opisyal o posibleng maling naka-flag na extension sa loob ng app.</string>
     <string name="nsfw_sources">Mga Pinagkukunang NSFW (pang-18+)</string>
     <string name="source_migration_guide">Gabay sa paglipat ng pinagkukunan</string>
@@ -288,9 +277,7 @@
     <string name="only_enable_pinned_for_migration">I-enable lamang ang mga nakamarkang pinagkukunan para sa migrasyon</string>
     <string name="match_enabled_sources">Itugma sa naka-enable na pinagkukunan</string>
     <string name="match_pinned_sources">Itugma sa mga nakamarkang punagkukunan</string>
-    <string name="only_search_pinned_when">Maghanap lamang sa mga nakamarkang pinagkukunan</string>
     <string name="check_for_extension_updates">Maghanap ng update para sa mga extension</string>
-    <string name="pref_global_search">Pangkalahatang Paghahanap</string>
     <string name="delete_all_covers__not_in_library_used_">Burahin lahat ng naka-cache na pabalat na wala sa iyong library
 \nKasalukuyang ginagamit: %1$s</string>
     <string name="clear_cached_covers_non_library">Burahin ang mga naka-cache na pabalat na wala sa iyong library</string>

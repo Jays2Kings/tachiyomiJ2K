@@ -31,7 +31,6 @@
     <string name="add">Ekle</string>
     <string name="edit_categories">Ulamları düzenle</string>
     <string name="move_to_categories">Ulamlara taşı</string>
-    <string name="start">Başlat</string>
     <string name="stop">Durdur</string>
     <string name="pause">Duraklat</string>
     <string name="clear">Temizle</string>
@@ -69,15 +68,12 @@
     <string name="daily">Her gün</string>
     <string name="every_2_days">2 günde bir</string>
     <string name="weekly">Her hafta</string>
-    <string name="categories_to_include_in_global_update">Genel güncellemeye eklenecek ulamlar</string>
     <string name="all">Tümü</string>
     <string name="library_update_restriction">Aygıt kısıtlamaları</string>
-    <string name="library_update_restriction_summary">Yalnızca koşullar sağlandığında güncelle</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Şarj oluyor</string>
     <string name="app_theme">Uygulama teması</string>
     <string name="dark">Koyu tema</string>
-    <string name="amoled_black">AMOLED Siyah</string>
     <string name="language">Dil</string>
     <string name="system_default">Sistem öntanımlı</string>
     <string name="default_category">Varsayılan ulam</string>
@@ -86,7 +82,6 @@
     <string name="installing">Kuruluyor</string>
     <string name="installed">Kuruldu</string>
     <string name="trust">Güven</string>
-    <string name="untrusted">Güvenilmeyen</string>
     <string name="uninstall">Kaldır</string>
     <string name="untrusted_extension">Güvenilmeyen uzantı</string>
     <string name="untrusted_extension_message">Kötü niyetli uzantılar, saklanan oturum açma kimlik bilgilerini okuyabilir veya rastgele kod çalıştırabilir.
@@ -128,7 +123,6 @@
     <string name="fast">Hızlı</string>
     <string name="rotation">Döndürme</string>
     <string name="free">Serbest</string>
-    <string name="lock">Kilitle</string>
     <string name="red_initial">K</string>
     <string name="green_initial">Y</string>
     <string name="blue_initial">M</string>
@@ -144,9 +138,7 @@
     <string name="fourth_to_last">Sondan dördüncü bölüm</string>
     <string name="fifth_to_last">Sondan beşinci bölüm</string>
     <string name="download_new_chapters">Yeni bölümleri indir</string>
-    <string name="categories_to_include_in_download">İndirmeye dahil edilecek kategoriler</string>
     <string name="services">Hizmetler</string>
-    <string name="backup">Yedekleme</string>
     <string name="create_backup">Yedek oluştur</string>
     <string name="can_be_used_to_restore">Şu anki kitaplığı geri yüklemek için kullanılabilir</string>
     <string name="restore_backup">Yedeği geri yükle</string>
@@ -238,7 +230,6 @@
     <string name="searching_for_updates">Güncellemeler aranıyor…</string>
     <string name="download_complete">İndirme tamamlandı</string>
     <string name="download_error">İndirme hatası</string>
-    <string name="update_available">Güncelleme var</string>
     <string name="cover_of_image">Girdinin kapağı</string>
     <string name="no_recent_chapters">Yeni bölüm yok</string>
     <string name="no_recently_read_manga">Yakınlarda okunan dizi yok</string>
@@ -301,7 +292,6 @@
     <string name="requires_app_restart">Etkili olması için uygulamanın yeniden başlatılmasını gerektirir</string>
     <string name="disable_battery_optimization">Pil optimizasyonunu devre dışı bırak</string>
     <string name="battery_optimization_disabled">Pil optimizasyonu zaten devre dışı</string>
-    <string name="pref_global_search">Genel arama</string>
     <string name="check_for_extension_updates">Uzantı güncellemelerini denetle</string>
     <string name="website">Web sitesi</string>
     <string name="open_source_licenses">Açık kaynak lisansları</string>
@@ -392,12 +382,7 @@
     <string name="reset_cover">Kapağı sıfırla</string>
     <string name="reset_tags">Etiketleri sıfırla</string>
     <string name="clear_tags">Etiketleri temizle</string>
-    <string name="oldest_first">Eskiden yeniye</string>
-    <string name="newest_first">Yeniden eskiye</string>
-    <string name="sort_by_chapter_number">Bölüm sayısına göre sırala</string>
-    <string name="sort_by_source_s_order">Kaynağın sırasına göre sırala</string>
     <string name="hide_chapter_titles">Bölüm başlıklarını gizle</string>
-    <string name="show_read_chapters">Okunan bölümleri göster</string>
     <string name="show_unread_chapters">Okunmayan bölümleri göster</string>
     <string name="show_downloaded_chapters">İndirilmiş bölümleri göster</string>
     <string name="show_bookmarked_chapters">İşaretlenmiş bölümleri göster</string>
@@ -438,7 +423,6 @@
     <string name="nothing_is_downloading">Şu anda indirme yok</string>
     <string name="downloading_">İndiriliyor: %1$s</string>
     <string name="username_must_not_be_blank">Kullanıcı adı veya şifre boş bırakılamaz</string>
-    <string name="whats_new">Yenilikler</string>
     <string name="source_migration_guide">Kaynak geçiş kılavuzu</string>
     <string name="nsfw_sources">Yetişkin içerik (18+) kaynakları</string>
     <string name="does_not_prevent_unofficial_nsfw">Bu, resmi olmayan veya yanlış işaretlenmiş uzantıların, uygulama içinde yetişkin (18+) içeriği göstermesini engellemez.</string>
@@ -450,7 +434,6 @@
     <string name="locale">Yerel</string>
     <string name="automatic_backups">Otomatik yedekleme</string>
     <string name="invalid_backup_file">Geçersiz yedek dosyası</string>
-    <string name="invalid_backup_file_type">Geçersiz yedek dosyası türü: %1$s\n.proto.gz veya .json ile bitmelidir.</string>
     <string name="backup_has_no_manga">Yedek bir girdi içermiyor.</string>
     <string name="restore_missing_sources">Eksik kaynaklar:</string>
     <string name="restore_missing_trackers">Giriş yapılmamış izleyiciler:</string>
@@ -461,7 +444,6 @@
         <item quantity="one">%1$s içinde %2$s hatayla tamamlandı</item>
         <item quantity="other">%1$s içinde %2$s hatayla tamamlandı</item>
     </plurals>
-    <string name="no_chapters_error">Bölüm bulunamadı</string>
     <string name="badges">Rozetler</string>
     <string name="last_used">Son kullanılan</string>
     <string name="nsfw_short">18+</string>
@@ -492,7 +474,6 @@
     <string name="backup_in_progress">Yedekleme zaten devam ediyor</string>
     <string name="in_library">Kitaplıkta</string>
     <string name="flat_lime">Düz Kireç</string>
-    <string name="hot_pink">Sıcak Pembe</string>
     <string name="spring_blossom">Bahar Çiçeği</string>
     <string name="midnight_dusk">Alacakaranlık</string>
     <string name="stop_migrating">Geçişi durdur\?</string>
@@ -538,8 +519,6 @@
     <string name="both_axes">Her İki Eksen</string>
     <string name="vertically">Dikey</string>
     <string name="horizontally">Yatay</string>
-    <string name="switch_to_single">Tek sayfaya geç</string>
-    <string name="switch_to_double">Çift sayfaya geç</string>
     <string name="double_pages">Çift sayfa</string>
     <string name="smart_by_page">Akıllı (sayfaya göre)</string>
     <string name="invert_double_pages">Çift sayfaları ters çevir</string>
@@ -553,7 +532,6 @@
     <string name="save_first_page">İlk sayfayı kaydet</string>
     <string name="share_first_page">İlk sayfayı paylaş</string>
     <string name="set_first_page_as_cover">İlk sayfayı kapak olarak ayarla</string>
-    <string name="webtoon_style">webtoon stili</string>
     <string name="reading_">Okunan %1$s</string>
     <string name="pages_">Sayfalar %1$s</string>
     <string name="set_as_default_for_all">Tümü için varsayılan ayarla</string>
@@ -625,7 +603,6 @@
         <item quantity="one">Önbellek temizlendi. %d dosya silindi</item>
         <item quantity="other">Önbellek temizlendi. %d dosya silindi</item>
     </plurals>
-    <string name="not_logged_into_">Giriş yapılmadı: %1$s</string>
     <string name="restore_error">Yedek geri yüklenemedi</string>
     <string name="pressing_back_to_start">Geri gitmek, uygulamadan çıkmadan önce başlangıç ekranına döner</string>
     <string name="back_to_start">Başlangıç ekranına dön</string>
@@ -658,7 +635,6 @@
     <string name="migration_sources_changed">Geçiş kaynakları değişti</string>
     <string name="match_enabled_sources">Aktif olan kaynakları eşleştir</string>
     <string name="match_pinned_sources">Sabitlenmiş kaynakları eşleştir</string>
-    <string name="only_search_pinned_when">Yalnızca sabitlenmiş kaynakları ara</string>
     <plurals name="cleanup_done">
         <item quantity="one">Temizleme bitti. %d klasör kaldırıldı</item>
         <item quantity="other">Temizleme bitti. %d klasör kaldırıldı</item>
@@ -885,7 +861,6 @@
     <string name="download_queue_size_warning">Uyarı: Büyük toplu indirmeler kaynakların yavaşlamasına ve/veya Tachiyomi\'yi engellemesine neden olabilir. Daha çok öğrenmek için dokunun.</string>
     <string name="lime_time">Limon Zamanı</string>
     <string name="save_chapters_as_cbz">CBZ arşivi olarak kaydet</string>
-    <string name="classic_blue">Klasik Mavi</string>
     <string name="publishing_finished">Yayımı tamamlandı</string>
     <string name="cancelled">İptal edildi</string>
     <string name="on_hiatus">Molada</string>
@@ -942,9 +917,7 @@
     <string name="tap_to_see_details">Ayrıntıları görmek için dokun</string>
     <string name="tap_to_learn_more">Daha fazla bilgi edinmek için dokunun</string>
     <string name="use_staggered_grid">Aşamalı ızgara kullan</string>
-    <string name="pref_update_only_completely_read_summary">Diziyi yalnızca okunmayan bölüm yoksa (tamamen okundu ise) güncelle</string>
     <string name="update_tracking_marked_read">Okundu olarak işaretlendiğinde izlemeyi güncelle</string>
-    <string name="view_all">Tümünü görüntüle</string>
     <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
     <string name="clear_history">Geçmişi temizle</string>
     <string name="clear_history_completed">Geçmiş silindi</string>
@@ -959,7 +932,6 @@
     <string name="download_ahead_info">Yalnızca kitaplıktaki girdilerde ve geçerli bölüm ile bir sonraki bölüm zaten indirildiyse kullanılabilir</string>
     <string name="pref_manage_notifications">Bildirimleri yönet</string>
     <string name="battery_not_low">Pil düşük değil</string>
-    <string name="faq_and_guides">SSS ve Kılavuzlar</string>
     <string name="learn_why">Nedenini öğrenin</string>
     <string name="secure_screen_summary">Güvenli ekran, uygulamalar arasında geçiş yaparken uygulama içeriğini gizler ve ekran görüntüsü alınmasını engeller</string>
     <string name="open_in_app">Uygulamada aç</string>

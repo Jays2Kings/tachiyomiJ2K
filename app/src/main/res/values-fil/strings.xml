@@ -32,7 +32,6 @@
     <string name="check_for_updates">Maghanap ng update</string>
     <string name="secure_screen">Bantayan ang screen</string>
     <string name="security">Seguridad</string>
-    <string name="backup">Pag-backup</string>
     <string name="create_backup">Gumawa ng backup</string>
     <string name="can_be_used_to_restore">Magagamit para maibalik ang kasalukuyang Aklatan</string>
     <string name="restore_backup">Bumalik sa backup</string>
@@ -58,7 +57,6 @@
     <string name="updates_tracking_details">Ina-update ang estado, iskor, at huling nabasang kabanata mula sa mga serbisyo sa pagta-track</string>
     <string name="disable_battery_optimization">Patayin ang pag-o-optimisa sa baterya</string>
     <string name="battery_optimization_disabled">Di na pinagana ang pag-o-optimisa sa baterya</string>
-    <string name="pref_global_search">Panlahatang paghahanap</string>
     <string name="check_for_extension_updates">Maghanap ng update sa extension</string>
     <string name="version">Bersyon</string>
     <string name="build_time">Oras ng paggawa</string>
@@ -94,7 +92,6 @@
     <string name="fourth_to_last">Pang-apat sa huli</string>
     <string name="fifth_to_last">Panlima sa huli</string>
     <string name="download_new_chapters">I-download ang mga bagong kabanata</string>
-    <string name="categories_to_include_in_download">Mga kategoryang kasama sa download</string>
     <string name="manual">Mano-mano</string>
     <string name="every_6_hours">Kada 6 na oras</string>
     <string name="every_12_hours">Kada 12 oras</string>
@@ -139,8 +136,6 @@
     <string name="new_chapters_found">May mga bagong kabanata</string>
     <string name="library_update_frequency">Dalas ng pag-update</string>
     <string name="library_update_restriction">Mga kondisyon sa pag-update</string>
-    <string name="library_update_restriction_summary">I-update kung nakamit ang (mga) kondisyon</string>
-    <string name="categories_to_include_in_global_update">Kategoryang kasama sa panlahatang update</string>
     <string name="updates">Bago</string>
     <string name="history">Nakaraan</string>
     <string name="no_more_results">Wala na\'ng resulta</string>
@@ -160,7 +155,6 @@
     <string name="installing">Ini-install</string>
     <string name="installed">Naka-install</string>
     <string name="trust">Tiwala</string>
-    <string name="untrusted">Di tiwala</string>
     <string name="uninstall">I-uninstall</string>
     <string name="untrusted_extension">Di-pinagkakatiwalaang extension</string>
     <string name="untrusted_extension_message">Maaaring basahin ng mga mapanganib na extension ang anumang nakaimbak na kredensyal sa pag-log in o magsagawa ng arbitrary code.
@@ -252,7 +246,6 @@
     <string name="left">Kaliwa</string>
     <string name="less">Bawasan</string>
     <string name="loading">Naglo-load…</string>
-    <string name="lock">Naka-lock</string>
     <string name="mark_as_read">Markahang nabasa</string>
     <string name="mark_as_unread">Markahang di pa nabasa</string>
     <string name="mark_previous_as_read">Markahang nabasa ang mga nauna</string>
@@ -284,7 +277,6 @@
     <string name="select_all">Piliin lahat</string>
     <string name="share">Ibahagi</string>
     <string name="sort">Ayusin</string>
-    <string name="start">Simulan</string>
     <string name="stop">Itigil</string>
     <string name="undo">I-undo</string>
     <string name="unknown_error">Di matukoy na error</string>
@@ -345,8 +337,6 @@
     <string name="source_migration_guide">Gabay sa Paglipat ng source</string>
     <string name="nsfw_sources">Mga source na NSFW (18+)</string>
     <string name="does_not_prevent_unofficial_nsfw">Hindi nito naiiwasan ang pagpapakita ng mga NSFW (18+) sa mga di-opisyal o posibleng maling naka-flag na extension sa loob ng app.</string>
-    <string name="whats_new">Anong bago</string>
-    <string name="no_chapters_error">Walang nakitang kabanata</string>
     <string name="badges">Panukoy</string>
     <string name="started_reading_date">Sinimulang basahin</string>
     <string name="finished_reading_date">Natapos basahin</string>
@@ -355,8 +345,6 @@
     <string name="locale">Lokal</string>
     <string name="automatic_backups">Kusang pag-backup</string>
     <string name="invalid_backup_file">Invalid na backup</string>
-    <string name="invalid_backup_file_type">Invalid na backup: %1$s
-\nDapat nagtatapos ito sa .proto.gz o .json.</string>
     <string name="backup_has_no_manga">Hindi naglalaman ang backup ng kahit anong entry.</string>
     <string name="restore_missing_sources">Nawawalang source:</string>
     <string name="restore_missing_trackers">Di naka-login sa mga tracker:</string>
@@ -388,7 +376,6 @@
     <string name="library_search_hint">Hanapin ang pamagat, tag, source</string>
     <string name="selected_">Pinili: %1$d</string>
     <string name="your_library">Aklatan mo</string>
-    <string name="update_available">May bagong update</string>
     <string name="updating_">Ina-update ang %1$s</string>
     <string name="jump_to_category">Puntahan ang kategorya</string>
     <string name="long_press_category">Mahabang pindutin para i-edit ang kategorya</string>
@@ -427,8 +414,6 @@
     <string name="updates_and_history">Bago &amp; Nakaraan</string>
     <string name="include_in_global_update">Isama sa panlahatang update</string>
     <string name="date_fetched">Petsa kinuha</string>
-    <string name="hot_pink">Mapusyaw</string>
-    <string name="amoled_black">Itim na AMOLED</string>
     <string name="flat_lime">Lunti</string>
     <string name="midnight_dusk">Hatinggabi</string>
     <string name="spring_blossom">Sakura</string>
@@ -503,8 +488,6 @@
     <string name="smart_based_on_page">Matalino (base sa pahina)</string>
     <string name="locked_landscape">Naka-lock sa landscape</string>
     <string name="locked_portrait">Naka-lock sa portrait</string>
-    <string name="switch_to_single">Lumipat sa isang pahina</string>
-    <string name="switch_to_double">Lumipat sa dobleng pahina</string>
     <string name="single_page">Isang pahina</string>
     <string name="double_pages">Dobleng pahina</string>
     <string name="source_hidden">Nakatago ang source</string>
@@ -515,7 +498,6 @@
     <string name="data_management">Pamamahala sa data</string>
     <string name="force_download_cache_refresh_summary">Pipilitin nito na muling ikalkula ang download cache. May gamit ito kung binago mo ang mga download sa labas ng app na ito at gusto mong kunin sila ng app</string>
     <string name="force_download_cache_refresh">I-refresh ang download cache</string>
-    <string name="not_logged_into_">Di naka-login sa %1$s</string>
     <string name="download_unread">I-download ang di pa nabasa</string>
     <string name="last_used_library_recents">Huling ginamit (Aklatan o Kamakailan)</string>
     <string name="pure_black_dark_mode">Purong itim</string>
@@ -548,7 +530,6 @@
     <string name="save_first_page">I-save ang unang pahina</string>
     <string name="share_first_page">Ibahagi ang unang pahina</string>
     <string name="set_first_page_as_cover">Itakda ang unang pahina bilang pabalat</string>
-    <string name="webtoon_style">pa-webtoon</string>
     <string name="reading_">Binabasa: %1$s</string>
     <string name="changing_will_reset_reading_mode">Mari-reset ang paraan ng pagbasa para sa seryeng ito kung babaguhin ito</string>
     <string name="reading_mode">Paraan ng pagbasa</string>
@@ -739,7 +720,6 @@
     <string name="tap_to_see_details">Pindutin para makita ang detalye</string>
     <string name="update_tracking_scoring_type">I-update ang uri ng iskor ng %1$s</string>
     <string name="scoring_type_updated">Na-update na ang uri ng iskor</string>
-    <string name="sort_by_source_s_order">Ayusin base sa ayos ng source</string>
     <string name="reset_tags">I-reset ang mga tag</string>
     <string name="migrating_to">lilipat sa</string>
     <plurals name="migrate_manga">
@@ -749,7 +729,6 @@
     <string name="must_be_in_library_to_edit">Ang mga serye ay dapat nasa iyong library upang ma-edit</string>
     <string name="filter_groups">I-filter ang mga scanlator</string>
     <string name="language_badge">Wika</string>
-    <string name="show_read_chapters">Ipakita ang mga kabanatang nabasa</string>
     <string name="use_side_navigation">Gamitin ang nabigasyon sa gilid</string>
     <string name="over_wifi_only">Sa Wi-Fi lang</string>
     <string name="show_recent_series">Ipakita ang mga kamakailang serye</string>
@@ -782,7 +761,6 @@
     <string name="search_manually">Mano-manong hanapin</string>
     <string name="copy_now">Kopyahin na</string>
     <string name="dont_migrate">Wag lumipat</string>
-    <string name="classic_blue">Classic na Bughaw</string>
     <string name="theme_buttons_based_on_cover">Kulayan ang mga button base sa pabalat</string>
     <string name="show_larger_toolbar">Magpakita ng isang mas malaki at pinalawak na toolbar sa taas ng karamihan sa mga pahina (hindi magpapakita sa mga maliliit na device mapaanuman ang pagsasaayos)</string>
     <string name="includes_recently_read_updated_added">Isama ang kamakailang binasa, na-update, at dinagdag na serye</string>
@@ -790,9 +768,6 @@
     <string name="split_double_pages_portrait">Hatiin ang mga dobleng pahina sa Nakatayo</string>
     <string name="pad_cutout_areas">I-pad ang mga cutout area</string>
     <string name="automatic_can_still_switch">Habang ginagamit ang kusang pag-layout sa pahina, maaari ka pa ring magpalit ng layout habang nagbabasa nang hindi ino-override ito</string>
-    <string name="sort_by_chapter_number">Ayusin base sa bilang ng kabanata</string>
-    <string name="newest_first">Pinakabago papaluma</string>
-    <string name="oldest_first">Pinakaluma papabago</string>
     <string name="cannot_remove_tracking_while_offline">Di matatanggal ang tracker mula sa %1$s habang offline</string>
     <string name="turn_on_">Buksan ang %s</string>
     <string name="light_theme">Maliwanag na tema</string>
@@ -812,7 +787,6 @@
     <string name="over_any_network">Sa kahit anong network</string>
     <string name="dont_auto_update">Wag magkusang mag-update</string>
     <string name="use_staggered_grid">Gamitin ang di-pantay na grid</string>
-    <string name="pref_update_only_completely_read_summary">I-update lang ang serye kung walang kabanatang di pa nabasa (lahat ay nabasa na)</string>
     <string name="both_axes">Pareho</string>
     <string name="cutout_area_behavior">Gagawin sa cutout area</string>
     <string name="ignore_cutout_areas">Balewalain ang mga cutout area</string>
@@ -882,7 +856,6 @@
     <string name="backup_info">Rinerekomenda po namin ang kusang pag-backup. Kailangan mo ring magtabi ng mga kopya sa ibang lugar.</string>
     <string name="pref_manage_notifications">Pamahalaan ang mga abiso</string>
     <string name="battery_not_low">Di pa lowbat</string>
-    <string name="faq_and_guides">Mga Madalas Itanong at Gabay</string>
     <plurals name="cleanup_done">
         <item quantity="one">Tapos na ang paglilinis. Inalis ang %d folder</item>
         <item quantity="other">Tapos na ang paglilinis. Inalis ang %d (na) folder</item>
@@ -904,7 +877,6 @@
     <string name="clear_cached_covers_non_library">Tanggalin ang mga naka-cache na pabalat na wala sa Aklatan</string>
     <string name="select_uninstalled_sources">Piliin ang mga na-uninstall na source</string>
     <string name="notify_extension_updated">Na-update ang extension ng Notify</string>
-    <string name="only_search_pinned_when">Maghanap lang sa mga naka-pin na source</string>
     <string name="downloads_swipe_tutorial">Maaaring kanselahin ang pag-download sa pamamagitan ng pag-swipe sa kanila
 \nI-swipe ang tip na ito para mawala ito</string>
     <string name="remove_download">Tanggalin ang download</string>
@@ -941,7 +913,6 @@
     <string name="mark_range_as_unread">Markahan ang isang grupo ng kabanata bilang di pa nabasa</string>
     <string name="search_">Maghanap sa %1$s</string>
     <string name="select_none">Piliin ang wala</string>
-    <string name="view_all">Tingnan lahat</string>
     <string name="clean_read_manga_not_in_library">Linisin ang mga entry na wala sa Aklatan</string>
     <string name="starting_cleanup">Panimulang paglilinis</string>
     <string name="no_folders_to_cleanup">Walang lilinising folder</string>

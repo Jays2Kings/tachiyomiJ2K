@@ -77,7 +77,6 @@
     <string name="install">نصب</string>
     <string name="left">چپ</string>
     <string name="less">نمایش اطلاعات کمتر</string>
-    <string name="lock">قفل</string>
     <string name="mark_as_read">علامت گذاری به عنوان خوانده شده</string>
     <string name="mark_as_unread">علامت گذاری به عنوان خوانده نشده</string>
     <string name="mark_previous_as_read">علامت گذاری قبلی‌ها به عنوان خوانده شده</string>
@@ -107,8 +106,6 @@
     <string name="new_chapters_found">فصل‌های جدید پیدا شدند</string>
     <string name="library_update_frequency">فرکانس آپدیت کتابخانه</string>
     <string name="library_update_restriction">محدودیت‌های دستگاه</string>
-    <string name="library_update_restriction_summary">در چه شرایطی کتابخانه آپدیت شود</string>
-    <string name="categories_to_include_in_global_update">دسته بندی هایی که در به آپدیت سراسری شامل می شوند</string>
     <string name="updates">آپدیت‌ها</string>
     <string name="other">دیگر</string>
     <string name="global_search">جست و جو در تمام منابع…</string>
@@ -121,7 +118,6 @@
     <string name="installing">در حال نصب</string>
     <string name="installed">نصب شده</string>
     <string name="trust">مورد اعتماد</string>
-    <string name="untrusted">نامطمئن</string>
     <string name="uninstall">حذف نصب</string>
     <string name="version_">نگارش %1$s</string>
     <string name="language_">زبان: %1$s</string>
@@ -164,7 +160,6 @@
     <string name="clear_database">پاک کردن پایگاه داده</string>
     <string name="updates_tracking_details">وضعیت خواندن، امتیاز و آخرین فصل خوانده شده را از سایت خدمات ردیابی آپدیت می‌کند</string>
     <string name="disable_battery_optimization">غیر فعال کردن بهینه سازی باتری</string>
-    <string name="pref_global_search">جست و جوی کامل</string>
     <string name="check_for_extension_updates">بررسی برای به افزونه‌های آپدیت‌شده</string>
     <string name="send_crash_report">ارسال گزارش های خرابی</string>
     <string name="helps_fix_bugs">به رفع اشکالات برنامه کمک می کند. هیچ گونه داده حساسی ارسال نخواهد شد</string>
@@ -188,7 +183,6 @@
     <string name="only_download_over_wifi">فقط از طریق Wi-Fi بارگیری شود</string>
     <string name="custom_location">مکان سفارشی</string>
     <string name="download_new_chapters">دانلود فصل‌های جدید</string>
-    <string name="categories_to_include_in_download">دسته بندی هایی که در دانلود شامل می شوند</string>
     <string name="manual">فقط دستی</string>
     <string name="every_6_hours">هر ۶ ساعت یکبار</string>
     <string name="every_12_hours">هر ۱۲ ساعت یکبار</string>
@@ -208,7 +202,6 @@
     <string name="select_all">انتخاب همه</string>
     <string name="share">اشتراک گذاری</string>
     <string name="sort">مرتب سازی</string>
-    <string name="start">آغاز</string>
     <string name="stop">متوقف کردن</string>
     <string name="undo">خنثی کردن (Undo)</string>
     <string name="unpin">برداشتن پین</string>
@@ -231,7 +224,6 @@
     <string name="email">آدرس ایمیل</string>
     <string name="username">نام کاربری</string>
     <string name="website">وب سایت</string>
-    <string name="whats_new">موارد جدید</string>
     <string name="build_time">زمان ساخت</string>
     <string name="version">نسخهٔ</string>
     <string name="battery_optimization_disabled">بهینه سازی باتری از قبل غیرفعال شده است</string>
@@ -244,7 +236,6 @@
     <string name="creating_backup">درحال ایجاد نسخه پشتیبان</string>
     <string name="restore_completed">بازیابی کامل شد</string>
     <string name="backup_created">نسخه پشتیبان ایجاد شد</string>
-    <string name="backup">پشتیبان گیری</string>
     <string name="secure_screen">صفحه نمایش امن</string>
     <string name="check_for_updates">بررسی برای به آپدیت‌ها</string>
     <string name="system_default">پیش‌فرض سیستم</string>
@@ -316,7 +307,6 @@
     <string name="backup_has_no_manga">فایل پشتیبان شامل هیچ مانگا ای نیست.</string>
     <string name="restore_missing_sources">منابع ناموجود:</string>
     <string name="restore_missing_trackers">ردیابی هایی که به سیستم وارد نشده اند:</string>
-    <string name="no_chapters_error">هیچ قسمتی پیدا نشد</string>
     <string name="badges">تعداد</string>
     <string name="last_used">آخرین استفاده</string>
     <string name="nsfw_short">18+</string>
@@ -366,7 +356,6 @@
     <string name="use_custom_color_filter">استفاده از فیلتر رنگ سفارشی</string>
     <string name="use_custom_brightness">استفاده از روشنایی سفارشی</string>
     <string name="enable_zoom_out">فعالسازی بزرگنمایی</string>
-    <string name="webtoon_style">سبک وبتون</string>
     <string name="set_as_default_for_all">به عنوان حالت پیشرفض برای همه قرار بده</string>
     <string name="app_info">اطلاعات اپلیکیشن</string>
     <string name="may_contain_nsfw">ممکن است دارای صحنه های نامناسب برای کار(+18) باشد</string>
@@ -404,7 +393,6 @@
     <string name="show_all_categories">همه دسته بندی ها را نشان بده</string>
     <string name="no_matches_for_filters">هیچ نمونه مشابهی برای فیلترهای فعلی شما پیدا نشد</string>
     <string name="library_is_empty_add_from_browse">کتابخانه شما خالی است، می توانید از صفحه مرور به کتابخانه خود اضافه کنید</string>
-    <string name="update_available">بروزرسانی در دسترس است</string>
     <string name="jump_to_category">پرش به دسته بندی</string>
     <string name="long_press_category">برای ویرایش یک دسته بندی بر روی آن ضربه بزنید و نگه دارید</string>
     <string name="category_deleted">این دسته بندی حذف شد</string>
@@ -514,7 +502,6 @@
     <string name="descending">نزولی</string>
     <string name="show_number_of_items">نمایش تعداد موارد</string>
     <string name="tako">تاکو</string>
-    <string name="faq_and_guides">پرسش و پاسخ‌های متداول و راهنمایی‌ها</string>
     <string name="split_tall_images">نصف کردن خودکار عکس های بلند</string>
     <string name="tap_zones">مناطق قابل لمس</string>
     <string name="category_cannot_be_blank">نام دسته نمی تواند خالی باشد</string>
@@ -631,7 +618,6 @@
     <string name="a_while_ago">کمی پیش</string>
     <string name="reset_chapter_history">بازنشانی تاریخچه چپتر</string>
     <string name="uniform_covers">کاور های هماهنگ</string>
-    <string name="pref_update_only_completely_read_summary">تنها وقتی مجموعه ها را به روز رسانی کن که هیچ چپتر خوانده نشده ای وجود نداشته باشد (کامل خوانده شده باشد)</string>
     <string name="notification_update_error">%1$d بروز رسانی ناموفق</string>
     <string name="show_read_chapters_all">چپتر های خوانده شده را به صورت کلی و گروهی نشان بده</string>
     <string name="no_alternatives_found">هیچ جای گزینی یافت نشد</string>
@@ -767,8 +753,6 @@
     <string name="split_double_pages">تقسیم صفحات دوتایی</string>
     <string name="double_pages">صفحات دوتایی</string>
     <string name="single_page">تک صفحه‌ای</string>
-    <string name="switch_to_double">تعویض به صفحات دوتایی</string>
-    <string name="switch_to_single">تغییر به صفحه تکی</string>
     <string name="smart_based_on_page">هوشمند (بر اساس صفحه)</string>
     <string name="smart_based_on_page_and_theme">­هوشمند (بر اساس صفحه و قالب)</string>
     <string name="if_disabled_transition_will_skip">اگر غیرفعال باشد، در صورت بارگذاری فصل بعدی، صفحه انتقال نادیده گرفته می‌شود</string>
@@ -816,12 +800,7 @@
     <string name="show_bookmarked_chapters">نمایش چپترهای نشانه‌گذاری شده</string>
     <string name="show_downloaded_chapters">نمایش چپترهای دانلود شده</string>
     <string name="show_unread_chapters">نمایش چپترهای خوانده نشده</string>
-    <string name="show_read_chapters">نمایش چپترهای خوانده شده</string>
     <string name="hide_chapter_titles">پنهان کردن عناوین چپتر</string>
-    <string name="sort_by_source_s_order">مرتب سازی بر اساس ترتیب منبع</string>
-    <string name="sort_by_chapter_number">مرتب سازی بر اساس شماره چپتر</string>
-    <string name="newest_first">جدیدترین تا قدیمی‌ترین</string>
-    <string name="oldest_first">قدیمی‌ترین تا جدیدترین</string>
     <string name="add_tag">افزودن برچسب</string>
     <string name="clear_tags">پاک کردن برچسب‌ها</string>
     <string name="reset_tags">بازنشانی برچسب‌ها</string>
@@ -904,8 +883,6 @@
     <string name="light_theme">پوسته روشن</string>
     <string name="dark_theme">پوسته تیره</string>
     <string name="dark">تاریک</string>
-    <string name="amoled_black">مشکی آمولد</string>
-    <string name="classic_blue">آبی کلاسیک</string>
     <string name="spring_blossom">شکوفه بهاری</string>
     <string name="a_brighter_you">تو روشن‌تر (پویا)</string>
     <string name="a_calmer_you">تو آرام‌تر (پویا)</string>
@@ -917,7 +894,6 @@
     <string name="violet">بنفش</string>
     <string name="tokyo_light">توکیو روشن</string>
     <string name="tokyo_night">شب توکیو</string>
-    <string name="hot_pink">صورتی داغ</string>
     <string name="lime_time">زمان آهک</string>
     <string name="flat_lime">آهک تخت</string>
     <string name="white_theme">سفید خالص</string>
@@ -958,11 +934,9 @@
     <string name="restore_in_progress">بازیابی در حال انجام است</string>
     <string name="backup_in_progress">پشتیبان‌گیری در حال انجام است</string>
     <string name="max_auto_backups">حداکثر پشتیبان‌گیری خودکار</string>
-    <string name="invalid_backup_file_type">نوع فایل پشتیبان نامعتبر است: %1$s\nباید با .proto.gz یا .json خاتمه یابد.</string>
     <string name="restore_error">بازیابی نسخه پشتیبان انجام نشد</string>
     <string name="backup_restore_invalid_uri">خطا: آدرس اینترنتی خالی</string>
     <string name="backup_info">پشتیبان‌گیری خودکار اکیداً توصیه می‌شود. شما باید کپی‌ها را در جاهای دیگر نیز نگه دارید.</string>
-    <string name="not_logged_into_">وارد %1$s نشده‌ است</string>
     <string name="force_download_cache_refresh">حافظه پنهان دانلود را به‌روزرسانی کنید</string>
     <string name="force_download_cache_refresh_summary">این کار باعث می‌شود کش دانلودها دوباره محاسبه شود. اگر دانلودها را خارج از این برنامه تغییر داده‌اید و می‌خواهید برنامه آنها را دریافت کند، مفید است</string>
     <string name="data_management">مدیریت داده‌ها</string>
@@ -1014,7 +988,6 @@
     <string name="auto_update_extensions">بروزرسانی خودکار اکستنشن ها</string>
     <string name="notify_extension_updated">با پایان بروزرسانی هر اکستنشن من را مطلع کن</string>
     <string name="some_extensions_may_not_update">ممکن است برخی از اکستنشن هایی که خارج از این برنامه نصب شده اند، به صورت خودکار بروزرسانی نشوند</string>
-    <string name="only_search_pinned_when">فقط بین منابعی که پین شده اند جستجو شود</string>
     <string name="sources_to_search">منابعی که جستجو بین آنها صورت میگیرد</string>
     <string name="hide_in_library_items">عناوینی که در حال حاظر در کتابخانه من هستند را پنهان کن</string>
     <string name="show_duplicate_in_library_items">برچسب \"تکراری\" را نشان بده</string>

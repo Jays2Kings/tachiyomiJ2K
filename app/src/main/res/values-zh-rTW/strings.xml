@@ -31,7 +31,6 @@
     <string name="add">新增</string>
     <string name="edit_categories">管理分類</string>
     <string name="move_to_categories">移至分類</string>
-    <string name="start">開始</string>
     <string name="stop">停止</string>
     <string name="pause">暫停</string>
     <string name="clear">清除</string>
@@ -70,14 +69,12 @@
     <string name="daily">每日</string>
     <string name="every_2_days">每 2 日</string>
     <string name="weekly">每週</string>
-    <string name="categories_to_include_in_global_update">自動更新的分類</string>
     <string name="all">全部</string>
     <string name="library_update_restriction">裝置限制</string>
     <string name="wifi">僅限 Wi-Fi</string>
     <string name="charging">充電時</string>
     <string name="app_theme">佈景主題</string>
     <string name="dark">深色</string>
-    <string name="amoled_black">全黑</string>
     <string name="language">語言</string>
     <string name="system_default">系統預設</string>
     <string name="default_category">預設類別</string>
@@ -99,7 +96,6 @@
     <string name="fast">快速</string>
     <string name="rotation">螢幕方向</string>
     <string name="free">自動</string>
-    <string name="lock">鎖定</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -109,9 +105,7 @@
     <string name="remove_when_marked_as_read">刪除標示為已讀的章節</string>
     <string name="custom_location">自訂位置</string>
     <string name="download_new_chapters">自動下載新章節</string>
-    <string name="categories_to_include_in_download">欲啟用自動下載的分類</string>
     <string name="services">服務</string>
-    <string name="backup">備份</string>
     <string name="create_backup">建立備份</string>
     <string name="restore_backup">還原備份</string>
     <string name="backup_location">備份位置</string>
@@ -142,7 +136,6 @@
     <string name="searching_for_updates">正在檢查更新…</string>
     <string name="download_complete">下載完成</string>
     <string name="download_error">下載失敗</string>
-    <string name="update_available">可用的更新</string>
     <string name="no_wifi_connection">沒有可用的 Wi-Fi 連線</string>
     <string name="no_network_connection">尚未連接至網路</string>
     <string name="download_paused">下載已暫停</string>
@@ -225,7 +218,6 @@
     <string name="updates_covers_genres_desc">更新漫畫封面、類型、簡介及狀態</string>
     <string name="migrate">遷移</string>
     <string name="failed_to_update_cover">封面更新失敗</string>
-    <string name="library_update_restriction_summary">僅在符合條件時更新</string>
     <string name="category_with_name_exists">已有名稱相同的分類！</string>
     <string name="page_">第 %1$d 頁</string>
     <string name="next_chapter_not_found">找不到下一章</string>
@@ -240,7 +232,6 @@
     <string name="no_recent_chapters">沒有新章節</string>
     <string name="tracking">歷程</string>
     <string name="trust">信任</string>
-    <string name="untrusted">不信任</string>
     <string name="untrusted_extension">未受信任的擴充套件</string>
     <string name="untrusted_extension_message">惡意擴充功能能夠閱讀任何儲存的登入憑證，或執行任意程式碼。
 \n
@@ -266,7 +257,6 @@
     <string name="requires_app_restart">需要重新啟動應用程式以套用</string>
     <string name="disable_battery_optimization">停用電池效能最佳化</string>
     <string name="battery_optimization_disabled">已停用電池效能最佳化</string>
-    <string name="pref_global_search">全域搜尋</string>
     <string name="check_for_extension_updates">自動檢查擴充套件更新</string>
     <string name="website">網站</string>
     <string name="open_source_licenses">開放原始碼授權</string>
@@ -346,8 +336,6 @@
     <string name="locale">在地化</string>
     <string name="automatic_backups">自動備份</string>
     <string name="invalid_backup_file">無效的備份檔</string>
-    <string name="invalid_backup_file_type">無效的備份檔格式：%1$s
-\n副檔名應為 .proto.gz 或 .json。</string>
     <string name="backup_has_no_manga">此備份不含任何漫畫項目。</string>
     <string name="restore_missing_sources">遺失來源：</string>
     <string name="restore_missing_trackers">尚未登入至歷程平台：</string>
@@ -356,7 +344,6 @@
     <plurals name="restore_completed_message">
         <item quantity="other">歷時 %1$s，出現 %2$s 個錯誤</item>
     </plurals>
-    <string name="no_chapters_error">沒有章節</string>
     <string name="badges">標籤</string>
     <string name="last_used">最近使用</string>
     <string name="nsfw_short">18+</string>
@@ -376,7 +363,6 @@
     <string name="source_migration_guide">來源遷移說明</string>
     <string name="nsfw_sources">未滿十八歲之人不宜瀏覽的來源</string>
     <string name="does_not_prevent_unofficial_nsfw">即使啟用監護限制，還是可能有漏網之魚。使用者仍可藉由非官方或未正確標幟的擴充套件在本應用程式中瀏覽未滿十八歲之人不宜觀賞的內容。</string>
-    <string name="whats_new">更新日誌</string>
     <string name="file_picker_error">找不到檔案選擇器</string>
     <string name="open_log">檢視記錄檔</string>
     <string name="backup_and_restore">備份與還原</string>
@@ -420,12 +406,7 @@
     <string name="select_sources">選擇來源</string>
     <string name="set_as_default">設定為預設</string>
     <string name="custom_manga_info">自訂漫畫資訊</string>
-    <string name="oldest_first">最舊到最新</string>
-    <string name="newest_first">最新到最舊</string>
-    <string name="sort_by_chapter_number">依編號排序</string>
-    <string name="sort_by_source_s_order">依來源排序</string>
     <string name="hide_chapter_titles">隱藏標題</string>
-    <string name="show_read_chapters">顯示已讀章節</string>
     <string name="show_unread_chapters">顯示未讀章節</string>
     <string name="show_downloaded_chapters">顯示已下載</string>
     <string name="show_bookmarked_chapters">顯示已加入書籤</string>
@@ -626,7 +607,6 @@
     <string name="uniform_grid_covers">統一格狀封面</string>
     <string name="can_be_found_in_library_filters">也可以在展開書櫃篩選器找到</string>
     <string name="use_staggered_grid">使用交錯格狀</string>
-    <string name="pref_update_only_completely_read_summary">只在所有章節都已讀完後，才進行系列更新</string>
     <string name="chapter_x_of_y">%1$d/%2$d</string>
     <string name="release_page">發佈頁面</string>
     <string name="your_library">你的書櫃</string>
@@ -643,7 +623,6 @@
     <string name="backup_info">強烈建議啟用自動備份，並在他處保留副本。</string>
     <string name="pref_manage_notifications">管理通知設定</string>
     <string name="battery_not_low">電量充足時</string>
-    <string name="faq_and_guides">常見問題與指南</string>
     <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面。</string>
     <string name="pref_hide_threshold">捲動時隱藏選單的靈敏度</string>
     <string name="pref_highest">最高</string>
@@ -737,7 +716,6 @@
     <string name="appwidget_unavailable_locked">當需要解鎖才能存取應用程式時，無法使用小工具</string>
     <string name="set_as_default_for_all">將所有設定重回默認值</string>
     <string name="changing_will_reset_reading_mode">更改此項目將會重置本系列的閱讀模式</string>
-    <string name="webtoon_style">webtoon風格</string>
     <string name="save_combined_pages">儲存合併頁面</string>
     <string name="page_preload_amount">預先載入的頁數</string>
     <string name="set_second_page_as_cover">將第二頁設置為封面</string>
@@ -764,8 +742,6 @@
     <string name="set_first_page_as_cover">將第一頁設置為封面</string>
     <string name="_must_be_enabled_first">%1$s必須先啟用</string>
     <string name="could_not_install_extension">無法安裝擴充套件</string>
-    <string name="switch_to_single">切換到單頁</string>
-    <string name="switch_to_double">切換到雙頁</string>
     <string name="automatic_can_still_switch">使用自動頁面佈局時，您仍然可以在閱讀時在佈局之間切換，而不會覆蓋此設置</string>
     <string name="some_extensions_may_prompt">一些擴充套件可能仍然需要先安裝。</string>
     <plurals name="_updates_pending">
@@ -803,13 +779,11 @@
         <item quantity="other">已成功遷移 %d 個漫畫系列</item>
     </plurals>
     <string name="a_brighter_you">更明亮的你（動態）</string>
-    <string name="classic_blue">經典藍</string>
     <string name="spring_blossom">春暖花開</string>
     <string name="teal_ocean">青色海洋</string>
     <string name="a_calmer_you">更平靜的你（動態）</string>
     <string name="default_behavior">默認行為</string>
     <string name="no_alternatives_found">沒有找到替代品</string>
-    <string name="hot_pink">熱情的粉色</string>
     <string name="flat_lime">淡灰</string>
     <string name="update_tracking_after_reading">在閱讀後更新追蹤</string>
     <string name="reset_tags">重置標籤</string>
@@ -948,7 +922,6 @@
     <string name="follow_system_theme">跟隨系統主題</string>
     <string name="hides_on_scroll">滾動時隱藏</string>
     <string name="back_to_start">返回起始頁面</string>
-    <string name="not_logged_into_">未登入 %1$s</string>
     <string name="check_for_beta_releases">檢查 Beta 版本</string>
     <string name="try_new_features">嘗試尚未正式發布的新功能，Beta 版本可能不穩定，僅供使用者提供開發者回饋意見。</string>
     <string name="warning_unenroll_from_beta">回到之前的正式版本可能會造成問題，需要清除應用程式資料。</string>
@@ -988,7 +961,6 @@
     <string name="clean_read_downloads">清理已讀下載</string>
     <string name="disable_if_issues_with_updating">如果您在更新或還原圖書館時遇到問題，請停用此功能</string>
     <string name="clean_up_cached_covers">清理快取的封面</string>
-    <string name="only_search_pinned_when">僅在固定的來源中搜索</string>
     <string name="downloading_">正在下載：%1$s</string>
     <string name="remove_download">移除下載</string>
     <string name="visit_recents_for_download_queue">前往「最近」選項卡以存取下載佇列。您也可以雙擊或長按以加快存取速度</string>
@@ -1015,7 +987,6 @@
     <string name="sort_and_filter">排序和篩選</string>
     <string name="tag">標籤</string>
     <string name="use_default">使用默認</string>
-    <string name="view_all">查看全部</string>
     <string name="by_series">依系列</string>
     <string name="by_week">依週別</string>
     <string name="by_day">依天</string>

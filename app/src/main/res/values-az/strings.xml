@@ -47,7 +47,6 @@
     <string name="chapter_not_found">Bölüm tapılmadı</string>
     <string name="local_invalid_format">Səhv bölüm formatı</string>
     <string name="order_by">Sırala</string>
-    <string name="no_chapters_error">Bölümlər tapılmadı</string>
     <string name="no_pages_found">Səhifələr tapılmadı</string>
     <plurals name="pages_left">
         <item quantity="one">%1$d səhifə qaldı</item>

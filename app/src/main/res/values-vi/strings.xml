@@ -24,7 +24,6 @@
     <string name="add">Thêm</string>
     <string name="edit_categories">Chỉnh sửa danh mục</string>
     <string name="move_to_categories">Chuyển đến danh mục</string>
-    <string name="start">Bắt đầu</string>
     <string name="stop">Dừng lại</string>
     <string name="pause">Tạm dừng</string>
     <string name="clear">Dọn dẹp</string>
@@ -60,10 +59,8 @@
     <string name="every_12_hours">Mỗi 12 tiếng</string>
     <string name="daily">Mỗi ngày</string>
     <string name="every_2_days">Mỗi 2 ngày</string>
-    <string name="categories_to_include_in_global_update">Các danh mục được cập nhật toàn bộ</string>
     <string name="all">Tất cả</string>
     <string name="library_update_restriction">Hạn chế từ thiết bị</string>
-    <string name="library_update_restriction_summary">Chỉ cập nhật khi có đủ các điều kiện</string>
     <string name="wifi">Wi-Fi</string>
     <string name="charging">Đang sạc</string>
     <string name="app_theme">Chủ đề ứng dụng</string>
@@ -99,7 +96,6 @@
     <string name="center">Giữa</string>
     <string name="rotation">Xoay</string>
     <string name="free">Tự do</string>
-    <string name="lock">Khóa</string>
     <string name="red_initial">R</string>
     <string name="green_initial">G</string>
     <string name="blue_initial">B</string>
@@ -185,8 +181,6 @@
     <string name="next_chapter_not_found">Không tìm thấy chương kế tiếp</string>
     <string name="decode_image_error">Hình ảnh không thể hiển thị được</string>
     <string name="use_image_as_cover">Bạn có chắc muốn đặt ảnh này làm ảnh bìa?</string>
-    <!-- Backup fragment -->
-    <string name="backup">Sao lưu</string>
     <!-- Recent manga fragment -->
     <!-- Downloads activity and service -->
     <!-- Library update service notifications -->
@@ -204,7 +198,6 @@
     <!--UpdateCheck Notifications-->
     <string name="download_complete">Đã tải xong</string>
     <string name="download_error">Lỗi khi tải xuống</string>
-    <string name="update_available">Có bản cập nhật</string>
     <!--Content Description-->
     <string name="cover_of_image">Ảnh bìa của truyện</string>
     <!-- Information Text -->
@@ -230,14 +223,12 @@
     <string name="restore">Khôi phục</string>
     <string name="updates">Cập nhật</string>
     <string name="weekly">Mỗi tuần</string>
-    <string name="amoled_black">Chủ đề: AMOLED Đen</string>
     <string name="default_category">Danh mục mặc định</string>
     <string name="always_ask">Luôn hỏi</string>
     <string name="pending">Đang chờ xử lý</string>
     <string name="installing">Đang cài đặt</string>
     <string name="installed">Đã cài</string>
     <string name="trust">Đáng tin cậy</string>
-    <string name="untrusted">Không đáng tin cậy</string>
     <string name="uninstall">Gỡ cài đặt</string>
     <string name="untrusted_extension">Tiện ích mở rộng không đáng tin cậy</string>
     <string name="untrusted_extension_message">Tiện ích mở rộng này được đăng ký bằng chứng chỉ không đáng tin cậy và chưa được kích hoạt.
@@ -253,7 +244,6 @@
     <string name="no_animation">Không hoạt ảnh</string>
     <string name="normal">Bình thường</string>
     <string name="fast">Nhanh</string>
-    <string name="categories_to_include_in_download">Danh mục để đưa vào tải xuống</string>
     <string name="create_backup">Tạo sao lưu</string>
     <string name="can_be_used_to_restore">Có thể sử dụng để khôi phục thư viện hiện tại</string>
     <string name="restore_backup">Khôi phục sao lưu</string>
@@ -293,7 +283,6 @@
     <string name="migrate">Di chuyển</string>
     <string name="common">Thường gặp</string>
     <string name="open_in_webview">Mở bằng webview</string>
-    <string name="true_32bit_color">Màu 32-bit</string>
     <string name="skip_read_chapters">Bỏ qua chương đã đọc</string>
     <string name="color_filter_blend_mode">Chế độ hòa trộn bộ lọc màu</string>
     <string name="overlay">Phủ lên</string>
@@ -310,7 +299,6 @@
     <string name="creating_backup">Đang tạo bản sao lưu</string>
     <string name="disable_battery_optimization">Tắt tối ưu pin</string>
     <string name="battery_optimization_disabled">Tối ưu pin đã được tắt</string>
-    <string name="pref_global_search">Tìm kiếm toàn bộ</string>
     <string name="check_for_extension_updates">Kiểm tra cập nhật của các tiện ích bổ sung</string>
     <string name="email">Địa chỉ email</string>
     <string name="successfully_logged_out">Bạn đã đăng xuất</string>
@@ -347,10 +335,6 @@
     <string name="continuous_vertical">Dọc</string>
     <string name="paged">Trang</string>
     <string name="always_show_chapter_transition">Luôn hiển thị chuyển tiếp chương</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_25">25%</string>
     <string name="remove_from_library">Gỡ bỏ khỏi thư viện</string>
     <plurals name="category_plural">
         <item quantity="other">%d danh mục</item>
@@ -393,8 +377,6 @@
     <string name="label_global_search">Tìm kiếm toàn bộ</string>
     <string name="disabled">Vô hiệu hóa</string>
     <string name="requires_app_restart">Yêu cầu khởi động lại ứng dụng để có hiệu lực</string>
-    <string name="invalid_backup_file_type">Lỗi định dạng : %1$s
-\nPhải kết thúc với đuôi .proto.gz hay .json.</string>
     <string name="edge_nav">Dạng góc cạnh</string>
     <string name="kindlish_nav">Dạng giống Kindle</string>
     <string name="l_nav">Dạng chữ L</string>
@@ -402,9 +384,7 @@
     <string name="crash_log_saved">Thông tin lỗi đã được lưu</string>
     <string name="file_picker_error">Không tìm thấy ứng dụng chọn tệp</string>
     <string name="add_tracking">Thêm theo dõi</string>
-    <string name="no_chapters_error">Không tìm thấy chương</string>
     <string name="local_source_help_guide">Hướng dẫn nguồn cục bộ</string>
-    <string name="whats_new">Có gì mới</string>
     <string name="website">Trang chủ</string>
     <string name="restoring_backup_canceled">Quá trình khôi phục đã bị ngắt</string>
     <plurals name="restore_completed_message">
@@ -412,7 +392,6 @@
     </plurals>
     <string name="restore_duration">%02d phút, %02d giây</string>
     <string name="pref_webtoon_side_padding">Kích cỡ hai bên</string>
-    <string name="webtoon_side_padding_0">Không</string>
     <string name="right_and_left_nav">Phải và trái</string>
     <string name="none">Không có</string>
     <string name="landscape">Ngang</string>
@@ -487,7 +466,6 @@
     <string name="only_enable_pinned_for_migration">Chỉ bật nguồn đã được ghim dành cho việc di chuyển</string>
     <string name="match_enabled_sources">Khớp với nguồn được bật</string>
     <string name="match_pinned_sources">Khớp với nguồn được ghim</string>
-    <string name="only_search_pinned_when">Chỉ tìm kiếm nguồn được ghim</string>
     <string name="delete_all_covers__not_in_library_used_">Xoá tất cả ảnh bìa không có trong thư viện 
 \nHiện tại đang sử dụng : %1$s</string>
     <string name="clear_cached_covers_non_library">Xoá ảnh bìa không có trong thư viện</string>
@@ -511,7 +489,6 @@
     <string name="dump_crash_logs">Vứt bỏ ghi chép các lần đột ngột dừng</string>
     <string name="crash_logs">Hiện lỗi</string>
     <string name="data_management">Quản lí dữ liệu</string>
-    <string name="not_logged_into_">Chưa đăng nhập vào :%1$s</string>
     <string name="restore_missing_trackers">Bộ theo dõi chưa được đăng nhập vào :</string>
     <string name="complete">Hoàn thành</string>
     <string name="progress">Tiến trình</string>
@@ -536,7 +513,6 @@
     <string name="white_theme">Chủ đề : Trắng Tinh Khiết</string>
     <string name="flat_lime">Chủ đề : Vàng Chanh Phẳng</string>
     <string name="spring_blossom">Chủ đề: Hoa Xuân</string>
-    <string name="hot_pink">Chủ đề: Hồng Nóng</string>
     <string name="midnight_dusk">Chủ đề: Hoàng Hôn Giữa Đêm</string>
     <string name="pauses_reading_history">Tạm dừng lưu lịch sử đọc</string>
     <string name="incognito_mode">Chế độ ẩn danh</string>
@@ -595,16 +571,11 @@
     <string name="reset_cover">Cài lại ảnh bìa</string>
     <string name="reset_tags">Cài lại nhãn</string>
     <string name="clear_tags">Xóa hết nhãn</string>
-    <string name="oldest_first">Cũ nhất tới mới nhất</string>
-    <string name="newest_first">Mới nhất đến cũ nhất</string>
-    <string name="sort_by_chapter_number">Sắp xếp theo số chương</string>
-    <string name="sort_by_source_s_order">Sắp xếp theo nguồn</string>
     <string name="hide_chapter_titles">Ẩn tiêu đề chương</string>
     <string name="all_but_bookmarked_chapters">Tất cả nhưng chỉ hiện những chương đã đánh dấu</string>
     <string name="show_bookmarked_chapters">Hiện những chương đã đánh dấu</string>
     <string name="show_downloaded_chapters">Hiện những chương đã tải</string>
     <string name="show_unread_chapters">Hiện những chương chưa đọc</string>
-    <string name="show_read_chapters">Hiện những chương đã đọc</string>
     <string name="show_all">Hiên tất cả</string>
     <string name="add_x_to_library">Thêm %1$s vào thư viện\?</string>
     <string name="all_read_chapters">Tất cả các chương đọc</string>
@@ -756,9 +727,7 @@
     <string name="smart_based_on_page">Thông minh (dựa theo trang)</string>
     <string name="locked_landscape">Khoá ngang</string>
     <string name="locked_portrait">Khoá dọc</string>
-    <string name="switch_to_single">Chuyển về trang đơn</string>
     <string name="invert_double_pages">Ngược trang đôi</string>
-    <string name="switch_to_double">Chuyển về dạng trang đôi</string>
     <string name="single_page">Trang đôi</string>
     <string name="double_pages">Hai trang</string>
     <string name="smart_by_theme">Thông minh (theo chủ đề)</string>
@@ -768,7 +737,6 @@
     <string name="remove_crop">Xoá bỏ phần cắt</string>
     <string name="crop_borders_webtoon">Cắt đường viền (Webtoon)</string>
     <string name="crop_borders_paged">Cắt đường viền ( Trang)</string>
-    <string name="reduces_banding_impacts_performance">Giảm lỗi hiển thị sai dải màu, nhưng có thể ảnh hưởng đến hiệu suất</string>
     <string name="page_preload_amount">Số lượng trang tải trước</string>
     <string name="amount_of_pages_to_preload">Số lượng trang cần tải trước khi đọc. Giá trị cao hơn sẽ mang lại trải nghiệm đọc mượt mà hơn, với chi phí sử dụng bộ nhớ đệm và mạng cao hơn.</string>
     <string name="reading_">Đang đọc %1$s</string>
@@ -784,7 +752,6 @@
     <string name="set_first_page_as_cover">Đặt trang đầu tiên làm ảnh bìa</string>
     <string name="previous_page">Trang trước</string>
     <string name="next_page">Trang kế</string>
-    <string name="webtoon_style">Dạng webtoon</string>
     <string name="changing_will_reset_reading_mode">Thay đổi ở đây sẽ làm mới lại chế độ đọc cho phần truyện này</string>
     <string name="reading_mode">Chế độ đọc</string>
     <string name="pages_">Chương %1$s</string>
@@ -909,7 +876,6 @@
     <string name="every_3_days">3 ngày một lần</string>
     <string name="save_chapters_as_cbz">Lưu dưới định dạng CBZ</string>
     <string name="lime_time">Tới Lúc Xanh Mạ</string>
-    <string name="classic_blue">Xanh Nước Biển Cổ Điển</string>
     <string name="enhanced_services">Dịch vụ nâng cao</string>
     <string name="publishing_finished">Đã hoàn thành xuất bản</string>
     <string name="cancelled">Đã ngưng</string>
@@ -966,18 +932,15 @@
 \nVuốt mẹo này đi để thu hồi nó</string>
     <string name="zoom_double_page_spreads">Phóng to thành trải trang đôi</string>
     <string name="use_staggered_grid">Sử dụng lưới so le</string>
-    <string name="pref_update_only_completely_read_summary">Chỉ cập nhập truyện nếu không có bất kỳ trang truyện nào chưa đọc (đã được đọc hết)</string>
     <string name="webview_data_deleted">Dữ liệu WebView đã được xóa</string>
     <string name="pref_clear_webview_data">Xóa dữ liệu WebView</string>
     <string name="select_uninstalled_sources">Chọn các nguồn được dỡ bỏ</string>
-    <string name="view_all">Xem toàn bộ</string>
     <string name="empty_backup_error">Không có mục thư viện nào để sao lưu</string>
     <string name="show_">Hiện %1$s</string>
     <string name="must_view_details_before_migration">Chi tiết về mục này cần phải được xem xét trước khi có thể di nhập</string>
     <string name="update_tracking_after_reading">Cập nhật theo dõi sau khi đọc</string>
     <string name="pref_manage_notifications">Quản lý thông báo</string>
     <string name="battery_not_low">Khi pin không quá thấp</string>
-    <string name="faq_and_guides">Câu Hỏi Thường Gặp và Hướng Dẫn</string>
     <string name="secure_screen_summary">Bảo vệ màn hình sẽ ẩn nội dung khi chuyển đổi ứng dụng và chặn chụp màn hình</string>
     <string name="pref_hide_threshold">Độ nhạy cho phần tự ẩn mục chính khi kéo cuộn</string>
     <string name="pref_highest">Cao nhất</string>
@@ -1004,7 +967,6 @@
     <string name="complete_list">Danh sách hoàn thành</string>
     <string name="unfinished_list">Danh sách chưa hoàn thành</string>
     <string name="sort_fetched_time">Sắp xếp bằng thời gian được nhập về</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">Chuỗi đại diện người dùng mặc định</string>
     <string name="loader_rar5_error">Định dạng RARv5 không được hỗ trợ</string>
     <string name="language_requires_app_restart">Một số ngôn ngữ sẽ cần khởi động lại ứng dụng để hiển thị chính xác</string>

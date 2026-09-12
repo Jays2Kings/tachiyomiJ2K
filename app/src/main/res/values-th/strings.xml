@@ -68,7 +68,6 @@
     <string name="source_migration">โยกย้ายแหล่งที่มา</string>
     <string name="bookmarked">บุ๊คมาร์ค</string>
     <string name="move_to_categories">ย้ายไปยังหมวดหมู่</string>
-    <string name="start">เริ่ม</string>
     <string name="stop">หยุด</string>
     <string name="pause">หยุดชั่วคราว</string>
     <string name="clear">ล้าง</string>
@@ -83,16 +82,12 @@
     <string name="downloads">การดาวน์โหลด</string>
     <string name="library_update_frequency">ความถี่ในการอัปเดตคลัง</string>
     <string name="manual">กำหนดเอง</string>
-    <string name="categories_to_include_in_global_update">หมวดหมู่ที่จะรวมในการอัปเดตทั้งหมด</string>
     <string name="library_update_restriction">ข้อจำกัดของอุปกรณ์</string>
-    <string name="library_update_restriction_summary">อัปเดตเฉพาะเมื่อตรงตามเงื่อนไข</string>
     <string name="wifi">Wi-Fi</string>
     <string name="app_theme">ธีมแอป</string>
     <string name="dark">มืด</string>
-    <string name="amoled_black">มืด AMOLED</string>
     <string name="default_category">หมวดหมู่เริ่มต้น</string>
     <string name="trust">เชื่อถือได้</string>
-    <string name="untrusted">ไม่น่าเชื่อถือ</string>
     <string name="uninstall">ถอนการติดตั้ง</string>
     <string name="untrusted_extension">ส่วนขยายที่ไม่น่าเชื่อถือ</string>
     <string name="untrusted_extension_message">ส่วนขยายที่เป็นอันตรายสามารถเรียกใช้โค้ดโดยอำเภอใจ
@@ -129,7 +124,6 @@
     <string name="fast">เร็ว</string>
     <string name="rotation">การหมุน</string>
     <string name="free">อิสระ</string>
-    <string name="lock">ล็อค</string>
     <string name="red_initial">แดง</string>
     <string name="green_initial">เขียว</string>
     <string name="blue_initial">น้ำเงิน</string>
@@ -145,9 +139,7 @@
     <string name="fourth_to_last">ตอนที่สี่ก่อนตอนสุดท้าย</string>
     <string name="fifth_to_last">ตอนที่ห้าก่อนตอนสุดท้าย</string>
     <string name="download_new_chapters">ดาวน์โหลดตอนใหม่</string>
-    <string name="categories_to_include_in_download">หมวดหมู่ที่จะรวมไว้ในการดาวน์โหลด</string>
     <string name="services">บริการ</string>
-    <string name="backup">การสำรองข้อมูล</string>
     <string name="create_backup">สร้างการสำรองข้อมูล</string>
     <string name="can_be_used_to_restore">สามารถใช้เรียกคืนค่าคลังบัจจุบัน</string>
     <string name="restore_backup">เรียกคืนค่าการสำรองข้อมูล</string>
@@ -216,7 +208,6 @@
     <string name="rereading">อ่านอีกครั้ง</string>
     <string name="score">คะแนน</string>
     <string name="open_in_webview">เปิดใน WebView</string>
-    <string name="true_32bit_color">สี 32 บิต</string>
     <string name="skip_read_chapters">ข้ามตอนที่ทำเครื่องหมายว่าอ่านแล้ว</string>
     <string name="color_filter_blend_mode">โหมดผสมตัวกรองสี</string>
     <string name="overlay">ซ้อนทับสี</string>
@@ -255,7 +246,6 @@
     <string name="searching_for_updates">กำลังค้นหาการอัปเดต…</string>
     <string name="download_complete">ดาวน์โหลดเสร็จสิ้น</string>
     <string name="download_error">ดาวน์โหลดเกิดข้อผิดพลาด</string>
-    <string name="update_available">อัปเดตพร้อมใช้งาน</string>
     <string name="cover_of_image">ปกของรายการ</string>
     <string name="no_recent_chapters">ไม่มีตอนล่าสุด</string>
     <string name="no_recently_read_manga">ไม่มีรายการที่เพิ่งอ่าน</string>
@@ -272,7 +262,6 @@
     <string name="remove_from_library">นำออกจากคลัง</string>
     <string name="copy_value">คัดลอก</string>
     <string name="creating_backup">กำลังสร้างการสำรองข้อมูล</string>
-    <string name="pref_global_search">ค้นหาทั้งหมด</string>
     <string name="open_log">เปิดบันทึก</string>
     <string name="next_chapter">ตอนถัดไป</string>
     <string name="previous_chapter">ตอนก่อนหน้า</string>
@@ -281,10 +270,8 @@
     <string name="updating_library">กำลังอัปเดตคลัง</string>
     <string name="myanimelist_relogin">กรุณาเข้าสู่ระบบ MAL อีกครั้ง</string>
     <string name="add_tracking">เพิ่มการติดตาม</string>
-    <string name="no_chapters_error">ไม่พบตอน</string>
     <string name="local_source_help_guide">คู่มือแหล่งที่มาภายในเครื่อง</string>
     <string name="email">ที่อยู่อีเมล</string>
-    <string name="whats_new">มีอะไรใหม่</string>
     <string name="website">เว็บไซต์</string>
     <string name="battery_optimization_disabled">การเพิ่มประสิทธิภาพแบตเตอรี่ถูกปิดใช้งานอยู่แล้ว</string>
     <string name="crash_log_saved">บันทึกบันทึกข้อขัดข้องแล้ว</string>
@@ -294,15 +281,8 @@
         <item quantity="other">ใช้เวลาไป %1$s โดยมีข้อผิดพลาด %2$s รายการ</item>
     </plurals>
     <string name="restore_duration">%02d นาที %02d วินาที</string>
-    <string name="invalid_backup_file_type">ประเภทแฟ้มข้อมูลสำรองไม่ถูกต้อง: %1$s
-\nควรลงท้ายด้วย .proto.gz หรือ .json</string>
     <string name="invalid_backup_file">ข้อมูลสำรองไม่ถูกต้อง</string>
     <string name="disabled">ปิดการใช้งาน</string>
-    <string name="webtoon_side_padding_25">25%</string>
-    <string name="webtoon_side_padding_20">20%</string>
-    <string name="webtoon_side_padding_15">15%</string>
-    <string name="webtoon_side_padding_10">10%</string>
-    <string name="webtoon_side_padding_0">ไม่มี</string>
     <string name="pref_webtoon_side_padding">ช่องว่างด้านข้าง</string>
     <string name="right_and_left_nav">ขวาและซ้าย</string>
     <string name="edge_nav">ขอบ</string>
@@ -364,7 +344,6 @@
     </plurals>
     <string name="reading_mode">โหมดการอ่าน</string>
     <string name="previous_page">หน้าก่อนหน้า</string>
-    <string name="reduces_banding_impacts_performance">ลดปัญหาแถบสี แต่อาจส่งผลต่อประสิทธิภาพ</string>
     <string name="skip_filtered_chapters">ข้ามตอนที่กรองไว้</string>
     <string name="paged">แสดงเป็นหน้า</string>
     <string name="locked_portrait">ล็อกแนวตั้ง</string>
@@ -446,14 +425,12 @@
     <string name="search_extensions">ค้นหาส่วนขยาย…</string>
     <string name="changing_will_reset_reading_mode">การเปลี่ยนแปลงนี้จะรีเซ็ตโหมดการอ่านสำหรับเรื่องนี้</string>
     <string name="about_this_">เกี่ยวกับ%1$sเรื่องนี้</string>
-    <string name="switch_to_single">สลับเป็นหน้าเดียว</string>
     <string name="vertically">แนวตั้ง</string>
     <string name="if_disabled_transition_will_skip">หากปิด การเปลี่ยนผ่านจะถูกข้าม และตอนถัดไปจะแสดงขึ้นมาหากโหลดไว้</string>
     <string name="automatic_can_still_switch">ในขณะที่ใช้เค้าโครงหน้าอัตโนมัติ คุณยังคงสามารถสลับไปมาระหว่างเค้าโครงขณะอ่านได้โดยไม่ต้องแทนที่การตั้งค่านี้</string>
     <string name="add_to_library">เพิ่มไปในคลัง</string>
     <string name="select_ending_chapter">เลือกตอนจบ</string>
     <string name="remove_previous_tracker">ลบตัวติดตามก่อนหน้า\?</string>
-    <string name="show_read_chapters">แสดงตอนที่อ่านแล้ว</string>
     <string name="clear_tags">ล้างแท็ก</string>
     <string name="add_tag">เพิ่มแท็ก</string>
     <string name="remove_x_from_service_and_add_y">ลบ %1$s ออกจาก %2$s และเพิ่ม %3$s</string>
@@ -469,7 +446,6 @@
     <plurals name="migrate_manga">
         <item quantity="other">โยกย้าย %1$d%2$s เรื่อง\?</item>
     </plurals>
-    <string name="classic_blue">คลาสสิคบลู</string>
     <plurals name="copy_manga">
         <item quantity="other">คัดลอก %1$d%2$s เรื่อง\?</item>
     </plurals>
@@ -566,7 +542,6 @@
         <item quantity="other">%1$s ตอน</item>
     </plurals>
     <string name="release_page">หน้ารีลีส</string>
-    <string name="sort_by_source_s_order">เรียงตามที่แหล่งที่มาจัดไว้</string>
     <string name="manhua">มังหัว</string>
     <string name="comic">คอมมิค</string>
     <string name="show_on_long_press">แสดงเมื่อแตะค้าง</string>
@@ -584,9 +559,6 @@
     <string name="show_downloaded_chapters">แสดงตอนที่ดาวน์โหลดไว้</string>
     <string name="show_unread_chapters">แสดงตอนที่ยังไม่ได้อ่าน</string>
     <string name="hide_chapter_titles">ซ่อนชื่อตอน</string>
-    <string name="sort_by_chapter_number">เรียงตามหมายเลขตอน</string>
-    <string name="newest_first">ใหม่ที่สุดก่อน</string>
-    <string name="oldest_first">เก่าที่สุดก่อน</string>
     <string name="reset_tags">รีเซ็ตแท็ก</string>
     <string name="reset_cover">รีเซ็ตปก</string>
     <string name="custom_manga_info">ข้อมูลกำหนดเอง</string>
@@ -624,7 +596,6 @@
     <string name="no_new_chapters_open_details">เมื่อไม่มีตอนใหม่ รายละเอียดของเรื่องจะเปิดขึ้นแทน</string>
     <string name="restore_in_progress">การคืนค่ากําลังดําเนินการอยู่แล้ว</string>
     <string name="backup_in_progress">การสำรองข้อมูลกําลังดําเนินการอยู่แล้ว</string>
-    <string name="not_logged_into_">ไม่ได้เข้าสู่ระบบ %1$s</string>
     <string name="force_download_cache_refresh">โหลดแคชการดาวน์โหลดใหม่</string>
     <string name="force_download_cache_refresh_summary">ตัวเลือกนี้จะบังคับให้คำนวณแคชการดาวน์โหลดใหม่ มีประโยชน์หากทำการแก้ไขการดาวน์โหลดที่มาจากภายนอกแอป</string>
     <string name="data_management">การจัดการข้อมูล</string>
@@ -637,7 +608,6 @@
     <plurals name="cache_cleared">
         <item quantity="other">ล้างแคชแล้ว แฟ้ม %d รายการได้ถูกลบ</item>
     </plurals>
-    <string name="only_search_pinned_when">ค้นหาเฉพาะแหล่งที่ตรึงไว้</string>
     <string name="match_pinned_sources">แหล่งที่มาที่ตรึงไว้เท่านั้น</string>
     <string name="match_enabled_sources">แหล่งที่มาที่เปิดไว้เท่านั้น</string>
     <string name="only_enable_enabled_for_migration">โยกย้ายได้เฉพาะแหล่งที่มาที่เปิดใช้งานไว้อยู่</string>
@@ -694,7 +664,6 @@
     </plurals>
     <string name="set_as_default_for_all">ตั้งเป็นค่าเริ่มต้นสำหรับทั้งหมด</string>
     <string name="pages_">หน้า %1$s</string>
-    <string name="webtoon_style">สไตล์เว็บตูน</string>
     <string name="set_first_page_as_cover">ตั้งหน้าแรกเป็นหน้าปก</string>
     <string name="share_first_page">แบ่งปันหน้าแรก</string>
     <string name="save_first_page">บันทึกหน้าแรก</string>
@@ -710,7 +679,6 @@
         <item quantity="other">%1$d หน้า</item>
     </plurals>
     <string name="single_page">หน้าเดียว</string>
-    <string name="switch_to_double">สลับเป็นสองหน้า</string>
     <string name="smart_based_on_page">อัตโนมัติ (ตามหน้า)</string>
     <string name="horizontally">แนวนอน</string>
     <string name="both_axes">ทั้งสองด้าน</string>
@@ -872,7 +840,6 @@
     <string name="strawberry_daiquiri">สตรอว์เบอร์รีแด๊กเคอรี่</string>
     <string name="teal_ocean">ทีลโอเชียน</string>
     <string name="sapphire_dusk">แซปไฟร์ดัสก์</string>
-    <string name="hot_pink">ฮ็อตพิงก์</string>
     <string name="lime_time">ไลม์ไทม์</string>
     <string name="notification_size_warning">การอัปเดตจำนวนมากอาจทำให้การใช้งานแบตเตอรี่เพิ่มขึ้นและแหล่งที่มาทำงานช้าลง แตะเพื่อเรียนรู้เพิ่มเติม</string>
     <string name="enhanced_services">บริการขั้นสูง</string>
@@ -927,9 +894,7 @@
     <string name="zoom_double_page_spreads">ซูมเข้าไปในหน้าคู่แยก</string>
     <string name="most_entries">รายการที่มากที่สุด</string>
     <string name="use_staggered_grid">ตารางแบบถมที่</string>
-    <string name="pref_update_only_completely_read_summary">อัปเดตเฉพาะรายการที่ไม่มีตอนที่ยังไม่ได้อ่าน (อ่านจนหมดแล้ว)</string>
     <string name="update_tracking_after_reading">อัปเดตการติดตามหลังจากอ่าน</string>
-    <string name="view_all">ดูทั้งหมด</string>
     <string name="show_">แสดง%1$s</string>
     <string name="pref_clear_webview_data">ล้างข้อมูล WebView</string>
     <string name="select_uninstalled_sources">เลือกแหล่งที่ถอนการติดตั้งแล้ว</string>
@@ -947,7 +912,6 @@
     </plurals>
     <string name="pref_manage_notifications">จัดการการแจ้งเตือน</string>
     <string name="battery_not_low">แบตเตอรี่ยังไม่ต่ำ</string>
-    <string name="faq_and_guides">คำถามที่พบบ่อยและคู่มือ</string>
     <string name="learn_why">เรียนรู้ว่าทำไม</string>
     <string name="secure_screen_summary">หน้าจอปลอดภัยจะซ่อนเนื้อหาของแอปเมื่อสลับแอปและกันไม่ให้ถ่ายภาพหน้าจอ</string>
     <string name="open_in_app">เปิดในแอป</string>
@@ -969,7 +933,6 @@
     <string name="tap_zones">โซนการแตะ</string>
     <string name="lavender">ลาเวนเดอร์</string>
     <string name="violet">ไวโอเล็ต</string>
-    <string name="webtoon_side_padding_5">5%</string>
     <string name="user_agent_string">ตัวแทนผู้ใช้เริ่มต้น</string>
     <string name="language_requires_app_restart">บางภาษาอาจจำเป็นต้องปิดเปิดแอปใหม่ เพื่อให้แสดงได้อย่างถูกต้อง</string>
     <string name="loader_rar5_error">ไม่รับรองรูปแบบ RARv5</string>
