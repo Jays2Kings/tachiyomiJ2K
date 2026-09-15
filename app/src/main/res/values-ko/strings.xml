@@ -1014,4 +1014,5 @@
     <plurals name="num_pages">
         <item quantity="other">%1$d페이지</item>
     </plurals>
+    <string name="crash_screen_title">앗!</string>
 </resources>
