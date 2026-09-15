@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.SparseArray
 import eu.davidea.flexibleadapter.FlexibleAdapter
+import eu.davidea.flexibleadapter.items.IFlexible
 
 /**
  * Adapter that holds the search cards.
@@ -12,7 +13,7 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
  */
 class GlobalSearchAdapter(
     val controller: GlobalSearchController,
-) : FlexibleAdapter<GlobalSearchItem>(null, controller, true) {
+) : FlexibleAdapter<IFlexible<*>>(null, controller, true) {
     val titleClickListener: OnTitleClickListener = controller
 
     /**

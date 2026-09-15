@@ -536,6 +536,8 @@ class PreferencesHelper(
 
     fun onlySearchPinned() = flowPrefs.getBoolean(Keys.onlySearchPinned, false)
 
+    fun onlySearchWithResults() = flowPrefs.getBoolean(Keys.onlySearchWithResults, false)
+
     fun hideInLibraryItems() = flowPrefs.getBoolean("browse_hide_in_library_items", false)
 
     fun showDuplicateInLibraryItems() = flowPrefs.getBoolean("browse_show_duplicate_in_library_items", false)
