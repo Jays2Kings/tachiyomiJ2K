@@ -86,9 +86,9 @@
     <string name="background_color">Warna latar</string>
     <string name="white">Putih</string>
     <string name="black">Hitam</string>
-    <string name="left_to_right_viewer">Kiri ke kanan</string>
-    <string name="right_to_left_viewer">Kanan ke kiri</string>
-    <string name="vertical_viewer">Tegak</string>
+    <string name="left_to_right_viewer">Berhalaman (kiri ke kanan)</string>
+    <string name="right_to_left_viewer">Berhalaman (kanan ke kiri)</string>
+    <string name="vertical_viewer">Berhalaman (vertikal)</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Tipe skala</string>
     <string name="fit_screen">Pas layar</string>
@@ -274,7 +274,7 @@
         <item quantity="other">Terdapat %d pembaruan ekstensi</item>
     </plurals>
     <string name="skip_filtered_chapters">Lewati bab yang terfilter</string>
-    <string name="continuous_vertical">Vertikal terus-menerus</string>
+    <string name="continuous_vertical">Strip panjang dengan jarak</string>
     <string name="paged">Halaman</string>
     <string name="unpin">Hilangkan tanda</string>
     <string name="view_chapters">Lihat bab</string>
@@ -320,7 +320,7 @@
     <string name="new_chapters">Bab baru</string>
     <string name="unknown_status">Status tak diketahui</string>
     <string name="manhwa">Manhwa</string>
-    <string name="add_to_library">Tambahkan ke pustaka</string>
+    <string name="add_to_library">Tambahkan ke perpustakaan</string>
     <string name="season_">Sesi %1$d</string>
     <string name="volume_">Volume %1$d</string>
     <string name="continue_reading">Melanjutkan membaca</string>
@@ -341,7 +341,7 @@
     <string name="source_hidden">Sumber tersembunyi</string>
     <string name="all_sources">Semua sumber</string>
     <string name="search_extensions">Cari ekstensi…</string>
-    <string name="in_library">Di Pustaka</string>
+    <string name="in_library">Di perpustakaan</string>
     <string name="reset_chapter_question">Atur ulang bab\?</string>
     <string name="search_recents">Cari yang terbaru…</string>
     <string name="view_all_updates">Lihat semua pembaharuan</string>
@@ -611,7 +611,7 @@
     <string name="automatic_orientation">Otomatis (berdasarkan orientasi)</string>
     <string name="automatic_can_still_switch">Ketika menggunakan tata letak halaman secara otomatis, Anda masih dapat menukar tata letak ketika sedang membaca tanpa menimpa pengaturan ini</string>
     <string name="page_layout">Tata letak halaman</string>
-    <string name="cutout_behavior_only_applies">Tingkah area potong hanya diterapkan pada mode tegak dengan beberapa jenis skala</string>
+    <string name="cutout_behavior_only_applies">Perilaku area cutout hanya berlaku dalam mode potret</string>
     <string name="ignore_cutout_areas">Abaikan area potong</string>
     <string name="start_past_cutout">Mulai potong terakhir</string>
     <string name="pad_cutout_areas">Area potong pad</string>
@@ -623,7 +623,7 @@
     <string name="locked_portrait">Terkunci tegak</string>
     <string name="double_pages">Halaman ganda</string>
     <string name="remove_crop">Hapus potong</string>
-    <string name="crop_borders_webtoon">Potong sisi (Webtoon)</string>
+    <string name="crop_borders_webtoon">Pangkas batas (Strip panjang)</string>
     <string name="crop_borders_paged">Potong sisi (Halaman)</string>
     <string name="invert_double_pages">Balikkan halaman ganda</string>
     <string name="amount_of_pages_to_preload">Jumlah dari halaman yang akan dimuat terlebih dahulu ketika membaca. Nilai lebih tinggi akan mengakibatkan sebuah pengalaman membaca yang lebih luwes, tetapi dengan pemakaian jaringan dan cache yang lebih besar.</string>
@@ -697,7 +697,7 @@
     <string name="delete_all_covers__not_in_library_used_">Hapus semua cache sampul yang tidak ada di pustaka Anda
 \nSaat ini menggunakan: %1$s</string>
     <string name="clear_cached_covers_non_library">Bersihkan cache sampul yang tidak ada di pustaka</string>
-    <string name="delete_old_covers_in_library_used_">Hapus cache sampul-sampul lama dan tidak terpakai dari entri dalam pustaka Anda yang telah diperbarui. \nSaat ini menggunakan: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Hapus sampul tersimpan di cache yang lama dan tidak digunakan untuk entri di perpustakaan Anda yang telah diperbarui.\nSaat ini digunakan: %1$s</string>
     <string name="disable_if_issues_with_updating">Nonaktifkan ini jika Anda mengalami masalah dengan pembaruan dan pemulihan pustaka Anda</string>
     <string name="no_folders_to_cleanup">Tidak ada folder untuk dibersihkan</string>
     <string name="clean_read_downloads">Bersihkan yang telah dibaca</string>
@@ -901,7 +901,7 @@
 \nGeser untuk menghilangkan tip ini</string>
     <string name="most_entries">Entri terbanyak</string>
     <string name="backup_restore_invalid_uri">Kesalahan: URI kosong</string>
-    <string name="backup_info">Pencadangan otomatis sangat disarankan. Anda juga harus menyimpan duplikat di tempat lain.</string>
+    <string name="backup_info">Pencadangan otomatis sangat disarankan. Anda juga sebaiknya menyimpan salinan di tempat lain. Cadangan dapat berisi data sensitif, termasuk kata sandi yang tersimpan; berhati-hatilah jika membagikannya.</string>
     <string name="use_staggered_grid">Gunakan grid jatuh</string>
     <string name="zoom_double_page_spreads">Zoom pada halaman ganda</string>
     <plurals name="next_unread_chapters">
@@ -1022,4 +1022,104 @@
     </plurals>
     <string name="url_not_set_click_again">URL repositori belum diatur, silakan edit URL</string>
     <string name="open_source_repo">Repositori sumber terbuka</string>
+    <plurals name="num_sources">
+        <item quantity="other">%1$d sumber</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="other">%1$d halaman</item>
+    </plurals>
+    <string name="library_search_filters">Tampilkan entri yang…</string>
+    <string name="library_optional_search_filters">Tampilkan entri yang secara opsional…</string>
+    <string name="search_operator_and">Sertakan</string>
+    <string name="search_operator_not">Kecualikan</string>
+    <string name="search_toggle_optional">Jadikan filter ini opsional</string>
+    <string name="search_exactly">Tepat</string>
+    <string name="search_between">Antara</string>
+    <string name="search_more_than">Lebih dari</string>
+    <string name="search_less_than">Kurang dari</string>
+    <string name="search_fewer_than">Lebih sedikit dari</string>
+    <string name="search_after">Setelah</string>
+    <string name="search_before">Sebelum</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Tandai bab duplikat yang telah dibaca sebagai telah dibaca</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Setelah membaca bab</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Setelah mengambil bab baru</string>
+    <string name="recent_searches">Pencarian terbaru</string>
+    <string name="saved_searches">Pencarian tersimpan</string>
+    <string name="show_on">Tampilkan pada</string>
+    <string name="only_x">Hanya %1$s</string>
+    <string name="clear_all">Hapus semua</string>
+    <string name="edit_search">Edit pencarian</string>
+    <string name="duplicate_in_library">Duplikat</string>
+    <string name="orphaned">Yatim</string>
+    <string name="extension_must_reinstall">Silakan hapus instalan, lalu instal ulang untuk memperbarui.</string>
+    <string name="error_repo_unreachable">Tidak dapat mengakses atau mengurai toko ini</string>
+    <string name="changing_will_reset_reading_mode_multiple">Mengubah ini akan mengatur ulang mode baca untuk seri-seri ini</string>
+    <string name="long_strip">Strip panjang</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Kedip saat halaman berubah</string>
+    <string name="flash_page_on_change_summary">Mengurangi efek bayangan pada layar e-ink</string>
+    <string name="flash_duration">Durasi kedipan</string>
+    <string name="flash_page_interval">Kedip setiap</string>
+    <string name="flash_with">Kedip dengan</string>
+    <string name="flash_black">Hitam</string>
+    <string name="flash_white">Putih</string>
+    <string name="flash_white_then_black">Putih dan Hitam</string>
+    <string name="vertical_seekbar">Gunakan bilah progres vertikal untuk</string>
+    <string name="vertical_seekbar_dock_left">Posisi bilah vertikal</string>
+    <string name="vertical_seekbar_height">Tinggi bilah vertikal</string>
+    <plurals name="missing_chapters">
+        <item quantity="other">%d bab hilang</item>
+    </plurals>
+    <string name="missing_chapters_count">%d hilang</string>
+    <string name="missing_chapters_range">Bab yang hilang %1$s</string>
+    <plurals name="edit_x_series">
+        <item quantity="other">Edit %d seri</item>
+    </plurals>
+    <string name="shared_tags">Tag bersama</string>
+    <string name="source_default">Default sumber</string>
+    <string name="considering">Mempertimbangkan</string>
+    <string name="copy_link">Salin tautan</string>
+    <string name="link">Tautan</string>
+    <string name="track_privately">Lacak secara pribadi</string>
+    <string name="track_publicly">Lacak secara publik</string>
+    <string name="tracked_privately">Dilacak secara pribadi</string>
+    <string name="add_tracking_privately">Tambahkan pelacakan secara pribadi</string>
+    <string name="track_options">Opsi pelacakan</string>
+    <string name="pref_incognito_mode_extension_summary">Jeda riwayat membaca untuk ekstensi</string>
+    <string name="tokyo_light">Tokyo Terang</string>
+    <string name="tokyo_night">Tokyo Malam</string>
+    <string name="render_description_images">Render gambar dalam deskripsi</string>
+    <string name="render_description_images_summary">Tampilkan gambar yang disematkan dalam deskripsi berformat Markdown</string>
+    <string name="show_missing_chapters">Tampilkan bab yang hilang</string>
+    <string name="show_missing_chapters_summary">Tampilkan pemisah untuk bab yang hilang dalam daftar bab, serta subjudul di samping jumlah bab</string>
+    <string name="pref_firebase">Analitik dan log kerusakan</string>
+    <string name="firebase_summary">Mengirimkan log kerusakan dan analitik akan memungkinkan kami mengidentifikasi serta memperbaiki masalah, meningkatkan kinerja, dan membuat pembaruan mendatang lebih relevan dengan kebutuhan Anda</string>
+    <string name="enable_analytics">Izinkan analitik</string>
+    <string name="enable_analytics_summary">Kirim data penggunaan yang dianonimkan untuk membantu meningkatkan fitur aplikasi</string>
+    <string name="what_should_restore">Apa yang ingin Anda pulihkan?</string>
+    <string name="private_settings">Sertakan pengaturan sensitif (misalnya token login pelacak)</string>
+    <string name="share_crash_logs">Bagikan log kerusakan</string>
+    <string name="crash_screen_title">Ups!</string>
+    <string name="crash_screen_description">%s mengalami kesalahan yang tidak terduga. Anda dapat membagikan log kerusakan untuk membantu melacak masalah tersebut.</string>
+    <string name="crash_screen_restart_application">Mulai ulang aplikasi</string>
+    <string name="sources_to_search">Sumber untuk dicari</string>
+    <string name="search_history">Riwayat pencarian</string>
+    <string name="show_recent_searches">Tampilkan pencarian terbaru</string>
+    <string name="search_history_cleared">Riwayat pencarian telah dihapus</string>
+    <string name="search_removed">Istilah pencarian telah dihapus</string>
+    <string name="filters">Filter: (%1$s)</string>
+    <string name="some_filters_not_applied">Beberapa filter tidak dapat diterapkan</string>
+    <string name="no_filters_applied">Tidak ada filter yang dapat diterapkan</string>
+    <string name="show_duplicate_in_library_items">Tampilkan lencana \"Duplikat\"</string>
+    <string name="show_duplicate_in_library_items_summary">Tampilkan lencana \"Duplikat\" untuk entri yang sudah ada di perpustakaan dari ekstensi lain. Catatan: Beberapa duplikat mungkin tidak terdeteksi karena perbedaan nama atau URL.</string>
+    <string name="logging_in">Sedang masuk…</string>
+    <string name="finding_downloads">Mencari unduhan…</string>
+    <string name="concurrent_source_downloads">Unduhan sumber secara bersamaan</string>
+    <string name="concurrent_page_downloads">Unduhan halaman secara bersamaan</string>
+    <string name="concurrent_page_downloads_summary">Halaman yang diunduh secara bersamaan per sumber</string>
+    <string name="unread_chapters">Bab belum dibaca</string>
+    <string name="all_enabled">Semua yang diaktifkan</string>
+    <string name="has_results">Memiliki hasil</string>
+    <string name="pinned_only">Hanya yang disematkan</string>
+    <string name="replace">Ganti</string>
 </resources>
