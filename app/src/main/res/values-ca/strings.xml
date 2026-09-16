@@ -269,7 +269,7 @@
     <string name="local_source_help_guide">Guia de fonts locals</string>
     <string name="check_site_in_web">Comproveu el lloc web en una visualització web</string>
     <string name="obsolete">Obsoleta</string>
-    <string name="obsolete_extension_message">Aquesta extensió ja no està disponible.</string>
+    <string name="obsolete_extension_message">Aquesta extensió no està associada a cap magatzem. No rebrà actualitzacions, és possible que no funcioni correctament i pot causar problemes a l’aplicació. És recomanable que la desinstal·leu.</string>
     <plurals name="extension_updates_available">
         <item quantity="one">Hi ha una actualització d’una extensió</item>
         <item quantity="many">Hi ha actualitzacions de %d extensions</item>
@@ -373,7 +373,7 @@
     <string name="restore_duration">%02d min i %02d s</string>
     <plurals name="restore_completed_message">
         <item quantity="one">Fet en %1$s amb %2$s error</item>
-        <item quantity="many">Fet en %1$s amb %2$s errors</item>
+        <item quantity="many">Fet en %1$s amb %2$s d’errors</item>
         <item quantity="other">Fet en %1$s amb %2$s errors</item>
     </plurals>
     <string name="badges">Icones</string>
@@ -489,7 +489,7 @@
     <string name="download_queue_size_warning">Advertència: Les baixades massa grosses poden fer que les fonts es tornin més lentes i/o bloquin el Tachiyomi. Premeu per a obtenir-ne més informació.</string>
     <plurals name="missing_chapters_warning">
         <item quantity="one">S’ha omès %d capítol. És possible que manqui a la font o que hagi estat filtrat</item>
-        <item quantity="many">S’han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
+        <item quantity="many">S’han omès %d de capítols. És possible que manquin a la font o que hagin estat filtrats</item>
         <item quantity="other">S’han omès %d capítols. És possible que manquin a la font o que hagin estat filtrats</item>
     </plurals>
     <string name="no_matches_for_filters">No s’ha trobat cap coincidència amb els vostres filtres actuals</string>
@@ -606,7 +606,7 @@
     <string name="download_ahead_info">Només funciona en elements de la biblioteca i si el capítol actual i el següent ja estan baixats</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">El següent capítol no llegit</item>
-        <item quantity="many">Els següents %d capítols no llegits</item>
+        <item quantity="many">Els següents %d de capítols no llegits</item>
         <item quantity="other">Els següents %d capítols no llegits</item>
     </plurals>
     <string name="external_storage_download_notice">El TachiyomiJ2K requereix l’accés a tots els fitxers per a poder baixar capítols. Premeu aquí i activeu «Permet l’accés a tots els fitxers».</string>
@@ -803,4 +803,10 @@
     <string name="search_more_than">Més que</string>
     <string name="search_less_than">Menys que</string>
     <string name="search_fewer_than">Menys que</string>
+    <plurals name="num_repos">
+        <item quantity="one">%d magatzem</item>
+        <item quantity="many">%d de magatzems</item>
+        <item quantity="other">%d magatzems</item>
+    </plurals>
+    <string name="considering">Considerant</string>
 </resources>
