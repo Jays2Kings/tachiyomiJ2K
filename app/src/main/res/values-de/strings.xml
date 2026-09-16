@@ -1068,4 +1068,5 @@
     <string name="save_pages_separately">Speicher Seiten in seperaten Ordnern</string>
     <string name="create_folders_by_manga_title">Erstellt den Mangatiteln entsprechend Ordner</string>
     <string name="share_cover">Cover teilen</string>
+    <string name="crash_screen_title">Ups!</string>
 </resources>
