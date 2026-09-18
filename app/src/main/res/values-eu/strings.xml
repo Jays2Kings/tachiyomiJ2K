@@ -264,7 +264,7 @@
     <string name="fullscreen">Pantaila osoa</string>
     <string name="blue_initial">U</string>
     <string name="multiply">Biderkatu</string>
-    <string name="left_to_right_viewer">Ezkerretik eskuinera</string>
+    <string name="left_to_right_viewer">Orrialdeka (Ezkerretik eskuinera)</string>
     <string name="theres_no_next_chapter">Ez dago hurrengo kapitulurik</string>
     <string name="theres_no_previous_chapter">Ez dago aurreko kapitulurik</string>
     <string name="next_chapter">Hurrengo kapitulua</string>
@@ -378,7 +378,7 @@
     <string name="start_reading">Hasi irakurtzen</string>
     <string name="continue_reading">Jarraitu irakurtzen</string>
     <string name="chapters_">%1$s Kapituluak</string>
-    <string name="add_to_library">Gehitu liburutegira</string>
+    <string name="add_to_library">Liburutegira gehitu</string>
     <string name="removed_from_library">Liburutegitik kendua</string>
     <string name="_copied_to_clipboard">%1$s arbelean kopiatu da</string>
     <string name="source_not_installed_">Iturria ez dago instalatuta: %1$s</string>
@@ -569,7 +569,7 @@
     <string name="uninstall">Desinstalatu</string>
     <string name="crop_borders_paged">Moztu ertzak (Orrialdeka)</string>
     <string name="volume_keys">Bolumen-teklak</string>
-    <string name="right_to_left_viewer">Eskuinetik ezkerrera</string>
+    <string name="right_to_left_viewer">Orrialdeka (Eskuinetik ezkerrera)</string>
     <string name="zoom_start_position">Zoomaren hasierako posizioa</string>
     <string name="smart_fit">Smart doiketa</string>
     <string name="locked_portrait">Bertikal blokeatua</string>
@@ -578,7 +578,7 @@
     <string name="always_show_chapter_transition">Erakutsi beti kapituluaren trantsizioa</string>
     <string name="page_layout">Orrialde-diseinua</string>
     <string name="show_on_long_press">Erakutsi sakaketa luzean</string>
-    <string name="cutout_behavior_only_applies">Mozturiko eremuen portaera modu bertikalean bakarrik aplikatzen da eskala mota jakin batzuekin</string>
+    <string name="cutout_behavior_only_applies">Mozturiko eremuen portaera modu bertikalean bakarrik aplikatzen da</string>
     <string name="no_description">Deskribapenik gabea</string>
     <string name="mark_all_chapters_as_read">Kapitulu guztiak irakurriak bezala markatu\?</string>
     <string name="remove_from_library">Kendu liburutegitik</string>
@@ -700,7 +700,7 @@
     <string name="overlay">Gainjarri</string>
     <string name="remove_crop">Kendu mozketa</string>
     <string name="dodge_lighten">Sahiestu / Argitu</string>
-    <string name="crop_borders_webtoon">Moztu ertzak (Webtoon)</string>
+    <string name="crop_borders_webtoon">Ertzak moztu (Tira luzea)</string>
     <string name="color_filter_blend_mode">Kolore-iragazkia modu nahastuan</string>
     <string name="skip_read_chapters">Saltatu irakurriak bezala markatutako kapituluak</string>
     <string name="skip_filtered_chapters">Saltatu iragazitako kapituluak</string>
@@ -713,9 +713,9 @@
     <string name="smart_by_theme">Smart (gaiaren arabera)</string>
     <string name="split_double_pages_portrait">Zatitu orrialde bikoitzak bertikalki</string>
     <string name="original_size">Jatorrizko tamaina</string>
-    <string name="vertical_viewer">Bertikalki</string>
+    <string name="vertical_viewer">Orrialdeka (Bertikalki)</string>
     <string name="single_page">Orrialde bakarra</string>
-    <string name="continuous_vertical">Bertikalki etengabe</string>
+    <string name="continuous_vertical">Tira luzea, hutsuneekin</string>
     <string name="paged">Orrikaldekatua</string>
     <string name="fit_screen">Doitu pantaila</string>
     <string name="stretch">Luzatu</string>
@@ -891,7 +891,7 @@
     <string name="clear_history_completed">Historia ezabatu da</string>
     <string name="clear_history_confirmation">Ziur zaude\? Historia guztia galduko da.</string>
     <string name="backup_restore_invalid_uri">Errorea: URI-a hutsik</string>
-    <string name="backup_info">Babeskopia automatikoak oso gomendagarriak dira. Kopiak beste leku batzuetan ere gorde beharko zenituzke.</string>
+    <string name="backup_info">Segurtasun kopia automatikoak oso gomendagarriak dira. Kopiak beste leku batzuetan ere gorde behar dira. Segurtasun-kopiek datu konfidentzialak izan ditzakete, gordetako pasahitzak barne; kontuz ibili partekatzen badituzu.</string>
     <string name="pref_manage_notifications">Kudeatu jakinarazpenak</string>
     <string name="secure_screen_summary">Pantaila seguruak aplikazioaren edukia ezkutatzen du aplikazioak aldatzean, eta pantaila-argazkiak blokeatzen ditu</string>
     <string name="pref_hide_threshold">Pantaila mugitzean menua ezkutatzeko sentikortasuna</string>
@@ -915,4 +915,33 @@
     <string name="library_entries">Manga</string>
     <string name="trackers">Zerbitzuak</string>
     <string name="apply">Ezarri</string>
+    <string name="loader_rar5_error">RARv5 formatua ez dago onartuta</string>
+    <plurals name="num_sources">
+        <item quantity="one">Iturri %1$d</item>
+        <item quantity="other">%1$d iturri</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">Orri %1$d</item>
+        <item quantity="other">%1$d orri</item>
+    </plurals>
+    <string name="new_beta_version_available">Beta bertsio berria eskuragarri!</string>
+    <string name="library_search_filters">…duten sarrerak erakutsi</string>
+    <string name="search_operator_and">Sartu</string>
+    <string name="search_operator_not">Baztertu</string>
+    <string name="search_toggle_optional">Iragazki hau hautazkoa egin</string>
+    <string name="search_exactly">Zehatz-mehatz</string>
+    <string name="search_between">Artean</string>
+    <string name="search_more_than">Baino gehiago</string>
+    <string name="search_less_than">Baino gutxiago</string>
+    <string name="search_fewer_than">Baino gutxiago</string>
+    <string name="search_after">Ondoren</string>
+    <string name="search_before">Aurretik</string>
+    <string name="cover_only_grid">Azalak soilik diten sareta</string>
+    <string name="language_badge">Hizkuntza-intsigniak</string>
+    <string name="use_staggered_grid">Sare mailakatua erabili</string>
+    <string name="allow_notifications_recommended">Jakinarazpenak baimentzea gomendagarria da, zure liburutegia eta aplikazioa eguneratuta mantentzeko.</string>
+    <string name="notification_update_error">%1$d eguneratze huts egin du</string>
+    <string name="notification_update_skipped">%1$d eguneratze saltatu dira</string>
+    <string name="skipped_reason_not_always_update">Saltatuta, serieak ez duelako eguneratzerik behar</string>
+    <string name="channel_skipped">Saltatuta</string>
 </resources>
