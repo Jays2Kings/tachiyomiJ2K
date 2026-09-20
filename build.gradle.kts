@@ -26,7 +26,7 @@ subprojects {
 buildscript {
     dependencies {
         //noinspection AndroidGradlePluginVersion
-        classpath("com.android.tools.build:gradle:9.3.2")
+        classpath("com.android.tools.build:gradle:9.3.3")
         classpath("com.google.gms:google-services:4.4.4")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${AndroidVersions.kotlin}")
         classpath("com.google.android.gms:oss-licenses-plugin:0.10.10")

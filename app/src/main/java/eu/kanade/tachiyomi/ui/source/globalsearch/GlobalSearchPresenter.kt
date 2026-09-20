@@ -185,7 +185,7 @@ open class GlobalSearchPresenter(
         fetchSourcesJob?.cancel()
         fetchSourcesJob =
             presenterScope.launch {
-                sources.map { source ->
+                sources.forEach { source ->
                     launch mainLaunch@{
                         semaphore.withPermit {
                             if (this@GlobalSearchPresenter.items.find { it.source == source }?.results != null) {

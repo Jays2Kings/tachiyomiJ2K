@@ -37,7 +37,5 @@ class GlobalSearchLoadingFooterItem : AbstractFlexibleItem<GlobalSearchLoadingFo
         adapter: FlexibleAdapter<IFlexible<RecyclerView.ViewHolder>>,
     ) : FlexibleViewHolder(view, adapter)
 
-    override fun hashCode(): Int {
-        return javaClass.hashCode()
-    }
+    override fun hashCode(): Int = javaClass.hashCode()
 }
