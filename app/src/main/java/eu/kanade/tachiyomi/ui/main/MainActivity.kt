@@ -1709,7 +1709,12 @@ open class MainActivity : BaseActivity<MainActivityBinding>() {
         val onRoot = router.backstackSize == 1
         val navIcon = if (onRoot) searchDrawable else backDrawable
         binding.toolbar.navigationIcon = if (onRoot) null else backDrawable
-        binding.searchToolbar.navigationIcon = if (binding.appBar.useLargeToolbar) searchDrawable else navIcon
+        binding.searchToolbar.navigationIcon =
+            when {
+                to is SmallToolbarInterface && canShowFloatingToolbar(to) -> backDrawable
+                binding.appBar.useLargeToolbar -> searchDrawable
+                else -> navIcon
+            }
         binding.searchToolbar.subtitle = null
 
         nav.visibility = if (!hideBottomNav) View.VISIBLE else nav.visibility

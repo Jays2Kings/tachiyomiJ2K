@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.view.View
 import androidx.core.view.isVisible
 import com.google.android.material.carousel.CarouselLayoutManager
+import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.data.database.models.Manga
 import eu.kanade.tachiyomi.databinding.SourceGlobalSearchControllerCardBinding
 import eu.kanade.tachiyomi.source.LocalSource
 import eu.kanade.tachiyomi.ui.base.holder.BaseFlexibleViewHolder
 import eu.kanade.tachiyomi.ui.migration.SearchController
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
 import eu.kanade.tachiyomi.util.system.LocaleHelper
 
 /**
@@ -51,13 +53,22 @@ class GlobalSearchHolder(
         val source = item.source
         val results = item.results
 
-        val titlePrefix = if (item.highlighted) "▶" else ""
-        val langSuffix = if (source.lang.isNotEmpty()) " (${source.lang})" else ""
-
-        // Set Title with country code if available.
-        binding.title.text = titlePrefix + source.name + langSuffix
-        binding.subtitle.isVisible = source !is LocalSource
-        binding.subtitle.text = LocaleHelper.getDisplayName(source.lang)
+        val title = (if (item.highlighted) "▶" else "") + source.name
+        binding.title.text = title
+        val filterNote =
+            when {
+                item.filtersOnlySkipped -> null
+                item.filterResult == FilterApplyResult.SOME -> itemView.context.getString(R.string.some_filters_not_applied)
+                item.filterResult == FilterApplyResult.NONE -> itemView.context.getString(R.string.no_filters_applied)
+                else -> null
+            }
+        val subtitle =
+            listOfNotNull(
+                LocaleHelper.getDisplayName(source.lang).takeIf { source !is LocalSource },
+                filterNote,
+            ).joinToString(" • ")
+        binding.subtitle.isVisible = subtitle.isNotBlank()
+        binding.subtitle.text = subtitle
 
         when {
             results == null -> {
@@ -66,6 +77,9 @@ class GlobalSearchHolder(
             }
             results.isEmpty() -> {
                 binding.progress.isVisible = false
+                binding.noResults.setText(
+                    if (item.filtersOnlySkipped) R.string.no_filters_applied else R.string.no_results_found,
+                )
                 binding.noResults.isVisible = true
                 binding.sourceCard.isVisible = false
             }

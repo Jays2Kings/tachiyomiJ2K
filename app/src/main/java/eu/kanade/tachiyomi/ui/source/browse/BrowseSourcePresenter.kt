@@ -26,6 +26,9 @@ import eu.kanade.tachiyomi.ui.source.filter.TextItem
 import eu.kanade.tachiyomi.ui.source.filter.TextSectionItem
 import eu.kanade.tachiyomi.ui.source.filter.TriStateItem
 import eu.kanade.tachiyomi.ui.source.filter.TriStateSectionItem
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
+import eu.kanade.tachiyomi.ui.source.searchhistory.SavedFilter
+import eu.kanade.tachiyomi.ui.source.searchhistory.applyTo
 import eu.kanade.tachiyomi.util.manga.duplicateLibraryMangaIds
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.withUIContext
@@ -83,6 +86,9 @@ open class BrowseSourcePresenter(
      */
     var appliedFilters = FilterList()
 
+    private var initialFilters: List<SavedFilter> = emptyList()
+    private var initialFiltersSourceId: Long? = null
+
     /**
      * Pager containing a list of manga results.
      */
@@ -97,6 +103,14 @@ open class BrowseSourcePresenter(
     var query = searchQuery ?: ""
 
     private val oldFilters = mutableListOf<Any?>()
+
+    fun stageInitialFilters(
+        filters: List<SavedFilter>,
+        sourceId: Long?,
+    ) {
+        initialFilters = filters
+        initialFiltersSourceId = sourceId
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -119,7 +133,17 @@ open class BrowseSourcePresenter(
                 }
             }
             filtersChanged = false
-            restartPager()
+            // save the original filters above, then apply new ones if provided
+            val filterResult =
+                initialFilters
+                    .takeIf { it.isNotEmpty() }
+                    ?.applyTo(sourceFilters, strict = initialFiltersSourceId == sourceId)
+            if (filterResult != null && filterResult != FilterApplyResult.NONE) {
+                filtersChanged = true
+                restartPager(filters = sourceFilters)
+            } else {
+                restartPager()
+            }
         }
     }
 

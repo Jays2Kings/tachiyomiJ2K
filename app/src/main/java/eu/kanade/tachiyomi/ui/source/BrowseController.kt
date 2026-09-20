@@ -45,7 +45,9 @@ import eu.kanade.tachiyomi.ui.setting.SettingsSourcesController
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
 import eu.kanade.tachiyomi.ui.source.browse.repos.RepoController
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchController
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
 import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryDelegate
+import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryEntry
 import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.getBottomGestureInsets
@@ -106,7 +108,19 @@ class BrowseController :
             container = { binding.browseFrameLayout },
             recycler = { binding.sourceRecycler },
             extraShouldShow = { !showingExtensions },
+            showFilterSnapshots = { true },
+            onApplyFilters = { entry ->
+                if (entry.query.isBlank()) {
+                    openGlobalSearch("", entry)
+                } else {
+                    pendingFilterEntry = entry
+                }
+                FilterApplyResult.ALL
+            },
+            collapseSearchOnSnapshot = false,
         )
+
+    private var pendingFilterEntry: SearchHistoryEntry? = null
 
     var extQuery = ""
         private set
@@ -790,7 +804,20 @@ class BrowseController :
             preferences.addToSearchHistory(query)
         }
         searchHistory.setVisible(false)
-        router.pushController(GlobalSearchController(query).withFadeTransaction())
+        val entry = pendingFilterEntry
+        pendingFilterEntry = null
+        openGlobalSearch(query, entry)
+    }
+
+    private fun openGlobalSearch(
+        query: String,
+        entry: SearchHistoryEntry? = null,
+    ) {
+        val controller = GlobalSearchController(query)
+        if (entry != null && entry.filters.isNotEmpty()) {
+            controller.presenter.stageFilters(entry.filters, entry.sourceId)
+        }
+        router.pushController(controller.withFadeTransaction())
     }
 
     override fun onActionViewExpand(item: MenuItem?) = searchHistory.onActionViewExpand(item)

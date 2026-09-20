@@ -5,6 +5,7 @@ import eu.kanade.tachiyomi.source.CatalogueSource
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchItem
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchMangaItem
 import eu.kanade.tachiyomi.ui.source.globalsearch.GlobalSearchPresenter
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
 
 class SearchPresenter(
     initialQuery: String? = "",
@@ -21,8 +22,9 @@ class SearchPresenter(
     override fun createCatalogueSearchItem(
         source: CatalogueSource,
         results: List<GlobalSearchMangaItem>?,
+        filterResult: FilterApplyResult?,
     ): GlobalSearchItem {
         // Set the catalogue search item as highlighted if the source matches that of the selected manga
-        return GlobalSearchItem(source, results, source.id == manga.source)
+        return GlobalSearchItem(source, results, source.id == manga.source, filterResult)
     }
 }

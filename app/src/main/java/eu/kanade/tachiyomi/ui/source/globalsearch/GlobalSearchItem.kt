@@ -7,6 +7,7 @@ import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
 import eu.davidea.flexibleadapter.items.IFlexible
 import eu.kanade.tachiyomi.R
 import eu.kanade.tachiyomi.source.CatalogueSource
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
 
 /**
  * Item that contains search result information.
@@ -14,12 +15,21 @@ import eu.kanade.tachiyomi.source.CatalogueSource
  * @param source the source for the search results.
  * @param results the search results.
  * @param highlighted whether this search item should be highlighted/marked in the catalogue search view.
+ * @param filterResult how much of the picked entry's filter set this source could take, or null
+ * when the search carries no filters at all (and while results are still loading).
  */
 class GlobalSearchItem(
     val source: CatalogueSource,
     val results: List<GlobalSearchMangaItem>?,
     val highlighted: Boolean = false,
+    val filterResult: FilterApplyResult? = null,
 ) : AbstractFlexibleItem<GlobalSearchHolder>() {
+    /**
+     * True when the source was never searched because the picked entry was filters-only and none
+     * of them matched here
+     */
+    var filtersOnlySkipped: Boolean = false
+
     /**
      * Set view.
      *

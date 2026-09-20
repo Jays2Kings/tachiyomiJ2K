@@ -136,11 +136,11 @@ open class BrowseSourceController(
             controller = this,
             container = { binding.sourceLayout },
             recycler = { recycler },
-            onApplyFilters = { filters, sourceId ->
+            onApplyFilters = { entry ->
                 val previousFilters = presenter.sourceFilters
                 presenter.sourceFilters = presenter.source.getFilterList()
-                val strict = sourceId == presenter.source.id
-                val result = filters.applyTo(presenter.sourceFilters, strict = strict)
+                val strict = entry.sourceId == presenter.source.id
+                val result = entry.filters.applyTo(presenter.sourceFilters, strict = strict)
                 if (result == FilterApplyResult.NONE) {
                     presenter.sourceFilters = previousFilters
                 } else {

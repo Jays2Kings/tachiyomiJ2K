@@ -23,15 +23,15 @@ import uy.kohesive.injekt.api.get
  * @param isEnabled whether this controller supports the feature at all
  * @param extraShouldShow an extra condition for the history to show
  * @param requireSearchExpanded whether the search toolbar must be expanded before showing
- * @param onApplyFilters called when a picked entry carries filters, so the controller can apply
- * them to whatever single source's [eu.kanade.tachiyomi.source.model.FilterList] it owns (only
- * [eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController] has one), passing along the
- * source id the entry was captured on so an exact match can skip loose matching entirely. Return
- * how many of them found a match - anything short of [FilterApplyResult.ALL] shows a heads-up.
+ * @param onApplyFilters called when a picked entry carries filters, for the controller to apply
+ * to whatever it searches. A blank-query snapshot has no submission following it, so that one
+ * has to run the search itself. Return how many filters matched - anything short of
+ * [FilterApplyResult.ALL] shows a heads-up, so return it to report that some other way.
  * @param showFilterSnapshots whether to show query-less filter-only entries
  * @param extraBottomPadding extra clearance for whatever floats over the bottom of [recycler]
  * @param currentSourceId the single source currently being browsed, if any
  * @param onHidden called whenever the history overlay goes from shown to hidden
+ * @param collapseSearchOnSnapshot whether applying a snapshot should also close the search bar
  */
 class SearchHistoryDelegate(
     private val controller: Controller,
@@ -40,11 +40,12 @@ class SearchHistoryDelegate(
     private val isEnabled: () -> Boolean = { true },
     private val extraShouldShow: () -> Boolean = { true },
     private val requireSearchExpanded: Boolean = true,
-    private val onApplyFilters: (List<SavedFilter>, Long?) -> FilterApplyResult = { _, _ -> FilterApplyResult.ALL },
+    private val onApplyFilters: (SearchHistoryEntry) -> FilterApplyResult = { FilterApplyResult.ALL },
     private val showFilterSnapshots: () -> Boolean = { false },
     private val extraBottomPadding: () -> Int = { 0 },
     private val currentSourceId: () -> Long? = { null },
     private val onHidden: () -> Unit = {},
+    private val collapseSearchOnSnapshot: Boolean = true,
 ) {
     private val preferences: PreferencesHelper by lazy { Injekt.get() }
 
@@ -75,7 +76,7 @@ class SearchHistoryDelegate(
                 isVisible = false
                 onQueryClicked = { entry ->
                     val result =
-                        if (entry.filters.isEmpty()) FilterApplyResult.ALL else onApplyFilters(entry.filters, entry.sourceId)
+                        if (entry.filters.isEmpty()) FilterApplyResult.ALL else onApplyFilters(entry)
                     val isSnapshot = entry.query.isBlank()
                     if (isSnapshot) {
                         if (result != FilterApplyResult.NONE) {
@@ -83,10 +84,12 @@ class SearchHistoryDelegate(
                             // reason to keep the search bar open - if nothing landed there's
                             // nothing to show for it, so leave things as they were instead
                             setVisible(false)
-                            controller.activityBinding
-                                ?.searchToolbar
-                                ?.searchItem
-                                ?.collapseActionView()
+                            if (collapseSearchOnSnapshot) {
+                                controller.activityBinding
+                                    ?.searchToolbar
+                                    ?.searchItem
+                                    ?.collapseActionView()
+                            }
                         }
                     } else {
                         // a saved search is never itself reordered into/recorded as recent - the

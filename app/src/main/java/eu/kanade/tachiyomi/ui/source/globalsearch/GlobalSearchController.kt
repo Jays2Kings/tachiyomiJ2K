@@ -24,6 +24,7 @@ import eu.kanade.tachiyomi.ui.main.SearchActivity
 import eu.kanade.tachiyomi.ui.main.SearchControllerInterface
 import eu.kanade.tachiyomi.ui.manga.MangaDetailsController
 import eu.kanade.tachiyomi.ui.source.browse.BrowseSourceController
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
 import eu.kanade.tachiyomi.ui.source.searchhistory.SearchHistoryDelegate
 import eu.kanade.tachiyomi.ui.source.searchhistory.addToSearchHistory
 import eu.kanade.tachiyomi.util.addOrRemoveToFavorites
@@ -71,6 +72,9 @@ open class GlobalSearchController(
     private var showOnlyResults = false
     private var lastSearchResult: List<GlobalSearchItem> = emptyList()
 
+    /** Set when the bar is closed by the controller itself, so it isn't read as a back press. */
+    private var suppressCollapseBack = false
+
     protected open val supportsSearchHistory: Boolean = true
 
     private val searchHistory =
@@ -80,6 +84,21 @@ open class GlobalSearchController(
             recycler = { binding.recycler },
             isEnabled = { supportsSearchHistory },
             requireSearchExpanded = false,
+            onApplyFilters = { entry ->
+                presenter.stageFilters(entry.filters, entry.sourceId)
+                if (entry.query.isBlank()) {
+                    activityBinding?.searchToolbar?.searchView?.setQuery("", false)
+                    presenter.search("", force = true)
+                    // there's nothing to type for these, so show the results instead of the bar
+                    collapseSearchBar()
+                    setTitle()
+                }
+                // each source reports what it could take on its own, so no need for snackbar
+                FilterApplyResult.ALL
+            },
+            showFilterSnapshots = { true },
+            // closing the search bar here navigates back, so [collapseSearchBar] does it instead
+            collapseSearchOnSnapshot = false,
         )
 
     override val mainRecycler: RecyclerView
@@ -94,14 +113,19 @@ open class GlobalSearchController(
 
     override fun createBinding(inflater: LayoutInflater) = SourceGlobalSearchControllerBinding.inflate(inflater)
 
-    override fun getSearchTitle(): String? = customTitle ?: presenter.query
+    override fun getSearchTitle(): String? =
+        customTitle ?: presenter.query.ifBlank { view?.context?.getString(R.string.label_global_search) }
 
     override val presenter = GlobalSearchPresenter(initialQuery, extensionFilter)
 
     override fun onTitleClick(position: Int) {
         val source = (adapter?.getItem(position) as? GlobalSearchItem)?.source ?: return
         preferences.lastUsedCatalogueSource().set(source.id)
-        router.pushController(BrowseSourceController(source, presenter.query).withFadeTransaction())
+        val controller = BrowseSourceController(source, presenter.query)
+        if (presenter.savedFilters.isNotEmpty()) {
+            controller.presenter.stageInitialFilters(presenter.savedFilters, presenter.filtersSourceId)
+        }
+        router.pushController(controller.withFadeTransaction())
         lastPosition = position
     }
 
@@ -151,7 +175,7 @@ open class GlobalSearchController(
                         val item = this.adapter?.getItem(index) as? GlobalSearchItem ?: return@let
                         val oldMangaIndex =
                             item.results?.indexOfFirst {
-                                it.manga.title.lowercase() == manga.title.lowercase()
+                                it.manga.title.equals(manga.title, ignoreCase = true)
                             } ?: return@let
                         val oldMangaItem = item.results.getOrNull(oldMangaIndex)
                         oldMangaItem?.manga?.favorite = stillFaved
@@ -178,7 +202,7 @@ open class GlobalSearchController(
      * Adds items to the options menu.
      *
      * @param menu menu containing options.
-     * @param inflater used to load the menu xml.
+     * @param inflater used to load the menu XML.
      */
     override fun onCreateOptionsMenu(
         menu: Menu,
@@ -189,8 +213,7 @@ open class GlobalSearchController(
 
         // Initialize search menu
         activityBinding?.searchToolbar?.setQueryHint(view?.context?.getString(R.string.global_search), false)
-        activityBinding?.searchToolbar?.searchItem?.expandActionView()
-        activityBinding?.searchToolbar?.searchView?.setQuery(presenter.query, false)
+        setUpSearchBar()
 
         setOnQueryTextChangeListener(
             activityBinding?.searchToolbar?.searchView,
@@ -214,11 +237,8 @@ open class GlobalSearchController(
     ) {
         super.onChangeStarted(handler, type)
         if (type.isEnter && isControllerVisible) {
-            val searchView = activityBinding?.searchToolbar?.searchView ?: return
-            val searchItem = activityBinding?.searchToolbar?.searchItem ?: return
-            searchItem.expandActionView()
-            searchView.setQuery(presenter.query, false)
-            searchView.clearFocus()
+            setUpSearchBar()
+            activityBinding?.searchToolbar?.searchView?.clearFocus()
         }
         if (type == ControllerChangeType.POP_ENTER && lastPosition > -1) {
             val holder = binding.recycler.findViewHolderForAdapterPosition(lastPosition) as? GlobalSearchHolder
@@ -227,7 +247,27 @@ open class GlobalSearchController(
         }
     }
 
-    // search is always expanded here, so this only kicks in once the query is cleared
+    /** A filters-only search has nothing to type, so it opens with the bar closed over its results. */
+    private fun shouldExpandSearch(): Boolean = presenter.query.isNotBlank() || !presenter.hasFilters
+
+    private fun setUpSearchBar() {
+        val searchToolbar = activityBinding?.searchToolbar ?: return
+        if (shouldExpandSearch()) {
+            searchToolbar.searchItem?.expandActionView()
+        } else {
+            collapseSearchBar()
+        }
+        searchToolbar.searchView?.setQuery(presenter.query, false)
+    }
+
+    /** Close the search bar without backing out */
+    private fun collapseSearchBar() {
+        val searchItem = activityBinding?.searchToolbar?.searchItem ?: return
+        if (!searchItem.isActionViewExpanded) return
+        suppressCollapseBack = true
+        searchItem.collapseActionView()
+    }
+
     override fun onActionViewExpand(item: MenuItem?) {
         val searchView = activityBinding?.searchToolbar?.searchView ?: return
         searchView.setQuery(presenter.query, false)
@@ -235,6 +275,11 @@ open class GlobalSearchController(
     }
 
     override fun onActionViewCollapse(item: MenuItem?) {
+        if (suppressCollapseBack) {
+            suppressCollapseBack = false
+            searchHistory.setVisible(false)
+            return
+        }
         if (activity is SearchActivity) {
             (activity as? SearchActivity)?.onBackPressedDispatcher?.onBackPressed()
         } else if (customTitle == null) {

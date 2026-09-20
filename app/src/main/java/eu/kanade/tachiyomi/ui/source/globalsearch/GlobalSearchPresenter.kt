@@ -12,6 +12,9 @@ import eu.kanade.tachiyomi.source.SourceManager
 import eu.kanade.tachiyomi.source.model.MangasPage
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.ui.base.presenter.BaseCoroutinePresenter
+import eu.kanade.tachiyomi.ui.source.searchhistory.FilterApplyResult
+import eu.kanade.tachiyomi.ui.source.searchhistory.SavedFilter
+import eu.kanade.tachiyomi.ui.source.searchhistory.applyTo
 import eu.kanade.tachiyomi.util.manga.duplicateLibraryMangaIds
 import eu.kanade.tachiyomi.util.system.launchIO
 import eu.kanade.tachiyomi.util.system.launchUI
@@ -60,6 +63,24 @@ open class GlobalSearchPresenter(
 
     var query = ""
 
+    /** Filters carried by the picked search-history entry, applied to each source's own list. */
+    var savedFilters: List<SavedFilter> = emptyList()
+        private set
+
+    /** Source [savedFilters] were captured on - matched strictly there, loosely everywhere else. */
+    var filtersSourceId: Long? = null
+        private set
+
+    /**
+     * Staged by [stageFilters], consumed by the next [search]. Picking a history entry applies its
+     * filters via this, and manual searches clears it.
+     */
+    private var pendingFilters: Pair<List<SavedFilter>, Long?>? = null
+
+    /** Whether this search has filters to go on, even if they haven't been searched with yet. */
+    val hasFilters: Boolean
+        get() = savedFilters.isNotEmpty() || pendingFilters?.first?.isNotEmpty() == true
+
     private val fetchImageFlow = MutableSharedFlow<Pair<List<Manga>, Source>>()
 
     private var fetchImageJob: Job? = null
@@ -90,6 +111,9 @@ open class GlobalSearchPresenter(
     fun refreshSourceFilter() {
         if (!sourceFilterEnabled) return
         sources = getSourcesToQuery()
+        // changing which sources get queried isn't a new search, so carry the filters over -
+        // nothing else stages them, and [search] clears whatever isn't staged
+        stageFilters(savedFilters, filtersSourceId)
         search(query, force = true)
     }
 
@@ -146,7 +170,8 @@ open class GlobalSearchPresenter(
     protected open fun createCatalogueSearchItem(
         source: CatalogueSource,
         results: List<GlobalSearchMangaItem>?,
-    ): GlobalSearchItem = GlobalSearchItem(source, results)
+        filterResult: FilterApplyResult? = null,
+    ): GlobalSearchItem = GlobalSearchItem(source, results, filterResult = filterResult)
 
     fun confirmDeletion(manga: Manga) {
         coverCache.deleteFromCache(manga)
@@ -167,11 +192,16 @@ open class GlobalSearchPresenter(
         query: String,
         force: Boolean = false,
     ) {
+        val (newFilters, newFiltersSourceId) = pendingFilters ?: (emptyList<SavedFilter>() to null)
+        pendingFilters = null
+
         // Return if there's nothing to do
-        if (this.query == query && !force) return
+        if (this.query == query && savedFilters == newFilters && !force) return
 
         // Update query
         this.query = query
+        savedFilters = newFilters
+        filtersSourceId = newFiltersSourceId
 
         // Create image fetch subscription
         initializeFetchImageSubscription()
@@ -191,10 +221,28 @@ open class GlobalSearchPresenter(
                             if (this@GlobalSearchPresenter.items.find { it.source == source }?.results != null) {
                                 return@mainLaunch
                             }
+                            val filterList = source.getFilterList()
+                            val filterResult =
+                                if (savedFilters.isEmpty()) {
+                                    null
+                                } else {
+                                    savedFilters.applyTo(filterList, strict = source.id == filtersSourceId)
+                                }
+                            if (query.isBlank() && filterResult == FilterApplyResult.NONE) {
+                                // sources that can't handle only filters have no unique results to show
+                                publishResults(
+                                    source,
+                                    emptyList(),
+                                    filterResult,
+                                    pinnedSourceIds,
+                                    skipped = true,
+                                )
+                                return@mainLaunch
+                            }
                             val mangas =
                                 try {
-                                    source.getSearchManga(1, query, source.getFilterList())
-                                } catch (error: Exception) {
+                                    source.getSearchManga(1, query, filterList)
+                                } catch (_: Exception) {
                                     MangasPage(emptyList(), false)
                                 }.mangas
                                     .take(10)
@@ -213,25 +261,46 @@ open class GlobalSearchPresenter(
                                 mangas.map { manga ->
                                     GlobalSearchMangaItem(manga, isDuplicateInLibrary = manga.id in duplicateIds)
                                 }
-                            val result = createCatalogueSearchItem(source, mangaItems)
-                            items =
-                                items
-                                    .map { item -> if (item.source == result.source) result else item }
-                                    .sortedWith(
-                                        compareBy(
-                                            // Bubble up sources that actually have results
-                                            { it.results.isNullOrEmpty() },
-                                            // Same as initial sort, i.e. pinned first then alphabetically
-                                            { it.source.id.toString() !in pinnedSourceIds },
-                                            { loadTime[it.source.id] ?: 0L },
-                                            { "${it.source.name.lowercase(Locale.getDefault())} (${it.source.lang})" },
-                                        ),
-                                    )
-                            withUIContext { view?.setItems(items) }
+                            publishResults(source, mangaItems, filterResult, pinnedSourceIds)
                         }
                     }
                 }
             }
+    }
+
+    /** Stages filters for the next [search] to pick up. See [pendingFilters]. */
+    fun stageFilters(
+        filters: List<SavedFilter>,
+        sourceId: Long?,
+    ) {
+        pendingFilters = filters to sourceId
+    }
+
+    /** Swaps [source]'s finished row in, re-sorts so sources with results bubble up, and pushes to the view. */
+    private suspend fun publishResults(
+        source: CatalogueSource,
+        mangaItems: List<GlobalSearchMangaItem>,
+        filterResult: FilterApplyResult?,
+        pinnedSourceIds: Set<String>,
+        skipped: Boolean = false,
+    ) {
+        val result =
+            createCatalogueSearchItem(source, mangaItems, filterResult)
+                .also { it.filtersOnlySkipped = skipped }
+        items =
+            items
+                .map { item -> if (item.source == result.source) result else item }
+                .sortedWith(
+                    compareBy(
+                        // Bubble up sources that actually have results
+                        { it.results.isNullOrEmpty() },
+                        // Same as initial sort, i.e. pinned first then alphabetically
+                        { it.source.id.toString() !in pinnedSourceIds },
+                        { loadTime[it.source.id] ?: 0L },
+                        { "${it.source.name.lowercase(Locale.getDefault())} (${it.source.lang})" },
+                    ),
+                )
+        withUIContext { view?.setItems(items) }
     }
 
     /**
