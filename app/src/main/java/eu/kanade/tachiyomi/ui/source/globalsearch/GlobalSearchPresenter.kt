@@ -54,8 +54,8 @@ open class GlobalSearchPresenter(
     lateinit var sources: List<CatalogueSource>
         private set
 
-    /** False when [sourcesToUse] pins the search to a fixed source list, e.g. migration search. */
-    val sourceFilterEnabled: Boolean = sourcesToUse == null
+    /** false for migration searches & extension intent searches */
+    val sourceFilterEnabled: Boolean = sourcesToUse == null && initialExtensionFilter.isNullOrEmpty()
 
     private var fetchSourcesJob: Job? = null
 
@@ -134,7 +134,7 @@ open class GlobalSearchPresenter(
                 .filterNot { it.id.toString() in hiddenCatalogues }
                 .sortedBy { "(${it.lang}) ${it.name}" }
 
-        return if (preferences.onlySearchPinned().get()) {
+        return if (sourceFilterEnabled && preferences.onlySearchPinned().get()) {
             list.filter { it.id.toString() in pinnedCatalogues }
         } else {
             list.sortedBy { it.id.toString() !in pinnedCatalogues }

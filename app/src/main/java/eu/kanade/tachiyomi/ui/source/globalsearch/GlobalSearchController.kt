@@ -446,17 +446,20 @@ open class GlobalSearchController(
     }
 
     private fun setupFilterHeader() {
-        showOnlyResults = preferences.onlySearchWithResults().get()
-        adapter?.addScrollableHeader(
-            GlobalSearchFilterHeaderItem(
-                // sourcesToUse (e.g. migration search) bypasses the pinned/all filter entirely
-                showPinnedButton = { presenter.sourceFilterEnabled },
-                isPinnedOnly = { preferences.onlySearchPinned().get() },
-                isHasResults = { showOnlyResults },
-                onPinnedClick = ::setPinnedOnlyFilter,
-                onHasResultsClick = ::setHasResultsFilter,
-            ),
-        )
+        // no header needed for extension intent search, since they shouldn't apply
+        if (extensionFilter.isNullOrEmpty()) {
+            showOnlyResults = preferences.onlySearchWithResults().get()
+            adapter?.addScrollableHeader(
+                GlobalSearchFilterHeaderItem(
+                    // sourcesToUse (e.g. migration search) bypasses the pinned/all filter entirely
+                    showPinnedButton = { presenter.sourceFilterEnabled },
+                    isPinnedOnly = { preferences.onlySearchPinned().get() },
+                    isHasResults = { showOnlyResults },
+                    onPinnedClick = ::setPinnedOnlyFilter,
+                    onHasResultsClick = ::setHasResultsFilter,
+                ),
+            )
+        }
         // in case items were already pushed by the presenter before this ran
         adapter?.updateDataSet(applyResultsFilter(lastSearchResult))
         updateFooterAndEmptyState(lastSearchResult)
