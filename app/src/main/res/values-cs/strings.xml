@@ -66,8 +66,8 @@
     <string name="background_color">Barva pozadí</string>
     <string name="white">Bílá</string>
     <string name="black">Černá</string>
-    <string name="left_to_right_viewer">Zleva doprava</string>
-    <string name="right_to_left_viewer">Zprava doleva</string>
+    <string name="left_to_right_viewer">Stránkováno (zleva doprava)</string>
+    <string name="right_to_left_viewer">Stránkováno (zprava doleva)</string>
     <string name="rotation">Otáčení</string>
     <string name="free">Volné</string>
     <string name="red_initial">R</string>
@@ -679,7 +679,7 @@
     <string name="invert_double_pages">Invertovat dvojité strany</string>
     <string name="split_double_pages_portrait">Rozdělit dvojité strany na portrét</string>
     <string name="crop_borders_paged">Oříznout okraje (Strankované)</string>
-    <string name="crop_borders_webtoon">Oříznout okraje (Webtoon)</string>
+    <string name="crop_borders_webtoon">Ozdobné okraje (dlouhý pruh)</string>
     <string name="split_double_pages">Rozdělit dvojité strany</string>
     <string name="pad_cutout_areas">Vyplnit vystřihnuté oblasti</string>
     <string name="external_storage_download_notice">TachiyomiJ2K potřebuje přístup k celému úložišti, aby mohlo stahovat kapitoly. Klikněte sem, poté povolte \"Povolit aplikaci přístup k souborům.\"</string>
@@ -1153,4 +1153,21 @@
     <string name="all_enabled">Vše povoleno</string>
     <string name="pinned_only">Pouze připnuté</string>
     <string name="replace">Nahradit</string>
+    <string name="recent_searches">Nedávná vyhledávání</string>
+    <string name="saved_searches">Uložené vyhledávání</string>
+    <string name="show_on">Zobrazit na</string>
+    <string name="only_x">Pouze %1$s</string>
+    <string name="clear_all">Vymazat vše</string>
+    <string name="edit_search">Upravit vyhledávání</string>
+    <string name="changing_will_reset_reading_mode_multiple">Změnou tohoto nastavení se resetuje režim čtení pro tyto řady</string>
+    <string name="long_strip">Dlouhý pás</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Bliknutí při změně stránky</string>
+    <string name="flash_page_on_change_summary">Snižuje efekt „ghostingu“ na displejích s technologií e-ink</string>
+    <string name="flash_duration">Doba trvání bliknutí</string>
+    <string name="flash_page_interval">Blikat každých</string>
+    <string name="flash_with">Probliknout s</string>
+    <string name="flash_black">Černou</string>
+    <string name="flash_white">Bílou</string>
+    <string name="flash_white_then_black">Bílou a černou</string>
 </resources>
