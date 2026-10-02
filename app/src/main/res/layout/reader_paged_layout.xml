@@ -177,6 +177,14 @@
             app:layout_constraintTop_toBottomOf="@id/webtoon_side_padding" />
 
         <eu.kanade.tachiyomi.widget.MaterialSpinnerView
+            android:id="@+id/webtoon_double_tap_zoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:title="@string/double_tap_zoom"
+            android:entries="@array/double_tap_zoom" />
+
+        <eu.kanade.tachiyomi.widget.MaterialSpinnerView
             android:id="@+id/webtoon_page_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
