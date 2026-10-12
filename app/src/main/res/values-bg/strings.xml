@@ -149,7 +149,7 @@
     <string name="unknown">Неизвестно</string>
     <string name="licensed">Лицензирана</string>
     <string name="author">Автор</string>
-    <string name="artist">Артист</string>
+    <string name="artist">Художник</string>
     <string name="status">Статус</string>
     <!-- Manga chapters fragment -->
     <string name="chapter_">Глава %1$s</string>
@@ -927,7 +927,7 @@
     <string name="pref_update_only_completely_read">С непрочетени глави</string>
     <string name="tap_to_see_details">Вижте пълните подробности за грешката</string>
     <string name="auto_download_while_reading">Автоматично изтегляне при четене</string>
-    <string name="on_hiatus">В хиатус</string>
+    <string name="on_hiatus">Прекъсната за неопределен период</string>
     <string name="cancelled">Отменена</string>
     <string name="reading_list">Списък за четене</string>
     <string name="skipped_reason_not_caught_up">Пропусната, понеже има непрочетени глави</string>
@@ -1082,4 +1082,84 @@
         <item quantity="other">%d статуси</item>
     </plurals>
     <string name="stat">Статистика</string>
+    <string name="edit_search">Редактирай търсене</string>
+    <string name="duplicate_in_library">Дубликат</string>
+    <string name="extension_must_reinstall">Моля, деинсталирайте и след това инсталирайте отново, за да актуализирате.</string>
+    <string name="changing_will_reset_reading_mode_multiple">Промяната на това ще нулира режима на четене за тези поредици</string>
+    <string name="flash_page_on_change">Присветване при смяна на страницата</string>
+    <string name="flash_duration">Времетеаене на присветвснето</string>
+    <string name="flash_page_interval">Присветва на всеки</string>
+    <string name="flash_with">Присветни с</string>
+    <string name="flash_black">Черно</string>
+    <string name="flash_white">Бяло</string>
+    <string name="flash_white_then_black">Бяло и черно</string>
+    <plurals name="missing_chapters">
+        <item quantity="one">Липсва %d глава</item>
+        <item quantity="other">Липсват %d глави</item>
+    </plurals>
+    <string name="missing_chapters_count">Лиспват %d</string>
+    <string name="missing_chapters_range">Липсващи глави %1$s</string>
+    <plurals name="edit_x_series">
+        <item quantity="one">Редактирай %d поредица</item>
+        <item quantity="other">Редактирай %d поредици</item>
+    </plurals>
+    <string name="shared_tags">Споделени тагове</string>
+    <string name="source_default">Източник по подразбиране</string>
+    <string name="considering">Като се има предвид</string>
+    <string name="copy_link">Копирай връзка</string>
+    <string name="link">Връзка</string>
+    <string name="track_privately">Проследяване в поверителен режим</string>
+    <string name="track_publicly">Проследяване в публичен режим</string>
+    <string name="tracked_privately">Проследявани в поверителен режим</string>
+    <string name="add_tracking_privately">Запази в поверително проследяване</string>
+    <string name="track_options">Опций за проследяване</string>
+    <string name="pref_incognito_mode_extension_summary">Спри историята на четене за добавка</string>
+    <string name="tokyo_light">Токийска Светлина</string>
+    <string name="tokyo_night">Токийска нощ</string>
+    <string name="show_missing_chapters">Покажи липсващи глави</string>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d страница</item>
+        <item quantity="other">%1$d страници</item>
+    </plurals>
+    <string name="replace">Замени</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d източник</item>
+        <item quantity="other">%1$d източници</item>
+    </plurals>
+    <string name="search_operator_and">Включи</string>
+    <string name="search_operator_not">Изключи</string>
+    <string name="search_toggle_optional">Направи този филтър незадължителен</string>
+    <string name="search_exactly">Точно</string>
+    <string name="search_between">Между</string>
+    <string name="search_more_than">Повече от</string>
+    <string name="search_less_than">По-малко от</string>
+    <string name="search_fewer_than">По-малко от</string>
+    <string name="search_after">След</string>
+    <string name="search_before">Преди</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Маркирай главата дубликат като прочетена</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">След прочитане на глава</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">След извличане на нова глава</string>
+    <string name="recent_searches">Скорошни търсения</string>
+    <string name="saved_searches">Запазени търсения</string>
+    <string name="show_on">Покажи на</string>
+    <string name="only_x">Само %1$s</string>
+    <string name="clear_all">Изчисти всичко</string>
+    <string name="long_strip">Дълга лента</string>
+    <string name="e_ink">Електронно мастило</string>
+    <string name="flash_page_on_change_summary">Намалява остатъчните изображения при дисплеите с електронно мастило</string>
+    <string name="orphaned">Изоставен</string>
+    <string name="unread_chapters">Непрочетени глави</string>
+    <string name="has_results">Имащи резулатати</string>
+    <string name="pinned_only">Само закачени</string>
+    <string name="filters">Филтри: (%1$s)</string>
+    <string name="some_filters_not_applied">Някои филтри не можаха да бъдат приложени</string>
+    <string name="no_filters_applied">Няма филтри за прилагане</string>
+    <string name="show_duplicate_in_library_items">Показване на значка „Дубликат“</string>
+    <string name="show_duplicate_in_library_items_summary">Показване на значка „Дубликат“ за записи, които вече присъстват в библиотеката от друго разширение. Забележка: Възможно е някои дубликати да не бъдат засечени поради разлики в имената или URL адресите.</string>
+    <string name="logging_in">Влизане…</string>
+    <string name="finding_downloads">Търсене на изтегляния…</string>
+    <string name="concurrent_source_downloads">Едновременно изтегляне от източници</string>
+    <string name="concurrent_page_downloads">Едновременно изтегляне на страници</string>
+    <string name="concurrent_page_downloads_summary">Страници, изтегляни едновременно от един източник</string>
+    <string name="crash_screen_restart_application">Рестартирай приложението</string>
 </resources>
