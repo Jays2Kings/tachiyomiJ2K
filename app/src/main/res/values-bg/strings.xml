@@ -306,7 +306,7 @@
         <item quantity="other">%d налични ъпдейта за разширения</item>
     </plurals>
     <string name="skip_filtered_chapters">Пропускай филтрирани глави</string>
-    <string name="continuous_vertical">Безкраен вертикален изглед</string>
+    <string name="continuous_vertical">Дълга лента с разления</string>
     <string name="paged">Страница</string>
     <string name="unpin">Откачи</string>
     <string name="view_chapters">Преглед на глави</string>
@@ -533,7 +533,7 @@
     <string name="sort_by">Сортиране по</string>
     <string name="auto_refresh_covers_summary">Обновяване на кориците в библиотеката и при актуализиране на библиотеката</string>
     <string name="last_read_">Последно прочетено %1$s</string>
-    <string name="crop_borders_webtoon">Изрязване на граници (Webtoon)</string>
+    <string name="crop_borders_webtoon">Изрязване на граници (дълга лента)</string>
     <string name="remove_tracking">Премахнете проследяването от приложението</string>
     <string name="about_this_">Относно това %1$s</string>
     <string name="start_reading">Започнете да четете</string>
@@ -621,7 +621,7 @@
     <string name="pad_cutout_areas">Области на изрязване на подложката</string>
     <string name="start_past_cutout">Започнете след изрязване</string>
     <string name="ignore_cutout_areas">Игнориране на областите на изрязване</string>
-    <string name="cutout_behavior_only_applies">Поведението на зоната на изрязване се прилага само в портретен режим с определени типове мащаби</string>
+    <string name="cutout_behavior_only_applies">Поведението на зоната на изрязване се прилага само в портретен режим</string>
     <string name="page_layout">Оформление на страница</string>
     <string name="automatic_orientation">Автоматично (в зависимост от ориентацията)</string>
     <string name="show_on_long_press">Показване при продължително натискане</string>
@@ -664,7 +664,7 @@
     <string name="migrate_now">Мигрирай сега</string>
     <string name="copy_now">Копирай сега</string>
     <string name="migrate_">Мигрирай %1$s</string>
-    <string name="no_chapters_found_for_migration">"Няма намерени глави, тази поредица  не може да се използва за миграция"</string>
+    <string name="no_chapters_found_for_migration">Няма намерени глави, тази поредица не може да се използва за миграция</string>
     <string name="skipping_">(пропускане на %1$d)</string>
     <plurals name="manga_migrated">
         <item quantity="one">%d преместена поредица</item>
@@ -912,7 +912,7 @@
     <string name="clear_history">Изчисти историята</string>
     <string name="clear_history_completed">Историята изтрита</string>
     <string name="clear_history_confirmation">Напълно ли сте сигурен\? Всичката ви история ще бъде загубена.</string>
-    <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места.</string>
+    <string name="backup_info">Автоматичното запазване е препоръчително. Добре е да имате копия на няколко места. Резервните копия може да съдържат чувствителни данни, включително запаметени пароли; внимавайте ако ги споделяте.</string>
     <string name="pref_manage_notifications">Уведомления</string>
     <string name="secure_screen_summary">Скрий съдържанието на приложението и блокирай снимките на екрана</string>
     <string name="pref_hide_threshold">Чувствителност за скриване на менюто при превъртане</string>
@@ -1162,4 +1162,28 @@
     <string name="concurrent_page_downloads">Едновременно изтегляне на страници</string>
     <string name="concurrent_page_downloads_summary">Страници, изтегляни едновременно от един източник</string>
     <string name="crash_screen_restart_application">Рестартирай приложението</string>
+    <string name="firebase_summary">Изпращането на записи от сривове и данни за анализ ще ни позволи да откриваме и отстраняваме проблеми, да подобряваме производителността и да правим бъдещите актуализации по-съобразени с вашите нужди.</string>
+    <string name="library_search_filters">Покажи записи, които…</string>
+    <string name="library_optional_search_filters">Показване на записи, които по избор…</string>
+    <string name="error_repo_unreachable">Неуспешно свързване с или разчитане на този магазин</string>
+    <string name="vertical_seekbar">Използвайте вертикална лента за напредък за</string>
+    <string name="vertical_seekbar_dock_left">Постави вертикална лента</string>
+    <string name="vertical_seekbar_height">Височина на вертикалната лента</string>
+    <string name="render_description_images">Изобразяване на изображения в описанията</string>
+    <string name="show_missing_chapters_summary">Показване на разделител за липсващи глави в списъка с глави и подзаглавие до броя на главите.</string>
+    <string name="pref_firebase">Анализи и записи от сривове</string>
+    <string name="enable_analytics">Разрешаване на анализи</string>
+    <string name="enable_analytics_summary">Изпращане на анонимизирани данни за използването с цел подобряване на функциите на приложението</string>
+    <string name="what_should_restore">Какво искаш да възстановиш?</string>
+    <string name="private_settings">Включване на чувствителни настройки (напр. токени за вход в тракери)</string>
+    <string name="share_crash_logs">Сподели записи от сривове</string>
+    <string name="crash_screen_title">Опаа!</string>
+    <string name="crash_screen_description">В %s възникна неочаквана грешка. Можете да споделите регистрационните файлове за срива, за да помогнете за откриването на проблема.</string>
+    <string name="sources_to_search">Източници за търсене</string>
+    <string name="search_history">История на търсенията</string>
+    <string name="show_recent_searches">Показване на скорошни търсения</string>
+    <string name="search_history_cleared">Историята на тъсенето е изчистена</string>
+    <string name="search_removed">Терминът за търсене е премахнат</string>
+    <string name="all_enabled">Всички са активирани</string>
+    <string name="render_description_images_summary">Показване на вградени изображения в описания, форматирани в Markdown</string>
 </resources>
