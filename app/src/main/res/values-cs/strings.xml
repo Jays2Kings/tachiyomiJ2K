@@ -871,9 +871,10 @@
     <string name="data_management">Správa dat</string>
     <string name="check_for_beta_releases">Zkontrolovat pro nové beta verze</string>
     <plurals name="cleanup_done">
-        <item quantity="one">Vyčištění dokončeno. %d odstraněná složka</item>
-        <item quantity="few">Vyčištění dokončeno. %d odstraněné složky</item>
-        <item quantity="other">Vyčištění dokončeno. %d odstraněných složek</item>
+        <item quantity="one">Úklid dokončen. Odstraněna %d složka</item>
+        <item quantity="few">Úklid dokončen. Odstraněny %d složky</item>
+        <item quantity="many">Úklid dokončen. Odstraněno %d složek</item>
+        <item quantity="other">Úklid dokončen. Odstraněno %d složek</item>
     </plurals>
     <string name="auto_update_extensions">Automaticky aktualizovat rozšíření</string>
     <string name="not_downloaded">Není staženo</string>
