@@ -247,7 +247,7 @@
     <string name="theres_no_previous_chapter">Tidak ada bab sebelumnya</string>
     <string name="loading_pages">Memuat halaman…</string>
     <string name="failed_to_load_pages_">Gagal memuat halaman: %1$s</string>
-    <string name="open_in_webview">Buka di sini</string>
+    <string name="open_in_webview">Buka di WebView</string>
     <string name="skip_read_chapters">Lewati bab yang sudah dibaca</string>
     <string name="color_filter_blend_mode">Mode saringan warna campur</string>
     <string name="overlay">Lapisan</string>
@@ -267,7 +267,7 @@
     <string name="date_added">Tanggal ditambahkan</string>
     <string name="latest_chapter">Bab terbaru</string>
     <string name="local_source_help_guide">Petunjuk sumber lokal</string>
-    <string name="check_site_in_web">Cek halaman web dalam tampilan web</string>
+    <string name="check_site_in_web">Periksa situs web di WebView</string>
     <string name="obsolete">Usang</string>
     <string name="obsolete_extension_message">Ekstensi ini tidak terikat dengan toko apa pun. Ekstensi ini tidak akan menerima pembaruan, mungkin tidak berfungsi sebagaimana mestinya, dan dapat menyebabkan masalah pada aplikasi. Menghapus pemasangannya sangat disarankan.</string>
     <plurals name="extension_updates_available">
