@@ -66,8 +66,8 @@
     <string name="background_color">Barva pozadí</string>
     <string name="white">Bílá</string>
     <string name="black">Černá</string>
-    <string name="left_to_right_viewer">Zleva doprava</string>
-    <string name="right_to_left_viewer">Zprava doleva</string>
+    <string name="left_to_right_viewer">Stránkováno (zleva doprava)</string>
+    <string name="right_to_left_viewer">Stránkováno (zprava doleva)</string>
     <string name="rotation">Otáčení</string>
     <string name="free">Volné</string>
     <string name="red_initial">R</string>
@@ -166,7 +166,7 @@
     <string name="crop_borders">Oříznout okraje</string>
     <string name="use_custom_brightness">Použít vlastní jas</string>
     <string name="use_custom_color_filter">Použít vlastní barevný filtr</string>
-    <string name="vertical_viewer">Vertikální</string>
+    <string name="vertical_viewer">Stránkování (vertikální)</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Typ úpravy velikosti</string>
     <string name="fit_screen">Přizpůsobit obrazovce</string>
@@ -633,7 +633,7 @@
     <string name="paged">Stránkovač</string>
     <string name="date_fetched">Datum načtení</string>
     <string name="ext_installer_shizuku_unavailable_dialog">Nainstalujte a spusťte Shizuku, abyste jej mohli používat jako instalátor rozšíření.</string>
-    <string name="continuous_vertical">Průběžné vertikální</string>
+    <string name="continuous_vertical">Dlouhý pruh s mezerami</string>
     <string name="invert_tapping">Invertovat oblasti dotyku</string>
     <string name="source_unsupported">Zdroj není podporován</string>
     <string name="appearance">Vzhled</string>
@@ -679,7 +679,7 @@
     <string name="invert_double_pages">Invertovat dvojité strany</string>
     <string name="split_double_pages_portrait">Rozdělit dvojité strany na portrét</string>
     <string name="crop_borders_paged">Oříznout okraje (Strankované)</string>
-    <string name="crop_borders_webtoon">Oříznout okraje (Webtoon)</string>
+    <string name="crop_borders_webtoon">Ozdobné okraje (dlouhý pruh)</string>
     <string name="split_double_pages">Rozdělit dvojité strany</string>
     <string name="pad_cutout_areas">Vyplnit vystřihnuté oblasti</string>
     <string name="external_storage_download_notice">TachiyomiJ2K potřebuje přístup k celému úložišti, aby mohlo stahovat kapitoly. Klikněte sem, poté povolte \"Povolit aplikaci přístup k souborům.\"</string>
@@ -729,7 +729,7 @@
     <string name="clear_history_confirmation">Jste si jistý/á\? Všechna historie bude navždy ztracena.</string>
     <string name="clear_history">Vymazat historii</string>
     <string name="backup_restore_invalid_uri">Chyba: prázdná URI</string>
-    <string name="backup_info">Automatické zálohy jsou vřele doporučeny. Měli byste si uchovat kopii zálohy na více místech.</string>
+    <string name="backup_info">Důrazně doporučujeme provádět automatické zálohy. Kopie byste měli uchovávat také na jiných místech. Zálohy mohou obsahovat citlivá data, včetně uložených hesel; při jejich sdílení buďte opatrní.</string>
     <string name="empty_backup_error">Žádné záznamy v knihovně k zálohování</string>
     <string name="pref_library_update_manga_restriction">Přeskočit aktualizaci titulů</string>
     <string name="pref_clear_webview_data">Vyčistit data WebView</string>
@@ -867,13 +867,14 @@
     <string name="delete_removed_chapters">Smazat odstraněné kapitoly</string>
     <string name="always_delete">Vždy odstranit</string>
     <string name="category_hopper_long_press">Akce dlouhého stisknutí násypky kategorie</string>
-    <string name="cutout_behavior_only_applies">Chování oblasti výřezu platí pouze v režimu na výšku s určitými typy měřítek</string>
+    <string name="cutout_behavior_only_applies">Chování ořezané oblasti platí pouze v režimu na výšku</string>
     <string name="data_management">Správa dat</string>
     <string name="check_for_beta_releases">Zkontrolovat pro nové beta verze</string>
     <plurals name="cleanup_done">
-        <item quantity="one">Vyčištění dokončeno. %d odstraněná složka</item>
-        <item quantity="few">Vyčištění dokončeno. %d odstraněné složky</item>
-        <item quantity="other">Vyčištění dokončeno. %d odstraněných složek</item>
+        <item quantity="one">Úklid dokončen. Odstraněna %d složka</item>
+        <item quantity="few">Úklid dokončen. Odstraněny %d složky</item>
+        <item quantity="many">Úklid dokončen. Odstraněno %d složek</item>
+        <item quantity="other">Úklid dokončen. Odstraněno %d složek</item>
     </plurals>
     <string name="auto_update_extensions">Automaticky aktualizovat rozšíření</string>
     <string name="not_downloaded">Není staženo</string>
@@ -976,7 +977,7 @@
     <string name="username_must_not_be_blank">Uživatelské jméno nebo heslo nesmí být prázdné</string>
     <string name="beta">BETA</string>
     <string name="no_new_chapters_open_details">Pokud nejsou k dispozici žádné nové kapitoly, otevřou se místo toho podrobnosti o sérii</string>
-    <string name="delete_old_covers_in_library_used_">Odstranění starých a nepoužívaných obalů publikací v knihovně, které byly aktualizovány. \nAktuálně používáno: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Odstraňte staré a nepoužívané obálky uložené v mezipaměti u položek ve vaší knihovně, které byly aktualizovány.\nAktuálně používáte: %1$s</string>
     <string name="user_agent_string">Výchozí řetězec uživatelského agenta</string>
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
@@ -1153,4 +1154,40 @@
     <string name="all_enabled">Vše povoleno</string>
     <string name="pinned_only">Pouze připnuté</string>
     <string name="replace">Nahradit</string>
+    <string name="recent_searches">Nedávná vyhledávání</string>
+    <string name="saved_searches">Uložené vyhledávání</string>
+    <string name="show_on">Zobrazit na</string>
+    <string name="only_x">Pouze %1$s</string>
+    <string name="clear_all">Vymazat vše</string>
+    <string name="edit_search">Upravit vyhledávání</string>
+    <string name="changing_will_reset_reading_mode_multiple">Změnou tohoto nastavení se resetuje režim čtení pro tyto řady</string>
+    <string name="long_strip">Dlouhý pás</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Bliknutí při změně stránky</string>
+    <string name="flash_page_on_change_summary">Snižuje efekt „ghostingu“ na displejích s technologií e-ink</string>
+    <string name="flash_duration">Doba trvání bliknutí</string>
+    <string name="flash_page_interval">Blikat každých</string>
+    <string name="flash_with">Probliknout s</string>
+    <string name="flash_black">Černou</string>
+    <string name="flash_white">Bílou</string>
+    <string name="flash_white_then_black">Bílou a černou</string>
+    <plurals name="edit_x_series">
+        <item quantity="one">Upravit %d sérii</item>
+        <item quantity="few">Upravit %d série</item>
+        <item quantity="many">Upravit %d sérií</item>
+        <item quantity="other">Upravit %d sérií</item>
+    </plurals>
+    <string name="shared_tags">Sdílené štítky</string>
+    <string name="source_default">Výchozí zdroj</string>
+    <string name="pref_incognito_mode_extension_summary">Pozastavit historii čtení pro rozšíření</string>
+    <string name="what_should_restore">Co chcete obnovit?</string>
+    <string name="private_settings">Zahrnout citlivá nastavení (např. přihlašovací tokeny ke sledovacímu systému)</string>
+    <string name="search_history">Historie vyhledávání</string>
+    <string name="show_recent_searches">Zobrazit poslední vyhledávání</string>
+    <string name="search_history_cleared">Historie vyhledávání byla vymazána</string>
+    <string name="search_removed">Hledaný výraz byl odstraněn</string>
+    <string name="filters">Filtry: (%1$s)</string>
+    <string name="some_filters_not_applied">Některé filtry nebylo možné použít</string>
+    <string name="no_filters_applied">Nelze použít žádné filtry</string>
+    <string name="has_results">Má výsledky</string>
 </resources>

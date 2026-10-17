@@ -189,7 +189,7 @@
     <string name="global_search">グローバル検索…</string>
     <string name="latest">最近の更新</string>
     <string name="browse">ブラウズ</string>
-    <string name="local_source_help_guide">ローカルソースガイド</string>
+    <string name="local_source_help_guide">ローカル ソース ガイド</string>
     <string name="check_site_in_web">WebView でウェブサイトを確認</string>
     <string name="obsolete">廃止済み</string>
     <string name="untrusted_extension_message">悪意のある拡張機能は、保存されているログイン認証情報を読み取ったり、任意のコードを実行したりする可能性があります。\n\nこの拡張機能を信頼することで、あなたはこれらのリスクを受け入れることになります。</string>
@@ -712,7 +712,7 @@
     <string name="cancel_all_for_series">このシリーズのすべてをキャンセル</string>
     <string name="dark_theme">ダークテーマ</string>
     <string name="light_theme">ライトテーマ</string>
-    <string name="about_dont_kill_my_app">一部のメーカーは、バックグラウンドサービスを停止させる追加のアプリ制限を設けています。この問題を解決する方法については、こちらのウェブサイトに詳しい情報が掲載されています。</string>
+    <string name="about_dont_kill_my_app">一部のメーカーは、バックグラウンド サービスを停止させる追加のアプリ制限を設けています。この問題を解決する方法については、こちらのウェブサイトに詳しい情報が掲載されています。</string>
     <string name="force_download_cache_refresh_summary">ダウンロードキャッシュの再計算を強制的に行います。アプリ外にダウンロード内容に変更を行ってアプリに変更を反映してもらいたい場合は役に立ちます</string>
     <string name="warning">警告</string>
     <string name="orientation">画面向き</string>
