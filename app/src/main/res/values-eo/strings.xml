@@ -385,4 +385,8 @@
         <item quantity="one">Sekva nelegita ĉapitro</item>
         <item quantity="other">Sekvaj %d nelegitaj ĉapitroj</item>
     </plurals>
+    <plurals name="num_repos">
+        <item quantity="one">%d etendaĵejo</item>
+        <item quantity="other">%d etendaĵejoj</item>
+    </plurals>
 </resources>
