@@ -841,7 +841,7 @@
     <string name="add_to_">Přidat do %1$s</string>
     <string name="preview">Náhled</string>
     <string name="use_default">Použít výchozí</string>
-    <string name="clean_orphaned_downloads">Vyčištění osiřelých</string>
+    <string name="clean_orphaned_downloads">Vyčistit opuštěné</string>
     <string name="match_pinned_sources">Shodovat s připnutými zdroji</string>
     <string name="recently_installed">Nedávno nainstalováno</string>
     <string name="auto_updates">Automatické aktualizace</string>
@@ -880,7 +880,7 @@
     <string name="not_downloaded">Není staženo</string>
     <string name="couldnt_download_low_space">Kapitoly nelze stáhnout z důvodu nedostatku místa na disku</string>
     <string name="always_keep">Vždy ponechat</string>
-    <string name="clean_read_downloads">Vyčištění přečtených</string>
+    <string name="clean_read_downloads">Vyčistit přečtené</string>
     <string name="delete_downloaded_if_removed_online">Odstranění stažených kapitol, pokud zdroj odstranil tuto kapitolu online</string>
     <string name="ask_on_chapters_page">Odstranění během globálních aktualizací, dotázat se na stránce kapitol</string>
     <plurals name="migrate_manga">
@@ -891,7 +891,7 @@
     <string name="restore_error">Nepodařilo se obnovit zálohu</string>
     <string name="warning_enroll_into_beta">Beta verze mohou být nestabilní a mohou vyžadovat vymazání dat aplikace.</string>
     <string name="warning_unenroll_from_beta">Návrat k předchozí produkční verzi může způsobit problémy a může vyžadovat vymazání dat aplikace.</string>
-    <string name="no_folders_to_cleanup">Žádné složky k vyčištění</string>
+    <string name="no_folders_to_cleanup">Nejsou žádné složky k vyčištění</string>
     <string name="disable_if_issues_with_updating">Vypněte tuto možnost, pokud máte problémy s aktualizací nebo obnovou knihovny</string>
     <string name="notify_extension_updated">Oznamovat aktualizaci rozšíření</string>
     <string name="some_extensions_may_not_update">Některá rozšíření nemusí být automaticky aktualizována, pokud byla nainstalována mimo tuto aplikaci</string>
@@ -931,7 +931,7 @@
         <item quantity="few">%d publikace migrovány</item>
         <item quantity="other">%d publikací migrováno</item>
     </plurals>
-    <string name="delete_unused_chapters">Odstraňte neexistující, částečně stažené a přečtené složky kapitol</string>
+    <string name="delete_unused_chapters">Odstranit složky s neexistujícími, částečně staženými a přečtenými kapitolami</string>
     <string name="clean_up_cached_covers">Vyčištění obalů uložených v mezipaměti</string>
     <string name="clear_cached_covers_non_library">Vymazání obalů v mezipaměti, které nejsou v knihovně</string>
     <string name="use_last_saved_migration_preferences">Použití posledních uložených předvoleb a zdrojů před migrací pro hromadnou migraci</string>
@@ -969,8 +969,8 @@
     <string name="downloads_swipe_tutorial">Stahování lze zrušit tak, že je přetáhnete pryč
 \nPřejetím prstem po tomto tipu ho zavřete</string>
     <string name="remove_download">Odstranění stahování</string>
-    <string name="starting_cleanup">Zahájení čištění</string>
-    <string name="clean_up_downloaded_chapters">Vyčištění stažených kapitol</string>
+    <string name="starting_cleanup">Zahájení úklidu</string>
+    <string name="clean_up_downloaded_chapters">Vyčistit stažené kapitoly</string>
     <string name="delete_all_covers__not_in_library_used_">Odstranění všech obalů uložených v mezipaměti, které nejsou ve vaší knihovně
 \nAktuálně používáno: %1$s</string>
     <string name="select_uninstalled_sources">Vybrat odinstalované zdroje</string>
@@ -982,7 +982,7 @@
     <string name="language_requires_app_restart">Některé jazyky mohou pro správné zobrazení vyžadovat opětovné spuštění aplikace</string>
     <string name="loader_rar5_error">Formát RARv5 není podporován</string>
     <string name="all_read_manga">Všechny přečtené publikace</string>
-    <string name="clear_db_exclude_read">Ponechejte položky s přečtenými kapitolami</string>
+    <string name="clear_db_exclude_read">Zachovat záznamy o přečtených kapitolách</string>
     <string name="auto_download_while_reading">Automatické stahování při čtení</string>
     <string name="downloaded_chapters">Stažené kapitoly</string>
     <string name="statistics">Statistiky</string>
