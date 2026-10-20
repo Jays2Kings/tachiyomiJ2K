@@ -1044,4 +1044,9 @@
     <string name="pref_mark_duplicate_read_chapter_read_existing">阅读完一章后</string>
     <string name="tracked_privately">已私下记录</string>
     <string name="crash_screen_title">哦豁！</string>
+    <string name="recent_searches">最近搜索</string>
+    <string name="saved_searches">保存搜索</string>
+    <string name="clear_all">清除全部</string>
+    <string name="edit_search">编辑搜索</string>
+    <string name="duplicate_in_library">重复</string>
 </resources>
