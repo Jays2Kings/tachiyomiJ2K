@@ -245,10 +245,10 @@
     <string name="black">Preto</string>
     <string name="smart_by_page">Inteligente (por página)</string>
     <string name="smart_by_theme">Inteligente (por tema)</string>
-    <string name="left_to_right_viewer">Esquerda para direita</string>
-    <string name="right_to_left_viewer">Direita para esquerda</string>
-    <string name="vertical_viewer">Vertical</string>
-    <string name="continuous_vertical">Vertical contínuo</string>
+    <string name="left_to_right_viewer">Paginado (Esquerda para direita)</string>
+    <string name="right_to_left_viewer">Paginado (Direita para esquerda)</string>
+    <string name="vertical_viewer">Paginado (Vertical)</string>
+    <string name="continuous_vertical">Tira longa com lacunas</string>
     <string name="paged">Paginação</string>
     <string name="scale_type">Tipo de escala</string>
     <string name="fit_screen">Ajustar à tela</string>
@@ -277,7 +277,7 @@
     <string name="volume_">Volume %1$d</string>
     <string name="season_">Temporada %1$d</string>
     <string name="added_to_library">Adicionado à biblioteca</string>
-    <string name="add_to_library">Adicionar à Biblioteca</string>
+    <string name="add_to_library">Adicionar à biblioteca</string>
     <string name="removed_from_library">Removido da biblioteca</string>
     <string name="_copied_to_clipboard">%1$s copiado para a área de transferência</string>
     <string name="source_not_installed_">Fonte não instalada: %1$s</string>
@@ -742,7 +742,7 @@
     <string name="automatic_orientation">Automático (baseado na orientação)</string>
     <string name="automatic_can_still_switch">Ao usar o layout de página automático, você ainda pode mudar entre os layouts enquanto lê sem sobrepôr esta configuração</string>
     <string name="page_layout">Layout de página</string>
-    <string name="cutout_behavior_only_applies">O comportamento da área de corte da tela aplica apenas no modo paisagem com certos tipos de escala</string>
+    <string name="cutout_behavior_only_applies">O comportamento da área de corte da tela aplica apenas no modo paisagem</string>
     <string name="ignore_cutout_areas">Ignorar as áreas de corte da tela</string>
     <string name="start_past_cutout">Iniciar após o corte da tela</string>
     <string name="pad_cutout_areas">Preencher as áreas de corte da tela</string>
@@ -758,7 +758,7 @@
     <string name="single_page">Página única</string>
     <string name="double_pages">Páginas duplas</string>
     <string name="remove_crop">Remover corte</string>
-    <string name="crop_borders_webtoon">Aparar bordas (Webtoon)</string>
+    <string name="crop_borders_webtoon">Aparar bordas (Tira longa)</string>
     <string name="crop_borders_paged">Aparar páginas (Paginado)</string>
     <string name="invert_double_pages">Inverter páginas duplas</string>
     <string name="amount_of_pages_to_preload">A quantidade de páginas para pré-carregar enquanto se lê. Valores maiores resultarão em uma experiência de leitura melhor, ao custo de maior uso do cache e da rede.</string>
@@ -1139,4 +1139,38 @@
     <string name="ext_revoke_trust">Revogar a confiabilidade de extensões desconhecidas</string>
     <string name="open_source_repo">Abrir repositório da fonte</string>
     <string name="crash_screen_title">Ooops!</string>
+    <string name="recent_searches">Pesquisas recentes</string>
+    <string name="saved_searches">Pesquisas salvas</string>
+    <string name="edit_search">Editar pesquisa</string>
+    <plurals name="num_repos">
+        <item quantity="one">%d loja</item>
+        <item quantity="many">%d lojas</item>
+        <item quantity="other">%d lojas</item>
+    </plurals>
+    <string name="only_x">Apenas %1$s</string>
+    <string name="clear_all">Limpar tudo</string>
+    <string name="long_strip">Tira longa</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Piscar ao mudar página</string>
+    <string name="flash_page_on_change_summary">Reduz ghosting em telas E-Ink</string>
+    <string name="vertical_seekbar">Usar barra de progresso vertical para</string>
+    <plurals name="missing_chapters">
+        <item quantity="one">Faltando %d capítulo</item>
+        <item quantity="many">Faltando %d capítulos</item>
+        <item quantity="other">Faltando %d capítulos</item>
+    </plurals>
+    <string name="missing_chapters_count">faltando %d</string>
+    <plurals name="edit_x_series">
+        <item quantity="one">Editar %d série</item>
+        <item quantity="many">Editar %d séries</item>
+        <item quantity="other">Editar %d séries</item>
+    </plurals>
+    <string name="shared_tags">tags compartilhadas</string>
+    <string name="source_default">Padrão da fonte</string>
+    <string name="considering">Considerando</string>
+    <string name="copy_link">Copiar link</string>
+    <string name="link">Link</string>
+    <string name="pref_incognito_mode_extension_summary">Pausa o histórico de leitura para a extensão</string>
+    <string name="render_description_images">Renderizar images em descrições</string>
+    <string name="show_missing_chapters">Mostrar capítulos faltantes</string>
 </resources>
