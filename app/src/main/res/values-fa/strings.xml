@@ -7,15 +7,15 @@
     <string name="bookmarked">بوک مارک شده</string>
     <string name="failed_to_load_pages_">لود صفحات با خطا مواجه شد: %1$s</string>
     <string name="fullscreen">تمام صفحه</string>
-    <string name="double_tap_anim_speed">Double tap animation speed</string>
+    <string name="double_tap_anim_speed">سرعت انیمیشن با دوبار ضربه زدن</string>
     <string name="show_page_number">نمایش شماره صفحه</string>
     <string name="crop_borders">بریدن حاشیه‌ها</string>
     <string name="color_filter_blend_mode">حالت blend فیلتر رنگ</string>
-    <string name="overlay">Overlay</string>
-    <string name="multiply">Multiply</string>
+    <string name="overlay">پوشش</string>
+    <string name="multiply">ضرب کردن</string>
     <string name="screen">صفحه نمایش</string>
-    <string name="dodge_lighten">Dodge / Lighten</string>
-    <string name="burn_darken">Burn / Darken</string>
+    <string name="dodge_lighten">دوج / روشن کردن</string>
+    <string name="burn_darken">سوزاندن / تیره کردن</string>
     <string name="keep_screen_on">روشن نگه داشتن صفحه نمایش</string>
     <string name="skip_read_chapters">پرش از فصل‌هایی که خوانده شده اند</string>
     <string name="skip_filtered_chapters">پرش ازز فصل‌های فیلتر شده</string>
@@ -25,7 +25,7 @@
     <string name="background_color">رنگ پس زمینه</string>
     <string name="white">سفید</string>
     <string name="black">سیاه</string>
-    <string name="continuous_vertical">عمودی پیوسته</string>
+    <string name="continuous_vertical">عنوار بلند با شکاف</string>
     <string name="paged">صفحه به صفحه</string>
     <string name="scale_type">نوع مقیاس</string>
     <string name="fit_screen">هم اندازه با صفحه نمایش</string>
@@ -122,8 +122,8 @@
     <string name="version_">نگارش %1$s</string>
     <string name="language_">زبان: %1$s</string>
     <plurals name="extension_updates_available">
-        <item quantity="one">آپدیت برای یک افرونه موجود استآپدیت برای %d افرونه موجود است</item>
-        <item quantity="other"/>
+        <item quantity="one">به‌روزرسانی افزونه در دسترس است</item>
+        <item quantity="other">%d به‌روزرسانی افزونه در دسترس است</item>
     </plurals>
     <string name="next_chapter_not_found">فصل بعدی یافت نشد</string>
     <string name="use_image_as_cover">این عکس، به عنوان عکس روی جلد تنظیم شود؟</string>
@@ -251,23 +251,19 @@
     <string name="currently_reading">درحال حاضر خواندن(Currently reading)</string>
     <string name="reading">درحال خواندن(Reading)</string>
     <string name="services">خدمات</string>
-    <string name="source_not_installed">منبع نصب نشده است: %1$s</string>
+    <string name="source_not_installed">منبع نصب نشده است</string>
     <string name="remove_from_library">حذف از کتابخانه</string>
     <string name="add_to_library">افزودن به کتابخانه</string>
     <string name="added_to_library">مانگا به کتابخانه اضافه شد</string>
     <string name="pref_webtoon_side_padding">فاصله از کنار صفحه</string>
-    <string name="vertical_viewer">عمودی</string>
-    <string name="right_to_left_viewer">راست به چپ</string>
-    <string name="left_to_right_viewer">چپ به راست</string>
+    <string name="vertical_viewer">صفحه بندی شده (عمودی)</string>
+    <string name="right_to_left_viewer">صفحه بندی شده (راست به چپ)</string>
+    <string name="left_to_right_viewer">صفحه بندی شده (چپ به راست)</string>
     <string name="decode_image_error">بازکردن عکس با خطا مواجه شد</string>
     <string name="cover_updated">عکس روی جلد بروزرسانی شد</string>
     <string name="set_as_cover">تنظیم به عنوان عکس روی جلد</string>
     <string name="obsolete_extension_message">این افزونه دیگر موجود نیست.</string>
-    <string name="untrusted_extension_message">این افزونه با یک گواهی نامطمئن امضا شده است و فعال نشده است.
-\n
-\nیک افزونه مخرب می تواند هر گونه طلاعات ورود به سیستم ذخیره شده تاچیومی را بخواند یا کدهای دلخواه(احتمالا خطرناک) را اجرا کند.
-\n
-\nبا اعتماد به این گواهی شما این خطرات را می‌پذیرید.</string>
+    <string name="untrusted_extension_message">افزونه‌های مخرب می‌توانند هرگونه اطلاعات ورود ذخیره‌شده را بخوانند یا کد دلخواه را اجرا کنند.\n\nبا اعتماد به این افزونه، شما این خطرات را می‌پذیرید.</string>
     <string name="untrusted_extension">افزونه نامطمئن</string>
     <string name="local_source_help_guide">راهنمای منبع محلی</string>
     <string name="in_library">در کتابخانه</string>
@@ -277,7 +273,7 @@
     <string name="no_results_found">هیچ نتیجه ای یافت نشد</string>
     <string name="no_more_results">نتیجه بیشتری یافت نشد</string>
     <string name="history">تاریخچه</string>
-    <string name="library_search_hint">عنوان یا نویسنده…</string>
+    <string name="library_search_hint">جستجوی عنوان، برچسب‌ها، منبع</string>
     <string name="updating_library">درحال آپدیت کتابخانه</string>
     <string name="default_category">دسته بندی پیشفرض</string>
     <string name="categories">دسته بندی ها</string>
@@ -336,8 +332,8 @@
     <string name="open_log">بازکردن log</string>
     <string name="chapters">قسمت ها</string>
     <plurals name="category_plural">
-        <item quantity="one">%d دسته%d دسته</item>
-        <item quantity="other"/>
+        <item quantity="one">%d دسته</item>
+        <item quantity="other">%d دسته</item>
     </plurals>
     <string name="progress">پیشرفت</string>
     <string name="complete">تکمیل شده</string>
@@ -383,7 +379,7 @@
     <string name="sort_by">مرتب سازی بر اساس</string>
     <string name="ungrouped">گروه بندی نشده</string>
     <string name="tracking_status">وضعیت پیگیری</string>
-    <string name="group_library_by">کتابخانه را بر اساس…گروه بندی کن</string>
+    <string name="group_library_by">کتابخانه گروهی توسط…</string>
     <string name="series_type">نوع مانگا</string>
     <string name="read_progress">پیشرفت خواندن</string>
     <string name="reorder_filters">فیلترها را دوباره بچین</string>
@@ -392,28 +388,28 @@
     <string name="always_show_current_category">همیشه دسته بندی کنونی را نشان بده</string>
     <string name="show_all_categories">همه دسته بندی ها را نشان بده</string>
     <string name="no_matches_for_filters">هیچ نمونه مشابهی برای فیلترهای فعلی شما پیدا نشد</string>
-    <string name="library_is_empty_add_from_browse">کتابخانه شما خالی است، می توانید از صفحه مرور به کتابخانه خود اضافه کنید</string>
+    <string name="library_is_empty_add_from_browse">کتابخانه شما خالی است، از برگه مرور، سری‌ها را به کتابخانه خود اضافه کنید.</string>
     <string name="jump_to_category">پرش به دسته بندی</string>
     <string name="long_press_category">برای ویرایش یک دسته بندی بر روی آن ضربه بزنید و نگه دارید</string>
     <string name="category_deleted">این دسته بندی حذف شد</string>
-    <string name="category_with_name_exists">یک دسته بندی با همین نام قبلا وجود دارد</string>
+    <string name="category_with_name_exists">یک دسته بندی با همین نام قبلا وجود دارد!</string>
     <string name="move_to_categories">انتقال به دسته بندی های</string>
     <string name="manage_category">دسته بندی مانگا</string>
     <string name="add_edit_categories">اضافه/ویرایش دسته بندی ها</string>
     <string name="add_categories">اضافه کردن دسته بندی</string>
     <string name="already_in_category">این مورد قبلا در این دسته بندی وجود داشته</string>
-    <string name="confirm_category_deletion_message">موارد این دسته بندی به دسته بندی پیشفرض منتقل خواهد شد</string>
+    <string name="confirm_category_deletion_message">موارد این دسته بندی به دسته بندی پیشفرض منتقل خواهد شد.</string>
     <string name="confirm_category_deletion">حذف دسته بندی؟</string>
     <string name="category_is_empty">این دسته بندی خالی است</string>
     <string name="create_new_category">ساخت دسته بندی جدید</string>
     <string name="category">دسته بندی</string>
     <string name="chapter_not_found">چپتر پیدا نشد</string>
-    <string name="chapters_removed">چپترهای حذف شده</string>
+    <string name="chapters_removed">فصل‌ها حذف شدند.</string>
     <string name="removed_bookmark">نشانک های حذف شده</string>
     <string name="marked_as_unread">علامت زده به عنوان خوانده نشده</string>
     <string name="marked_as_read">علامت زده به عنوان خوانده شده</string>
     <string name="all_chapters_read">همه چپترها خوانده شده</string>
-    <string name="last_read_chapter_">آخرین چپتر خوانده شده</string>
+    <string name="last_read_chapter_">آخرین فصل خوانده شده %1$s</string>
     <string name="new_chapters">چپترهای جدید</string>
     <string name="unlock">قفل را باز کنید</string>
     <string name="unlock_library">برای دسترسی به کتابخانه قفل را باز کنید</string>
@@ -433,7 +429,7 @@
     <string name="disabled">غیرفعال شده</string>
     <string name="log_out">خروج</string>
     <string name="log_out_from_">از%1$s خارج می شوید؟</string>
-    <string name="portrait">عمودی</string>
+    <string name="portrait">افقی</string>
     <string name="hide_notification_content">مخفی کردن اعلان‌ها</string>
     <string name="warning">اخطار</string>
     <string name="update_all">آپدیت همگی</string>
@@ -446,9 +442,7 @@
     <string name="clear_history_completed">سابقه پاک شد</string>
     <string name="clear_history_confirmation">آیا مطمئن هستید؟ تمام سابقه از دست خواهد رفت.</string>
     <string name="all_files_permission_required">اجازه دسترسی به فایل</string>
-    <string name="external_storage_permission_notice">تاچیومی J2K نیازمند دسترسی به همه فایل ها در اندوید 11 برای دانلود قسمت ها، ایجاد پشتیبان گیری خودکار، و خواندن مانگاهای محلی( مانگا های موجود در دستگاه شما) است.
-\n
-\nدر صفحه بعدی، اجازه \"مجاز بودن دسترسی به مدیریت همه پرونده‌ها\" را بدهید.</string>
+    <string name="external_storage_permission_notice">TachiyomiJ2K برای دانلود فصل‌ها، ایجاد پشتیبان‌گیری خودکار و خواندن مجموعه‌های محلی، نیاز به دسترسی به تمام فایل‌ها در اندروید ۱۱ دارد.\n\nدر صفحه بعد، گزینه «اجازه دسترسی برای مدیریت همه فایل‌ها» را فعال کنید.</string>
     <string name="pref_manage_notifications">مدیریت اعلان‌ها</string>
     <string name="channel_skipped">رد شده</string>
     <string name="getting_started_guide">راهنمای شروع</string>
@@ -505,7 +499,7 @@
     <string name="split_tall_images">نصف کردن خودکار عکس های بلند</string>
     <string name="tap_zones">مناطق قابل لمس</string>
     <string name="category_cannot_be_blank">نام دسته نمی تواند خالی باشد</string>
-    <string name="external_storage_download_notice">TachiyomiJ2K برای دانلود فصل ها نیاز به دسترسی به همه فایل ها دارد. روی اینجا ضربه بزنید، سپس «Allow access to management all files» را فعال کنید.</string>
+    <string name="external_storage_download_notice">TachiyomiJ2K برای دانلود فصل‌ها نیاز به دسترسی به همه فایل‌ها دارد. اینجا را لمس کنید، سپس گزینه «اجازه دسترسی برای مدیریت همه فایل‌ها» را فعال کنید.</string>
     <string name="updating_">در حال بروز رسانی %1$s</string>
     <string name="update_completed">به روز رسانی تکمیل شد</string>
     <string name="search_tips_show_periodically">نکات جستجو به صورت دوره ای نمایش داده می شود. برای جستجوی، پیشنهاد را به مدت طولانی فشار دهید.</string>
@@ -526,8 +520,8 @@
     <string name="downloaded_chapters">قسمت‌های دانلود شده</string>
     <string name="navigate_pan">هدایت به پن</string>
     <plurals name="for_n_titles">
-        <item quantity="one">برای ۱ مانگابرای %d مانگا</item>
-        <item quantity="other"/>
+        <item quantity="one">برای %d عنوان</item>
+        <item quantity="other">برای %d عنوان</item>
     </plurals>
     <string name="auto_download_while_reading">دانلود خودکار در حین خواندن</string>
     <string name="download_ahead">بارگیری شود</string>
@@ -547,8 +541,8 @@
     <string name="download_ahead_info">اگر قسمت فعلی و بعدی دانلود شده باشند، تنها برای ورودی‌های کتابخانه کار می‌کند</string>
     <string name="statistics">آمار</string>
     <plurals name="missing_chapters_warning">
-        <item quantity="one">1 قسمت جا افتاده است</item>
-        <item quantity="other">%d قسمت جا افتاده است</item>
+        <item quantity="one">پرش از %d فصل، یا منبع آن را ندارد یا فیلتر شده است</item>
+        <item quantity="other">پرش از %d فصل، یا منبع آن را ندارد یا فیلتر شده است</item>
     </plurals>
     <string name="gray_background">خاکستری</string>
     <string name="app_updates">بروزرسانی برنامه</string>
@@ -642,8 +636,8 @@
     <string name="reset_all_chapters_for_this_">همه چپتر ها را برای این %1$s باز نشانی کن</string>
     <string name="no_chapters_found_for_migration">هیچ چپتری یافت نشد، این مجموعه را نمیتوان برای انتقال مرجع استفاده کرد</string>
     <plurals name="extensions_updated_plural">
-        <item quantity="one">افرونه به روز رسانی شد</item>
-        <item quantity="other">%d افزونه به روز رسانی شد</item>
+        <item quantity="one">افرونه به‌روزرسانی شد</item>
+        <item quantity="other">%d افزونه به‌روزرسانی شد</item>
     </plurals>
     <string name="migrate_">انتقال منبع %1$s</string>
     <string name="popular">محبوب</string>
@@ -764,7 +758,7 @@
     <string name="pad_cutout_areas">نواحی برش پد</string>
     <string name="start_past_cutout">شروع از برش قبلی</string>
     <string name="ignore_cutout_areas">نادیده گرفتن نواحی برش خورده</string>
-    <string name="cutout_behavior_only_applies">رفتار ناحیه برش فقط در حالت عمودی با انواع مقیاس خاص اعمال می‌شود</string>
+    <string name="cutout_behavior_only_applies">رفتار ناحیه برش فقط در حالت عمودی اعمال می‌شود</string>
     <string name="page_layout">طرح بندی صفحه</string>
     <string name="automatic_can_still_switch">هنگام استفاده از طرح‌بندی خودکار صفحه، می‌توانید هنگام خواندن، بدون لغو این تنظیم، بین طرح‌بندی‌ها جابه‌جا شوید</string>
     <string name="automatic_orientation">خودکار (بر اساس جهت گیری)</string>
@@ -841,7 +835,7 @@
     <string name="link">پیوند</string>
     <string name="track_privately">پیگیری خصوصی</string>
     <string name="track_publicly">پیگیری عمومی</string>
-    <string name="tracked_privately">پیگیری های خصوصی</string>
+    <string name="tracked_privately">بطور خصوصی ردیابی شد</string>
     <string name="add_tracking_privately">افزودن پیگیری خصوصی</string>
     <string name="track_options">تنظیمات پیگیری</string>
     <string name="update_tracking_scoring_type">به‌روزرسانی نوع امتیازدهی %1$s</string>
@@ -936,7 +930,7 @@
     <string name="max_auto_backups">حداکثر پشتیبان‌گیری خودکار</string>
     <string name="restore_error">بازیابی نسخه پشتیبان انجام نشد</string>
     <string name="backup_restore_invalid_uri">خطا: آدرس اینترنتی خالی</string>
-    <string name="backup_info">پشتیبان‌گیری خودکار اکیداً توصیه می‌شود. شما باید کپی‌ها را در جاهای دیگر نیز نگه دارید.</string>
+    <string name="backup_info">پشتیبان‌گیری خودکار اکیداً توصیه می‌شود. شما باید کپی‌هایی را در جاهای دیگر نیز نگه دارید. پشتیبان‌ها ممکن است حاوی داده‌های حساس از جمله رمزهای عبور ذخیره شده باشند؛ در صورت اشتراک‌گذاری مراقب باشید.</string>
     <string name="force_download_cache_refresh">حافظه پنهان دانلود را به‌روزرسانی کنید</string>
     <string name="force_download_cache_refresh_summary">این کار باعث می‌شود کش دانلودها دوباره محاسبه شود. اگر دانلودها را خارج از این برنامه تغییر داده‌اید و می‌خواهید برنامه آنها را دریافت کند، مفید است</string>
     <string name="data_management">مدیریت داده‌ها</string>
@@ -979,7 +973,7 @@
         <item quantity="other">پاکسازی انجام شد. %d پوشه حذف شد</item>
     </plurals>
     <string name="clean_up_cached_covers">پاکسازی کاور‌های ذخیره‌شده</string>
-    <string name="delete_old_covers_in_library_used_">کاور های ذخیره شده قدیمی و بلااستفاده از عناوین موجود در کتابخانه خودتون رو که به‌روزرسانی شده‌اند، حذف کنید.\nاستفاده فعلی: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">کاورهای ذخیره‌شده‌ی قدیمی و بلااستفاده‌ی ورودی‌های به‌روزرسانی‌شده در کتابخانه‌ی خود را حذف کنید.\nاستفاده فعلی:%1$s</string>
     <string name="clear_cached_covers_non_library">پاکسازیحافظه موقط از کاور هایی که در کتابخانه وجود دارند</string>
     <string name="delete_all_covers__not_in_library_used_">پاکسازی حافظه موقط از تمام کاور هایی که در کتابخانه وجود ندارد \nCurrently using: %1$s</string>
     <string name="most_entries">بیشترین تعداد عناوین</string>
