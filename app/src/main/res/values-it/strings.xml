@@ -458,12 +458,12 @@
     <string name="visit_recents_for_download_queue">Visita le schede recenti per accedere alla lista dei download. Per un accesso più veloce, puoi premere due volte oppure premere e tenere premuto</string>
     <string name="username_must_not_be_blank">Il nome utente o la password non possono essere vuoti</string>
     <string name="you_can_migrate_in_library">Puoi migrare anche selezionando le voci nella tua libreria</string>
-    <string name="migration_sources_changed">Migrazione delle sorgenti modificata</string>
-    <string name="use_last_saved_migration_preferences">Usa le preferenze e le sorgenti dell\'ultimo salvataggio pre-migrazione, per la migrazione di gruppo</string>
-    <string name="only_enable_pinned_for_migration">Attiva per la migrazione, solo le sorgenti spuntate</string>
-    <string name="only_enable_enabled_for_migration">Attiva per la migrazione, solo le sorgenti attive</string>
-    <string name="match_enabled_sources">Abbina sorgenti attive</string>
-    <string name="match_pinned_sources">Abbina sorgenti spuntate</string>
+    <string name="migration_sources_changed">Migrazione delle fonti modificata</string>
+    <string name="use_last_saved_migration_preferences">Usa le preferenze e le fonti dell\'ultimo salvataggio pre-migrazione, per la migrazione di gruppo</string>
+    <string name="only_enable_pinned_for_migration">Attiva per la migrazione solo le fonti spuntate</string>
+    <string name="only_enable_enabled_for_migration">Attiva per la migrazione solo le fonti attive</string>
+    <string name="match_enabled_sources">Associa fonti attive</string>
+    <string name="match_pinned_sources">Associa fonti spuntate</string>
     <string name="clear_cached_covers_non_library">Elimina dalla cache le copertine non presenti in Libreria</string>
     <string name="delete_all_covers__not_in_library_used_">Elimina tutte le copertine non presenti in Libreria
 \nIn uso: %1$s</string>
@@ -518,7 +518,7 @@
     <string name="use_most_chapters">Usa la sorgente con più capitoli (più lento)</string>
     <string name="select_sources">Seleziona sorgenti</string>
     <string name="source_not_installed">Fonte non installata</string>
-    <string name="source_hidden">Sorgente nascosta</string>
+    <string name="source_hidden">Fonte nascosta</string>
     <string name="latest_">Più recente: %1$s</string>
     <string name="to_show_again_setting_sources">Per mostrare nuovamente questa schermata, vai in Impostazioni -&gt; Sorgenti.</string>
     <string name="skip_this_step_next_time">Salta questo step la prossima volta</string>
@@ -535,17 +535,9 @@
     <string name="currently_reading">In lettura</string>
     <string name="not_tracked">Non tracciati</string>
     <plurals name="deleted_chapters">
-        <item quantity="one">Un capitolo è stato rimosso dalla sorgente:
-\n%2$s
-\nEliminare il suo download\?</item>
-        <item quantity="many">%1$s capitoli sono stati rimossi dalla sorgente:
-\n%2$s
-\n
-\nEliminare i loro download\?</item>
-        <item quantity="other">%1$s capitoli sono stati rimossi dalla sorgente:
-\n%2$s
-\n
-\nEliminare i loro download\?</item>
+        <item quantity="one">Un capitolo è stato rimosso dalla fonte: \n%2$s \nEliminare il suo download?</item>
+        <item quantity="many">%1$s capitoli sono stati rimossi dalla fonte: \n%2$s \n \nEliminare i loro download?</item>
+        <item quantity="other">%1$s capitoli sono stati rimossi dalla fonte: \n%2$s \n \nEliminare i loro download?</item>
     </plurals>
     <string name="error_sharing_cover">Errore nella condivisione della copertina</string>
     <string name="error_saving_cover">Errore nel salvataggio della copertina</string>
@@ -583,7 +575,7 @@
     <string name="set_as_default_for_all">Imposta come predefinito per tutti</string>
     <string name="extension_updates">Aggiornamento estensioni</string>
     <string name="last_used">Ultimo uso</string>
-    <string name="all_sources">Tutte le sorgenti</string>
+    <string name="all_sources">Tutte le fonti</string>
     <string name="search_extensions">Cerca estensioni…</string>
     <string name="in_library">Nella libreria</string>
     <string name="reset_chapter_question">Resettare il capitolo\?</string>
@@ -1091,4 +1083,14 @@
     <string name="label_background_activity">Attività in secondo piano</string>
     <string name="ext_installer_summary">Consente l\'installazione delle estensioni senza richieste da parte dell\'utente e abilita gli aggiornamenti automatici per i dispositivi con Android 12</string>
     <string name="share_cover">Condividi copertina</string>
+    <string name="sources_to_search">Fonti da cercare</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d fonte</item>
+        <item quantity="many">%1$d fonti</item>
+        <item quantity="other">%1$d fonti</item>
+    </plurals>
+    <string name="open_source_repo">Apri repository della fonte</string>
+    <string name="source_default">Predefinito della fonte</string>
+    <string name="concurrent_source_downloads">Download simultanei per fonte</string>
+    <string name="concurrent_page_downloads_summary">Pagine scaricate simultaneamente per fonte</string>
 </resources>

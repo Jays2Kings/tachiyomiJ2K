@@ -520,7 +520,7 @@
     <string name="horizontally">Yatay</string>
     <string name="double_pages">Çift sayfa</string>
     <string name="smart_by_page">Akıllı (sayfaya göre)</string>
-    <string name="invert_double_pages">Çift sayfaları ters çevir</string>
+    <string name="invert_double_pages">İkili sayfaları ters çevir</string>
     <string name="page_preload_amount">Sayfa önyükleme miktarı</string>
     <string name="enable_zoom_out">Uzaklaştırmayı etkinleştir</string>
     <string name="save_combined_pages">Birleştirilmiş sayfaları kaydet</string>
