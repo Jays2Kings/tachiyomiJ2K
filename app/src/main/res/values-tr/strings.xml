@@ -1117,4 +1117,9 @@
     <string name="all_enabled">Tümü etkin</string>
     <string name="pinned_only">Yalnızca sabitlenmiş</string>
     <string name="replace">Yerine koy</string>
+    <string name="recent_searches">Son aramalar</string>
+    <string name="saved_searches">Kayıtlı aramalar</string>
+    <string name="only_x">Sadece %1$s</string>
+    <string name="clear_all">Tümünü temizle</string>
+    <string name="edit_search">Aramayı düzenle</string>
 </resources>
