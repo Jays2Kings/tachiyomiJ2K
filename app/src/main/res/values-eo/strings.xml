@@ -389,4 +389,8 @@
         <item quantity="one">%d etendaĵejo</item>
         <item quantity="other">%d etendaĵejoj</item>
     </plurals>
+    <plurals name="cleanup_done">
+        <item quantity="one">Senrubigo finita. Forigis %d dosierujo</item>
+        <item quantity="other">Senrubigo finita. Forigis %d dosierujoj</item>
+    </plurals>
 </resources>
