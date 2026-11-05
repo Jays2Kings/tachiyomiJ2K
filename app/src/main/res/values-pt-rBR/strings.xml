@@ -1218,4 +1218,14 @@
     <string name="has_results">Tem resultados</string>
     <string name="pinned_only">Fixados apenas</string>
     <string name="replace">Recolocado</string>
+    <string name="track_privately">Monitorar privadamente</string>
+    <string name="track_publicly">Monitorar publicamente</string>
+    <string name="tracked_privately">Monitorado privadamente</string>
+    <string name="add_tracking_privately">Adicionar monitoramento privado</string>
+    <string name="render_description_images_summary">Exibir imagens incorporadas em descrições formatadas em Markdown</string>
+    <string name="enable_analytics_summary">Enviar dados de uso anonimizados para ajudar a melhorar o aplicativo</string>
+    <string name="private_settings">Incluir configurações sensíveis (ex. tokens de login de rastreadores)</string>
+    <string name="crash_screen_description">%s encontrou um erro inesperado. Você pode compartilhar os registros de falha para ajudar a identificar o problema.</string>
+    <string name="sources_to_search">Fontes para procurar</string>
+    <string name="show_duplicate_in_library_items_summary">Exibir o selo \"Duplicado\" para itens que já estão na biblioteca através de outra extensão. Nota: Algumas duplicatas podem não ser detectadas devido a diferenças nos nomes ou URLs.</string>
 </resources>
