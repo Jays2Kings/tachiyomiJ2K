@@ -700,7 +700,7 @@
     <string name="turn_off_">%s kapat</string>
     <string name="turn_on_">%s aç</string>
     <string name="remove_crop">Kırpmayı kaldır</string>
-    <string name="crop_borders_webtoon">Kenarları kırp (Webtoon)</string>
+    <string name="crop_borders_webtoon">Kenarları kırp (Uzun şerit)</string>
     <string name="crop_borders_paged">Kenarları kırp (Sayfalı)</string>
     <string name="changing_will_reset_reading_mode">Bunu değiştirmek, okuma kipini bu seri için sıfırlayacaktır</string>
     <string name="series">Seri</string>
@@ -1122,4 +1122,11 @@
     <string name="only_x">Sadece %1$s</string>
     <string name="clear_all">Tümünü temizle</string>
     <string name="edit_search">Aramayı düzenle</string>
+    <string name="show_on">Göster</string>
+    <string name="changing_will_reset_reading_mode_multiple">Bunu değiştirmek, bu seri için okuma modunu sıfırlayacaktır</string>
+    <string name="long_strip">Uzun şerit</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Sayfa değişiminde ışık çak</string>
+    <string name="flash_page_on_change_summary">E-ink ekranlarda gölgelenmeyi azaltır</string>
+    <string name="flash_duration">Işık çakma süresi</string>
 </resources>
