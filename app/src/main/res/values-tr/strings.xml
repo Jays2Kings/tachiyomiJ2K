@@ -272,7 +272,7 @@
         <item quantity="other">%d uzantı güncellemesi var</item>
     </plurals>
     <string name="skip_filtered_chapters">Filtrelenmiş bölümleri geç</string>
-    <string name="continuous_vertical">Dikey sürekli</string>
+    <string name="continuous_vertical">Aralıklı uzun şerit</string>
     <string name="paged">Sayfalı</string>
     <string name="unpin">Sabitlemeyi kaldır</string>
     <string name="view_chapters">Bölümleri görüntüle</string>
@@ -658,7 +658,7 @@
 \nİndirmesi silinsin mi\?</item>
     </plurals>
     <string name="automatic_orientation">Otomatik (yönlendirmeye göre)</string>
-    <string name="cutout_behavior_only_applies">Kesme alanı davranışı yalnızca belirli ölçek türlerinde portre modunda geçerlidir</string>
+    <string name="cutout_behavior_only_applies">Ekran kesim bölgesi davranışı yalnızca portre modunda uygulanır</string>
     <string name="start_past_cutout">Kesmeden sonra başla</string>
     <string name="if_disabled_transition_will_skip">Devre dışıysa, sonraki bölüm yüklendiğinde geçiş sayfası atlanır</string>
     <string name="reset_all_chapters_for_this_">Bu %1$s için tüm bölümleri sıfırla</string>
@@ -1129,4 +1129,11 @@
     <string name="flash_page_on_change">Sayfa değişiminde ışık çak</string>
     <string name="flash_page_on_change_summary">E-ink ekranlarda gölgelenmeyi azaltır</string>
     <string name="flash_duration">Işık çakma süresi</string>
+    <plurals name="edit_x_series">
+        <item quantity="one">%d seriyi düzenle</item>
+        <item quantity="other">%d seriyi düzenle</item>
+    </plurals>
+    <string name="shared_tags">Paylaşılan etiketler</string>
+    <string name="source_default">Kaynak varsayılanı</string>
+    <string name="pref_incognito_mode_extension_summary">Uzantı için okuma geçmişini duraklat</string>
 </resources>
