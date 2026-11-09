@@ -1032,4 +1032,8 @@
     <string name="share_cover">Omslag delen</string>
     <string name="save_pages_separately">Sla pagina\'s op in aparte mappen</string>
     <string name="create_folders_by_manga_title">Maakt mappen aan op basis van mangatitel</string>
+    <plurals name="num_pages">
+        <item quantity="one">%1$dbladzijde</item>
+        <item quantity="other">%1$dbladzijden</item>
+    </plurals>
 </resources>
