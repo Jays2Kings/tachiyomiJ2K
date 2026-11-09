@@ -128,7 +128,7 @@
     <string name="next_chapter_not_found">فصل بعدی یافت نشد</string>
     <string name="use_image_as_cover">این عکس، به عنوان عکس روی جلد تنظیم شود؟</string>
     <string name="next">بعدی</string>
-    <string name="previous">قبلی:</string>
+    <string name="previous">قبلی</string>
     <string name="theres_no_next_chapter">فصل بعدی وجود ندارد</string>
     <string name="theres_no_previous_chapter">فصل قبلی وجود ندارد</string>
     <string name="loading_pages">درحال لود صفحات…</string>
@@ -219,7 +219,7 @@
     <string name="third_to_last">سوم به آخرین قسمت خوانده شده</string>
     <string name="second_to_last">دوم به آخرین قسمت خوانده شده</string>
     <string name="last_read_chapter">آخرین قسمت خوانده شده</string>
-    <string name="downloading">درحال دانلود…</string>
+    <string name="downloading">درحال بارگیری</string>
     <string name="password">گذرواژه</string>
     <string name="email">آدرس ایمیل</string>
     <string name="username">نام کاربری</string>
@@ -323,8 +323,8 @@
     <string name="restoring_backup_canceled">بازیابی لغو شده</string>
     <string name="restore_duration">%02d دقیقه, %02d ثانیه</string>
     <plurals name="restore_completed_message">
-        <item quantity="one">در %1$s با %2$s خطا انجام شددر %1$s با %2$s خطا انجام شد</item>
-        <item quantity="other"/>
+        <item quantity="one">در %1$s با خطای %2$s انجام شد</item>
+        <item quantity="other">در %1$s با خطای %2$s انجام شد</item>
     </plurals>
     <string name="source_migration_guide">راهنمای تعویض منبع</string>
     <string name="nsfw_sources">منابع محتوای جنسی (+18)</string>
@@ -485,8 +485,8 @@
     <string name="pure_black_dark_mode">حالت تاریک مشکی خالص</string>
     <string name="save_chapters_as_cbz">ذخیره به عنوان فایل آرشیو CBZ</string>
     <plurals name="after_minutes">
-        <item quantity="one">بعد از %1$s دقیقهبعد از %1$s دقیقه</item>
-        <item quantity="other"/>
+        <item quantity="one">بعد از %1$s دقیقه</item>
+        <item quantity="other">بعد از %1$s دقیقه</item>
     </plurals>
     <string name="exclude_">بدون: %s</string>
     <string name="tap_to_see_details">برای دیدن جزئیات لمس کنید</string>
@@ -537,7 +537,7 @@
     <string name="restore_content_full">داده ها از فایل پشتیبان برگردانده میشوند.
 \n
 \nلازم است که افزونه های جا مانده را دستی نصب کنید و وارد یک سرویس دنبال کننده شوید تا بتوانید پیشرفت هر کار را ذخیره کنید.</string>
-    <string name="restore_miui_warning">پشتیبانی/بازگردانی ممکن است کار نکند اگر بهینه‌سازی MIUI غیر فعال باشد</string>
+    <string name="restore_miui_warning">پشتیبانی/بازگردانی ممکن است کار نکند اگر بهینه‌سازی MIUI غیر فعال باشد.</string>
     <string name="download_ahead_info">اگر قسمت فعلی و بعدی دانلود شده باشند، تنها برای ورودی‌های کتابخانه کار می‌کند</string>
     <string name="statistics">آمار</string>
     <plurals name="missing_chapters_warning">
@@ -622,8 +622,8 @@
     <string name="share_first_page">به اشتراک گذاری اولین صفحه</string>
     <string name="search_extensions">جست و جوی افزونه ها …</string>
     <plurals name="migrate_manga">
-        <item quantity="one">%1$d مجموعه %2$s انتقال منبع شود؟</item>
-        <item quantity="other">%1$d مجموعه %2$s انتقال منبع شود؟</item>
+        <item quantity="one">%1$d%2$s سری منتقل شود؟</item>
+        <item quantity="other">%1$d%2$s سری منتقل شود؟</item>
     </plurals>
     <string name="must_be_in_library_to_edit">مجموعه ها باید در کتابخانه شما وجود داشته باشند تا بتوانید آنها را ویرایش کنید</string>
     <string name="pages_">%1$s صفحه</string>
@@ -657,8 +657,8 @@
     <string name="save_combined_pages">ذخیره صفحه های ترکیب شده</string>
     <string name="set_first_page_as_cover">اولین صفحا را به عنوان عکس کاور انتخاب کن</string>
     <plurals name="_updates_pending">
-        <item quantity="one">%d به روز رسانی در انتظار</item>
-        <item quantity="other">%d به روز رسانی در انتظار</item>
+        <item quantity="one">%d به‌روز رسانی در انتظار</item>
+        <item quantity="other">%d به‌روز رسانی در انتظار</item>
     </plurals>
     <string name="updating_extensions">در حال به روز رسانی افزنه ها</string>
     <string name="press_and_hold_to_also_reset">لمث و نگه داری هم میتواند تاریخ چه چپتر را باز نشانی کند</string>
@@ -682,6 +682,7 @@
     <string name="trackers">خدمات</string>
     <plurals name="num_sources">
         <item quantity="one">%1$d منبع</item>
+        <item quantity="other">%1$d منبع</item>
     </plurals>
     <plurals name="num_pages">
         <item quantity="one">%1$d صفحه</item>
@@ -835,7 +836,7 @@
     <string name="link">پیوند</string>
     <string name="track_privately">پیگیری خصوصی</string>
     <string name="track_publicly">پیگیری عمومی</string>
-    <string name="tracked_privately">بطور خصوصی ردیابی شد</string>
+    <string name="tracked_privately">ردیابی خصوصی</string>
     <string name="add_tracking_privately">افزودن پیگیری خصوصی</string>
     <string name="track_options">تنظیمات پیگیری</string>
     <string name="update_tracking_scoring_type">به‌روزرسانی نوع امتیازدهی %1$s</string>
@@ -985,7 +986,7 @@
     <string name="sources_to_search">منابعی که جستجو بین آنها صورت میگیرد</string>
     <string name="hide_in_library_items">عناوینی که در حال حاظر در کتابخانه من هستند را پنهان کن</string>
     <string name="show_duplicate_in_library_items">برچسب \"تکراری\" را نشان بده</string>
-    <string name="show_duplicate_in_library_items_summary">برچسب \"تکراری\" را برای عناوینی که در حال حاضر از اکستنشن های دیگر در کتابخانه من هستند را نمایش بده</string>
+    <string name="show_duplicate_in_library_items_summary">برای ورودی‌هایی که از افزونه‌ی دیگری در کتابخانه وجود دارند، برچسب «تکراری» نمایش داده شود. توجه: برخی از موارد تکراری ممکن است به دلیل تفاوت در نام‌ها یا نشانی‌های اینترنتی شناسایی نشوند.</string>
     <string name="match_pinned_sources">مطابق منابعی که پین شده اند</string>
     <string name="match_enabled_sources">مطابق منابعی که فعال شده اند</string>
     <string name="only_enable_pinned_for_migration">برای انتقال، فقط منابع پین‌شده را فعال کنید</string>
@@ -996,11 +997,11 @@
     <string name="whats_new_this_release">در این نسخه از انتشار، چه چیزهایی جدیدی افزوده شده</string>
     <string name="help_translate">در ترجمه کمک کنید</string>
     <string name="helpful_translation_links">لینک های کارآمد ترجمه</string>
-    <string name="logging_in">در حال ورود</string>
+    <string name="logging_in">در حال ورود…</string>
     <string name="log_in">ورود</string>
     <string name="successfully_logged_in">با موفقیت وارد شدید</string>
     <string name="username_must_not_be_blank">نام کاربری یا رمز نمیتواند خالی باشد</string>
-    <string name="downloading_">در حال دانلود:</string>
+    <string name="downloading_">در حال بارگیری: %1$s</string>
     <string name="downloads_swipe_tutorial">می‌توانید با کشیدن انگشت روی این اعلان، دانلود را لغو کنید\nبا کشیدن انگشت روی این اعلان، آن را لغو کنید</string>
     <string name="not_downloaded">دانلود نشده</string>
     <string name="finding_downloads">در حال پیدا کردن دانلود ها…</string>
@@ -1046,18 +1047,19 @@
     <string name="no_data_for_filters">داده ای مطابق فیلتر های فعلی یافت نشد</string>
     <plurals name="_series_types">
         <item quantity="one">%d نوع مجموعه</item>
+        <item quantity="other">%d نوع مجموعه</item>
     </plurals>
     <plurals name="_sources">
         <item quantity="one">%d منبع</item>
         <item quantity="other">%d منبع</item>
     </plurals>
     <plurals name="_statuses">
-        <item quantity="one">%d وضعیت ها</item>
-        <item quantity="other">%d وضعیت ها</item>
+        <item quantity="one">%d وضعیت</item>
+        <item quantity="other">%d وضعیت</item>
     </plurals>
     <plurals name="_languages">
-        <item quantity="one">%d زبان ها</item>
-        <item quantity="other">%d زبان ها</item>
+        <item quantity="one">%d زبان</item>
+        <item quantity="other">%d زبان</item>
     </plurals>
     <string name="appwidget_updates_description">عناوینی که به تازگی در کتابخانه شما بروزرسانی شده اند را ببینید</string>
     <string name="recent_searches">جستجو‌های اخیر</string>
