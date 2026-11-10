@@ -272,7 +272,7 @@
         <item quantity="other">%d uzantı güncellemesi var</item>
     </plurals>
     <string name="skip_filtered_chapters">Filtrelenmiş bölümleri geç</string>
-    <string name="continuous_vertical">Dikey sürekli</string>
+    <string name="continuous_vertical">Aralıklı uzun şerit</string>
     <string name="paged">Sayfalı</string>
     <string name="unpin">Sabitlemeyi kaldır</string>
     <string name="view_chapters">Bölümleri görüntüle</string>
@@ -520,7 +520,7 @@
     <string name="horizontally">Yatay</string>
     <string name="double_pages">Çift sayfa</string>
     <string name="smart_by_page">Akıllı (sayfaya göre)</string>
-    <string name="invert_double_pages">Çift sayfaları ters çevir</string>
+    <string name="invert_double_pages">İkili sayfaları ters çevir</string>
     <string name="page_preload_amount">Sayfa önyükleme miktarı</string>
     <string name="enable_zoom_out">Uzaklaştırmayı etkinleştir</string>
     <string name="save_combined_pages">Birleştirilmiş sayfaları kaydet</string>
@@ -658,7 +658,7 @@
 \nİndirmesi silinsin mi\?</item>
     </plurals>
     <string name="automatic_orientation">Otomatik (yönlendirmeye göre)</string>
-    <string name="cutout_behavior_only_applies">Kesme alanı davranışı yalnızca belirli ölçek türlerinde portre modunda geçerlidir</string>
+    <string name="cutout_behavior_only_applies">Ekran kesim bölgesi davranışı yalnızca portre modunda uygulanır</string>
     <string name="start_past_cutout">Kesmeden sonra başla</string>
     <string name="if_disabled_transition_will_skip">Devre dışıysa, sonraki bölüm yüklendiğinde geçiş sayfası atlanır</string>
     <string name="reset_all_chapters_for_this_">Bu %1$s için tüm bölümleri sıfırla</string>
@@ -700,7 +700,7 @@
     <string name="turn_off_">%s kapat</string>
     <string name="turn_on_">%s aç</string>
     <string name="remove_crop">Kırpmayı kaldır</string>
-    <string name="crop_borders_webtoon">Kenarları kırp (Webtoon)</string>
+    <string name="crop_borders_webtoon">Kenarları kırp (Uzun şerit)</string>
     <string name="crop_borders_paged">Kenarları kırp (Sayfalı)</string>
     <string name="changing_will_reset_reading_mode">Bunu değiştirmek, okuma kipini bu seri için sıfırlayacaktır</string>
     <string name="series">Seri</string>
@@ -1117,4 +1117,23 @@
     <string name="all_enabled">Tümü etkin</string>
     <string name="pinned_only">Yalnızca sabitlenmiş</string>
     <string name="replace">Yerine koy</string>
+    <string name="recent_searches">Son aramalar</string>
+    <string name="saved_searches">Kayıtlı aramalar</string>
+    <string name="only_x">Sadece %1$s</string>
+    <string name="clear_all">Tümünü temizle</string>
+    <string name="edit_search">Aramayı düzenle</string>
+    <string name="show_on">Göster</string>
+    <string name="changing_will_reset_reading_mode_multiple">Bunu değiştirmek, bu seri için okuma modunu sıfırlayacaktır</string>
+    <string name="long_strip">Uzun şerit</string>
+    <string name="e_ink">E-Ink</string>
+    <string name="flash_page_on_change">Sayfa değişiminde ışık çak</string>
+    <string name="flash_page_on_change_summary">E-ink ekranlarda gölgelenmeyi azaltır</string>
+    <string name="flash_duration">Işık çakma süresi</string>
+    <plurals name="edit_x_series">
+        <item quantity="one">%d seriyi düzenle</item>
+        <item quantity="other">%d seriyi düzenle</item>
+    </plurals>
+    <string name="shared_tags">Paylaşılan etiketler</string>
+    <string name="source_default">Kaynak varsayılanı</string>
+    <string name="pref_incognito_mode_extension_summary">Uzantı için okuma geçmişini duraklat</string>
 </resources>

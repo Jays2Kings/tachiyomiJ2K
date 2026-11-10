@@ -1094,4 +1094,43 @@
     <string name="save_pages_separately">Sauvegarder les pages dans des dossiers séparés</string>
     <string name="create_folders_by_manga_title">Crée les dossier selon le titre du manga</string>
     <string name="source_settings">Paramètres sources</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d source</item>
+        <item quantity="many">%1$d sources</item>
+        <item quantity="other">%1$d sources</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d page</item>
+        <item quantity="many">%1$d pages</item>
+        <item quantity="other">%1$d pages</item>
+    </plurals>
+    <string name="library_search_filters">Afficher les entrées qui…</string>
+    <string name="library_optional_search_filters">Afficher les entrées qui peuvent être…</string>
+    <string name="search_operator_and">Inclure</string>
+    <string name="search_operator_not">Exclure</string>
+    <string name="search_toggle_optional">Rendre ce filtre optionnel</string>
+    <string name="search_exactly">Exactement</string>
+    <string name="search_between">Entre</string>
+    <string name="search_more_than">Plus de</string>
+    <string name="search_less_than">Moins de</string>
+    <string name="search_fewer_than">Moins de</string>
+    <string name="search_after">Après</string>
+    <string name="search_before">Avant</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Marquer comme lu le chapitre en double</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Après avoir lu un chapitre</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Après avoir récupéré un nouveau chapitre</string>
+    <string name="recent_searches">Recherches récentes</string>
+    <string name="saved_searches">Recherches enregistrées</string>
+    <string name="show_on">Afficher sur</string>
+    <string name="only_x">Seulement %1$s</string>
+    <string name="clear_all">Effacer tout</string>
+    <string name="edit_search">Modifier la recherche</string>
+    <string name="duplicate_in_library">Double</string>
+    <string name="orphaned">Orphelin</string>
+    <string name="extension_api_error">Impossible de récupérer les extensions disponibles</string>
+    <string name="extension_must_reinstall">Veuillez désinstaller puis réinstaller pour effectuer la mise à jour.</string>
+    <string name="ext_revoke_trust">Révoquer les extensions inconnues de confiance</string>
+    <string name="action_add_repo_message">Ajoutez des boutiques supplémentaires à Tachiyomi. Il doit s\'agir de l\'URL du fichier index de la boutique</string>
+    <string name="extension_repos">Boutiques d\'extension</string>
+    <string name="open_source_repo">dépôt Open source</string>
 </resources>

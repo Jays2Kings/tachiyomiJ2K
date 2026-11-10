@@ -247,7 +247,7 @@
     <string name="theres_no_previous_chapter">Tidak ada bab sebelumnya</string>
     <string name="loading_pages">Memuat halaman…</string>
     <string name="failed_to_load_pages_">Gagal memuat halaman: %1$s</string>
-    <string name="open_in_webview">Buka di sini</string>
+    <string name="open_in_webview">Buka di WebView</string>
     <string name="skip_read_chapters">Lewati bab yang sudah dibaca</string>
     <string name="color_filter_blend_mode">Mode saringan warna campur</string>
     <string name="overlay">Lapisan</string>
@@ -267,9 +267,9 @@
     <string name="date_added">Tanggal ditambahkan</string>
     <string name="latest_chapter">Bab terbaru</string>
     <string name="local_source_help_guide">Petunjuk sumber lokal</string>
-    <string name="check_site_in_web">Cek halaman web dalam tampilan web</string>
+    <string name="check_site_in_web">Periksa situs web di WebView</string>
     <string name="obsolete">Usang</string>
-    <string name="obsolete_extension_message">Ekstensi ini sudah tidak tersedia.</string>
+    <string name="obsolete_extension_message">Ekstensi ini tidak terikat dengan toko apa pun. Ekstensi ini tidak akan menerima pembaruan, mungkin tidak berfungsi sebagaimana mestinya, dan dapat menyebabkan masalah pada aplikasi. Menghapus pemasangannya sangat disarankan.</string>
     <plurals name="extension_updates_available">
         <item quantity="other">Terdapat %d pembaruan ekstensi</item>
     </plurals>
@@ -320,7 +320,7 @@
     <string name="new_chapters">Bab baru</string>
     <string name="unknown_status">Status tak diketahui</string>
     <string name="manhwa">Manhwa</string>
-    <string name="add_to_library">Tambahkan ke perpustakaan</string>
+    <string name="add_to_library">Tambah ke pustaka</string>
     <string name="season_">Sesi %1$d</string>
     <string name="volume_">Volume %1$d</string>
     <string name="continue_reading">Melanjutkan membaca</string>
@@ -341,7 +341,7 @@
     <string name="source_hidden">Sumber tersembunyi</string>
     <string name="all_sources">Semua sumber</string>
     <string name="search_extensions">Cari ekstensi…</string>
-    <string name="in_library">Di perpustakaan</string>
+    <string name="in_library">Di pustaka</string>
     <string name="reset_chapter_question">Atur ulang bab\?</string>
     <string name="search_recents">Cari yang terbaru…</string>
     <string name="view_all_updates">Lihat semua pembaharuan</string>
@@ -859,13 +859,13 @@
     <string name="move_series_to_top">Pindahkan seri ke atas</string>
     <string name="ascending">Urutan naik</string>
     <string name="descending">Urutan turun</string>
-    <string name="clear_database_source_item_count">%1$d entri non-perpustakaan dalam database</string>
+    <string name="clear_database_source_item_count">%1$d entri non-pustaka dalam database</string>
     <string name="database_clean">Bersihkan database</string>
     <string name="confirm_manga_add_duplicate">Anda memiliki sebuah entri di pustaka anda dengan nama yang sama tapi dari sumber yang berbeda (%1$s).
 \n
 \nApakah Anda yakin untuk melanjutkan\?</string>
     <string name="select_inverse">Pilih kebalikan</string>
-    <string name="empty_backup_error">Tidak ada entri perpustakaan untuk dicadangkan</string>
+    <string name="empty_backup_error">Tidak ada entri pustaka untuk dicadangkan</string>
     <string name="skipped_reason_not_caught_up">Dilewati karena ada bab yang belum dibaca</string>
     <string name="cover_only_grid">Grid sampul saja</string>
     <string name="notification_update_error">%1$d pembaruan gagal</string>

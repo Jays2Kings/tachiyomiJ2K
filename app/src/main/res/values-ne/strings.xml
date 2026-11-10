@@ -1049,4 +1049,13 @@
     <string name="error_repo_exists">यो रेपो पहिले नै अवस्थित छ!</string>
     <string name="confirm_repo_deletion">रेपो हटाउनुहोस्</string>
     <string name="url_not_set_click_again">रेपो URL सेट गरिएको छैन, कृपया URL सम्पादन गर्नुहोस्</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d स्रोत</item>
+        <item quantity="other">%1$d स्रोतहरू</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d पृष्ठ</item>
+        <item quantity="other">%1$d पृष्ठहरू</item>
+    </plurals>
+    <string name="library_search_filters">इन्ट्रीहरू देखाउनु जुन…</string>
 </resources>
