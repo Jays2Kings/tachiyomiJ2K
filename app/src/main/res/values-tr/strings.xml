@@ -102,9 +102,9 @@
     <string name="background_color">Art alan rengi</string>
     <string name="white">Beyaz</string>
     <string name="black">Siyah</string>
-    <string name="left_to_right_viewer">Soldan sağa</string>
-    <string name="right_to_left_viewer">Sağdan sola</string>
-    <string name="vertical_viewer">Dikey</string>
+    <string name="left_to_right_viewer">Sayfalı (soldan sağa)</string>
+    <string name="right_to_left_viewer">Sayfalı (sağdan sola)</string>
+    <string name="vertical_viewer">Sayfalı (dikey)</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Boyutlandırma türü</string>
     <string name="fit_screen">Ekrana sığdır</string>
@@ -364,7 +364,7 @@
     <string name="in_progress">Devam Ediyor</string>
     <string name="comic">Çizgi Roman</string>
     <string name="clear_cached_covers_non_library">Kitaplıkta olmayan önbelleklenmiş kapakları temizleyin</string>
-    <string name="delete_old_covers_in_library_used_">Güncellenen kitaplığınızdaki eski ve kullanılmayan güncellenmiş dizi kapaklarını silin. \nŞu anda kullanılan: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Kitaplıktaki girdilerin eski ve kullanılmayan ama önbelleğe kaydedilmiş kapaklarını silin.\nŞu anda kullanılan: %1$s</string>
     <string name="clean_up_cached_covers">Önbelleklenmiş kapakları temizle</string>
     <string name="disable_if_issues_with_updating">Kitaplığınızı güncelleme veya geri yükleme ile ilgili sorunlar yaşıyorsanız bunu devre dışı bırakın</string>
     <string name="clean_read_manga_not_in_library">Kitaplıkta olmayan girdileri temizle</string>
@@ -922,7 +922,7 @@
     <string name="clear_history_completed">Geçmiş silindi</string>
     <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş silinecek.</string>
     <string name="backup_restore_invalid_uri">Hata: boş URI</string>
-    <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız.</string>
+    <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız. Yedekler, şifreler dahil olmak üzere hassas verileri içerebilirler; paylaşıyorsanız dikkat edin.</string>
     <string name="download_ahead">Önceden indir</string>
     <plurals name="next_unread_chapters">
         <item quantity="one">Sonraki okunmayan bölüm</item>
@@ -1136,4 +1136,19 @@
     <string name="shared_tags">Paylaşılan etiketler</string>
     <string name="source_default">Kaynak varsayılanı</string>
     <string name="pref_incognito_mode_extension_summary">Uzantı için okuma geçmişini duraklat</string>
+    <string name="flash_page_interval">Işık çakma aralığı</string>
+    <string name="flash_with">Işık rengi</string>
+    <string name="flash_black">Siyah</string>
+    <string name="flash_white">Beyaz</string>
+    <string name="flash_white_then_black">Beyaz ve Siyah</string>
+    <string name="what_should_restore">Neleri geri yüklemek istiyorsunuz?</string>
+    <string name="private_settings">Hassar ayarları dahik et (izleme hizmetleri giriş bilgileri gibi)</string>
+    <string name="search_history">Arama geçmişi</string>
+    <string name="show_recent_searches">Son aramaları göster</string>
+    <string name="search_history_cleared">Arama geçmişi silindi</string>
+    <string name="search_removed">Arama sorgusu silindi</string>
+    <string name="filters">Filtreler: (%1$s)</string>
+    <string name="some_filters_not_applied">Bazı filtreler uygulanamadı</string>
+    <string name="no_filters_applied">Filtrelerin hiçbiri uygulanamadı</string>
+    <string name="has_results">Sonuç var</string>
 </resources>
