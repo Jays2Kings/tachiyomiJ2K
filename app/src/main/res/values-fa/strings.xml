@@ -275,7 +275,7 @@
     <string name="history">تاریخچه</string>
     <string name="library_search_hint">جستجوی عنوان، برچسب‌ها، منبع</string>
     <string name="updating_library">درحال آپدیت کتابخانه</string>
-    <string name="default_category">دسته بندی پیشفرض</string>
+    <string name="default_category">دسته‌بندی پیش‌فرض</string>
     <string name="categories">دسته بندی ها</string>
     <plurals name="chapters_plural">
         <item quantity="one">قسمت%1$s</item>
@@ -771,8 +771,8 @@
         <item quantity="other">%1$d صفحه</item>
     </plurals>
     <plurals name="missing_chapters">
-        <item quantity="one">%d چپتر گمشده</item>
-        <item quantity="other">%d چپتر گمشده</item>
+        <item quantity="one">‏%d قسمت گمشده</item>
+        <item quantity="other">%d قسمت گمشده</item>
     </plurals>
     <string name="missing_chapters_count">%d گمشده</string>
     <string name="missing_chapters_range">چپترهای گمشده %1$s</string>
@@ -865,8 +865,8 @@
     <string name="migrate_now">مهاجرت کردن</string>
     <string name="copy_now">رونوشت کردن</string>
     <plurals name="copy_manga">
-        <item quantity="one">سری %1$d%2$s کپی شود؟</item>
-        <item quantity="other">سری %1$d%2$s کپی شود؟</item>
+        <item quantity="one">%1$d%2$s سری کپی شود؟</item>
+        <item quantity="other">%1$d%2$s سری کپی شود؟</item>
     </plurals>
     <string name="skipping_">(صرف نظر از %1$d)</string>
     <plurals name="manga_migrated">
