@@ -1088,7 +1088,7 @@
     <string name="link">Bağlantı</string>
     <string name="track_privately">Gizli olarak izle</string>
     <string name="track_publicly">Herkese açık olarak izle</string>
-    <string name="tracked_privately">Gizlilik olarak izlendi</string>
+    <string name="tracked_privately">Gizli olarak izlendi</string>
     <string name="add_tracking_privately">İzlemeyi gizli olarak ekle</string>
     <string name="track_options">İzleme seçenekleri</string>
     <string name="tokyo_light">Tokyo Işığı</string>
