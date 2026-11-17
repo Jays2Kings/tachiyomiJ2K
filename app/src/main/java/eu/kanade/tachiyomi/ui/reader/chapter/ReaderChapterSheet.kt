@@ -128,11 +128,6 @@ class ReaderChapterSheet
                         val canShowNav = (viewModel.getCurrentChapter()?.pages?.size ?: 1) > 1
                         if (state == BottomSheetBehavior.STATE_COLLAPSED) {
                             sheetBehavior?.isHideable = false
-                            (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
-                                adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
-                                    ?: 0,
-                                binding.chapterRecycler.height / 2 - 30.dpToPx,
-                            )
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isVisible = true
                             }
@@ -144,6 +139,11 @@ class ReaderChapterSheet
                             }
                         }
                         if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                            (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
+                                adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
+                                    ?: 0,
+                                binding.chapterRecycler.height / 2 - 30.dpToPx,
+                            )
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isInvisible = true
                             }
