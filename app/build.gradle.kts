@@ -259,8 +259,8 @@ dependencies {
     val fastAdapterVersion = "5.7.0"
     implementation("com.mikepenz:fastadapter:$fastAdapterVersion")
     implementation("com.mikepenz:fastadapter-extensions-binding:$fastAdapterVersion")
-    implementation("com.github.arkon.FlexibleAdapter:flexible-adapter:c8013533")
-    implementation("com.github.arkon.FlexibleAdapter:flexible-adapter-ui:c8013533")
+    implementation("com.github.arkon.FlexibleAdapter:flexible-adapter:3268efe4")
+    implementation("com.github.arkon.FlexibleAdapter:flexible-adapter-ui:3268efe4")
     implementation("com.nightlynexus.viewstatepageradapter:viewstatepageradapter:1.1.0")
     implementation("com.github.mthli:Slice:v1.2")
     implementation("io.noties.markwon:core:4.6.2")
