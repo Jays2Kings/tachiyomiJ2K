@@ -919,7 +919,7 @@
     <string name="update_tracking_marked_read">Okundu olarak işaretlendiğinde izlemeyi güncelle</string>
     <string name="update_tracking_after_reading">Okuduktan sonra izlemeyi güncelle</string>
     <string name="clear_history">Geçmişi temizle</string>
-    <string name="clear_history_completed">Geçmiş silindi</string>
+    <string name="clear_history_completed">Geçmiş temizlendi</string>
     <string name="clear_history_confirmation">Emin misiniz\? Tüm geçmiş silinecek.</string>
     <string name="backup_restore_invalid_uri">Hata: boş URI</string>
     <string name="backup_info">Otomatik yedeklemeler şiddetle tavsiye edilir. Kopyaları başka yerlerde de tutmalısınız. Yedekler, şifreler dahil olmak üzere hassas verileri içerebilirler; paylaşıyorsanız dikkat edin.</string>
