@@ -3,8 +3,10 @@ package eu.kanade.tachiyomi.ui.reader.chapter
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewParent
 import android.widget.LinearLayout
 import androidx.core.graphics.ColorUtils
@@ -57,6 +59,27 @@ class ReaderChapterSheet
             binding = ReaderChaptersSheetBinding.bind(this)
         }
 
+        override fun requestChildRectangleOnScreen(
+            child: View,
+            rect: Rect,
+            immediate: Boolean,
+        ): Boolean = false
+
+        override fun scrollTo(x: Int, y: Int) {
+            super.scrollTo(0, 0)
+        }
+
+        override fun scrollBy(x: Int, y: Int) {
+            // Prevent LinearLayout from scrolling internally
+        }
+
+        override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
+            super.onLayout(changed, l, t, r, b)
+            if (scrollY != 0) {
+                scrollY = 0
+            }
+        }
+
         fun setup(activity: ReaderActivity) {
             viewModel = activity.viewModel
             val fullPrimary = activity.getResourceColor(R.attr.colorSurface)
@@ -77,16 +100,31 @@ class ReaderChapterSheet
 
             // Listener to show/hide the chapter sheet just be going down on a d-pad/arrow keys
             viewTreeObserver.addOnGlobalFocusChangeListener { _, newFocus ->
-                if (!activity.menuVisible || newFocus == null) return@addOnGlobalFocusChangeListener
+                if (!activity.menuVisible || newFocus == null || isInTouchMode) return@addOnGlobalFocusChangeListener
+                if (sheetBehavior?.state == BottomSheetBehavior.STATE_SETTLING || sheetBehavior?.state == BottomSheetBehavior.STATE_DRAGGING) {
+                    return@addOnGlobalFocusChangeListener
+                }
                 when {
-                    newFocus.isOrDescendantOf(binding.chapterRecycler) -> sheetBehavior?.expand()
-                    newFocus.isOrDescendantOf(binding.topbarLayout) -> sheetBehavior?.collapse()
+                    newFocus.isOrDescendantOf(binding.chapterRecycler) -> {
+                        if (sheetBehavior?.isCollapsed() == true) {
+                            sheetBehavior?.expand()
+                        }
+                    }
+                    newFocus.isOrDescendantOf(binding.topbarLayout) -> {
+                        if (sheetBehavior?.isExpanded() == true) {
+                            sheetBehavior?.collapse()
+                        }
+                    }
                 }
             }
 
             post {
                 binding.chapterRecycler.alpha = if (sheetBehavior.isExpanded()) 1f else 0f
+                binding.chapterRecycler.isInvisible = !sheetBehavior.isExpanded()
                 binding.chapterRecycler.isClickable = sheetBehavior.isExpanded()
+                binding.chapterRecycler.isFocusable = sheetBehavior.isExpanded()
+                binding.chapterRecycler.descendantFocusability =
+                    if (sheetBehavior.isExpanded()) ViewGroup.FOCUS_AFTER_DESCENDANTS else ViewGroup.FOCUS_BLOCK_DESCENDANTS
                 val canShowNav = (viewModel.getCurrentChapter()?.pages?.size ?: 1) > 1
                 if (canShowNav) {
                     activity.binding.readerNav.root.isVisible = sheetBehavior.isCollapsed()
@@ -107,6 +145,7 @@ class ReaderChapterSheet
                         backgroundTintList =
                             ColorStateList.valueOf(lerpColor(primary, fullPrimary, trueProgress))
                         binding.chapterRecycler.alpha = trueProgress
+                        binding.chapterRecycler.isInvisible = progress <= 0f
                         if (activity.sheetManageNavColor && progress > 0f) {
                             activity.binding.navBar.backgroundColor =
                                 lerpColor(ColorUtils.setAlphaComponent(navPrimary, 0), navPrimary, trueProgress)
@@ -134,14 +173,27 @@ class ReaderChapterSheet
                                 activity.binding.readerNav.root.isVisible = true
                             }
                             activity.binding.readerNav.root.alpha = 1f
+                            binding.chapterRecycler.alpha = 0f
+                            binding.chapterRecycler.isInvisible = true
+                            binding.chapterRecycler.isFocusable = false
+                            binding.chapterRecycler.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                            binding.chapterRecycler.clearFocus()
                         }
                         if (state == BottomSheetBehavior.STATE_DRAGGING || state == BottomSheetBehavior.STATE_SETTLING) {
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isVisible = true
                             }
+                            if (sheetBehavior?.isExpanded() == false) {
+                                binding.chapterRecycler.clearFocus()
+                                binding.chapterRecycler.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                            }
                         }
                         if (state == BottomSheetBehavior.STATE_EXPANDED) {
                             activity.binding.touchView.isVisible = true
+                            binding.chapterRecycler.isInvisible = false
+                            binding.chapterRecycler.alpha = 1f
+                            binding.chapterRecycler.isFocusable = true
+                            binding.chapterRecycler.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
                             (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
                                 adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
                                     ?: 0,
@@ -151,7 +203,6 @@ class ReaderChapterSheet
                                 activity.binding.readerNav.root.isInvisible = true
                             }
                             activity.binding.readerNav.root.alpha = 0f
-                            binding.chapterRecycler.alpha = 1f
                             if (activity.sheetManageNavColor) {
                                 activity.binding.navBar.backgroundColor =
                                     navPrimary
@@ -163,6 +214,11 @@ class ReaderChapterSheet
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isInvisible = true
                             }
+                            binding.chapterRecycler.alpha = 0f
+                            binding.chapterRecycler.isInvisible = true
+                            binding.chapterRecycler.isFocusable = false
+                            binding.chapterRecycler.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                            binding.chapterRecycler.clearFocus()
                             binding.root.isInvisible = true
                         } else if (binding.root.isVisible) {
                             binding.root.isVisible = true
