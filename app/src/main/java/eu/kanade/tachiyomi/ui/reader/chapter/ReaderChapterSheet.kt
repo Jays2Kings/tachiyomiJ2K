@@ -99,6 +99,7 @@ class ReaderChapterSheet
                         bottomSheet: View,
                         progress: Float,
                     ) {
+                        activity.binding.touchView.isVisible = progress > 0f
                         binding.root.isVisible = true
                         binding.pill.alpha = (1 - max(0f, progress)) * 0.25f
                         val trueProgress = max(progress, 0f)
@@ -127,6 +128,7 @@ class ReaderChapterSheet
                     ) {
                         val canShowNav = (viewModel.getCurrentChapter()?.pages?.size ?: 1) > 1
                         if (state == BottomSheetBehavior.STATE_COLLAPSED) {
+                            activity.binding.touchView.isVisible = false
                             sheetBehavior?.isHideable = false
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isVisible = true
@@ -139,6 +141,7 @@ class ReaderChapterSheet
                             }
                         }
                         if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                            activity.binding.touchView.isVisible = true
                             (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
                                 adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
                                     ?: 0,
@@ -155,6 +158,7 @@ class ReaderChapterSheet
                             }
                         }
                         if (state == BottomSheetBehavior.STATE_HIDDEN) {
+                            activity.binding.touchView.isVisible = false
                             activity.binding.readerNav.root.alpha = 0f
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isInvisible = true
