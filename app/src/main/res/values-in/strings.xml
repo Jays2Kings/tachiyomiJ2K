@@ -768,7 +768,7 @@
     <string name="no_match_found">Tidak ditemukan</string>
     <string name="source_unsupported">Sumber tidak didukung</string>
     <string name="set_as_default">Atur sebagai default</string>
-    <string name="add_tag">Tambahkan tag</string>
+    <string name="add_tag">Tambahkan Tag</string>
     <plurals name="_updates_pending">
         <item quantity="other">%d pembaruan tertunda</item>
     </plurals>
