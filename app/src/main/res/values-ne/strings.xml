@@ -1058,4 +1058,6 @@
         <item quantity="other">%1$d पृष्ठहरू</item>
     </plurals>
     <string name="library_search_filters">इन्ट्रीहरू देखाउनु जुन…</string>
+    <string name="search_operator_and">समावेश गर्नु</string>
+    <string name="search_operator_not">बहिष्कार गर्नु</string>
 </resources>
