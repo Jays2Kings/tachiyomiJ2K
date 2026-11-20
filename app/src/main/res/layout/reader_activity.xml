@@ -68,6 +68,9 @@
         android:id="@+id/touch_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         />
 
     <FrameLayout

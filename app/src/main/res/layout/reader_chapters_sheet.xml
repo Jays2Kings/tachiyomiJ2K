@@ -8,6 +8,7 @@
     android:background="@drawable/bottom_sheet_rounded_background"
     android:orientation="vertical"
     app:behavior_peekHeight="60dp"
+    app:behavior_autoExpandOnRequestChildRectangleOffscreen="false"
     app:layout_behavior="eu.kanade.tachiyomi.ui.reader.chapter.ReaderChapterSheetBehavior">
 
     <FrameLayout

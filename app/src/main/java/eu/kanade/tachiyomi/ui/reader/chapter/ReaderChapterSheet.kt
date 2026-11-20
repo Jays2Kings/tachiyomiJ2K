@@ -77,15 +77,29 @@ class ReaderChapterSheet
 
             // Listener to show/hide the chapter sheet just be going down on a d-pad/arrow keys
             viewTreeObserver.addOnGlobalFocusChangeListener { _, newFocus ->
-                if (!activity.menuVisible || newFocus == null) return@addOnGlobalFocusChangeListener
+                if (!activity.menuVisible || newFocus == null || isInTouchMode) return@addOnGlobalFocusChangeListener
+                if (sheetBehavior?.state == BottomSheetBehavior.STATE_SETTLING ||
+                    sheetBehavior?.state == BottomSheetBehavior.STATE_DRAGGING
+                ) {
+                    return@addOnGlobalFocusChangeListener
+                }
                 when {
-                    newFocus.isOrDescendantOf(binding.chapterRecycler) -> sheetBehavior?.expand()
-                    newFocus.isOrDescendantOf(binding.topbarLayout) -> sheetBehavior?.collapse()
+                    newFocus.isOrDescendantOf(binding.chapterRecycler) -> {
+                        if (sheetBehavior?.isCollapsed() == true) {
+                            sheetBehavior?.expand()
+                        }
+                    }
+                    newFocus.isOrDescendantOf(binding.topbarLayout) -> {
+                        if (sheetBehavior?.isExpanded() == true) {
+                            sheetBehavior?.collapse()
+                        }
+                    }
                 }
             }
 
             post {
                 binding.chapterRecycler.alpha = if (sheetBehavior.isExpanded()) 1f else 0f
+                binding.chapterRecycler.isInvisible = !sheetBehavior.isExpanded()
                 binding.chapterRecycler.isClickable = sheetBehavior.isExpanded()
                 val canShowNav = (viewModel.getCurrentChapter()?.pages?.size ?: 1) > 1
                 if (canShowNav) {
@@ -99,6 +113,7 @@ class ReaderChapterSheet
                         bottomSheet: View,
                         progress: Float,
                     ) {
+                        activity.binding.touchView.isVisible = progress > 0f
                         binding.root.isVisible = true
                         binding.pill.alpha = (1 - max(0f, progress)) * 0.25f
                         val trueProgress = max(progress, 0f)
@@ -106,6 +121,7 @@ class ReaderChapterSheet
                         backgroundTintList =
                             ColorStateList.valueOf(lerpColor(primary, fullPrimary, trueProgress))
                         binding.chapterRecycler.alpha = trueProgress
+                        binding.chapterRecycler.isInvisible = progress <= 0f
                         if (activity.sheetManageNavColor && progress > 0f) {
                             activity.binding.navBar.backgroundColor =
                                 lerpColor(ColorUtils.setAlphaComponent(navPrimary, 0), navPrimary, trueProgress)
@@ -127,16 +143,14 @@ class ReaderChapterSheet
                     ) {
                         val canShowNav = (viewModel.getCurrentChapter()?.pages?.size ?: 1) > 1
                         if (state == BottomSheetBehavior.STATE_COLLAPSED) {
+                            activity.binding.touchView.isVisible = false
                             sheetBehavior?.isHideable = false
-                            (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
-                                adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
-                                    ?: 0,
-                                binding.chapterRecycler.height / 2 - 30.dpToPx,
-                            )
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isVisible = true
                             }
                             activity.binding.readerNav.root.alpha = 1f
+                            binding.chapterRecycler.alpha = 0f
+                            binding.chapterRecycler.isInvisible = true
                         }
                         if (state == BottomSheetBehavior.STATE_DRAGGING || state == BottomSheetBehavior.STATE_SETTLING) {
                             if (canShowNav) {
@@ -144,21 +158,31 @@ class ReaderChapterSheet
                             }
                         }
                         if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                            activity.binding.touchView.isVisible = true
+                            binding.chapterRecycler.isInvisible = false
+                            binding.chapterRecycler.alpha = 1f
+                            (binding.chapterRecycler.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
+                                adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L)
+                                    ?: 0,
+                                binding.chapterRecycler.height / 2 - 30.dpToPx,
+                            )
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isInvisible = true
                             }
                             activity.binding.readerNav.root.alpha = 0f
-                            binding.chapterRecycler.alpha = 1f
                             if (activity.sheetManageNavColor) {
                                 activity.binding.navBar.backgroundColor =
                                     navPrimary
                             }
                         }
                         if (state == BottomSheetBehavior.STATE_HIDDEN) {
+                            activity.binding.touchView.isVisible = false
                             activity.binding.readerNav.root.alpha = 0f
                             if (canShowNav) {
                                 activity.binding.readerNav.root.isInvisible = true
                             }
+                            binding.chapterRecycler.alpha = 0f
+                            binding.chapterRecycler.isInvisible = true
                             binding.root.isInvisible = true
                         } else if (binding.root.isVisible) {
                             binding.root.isVisible = true
@@ -276,6 +300,7 @@ class ReaderChapterSheet
         }
 
         fun focusCurrentChapter() {
+            if (isInTouchMode) return
             val position = adapter?.getPosition(viewModel.getCurrentChapter()?.chapter?.id ?: 0L) ?: 0
             binding.chapterRecycler.post {
                 binding.chapterRecycler

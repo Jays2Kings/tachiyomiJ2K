@@ -1020,7 +1020,7 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
                 sheetBehavior?.expand()
                 focusCurrentChapter()
             } else {
-                toggleMenu()
+                sheetBehavior?.collapse()
             }
         }
     }
@@ -1073,6 +1073,18 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
                 val intent = SearchActivity.openMangaIntent(this, id)
                 startActivity(intent)
             }
+        }
+
+        binding.touchView.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                        .isCollapsed()
+                ) {
+                    binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                        ?.collapse()
+                }
+            }
+            true
         }
 
         with(binding.chaptersSheet) {
@@ -1182,17 +1194,6 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
         binding.readerNav.leftChapter.setOnClickListener { loadAdjacentChapter(false) }
         binding.readerNav.rightChapter.setOnClickListener { loadAdjacentChapter(true) }
 
-        binding.touchView.setOnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_DOWN) {
-                if (binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
-                        .isExpanded()
-                ) {
-                    binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
-                        ?.collapse()
-                }
-            }
-            false
-        }
         val readerNavGestureDetector = ReaderNavGestureDetector(this)
         val gestureDetector = GestureDetector(this, readerNavGestureDetector)
         with(binding.readerNav) {
@@ -1559,6 +1560,7 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
                     ?.collapse()
             }
         } else {
+            binding.touchView.isVisible = false
             if (preferences.fullscreen().get() && !isInMultiWindowMode) {
                 wic.hide(systemBars())
                 wic.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_DEFAULT
@@ -2108,6 +2110,13 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
      * viewer because each one implements its own touch and key events.
      */
     fun toggleMenu() {
+        if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                .isCollapsed()
+        ) {
+            binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                ?.collapse()
+            return
+        }
         setMenuVisibility(!menuVisible)
     }
 
