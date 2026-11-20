@@ -14,13 +14,14 @@ class ReaderChapterSheetBehavior<V : View>
         context: Context,
         attrs: AttributeSet? = null,
     ) : BottomSheetBehavior<V>(context, attrs) {
+        init {
+            isAutoExpandOnRequestChildRectangleOffscreen = false
+        }
+
         override fun onRequestChildRectangleOnScreen(
             parent: CoordinatorLayout,
             child: V,
             rectangle: Rect,
             immediate: Boolean,
-        ): Boolean {
-            if (state != STATE_EXPANDED) return false
-            return super.onRequestChildRectangleOnScreen(parent, child, rectangle, immediate)
-        }
+        ): Boolean = false
     }

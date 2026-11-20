@@ -1076,7 +1076,7 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
         }
 
         binding.touchView.setOnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_UP) {
+            if (event.action == MotionEvent.ACTION_DOWN) {
                 if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior.isCollapsed()) {
                     binding.chaptersSheet.chaptersBottomSheet.sheetBehavior?.collapse()
                 }
@@ -1191,17 +1191,6 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
         binding.readerNav.leftChapter.setOnClickListener { loadAdjacentChapter(false) }
         binding.readerNav.rightChapter.setOnClickListener { loadAdjacentChapter(true) }
 
-        binding.touchView.setOnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_DOWN) {
-                if (binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
-                        .isExpanded()
-                ) {
-                    binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
-                        ?.collapse()
-                }
-            }
-            false
-        }
         val readerNavGestureDetector = ReaderNavGestureDetector(this)
         val gestureDetector = GestureDetector(this, readerNavGestureDetector)
         with(binding.readerNav) {
