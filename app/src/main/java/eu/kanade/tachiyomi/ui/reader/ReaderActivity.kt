@@ -1077,8 +1077,11 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
 
         binding.touchView.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_DOWN) {
-                if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior.isCollapsed()) {
-                    binding.chaptersSheet.chaptersBottomSheet.sheetBehavior?.collapse()
+                if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                        .isCollapsed()
+                ) {
+                    binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                        ?.collapse()
                 }
             }
             true
@@ -2107,8 +2110,11 @@ class ReaderActivity : BaseActivity<ReaderActivityBinding>() {
      * viewer because each one implements its own touch and key events.
      */
     fun toggleMenu() {
-        if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior.isCollapsed()) {
-            binding.chaptersSheet.chaptersBottomSheet.sheetBehavior?.collapse()
+        if (!binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                .isCollapsed()
+        ) {
+            binding.chaptersSheet.chaptersBottomSheet.sheetBehavior
+                ?.collapse()
             return
         }
         setMenuVisibility(!menuVisible)

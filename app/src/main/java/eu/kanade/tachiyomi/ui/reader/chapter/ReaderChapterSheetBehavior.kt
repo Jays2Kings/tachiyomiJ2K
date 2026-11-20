@@ -23,5 +23,8 @@ class ReaderChapterSheetBehavior<V : View>
             child: V,
             rectangle: Rect,
             immediate: Boolean,
-        ): Boolean = false
+        ): Boolean {
+            if (state != STATE_EXPANDED) return false
+            return super.onRequestChildRectangleOnScreen(parent, child, rectangle, immediate)
+        }
     }
