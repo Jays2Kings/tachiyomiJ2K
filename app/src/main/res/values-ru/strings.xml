@@ -506,7 +506,7 @@
     <string name="show_unread_chapters">Показать непрочитанные главы</string>
     <string name="hide_chapter_titles">Скрыть названия глав</string>
     <string name="clear_tags">Очистить теги</string>
-    <string name="reset_tags">Сбросить теги</string>
+    <string name="reset_tags">Сбросить тэги</string>
     <string name="reset_cover">Сбросить обложку</string>
     <string name="remember_this_choice">Запомнить этот выбор</string>
     <string name="source_not_installed">Источник не установлен</string>
