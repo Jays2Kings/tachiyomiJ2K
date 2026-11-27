@@ -330,7 +330,7 @@
     <string name="file_picker_error">Nenašla sa žiadna aplikácia na výber súborov</string>
     <string name="manhua">Manhua</string>
     <string name="in_progress">Prebieha</string>
-    <string name="artist">Umelec</string>
+    <string name="artist">Interpret</string>
     <string name="unknown_status">Neznámy stav</string>
     <string name="not_bookmarked">Nie je označené záložkou</string>
     <string name="by_source_order">Podľa poradia zdroja</string>

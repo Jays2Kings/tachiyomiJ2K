@@ -64,9 +64,9 @@
     <string name="background_color">Cor de fundo</string>
     <string name="white">Branco</string>
     <string name="black">Preto</string>
-    <string name="left_to_right_viewer">Esquerda para a direita</string>
-    <string name="right_to_left_viewer">Direita para a esquerda</string>
-    <string name="vertical_viewer">Vertical</string>
+    <string name="left_to_right_viewer">Paginado (esquerda para a direita)</string>
+    <string name="right_to_left_viewer">Paginado (direita para a esquerda)</string>
+    <string name="vertical_viewer">Paginado (vertical)</string>
     <string name="webtoon">Webtoon</string>
     <string name="scale_type">Tipo de escala</string>
     <string name="fit_screen">Ajustar ao ecrã</string>
@@ -310,7 +310,7 @@
         <item quantity="other">%d atualizações de extensão disponíveis</item>
     </plurals>
     <string name="skip_filtered_chapters">Saltar capítulos filtrados</string>
-    <string name="continuous_vertical">Vertical contínuo</string>
+    <string name="continuous_vertical">Tira longa com espaços</string>
     <string name="paged">Paginação</string>
     <string name="always_show_chapter_transition">Mostrar sempre transição entre capítulos</string>
     <string name="pref_webtoon_side_padding">Preenchimento lateral</string>
@@ -514,8 +514,8 @@
     <string name="want_to_read">Quero Ler</string>
     <string name="currently_reading">Lendo Atualmente</string>
     <string name="source_not_installed">Fonte não instalada</string>
-    <string name="in_library">Na Biblioteca</string>
-    <string name="add_to_library">Adicionar à Biblioteca</string>
+    <string name="in_library">Na biblioteca</string>
+    <string name="add_to_library">Adicionar à biblioteca</string>
     <string name="restore_in_progress">Restauro em progresso</string>
     <string name="backup_in_progress">Cópia de segurança em progresso</string>
     <string name="disabled">Desativado</string>
@@ -582,7 +582,7 @@
     <string name="delete_all_covers__not_in_library_used_">Apaga todas as capas do cache fora da sua biblioteca.
 \nAtualmente a usar: %1$s</string>
     <string name="clear_cached_covers_non_library">Limpar capas em cache fora da biblioteca</string>
-    <string name="delete_old_covers_in_library_used_">Apaga capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados. \nAtualmente a usar: %1$s</string>
+    <string name="delete_old_covers_in_library_used_">Apaga capas em cache antigas e não usadas de mangás na sua biblioteca que foram atualizados.\nAtualmente a usar: %1$s</string>
     <string name="clean_up_cached_covers">Limpar capas em cache</string>
     <plurals name="cleanup_done">
         <item quantity="one">Limpeza realizada. %d pasta removida</item>
@@ -675,7 +675,7 @@
     <string name="cover_saved">Capa guardada</string>
     <string name="remember_this_choice">Lembrar esta opção</string>
     <string name="reset_cover">Redefinir capa</string>
-    <string name="reset_tags">Redefinir tags</string>
+    <string name="reset_tags">Repor etiquetas</string>
     <string name="clear_tags">Limpar tags</string>
     <string name="hide_chapter_titles">Ocultar títulos de capítulos</string>
     <string name="show_unread_chapters">Mostrar capítulos não lidos</string>
@@ -708,7 +708,7 @@
     <string name="automatic_orientation">Automático (baseado na orientação)</string>
     <string name="automatic_can_still_switch">Ao usar o layout de página automático, ainda pode mudar entre os layouts enquanto lê sem sobrepôr esta configuração</string>
     <string name="page_layout">Layout de página</string>
-    <string name="cutout_behavior_only_applies">O comportamento da área de corte do ecrã aplica apenas no modo paisagem com certos tipos de escala</string>
+    <string name="cutout_behavior_only_applies">O comportamento da área de corte aplica-se apenas no modo retrato</string>
     <string name="ignore_cutout_areas">Ignorar as áreas de corte do ecrã</string>
     <string name="start_past_cutout">Iniciar após o corte do ecrã</string>
     <string name="pad_cutout_areas">Preencher as áreas de corte do ecrã</string>
@@ -726,7 +726,7 @@
     <string name="smart_by_theme">Inteligente (por tema)</string>
     <string name="smart_by_page">Inteligente (por página)</string>
     <string name="remove_crop">Remover corte</string>
-    <string name="crop_borders_webtoon">Aparar bordas (Webtoon)</string>
+    <string name="crop_borders_webtoon">Cortar bordas (Tira longa)</string>
     <string name="crop_borders_paged">Aparar páginas (Paginado)</string>
     <string name="invert_double_pages">Inverter páginas duplas</string>
     <string name="amount_of_pages_to_preload">A quantidade de páginas a pré-carregar enquanto lê. Valores maiores resultarão numa experiência de leitura melhor, ao custo do uso de cache e rede mais alto.</string>
@@ -929,7 +929,7 @@
     <string name="clear_history">Eliminar histórico</string>
     <string name="clear_history_completed">Histórico eliminado</string>
     <string name="clear_history_confirmation">Tem a certeza\? Todo o histórico será perdido.</string>
-    <string name="backup_info">Cópias de segurança automáticas são altamente recomendadas. Também deve guardar cópias em outros locais.</string>
+    <string name="backup_info">Cópias de segurança automáticas são altamente recomendadas. Deve também guardar cópias noutros locais. As cópias podem conter dados sensíveis, incluindo palavras-passe guardadas; tenha cuidado ao partilhar.</string>
     <string name="language_badge">Distintivo de linguagem</string>
     <string name="expanded_toolbar">Barra de ferramentas expandida</string>
     <string name="show_larger_toolbar">Mostrar uma barra de ferramenta maior, no topo da maioria das páginas (em aparelhos menores essa opção é desabiltiada independentemente da escolha)</string>

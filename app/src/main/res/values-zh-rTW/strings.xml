@@ -152,9 +152,9 @@
     <string name="background_color">背景顏色</string>
     <string name="white">白色</string>
     <string name="black">黑色</string>
-    <string name="left_to_right_viewer">單頁式 (由左至右)</string>
-    <string name="right_to_left_viewer">單頁式 (由右至左)</string>
-    <string name="vertical_viewer">單頁式 (由上至下)</string>
+    <string name="left_to_right_viewer">單頁（由左至右）</string>
+    <string name="right_to_left_viewer">單頁（由右至左）</string>
+    <string name="vertical_viewer">單頁（垂直翻頁）</string>
     <string name="webtoon">條漫</string>
     <string name="scale_type">縮放模式</string>
     <string name="fit_screen">符合螢幕</string>
@@ -276,7 +276,7 @@
         <item quantity="other">%d 個擴充套件可更新</item>
     </plurals>
     <string name="skip_filtered_chapters">略過已篩選的章節</string>
-    <string name="continuous_vertical">垂直連貫</string>
+    <string name="continuous_vertical">長條圖（含間距）</string>
     <string name="paged">單頁式</string>
     <string name="always_show_chapter_transition">永遠顯示章節間的隔頁</string>
     <string name="pref_webtoon_side_padding">頁緣留白</string>
@@ -386,8 +386,8 @@
     <string name="doh">DNS over HTTPS</string>
     <string name="want_to_read">想要看</string>
     <string name="currently_reading">閱讀中</string>
-    <string name="in_library">在書櫃中</string>
-    <string name="add_to_library">加入書櫃</string>
+    <string name="in_library">已在書庫中</string>
+    <string name="add_to_library">加入書庫</string>
     <string name="unknown_status">連載狀態不明</string>
     <string name="restore_in_progress">還原已在進行</string>
     <string name="backup_in_progress">備份已在進行</string>
@@ -620,7 +620,7 @@
     </plurals>
     <string name="auto_refresh_covers_summary">更新書櫃的同時更新封面</string>
     <string name="backup_restore_invalid_uri">錯誤：URI 空白</string>
-    <string name="backup_info">強烈建議啟用自動備份，並在他處保留副本。</string>
+    <string name="backup_info">強烈建議開啟自動備份，並於其他位置保存副本。備份檔可能包含已儲存的密碼等敏感資料，分享時請務必小心。</string>
     <string name="pref_manage_notifications">管理通知設定</string>
     <string name="battery_not_low">電量充足時</string>
     <string name="secure_screen_summary">在切換應用程式時隱藏預覽，並禁止擷取螢幕畫面。</string>
@@ -786,7 +786,7 @@
     <string name="no_alternatives_found">沒有找到替代品</string>
     <string name="flat_lime">淡灰</string>
     <string name="update_tracking_after_reading">在閱讀後更新追蹤</string>
-    <string name="reset_tags">重置標籤</string>
+    <string name="reset_tags">重設標籤</string>
     <string name="hide_bottom_nav">自動隱藏底部導覽列</string>
     <string name="all_read_manga">所有已完整閱讀的漫畫</string>
     <string name="use_suggested_date">使用建議的日期</string>
@@ -861,12 +861,12 @@
     <string name="starting_screen">起始頁面</string>
     <string name="series_opens_new_chapters">漫畫系列快捷方式會開啟新的章節</string>
     <string name="no_folders_to_cleanup">沒有需要清理的資料夾</string>
-    <string name="delete_old_covers_in_library_used_">刪除已更新漫畫的過期和未使用的緩存封面。 \n目前使用：%1$s</string>
+    <string name="delete_old_covers_in_library_used_">刪除書庫中已更新作品的舊版及未使用封面快取。\n目前已使用：%1$s</string>
     <string name="remove_crop">移除裁剪</string>
     <string name="vertically">縱向</string>
     <string name="both_axes">兩個軸</string>
     <string name="ignore_cutout_areas">忽略切割區域</string>
-    <string name="cutout_behavior_only_applies">切割區域行為僅適用於特定縮放類型的直向模式</string>
+    <string name="cutout_behavior_only_applies">瀏海／挖孔區域設定僅適用於直向模式</string>
     <plurals name="pages_plural">
         <item quantity="other">%1$d 頁</item>
     </plurals>
@@ -948,7 +948,7 @@
     <string name="mark_all_as_read">全部標記為已讀</string>
     <string name="show_more_chapters">顯示更多章節</string>
     <string name="collapse_grouped_chapters">折疊分組章節</string>
-    <string name="crop_borders_webtoon">裁剪邊框 (網頁漫畫)</string>
+    <string name="crop_borders_webtoon">裁切白邊（長條圖）</string>
     <string name="show_on_long_press">長按顯示</string>
     <string name="over_wifi_only">僅限 Wi-Fi 環境下更新</string>
     <string name="dont_auto_update">不自動更新</string>
@@ -1089,4 +1089,37 @@
     <string name="all_enabled">全部啟用</string>
     <string name="pinned_only">僅已釘選</string>
     <string name="replace">取代</string>
+    <string name="recent_searches">最近搜尋</string>
+    <string name="clear_all">全部清除</string>
+    <string name="edit_search">編輯搜尋</string>
+    <string name="changing_will_reset_reading_mode_multiple">變更此設定將會重設這些作品的閱讀模式</string>
+    <string name="long_strip">長條圖</string>
+    <string name="e_ink">電子紙（E-Ink）</string>
+    <string name="flash_page_on_change">翻頁時閃爍刷新</string>
+    <string name="flash_page_on_change_summary">減少電子紙螢幕的殘影</string>
+    <string name="flash_duration">閃爍持續時間</string>
+    <string name="flash_page_interval">閃爍間隔</string>
+    <string name="flash_with">閃爍顏色</string>
+    <string name="flash_black">黑色</string>
+    <string name="flash_white">白色</string>
+    <string name="flash_white_then_black">先白後黑</string>
+    <plurals name="edit_x_series">
+        <item quantity="other">編輯 %d 部作品</item>
+    </plurals>
+    <string name="shared_tags">共同標籤</string>
+    <string name="source_default">圖源預設</string>
+    <string name="pref_incognito_mode_extension_summary">暫停記錄擴充套件的閱讀紀錄</string>
+    <string name="what_should_restore">您要還原哪些項目？</string>
+    <string name="private_settings">包含敏感設定（例如進度追蹤服務的登入權杖）</string>
+    <string name="search_history">搜尋紀錄</string>
+    <string name="show_recent_searches">顯示最近搜尋</string>
+    <string name="search_history_cleared">已清除搜尋紀錄</string>
+    <string name="search_removed">已移除搜尋字詞</string>
+    <string name="saved_searches">已儲存的搜尋</string>
+    <string name="show_on">顯示於</string>
+    <string name="only_x">僅限 %1$s</string>
+    <string name="filters">篩選條件：（%1$s）</string>
+    <string name="some_filters_not_applied">部分篩選條件無法套用</string>
+    <string name="no_filters_applied">無法套用任何篩選條件</string>
+    <string name="has_results">有搜尋結果</string>
 </resources>

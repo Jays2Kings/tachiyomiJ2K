@@ -1107,4 +1107,48 @@
     <string name="confirm_repo_deletion">Borrar repo</string>
     <string name="delete_repo_confirmation">¿Desea eliminar el repo \"%s\"?</string>
     <string name="url_not_set_click_again">La URL del repositorio no está configurada, por favor edite la URL</string>
+    <plurals name="num_sources">
+        <item quantity="one">%1$d fuente</item>
+        <item quantity="many">%1$d fuentes</item>
+        <item quantity="other">%1$d fuente</item>
+    </plurals>
+    <plurals name="num_pages">
+        <item quantity="one">%1$d página</item>
+        <item quantity="many">%1$d páginas</item>
+        <item quantity="other">%1$d páginas</item>
+    </plurals>
+    <string name="library_search_filters">Mostrar entradas que…</string>
+    <string name="library_optional_search_filters">Mostrar entradas que, opcionalmente…</string>
+    <string name="search_operator_and">Incluir</string>
+    <string name="search_operator_not">Excluir</string>
+    <string name="search_toggle_optional">Hacer opcional este filtro</string>
+    <string name="search_exactly">Exactamente</string>
+    <string name="search_between">Entre</string>
+    <string name="search_more_than">Más que</string>
+    <string name="search_less_than">Menos que</string>
+    <string name="search_fewer_than">Menos que</string>
+    <string name="search_after">Después</string>
+    <string name="search_before">Antes</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Marcar duplicados de capítulos leídos como leídos</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Después de leer un capítulo</string>
+    <string name="recent_searches">Búsquedas recientes</string>
+    <string name="saved_searches">Búsquedas guardadas</string>
+    <string name="show_on">Mostrar en</string>
+    <string name="only_x">Solo</string>
+    <string name="clear_all">Limpiar todo</string>
+    <string name="edit_search">Editar búsqueda</string>
+    <string name="duplicate_in_library">Duplicar</string>
+    <string name="orphaned">Huérfano</string>
+    <string name="extension_must_reinstall">Por favor, desinstala, luego reinstala para actualizar.</string>
+    <string name="error_repo_unreachable">No se pudo comunicar o leer de este repositorio</string>
+    <string name="changing_will_reset_reading_mode_multiple">Cambiar esto reseteará el modo de lectura para estas series</string>
+    <string name="flash_black">Negro</string>
+    <string name="flash_white">Blanco</string>
+    <string name="flash_white_then_black">Blanco y Negro</string>
+    <string name="vertical_seekbar">Utilizar barra de progreso vertical para</string>
+    <plurals name="missing_chapters">
+        <item quantity="one">Falta %d capítulo</item>
+        <item quantity="many">Faltan %d capítulos</item>
+        <item quantity="other">Faltan %d capítulos</item>
+    </plurals>
 </resources>

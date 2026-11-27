@@ -72,7 +72,7 @@
     <string name="dark">داكن</string>
     <string name="language">اللغة</string>
     <string name="system_default">مثل النظام</string>
-    <string name="default_category">الفئة المبدئية</string>
+    <string name="default_category">الفئة الافتراضية</string>
     <string name="always_ask">السؤال دائما</string>
     <string name="fullscreen">ملء الشاشة</string>
     <string name="show_page_number">أظهر رقم الصفحة</string>
@@ -218,10 +218,8 @@
     <string name="installed">تمَّ التثبيت</string>
     <string name="trust">موثوق</string>
     <string name="uninstall">حذف</string>
-    <string name="untrusted_extension">إضافة ذات ريبة</string>
-    <string name="untrusted_extension_message">بإمكان أي إضافة خبيثة قراءة بيانات تسجيل الدخول المخزَّنة في Tachiyomi أو تنفيذ تعليمات برمجية عشوائية.
-\n
-\nبقبولك لهذه الإضافة، أنت تقبل المخاطر.</string>
+    <string name="untrusted_extension">إضافة غير موثوقة</string>
+    <string name="untrusted_extension_message">يمكن للإضافات الخبيثة قراءة أي بيانات اعتماد تسجيل دخول مخزنة أو تنفيذ تعليمات برمجية عشوائية. \n \nمن خلال الوثوق بهذه الإضافة، فإنك تقبل هذه المخاطر.</string>
     <string name="version_">الإصدار: %1$s</string>
     <string name="language_">اللغة: %1$s</string>
     <string name="double_tap_anim_speed">سرعة تحريك الضغط المزدوج</string>
@@ -267,7 +265,7 @@
     <string name="local_source_help_guide">دليل استخدام المصادر المحلية</string>
     <string name="check_site_in_web">التحقق من الموقع الإلكتروني في WebView</string>
     <string name="obsolete">متروك</string>
-    <string name="obsolete_extension_message">باتت هذه الإضافة لا تتوفَّر.</string>
+    <string name="obsolete_extension_message">هذه الإضافة لم تعد متوفرة. قد لا تعمل بشكل صحيح ويمكن أن تسبب بمشاكل في التطبيق. يوصى بإلغاء تثبيتها.</string>
     <plurals name="extension_updates_available">
         <item quantity="zero">لا توجد تحديثات للإضافات</item>
         <item quantity="one">يتوفَّر تحديث لإضافة</item>
@@ -626,11 +624,11 @@
     <string name="restore_duration">%02d دقيقة و %02d ثانية</string>
     <plurals name="restore_completed_message">
         <item quantity="zero">تمَّ في %1$s وبدون أخطاء</item>
-        <item quantity="one">تمَّ في %1$s وفيه خطأ</item>
-        <item quantity="two">تمَّ في %1$s وفيه خطآن</item>
-        <item quantity="few">تمَّ في %1$s وفيه %2$s أخطاء</item>
-        <item quantity="many">تمَّ في %1$s وفيه %2$s خطأً</item>
-        <item quantity="other">تمَّ في %1$s وفيه %2$s خطأ</item>
+        <item quantity="one">تمَّ في %1$s بخطأ واحد</item>
+        <item quantity="two">تمَّ في %1$s بخطأين</item>
+        <item quantity="few">تمَّ في %1$s وبه %2$s أخطاء</item>
+        <item quantity="many">تمَّ في %1$s وبه %2$s خطأً</item>
+        <item quantity="other">تمَّ في %1$s وبه %2$s خطأ</item>
     </plurals>
     <string name="source_migration_guide">دليل ترحيل المصدر</string>
     <string name="nsfw_sources">محتوى +18</string>
@@ -1013,7 +1011,7 @@
     <string name="update_tracking_marked_read">حدِّث التتبُّع حال تعليم الفصل مقروءًا</string>
     <string name="backup_restore_invalid_uri">خطأ: رابط فارغ</string>
     <string name="backup_info">يوصى بشدة بالنسخ الاحتياطي التلقائي. يجب عليك الاحتفاظ بنسخ في أماكن أخرى أيضًا.</string>
-    <string name="pref_manage_notifications">أدر الإشعارات</string>
+    <string name="pref_manage_notifications">إدارة الإشعارات</string>
     <string name="battery_not_low">البطارية ليست منخفضةً</string>
     <string name="download_ahead_info">يعمل فقط على الإدخالات في المكتبة وإذا كان الفصل الحالي بالإضافة إلى الفصل التالي قد تم تنزيلهم بالفعل</string>
     <string name="download_ahead">التنزيل المسبق</string>
@@ -1022,8 +1020,8 @@
         <item quantity="one">الفصل غير المقروء التالي</item>
         <item quantity="two">الفصلان غير المقروءين التاليان</item>
         <item quantity="few">%d فصول تالية لم تُقرأ</item>
-        <item quantity="many">%d فصلًا تاليًا لم يُقرؤوا</item>
-        <item quantity="other">%d فصل تالٍ لم يُقرؤوا</item>
+        <item quantity="many">%d فصلًا تاليًا لم يُقرأ</item>
+        <item quantity="other">%d فصل تالٍ لم يُقرأ</item>
     </plurals>
     <string name="learn_why">لماذا</string>
     <string name="secure_screen_summary">تُخفي الشاشة الآمنة محتوى التطبيق عند التبديل بين التطبيقات، وتمنع التقاط الشاشة كذلك</string>
@@ -1140,7 +1138,7 @@
     <string name="share_cover">شارك الغلاف</string>
     <string name="save_pages_separately">احفظ الصفحات في مجلدات مختلفة</string>
     <string name="create_folders_by_manga_title">يُنشِئ ملفات حسب عنوان المانجا</string>
-    <string name="extension_api_error">فشل في إظهار الإضافات المتاحة</string>
+    <string name="extension_api_error">فشل الحصول على قائمة الإضافات</string>
     <string name="ext_revoke_trust">إبطال الإضافات المجهولة والموثوقة</string>
     <string name="open_source_repo">فتح مُخزن بيانات المصدر</string>
     <string name="action_add_repo">أضِف مُخزن بيانات</string>
@@ -1161,4 +1159,8 @@
         <item quantity="other">%d مَخزن</item>
     </plurals>
     <string name="delete_repo_confirmation">أتريد حذف مَخزن البيانات \"%s\"؟</string>
+    <string name="firebase_summary">سيسمح لنا إرسال سجلات الأعطال والتحليلات بتحديد المشكلات وإصلاحها وتحسين الأداء وجعل التحديثات المستقبلية أكثر ملاءمة لاحتياجاتك</string>
+    <string name="pref_mark_duplicate_read_chapter_read">اعتبر الفصل المقروء المكرر مقروء</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">بعد قراءة الفصل</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">بعد جلب فصل جديد</string>
 </resources>
